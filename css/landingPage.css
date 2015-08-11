@@ -10,10 +10,10 @@ dl, dd, ol, ul, figure {
   0% {
     opacity: 0;
   }
-  10% {
+  5% {
     opacity: 1;
   }
-  90% {
+  95% {
     opacity: 1;
   }
   100% {
@@ -25,7 +25,7 @@ dl, dd, ol, ul, figure {
   animation-name: FadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 4999ms;
+  animation-duration: 5s; /*Same as slideshow timer*/
   animation-direction: alternate;
 }
 
