@@ -6,6 +6,29 @@ dl, dd, ol, ul, figure {
 }
 /*Override all other declarations that Jekyll imported*/
 
+@keyframes FadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.background-fade {
+  animation-name: FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 4999ms;
+  animation-direction: alternate;
+}
+
 .landing-background {
   height: 100vh;
   width: 100vw;
@@ -16,6 +39,7 @@ dl, dd, ol, ul, figure {
   position: absolute;
   -webkit-filter: grayscale(0.6) blur(10px);
   z-index: 1;
+  opacity: 0;
 }
 
 .content-area {

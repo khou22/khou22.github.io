@@ -24,16 +24,17 @@ var LandingPage = React.createClass({
     };
   },
   nextBackground: function() {
+    document.getElementById("backgroundDiv").classList.remove('background-fade');
     if (this.state.currentBackground < this.state.backgroundURLs.length - 1) { //if not the last background in array
       this.setState({
         currentBackground: this.state.currentBackground + 1 //Go to next background index
       });
     } else {
-      console.log("Reseting counter")
       this.setState({
         currentBackground: 0 //Reset index
       })
     }
+    setTimeout(function() {document.getElementById("backgroundDiv").classList.add('background-fade');}, 25);
   },
   render: function() {
     var URL = this.state.backgroundURLs[this.state.currentBackground];
@@ -46,7 +47,7 @@ var LandingPage = React.createClass({
           <ProfileBox />
           <ModalBox showModal={false} />
         </div>
-        <div className="landing-background" style={backgroundStyle}></div>
+        <div id="backgroundDiv" className="landing-background background-fade" style={backgroundStyle}></div>
       </div>
     );
   }
