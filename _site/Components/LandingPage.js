@@ -1,12 +1,31 @@
+//Landing page for my website
+
 var LandingPage = React.createClass({
+  getInitialState: function() {
+    return {
+      backgroundURL: [
+        "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg", //Background
+      ],
+      currentBackground: 0 //Index in array of backgrounds
+    };
+  },
+  nextBackground: function() {
+    this.setState({
+      currentBackground: this.state.currentBackground++ //Go to next background index
+    })
+  },
   render: function() {
+    var URL = this.state.backgroundURL[this.state.currentBackground];
+    var backgroundStyle = {
+      backgroundImage: 'url(' + URL + ')'
+    };
     return (
       <div>
         <div className="content-area">
           <ProfileBox />
           <ModalBox showModal={false} />
         </div>
-        <div className="landing-background"></div>
+        <div className="landing-background" style={backgroundStyle}></div>
       </div>
     );
   }
