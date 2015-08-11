@@ -15,11 +15,91 @@ dl, dd, ol, ul, figure {
   background-attachment: fixed;
   background-position: 50% 0%;
   position: absolute;
-  -webkit-filter: grayscale(0.5) blur(8px);
+  -webkit-filter: grayscale(0.6) blur(10px);
   z-index: 1;
 }
 
 .content-area {
   z-index: 2;
   position: absolute;
+  width: 400px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -200px;
+}
+
+.profile-name {
+  text-align: center;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  font-size: 5rem;
+  color: white;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  background-image: url("./../media/site/images/Profile.jpg");
+  background-size: contain;
+  position: relative;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9001;
+}
+.modal__container {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: auto;
+    padding: 3rem;
+    border-radius: .25rem;
+    width: 50%;
+    max-width: 40rem;
+    min-width: 20rem;
+    height: 100%;
+}
+.modal__header {
+    flex-shrink: 0;
+    border: 1px solid black;
+}
+.modal__content {
+    padding-top: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+.modal__footer {
+    border-top: 2px solid grey;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    padding: .75rem;
+    text-align: right;
+    border: 1px solid black;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9000;
+    visibility: visible;
+    opacity: 1;
 }
