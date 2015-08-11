@@ -8,12 +8,30 @@ function preload() { //Preload the images ahead of time so they don't lag
   }
 }
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex; //Arguments
+  while (0 !== currentIndex) { //If still elements to shuffle
+    randomIndex = Math.floor(Math.random() * currentIndex); //Pick random element
+    currentIndex -= 1; //Subtract from total
+    temporaryValue = array[currentIndex]; //Store
+    array[currentIndex] = array[randomIndex]; //Set replacement
+    array[randomIndex] = temporaryValue; //Set replacement
+  }
+  return array;
+}
+
 var LandingPage = React.createClass({
   getInitialState: function() {
+    var shuffleBackgrounds = true;
     var backgrounds = [
       "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
-      "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg"
+      "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
+      "./../media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
+      "./../media/site/images/backgrounds/Maple_Baseball_Bat.jpg"
     ];
+    if (shuffleBackgrounds) { //If shuffle
+      shuffle(backgrounds); //Shuffle backgrounds
+    }
     setInterval(this.nextBackground.bind(this), 5000);
     for (var i = 0; i < backgrounds.length; i++) { //Cycle through backgrounds
       preload(backgrounds[i]); //Preload every background
