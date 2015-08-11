@@ -72,6 +72,9 @@ var LandingPage = React.createClass({
 });
 
 var ProfileBox = React.createClass({
+  enterBlog: function() {
+    location.href="/blog"
+  },
   render: function() {
     return (
       <div>
@@ -79,7 +82,9 @@ var ProfileBox = React.createClass({
           Kevin Hou
         </div>
         <div className="profile-picture"></div>
-        Click <a href="/blog">here</a> for my blog
+        <div className="profile-blog">
+          <button className="blog-button" onClick={this.enterBlog.bind(this)}>Enter Blog</button>
+        </div>
       </div>
     );
   }

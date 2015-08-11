@@ -1,23 +1,50 @@
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-    margin: 0 !important;
-    padding: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 /*Override all other declarations that Jekyll imported*/
+
+@font-face {
+   font-family: defaultFont;
+   src: url(./../media/site/fonts/ShreeDev0714/ShreeDev0714.ttf);
+}
+@font-face {
+   font-family: defaultFont_bold;
+   src: url(./../media/site/fonts/ShreeDev0714/ShreeDev0714-Bold.ttf);
+   font-weight: bold;
+}
+@font-face {
+   font-family: defaultFont_Italics;
+   src: url(./../media/site/fonts/ShreeDev0714/ShreeDev0714-Italic.ttf);
+   font-weight: italic;
+}
+@font-face {
+   font-family: defaultFont_Bold_Italics;
+   src: url(./../media/site/fonts/ShreeDev0714/ShreeDev0714-Bold-Italic.ttf);
+   font-weight: bold italic;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 @keyframes FadeInOut {
   0% {
     opacity: 0;
   }
-  5% {
+  15% {
     opacity: 1;
   }
   95% {
     opacity: 1;
+    left: 0rem;
   }
   100% {
-    opacity: 0;
+    opacity: .5;
+    left: 120%;
   }
 }
 
@@ -25,8 +52,7 @@ dl, dd, ol, ul, figure {
   animation-name: FadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 5s; /*Same as slideshow timer*/
-  animation-direction: alternate;
+  animation-duration: 5.01s; /*Same as slideshow timer*/
 }
 
 .landing-background {
@@ -37,7 +63,6 @@ dl, dd, ol, ul, figure {
   background-attachment: fixed;
   background-position: 50% 0%;
   position: absolute;
-  -webkit-filter: grayscale(0.6) blur(10px);
   z-index: 1;
   opacity: 0;
 }
@@ -46,17 +71,40 @@ dl, dd, ol, ul, figure {
   z-index: 2;
   position: absolute;
   width: 400px;
-  height: 300px;
   top: 50%;
   left: 50%;
   margin: -200px 0 0 -200px;
+  font-family: defaultFont;
+  padding: .75rem;
+  background: rgba(255, 255, 255, .75);
+  border-radius: 1rem;
+  border: 1px solid gray;
 }
 
 .profile-name {
   text-align: center;
-  font-family: Trebuchet MS, Helvetica, sans-serif;
   font-size: 5rem;
-  color: white;
+  color: black;
+  line-height: 5rem;
+  margin-top: 1rem;
+}
+
+.profile-blog {
+  text-align: center;
+  color: black;
+}
+
+.blog-button {
+  width: 50%;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: .4rem;
+  opacity: .75;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  opacity: 1;
+  border: 1px solid gray;
 }
 
 .profile-picture {
@@ -69,6 +117,15 @@ dl, dd, ol, ul, figure {
   background-image: url("./../media/site/images/Profile.jpg");
   background-size: contain;
   position: relative;
+  border: 1px solid gray;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.MainDiv {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
 }
 
 .modal {
