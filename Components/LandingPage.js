@@ -34,6 +34,7 @@ var LandingPage = React.createClass({
       "./../media/site/images/backgrounds/MusicViz.jpg",
       "./../media/site/images/backgrounds/Japanese_Square_Plate.jpg"
     ];
+    setTimeout(function() {document.getElementById("mainDiv").classList.add('div-fade-in');}, 1);
     if (shuffleBackgrounds) { //If shuffle
       shuffle(backgrounds); //Shuffle backgrounds
     }
@@ -69,7 +70,7 @@ var LandingPage = React.createClass({
       backgroundImage: 'url(' + BackURL + ')',
     };
     return (
-      <div>
+      <div id="mainDiv">
         <div className="content-area">
           <ProfileBox />
           <ModalBox showModal={false} />
