@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kevin Hou&#39;s Blog</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <description>A blog about programming, wood, and anything that comes to my mind.
 </description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Aug 2015 22:24:47 -0700</pubDate>
-    <lastBuildDate>Tue, 11 Aug 2015 22:24:47 -0700</lastBuildDate>
+    <link>http://khou22.github.io/</link>
+    <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 11 Aug 2015 22:50:20 -0700</pubDate>
+    <lastBuildDate>Tue, 11 Aug 2015 22:50:20 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Tue, 04 Aug 2015 09:22:08 -0700</pubDate>
-        <link>http://yourdomain.com/programming/2015/08/04/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/programming/2015/08/04/welcome-to-jekyll.html</guid>
+        <link>http://khou22.github.io/programming/2015/08/04/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2015/08/04/welcome-to-jekyll.html</guid>
         
         
         <category>programming</category>
@@ -55,8 +55,8 @@
 &lt;span class=&quot;cm&quot;&gt;*/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 04 Aug 2015 09:22:08 -0700</pubDate>
-        <link>http://yourdomain.com/introduction/2015/08/04/first-post.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/introduction/2015/08/04/first-post.html</guid>
+        <link>http://khou22.github.io/introduction/2015/08/04/first-post.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/introduction/2015/08/04/first-post.html</guid>
         
         <category>github-pages</category>
         
@@ -94,8 +94,8 @@
 &lt;p&gt;Hope this helps!&lt;/p&gt;
 </description>
         <pubDate>Fri, 24 Jul 2015 04:48:41 -0700</pubDate>
-        <link>http://yourdomain.com/programming/2015/07/24/using-javascript-variables-from-another-file-in-reactjs.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/programming/2015/07/24/using-javascript-variables-from-another-file-in-reactjs.html</guid>
+        <link>http://khou22.github.io/programming/2015/07/24/using-javascript-variables-from-another-file-in-reactjs.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2015/07/24/using-javascript-variables-from-another-file-in-reactjs.html</guid>
         
         <category>javascript</category>
         
@@ -134,8 +134,8 @@
 &lt;p&gt;This method is particularly useful when you need many if-statements in a row. Hope this help!&lt;/p&gt;
 </description>
         <pubDate>Tue, 21 Jul 2015 07:32:00 -0700</pubDate>
-        <link>http://yourdomain.com/programming/2015/07/21/quick-short-ifthen-statement.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/programming/2015/07/21/quick-short-ifthen-statement.html</guid>
+        <link>http://khou22.github.io/programming/2015/07/21/quick-short-ifthen-statement.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2015/07/21/quick-short-ifthen-statement.html</guid>
         
         <category>javascript</category>
         
@@ -201,8 +201,8 @@
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
         <pubDate>Mon, 20 Jul 2015 08:43:23 -0700</pubDate>
-        <link>http://yourdomain.com/programming/2015/07/20/react-passing-information-from-child-to-parent-while-mapping-json-data.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/programming/2015/07/20/react-passing-information-from-child-to-parent-while-mapping-json-data.html</guid>
+        <link>http://khou22.github.io/programming/2015/07/20/react-passing-information-from-child-to-parent-while-mapping-json-data.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2015/07/20/react-passing-information-from-child-to-parent-while-mapping-json-data.html</guid>
         
         <category>reactjs</category>
         
@@ -302,8 +302,8 @@
 &lt;p&gt;Hope this helped!&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Jul 2015 07:07:02 -0700</pubDate>
-        <link>http://yourdomain.com/programming/2015/07/17/css3-animation-basics-and-callback-solutions.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/programming/2015/07/17/css3-animation-basics-and-callback-solutions.html</guid>
+        <link>http://khou22.github.io/programming/2015/07/17/css3-animation-basics-and-callback-solutions.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2015/07/17/css3-animation-basics-and-callback-solutions.html</guid>
         
         <category>css</category>
         
@@ -331,8 +331,8 @@
 &lt;p&gt;Hope this helps! It’s a good way of storing your work so that you can reference it later. You might also want to store a local version of the spike by downlaoding the zip file just in case.&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Jul 2015 06:10:57 -0700</pubDate>
-        <link>http://yourdomain.com/programming/2015/07/17/creating-a-spike-on-github.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/programming/2015/07/17/creating-a-spike-on-github.html</guid>
+        <link>http://khou22.github.io/programming/2015/07/17/creating-a-spike-on-github.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2015/07/17/creating-a-spike-on-github.html</guid>
         
         <category>salesforce</category>
         
@@ -362,8 +362,8 @@ Websites: Github, Codeschool, Codeacademy, W3Schools, Codepen.io, Heroku, Gmail&
 &lt;p&gt;I’ll be posting about various topics including bug solutions, life advice, and my perspective on what the corporate life is like (hint: free ice cream).&lt;/p&gt;
 </description>
         <pubDate>Thu, 16 Jul 2015 06:35:21 -0700</pubDate>
-        <link>http://yourdomain.com/work/2015/07/16/salesforce-internship---summer-2015.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/work/2015/07/16/salesforce-internship---summer-2015.html</guid>
+        <link>http://khou22.github.io/work/2015/07/16/salesforce-internship---summer-2015.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/work/2015/07/16/salesforce-internship---summer-2015.html</guid>
         
         <category>salesforce</category>
         
@@ -438,8 +438,8 @@ Websites: Github, Codeschool, Codeacademy, W3Schools, Codepen.io, Heroku, Gmail&
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 16 Jul 2015 06:10:57 -0700</pubDate>
-        <link>http://yourdomain.com/programming/2015/07/16/common-react-issue---button-clicks.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/programming/2015/07/16/common-react-issue---button-clicks.html</guid>
+        <link>http://khou22.github.io/programming/2015/07/16/common-react-issue---button-clicks.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2015/07/16/common-react-issue---button-clicks.html</guid>
         
         <category>salesforce</category>
         
@@ -463,8 +463,8 @@ Websites: Github, Codeschool, Codeacademy, W3Schools, Codepen.io, Heroku, Gmail&
 &lt;p&gt;Stay tuned for more demos and explanatory videos!&lt;/p&gt;
 </description>
         <pubDate>Wed, 11 Mar 2015 12:15:43 -0700</pubDate>
-        <link>http://yourdomain.com/2015/03/11/jubel---musicviz-demo.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/03/11/jubel---musicviz-demo.html</guid>
+        <link>http://khou22.github.io/2015/03/11/jubel---musicviz-demo.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/2015/03/11/jubel---musicviz-demo.html</guid>
         
         <category>processing</category>
         

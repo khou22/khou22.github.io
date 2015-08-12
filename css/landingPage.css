@@ -4,8 +4,8 @@ dl, dd, ol, ul, figure {
   margin: 0 !important;
   padding: 0 !important;
 }
-/*Override all other declarations that Jekyll imported*/
 
+/*Override all other declarations that Jekyll imported*/
 @font-face {
    font-family: defaultFont;
    src: url(./../media/site/fonts/ShreeDev0714/ShreeDev0714.ttf);
