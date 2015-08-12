@@ -19,3 +19,10 @@ I've been maintaining a <a href="kevinhou.wix.com/projects">website</a> and <a h
 A big shoutout to Seimith for her help not just on this, but with all my questions throughout the summer. She's spent hours and hours helping me through my projects even if she has a lot on her plate. Thanks a bunch :)
 
 I think I'm going to do a brain dump of everything Seimith taught me just so that I can remember it for personal reference. Lots of markup tricks, Jekyll tips, etc. Anyways, I'm really excited to get this going and I'll be following up with more blog posts soon so stay tuned!
+
+{% highlight javascript %}
+/*
+Note:
+Full list of supported languages: http://pygments.org/languages/
+*/
+{% endhighlight %}

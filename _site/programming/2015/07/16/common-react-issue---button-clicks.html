@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Articles by category: programming</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+  <title>Common React Issue - Button Clicks</title>
+  <meta name="description" content="I’ve started to get the hang of React and ES6, but it’s only been three weeks and there are of course tons and tons of things I haven’t learned yet. I’ll go ...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/blog/category/programming/">
+  <link rel="canonical" href="http://yourdomain.com/programming/2015/07/16/common-react-issue---button-clicks.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -139,93 +138,100 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <header id="post-header">
-    <h1 id="post-title">programming</h1>
-    <h4 id="post-subtitle">Articles by category</h4>
-</header>
-
-<div id="post-content">
+        <div class="post">
+  
     
         
+        
+          
             
-            
-                <h3>2015</h3><div class="list-group">
-            
-      
-            
-      
-            <a href="/programming/2015/08/04/welcome-to-jekyll.html/">
-                <h4>Welcome to Jekyll!</h4>
-            </a>
-
+                
+                
             
         
-            
-            
-      
+          
             
                 
                 
-                
-            
-      
-            <a href="/programming/2015/07/17/creating-a-spike-on-github.html/">
-                <h4>Creating a Spike on Github</h4>
-            </a>
-
             
         
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2015/07/16/common-react-issue---button-clicks.html/">
-                <h4>Common React Issue - Button Clicks</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2015/03/10/musicviz-demo-with-goooo-by-tnght.html/">
-                <h4>MusicViz Demo with Goooo by TNGHT</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-                    </div><h3>2014</h3><div class="list-group">
-                
-            
-      
-            <a href="/programming/2014/12/07/handwriting-font-app-with-video-and-source-code.html/">
-                <h4>Handwriting Font App (With Video and Source Code)</h4>
-            </a>
-
-            
-                </div>
+          
             
         
     
+
+  <header class="post-header">
+    <h1 class="post-title">Common React Issue - Button Clicks</h1>
+    <p class="post-meta">Jul 16, 2015 • Kevin Hou</p>
+  </header>
+  <article class="post-content">
+    <p>I’ve started to get the hang of <b>React</b> and <b>ES6</b>, but it’s only been three weeks and there are of course tons and tons of things I haven’t learned yet. I’ll go over a couple of things that I think anyone starting to learn React could benefit from. In this blog post I’ll go over Button Clicks.</p>
+
+<p>React works differently from plain old Vanilla Javascript in a couple of ways. One of which is the modular structure of the code. Each module has functions within it that can be accessed only by that specific module.</p>
+
+<p>You might be encountering a couple errors:</p>
+<ol>
+  <li>onClick function triggering when button loads</li>
+  <li>The onClick function doesn't recognize the function its supposed to trigger</li>
+  <li>The function refreshes the page</li>
+  <li>You can't pass parameters into the function</li>
+</ol>
+<p>See the corresponding number below for potential solutions and explanations.</p>
+
+<hr />
+
+<p><br /></p>
+
+<h4>1. Prevent onClick from automatically running</h4>
+<p>The reason it automatically runs is because you are triggering the function when referencing it. Your code may look like this:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">()}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="err">/button&gt;</span></code></pre></div>
+
+<p>The parentheses indicate that the function should be executed. When the page loads, it sees the parenthesis and runs the corresponding function. To fix the issue, simply remove the parenthesis. To pass parameters in, see the section below.</p>
+
+<h4>2. Force onClick to recognize function</h4>
+<p>Use</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span></code></pre></div>
+
+<p>at the end of</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">}</span></code></pre></div>
+
+<p>See example below.</p>
+
+<h4>3. Prevent Auto-Refresh</h4>
+<p>Simply use the: preventDefault() function</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">buttonClick</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">//Prevents auto refresh</span>
+  <span class="p">},</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span><span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+    <span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+
+<h4>4. Passing Parameters</h4>
+<p>Add the parameters in the .bind(this) as seen below</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">buttonClick</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span><span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">num</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+    <span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+
+  </article>
+  <p id="post-meta">Posted with: <a href="/blog/tag//">Salesforce Internship</a>, <a href="/blog/tag//">ReactJS</a>, </p>
 </div>
+
       </div>
     </div>
 
