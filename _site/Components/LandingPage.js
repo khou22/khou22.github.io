@@ -28,7 +28,11 @@ var LandingPage = React.createClass({
       "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
       "./../media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
       "./../media/site/images/backgrounds/Maple_Baseball_Bat.jpg",
-      "./../media/site/images/backgrounds/Gavel.jpg"
+      "./../media/site/images/backgrounds/Gavel.jpg",
+      "./../media/site/images/backgrounds/Fruit_Tart.jpg",
+      "./../media/site/images/backgrounds/Wood_Pens.jpg",
+      "./../media/site/images/backgrounds/MusicViz.jpg",
+      "./../media/site/images/backgrounds/Japanese_Square_Plate.jpg"
     ];
     if (shuffleBackgrounds) { //If shuffle
       shuffle(backgrounds); //Shuffle backgrounds

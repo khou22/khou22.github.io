@@ -35,14 +35,20 @@ html, body {
   0% {
     opacity: 1;
     left: 0rem;
+    height: 100%;
+    top: 0%;
   }
   80% {
     opacity: 1;
     left: 0rem;
+    height: 100%;
+    top: 0%;
   }
   100% {
     opacity: 0;
     left: 100%;
+    height: 90%;
+    top: 5%;
   }
 }
 
