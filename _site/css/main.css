@@ -447,3 +447,20 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+/*Custom Sass file for blog directory*/
+@font-face {
+  font-family: defaultFont;
+  src: url(./../media/site/fonts/ShreeDev0714/ShreeDev0714.ttf); }
+@font-face {
+  font-family: defaultFont_bold;
+  src: url(./../media/site/fonts/ShreeDev0714/ShreeDev0714-Bold.ttf);
+  font-weight: bold; }
+@font-face {
+  font-family: defaultFont_Italics;
+  src: url(./../media/site/fonts/ShreeDev0714/ShreeDev0714-Italic.ttf);
+  font-weight: italic; }
+@font-face {
+  font-family: defaultFont_Bold_Italics;
+  src: url(./../media/site/fonts/ShreeDev0714/ShreeDev0714-Bold-Italic.ttf);
+  font-weight: bold italic; }
