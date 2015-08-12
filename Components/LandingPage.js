@@ -22,12 +22,14 @@ function shuffle(array) {
 
 var LandingPage = React.createClass({
   getInitialState: function() {
-    var shuffleBackgrounds = false;
+    var shuffleBackgrounds = true;
     var backgrounds = [
       "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
       "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
       "./../media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
-      "./../media/site/images/backgrounds/Maple_Baseball_Bat.jpg"
+      "./../media/site/images/backgrounds/Maple_Baseball_Bat.jpg",
+      "./../media/site/images/backgrounds/Gavel.jpg",
+      "./../media/site/images/backgrounds/Walnut_Plaque.jpg"
     ];
     if (shuffleBackgrounds) { //If shuffle
       shuffle(backgrounds); //Shuffle backgrounds
