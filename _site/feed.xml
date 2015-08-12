@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Aug 2015 19:45:54 -0700</pubDate>
-    <lastBuildDate>Tue, 11 Aug 2015 19:45:54 -0700</lastBuildDate>
+    <pubDate>Tue, 11 Aug 2015 20:00:13 -0700</pubDate>
+    <lastBuildDate>Tue, 11 Aug 2015 20:00:13 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -57,6 +57,31 @@
         
         
         <category>introduction</category>
+        
+      </item>
+    
+      <item>
+        <title>Creating a Spike on Github</title>
+        <description>&lt;p&gt;In programming, a spike a place to test out various methods before actually coding the finished project. For the past week, I’ve been practicing with a whole host of components that I will ultimately use in my final project such as modals, lists, animation, React components, json data, states, props…the list goes on and on and on. I didn’t want to lose this code because, believe it or not, it can actually be really helpful down the road. Sometime I’ll forget how I did something originally, and I’ll have to refer back to the previous file. To solve this issue, I created a Spike branch in Github.&lt;/p&gt;
+
+&lt;p&gt;I essentially backed up my spike so that I could reference it later on. To be honest, I’m not entirely sure what I did, but my mentor told me that I was backing up my code so I’ll take his word for it. Originally, my spike was in my Master branch. I used this code in terminal to back it up:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./../../../../media/blog/images/Github Spike.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hope this helps! It’s a good way of storing your work so that you can reference it later. You might also want to store a local version of the spike by downlaoding the zip file just in case.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 17 Jul 2015 06:10:57 -0700</pubDate>
+        <link>http://yourdomain.com/programming/2015/07/17/creating-a-spike-on-github.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/programming/2015/07/17/creating-a-spike-on-github.html</guid>
+        
+        <category>salesforce</category>
+        
+        <category>unix</category>
+        
+        <category>github</category>
+        
+        
+        <category>programming</category>
         
       </item>
     

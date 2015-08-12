@@ -40,3 +40,9 @@ jekyll:
 
 musicviz:
   name: Music Visualizer
+
+github:
+  name: GitHub
+
+unix:
+  name: Unix
