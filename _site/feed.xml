@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Aug 2015 20:46:18 -0700</pubDate>
-    <lastBuildDate>Tue, 11 Aug 2015 20:46:18 -0700</lastBuildDate>
+    <pubDate>Tue, 11 Aug 2015 22:24:47 -0700</pubDate>
+    <lastBuildDate>Tue, 11 Aug 2015 22:24:47 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -62,6 +62,47 @@
         
         
         <category>introduction</category>
+        
+      </item>
+    
+      <item>
+        <title>Using Javascript Variables From Another File in ReactJS</title>
+        <description>&lt;p&gt;The project I’ve been working on requires data entry that isn’t always easy to organize if they are kept locally in my React code. I’ve been declaring my data as a getInitialState() which is both inconvienient and messy. To work around this, I’m keeping my data in a seperate Javascript file called “file.js.”&lt;/p&gt;
+
+&lt;p&gt;I keep my data in a JSON format, but as a string:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello world!&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//In file.js&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Below this line, I must export this variable so that it can be imported in the React code:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//In file.js&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I store my string as an object called “data.” I then import the contents of “file.js” in my main “App.jsx” file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;./file.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//In App.jsx&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The contents of the object I exported in the other file is being stored as the variable “file” here. I can then convert the contents of “file” to an object:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//&amp;quot;data&amp;quot; is the object within &amp;quot;file&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Convert this into a usable Javascript object:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;finalData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Your string, “Hello world!”, is now stored within the variable finalData.&lt;/p&gt;
+
+&lt;p&gt;Hope this helps!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 24 Jul 2015 04:48:41 -0700</pubDate>
+        <link>http://yourdomain.com/programming/2015/07/24/using-javascript-variables-from-another-file-in-reactjs.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/programming/2015/07/24/using-javascript-variables-from-another-file-in-reactjs.html</guid>
+        
+        <category>javascript</category>
+        
+        <category>reactjs</category>
+        
+        
+        <category>programming</category>
         
       </item>
     
@@ -431,48 +472,6 @@ Websites: Github, Codeschool, Codeacademy, W3Schools, Codepen.io, Heroku, Gmail&
         
         <category>musicviz</category>
         
-        
-      </item>
-    
-      <item>
-        <title>MusicViz Demo with Goooo by TNGHT</title>
-        <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/sbJhaRZhsZo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is &lt;b&gt;MusicViz&lt;/b&gt;. Often times music visualizers are created with Adobe Aftereffects for each individual song. Unlike these other “music visualizers,” I wanted to make something that works with any song or even any sound. I programmed this with Java and the Minim library.&lt;/p&gt;
-
-&lt;h4&gt;Features:&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Customizable animations (speed, fade time, sensitivity)&lt;/li&gt;
-  &lt;li&gt;Five color-coordinated themes and backgrounds&lt;/li&gt;
-  &lt;li&gt;Works with any “.mp3” file and many other common music file types&lt;/li&gt;
-  &lt;li&gt;Compatible with Mac, PC, and Linux&lt;/li&gt;
-  &lt;li&gt;Click to create a “firework” of dots&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Unfortunately, I could not find a good screen recorder online that was both free and could record high frame rates. I opted to mirror my display with a TV then record the TV with a camcorder. Sorry for the low quality, hopefully I’ll get that sorted out in the future.&lt;/p&gt;
-
-&lt;p&gt;I will be uploading more songs with MusicViz soon. I am also working on an explanatory video about how the software works and what goes on behind the scenes. I coded this entirely with Processing.&lt;/p&gt;
-
-&lt;p&gt;I also do not own rights to the song “Goooo” by TNGHT. No copyright infringement intended! (That’s what everyone says in their videos so I guess I’ll do that too) It’s a great electronic song that highlights MusicViz’s ability to detect beat drops, etc.&lt;/p&gt;
-
-&lt;p&gt;Hope you enjoyed it!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://kevinhou.wix.com/projects&quot;&gt;Project Portfolio&lt;/a&gt;&lt;br /&gt;
-I have galleries and blog posts that highlight my wood, electronics, programming, and metal projects.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 10 Mar 2015 05:26:43 -0700</pubDate>
-        <link>http://yourdomain.com/programming/2015/03/10/musicviz-demo-with-goooo-by-tnght.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/programming/2015/03/10/musicviz-demo-with-goooo-by-tnght.html</guid>
-        
-        <category>java</category>
-        
-        <category>processing</category>
-        
-        <category>musicviz</category>
-        
-        
-        <category>programming</category>
         
       </item>
     
