@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Jubel - MusicViz Demo</title>
-  <meta name="description" content="">
+  <title>CSS3 Animation Basics and Callback Solutions</title>
+  <meta name="description" content="I’ve been working wtih CSS3 animations lately, primarily to add motion and excitement to my project. I’ve played around with them and I’ve figured out the ba...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/2015/03/11/jubel---musicviz-demo.html">
+  <link rel="canonical" href="http://yourdomain.com/programming/2015/07/17/css3-animation-basics-and-callback-solutions.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -161,23 +161,107 @@
                 
             
         
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
     
 
   <header class="post-header">
-    <h1 class="post-title">Jubel - MusicViz Demo</h1>
-    <p class="post-meta">Mar 11, 2015 • Kevin Hou</p>
+    <h1 class="post-title">CSS3 Animation Basics and Callback Solutions</h1>
+    <p class="post-meta">Jul 17, 2015 • Kevin Hou</p>
   </header>
   <article class="post-content">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ntAn46zWuZE" frameborder="0" allowfullscreen=""></iframe>
+    <p>I’ve been working wtih CSS3 animations lately, primarily to add motion and excitement to my project. I’ve played around with them and I’ve figured out the basics with entrances, exits, transitions, scaling, etc. The method that I’ve been doing is essentially using a state as a boolean. If a button is clicked, the state is toggled and the animation class is added onto the div container. It looks something like this (most of this code is courtesy of Seimith Suth):</p>
 
-<p>I just published another video highlighting the functionality of my app, MusicViz. I used the song “Jubel” by Klingande both because it works well with the music visualizer and because I simply love the song. It’s a wonderful combination of electronic and instrumental music. Because the song doesn’t remain in “high gear” (doesn’t constantly trigger the visualizer) for the entire song, there’s some times where the music visualizer doens’t spawn any dots. Watching it create arcs across the circle was mesmerizing in itself and the contrast between these intense and non-intense periods was interesting.</p>
+<p>React Code:</p>
 
-<p>I fixed the issue of not recording in high definition by using one of the high-powered school computers. I was able to screen caputre at 1080p and then layer the song on top of the noiseless video. This method worked well and I think that’s what I will do for future videos.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">getInitialState</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="nx">animate</span><span class="o">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">buttonClick</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+      <span class="nx">animate</span><span class="o">:</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">animate</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">className</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">animate</span> <span class="o">?</span> <span class="s2">&quot;bump&quot;</span> <span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;animation&quot;</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;truck &quot;</span> <span class="o">+</span> <span class="nx">className</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://gearscrm.com/wp-content/uploads/2015/04/Summer-release-logo.png&quot;</span> <span class="o">/&gt;</span>
+          <span class="o">&lt;</span><span class="err">/div&gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
 
-<p>Stay tuned for more demos and explanatory videos!</p>
+<p>Sass (SCSS):</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@-webkit-keyframes</span> <span class="nt">bounce</span> <span class="p">{</span>
+  <span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">0px</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nt">30</span><span class="o">%</span> <span class="p">{</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">50px</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nt">60</span><span class="o">%</span> <span class="p">{</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">-45px</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+ 
+<span class="nc">.animation</span> <span class="p">{</span>
+  <span class="k">display</span><span class="o">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
+  <span class="c">/*top: 50%;</span>
+<span class="c">  left: 45%;*/</span>
+<span class="p">}</span>
+<span class="nc">.animation</span> <span class="nc">.truck</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
+  <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">300</span><span class="n">ms</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+<span class="p">}</span>
+ 
+<span class="nc">.animation</span> <span class="nc">.bump</span> <span class="p">{</span>
+  <span class="c">/*Need webkit for codepen here for some reason*/</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">-</span><span class="n">name</span><span class="o">:</span> <span class="n">bounce</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">-</span><span class="n">iteration</span><span class="o">-</span><span class="n">count</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">-</span><span class="n">duration</span><span class="o">:</span> <span class="m">800</span><span class="n">ms</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>The problem with this, is that the button simply toggles between true false. There is no ellegant way to set the state back to false after the animation is done. However, there are some alternatives:</p>
+
+<ol>
+  <li>
+    <p>In my opinion, the easier solution would be simply to use a setTimeout function to automatically run a function that sets the state as false after a given amount of time. SImply set the interval to be equal to or longer than the animation and it should work. Simple!</p>
+  </li>
+  <li>
+    <p>The second way is to use jQuery. I’m no expert on jQuery so I’ll let Google do the work for me. I know a lot of people were posting about it so I figured there is a solution.</p>
+  </li>
+</ol>
+
+<p>Hope this helped!</p>
 
   </article>
-  <p id="post-meta">Posted with: <a href="/blog/tag//">Processing</a>, <a href="/blog/tag//">java</a>, <a href="/blog/tag//">Music Visualizer</a></p>
+  <p id="post-meta">Posted with: <a href="/blog/tag//">CSS</a>, <a href="/blog/tag//">CSS3</a>, <a href="/blog/tag//">HTML</a>, <a href="/blog/tag//">ReactJS</a>, <a href="/blog/tag//">javascript</a></p>
 </div>
 
       </div>

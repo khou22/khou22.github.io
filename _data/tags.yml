@@ -26,6 +26,9 @@ javascript:
 reactjs:
   name: ReactJS
 
+es6:
+  name: ES6
+
 html:
   name: HTML
 
