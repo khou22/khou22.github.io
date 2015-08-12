@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Aug 2015 17:58:48 -0700</pubDate>
-    <lastBuildDate>Tue, 11 Aug 2015 17:58:48 -0700</lastBuildDate>
+    <pubDate>Tue, 11 Aug 2015 19:45:54 -0700</pubDate>
+    <lastBuildDate>Tue, 11 Aug 2015 19:45:54 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -57,6 +57,243 @@
         
         
         <category>introduction</category>
+        
+      </item>
+    
+      <item>
+        <title>Salesforce Internship - Summer 2015</title>
+        <description>&lt;p&gt;&lt;img width=&quot;250&quot; style=&quot;margin-left: 10%&quot; src=&quot;http://www.amzur.com/wp-content/uploads/2015/04/Salesforce_Logo.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve been interning at Salesforce.com for the past couple weeks this summer and I figured I would keep a section of my blog devoted to my thoughts, experiences, and anything that comes to mind! I’ve been working as an Engineer on the UX Design team. Unfortunately, I can’t disclose my current project, but I will be able to show you guys in the future. I started working at Salesforce on June 22nd and these past three weeks have been some of my favorite weeks of my life! I’ve met so many amazing people and learned a ton of new skills. It’s truly a blessing to have this opportunity and I intend to make the most of it.&lt;/p&gt;
+
+&lt;p&gt;Here’s some background on the kinds of things I’m doing/using while I’m working here:
+Computer: Macbook Pro 15” Retina from 2014 with 2.8 GHz Intel Core i7, 16 gb of ram, and a 512 gb SSD
+Applications: Sublime Text 2, iTerm 2, Sketch, Slack, Chrome
+Languages: HTML, CSS, SCSS, Vanilla Javascript, React, ES6, and a little bit of Angular in the beginning
+Websites: Github, Codeschool, Codeacademy, W3Schools, Codepen.io, Heroku, Gmail&lt;/p&gt;
+
+&lt;p&gt;I am one of two high schoolers in the Futureforce intern program at Salesforce.com, so the learning curve is pretty steep. I’m doing my best and I’ve really learned a lot!&lt;/p&gt;
+
+&lt;p&gt;I’ll be posting about various topics including bug solutions, life advice, and my perspective on what the corporate life is like (hint: free ice cream).&lt;/p&gt;
+</description>
+        <pubDate>Thu, 16 Jul 2015 06:35:21 -0700</pubDate>
+        <link>http://yourdomain.com/work/2015/07/16/salesforce-internship---summer-2015.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/work/2015/07/16/salesforce-internship---summer-2015.html</guid>
+        
+        <category>salesforce</category>
+        
+        
+        <category>work</category>
+        
+      </item>
+    
+      <item>
+        <title>Jubel - MusicViz Demo</title>
+        <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ntAn46zWuZE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I just published another video highlighting the functionality of my app, MusicViz. I used the song “Jubel” by Klingande both because it works well with the music visualizer and because I simply love the song. It’s a wonderful combination of electronic and instrumental music. Because the song doesn’t remain in “high gear” (doesn’t constantly trigger the visualizer) for the entire song, there’s some times where the music visualizer doens’t spawn any dots. Watching it create arcs across the circle was mesmerizing in itself and the contrast between these intense and non-intense periods was interesting.&lt;/p&gt;
+
+&lt;p&gt;I fixed the issue of not recording in high definition by using one of the high-powered school computers. I was able to screen caputre at 1080p and then layer the song on top of the noiseless video. This method worked well and I think that’s what I will do for future videos.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned for more demos and explanatory videos!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 11 Mar 2015 12:15:43 -0700</pubDate>
+        <link>http://yourdomain.com/2015/03/11/jubel---musicviz-demo.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/03/11/jubel---musicviz-demo.html</guid>
+        
+        <category>processing</category>
+        
+        <category>java</category>
+        
+        <category>musicviz</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>MusicViz Demo with Goooo by TNGHT</title>
+        <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/sbJhaRZhsZo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is &lt;b&gt;MusicViz&lt;/b&gt;. Often times music visualizers are created with Adobe Aftereffects for each individual song. Unlike these other “music visualizers,” I wanted to make something that works with any song or even any sound. I programmed this with Java and the Minim library.&lt;/p&gt;
+
+&lt;h4&gt;Features:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Customizable animations (speed, fade time, sensitivity)&lt;/li&gt;
+  &lt;li&gt;Five color-coordinated themes and backgrounds&lt;/li&gt;
+  &lt;li&gt;Works with any “.mp3” file and many other common music file types&lt;/li&gt;
+  &lt;li&gt;Compatible with Mac, PC, and Linux&lt;/li&gt;
+  &lt;li&gt;Click to create a “firework” of dots&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Unfortunately, I could not find a good screen recorder online that was both free and could record high frame rates. I opted to mirror my display with a TV then record the TV with a camcorder. Sorry for the low quality, hopefully I’ll get that sorted out in the future.&lt;/p&gt;
+
+&lt;p&gt;I will be uploading more songs with MusicViz soon. I am also working on an explanatory video about how the software works and what goes on behind the scenes. I coded this entirely with Processing.&lt;/p&gt;
+
+&lt;p&gt;I also do not own rights to the song “Goooo” by TNGHT. No copyright infringement intended! (That’s what everyone says in their videos so I guess I’ll do that too) It’s a great electronic song that highlights MusicViz’s ability to detect beat drops, etc.&lt;/p&gt;
+
+&lt;p&gt;Hope you enjoyed it!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://kevinhou.wix.com/projects&quot;&gt;Project Portfolio&lt;/a&gt;&lt;br /&gt;
+I have galleries and blog posts that highlight my wood, electronics, programming, and metal projects.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 10 Mar 2015 05:26:43 -0700</pubDate>
+        <link>http://yourdomain.com/programming/2015/03/10/musicviz-demo-with-goooo-by-tnght.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/programming/2015/03/10/musicviz-demo-with-goooo-by-tnght.html</guid>
+        
+        <category>java</category>
+        
+        <category>processing</category>
+        
+        <category>musicviz</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>iPhone Made Out of 350 Math Functions</title>
+        <description>&lt;p&gt;Last year, I made an iPhone using about 350 linear, conic, and piecewise functions. It took about 20 hours to make and was meant to model an iPhone home display. It is actually supposed to have animation, but due to the sheer number of equations, my browser would constantly crash if I tried it. I own a Mac with Retina display so I do not encourage you to try the animation.&lt;/p&gt;
+
+&lt;p&gt;Here is the link:
+&lt;a href=&quot;https://www.desmos.com/calculator/b2qi05nasi&quot;&gt;https://www.desmos.com/calculator/b2qi05nasi&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;My graph was actually featured as one of the “Creative Picks” for the Desmos site!
+&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are the different types of equations I used and the total times I used them.
+&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone Stats.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below are images of the finsihed product with each function labeled. The number corresponds to the function on the Desmos file as well as the number on the list of all the functions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone Labeled 3.jpg&quot; /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone Labeled 2.jpg&quot; /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone Labeled 1.jpg&quot; /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone Labeled 4.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Circles:
+2, 3, 4, 5, 6, 16, 17, 18, 19, 31, 32, 33, 34, 43, 44, 56, 57, 58, 61, 68, 69, 88, 89, 90, 91, 92, 93, 98, 100, 115, 117, 125, 126, 127, 128, 141, 142, 150, 151, 152, 153, 154, 158, 159, 160, 161, 162, 163, 169, 170, 171, 172, 176, 177, 181, 182, 184, 189, 190, 194, 195, 199, 200, 204, 205, 220, 224, 225, 230, 231, 253, 254, 260, 273, 274, 281, 282, 283, 284, 291, 192, 298, 299, 306, 307, 308, 316, 317, 318, 324.&lt;/p&gt;
+
+&lt;p&gt;Ellipses:
+7, 8, 27, 37, 38, 59, 62, 102, 103, 104, 105, 106, 107, 108, 109, 129, 133, 143, 185, 296, 310, 312.&lt;/p&gt;
+
+&lt;p&gt;Hyperbolas:
+9, 10, 20, 22, 25, 26, 29, 30, 35, 36, 39, 41, 42, 45, 48, 51, 52, 54, 55, 60, 66, 67, 86, 87, 99, 101, 113, 114, 116, 121, 122, 139, 140, 156, 157, 165, 166, 167, 168, 174, 175, 179, 180, 187, 188, 197, 198, 202, 203, 222, 223, 251, 252, 258, 270, 271, 272, 286, 287, 289, 290, 304, 305, 314, 315.&lt;/p&gt;
+
+&lt;p&gt;Parabolas:
+21, 23, 24, 70, 71, 72, 73, 96, 123, 134, 135, 267, 268, 275, 276, 277, 294, 302, 309.&lt;/p&gt;
+
+&lt;p&gt;Lines (Linear Equations):
+11, 12, 13, 14, 49, 50, 63, 64, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 94, 95, 111, 112, 124, 130, 137, 144, 145, 146, 147, 148, 149, 183, 215, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 255, 256, 257, 259, 261, 263, 264, 265, 266, 278, 279, 285, 293, 295, 300, 301, 311, 319, 320, 321, 322, 325.&lt;/p&gt;
+
+&lt;p&gt;Semicircles:
+46, 47, 120, 131, 132, 192, 193, 206, 207, 208, 209, 210, 211, 212, 213, 216, 217, 218, 219, 226, 227, 228, 229, 234.&lt;/p&gt;
+
+&lt;p&gt;Sine Wave (Trig Functions):
+118, 119, 120.&lt;/p&gt;
+
+&lt;p&gt;Piecewise Function (Two Lines):
+214.&lt;/p&gt;
+
+&lt;p&gt;Animation Slider:
+1.&lt;/p&gt;
+
+&lt;p&gt;Place Holders:
+15, 28, 40, 53, 65, 85, 97, 110, 138, 155, 164, 173, 178, 186, 191, 196, 201, 221, 250, 262, 269, 280, 288, 297, 303, 313, 323.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 Mar 2015 11:38:01 -0700</pubDate>
+        <link>http://yourdomain.com/school/2015/03/08/iphone-made-out-of-350-math-functions.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/school/2015/03/08/iphone-made-out-of-350-math-functions.html</guid>
+        
+        <category>desmos</category>
+        
+        
+        <category>school</category>
+        
+      </item>
+    
+      <item>
+        <title>Handwriting Font App (With Video and Source Code)</title>
+        <description>&lt;p&gt;I recently programmed my own handwriting font app using Processing, a Java-based programming language. The program prompts the user’s handwriting, stores it locally, then allows the user to type in their own handwriting. I spent many hours on this project, and I had a lot of fun making it! I was really going for a program that would not only be a challenge programming-wise, but would also be a great tool to have. The features include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Functioning typing interface&lt;/li&gt;
+  &lt;li&gt;Font size&lt;/li&gt;
+  &lt;li&gt;Support of multiple users&lt;/li&gt;
+  &lt;li&gt;Line wrap and backspace&lt;/li&gt;
+  &lt;li&gt;Numerous special characters&lt;/li&gt;
+  &lt;li&gt;Export a PDF vector file to be laser cut/fabricated&lt;/li&gt;
+  &lt;li&gt;One of the coolest parts about this project is the ability to print out what you&#39;ve typed on a Watercolor Bot. This is a CNC machine that uses a pen to draw out vector files.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A &lt;a href=&quot;http://youtu.be/9qK6qmGWyB4&quot;&gt;video&lt;/a&gt; of the program in action.&lt;/p&gt;
+
+&lt;p&gt;I was very proud of this program. I spent a great deal of time on it and I was thrilled when I finally got it to work. Because of the complex nature of this project, I learned a great deal about both programming in Processing (PShapes, etc.) and the Watercolor Bot. My attempt at programming a “simple” word processor also revealed how difficult and complex Microsoft Office is.&lt;/p&gt;
+
+&lt;p&gt;If I had more time, I would add bold, italics, colored fonts, underlining, a curser, spell check, better line wrap, etc.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/khou22/Handwriting-Font-App&quot;&gt;source code&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 07 Dec 2014 10:38:01 -0800</pubDate>
+        <link>http://yourdomain.com/programming/2014/12/07/handwriting-font-app-with-video-and-source-code.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/programming/2014/12/07/handwriting-font-app-with-video-and-source-code.html</guid>
+        
+        <category>processing</category>
+        
+        <category>java</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Accentuating Your Wood Grain with Colored Wax Finish</title>
+        <description>&lt;p&gt;I came across this video in my youTube “Recommended” playlist. I was intrigued by this video as it was such a unique concept and produced such an amazing result. Essentially, you add colored wax to your wood in order to highlight the grain. I really want to try this on one of my bowls (or even my next bat?) to see what it would look like. The steps are as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sand your wood completely (400 grit)- any tearout or blemishes will be obvious after applying the wax. The video talks about how perfect and smooth it has to be. &quot;Best sanded piece you&#39;ve ever done&quot;&lt;/li&gt;
+  &lt;li&gt;Rub on a clear, oil-based finish that seals the wood. This will prevent the wax from entering the non-grain areas in the wood. The man in this video used deft gloss lacquer on a paper towel.&lt;/li&gt;
+  &lt;li&gt;Use a brush to burnish the wood and remove any excess finish.&lt;/li&gt;
+  &lt;li&gt;Apply the wax thoroughly and use multiple coats using a cheese cloth. The result should be immediate and intrigueing. Wait about 15 minutes for it to dry.&lt;/li&gt;
+  &lt;li&gt;Make sure the wax is dry and doesn&#39;t smir. Apply another finish (this man used watco oil) to seal in the wax and remove the excess wax. Apply many times to remove all the wax that is not in the grain. The thinner in the finish wipes off the excess.&lt;/li&gt;
+  &lt;li&gt;Wipe dry. The wax, oil, and varnish should be sealed in the wood.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I plan on using this method soon! I will most likely post pictures or even film the process. Below is a list of all recommended materials:
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;a href=&quot;http://www.lifeandhome.com/lacquer-clear-wood-finish-13oz.html?gclid=CjwKEAjw2MOhBRCq-Nr87_j-lDASJAAl4FNhS7BpFsTXI3M0tOdxC9aixJXg6N5FAOMMJMyd51o1XxoCFTnw_wcB&quot;&gt;DEFT Clear Lacquer Wood Finish&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href=&quot;http://www.shop.com/Kiwi+2+1+2+Oz+Black+Shoe+Polish-766430450-p+.xhtml?sourceid=298&amp;amp;gclid=CjwKEAjw2MOhBRCq-Nr87_j-lDASJAAl4FNheluAO4WQi30TP9ANJ2EB6DRyi5NiBSzKP9mkuHEtLBoCNo7w_wcB&quot;&gt;Black Shoe Polish (Wax)&lt;/a&gt;
+&lt;br /&gt;
+Any Watco Danish Oil - &lt;a href=&quot;http://www.woodcraft.com/Product/146447/Watco-Danish-Oil-Red-Mahogany-Pint.aspx&quot;&gt;Example&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Oct 2014 15:34:10 -0700</pubDate>
+        <link>http://yourdomain.com/wood/2014/10/05/accentuating-your-wood-grain-with-colored-wax-finish.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/wood/2014/10/05/accentuating-your-wood-grain-with-colored-wax-finish.html</guid>
+        
+        <category>wood-finish</category>
+        
+        
+        <category>wood</category>
         
       </item>
     

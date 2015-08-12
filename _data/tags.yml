@@ -1,3 +1,42 @@
 # Add this structure for every new tag
 github-pages:
   name: GitHub Pages
+
+woodturning:
+  name: Woodturning
+
+wood-finish:
+  name: Wood Finish
+
+salesforce:
+  name: Salesforce Internship
+
+processing:
+  name: Processing
+
+desmos:
+  name: Desmos
+
+java:
+  name: java
+
+javascript:
+  name: javascript
+
+reactjs:
+  name: ReactJS
+
+html:
+  name: HTML
+
+css:
+  name: CSS
+
+css3:
+  name: CSS3
+
+jekyll:
+  name: Jekyll
+
+musicviz:
+  name: Music Visualizer

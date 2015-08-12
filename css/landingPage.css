@@ -74,9 +74,14 @@ html, body {
   margin: -275px 0 0 -200px;
   font-family: defaultFont;
   padding: .75rem;
-  background: rgba(255, 255, 255, .25);
+  background: rgba(255, 255, 255, .2);
   border-radius: 1rem;
   border: 1px solid gray;
+
+  border-bottom: 2px solid;
+  border-bottom-color: #ccc;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .profile-name {
@@ -90,20 +95,26 @@ html, body {
 .profile-blog {
   text-align: center;
   color: black;
+  margin: auto;
 }
 
 .blog-button {
   width: 50%;
   height: 2.5rem;
   border: 2px solid white;
-  background-color: rgba(255, 255, 255, .75);
+  background-color: rgba(255, 255, 255, .5);
   border-radius: .4rem;
   opacity: .75;
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   opacity: 1;
   border: 1px solid gray;
+}
+
+.blog-button:hover {
+  background-color: rgba(255, 255, 255, .75);
+  border: 0px;
 }
 
 .profile-picture {
