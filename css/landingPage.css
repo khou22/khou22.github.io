@@ -31,28 +31,26 @@ html, body {
   overflow-x: hidden;
 }
 
-@keyframes FadeInOut {
+@-webkit-keyframes FadeInOut {
   0% {
-    opacity: 0;
-  }
-  15% {
     opacity: 1;
+    left: 0rem;
   }
-  95% {
+  80% {
     opacity: 1;
     left: 0rem;
   }
   100% {
-    opacity: .5;
-    left: 120%;
+    opacity: 0;
+    left: 100%;
   }
 }
 
 .background-fade {
-  animation-name: FadeInOut;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 5.01s; /*Same as slideshow timer*/
+  -webkit-animation-name: FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 5.01s; /*Same as slideshow timer*/
 }
 
 .landing-background {
@@ -64,7 +62,7 @@ html, body {
   background-position: 50% 0%;
   position: absolute;
   z-index: 1;
-  opacity: 0;
+  opacity: 1;
 }
 
 .content-area {

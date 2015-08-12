@@ -22,7 +22,7 @@ function shuffle(array) {
 
 var LandingPage = React.createClass({
   getInitialState: function() {
-    var shuffleBackgrounds = true;
+    var shuffleBackgrounds = false;
     var backgrounds = [
       "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
       "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
@@ -56,8 +56,12 @@ var LandingPage = React.createClass({
   },
   render: function() {
     var URL = this.state.backgroundURLs[this.state.currentBackground];
+    var BackURL = this.state.currentBackground >= this.state.backgroundURLs.length-1 ? this.state.backgroundURLs[0] : this.state.backgroundURLs[this.state.currentBackground + 1];
     var backgroundStyle = {
       backgroundImage: 'url(' + URL + ')',
+    };
+    var backgroundStyleBack = {
+      backgroundImage: 'url(' + BackURL + ')',
     };
     return (
       <div>
@@ -65,6 +69,7 @@ var LandingPage = React.createClass({
           <ProfileBox />
           <ModalBox showModal={false} />
         </div>
+        <div className="landing-background" style={backgroundStyleBack}></div>
         <div id="backgroundDiv" className="landing-background background-fade" style={backgroundStyle}></div>
       </div>
     );
