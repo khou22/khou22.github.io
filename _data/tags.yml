@@ -18,10 +18,10 @@ desmos:
   name: Desmos
 
 java:
-  name: java
+  name: Java
 
 javascript:
-  name: javascript
+  name: Javascript
 
 reactjs:
   name: ReactJS

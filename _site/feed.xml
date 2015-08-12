@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Aug 2015 20:30:11 -0700</pubDate>
-    <lastBuildDate>Tue, 11 Aug 2015 20:30:11 -0700</lastBuildDate>
+    <pubDate>Tue, 11 Aug 2015 20:46:18 -0700</pubDate>
+    <lastBuildDate>Tue, 11 Aug 2015 20:46:18 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -62,6 +62,119 @@
         
         
         <category>introduction</category>
+        
+      </item>
+    
+      <item>
+        <title>Quick, Short If/Then Statement</title>
+        <description>&lt;p&gt;As a lot of you guys know, a proper if/then statement looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Or something along those lines. If you want to set a value for a variable, it can take at least 6 lines of code. In a long file, adding 6 lines of code every time you want to set a variable based on an if-statement can make your code very messy. For example, to set a simple yes/no off of a boolean takes this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;yes&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;no&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;An &lt;b&gt;efficient, concise&lt;/b&gt; alternative is to use this format condenses this code into one line:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;condition&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;yes&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;no&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is a very simple, easy trick to greatly increase the readabitlity of your code. Instead of having an incredibely long file with lots of short lines, you can work horizontally and make use of your horizontal realistate.&lt;/p&gt;
+
+&lt;p&gt;This method is particularly useful when you need many if-statements in a row. Hope this help!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 21 Jul 2015 07:32:00 -0700</pubDate>
+        <link>http://yourdomain.com/programming/2015/07/21/quick-short-ifthen-statement.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/programming/2015/07/21/quick-short-ifthen-statement.html</guid>
+        
+        <category>javascript</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>React: Passing Information from Child to Parent while Mapping JSON Data</title>
+        <description>&lt;p&gt;I’ve had a lot of issues in the past week trying to figure out how to pass information from the child component to the parent component while mapping JSON data.&lt;/p&gt;
+
+&lt;p&gt;Here’s what it looks like to pass information from the child component to the parent component:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//This runs when the child component clicks. Parent component now has access to Child component variable, &amp;#39;number&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Child&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+ 
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Child&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Click&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/button&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s what it looks like to map a JSON object:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contactNodes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;contacts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;contact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toUpperCase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toUpperCase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lastName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/h1&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Unfortunately, it’s difficult to combine these two things because when using “this.handleClick”, “this” refers to the current object it is in. When you map data, “this” refers to contactNodes, not the component; therefore, you cannot refer to a function while mapping JSON data. I finally figured out a simple way around this issue. Instead of including all my HTML in the return while mapping, I used the map function to set states. Then I passed those states into the components in the regular render() function. This allowed me to use functions because the “this” would refer to the correct object.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;getInitialState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)}),&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Click&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GameAnswerChoices&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 20 Jul 2015 08:43:23 -0700</pubDate>
+        <link>http://yourdomain.com/programming/2015/07/20/react-passing-information-from-child-to-parent-while-mapping-json-data.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/programming/2015/07/20/react-passing-information-from-child-to-parent-while-mapping-json-data.html</guid>
+        
+        <category>reactjs</category>
+        
+        <category>salesforce</category>
+        
+        <category>javascript</category>
+        
+        <category>html</category>
+        
+        <category>es6</category>
+        
+        
+        <category>programming</category>
         
       </item>
     
@@ -357,118 +470,6 @@ I have galleries and blog posts that highlight my wood, electronics, programming
         <category>processing</category>
         
         <category>musicviz</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>iPhone Made Out of 350 Math Functions</title>
-        <description>&lt;p&gt;Last year, I made an iPhone using about 350 linear, conic, and piecewise functions. It took about 20 hours to make and was meant to model an iPhone home display. It is actually supposed to have animation, but due to the sheer number of equations, my browser would constantly crash if I tried it. I own a Mac with Retina display so I do not encourage you to try the animation.&lt;/p&gt;
-
-&lt;p&gt;Here is the link:
-&lt;a href=&quot;https://www.desmos.com/calculator/b2qi05nasi&quot;&gt;https://www.desmos.com/calculator/b2qi05nasi&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;My graph was actually featured as one of the “Creative Picks” for the Desmos site!
-&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here are the different types of equations I used and the total times I used them.
-&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone Stats.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Below are images of the finsihed product with each function labeled. The number corresponds to the function on the Desmos file as well as the number on the list of all the functions.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone Labeled 3.jpg&quot; /&gt;
-&lt;br /&gt;
-&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone Labeled 2.jpg&quot; /&gt;
-&lt;br /&gt;
-&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone Labeled 1.jpg&quot; /&gt;
-&lt;br /&gt;
-&lt;img src=&quot;./../../../../media/blog/images/Desmos/Desmos iPhone Labeled 4.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Circles:
-2, 3, 4, 5, 6, 16, 17, 18, 19, 31, 32, 33, 34, 43, 44, 56, 57, 58, 61, 68, 69, 88, 89, 90, 91, 92, 93, 98, 100, 115, 117, 125, 126, 127, 128, 141, 142, 150, 151, 152, 153, 154, 158, 159, 160, 161, 162, 163, 169, 170, 171, 172, 176, 177, 181, 182, 184, 189, 190, 194, 195, 199, 200, 204, 205, 220, 224, 225, 230, 231, 253, 254, 260, 273, 274, 281, 282, 283, 284, 291, 192, 298, 299, 306, 307, 308, 316, 317, 318, 324.&lt;/p&gt;
-
-&lt;p&gt;Ellipses:
-7, 8, 27, 37, 38, 59, 62, 102, 103, 104, 105, 106, 107, 108, 109, 129, 133, 143, 185, 296, 310, 312.&lt;/p&gt;
-
-&lt;p&gt;Hyperbolas:
-9, 10, 20, 22, 25, 26, 29, 30, 35, 36, 39, 41, 42, 45, 48, 51, 52, 54, 55, 60, 66, 67, 86, 87, 99, 101, 113, 114, 116, 121, 122, 139, 140, 156, 157, 165, 166, 167, 168, 174, 175, 179, 180, 187, 188, 197, 198, 202, 203, 222, 223, 251, 252, 258, 270, 271, 272, 286, 287, 289, 290, 304, 305, 314, 315.&lt;/p&gt;
-
-&lt;p&gt;Parabolas:
-21, 23, 24, 70, 71, 72, 73, 96, 123, 134, 135, 267, 268, 275, 276, 277, 294, 302, 309.&lt;/p&gt;
-
-&lt;p&gt;Lines (Linear Equations):
-11, 12, 13, 14, 49, 50, 63, 64, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 94, 95, 111, 112, 124, 130, 137, 144, 145, 146, 147, 148, 149, 183, 215, 232, 233, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 255, 256, 257, 259, 261, 263, 264, 265, 266, 278, 279, 285, 293, 295, 300, 301, 311, 319, 320, 321, 322, 325.&lt;/p&gt;
-
-&lt;p&gt;Semicircles:
-46, 47, 120, 131, 132, 192, 193, 206, 207, 208, 209, 210, 211, 212, 213, 216, 217, 218, 219, 226, 227, 228, 229, 234.&lt;/p&gt;
-
-&lt;p&gt;Sine Wave (Trig Functions):
-118, 119, 120.&lt;/p&gt;
-
-&lt;p&gt;Piecewise Function (Two Lines):
-214.&lt;/p&gt;
-
-&lt;p&gt;Animation Slider:
-1.&lt;/p&gt;
-
-&lt;p&gt;Place Holders:
-15, 28, 40, 53, 65, 85, 97, 110, 138, 155, 164, 173, 178, 186, 191, 196, 201, 221, 250, 262, 269, 280, 288, 297, 303, 313, 323.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 08 Mar 2015 11:38:01 -0700</pubDate>
-        <link>http://yourdomain.com/school/2015/03/08/iphone-made-out-of-350-math-functions.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/school/2015/03/08/iphone-made-out-of-350-math-functions.html</guid>
-        
-        <category>desmos</category>
-        
-        
-        <category>school</category>
-        
-      </item>
-    
-      <item>
-        <title>Handwriting Font App (With Video and Source Code)</title>
-        <description>&lt;p&gt;I recently programmed my own handwriting font app using Processing, a Java-based programming language. The program prompts the user’s handwriting, stores it locally, then allows the user to type in their own handwriting. I spent many hours on this project, and I had a lot of fun making it! I was really going for a program that would not only be a challenge programming-wise, but would also be a great tool to have. The features include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Functioning typing interface&lt;/li&gt;
-  &lt;li&gt;Font size&lt;/li&gt;
-  &lt;li&gt;Support of multiple users&lt;/li&gt;
-  &lt;li&gt;Line wrap and backspace&lt;/li&gt;
-  &lt;li&gt;Numerous special characters&lt;/li&gt;
-  &lt;li&gt;Export a PDF vector file to be laser cut/fabricated&lt;/li&gt;
-  &lt;li&gt;One of the coolest parts about this project is the ability to print out what you&#39;ve typed on a Watercolor Bot. This is a CNC machine that uses a pen to draw out vector files.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A &lt;a href=&quot;http://youtu.be/9qK6qmGWyB4&quot;&gt;video&lt;/a&gt; of the program in action.&lt;/p&gt;
-
-&lt;p&gt;I was very proud of this program. I spent a great deal of time on it and I was thrilled when I finally got it to work. Because of the complex nature of this project, I learned a great deal about both programming in Processing (PShapes, etc.) and the Watercolor Bot. My attempt at programming a “simple” word processor also revealed how difficult and complex Microsoft Office is.&lt;/p&gt;
-
-&lt;p&gt;If I had more time, I would add bold, italics, colored fonts, underlining, a curser, spell check, better line wrap, etc.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://github.com/khou22/Handwriting-Font-App&quot;&gt;source code&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 07 Dec 2014 10:38:01 -0800</pubDate>
-        <link>http://yourdomain.com/programming/2014/12/07/handwriting-font-app-with-video-and-source-code.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/programming/2014/12/07/handwriting-font-app-with-video-and-source-code.html</guid>
-        
-        <category>processing</category>
-        
-        <category>java</category>
         
         
         <category>programming</category>
