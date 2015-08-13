@@ -83,8 +83,19 @@ var LandingPage = React.createClass({
 });
 
 var ProfileBox = React.createClass({
-  enterBlog: function() {
-    location.href="/blog"
+  redirect: function(page) {
+    switch (page) {
+      case "wood":
+        window.open("https://kevinhou.wix.com/projects#!wood/c1han", '_blank);');
+        break;
+      case "blog":
+        location.href="/blog";
+        break;
+      case "programming":
+        window.open("http://kevinhou.wix.com/projects#!woodprojects/ckra", '_blank);');
+        break;
+      default:
+    };
   },
   render: function() {
     return (
@@ -94,7 +105,18 @@ var ProfileBox = React.createClass({
         </div>
         <div className="profile-picture"></div>
         <div className="profile-blog">
-          <button className="blog-button" onClick={this.enterBlog.bind(this)}>Enter Blog</button>
+          <button className="blog-button" onClick={this.redirect.bind(this, "wood")}>
+            <div className="wood-icon">
+            </div>
+          </button>
+          <button className="blog-button" onClick={this.redirect.bind(this, "blog")}>
+            <div className="blog-icon">
+            </div>
+          </button>
+          <button className="blog-button" onClick={this.redirect.bind(this, "programming")}>
+            <div className="code-icon">
+            </div>
+          </button>
         </div>
       </div>
     );

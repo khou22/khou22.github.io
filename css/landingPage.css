@@ -96,10 +96,11 @@ html, body {
   margin: -275px 0 0 -200px;
   font-family: defaultFont;
   padding: .75rem;
-  background: rgba(255, 255, 255, .2);
+  background: rgba(75, 75, 75, .2);
   border-radius: 1rem;
   border: 1px solid gray;
 
+  /*Shadow*/
   border-bottom: 2px solid;
   border-bottom-color: #ccc;
   border-bottom-color: rgba(255, 255, 255, 0.2);
@@ -109,34 +110,59 @@ html, body {
 .profile-name {
   text-align: center;
   font-size: 5rem;
-  color: black;
+  color: white;
   line-height: 5rem;
   margin-top: 1rem;
 }
 
 .profile-blog {
   text-align: center;
-  color: black;
+  color: white;
   margin: auto;
 }
 
 .blog-button {
-  width: 50%;
-  height: 2.5rem;
-  border: 2px solid white;
-  background-color: rgba(255, 255, 255, .5);
-  border-radius: .4rem;
-  opacity: .75;
-  font-size: 1rem;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 40px;
+  font-size: 1.1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   opacity: 1;
-  border: 1px solid gray;
+  color: white;
+  margin-right: .75rem;
+  margin-left: .75rem;
 }
 
 .blog-button:hover {
-  background-color: rgba(255, 255, 255, .75);
-  border: 0px;
+  background-color: rgba(255, 255, 255, .25);
+  /*border: 4px;*/
+}
+
+.wood-icon {
+  background-image: url("./../media/site/icons/table_saw.png");
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
+
+.blog-icon {
+  background-image: url("./../media/site/icons/blog.png");
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  margin: auto;
+}
+
+.code-icon {
+  background-image: url("./../media/site/icons/code.png");
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  margin: auto;
 }
 
 .profile-picture {

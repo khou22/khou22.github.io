@@ -470,6 +470,7 @@ pre {
 /*Site font*/
 /*For the _includes/header.html file*/
 .nav-link-box {
-  height: 1.75rem;
-  width: 1.75rem;
-  background-color: gray; }
+  height: 32px;
+  width: 32px;
+  background-color: gray;
+  margin: 2px; }
