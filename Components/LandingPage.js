@@ -105,23 +105,32 @@ var ProfileBox = React.createClass({
         </div>
         <div className="profile-picture"></div>
         <div className="profile-blog">
-          <button className="blog-button" onClick={this.redirect.bind(this, "wood")}>
-            <div className="wood-icon">
-            </div>
-          </button>
-          <button className="blog-button" onClick={this.redirect.bind(this, "blog")}>
-            <div className="blog-icon">
-            </div>
-          </button>
-          <button className="blog-button" onClick={this.redirect.bind(this, "programming")}>
-            <div className="code-icon">
-            </div>
-          </button>
+          <PageButton className="blog-button" redirect={this.redirect.bind(this, "wood")} iconClass="wood-icon" label="Wood" />
+          <PageButton className="blog-button" redirect={this.redirect.bind(this, "blog")} iconClass="blog-icon" label="Blog" />
+          <PageButton className="blog-button" redirect={this.redirect.bind(this, "programming")} iconClass="code-icon" label="Coding" />
         </div>
       </div>
     );
   }
 });
+
+var PageButton = React.createClass({
+  render: function() {
+    return (
+      <span>
+        <button className={this.props.className} onClick={this.props.redirect.bind(this)}>
+          <div className={this.props.iconClass}>
+          </div>
+          <div className="icon-label">{this.props.label}</div>
+        </button>
+        <button className={this.props.className + "-null"} onClick={this.props.redirect.bind(this)}>
+          <div className={this.props.iconClass}>
+          </div>
+        </button>
+      </span>
+    );
+  }
+})
 
 var ModalBox = React.createClass({
   render: function() {
