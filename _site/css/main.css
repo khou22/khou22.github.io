@@ -466,3 +466,9 @@ pre {
   font-weight: bold italic; }
 .home {
   font-family: defaultFont; }
+
+/*For the _includes/header.html file*/
+.nav-link-box {
+  height: 1.75rem;
+  width: 1.75rem;
+  background-color: gray; }

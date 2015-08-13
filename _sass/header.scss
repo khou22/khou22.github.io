@@ -1,0 +1,13 @@
+/*For the _includes/header.html file*/
+
+.nav {
+  &-bar {
+    
+  }
+
+  &-link-box {
+    height: 1.75rem;
+    width: 1.75rem;
+    background-color: gray;
+  }
+}
