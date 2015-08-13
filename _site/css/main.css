@@ -464,9 +464,10 @@ pre {
   font-family: defaultFont_Bold_Italics;
   src: url(./../media/site/fonts/ShreeDev0714/ShreeDev0714-Bold-Italic.ttf);
   font-weight: bold italic; }
-.home {
-  font-family: defaultFont; }
+* {
+  font-family: defaultFont !important; }
 
+/*Site font*/
 /*For the _includes/header.html file*/
 .nav-link-box {
   height: 1.75rem;
