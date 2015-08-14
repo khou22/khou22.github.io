@@ -103,7 +103,26 @@ var ProfileBox = React.createClass({
         <div className="profile-name">
           Kevin Hou
         </div>
-        <div className="profile-picture"></div>
+        <div className="cardDiv">
+          <div className="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div className="flipper">
+              <div className="front">
+                <div className="profile-picture"></div>
+              </div>
+              <div className="back">
+                <div className="profile-about">
+                  <div className="profile-about-text">
+                    <p style={{"fontSize": "1.25rem", "lineHeight": "0rem"}}>Portfolio and Blog</p>
+                    <hr style={{"marginTop": "18px"}}/>
+                      Lick-Wilmerding '16
+                    <hr />
+                    <p>Wood. Coding. Computers.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="profile-blog">
           <PageButton className="blog-button" redirect={this.redirect.bind(this, "wood")} iconClass="wood-icon" label="Wood" left={56}/>
           <PageButton className="blog-button" redirect={this.redirect.bind(this, "blog")} iconClass="blog-icon" label="Blog" left={160}/>
