@@ -105,9 +105,9 @@ var ProfileBox = React.createClass({
         </div>
         <div className="profile-picture"></div>
         <div className="profile-blog">
-          <PageButton className="blog-button" redirect={this.redirect.bind(this, "wood")} iconClass="wood-icon" label="Wood" />
-          <PageButton className="blog-button" redirect={this.redirect.bind(this, "blog")} iconClass="blog-icon" label="Blog" />
-          <PageButton className="blog-button" redirect={this.redirect.bind(this, "programming")} iconClass="code-icon" label="Coding" />
+          <PageButton className="blog-button" redirect={this.redirect.bind(this, "wood")} iconClass="wood-icon" label="Wood" left={56}/>
+          <PageButton className="blog-button" redirect={this.redirect.bind(this, "blog")} iconClass="blog-icon" label="Blog" left={160}/>
+          <PageButton className="blog-button" redirect={this.redirect.bind(this, "programming")} iconClass="code-icon" label="Coding" left={264}/>
         </div>
       </div>
     );
@@ -115,19 +115,17 @@ var ProfileBox = React.createClass({
 });
 
 var PageButton = React.createClass({
+  mouseHover: function() {
+    console.log("H")
+  },
   render: function() {
+    var buttonStyle = {
+      left: this.props.left
+    }
     return (
-      <span>
-        <button className={this.props.className} onClick={this.props.redirect.bind(this)}>
-          <div className={this.props.iconClass}>
-          </div>
-          <div className="icon-label">{this.props.label}</div>
-        </button>
-        <button className={this.props.className + "-null"} onClick={this.props.redirect.bind(this)}>
-          <div className={this.props.iconClass}>
-          </div>
-        </button>
-      </span>
+      <button className={this.props.className + " " + this.props.iconClass} onClick={this.props.redirect.bind(this)}>
+        <div className="icon-label">{this.props.label}</div>
+      </button>
     );
   }
 })
