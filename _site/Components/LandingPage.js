@@ -32,7 +32,8 @@ var LandingPage = React.createClass({
       "./../media/site/images/backgrounds/Fruit_Tart.jpg",
       "./../media/site/images/backgrounds/Wood_Pens.jpg",
       "./../media/site/images/backgrounds/MusicViz.jpg",
-      "./../media/site/images/backgrounds/Japanese_Square_Plate.jpg"
+      "./../media/site/images/backgrounds/Japanese_Square_Plate.jpg",
+      "./../media/site/images/backgrounds/Online_Sandwich_Ordering_Machine.jpg"
     ];
     setTimeout(function() {document.getElementById("mainDiv").classList.add('div-fade-in');}, 1);
     if (shuffleBackgrounds) { //If shuffle
