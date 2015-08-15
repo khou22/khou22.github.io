@@ -31,6 +31,17 @@ html, body {
   overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: defaultFont;
+}
+p, div {
+    font-family: defaultFont;
+}
+
+hr {
+  margin-bottom: 14px;
+}
+
 @-webkit-keyframes FadeInDiv {
   0% {
     opacity: 0;
@@ -121,10 +132,10 @@ html, body {
 
 .profile-name {
   text-align: center;
-  font-size: 5rem;
+  font-size: 7rem;
   color: white;
-  line-height: 5rem;
-  margin-top: 1rem;
+  line-height: 6.5rem;
+  margin-top: 1.5rem;
 }
 
 .profile-blog {
@@ -163,11 +174,12 @@ html, body {
 }
 
 .icon-label {
+  font-size: 2rem;
   width: 80px;
   height: 80px;
   position: absolute;
   margin: auto;
-  bottom: 0px;
+  bottom: -10px;
   text-align: center;
 }
 
@@ -220,10 +232,13 @@ html, body {
 }
 
 .profile-about-text {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
   top: 60px;
   padding: .25rem;
   position: absolute;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .profile-label {

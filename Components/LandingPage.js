@@ -113,10 +113,10 @@ var ProfileBox = React.createClass({
               <div className="back">
                 <div className="profile-about">
                   <div className="profile-about-text">
-                    <p style={{"fontSize": "1.25rem", "lineHeight": "0rem"}}>Portfolio and Blog</p>
-                    <hr style={{"marginTop": "18px"}}/>
+                    <p style={{"fontSize": "2rem", "lineHeight": "0rem"}}>Portfolio and Blog</p>
+                    <hr style={{"marginTop": "14px"}}/>
                       Lick-Wilmerding '16
-                    <hr />
+                    <hr style={{"marginTop": "14px"}}/>
                     <p>Wood. Coding. Computers.</p>
                   </div>
                 </div>
