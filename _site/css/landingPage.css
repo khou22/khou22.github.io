@@ -352,3 +352,78 @@ html, body {
 .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
   transform: rotateY(180deg);
 }
+
+.facebook-bw {
+   background-image: url(./../media/site/icons/logos/Facebook.png);
+   background-size: contain;
+   width: 100%;
+   height: 100%;
+   width: 100%;
+   height: 100%;
+}
+
+.flickr-bw {
+   background-image: url(./../media/site/icons/logos/Flickr.png);
+   background-size: contain;
+   width: 100%;
+   height: 100%;
+}
+
+.gallery-bw {
+   background-image: url(./../media/site/icons/gallery.png);
+   background-size: contain;
+   width: 100%;
+   height: 100%;
+}
+
+.github-bw {
+   background-image: url(./../media/site/icons/logos/Github.png);
+   background-size: contain;
+   width: 100%;
+   height: 100%;
+}
+
+.instagram-bw {
+   background-image: url(./../media/site/icons/logos/Instagram.png);
+   background-size: contain;
+   width: 100%;
+   height: 100%;
+}
+
+.linkedin-bw {
+   background-image: url(./../media/site/icons/logos/LinkedIn.png);
+   background-size: contain;
+   width: 100%;
+   height: 100%;
+}
+
+.twitter-bw {
+   background-image: url(./../media/site/icons/logos/Twitter.png);
+   background-size: contain;
+   width: 100%;
+   height: 100%;
+}
+
+.nav-bar {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 2% -81px;
+  -webkit-filter: invert(1);
+  border: 1px solid gray;
+  border-bottom: 2px solid;
+  border-bottom-color: #ccc;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(75, 75, 75, .2);
+  border-radius: 10px;
+  padding: .25rem;
+}
+
+.nav-link-box {
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  margin: 2px;
+}

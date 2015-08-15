@@ -76,9 +76,41 @@ var LandingPage = React.createClass({
           <ProfileBox />
           <ModalBox showModal={false} />
         </div>
+        <ExternalLinks />
         <div className="landing-background" style={backgroundStyleBack}></div>
         <div id="backgroundDiv" className="landing-background background-fade" style={backgroundStyle}></div>
       </div>
+    );
+  }
+});
+
+var ExternalLinks = React.createClass({
+  render: function() {
+    return (
+      <table className="nav-bar">
+        <tr>
+          <td>
+            <a href="https://www.linkedin.com/in/kevinhou22" target="_blank">
+              <div className="nav-link-box linkedin-bw"></div>
+            </a>
+          </td>
+          <td>
+            <a href="https://github.com/khou22" target="_blank">
+              <div className="nav-link-box github-bw"></div>
+            </a>
+          </td>
+          <td>
+            <a href="https://www.flickr.com/photos/127963703@N03/albums" target="_blank">
+              <div className="nav-link-box flickr-bw"></div>
+            </a>
+          </td>
+          <td>
+            <a href="http://kevinhou.wix.com/projects" target="_blank">
+              <div className="nav-link-box gallery-bw"></div>
+            </a>
+          </td>
+        </tr>
+      </table>
     );
   }
 });
