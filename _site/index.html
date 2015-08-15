@@ -9,10 +9,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/landingPage.css">
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div id="content" class="MainDiv"></div>
     <script type="text/jsx;harmony=true" src="Components/LandingPage.js">
+    </script>
+
+    <!-- Bottom Menu -->
+    <table class="nav-bar">
+      <tr>
+        <td>
+          <a href="https://www.linkedin.com/in/kevinhou22" target="_blank" data-toggle="tooltip" title="LinkedIn">
+            <div class="nav-link-box linkedin-bw"></div>
+          </a>
+        </td>
+        <td>
+          <a href="https://github.com/khou22" target="_blank" data-toggle="tooltip" title="Github">
+            <div class="nav-link-box github-bw"></div>
+          </a>
+        </td>
+        <td>
+          <a href="https://www.flickr.com/photos/127963703@N03/albums" target="_blank" data-toggle="tooltip" title="Flickr">
+            <div class="nav-link-box flickr-bw"></div>
+          </a>
+        </td>
+        <td>
+          <a href="http://kevinhou.wix.com/projects" target="_blank" data-toggle="tooltip" title="Portfolio">
+            <div class="nav-link-box gallery-bw"></div>
+          </a>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Activate Tooltips -->
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
     </script>
   </body>
 </html>

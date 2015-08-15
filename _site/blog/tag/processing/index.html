@@ -140,27 +140,34 @@
   <table class="nav-bar"> <!-- Custom header -->
     <tr>
       <td>
-        <a href="https://www.linkedin.com/in/kevinhou22" target="_blank">
+        <a href="https://www.linkedin.com/in/kevinhou22" target="_blank" data-toggle="tooltip" title="LinkedIn">
           <div class="nav-link-box linkedin-bw"></div>
         </a>
       </td>
       <td>
-        <a href="https://github.com/khou22" target="_blank">
+        <a href="https://github.com/khou22" target="_blank" data-toggle="tooltip" title="Github">
           <div class="nav-link-box github-bw"></div>
         </a>
       </td>
       <td>
-        <a href="https://www.flickr.com/photos/127963703@N03/albums" target="_blank">
+        <a href="https://www.flickr.com/photos/127963703@N03/albums" target="_blank" data-toggle="tooltip" title="Flickr">
           <div class="nav-link-box flickr-bw"></div>
         </a>
       </td>
       <td>
-        <a href="http://kevinhou.wix.com/projects" target="_blank">
+        <a href="http://kevinhou.wix.com/projects" target="_blank" data-toggle="tooltip" title="Portfolio">
           <div class="nav-link-box gallery-bw"></div>
         </a>
       </td>
     </tr>
   </table>
+
+  <!-- Activate Tooltips -->
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
 </header>
 
