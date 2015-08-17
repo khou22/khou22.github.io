@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kevin Hou's Blog</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind.
-">
+  <title>CSS Filters and Effects</title>
+  <meta name="description" content="Since most of the site (as of now) does not use Bootstrap as a default style tool, I’ve been doing a lot of custom CSS from scratch. My landing page is meant...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/">
+  <link rel="canonical" href="http://khou22.github.io/programming/2015/08/17/css-filters-and-effects.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -179,185 +178,64 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <!-- Blog homepage -->
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    <!-- Repeats for (maps) all posts -->
+        <div class="post">
+  
     
-      <li>
-        <span class="post-meta">Aug 17, 2015</span>
-
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/programming/2015/08/17/css-filters-and-effects.html">CSS Filters and Effects</a>
-        </h2>
-        <p>
-          How to use CSS3 animations to apply filters on images or divs.
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 4, 2015</span>
-
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/programming/2015/08/04/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-        <p>
+        
+        
           
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 4, 2015</span>
-
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/introduction/2015/08/04/first-post.html">First Blog Post on Github</a>
-        </h2>
-        <p>
-          This is my first blog post using Jekyll on Github Pages! I'm really excited to start updating this site so stay tuned!
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 24, 2015</span>
-
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/programming/2015/07/24/using-javascript-variables-from-another-file-in-reactjs.html">Using Javascript Variables From Another File in ReactJS</a>
-        </h2>
-        <p>
-          How to import variables from another Javascript file
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 21, 2015</span>
-
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/programming/2015/07/21/quick-short-ifthen-statement.html">Quick, Short If/Then Statement</a>
-        </h2>
-        <p>
-          A quicker and faster way of writing if/then statements in javascript.
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 20, 2015</span>
-
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/programming/2015/07/20/react-passing-information-from-child-to-parent-while-mapping-json-data.html">React: Passing Information from Child to Parent while Mapping JSON Data</a>
-        </h2>
-        <p>
+            
+        
           
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 17, 2015</span>
-
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/programming/2015/07/17/css3-animation-basics-and-callback-solutions.html">CSS3 Animation Basics and Callback Solutions</a>
-        </h2>
-        <p>
+            
+        
           
-        </p>
-      </li>
+            
+                
+                
+            
+        
     
-      <li>
-        <span class="post-meta">Jul 17, 2015</span>
 
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/programming/2015/07/17/creating-a-spike-on-github.html">Creating a Spike on Github</a>
-        </h2>
-        <p>
-          Creating a backup of my playground files on Github. A file where you play around with technique and features is called a 'spike.'
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 16, 2015</span>
+  <header class="post-header">
+    <h1 class="post-title">CSS Filters and Effects</h1>
+    <p class="post-meta">Aug 17, 2015 • 2015-08-17 08:03:23 -0700</p>
+  </header>
+  <article class="post-content">
+    <p>Since most of the site (as of now) does not use Bootstrap as a default style tool, I’ve been doing a lot of custom CSS from scratch. My landing page is meant to mimic a sheet of glass with a semi-transparent background and border. Here’s some quick and simple CSS that can turn any div into a piece of glass:</p>
 
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/work/2015/07/16/salesforce-internship---summer-2015.html">Salesforce Internship - Summer 2015</a>
-        </h2>
-        <p>
-          First thoughts on my new internship at Salesforce.com during the summer of 2015. I worked as a UX (User Experience) Engineer.
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 16, 2015</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.glass</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="o">.</span><span class="m">2</span><span class="p">);</span>
+  <span class="k">border-bottom</span><span class="o">:</span> <span class="m">2px</span> <span class="k">solid</span><span class="p">;</span>
+  <span class="k">border-bottom-color</span><span class="o">:</span> <span class="m">#ccc</span><span class="p">;</span>
+  <span class="k">border-bottom-color</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">2</span><span class="p">);</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">3px</span> <span class="m">6px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">3</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
 
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/programming/2015/07/16/common-react-issue---button-clicks.html">Common React Issue - Button Clicks</a>
-        </h2>
-        <p>
-          
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 11, 2015</span>
+<p>This setup can easily be customized by changing the values of the background-color, border-color, etc. For example, my component background is not actually transparent white. My white text was a little too hard to see against the white background, so I changed it to have a tint of grey:</p>
 
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/2015/03/11/jubel---musicviz-demo.html">Jubel - MusicViz Demo</a>
-        </h2>
-        <p>
-          
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 10, 2015</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">background-color</span><span class="o">:</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">100</span><span class="o">,</span> <span class="nt">100</span><span class="o">,</span> <span class="nt">100</span><span class="o">,</span> <span class="nc">.2</span><span class="o">);</span></code></pre></div>
 
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/programming/2015/03/10/musicviz-demo-with-goooo-by-tnght.html">MusicViz Demo with Goooo by TNGHT</a>
-        </h2>
-        <p>
-          
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 8, 2015</span>
+<hr />
 
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/school/2015/03/08/iphone-made-out-of-350-math-functions.html">iPhone Made Out of 350 Math Functions</a>
-        </h2>
-        <p>
-          An overview of a picture of an iPhone that I generated using 350+ math equations on Desmos.com.
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 7, 2014</span>
+<p>Another cool CSS3 trick is to apply filters on images. This is similar to iPhone filters or filters you would see on Instagram. Here’s an example of a greyscale filter with a blur. I was originally planning on using this for my landing page, but I ended up scrapping the idea because I liked seeing the vibrant colors of my pictures, especially the woodworking ones.</p>
 
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/programming/2014/12/07/handwriting-font-app-with-video-and-source-code.html">Handwriting Font App (With Video and Source Code)</a>
-        </h2>
-        <p>
-          Summary of my handwriting font app. It takes the user's handwriting, creates a font out of it, and allows them to type in their own handwriting. The file can be exported as a vector file and printed on the CNC Watercolor bot to mimic a real person's writing.
-        </p>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 5, 2014</span>
+<p>Simply apply this to your CSS class:</p>
 
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="/wood/2014/10/05/accentuating-your-wood-grain-with-colored-wax-finish.html">Accentuating Your Wood Grain with Colored Wax Finish</a>
-        </h2>
-        <p>
-          
-        </p>
-      </li>
-    
-  </ul>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-filter</span><span class="o">:</span> <span class="nt">grayscale</span><span class="o">(</span><span class="nt">0</span><span class="nc">.5</span><span class="o">)</span> <span class="nt">blur</span><span class="o">(</span><span class="nt">10px</span><span class="o">);</span></code></pre></div>
 
-  <p class="rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></p>
+<p>or as an inline style using ReactJS:</p>
 
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">var</span> <span class="nt">backgroundBlur</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">WebkitFilter</span><span class="o">:</span> <span class="s1">&#39;grayscale(0.5) blur(7px)&#39;</span>
+<span class="p">}</span> <span class="o">//</span><span class="nt">As</span> <span class="nt">an</span> <span class="nt">inline</span> <span class="nt">style</span> <span class="nt">-</span> <span class="nt">syntax</span></code></pre></div>
+
+<p>Hope this helps.</p>
+
+  </article>
+  <p id="post-meta">Posted with: <a href="/blog/tag//">ReactJS</a></p>
 </div>
+
       </div>
     </div>
 
