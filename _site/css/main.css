@@ -494,6 +494,12 @@ pre {
   width: 100%;
   height: 100%; }
 
+.home-bw {
+  background-image: url(./../media/site/icons/home.png);
+  background-size: contain;
+  width: 100%;
+  height: 100%; }
+
 .instagram-bw {
   background-image: url(./../media/site/icons/logos/Instagram.png);
   background-size: contain;
