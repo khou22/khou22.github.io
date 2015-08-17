@@ -261,21 +261,25 @@ pre {
   padding: 30px 0; }
 
 .page-heading {
-  font-size: 20px; }
+  font-size: 24px; }
 
 .post-list {
   margin-left: 0;
   list-style: none; }
   .post-list > li {
-    margin-bottom: 30px; }
+    margin-bottom: 10px; }
+
+.post-individual {
+  padding: 7.5px; }
 
 .post-meta {
   font-size: 14px;
-  color: #828282; }
+  color: #828282;
+  line-height: 3rem; }
 
 .post-link {
   display: block;
-  font-size: 24px; }
+  font-size: 2rem; }
 
 /**
  * Posts
@@ -468,6 +472,12 @@ pre {
   font-family: defaultFont !important; }
 
 /*Site font*/
+/*Override Bootstrap*/
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul, figure {
+  margin: 0 !important; }
+
 .facebook-bw {
   background-image: url(./../media/site/icons/logos/Facebook.png);
   background-size: contain;

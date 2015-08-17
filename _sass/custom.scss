@@ -21,6 +21,13 @@
 
 *{ font-family: defaultFont !important; } /*Site font*/
 
+/*Override Bootstrap*/
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul, figure {
+  margin: 0 !important;
+}
+
 .facebook-bw {
    background-image: url(./../media/site/icons/logos/Facebook.png);
    background-size: contain;
