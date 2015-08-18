@@ -475,7 +475,7 @@ pre {
 /*Override Bootstrap*/
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-dl, dd, ol, ul, figure {
+dl, dd, ol, figure {
   margin: 0 !important; }
 
 .facebook-bw {

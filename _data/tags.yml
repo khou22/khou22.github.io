@@ -49,3 +49,6 @@ github:
 
 unix:
   name: Unix
+
+osx:
+  name: OSX
