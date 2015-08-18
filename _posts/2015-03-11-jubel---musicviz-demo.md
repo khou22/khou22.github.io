@@ -4,7 +4,7 @@ title: "Jubel - MusicViz Demo"
 author: "Kevin Hou"
 date:   2015-03-11 19:15:43
 description: ""
-category: 
+category: Programming
 tags: [processing, java, musicviz]
 ---
 

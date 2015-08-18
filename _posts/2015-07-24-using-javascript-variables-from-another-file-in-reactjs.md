@@ -4,7 +4,7 @@ title: "Using Javascript Variables From Another File in ReactJS"
 author: "Kevin Hou"
 date:   2015-07-24 11:48:41
 description: "How to import variables from another Javascript file"
-category: programming
+category: Programming
 tags: [javascript, reactjs]
 ---
 The project I've been working on requires data entry that isn't always easy to organize if they are kept locally in my React code. I've been declaring my data as a getInitialState() which is both inconvienient and messy. To work around this, I'm keeping my data in a seperate Javascript file called "file.js."

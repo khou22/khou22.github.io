@@ -4,7 +4,7 @@ title: "iPhone Made Out of 350 Math Functions"
 author: "Kevin Hou"
 date: 2015-03-08 18:38:01
 description: "An overview of a picture of an iPhone that I generated using 350+ math equations on Desmos.com."
-category: school
+category: School
 tags: [desmos]
 ---
 

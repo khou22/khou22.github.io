@@ -1,54 +1,72 @@
 # Add this structure for every new tag
-github-pages:
-  name: GitHub Pages
+github-pages: #Declare the object
+  slug: github-pages #Tag string for data organization - this is the same as the line above
+  name: GitHub Pages #Name of the tag
 
 woodturning:
+  slug: woodturning
   name: Woodturning
 
 wood-finish:
+  slug: wood-finish
   name: Wood Finish
 
 salesforce:
+  slug: salesforce
   name: Salesforce Internship
 
 processing:
+  slug: processing
   name: Processing
 
 desmos:
+  slug: desmos
   name: Desmos
 
 java:
+  slug: java
   name: Java
 
 javascript:
+  slug: javascript
   name: Javascript
 
 reactjs:
+  slug: reactjs
   name: ReactJS
 
 es6:
+  slug: es6
   name: ES6
 
 html:
+  slug: html
   name: HTML
 
 css:
+  slug: css
   name: CSS
 
 css3:
+  slug: css3
   name: CSS3
 
 jekyll:
+  slug: jekyll
   name: Jekyll
 
 musicviz:
+  slug: musicviz
   name: Music Visualizer
 
 github:
+  slug: github
   name: GitHub
 
 unix:
+  slug: unix
   name: Unix
 
 osx:
+  slug: osx
   name: OSX

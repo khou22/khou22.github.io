@@ -4,7 +4,7 @@ title: "Quick, Short If/Then Statement"
 author: "Kevin Hou"
 date:   2015-07-21 14:32:00
 description: "A quicker and faster way of writing if/then statements in javascript."
-category: programming
+category: Programming
 tags: [javascript]
 ---
 As a lot of you guys know, a proper if/then statement looks like this:

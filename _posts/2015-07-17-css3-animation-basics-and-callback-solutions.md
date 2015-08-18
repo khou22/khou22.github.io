@@ -4,7 +4,7 @@ title: "CSS3 Animation Basics and Callback Solutions"
 author: "Kevin Hou"
 date:   2015-07-17 14:07:02
 description: ""
-category: programming
+category: Programming
 tags: [css, css3, html, reactjs, javascript]
 ---
 I've been working wtih CSS3 animations lately, primarily to add motion and excitement to my project. I've played around with them and I've figured out the basics with entrances, exits, transitions, scaling, etc. The method that I've been doing is essentially using a state as a boolean. If a button is clicked, the state is toggled and the animation class is added onto the div container. It looks something like this (most of this code is courtesy of Seimith Suth):

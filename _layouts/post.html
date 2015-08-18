@@ -3,8 +3,19 @@ layout: default
 ---
 <div class="post">
   {% assign post = page %}
+    
     {% if post.tags.size > 0 %}
-        {% capture tags_content %}Posted with: {% endcapture %}
+      {% assign general_content_one = 'Posted' %}
+    {% else %}
+      {% if post.categories.size > 0 %}
+        {% assign general_content_one = 'Posted' %}
+      {% else %}
+        {% assign general_content_one = '' %}
+      {% endif %}
+    {% endif %}
+
+    {% if post.tags.size > 0 %}
+        {% capture tags_content %} with {% endcapture %}
         {% for post_tag in post.tags %}
           {% assign tag = site.data.tags[post_tag] %}
             {% if tag %}
@@ -16,6 +27,18 @@ layout: default
         {% assign tags_content = '' %}
     {% endif %}
 
+    {% if post.categories.size > 0 %}
+      {% for post_category in post.categories %}
+          {% assign category = site.data.categories[post_category] %}
+            {% if category %}
+                {% capture categories_content_temp %}{{ categories_content }} in <a href="/blog/category/{{ category.slug }}/">{{ category.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+                {% assign categories_content = categories_content_temp %}
+            {% endif %}
+        {% endfor %}
+    {% else %}
+      {% assign categories_content = '' %}
+    {% endif %}
+
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
@@ -23,5 +46,5 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
-  <p id="post-meta">{{ tags_content }}</p>
+  <p id="post-meta">{{ general_content_one }}{{ categories_content }}{{ general_content_two }}{{ tags_content }}</p>
 </div>

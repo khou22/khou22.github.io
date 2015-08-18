@@ -1,17 +1,23 @@
-- slug: programming
+programming:
+  slug: programming
   name: Programming
 
-- slug: wood
+wood:
+  slug: wood
   name: Wood
 
-- slug: school
+school:
+  slug: school
   name: School
 
-- slug: life
+life:
+  slug: life
   name: Life
 
-- slug: work
+work:
+  slug: work
   name: Work
 
-- slug: computer
+computer:
+  slug: computer
   name: Computer

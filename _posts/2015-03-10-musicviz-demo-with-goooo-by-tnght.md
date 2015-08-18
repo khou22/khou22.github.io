@@ -4,7 +4,7 @@ title: "MusicViz Demo with Goooo by TNGHT"
 author: "Kevin Hou"
 date:   2015-03-10 12:26:43
 description: ""
-category: programming
+category: Programming
 tags: [java, processing, musicviz]
 ---
 

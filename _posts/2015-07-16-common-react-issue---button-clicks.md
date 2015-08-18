@@ -4,7 +4,7 @@ title: "Common React Issue - Button Clicks"
 author: "Kevin Hou"
 date:   2015-07-16 13:10:57
 description: ""
-category: programming
+category: Programming
 tags: [salesforce, reactjs, javavscript]
 ---
 I've started to get the hang of <b>React</b> and <b>ES6</b>, but it's only been three weeks and there are of course tons and tons of things I haven't learned yet. I'll go over a couple of things that I think anyone starting to learn React could benefit from. In this blog post I'll go over Button Clicks.
