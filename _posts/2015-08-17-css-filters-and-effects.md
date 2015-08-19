@@ -35,7 +35,7 @@ Simply apply this to your CSS class:
 {% endhighlight %}
 
 or as an inline style using ReactJS:
-{% highlight css %}
+{% highlight javascript %}
 var backgroundBlur = {
   WebkitFilter: 'grayscale(0.5) blur(7px)'
 } //As an inline style - syntax
