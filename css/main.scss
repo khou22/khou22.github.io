@@ -45,10 +45,12 @@ $on-laptop:        800px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
+// Import custom sass files for use in the blog site
 @import
         "base",
         "layout",
         "syntax-highlighting",
         "custom",
-        "header"
+        "header",
+        "post"
 ;

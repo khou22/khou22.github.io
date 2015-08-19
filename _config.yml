@@ -1,5 +1,7 @@
 # Site settings
 title: Kevin Hou's Blog
+author: Kevin Hou
+location: San Francisco Bay Area
 email: kevin.ch.hou@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   A blog about programming, wood, and anything that comes to my mind.
