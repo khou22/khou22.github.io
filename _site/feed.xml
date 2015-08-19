@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Aug 2015 20:53:13 -0700</pubDate>
-    <lastBuildDate>Tue, 18 Aug 2015 20:53:13 -0700</lastBuildDate>
+    <pubDate>Wed, 19 Aug 2015 13:40:17 -0400</pubDate>
+    <lastBuildDate>Wed, 19 Aug 2015 13:40:17 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -42,7 +42,7 @@
 
 &lt;p&gt;Hope this helps.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 17 Aug 2015 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 17 Aug 2015 00:00:00 -0400</pubDate>
         <link>http://khou22.github.io/programming/2015/08/17/css-filters-and-effects.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2015/08/17/css-filters-and-effects.html</guid>
         
@@ -67,7 +67,7 @@
   &lt;li&gt;If you have no selection, it will create a square selection.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 17 Aug 2015 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 17 Aug 2015 00:00:00 -0400</pubDate>
         <link>http://khou22.github.io/computer/2015/08/17/cropping-square-images-in-mac-preview.html</link>
         <guid isPermaLink="true">http://khou22.github.io/computer/2015/08/17/cropping-square-images-in-mac-preview.html</guid>
         
@@ -95,7 +95,7 @@
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 04 Aug 2015 09:22:08 -0700</pubDate>
+        <pubDate>Tue, 04 Aug 2015 12:22:08 -0400</pubDate>
         <link>http://khou22.github.io/programming/2015/08/04/welcome-to-jekyll.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2015/08/04/welcome-to-jekyll.html</guid>
         
@@ -122,7 +122,7 @@
 &lt;span class=&quot;cm&quot;&gt;Full list of supported languages: http://pygments.org/languages/&lt;/span&gt;
 &lt;span class=&quot;cm&quot;&gt;*/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
-        <pubDate>Tue, 04 Aug 2015 09:22:08 -0700</pubDate>
+        <pubDate>Tue, 04 Aug 2015 12:22:08 -0400</pubDate>
         <link>http://khou22.github.io/introduction/2015/08/04/first-post.html</link>
         <guid isPermaLink="true">http://khou22.github.io/introduction/2015/08/04/first-post.html</guid>
         
@@ -161,7 +161,7 @@
 
 &lt;p&gt;Hope this helps!&lt;/p&gt;
 </description>
-        <pubDate>Fri, 24 Jul 2015 04:48:41 -0700</pubDate>
+        <pubDate>Fri, 24 Jul 2015 07:48:41 -0400</pubDate>
         <link>http://khou22.github.io/programming/2015/07/24/using-javascript-variables-from-another-file-in-reactjs.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2015/07/24/using-javascript-variables-from-another-file-in-reactjs.html</guid>
         
@@ -201,7 +201,7 @@
 
 &lt;p&gt;This method is particularly useful when you need many if-statements in a row. Hope this help!&lt;/p&gt;
 </description>
-        <pubDate>Tue, 21 Jul 2015 07:32:00 -0700</pubDate>
+        <pubDate>Tue, 21 Jul 2015 10:32:00 -0400</pubDate>
         <link>http://khou22.github.io/programming/2015/07/21/quick-short-ifthen-statement.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2015/07/21/quick-short-ifthen-statement.html</guid>
         
@@ -268,7 +268,7 @@
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
-        <pubDate>Mon, 20 Jul 2015 08:43:23 -0700</pubDate>
+        <pubDate>Mon, 20 Jul 2015 11:43:23 -0400</pubDate>
         <link>http://khou22.github.io/programming/2015/07/20/react-passing-information-from-child-to-parent-while-mapping-json-data.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2015/07/20/react-passing-information-from-child-to-parent-while-mapping-json-data.html</guid>
         
@@ -369,7 +369,7 @@
 
 &lt;p&gt;Hope this helped!&lt;/p&gt;
 </description>
-        <pubDate>Fri, 17 Jul 2015 07:07:02 -0700</pubDate>
+        <pubDate>Fri, 17 Jul 2015 10:07:02 -0400</pubDate>
         <link>http://khou22.github.io/programming/2015/07/17/css3-animation-basics-and-callback-solutions.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2015/07/17/css3-animation-basics-and-callback-solutions.html</guid>
         
@@ -398,7 +398,7 @@
 
 &lt;p&gt;Hope this helps! It’s a good way of storing your work so that you can reference it later. You might also want to store a local version of the spike by downlaoding the zip file just in case.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 17 Jul 2015 06:10:57 -0700</pubDate>
+        <pubDate>Fri, 17 Jul 2015 09:10:57 -0400</pubDate>
         <link>http://khou22.github.io/programming/2015/07/17/creating-a-spike-on-github.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2015/07/17/creating-a-spike-on-github.html</guid>
         
@@ -429,7 +429,7 @@ Websites: Github, Codeschool, Codeacademy, W3Schools, Codepen.io, Heroku, Gmail&
 
 &lt;p&gt;I’ll be posting about various topics including bug solutions, life advice, and my perspective on what the corporate life is like (hint: free ice cream).&lt;/p&gt;
 </description>
-        <pubDate>Thu, 16 Jul 2015 06:35:21 -0700</pubDate>
+        <pubDate>Thu, 16 Jul 2015 09:35:21 -0400</pubDate>
         <link>http://khou22.github.io/work/2015/07/16/salesforce-internship---summer-2015.html</link>
         <guid isPermaLink="true">http://khou22.github.io/work/2015/07/16/salesforce-internship---summer-2015.html</guid>
         
