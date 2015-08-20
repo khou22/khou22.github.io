@@ -475,7 +475,7 @@ pre {
 /*Override Bootstrap*/
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-dl, dd, ol, figure {
+dl, dd, figure {
   margin: 0 !important; }
 
 .facebook-bw {
@@ -543,3 +543,11 @@ dl, dd, ol, figure {
   margin: 2px; }
 
 /*Custom sass file for the post.scss layout*/
+/*For the index blog page*/
+.left-main {
+  width: 80%;
+  float: left; }
+
+.right-column {
+  width: 19%;
+  float: right; }
