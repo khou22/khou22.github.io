@@ -5,10 +5,17 @@
     margin: auto;
   }
 
+  &-td {
+    border: 1px solid black;
+    border-radius: 19px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
   &-link-box {
     height: 32px;
     width: 32px;
-    background-color: white;
+    /*background-color: white;*/
     margin: 2px;
   }
 }
