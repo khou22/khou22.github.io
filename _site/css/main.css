@@ -484,6 +484,16 @@ b {
 i {
   font-family: defaultFont_Italics !important; }
 
+em {
+  font-family: defaultFont_Italics !important; }
+
+strong {
+  font-family: defaultFont_bold !important;
+  color: red; }
+
+.bold-italics {
+  font-family: defaultFont_Bold_Italics !important; }
+
 .no-style {
   list-style: none;
   margin: 0 !important; }
