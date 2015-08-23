@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<!-- Blog homepage -->
+
+<div class="home left-main">
+
+  <h1 class="page-heading">Posts</h1>
+  <ul class="post-list">
+    <!-- Repeats for (maps) all posts -->
+    {% for tag in site.data.tags %}
+      <h5>
+        {{ tag[1].name }}
+      </h5>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
+
+<div class="right-column">
+  <div class="featured">
+    Featured posts:
+    <ol>
+      <li>First post</li>
+      <li>Second post</li>
+      <li>Third post</li>
+    </ol>
+  </div>
+  <div class="recent">
+    Recent posts:
+    <ol>
+      <li>First post</li>
+      <li>Second post</li>
+      <li>Third post</li>
+    </ol>
+  </div>
+  <div class="browse-category">
+    <a href="category">
+      Browse by Category
+    </a>
+  </div>
+  <div class="browse-tag">
+    <a href="tag">
+      Browse by Tag
+    </a>
+  </div>
+</div>
