@@ -481,6 +481,9 @@ dl, dd, figure {
 b {
   font-family: defaultFont_bold !important; }
 
+i {
+  font-family: defaultFont_Italics !important; }
+
 .no-style {
   list-style: none;
   margin: 0 !important; }
