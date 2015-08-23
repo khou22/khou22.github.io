@@ -551,3 +551,11 @@ dl, dd, figure {
 .right-column {
   width: 19%;
   float: right; }
+
+/*Custom sass for anything to do with tags*/
+.tag-list {
+  font-size: 2rem; }
+
+/*Custom sass for anything to do with categories*/
+.category-list {
+  font-size: 2rem; }

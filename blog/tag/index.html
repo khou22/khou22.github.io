@@ -6,13 +6,18 @@ layout: default
 
 <div class="home left-main">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Browse All Tags</h1>
+  <br />
   <ul class="post-list">
     <!-- Repeats for (maps) all posts -->
     {% for tag in site.data.tags %}
-      <h5>
-        {{ tag[1].name }}
-      </h5>
+      <li>
+        <h5 class="tag-list">
+          <a href="{{ site.baseurl }}/blog/tag/{{ tag[1].slug }}">
+            {{ tag[1].name }}
+          </a>
+        </h5>
+      </li>
     {% endfor %}
   </ul>
 
@@ -38,12 +43,12 @@ layout: default
     </ol>
   </div>
   <div class="browse-category">
-    <a href="category">
+    <a href="{{ site.baseurl }}/blog/category">
       Browse by Category
     </a>
   </div>
   <div class="browse-tag">
-    <a href="tag">
+    <a href="{{ site.baseurl }}/blog/tag">
       Browse by Tag
     </a>
   </div>
