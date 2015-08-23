@@ -7,19 +7,12 @@ layout: default
 <div class="home left-main">
 
   <h1 class="page-heading">Posts</h1>
-
   <ul class="post-list">
     <!-- Repeats for (maps) all posts -->
-    {% for post in site.posts %}
-      <li class="post-individual">
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <p>
-          {{ post.description }}
-        </p>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      </li>
+    {% for category in site.data.categories %}
+      <h5>
+        {{ category[1].name }}
+      </h5>
     {% endfor %}
   </ul>
 
