@@ -28,6 +28,15 @@ dl, dd, figure {
   margin: 0 !important;
 }
 
+b {
+   font-family: defaultFont_bold !important;
+}
+
+.no-style {
+   list-style: none;
+   margin: 0 !important;
+}
+
 .facebook-bw {
    background-image: url(./../media/site/icons/logos/Facebook.png);
    background-size: contain;

@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 23 Aug 2015 19:34:32 -0400</pubDate>
-    <lastBuildDate>Sun, 23 Aug 2015 19:34:32 -0400</lastBuildDate>
+    <pubDate>Sun, 23 Aug 2015 19:47:54 -0400</pubDate>
+    <lastBuildDate>Sun, 23 Aug 2015 19:47:54 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -419,11 +419,17 @@
 
 &lt;p&gt;I’ve been interning at Salesforce.com for the past couple weeks this summer and I figured I would keep a section of my blog devoted to my thoughts, experiences, and anything that comes to mind! I’ve been working as an Engineer on the UX Design team. Unfortunately, I can’t disclose my current project, but I will be able to show you guys in the future. I started working at Salesforce on June 22nd and these past three weeks have been some of my favorite weeks of my life! I’ve met so many amazing people and learned a ton of new skills. It’s truly a blessing to have this opportunity and I intend to make the most of it.&lt;/p&gt;
 
-&lt;p&gt;Here’s some background on the kinds of things I’m doing/using while I’m working here:
-Computer: Macbook Pro 15” Retina from 2014 with 2.8 GHz Intel Core i7, 16 gb of ram, and a 512 gb SSD
-Applications: Sublime Text 2, iTerm 2, Sketch, Slack, Chrome
-Languages: HTML, CSS, SCSS, Vanilla Javascript, React, ES6, and a little bit of Angular in the beginning
-Websites: Github, Codeschool, Codeacademy, W3Schools, Codepen.io, Heroku, Gmail&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here’s some background on the kinds of things I’m doing/using while I’m working here:&lt;/p&gt;
+&lt;ul class=&quot;no-style&quot;&gt;
+  &lt;li&gt;&lt;b&gt;Computer:&lt;/b&gt; Macbook Pro 15&quot; Retina from 2014 with 2.8 GHz Intel Core i7, 16 gb of ram, and a 512 gb SSD&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Applications:&lt;/b&gt; Sublime Text 2, iTerm 2, Sketch, Slack, Chrome&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Languages:&lt;/b&gt; HTML, CSS, SCSS, Vanilla Javascript, React, ES6, and a little bit of Angular in the beginning&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Websites:&lt;/b&gt; Github, Codeschool, Codeacademy, W3Schools, Codepen.io, Heroku, Gmail&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;I am one of two high schoolers in the Futureforce intern program at Salesforce.com, so the learning curve is pretty steep. I’m doing my best and I’ve really learned a lot!&lt;/p&gt;
 
