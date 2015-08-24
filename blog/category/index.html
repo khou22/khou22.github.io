@@ -13,7 +13,7 @@ layout: default
     {% for category in site.data.categories %}
       <li>
         <h5 class="category-list">
-          <a href="{{ site.baseurl }}/blog/category/{{ category[1].slug }}">
+          <a href="{{ category[1].slug | prepend: site.baseurl/blog/category }}">
             {{ category[1].name }}
           </a>
         </h5>
