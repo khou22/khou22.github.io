@@ -5,12 +5,14 @@ location: San Francisco Bay Area
 school: Lick-Wilmerding High School
 email: kevin.ch.hou@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  A blog about programming, wood, and anything that comes to my mind.
+  A blog about programming, wood, and anything that comes to my mind. Enjoy.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://khou22.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  khou22
+LinkedIn_url: "https://www.linkedin.com/in/kevinhou22"
 portfolio_url: "http://kevinhou.wix.com/projects"
+flickr_url: "https://www.flickr.com/photos/127963703@N03/albums"
 
 # Build settings
 markdown: kramdown
