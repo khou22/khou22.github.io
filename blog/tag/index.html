@@ -13,7 +13,7 @@ layout: default
     {% for tag in site.data.tags %}
       <li>
         <h5 class="tag-list">
-          <a href="{{ site.baseurl }}/blog/tag/{{ tag[1].slug }}">
+          <a href="{{ tag[1].slug | prepend: site.baseurl/blog/tag }}">
             {{ tag[1].name }}
           </a>
         </h5>
