@@ -29,9 +29,13 @@ layout: default
   <div class="featured">
     Featured posts:
     <ol>
-      <li>First post</li>
-      <li>Second post</li>
-      <li>Third post</li>
+      {% for post in site.posts %}
+        {% if post.featured != "no" %} <!-- if featured -->
+          <li>
+            <a class="recent-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
     </ol>
   </div>
   <div class="recent">

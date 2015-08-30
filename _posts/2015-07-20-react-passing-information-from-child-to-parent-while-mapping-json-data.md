@@ -6,6 +6,7 @@ date:   2015-07-20 15:43:23
 description: ""
 category: Programming
 tags: [reactjs, salesforce, javascript, html, es6]
+featured: "no"
 ---
 I've had a lot of issues in the past week trying to figure out how to pass information from the child component to the parent component while mapping JSON data.
  

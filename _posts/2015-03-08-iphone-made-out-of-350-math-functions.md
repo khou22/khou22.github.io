@@ -6,6 +6,7 @@ date: 2015-03-08 18:38:01
 description: "An overview of a picture of an iPhone that I generated using 350+ math equations on Desmos.com."
 category: School
 tags: [desmos]
+featured: "no"
 ---
 
 Last year, I made an iPhone using about 350 linear, conic, and piecewise functions. It took about 20 hours to make and was meant to model an iPhone home display. It is actually supposed to have animation, but due to the sheer number of equations, my browser would constantly crash if I tried it. I own a Mac with Retina display so I do not encourage you to try the animation.

@@ -6,6 +6,7 @@ author: 2015-08-17 15:03:23
 description: "How to use CSS3 animations to apply filters on images or divs."
 category: Programming
 tags: [CSS, CSS3, reactjs]
+featured: "no"
 ---
 
 Since most of the site (as of now) does not use Bootstrap as a default style tool, I've been doing a lot of custom CSS from scratch. My landing page is meant to mimic a sheet of glass with a semi-transparent background and border. Here's some quick and simple CSS that can turn any div into a piece of glass:

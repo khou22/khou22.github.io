@@ -6,6 +6,7 @@ author: 2015-08-17 21:37:21
 description: ""
 category: Computer
 tags: [osx]
+featured: "no"
 ---
 
 A discovered another Mac OS trick that uses the option key. To crop a picture in Preview into a square, hold the option key and the shift key while dragging with your mouse. This causes the selection to scale proportionally.

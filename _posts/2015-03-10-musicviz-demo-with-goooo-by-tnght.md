@@ -6,6 +6,7 @@ date:   2015-03-10 12:26:43
 description: ""
 category: Programming
 tags: [java, processing, musicviz]
+featured: "no"
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sbJhaRZhsZo" frameborder="0" allowfullscreen></iframe>

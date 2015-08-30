@@ -6,6 +6,7 @@ date:   2015-07-16 13:10:57
 description: ""
 category: Programming
 tags: [salesforce, reactjs, javavscript]
+featured: "no"
 ---
 I've started to get the hang of <b>React</b> and <b>ES6</b>, but it's only been three weeks and there are of course tons and tons of things I haven't learned yet. I'll go over a couple of things that I think anyone starting to learn React could benefit from. In this blog post I'll go over Button Clicks.
  

@@ -6,6 +6,7 @@ date: 2014-12-07 18:38:01
 description: "Summary of my handwriting font app. It takes the user's handwriting, creates a font out of it, and allows them to type in their own handwriting. The file can be exported as a vector file and printed on the CNC Watercolor bot to mimic a real person's writing."
 category: Programming
 tags: [processing, java]
+featured: "no"
 ---
 I recently programmed my own handwriting font app using Processing, a Java-based programming language. The program prompts the user's handwriting, stores it locally, then allows the user to type in their own handwriting. I spent many hours on this project, and I had a lot of fun making it! I was really going for a program that would not only be a challenge programming-wise, but would also be a great tool to have. The features include:
 <ul>

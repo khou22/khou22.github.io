@@ -6,6 +6,7 @@ date: 2014-10-05 22:34:10
 description: ""
 category: Wood
 tags: [wood-finish]
+featured: "no"
 ---
 
 I came across this video in my youTube "Recommended" playlist. I was intrigued by this video as it was such a unique concept and produced such an amazing result. Essentially, you add colored wax to your wood in order to highlight the grain. I really want to try this on one of my bowls (or even my next bat?) to see what it would look like. The steps are as follows:

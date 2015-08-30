@@ -6,6 +6,7 @@ date:   2015-07-17 13:10:57
 description: "Creating a backup of my playground files on Github. A file where you play around with technique and features is called a 'spike.'"
 category: Programming
 tags: [salesforce, unix, github]
+featured: "no"
 ---
 In programming, a spike a place to test out various methods before actually coding the finished project. For the past week, I've been practicing with a whole host of components that I will ultimately use in my final project such as modals, lists, animation, React components, json data, states, props...the list goes on and on and on. I didn't want to lose this code because, believe it or not, it can actually be really helpful down the road. Sometime I'll forget how I did something originally, and I'll have to refer back to the previous file. To solve this issue, I created a Spike branch in Github.
  
