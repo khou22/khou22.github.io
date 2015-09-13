@@ -70,3 +70,7 @@ unix:
 osx:
   slug: osx
   name: OSX
+
+sublime:
+  slug: sublime
+  name: Sublime Text

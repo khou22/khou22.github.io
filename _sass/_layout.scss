@@ -1,6 +1,12 @@
 /**
  * Site header
  */
+$brand-red:       #D5491F;
+$brand-orange:    #DA8D0F;
+$brand-green:     #80A454;
+$brand-grey:      #9DB7C1;
+$brand-blue:      #3286A8;
+
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -16,10 +22,12 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    vertical-align: middle;
+    color: $brand-blue;
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $brand-blue;
     }
 }
 

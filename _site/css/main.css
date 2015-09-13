@@ -156,9 +156,11 @@ pre {
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left; }
+  float: left;
+  vertical-align: middle;
+  color: #3286A8; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: #3286A8; }
 
 .site-nav {
   float: right;
@@ -477,6 +479,15 @@ body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 dl, dd, figure {
   margin: 0 !important; }
+
+hr {
+  border-color: black !important; }
+
+a:hover {
+  text-decoration: none !important; }
+
+a:active {
+  text-decoration: none !important; }
 
 b {
   font-family: defaultFont_bold !important; }

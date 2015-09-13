@@ -449,3 +449,10 @@ hr {
   background-color: transparent;
   margin: 2px;
 }
+
+.landing-logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 5;
+}
