@@ -16,7 +16,7 @@ Today, I discovered accessibility and assistive technology. It's really an intri
 I'm sure a lot of people have tabbed through webpages before. It's great for forms, but it can be a huge pain tabbing through a web app. In order to make things more accessible, Salesforce.com has a premade class called "assistive-text" that hides the enclosing text within the tag, but still allows it to be voiced over.
 <br />
 <br />
-I have an {% highlight html %}<a>{% endhighlight %} tag in my web app, and because it was an image, the voiceover function on the Mac couldn't read a label. To solve this, I added this right above the image inside of the parent div:
+I have an '\<a>' tag in my web app, and because it was an image, the voiceover function on the Mac couldn't read a label. To solve this, I added this right above the image inside of the parent div:
 {% highlight html %}
 <span className="assistive-text">Close</span>
 {% endhighlight %}
