@@ -1,3 +1,9 @@
+$brand-red:       #D5491F;
+$brand-orange:    #DA8D0F;
+$brand-green:     #80A454;
+$brand-grey:      #9DB7C1;
+$brand-blue:      #3286A8;
+
 /**
  * Reset some basic elements
  */
@@ -89,11 +95,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $brand-blue;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($brand-blue, 5%);
     }
 
     &:hover {

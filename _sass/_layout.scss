@@ -175,6 +175,7 @@ $brand-blue:      #3286A8;
 
 .page-heading {
     font-size: 24px;
+    color: $brand-red;
 }
 
 .post-list {
@@ -214,10 +215,15 @@ $brand-blue:      #3286A8;
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
+    color: $brand-blue;
 
     @include media-query($on-laptop) {
         font-size: 36px;
     }
+}
+
+.post-description {
+    color: grey;
 }
 
 .post-content {

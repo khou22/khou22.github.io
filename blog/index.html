@@ -15,7 +15,7 @@ layout: default
         <h2 style="margin-bottom: 0rem">
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-        <p>
+        <p class="post-description">
           {{ post.description }}
         </p>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -30,7 +30,7 @@ layout: default
 <div class="right-column">
   <div class="featured">
     Featured posts:
-    <ol>
+    <ol class="regular-font-color">
       {% for post in site.posts %}
         {% if post.featured != "no" %} <!-- if featured -->
           <li>
@@ -42,7 +42,7 @@ layout: default
   </div>
   <div class="recent">
     Recent posts:
-    <ol>
+    <ol class="regular-font-color">
       {% for post in site.posts %}
         {% if forloop.index0 < 3 %} <!-- Only display last 3 posts -->
           <li>

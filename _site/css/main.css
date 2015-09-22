@@ -64,10 +64,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: #3286A8;
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: #2c7694; }
   a:hover {
     color: #111;
     text-decoration: underline; }
@@ -263,7 +263,8 @@ pre {
   padding: 30px 0; }
 
 .page-heading {
-  font-size: 24px; }
+  font-size: 24px;
+  color: #D5491F; }
 
 .post-list {
   margin-left: 0;
@@ -292,10 +293,14 @@ pre {
 .post-title {
   font-size: 42px;
   letter-spacing: -1px;
-  line-height: 1; }
+  line-height: 1;
+  color: #3286A8; }
   @media screen and (max-width: 800px) {
     .post-title {
       font-size: 36px; } }
+
+.post-description {
+  color: grey; }
 
 .post-content {
   margin-bottom: 30px; }
@@ -569,6 +574,9 @@ strong {
   width: 100%;
   height: 100%; }
 
+.regular-font-color {
+  color: #9DB7C1; }
+
 /*For the _includes/header.html file*/
 .nav-bar {
   margin: auto; }
@@ -584,6 +592,9 @@ strong {
   margin: 2px; }
 
 /*Custom sass file for the post.scss layout*/
+.post-return-main {
+  color: #9DB7C1 !important; }
+
 /*For the index blog page*/
 .left-main {
   width: 80%;
@@ -592,6 +603,12 @@ strong {
 .right-column {
   width: 19%;
   float: right; }
+
+.featured {
+  color: #D5491F; }
+
+.recent {
+  color: #D5491F; }
 
 /*Custom sass for anything to do with tags*/
 .tag-list {

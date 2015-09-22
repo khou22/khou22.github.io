@@ -1,4 +1,11 @@
 /*For the index blog page*/
+
+$brand-red:       #D5491F;
+$brand-orange:    #DA8D0F;
+$brand-green:     #80A454;
+$brand-grey:      #9DB7C1;
+$brand-blue:      #3286A8;
+
 .left-main {
   width: 80%;
   float: left;
@@ -11,4 +18,12 @@
 
 .recent-link {
   
+}
+
+.featured {
+  color: $brand-red;
+}
+
+.recent {
+  color: $brand-red;
 }
