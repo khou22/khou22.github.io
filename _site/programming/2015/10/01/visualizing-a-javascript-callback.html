@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kevin Hou's Blog</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
-">
+  <title>Visualizing a Javascript Callback</title>
+  <meta name="description" content="Ever wondered what technical sounding words like “asyncrhonis” or “event-loops” meant? It took me a while to figure out all the complicated terminology assoc...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/category/">
+  <link rel="canonical" href="http://khou22.github.io/programming/2015/10/01/visualizing-a-javascript-callback.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -229,249 +228,59 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <!-- Blog homepage -->
+        <div class="post">
+  
+    
+    
+      
+    
 
-<div class="home left-main">
+    
+        
+        
+          
+            
+        
+    
 
-  <h1 class="page-heading">Browse All Categories</h1>
-  <br />
-  <ul class="post-list">
-    <!-- Repeats for (maps) all posts -->
     
-      <li>
-        <h5 class="category-list">
-          <a href="programming">
-            Programming
-          </a>
-        </h5>
-      </li>
+      
+          
+            
+                
+                
+            
+        
     
-      <li>
-        <h5 class="category-list">
-          <a href="wood">
-            Wood
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="school">
-            School
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="life">
-            Life
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="work">
-            Work
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="computer">
-            Computer
-          </a>
-        </h5>
-      </li>
-    
-  </ul>
+  <header class="post-header">
+    <p class="post-return-main"><a href="/blog">
+      <
+      Return to all blogs
+    </a></p>
+    <br />
+    <h1 class="post-title">Visualizing a Javascript Callback</h1>
+    <p class="post-meta">Oct 1, 2015 • Kevin Hou</p>
+  </header>
+  <article class="post-content">
+    <p>Ever wondered what technical sounding words like “asyncrhonis” or “event-loops” meant? It took me a while to figure out all the complicated terminology associated with code execution, but basically these words all relate to the order in which lines of code are run.</p>
 
-  <p class="rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></p>
+<p><br /></p>
 
+<p>I came across a neat web app that one of my LinkedIn connections posted called <a href="http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!" target="_blank">Loupe</a>. According to their website, <i>“Loupe is a little visualisation to help you understand how JavaScript’s call stack/event loop/callback queue interact with each other.”</i></p>
+
+<p><br /></p>
+
+<p>Here is a brief overview of the concept:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8aGhZQkoFbQ" frameborder="0" allowfullscreen=""></iframe>
+
+<p><br /></p>
+
+<p>If you are at all curious or just want a new perspective on things, I encourage you check out <a href="http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!" target="_blank">Loupe</a>!</p>
+
+  </article>
+  <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with </p>
 </div>
 
-<div class="right-column">
-  <div class="featured">
-    Featured posts:
-    <ol>
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/introduction/2015/08/04/first-post.html">First Blog Post on Github</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/08/02/best-way-to-customize-terminal.html">Best Way to Customize Terminal</a>
-          </li>
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/07/31/accessibility-enabling-voiceover-on-buttons-and-links.html">Accessibility: Enabling Voiceover on Buttons and Links</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/07/29/creating-a-roll-style-number-counter-that-mimics-a-slot-machine.html">Creating a Roll Style Number Counter that Mimics a Slot Machine</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/work/2015/07/16/salesforce-internship---summer-2015.html">Salesforce Internship - Summer 2015</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="recent">
-    Recent posts:
-    <ol>
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2015/10/01/visualizing-a-javascript-callback.html">Visualizing a Javascript Callback</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2015/09/12/react-syntax-highlighting-in-sublime-text-editor-babel-sublime.html">React Syntax Highlighting in Sublime Text Editor (Babel Sublime)</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2015/09/08/comparison-operators--vs-.html">Comparison Operators: '==' vs. '==='</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="browse-category">
-    <a href="/blog/category">
-      Browse by Category
-    </a>
-  </div>
-  <div class="browse-tag">
-    <a href="/blog/tag">
-      Browse by Tag
-    </a>
-  </div>
-</div>
       </div>
     </div>
 
