@@ -519,8 +519,14 @@ strong {
   list-style: none;
   margin: 0 !important; }
 
+.email-bw {
+  background-image: url(./../media/site/icons/email_bw.png);
+  background-size: contain;
+  width: 100%;
+  height: 100%; }
+
 .facebook-bw {
-  background-image: url(./../media/site/icons/logos/Facebook.png);
+  background-image: url(./../media/site/icons/logos/Facebook_bw.png);
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -528,49 +534,49 @@ strong {
   height: 100%; }
 
 .flickr-bw {
-  background-image: url(./../media/site/icons/logos/Flickr.png);
+  background-image: url(./../media/site/icons/logos/Flickr_bw.png);
   background-size: contain;
   width: 100%;
   height: 100%; }
 
 .gallery-bw {
-  background-image: url(./../media/site/icons/gallery.png);
+  background-image: url(./../media/site/icons/gallery_bw.png);
   background-size: contain;
   width: 100%;
   height: 100%; }
 
 .github-bw {
-  background-image: url(./../media/site/icons/logos/Github.png);
+  background-image: url(./../media/site/icons/logos/Github_bw.png);
   background-size: contain;
   width: 100%;
   height: 100%; }
 
 .home-bw {
-  background-image: url(./../media/site/icons/home.png);
+  background-image: url(./../media/site/icons/home_bw.png);
   background-size: contain;
   width: 100%;
   height: 100%; }
 
 .highSchool-bw {
-  background-image: url(./../media/site/icons/highSchool.png);
+  background-image: url(./../media/site/icons/highSchool_bw.png);
   background-size: contain;
   width: 100%;
   height: 100%; }
 
 .instagram-bw {
-  background-image: url(./../media/site/icons/logos/Instagram.png);
+  background-image: url(./../media/site/icons/logos/Instagram_bw.png);
   background-size: contain;
   width: 100%;
   height: 100%; }
 
 .linkedin-bw {
-  background-image: url(./../media/site/icons/logos/LinkedIn.png);
+  background-image: url(./../media/site/icons/logos/LinkedIn_bw.png);
   background-size: contain;
   width: 100%;
   height: 100%; }
 
 .twitter-bw {
-  background-image: url(./../media/site/icons/logos/Twitter.png);
+  background-image: url(./../media/site/icons/logos/Twitter_bw.png);
   background-size: contain;
   width: 100%;
   height: 100%; }
@@ -582,15 +588,18 @@ strong {
 .nav-bar {
   margin: auto; }
 .nav-td {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   border-radius: 19px;
-  margin-left: 4px;
-  margin-right: 4px; }
+  margin-left: 15px;
+  margin-right: 15px; }
 .nav-link-box {
   height: 32px;
   width: 32px;
   /*background-color: white;*/
-  margin: 2px; }
+  margin: auto; }
+.nav-link-label {
+  text-align: center;
+  color: #3286A8; }
 
 /*Custom sass file for the post.scss layout*/
 .post-return-main {

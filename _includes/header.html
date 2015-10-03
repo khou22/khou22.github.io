@@ -6,30 +6,16 @@
       {{ site.title }}
     </a>
 
-    <nav class="site-nav">
-      <!-- <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a> -->
-
-      <div class="trigger">
-        <!-- {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a> This is where the "Articles by tag: ..." and "Articles by Category: ..." come from.
-          {% endif %}
-        {% endfor %} -->
-      </div>
-    </nav>
   </div>
+
+
   <table class="nav-bar"> <!-- Custom header -->
     <tr>
       <td>
         <div class="nav-td">
           <a href="{{ site.baseurl }}/blog" data-toggle="tooltip" title="Home">
             <div class="nav-link-box home-bw"></div>
+            <p class="nav-link-label">Home</p>
           </a>
         </div>
       </td>
@@ -37,6 +23,7 @@
         <div class="nav-td">
           <a href="{{ site.LinkedIn_url }}" target="_blank" data-toggle="tooltip" title="LinkedIn">
             <div class="nav-link-box linkedin-bw"></div>
+            <p class="nav-link-label">LinkedIn</p>
           </a>
         </div>
       </td>
@@ -44,6 +31,7 @@
         <div class="nav-td">
           <a href="https://github.com/{{ site.github_username }}" target="_blank" data-toggle="tooltip" title="Github">
             <div class="nav-link-box github-bw"></div>
+            <p class="nav-link-label">Github</p>
           </a>
         </div>
       </td>
@@ -51,6 +39,7 @@
         <div class="nav-td">
           <a href="{{ site.flickr_url }}" target="_blank" data-toggle="tooltip" title="Flickr">
             <div class="nav-link-box flickr-bw"></div>
+            <p class="nav-link-label">Flickr</p>
           </a>
         </div>
       </td>
@@ -58,6 +47,7 @@
         <div class="nav-td">
           <a href="{{ site.portfolio_url }}" target="_blank" data-toggle="tooltip" title="Portfolio">
             <div class="nav-link-box gallery-bw"></div>
+            <p class="nav-link-label">Portfolio</p>
           </a>
         </div>
       </td>
@@ -65,6 +55,15 @@
         <div class="nav-td">
           <a href="{{ site.school_profile }}" target="_blank" data-toggle="tooltip" title="School Profile">
             <div class="nav-link-box highSchool-bw"></div>
+            <p class="nav-link-label">School Profile</p>
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="nav-td">
+          <a href="{{ site.baseurl }}/contact" data-toggle="tooltip" title="Contact">
+            <div class="nav-link-box email-bw"></div>
+            <p class="nav-link-label">Contact</p>
           </a>
         </div>
       </td>
