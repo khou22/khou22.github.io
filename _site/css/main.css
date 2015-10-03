@@ -627,3 +627,13 @@ strong {
 /*Custom sass for anything to do with categories*/
 .category-list {
   font-size: 2rem; }
+
+/*For contact page*/
+.contact-header {
+  color: #3286A8; }
+.contact-main-column {
+  width: 55%;
+  float: left; }
+.contact-profile-column {
+  width: 40%;
+  float: right; }

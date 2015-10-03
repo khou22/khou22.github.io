@@ -1,0 +1,23 @@
+/*For contact page*/
+
+$brand-red:       #D5491F;
+$brand-orange:    #DA8D0F;
+$brand-green:     #80A454;
+$brand-grey:      #9DB7C1;
+$brand-blue:      #3286A8;
+
+.contact {
+  &-header {
+    color: $brand-blue;
+  }
+
+  &-main-column {
+    width: 55%;
+    float: left;
+  }
+
+  &-profile-column {
+    width: 40%;
+    float: right;
+  }
+}
