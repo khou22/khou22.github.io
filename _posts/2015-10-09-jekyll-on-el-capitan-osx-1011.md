@@ -19,7 +19,7 @@ zsh: command not found: jekyll
 
 <br />
 
-For anyone wondering how to fix this, I found the solution after poking around online:
+I believe this is due to a new system security setting that prohibits ruby gems from being downloaded in the traditional way. For anyone wondering how to fix this, I found the solution after poking around online:
 
 <br />
 
