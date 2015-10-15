@@ -606,6 +606,8 @@ strong {
 .nav-link-label {
   text-align: center;
   color: #3286A8; }
+.nav-custom-spacing {
+  margin-bottom: 12px; }
 
 /*Custom sass file for the post.scss layout*/
 .post-return-main {
