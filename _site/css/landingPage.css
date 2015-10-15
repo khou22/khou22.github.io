@@ -128,6 +128,12 @@ hr {
   border-radius: 1rem;
   border: 1px solid gray;
 
+  /*Fade in animation*/
+  -webkit-animation-name: FadeInDiv;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-duration: 3000ms;
+
   /*Shadow*/
   border-bottom: 2px solid;
   border-bottom-color: #ccc;

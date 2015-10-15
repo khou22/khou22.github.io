@@ -31,7 +31,7 @@ var LandingPage = React.createClass({
       "./../media/site/images/backgrounds/Gavel.jpg",
       "./../media/site/images/backgrounds/Fruit_Tart.jpg",
       "./../media/site/images/backgrounds/Wood_Pens.jpg",
-      "./../media/site/images/backgrounds/MusicViz.jpg",
+      "./../media/site/images/backgrounds/MusicViz.png",
       "./../media/site/images/backgrounds/Japanese_Square_Plate.jpg",
       "./../media/site/images/backgrounds/Online_Sandwich_Ordering_Machine.jpg",
       "./../media/site/images/backgrounds/Kevin_Turning_Chaote_Viga.jpg",
