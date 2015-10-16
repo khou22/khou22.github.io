@@ -645,3 +645,6 @@ strong {
 .contact-profile-column {
   width: 40%;
   float: right; }
+
+.project-hr {
+  border-color: #9DB7C1 !important; }

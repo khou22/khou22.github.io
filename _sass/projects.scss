@@ -1,0 +1,19 @@
+$brand-red:       #D5491F;
+$brand-orange:    #DA8D0F;
+$brand-green:     #80A454;
+$brand-grey:      #9DB7C1;
+$brand-blue:      #3286A8;
+
+.project {
+  &-title {
+
+  }
+
+  &-description {
+
+  }
+
+  &-hr {
+    border-color: $brand-grey !important;
+  }
+}
