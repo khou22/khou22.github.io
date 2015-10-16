@@ -308,8 +308,8 @@ hr {
 .modal__content {
     padding-top: 2rem;
     padding: 1rem;
-    overflow: hidden;
-    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
     border: 1px solid black;
 }
 .modal__footer {
