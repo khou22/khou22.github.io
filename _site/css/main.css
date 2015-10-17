@@ -628,6 +628,10 @@ strong {
 .recent {
   color: #D5491F; }
 
+.number-of-posts {
+  font-size: 20px;
+  color: #9DB7C1; }
+
 /*Custom sass for anything to do with tags*/
 .tag-list {
   font-size: 2rem; }

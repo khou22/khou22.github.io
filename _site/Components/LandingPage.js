@@ -3,7 +3,8 @@
 var images = new Array() //Declare array
 function preload() { //Preload the images ahead of time so they don't lag
   for (i = 0; i < preload.arguments.length; i++) {
-    images[i] = new Image()
+    // console.log("Preloading:", images[i]); //Feedback
+    images[i] = new Image() //Creates the image tag for each image
     images[i].src = preload.arguments[i]
   }
 }
