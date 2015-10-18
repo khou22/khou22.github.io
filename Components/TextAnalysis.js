@@ -4,7 +4,7 @@ reader.onload = function(e) { //Callback if reader is used
   readerOutput = reader.result; //Stores the results
   console.log("File Reader Complete"); //Feedback
 }
-var callbackTime = 1000;
+var callbackTime = 1000; //Defines how long the user should wait for the file to load
 
 var StrToArray = function(data) {
   console.log(data);
@@ -27,7 +27,7 @@ var StrToArray = function(data) {
   }
   console.log(strArray); //Feedback
   return(strArray); //Return array
-}
+};
 
 var TextAnalysis = React.createClass({
   getInitialState: function() {
