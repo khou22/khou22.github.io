@@ -4,20 +4,36 @@ var doneReading = false;
 reader.onload = function(e) { //Callback if reader is used
   rawText = reader.result; //Stores the results
   if (document.getElementById("FacebookMessageData").checked) {
+    var frontSplit = document.getElementById("FacebookName").value;
     console.log("Format: Facebook Message Data")
-    var front = rawText.split("<p>"); //Split at the front
-    console.log(front)
+    var front = rawText.split(frontSplit); //Split at the front
+    // console.log(front)
     var back = [];
     for (var i = 0; i < front.length; i++) {
-      back.push(front[i].split("</p>")); //Split at the end
+      var temp = front[i].split("</p>");
+      console.log(temp[0])
+      var final = temp[0];
+      if (temp[0].indexOf("<p>")) {
+        if (temp[0].split("<p>")[1]) { //If it exists
+          final = temp[0].split("<p>")[1];
+        } else {
+          final = "3RR0R";
+        }
+      } else {
+        final = "3RR0R";
+      }
+      console.log(final); //Split again and get the last bit (the message)
+      if (final != "3RR0R") { //If not an error
+        back.push(final);
+      }
     }
     readerOutput = "";
     for (var i = 0; i < back.length; i++) {
-      // console.log(back[i][0]); //First element
-      readerOutput += " " + back[i][0];
+      readerOutput += " " + back[i];
     }
   }
   console.log("File Reader Complete"); //Feedback
+  console.log(readerOutput)
   // console.log(readerOutput)
   doneReading = true;
 }
@@ -98,6 +114,7 @@ var TextAnalysis = React.createClass({
         <div className="TA-file-input">
           <form onSubmit={this.loadFile.bind(this)}>
             Select text file: <input type="file" id="selectedFile" name="text" accept="." multiple/>
+            Exact Facebook Name<input type="text" name="Facebook Name" value="Kevin Hou" id="FacebookName" /> <br />
             <input type="radio" name="Analysis Type" value="NA" /> No Special Format<br />
             <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Facebook Messages<br />
             <input type="submit" Value="Analyze"/>
