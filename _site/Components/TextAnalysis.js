@@ -4,7 +4,8 @@ reader.onload = function(e) { //Callback if reader is used
   readerOutput = reader.result; //Stores the results
   console.log("File Reader Complete"); //Feedback
 }
-var callbackTime = 1000; //Defines how long the user should wait for the file to load
+var callbackTime = 15000; //Defines how long the user should wait for the file to load
+var countdownInterval;
 
 var StrToArray = function(data) {
   // console.log(data);
@@ -32,22 +33,55 @@ var StrToArray = function(data) {
 var TextAnalysis = React.createClass({
   getInitialState: function() {
     return {
-      textInput: "Five Five Four Three Four Five Five Too Too Three Two Four Three Five One Four Two"
+      textInput: "Five Five Four Three Four Five Five Too Too Three Two Four Three Five One Four Two",
+      fileName: "NA",
+      fileSize: 0,
+      fileType: "NA",
+      fileLastModified: 0,
+      fileLastModifiedDate: new Date(1998, 0, 1, 7, 10, 22, 0),
+      showModal: "false",
+      timeRemaining: callbackTime
     }
   },
   loadFile: function() {
     // console.log("Loading file"); //Feedback
     var selectedFile = document.getElementById('selectedFile').files[0]; //Find file
-    // console.log(selectedFile); //Feedback
+    console.log(selectedFile.lastModifiedDate); //Feedback
+    this.setState({ //Save the file details
+      fileName: selectedFile.name,
+      fileSize: selectedFile.size,
+      fileType: selectedFile.type,
+      fileLastModified: selectedFile.lastModified,
+      fileLastModifiedDate: selectedFile.lastModifiedDate
+    });
     setTimeout(this.uploadComplete.bind(this), callbackTime); //Create artificial callback to allow reader to do its work
+    countdownInterval = setInterval(this.countdownCallback.bind(this), 1000); //Run every second
     reader.readAsText(selectedFile); //Use the reader
     return false; //Prevent page auto-refresh
   },
+  countdownCallback: function() {
+    console.log(this.state.timeRemaining);
+    if (this.state.timeRemaining > 0) {
+      this.setState({
+        timeRemaining: this.state.timeRemaining - 1000
+      });
+    } else {
+      clearInterval(countdownInterval);
+    }
+  },
   uploadComplete: function() {
+    console.log("Callbacktime done");
     console.log(readerOutput);
     this.setState({
       textInput: readerOutput
     })
+  },
+  toggleModal: function(input) {
+    console.log("Switching to", input)
+    this.setState({
+      showModal: input
+    });
+    return false; //Prevent page auto-refresh
   },
   render: function() {
     return (
@@ -58,8 +92,16 @@ var TextAnalysis = React.createClass({
             <input type="submit" Value="Analyze"/>
           </form>
         </div>
-        <CheckInput textInput={this.state.textInput} />
-        <Analysis data={this.state.textInput} />
+        <CheckInput textInput={this.state.textInput}
+          fileName={this.state.fileName}
+          fileSize={this.state.fileSize}
+          fileType={this.state.fileType}
+          fileLastModified={this.state.fileLastModified}
+          fileLastModifiedDate={this.state.fileLastModifiedDate}
+          showModal={this.state.showModal}
+          toggleModal={this.toggleModal}/>
+        <Analysis data={this.state.textInput}
+          toggleModal={this.toggleModal}/>
       </div>
     )
   }
@@ -69,12 +111,55 @@ var CheckInput = React.createClass({
   render: function() {
     return (
       <div>
-        Inputed text:
-        <p>{this.props.textInput}</p>
+        <FileInputModal showModal={this.props.showModal}
+          textInput={this.props.textInput}
+          toggleModal={this.props.toggleModal}
+          fileName={this.props.fileName}
+          fileSize={this.props.fileSize}
+          fileType={this.props.fileType}
+          fileLastModified={this.props.fileLastModified}
+          fileLastModifiedDate={this.props.fileLastModifiedDate}/>
+        <button onClick={this.props.toggleModal.bind(this, "fileInfo")}>Show File Data</button>
       </div>
     )
   }
 });
+
+var FileInputModal = React.createClass({
+  render: function() {
+    if (this.props.showModal == "fileInfo") {
+      return (
+        <div aria-hidden="false" role="dialog" className="TA-modal">
+          <div className="TA-modal-backdrop">
+             </div>
+          <div className="TA-modal__container">
+            <div className="TA-modal__header">
+              <h2>File Upload Information</h2>
+            </div>
+            <div className="TA-modal__content">
+              <h3>File Information:</h3>
+              <p>Name: <i>{this.props.fileName}</i></p>
+              <p>Size: <i>{this.props.fileSize}</i></p>
+              <p>Type: <i>{this.props.fileType}</i></p>
+              <p>Last Modified: <i>{this.props.fileLastModified}</i></p>
+              <p>Date Last Modified: <i>{this.props.fileLastModifiedDate.toString()}</i></p>
+              Text:
+              <p>{this.props.textInput}</p>
+            </div>
+            <div className="TA-modal__footer">
+              <button onClick={this.props.toggleModal.bind(this, "false")}>Close</button>
+            </div>
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <span>
+        </span>
+      )
+    }
+  }
+})
 
 var Analysis = React.createClass({
   getInitialState: function() {
@@ -117,13 +202,13 @@ var Analysis = React.createClass({
         sortedWordsCount.push(1);
       }
     }
-    console.log(uniqueWords); //Feedback
-    console.log(uniqueWordsCount); //Feedback
+    // console.log(uniqueWords); //Feedback
+    // console.log(uniqueWordsCount); //Feedback
 
     var sortedWords = [];
     sortedWordsCount.sort(function(a, b){return b-a}); //Sort down
-    console.log("Not sorted", uniqueWordsCount);
-    console.log("Sorted", sortedWordsCount);
+    // console.log("Not sorted", uniqueWordsCount);
+    // console.log("Sorted", sortedWordsCount);
 
     var indexes = [];
     for (var i = sortedWordsCount.length; i >= 0; i+= -1) {
@@ -137,8 +222,8 @@ var Analysis = React.createClass({
       }
     }
 
-    console.log(sortedWords.reverse());
-    console.log("Sorted", sortedWordsCount);
+    // console.log(sortedWords.reverse());
+    // console.log("Sorted", sortedWordsCount);
 
     var counter = 0;
     var wordUsageTable = sortedWords.map(function(word) {
@@ -150,14 +235,9 @@ var Analysis = React.createClass({
         </tr>
       )
     })
-    var wordListNodes = this.state.strArray.map(function(word) { //Main logic
-      return (
-        word + ", "
-      )
-    });
+    
     return (
       <div>
-        {wordListNodes}
         <table>
           {wordUsageTable}
         </table>
