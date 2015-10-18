@@ -652,3 +652,8 @@ strong {
 
 .project-hr {
   border-color: #9DB7C1 !important; }
+
+/*TA is text-analysis for short*/
+.TA-file-input {
+  border: 1px solid black;
+  padding: 6px; }

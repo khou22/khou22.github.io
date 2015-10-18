@@ -1,0 +1,14 @@
+/*TA is text-analysis for short*/
+
+$brand-red:       #D5491F;
+$brand-orange:    #DA8D0F;
+$brand-green:     #80A454;
+$brand-grey:      #9DB7C1;
+$brand-blue:      #3286A8;
+
+.TA {
+  &-file-input {
+    border: 1px solid black;
+    padding: 6px;
+  }
+}

@@ -6,10 +6,33 @@ reader.onload = function(e) { //Callback if reader is used
 }
 var callbackTime = 1000;
 
+var StrToArray = function(data) {
+  console.log(data);
+  var strArray = [];
+  var splitAt = [" ", "-"]; //What constitutes a new word
+  var array1 = data.split(splitAt[0]);
+  for (var i = 0; i < array1.length; i++) {
+    strArray.push(array1[i]); //First split
+  }
+  for (var z = 1; z < splitAt.length; z++) { //All other splits
+    for (var i = 0; i < strArray.length; i++) {
+      if (strArray[i].indexOf(splitAt[z])) {
+        var array = strArray[i].split(splitAt[z]);
+        for (var j = 0; j < array.length; j++) {
+          strArray.push(array[j]);
+        }
+        strArray.splice(i, 1); //Remove element
+      }
+    }
+  }
+  console.log(strArray); //Feedback
+  return(strArray); //Return array
+}
+
 var TextAnalysis = React.createClass({
   getInitialState: function() {
     return {
-      textInput: "Kevin Hou"
+      textInput: "Kevin Hou. Hello hello test-st r hi hi hi hi hi this is a test string."
     }
   },
   loadFile: function() {
@@ -29,11 +52,14 @@ var TextAnalysis = React.createClass({
   render: function() {
     return (
       <div>
-        <CheckInput textInput = {this.state.textInput} />
-        <form onSubmit={this.loadFile.bind(this)}>
-          Select text file: <input type="file" id="selectedFile" name="text" accept=".txt" />
-          <input type="submit" Value="Analyze"/>
-        </form>
+        <div className="TA-file-input">
+          <form onSubmit={this.loadFile.bind(this)}>
+            Select text file: <input type="file" id="selectedFile" name="text" accept=".txt" />
+            <input type="submit" Value="Analyze"/>
+          </form>
+        </div>
+        <CheckInput textInput={this.state.textInput} />
+        <Analysis data={this.state.textInput} />
       </div>
     )
   }
@@ -43,7 +69,38 @@ var CheckInput = React.createClass({
   render: function() {
     return (
       <div>
+        Inputed text:
         <p>{this.props.textInput}</p>
+      </div>
+    )
+  }
+});
+
+var Analysis = React.createClass({
+  getInitialState: function() {
+    var data = this.props.data;
+    var strArray = StrToArray(data); //Run function
+    return {
+      str: this.props.data,
+      strArray: strArray
+    }
+  },
+  componentWillReceiveProps: function(props) { //Repeat the breakdown every time text is changed
+    var data = props.data;
+    var strArray = StrToArray(data); //Run function
+    this.setState({
+      str: props.data,
+      strArray: strArray
+    });
+  },
+  render: function() {
+    var wordNodes = this.state.strArray.map(function(word) {
+      var str = word + ", ";
+      return (str)
+    });
+    return (
+      <div>
+        {wordNodes}
       </div>
     )
   }
@@ -53,7 +110,7 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
-        This app analyzes text
+        <h1 className="contact-header">Text Analysis App</h1>
         <br />
         Started: October 17 2015 8:20 PST
         <hr />
