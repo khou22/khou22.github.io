@@ -657,6 +657,15 @@ strong {
 .TA-file-input {
   border: 1px solid black;
   padding: 6px; }
+.TA-word-list {
+  border: 1px solid black;
+  max-width: 60px;
+  word-wrap: break-word; }
+.TA-word-list-count {
+  border: 1px solid black; }
+.TA-word-list-table {
+  width: 100%;
+  text-align: center; }
 .TA-modal {
   position: fixed;
   top: 0;

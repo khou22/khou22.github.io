@@ -11,7 +11,7 @@ reader.onload = function(e) { //Callback if reader is used
     var back = [];
     for (var i = 0; i < front.length; i++) {
       var temp = front[i].split("</p>");
-      console.log(temp[0])
+      // console.log(temp[0])
       var final = temp[0];
       if (temp[0].indexOf("<p>")) {
         if (temp[0].split("<p>")[1]) { //If it exists
@@ -259,15 +259,15 @@ var Analysis = React.createClass({
       counter++; //Must be before the return
       return (
         <tr>
-          <td>{word}</td>
-          <td>{sortedWordsCount[counter-1]}</td>
+          <td className="TA-word-list">{word}</td>
+          <td className="TA-word-list-count">{sortedWordsCount[counter-1]}</td>
         </tr>
       )
     })
     
     return (
       <div>
-        <table>
+        <table className="TA-word-list-table">
           {wordUsageTable}
         </table>
       </div>

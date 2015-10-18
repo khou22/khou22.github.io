@@ -12,6 +12,21 @@ $brand-blue:      #3286A8;
     padding: 6px;
   }
 
+  &-word-list {
+    border: 1px solid black;
+    max-width: 60px;
+    word-wrap: break-word;
+  }
+
+  &-word-list-count {
+    border: 1px solid black;
+  }
+
+  &-word-list-table {
+    width: 100%;
+    text-align: center;
+  }
+
   &-modal {
     position: fixed;
     top: 0;
