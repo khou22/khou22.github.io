@@ -22,7 +22,7 @@ reader.onload = function(e) { //Callback if reader is used
       } else {
         final = "3RR0R";
       }
-      console.log(final); //Split again and get the last bit (the message)
+      // console.log(final); //Split again and get the last bit (the message)
       if (final != "3RR0R") { //If not an error
         back.push(final);
       }
@@ -33,7 +33,7 @@ reader.onload = function(e) { //Callback if reader is used
     }
   }
   console.log("File Reader Complete"); //Feedback
-  console.log(readerOutput)
+  // console.log(readerOutput)
   // console.log(readerOutput)
   doneReading = true;
 }
@@ -281,7 +281,10 @@ var App = React.createClass({
       <div>
         <h1 className="contact-header">Text Analysis App</h1>
         <br />
-        Started: October 17 2015 8:20 PST
+        <b>Started:</b> October 17 2015 8:20 PST <br />
+        <b>Instructions:</b> If you are uploading Facebook message data, find the file, change the file type to .txt, then use unix to split the file into smaller chunks:
+        <br />
+        $directory-containing-file  split -b 4m messages.txt
         <hr />
         <TextAnalysis />
       </div>
