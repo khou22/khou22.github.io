@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Articles by tag: javascript</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
-">
+  <title>Reading a Text File Using HTML and Javascript</title>
+  <meta name="description" content="I just started working on a project that will analyze the user’s text and look for patterns, word usage, etc. My first hurdle was creating a system in which ...">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -18,7 +17,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/tag/javascript/">
+  <link rel="canonical" href="http://khou22.github.io/programming/2015/10/17/reading-a-text-file-using-html-and-javascript.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -137,151 +136,98 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <header id="post-header">
-    <h1 id="post-title">javascript</h1>
-    <h4 id="post-subtitle">Articles by tag</h4>
-</header>
+        <div class="post">
+  
+    
+    
+      
+    
 
-<div id="post-content">
     
         
+        
+          
             
-            
-                <h3>2015</h3><div class="list-group">
-            
-      
-            
-      
-            <a href="/programming/2015/10/17/reading-a-text-file-using-html-and-javascript.html">
-                <h4>Reading a Text File Using HTML and Javascript</h4>
-            </a>
-
+                
+                
             
         
-            
-            
-      
+          
             
                 
                 
-                
-            
-      
-            <a href="/programming/2015/09/08/comparison-operators--vs-.html">
-                <h4>Comparison Operators: '==' vs. '==='</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2015/07/31/clearing-timeouts-and-intervals-before-they-trigger.html">
-                <h4>Clearing Timeouts and Intervals Before They Trigger</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2015/07/31/restarting-a-css3-animation-with-javascript-in-react.html">
-                <h4>Restarting a CSS3 Animation with Javascript in React</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2015/07/29/creating-a-roll-style-number-counter-that-mimics-a-slot-machine.html">
-                <h4>Creating a Roll Style Number Counter that Mimics a Slot Machine</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2015/07/24/using-javascript-variables-from-another-file-in-reactjs.html">
-                <h4>Using Javascript Variables From Another File in ReactJS</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2015/07/21/quick-short-ifthen-statement.html">
-                <h4>Quick, Short If/Then Statement</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2015/07/20/react-passing-information-from-child-to-parent-while-mapping-json-data.html">
-                <h4>React: Passing Information from Child to Parent while Mapping JSON Data</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2015/07/17/css3-animation-basics-and-callback-solutions.html">
-                <h4>CSS3 Animation Basics and Callback Solutions</h4>
-            </a>
-
-            
-                </div>
             
         
     
+
+    
+      
+          
+            
+                
+                
+            
+        
+    
+  <header class="post-header">
+    <p class="post-return-main"><a href="/blog">
+      <
+      Return to all blogs
+    </a></p>
+    <br />
+    <h1 class="post-title">Reading a Text File Using HTML and Javascript</h1>
+    <p class="post-meta">Oct 17, 2015 • Kevin Hou</p>
+  </header>
+  <article class="post-content">
+    <p>I just started working on a project that will analyze the user’s text and look for patterns, word usage, etc. My first hurdle was creating a system in which the user can upload a text file and have the server read it as a string.</p>
+
+<p>After a lot of piecing together research online, I think I’ve found the answer.</p>
+
+<p>Start with a simple HTML form input. This form will accept a tag and, when submitted, will run the function “loadFile.” I am using ReactJS so I had to bind the function to the parent.</p>
+
+<p><br /></p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">onSubmit=</span><span class="s">{this.loadFile.bind(this)}</span><span class="nt">&gt;</span>
+  Select text file: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span> <span class="na">id=</span><span class="s">&quot;selectedFile&quot;</span> <span class="na">name=</span><span class="s">&quot;text&quot;</span> <span class="na">accept=</span><span class="s">&quot;.txt&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<p><i>React requires closing slashes on the inputs because it only recognizes “complete” tags.</i></p>
+
+<p><br /></p>
+
+<p>Now here’s where the fun happens:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">loadFile</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Loading file&quot;</span><span class="p">);</span> <span class="c1">//Feedback</span>
+  <span class="kd">var</span> <span class="nx">selectedFile</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;selectedFile&#39;</span><span class="p">).</span><span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">//Identifying the selected file using the id of the form tag</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">selectedFile</span><span class="p">);</span> <span class="c1">//Feedback to make sure the file is loaded correctly</span>
+  <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span> <span class="c1">//Create a document reader (built into HTML5)</span>
+  <span class="nx">reader</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//Declare the asyncronous callback for when a file is loaded into the reader</span>
+    <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">reader</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span> <span class="c1">//The contents of the text file</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span> <span class="c1">//Spits back the contents of the text file</span>
+  <span class="p">}</span>
+  <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsText</span><span class="p">(</span><span class="nx">selectedFile</span><span class="p">);</span> <span class="c1">//Calls the reader to read our selected text file</span>
+  <span class="c1">//The reader goes to its &quot;onload&quot; function and executes that code</span>
+  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">//Prevents the page from auto-refreshing</span>
+<span class="p">}</span></code></pre></div>
+
+<p><br /></p>
+
+<p>That’s it! It was so satisfying once it worked. Hope this helps!</p>
+
+<p><br /></p>
+
+<p>Main Sources:
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText">https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText</a>
+<a href="http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api">http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api</a>
+<a href="http://www.htmlgoodies.com/beyond/javascript/read-text-files-using-the-javascript-filereader.html#fbid=imWj_l2wfU6">http://www.htmlgoodies.com/beyond/javascript/read-text-files-using-the-javascript-filereader.html#fbid=imWj_l2wfU6</a>
+<a href="http://www.w3schools.com/tags/att_input_type.asp">http://www.w3schools.com/tags/att_input_type.asp</a></p>
+
+  </article>
+  <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/html/">HTML</a>, <a href="/blog/tag/javascript/">Javascript</a></p>
 </div>
+
       </div>
     </div>
 
