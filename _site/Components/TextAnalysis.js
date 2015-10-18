@@ -32,7 +32,7 @@ var StrToArray = function(data) {
 var TextAnalysis = React.createClass({
   getInitialState: function() {
     return {
-      textInput: "Five Five Four Three Four Five Five Three Two Four Three Five One Four Two"
+      textInput: "Five Five Four Three Four Five Five Too Too Three Two Four Three Five One Four Two"
     }
   },
   loadFile: function() {
@@ -131,6 +131,8 @@ var Analysis = React.createClass({
         // console.log(sortedWordsCount[i], "vs", uniqueWordsCount[j])
         if (sortedWordsCount[i] == uniqueWordsCount[j]) {
           sortedWords.push(uniqueWords[j]);
+          uniqueWordsCount.splice(j, 1);
+          uniqueWords.splice(j, 1);
         }
       }
     }
