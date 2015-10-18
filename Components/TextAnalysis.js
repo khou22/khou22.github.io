@@ -7,7 +7,7 @@ reader.onload = function(e) { //Callback if reader is used
 var callbackTime = 1000; //Defines how long the user should wait for the file to load
 
 var StrToArray = function(data) {
-  console.log(data);
+  // console.log(data);
   var strArray = [];
   var splitAt = [" ", "-"]; //What constitutes a new word
   var array1 = data.split(splitAt[0]);
@@ -25,14 +25,14 @@ var StrToArray = function(data) {
       }
     }
   }
-  console.log(strArray); //Feedback
+  // console.log(strArray); //Feedback
   return(strArray); //Return array
 };
 
 var TextAnalysis = React.createClass({
   getInitialState: function() {
     return {
-      textInput: "Kevin Hou. Hello hello test-st r hi hi hi hi hi this is a test string."
+      textInput: "Four Three Four Three Two Four Three One Four Two"
     }
   },
   loadFile: function() {
@@ -100,22 +100,47 @@ var Analysis = React.createClass({
     // *******   Word usage   *******
     var uniqueWords = [];
     var uniqueWordsCount = [];
-    console.log("Parsing", this.state.strArray);
+    var sortedWordsCount = [];
+    // console.log("Parsing", this.state.strArray);
     for (var i = 0; i < this.state.strArray.length; i++) {
       var foundWord = false;
       for (var j = 0; j < uniqueWords.length; j++) {
         if (this.state.strArray[i] == uniqueWords[j]) { //If find match
           uniqueWordsCount[j] = uniqueWordsCount[j] + 1; //Increase count for that word
+          sortedWordsCount[j] = sortedWordsCount[j] + 1;
           foundWord = true;
         }
       }
       if (!foundWord) {
         uniqueWords.push(this.state.strArray[i]); //Add to arrays
         uniqueWordsCount.push(1);
+        sortedWordsCount.push(1);
       }
     }
-    console.log(uniqueWords.length); //Feedback
-    console.log(uniqueWordsCount.length); //Feedback
+    console.log(uniqueWords); //Feedback
+    console.log(uniqueWordsCount); //Feedback
+
+    var sortedWords = [];
+    sortedWordsCount.sort(function(a, b){return b-a}); //Sort down
+    console.log("Not sorted", uniqueWordsCount);
+    console.log("Sorted", sortedWordsCount);
+
+    var indexes = [];
+    for (var i = 0; i < sortedWordsCount.length; i++) {
+      for (var j = 0; j < uniqueWordsCount.length; j++) {
+        // console.log(sortedWordsCount[i], "vs", uniqueWordsCount[j])
+        if (sortedWordsCount[i] == uniqueWordsCount[j]) {
+          console.log("Pushing", j)
+          indexes.push(j);
+        }
+      }
+    }
+    for (var i = 0; i < indexes.length; i++) {
+      sortedWords.push(uniqueWords[indexes[i]]); //Sort into decending
+    }
+
+    console.log(sortedWords);
+    console.log("Sorted", sortedWordsCount);
 
     var counter = 0;
     var wordUsageTable = uniqueWords.map(function(word) {
