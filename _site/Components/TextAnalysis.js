@@ -1,16 +1,18 @@
 var reader = new FileReader(); //New reader
-var readerOutput; //Declare global
+var readerOutput = "Default String"; //Declare global
+var doneReading = false;
 reader.onload = function(e) { //Callback if reader is used
   readerOutput = reader.result; //Stores the results
   console.log("File Reader Complete"); //Feedback
+  doneReading = true;
 }
-var callbackTime = 15000; //Defines how long the user should wait for the file to load
-var countdownInterval;
+
+var waitInterval;
 
 var StrToArray = function(data) {
   // console.log(data);
   var strArray = [];
-  var splitAt = [" ", "-"]; //What constitutes a new word
+  var splitAt = [" ", "-", "<", ">"]; //What constitutes a new word
   var array1 = data.split(splitAt[0]);
   for (var i = 0; i < array1.length; i++) {
     strArray.push(array1[i]); //First split
@@ -39,14 +41,13 @@ var TextAnalysis = React.createClass({
       fileType: "NA",
       fileLastModified: 0,
       fileLastModifiedDate: new Date(1998, 0, 1, 7, 10, 22, 0),
-      showModal: "false",
-      timeRemaining: callbackTime
+      showModal: "false"
     }
   },
   loadFile: function() {
     // console.log("Loading file"); //Feedback
     var selectedFile = document.getElementById('selectedFile').files[0]; //Find file
-    console.log(selectedFile.lastModifiedDate); //Feedback
+    console.log(selectedFile.size); //Feedback
     this.setState({ //Save the file details
       fileName: selectedFile.name,
       fileSize: selectedFile.size,
@@ -54,27 +55,20 @@ var TextAnalysis = React.createClass({
       fileLastModified: selectedFile.lastModified,
       fileLastModifiedDate: selectedFile.lastModifiedDate
     });
-    setTimeout(this.uploadComplete.bind(this), callbackTime); //Create artificial callback to allow reader to do its work
-    countdownInterval = setInterval(this.countdownCallback.bind(this), 1000); //Run every second
+    waitInterval = setInterval(this.uploadComplete.bind(this), 1000); //Create artificial callback to allow reader to do its work
     reader.readAsText(selectedFile); //Use the reader
     return false; //Prevent page auto-refresh
   },
-  countdownCallback: function() {
-    console.log(this.state.timeRemaining);
-    if (this.state.timeRemaining > 0) {
-      this.setState({
-        timeRemaining: this.state.timeRemaining - 1000
-      });
-    } else {
-      clearInterval(countdownInterval);
-    }
-  },
   uploadComplete: function() {
-    console.log("Callbacktime done");
-    console.log(readerOutput);
-    this.setState({
-      textInput: readerOutput
-    })
+    if (doneReading) {
+      clearInterval(waitInterval)
+      console.log(readerOutput.length);
+      console.log("Setting state");
+      this.setState({
+        textInput: readerOutput
+      })
+      console.log("Set state")
+    }
   },
   toggleModal: function(input) {
     console.log("Switching to", input)
@@ -222,6 +216,7 @@ var Analysis = React.createClass({
       }
     }
 
+    sortedWords.reverse();
     // console.log(sortedWords.reverse());
     // console.log("Sorted", sortedWordsCount);
 
