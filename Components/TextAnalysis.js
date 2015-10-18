@@ -1,9 +1,24 @@
 var reader = new FileReader(); //New reader
 var readerOutput = "Default String"; //Declare global
 var doneReading = false;
+var readingFacebook = true;
 reader.onload = function(e) { //Callback if reader is used
-  readerOutput = reader.result; //Stores the results
+  rawText = reader.result; //Stores the results
+  if (readingFacebook) {
+    var front = rawText.split("<p>"); //Split at the front
+    console.log(front)
+    var back = [];
+    for (var i = 0; i < front.length; i++) {
+      back.push(front[i].split("</p>")); //Split at the end
+    }
+    readerOutput = "";
+    for (var i = 0; i < back.length; i++) {
+      // console.log(back[i][0]); //First element
+      readerOutput += " " + back[i][0];
+    }
+  }
   console.log("File Reader Complete"); //Feedback
+  // console.log(readerOutput)
   doneReading = true;
 }
 
@@ -47,7 +62,7 @@ var TextAnalysis = React.createClass({
   loadFile: function() {
     // console.log("Loading file"); //Feedback
     var selectedFile = document.getElementById('selectedFile').files[0]; //Find file
-    console.log(selectedFile.size); //Feedback
+    // console.log(selectedFile.size); //Feedback
     this.setState({ //Save the file details
       fileName: selectedFile.name,
       fileSize: selectedFile.size,
@@ -82,7 +97,7 @@ var TextAnalysis = React.createClass({
       <div>
         <div className="TA-file-input">
           <form onSubmit={this.loadFile.bind(this)}>
-            Select text file: <input type="file" id="selectedFile" name="text" accept=".txt" />
+            Select text file: <input type="file" id="selectedFile" name="text" accept=".txt" multiple/>
             <input type="submit" Value="Analyze"/>
           </form>
         </div>
