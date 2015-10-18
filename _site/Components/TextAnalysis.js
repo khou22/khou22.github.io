@@ -82,7 +82,9 @@ var Analysis = React.createClass({
     var strArray = StrToArray(data); //Run function
     return {
       str: this.props.data,
-      strArray: strArray
+      strArray: strArray,
+      uniqueWords: [],
+      uniqueWordsCount: []
     }
   },
   componentWillReceiveProps: function(props) { //Repeat the breakdown every time text is changed
@@ -94,13 +96,48 @@ var Analysis = React.createClass({
     });
   },
   render: function() {
-    var wordNodes = this.state.strArray.map(function(word) {
-      var str = word + ", ";
-      return (str)
+    
+    // *******   Word usage   *******
+    var uniqueWords = [];
+    var uniqueWordsCount = [];
+    console.log("Parsing", this.state.strArray);
+    for (var i = 0; i < this.state.strArray.length; i++) {
+      var foundWord = false;
+      for (var j = 0; j < uniqueWords.length; j++) {
+        if (this.state.strArray[i] == uniqueWords[j]) { //If find match
+          uniqueWordsCount[j] = uniqueWordsCount[j] + 1; //Increase count for that word
+          foundWord = true;
+        }
+      }
+      if (!foundWord) {
+        uniqueWords.push(this.state.strArray[i]); //Add to arrays
+        uniqueWordsCount.push(1);
+      }
+    }
+    console.log(uniqueWords.length); //Feedback
+    console.log(uniqueWordsCount.length); //Feedback
+
+    var counter = 0;
+    var wordUsageTable = uniqueWords.map(function(word) {
+      counter++; //Must be before the return
+      return (
+        <tr>
+          <td>{word}</td>
+          <td>{uniqueWordsCount[counter-1]}</td>
+        </tr>
+      )
+    })
+    var wordListNodes = this.state.strArray.map(function(word) { //Main logic
+      return (
+        word + ", "
+      )
     });
     return (
       <div>
-        {wordNodes}
+        {wordListNodes}
+        <table>
+          {wordUsageTable}
+        </table>
       </div>
     )
   }
