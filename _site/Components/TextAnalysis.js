@@ -32,7 +32,7 @@ var StrToArray = function(data) {
 var TextAnalysis = React.createClass({
   getInitialState: function() {
     return {
-      textInput: "Four Three Four Three Two Four Three One Four Two"
+      textInput: "Five Five Four Three Four Five Five Three Two Four Three Five One Four Two"
     }
   },
   loadFile: function() {
@@ -126,29 +126,25 @@ var Analysis = React.createClass({
     console.log("Sorted", sortedWordsCount);
 
     var indexes = [];
-    for (var i = 0; i < sortedWordsCount.length; i++) {
+    for (var i = sortedWordsCount.length; i >= 0; i+= -1) {
       for (var j = 0; j < uniqueWordsCount.length; j++) {
         // console.log(sortedWordsCount[i], "vs", uniqueWordsCount[j])
         if (sortedWordsCount[i] == uniqueWordsCount[j]) {
-          console.log("Pushing", j)
-          indexes.push(j);
+          sortedWords.push(uniqueWords[j]);
         }
       }
     }
-    for (var i = 0; i < indexes.length; i++) {
-      sortedWords.push(uniqueWords[indexes[i]]); //Sort into decending
-    }
 
-    console.log(sortedWords);
+    console.log(sortedWords.reverse());
     console.log("Sorted", sortedWordsCount);
 
     var counter = 0;
-    var wordUsageTable = uniqueWords.map(function(word) {
+    var wordUsageTable = sortedWords.map(function(word) {
       counter++; //Must be before the return
       return (
         <tr>
           <td>{word}</td>
-          <td>{uniqueWordsCount[counter-1]}</td>
+          <td>{sortedWordsCount[counter-1]}</td>
         </tr>
       )
     })
