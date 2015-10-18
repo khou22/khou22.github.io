@@ -1,10 +1,10 @@
 var reader = new FileReader(); //New reader
 var readerOutput = "Default String"; //Declare global
 var doneReading = false;
-var readingFacebook = true;
 reader.onload = function(e) { //Callback if reader is used
   rawText = reader.result; //Stores the results
-  if (readingFacebook) {
+  if (document.getElementById("FacebookMessageData").checked) {
+    console.log("Format: Facebook Message Data")
     var front = rawText.split("<p>"); //Split at the front
     console.log(front)
     var back = [];
@@ -97,7 +97,9 @@ var TextAnalysis = React.createClass({
       <div>
         <div className="TA-file-input">
           <form onSubmit={this.loadFile.bind(this)}>
-            Select text file: <input type="file" id="selectedFile" name="text" accept=".txt" multiple/>
+            Select text file: <input type="file" id="selectedFile" name="text" accept="." multiple/>
+            <input type="radio" name="Analysis Type" value="NA" /> No Special Format<br />
+            <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Facebook Messages<br />
             <input type="submit" Value="Analyze"/>
           </form>
         </div>
