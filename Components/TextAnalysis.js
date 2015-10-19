@@ -7,7 +7,7 @@ reader.onload = function(e) { //Callback if reader is used
   rawText = reader.result; //Stores the results
   // console.log(rawText)
   
-  if (document.getElementById('NoFormat').checked) {
+  if (document.getElementById('NoFormat').checked || document.getElementById('Analyze').checked) {
     readerOutput = rawText;
   }
   if (document.getElementById("FacebookMessageData").checked) {
@@ -115,23 +115,83 @@ var TextAnalysis = React.createClass({
       waitInterval = setInterval(this.uploadComplete.bind(this), 1000); //Create artificial callback to allow reader to do its work
       reader.readAsText(selectedFile); //Use the reader
     } else {
-      // console.log("Done with all files")
+      console.log("Done with all files")
       clearInterval(waitInterval)
       // console.log(readerOutput.length)
-      console.log(document.getElementById('NoFormat').checked)
-      console.log(document.getElementById('FacebookMessageData').checked)
-      if (document.getElementById('NoFormat').checked == true && document.getElementById('FacebookMessageData').checked == false) {
-        console.log("Setting state");
+      if (document.getElementById('Analyze').checked == false) {
+        var strArray = StrToArray(readerOutput)
+        // *******   Word usage   *******
+        var uniqueWords = [];
+        var uniqueWordsCount = [];
+        var sortedWordsCount = [];
+        // console.log("Parsing", strArray);
+        for (var i = 0; i < strArray.length; i++) {
+          var foundWord = false;
+          for (var j = 0; j < uniqueWords.length; j++) {
+            if (strArray[i] == uniqueWords[j]) { //If find match
+              uniqueWordsCount[j] = uniqueWordsCount[j] + 1; //Increase count for that word
+              sortedWordsCount[j] = sortedWordsCount[j] + 1;
+              foundWord = true;
+            }
+          }
+          if (!foundWord) {
+            uniqueWords.push(strArray[i]); //Add to arrays
+            uniqueWordsCount.push(1);
+            sortedWordsCount.push(1);
+          }
+        }
+        // console.log(uniqueWords); //Feedback
+        // console.log(uniqueWordsCount); //Feedback
+
+        var sortedWords = [];
+        sortedWordsCount.sort(function(a, b){return b-a}); //Sort down
+        // console.log("Not sorted", uniqueWordsCount);
+        // console.log("Sorted", sortedWordsCount);
+
+        var indexes = [];
+        for (var i = sortedWordsCount.length; i >= 0; i+= -1) {
+          for (var j = 0; j < uniqueWordsCount.length; j++) {
+            // console.log(sortedWordsCount[i], "vs", uniqueWordsCount[j])
+            if (sortedWordsCount[i] == uniqueWordsCount[j]) {
+              sortedWords.push(uniqueWords[j]);
+              uniqueWordsCount.splice(j, 1);
+              uniqueWords.splice(j, 1);
+            }
+          }
+        }
+
+        sortedWords.reverse();
+        console.log(sortedWords, sortedWords.length);
+        console.log("Sorted", sortedWordsCount, sortedWordsCount.length);
+        var temp = "";
+        for (var i = 0; i < sortedWords.length; i++) {
+          temp += sortedWords[i] + "|" + sortedWordsCount[i] + "~";
+        }
+        console.log(temp)
+        readerOutput = temp;
+        // console.log(readerOutput)
+        var link = document.getElementById('downloadlink');
+        link.href = makeTextFile(readerOutput); //Create the download file
+        link.style.display = 'block';
+      } else { //If analyzing
+        var ray = readerOutput.split("~");
+        console.log(ray)
+        ray.splice(ray.length - 1, 1); //Cut off the undefined at the end
+        var a = [];
+        var b = [];
+        for (var i = 0; i < ray.length; i++) {
+          var ray2 = ray[i].split("|");
+          a.push(ray2[0]); //Words
+          b.push(ray2[1]); //Count
+        }
+        console.log(a)
+        console.log(b)
         this.setState({
-          textInput: readerOutput
+          wordList: a,
+          wordListCount: b
         })
-        console.log("Set state");
-        console.log(readerOutput.length);
       }
-      // console.log(readerOutput)
-      var link = document.getElementById('downloadlink');
-      link.href = makeTextFile(readerOutput);
-      link.style.display = 'block';
+      
     }
     return false; //Prevent page auto-refresh
   },
@@ -161,8 +221,11 @@ var TextAnalysis = React.createClass({
           <form onSubmit={this.loadFile.bind(this)}>
             Select text file: <input type="file" id="selectedFile" name="text" accept="." multiple/>
             Exact Facebook Name: <input type="text" name="Facebook Name" value="Kevin Hou" id="FacebookName" /> <br />
+            <input type="radio" name="Analysis Type" value="Analyze" id="Analyze"/> Analyze Compressed<br />
+            Compress: <br />
             <input type="radio" name="Analysis Type" value="NA" id="NoFormat"/> No Special Format<br />
             <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Compress Facebook Messages<br />
+            <input type="checkbox" name="Big Data" value="Big Data" id="BigData" /> Big Data<br />
             <button type="submit" Value="Analyze">Go</button>
           </form>
           <a download="Compressed Facebook Messages.txt" id="downloadlink" >Download</a>
@@ -256,67 +319,8 @@ var Analysis = React.createClass({
     });
   },
   render: function() {
-    
-    // *******   Word usage   *******
-    var uniqueWords = [];
-    var uniqueWordsCount = [];
-    var sortedWordsCount = [];
-    // console.log("Parsing", this.state.strArray);
-    for (var i = 0; i < this.state.strArray.length; i++) {
-      var foundWord = false;
-      for (var j = 0; j < uniqueWords.length; j++) {
-        if (this.state.strArray[i] == uniqueWords[j]) { //If find match
-          uniqueWordsCount[j] = uniqueWordsCount[j] + 1; //Increase count for that word
-          sortedWordsCount[j] = sortedWordsCount[j] + 1;
-          foundWord = true;
-        }
-      }
-      if (!foundWord) {
-        uniqueWords.push(this.state.strArray[i]); //Add to arrays
-        uniqueWordsCount.push(1);
-        sortedWordsCount.push(1);
-      }
-    }
-    // console.log(uniqueWords); //Feedback
-    // console.log(uniqueWordsCount); //Feedback
-
-    var sortedWords = [];
-    sortedWordsCount.sort(function(a, b){return b-a}); //Sort down
-    // console.log("Not sorted", uniqueWordsCount);
-    // console.log("Sorted", sortedWordsCount);
-
-    var indexes = [];
-    for (var i = sortedWordsCount.length; i >= 0; i+= -1) {
-      for (var j = 0; j < uniqueWordsCount.length; j++) {
-        // console.log(sortedWordsCount[i], "vs", uniqueWordsCount[j])
-        if (sortedWordsCount[i] == uniqueWordsCount[j]) {
-          sortedWords.push(uniqueWords[j]);
-          uniqueWordsCount.splice(j, 1);
-          uniqueWords.splice(j, 1);
-        }
-      }
-    }
-
-    sortedWords.reverse();
-    // console.log(sortedWords.reverse());
-    // console.log("Sorted", sortedWordsCount);
-
-    var counter = 0;
-    var wordUsageTable = sortedWords.map(function(word) {
-      counter++; //Must be before the return
-      return (
-        <tr>
-          <td className="TA-word-list">{word}</td>
-          <td className="TA-word-list-count">{sortedWordsCount[counter-1]}</td>
-        </tr>
-      )
-    })
-    
     return (
       <div>
-        <table className="TA-word-list-table">
-          {wordUsageTable}
-        </table>
       </div>
     )
   }
@@ -332,6 +336,8 @@ var App = React.createClass({
         <b>Instructions:</b> If you are uploading Facebook message data, find the file, change the file type to .txt, then use unix to split the file into smaller chunks:
         <br />
         $directory-containing-file  split -b 4m messages.txt
+        <br />
+        *Checking "Big Data" cuts the words with only one use
         <hr />
         <TextAnalysis />
       </div>
