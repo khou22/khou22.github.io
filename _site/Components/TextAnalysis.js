@@ -11,12 +11,19 @@ reader.onload = function(e) { //Callback if reader is used
     readerOutput = rawText;
   }
   if (document.getElementById("FacebookMessageData").checked) {
-    var frontSplit = document.getElementById("FacebookName").value;
+    var frontSplit = "Kevin Hou"
+    if (document.getElementById("FacebookName").value) {
+      frontSplit = document.getElementById("FacebookName").value;
+    }
     console.log("Format: Facebook Message Data")
+    console.log("Name: " + frontSplit)
     var front = rawText.split(frontSplit); //Split at the front
     // console.log(front)
     var back = [];
+    var percentageDone = 0;
     for (var i = 0; i < front.length; i++) {
+      percentageDone = 100 * (i/front.length);
+      console.log(percentageDone);
       var temp = front[i].split("</p>");
       // console.log(temp[0])
       var final = temp[0];
@@ -116,17 +123,23 @@ var TextAnalysis = React.createClass({
       waitInterval = setInterval(this.uploadComplete.bind(this), 1000); //Create artificial callback to allow reader to do its work
       reader.readAsText(selectedFile); //Use the reader
     } else {
-      console.log("Done with all files")
+      console.log("Done loading all files")
+
       clearInterval(waitInterval)
       // console.log(readerOutput.length)
-      if (document.getElementById('Analyze').checked == false) {
+      if (document.getElementById('Analyze').checked == false) { //Compressing
+        console.log("Compressing...");
         var strArray = StrToArray(readerOutput)
         // *******   Word usage   *******
+        console.log("Starting deconstruction")
         var uniqueWords = [];
         var uniqueWordsCount = [];
         var sortedWordsCount = [];
         // console.log("Parsing", strArray);
+        var percentageDone = 0;
         for (var i = 0; i < strArray.length; i++) {
+          percentageDone = 100 * (i/strArray.length);
+          console.log(percentageDone);
           var foundWord = false;
           for (var j = 0; j < uniqueWords.length; j++) {
             if (strArray[i] == uniqueWords[j]) { //If find match
@@ -150,37 +163,51 @@ var TextAnalysis = React.createClass({
         // console.log("Sorted", sortedWordsCount);
 
         var indexes = [];
+        console.log("Packaging...")
+        percentageDone = 0;
         for (var i = sortedWordsCount.length; i >= 0; i+= -1) {
+          percentageDone = 100 * ((sortedWordsCount.length - i)/sortedWordsCount.length);
+          console.log(percentageDone);
           for (var j = 0; j < uniqueWordsCount.length; j++) {
             // console.log(sortedWordsCount[i], "vs", uniqueWordsCount[j])
             if (sortedWordsCount[i] == uniqueWordsCount[j]) {
-              sortedWords.push(uniqueWords[j]);
-              uniqueWordsCount.splice(j, 1);
-              uniqueWords.splice(j, 1);
+              if (document.getElementById('BigData').checked) { //If doing big data
+                var threshold = 10; //Default 10
+                if (document.getElementById('BigDataValue').value) {
+                  threshold = document.getElementById('BigDataValue').value;
+                }
+                if (sortedWordsCount[i] > threshold) {
+                  sortedWords.push(uniqueWords[j]);
+                  uniqueWordsCount.splice(j, 1);
+                  uniqueWords.splice(j, 1);
+                }
+              } else {
+                sortedWords.push(uniqueWords[j]);
+                uniqueWordsCount.splice(j, 1);
+                uniqueWords.splice(j, 1);
+              }
             }
           }
         }
 
         sortedWords.reverse();
-        console.log(sortedWords, sortedWords.length);
-        console.log("Sorted", sortedWordsCount, sortedWordsCount.length);
-        if (document.getElementById('BigData').checked) { //If doing big data
-          var num = sortedWordsCount.indexOf(1); //Delete all words with just one occurance
-          var size = sortedWordsCount.length - num;
-          sortedWords.splice(num, size);
-          sortedWordsCount.splice(num, size);
-        }
+        // console.log(sortedWords, sortedWords.length);
+        // console.log("Sorted", sortedWordsCount, sortedWordsCount.length);
+        
         var temp = "";
         for (var i = 0; i < sortedWords.length; i++) {
           temp += sortedWords[i] + "|" + sortedWordsCount[i] + "~";
         }
-        console.log(temp)
+        // console.log(temp)
         readerOutput = temp;
         // console.log(readerOutput)
         var link = document.getElementById('downloadlink');
         link.href = makeTextFile(readerOutput); //Create the download file
         link.style.display = 'block';
+        console.log("Download Ready");
+
       } else { //If analyzing
+        console.log("Analyzing...");
         var ray = readerOutput.split("~");
         console.log(ray)
         ray.splice(ray.length - 1, 1); //Cut off the undefined at the end
@@ -227,12 +254,13 @@ var TextAnalysis = React.createClass({
         <div className="TA-file-input">
           <form onSubmit={this.loadFile.bind(this)}>
             Select text file: <input type="file" id="selectedFile" name="text" accept="." multiple/>
-            Exact Facebook Name: <input type="text" name="Facebook Name" value="Kevin Hou" id="FacebookName" /> <br />
             <input type="radio" name="Analysis Type" value="Analyze" id="Analyze"/> Analyze Compressed<br />
-            Compress: <br />
+            <b>Compress: </b><br />
             <input type="radio" name="Analysis Type" value="NA" id="NoFormat"/> No Special Format<br />
             <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Compress Facebook Messages<br />
-            <input type="checkbox" name="Big Data" value="Big Data" id="BigData" /> Big Data<br />
+            Exact Facebook Name: <input type="text" name="Facebook Name" placeholder="Kevin Hou" id="FacebookName" /> <br />
+            <input type="checkbox" name="Big Data" value="Big Data" id="BigData" /> Big Data: 
+            <input type="text" name="Big Data Value" placeholder="10" id="BigDataValue" /><br />
             <button type="submit" Value="Analyze">Go</button>
           </form>
           <a download="Compressed Facebook Messages.txt" id="downloadlink" >Download</a>
@@ -315,14 +343,14 @@ var Analysis = React.createClass({
       counter++;
       return (
         <tr>
-          <td>{word}</td>
-          <td>{frequency[counter - 1]}</td>
+          <td className="TA-word-list">{word}</td>
+          <td className="TA-word-list-count">{frequency[counter - 1]}</td>
         </tr>
       );
     });
     return (
       <div>
-        <table>
+        <table className="TA-word-list-table">
           {tableNodes}
         </table>
       </div>
