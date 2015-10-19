@@ -5,6 +5,11 @@ var numberOfFiles = 1;
 var currentFile = 0;
 reader.onload = function(e) { //Callback if reader is used
   rawText = reader.result; //Stores the results
+  // console.log(rawText)
+  
+  if (document.getElementById('NoFormat').checked) {
+    readerOutput = rawText;
+  }
   if (document.getElementById("FacebookMessageData").checked) {
     var frontSplit = document.getElementById("FacebookName").value;
     console.log("Format: Facebook Message Data")
@@ -33,11 +38,11 @@ reader.onload = function(e) { //Callback if reader is used
       readerOutput += " " + back[i];
     }
   }
-  console.log("File Reader Complete"); //Feedback
+  // console.log("File Reader Complete"); //Feedback
   // console.log(readerOutput)
   // console.log(readerOutput)
   currentFile++; //Next file
-  console.log("Next file");
+  // console.log("Next file");
   doneReading = true;
 }
 
@@ -61,7 +66,7 @@ var waitInterval;
 var StrToArray = function(data) {
   // console.log(data);
   var strArray = [];
-  var splitAt = [" ", "-", "<", ">"]; //What constitutes a new word
+  var splitAt = [" ", "-", "<", ">", "&#039;"]; //What constitutes a new word
   var array1 = data.split(splitAt[0]);
   for (var i = 0; i < array1.length; i++) {
     strArray.push(array1[i]); //First split
@@ -110,9 +115,20 @@ var TextAnalysis = React.createClass({
       waitInterval = setInterval(this.uploadComplete.bind(this), 1000); //Create artificial callback to allow reader to do its work
       reader.readAsText(selectedFile); //Use the reader
     } else {
-      console.log("Done with all files")
+      // console.log("Done with all files")
       clearInterval(waitInterval)
-      console.log(readerOutput.length)
+      // console.log(readerOutput.length)
+      console.log(document.getElementById('NoFormat').checked)
+      console.log(document.getElementById('FacebookMessageData').checked)
+      if (document.getElementById('NoFormat').checked == true && document.getElementById('FacebookMessageData').checked == false) {
+        console.log("Setting state");
+        this.setState({
+          textInput: readerOutput
+        })
+        console.log("Set state");
+        console.log(readerOutput.length);
+      }
+      // console.log(readerOutput)
       var link = document.getElementById('downloadlink');
       link.href = makeTextFile(readerOutput);
       link.style.display = 'block';
@@ -123,17 +139,11 @@ var TextAnalysis = React.createClass({
     if (doneReading) {
       if (currentFile <= numberOfFiles) {
         doneReading = false;
-        // console.log("Setting state");
-        // this.setState({
-        //   textInput: this.state.textInput + " " + readerOutput
-        // })
-        // console.log(readerOutput.length);
-        // console.log("Set state")
         this.loadFile(); //Do it again
       } else {
         clearInterval(waitInterval)
-        console.log("Done with all files")
-        console.log(readerOutput.length)
+        // console.log("Done with all files")
+        // console.log(readerOutput.length)
       }
     }
   },
@@ -151,11 +161,11 @@ var TextAnalysis = React.createClass({
           <form onSubmit={this.loadFile.bind(this)}>
             Select text file: <input type="file" id="selectedFile" name="text" accept="." multiple/>
             Exact Facebook Name: <input type="text" name="Facebook Name" value="Kevin Hou" id="FacebookName" /> <br />
-            <input type="radio" name="Analysis Type" value="NA" /> No Special Format<br />
-            <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Facebook Messages<br />
-            <input type="submit" Value="Analyze"/>
+            <input type="radio" name="Analysis Type" value="NA" id="NoFormat"/> No Special Format<br />
+            <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Compress Facebook Messages<br />
+            <button type="submit" Value="Analyze">Go</button>
           </form>
-          <a download="info.txt" id="downloadlink" >Download</a>
+          <a download="Compressed Facebook Messages.txt" id="downloadlink" >Download</a>
         </div>
         <CheckInput textInput={this.state.textInput}
           fileName={this.state.fileName}
