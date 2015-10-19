@@ -7,9 +7,16 @@ $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 
 .TA {
+  &-header {
+    color: $brand-blue;
+    line-height: 6px;
+  }
+
   &-file-input {
     border: 1px solid black;
-    padding: 6px;
+    padding: 10px;
+    height: 25rem;
+    margin: 1rem;
   }
 
   &-word-list {
@@ -24,6 +31,23 @@ $brand-blue:      #3286A8;
 
   &-word-list-table {
     width: 100%;
+    text-align: center;
+  }
+
+  &-options {
+    width: 60%;
+    float: left;
+    height: 100%;
+    border-right: 1px solid black;
+    margin-left: 12px;
+  }
+
+  &-download {
+    width: 35%;
+    float: right;
+    height: 100%;
+    font-size: 20px;
+    margin-top: 6rem;
     text-align: center;
   }
 

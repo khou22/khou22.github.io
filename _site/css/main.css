@@ -654,9 +654,14 @@ strong {
   border-color: #9DB7C1 !important; }
 
 /*TA is text-analysis for short*/
+.TA-header {
+  color: #3286A8;
+  line-height: 6px; }
 .TA-file-input {
   border: 1px solid black;
-  padding: 6px; }
+  padding: 10px;
+  height: 25rem;
+  margin: 1rem; }
 .TA-word-list {
   border: 1px solid black;
   max-width: 60px;
@@ -665,6 +670,19 @@ strong {
   border: 1px solid black; }
 .TA-word-list-table {
   width: 100%;
+  text-align: center; }
+.TA-options {
+  width: 60%;
+  float: left;
+  height: 100%;
+  border-right: 1px solid black;
+  margin-left: 12px; }
+.TA-download {
+  width: 35%;
+  float: right;
+  height: 100%;
+  font-size: 20px;
+  margin-top: 6rem;
   text-align: center; }
 .TA-modal {
   position: fixed;

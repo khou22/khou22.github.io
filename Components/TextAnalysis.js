@@ -96,17 +96,19 @@ var StrToArray = function(data) {
 var TextAnalysis = React.createClass({
   getInitialState: function() {
     return {
-      wordList: ["Three", "Two", "One"],
-      wordListCount: [3, 2, 1],
+      wordList: [],
+      wordListCount: [],
       fileName: "NA",
       fileSize: 0,
       fileType: "NA",
       fileLastModified: 0,
       fileLastModifiedDate: new Date(1998, 0, 1, 7, 10, 22, 0),
-      showModal: "false"
+      showModal: "false",
+      currentPercentage: 0
     }
   },
   loadFile: function() {
+    document.getElementById('downloadlink').innerHTML = "Working...";
     if (currentFile < numberOfFiles) {
       console.log("Loading file", currentFile); //Feedback
       var files = document.getElementById('selectedFile').files;
@@ -114,15 +116,16 @@ var TextAnalysis = React.createClass({
       var selectedFile = files[currentFile]; //Find file
       // console.log(selectedFile.size); //Feedback
       this.setState({ //Save the file details
-        fileName: this.state.fileName + ", " + selectedFile.name,
-        fileSize: this.state.fileSize + ", " + selectedFile.size,
-        fileType: this.state.fileType + ", " + selectedFile.type,
-        fileLastModified: this.state.fileLastModified + ", " + selectedFile.lastModified,
-        fileLastModifiedDate: this.state.fileLastModifiedDate + ", " + selectedFile.lastModifiedDate
+        fileName: selectedFile.name,
+        fileSize: selectedFile.size,
+        fileType: selectedFile.type,
+        fileLastModified: selectedFile.lastModified,
+        fileLastModifiedDate: selectedFile.lastModifiedDate
       });
       waitInterval = setInterval(this.uploadComplete.bind(this), 1000); //Create artificial callback to allow reader to do its work
       reader.readAsText(selectedFile); //Use the reader
     } else {
+      document.getElementById('downloadlink').innerHTML = "Compressing...";
       console.log("Done loading all files")
 
       clearInterval(waitInterval)
@@ -163,6 +166,7 @@ var TextAnalysis = React.createClass({
         // console.log("Sorted", sortedWordsCount);
 
         var indexes = [];
+        document.getElementById('downloadlink').innerHTML = "Packaging...";
         console.log("Packaging...")
         percentageDone = 0;
         for (var i = sortedWordsCount.length; i >= 0; i+= -1) {
@@ -204,9 +208,11 @@ var TextAnalysis = React.createClass({
         var link = document.getElementById('downloadlink');
         link.href = makeTextFile(readerOutput); //Create the download file
         link.style.display = 'block';
+        document.getElementById('downloadlink').innerHTML = "Download";
         console.log("Download Ready");
 
       } else { //If analyzing
+        document.getElementById('downloadlink').innerHTML = "Analyzing...";
         console.log("Analyzing...");
         var ray = readerOutput.split("~");
         console.log(ray)
@@ -224,6 +230,7 @@ var TextAnalysis = React.createClass({
           wordList: a,
           wordListCount: b
         })
+        document.getElementById('downloadlink').innerHTML = "Analysis Done";
       }
       
     }
@@ -252,21 +259,24 @@ var TextAnalysis = React.createClass({
     return (
       <div>
         <div className="TA-file-input">
-          <form onSubmit={this.loadFile.bind(this)}>
-            Select text file: <input type="file" id="selectedFile" name="text" accept="." multiple/>
-            <input type="radio" name="Analysis Type" value="Analyze" id="Analyze"/> Analyze Compressed<br />
-            <b>Compress: </b><br />
-            <input type="radio" name="Analysis Type" value="NA" id="NoFormat"/> No Special Format<br />
-            <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Compress Facebook Messages<br />
-            Exact Facebook Name: <input type="text" name="Facebook Name" placeholder="Kevin Hou" id="FacebookName" /> <br />
-            <input type="checkbox" name="Big Data" value="Big Data" id="BigData" /> Big Data: 
-            <input type="text" name="Big Data Value" placeholder="10" id="BigDataValue" /><br />
-            <button type="submit" Value="Analyze">Go</button>
-          </form>
-          <a download="Compressed Facebook Messages.txt" id="downloadlink" >Download</a>
+          <div className="TA-options">
+            <form onSubmit={this.loadFile.bind(this)}>
+              Select text file: <input type="file" id="selectedFile" name="text" accept="." multiple/>
+              <input type="radio" name="Analysis Type" value="Analyze" id="Analyze"/> Analyze Compressed<br />
+              <b>Compress: </b><br />
+              <input type="radio" name="Analysis Type" value="NA" id="NoFormat"/> No Special Format<br />
+              <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Compress Facebook Messages<br />
+              Exact Facebook Name: <input type="text" name="Facebook Name" placeholder="Kevin Hou" id="FacebookName" /> <br />
+              <input type="checkbox" name="Big Data" value="Big Data" id="BigData" size="4" /> Big Data: <input type="text" name="Big Data Value" placeholder="10" id="BigDataValue" /><br />
+              <button type="submit" Value="Analyze">Go</button>
+            </form>
+          </div>
+          <div className="TA-download">
+            <p>Open Console to View Progress</p><br />
+            <a download="Compressed_Data.txt" id="downloadlink" >Ready to Receive</a>
+          </div>
         </div>
-        <CheckInput textInput={this.state.textInput}
-          fileName={this.state.fileName}
+        <CheckInput fileName={this.state.fileName}
           fileSize={this.state.fileSize}
           fileType={this.state.fileType}
           fileLastModified={this.state.fileLastModified}
@@ -286,7 +296,6 @@ var CheckInput = React.createClass({
     return (
       <div>
         <FileInputModal showModal={this.props.showModal}
-          textInput={this.props.textInput}
           toggleModal={this.props.toggleModal}
           fileName={this.props.fileName}
           fileSize={this.props.fileSize}
@@ -317,8 +326,6 @@ var FileInputModal = React.createClass({
               <p>Type: <i>{this.props.fileType}</i></p>
               <p>Last Modified: <i>{this.props.fileLastModified}</i></p>
               <p>Date Last Modified: <i>{this.props.fileLastModifiedDate.toString()}</i></p>
-              Text:
-              <p>{this.props.textInput}</p>
             </div>
             <div className="TA-modal__footer">
               <button onClick={this.props.toggleModal.bind(this, "false")}>Close</button>
@@ -362,16 +369,45 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
-        <h1 className="contact-header">Text Analysis App</h1>
+        <h1 className="TA-header">Text Analysis App</h1>
         <br />
+        <h4>By: Kevin Hou</h4>
         <b>Started:</b> October 17 2015 8:20 PST <br />
-        <b>Instructions:</b> If you are uploading Facebook message data, find the file, change the file type to .txt, then use unix to split the file into smaller chunks:
-        <br />
-        $directory-containing-file  split -b 4m messages.txt
-        <br />
-        *Checking "Big Data" cuts the words with only one use
-        <hr />
         <TextAnalysis />
+        <hr />
+        <b>Instructions:</b> 
+        <p>This is a two step process. First <b>compress</b> your file(s):</p>
+        <ol>
+          <b>Regular Text</b>
+          <li>Upload the file(s) by pressing the 'Choose Files' button</li>
+          <li>Select the 'No Special Format' radio button</li>
+          <li>If you have a slow computer, browser, massive file, or no patience, check big data to speed up the process. A high number corresponds with a faster process but less data.</li>
+          <li>Click 'Go'</li>
+          <li>Wait until the compression is complete (this can take a long time) then click download</li>
+        </ol>
+        <ol>
+          <b>Facebook Message Data</b>
+          <li>Download your Facebook user data if you haven't already. <a href="https://www.facebook.com/help/131112897028467/">Need help?</a></li>
+          <li>Locate the 'message.htm' file in the downloaded folder <i>(root/html/message.htm)</i></li>
+          <li>Change the file type to a plain text file by renaming the file to: <i>message.txt</i></li>
+          <li>Open the terminal and navigate to your message.txt directory. <a href="http://mally.stanford.edu/~sr/computing/basic-unix.html">Unix Commands</a></li>
+          <li>Enter the following: <i>directory-containing-file  split -b 4m messages.txt</i><br />
+            It should look like this: <i>$: directory-containing-file  split -b 4m messages.txt</i></li>
+          <li>Upload the file(s) by pressing the 'Choose Files' button</li>
+          <li>Select the 'Compress Facebook Messages' radio button</li>
+          <li>Check the 'Big Data' checkbox and enter at least '50' into the text field</li>
+          <li>Click 'Go'</li>
+          <li>Wait until the compression is complete (this can take a long time) then click download</li>
+        </ol>
+        *Checking "Big Data" cuts the words with frequencies under the specified number
+        <br />
+        <p>Now we can <b>analyze</b> our compressed data</p>
+        <ol>
+          <li>Refresh the page to clear the cache</li>
+          <li>Find the downloaded, compressed folder in your downloads folder. It should be named: <i>Compressed_Data.txt</i></li>
+          <li>Select the 'Analyze Compressed' radio button</li>
+          <li>Click go and see what you uncover!</li>
+        </ol>
       </div>
     )
   }
