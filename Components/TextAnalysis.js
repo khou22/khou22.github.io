@@ -29,7 +29,6 @@ reader.onload = function(e) { //Callback if reader is used
         back.push(final);
       }
     }
-    readerOutput = "";
     for (var i = 0; i < back.length; i++) {
       readerOutput += " " + back[i];
     }
@@ -41,6 +40,21 @@ reader.onload = function(e) { //Callback if reader is used
   console.log("Next file");
   doneReading = true;
 }
+
+var textFile = null,
+ makeTextFile = function (text) {
+  var data = new Blob([text], {type: 'text/plain'});
+
+  // If we are replacing a previously generated file we need to
+  // manually revoke the object URL to avoid memory leaks.
+  if (textFile !== null) {
+    window.URL.revokeObjectURL(textFile);
+  }
+
+  textFile = window.URL.createObjectURL(data);
+
+  return textFile;
+};
 
 var waitInterval;
 
@@ -97,6 +111,11 @@ var TextAnalysis = React.createClass({
       reader.readAsText(selectedFile); //Use the reader
     } else {
       console.log("Done with all files")
+      clearInterval(waitInterval)
+      console.log(readerOutput.length)
+      var link = document.getElementById('downloadlink');
+      link.href = makeTextFile(readerOutput);
+      link.style.display = 'block';
     }
     return false; //Prevent page auto-refresh
   },
@@ -104,16 +123,17 @@ var TextAnalysis = React.createClass({
     if (doneReading) {
       if (currentFile <= numberOfFiles) {
         doneReading = false;
-        console.log("Setting state");
-        this.setState({
-          textInput: this.state.textInput + " " + readerOutput
-        })
-        console.log(readerOutput.length);
-        console.log("Set state")
+        // console.log("Setting state");
+        // this.setState({
+        //   textInput: this.state.textInput + " " + readerOutput
+        // })
+        // console.log(readerOutput.length);
+        // console.log("Set state")
         this.loadFile(); //Do it again
       } else {
         clearInterval(waitInterval)
         console.log("Done with all files")
+        console.log(readerOutput.length)
       }
     }
   },
@@ -135,6 +155,7 @@ var TextAnalysis = React.createClass({
             <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Facebook Messages<br />
             <input type="submit" Value="Analyze"/>
           </form>
+          <a download="info.txt" id="downloadlink" >Download</a>
         </div>
         <CheckInput textInput={this.state.textInput}
           fileName={this.state.fileName}
