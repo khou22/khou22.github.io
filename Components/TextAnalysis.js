@@ -89,7 +89,8 @@ var StrToArray = function(data) {
 var TextAnalysis = React.createClass({
   getInitialState: function() {
     return {
-      textInput: "Five Five Four Three Four Five Five Too Too Three Two Four Three Five One Four Two",
+      wordList: ["Three", "Two", "One"],
+      wordListCount: [3, 2, 1],
       fileName: "NA",
       fileSize: 0,
       fileType: "NA",
@@ -238,7 +239,8 @@ var TextAnalysis = React.createClass({
           fileLastModifiedDate={this.state.fileLastModifiedDate}
           showModal={this.state.showModal}
           toggleModal={this.toggleModal}/>
-        <Analysis data={this.state.textInput}
+        <Analysis wordList={this.state.wordList}
+          wordListCount={this.state.wordListCount}
           toggleModal={this.toggleModal}/>
       </div>
     )
@@ -300,31 +302,27 @@ var FileInputModal = React.createClass({
 })
 
 var Analysis = React.createClass({
-  getInitialState: function() {
-    var data = this.props.data;
-    var strArray = StrToArray(data); //Run function
-    return {
-      str: this.props.data,
-      strArray: strArray,
-      uniqueWords: [],
-      uniqueWordsCount: []
-    }
-  },
-  componentWillReceiveProps: function(props) { //Repeat the breakdown every time text is changed
-    var data = props.data;
-    var strArray = StrToArray(data); //Run function
-    this.setState({
-      str: props.data,
-      strArray: strArray
-    });
-  },
   render: function() {
+    var counter = 0;
+    var frequency = this.props.wordListCount;
+    var tableNodes = this.props.wordList.map(function(word) {
+      counter++;
+      return (
+        <tr>
+          <td>{word}</td>
+          <td>{frequency[counter - 1]}</td>
+        </tr>
+      );
+    });
     return (
       <div>
+        <table>
+          {tableNodes}
+        </table>
       </div>
     )
   }
-})
+});
 
 var App = React.createClass({
   render: function() {
