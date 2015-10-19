@@ -1,6 +1,8 @@
 var reader = new FileReader(); //New reader
 var readerOutput = "Default String"; //Declare global
 var doneReading = false;
+var numberOfFiles = 1;
+var currentFile = 0;
 reader.onload = function(e) { //Callback if reader is used
   rawText = reader.result; //Stores the results
   if (document.getElementById("FacebookMessageData").checked) {
@@ -35,6 +37,8 @@ reader.onload = function(e) { //Callback if reader is used
   console.log("File Reader Complete"); //Feedback
   // console.log(readerOutput)
   // console.log(readerOutput)
+  currentFile++; //Next file
+  console.log("Next file");
   doneReading = true;
 }
 
@@ -76,29 +80,41 @@ var TextAnalysis = React.createClass({
     }
   },
   loadFile: function() {
-    // console.log("Loading file"); //Feedback
-    var selectedFile = document.getElementById('selectedFile').files[0]; //Find file
-    // console.log(selectedFile.size); //Feedback
-    this.setState({ //Save the file details
-      fileName: selectedFile.name,
-      fileSize: selectedFile.size,
-      fileType: selectedFile.type,
-      fileLastModified: selectedFile.lastModified,
-      fileLastModifiedDate: selectedFile.lastModifiedDate
-    });
-    waitInterval = setInterval(this.uploadComplete.bind(this), 1000); //Create artificial callback to allow reader to do its work
-    reader.readAsText(selectedFile); //Use the reader
+    if (currentFile < numberOfFiles) {
+      console.log("Loading file", currentFile); //Feedback
+      var files = document.getElementById('selectedFile').files;
+      numberOfFiles = files.length;
+      var selectedFile = files[currentFile]; //Find file
+      // console.log(selectedFile.size); //Feedback
+      this.setState({ //Save the file details
+        fileName: this.state.fileName + ", " + selectedFile.name,
+        fileSize: this.state.fileSize + ", " + selectedFile.size,
+        fileType: this.state.fileType + ", " + selectedFile.type,
+        fileLastModified: this.state.fileLastModified + ", " + selectedFile.lastModified,
+        fileLastModifiedDate: this.state.fileLastModifiedDate + ", " + selectedFile.lastModifiedDate
+      });
+      waitInterval = setInterval(this.uploadComplete.bind(this), 1000); //Create artificial callback to allow reader to do its work
+      reader.readAsText(selectedFile); //Use the reader
+    } else {
+      console.log("Done with all files")
+    }
     return false; //Prevent page auto-refresh
   },
   uploadComplete: function() {
     if (doneReading) {
-      clearInterval(waitInterval)
-      console.log(readerOutput.length);
-      console.log("Setting state");
-      this.setState({
-        textInput: readerOutput
-      })
-      console.log("Set state")
+      if (currentFile <= numberOfFiles) {
+        doneReading = false;
+        console.log("Setting state");
+        this.setState({
+          textInput: this.state.textInput + " " + readerOutput
+        })
+        console.log(readerOutput.length);
+        console.log("Set state")
+        this.loadFile(); //Do it again
+      } else {
+        clearInterval(waitInterval)
+        console.log("Done with all files")
+      }
     }
   },
   toggleModal: function(input) {
@@ -114,7 +130,7 @@ var TextAnalysis = React.createClass({
         <div className="TA-file-input">
           <form onSubmit={this.loadFile.bind(this)}>
             Select text file: <input type="file" id="selectedFile" name="text" accept="." multiple/>
-            Exact Facebook Name<input type="text" name="Facebook Name" value="Kevin Hou" id="FacebookName" /> <br />
+            Exact Facebook Name: <input type="text" name="Facebook Name" value="Kevin Hou" id="FacebookName" /> <br />
             <input type="radio" name="Analysis Type" value="NA" /> No Special Format<br />
             <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Facebook Messages<br />
             <input type="submit" Value="Analyze"/>
