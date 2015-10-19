@@ -164,6 +164,12 @@ var TextAnalysis = React.createClass({
         sortedWords.reverse();
         console.log(sortedWords, sortedWords.length);
         console.log("Sorted", sortedWordsCount, sortedWordsCount.length);
+        if (document.getElementById('BigData').checked) { //If doing big data
+          var num = sortedWordsCount.indexOf(1); //Delete all words with just one occurance
+          var size = sortedWordsCount.length - num;
+          sortedWords.splice(num, size);
+          sortedWordsCount.splice(num, size);
+        }
         var temp = "";
         for (var i = 0; i < sortedWords.length; i++) {
           temp += sortedWords[i] + "|" + sortedWordsCount[i] + "~";
