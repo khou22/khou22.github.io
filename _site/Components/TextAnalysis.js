@@ -19,26 +19,40 @@ reader.onload = function(e) { //Callback if reader is used
       var otherName = "";
       if (document.getElementById('ConversationUser').value) { //If entered other user's name
         otherName = document.getElementById('ConversationUser').value;
-        var finalRaw = "";
-        // console.log(rawText);
-        if (rawText.indexOf("user\">" + otherName)) { //If found a message with the other person
-          document.getElementById('downloadlink').innerHTML = "Finding Conversations with " + otherName + "...";
-          console.log("Finding Conversations with", otherName + "...");
-          var temp = rawText.split("user\">" + otherName)
-          for (var i = 0; i < temp.length; i++) {
-            // console.log(temp[i].indexOf("user\">" + frontSplit));
-            if (temp[i].indexOf("user\">" + frontSplit)) { //Chop off extranious
-              // console.log("Found user's name in the array");
-              // console.log(temp[i])
-              finalRaw += temp[i]; //First element in the array
-            }
-          }
-          rawText = finalRaw; //Reset rawText to new string
-          console.log("Found only messages from:", otherName);
-          // console.log(rawText)
+      console.log(otherName.indexOf(','))
+        if (otherName.indexOf(',') >= 0) {
+          otherName = otherName.split(',');
+          console.log("Detected multiple names")
         } else {
-          console.log("Please enter the other user's exact Facebook name");
-          Alert("Please enter the other user's exact Facebook name");  
+          otherName = [otherName, "3RR0R"]; //So that the otherName value will still be an array
+        }
+        alert(otherName[0])
+        for (var name = 0; name < otherName.length; name++) {
+          var finalRaw = "";
+          // console.log(rawText);
+          // console.log(otherName);
+          // console.log(otherName[name])
+          var friend = otherName[name].trim();
+          // console.log(friend)
+          if (rawText.indexOf("user\">" + friend)) { //If found a message with the other person
+            document.getElementById('downloadlink').innerHTML = "Finding Conversations with " + friend + "...";
+            console.log("Finding Conversations with", friend + "...");
+            var temp = rawText.split("user\">" + friend)
+            for (var i = 0; i < temp.length; i++) {
+              // console.log(temp[i].indexOf("user\">" + frontSplit));
+              if (temp[i].indexOf("user\">" + frontSplit)) { //Chop off extranious
+                // console.log("Found user's name in the array");
+                // console.log(temp[i])
+                finalRaw += temp[i]; //First element in the array
+              }
+            }
+            rawText = finalRaw; //Reset rawText to new string
+            console.log("Found only messages from:", friend);
+            // console.log(rawText)
+          } else {
+            console.log("Please enter the other user's exact Facebook name");
+            Alert("Please enter the other user's exact Facebook name");
+          }
         }
       } else {
         console.log("Please enter the other user's exact Facebook name");
@@ -105,7 +119,7 @@ var waitInterval;
 var StrToArray = function(data) {
   // console.log(data);
   var strArray = [];
-  var splitAt = [" ", "-", "<", ">", "&#039;"]; //What constitutes a new word
+  var splitAt = [" ", "-", "<", ">", "&#039", "&#039;"]; //What constitutes a new word
   var array1 = data.split(splitAt[0]);
   for (var i = 0; i < array1.length; i++) {
     strArray.push(array1[i]); //First split
@@ -299,7 +313,7 @@ var TextAnalysis = React.createClass({
               <input type="radio" name="Analysis Type" value="NA" id="NoFormat"/> No Special Format<br />
               <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Compress Facebook Messages<br />
               Exact Facebook Name: <input type="text" name="Facebook Name" placeholder="Kevin Hou" id="FacebookName" /> <br />
-              <input type="checkbox" name="Conversation" value="Conversation" id="Conversation" size="4" /> Other User: <input type="text" name="Conversation User" placeholder="User" id="ConversationUser" /><br />
+              <input type="checkbox" name="Conversation" value="Conversation" id="Conversation" size="4" /> Other User: <input type="text" name="Conversation User" placeholder="User1, User 2, etc." id="ConversationUser" /><br />
               <input type="checkbox" name="Big Data" value="Big Data" id="BigData" size="4" /> Big Data: <input type="text" name="Big Data Value" placeholder="10" id="BigDataValue" /><br />
               <button type="submit" Value="Analyze">Go</button>
             </form>
@@ -428,6 +442,7 @@ var App = React.createClass({
             It should look like this: <i>$: directory-containing-file  split -b 4m messages.txt</i></li>
           <li>Upload the file(s) by pressing the 'Choose Files' button</li>
           <li>Select the 'Compress Facebook Messages' radio button</li>
+          <li>If you want to limit the text to only certain conversations, type the user(s) seperated by commas.</li>
           <li>Check the 'Big Data' checkbox and enter at least '50' into the text field</li>
           <li>Click 'Go'</li>
           <li>Wait until the compression is complete (this can take a long time) then click download</li>
