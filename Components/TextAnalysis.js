@@ -13,11 +13,39 @@ reader.onload = function(e) { //Callback if reader is used
   if (document.getElementById("FacebookMessageData").checked) {
     var frontSplit = "Kevin Hou"
     if (document.getElementById("FacebookName").value) {
-      frontSplit = document.getElementById("FacebookName").value;
+      frontSplit = document.getElementById("FacebookName").value; //Get user's name
+    }
+    if (document.getElementById('Conversation').checked) { //If for specific users
+      var otherName = "";
+      if (document.getElementById('ConversationUser').value) { //If entered other user's name
+        otherName = document.getElementById('ConversationUser').value;
+        var finalRaw = "";
+        // console.log(rawText);
+        if (rawText.indexOf("user\">" + otherName)) { //If found a message with the other person
+          var temp = rawText.split("user\">" + otherName)
+          for (var i = 0; i < temp.length; i++) {
+            // console.log(temp[i].indexOf("user\">" + frontSplit));
+            if (temp[i].indexOf("user\">" + frontSplit)) { //Chop off extranious
+              // console.log("Found user's name in the array");
+              // console.log(temp[i])
+              finalRaw += temp[i]; //First element in the array
+            }
+          }
+          rawText = finalRaw; //Reset rawText to new string
+          console.log("Found only messages from:", otherName);
+          // console.log(rawText)
+        } else {
+          console.log("Please enter the other user's exact Facebook name");
+          Alert("Please enter the other user's exact Facebook name");  
+        }
+      } else {
+        console.log("Please enter the other user's exact Facebook name");
+        Alert("Please enter the other user's exact Facebook name");
+      }
     }
     console.log("Format: Facebook Message Data")
     console.log("Name: " + frontSplit)
-    var front = rawText.split(frontSplit); //Split at the front
+    var front = rawText.split("user\">" + frontSplit); //Split at the front
     // console.log(front)
     var back = [];
     var percentageDone = 0;
@@ -267,6 +295,7 @@ var TextAnalysis = React.createClass({
               <input type="radio" name="Analysis Type" value="NA" id="NoFormat"/> No Special Format<br />
               <input type="radio" name="Analysis Type" value="Facebook Messages" id="FacebookMessageData" /> Compress Facebook Messages<br />
               Exact Facebook Name: <input type="text" name="Facebook Name" placeholder="Kevin Hou" id="FacebookName" /> <br />
+              <input type="checkbox" name="Conversation" value="Conversation" id="Conversation" size="4" /> Other User: <input type="text" name="Conversation User" placeholder="User" id="ConversationUser" /><br />
               <input type="checkbox" name="Big Data" value="Big Data" id="BigData" size="4" /> Big Data: <input type="text" name="Big Data Value" placeholder="10" id="BigDataValue" /><br />
               <button type="submit" Value="Analyze">Go</button>
             </form>
