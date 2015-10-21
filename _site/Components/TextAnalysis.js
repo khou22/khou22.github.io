@@ -22,6 +22,8 @@ reader.onload = function(e) { //Callback if reader is used
         var finalRaw = "";
         // console.log(rawText);
         if (rawText.indexOf("user\">" + otherName)) { //If found a message with the other person
+          document.getElementById('downloadlink').innerHTML = "Finding Conversations with " + otherName + "...";
+          console.log("Finding Conversations with", otherName + "...");
           var temp = rawText.split("user\">" + otherName)
           for (var i = 0; i < temp.length; i++) {
             // console.log(temp[i].indexOf("user\">" + frontSplit));
@@ -49,6 +51,8 @@ reader.onload = function(e) { //Callback if reader is used
     // console.log(front)
     var back = [];
     var percentageDone = 0;
+    document.getElementById('downloadlink').innerHTML = "Parsing Message Content...";
+    console.log("Parsing Message Content...");
     for (var i = 0; i < front.length; i++) {
       percentageDone = 100 * (i/front.length);
       console.log(percentageDone);
@@ -243,7 +247,7 @@ var TextAnalysis = React.createClass({
         document.getElementById('downloadlink').innerHTML = "Analyzing...";
         console.log("Analyzing...");
         var ray = readerOutput.split("~");
-        console.log(ray)
+        // console.log(ray)
         ray.splice(ray.length - 1, 1); //Cut off the undefined at the end
         var a = [];
         var b = [];
@@ -252,8 +256,8 @@ var TextAnalysis = React.createClass({
           a.push(ray2[0]); //Words
           b.push(ray2[1]); //Count
         }
-        console.log(a)
-        console.log(b)
+        // console.log(a)
+        // console.log(b)
         this.setState({
           wordList: a,
           wordListCount: b
