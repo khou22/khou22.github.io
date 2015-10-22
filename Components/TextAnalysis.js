@@ -346,18 +346,25 @@ var TextAnalysis = React.createClass({
 
 var CheckInput = React.createClass({
   render: function() {
-    return (
-      <span>
-        <FileInputModal showModal={this.props.showModal}
-          toggleModal={this.props.toggleModal}
-          fileName={this.props.fileName}
-          fileSize={this.props.fileSize}
-          fileType={this.props.fileType}
-          fileLastModified={this.props.fileLastModified}
-          fileLastModifiedDate={this.props.fileLastModifiedDate}/>
-        <button onClick={this.props.toggleModal.bind(this, "fileInfo")}>Show File Data</button>
-      </span>
-    )
+    if (readerOutput != "Default String") {
+      return (
+        <span>
+          <FileInputModal showModal={this.props.showModal}
+            toggleModal={this.props.toggleModal}
+            fileName={this.props.fileName}
+            fileSize={this.props.fileSize}
+            fileType={this.props.fileType}
+            fileLastModified={this.props.fileLastModified}
+            fileLastModifiedDate={this.props.fileLastModifiedDate}/>
+          <button onClick={this.props.toggleModal.bind(this, "fileInfo")}>Show File Data</button>
+        </span>
+      )
+    } else {
+      return (
+        <span>
+        </span>
+      )
+    }
   }
 });
 
