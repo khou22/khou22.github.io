@@ -27,8 +27,8 @@ reader.onload = function(e) { //Callback if reader is used
           otherName = [otherName, "3RR0R"]; //So that the otherName value will still be an array
         }
         alert(otherName[0])
+        var finalRaw = "";
         for (var name = 0; name < otherName.length; name++) {
-          var finalRaw = "";
           // console.log(rawText);
           // console.log(otherName);
           // console.log(otherName[name])
@@ -46,14 +46,14 @@ reader.onload = function(e) { //Callback if reader is used
                 finalRaw += temp[i]; //First element in the array
               }
             }
-            rawText = finalRaw; //Reset rawText to new string
-            console.log("Found only messages from:", friend);
             // console.log(rawText)
           } else {
             console.log("Please enter the other user's exact Facebook name");
             Alert("Please enter the other user's exact Facebook name");
           }
         }
+        rawText = finalRaw; //Reset rawText to new string
+        console.log("Found only messages from:", friend);
       } else {
         console.log("Please enter the other user's exact Facebook name");
         Alert("Please enter the other user's exact Facebook name");
@@ -118,6 +118,8 @@ var waitInterval;
 
 var StrToArray = function(data) {
   // console.log(data);
+  console.log("Counting unique words");
+  document.getElementById('downloadlink').innerHTML = "Counting Words...";
   var strArray = [];
   var splitAt = [" ", "-", "<", ">", "&#039", "&#039;"]; //What constitutes a new word
   var array1 = data.split(splitAt[0]);
@@ -125,6 +127,7 @@ var StrToArray = function(data) {
     strArray.push(array1[i]); //First split
   }
   for (var z = 1; z < splitAt.length; z++) { //All other splits
+    console.log(z/splitAt.length)
     for (var i = 0; i < strArray.length; i++) {
       if (strArray[i].indexOf(splitAt[z])) {
         var array = strArray[i].split(splitAt[z]);
@@ -171,16 +174,16 @@ var TextAnalysis = React.createClass({
       waitInterval = setInterval(this.uploadComplete.bind(this), 1000); //Create artificial callback to allow reader to do its work
       reader.readAsText(selectedFile); //Use the reader
     } else {
-      document.getElementById('downloadlink').innerHTML = "Compressing...";
       console.log("Done loading all files")
 
       clearInterval(waitInterval)
       // console.log(readerOutput.length)
       if (document.getElementById('Analyze').checked == false) { //Compressing
-        console.log("Compressing...");
         var strArray = StrToArray(readerOutput)
+        console.log("Compressing...");
         // *******   Word usage   *******
         console.log("Starting deconstruction")
+        document.getElementById('downloadlink').innerHTML = "Compressing...";
         var uniqueWords = [];
         var uniqueWordsCount = [];
         var sortedWordsCount = [];
@@ -267,7 +270,11 @@ var TextAnalysis = React.createClass({
         var b = [];
         for (var i = 0; i < ray.length; i++) {
           var ray2 = ray[i].split("|");
-          a.push(ray2[0]); //Words
+          var temp = ray2[0];
+          if (ray2[0].indexOf("&#039;") >= 0) {
+            temp = ray2[0].replace("&#039;", "'"); //Replace the special characters
+          };
+          a.push(temp); //Words
           b.push(ray2[1]); //Count
         }
         // console.log(a)
