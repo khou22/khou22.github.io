@@ -121,7 +121,7 @@ var StrToArray = function(data) {
   console.log("Counting unique words");
   document.getElementById('downloadlink').innerHTML = "Counting Words...";
   var strArray = [];
-  var splitAt = [" ", "-", "<", ">", "&#039", "&#039;"]; //What constitutes a new word
+  var splitAt = [" ", "-", "<", ">"]; //What constitutes a new word
   var array1 = data.split(splitAt[0]);
   for (var i = 0; i < array1.length; i++) {
     strArray.push(array1[i]); //First split
