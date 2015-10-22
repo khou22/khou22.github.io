@@ -284,6 +284,8 @@ var TextAnalysis = React.createClass({
           wordListCount: b
         })
         document.getElementById('downloadlink').innerHTML = "Analysis Done";
+        //Logic after anlaysis is done
+        this.loadCommonWordsFromServer();
       }
       
     }
@@ -307,6 +309,23 @@ var TextAnalysis = React.createClass({
       showModal: input
     });
     return false; //Prevent page auto-refresh
+  },
+  loadCommonWordsFromServer: function() {
+    $.ajax({
+      url: this.props.url,
+      dataType: 'json',
+      cache: false,
+      success: function(data) {
+        this.retrieveData(data);
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this.props.url, "||", status, "||", err.toString());
+      }.bind(this)
+    });
+  },
+  retrieveData: function(data) {
+    this.setState({data: data});
+    console.log(data)
   },
   render: function() {
     return (
@@ -433,7 +452,8 @@ var App = React.createClass({
         <br />
         <h4>By: Kevin Hou</h4>
         <b>Started:</b> October 17 2015 8:20 PST <br />
-        <TextAnalysis />
+        <TextAnalysis url={"data.json"}
+          pollInterval={2000}/>
         <hr />
         <b>Instructions:</b> 
         <p>This is a two step process. First <b>compress</b> your file(s):</p>
