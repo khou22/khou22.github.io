@@ -322,7 +322,13 @@ var TextAnalysis = React.createClass({
               Exact Facebook Name: <input type="text" name="Facebook Name" placeholder="Kevin Hou" id="FacebookName" /> <br />
               <input type="checkbox" name="Conversation" value="Conversation" id="Conversation" size="4" /> Other User: <input type="text" name="Conversation User" placeholder="User1, User 2, etc." id="ConversationUser" /><br />
               <input type="checkbox" name="Big Data" value="Big Data" id="BigData" size="4" /> Big Data: <input type="text" name="Big Data Value" placeholder="10" id="BigDataValue" /><br />
-              <button type="submit" Value="Analyze">Go</button>
+              <button type="submit" Value="Analyze">Go</button> <CheckInput fileName={this.state.fileName}
+                fileSize={this.state.fileSize}
+                fileType={this.state.fileType}
+                fileLastModified={this.state.fileLastModified}
+                fileLastModifiedDate={this.state.fileLastModifiedDate}
+                showModal={this.state.showModal}
+                toggleModal={this.toggleModal}/>
             </form>
           </div>
           <div className="TA-download">
@@ -330,13 +336,6 @@ var TextAnalysis = React.createClass({
             <a download="Compressed_Data.txt" id="downloadlink" >Ready to Receive</a>
           </div>
         </div>
-        <CheckInput fileName={this.state.fileName}
-          fileSize={this.state.fileSize}
-          fileType={this.state.fileType}
-          fileLastModified={this.state.fileLastModified}
-          fileLastModifiedDate={this.state.fileLastModifiedDate}
-          showModal={this.state.showModal}
-          toggleModal={this.toggleModal}/>
         <Analysis wordList={this.state.wordList}
           wordListCount={this.state.wordListCount}
           toggleModal={this.toggleModal}/>
@@ -348,7 +347,7 @@ var TextAnalysis = React.createClass({
 var CheckInput = React.createClass({
   render: function() {
     return (
-      <div>
+      <span>
         <FileInputModal showModal={this.props.showModal}
           toggleModal={this.props.toggleModal}
           fileName={this.props.fileName}
@@ -357,7 +356,7 @@ var CheckInput = React.createClass({
           fileLastModified={this.props.fileLastModified}
           fileLastModifiedDate={this.props.fileLastModifiedDate}/>
         <button onClick={this.props.toggleModal.bind(this, "fileInfo")}>Show File Data</button>
-      </div>
+      </span>
     )
   }
 });
