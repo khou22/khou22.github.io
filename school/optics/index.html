@@ -1,0 +1,101 @@
+<!-- index.html -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Physics Optics Lab</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/backgrounds.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/animations.css">
+  </head>
+  <body>
+    <div class="parallax">
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background1">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="site-header">
+            <h1 class="site-title">Optics Lab</h1>
+            <h3 class="site-subtitle">Kevin Hou, Julia Howard, Lizzy Wu</h3>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background2">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content lab-abstract">
+            <div class="scroll-down-animation scroll-down-arrow">
+              <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+            </div>
+            <h3 class='site-subtitle'>Abstract</h3>
+            <br />
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="changeLabAbstract(1)">Lab 1: Title</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="changeLabAbstract(2)">Lab 2: Title</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="changeLabAbstract(3)">Lab 3: Title</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="changeLabAbstract(4)">Lab 4: Title</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" onclick="changeLabAbstract(5)">Lab 5: Title</button>
+              </div>
+            </div>
+            <br />
+            <div id="labAbstract">
+              Lab 1 Description
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var changeLabAbstract = function(lab) {
+          var finalObj = "";
+          var labDescriptions = [
+            "Lab 1 Description",
+            "Lab 2 Description",
+            "Lab 3 Description",
+            "Lab 4 Description",
+            "Lab 5 Description",
+          ];
+          finalObj = labDescriptions[lab-1];
+          document.getElementById('labAbstract').innerHTML = finalObj;
+        }
+      </script>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background3">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          Foreground
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
