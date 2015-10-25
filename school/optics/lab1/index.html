@@ -1,0 +1,183 @@
+<!-- index.html -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Physics Optics Lab</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../css/backgrounds.css">
+    <link rel="stylesheet" href="../css/parallax.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/animations.css">
+  </head>
+  <body>
+    <div class="parallax">
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background1">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="lab-header">
+            <h1 class="lab-title">Lab 1: Light and Distance</h1>
+            <h3 class="lab-project-subtitle">Introduction to Optics</h3>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background2">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content lab-abstract">
+            <div class="scroll-down-animation scroll-down-arrow">
+              <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+            </div>
+            <h3 class='lab-subtitle'>Abstract</h3>
+            <p class='lab-text lab-abstract'>
+              In this lab a sensor was used to determine the relationship between light intensity and the distance between the light source and the sensor to determine that as distance increases, illumination decreases as a polynomial function. The reason for the diminishing in brightness is due to the dispersion of light rays that decreases the number of rays that eventually end up being perceived by the sensor.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background3">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Terms and Definitions</h3>
+            <p class='lab-text lab-terms'>
+              <br />
+              <b>Lux:</b> A unit of illumination
+            </p>            
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background4">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Overview of Lab</h3>
+            <p class='lab-text lab-overview'>
+              The lab uses a light source of invariable intensity and a light sensor on a track. The light sensor is moved away from the light source by 10 cm increments and records the intensity of light in lux. Any data taken either by hand or on the computer 
+            </p>
+            <hr />
+            <p class='lab-text lab-purpose'>
+              The purpose was to determine a mathematical relationship between intensity of light and the distance between the sensor and light source.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background5">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Data</h3>
+            <div class="lab-left-half">
+              <div class='lab-text lab-data lab-table' id="lab-table">
+                <script>
+                  var distance = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110];
+                  var illumination = [770, 258.7, 145.7, 109, 91.1, 82.7, 89.3, 66.5, 65.3, 68.3, 69.1];
+                  var finalObj = "<table class='lab-table'>";
+                  finalObj += "<tr><td class='lab-td'>Distance</td><td class='lab-td'>Illumination</td><td class='lab-td'>Distance</td><td class='lab-td'>Illumination</td></tr>"
+                  for (var i = 0; i < distance.length/2; i++) {
+                    finalObj += "<tr><td class='lab-td'>" + distance[i] + "</td><td class='lab-td'>" + illumination[i] + "</td><td class='lab-td'>" + distance[i + 4] + "</td><td class ='lab-td'>" + illumination[i + 4] + "</tr>";
+                  }
+                  finalObj += "</table>";
+                  document.getElementById('lab-table').innerHTML = finalObj;
+                </script>
+              </div>
+            </div>
+            <div class="lab-right-half">
+              <h4 class='lab-section-title'>Observations, Notes</h4>
+              <h4 class='lab-section-title'>Graphs</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background6">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Equations and Calculations</h3>
+            <p class='lab-text lab-calculations'>
+              The illumination decreases until the ambient light makes the light variance, due to distance, negligible.
+              <br />
+              <hr />
+              <p class='lab-text'>
+                [(7.097 * 10^4)/(D^2)] + 64.54
+                <br />
+                Where D is the distance between the light and the sensor
+              </p>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background7">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Analysis and Conclusion</h3>
+            <p class='lab-text lab-conclusion'>
+              We learned that as a sensor is moved farther away from the light source, the perception of illumination is lowered. The light disperses from the light source, decreasing the number of light rays that are percepted, be it by a digital sensor or biological one (i.e. your eye). However, the at some distance, the light perceived by the source is negligible compared to the ambient light of, for example, the sun. The relationship between distance and illumination perceived is a polynomial function.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background8">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Pictures and Diagrams</h3>
+            <div class='lab-text lab-pictures'>
+              <div class='lab-left-half'>
+                <img src='../media/images/lab3.jpg' style="max-width: 80%; border: 1px solid white">
+              </div>
+              <div class='lab-right-half'>
+                <img src='../media/images/lab3-3.jpg' style="max-width: 80%; border: 1px solid white">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

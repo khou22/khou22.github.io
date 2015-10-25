@@ -1,0 +1,195 @@
+<!-- index.html -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Physics Optics Lab</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../css/backgrounds.css">
+    <link rel="stylesheet" href="../css/parallax.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/animations.css">
+  </head>
+  <body>
+    <div class="parallax">
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background1">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="lab-header">
+            <h1 class="lab-title">Lab 3: Build a Telescope</h1>
+            <h3 class="lab-project-subtitle">Virtual Images and the Telescope</h3>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background2">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content lab-abstract">
+            <div class="scroll-down-animation scroll-down-arrow">
+              <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+            </div>
+            <h3 class='lab-subtitle'>Abstract</h3>
+            <p class='lab-text lab-abstract'>
+              In this lab, we examined how a refracting optical telescope functions to produce a real image or virtual image. Varying lens type, distance from the lens to the lens and the background on which the image was produced, we observed how the image size, distance to focus, and image orientation changed.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background3">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Terms and Definitions</h3>
+            <p class='lab-text lab-terms'>
+              <br /><b>Real Image:</b> Can exist even if no observer is present (object is farther than the focal length) Can be projected so that multiple people can see the image, even if the image disappears.
+              <br /><b>Virtual Image:</b> Requires the visual system of an observer (object is closer to the lens than the focal length) Cannot be projected
+              <br /><b>Focal Distance:</b> Distance between the lens and the point where the light rays converge
+              <br /><b>Magnification:</b> A vector quantity used to determine the degree at which a visual object is magnified
+              <br /><b>Concave:</b> A surface that curves in on itself like the interior of a circle
+              <br /><b>Double Concave Lens:</b> A lens with a concave curve on both sides.
+            </p>            
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background4">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Overview of Lab</h3>
+            <p class='lab-text lab-overview'>
+              By using multiple lenses, extra magnification of an object could be achieved with the same amount of clarity. 
+            </p>
+            <hr />
+            <p class='lab-text lab-purpose'>
+              The purpose of the lab was to discover the properties of light through multiple lenses. A refracting optical telescope was built to solidify an understanding of real and virtual images.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background5">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Data</h3>
+            <div class="lab-table-description">
+              <p class="lab-table-title"><b>When Image is Most Focused</b></p>
+              <div class='lab-text lab-data lab-table'>
+                <table class='lab-table'>
+                  <tr>
+                    <td class='lab-td'>Lens Type/Setup</td>
+                    <td class='lab-td'>Distance from Lens to Film when Image is Focused</td>
+                    <td class='lab-td'>Observations</td>
+                  </tr>
+                  <tr>
+                    <td class='lab-td'>10 cm double convex</td>
+                    <td class='lab-td'>8.5 cm</td>
+                    <td class='lab-td'>Virtual</td>
+                  </tr>
+                  <tr>
+                    <td class='lab-td'>10 cm double convex + 20 cm double convex, telescope set up</td>
+                    <td class='lab-td'>10 cm to film: 8 cm<br />Film to 20 cm: 20 cm</td>
+                    <td class='lab-td'>Virtual, larger image</td>
+                  </tr>
+                  <tr>
+                    <td class='lab-td'>20 cm double convex + 10 cm double convex, telescope set up</td>
+                    <td class='lab-td'>20 cm to film: 8 cm<br />Film to 10 cm: 9.5 cm</td>
+                    <td class='lab-td'>Real iamge, looks better, glowy, smaller image</td>
+                  </tr>
+                  <tr>
+                    <td class='lab-td'>Two 20 cm double convex lenses, telescope set up</td>
+                    <td class='lab-td'>10 cm to film: 11 cm<br />Film to 20 cm: 20 cm</td>
+                    <td class='lab-td'>Virtual, large, focused</td>
+                  </tr>
+                </table>
+              </div>
+              <br />
+              Analysis: The difference between the two lenses is roughly the same as the sum as the focal distances. 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background6">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Extension: Galilean Telescopes</h3>
+            <p class='lab-text lab-abstract'>
+              A galilean telescope is a telescope which uses both a positive objective and a negative eye lens which are positioned based on the difference of their two focal distances. The second negative lens is placed in an arrangement so the second focal point occurs where the second focal point of the objective lens occurs.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background7">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Analysis and Conclusion</h3>
+            <p class='lab-text lab-conclusion'>
+              We learned that object distance and image distance are inversely proportional. The light rays through the convex lens converge on a surface, creating a real image, even if the image produced is distorted from the original one. The equation allows us to calculate the focal distance, image distance or object distance when given two of the three values.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+          <div class="background background8">
+            Background
+          </div>
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+          <div class="layer-content">
+            <h3 class='lab-subtitle'>Pictures</h3>
+            <div class='lab-text lab-pictures'>
+              <div class='lab-left-half'>
+                <img src='../media/images/lab3.jpg' style="max-width: 80%; border: 1px solid white">
+              </div>
+              <div class='lab-right-half'>
+                <img src='../media/images/lab3-3.jpg' style="max-width: 80%; border: 1px solid white">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
