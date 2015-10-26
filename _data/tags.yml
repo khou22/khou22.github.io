@@ -59,6 +59,10 @@ musicviz:
   slug: musicviz
   name: Music Visualizer
 
+node-js:
+  slug: node-js
+  name: Node.js
+
 github:
   slug: github
   name: GitHub
