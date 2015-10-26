@@ -15,87 +15,36 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="css/backgrounds.css">
-    <link rel="stylesheet" href="css/parallax.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="../../css/optics/backgrounds.css">
+    <link rel="stylesheet" href="../../css/optics/parallax.css">
+    <link rel="stylesheet" href="../../css/optics/custom.css">
+    <link rel="stylesheet" href="../../css/optics/animations.css">
+    <link rel="stylesheet" href="../../css/optics/landingPage.css">
   </head>
   <body>
-    <div class="parallax">
-      <div class="parallax__group">
-        <div class="parallax__layer parallax__layer--back">
-          <div class="background background1">
-            Background
-          </div>
-        </div>
-        <div class="parallax__layer parallax__layer--base">
-          <div class="site-header">
-            <h1 class="site-title">Optics Lab</h1>
-            <h3 class="site-subtitle">Kevin Hou, Julia Howard, Lizzy Wu</h3>
-          </div>
+    <div class="lab-background">
+      <div class="lab-welcome">
+        <div class="lab-welcome-content">
+          <p class="lab-welcome-title">
+            Honors Physics Optics Lab
+          </p>
+          <p class="lab-welcome-subtitle">
+            Kevin Hou, Julia Howard, and Lizzy Wu
+          </p>
         </div>
       </div>
-      <div class="parallax__group">
-        <div class="parallax__layer parallax__layer--back">
-          <div class="background background2">
-            Background
-          </div>
-        </div>
-        <div class="parallax__layer parallax__layer--base">
-          <div class="layer-content lab-abstract">
-            <div class="scroll-down-animation scroll-down-arrow">
-              <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-            </div>
-            <h3 class='site-subtitle'>Abstract</h3>
-            <br />
-            <div class="btn-group btn-group-justified" role="group" aria-label="...">
-              <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default" onclick="changeLabAbstract(1)">Lab 1: Title</button>
-              </div>
-              <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default" onclick="changeLabAbstract(2)">Lab 2: Title</button>
-              </div>
-              <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default" onclick="changeLabAbstract(3)">Lab 3: Title</button>
-              </div>
-              <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default" onclick="changeLabAbstract(4)">Lab 4: Title</button>
-              </div>
-              <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default" onclick="changeLabAbstract(5)">Lab 5: Title</button>
-              </div>
-            </div>
-            <br />
-            <div id="labAbstract">
-              Lab 1 Description
-            </div>
-          </div>
-        </div>
+      <div class="lab-links">
+        <button class="lab-button" onClick="link('lab1')">Lab 1</button>
+        <button class="lab-button" onClick="link('lab2')">Lab 2</button>
+        <button class="lab-button" onClick="link('lab3')">Lab 3</button>
+        <button class="lab-button" onClick="link('lab4')">Lab 4</button>
       </div>
       <script>
-        var changeLabAbstract = function(lab) {
-          var finalObj = "";
-          var labDescriptions = [
-            "Lab 1 Description",
-            "Lab 2 Description",
-            "Lab 3 Description",
-            "Lab 4 Description",
-            "Lab 5 Description",
-          ];
-          finalObj = labDescriptions[lab-1];
-          document.getElementById('labAbstract').innerHTML = finalObj;
-        }
+      var link = function(url) {
+        var str = "http://khou22.github.io/school/optics/" + url
+        window.open(str);
+      }
       </script>
-      <div class="parallax__group">
-        <div class="parallax__layer parallax__layer--back">
-          <div class="background background3">
-            Background
-          </div>
-        </div>
-        <div class="parallax__layer parallax__layer--base">
-          Foreground
-        </div>
-      </div>
     </div>
   </body>
 </html>

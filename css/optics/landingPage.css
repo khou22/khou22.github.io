@@ -1,0 +1,65 @@
+.lab-background {
+  background-image: url(./../../school/optics/media/images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.lab-welcome {
+  width: 40%;
+  height: 20%;
+  position: absolute;
+  left: 30%; /*50 - (.5 * width)*/
+  top: 5%;
+  border-radius: 3rem;
+
+  /*Glass Effect*/
+  border-bottom: 1px solid;
+  border-bottom-color: #ccc;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.lab-welcome-title {
+  font-size: 5rem;
+  text-align: center;
+  color: black;
+}
+
+.lab-welcome-subtitle {
+  font-size: 3rem;
+  text-align: center;
+  color: black;
+}
+
+.lab-welcome-content {
+  margin-top: 5%;
+}
+
+.lab-links {
+  width: 30%;
+  position: absolute;
+  left: 35%; /*50 - (.5 * width)*/
+  bottom: 10%;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  /*Glass Effect*/
+  border-bottom: 1px solid;
+  border-bottom-color: #ccc;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.lab-button {
+  width: 75px;
+  height: 75px;
+  margin-left: 30px;
+  border-radius: 37.5px;
+  font-size: 2rem;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+}
