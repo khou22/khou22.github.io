@@ -1,0 +1,16 @@
+.scroll-down-animation {
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    margin-top: -9%;
+  }
+  100% {
+    margin-top: -6%;
+  }
+}
