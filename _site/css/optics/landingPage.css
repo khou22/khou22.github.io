@@ -40,7 +40,8 @@
 .lab-links {
   width: 450px;
   position: absolute;
-  left: 37.5%;
+  left: -225px;
+  margin-left: 50%;
   bottom: 10%;
   border-radius: 1rem;
   padding: 1rem;
