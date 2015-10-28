@@ -121,7 +121,11 @@ var StrToArray = function(data) {
   console.log("Counting unique words");
   document.getElementById('downloadlink').innerHTML = "Counting Words...";
   var strArray = [];
-  var splitAt = [" ", "-", "<", ">"]; //What constitutes a new word
+  var splitAt = [" ", "-", "<", ">", "\n", "\r"]; //What constitutes a new word, includes carriage returns
+
+  //Attempting to remove carriage returns
+  data = data.replace(/\r/gm,' '); //Replace carriage returns with spaces
+
   var array1 = data.split(splitAt[0]);
   for (var i = 0; i < array1.length; i++) {
     strArray.push(array1[i]); //First split
