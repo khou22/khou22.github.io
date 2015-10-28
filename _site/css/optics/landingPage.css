@@ -65,3 +65,25 @@
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid white;
 }
+
+.lab-nav-links {
+  width: 1000px;
+  position: relative;
+  left: -500px;
+  margin-left: 50%;
+  bottom: 10%;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.lab-nav-button {
+  width: 21%;
+  height: 70px;
+  margin-left: 14px;
+  margin-right: 14px;
+  border-radius: 20px;
+  font-size: 2rem;
+
+  background-color: rgb(255, 255, 255);
+  border: 1px solid white;
+}
