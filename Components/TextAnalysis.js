@@ -124,7 +124,7 @@ var StrToArray = function(data) {
   var splitAt = [" ", "-", "<", ">", "\n", "\r"]; //What constitutes a new word, includes carriage returns
 
   //Attempting to remove carriage returns
-  data = data.replace(/\r/gm,' '); //Replace carriage returns with spaces
+  data = data.replace(/\r/gm,' '); //Replace carriage returns with spaces, doesn't seem to work
 
   var array1 = data.split(splitAt[0]);
   for (var i = 0; i < array1.length; i++) {
