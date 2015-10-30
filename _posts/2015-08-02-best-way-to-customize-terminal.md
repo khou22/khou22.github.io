@@ -18,14 +18,14 @@ Oh-my-zsh is located here: <a href="https://github.com/robbyrussell/oh-my-zsh">h
 <br />
 <br />
 To install, simply use one of the following methods and type the command:
+<b>Curl Method</b>
 {% highlight bash %}
-curl
 $: sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 {% endhighlight %}
 
 or
 
+<b>Wget Method</b>
 {% highlight bash %}
-wget
 $: sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 {% endhighlight %}
