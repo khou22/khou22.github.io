@@ -6,7 +6,7 @@ date: 2015-10-17 20:55:04
 description: "Uploading a text file and sorting it into a string"
 category: Programming
 tags: [html, javascript]
-featured: "yes"
+featured: "no"
 ---
 I just started working on a project that will analyze the user's text and look for patterns, word usage, etc. My first hurdle was creating a system in which the user can upload a text file and have the server read it as a string.
 

@@ -17,7 +17,7 @@ It was shocking how much personal information was available at my finger tips ju
 
 <br />
 
-<a href="khou22.github.io/blog/apps/text-analysis" target="_blank"><b>Text-Analysis App</b></a>
+<a href="http://khou22.github.io/blog/apps/text-analysis" target="_blank"><b>Text-Analysis App</b></a>
 
 <hr />
 
@@ -37,6 +37,6 @@ I've learned so much in the past couple week while programming this app, the mos
 
 <br />
 
-I encourage you to give it a try! You might learn something neat about the way you speak. I'll be adding more analysis in the coming weeks including writing grade level (according to US standards), readability, emotional state, etc. It'll be interesting!
+I encourage you to give it a try! You might learn something neat about the way you speak. I'll be adding more analysis in the coming weeks including <a href="#" data-toggle="tooltip" title="See the Flesch-Kincaid Grade Level formula">writing grade level</a> (according to US standards), readability, emotional state, etc. It'll be interesting!
 
 If you have any suggestions or comments feel free to <a href="mailto:kevin.ch.hou@gmail.com">let me know</a>!

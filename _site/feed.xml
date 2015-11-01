@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Nov 2015 15:05:05 -0800</pubDate>
-    <lastBuildDate>Sun, 01 Nov 2015 15:05:05 -0800</lastBuildDate>
+    <pubDate>Sun, 01 Nov 2015 15:11:23 -0800</pubDate>
+    <lastBuildDate>Sun, 01 Nov 2015 15:11:23 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -20,7 +20,7 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;khou22.github.io/blog/apps/text-analysis&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;Text-Analysis App&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://khou22.github.io/blog/apps/text-analysis&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;Text-Analysis App&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -40,7 +40,7 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;I encourage you to give it a try! You might learn something neat about the way you speak. I’ll be adding more analysis in the coming weeks including writing grade level (according to US standards), readability, emotional state, etc. It’ll be interesting!&lt;/p&gt;
+&lt;p&gt;I encourage you to give it a try! You might learn something neat about the way you speak. I’ll be adding more analysis in the coming weeks including &lt;a href=&quot;#&quot; data-toggle=&quot;tooltip&quot; title=&quot;See the Flesch-Kincaid Grade Level formula&quot;&gt;writing grade level&lt;/a&gt; (according to US standards), readability, emotional state, etc. It’ll be interesting!&lt;/p&gt;
 
 &lt;p&gt;If you have any suggestions or comments feel free to &lt;a href=&quot;mailto:kevin.ch.hou@gmail.com&quot;&gt;let me know&lt;/a&gt;!&lt;/p&gt;
 </description>

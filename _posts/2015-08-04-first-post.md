@@ -6,7 +6,7 @@ date:   2015-08-04 16:22:08
 description: "This is my first blog post using Jekyll on Github Pages! I'm really excited to start updating this site so stay tuned!"
 category: Introduction 
 tags: [github-pages]
-featured: "yes"
+featured: "no"
 ---
 
 {% highlight javascript %}
