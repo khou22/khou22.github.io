@@ -23,9 +23,10 @@ function shuffle(array) {
 
 var LandingPage = React.createClass({
   getInitialState: function() {
-    var shuffleBackgrounds = true;
+    var shuffleBackgrounds = false;
     var backgrounds = [
       "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
+      "./../media/site/images/backgrounds/Square_Comet_Wallpaper.jpg",
       "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
       "./../media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
       "./../media/site/images/backgrounds/Maple_Baseball_Bat.jpg",
