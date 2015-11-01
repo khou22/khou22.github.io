@@ -57,7 +57,7 @@ This will install all the required modules. This sytem makes sharing code incred
 <b>Including Other JS Files in Your Code</b>
 It's very easy to include other Javascript files in your code. In fact, it's almsot identical to including a package dependency. Simply include:
 {% highlight javascript %}
-var m2 = require(‘./module2’); //Assumes js file
+var m2 = require("./module2"); //Assumes js file
 {% endhighlight %}
 
 Must export your data in module2 otherwise it just reads an empty object:
@@ -74,8 +74,8 @@ It's very easy to start your own web server to run compiled code. It's great for
 {% highlight javascript %}
 var server = http.createServer(function(request, response) {
   //Every time server hears something at port 3000, will respond with this:
-  console.log(‘Got a request’); //Returns in the terminal
-  response.write(‘Hi’); //Sends the window content. The browser will display "Hi"
+  console.log("Got a request"); //Returns in the terminal
+  response.write("Hi"); //Sends the window content. The browser will display "Hi"
   response.end();
 });
 

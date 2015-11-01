@@ -224,7 +224,7 @@ Node.js also built NPM - Node Package Manager - which is the default package man
 <p><b>Including Other JS Files in Your Code</b>
 It’s very easy to include other Javascript files in your code. In fact, it’s almsot identical to including a package dependency. Simply include:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">m2</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="err">‘</span><span class="p">.</span><span class="o">/</span><span class="nx">module2</span><span class="err">’</span><span class="p">);</span> <span class="c1">//Assumes js file</span></code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">m2</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;./module2&quot;</span><span class="p">);</span> <span class="c1">//Assumes js file</span></code></pre></div>
 
 <p>Must export your data in module2 otherwise it just reads an empty object:</p>
 
@@ -239,8 +239,8 @@ It’s very easy to include other Javascript files in your code. In fact, it’s
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">//Every time server hears something at port 3000, will respond with this:</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">‘</span><span class="nx">Got</span> <span class="nx">a</span> <span class="nx">request</span><span class="err">’</span><span class="p">);</span> <span class="c1">//Returns in the terminal</span>
-  <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="err">‘</span><span class="nx">Hi</span><span class="err">’</span><span class="p">);</span> <span class="c1">//Sends the window content. The browser will display &quot;Hi&quot;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Got a request&quot;</span><span class="p">);</span> <span class="c1">//Returns in the terminal</span>
+  <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Hi&quot;</span><span class="p">);</span> <span class="c1">//Sends the window content. The browser will display &quot;Hi&quot;</span>
   <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
 <span class="p">});</span>
 
