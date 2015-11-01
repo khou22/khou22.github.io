@@ -1,4 +1,8 @@
 # Add this structure for every new tag
+apps:
+  slug: apps
+  name: Apps
+
 github-pages: #Declare the object
   slug: github-pages #Tag string for data organization - this is the same as the line above
   name: GitHub Pages #Name of the tag

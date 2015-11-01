@@ -6,9 +6,64 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Nov 2015 14:15:34 -0800</pubDate>
-    <lastBuildDate>Sun, 01 Nov 2015 14:15:34 -0800</lastBuildDate>
+    <pubDate>Sun, 01 Nov 2015 15:05:05 -0800</pubDate>
+    <lastBuildDate>Sun, 01 Nov 2015 15:05:05 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Text Analysis App: How Do You Talk To People on Facebook Versus In An Engineering Report?</title>
+        <description>&lt;p&gt;A couple weeks ago I downloaded by my &lt;a href=&quot;https://www.facebook.com/help/131112897028467/&quot;&gt;Facebook user data&lt;/a&gt;. By law, Facebook is required to package and send you your raw Facebook data…including every message you’ve ever sent.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;It was shocking how much personal information was available at my finger tips just from my Facebook profile. I was intrigued that all my Facebook messages were in once place. I decided to program an app that would sort through my messages and pick out the messages that I send. I also added in the ability to read simple text files such as my essays, emails, etc. The app can be found here:&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;khou22.github.io/blog/apps/text-analysis&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;Text-Analysis App&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I created options to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;FIlter out other people&#39;s messages to isolate your own data&lt;/li&gt;
+  &lt;li&gt;Filter out messages only between you and specific person(s)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Because it’s first semester senior year (college apps are in full swing) I haven’t had as much time as I’d like to work on this app. I’ve spent about a week on it and I’m currently working on adding new features. Right now it works for any text file and any Facebook message file (detailed instructions in the app).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve learned so much in the past couple week while programming this app, the most significant being memory management. I’m dealing with millions of lines of user data (my message file was a whopping 30 mb of pure text) and my computer has crashed a lot under the strain. I’ve managed to fix most of the issues and it’s so interesting learning how to efficiently go through such massive amounts of data without overloading the browser. One of the neat options I added in was a ‘big data’ option. If checked it will filter out any word that doesn’t occur over the specified number of times, therefore decreasing the load on the browser.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I encourage you to give it a try! You might learn something neat about the way you speak. I’ll be adding more analysis in the coming weeks including writing grade level (according to US standards), readability, emotional state, etc. It’ll be interesting!&lt;/p&gt;
+
+&lt;p&gt;If you have any suggestions or comments feel free to &lt;a href=&quot;mailto:kevin.ch.hou@gmail.com&quot;&gt;let me know&lt;/a&gt;!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Nov 2015 06:23:08 -0800</pubDate>
+        <link>http://khou22.github.io/programming/2015/11/01/text-analysis-app-how-do-you-talk-to-people-on-facebook-versus-in-an-engineering-report.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2015/11/01/text-analysis-app-how-do-you-talk-to-people-on-facebook-versus-in-an-engineering-report.html</guid>
+        
+        <category>apps</category>
+        
+        <category>javascript</category>
+        
+        <category>reactjs</category>
+        
+        <category>html</category>
+        
+        <category>css</category>
+        
+        <category>node-js</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>NodeJS Basics - Setting Up A Local Web Server</title>
@@ -366,32 +421,6 @@ It’s cool to see what holding option does when clicking! Wonder what else Appl
         <category>css</category>
         
         <category>osx</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 04 Aug 2015 09:22:08 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2015/08/04/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2015/08/04/welcome-to-jekyll.html</guid>
         
         
         <category>programming</category>
