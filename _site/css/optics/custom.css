@@ -95,3 +95,13 @@
 .lab-terms {
   font-size: 2.5rem;
 }
+
+.lab-picture-caption {
+  font-size: 2rem;
+  width: 80%;
+}
+
+.lab-return-home {
+  color: white;
+  font-size: 2rem;
+}
