@@ -502,7 +502,7 @@ var App = React.createClass({
   }
 });
 
-/*JSON to CSV Converter*/
+/*JSON to CSV Converter (found at: http://jsfiddle.net/hybrid13i/JXrwM/)*/
 /* ************************************************************************************* */
 function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
     //If JSONData is not an object then JSON.parse will parse the JSON string in an Object
