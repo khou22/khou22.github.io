@@ -736,3 +736,7 @@ strong {
     visibility: visible;
     opacity: 0.75;
     background-color: white; }
+
+.footer-icon-box {
+  width: 16px;
+  height: 16px; }
