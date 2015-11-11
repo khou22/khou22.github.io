@@ -291,8 +291,8 @@ var TextAnalysis = React.createClass({
         //Logic after anlaysis is done
         this.loadCommonWordsFromServer();
 
-        console.log("Added JSON data")
-        var data = "{ \"generalUserData\": { \"numberOfUses\": \"0\" } }"; //JSON Data
+        console.log("Added JSON data");
+        var data = "[{\"Vehicle\"\:\"BMW\",\"Rank\"\:\"1\"}, {\"Vehicle\"\:\"Honda\",\"Rank\"\:\"2\"}]"; //Put '\' in front of quotes and colons
         JSONToCSVConvertor(data, "Excel Data", true);
       }
       
