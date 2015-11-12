@@ -121,10 +121,16 @@ var StrToArray = function(data) {
   console.log("Counting unique words");
   document.getElementById('downloadlink').innerHTML = "Counting Words...";
   var strArray = [];
-  var splitAt = [" ", "-", "<", ">", "\n", "\r"]; //What constitutes a new word, includes carriage returns
+  var splitAt = [" ", "<", ">", "\n", "\r"]; //What constitutes a new word, includes carriage returns
 
-  //Attempting to remove carriage returns
+  //Remove carriage returns
   data = data.replace(/(\r\n|\n|\r)/gm,""); //Replace carriage returns with spaces, doesn't seem to work
+
+  data = data.replace(/\./g,' '); //Replace periods with spaces
+  data = data.replace(/\s{2,10}/g, ' '); //Replace instances of more than one space
+
+  //Replace all punctuation
+  data = data.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""); //Replace ALL punctuation
 
   var array1 = data.split(splitAt[0]);
   for (var i = 0; i < array1.length; i++) {
@@ -281,10 +287,14 @@ var TextAnalysis = React.createClass({
           if (ray2[0].indexOf("&#039;") >= 0) {
             temp = ray2[0].replace("&#039;", "'"); //Replace the special characters
           };
+          temp = temp.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""); //Replace ALL punctuation
+          temp = temp.replace(/\s{2,10}/g, ''); //Remove all instances of multiple spaces in a row
+          temp = temp.replace(/\s+/g, ''); //Remove all instances of a single space
+          temp = temp.trim();
           a.push(temp); //Words
           b.push(ray2[1]); //Count
 
-          wordObj += "{\"Word\"\:\"" + temp + "\",\"Frequency\"\:\"" + ray2[1] + "\"}";
+          wordObj += "{\"Word\"\:\"" + temp + "\", \"Frequency\"\:\"" + ray2[1] + "\"}";
           if (i != ray.length - 1) { //If not the last one
             wordObj += ", ";
           }
