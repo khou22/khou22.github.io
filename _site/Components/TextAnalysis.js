@@ -284,8 +284,11 @@ var TextAnalysis = React.createClass({
         for (var i = 0; i < ray.length; i++) {
           var ray2 = ray[i].split("|");
           var temp = ray2[0];
-          if (ray2[0].indexOf("&#039;") >= 0) {
-            temp = ray2[0].replace("&#039;", "'"); //Replace the special characters
+          if (ray2[0].indexOf("039") >= 0) {
+            console.log("Found:", ray2[0]);
+            temp = ray2[0].replace("&#039;", "\'"); //Replace the special characters
+            temp = temp.replace("039", "\'");
+            console.log("Convertered to:", temp)
           };
           temp = temp.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""); //Replace ALL punctuation
           temp = temp.replace(/\s{2,10}/g, ''); //Remove all instances of multiple spaces in a row
