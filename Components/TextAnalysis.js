@@ -297,7 +297,10 @@ var TextAnalysis = React.createClass({
           a.push(temp); //Words
           b.push(ray2[1]); //Count
 
-          wordObj += "{\"Word\"\:\"" + temp + "\", \"Frequency\"\:\"" + ray2[1] + "\"}";
+          wordObj += "{\"Word\"\:\"" + temp + "\", ";
+          wordObj += "\"Frequency\"\:\"" + ray2[1] + "\", ";
+          wordObj += "\"Length\"\:\"" + temp.length + "\"";
+          wordObj += "}";
           if (i != ray.length - 1) { //If not the last one
             wordObj += ", ";
           }
