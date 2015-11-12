@@ -124,7 +124,7 @@ var StrToArray = function(data) {
   var splitAt = [" ", "-", "<", ">", "\n", "\r"]; //What constitutes a new word, includes carriage returns
 
   //Attempting to remove carriage returns
-  data = data.replace(/\r/gm,' '); //Replace carriage returns with spaces, doesn't seem to work
+  data = data.replace(/(\r\n|\n|\r)/gm,""); //Replace carriage returns with spaces, doesn't seem to work
 
   var array1 = data.split(splitAt[0]);
   for (var i = 0; i < array1.length; i++) {
@@ -269,6 +269,9 @@ var TextAnalysis = React.createClass({
         console.log("Analyzing...");
         var ray = readerOutput.split("~");
         // console.log(ray)
+
+        var wordObj = "["; //Start JSON data structure
+
         ray.splice(ray.length - 1, 1); //Cut off the undefined at the end
         var a = [];
         var b = [];
@@ -280,20 +283,27 @@ var TextAnalysis = React.createClass({
           };
           a.push(temp); //Words
           b.push(ray2[1]); //Count
+
+          wordObj += "{\"Word\"\:\"" + temp + "\",\"Frequency\"\:\"" + ray2[1] + "\"}";
+          if (i != ray.length - 1) { //If not the last one
+            wordObj += ", ";
+          }
         }
-        // console.log(a)
-        // console.log(b)
+        wordObj += "]"
+        console.log(wordObj)
         this.setState({
           wordList: a,
           wordListCount: b
         })
         document.getElementById('downloadlink').innerHTML = "Analysis Done";
+        
         //Logic after anlaysis is done
-        this.loadCommonWordsFromServer();
+        this.loadCommonWordsFromServer(); //Load general data from offline JSON
 
+        //Generate an excel spreadsheet
         console.log("Added JSON data");
-        var data = "[{\"Vehicle\"\:\"BMW\",\"Rank\"\:\"1\"}, {\"Vehicle\"\:\"Honda\",\"Rank\"\:\"2\"}]"; //Put '\' in front of quotes and colons
-        JSONToCSVConvertor(data, "Excel Data", true);
+        // var data = "[{\"Vehicle\"\:\"BMW\",\"Rank\"\:\"1\"}, {\"Vehicle\"\:\"Honda\",\"Rank\"\:\"2\"}]"; //Put '\' in front of quotes and colons
+        JSONToCSVConvertor(wordObj, "Excel Data", true);
       }
       
     }
