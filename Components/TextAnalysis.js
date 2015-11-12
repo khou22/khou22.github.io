@@ -285,10 +285,10 @@ var TextAnalysis = React.createClass({
           var ray2 = ray[i].split("|");
           var temp = ray2[0];
           if (ray2[0].indexOf("039") >= 0) {
-            console.log("Found:", ray2[0]);
+            // console.log("Found:", ray2[0]);
             temp = ray2[0].replace("&#039;", "\'"); //Replace the special characters
             temp = temp.replace("039", "\'"); //Remove apostrophe
-            console.log("Convertered to:", temp)
+            // console.log("Convertered to:", temp)
           };
           temp = temp.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""); //Replace ALL punctuation
           temp = temp.replace(/\s{2,10}/g, ''); //Remove all instances of multiple spaces in a row
@@ -299,7 +299,8 @@ var TextAnalysis = React.createClass({
 
           wordObj += "{\"Word\"\:\"" + temp + "\", ";
           wordObj += "\"Frequency\"\:\"" + ray2[1] + "\", ";
-          wordObj += "\"Length\"\:\"" + temp.length + "\"";
+          wordObj += "\"Length\"\:\"" + temp.length + "\", ";
+          wordObj += "\"Syllables\"\:\"" + syllableCount(temp) + "\"";
           wordObj += "}";
           if (i != ray.length - 1) { //If not the last one
             wordObj += ", ";
@@ -534,9 +535,8 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel, AutomaticDownload)
     var arrData = typeof JSONData != 'object' ? JSON.parse(JSONData) : JSONData;
     
     var CSV = '';
-    //Set Report title in first row or line
-    
-    CSV += ReportTitle + '\r\n\n';
+    // //Set Report title in first row or line
+    // CSV += ReportTitle + '\r\n\n';
 
     //This condition will generate the Label/Header
     if (ShowLabel) {
@@ -615,6 +615,24 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel, AutomaticDownload)
     }
 }
 /* *************************************************************************************  */
+
+/*Local Syllable Count Function*/
+//Found here: http://stackoverflow.com/questions/5686483/how-to-compute-number-of-syllables-in-a-word-in-javascript
+function syllableCount(word) {
+  if (word == "null") { //If variable is undefined
+    return 0;
+  }
+  word = word.toLowerCase(); //Downcase
+  if(word.length <= 3) { return 1; } //Return 1 if fewer than 3 letters
+  word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, ''); //word.sub!(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '')
+  word = word.replace(/^y/, ''); //word.sub!(/^y/, '')
+  var final = word.match(/[aeiouy]{1,2}/g); //word.scan(/[aeiouy]{1,2}/)
+  if (final != null) { //If exists
+    return final.length; //Return length
+  } else {
+    return 0; //Otherwise return 0
+  }
+}
 
 React.render(
   React.createElement(App, null),
