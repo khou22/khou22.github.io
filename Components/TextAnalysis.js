@@ -287,7 +287,7 @@ var TextAnalysis = React.createClass({
           if (ray2[0].indexOf("039") >= 0) {
             console.log("Found:", ray2[0]);
             temp = ray2[0].replace("&#039;", "\'"); //Replace the special characters
-            temp = temp.replace("039", "\'");
+            temp = temp.replace("039", "\'"); //Remove apostrophe
             console.log("Convertered to:", temp)
           };
           temp = temp.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""); //Replace ALL punctuation
