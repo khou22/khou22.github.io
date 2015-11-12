@@ -300,7 +300,7 @@ var TextAnalysis = React.createClass({
           }
         }
         wordObj += "]"
-        console.log(wordObj)
+        // console.log(wordObj); //JSON object string
         this.setState({
           wordList: a,
           wordListCount: b
@@ -312,8 +312,7 @@ var TextAnalysis = React.createClass({
 
         //Generate an excel spreadsheet
         console.log("Added JSON data");
-        // var data = "[{\"Vehicle\"\:\"BMW\",\"Rank\"\:\"1\"}, {\"Vehicle\"\:\"Honda\",\"Rank\"\:\"2\"}]"; //Put '\' in front of quotes and colons
-        JSONToCSVConvertor(wordObj, "Excel Data", true);
+        JSONToCSVConvertor(wordObj, "Excel Spreadsheet", true, false);
       }
       
     }
@@ -524,7 +523,7 @@ var App = React.createClass({
 
 /*JSON to CSV Converter (found at: http://jsfiddle.net/hybrid13i/JXrwM/)*/
 /* ************************************************************************************* */
-function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
+function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel, AutomaticDownload) {
     //If JSONData is not an object then JSON.parse will parse the JSON string in an Object
     var arrData = typeof JSONData != 'object' ? JSON.parse(JSONData) : JSONData;
     
@@ -571,7 +570,7 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
     }   
     
     //Generate a file name
-    var fileName = "MyReport_";
+    var fileName = "Word_Usage_";
     //this will remove the blank-spaces from the title and replace it with an underscore
     fileName += ReportTitle.replace(/ /g,"_");   
     
@@ -583,19 +582,31 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
     // but this will not work in some browsers
     // or you will not get the correct file extension    
     
-    //this trick will generate a temp <a /> tag
-    var link = document.createElement("a");    
-    link.href = uri;
     
-    //set the visibility hidden so it will not effect on your web-layout
-    link.style = "visibility:hidden";
-    link.download = fileName + ".csv";
-    
-    //this part will append the anchor tag and remove it after automatic click
-    console.log("Download the CSV file");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    if (AutomaticDownload) {
+      //this trick will generate a temp <a /> tag
+      var link = document.createElement("a");    
+      link.href = uri;
+      
+      //set the visibility hidden so it will not effect on your web-layout
+      link.style = "visibility:hidden";
+      link.download = fileName + ".csv";
+
+      //This part will append the anchor tag and remove it after automatic click
+      //This code causes the file to automatically download
+      console.log("Download the CSV file");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      //This code will create a link for the user to download the data
+      var downloadLink = document.getElementById('downloadlink');
+      downloadLink.href = uri; //Create the download CSV file
+      downloadLink.style = "visibility:hidden";
+      downloadLink.download = fileName + ".csv";
+      downloadLink.style.display = 'block';
+      document.getElementById('downloadlink').innerHTML = "Download Spreadsheet";
+    }
 }
 /* *************************************************************************************  */
 
