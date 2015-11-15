@@ -21,6 +21,8 @@ function shuffle(array) {
   return array;
 }
 
+/****************************** Start of components ******************************/
+
 var LandingPage = React.createClass({
   getInitialState: function() {
     var shuffleBackgrounds = true;
@@ -106,7 +108,7 @@ var ProfileBox = React.createClass({
   render: function() {
     return (
       <div>
-        <div className="profile-name">
+        <div className="profile-name" id="kevin">
           Kevin Hou
         </div>
         <div className="cardDiv">
@@ -187,3 +189,20 @@ React.render(
   React.createElement(LandingPage, null),
   document.getElementById('content')
 );
+
+var theater = theaterJS({ local: 'fr' })
+
+theater
+  .on('type:start, erase:start', function () {
+    theater.getCurrentActor().$element.classList.add('actor__content--typing')
+  })
+  .on('type:end, erase:end', function () {
+    theater.getCurrentActor().$element.classList.remove('actor__content--typing')
+  })
+
+theater
+  .addActor('kevin', { speed: 0.6, accuracy: 0.7 })
+  .addScene('kevin:Kevin Hou', 2000)
+  .addScene('kevin:Welcome!', 1000)
+  .addScene('kevin:Kevin Hou', 2000)
+  .addScene(theater.replay.bind(theater))
