@@ -17,7 +17,7 @@ I came across a neat web app that one of my LinkedIn connections posted called <
 <br />
 
 Here is a brief overview of the concept:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8aGhZQkoFbQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/8aGhZQkoFbQ" frameborder="0" allowfullscreen></iframe>
 
 <br />
 
