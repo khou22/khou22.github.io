@@ -8,6 +8,11 @@ var AppsPage = React.createClass({
             name: "Text Analysis",
             slug: "text-analysis",
             description: "An app to analyze the user's text for patterns, word choice, etc."
+          },
+          {
+            name: "Stats Test Score Calculator",
+            slug: "stats-test-score-calculator",
+            description: "An app to automatically calculate test scores and apply a grading curve. Built for Triggs Honors Stats Classes."
           }]
         }/>
       </div>
