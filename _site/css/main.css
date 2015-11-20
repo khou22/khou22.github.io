@@ -745,7 +745,8 @@ strong {
   width: 48%;
   float: left;
   border: 1px solid black;
-  padding: 5%; }
+  padding: 5%;
+  line-height: 24px; }
 .stsc-output-div {
   width: 48%;
   float: right;
@@ -754,3 +755,5 @@ strong {
   font-size: 24px; }
 .stsc-score {
   color: #3286A8; }
+.stsc-instructions {
+  line-height: 16px; }

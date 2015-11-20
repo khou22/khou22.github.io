@@ -84,6 +84,11 @@ var UserInput = React.createClass({
   render: function() {
     return (
       <div>
+        <h3>Input Your Scores:</h3>
+        <div className="stsc-instructions">
+          <i>It's OK to leave free response scores blank if they're non-existant.</i>
+        </div>
+        <hr />
         <form onSubmit={this.props.submit.bind(this)}>
           Multiple Choice Right: <input type="text" placeholder="40" size="4" id="multipleChoice" /> /40
           <br />
