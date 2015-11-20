@@ -65,15 +65,20 @@ var ScoreCalculator = React.createClass({
   render: function() {
     return (
       <div>
-        <div className="stsc-input-div">
-          <UserInput submit={this.submitData.bind(this)}/>
-        </div>
-        <div className="stsc-output-div">
-          AP Composite Score:
-          <p className="stsc-score" id="APScore">Waiting to Receive</p>
-          <hr />
-          Triggs Score:
-          <p className="stsc-score" id="score">Waiting to Receive</p>
+        <h1>Test Score Convertor 2015-2016</h1>
+        <h3>Mariel Triggs - Honors Stats</h3>
+        <br />
+        <div>
+          <div className="stsc-input-div">
+            <UserInput submit={this.submitData.bind(this)}/>
+          </div>
+          <div className="stsc-output-div">
+            AP Composite Score:
+            <p className="stsc-score" id="APScore">Waiting to Receive</p>
+            <hr />
+            Triggs Score:
+            <p className="stsc-score" id="score">Waiting to Receive</p>
+          </div>
         </div>
       </div>
     );
