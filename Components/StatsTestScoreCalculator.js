@@ -54,10 +54,11 @@ var ScoreCalculator = React.createClass({
     
     var compositeScore = max;
     console.log("Commposite AP Score: " + compositeScore);
+    var triggsScore = gradingCurve(compositeScore);
+    console.log("Triggs Score: " + triggsScore);
 
-    console.log("Triggs Score: " + gradingCurve(compositeScore));
-
-    document.getElementById('score').innerHTML = compositeScore;
+    document.getElementById('score').innerHTML = triggsScore;
+    document.getElementById('APScore').innerHTML = compositeScore;
 
     return false; //Prevent screen refresh
   },
@@ -68,7 +69,10 @@ var ScoreCalculator = React.createClass({
           <UserInput submit={this.submitData.bind(this)}/>
         </div>
         <div className="stsc-output-div">
-          Score:
+          AP Composite Score:
+          <p className="stsc-score" id="APScore">Waiting to Receive</p>
+          <hr />
+          Triggs Score:
           <p className="stsc-score" id="score">Waiting to Receive</p>
         </div>
       </div>
