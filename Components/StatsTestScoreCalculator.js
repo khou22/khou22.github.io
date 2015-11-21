@@ -10,10 +10,29 @@ var gradingCurve = function(score) {
   var output = (m * temp) + 40;
   return output; //Return output
 }
-console.log(gradingCurve(79)); //Test. Should be about 91.39
 
 var ScoreCalculator = React.createClass({
   submitData: function() {
+    //Check if all scores are within specified range
+    if (document.getElementById('multipleChoice').value) { //Check multiple choice
+      if (document.getElementById('multipleChoice').value > 40 || document.getElementById('multipleChoice').value < 0) {
+        alert("Please keep scores within the defined domain")
+        return false; //Kill
+      }
+    } else { //If no multiple choice
+      alert("Please enter a multiple choice score");
+      return false; //Kill
+    }
+    for (var i = 0; i < 6; i++) { //Check free response questions
+      var questionNumber = i + 1;
+      var objectID = "question" + questionNumber;
+      if (document.getElementById(objectID).value) {
+        if (document.getElementById(objectID).value > 4 || document.getElementById(objectID).value < 0) {
+          alert("Please keep scores within the defined domain")
+          return false; //Kill
+        }
+      }
+    }
     //Collect question data
     var freeResponses = [];
     for (var i = 0; i < 6; i++) {
