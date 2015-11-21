@@ -51,6 +51,12 @@ $brand-blue:      #3286A8;
     text-align: center;
   }
 
+  &-scores-div {
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 1rem;
+  }
+
   &-modal {
     position: fixed;
     top: 0;

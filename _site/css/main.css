@@ -684,6 +684,10 @@ strong {
   font-size: 20px;
   margin-top: 6rem;
   text-align: center; }
+.TA-scores-div {
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 1rem; }
 .TA-modal {
   position: fixed;
   top: 0;

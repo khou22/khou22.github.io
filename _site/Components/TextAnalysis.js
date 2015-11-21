@@ -3,6 +3,11 @@ var readerOutput = "Default String"; //Declare global
 var doneReading = false;
 var numberOfFiles = 1;
 var currentFile = 0;
+
+var propertyOrder = ["totalWords", "totalSentences"]; //Order in which they are added
+var totalWords = 0;
+var totalSentences = 0;
+
 reader.onload = function(e) { //Callback if reader is used
   rawText = reader.result; //Stores the results
   // console.log(rawText)
@@ -43,7 +48,7 @@ reader.onload = function(e) { //Callback if reader is used
               if (temp[i].indexOf("user\">" + frontSplit)) { //Chop off extranious
                 // console.log("Found user's name in the array");
                 // console.log(temp[i])
-                finalRaw += temp[i]; //First element in the array
+                finalRaw += temp[i]; //First element in the array and add a period at the end of each message
               }
             }
             // console.log(rawText)
@@ -88,7 +93,7 @@ reader.onload = function(e) { //Callback if reader is used
       }
     }
     for (var i = 0; i < back.length; i++) {
-      readerOutput += " " + back[i];
+      readerOutput += " " + back[i] + "."; //Add period after every new message
     }
   }
   // console.log("File Reader Complete"); //Feedback
@@ -123,6 +128,10 @@ var StrToArray = function(data) {
   var strArray = [];
   var splitAt = [" ", "<", ">", "\n", "\r"]; //What constitutes a new word, includes carriage returns
 
+  //Count sentences
+  totalSentences = data.split(".").length;
+  console.log(totalSentences);
+
   //Remove carriage returns
   data = data.replace(/(\r\n|\n|\r)/gm,""); //Replace carriage returns with spaces, doesn't seem to work
 
@@ -148,7 +157,8 @@ var StrToArray = function(data) {
       }
     }
   }
-  // console.log(strArray); //Feedback
+  // console.log(strArray.length); //Feedback - number of words
+  totalWords = strArray.length;
   return(strArray); //Return array
 };
 
@@ -163,7 +173,9 @@ var TextAnalysis = React.createClass({
       fileLastModified: 0,
       fileLastModifiedDate: new Date(1998, 0, 1, 7, 10, 22, 0),
       showModal: "false",
-      currentPercentage: 0
+      currentPercentage: 0,
+      fleschKincaid: 0,
+      readingEase: 0
     }
   },
   loadFile: function() {
@@ -257,7 +269,11 @@ var TextAnalysis = React.createClass({
         // console.log(sortedWords, sortedWords.length);
         // console.log("Sorted", sortedWordsCount, sortedWordsCount.length);
         
-        var temp = "";
+        var temp = "totalWords=" + totalWords + ";";
+        temp += "totalSentences=" + totalSentences + ";";
+        console.log(temp)
+
+        temp += "{[()]}";
         for (var i = 0; i < sortedWords.length; i++) {
           temp += sortedWords[i] + "|" + sortedWordsCount[i] + "~";
         }
@@ -273,7 +289,19 @@ var TextAnalysis = React.createClass({
       } else { //If analyzing
         document.getElementById('downloadlink').innerHTML = "Analyzing...";
         console.log("Analyzing...");
-        var ray = readerOutput.split("~");
+        var details = readerOutput.split("{[()]}")[0];
+
+        //Read properties
+        var properties = details.split(";");
+        var propertyValues = [];
+        for (var i = 0; i < properties.length - 1; i++) { //Don't count last one
+          propertyValues.push(properties[i].split("=")[1]);
+        }
+        // console.log(propertyValues)
+        
+
+        var wordUsage = readerOutput.split("{[()]}")[1];
+        var ray = wordUsage.split("~");
         // console.log(ray)
 
         var wordObj = "["; //Start JSON data structure
@@ -308,11 +336,40 @@ var TextAnalysis = React.createClass({
         }
         wordObj += "]"
         // console.log(wordObj); //JSON object string
+
+        //Count total syllables
+        var totalSyllables = 0;
+        for (var i = 0; i < a.length; i++) {
+          var syllables = syllableCount(a[i]);
+          totalSyllables += syllables * b[i]; //Add syllables to total count
+        }
+        propertyOrder.push("totalSyllables");
+        propertyValues.push(totalSyllables);
+        // console.log(propertyOrder);
+        // console.log(propertyValues);
+
         this.setState({
           wordList: a,
           wordListCount: b
         })
         document.getElementById('downloadlink').innerHTML = "Analysis Done";
+
+        //Property feedback
+        for (var i = 0; i < propertyValues.length; i++) {
+          console.log(propertyOrder[i], propertyValues[i]);
+        };
+
+        // order within array: totalWords, totalSentences, totalSyllables
+        totalWords = propertyValues[0];
+        totalSentences = propertyValues[1];
+        totalSyllables = propertyValues[2];
+
+        var readingEase = 206.835 - (1.015 * (totalWords/totalSentences)) - (84.6 * (totalSyllables/totalWords));
+        var fleschKincaid = (.39 * (totalWords/totalSentences)) + (11.8 * (totalSyllables/totalWords)) - 15.59;
+        this.setState({
+          readingEase: readingEase,
+          fleschKincaid: fleschKincaid
+        });
         
         //Logic after anlaysis is done
         this.loadCommonWordsFromServer(); //Load general data from offline JSON
@@ -391,7 +448,9 @@ var TextAnalysis = React.createClass({
         </div>
         <Analysis wordList={this.state.wordList}
           wordListCount={this.state.wordListCount}
-          toggleModal={this.toggleModal}/>
+          toggleModal={this.toggleModal}
+          fleschKincaid={this.state.fleschKincaid}
+          readingEase={this.state.readingEase}/>
       </div>
     )
   }
@@ -470,6 +529,19 @@ var Analysis = React.createClass({
     });
     return (
       <div>
+        <div className="TA-scores-div">
+          <b>Scores</b><br />
+          <b>Reading Ease: {this.props.readingEase}</b><br />
+          <b>Flesch-Kincaid Grade Level: {this.props.fleschKincaid}</b><br />
+          <br />
+          Reading Ease Key:<br />
+          90.0–100.0  easily understood by an average 11-year-old student<br />
+          60.0–70.0 easily understood by 13- to 15-year-old students<br />
+          0.0–30.0  best understood by university graduates<br />
+          <br />
+          Flesch-Kincaid Key:<br />
+          Number corresponds to US grade level.
+        </div>
         <table className="TA-word-list-table">
           {tableNodes}
         </table>
