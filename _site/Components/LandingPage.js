@@ -43,6 +43,7 @@ var LandingPage = React.createClass({
       "./../media/site/images/backgrounds/Turning_Chaote_Viga.jpg"
     ];
     setTimeout(function() {document.getElementById("mainDiv").classList.add('div-fade-in');}, 1);
+    preload("./../media/site/images/Profile.jpg"); //Preload profile picture
     if (shuffleBackgrounds) { //If shuffle
       shuffle(backgrounds); //Shuffle backgrounds
     }
