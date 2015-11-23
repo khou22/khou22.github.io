@@ -29,7 +29,6 @@ var LandingPage = React.createClass({
     var backgrounds = [
       "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
       "./../media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand.jpg",
-      // "./../media/site/images/backgrounds/Square_Comet_Wallpaper.jpg",
       "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
       "./../media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
       "./../media/site/images/backgrounds/Maple_Baseball_Bat.jpg",
