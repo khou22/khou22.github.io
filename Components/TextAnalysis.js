@@ -419,6 +419,8 @@ var TextAnalysis = React.createClass({
     console.log(data)
   },
   render: function() {
+    var temp = this.state.fileName.replace(/ /g,"_"); //Replace spaces
+    var downloadName = "Data - " + temp + ".txt";
     return (
       <div>
         <div className="TA-file-input">
@@ -443,7 +445,7 @@ var TextAnalysis = React.createClass({
           </div>
           <div className="TA-download">
             <p>Open Console to View Progress</p><br />
-            <a download="Compressed_Data.txt" id="downloadlink" >Ready to Receive</a>
+            <a download={downloadName} id="downloadlink" >Ready to Receive</a>
           </div>
         </div>
         <Analysis wordList={this.state.wordList}
@@ -527,12 +529,14 @@ var Analysis = React.createClass({
         </tr>
       );
     });
+    var readingEase = Math.round(100 * this.props.readingEase)/100;
+    var gradeLevel = Math.round(100 * this.props.fleschKincaid)/100; //Two decimals
     return (
       <div>
         <div className="TA-scores-div">
           <b>Scores</b><br />
-          <b>Reading Ease: {this.props.readingEase}</b><br />
-          <b>Flesch-Kincaid Grade Level: {this.props.fleschKincaid}</b><br />
+          <b>Reading Ease: {readingEase}</b><br />
+          <b>Flesch-Kincaid Grade Level: {gradeLevel}</b><br />
           <br />
           Reading Ease Key:<br />
           90.0–100.0  easily understood by an average 11-year-old student<br />
