@@ -186,8 +186,18 @@ var TextAnalysis = React.createClass({
       numberOfFiles = files.length;
       var selectedFile = files[currentFile]; //Find file
       // console.log(selectedFile.size); //Feedback
+      var temp = selectedFile.name;
+      if (selectedFile.name.indexOf('.txt')) {
+        console.log("Removing extension")
+        temp = temp.replace('.txt', '');
+      }
+      if (selectedFile.name.indexOf('Data — ')) {
+        console.log("Removing 'Data — ' prefix")
+        temp = temp.replace('Data - ', '');
+      }
+      console.log(temp)
       this.setState({ //Save the file details
-        fileName: selectedFile.name,
+        fileName: temp,
         fileSize: selectedFile.size,
         fileType: selectedFile.type,
         fileLastModified: selectedFile.lastModified,
@@ -335,7 +345,7 @@ var TextAnalysis = React.createClass({
           }
         }
         wordObj += "]"
-        console.log(wordObj); //JSON object string
+        // console.log(wordObj); //JSON object string
 
         //Count total syllables
         var totalSyllables = 0;
@@ -376,7 +386,7 @@ var TextAnalysis = React.createClass({
 
         //Generate an excel spreadsheet
         console.log("Added JSON data");
-        JSONToCSVConvertor(wordObj, "Excel Spreadsheet", true, false);
+        JSONToCSVConvertor(wordObj, this.state.fileName, true, false);
       }
       
     }
@@ -652,7 +662,7 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel, AutomaticDownload)
     }   
     
     //Generate a file name
-    var fileName = "Word_Usage_";
+    var fileName = "Word_Usage_Excel - ";
     //this will remove the blank-spaces from the title and replace it with an underscore
     fileName += ReportTitle.replace(/ /g,"_");   
     
