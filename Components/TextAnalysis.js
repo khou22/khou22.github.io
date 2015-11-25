@@ -139,7 +139,7 @@ var StrToArray = function(data) {
   data = data.replace(/\s{2,10}/g, ' '); //Replace instances of more than one space
 
   //Replace all punctuation
-  data = data.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""); //Replace ALL punctuation
+  data = data.replace(/[.,-\/#!$%\^&\*;:{}=\-_`"~()]/g,""); //Replace ALL punctuation
 
   var array1 = data.split(splitAt[0]);
   for (var i = 0; i < array1.length; i++) {
@@ -318,7 +318,7 @@ var TextAnalysis = React.createClass({
             temp = temp.replace("039", "\'"); //Remove apostrophe
             // console.log("Convertered to:", temp)
           };
-          temp = temp.replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""); //Replace ALL punctuation
+          temp = temp.replace(/[.,-\/#!$%\^&\*;:{}=\-_`"~()]/g,""); //Replace ALL punctuation
           temp = temp.replace(/\s{2,10}/g, ''); //Remove all instances of multiple spaces in a row
           temp = temp.replace(/\s+/g, ''); //Remove all instances of a single space
           temp = temp.trim();
@@ -335,7 +335,7 @@ var TextAnalysis = React.createClass({
           }
         }
         wordObj += "]"
-        // console.log(wordObj); //JSON object string
+        console.log(wordObj); //JSON object string
 
         //Count total syllables
         var totalSyllables = 0;
