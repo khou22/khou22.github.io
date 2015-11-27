@@ -261,7 +261,9 @@ pre {
  * Page content
  */
 .page-content {
-  padding: 30px 0; }
+  padding: 30px 0;
+  background-image: url("./../media/site/textures/white_wall_hash.png");
+  background-repeat: infinite; }
 
 .page-heading {
   font-size: 24px;
