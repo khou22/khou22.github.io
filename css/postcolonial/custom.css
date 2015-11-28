@@ -1,0 +1,16 @@
+@font-face {
+  font-family: defaultFont;
+  src: url(./../../media/site/fonts/ProximaNova/ProximaNova-Light.otf);
+}
+
+*{
+  font-family: defaultFont;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.pca-movie-overview {
+  background: blue;
+}
