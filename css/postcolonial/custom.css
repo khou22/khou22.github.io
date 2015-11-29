@@ -12,7 +12,7 @@ h3 {  font-size: 32px;  }
 h4 {  font-size: 24px;  }
 
 ::-webkit-scrollbar { 
-  display: none; 
+  /*display: none;*/
 }
 
 .pca-background {
