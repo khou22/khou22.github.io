@@ -1,0 +1,14 @@
+.pca-madagascar-background-1 {
+  -webkit-filter: blur(5px) grayscale(0.1) sepia(0.1) brightness(0.7);
+  background-image: url('../../school/postcolonial-africa/media/Madagascar_African_Landscape.jpg');
+}
+
+.pca-madagascar-background-2 {
+  -webkit-filter: blur(3px) grayscale(0.1) sepia(0.1);
+  background-image: url("http://images2.fanpop.com/images/photos/5600000/Madagascar-Escape-2-Africa-madagascar-5677670-592-320.jpg")
+}
+
+.pca-madagascar-background-3 {
+  -webkit-filter: blur(5px) grayscale(0.2);
+  background-image: url("http://www.aceshowbiz.com/images/still/madagascar2_32.jpg")
+}

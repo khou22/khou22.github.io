@@ -51,12 +51,21 @@ h4 {  font-size: 24px;  }
   float: right;
 }
 
-.pca-madagascar-background-1 {
-  -webkit-filter: blur(5px) grayscale(0.1) sepia(0.1) brightness(0.7);
-  background-image: url('../../school/postcolonial-africa/media/Madagascar_African_Landscape.jpg');
+.pca-movie-poster-img {
+  margin: auto;
+  height: 75vh;
+  border: 2px solid white;
 }
 
-.pca-madagascar-background-2 {
-  -webkit-filter: blur(2px) grayscale(0.1) sepia(0.1);
-  background-image: url("http://images2.fanpop.com/images/photos/5600000/Madagascar-Escape-2-Africa-madagascar-5677670-592-320.jpg")
+.pca-section-header {
+  text-align: center;
+  color: white;
+}
+
+.pca-movie-video {
+  /*YouTube videos are 640x360 ratio*/
+  margin: auto;
+  width: 60%;
+  height: 65vh;
+  /*background-color: black;*/
 }
