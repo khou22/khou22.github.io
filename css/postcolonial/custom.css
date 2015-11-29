@@ -3,14 +3,54 @@
   src: url(./../../media/site/fonts/ProximaNova/ProximaNova-Light.otf);
 }
 
-*{
-  font-family: defaultFont;
-}
+*{  font-family: defaultFont; }
+
+/*Specify font sizes*/
+h1 {  font-size: 72px;  }
+h2 {  font-size: 48px;  }
+h3 {  font-size: 32px;  }
+h4 {  font-size: 24px;  }
 
 ::-webkit-scrollbar { 
-    display: none; 
+  display: none; 
+}
+
+.pca-background {
+  z-index: -1;
+}
+
+.pca-foreground {
+  position: relative;
+  margin-top: -100vh;
+  width: 100%;
+  z-index: 1;
 }
 
 .pca-movie-overview {
-  background: blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.pca-movie-details {
+  width: 60%;
+  margin-left: 2%;
+  height: 100%;
+  float: left;
+  /*Content styling*/
+  padding: 5%;
+  color: white;
+}
+
+.pca-movie-poster {
+  padding-top: 5%;
+  margin-right: 2%;
+  width: 35%;
+  height: 100%;
+  float: right;
+}
+
+.pca-madagascar-background {
+  -webkit-filter: blur(5px) grayscale(0.1) sepia(0.1);
+  background-image: url('../../school/postcolonial-africa/media/Madagascar_African_Landscape.jpg');
 }
