@@ -6,16 +6,18 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Nov 2015 21:41:01 -0800</pubDate>
-    <lastBuildDate>Sun, 29 Nov 2015 21:41:01 -0800</lastBuildDate>
+    <pubDate>Sun, 29 Nov 2015 21:44:17 -0800</pubDate>
+    <lastBuildDate>Sun, 29 Nov 2015 21:44:17 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>TheaterJS: How to Add and Use Javascript Libraries</title>
-        <description>&lt;p&gt;I am working on getting some neat, open-source Javascript libraries ported into my website. I’m trying to teach myself how to incorporate the pleathorea of user contributed libraries into my site. Over the summer, I taught myself how to use NPM dependencies — elegeant packages of Javascript code that would perform preset functions. With the millions of NPM packages out there, I wanted to use it in my own site.
-&lt;br /&gt;
-Unfortunately, I haven’t been able to build a compiler that would allow me to use NPM dependencies in my code. I’m still interested in using other people’s code in my apps so I’ve resorted to Javascript libraries. I came across a really cool one called &lt;a href=&quot;https://github.com/Zhouzi/TheaterJS&quot; target=&quot;_blank&quot;&gt;TheaterJS&lt;/a&gt;. Here’s a quick &lt;a href=&quot;http://codepen.io/Zhouzi/pen/JoRazP&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;
-&lt;br /&gt;
+        <description>&lt;p&gt;I am working on getting some neat, open-source Javascript libraries ported into my website. I’m trying to teach myself how to incorporate the pleathorea of user contributed libraries into my site. Over the summer, I taught myself how to use NPM dependencies — elegeant packages of Javascript code that would perform preset functions. With the millions of NPM packages out there, I wanted to use it in my own site.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Unfortunately, I haven’t been able to build a compiler that would allow me to use NPM dependencies in my code. I’m still interested in using other people’s code in my apps so I’ve resorted to Javascript libraries. I came across a really cool one called &lt;a href=&quot;https://github.com/Zhouzi/TheaterJS&quot; target=&quot;_blank&quot;&gt;TheaterJS&lt;/a&gt;. Here’s a quick &lt;a href=&quot;http://codepen.io/Zhouzi/pen/JoRazP&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
 Turns out, the steps to import Javascript libraries are very straightforward and simple.&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Download the &lt;a href=&quot;https://github.com/Zhouzi/TheaterJS/releases&quot; target=&quot;_blank&quot;&gt;library&lt;/a&gt;&lt;/li&gt;

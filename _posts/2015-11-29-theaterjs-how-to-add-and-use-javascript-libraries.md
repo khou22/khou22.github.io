@@ -9,8 +9,10 @@ tags: [javascript]
 featured: "no"
 ---
 I am working on getting some neat, open-source Javascript libraries ported into my website. I'm trying to teach myself how to incorporate the pleathorea of user contributed libraries into my site. Over the summer, I taught myself how to use NPM dependencies — elegeant packages of Javascript code that would perform preset functions. With the millions of NPM packages out there, I wanted to use it in my own site.
+
 <br />
 Unfortunately, I haven't been able to build a compiler that would allow me to use NPM dependencies in my code. I'm still interested in using other people's code in my apps so I've resorted to Javascript libraries. I came across a really cool one called <a href="https://github.com/Zhouzi/TheaterJS" target="_blank">TheaterJS</a>. Here's a quick <a href="http://codepen.io/Zhouzi/pen/JoRazP" target="_blank">demo</a>
+
 <br />
 Turns out, the steps to import Javascript libraries are very straightforward and simple.
 <ol>
