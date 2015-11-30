@@ -6,9 +6,51 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Nov 2015 20:56:48 -0800</pubDate>
-    <lastBuildDate>Sun, 29 Nov 2015 20:56:48 -0800</lastBuildDate>
+    <pubDate>Sun, 29 Nov 2015 21:41:01 -0800</pubDate>
+    <lastBuildDate>Sun, 29 Nov 2015 21:41:01 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>TheaterJS: How to Add and Use Javascript Libraries</title>
+        <description>&lt;p&gt;I am working on getting some neat, open-source Javascript libraries ported into my website. I’m trying to teach myself how to incorporate the pleathorea of user contributed libraries into my site. Over the summer, I taught myself how to use NPM dependencies — elegeant packages of Javascript code that would perform preset functions. With the millions of NPM packages out there, I wanted to use it in my own site.
+&lt;br /&gt;
+Unfortunately, I haven’t been able to build a compiler that would allow me to use NPM dependencies in my code. I’m still interested in using other people’s code in my apps so I’ve resorted to Javascript libraries. I came across a really cool one called &lt;a href=&quot;https://github.com/Zhouzi/TheaterJS&quot; target=&quot;_blank&quot;&gt;TheaterJS&lt;/a&gt;. Here’s a quick &lt;a href=&quot;http://codepen.io/Zhouzi/pen/JoRazP&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;
+&lt;br /&gt;
+Turns out, the steps to import Javascript libraries are very straightforward and simple.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Download the &lt;a href=&quot;https://github.com/Zhouzi/TheaterJS/releases&quot; target=&quot;_blank&quot;&gt;library&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Move the file into your source code. It doesn&#39;t matter where.&lt;/li&gt;
+  &lt;li&gt;
+    Link the &#39;.min.js&#39; file in the &amp;lt;\head&amp;gt; of your HTML file like so:
+    
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;path/to/library/TheaterJS-2.0.1/dist/theater.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- TheaterJS --&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+  &lt;/li&gt;
+  &lt;li&gt;
+    Now you can use the library by calling the functions defined in the documentation. TheaterJS mimics a human chat transcript. An actual demo can be found on my &lt;a href=&quot;http://khou22.github.io&quot; target=&quot;_blank&quot;&gt;landing page&lt;/a&gt;. Here&#39;s how to use TheaterJS&#39;s functions (this is the actual code I used on my landing page):
+    
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;theater&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addActor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;kevin&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;speed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accuracy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.7&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addScene&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;kevin:Kevin Hou&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addScene&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;kevin:Welcome!&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addScene&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;kevin:Kevin Hou&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addScene&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;theater&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;theater&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+  &lt;/li&gt;
+  &lt;br /&gt;
+  Hope this helped!
+&lt;/ol&gt;
+</description>
+        <pubDate>Sun, 29 Nov 2015 13:17:51 -0800</pubDate>
+        <link>http://khou22.github.io/programming/2015/11/29/theaterjs-how-to-add-and-use-javascript-libraries.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2015/11/29/theaterjs-how-to-add-and-use-javascript-libraries.html</guid>
+        
+        <category>javascript</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Text Analysis App: How Do You Talk To People on Facebook Versus In An Engineering Report?</title>
@@ -389,41 +431,6 @@ I highly recommend this for anyone working in ReactJS on Sublime!&lt;/p&gt;
         
         
         <category>computer</category>
-        
-      </item>
-    
-      <item>
-        <title>Small Lessons: Disabling Scrolling, Extra Screen Sizes, Mirroring and Screen Arrangement Tricks</title>
-        <description>&lt;p&gt;I’ve been dealing with some really weirdly-sized images for my project and this have given me all sorts of issues in terms of scaling, cropping, and scrolling. There are many instances where I don’t have any content off the screen, but there is still a side scroll. I’ve tried inspecting my elements to see which part of my code is responsible for the extra white space, but to no avail. I settled with just disabling the side scroll for this app. Here’s how you do it:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;Simply&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;CSS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;overflow-x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Another cool little Mac OSX tip that I learned this week was how to show hidden screen sizes/aspect ratios for monitors. If you hook up your monitor and go to the display prefernces, you should only see a few possible screen sizes. There’s a trick to get more specific resolutions. Simply hold option when clicking on “Scaled.” It works like a charm!
-&lt;br /&gt;&lt;/p&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;
-You can also choose to mirror a select screen by holding option and dragging a screen over another screen in display arrangement system preferences. For example, you can have a 3 display setup with your third display mirroring your second display. You can still use your second display as an additional monitor, but your third display will now be mirroring your second.
-&lt;br /&gt;
-&lt;br /&gt;
-It’s cool to see what holding option does when clicking! Wonder what else Apple has hidden from us using the “option” key…&lt;/p&gt;
-</description>
-        <pubDate>Sun, 16 Aug 2015 04:29:33 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2015/08/16/small-lessons-disabling-scrolling-extra-screen-sizes-mirroring-and-screen-arrangement-tricks.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2015/08/16/small-lessons-disabling-scrolling-extra-screen-sizes-mirroring-and-screen-arrangement-tricks.html</guid>
-        
-        <category>css</category>
-        
-        <category>osx</category>
-        
-        
-        <category>programming</category>
         
       </item>
     

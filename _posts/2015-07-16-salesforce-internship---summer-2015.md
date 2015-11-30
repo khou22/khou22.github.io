@@ -6,7 +6,7 @@ date:   2015-07-16 13:35:21
 description: "First thoughts on my new internship at Salesforce.com during the summer of 2015. I worked as a UX (User Experience) Engineer."
 category: Work
 tags: [salesforce]
-featured: "yes"
+featured: "no"
 ---
 <img width="250" style="margin-left: 10%" src="http://www.amzur.com/wp-content/uploads/2015/04/Salesforce_Logo.png">
 

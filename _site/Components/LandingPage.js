@@ -27,7 +27,7 @@ var LandingPage = React.createClass({
   getInitialState: function() {
     var shuffleBackgrounds = true;
     var backgrounds = [
-      "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
+      // "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg", //Automatically first image, so commented out
       "./../media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand.jpg",
       "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
       "./../media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
@@ -48,21 +48,24 @@ var LandingPage = React.createClass({
     if (shuffleBackgrounds) { //If shuffle
       shuffle(backgrounds); //Shuffle backgrounds
     }
-    setTimeout(function() {
-      console.log("Starting slideshow");
-      document.getElementById("backgroundDiv").classList.add('background-fade');
+    var firstImage = "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg";
+    var finalRay = [firstImage]; //Add first image
+    for (var i = 0; i < backgrounds.length; i++) {
+      finalRay.push(backgrounds[i]); //Add shuffled to the final array of images
+    }
+    setTimeout(function() { //Start slideshow after 10 seconds
+      document.getElementById("backgroundDiv").classList.add('background-fade'); //Add the fade animation
       setInterval(this.nextBackground.bind(this), 5000);
-    }.bind(this), 10000); //Start slideshow after 10 seconds
-    for (var i = 0; i < backgrounds.length; i++) { //Cycle through backgrounds
-      preload(backgrounds[i]); //Preload every background
+    }.bind(this), 7000);
+    for (var i = 0; i < finalRay.length; i++) { //Cycle through backgrounds
+      preload(finalRay[i]); //Preload every background
     }
     return {
-      backgroundURLs: backgrounds,
+      backgroundURLs: finalRay,
       currentBackground: 0 //Index in array of backgrounds
     };
   },
   nextBackground: function() {
-    console.log(this.state.currentBackground)
     document.getElementById("backgroundDiv").classList.remove('background-fade');
     if (this.state.currentBackground < this.state.backgroundURLs.length - 1) { //if not the last background in array
       this.setState({
