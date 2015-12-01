@@ -27,7 +27,7 @@ reader.onload = function(e) { //Callback if reader is used
       console.log(otherName.indexOf(','))
         if (otherName.indexOf(',') >= 0) {
           otherName = otherName.split(',');
-          console.log("Detected multiple names")
+          console.log("Detected multiple names");
         } else {
           otherName = [otherName, "3RR0R"]; //So that the otherName value will still be an array
         }
