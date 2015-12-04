@@ -13,17 +13,63 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+    <!-- Javascript Libraries -->
+    <script src="../../../libraries/TheaterJS-2.0.1/dist/theater.min.js"></script> <!-- TheaterJS -->
+
+    <!-- Include scrollify library -->
+    <script type="text/JavaScript" src="./../../../../libraries/Scrollify/jquery.scrollify.js"></script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../../css/postcolonial/custom.css">
+    <link rel="stylesheet" href="../../css/postcolonial/backgrounds.css">
+    <link rel="stylesheet" href="../../css/postcolonial/landing-page.css">
 
     <link rel="icon" type="image/png" href="./../../../media/site/favicon.png">
+
+    <script>
+      //Declare Scrollify sections
+      $(function() {
+        $.scrollify({
+          section : "section",
+        });
+      });
+
+      $.scrollify ({
+        scrollSpeed: 750
+      });
+    </script>
   </head>
   <body>
-    <div>
-      Basic infrastructure is here
-      <br />
-      Quick Links: <a href="madagascar">Madagascar</a>
-    </div>
+    <section>
+      <div class="pca-background">
+        <div class="pca-landing-background">
+        </div>
+      </div>
+      <div class="pca-foreground">
+        <div class="pca-landing-quote">
+          <p class="pca-landing-quote-text" id="quote">Hello</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var theater = theaterJS({ local: 'fr' })
+
+      theater
+        .on('type:start, erase:start', function () {
+          theater.getCurrentActor().$element.classList.add('actor__content--typing')
+        })
+        .on('type:end, erase:end', function () {
+          theater.getCurrentActor().$element.classList.remove('actor__content--typing')
+        })
+
+      theater
+        .addActor('quote', { speed: 1.3, accuracy: 0.7 })
+        .addScene('quote:We’ve dropped our guards because talking animals are the lingua franca of innocuous cuteness...', 2000)
+        .addScene('quote:These movies are teaching children the finer points of racial prejudice before they’ve even learned to read', 2000)
+        .addScene('quote:Kevin Hou', 2000)
+        .addScene(theater.replay.bind(theater))
+    </script>
   </body>
 
   <!-- Google Analytics -->

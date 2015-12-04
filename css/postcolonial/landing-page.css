@@ -1,0 +1,18 @@
+.pca-landing-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-image: url("https://daywallpaper.files.wordpress.com/2013/08/silhouette-elephants-in-the-sunset.jpg");
+  -webkit-filter: blur(7px) grayscale(0.5);
+}
+
+.pca-landing-quote {
+  width: 75%;
+  margin-left: 5%;
+  margin-top: 5%;
+  color: white;
+}
+
+.pca-landing-quote-text {
+  font-size: 48px;
+}
