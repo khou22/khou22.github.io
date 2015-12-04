@@ -1,14 +1,14 @@
 //Algorithm from: http://appass.com/calculators/statistics
 //Grading curve from: https://www.desmos.com/calculator/u3e22vgeq1
 
-var gradingCurve = function(score) {
+var gradingCurve = function(score) { //Defined by Mariel Triggs
   var t = .1;
   var n = 1.1;
   var m = 7;
-  //Which equation do I use?
+  
   var temp = Math.pow((n * (score - 30)), .5);
   var output = (m * temp) + 40;
-  return output; //Return output
+  return output; //Return curved grade
 }
 
 var ScoreCalculator = React.createClass({
@@ -65,7 +65,7 @@ var ScoreCalculator = React.createClass({
     var average = total/filledValues; //Average score per question
     // console.log("Average per question: " + average)
 
-    var numberOfQuestions = 6;
+    var numberOfQuestions = 6; //total number of questions
     //Deduct points
     max = max - (40 - mcRight); //Subtract from total
     var pointsWrong = numberOfQuestions * (4 - average);
