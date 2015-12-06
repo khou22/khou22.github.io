@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Postcolonial Africa</title>
+    <title>Madagascar Series</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -13,17 +13,17 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <!-- Javascript Libraries -->
-    <script src="../../../libraries/TheaterJS-2.0.1/dist/theater.min.js"></script> <!-- TheaterJS -->
-
     <!-- Include scrollify library -->
     <script type="text/JavaScript" src="./../../../../libraries/Scrollify/jquery.scrollify.js"></script>
+
+    <!-- Javascript Libraries -->
+    <script src="./../../../../libraries/TheaterJS-2.0.1/dist/theater.min.js"></script> <!-- TheaterJS -->
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="../../css/postcolonial/custom.css">
     <link rel="stylesheet" href="../../css/postcolonial/backgrounds.css">
-    <link rel="stylesheet" href="../../css/postcolonial/landing-page.css">
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="./../../../media/site/favicon.png">
 
     <script>
@@ -42,7 +42,7 @@
   <body>
     <section>
       <div class="pca-background">
-        <div class="pca-landing-background">
+        <div class="pca-movie-overview pca-madagascar-background-1">
         </div>
       </div>
       <div class="pca-foreground">
@@ -51,14 +51,19 @@
         </div>
       </div>
     </section>
-
+    
     <section>
       <div class="pca-background">
-        <div style="background: black">
+        <div class="pca-movie-overview pca-madagascar-background-2">
         </div>
       </div>
       <div class="pca-foreground">
-        This is where the links will go
+        <div class="pca-section-header">
+          <h1>Trailer</h1>
+        </div>
+        <div class="pca-movie-video">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_FvCgabQVjA" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
@@ -80,6 +85,7 @@
         .addScene('quote:Don\'t pay attention to this, it\'s not good', 2000)
         .addScene(theater.replay.bind(theater))
     </script>
+
   </body>
 
   <!-- Google Analytics -->
@@ -92,5 +98,5 @@
     ga('create', 'UA-66796355-1', 'auto');
     ga('send', 'pageview');
   </script>
-  
+
 </html>
