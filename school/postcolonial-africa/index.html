@@ -22,6 +22,7 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="../../css/postcolonial/custom.css">
     <link rel="stylesheet" href="../../css/postcolonial/backgrounds.css">
+    <link rel="stylesheet" href="../../css/postcolonial/landing-page.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./../../../media/site/favicon.png">
@@ -42,13 +43,22 @@
   <body>
     <section>
       <div class="pca-background">
-        <div class="pca-movie-overview pca-madagascar-background-1">
+        <div class="pca-movie-overview pca-landing-background">
         </div>
       </div>
       <div class="pca-foreground">
-        <div class="pca-landing-quote">
-          <p class="pca-landing-quote-text" id="quote">Hello</p>
+        <div class="pca-site-title">
+          <h1>Hollywood Stereotypes</h1>
         </div>
+        <div class="pca-site-subtitle">
+          <p class="pca-site-subtitle-text"> Africa is 
+            <span id="fillTitle">poor</span>
+            <div class="pca-site-subtitle-search">
+            </div>
+          </p>
+        </div>
+        <div class="pca-word-cloud">
+          </div>
       </div>
     </section>
     
@@ -58,12 +68,7 @@
         </div>
       </div>
       <div class="pca-foreground">
-        <div class="pca-section-header">
-          <h1>Trailer</h1>
-        </div>
-        <div class="pca-movie-video">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_FvCgabQVjA" frameborder="0" allowfullscreen></iframe>
-        </div>
+        
       </div>
     </section>
 
@@ -79,10 +84,12 @@
         })
 
       theater
-        .addActor('quote', { speed: 1.3, accuracy: 0.7 })
-        .addScene('quote:We’ve dropped our guards because talking animals are the lingua franca of innocuous cuteness...', 2000)
-        .addScene('quote:These movies are teaching children the finer points of racial prejudice before they’ve even learned to read', 2000)
-        .addScene('quote:Don\'t pay attention to this, it\'s not good', 2000)
+        .addActor('fillTitle', { speed: .7, accuracy: 0.6 })
+        .addScene('fillTitle:poor', 2000)
+        .addScene('fillTitle:underdeveloped', 2000)
+        .addScene('fillTitle:dangerous', 2000)
+        .addScene('fillTitle:hopeless', 2000)
+        .addScene('fillTitle:uncivilized', 2000)
         .addScene(theater.replay.bind(theater))
     </script>
 

@@ -1,6 +1,6 @@
 @font-face {
   font-family: defaultFont;
-  src: url(./../../media/site/fonts/ProximaNova/ProximaNova-Light.otf);
+  src: url(./../../media/site/fonts/Papyrus/Papyrus.ttf);
 }
 
 *{  font-family: defaultFont; }
