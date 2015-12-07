@@ -85,13 +85,15 @@
           theater.getCurrentActor().$element.classList.remove('actor__content--typing')
         })
 
+      var delay = 1000;
+
       theater
         .addActor('fillTitle', { speed: .7, accuracy: 0.6 })
-        .addScene('fillTitle:poor', 2000)
-        .addScene('fillTitle:underdeveloped', 2000)
-        .addScene('fillTitle:dangerous', 2000)
-        .addScene('fillTitle:hopeless', 2000)
-        .addScene('fillTitle:uncivilized', 2000)
+        .addScene('fillTitle:poor', delay)
+        .addScene('fillTitle:underdeveloped', delay)
+        .addScene('fillTitle:dangerous', delay)
+        .addScene('fillTitle:hopeless', delay)
+        .addScene('fillTitle:uncivilized', delay)
         .addScene(theater.replay.bind(theater))
     </script>
 
