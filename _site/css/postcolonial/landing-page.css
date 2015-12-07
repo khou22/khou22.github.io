@@ -1,17 +1,16 @@
 .pca-landing-background {
   background-image: url("https://daywallpaper.files.wordpress.com/2013/08/silhouette-elephants-in-the-sunset.jpg");
-  -webkit-filter: blur(1px) grayscale(0.5);
+  -webkit-filter: grayscale(0.2);
 }
 
 .pca-word-cloud {
-  width: 100%;
-  height: 1000px;
+  width: 1000px;
+  height: 640px;
   background-image: url('../../school/postcolonial-africa/media/Word_Cloud.png');
   background-size: contain;
   background-repeat: no-repeat;
   margin: auto;
-  position: absolute;
-  top: 18rem;
+  margin-top: 100px;
 }
 
 .pca-site-subtitle {
