@@ -70,7 +70,10 @@
         </div>
       </div>
       <div class="pca-foreground">
-        
+        <div class="pca-section-text">
+          <h1>Quick Links</h1>
+          <a href="http://khou22.github.io/school/postcolonial-africa/madagascar/#1">Madagascar Series</a>
+        </div>
       </div>
     </section>
 
@@ -85,13 +88,17 @@
           theater.getCurrentActor().$element.classList.remove('actor__content--typing')
         })
 
-      var delay = 1000;
+      var delay = 750;
 
       theater
-        .addActor('fillTitle', { speed: .7, accuracy: 0.6 })
+        .addActor('fillTitle', { speed: .9, accuracy: 0.7 })
+        .addScene('fillTitle:exotic', delay)
+        .addScene('fillTitle:diseased and consumed with war', delay)
         .addScene('fillTitle:poor', delay)
+        .addScene('fillTitle:savage', delay)
         .addScene('fillTitle:underdeveloped', delay)
         .addScene('fillTitle:dangerous', delay)
+        .addScene('fillTitle:home of elephants and lions', delay)
         .addScene('fillTitle:hopeless', delay)
         .addScene('fillTitle:uncivilized', delay)
         .addScene(theater.replay.bind(theater))
