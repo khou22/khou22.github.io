@@ -1,19 +1,35 @@
 .pca-madagascar-background-1 {
   -webkit-filter: blur(5px) grayscale(0.1) sepia(0.1) brightness(0.7);
   background-image: url('../../school/postcolonial-africa/media/Madagascar_African_Landscape.jpg');
+  /*African reservation pan*/
 }
 
 .pca-madagascar-background-2 {
   -webkit-filter: blur(3px) grayscale(0.1) sepia(0.1);
-  background-image: url("http://images2.fanpop.com/images/photos/5600000/Madagascar-Escape-2-Africa-madagascar-5677670-592-320.jpg")
+  background-image: url("http://images2.fanpop.com/images/photos/5600000/Madagascar-Escape-2-Africa-madagascar-5677670-592-320.jpg");
+  /*Lemurs riding flamingos*/
 }
 
 .pca-madagascar-background-3 {
   -webkit-filter: blur(6px) grayscale(0.3);
-  background-image: url("http://www.aceshowbiz.com/images/still/madagascar2_32.jpg")
+  background-image: url("http://www.aceshowbiz.com/images/still/madagascar2_32.jpg");
+  /*Penguins*/
 }
 
 .pca-madagascar-background-4 {
   -webkit-filter: blur(6px) grayscale(0.3);
   background-image: url("https://s-media-cache-ak0.pinimg.com/736x/b2/5c/53/b25c53917a29c402ea9989390a9b5748.jpg");
+  /*Monkeys in aristocratic suits*/
+}
+
+.pca-madagascar-background-5 {
+  -webkit-filter: blur(3px) grayscale(0.1) sepia(0.1);
+  background-image: url("http://3.bp.blogspot.com/-jYnu9gctCig/VCfZ8aihftI/AAAAAAAABww/ztSUR6RZnjA/s1600/nana.jpg");
+  /*Humans surviving*/
+}
+
+.pca-madagascar-background-6 {
+  -webkit-filter: blur(6px) grayscale(0.3);
+  background-image: url("http://www.madagascar-library.com/images/700x700/madagascar-movie-screenshot2.jpg");
+  /*Looking at Madagascar jungle*/
 }
