@@ -12,3 +12,8 @@
   -webkit-filter: blur(6px) grayscale(0.3);
   background-image: url("http://www.aceshowbiz.com/images/still/madagascar2_32.jpg")
 }
+
+.pca-madagascar-background-4 {
+  -webkit-filter: blur(6px) grayscale(0.3);
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/b2/5c/53/b25c53917a29c402ea9989390a9b5748.jpg");
+}

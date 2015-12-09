@@ -1,3 +1,12 @@
+/*Set uniqe font for landing page*/
+@font-face {
+  font-family: papyrusFont;
+  src: url(./../../media/site/fonts/Papyrus/Papyrus.ttc);
+}
+*{  font-family: papyrusFont !important; } /*Override custom.css*/
+
+/*Stylesheet begins*/
+
 .pca-landing-background {
   background-image: url("https://daywallpaper.files.wordpress.com/2013/08/silhouette-elephants-in-the-sunset.jpg");
   -webkit-filter: grayscale(0.2);
