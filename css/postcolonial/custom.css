@@ -68,7 +68,7 @@ h4 {  font-size: 24px;  }
 .pca-movie-video {
   /*YouTube videos are 640x360 ratio*/
   margin: auto;
-  width: 60%;
+  width: 90%;
   height: 65vh;
   /*background-color: black;*/
 }
@@ -81,6 +81,10 @@ h4 {  font-size: 24px;  }
   color: black;
   font-size: 20px;
   margin-top: 4%;
+}
+
+.pca-youtube-video {
+  width: 60%;
 }
 
 .pca-nav-bar-div {
