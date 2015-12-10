@@ -35,7 +35,7 @@
 }
 
 .pca-tarzan-background-1 {
-  -webkit-filter: blur(5px) grayscale(0.1) sepia(0.1);
+  -webkit-filter: blur(10px);
   background-image: url("http://images.popmatters.com/news_art/t/tarzan_disney_bluray_splash650.jpg");
   /*Cover Page*/
 }
