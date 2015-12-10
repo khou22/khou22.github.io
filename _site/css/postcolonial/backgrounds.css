@@ -33,3 +33,33 @@
   background-image: url("http://www.madagascar-library.com/images/700x700/madagascar-movie-screenshot2.jpg");
   /*Looking at Madagascar jungle*/
 }
+
+.pca-tarzan-background-1 {
+  -webkit-filter: blur(5px) grayscale(0.1) sepia(0.1);
+  background-image: url("http://images.popmatters.com/news_art/t/tarzan_disney_bluray_splash650.jpg");
+  /*Cover Page*/
+}
+
+.pca-tarzan-background-2 {
+  -webkit-filter: blur(5px) grayscale(0.1) sepia(0.1);
+  background-image: url("http://vignette1.wikia.nocookie.net/disney/images/0/01/Tarzan-disneyscreencaps.com-9805.jpg/revision/latest?cb=20140415221153");
+  /*Trailer*/
+}
+
+.pca-tarzan-background-3 {
+  -webkit-filter: blur(3px) grayscale(0.1) sepia(0.1);
+  background-image: url("http://www.rotoscopers.com/wp-content/uploads/2014/06/tarzan-underated-disney-film.png");
+  /*History of Tarzan*/
+}
+
+.pca-tarzan-background-4 {
+  -webkit-filter: blur(6px) grayscale(0.3);
+  background-image: url("http://images4.fanpop.com/image/photos/21000000/Tarzan-Jane-Porter-walt-disney-characters-21013477-1182-716.jpg");
+  /*Disney's Tarzan*/
+}
+
+.pca-tarzan-background-5 {
+  -webkit-filter: blur(6px) grayscale(0.3);
+  background-image: url("http://vignette2.wikia.nocookie.net/disney/images/4/4c/Jane-Porter-(Tarzan).jpg/revision/latest?cb=20140507105014");
+  /*Analysis of Tarzan*/
+}
