@@ -35,6 +35,8 @@ var LandingPage = React.createClass({
       "./../media/site/images/backgrounds/Tropical_Wood_Phone_Stand.jpg",
       "./../media/site/images/backgrounds/Maple_Baseball_Bat.jpg",
       "./../media/site/images/backgrounds/Gavel.jpg",
+      "./../media/site/images/backgrounds/Walnut_and_Maple_Single_Speaker.jpg",
+      "./../media/site/images/backgrounds/Maple_and_Walnut_Visualizer.jpg",
       "./../media/site/images/backgrounds/Fruit_Tart.jpg",
       "./../media/site/images/backgrounds/Wood_Pens.jpg",
       "./../media/site/images/backgrounds/MusicViz.png",
