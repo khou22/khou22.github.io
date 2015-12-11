@@ -20,12 +20,6 @@
   padding: 2%;
 }
 
-.pca-bibliography-text {
-  border-radius: 12px;
-  padding: 3%;
-  background-color: rgba(255, 255, 255, .6); /*Make glass more opaque*/
-}
-
 .pca-parallax__layer--back {
   transform: translateZ(-5px) scale(10);
   /*background-image: url('../../school/postcolonial-africa/media/Madagascar_African_Landscape.jpg');*/
