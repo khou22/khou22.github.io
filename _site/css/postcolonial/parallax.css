@@ -16,10 +16,20 @@
 
 .pca-parallax__layer--base {
   transform: translateZ(0);
+  color: white !important;
+  padding: 2%;
+}
+
+.pca-bibliography-text {
+  border-radius: 12px;
+  padding: 3%;
+  background-color: rgba(255, 255, 255, .6); /*Make glass more opaque*/
 }
 
 .pca-parallax__layer--back {
   transform: translateZ(-5px) scale(10);
-  background-image: url('../../school/postcolonial-africa/media/Madagascar_African_Landscape.jpg');
+  /*background-image: url('../../school/postcolonial-africa/media/Madagascar_African_Landscape.jpg');*/
+  background-image: url("http://moverplatform.blob.core.windows.net/wwwusamovercom/blog-images/593dadc5-1237-4d91-9072-353ad2a62c0e.jpg");
+  -webkit-filter: grayscale(0.9);
   /*background-size: contain;*/
 }
