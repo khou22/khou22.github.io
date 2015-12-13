@@ -12,6 +12,11 @@
   -webkit-filter: grayscale(0.2);
 }
 
+.pca-landing-background-1 {
+  background-image: url("../../school/postcolonial-africa/media/Landing_Page_Background.png");
+  /*-webkit-filter: grayscale(0.2);*/
+}
+
 .pca-word-cloud {
   width: 1000px;
   height: 640px;
