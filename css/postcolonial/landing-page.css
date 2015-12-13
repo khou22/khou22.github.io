@@ -31,8 +31,6 @@ a{  color: black !important;  } /*Override blue link*/
 .pca-links-button {
   width: 100%;
   border-radius: 12px;
-  border: 2px solid black;
-  background: rgba(255, 255, 255, .25);
   text-align: center;
   vertical-align: middle;
   font-size: 42px;
