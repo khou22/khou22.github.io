@@ -4,6 +4,7 @@
   src: url(./../../media/site/fonts/Papyrus/Papyrus.ttc);
 }
 *{  font-family: papyrusFont !important; } /*Override custom.css*/
+a{  color: black !important;  } /*Override blue link*/
 
 /*Stylesheet begins*/
 
@@ -15,6 +16,26 @@
 .pca-landing-background-1 {
   background-image: url("../../school/postcolonial-africa/media/Landing_Page_Background.png");
   /*-webkit-filter: grayscale(0.2);*/
+}
+
+.pca-links-table {
+  width: 100%;
+  margin-top: 14%;
+}
+
+.pca-links-td {
+  width: 20%;
+  padding: 12px;
+}
+
+.pca-links-button {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid black;
+  background: rgba(255, 255, 255, .5);
+  text-align: center;
+  vertical-align: middle;
+  font-size: 48px;
 }
 
 .pca-word-cloud {
