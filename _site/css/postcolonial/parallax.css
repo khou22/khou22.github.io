@@ -24,6 +24,7 @@
   transform: translateZ(-5px) scale(10);
   /*background-image: url('../../school/postcolonial-africa/media/Madagascar_African_Landscape.jpg');*/
   background-image: url("http://moverplatform.blob.core.windows.net/wwwusamovercom/blog-images/593dadc5-1237-4d91-9072-353ad2a62c0e.jpg");
-  -webkit-filter: grayscale(0.9);
+  -webkit-filter: grayscale(0.9) brightness(2.75) contrast(.5);
+  filter: grayscale(0.9) brightness(2.75) contrast(.5);
   /*background-size: contain;*/
 }
