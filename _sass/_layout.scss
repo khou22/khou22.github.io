@@ -171,7 +171,8 @@ $brand-blue:      #3286A8;
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    /*padding: $spacing-unit 0;*/ /*Default*/
+    padding: 0 0; /*No spacing*/
     background-image: url('./../media/site/textures/white_wall_hash.png');
     background-repeat: infinite;
 }

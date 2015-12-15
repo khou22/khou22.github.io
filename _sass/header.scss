@@ -5,7 +5,7 @@ $brand-green:     #80A454;
 $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 
-.nav {
+.external {
   &-bar {
     margin: auto;
   }
@@ -31,6 +31,28 @@ $brand-blue:      #3286A8;
 
   &-custom-spacing {
     margin-bottom: 12px;
+  }
+}
+
+.site-nav {
+  &-bar {
+    margin-bottom: 0px;
+    
+    /*Copied from .wrapper class*/
+    max-width: -webkit-calc(800px - (30px * 2));
+    max-width: calc(800px - (30px * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px; }
+
+    /*Media querie for width*/
+    @media screen and (max-width: 800px) {
+      .site-nav-bar {
+        max-width: -webkit-calc(800px - (30px));
+        max-width: calc(800px - (30px));
+        padding-right: 15px;
+        padding-left: 15px; }
   }
 }
 

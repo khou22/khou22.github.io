@@ -261,7 +261,10 @@ pre {
  * Page content
  */
 .page-content {
-  padding: 30px 0;
+  /*padding: $spacing-unit 0;*/
+  /*Default*/
+  padding: 0 0;
+  /*No spacing*/
   background-image: url("./../media/site/textures/white_wall_hash.png");
   background-repeat: infinite; }
 
@@ -593,23 +596,41 @@ strong {
   color: #9DB7C1; }
 
 /*For the _includes/header.html file*/
-.nav-bar {
+.external-bar {
   margin: auto; }
-.nav-td {
+.external-td {
   /*border: 1px solid black;*/
   border-radius: 19px;
   margin-left: 15px;
   margin-right: 15px; }
-.nav-link-box {
+.external-link-box {
   height: 32px;
   width: 32px;
   /*background-color: white;*/
   margin: auto; }
-.nav-link-label {
+.external-link-label {
   text-align: center;
   color: #3286A8; }
-.nav-custom-spacing {
+.external-custom-spacing {
   margin-bottom: 12px; }
+
+.site-nav {
+  /*Media querie for width*/ }
+  .site-nav-bar {
+    margin-bottom: 0px;
+    /*Copied from .wrapper class*/
+    max-width: -webkit-calc(800px - (30px * 2));
+    max-width: calc(800px - (30px * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px; }
+  @media screen and (max-width: 800px) {
+    .site-nav .site-nav-bar {
+      max-width: -webkit-calc(800px - (30px));
+      max-width: calc(800px - (30px));
+      padding-right: 15px;
+      padding-left: 15px; } }
 
 /*Dropdown info from: http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php*/
 .nav-ul {
