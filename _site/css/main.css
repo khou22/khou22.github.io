@@ -264,7 +264,7 @@ pre {
 .page-content {
   /*padding: $spacing-unit 0;*/
   /*Default*/
-  padding: 0 0;
+  padding: 12px 0;
   /*No spacing*/
   background-image: url("./../media/site/textures/white_wall_hash.png");
   background-repeat: infinite; }
@@ -636,8 +636,7 @@ strong {
 /*Dropdown info from: http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php*/
 .nav-ul {
   /*padding: 0;*/
-  list-style: none;
-  background: #f2f2f2; }
+  list-style: none; }
 
 .nav-ul .nav-li {
   display: inline-block;
@@ -653,8 +652,9 @@ strong {
   text-decoration: none; }
 
 .nav-ul .nav-li a:hover {
+  /*Link hover*/
   color: #fff;
-  background: #939393; }
+  background: #3286A8; }
 
 .nav-ul .nav-li ul.dropdown {
   min-width: 125px;

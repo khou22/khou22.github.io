@@ -60,7 +60,6 @@ $brand-blue:      #3286A8;
 .nav-ul{
     /*padding: 0;*/
     list-style: none;
-    background: #f2f2f2;
 }
 .nav-ul .nav-li{
     display: inline-block;
@@ -74,9 +73,9 @@ $brand-blue:      #3286A8;
     color: #333;
     text-decoration: none;
 }
-.nav-ul .nav-li a:hover{
+.nav-ul .nav-li a:hover{ /*Link hover*/
     color: #fff;
-    background: #939393;
+    background: $brand-blue;
 }
 .nav-ul .nav-li ul.dropdown{
     min-width: 125px; /* Set width of the dropdown */
