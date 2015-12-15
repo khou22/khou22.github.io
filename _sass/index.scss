@@ -7,12 +7,12 @@ $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 
 .left-main {
-  width: 80%;
+  width: 78%;
   float: left;
 }
 
 .right-column {
-  width: 19%;
+  width: 20%;
   float: right;
 }
 
@@ -31,4 +31,8 @@ $brand-blue:      #3286A8;
 .number-of-posts {
   font-size: 20px;
   color: $brand-grey;
+}
+
+.right-column ol{
+  margin-left: 12px;
 }
