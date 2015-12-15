@@ -95,6 +95,16 @@ h4 {  font-size: 24px;  }
   margin-top: 90px;
 }
 
+.pca-pyschology-title {
+  font-size: 64px;
+}
+
+.pca-pyschology-cover {
+  padding: 3%;
+  width: 80%;
+  color: white;
+}
+
 .pca-nav-bar-div {
   width: 96%; /*Compensate for padding*/
   left: 0px;

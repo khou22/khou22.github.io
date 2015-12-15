@@ -99,3 +99,21 @@
   background-image: url("http://img3.wikia.nocookie.net/__cb20120409220859/disney/images/b/bf/Simba-3-(The_Lion_King).jpg");
   /*Pyschoanalysis of The Lion King*/
 }
+
+.pca-pyschology-background-1 {
+  -webkit-filter: blur(2px) grayscale(0.3) brightness(.65);
+  background-image: url("https://gigaom.com/wp-content/uploads/sites/1/2014/04/amazonfiretv-freetime.jpg?quality=80&strip=all");
+  /*Cover page*/
+}
+
+.pca-pyschology-background-2 {
+  -webkit-filter: blur(2px) grayscale(0.3);
+  background-image: url("https://tribkcpq.files.wordpress.com/2014/08/television.jpg?w=1200");
+  /*Pyschological impact*/
+}
+
+.pca-pyschology-background-3 {
+  -webkit-filter: blur(2px) grayscale(0.3);
+  background-image: url("http://www.thestar.com/content/dam/thestar/life/parent/2013/07/15/parents_tv_habits_strongest_predictor_of_kids_screen_time_study_finds/watching_tv.jpg");
+  /*What should parents do*/
+}
