@@ -58,36 +58,40 @@ $brand-blue:      #3286A8;
 
 /*Dropdown info from: http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php*/
 .nav-ul{
-    /*padding: 0;*/
-    list-style: none;
+  /*padding: 0;*/
+  list-style: none;
+  margin-top: 12px;
+}
+.nav-item {
+  width: 19%;
 }
 .nav-ul .nav-li{
-    display: inline-block;
-    position: relative;
-    line-height: 21px;
-    /*text-align: left;*/
+  display: inline-block;
+  position: relative;
+  line-height: 21px;
+  text-align: center;
 }
 .nav-ul .nav-li a{ /*Links in nav bar*/
-    display: block;
-    padding: 8px 25px;
-    color: #333;
-    text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  color: $brand-blue;
+  text-decoration: none;
 }
 .nav-ul .nav-li a:hover{ /*Link hover*/
-    color: #fff;
-    background: $brand-blue;
+  color: #fff; /*Turn font color to white*/
+  background: $brand-blue;
 }
 .nav-ul .nav-li ul.dropdown{
-    min-width: 125px; /* Set width of the dropdown */
-    background: #f2f2f2;
-    display: none;
-    position: absolute;
-    z-index: 999;
-    left: 0;
+  min-width: 125px; /* Set width of the dropdown */
+  background: #f2f2f2;
+  display: none;
+  position: absolute;
+  z-index: 999;
+  left: 0;
 }
 .nav-ul .nav-li:hover ul.dropdown{
-    display: block; /* Display the dropdown */
+  display: block; /* Display the dropdown */
 }
 .nav-ul .nav-li ul.dropdown .nav-li{
-    display: block;
+  display: block;
 }
