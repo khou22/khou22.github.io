@@ -3,6 +3,7 @@ var App = React.createClass({
     return (
       <div>
         Time Calculator
+        <p>This is a work in progress. Started: December 16, 2015 19:15 PST</p>
       </div>
     );
   }
