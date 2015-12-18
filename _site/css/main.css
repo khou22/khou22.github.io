@@ -834,3 +834,8 @@ strong {
   color: #3286A8; }
 .stsc-instructions {
   line-height: 16px; }
+
+.tcalc-hour-input {
+  width: 50px; }
+.tcalc-minutes-input {
+  width: 50px; }
