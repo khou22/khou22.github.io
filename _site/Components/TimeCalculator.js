@@ -16,6 +16,9 @@ var InputField = React.createClass({
       <div className="tcalc-input-div">
         <form>
           <TimeInput />
+          <TimeInput />
+          <TimeInput />
+          <input type="submit" />
         </form>
       </div>
     );
@@ -28,6 +31,7 @@ var TimeInput = React.createClass({
       <span>
         <input type="number" className="tcalc-hour-input" />:
         <input type="number" className="tcalc-minutes-input" />
+        <br />
       </span>
     );
   }
