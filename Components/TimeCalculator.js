@@ -11,6 +11,9 @@ var App = React.createClass({
 });
 
 var InputField = React.createClass({
+  submitTimes: function() {
+    console.log("Submitted times");
+  },
   render: function() {
     return (
       <div className="tcalc-input-div">
