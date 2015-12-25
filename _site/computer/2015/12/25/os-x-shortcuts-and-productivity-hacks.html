@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Articles by category: computer</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
-">
+  <title>OS X Shortcuts and Productivity Hacks</title>
+  <meta name="description" content="Happy holidays everyone! Here are some useful OS X tips and tricks that I thought I would share:1) Command Line Shortcut: AliasesAliases in a traditional des...">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -18,7 +17,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/category/computer/">
+  <link rel="canonical" href="http://khou22.github.io/computer/2015/12/25/os-x-shortcuts-and-productivity-hacks.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -168,46 +167,86 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <header id="post-header">
-    <h1 id="post-title">computer</h1>
-    <h4 id="post-subtitle">Articles by category</h4>
-</header>
+        <div class="post">
+  
+    
+    
+      
+    
 
-<div id="post-content">
     
         
+        
+          
             
-            
-                <h3>2015</h3><div class="list-group">
-            
-      
-            
-      
-            <a href="/computer/2015/12/25/os-x-shortcuts-and-productivity-hacks.html">
-                <h4>OS X Shortcuts and Productivity Hacks</h4>
-            </a>
-
+                
+                
             
         
-            
-            
-      
+          
             
                 
                 
-                
-            
-      
-            <a href="/computer/2015/08/17/cropping-square-images-in-mac-preview.html">
-                <h4>Cropping Square Images in Mac Preview</h4>
-            </a>
-
-            
-                </div>
             
         
     
+
+    
+      
+          
+            
+                
+                
+            
+        
+    
+  <header class="post-header">
+    <p class="post-return-main"><a href="/blog">
+      <
+      Return to all blogs
+    </a></p>
+    <br />
+    <h1 class="post-title">OS X Shortcuts and Productivity Hacks</h1>
+    <p class="post-meta">Dec 25, 2015 • Kevin Hou</p>
+  </header>
+  <article class="post-content">
+    <p>Happy holidays everyone! Here are some useful OS X tips and tricks that I thought I would share:
+<br /><br /></p>
+<h2>1) Command Line Shortcut: Aliases</h2>
+<p>Aliases in a traditional desktop UI are essentially shortcuts to other directories or files in your system. In general, they’re used to access objects hidden deep within your file structure or when you want a file in two seperate locations and you don’t want to copy it over.
+<br /><br />
+Aliases in your Terminal are similar in the sense that they provide shortcuts to files, but unlike in a traditional desktop UI, the aliases can be used at any level in the file system. An alias is not a shortcut file or folder. Instead it is a command that can be typed at any point.
+<br /><br />
+For example, if I access the folder ‘myFolder’ often, I would create an alias to basically trigger the function ‘cd /Users/Kevin/Documents/myFolder.’ To do this, open ‘~/.bash_profile’ and add the following line:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">myFolderShortcut</span><span class="o">=</span><span class="s1">&#39;cd /Users/Kevin/Documents/myFolder&#39;</span></code></pre></div>
+
+<p><br />
+The .bash_profile file is a customizable list of user-contributed functions, aliases, etc. In some cases, the .bash_profile is loaded automatically when the Terminal starts, but I’ve found that mine doesn’t do this. Instead I type:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">source</span> .bash_profile</code></pre></div>
+<p>whenever I first open a Terminal session.
+<br /><br />
+Now, you can type</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span>myFolderShortcut</code></pre></div>
+<p>anywhere in your Terminal session and you will be directed to myFolder.
+<br /><br /></p>
+<h2>2) Faster Mac Dock Productivity</h2>
+<p>The Mac Dock is a great and simple way to quickly access your favorite applications without having to open your Applications folder; however, the half a second it takes to trigger the Dock reveal and then the extra second it takes for the Dock to slide into view can waste precious time. I don’t like having the Dock visible on my desktop because it takes up previous screen real estate. I found <a href="https://www.youtube.com/watch?v=ZaxkqlRE-NI">this video</a> on Flipboard that explains how to “correclty” use the Mac Dock in the fastest and most efficient way possible:</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/ZaxkqlRE-NI" frameborder="0" allowfullscreen=""></iframe>
+<p><br />
+Here is a screenshot of my setup:
+<img src="./../../../../media/blog/images/Faster Mac Dock Reveal.png" />
+<br /><br /></p>
+
+<h2>3) Creating and Converting Plain Text Files on the Mac</h2>
+<p>Plain text files (ext. ‘.txt’) are fantastic ways to remove styling on text, share information between apps, etc. I realized I didn’t know how to create plain text files on my Mac. I researched it and found the solution to be quite simple. The stock Text Edit application on OS X has a native function to convert text files into plain text.
+<br /><br />
+In TextEdit, navigate to Format-&gt;Make Plain Text. The keyboard shortcut command is: Command + Shift + T. It works similarly when converting Plain Text to Rich Text (ext. ‘.rtf’). If there is existing text, the application will prompt you with a warning before it converts.</p>
+
+  </article>
+  <p id="post-meta">Posted in <a href="/blog/category/computer/">Computer</a> with <a href="/blog/tag/unix/">Unix</a>, <a href="/blog/tag/osx/">OSX</a></p>
 </div>
+
       </div>
     </div>
 

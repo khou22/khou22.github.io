@@ -6,9 +6,57 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 Dec 2015 16:35:42 -0800</pubDate>
-    <lastBuildDate>Thu, 24 Dec 2015 16:35:42 -0800</lastBuildDate>
+    <pubDate>Fri, 25 Dec 2015 13:36:37 -0800</pubDate>
+    <lastBuildDate>Fri, 25 Dec 2015 13:36:37 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>OS X Shortcuts and Productivity Hacks</title>
+        <description>&lt;p&gt;Happy holidays everyone! Here are some useful OS X tips and tricks that I thought I would share:
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;1) Command Line Shortcut: Aliases&lt;/h2&gt;
+&lt;p&gt;Aliases in a traditional desktop UI are essentially shortcuts to other directories or files in your system. In general, they’re used to access objects hidden deep within your file structure or when you want a file in two seperate locations and you don’t want to copy it over.
+&lt;br /&gt;&lt;br /&gt;
+Aliases in your Terminal are similar in the sense that they provide shortcuts to files, but unlike in a traditional desktop UI, the aliases can be used at any level in the file system. An alias is not a shortcut file or folder. Instead it is a command that can be typed at any point.
+&lt;br /&gt;&lt;br /&gt;
+For example, if I access the folder ‘myFolder’ often, I would create an alias to basically trigger the function ‘cd /Users/Kevin/Documents/myFolder.’ To do this, open ‘~/.bash_profile’ and add the following line:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;myFolderShortcut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;cd /Users/Kevin/Documents/myFolder&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+The .bash_profile file is a customizable list of user-contributed functions, aliases, etc. In some cases, the .bash_profile is loaded automatically when the Terminal starts, but I’ve found that mine doesn’t do this. Instead I type:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; .bash_profile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;whenever I first open a Terminal session.
+&lt;br /&gt;&lt;br /&gt;
+Now, you can type&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;myFolderShortcut&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;anywhere in your Terminal session and you will be directed to myFolder.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;2) Faster Mac Dock Productivity&lt;/h2&gt;
+&lt;p&gt;The Mac Dock is a great and simple way to quickly access your favorite applications without having to open your Applications folder; however, the half a second it takes to trigger the Dock reveal and then the extra second it takes for the Dock to slide into view can waste precious time. I don’t like having the Dock visible on my desktop because it takes up previous screen real estate. I found &lt;a href=&quot;https://www.youtube.com/watch?v=ZaxkqlRE-NI&quot;&gt;this video&lt;/a&gt; on Flipboard that explains how to “correclty” use the Mac Dock in the fastest and most efficient way possible:&lt;/p&gt;
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/ZaxkqlRE-NI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br /&gt;
+Here is a screenshot of my setup:
+&lt;img src=&quot;./../../../../media/blog/images/Faster Mac Dock Reveal.png&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2&gt;3) Creating and Converting Plain Text Files on the Mac&lt;/h2&gt;
+&lt;p&gt;Plain text files (ext. ‘.txt’) are fantastic ways to remove styling on text, share information between apps, etc. I realized I didn’t know how to create plain text files on my Mac. I researched it and found the solution to be quite simple. The stock Text Edit application on OS X has a native function to convert text files into plain text.
+&lt;br /&gt;&lt;br /&gt;
+In TextEdit, navigate to Format-&amp;gt;Make Plain Text. The keyboard shortcut command is: Command + Shift + T. It works similarly when converting Plain Text to Rich Text (ext. ‘.rtf’). If there is existing text, the application will prompt you with a warning before it converts.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 25 Dec 2015 04:59:02 -0800</pubDate>
+        <link>http://khou22.github.io/computer/2015/12/25/os-x-shortcuts-and-productivity-hacks.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/computer/2015/12/25/os-x-shortcuts-and-productivity-hacks.html</guid>
+        
+        <category>unix</category>
+        
+        <category>osx</category>
+        
+        
+        <category>computer</category>
+        
+      </item>
     
       <item>
         <title>TheaterJS: How to Add and Use Javascript Libraries</title>
@@ -412,27 +460,6 @@ I highly recommend this for anyone working in ReactJS on Sublime!&lt;/p&gt;
         
         
         <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Cropping Square Images in Mac Preview</title>
-        <description>&lt;p&gt;A discovered another Mac OS trick that uses the option key. To crop a picture in Preview into a square, hold the option key and the shift key while dragging with your mouse. This causes the selection to scale proportionally.&lt;/p&gt;
-
-&lt;p&gt;There are two possible outcomes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;If you have an existing selection, it will keep the same aspect ratio.&lt;/li&gt;
-  &lt;li&gt;If you have no selection, it will create a square selection.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 17 Aug 2015 00:00:00 -0700</pubDate>
-        <link>http://khou22.github.io/computer/2015/08/17/cropping-square-images-in-mac-preview.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/computer/2015/08/17/cropping-square-images-in-mac-preview.html</guid>
-        
-        <category>osx</category>
-        
-        
-        <category>computer</category>
         
       </item>
     
