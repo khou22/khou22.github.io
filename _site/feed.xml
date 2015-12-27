@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Dec 2015 00:12:47 -0800</pubDate>
-    <lastBuildDate>Sat, 26 Dec 2015 00:12:47 -0800</lastBuildDate>
+    <pubDate>Sun, 27 Dec 2015 00:14:30 -0800</pubDate>
+    <lastBuildDate>Sun, 27 Dec 2015 00:14:30 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -44,6 +44,9 @@ Here is a screenshot of my setup:
 &lt;p&gt;Plain text files (ext. ‘.txt’) are fantastic ways to remove styling on text, share information between apps, etc. I realized I didn’t know how to create plain text files on my Mac. I researched it and found the solution to be quite simple. The stock Text Edit application on OS X has a native function to convert text files into plain text.
 &lt;br /&gt;&lt;br /&gt;
 In TextEdit, navigate to Format-&amp;gt;Make Plain Text. The keyboard shortcut command is: Command + Shift + T. It works similarly when converting Plain Text to Rich Text (ext. ‘.rtf’). If there is existing text, the application will prompt you with a warning before it converts.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Hope this helped!&lt;/p&gt;
 </description>
         <pubDate>Fri, 25 Dec 2015 04:59:02 -0800</pubDate>
         <link>http://khou22.github.io/computer/2015/12/25/os-x-shortcuts-and-productivity-hacks.html</link>

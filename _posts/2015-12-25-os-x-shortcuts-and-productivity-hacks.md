@@ -36,3 +36,5 @@ Here is a screenshot of my setup:
 Plain text files (ext. '.txt') are fantastic ways to remove styling on text, share information between apps, etc. I realized I didn't know how to create plain text files on my Mac. I researched it and found the solution to be quite simple. The stock Text Edit application on OS X has a native function to convert text files into plain text.
 <br><br>
 In TextEdit, navigate to Format->Make Plain Text. The keyboard shortcut command is: Command + Shift + T. It works similarly when converting Plain Text to Rich Text (ext. '.rtf'). If there is existing text, the application will prompt you with a warning before it converts.
+<hr>
+Hope this helped!
