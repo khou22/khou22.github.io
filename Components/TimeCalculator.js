@@ -16,16 +16,18 @@ var InputField = React.createClass({
   },
   render: function() {
     return (
-      <p class="tcalc-instructions-text">
-        Type your times below. You may input up to 3.
-      </p>
-      <div className="tcalc-input-div">
-        <form>
-          <TimeInput />
-          <TimeInput />
-          <TimeInput />
-          <input type="submit" />
-        </form>
+      <div>
+        <p class="tcalc-instructions-text">
+          Type your times below. You may input up to 3.
+        </p>
+        <div className="tcalc-input-div">
+          <form>
+            <TimeInput />
+            <TimeInput />
+            <TimeInput />
+            <input type="submit" />
+          </form>
+        </div>
       </div>
     );
   }
