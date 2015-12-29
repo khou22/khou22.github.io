@@ -14,36 +14,22 @@ var InputField = React.createClass({
   submitTimes: function() {
     console.log("Submitted times");
   },
+  addFields: function() {
+    
+  },
   render: function() {
     return (
       <div>
-        <p class="tcalc-instructions-text">
+        <p className="tcalc-instructions-text">
           Type your times below. You may input up to 3.
         </p>
         <div className="tcalc-input-div">
-          <form>
-            <TimeInput />
-            <TimeInput />
-            <TimeInput />
-            <input type="submit" />
-          </form>
+          
         </div>
       </div>
     );
   }
 });
-
-var TimeInput = React.createClass({
-  render: function() {
-    return (
-      <span>
-        <input type="number" className="tcalc-hour-input" />:
-        <input type="number" className="tcalc-minutes-input" />
-        <br />
-      </span>
-    );
-  }
-})
 
 React.render(
   React.createElement(App, null),
