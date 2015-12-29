@@ -276,8 +276,8 @@ var TextAnalysis = React.createClass({
         }
 
         sortedWords.reverse();
-        // console.log(sortedWords, sortedWords.length);
-        // console.log("Sorted", sortedWordsCount, sortedWordsCount.length);
+        // console.log(sortedWords, sortedWords.length); //Debugging
+        // console.log("Sorted", sortedWordsCount, sortedWordsCount.length); //Debugging
         
         var temp = "totalWords=" + totalWords + ";";
         temp += "totalSentences=" + totalSentences + ";";
