@@ -835,7 +835,7 @@ strong {
 .stsc-instructions {
   line-height: 16px; }
 
-.tcalc-hour-input {
-  width: 50px; }
 .tcalc-minutes-input {
+  width: 50px; }
+.tcalc-seconds-input {
   width: 50px; }

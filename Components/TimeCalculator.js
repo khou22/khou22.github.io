@@ -17,11 +17,13 @@ var App = React.createClass({
 var InputField = React.createClass({
   getInitialState: function() {
     return {
-      counter: 2
+      counter: 2,
+      minutes: [],
+      seconds: []
     }
   },
-  submitTimes: function() {
-    console.log("Submitted times");
+  minutesToSeconds: function(minutes) {
+    return (minutes * 60)
   },
   addFields: function() {
     if(this.state.counter > 10) {
@@ -32,15 +34,19 @@ var InputField = React.createClass({
     var newTextBoxDiv = $(document.createElement('div'))
     .attr("id", 'TextBoxDiv' + this.state.counter);
     
-    newTextBoxDiv.after().html('<label>Textbox #'+ this.state.counter + ' : </label>' + '<input type="text" name="textbox' + this.state.counter + '" id="textbox' + this.state.counter + '" value="" >');
+    newTextBoxDiv.after().html('<label>Time #'+ this.state.counter + ' : </label>' +
+      '<input type="text" name="minutes' + this.state.counter +
+      '" id="minutes' + this.state.counter + '" value="" class="tcalc-minutes-input">' +
+      '<input type="text" name="seconds' + this.state.counter +
+      '" id="seconds' + this.state.counter + '" value="" class="tcalc-seconds-input" >');
     newTextBoxDiv.appendTo("#TextBoxesGroup");        
     
     this.state.counter++; //Add to counter
   },
   removeFields: function() {
-    if(this.state.counter == 1) {
-      alert("No more textbox to remove");
-      return false;
+    if(this.state.counter == 1) { //If no more to remove
+      alert("No more textbox to remove"); //Alert
+      return false; //Prevent removal
     }
     this.state.counter--; //Remove from counter
 
@@ -48,10 +54,34 @@ var InputField = React.createClass({
   },
   submitForm: function() {
     var msg = '';
-    for(var i = 1; i < this.state.counter; i++){
-      msg += "\n Textbox #" + i + " : " + $('#textbox' + i).val(); //Build alert string
+    var minRay = [];
+    var secRay = [];
+    for (var i = 1; i < this.state.counter; i++){
+      var min = parseInt($('#minutes' + i).val()); //Retrieve minutes value
+      var sec = parseInt($('#seconds' + i).val()); //Retrieve seconds value
+      minRay.push(min);
+      secRay.push(sec);
+
+      msg += "\n Time #" + i + " = " + min + ":" + sec; //Build alert string
+    };
+
+    var totalSeconds = 0;
+    for (var i = 0; i < minRay.length; i++) {
+      timeSeconds = this.minutesToSeconds(minRay[i]) + secRay[i];
+      totalSeconds += timeSeconds;
     }
-    alert(msg);
+    
+    //Average the times
+    console.log("Total seconds:", totalSeconds);
+    var average = totalSeconds/minRay.length;
+    console.log("Average time:", average, "seconds")
+
+    this.setState({
+      minutes: minRay,
+      seconds: secRay
+    }); //Store values
+    
+    // alert(msg);
   },
   render: function() {
     return (
@@ -62,7 +92,9 @@ var InputField = React.createClass({
         <div className="tcalc-input-div">
           <div id='TextBoxesGroup'>
             <div id="TextBoxDiv1">
-              <label>Textbox #1 : </label><input type='textbox' id='textbox1' />
+              <label>Time #1 : </label>
+              <input type='textbox' name='minutes1' id='minutes1' className='tcalc-minutes-input' />
+              <input type='textbox' name='seconds1' id='seconds1' className='tcalc-seconds-input' />
             </div>
           </div>
           <button type='button' id='addButton' onClick={this.addFields.bind(this)}>Add Button</button>
