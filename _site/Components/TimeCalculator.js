@@ -19,7 +19,8 @@ var InputField = React.createClass({
     return {
       counter: 2,
       minutes: [],
-      seconds: []
+      seconds: [],
+      average: 0
     }
   },
   minutesToSeconds: function(minutes) {
@@ -78,7 +79,8 @@ var InputField = React.createClass({
 
     this.setState({
       minutes: minRay,
-      seconds: secRay
+      seconds: secRay,
+      average: average
     }); //Store values
     
     // alert(msg);
@@ -87,7 +89,7 @@ var InputField = React.createClass({
     return (
       <div>
         <p className="tcalc-instructions-text">
-          Type your times below. You may input up to 10.
+          Type your times below. You may input up to 10. Average time: {this.state.average}
         </p>
         <div className="tcalc-input-div">
           <div id='TextBoxesGroup'>
