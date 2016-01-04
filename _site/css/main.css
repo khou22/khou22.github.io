@@ -839,3 +839,8 @@ strong {
   width: 50px; }
 .tcalc-seconds-input {
   width: 50px; }
+.tcalc-analysis-div {
+  width: 90%;
+  margin: 5%;
+  border: 1px solid black;
+  padding: 2%; }

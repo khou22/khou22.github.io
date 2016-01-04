@@ -89,8 +89,11 @@ var InputField = React.createClass({
     return (
       <div>
         <p className="tcalc-instructions-text">
-          Type your times below. You may input up to 10. Average time: {this.state.average}
+          Type your times below. You may input up to 10.
         </p>
+        <div className="tcalc-analysis-div">
+          Average time: {this.state.average}
+        </div>
         <div className="tcalc-input-div">
           <div id='TextBoxesGroup'>
             <div id="TextBoxDiv1">

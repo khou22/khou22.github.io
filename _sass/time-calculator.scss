@@ -12,4 +12,11 @@ $timeNumberInputWidth: 50px;
   &-seconds-input {
     width: $timeNumberInputWidth;
   }
+
+  &-analysis-div {
+    width: 90%;
+    margin: 5%;
+    border: 1px solid black;
+    padding: 2%;
+  }
 }
