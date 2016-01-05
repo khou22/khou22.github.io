@@ -86,13 +86,17 @@ var InputField = React.createClass({
     // alert(msg);
   },
   render: function() {
+    var averageMinutes = Math.floor(this.state.average/60);
+    var averageSeconds = this.state.average % 60;
     return (
       <div>
         <p className="tcalc-instructions-text">
           Type your times below. You may input up to 10.
         </p>
         <div className="tcalc-analysis-div">
-          Average time: {this.state.average}
+          Average total seconds: {this.state.average}
+          <br />
+          Average time: {averageMinutes}:{averageSeconds}
         </div>
         <div className="tcalc-input-div">
           <div id='TextBoxesGroup'>
@@ -102,9 +106,10 @@ var InputField = React.createClass({
               <input type='textbox' name='seconds1' id='seconds1' className='tcalc-seconds-input' />
             </div>
           </div>
-          <button type='button' id='addButton' onClick={this.addFields.bind(this)}>Add Button</button>
-          <button type='button' id='removeButton' onClick={this.removeFields.bind(this)}>Remove Button</button>
-          <button type='button' id='getButtonValue' onClick={this.submitForm.bind(this)}>Get TextBox Value</button>
+          <button type='button' id='addButton' onClick={this.addFields.bind(this)}>Add Time</button>
+          <button type='button' id='removeButton' onClick={this.removeFields.bind(this)}>Remove Time</button>
+          <br />
+          <button type='button' id='getButtonValue' onClick={this.submitForm.bind(this)}>Get Average Time</button>
         </div>
       </div>
     );
