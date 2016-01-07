@@ -2,7 +2,7 @@
 Dynamic HTML form created with the help of: http://www.mkyong.com/jquery/how-to-add-remove-textbox-dynamically-with-jquery/
 **********************************************/
 
-var App = React.createClass({
+var App = React.createClass({ //Main parent component
   render: function() {
     return (
       <div>
@@ -94,7 +94,7 @@ var InputField = React.createClass({
     return (
       <div>
         <p className="tcalc-instructions-text">
-          Type your times below. You may input up to 10.
+          Type your times below. You may add up to 10.
         </p>
         <div className="tcalc-analysis-div">
           <i>Average total seconds:</i> {this.state.average}

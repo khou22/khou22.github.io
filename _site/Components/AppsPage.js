@@ -13,6 +13,11 @@ var AppsPage = React.createClass({
             name: "Stats Test Score Calculator",
             slug: "stats-test-score-calculator",
             description: "An app to automatically calculate test scores and apply a grading curve. Built for Triggs Honors Stats Classes."
+          },
+          {
+            name: "Time Calculator",
+            slug: "time-calculator",
+            description: "An app that takes in an ambiguous number of times and outputs the average of those times."
           }]
         }/>
       </div>
