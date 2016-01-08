@@ -72,11 +72,16 @@ var ScoreCalculator = React.createClass({
     max = max - (2 * pointsWrong); //Subtract number wrong
     
     var compositeScore = max;
-    console.log("Commposite AP Score: " + compositeScore);
-    var triggsScore = gradingCurve(compositeScore);
-    console.log("Triggs Score: " + triggsScore);
+    var triggsSem1 = gradingCurve(compositeScore);
+    var triggsSem2 = (.5 * compositeScore) + 50;
 
-    document.getElementById('score').innerHTML = triggsScore;
+    console.log("Commposite AP Score: " + compositeScore);
+    console.log("Triggs Scores: ");
+    console.log("Semester 1: " + triggsSem1);
+    console.log("Semester 2: " + triggsSem2);
+
+    document.getElementById('score1').innerHTML = triggsSem1;
+    document.getElementById('score2').innerHTML = triggsSem2;
     document.getElementById('APScore').innerHTML = compositeScore;
 
     return false; //Prevent screen refresh
@@ -95,8 +100,11 @@ var ScoreCalculator = React.createClass({
             AP Composite Score:
             <p className="stsc-score" id="APScore">Waiting to Receive</p>
             <hr />
-            Triggs Score:
-            <p className="stsc-score" id="score">Waiting to Receive</p>
+            Triggs Score (First Semester):
+            <p className="stsc-score" id="score1">Waiting to Receive</p>
+            <hr />
+            Triggs Score (Second Semester):
+            <p className="stsc-score" id="score2">Waiting to Receive</p>
           </div>
         </div>
       </div>
