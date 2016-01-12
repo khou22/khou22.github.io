@@ -6,6 +6,9 @@ var WallpaperPage = React.createClass({
         <img src="./../../media/design/wallpapers/iPhone 5s Comet Wallpaper.png" />
         <img src="./../../media/design/wallpapers/Square Comet Wallpaper.png" />
         <img src="./../../media/design/wallpapers/iPhone 5s Square Chain Wallpaper.png" />
+        <img src="./../../media/design/wallpapers/Winding Road Wallpaper.png" />
+        <img src="./../../media/design/wallpapers/iPhone 6s Winding Road Wallpaper.png" />
+        <img src="./../../media/design/wallpapers/Skywalker Ranch Glass Wallpaper.png" />
       </div>
     );
   }
