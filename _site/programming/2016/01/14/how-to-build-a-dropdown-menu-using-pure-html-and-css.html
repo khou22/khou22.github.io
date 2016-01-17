@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>How to Build a Dropdown Menu Using Pure HTML and CSS</title>
-  <meta name="description" content="">
+  <meta name="description" content="Bare Bones Dropdown Menu - Pure CSS">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -211,7 +211,61 @@
     <p class="post-meta">Jan 14, 2016 • Kevin Hou</p>
   </header>
   <article class="post-content">
-    
+    <p>Bare Bones Dropdown Menu - Pure CSS</p>
+
+<h3>HTML</h3>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav-ul&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-li&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;nav-a&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Work <span class="ni">&amp;#9662;</span><span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav-ul dropdown&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-li&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Apps<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-li&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Projects<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-li&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>School Projects<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-li&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;nav-a&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+<h3>CSS</h3>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">CSS</span><span class="o">:</span>
+<span class="c">/*Dropdown info from: http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php*/</span>
+<span class="nc">.nav-ul</span><span class="p">{</span>
+    <span class="c">/*padding: 0;*/</span>
+    <span class="k">list-style</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#f2f2f2</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.nav-ul</span> <span class="nc">.nav-li</span><span class="p">{</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+    <span class="k">line-height</span><span class="o">:</span> <span class="m">21px</span><span class="p">;</span>
+    <span class="c">/*text-align: left;*/</span>
+<span class="p">}</span>
+<span class="nc">.nav-ul</span> <span class="nc">.nav-li</span> <span class="nc">.nav-a</span><span class="p">{</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">8px</span> <span class="m">25px</span><span class="p">;</span>
+    <span class="k">color</span><span class="o">:</span> <span class="m">#333</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.nav-ul</span> <span class="nc">.nav-li</span> <span class="nc">.nav-a</span><span class="nd">:hover</span><span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="m">#fff</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#939393</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.nav-ul</span> <span class="nc">.nav-li</span> <span class="nc">.nav-ul.dropdown</span><span class="p">{</span>
+    <span class="k">min-width</span><span class="o">:</span> <span class="m">125px</span><span class="p">;</span> <span class="c">/* Set width of the dropdown */</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#f2f2f2</span><span class="p">;</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+    <span class="k">z-index</span><span class="o">:</span> <span class="m">999</span><span class="p">;</span>
+    <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.nav-ul</span> <span class="nc">.nav-li</span><span class="nd">:hover</span> <span class="nc">.nav-ul.dropdown</span><span class="p">{</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span> <span class="c">/* Display the dropdown */</span>
+<span class="p">}</span>
+<span class="nc">.nav-ul</span> <span class="nc">.nav-li</span> <span class="nc">.nav-ul.dropdown</span> <span class="nc">.nav-li</span><span class="p">{</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
   </article>
   <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/html/">HTML</a>, <a href="/blog/tag/css/">CSS</a></p>
