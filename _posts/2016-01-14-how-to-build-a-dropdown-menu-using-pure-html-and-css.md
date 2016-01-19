@@ -10,6 +10,8 @@ featured: "no"
 ---
 Here is how to make a bare bones dropdown navigation menu using only CSS and HTML. There are more complicated ways of doing this using JQuery, but I've found this method a lot easier. I pulled code from a variety of sources — the CSS mostly came from <a href="http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php">here</a>.
 
+<h2>Source Code</h2>
+
 <h3>HTML</h3>
 {% highlight html %}
 <ul class="nav-ul">
