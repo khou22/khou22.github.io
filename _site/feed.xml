@@ -6,13 +6,13 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 16 Jan 2016 21:47:47 -0800</pubDate>
-    <lastBuildDate>Sat, 16 Jan 2016 21:47:47 -0800</lastBuildDate>
+    <pubDate>Mon, 18 Jan 2016 17:12:55 -0800</pubDate>
+    <lastBuildDate>Mon, 18 Jan 2016 17:12:55 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>How to Build a Dropdown Menu Using Pure HTML and CSS</title>
-        <description>&lt;p&gt;Bare Bones Dropdown Menu - Pure CSS&lt;/p&gt;
+        <description>&lt;p&gt;Here is how to make a bare bones dropdown navigation menu using only CSS and HTML. There are more complicated ways of doing this using JQuery, but I’ve found this method a lot easier. I pulled code from a variety of sources — the CSS mostly came from &lt;a href=&quot;http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3&gt;HTML&lt;/h3&gt;
 
@@ -31,7 +31,6 @@
 &lt;h3&gt;CSS&lt;/h3&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;CSS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;/*Dropdown info from: http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php*/&lt;/span&gt;
 &lt;span class=&quot;nc&quot;&gt;.nav-ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;c&quot;&gt;/*padding: 0;*/&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;list-style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;

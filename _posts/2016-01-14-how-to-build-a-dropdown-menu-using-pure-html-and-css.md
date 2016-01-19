@@ -8,7 +8,7 @@ category: Programming
 tags: [html, css]
 featured: "no"
 ---
-Bare Bones Dropdown Menu - Pure CSS
+Here is how to make a bare bones dropdown navigation menu using only CSS and HTML. There are more complicated ways of doing this using JQuery, but I've found this method a lot easier. I pulled code from a variety of sources — the CSS mostly came from <a href="http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php">here</a>.
 
 <h3>HTML</h3>
 {% highlight html %}
@@ -28,7 +28,6 @@ Bare Bones Dropdown Menu - Pure CSS
 <h3>CSS</h3>
 {% highlight css %}
 CSS:
-/*Dropdown info from: http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php*/
 .nav-ul{
     /*padding: 0;*/
     list-style: none;
