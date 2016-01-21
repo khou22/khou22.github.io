@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Jan 2016 11:54:50 -0800</pubDate>
-    <lastBuildDate>Tue, 19 Jan 2016 11:54:50 -0800</lastBuildDate>
+    <pubDate>Wed, 20 Jan 2016 18:08:02 -0800</pubDate>
+    <lastBuildDate>Wed, 20 Jan 2016 18:08:02 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -68,6 +68,8 @@
 &lt;span class=&quot;nc&quot;&gt;.nav-ul&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.nav-li&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.nav-ul.dropdown&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.nav-li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hope this helps!&lt;/p&gt;
 </description>
         <pubDate>Thu, 14 Jan 2016 15:54:51 -0800</pubDate>
         <link>http://khou22.github.io/programming/2016/01/14/how-to-build-a-dropdown-menu-using-pure-html-and-css.html</link>
