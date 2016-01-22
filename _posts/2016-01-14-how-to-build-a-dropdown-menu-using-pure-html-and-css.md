@@ -3,7 +3,7 @@ layout: post
 title: "How to Build a Dropdown Menu Using Pure HTML and CSS"
 author: "Kevin Hou"
 date: 2016-01-14 23:54:51
-description: ""
+description: "A short tutorial on how to build a navigation bar with dropdown menu options using only HTML and CSS"
 category: Programming
 tags: [html, css]
 featured: "no"
