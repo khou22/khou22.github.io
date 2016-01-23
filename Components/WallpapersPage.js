@@ -1,32 +1,36 @@
 var WallpaperPage = React.createClass({
-  render: function() {
-    return (
-      <div>
-        <h1 className="contact-header">Wallpapers</h1>
-        <a href="./../../media/design/wallpapers/iPhone 5s Comet Wallpaper.png" download>
-			<img src="./../../media/design/wallpapers/iPhone 5s Comet Wallpaper.png" />
-		</a>
-        <a href="./../../media/design/wallpapers/Square Comet Wallpaper.png" download>
-			<img src="./../../media/design/wallpapers/Square Comet Wallpaper.png" />
-		</a>
-        <a href="./../../media/design/wallpapers/iPhone 5s Square Chain Wallpaper.png" download>
-			<img src="./../../media/design/wallpapers/iPhone 5s Square Chain Wallpaper.png" />
-		</a>
-        <a href="./../../media/design/wallpapers/Winding Road Wallpaper.png" download>
-			<img src="./../../media/design/wallpapers/Winding Road Wallpaper.png" />
-		</a>
-        <a href="./../../media/design/wallpapers/iPhone 6s Winding Road Wallpaper.png" download>
-			<img src="./../../media/design/wallpapers/iPhone 6s Winding Road Wallpaper.png" />
-		</a>
-        <a href="./../../media/design/wallpapers/Skywalker Ranch Glass Wallpaper.png" download>
-			<img src="./../../media/design/wallpapers/Skywalker Ranch Glass Wallpaper.png" />
-		</a>
-      </div>
-    );
-  }
+		getInitialState: function() {
+				return {
+					fileNames: [
+							"iPhone 5s Comet Wallpaper.png",
+							"Square Comet Wallpaper.png",
+							"iPhone 5s Square Chain Wallpaper.png",
+							"Winding Road Wallpaper.png",
+							"iPhone 6s Winding Road Wallpaper.png",
+							"Skywalker Ranch Glass Wallpaper.png",
+							"San Francisco Wallpaper.png",
+					]
+				}
+		},
+		render: function() {
+				var wallpaperNodes = this.state.fileNames.map(function(slug) {
+						var path = "./../../media/design/wallpapers/" + slug;
+						return (
+								<a href={path} download>
+									<img src={path} />
+								</a>
+						)
+				});
+				return (
+						<div>
+								<h1 className="contact-header">Wallpapers</h1>
+								{wallpaperNodes}
+						</div>
+				);
+		}
 })
 
 React.render(
-  React.createElement(WallpaperPage, null),
-  document.getElementById('content')
+		React.createElement(WallpaperPage, null),
+  	document.getElementById('content')
 );
