@@ -5,7 +5,7 @@ var gradingCurve = function(score) { //Defined by Mariel Triggs
   var t = .1;
   var n = 1.1;
   var m = 7;
-  
+
   var temp = Math.pow((n * (score - 30)), .5);
   var output = (m * temp) + 40;
   return output; //Return curved grade
@@ -70,7 +70,7 @@ var ScoreCalculator = React.createClass({
     max = max - (40 - mcRight); //Subtract from total
     var pointsWrong = numberOfQuestions * (4 - average);
     max = max - (2 * pointsWrong); //Subtract number wrong
-    
+
     var compositeScore = max;
     var triggsSem1 = gradingCurve(compositeScore);
     var triggsSem2 = (.5 * compositeScore) + 50;

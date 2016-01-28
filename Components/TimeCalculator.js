@@ -31,17 +31,17 @@ var InputField = React.createClass({
       alert("Only 10 textboxes allow");
       return false;
     }
-    
+
     var newTextBoxDiv = $(document.createElement('div'))
     .attr("id", 'TextBoxDiv' + this.state.counter);
-    
+
     newTextBoxDiv.after().html('<label>Time #'+ this.state.counter + ' : </label>' +
       '<input type="text" name="minutes' + this.state.counter +
       '" id="minutes' + this.state.counter + '" value="" class="tcalc-minutes-input">:' +
       '<input type="text" name="seconds' + this.state.counter +
       '" id="seconds' + this.state.counter + '" value="" class="tcalc-seconds-input" >');
-    newTextBoxDiv.appendTo("#TextBoxesGroup");        
-    
+    newTextBoxDiv.appendTo("#TextBoxesGroup");
+
     this.state.counter++; //Add to counter
   },
   removeFields: function() {
@@ -71,7 +71,7 @@ var InputField = React.createClass({
       timeSeconds = this.minutesToSeconds(minRay[i]) + secRay[i];
       totalSeconds += timeSeconds;
     }
-    
+
     //Average the times
     console.log("Total seconds:", totalSeconds);
     var average = totalSeconds/minRay.length;
@@ -82,7 +82,7 @@ var InputField = React.createClass({
       seconds: secRay,
       average: average
     }); //Store values
-    
+
     // alert(msg);
   },
   render: function() {
