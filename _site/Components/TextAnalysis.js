@@ -11,7 +11,7 @@ var totalSentences = 0;
 reader.onload = function(e) { //Callback if reader is used
   rawText = reader.result; //Stores the results
   // console.log(rawText)
-  
+
   if (document.getElementById('NoFormat').checked || document.getElementById('Analyze').checked) {
     readerOutput = rawText;
   }
@@ -278,7 +278,7 @@ var TextAnalysis = React.createClass({
         sortedWords.reverse();
         // console.log(sortedWords, sortedWords.length); //Debugging
         // console.log("Sorted", sortedWordsCount, sortedWordsCount.length); //Debugging
-        
+
         var temp = "totalWords=" + totalWords + ";";
         temp += "totalSentences=" + totalSentences + ";";
         console.log(temp)
@@ -308,7 +308,7 @@ var TextAnalysis = React.createClass({
           propertyValues.push(properties[i].split("=")[1]);
         }
         // console.log(propertyValues)
-        
+
 
         var wordUsage = readerOutput.split("{[()]}")[1];
         var ray = wordUsage.split("~");
@@ -380,7 +380,7 @@ var TextAnalysis = React.createClass({
           readingEase: readingEase,
           fleschKincaid: fleschKincaid
         });
-        
+
         //Logic after anlaysis is done
         this.loadCommonWordsFromServer(); //Load general data from offline JSON
 
@@ -388,7 +388,7 @@ var TextAnalysis = React.createClass({
         console.log("Added JSON data");
         JSONToCSVConvertor(wordObj, this.state.fileName, true, false);
       }
-      
+
     }
     return false; //Prevent page auto-refresh
   },
@@ -575,7 +575,7 @@ var App = React.createClass({
         <TextAnalysis url={"data.json"}
           pollInterval={2000}/>
         <hr />
-        <b>Instructions:</b> 
+        <b>Instructions:</b>
         <p>This is a two step process. First <b>compress</b> your file(s):</p>
         <ol>
           <b>Regular Text</b>
@@ -619,7 +619,7 @@ var App = React.createClass({
 function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel, AutomaticDownload) {
     //If JSONData is not an object then JSON.parse will parse the JSON string in an Object
     var arrData = typeof JSONData != 'object' ? JSON.parse(JSONData) : JSONData;
-    
+
     var CSV = '';
     // //Set Report title in first row or line
     // CSV += ReportTitle + '\r\n\n';
@@ -627,59 +627,59 @@ function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel, AutomaticDownload)
     //This condition will generate the Label/Header
     if (ShowLabel) {
         var row = "";
-        
+
         //This loop will extract the label from 1st index of on array
         for (var index in arrData[0]) {
-            
+
             //Now convert each value to string and comma-seprated
             row += index + ',';
         }
 
         row = row.slice(0, -1);
-        
+
         //append Label row with line break
         CSV += row + '\r\n';
     }
-    
+
     //1st loop is to extract each row
     for (var i = 0; i < arrData.length; i++) {
         var row = "";
-        
+
         //2nd loop will extract each column and convert it in string comma-seprated
         for (var index in arrData[i]) {
             row += '"' + arrData[i][index] + '",';
         }
 
         row.slice(0, row.length - 1);
-        
+
         //add a line break after each row
         CSV += row + '\r\n';
     }
 
-    if (CSV == '') {        
+    if (CSV == '') {
         alert("Invalid data");
         return;
-    }   
-    
+    }
+
     //Generate a file name
     var fileName = "Word_Usage_Excel - ";
     //this will remove the blank-spaces from the title and replace it with an underscore
-    fileName += ReportTitle.replace(/ /g,"_");   
-    
+    fileName += ReportTitle.replace(/ /g,"_");
+
     //Initialize file format you want csv or xls
     var uri = 'data:text/csv;charset=utf-8,' + escape(CSV);
-    
+
     // Now the little tricky part.
     // you can use either>> window.open(uri);
     // but this will not work in some browsers
-    // or you will not get the correct file extension    
-    
-    
+    // or you will not get the correct file extension
+
+
     if (AutomaticDownload) {
       //this trick will generate a temp <a /> tag
-      var link = document.createElement("a");    
+      var link = document.createElement("a");
       link.href = uri;
-      
+
       //set the visibility hidden so it will not effect on your web-layout
       link.style = "visibility:hidden";
       link.download = fileName + ".csv";

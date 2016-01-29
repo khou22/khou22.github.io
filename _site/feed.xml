@@ -6,9 +6,46 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Jan 2016 08:17:21 -0800</pubDate>
-    <lastBuildDate>Tue, 26 Jan 2016 08:17:21 -0800</lastBuildDate>
+    <pubDate>Thu, 28 Jan 2016 20:41:58 -0800</pubDate>
+    <lastBuildDate>Thu, 28 Jan 2016 20:41:58 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Getting Started with Ionic: First Impressions, Tips, and Notes to Self</title>
+        <description>&lt;h1 id=&quot;working-on-the-project&quot;&gt;Working on the Project&lt;/h1&gt;
+&lt;p&gt;Open server:
+dev_appserver.py Uber&lt;/p&gt;
+
+&lt;h1 id=&quot;run-the-project&quot;&gt;Run the Project&lt;/h1&gt;
+&lt;p&gt;To run locally:
+ionic serve&lt;/p&gt;
+
+&lt;p&gt;To run in xcode simulator:
+ionic run ios -l -c -s&lt;/p&gt;
+
+&lt;p&gt;To get it on “Ionic View” for my iPhone:
+ionic upload&lt;/p&gt;
+
+&lt;h1 id=&quot;opening-the-project-in-xcode&quot;&gt;Opening the Project in Xcode&lt;/h1&gt;
+&lt;p&gt;Open the xcode project on xcode
+/Users/KevinHou/Documents/Programming/UberScheduler/UberScheduler/platforms/ios
+Then click run&lt;/p&gt;
+
+&lt;h1 id=&quot;logging-into-ionic-command-line&quot;&gt;Logging Into Ionic (Command Line)&lt;/h1&gt;
+&lt;p&gt;To log in to Ionic:
+ionic login&lt;/p&gt;
+
+&lt;h1 id=&quot;starting-a-new-ionic-project&quot;&gt;Starting a New Ionic Project&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/30518213/error-uploading-ionic-app&quot; target=&quot;blank&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 28 Jan 2016 12:38:34 -0800</pubDate>
+        <link>http://khou22.github.io/programming/2016/01/28/getting-started-with-ionic-first-impressions-tips-and-notes-to-self.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/01/28/getting-started-with-ionic-first-impressions-tips-and-notes-to-self.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>How to Build a Dropdown Menu Using Pure HTML and CSS</title>
@@ -463,30 +500,6 @@ I highly recommend this for anyone working in ReactJS on Sublime!&lt;/p&gt;
         <category>sublime</category>
         
         <category>react</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Comparison Operators: &#39;==&#39; vs. &#39;===&#39;</title>
-        <description>&lt;p&gt;For the longest time, I didn’t realize that ‘===’ was a comparison operator in Javascript. I just recently learned what the difference between them was. The double equal signs tell the comparison statement to convert the two values into the same type before comparing them. The triple equal signs do not convert the values before coimparing. If the two values do not share the same type, it will simply return false. For example:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
- 
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Will return true&lt;/span&gt;
- 
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Will return false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This is a super short post, but I figured I should write it down since it was interesting and something I should remember.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 08 Sep 2015 14:41:46 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2015/09/08/comparison-operators--vs-.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2015/09/08/comparison-operators--vs-.html</guid>
-        
-        <category>javascript</category>
         
         
         <category>programming</category>
