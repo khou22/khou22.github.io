@@ -6,9 +6,22 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Jan 2016 20:45:51 -0800</pubDate>
-    <lastBuildDate>Thu, 28 Jan 2016 20:45:51 -0800</lastBuildDate>
+    <pubDate>Sun, 31 Jan 2016 13:45:18 -0800</pubDate>
+    <lastBuildDate>Sun, 31 Jan 2016 13:45:18 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Installing and Getting Started with Python</title>
+        <description>
+</description>
+        <pubDate>Sun, 31 Jan 2016 05:44:44 -0800</pubDate>
+        <link>http://khou22.github.io/programming/2016/01/31/installing-and-getting-started-with-python.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/01/31/installing-and-getting-started-with-python.html</guid>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Getting Started with Ionic: First Impressions, Tips, and Notes to Self</title>
@@ -480,31 +493,6 @@ zsh: &lt;span class=&quot;nb&quot;&gt;command &lt;/span&gt;not found: jekyll&lt;
         <guid isPermaLink="true">http://khou22.github.io/programming/2015/10/01/visualizing-a-javascript-callback.html</guid>
         
         <category>Javascript</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>React Syntax Highlighting in Sublime Text Editor (Babel Sublime)</title>
-        <description>&lt;p&gt;Since I’m working with the Javascript framework, React, I would like to have a syntax highlighter in my Sublime IDE. Babel-Sublime is just what I’m looking for - it is integrated with Sublime and provides syntax highlighting for JSX code.
-&lt;br /&gt;
-&lt;br /&gt;
-You can install it using Package Control and feel free to check out my blog post to see how that’s done. Here’s the link to Babel-Sublime:
-&lt;br /&gt;
-&lt;a href=&quot;https://github.com/babel/babel-sublime&quot;&gt;https://github.com/babel/babel-sublime&lt;/a&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-I highly recommend this for anyone working in ReactJS on Sublime!&lt;/p&gt;
-</description>
-        <pubDate>Sat, 12 Sep 2015 14:52:25 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2015/09/12/react-syntax-highlighting-in-sublime-text-editor-babel-sublime.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2015/09/12/react-syntax-highlighting-in-sublime-text-editor-babel-sublime.html</guid>
-        
-        <category>sublime</category>
-        
-        <category>react</category>
         
         
         <category>programming</category>
