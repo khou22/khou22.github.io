@@ -82,3 +82,11 @@ osx:
 sublime:
   slug: sublime
   name: Sublime Text
+
+ionic:
+  slug: ionic
+  name: Ionic
+
+python:
+  slug: python
+  name: Python

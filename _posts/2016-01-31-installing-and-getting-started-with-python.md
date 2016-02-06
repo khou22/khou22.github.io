@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-01-31 13:44:44
 description: "Setting up Python on my own computer."
 category: Programming
-tags: []
+tags: [python]
 featured: "no"
 ---
 # Downloading and Installing Python
