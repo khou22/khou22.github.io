@@ -19,3 +19,8 @@ In order to install globally you may to run a "sudo" install:
 {% highlight bash %}
 $ sudo python get-pip.py
 {% endhighlight %}
+
+# Installing Python Modules
+{% highlight bash %}
+$ sudo pip install requests
+{% endhighlight %}
