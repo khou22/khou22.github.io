@@ -14,7 +14,7 @@ First download Python from the <a href="https://www.python.org/downloads/">Pytho
 {% highlight bash %}
 $ python get-pip.py
 {% endhighlight %}
-
+so
 In order to install globally you may to run a "sudo" install:
 {% highlight bash %}
 $ sudo python get-pip.py
