@@ -7,7 +7,7 @@ var AppsPage = React.createClass({
           [{
             name: "Text Analysis",
             slug: "text-analysis",
-            description: "An app to analyze the user's text for patterns, word choice, etc."
+            description: "An app to analyze the user's text for patterns, word choice, etc. It accepts text files as well as Facebook user data."
           },
           {
             name: "Stats Test Score Calculator",
@@ -17,7 +17,7 @@ var AppsPage = React.createClass({
           {
             name: "Time Calculator",
             slug: "time-calculator",
-            description: "An app that takes in an ambiguous number of times and outputs the average of those times."
+            description: "An app that takes in an ambiguous number of times and outputs the average of those times. Made this for my friend who does crew."
           }]
         }/>
       </div>
