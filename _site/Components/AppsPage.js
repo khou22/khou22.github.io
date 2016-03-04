@@ -18,6 +18,11 @@ var AppsPage = React.createClass({
             name: "Time Calculator",
             slug: "time-calculator",
             description: "An app that takes in an ambiguous number of times and outputs the average of those times. Made this for my friend who does crew."
+          },
+          {
+            name: "Presidential Election Forecast 2016",
+            slug: "presidential-election-forecast-2016",
+            description: "Runs simulations and forecasts who will win the 2016 presidential election. Right now it only simulates who will win the Republican candidacy."
           }]
         }/>
       </div>

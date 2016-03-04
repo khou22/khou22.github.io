@@ -38,7 +38,7 @@ var App = React.createClass({ // Main parent component
     }
   },
   onSubmit: function() {
-    var numVoters = 100; // Total number of voters we're simulating
+    var numVoters = 123; // Total number of voters we're simulating
     // Quinn and I decided to use the number of Mitt Romney voters in Minnesota 2012 as the default:
     // 1,321,575
     // http://elections.nbcnews.com/ns/politics/2012/minnesota/#.VtkAsZMrJhF
@@ -123,7 +123,10 @@ var App = React.createClass({ // Main parent component
       <div>
         <h2>2016 Presidential Election Forecast</h2>
         <p>This is a work in progress. Started: March 3, 2016 19:30 PST</p>
+        <p>Currently running a simulation of 123 Republican voters (random sample size). Repeating 1000 times and storing who wins each.</p>
+        <br></br>
         <InputField onSubmit={this.onSubmit}/>
+        <hr />
         <Results
           candidates={this.state.candidates}
           totalVoters={this.state.totalVoters} />
@@ -157,7 +160,7 @@ var Results = React.createClass({ // Show results of simulation
       var wins = candidate.wins;
       return (
         <div>
-          <h4>{name}: {wins} simulations won</h4>
+          <h4>{name}: {wins} elections won</h4>
           <p>Votes: {votes} ({percentage}%)</p>
           <br></br>
         </div>
