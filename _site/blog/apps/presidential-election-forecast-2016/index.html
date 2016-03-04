@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Installing and Getting Started with Python</title>
-  <meta name="description" content="Downloading and Installing PythonFirst download Python from the Python website. After installing, you can install other helpful tools including Pip. Save the...">
+  <title>Kevin Hou's Blog</title>
+  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
+">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -18,7 +19,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2016/01/31/installing-and-getting-started-with-python.html">
+  <link rel="canonical" href="http://khou22.github.io/blog/apps/presidential-election-forecast-2016/">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -168,83 +169,10 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="post">
-  
-    
-    
-      
-    
+        <div id="content" class="MainDiv"></div>
 
-    
-        
-        
-          
-            
-                
-                
-            
-        
-    
-
-    
-      
-          
-            
-                
-                
-            
-        
-    
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Installing and Getting Started with Python</h1>
-    <p class="post-meta">Jan 31, 2016 • Kevin Hou</p>
-  </header>
-  <article class="post-content">
-    <h1 id="downloading-and-installing-python">Downloading and Installing Python</h1>
-<p>First download Python from the <a href="https://www.python.org/downloads/">Python website</a>. After installing, you can install other helpful tools including <a href="https://bootstrap.pypa.io/get-pip.py">Pip</a>. Save the file as a Python file (extension: “.py”) and navigate to the file in your terminal. Run the Python script using your terminal to install:</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python get-pip.py</code></pre></div>
-
-<p>so
-In order to install globally you may to run a “sudo” install:</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo python get-pip.py</code></pre></div>
-
-<h1 id="installing-python-modules">Installing Python Modules</h1>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo pip install requests</code></pre></div>
-
-<p>The entire Python setup was surprisingly easy. I had never programmed in Python before and only knew that it was good for backend scripts. I really wanted to expand my coding knowledge so I decided to take up Python. Here are some useful “projects” that got me going:</p>
-<ul>
-  <li>Web Scraping</li>
-  <li>Simple math formulas</li>
-  <li>Using cool modules</li>
-  <li>Calling API's like iTunes and YouTube</li>
-  <li>Encoding and decoding JSON data</li>
-  <li>Downloading files and making a progress bar</li>
-</ul>
-
-<h1 id="dynamic-progress-bar">Dynamic Progress Bar</h1>
-<p>This project helped me gain a better understanding of how Python can communicate with the user via the Terminal interface.
-Reference: <a href="http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console">http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console</a></p>
-
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\r</span><span class="si">%d%%</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></code></pre></div>
-
-<h1 id="constructing-and-interpreting-json-data">Constructing and Interpreting JSON data</h1>
-<p>This was great way for me to learn how Python data structures worked. It helped me gain a good foundation in simple variable types as well as how to communicate between different programming languages. For example, Javascript often sends data in the form of a JSON object. By doing this project I was able to pass data from my Javascript into my Python script and vice versa.
-Reference: <a href="https://docs.python.org/2/library/json.html">https://docs.python.org/2/library/json.html</a></p>
-
-  </article>
-  <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/python/">Python</a></p>
-</div>
+<script type="text/jsx;harmony=true" src="../../../Components/PresidentialElectionForecast2016.js">
+</script>
 
       </div>
     </div>

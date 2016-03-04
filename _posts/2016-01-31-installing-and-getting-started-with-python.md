@@ -38,7 +38,7 @@ The entire Python setup was surprisingly easy. I had never programmed in Python 
 
 # Dynamic Progress Bar
 This project helped me gain a better understanding of how Python can communicate with the user via the Terminal interface.
-Reference to: <a href="http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console">http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console</a>
+Reference: <a href="http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console">http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console</a>
 {% highlight python %}
 for i in range(100):
     time.sleep(1)
@@ -48,3 +48,4 @@ for i in range(100):
 
 # Constructing and Interpreting JSON data
 This was great way for me to learn how Python data structures worked. It helped me gain a good foundation in simple variable types as well as how to communicate between different programming languages. For example, Javascript often sends data in the form of a JSON object. By doing this project I was able to pass data from my Javascript into my Python script and vice versa.
+Reference: <a href="https://docs.python.org/2/library/json.html">https://docs.python.org/2/library/json.html</a>

@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Mar 2016 00:51:23 -0800</pubDate>
-    <lastBuildDate>Tue, 01 Mar 2016 00:51:23 -0800</lastBuildDate>
+    <pubDate>Thu, 03 Mar 2016 20:20:58 -0800</pubDate>
+    <lastBuildDate>Thu, 03 Mar 2016 20:20:58 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -38,7 +38,7 @@ In order to install globally you may to run a “sudo” install:&lt;/p&gt;
 
 &lt;h1 id=&quot;dynamic-progress-bar&quot;&gt;Dynamic Progress Bar&lt;/h1&gt;
 &lt;p&gt;This project helped me gain a better understanding of how Python can communicate with the user via the Terminal interface.
-Reference to: &lt;a href=&quot;http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console&quot;&gt;http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console&lt;/a&gt;&lt;/p&gt;
+Reference: &lt;a href=&quot;http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console&quot;&gt;http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -46,7 +46,8 @@ Reference to: &lt;a href=&quot;http://stackoverflow.com/questions/3173320/text-p
     &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flush&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;constructing-and-interpreting-json-data&quot;&gt;Constructing and Interpreting JSON data&lt;/h1&gt;
-&lt;p&gt;This was great way for me to learn how Python data structures worked. It helped me gain a good foundation in simple variable types as well as how to communicate between different programming languages. For example, Javascript often sends data in the form of a JSON object. By doing this project I was able to pass data from my Javascript into my Python script and vice versa.&lt;/p&gt;
+&lt;p&gt;This was great way for me to learn how Python data structures worked. It helped me gain a good foundation in simple variable types as well as how to communicate between different programming languages. For example, Javascript often sends data in the form of a JSON object. By doing this project I was able to pass data from my Javascript into my Python script and vice versa.
+Reference: &lt;a href=&quot;https://docs.python.org/2/library/json.html&quot;&gt;https://docs.python.org/2/library/json.html&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 31 Jan 2016 05:44:44 -0800</pubDate>
         <link>http://khou22.github.io/programming/2016/01/31/installing-and-getting-started-with-python.html</link>
