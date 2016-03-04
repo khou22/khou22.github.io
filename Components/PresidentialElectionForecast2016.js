@@ -6,40 +6,43 @@ var App = React.createClass({ // Main parent component
         {
           name: "Trump",
           percentage: .374,
-          votes: 0
+          votes: 0,
+          wins: 0
         },
         {
           name: "Rubio",
           percentage: .252,
-          votes: 0
+          votes: 0,
+          wins: 0
         },
         {
           name: "Cruz",
           percentage: .180,
-          votes: 0
+          votes: 0,
+          wins: 0
         },
         {
           name: "Kasich",
           percentage: .147,
-          votes: 0
+          votes: 0,
+          wins: 0
         },
         {
           name: "Lost Voters",
           percentage: .047,
-          votes: 0
+          votes: 0,
+          wins: 0
         },
       ],
       totalVoters: 0,
     }
   },
   onSubmit: function() {
-    numVoters = 1321575; // Total number of voters we're simulating
+    var numVoters = 100; // Total number of voters we're simulating
     // Quinn and I decided to use the number of Mitt Romney voters in Minnesota 2012 as the default:
     // 1,321,575
     // http://elections.nbcnews.com/ns/politics/2012/minnesota/#.VtkAsZMrJhF
-
-    var totalVoters = 0; // Current count of voters
-    var tempArray = [0, 0, 0, 0, 0]; // Array to store values in local scope
+    var numSamples = 1000;
 
     // Figure out the cutoff points for the random number
     var cutoffs = []; // Reset
@@ -51,28 +54,48 @@ var App = React.createClass({ // Main parent component
     }
     // console.log(cutoffs); // Debugging
 
-    for (var i = 0; i < numVoters; i++) {
-  		totalVoters++; // Add to total counter
-  		var random = Math.random(); // Generate random number
-      // console.log(random); // Feedback
+    var candidateWins = [0, 0, 0, 0, 0];
+    for (var j = 0; j < numSamples; j++)
+    {
+      // Reset these values
+      var totalVoters = 0; // Current count of voters
+      var tempArray = [0, 0, 0, 0, 0]; // Array to store values in local scope
 
-      // Determine which candidate they voted for
-  		if (random < cutoffs[0]) {
-  			tempArray[0]++;
-        // console.log("Voted for Trump");
-  		} else if (random < cutoffs[1]) {
-  			tempArray[1]++;
-        // console.log("Voted for Rubio");
-  		} else if (random < cutoffs[2]) {
-  			tempArray[2]++;
-        // console.log("Voted for Cruz");
-  		} else if (random < cutoffs[3]) {
-  			tempArray[3]++;
-        // console.log("Voted for Kasich");
-  		} else {
-  			tempArray[4]++;
-        // console.log("Lost Voter");
-  		}
+      for (var i = 0; i < numVoters; i++) {
+    		totalVoters++; // Add to total counter
+    		var random = Math.random(); // Generate random number
+        // console.log(random); // Feedback
+
+        // Determine which candidate they voted for
+    		if (random < cutoffs[0]) {
+    			tempArray[0]++;
+          // console.log("Voted for Trump");
+    		} else if (random < cutoffs[1]) {
+    			tempArray[1]++;
+          // console.log("Voted for Rubio");
+    		} else if (random < cutoffs[2]) {
+    			tempArray[2]++;
+          // console.log("Voted for Cruz");
+    		} else if (random < cutoffs[3]) {
+    			tempArray[3]++;
+          // console.log("Voted for Kasich");
+    		} else {
+    			tempArray[4]++;
+          // console.log("Lost Voter");
+    		}
+      }
+
+      var maximum = 0;
+      var indexOfMax = 0;
+      for (var i = 0; i < tempArray.length; i++) {
+        if (tempArray[i] > maximum) {
+          maximum = tempArray[i];
+          indexOfMax = i; // Save index
+        }
+      }
+
+      var newVal = candidateWins[indexOfMax] + 1;
+      candidateWins[indexOfMax] = newVal;
   	}
 
     // Temp object
@@ -83,7 +106,8 @@ var App = React.createClass({ // Main parent component
       var objectToPush = { // Declare object
         name: name,
         percentage: percentage,
-        votes: tempArray[i]
+        votes: tempArray[i],
+        wins: candidateWins[i]
       }
       tempCandidates.push(objectToPush); // Add to array
     }
@@ -130,13 +154,19 @@ var Results = React.createClass({ // Show results of simulation
       var name = candidate.name;
       var votes = candidate.votes;
       var percentage = Math.round(1000 * votes/totalVoters)/10; // Round to the nearest 10th
+      var wins = candidate.wins;
       return (
-        <p>{name}: {votes} ({percentage})</p>
+        <div>
+          <h4>{name}: {wins} simulations won</h4>
+          <p>Votes: {votes} ({percentage}%)</p>
+          <br></br>
+        </div>
       )
     })
     return (
       <div>
         <h3>Results</h3>
+        <p>From last simulation of sample</p>
         {candidateNodes}
       </div>
     )
