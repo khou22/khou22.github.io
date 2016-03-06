@@ -47,5 +47,4 @@ for i in range(100):
 {% endhighlight %}
 
 # Constructing and Interpreting JSON data
-This was great way for me to learn how Python data structures worked. It helped me gain a good foundation in simple variable types as well as how to communicate between different programming languages. For example, Javascript often sends data in the form of a JSON object. By doing this project I was able to pass data from my Javascript into my Python script and vice versa.
-Reference: <a href="https://docs.python.org/2/library/json.html">https://docs.python.org/2/library/json.html</a>
+This was great way for me to learn how Python data structures worked. It helped me gain a good foundation in simple variable types as well as how to communicate between different programming languages. For example, Javascript often sends data in the form of a JSON object. By doing this project I was able to pass data from my Javascript into my Python script and vice versa. <a href="https://docs.python.org/2/library/json.html">Reference</a>
