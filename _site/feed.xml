@@ -6,9 +6,35 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Mar 2016 16:55:33 -0800</pubDate>
-    <lastBuildDate>Sun, 06 Mar 2016 16:55:33 -0800</lastBuildDate>
+    <pubDate>Mon, 07 Mar 2016 00:05:30 -0800</pubDate>
+    <lastBuildDate>Mon, 07 Mar 2016 00:05:30 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Carving a Topical Map Using a CNC Router</title>
+        <description>&lt;h1 id=&quot;cutting-topographical-maps-on-the-cnc-router&quot;&gt;Cutting Topographical Maps on the CNC Router&lt;/h1&gt;
+
+&lt;p&gt;&lt;b&gt;Process&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Import map from Google Earth plugin on SketchUp&lt;/li&gt;
+  &lt;li&gt;Geo-location → Add location&lt;/li&gt;
+  &lt;li&gt;Select show terrain&lt;/li&gt;
+  &lt;li&gt;Export from sketchup as a .3ds&lt;/li&gt;
+  &lt;li&gt;Import on Rhino as “Component / 3D Model”&lt;/li&gt;
+  &lt;li&gt;Set size&lt;/li&gt;
+  &lt;li&gt;Set Toolpath&lt;/li&gt;
+  &lt;li&gt;Cut “3D Rough Toolpath” first&lt;/li&gt;
+  &lt;li&gt;Cut “3D Finishing Toolpath”&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sun, 06 Mar 2016 15:59:45 -0800</pubDate>
+        <link>http://khou22.github.io/wood/2016/03/06/carving-a-topical-map-using-a-cnc-router.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/wood/2016/03/06/carving-a-topical-map-using-a-cnc-router.html</guid>
+        
+        
+        <category>wood</category>
+        
+      </item>
     
       <item>
         <title>Installing and Getting Started with Python</title>
@@ -46,8 +72,7 @@ Reference: &lt;a href=&quot;http://stackoverflow.com/questions/3173320/text-prog
     &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flush&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;constructing-and-interpreting-json-data&quot;&gt;Constructing and Interpreting JSON data&lt;/h1&gt;
-&lt;p&gt;This was great way for me to learn how Python data structures worked. It helped me gain a good foundation in simple variable types as well as how to communicate between different programming languages. For example, Javascript often sends data in the form of a JSON object. By doing this project I was able to pass data from my Javascript into my Python script and vice versa.
-Reference: &lt;a href=&quot;https://docs.python.org/2/library/json.html&quot;&gt;https://docs.python.org/2/library/json.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This was great way for me to learn how Python data structures worked. It helped me gain a good foundation in simple variable types as well as how to communicate between different programming languages. For example, Javascript often sends data in the form of a JSON object. By doing this project I was able to pass data from my Javascript into my Python script and vice versa. &lt;a href=&quot;https://docs.python.org/2/library/json.html&quot;&gt;Reference&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 31 Jan 2016 05:44:44 -0800</pubDate>
         <link>http://khou22.github.io/programming/2016/01/31/installing-and-getting-started-with-python.html</link>
@@ -505,34 +530,6 @@ zsh: &lt;span class=&quot;nb&quot;&gt;command &lt;/span&gt;not found: jekyll&lt;
         <category>Jekyll</category>
         
         <category>osx</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Visualizing a Javascript Callback</title>
-        <description>&lt;p&gt;Ever wondered what technical sounding words like “asyncrhonis” or “event-loops” meant? It took me a while to figure out all the complicated terminology associated with code execution, but basically these words all relate to the order in which lines of code are run.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;I came across a neat web app that one of my LinkedIn connections posted called &lt;a href=&quot;http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!&quot; target=&quot;_blank&quot;&gt;Loupe&lt;/a&gt;. According to their website, &lt;i&gt;“Loupe is a little visualisation to help you understand how JavaScript’s call stack/event loop/callback queue interact with each other.”&lt;/i&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here is a brief overview of the concept:&lt;/p&gt;
-&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/8aGhZQkoFbQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you are at all curious or just want a new perspective on things, I encourage you check out &lt;a href=&quot;http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!&quot; target=&quot;_blank&quot;&gt;Loupe&lt;/a&gt;!&lt;/p&gt;
-</description>
-        <pubDate>Thu, 01 Oct 2015 11:26:42 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2015/10/01/visualizing-a-javascript-callback.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2015/10/01/visualizing-a-javascript-callback.html</guid>
-        
-        <category>Javascript</category>
         
         
         <category>programming</category>
