@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Carving a Topical Map Using a CNC Router"
+title: "Getting Started with the CNC Router"
 author: "Kevin Hou"
 date: 2016-03-06 23:59:45
 description: "Part of a wood project I'm working on. Using SketchUp and Aspire to prepare the CNC cutpath."
@@ -8,7 +8,7 @@ category: Wood
 tags: []
 featured: "no"
 ---
-# Cutting Topographical Maps on the CNC Router
+<h2>Cutting Topographical Maps on the CNC Router</h2>
 
 <b>Process</b>
 <ol>
