@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kevin Hou's Blog</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
-">
+  <title>Introduction to Services in AngularJS</title>
+  <meta name="description" content="Blog post in progress">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -19,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/tag/">
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/03/13/introduction-to-services-in-angularjs.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -170,421 +169,90 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <!-- Blog homepage -->
+        <div class="post">
+  
+    
+    
+      
+        
+      
+    
 
-<div class="home left-main">
+    
+        
+    
 
-  <h1 class="page-heading">Browse All Tags</h1>
-  <br />
-  <ul class="post-list">
-    <!-- Repeats for (maps) all posts -->
     
-      <li>
-        <h5 class="tag-list">
-          <a href="apps">
-            Apps
-          </a>
-        </h5>
-      </li>
+      
+          
+            
+                
+                
+            
+        
     
-      <li>
-        <h5 class="tag-list">
-          <a href="github-pages">
-            GitHub Pages
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="woodturning">
-            Woodturning
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="wood-finish">
-            Wood Finish
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="salesforce">
-            Salesforce Internship
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="processing">
-            Processing
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="desmos">
-            Desmos
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="java">
-            Java
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="javascript">
-            Javascript
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="reactjs">
-            ReactJS
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="es6">
-            ES6
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="html">
-            HTML
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="css">
-            CSS
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="css3">
-            CSS3
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="jekyll">
-            Jekyll
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="musicviz">
-            Music Visualizer
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="node-js">
-            Node.js
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="github">
-            GitHub
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="unix">
-            Unix
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="osx">
-            OSX
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="sublime">
-            Sublime Text
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="ionic">
-            Ionic
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="python">
-            Python
-          </a>
-        </h5>
-      </li>
-    
-  </ul>
+  <header class="post-header">
+    <p class="post-return-main"><a href="/blog">
+      <
+      Return to all blogs
+    </a></p>
+    <br />
+    <h1 class="post-title">Introduction to Services in AngularJS</h1>
+    <p class="post-meta">Mar 13, 2016 • Kevin Hou</p>
+  </header>
+  <article class="post-content">
+    <p><strong>Blog post in progress</strong></p>
 
-  <p class="rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></p>
+<ol>
+  <li>
+    Create service file
+    
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="err">‘</span><span class="nx">moduleName</span><span class="err">’</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ionic&#39;</span><span class="p">,</span> <span class="s1">&#39;ngCordova&#39;</span><span class="p">])</span>
+      <span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="err">‘</span><span class="nx">serviceFunction</span><span class="err">’</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">testVariable</span> <span class="o">=</span> <span class="s2">&quot;Kevin&quot;</span>
+        <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">testVariable</span><span class="p">)</span>
+        <span class="p">};</span>
+      <span class="p">})</span>
+      <span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="err">‘</span><span class="nx">serviceVariable</span><span class="err">’</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">testVariable</span> <span class="o">=</span> <span class="s2">&quot;Kevin&quot;</span>
+        <span class="k">return</span> <span class="nx">testVariable</span>
+      <span class="p">})</span></code></pre></div>
 
+  </li>
+
+  <li>
+    Make sure the names are consistent
+  </li>
+
+  <li>
+    Add ‘moduleName’ to the module’s dependancy
+    
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;scheduledRidesCtrl&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ui.bootstrap&#39;</span><span class="p">,</span> <span class="s1">&#39;geocoding&#39;</span><span class="p">])</span></code></pre></div>
+
+  </li>
+
+  <li>
+    Include the name of the service function in the controller’s function(…, …)
+    
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">&#39;scheduledRidesCtrl&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$ionicPopup</span><span class="p">,</span> <span class="nx">$timeout</span><span class="p">,</span> <span class="nx">serviceFunction</span><span class="p">,</span> <span class="nx">serviceVariable</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="p">}</span></code></pre></div>
+
+  </li>
+
+  <li>Can now use the functions and variables in any controller that you included the dependency for. Simply call:
+    
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">serviceFunction</span><span class="p">();</span> <span class="c1">// Runs the service function</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">serviceVariable</span><span class="p">);</span> <span class="c1">// Uses the service variable as a regular variable</span></code></pre></div>
+
+  </li>
+</ol>
+
+  </article>
+  <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a></p>
 </div>
 
-<div class="right-column">
-  <div class="featured">
-    Featured posts:
-    <ol>
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/11/01/text-analysis-app-how-do-you-talk-to-people-on-facebook-versus-in-an-engineering-report.html">Text Analysis App: How Do You Talk To People on Facebook Versus In An Engineering Report?</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/10/25/nodejs-basics---setting-up-a-local-web-server.html">NodeJS Basics - Setting Up A Local Web Server</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/08/02/best-way-to-customize-terminal.html">Best Way to Customize Terminal</a>
-          </li>
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/07/31/accessibility-enabling-voiceover-on-buttons-and-links.html">Accessibility: Enabling Voiceover on Buttons and Links</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="recent">
-    Recent posts:
-    <ol>
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2016/03/13/introduction-to-services-in-angularjs.html">Introduction to Services in AngularJS</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/wood/2016/03/06/getting-started-with-the-cnc-router.html">Getting Started with the CNC Router</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2016/01/31/installing-and-getting-started-with-python.html">Installing and Getting Started with Python</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="browse-category">
-    <a href="/blog/category">
-      Browse by Category
-    </a>
-  </div>
-  <div class="browse-tag">
-    <a href="/blog/tag">
-      Browse by Tag
-    </a>
-  </div>
-</div>
       </div>
     </div>
 
