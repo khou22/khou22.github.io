@@ -6,13 +6,15 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Mar 2016 23:34:58 -0700</pubDate>
-    <lastBuildDate>Sun, 13 Mar 2016 23:34:58 -0700</lastBuildDate>
+    <pubDate>Tue, 15 Mar 2016 21:55:37 -0700</pubDate>
+    <lastBuildDate>Tue, 15 Mar 2016 21:55:37 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Introduction to Services in AngularJS</title>
         <description>&lt;p&gt;&lt;strong&gt;Blog post in progress&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;What Are Services?&lt;/h2&gt;
+&lt;p&gt;In a nutshell, services are a way of making functions and variables global. They can be injected as dependencies in any controller and its functions/variables can be accessible across controllers.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -37,10 +39,11 @@
   &lt;/li&gt;
 
   &lt;li&gt;
-    Add ‘moduleName’ to the module’s dependancy
+    Add ‘geocoding’ (the module name) to the module’s dependency
     
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;scheduledRidesCtrl&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;ui.bootstrap&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;geocoding&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+    The way I explained this to a friend is basically using the &#39;ui.bootstrap&#39; analogy. Bootstrap in its most basic form is a a compilation of CSS styling and Javascript for functionality. When we include the &#39;ui.bootstrap&#39; dependency, we are essentially including that Javascript file to be used in this controller. It&#39;s not different when we create our own services. A service is basically a group of Javascript functions. If the services is included as a dependency, it will load all those Javascript functions and make them available to use in that controller. It&#39;s a good way of selectively loading specific Javascript files so that not all of your Javascript files have to load for every page.
   &lt;/li&gt;
 
   &lt;li&gt;
