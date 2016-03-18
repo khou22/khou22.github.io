@@ -9,6 +9,7 @@ tags: []
 featured: "no"
 ---
 <h2>Cutting Topographical Maps on the CNC Router</h2>
+<p>This blog post is primarily for my own notes. It's a work in progress. As my project progresses and I encounter more challenges, I will write about them here.</p>
 
 <b>Process</b>
 <ol>

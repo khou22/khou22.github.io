@@ -1,0 +1,50 @@
+<!-- Not using the template (no nav bar, footer, etc.)
+---
+layout: default
+---
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kevin Hou's Home Page</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <!-- React -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../../../css/browserHomePage/browserHomePage.css">
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66796355-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="../../../media/site/favicon.png">
+  </head>
+  <body>
+    <!-- DIV that will be modified by ReactJS -->
+    <div id="content"></div>
+
+    <!-- ReactJS Code -->
+    <script type="text/jsx;harmony=true" src="../../../Components/BrowserHomePage.js">
+    </script>
+
+  </body>
+</html>
