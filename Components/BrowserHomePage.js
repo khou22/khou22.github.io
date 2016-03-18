@@ -12,15 +12,6 @@ var App = React.createClass({ // Main parent component
     var finalUrl = baseURL.replace("[number]", imageIndex); // Inject image index
     console.log("Final URL:", finalUrl);
 
-    var img = new Image();
-    img.src = "url(" + finalUrl + ")";
-
-    img.onerror = function(){ // Failed to load
-        console.log("failed");
-    };
-    img.onload = function(){ // Loaded successfully
-        console.log("success");
-    };
     return finalUrl; // Return the URL
   },
   newBackground: function() {
