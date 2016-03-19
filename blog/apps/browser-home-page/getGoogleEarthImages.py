@@ -12,25 +12,44 @@ import sys # More control over printing
 # Good practice for communicating between Javascript and Python
 # Also good practice for web scraping with Python
 
-indexRange = [0, 2200] # Approximate range of indexes
+indexRange = [1000, 3050] # Approximate range of indexes
 # indexRange = [2190, 2199] # Practice range (much shorter and faster to debug)
 baseUrl = "https://www.gstatic.com/prettyearth/assets/full/"
 goodImages = []
+badImageCount = 0
 
+count = 0.0 # Index starting from 0
 for i in range(indexRange[0], indexRange[1]):
     # print "Checking link: %d..." % i # Feedback
     finalUrl = baseUrl + str(i) + ".jpg" # Concatenate
     # print finalUrl
 
+    count += 1.0 # Add to counter
+    total = float(indexRange[1] - indexRange[0])
+    
+    # Progress bar: http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console
+    # Author: Greenstick and Vladimir Ignatyev
+    prefix = ''
+    suffix = ''
+    decimals = 3
+    barLength = 100
+    filledLength    = int(round(barLength * count / float(total)))
+    percents        = round(100.00 * (count / float(total)), decimals)
+    bar             = '#' * filledLength + '-' * (barLength - filledLength)
+    sys.stdout.write('%s [%s] %s%s %s\r' % (prefix, bar, percents, '%', suffix)),
+    sys.stdout.flush()
+
     try:
         urllib2.urlopen(finalUrl)
     except urllib2.HTTPError, e: # Check the errors
         if e.code == 404: # 404 error
-            print "Index %d ---> 404: Page Not Found" % i
+            # print "Index %d ---> 404: Page Not Found" % i # Feedback
+            badImageCount += 1 # Add to counter
         else: # Other error
-            print "Index %d ---> Error, but not 404" % i
+            # print "Index %d ---> Error, but not 404" % i # Feedback
+            badImageCount += 1
     else: # Found the page
-        print "Index %d ---> 200: Image Found" % i
+        # print "Index %d ---> 200: Image Found" % i # Feedback
         goodImages.append(i)
 # print goodImages
 
