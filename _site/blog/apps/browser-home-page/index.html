@@ -8,11 +8,8 @@ layout: default
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Kevin Hou's Home Page</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <!-- React -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -21,6 +18,7 @@ layout: default
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../../../css/browserHomePage/browserHomePage.css">
 
     <!-- Google Analytics -->
@@ -41,6 +39,9 @@ layout: default
   <body>
     <!-- DIV that will be modified by ReactJS -->
     <div id="content"></div>
+
+    <!-- Google Earth Images Array (Created by Python Script) -->
+    <script src="GoodImages.js"></script>
 
     <!-- ReactJS Code -->
     <script type="text/jsx;harmony=true" src="../../../Components/BrowserHomePage.js">
