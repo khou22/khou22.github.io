@@ -5,15 +5,16 @@ import webbrowser # This module can control the browser
 import time # Getting current time (float type)
 import datetime # Formatting current time into a string
 import sys # More control over printing
+# Image repository: https://earthview.withgoogle.com/
 
 # print "Script to grab all working Google Earth images"
 # Cycle through all the potential Google Earth URLs. Collect the good indexes and create a Javascript array for them.
 # Can then use that file in my Javascript app
-# Good practice for communicating between Javascript and Python
-# Also good practice for web scraping with Python
+# Good practice for communicating between Javascript and Python - python writing javascript to be read by other javascript
+# Also good practice for web scraping with Python, creating my own functions
 
 indexRange = [1000, 3050] # Approximate range of indexes
-# indexRange = [2190, 2199] # Practice range (much shorter and faster to debug)
+# indexRange = [2197, 2199] # Practice range (much shorter and faster to debug)
 baseUrl = "https://www.gstatic.com/prettyearth/assets/full/"
 goodImages = []
 badImageCount = 0
@@ -26,7 +27,7 @@ for i in range(indexRange[0], indexRange[1]):
 
     count += 1.0 # Add to counter
     total = float(indexRange[1] - indexRange[0])
-    
+
     # Progress bar: http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console
     # Author: Greenstick and Vladimir Ignatyev
     prefix = ''
@@ -60,12 +61,38 @@ timestamp = str(timestamp)
 # print timestamp # Feedback
 
 # Create JS file
+def createJavascriptVar(varName, value, varType): # Function for creating JS variable declaration
+    # Allows Javascript to access values as variable
+    # print "Creating variable: %s" % varName # Feedback
+    output = "var " + varName + " = " # Add variable name and equals sign
+    if varType is 'string': # If a string type
+        # print "Type: String"
+        output += "'" + value + "';\n"
+    elif varType is 'int': # If a number and not a string
+        # print "Type: Int"
+        output += str(value) + ";\n" # Semicolon and new line
+    # print output # Feedback
+    return output # Return as a value
+
+def createConsoleLog(message): # Function for creating JS console.log
+    # Good for debugging/user feedback in JS file
+    output = "console.log('" + message + "');\n" # Concatenate strings
+    # print output # Feedback
+    return output
+
+createJavascriptVar('timestamp', "1", 'int')
+createConsoleLog("Hello")
+
 # '\n' signifies a line break
 fileName = "GoodImages.js"
 outputFile = open(fileName, 'w') # 'w' for writing, will overwrite existing
-outputFile.write("console.log('Loaded Google Earth Image Indexes');\n") # Write debugger code
-outputFile.write("var timestamp = '" + timestamp + "';\n") # Store as a variable so Javascript can access as variable
-outputFile.write("console.log('Last updated:', timestamp);\n") # Add time stamp from current time
+
+# Code to write more code
+outputFile.write(createConsoleLog("Loaded Google Earth Image Indexes")) # Write debugger code
+outputFile.write(createJavascriptVar('timestamp', timestamp, 'string')) # Create JS variable for timestamp
+outputFile.write(createJavascriptVar('goodImageCount', len(goodImages), 'int')) # Create JS variable for bad image count
+outputFile.write(createJavascriptVar('badImageCount', badImageCount, 'int')) # Create JS variable for bad image count
+outputFile.write(createConsoleLog("'Last updated:', timestamp")) # Add time stamp from current time
 outputFile.write("var goodImages = [\n") # Open array
 outputFile.write("  ") # Indent for formatting
 
