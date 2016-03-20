@@ -1,8 +1,8 @@
 console.log('Loaded Google Earth Image Indexes');
-var timestamp = '2016-03-19 15:36:19';
+console.log('Last updated: 2016-03-19 20:51:32');
+var timestamp = '2016-03-19 20:51:32';
 var goodImageCount = 954;
 var badImageCount = 1096;
-console.log(''Last updated:', timestamp');
 var goodImages = [
   1003,
   1004,

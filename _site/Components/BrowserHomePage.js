@@ -5,10 +5,10 @@ var App = React.createClass({ // Main parent component
     }
   },
   randomBackground: function() {
-    var min = 1253; // Lowest image index: 1253
-    var max = 2199; // Highest image index: 2199
+    var max = goodImages.length; // Array of good images from the Python Script
     var baseURL = "https://www.gstatic.com/prettyearth/assets/full/[number].jpg"; // Template URL
-    var imageIndex = Math.round(Math.random() * (max - min) + min); // Random number between the specified max/min
+    var arrayIndex = Math.round(Math.random() * max); // Random number between the specified max/min
+    var imageIndex = goodImages[arrayIndex];
     var finalUrl = baseURL.replace("[number]", imageIndex); // Inject image index
     console.log("Final URL:", finalUrl);
 
@@ -20,16 +20,24 @@ var App = React.createClass({ // Main parent component
     });
   },
   render: function() {
-    var backgroundStyle = { backgroundImage: 'url(' + this.state.backgroundURL + ')' };
+
     return (
       <div>
-        <div className="background" style={backgroundStyle}>
-          <button onClick={this.newBackground}>New Google Earth Image</button>
-        </div>
+        <Background backgroundURL = {this.state.backgroundURL} />
       </div>
     );
   }
 });
+
+var Background = React.createClass({
+  render: function() {
+    var backgroundStyle = { backgroundImage: 'url(' + this.props.backgroundURL + ')' };
+    return (
+      <div className="background" style={backgroundStyle}>
+      </div>
+    )
+  }
+})
 
 React.render(
   React.createElement(App, null),

@@ -80,19 +80,16 @@ def createConsoleLog(message): # Function for creating JS console.log
     # print output # Feedback
     return output
 
-createJavascriptVar('timestamp', "1", 'int')
-createConsoleLog("Hello")
-
 # '\n' signifies a line break
-fileName = "GoodImages.js"
+fileName = "GoodGoogleEarthImages.js"
 outputFile = open(fileName, 'w') # 'w' for writing, will overwrite existing
 
 # Code to write more code
 outputFile.write(createConsoleLog("Loaded Google Earth Image Indexes")) # Write debugger code
+outputFile.write(createConsoleLog("Last updated: " + timestamp)) # Add time stamp from current time
 outputFile.write(createJavascriptVar('timestamp', timestamp, 'string')) # Create JS variable for timestamp
 outputFile.write(createJavascriptVar('goodImageCount', len(goodImages), 'int')) # Create JS variable for bad image count
 outputFile.write(createJavascriptVar('badImageCount', badImageCount, 'int')) # Create JS variable for bad image count
-outputFile.write(createConsoleLog("'Last updated:', timestamp")) # Add time stamp from current time
 outputFile.write("var goodImages = [\n") # Open array
 outputFile.write("  ") # Indent for formatting
 
