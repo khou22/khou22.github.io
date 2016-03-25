@@ -88,7 +88,7 @@ outputFile = open(fileName, 'w') # 'w' for writing, will overwrite existing
 outputFile.write(createConsoleLog("Loaded Google Earth Image Indexes")) # Write debugger code
 outputFile.write(createConsoleLog("Last updated: " + timestamp)) # Add time stamp from current time
 outputFile.write(createJavascriptVar('timestamp', timestamp, 'string')) # Create JS variable for timestamp
-outputFile.write(createJavascriptVar('goodImageCount', len(goodImages), 'int')) # Create JS variable for bad image count
+outputFile.write(createJavascriptVar('goodImageCount', len(goodImages), 'int')) # Create JS variable for good image count
 outputFile.write(createJavascriptVar('badImageCount', badImageCount, 'int')) # Create JS variable for bad image count
 outputFile.write("var goodImages = [\n") # Open array
 outputFile.write("  ") # Indent for formatting
@@ -100,7 +100,7 @@ for i in range(0, len(goodImages)): # Cycle through array
     sys.stdout.write("\r%d%%" % percent)
     sys.stdout.flush() # No line break
 
-    outputFile.write(str(goodImages[i])) # Add image index string to array
+    outputFile.write(str(goodImages[i])) # Add image index int to array
     if i != len(goodImages) - 1: # If not the last image index
         outputFile.write(",\n") # Continue array
         outputFile.write("  ") # Indent for formatting

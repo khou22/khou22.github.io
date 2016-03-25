@@ -33,8 +33,8 @@ var App = React.createClass({ // Main parent component
 var WeatherWidget = React.createClass({
   render: function() {
     return (
-      <div class="widget-div">
-        I am a widget
+      <div className="greeting-card">
+        <p className="greeting-header">Welcome, Kevin</p>
       </div>
     )
   }

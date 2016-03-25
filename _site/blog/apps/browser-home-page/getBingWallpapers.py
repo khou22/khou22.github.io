@@ -7,26 +7,21 @@ import datetime # Formatting current time into a string
 import sys # More control over printing
 # Image repository: https://earthview.withgoogle.com/
 
-# print "Script to grab all working Google Earth images"
-# Cycle through all the potential Google Earth URLs. Collect the good indexes and create a Javascript array for them.
+# Doesn't work right now — might be worth scratching this project because the Bing wallpaper is only changed once a day
+
+# print "Script to grab a certain number of Bing backgrounds"
+# Cycle through all the potential Bing backgrounds. Collect the good indexes and create a Javascript array for them.
 # Can then use that file in my Javascript app
 # Good practice for communicating between Javascript and Python - python writing javascript to be read by other javascript
 # Also good practice for web scraping with Python, creating my own functions
 
-indexRange = [1000, 3050] # Approximate range of indexes
-# indexRange = [2197, 2199] # Practice range (much shorter and faster to debug)
-baseUrl = "https://www.gstatic.com/prettyearth/assets/full/"
-goodImages = []
-badImageCount = 0
+numberOfImages = 1
+wallpapers = []
 
-count = 0.0 # Index starting from 0
-for i in range(indexRange[0], indexRange[1]):
-    # print "Checking link: %d..." % i # Feedback
-    finalUrl = baseUrl + str(i) + ".jpg" # Concatenate
-    # print finalUrl
+for i in range(0, numberOfImages):
 
-    count += 1.0 # Add to counter
-    total = float(indexRange[1] - indexRange[0])
+    count = float(i)
+    total = float(numberOfImages)
 
     # Progress bar: http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console
     # Author: Greenstick and Vladimir Ignatyev
@@ -34,25 +29,27 @@ for i in range(indexRange[0], indexRange[1]):
     suffix = ''
     decimals = 3
     barLength = 100
-    filledLength    = int(round(barLength * count / float(total)))
-    percents        = round(100.00 * (count / float(total)), decimals)
-    bar             = '#' * filledLength + '-' * (barLength - filledLength)
+    filledLength = int(round(barLength * count / float(total)))
+    percents = round(100.00 * (count / float(total)), decimals)
+    bar = '#' * filledLength + '-' * (barLength - filledLength)
     sys.stdout.write('%s [%s] %s%s %s\r' % (prefix, bar, percents, '%', suffix)),
     sys.stdout.flush()
 
-    try:
-        urllib2.urlopen(finalUrl)
-    except urllib2.HTTPError, e: # Check the errors
-        if e.code == 404: # 404 error
-            # print "Index %d ---> 404: Page Not Found" % i # Feedback
-            badImageCount += 1 # Add to counter
-        else: # Other error
-            # print "Index %d ---> Error, but not 404" % i # Feedback
-            badImageCount += 1
-    else: # Found the page
-        # print "Index %d ---> 200: Image Found" % i # Feedback
-        goodImages.append(i)
-# print goodImages
+    response = urllib2.urlopen("http://www.bing.com/") #Get markdown
+    html = response.read() #Markdown
+    soup = BeautifulSoup(html, "lxml") # Using lxml parser
+    markdown = str(soup.body)
+    print markdown
+
+    start = "g_img={url:'" # Start of URL
+    end = "',id:'bgDiv'" # End of URL
+    startIndex = markdown.index(start) + len(start) # Crop to the beginning of the URL, trim the start indicator
+    endIndex = markdown.index(end) # Crop to the end of the URL
+    backgroundURL = markdown[startIndex:endIndex] # Trim the string to the indexes
+    print backgroundURL # Feedback
+
+    wallpapers.append(backgroundURL)
+
 
 # Get current time stamp
 ts = time.time() # Get current time
@@ -81,31 +78,29 @@ def createConsoleLog(message): # Function for creating JS console.log
     return output
 
 # '\n' signifies a line break
-fileName = "GoodGoogleEarthImages.js"
+fileName = "BingWallpapers.js"
 outputFile = open(fileName, 'w') # 'w' for writing, will overwrite existing
 
 # Code to write more code
-outputFile.write(createConsoleLog("Loaded Google Earth Image Indexes")) # Write debugger code
+outputFile.write(createConsoleLog("Loaded Bing Wallpapers")) # Write debugger code
 outputFile.write(createConsoleLog("Last updated: " + timestamp)) # Add time stamp from current time
 outputFile.write(createJavascriptVar('timestamp', timestamp, 'string')) # Create JS variable for timestamp
-outputFile.write(createJavascriptVar('goodImageCount', len(goodImages), 'int')) # Create JS variable for good image count
-outputFile.write(createJavascriptVar('badImageCount', badImageCount, 'int')) # Create JS variable for bad image count
-outputFile.write("var goodImages = [\n") # Open array
+outputFile.write("var BingWallpapers = [\n") # Open array
 outputFile.write("  ") # Indent for formatting
 
-for i in range(0, len(goodImages)): # Cycle through array
+for i in range(0, len(wallpapers)): # Cycle through array
     count = i + 1
-    percent = count * 1e2 /float(len(goodImages)) # Calculate percentage complete
+    percent = count * 1e2 /float(len(wallpapers)) # Calculate percentage complete
     # print(percent)
     sys.stdout.write("\r%d%%" % percent)
     sys.stdout.flush() # No line break
 
-    outputFile.write(str(goodImages[i])) # Add image index int to array
-    if i != len(goodImages) - 1: # If not the last image index
+    outputFile.write("\"" + str(wallpapers[i]) + "\"") # Add image index string to array
+    if i != len(wallpapers) - 1: # If not the last image index
         outputFile.write(",\n") # Continue array
         outputFile.write("  ") # Indent for formatting
     else: # Last element in array
         outputFile.write("\n];") # Close array
 
 print "" # Line break
-print "****** Retrieved %d Google Earth Image Indexes ******" % len(goodImages)
+print "****** Retrieved %d Bing Wallpaper URL's ******" % len(wallpapers)
