@@ -24,10 +24,21 @@ var App = React.createClass({ // Main parent component
     return (
       <div>
         <Background backgroundURL = {this.state.backgroundURL} />
+        <WeatherWidget />
       </div>
     );
   }
 });
+
+var WeatherWidget = React.createClass({
+  render: function() {
+    return (
+      <div class="widget-div">
+        I am a widget
+      </div>
+    )
+  }
+})
 
 var Background = React.createClass({
   render: function() {
