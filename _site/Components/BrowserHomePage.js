@@ -24,17 +24,61 @@ var App = React.createClass({ // Main parent component
     return (
       <div>
         <Background backgroundURL = {this.state.backgroundURL} />
-        <WeatherWidget />
+        <SearchBar />
+        <ProfilePicture />
+        <SchoolButtonGroup />
       </div>
     );
   }
 });
 
-var WeatherWidget = React.createClass({
+var ProfilePicture = React.createClass({
   render: function() {
     return (
-      <div className="greeting-card">
-        <p className="greeting-header">Welcome, Kevin</p>
+      <div className="profile-picture">
+      </div>
+    )
+  }
+})
+
+var SearchBar = React.createClass({
+  render: function() {
+    return (
+      <div className="search-bar">
+
+      </div>
+    )
+  }
+})
+
+var SchoolButtonGroup = React.createClass({
+  getInitialState: function() {
+    return {
+      showLinks: false
+    }
+  },
+  showGroup: function() {
+    console.log("Mouse enter/exit school group");
+    newState = !this.state.showLinks;
+    this.setState({
+      showLinks: newState
+    })
+  },
+  render: function() {
+    return (
+      <div onMouseEnter={this.showGroup.bind(this)} onMouseOut={this.showGroup.bind(this)}>
+        <div className="button-group school-group">
+          School
+        </div>
+        <div className="button-subgroup school-group school-1">
+          LWHS
+        </div>
+        <div className="button-subgroup school-group school-2">
+          LWHS
+        </div>
+        <div className="button-subgroup school-group school-3">
+          LWHS
+        </div>
       </div>
     )
   }
