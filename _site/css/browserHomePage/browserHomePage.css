@@ -49,8 +49,8 @@
 .welcome-bar {
   position: absolute;
   width: 1000px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   left: 50%;
   top: 15vh;
   transform: translateX(-500px);
@@ -59,12 +59,12 @@
 }
 
 .time {
-  font-size: 175px;
+  font-size: 10rem;
   letter-spacing: 2px;
 }
 
 .welcome-text {
-  font-size: 58px;
+  font-size: 3rem;
 }
 
 .invisible-color {
@@ -72,7 +72,8 @@
 }
 
 .group {
-
+  vertical-align: middle;
+  text-align: center;
 }
 
 .button-group {
@@ -85,13 +86,13 @@
 
 .school-group {
   top: 55vh;
-  left: 30%;
+  left: 25%;
   transform: translateX(-75px);
 }
 
 .programming-group {
   top: 55vh;
-  right: 30%;
+  right: 25%;
   transform: translateX(75px);
 }
 
