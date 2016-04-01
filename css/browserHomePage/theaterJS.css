@@ -1,0 +1,18 @@
+@-webkit-keyframes blinkCurser {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes blinkCurser {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.actor__content--typing {
+  -webkit-animation-name: blinkCurser;
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: blinkCurser;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+}

@@ -10,7 +10,7 @@
 }
 
 .glass {
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(0, 0, 0, 0.4);
   border-bottom: 2px solid;
   border-bottom-color: #ccc;
   border-bottom-color: rgba(255, 255, 255, 0.3);
@@ -26,16 +26,53 @@
 
 .profile-picture {
   position: absolute;
-  top: 25vh;
-  left: 50%;
-  transform: translateX(-75px);
+  top: 20px;
+  left: 20px;
   border-radius: 75px;
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   background-image: url("./../../media/site/images/Profile.jpg");
   background-size: contain;
   background-color: rgba(255, 255, 255, .2);
   border: 1px solid white;
+}
+
+.profile-text {
+  position: absolute;
+  top: 20px;
+  left: 120px;
+  width: 200px;
+  height: 75px;
+  color: white;
+}
+
+.welcome-bar {
+  position: absolute;
+  width: 1000px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  left: 50%;
+  top: 15vh;
+  transform: translateX(-500px);
+  color: white;
+  text-align: center;
+}
+
+.time {
+  font-size: 175px;
+  letter-spacing: 2px;
+}
+
+.welcome-text {
+  font-size: 58px;
+}
+
+.invisible-color {
+  color: rgba(255, 255, 255, 0);
+}
+
+.group {
+
 }
 
 .button-group {
@@ -43,13 +80,19 @@
   width: 150px;
   height: 150px;
   border-radius: 75px;
-  transform: translateX(-75px);
   background-color: white;
 }
 
 .school-group {
   top: 55vh;
   left: 30%;
+  transform: translateX(-75px);
+}
+
+.programming-group {
+  top: 55vh;
+  right: 30%;
+  transform: translateX(75px);
 }
 
 .button-subgroup {
@@ -65,9 +108,21 @@
 }
 
 .school-2 {
-  transform: translateX(-50px);
+  transform: translate(-150px, 135px);
 }
 
 .school-3 {
-  transform: translateX(100px);
+  transform: translate(0px, 170px);
+}
+
+.programming-1 {
+  transform: translateX(200px);
+}
+
+.programming-2 {
+  transform: translate(150px, 135px);
+}
+
+.programming-3 {
+  transform: translate(0px, 170px);
 }
