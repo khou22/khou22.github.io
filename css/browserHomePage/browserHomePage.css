@@ -49,6 +49,7 @@
 .welcome-bar {
   position: absolute;
   width: 1000px;
+  border-radius: 1rem;
   padding-top: 10px;
   padding-bottom: 10px;
   left: 50%;
@@ -80,13 +81,20 @@
   position: absolute;
   width: 150px;
   height: 150px;
+  border: 1px solid white;
   border-radius: 75px;
-  background-color: white;
+  background-color: grey;
 }
 
 .school-group {
   top: 55vh;
   left: 25%;
+  transform: translateX(-75px);
+}
+
+.personal-group {
+  top: 60vh;
+  left: 50%;
   transform: translateX(-75px);
 }
 
@@ -101,7 +109,12 @@
   width: 100px;
   height: 100px;
   border-radius: 50px;
+  border: 1px solid white;
   background-color: grey;
+
+  /*Animation*/
+  -webkit-animation: fadeIn 500ms 1;
+  animation: fadeIn 500ms 1;
 }
 
 .school-1 {
@@ -114,6 +127,18 @@
 
 .school-3 {
   transform: translate(0px, 170px);
+}
+
+.personal-1 {
+  transform: translate(75px, 100px);
+}
+
+.personal-2 {
+  transform: translate(-50px, 170px);
+}
+
+.personal-3 {
+  transform: translate(-175px, 100px);
 }
 
 .programming-1 {
