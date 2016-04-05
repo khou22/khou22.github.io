@@ -99,6 +99,9 @@ var SchoolButtonGroup = React.createClass({
       showLinks: false
     }
   },
+  clickedGroup: function() {
+    console.log("Clicked school group")
+  },
   showGroup: function(state) {
     console.log("Mouse enter/exit school group");
     if (state == "show") {
@@ -115,7 +118,8 @@ var SchoolButtonGroup = React.createClass({
     return (
       <div className="group">
         <div className="button-group school-group" onMouseEnter={this.showGroup.bind(this, "show")}
-        onMouseOut={this.showGroup.bind(this, "hide")}>
+        onMouseOut={this.showGroup.bind(this, "hide")}
+        onClick={this.clickedGroup.bind(this)}>
           School
         </div>
         { this.state.showLinks ? (
@@ -142,6 +146,9 @@ var PersonalButtonGroup = React.createClass({
       showLinks: false
     }
   },
+  clickedGroup: function() {
+    console.log("Clicked personal group")
+  },
   showGroup: function(state) {
     console.log("Mouse enter/exit personal group");
     if (state == "show") {
@@ -158,7 +165,8 @@ var PersonalButtonGroup = React.createClass({
     return (
       <div className="group">
         <div className="button-group personal-group" onMouseEnter={this.showGroup.bind(this, "show")}
-        onMouseOut={this.showGroup.bind(this, "hide")}>
+        onMouseOut={this.showGroup.bind(this, "hide")}
+        onClick={this.clickedGroup.bind(this)}>
           Personal
         </div>
         { this.state.showLinks ? (
@@ -185,6 +193,9 @@ var ProgrammingButtonGroup = React.createClass({
       showLinks: false
     }
   },
+  clickedGroup: function() {
+    console.log("Clicked programming group");
+  },
   showGroup: function(state) {
     console.log("Mouse enter/exit programming group");
     if (state == "show") {
@@ -201,7 +212,8 @@ var ProgrammingButtonGroup = React.createClass({
     return (
       <div className="group">
         <div className="button-group programming-group" onMouseEnter={this.showGroup.bind(this, "show")}
-        onMouseOut={this.showGroup.bind(this, "hide")}>
+        onMouseOut={this.showGroup.bind(this, "hide")}
+        onClick={this.clickedGroup.bind(this)}>
           Programming
         </div>
         { this.state.showLinks ? (

@@ -84,6 +84,9 @@
   border: 1px solid white;
   border-radius: 75px;
   background-color: grey;
+
+  /*Mouse pointer*/
+  cursor: pointer;
 }
 
 .school-group {
@@ -115,6 +118,9 @@
   /*Animation*/
   -webkit-animation: fadeIn 500ms 1;
   animation: fadeIn 500ms 1;
+
+  /*Mouse pointer*/
+  cursor: pointer;
 }
 
 .school-1 {
