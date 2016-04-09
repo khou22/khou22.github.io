@@ -2,7 +2,60 @@ var App = React.createClass({ // Main parent component
   getInitialState: function() {
     return {
       backgroundURL: this.randomBackground(),
-      fadeTime: 2000
+      fadeTime: 2000,
+      content: [
+        {
+          name: "School",
+          links: [
+            {
+              label: "Google",
+              url: "https://www.google.com"
+            },
+            {
+              label: "YouTube",
+              url: "https://www.youtube.com"
+            },
+            {
+              label: "LWHS",
+              url: "http://www.lwhs.org/page"
+            },
+          ]
+        },
+        {
+          name: "Personal",
+          links: [
+            {
+              label: "Google",
+              url: "https://www.google.com"
+            },
+            {
+              label: "YouTube",
+              url: "https://www.youtube.com"
+            },
+            {
+              label: "LWHS",
+              url: "http://www.lwhs.org/page"
+            },
+          ]
+        },
+        {
+          name: "Programming",
+          links: [
+            {
+              label: "Google",
+              url: "https://www.google.com"
+            },
+            {
+              label: "YouTube",
+              url: "https://www.youtube.com"
+            },
+            {
+              label: "LWHS",
+              url: "http://www.lwhs.org/page"
+            },
+          ]
+        }
+      ]
     }
   },
   randomBackground: function() {
@@ -27,9 +80,9 @@ var App = React.createClass({ // Main parent component
         <Background backgroundURL = {this.state.backgroundURL} />
         <WelcomeBar />
         <ProfilePicture />
-        <SchoolButtonGroup fadeTime={this.state.fadeTime} />
-        <PersonalButtonGroup fadeTime={this.state.fadeTime} />
-        <ProgrammingButtonGroup fadeTime={this.state.fadeTime} />
+        <ButtonGroup fadeTime={this.state.fadeTime} content={this.state.content[0]} index={0} />
+        <ButtonGroup fadeTime={this.state.fadeTime} content={this.state.content[1]} index={1} />
+        <ButtonGroup fadeTime={this.state.fadeTime} content={this.state.content[2]} index={2} />
       </div>
     );
   }
@@ -93,146 +146,73 @@ var WelcomeBar = React.createClass({
   }
 })
 
-var SchoolButtonGroup = React.createClass({
+var ButtonGroup = React.createClass({
   getInitialState: function() {
     return {
-      showLinks: false
+      showLinks: false,
+      groupName: this.props.content.name,
+      links: this.props.content.links,
     }
   },
   clickedGroup: function() {
-    console.log("Clicked school group")
+    // console.log("Clicked", this.state.groupName, "group"); // Feedback
+    for (var i = 0; i < this.state.links.length; i++) { // Cycle through all links in group
+      window.open(this.state.links[i].url, '_blank'); // Open links in a new tab
+    }
+  },
+  clickedLink: function(linkNumber) {
+    // console.log("Clicked link:", linkNumber); // Feedback
+    window.open(this.state.links[linkNumber].url, '_blank'); // Opens in a new tab
   },
   showGroup: function(state) {
-    console.log("Mouse enter/exit school group");
+    // console.log("Mouse enter/exit ", this.state.groupName, "group"); // Feedback
     if (state == "show") {
       this.setState({
         showLinks: true
       })
     } else {
-      setTimeout(() => {
+      var hideTimer = setTimeout(() => {
         this.setState({ showLinks: false });
       }, this.props.fadeTime);
     }
   },
+  resetShow: function() {
+    console.log("Resetting timer");
+    clearTimeout(hideTimer);
+    var hideTimer = setTimeout(() => {
+      this.setState({ showLinks: false });
+    }, this.props.fadeTime);
+  },
   render: function() {
+    index = this.props.index;
     return (
       <div className="group">
-        <div className="button-group school-group" onMouseEnter={this.showGroup.bind(this, "show")}
-        onMouseOut={this.showGroup.bind(this, "hide")}
-        onClick={this.clickedGroup.bind(this)}>
-          School
+        <div className={"button-group group-" + index}
+          onMouseEnter={this.showGroup.bind(this, "show")}
+          onMouseOut={this.showGroup.bind(this, "hide")}
+          onClick={this.clickedGroup.bind(this)} >
+          {this.state.groupName}
         </div>
         { this.state.showLinks ? (
-          <span>
-            <div className="button-subgroup school-group school-1">
-              LWHS
+          <span onMouseOver={this.resetShow.bind(this)} >
+            <div className={"button-subgroup group-" + index + " group-" + index + "-0"}
+            onClick={this.clickedLink.bind(this, 0)} >
+              {this.state.links[0].label}
             </div>
-            <div className="button-subgroup school-group school-2">
-              LWHS
+            <div className={"button-subgroup group-" + index + " group-" + index + "-1"}
+            onClick={this.clickedLink.bind(this, 1)} >
+              {this.state.links[1].label}
             </div>
-            <div className="button-subgroup school-group school-3">
-              LWHS
+            <div className={"button-subgroup group-" + index + " group-" + index + "-2"}
+            onClick={this.clickedLink.bind(this, 2)} >
+              {this.state.links[2].label}
             </div>
           </span>
         ) : null }
       </div>
     )
   }
-})
-
-var PersonalButtonGroup = React.createClass({
-  getInitialState: function() {
-    return {
-      showLinks: false
-    }
-  },
-  clickedGroup: function() {
-    console.log("Clicked personal group")
-  },
-  showGroup: function(state) {
-    console.log("Mouse enter/exit personal group");
-    if (state == "show") {
-      this.setState({
-        showLinks: true
-      })
-    } else {
-      setTimeout(() => {
-        this.setState({ showLinks: false });
-      }, this.props.fadeTime);
-    }
-  },
-  render: function() {
-    return (
-      <div className="group">
-        <div className="button-group personal-group" onMouseEnter={this.showGroup.bind(this, "show")}
-        onMouseOut={this.showGroup.bind(this, "hide")}
-        onClick={this.clickedGroup.bind(this)}>
-          Personal
-        </div>
-        { this.state.showLinks ? (
-          <span>
-            <div className="button-subgroup personal-group personal-1">
-              LWHS
-            </div>
-            <div className="button-subgroup personal-group personal-2">
-              LWHS
-            </div>
-            <div className="button-subgroup personal-group personal-3">
-              LWHS
-            </div>
-          </span>
-        ) : null }
-      </div>
-    )
-  }
-})
-
-var ProgrammingButtonGroup = React.createClass({
-  getInitialState: function() {
-    return {
-      showLinks: false
-    }
-  },
-  clickedGroup: function() {
-    console.log("Clicked programming group");
-  },
-  showGroup: function(state) {
-    console.log("Mouse enter/exit programming group");
-    if (state == "show") {
-      this.setState({
-        showLinks: true
-      })
-    } else {
-      setTimeout(() => {
-        this.setState({ showLinks: false });
-      }, this.props.fadeTime);
-    }
-  },
-  render: function() {
-    return (
-      <div className="group">
-        <div className="button-group programming-group" onMouseEnter={this.showGroup.bind(this, "show")}
-        onMouseOut={this.showGroup.bind(this, "hide")}
-        onClick={this.clickedGroup.bind(this)}>
-          Programming
-        </div>
-        { this.state.showLinks ? (
-          <span>
-            <div className="button-subgroup programming-group programming-1">
-              LWHS
-            </div>
-            <div className="button-subgroup programming-group programming-2">
-              LWHS
-            </div>
-            <div className="button-subgroup programming-group programming-3">
-              LWHS
-            </div>
-          </span>
-        ) : null }
-      </div>
-    )
-  }
-})
+});
 
 var Background = React.createClass({
   render: function() {

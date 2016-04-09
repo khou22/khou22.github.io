@@ -89,19 +89,19 @@
   cursor: pointer;
 }
 
-.school-group {
+.group-0 {
   top: 55vh;
   left: 25%;
   transform: translateX(-75px);
 }
 
-.personal-group {
+.group-1 {
   top: 60vh;
   left: 50%;
   transform: translateX(-75px);
 }
 
-.programming-group {
+.group-2 {
   top: 55vh;
   right: 25%;
   transform: translateX(75px);
@@ -123,38 +123,38 @@
   cursor: pointer;
 }
 
-.school-1 {
+.group-0-0 {
   transform: translateX(-200px);
 }
 
-.school-2 {
+.group-0-1 {
   transform: translate(-150px, 135px);
 }
 
-.school-3 {
+.group-0-2 {
   transform: translate(0px, 170px);
 }
 
-.personal-1 {
+.group-1-0 {
   transform: translate(75px, 100px);
 }
 
-.personal-2 {
+.group-1-1 {
   transform: translate(-50px, 170px);
 }
 
-.personal-3 {
+.group-1-2 {
   transform: translate(-175px, 100px);
 }
 
-.programming-1 {
+.group-2-0 {
   transform: translateX(200px);
 }
 
-.programming-2 {
+.group-2-1 {
   transform: translate(150px, 135px);
 }
 
-.programming-3 {
+.group-2-2 {
   transform: translate(0px, 170px);
 }
