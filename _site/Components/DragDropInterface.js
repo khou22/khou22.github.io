@@ -58,13 +58,23 @@ var App = React.createClass({ //Main parent component
 
     for (var i = 0; i < list.length; i++) {
       if (originalIndex < desiredIndex) { // If moving an object higher on the list
-        console.log("Checking", list[i].label);
+        // console.log("Checking", list[i].label); // Debugging
         if (list[i].order == originalIndex) {
-          console.log("Changing", list[i].label, "index to", desiredIndex)
+          // console.log("Changing", list[i].label, "index to", desiredIndex) // Debugging
           updatedList[i].order = desiredIndex; // Change order of original object
         } else if (list[i].order > originalIndex && list[i].order <= desiredIndex) {// If between the two
           var newIndex = updatedList[i].order - 1;
-          console.log("Changing", list[i].label, "index to", newIndex)
+          // console.log("Changing", list[i].label, "index to", newIndex) // Debugging
+          updatedList[i].order = newIndex;
+        }
+      } else { // If moving an item lower on the list
+        // console.log("Checking", list[i].label); // Debugging
+        if (list[i].order == originalIndex) {
+          // console.log("Changing", list[i].label, "index to", desiredIndex) // Debugging
+          updatedList[i].order = desiredIndex; // Change order of original object
+        } else if (list[i].order < originalIndex && list[i].order >= desiredIndex) {// If between the two
+          var newIndex = updatedList[i].order + 1;
+          console.log("Changing", list[i].label, "index to", newIndex) // Debugging
           updatedList[i].order = newIndex;
         }
       }
