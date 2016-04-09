@@ -9,12 +9,12 @@ var App = React.createClass({ //Main parent component
         },
         {
           label: "1x",
-          color: "blue",
+          color: "orange",
           order: 1
         },
         {
           label: "2x",
-          color: "purple",
+          color: "yellow",
           order: 2
         },
         {
@@ -24,35 +24,38 @@ var App = React.createClass({ //Main parent component
         },
         {
           label: "4x",
-          color: "green",
+          color: "blue",
           order: 4
         },
         {
           label: "5x",
-          color: "green",
+          color: "purple",
           order: 5
         },
         {
           label: "6x",
-          color: "green",
+          color: "grey",
           order: 6
         },
       ],
       currentDragIndex: 0,
-      currentDropLocation: 0
+      currentDropLocation: 0,
+      dragging: false
     }
   },
   setDropIndex: function(index) { // Store index you're dropping over
     // Fire when dropping an object
-    console.log("Dropping object over", index); // Feedback
+    // console.log("Dropping object over", index); // Feedback
+    // console.log("Dragging: false")
     this.setState({
-      currentDropLocation: index // Store
+      currentDropLocation: index, // Store
+      dragging: false
     })
 
     // Logic to reorder list
     var originalIndex = this.state.currentDragIndex;
     var desiredIndex = index;
-    console.log("Reordering list. Moving", originalIndex, "to", desiredIndex);
+    // console.log("Reordering list. Moving", originalIndex, "to", desiredIndex);
     var list = this.state.list;
     var updatedList = this.state.list;
 
@@ -74,21 +77,23 @@ var App = React.createClass({ //Main parent component
           updatedList[i].order = desiredIndex; // Change order of original object
         } else if (list[i].order < originalIndex && list[i].order >= desiredIndex) {// If between the two
           var newIndex = updatedList[i].order + 1;
-          console.log("Changing", list[i].label, "index to", newIndex) // Debugging
+          // console.log("Changing", list[i].label, "index to", newIndex) // Debugging
           updatedList[i].order = newIndex;
         }
       }
     }
 
-    console.log(updatedList);
+    // console.log(updatedList); // Debugging
     this.setState({ // Update state
       list: updatedList
     })
   },
   setDragObject: function(index) { // Store index of what you're dropping
-    console.log("Dragging object", index);
+    // console.log("Dragging object", index);
+    // console.log("Dragging: true"); // Debugging
     this.setState({
-      currentDragIndex: index // Store
+      currentDragIndex: index, // Store
+      dragging: true
     })
   },
   render: function() {
@@ -110,9 +115,11 @@ var App = React.createClass({ //Main parent component
     } // sortedArray now in order
     var setDropIndex = this.setDropIndex; // Must keep this outside of the mapping because of scope
     var setDragObject = this.setDragObject; // Set which object is being dragged
+    var dragging = this.state.dragging; // Store outside of mapping because of scope
+
     var listNodes = sortedArray.map(function(listItem) {
       return (
-        <ListElement data={listItem} setDropIndex={setDropIndex} setDragObject={setDragObject} />
+        <ListElement data={listItem} setDropIndex={setDropIndex} setDragObject={setDragObject} dragging={dragging}/>
       );
     })
     return (
@@ -141,11 +148,15 @@ var ListElement = React.createClass({
     this.props.setDropIndex(this.props.data.order); // Pass in the index of the object you're dropping over
   },
   render: function() {
+    var backgroundColor = {"backgroundColor": this.props.data.color}
+    var cursorClass = this.props.dragging ? "draggingCursor" : "";
+    console.log("Dragging class:", cursorClass)
     return (
-      <div className="list-block" draggable="true"
+      <div className={"list-block " + cursorClass} draggable="true" style={backgroundColor}
         onDragStart={this.onDragStart.bind(this, event)}
         onDragOver={this.onDragOver.bind(this, event)}
         onDrop={this.onDrop.bind(this, event)} >
+
         {this.props.data.label}
       </div>
     )
