@@ -6,52 +6,64 @@ var App = React.createClass({ // Main parent component
       content: [
         {
           name: "School",
+          groupIcon: "../../../media/site/icons/email_bw.png",
           links: [
             {
               label: "Google",
-              url: "https://www.google.com"
+              url: "https://www.google.com",
+              iconPath: "../../../media/site/icons/email_bw.png"
             },
             {
               label: "YouTube",
-              url: "https://www.youtube.com"
+              url: "https://www.youtube.com",
+              iconPath: "../../../media/site/icons/email_bw.png"
             },
             {
               label: "LWHS",
-              url: "http://www.lwhs.org/page"
+              url: "http://www.lwhs.org/page",
+              iconPath: "../../../media/site/icons/email_bw.png"
             },
           ]
         },
         {
           name: "Personal",
+          groupIcon: "../../../media/site/icons/email_bw.png",
           links: [
             {
               label: "Google",
-              url: "https://www.google.com"
+              url: "https://www.google.com",
+              iconPath: "../../../media/site/icons/email_bw.png"
             },
             {
               label: "YouTube",
-              url: "https://www.youtube.com"
+              url: "https://www.youtube.com",
+              iconPath: "../../../media/site/icons/email_bw.png"
             },
             {
               label: "LWHS",
-              url: "http://www.lwhs.org/page"
+              url: "http://www.lwhs.org/page",
+              iconPath: "../../../media/site/icons/email_bw.png"
             },
           ]
         },
         {
           name: "Programming",
+          groupIcon: "../../../media/site/icons/email_bw.png",
           links: [
             {
               label: "Google",
-              url: "https://www.google.com"
+              url: "https://www.google.com",
+              iconPath: "../../../media/site/icons/email_bw.png"
             },
             {
               label: "YouTube",
-              url: "https://www.youtube.com"
+              url: "https://www.youtube.com",
+              iconPath: "../../../media/site/icons/email_bw.png"
             },
             {
               label: "LWHS",
-              url: "http://www.lwhs.org/page"
+              url: "http://www.lwhs.org/page",
+              iconPath: "../../../media/site/icons/email_bw.png"
             },
           ]
         }
@@ -120,6 +132,9 @@ var WelcomeBar = React.createClass({
     var h = today.getHours();
     if (h > 12) {
       h = h % 12; // 12 hour time, not military time
+    }
+    if (h == 0) { // If hour is 12 or 24
+      h = "12";
     }
     var m = today.getMinutes();
     if (m < 10) {
@@ -191,20 +206,23 @@ var ButtonGroup = React.createClass({
           onMouseEnter={this.showGroup.bind(this, "show")}
           onMouseOut={this.showGroup.bind(this, "hide")}
           onClick={this.clickedGroup.bind(this)} >
-          {this.state.groupName}
+          <img src={this.props.content.groupIcon} className="group-icon"/>
         </div>
         { this.state.showLinks ? (
           <span onMouseOver={this.resetShow.bind(this)} >
             <div className={"button-subgroup group-" + index + " group-" + index + "-0"}
             onClick={this.clickedLink.bind(this, 0)} >
+              <img src={this.state.links[0].iconPath} className="link-icon"/>
               {this.state.links[0].label}
             </div>
             <div className={"button-subgroup group-" + index + " group-" + index + "-1"}
             onClick={this.clickedLink.bind(this, 1)} >
+              <img src={this.state.links[1].iconPath} className="link-icon"/>
               {this.state.links[1].label}
             </div>
             <div className={"button-subgroup group-" + index + " group-" + index + "-2"}
             onClick={this.clickedLink.bind(this, 2)} >
+              <img src={this.state.links[2].iconPath} className="link-icon"/>
               {this.state.links[2].label}
             </div>
           </span>

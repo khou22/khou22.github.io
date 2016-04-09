@@ -114,6 +114,7 @@
   border-radius: 50px;
   border: 1px solid white;
   background-color: grey;
+  vertical-align: middle;
 
   /*Animation*/
   -webkit-animation: fadeIn 500ms 1;
@@ -121,6 +122,20 @@
 
   /*Mouse pointer*/
   cursor: pointer;
+}
+
+.link-icon {
+  position: relative;
+  width: 75%;
+  height: 75%;
+  top: 12px;
+}
+
+.group-icon {
+  position: relative;
+  width: 65%;
+  height: 65%;
+  top: 26px;
 }
 
 .group-0-0 {
