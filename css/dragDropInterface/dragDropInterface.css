@@ -1,11 +1,67 @@
-.list-block {
-  width: 300px;
-  height: 100px;
-  border: 1px solid black;
+.toolbar {
+  width: 400px;
+  height: 40px;
+  border: 2px solid rgb(211, 211, 211);
 }
 
-.draggingCursor {
+.list-block {
+  width: 400px;
+  height: 60px;
+  border: 2px solid rgb(211, 211, 211);
+  border-top: none;
+}
+
+.draggingElement {
   cursor: move !important;
   opacity: 1 !important;
-  
+  display: block;
+  border: 1px solid rgba(144, 199, 222, 1) !important;
+  background-color: rgba(144, 199, 222, .25) !important
+}
+
+.draggingIcon {
+  background-color: rgba(144, 199, 222, .75) !important;
+}
+
+.list-info {
+  width: 15%;
+  height: 100%;
+  float: left;
+  border-right: 1px solid rgb(211, 211, 211);
+}
+
+.list-content {
+  vertical-align: middle;
+  width: 75%;
+  height: 100%;
+  float: left;
+  padding-left: 6px;
+}
+
+.list-delete {
+  width: 5%;
+  float: right;
+  cursor: pointer;
+}
+
+.list-color {
+  margin: auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+}
+
+.list-equation {
+  line-height: 62px;
+  font-size: 20px;
+}
+
+.new-equation-button {
+  height: 30px;
+  margin: 5px;
+  width: 60px;
+  font-size: 30px;
+  line-height: 0px;
+  border-radius: 3px;
+  border: 1px solid black;
 }

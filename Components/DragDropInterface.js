@@ -90,11 +90,46 @@ var App = React.createClass({ //Main parent component
   },
   setDragObject: function(index) { // Store index of what you're dropping
     // console.log("Dragging object", index);
-    // console.log("Dragging: true"); // Debugging
+    // console.log("Dragging:", index); // Debugging
     this.setState({
       currentDragIndex: index, // Store
-      dragging: true
+      dragging: index
     })
+  },
+  newEquation: function() {
+    var currentList = this.state.list;
+    console.log("New equation at index", currentList.length);
+    var newEquation = { // Default value
+      label: "x",
+      color: "red",
+      order: currentList.length
+    }
+    currentList.push(newEquation); // Push to array
+    this.setState({
+      list: currentList // Save to state
+    })
+  },
+  deleteEquation: function(index) {
+    const list = this.state.list; // Unchanging value
+    var updatedList = list.slice(); // Save to this array
+
+    for (var i = 0; i < list.length; i++) {
+      console.log(i, list.length, updatedList.length) // Feedback
+      if (list[i].order == index) { // If this is the one we're deleting
+        updatedList.splice(i, 1); // Remove that array
+        // console.log("Deleting equation", list[i].label);
+      }
+      if (list[i].order > index) {
+        console.log("Moving", list[i].label, "down");
+        updatedList[i-1].order += -1; // Move all the ones above it down one
+      }
+    }
+
+    this.setState({ // Update state
+      list: updatedList
+    })
+
+    console.log(updatedList); // Feedback
   },
   render: function() {
     var data = this.state.list;
@@ -116,15 +151,19 @@ var App = React.createClass({ //Main parent component
     var setDropIndex = this.setDropIndex; // Must keep this outside of the mapping because of scope
     var setDragObject = this.setDragObject; // Set which object is being dragged
     var dragging = this.state.dragging; // Store outside of mapping because of scope
+    var deleteEquation = this.deleteEquation; // Store outside of mapping
 
     var listNodes = sortedArray.map(function(listItem) {
       return (
-        <ListElement data={listItem} setDropIndex={setDropIndex} setDragObject={setDragObject} dragging={dragging}/>
+        <ListElement data={listItem} setDropIndex={setDropIndex} setDragObject={setDragObject} dragging={dragging} deleteEquation={deleteEquation}/>
       );
     })
     return (
       <div>
-        <h2>Drag and Drop Interface</h2>
+        <h1>Desmos Drag and Drop Interface</h1>
+        <div className="toolbar">
+          <button className="new-equation-button" onClick={this.newEquation.bind(this)}>+</button>
+        </div>
         {listNodes}
       </div>
     );
@@ -149,15 +188,29 @@ var ListElement = React.createClass({
   },
   render: function() {
     var backgroundColor = {"backgroundColor": this.props.data.color}
-    var cursorClass = this.props.dragging ? "draggingCursor" : "";
-    console.log("Dragging class:", cursorClass)
+    var draggingIcon = ""; // Create variable
+    var draggingElement = ""; // Create variable
+    if (this.props.data.order === this.props.dragging) { // If dragging this div
+      draggingIcon = "draggingIcon";
+      draggingElement = "draggingElement";
+    }
+    // console.log("Dragging class:", draggingClass) // Debugging
     return (
-      <div className={"list-block " + cursorClass} draggable="true" style={backgroundColor}
+      <div className={"list-block " + draggingElement} draggable="true"
         onDragStart={this.onDragStart.bind(this, event)}
         onDragOver={this.onDragOver.bind(this, event)}
         onDrop={this.onDrop.bind(this, event)} >
-
-        {this.props.data.label}
+        <div className={"list-info " + draggingIcon} draggable="true">
+          {this.props.data.order + 1}
+          <div className="list-color" style={backgroundColor} >
+          </div>
+        </div>
+        <div className="list-content">
+          <p className="list-equation">{this.props.data.label}</p>
+        </div>
+        <div className="list-delete">
+          <a onClick={this.props.deleteEquation.bind(this, this.props.data.order)}>x</a>
+        </div>
       </div>
     )
   }
