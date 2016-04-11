@@ -31,12 +31,6 @@ dl, dd, ol, ul, figure {
    font-weight: bold italic;
 }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-family: defaultFont;
 }

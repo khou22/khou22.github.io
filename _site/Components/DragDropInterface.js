@@ -98,10 +98,16 @@ var App = React.createClass({ //Main parent component
   },
   newEquation: function() {
     var currentList = this.state.list;
-    console.log("New equation at index", currentList.length);
+
+    var colors = ["red", "orange", "yellow", "green", "blue", "purple", "grey"]; // Potential colors
+    var randomIndex = Math.floor(colors.length * Math.random()); // Random index
+    console.log(randomIndex)
+    var selectedColor = colors[randomIndex]; // Random color
+
+    // console.log("New equation at index", currentList.length);
     var newEquation = { // Default value
-      label: "x",
-      color: "red",
+      label: String(currentList.length) + "x",
+      color: selectedColor,
       order: currentList.length
     }
     currentList.push(newEquation); // Push to array
@@ -114,13 +120,13 @@ var App = React.createClass({ //Main parent component
     var updatedList = list.slice(); // Save to this array
 
     for (var i = 0; i < list.length; i++) {
-      console.log(i, list.length, updatedList.length) // Feedback
+      // console.log(i, list.length, updatedList.length) // Feedback
       if (list[i].order == index) { // If this is the one we're deleting
         updatedList.splice(i, 1); // Remove that array
         // console.log("Deleting equation", list[i].label);
       }
       if (list[i].order > index) {
-        console.log("Moving", list[i].label, "down");
+        // console.log("Moving", list[i].label, "down");
         updatedList[i-1].order += -1; // Move all the ones above it down one
       }
     }
