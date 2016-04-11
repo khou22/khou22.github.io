@@ -155,7 +155,7 @@ var ProfileBox = React.createClass({
 
 var PageButton = React.createClass({
   mouseHover: function() {
-    console.log("H")
+    // console.log("H")
   },
   render: function() {
     var buttonStyle = {
