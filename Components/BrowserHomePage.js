@@ -2,7 +2,7 @@ var App = React.createClass({ // Main parent component
   getInitialState: function() {
     return {
       backgroundURL: this.randomBackground(),
-      fadeTime: 2000,
+      fadeTime: 4000,
       content: [
         {
           name: "School",
@@ -213,17 +213,17 @@ var ButtonGroup = React.createClass({
             <div className={"button-subgroup group-" + index + " group-" + index + "-0"}
             onClick={this.clickedLink.bind(this, 0)} >
               <img src={this.state.links[0].iconPath} className="link-icon"/>
-              {this.state.links[0].label}
+              <div className="icon-label">{this.state.links[0].label}</div>
             </div>
             <div className={"button-subgroup group-" + index + " group-" + index + "-1"}
             onClick={this.clickedLink.bind(this, 1)} >
               <img src={this.state.links[1].iconPath} className="link-icon"/>
-              {this.state.links[1].label}
+              <div className="icon-label">{this.state.links[1].label}</div>
             </div>
             <div className={"button-subgroup group-" + index + " group-" + index + "-2"}
             onClick={this.clickedLink.bind(this, 2)} >
               <img src={this.state.links[2].iconPath} className="link-icon"/>
-              {this.state.links[2].label}
+              <div className="icon-label">{this.state.links[2].label}</div>
             </div>
           </span>
         ) : null }

@@ -113,7 +113,7 @@
   height: 100px;
   border-radius: 50px;
   border: 1px solid white;
-  background-color: grey;
+  background-color: rgba(255, 255, 255, .2);
   vertical-align: middle;
 
   /*Animation*/
@@ -123,6 +123,18 @@
   /*Mouse pointer*/
   cursor: pointer;
 }
+
+.button-subgroup:hover {
+  background-color: rgba(255, 255, 255, .2);
+  color: rgba(255, 255, 255, 1); /*Turn on text*/
+  background-image: none; /*Turn off icon*/
+
+  -webkit-animation-name: ButtonHover;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-duration: 500ms;
+}
+
 
 .link-icon {
   position: relative;
@@ -136,35 +148,6 @@
   width: 65%;
   height: 65%;
   top: 26px;
-}
-
-.blog-button {
-  width: 80px;
-  height: 80px;
-  border: 2px solid rgba(255, 255, 255, 1);
-  background-color: rgba(255, 255, 255, 0);
-  border-radius: 40px;
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  opacity: 1;
-  color: rgba(255, 255, 255, 0);
-  margin-right: .75rem;
-  margin-left: .75rem;
-  padding: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.blog-button:hover {
-  background-color: rgba(255, 255, 255, .2);
-  color: rgba(255, 255, 255, 1); /*Turn on text*/
-  background-image: none; /*Turn off icon*/
-
-  -webkit-animation-name: ButtonHover;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-duration: 500ms;
 }
 
 .icon-label {
