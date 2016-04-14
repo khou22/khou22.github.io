@@ -81,9 +81,9 @@
   position: absolute;
   width: 150px;
   height: 150px;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 75px;
-  background-color: grey;
+  background-color: rgba(255, 255, 255, .2);
 
   /*Mouse pointer*/
   cursor: pointer;
@@ -108,13 +108,22 @@
 }
 
 .button-subgroup {
+  /*Button style*/
   position: absolute;
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  border: 1px solid white;
+  border: 2px solid white;
+
+  /*Text style*/
+  color: rgba(255, 255, 255, 0);
+  text-align: center;
+
+  /*Icon style*/
   background-color: rgba(255, 255, 255, .2);
-  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
 
   /*Animation*/
   -webkit-animation: fadeIn 500ms 1;
@@ -125,9 +134,9 @@
 }
 
 .button-subgroup:hover {
-  background-color: rgba(255, 255, 255, .2);
+  /*background-color: rgba(255, 255, 255, .2);*/
   color: rgba(255, 255, 255, 1); /*Turn on text*/
-  background-image: none; /*Turn off icon*/
+  background-image: none !important; /*Turn off icon*/
 
   -webkit-animation-name: ButtonHover;
   -webkit-animation-timing-function: ease-in-out;
@@ -152,11 +161,10 @@
 
 .icon-label {
   font-size: 2rem;
-  width: 80px;
   height: 80px;
-  position: absolute;
+  transform: translateY(30px);
+  position: relative;;
   margin: auto;
-  bottom: -10px;
   text-align: center;
 }
 

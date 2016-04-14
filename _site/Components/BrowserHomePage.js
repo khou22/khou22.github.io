@@ -2,7 +2,7 @@ var App = React.createClass({ // Main parent component
   getInitialState: function() {
     return {
       backgroundURL: this.randomBackground(),
-      fadeTime: 4000,
+      fadeTime: 50000,
       content: [
         {
           name: "School",
@@ -30,8 +30,8 @@ var App = React.createClass({ // Main parent component
           groupIcon: "../../../media/site/icons/email_bw.png",
           links: [
             {
-              label: "Google",
-              url: "https://www.google.com",
+              label: "Gmail",
+              url: "https://www.gmail.com",
               iconPath: "../../../media/site/icons/email_bw.png"
             },
             {
@@ -51,9 +51,9 @@ var App = React.createClass({ // Main parent component
           groupIcon: "../../../media/site/icons/email_bw.png",
           links: [
             {
-              label: "Google",
-              url: "https://www.google.com",
-              iconPath: "../../../media/site/icons/email_bw.png"
+              label: "GitHub",
+              url: "https://github.com/khou22",
+              iconPath: "../../../media/site/icons/logos/Github_bw.png"
             },
             {
               label: "YouTube",
@@ -176,7 +176,7 @@ var ButtonGroup = React.createClass({
     }
   },
   clickedLink: function(linkNumber) {
-    // console.log("Clicked link:", linkNumber); // Feedback
+    console.log("Clicked link:", linkNumber); // Feedback
     window.open(this.state.links[linkNumber].url, '_blank'); // Opens in a new tab
   },
   showGroup: function(state) {
@@ -200,6 +200,19 @@ var ButtonGroup = React.createClass({
   },
   render: function() {
     index = this.props.index;
+    var counter = -1; // Start at -1 because adding 1 immediately
+    var clickedLink = this.clickedLink;
+    var linkNodes = this.state.links.map(function(link) {
+      counter++; // Index
+      var iconStyle = { "backgroundImage": "url(" + link.iconPath + ")" }
+      return (
+        <div style={iconStyle}
+          className={"button-subgroup group-" + index + " group-" + index + "-" + counter}
+          onClick={clickedLink.bind(this, counter)} >
+          <div className="icon-label">{link.label}</div>
+        </div>
+      )
+    })
     return (
       <div className="group">
         <div className={"button-group group-" + index}
@@ -210,21 +223,7 @@ var ButtonGroup = React.createClass({
         </div>
         { this.state.showLinks ? (
           <span onMouseOver={this.resetShow.bind(this)} >
-            <div className={"button-subgroup group-" + index + " group-" + index + "-0"}
-            onClick={this.clickedLink.bind(this, 0)} >
-              <img src={this.state.links[0].iconPath} className="link-icon"/>
-              <div className="icon-label">{this.state.links[0].label}</div>
-            </div>
-            <div className={"button-subgroup group-" + index + " group-" + index + "-1"}
-            onClick={this.clickedLink.bind(this, 1)} >
-              <img src={this.state.links[1].iconPath} className="link-icon"/>
-              <div className="icon-label">{this.state.links[1].label}</div>
-            </div>
-            <div className={"button-subgroup group-" + index + " group-" + index + "-2"}
-            onClick={this.clickedLink.bind(this, 2)} >
-              <img src={this.state.links[2].iconPath} className="link-icon"/>
-              <div className="icon-label">{this.state.links[2].label}</div>
-            </div>
+            { linkNodes }
           </span>
         ) : null }
       </div>
