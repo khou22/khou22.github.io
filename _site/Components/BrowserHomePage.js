@@ -37,12 +37,12 @@ var App = React.createClass({ // Main parent component
             {
               label: "YouTube",
               url: "https://www.youtube.com",
-              iconPath: "../../../media/site/icons/email_bw.png"
+              iconPath: "../../../media/site/icons/logos/YouTube_bw.png"
             },
             {
-              label: "LWHS",
-              url: "http://www.lwhs.org/page",
-              iconPath: "../../../media/site/icons/email_bw.png"
+              label: "Facebook",
+              url: "https://www.facebook.com/",
+              iconPath: "../../../media/site/icons/logos/Facebook_bw.png"
             },
           ]
         },
