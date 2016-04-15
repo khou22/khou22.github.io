@@ -6,7 +6,7 @@ var App = React.createClass({ // Main parent component
       content: [
         {
           name: "School",
-          groupIcon: "../../../media/site/icons/email_bw.png",
+          groupIcon: "../../../media/site/icons/highSchool_bw.png",
           links: [
             {
               label: "Google",
@@ -16,18 +16,18 @@ var App = React.createClass({ // Main parent component
             {
               label: "YouTube",
               url: "https://www.youtube.com",
-              iconPath: "../../../media/site/icons/email_bw.png"
+              iconPath: "../../../media/site/icons/logos/YouTube_bw.png"
             },
             {
               label: "LWHS",
               url: "http://www.lwhs.org/page",
-              iconPath: "../../../media/site/icons/email_bw.png"
+              iconPath: "../../../media/site/icons/highSchool_bw.png"
             },
           ]
         },
         {
           name: "Personal",
-          groupIcon: "../../../media/site/icons/email_bw.png",
+          groupIcon: "../../../media/site/icons/home_bw.png",
           links: [
             {
               label: "Gmail",
@@ -48,7 +48,7 @@ var App = React.createClass({ // Main parent component
         },
         {
           name: "Programming",
-          groupIcon: "../../../media/site/icons/email_bw.png",
+          groupIcon: "../../../media/site/icons/code.png",
           links: [
             {
               label: "GitHub",
@@ -272,4 +272,5 @@ var dateString = month + " " + day + ", " + year;
 theater
   .addScene('welcome-text:Today is ' + dateString, 1500)
   .addScene('welcome-text:How can I help you today?', 1000)
+  .addScene('welcome-text:Hover over the icons below for more...', 1000)
   .addScene(theater.replay.bind(theater))
