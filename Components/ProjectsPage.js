@@ -4,7 +4,18 @@ var ProjectsPage = React.createClass({
       <div>
         <h1 className="contact-header">Projects</h1>
         <ProjectsList data={
-          [{
+          [
+            {
+              name: "Uber Scheduler",
+              slug: "Uber-Scheduler",
+              description: "An iOS app to call Ubers ahead of time or on a recurring schedule. I was the frontend engineer and designer. We built this at a hackathon and won 1st place overall."
+            },
+            {
+              name: "Execute Order 66",
+              slug: "Execute-Order-66",
+              description: "A Google Chrome Extension that cleanses the profanity out of your GitHub repos."
+            },
+            {
             name: "Wood Club",
             slug: "wood-club",
             description: "The birth and evolution of Wood Club - a club I lead at my high school"
