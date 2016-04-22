@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kevin Hou's Blog</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
-">
+  <title>Uber Scheduler: Calling Ubers Alarm Clock Style</title>
+  <meta name="description" content="This past week, a group of friend and I attended a hackathon, MenloHacks ñ an MLH (Major League Hackathon) sponsored event. This was my first hackathon and w...">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -19,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/category/">
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/04/21/uber-scheduler-calling-ubers-alarm-clock-style.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -174,293 +173,64 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <!-- Blog homepage -->
+        <div class="post">
+  
+    
+    
+      
+        
+      
+    
 
-<div class="home left-main">
+    
+        
+    
 
-  <h1 class="page-heading">Browse All Categories</h1>
-  <br />
-  <ul class="post-list">
-    <!-- Repeats for (maps) all posts -->
     
-      <li>
-        <h5 class="category-list">
-          <a href="programming">
-            Programming
-          </a>
-        </h5>
-      </li>
+      
+          
+            
+                
+                
+            
+        
     
-      <li>
-        <h5 class="category-list">
-          <a href="wood">
-            Wood
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="school">
-            School
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="life">
-            Life
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="work">
-            Work
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="computer">
-            Computer
-          </a>
-        </h5>
-      </li>
-    
-  </ul>
+  <header class="post-header">
+    <p class="post-return-main"><a href="/blog">
+      <
+      Return to all blogs
+    </a></p>
+    <br />
+    <h1 class="post-title">Uber Scheduler: Calling Ubers Alarm Clock Style</h1>
+    <p class="post-meta">Apr 21, 2016 • Kevin Hou</p>
+  </header>
+  <article class="post-content">
+    <p>This past week, a group of friend and I attended a hackathon, MenloHacks ñ an MLH (Major League Hackathon) sponsored event. This was my first hackathon and was also for one of my two partners. Our group of 3 high schoolers built an Uber scheduling app for both iOS and Android. Our app would essentially allow users to schedule uber rides ahead of time at a set date/time. Another core segment of our app was the recurring schedule component: an alarm-clock-style feature that could automatically call you an Uber on specific weekdays (i.e. every Monday, Wednesday, and Friday at 5:45 PM). We were able to complete our product within the allotted 24 hour time period. We even had time to build another project - a Google Chrome extension that censors your vulgar GitHub commits (see <a href="#">Execute Order 66</a>). I worked as the primary front end engineer and also designed the UI/UX from scratch.
+<br /><br />
+We built our app in Ionic using AngularJS for the front end and Python for our Google App Engine backend. We wanted to have discipline when building the app so we concentrated on maintaining good coding practices such as commenting code, building in a scalable fashion, as well as programming code that was organized and efficient. Due to the nature of Google App Engine, our app is potentially scalable to millions of users.
+<br /><br /></p>
+<h3>Design</h3>
+<p>This was one of my first times designing an app from ground zero. Often times I would design pages as I went or only design a single component. Because I realized the importance of the role of UX/UI design in app development, I decided to take the time to plan each page out down to the pixel. While the rest of my group coded the backend on Google App Engine, I spent about 5 hours working with Sketch to come up with a simple and streamlined user flow as well as a beautiful UI. I even mocked up different variations and iterated upon my designs.
+<br /><br />
+I used Google Material Design as inspiration and a starting block because we enjoyed its styling methodology. While many of our components were variations of existing components (a small percentage were directly copied), some of the icons and components were of my own creation that I designed to mimic the overall Material Design feel.
+<br /><br /></p>
+<h3>Building the App</h3>
+<p>After spending about a quarter of the 24 hours designing, I began to transition to building the front end. One of my group members had already built a somewhat functional landing page, so I set about building the other pages. I found it significantly easier to build the front end when I had an accurate design to go off of. In fact, the time I saved likely outweighed the 6 or so hours it took to create the designs.
+<br /><br />
+I created Angular services for everything relating to global variables or functions. By doing this from the beginning, it made my group member’s job of connecting the front end to the backend significantly easier. I used some open source Angular packages that sped up the coding process. the two packages I used were for the date selection modal and for the time selection modal. They can be found here:</p>
+<ol>
+  <li>Link 1</li>
+  <li>Link 2</li>
+</ol>
+<p><br /><br />
+Overall, the development process went very smoothly and our group worked together well. Because this was my first hackathon, I was both ecstatic and pleasantly surprised when we were chosen as the best overall hack that day.
+<br /><br />
+See our Devpost <a href="http://devpost.com/software/uber-scheduler">project page</a>.</p>
 
-  <p class="rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></p>
-
+  </article>
+  <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a></p>
 </div>
 
-<div class="right-column">
-  <div class="featured">
-    Featured posts:
-    <ol>
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2016/04/21/uber-scheduler-calling-ubers-alarm-clock-style.html">Uber Scheduler: Calling Ubers Alarm Clock Style</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/11/01/text-analysis-app-how-do-you-talk-to-people-on-facebook-versus-in-an-engineering-report.html">Text Analysis App: How Do You Talk To People on Facebook Versus In An Engineering Report?</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/10/25/nodejs-basics---setting-up-a-local-web-server.html">NodeJS Basics - Setting Up A Local Web Server</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/08/02/best-way-to-customize-terminal.html">Best Way to Customize Terminal</a>
-          </li>
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/07/31/accessibility-enabling-voiceover-on-buttons-and-links.html">Accessibility: Enabling Voiceover on Buttons and Links</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="recent">
-    Recent posts:
-    <ol>
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2016/04/21/uber-scheduler-calling-ubers-alarm-clock-style.html">Uber Scheduler: Calling Ubers Alarm Clock Style</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2016/03/13/introduction-to-services-in-angularjs.html">Introduction to Services in AngularJS</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/wood/2016/03/06/getting-started-with-the-cnc-router.html">Getting Started with the CNC Router</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="browse-category">
-    <a href="/blog/category">
-      Browse by Category
-    </a>
-  </div>
-  <div class="browse-tag">
-    <a href="/blog/tag">
-      Browse by Tag
-    </a>
-  </div>
-</div>
       </div>
     </div>
 
