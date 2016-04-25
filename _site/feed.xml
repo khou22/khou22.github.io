@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 Apr 2016 23:03:26 -0700</pubDate>
-    <lastBuildDate>Thu, 21 Apr 2016 23:03:26 -0700</lastBuildDate>
+    <pubDate>Sun, 24 Apr 2016 21:18:57 -0700</pubDate>
+    <lastBuildDate>Sun, 24 Apr 2016 21:18:57 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -26,13 +26,14 @@ I used Google Material Design as inspiration and a starting block because we enj
 &lt;br /&gt;&lt;br /&gt;
 I created Angular services for everything relating to global variables or functions. By doing this from the beginning, it made my group member’s job of connecting the front end to the backend significantly easier. I used some open source Angular packages that sped up the coding process. the two packages I used were for the date selection modal and for the time selection modal. They can be found here:&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Link 1&lt;/li&gt;
-  &lt;li&gt;Link 2&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+  &lt;li&gt;Time Picker Modal: &lt;a href=&quot;https://github.com/rajeshwarpatlolla/ionic-timepicker&quot;&gt;https://github.com/rajeshwarpatlolla/ionic-timepicker
+  &lt;li&gt;Date Picker Modal: &lt;a href=&quot;https://github.com/rajeshwarpatlolla/ionic-datepicker&quot;&gt;https://github.com/rajeshwarpatlolla/ionic-datepicker&lt;/a&gt;&lt;/li&gt;
+
+&lt;br /&gt;&lt;br /&gt;
 Overall, the development process went very smoothly and our group worked together well. Because this was my first hackathon, I was both ecstatic and pleasantly surprised when we were chosen as the best overall hack that day.
 &lt;br /&gt;&lt;br /&gt;
-See our Devpost &lt;a href=&quot;http://devpost.com/software/uber-scheduler&quot;&gt;project page&lt;/a&gt;.&lt;/p&gt;
+See our Devpost &lt;a href=&quot;http://devpost.com/software/uber-scheduler&quot;&gt;project page&lt;/a&gt;.
+&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Thu, 21 Apr 2016 15:43:30 -0700</pubDate>
         <link>http://khou22.github.io/programming/2016/04/21/uber-scheduler-calling-ubers-alarm-clock-style.html</link>
