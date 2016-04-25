@@ -8,3 +8,9 @@ This is the Github repository I use to serve my Github Pages site. This is my ma
 I started building this site in August 2015. I had been writing apps in Java and had done some minor web development before then, but I wanted to start an entire public website from scratch. It lets me not only continue my passion for coding, but also to pursue my interests in design, photography, etc. I am trying to teach myself NodeJS and AngularJS so that I can integrate these into my site.
 
 If you have any comments, suggestions, or feedback please let me know!
+
+To do:
+<ul>
+  <li>Redo project portfolio page</li>
+  <li>Finish contact me page</li>
+</ul>
