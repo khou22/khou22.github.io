@@ -22,8 +22,8 @@ After spending about a quarter of the 24 hours designing, I began to transition 
 <br><br>
 I created Angular services for everything relating to global variables or functions. By doing this from the beginning, it made my group member's job of connecting the front end to the backend significantly easier. I used some open source Angular packages that sped up the coding process. the two packages I used were for the date selection modal and for the time selection modal. They can be found here:
 <ol>
-  <li>Time Picker Modal: <a href="https://github.com/rajeshwarpatlolla/ionic-timepicker">https://github.com/rajeshwarpatlolla/ionic-timepicker</li>
-  <li>Date Picker Modal: <a href="https://github.com/rajeshwarpatlolla/ionic-datepicker">https://github.com/rajeshwarpatlolla/ionic-datepicker</a></li>
+  <li>Time Picker Modal: <a href="https://github.com/rajeshwarpatlolla/ionic-timepicker" target="_blank">https://github.com/rajeshwarpatlolla/ionic-timepicker</li>
+  <li>Date Picker Modal: <a href="https://github.com/rajeshwarpatlolla/ionic-datepicker" target="_blank">https://github.com/rajeshwarpatlolla/ionic-datepicker</a></li>
 </ol>
 <br><br>
 Overall, the development process went very smoothly and our group worked together well. Because this was my first hackathon, I was both ecstatic and pleasantly surprised when we were chosen as the best overall hack that day.
