@@ -691,6 +691,16 @@ li {
   padding-left: 12px;
   list-style-position: inside; }
 
+.iPhone-screenshots-medium {
+  margin: 12px;
+  width: 300px;
+  display: inline-block; }
+
+.iPhone-screenshots-small {
+  margin: 12px;
+  width: 150px;
+  display: inline-block; }
+
 /*For the index blog page*/
 .left-main {
   width: 78%;
