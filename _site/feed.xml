@@ -6,33 +6,36 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Apr 2016 22:28:12 -0700</pubDate>
-    <lastBuildDate>Mon, 25 Apr 2016 22:28:12 -0700</lastBuildDate>
+    <pubDate>Tue, 26 Apr 2016 09:11:01 -0700</pubDate>
+    <lastBuildDate>Tue, 26 Apr 2016 09:11:01 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Uber Scheduler: Calling Ubers Alarm Clock Style</title>
         <description>&lt;p&gt;This past week, a group of friend and I attended a hackathon, MenloHacks ñ an MLH (Major League Hackathon) sponsored event. This was my first hackathon and was also for one of my two partners. Our group of 3 high schoolers built an Uber scheduling app for both iOS and Android. Our app would essentially allow users to schedule uber rides ahead of time at a set date/time. Another core segment of our app was the recurring schedule component: an alarm-clock-style feature that could automatically call you an Uber on specific weekdays (i.e. every Monday, Wednesday, and Friday at 5:45 PM). We were able to complete our product within the allotted 24 hour time period. We even had time to build another project - a Google Chrome extension that censors your vulgar GitHub commits (see &lt;a href=&quot;#&quot;&gt;Execute Order 66&lt;/a&gt;). I worked as the primary front end engineer and also designed the UI/UX from scratch.
-&lt;br /&gt;&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
 We built our app in Ionic using AngularJS for the front end and Python for our Google Cloud Engine backend. We wanted to have discipline when building the app so we concentrated on maintaining good coding practices such as commenting code, building in a scalable fashion, as well as programming code that was organized and efficient. Due to the nature of Google Cloud Engine, our app is potentially scalable to millions of users.
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3&gt;Design&lt;/h3&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Design&lt;/h3&gt;
 &lt;p&gt;This was one of my first times designing an app from ground zero. Often times I would design pages as I went or only design a single component. Because I realized the importance of the role of UX/UI design in app development, I decided to take the time to plan each page out down to the pixel. While the rest of my group coded the backend on Google Cloud Engineine, I spent about 5 hours working with Sketch to come up with a simple and streamlined user flow as well as a beautiful UI. I even mocked up different variations and iterated upon my designs.
-&lt;br /&gt;&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
 I used Google Material Design as inspiration and a starting block because we enjoyed its styling methodology. While many of our components were variations of existing components (a small percentage were directly copied), some of the icons and components were of my own creation that I designed to mimic the overall Material Design feel.
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3&gt;Building the App&lt;/h3&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Building the App&lt;/h3&gt;
 &lt;p&gt;After spending about a quarter of the 24 hours designing, I began to transition to building the front end. One of my group members had already built a somewhat functional landing page, so I set about building the other pages. I found it significantly easier to build the front end when I had an accurate design to go off of. In fact, the time I saved likely outweighed the 6 or so hours it took to create the designs.
-&lt;br /&gt;&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
 I created Angular services for everything relating to global variables or functions. By doing this from the beginning, it made my group member’s job of connecting the front end to the backend significantly easier. I used some open source Angular packages that sped up the coding process. the two packages I used were for the date selection modal and for the time selection modal. They can be found here:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Time Picker Modal: &lt;a href=&quot;https://github.com/rajeshwarpatlolla/ionic-timepicker&quot; target=&quot;_blank&quot;&gt;https://github.com/rajeshwarpatlolla/ionic-timepicker
   &lt;li&gt;Date Picker Modal: &lt;a href=&quot;https://github.com/rajeshwarpatlolla/ionic-datepicker&quot; target=&quot;_blank&quot;&gt;https://github.com/rajeshwarpatlolla/ionic-datepicker&lt;/a&gt;&lt;/li&gt;
 
-&lt;br /&gt;&lt;br /&gt;
-Overall, the development process went very smoothly and our group worked together well. Because this was my first hackathon, I was both ecstatic and pleasantly surprised when we were chosen as the best overall hack that day.
-&lt;br /&gt;&lt;br /&gt;
-See our Devpost &lt;a href=&quot;http://devpost.com/software/uber-scheduler&quot;&gt;project page&lt;/a&gt;.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Overall, the development process went very smoothly and our group worked together well. Because this was my first hackathon, I was both happy and pleasantly surprised when we were chosen as the best overall hack that day.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;External Links:&lt;/h3&gt;
+Go to our &lt;a href=&quot;http://devpost.com/software/uber-scheduler&quot;&gt;Devpost project page&lt;/a&gt; to see what we submitted for the Hackathon.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+For our complete source code see our &lt;a href=&quot;https://github.com/AlexFine/MenloHacks&quot;&gt;GitHub Repo&lt;/a&gt;.
 &lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Thu, 21 Apr 2016 15:43:30 -0700</pubDate>
@@ -47,9 +50,10 @@ See our Devpost &lt;a href=&quot;http://devpost.com/software/uber-scheduler&quot
       <item>
         <title>Introduction to Services in AngularJS</title>
         <description>&lt;p&gt;&lt;strong&gt;Blog post in progress&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;What Are Services?&lt;/h2&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;What Are Services?&lt;/h3&gt;
 &lt;p&gt;In a nutshell, services are a way of making functions and variables global. They can be injected as dependencies in any controller and its functions/variables can be accessible across controllers.&lt;/p&gt;
 
+&lt;h3 class=&quot;post-subheader&quot;&gt;Creating the Service&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;
     Create service file
@@ -79,6 +83,7 @@ See our Devpost &lt;a href=&quot;http://devpost.com/software/uber-scheduler&quot
 
     The way I explained this to a friend is basically using the &#39;ui.bootstrap&#39; analogy. Bootstrap in its most basic form is a a compilation of CSS styling and Javascript for functionality. When we include the &#39;ui.bootstrap&#39; dependency, we are essentially including that Javascript file to be used in this controller. It&#39;s not different when we create our own services. A service is basically a group of Javascript functions. If the services is included as a dependency, it will load all those Javascript functions and make them available to use in that controller. It&#39;s a good way of selectively loading specific Javascript files so that not all of your Javascript files have to load for every page.
   &lt;/li&gt;
+  &lt;br class=&quot;post-line-break&quot; /&gt;
 
   &lt;li&gt;
     Include the name of the service function in the controller’s function(…, …)
@@ -92,7 +97,7 @@ See our Devpost &lt;a href=&quot;http://devpost.com/software/uber-scheduler&quot
   &lt;li&gt;Can now use the functions and variables in any controller that you included the dependency for. Simply call:
     
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;serviceFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Runs the service function&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;serviceVariable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Uses the service variable as a regular variable&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;serviceVariable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Uses the service variable as a regular variable&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
   &lt;/li&gt;
 &lt;/ol&gt;

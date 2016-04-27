@@ -111,8 +111,8 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - (30px * 2));
+  max-width: -webkit-calc(800px - (30px));
+  max-width: calc(800px - (30px));
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
@@ -598,7 +598,8 @@ strong {
 
 /*For the _includes/header.html file*/
 .external-bar {
-  margin: auto; }
+  margin: auto;
+  width: 100%; }
 .external-td {
   /*border: 1px solid black;*/
   border-radius: 19px;
@@ -623,9 +624,7 @@ strong {
     max-width: -webkit-calc(800px - (30px * 2));
     max-width: calc(800px - (30px * 2));
     margin-right: auto;
-    margin-left: auto;
-    padding-right: 30px;
-    padding-left: 30px; }
+    margin-left: auto; }
   @media screen and (max-width: 800px) {
     .site-nav .site-nav-bar {
       max-width: -webkit-calc(800px - (30px));
@@ -680,6 +679,17 @@ strong {
 /*Custom sass file for the post.scss layout*/
 .post-return-main {
   color: #9DB7C1 !important; }
+
+.post-line-break {
+  line-height: 24px !important; }
+
+.post-subheader {
+  padding-top: 1.5rem;
+  padding-bottom: .5rem; }
+
+li {
+  padding-left: 12px;
+  list-style-position: inside; }
 
 /*For the index blog page*/
 .left-main {

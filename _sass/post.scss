@@ -2,3 +2,17 @@
 .post-return-main {
   color: $brand-grey !important;
 }
+
+.post-line-break {
+  line-height: 24px !important;
+}
+
+.post-subheader {
+  padding-top: 1.5rem;
+  padding-bottom: .5rem;
+}
+
+li {
+  padding-left: 12px;
+  list-style-position: inside;
+}

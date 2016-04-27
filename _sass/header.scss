@@ -8,6 +8,7 @@ $brand-blue:      #3286A8;
 .external {
   &-bar {
     margin: auto;
+    width: 100%;
   }
 
   &-td {
@@ -43,16 +44,18 @@ $brand-blue:      #3286A8;
     max-width: calc(800px - (30px * 2));
     margin-right: auto;
     margin-left: auto;
-    padding-right: 30px;
-    padding-left: 30px; }
+    // padding-right: 30px;
+    // padding-left: 30px;
+  }
 
-    /*Media querie for width*/
-    @media screen and (max-width: 800px) {
-      .site-nav-bar {
-        max-width: -webkit-calc(800px - (30px));
-        max-width: calc(800px - (30px));
-        padding-right: 15px;
-        padding-left: 15px; }
+  /*Media querie for width*/
+  @media screen and (max-width: 800px) {
+    .site-nav-bar {
+      max-width: -webkit-calc(800px - (30px));
+      max-width: calc(800px - (30px));
+      padding-right: 15px;
+      padding-left: 15px;
+    }
   }
 }
 
