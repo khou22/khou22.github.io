@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-03-06 23:59:45
 description: "Part of a wood project I'm working on. Using SketchUp and Aspire to prepare the CNC cutpath."
 category: Wood
-tags: []
+tags: ['cnc-wood-router']
 featured: "no"
 ---
 <h2>Cutting Topographical Maps on the CNC Router</h2>

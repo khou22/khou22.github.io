@@ -122,7 +122,11 @@ var ProjectsList = React.createClass({
     });
     return (
       <div>
-        <i>Ongoing projects that I write about. All wood projects can be found on my Project Portfolio, Flickr, YouTube, LinkedIn, etc.</i>
+        <i>My wood projects are unlisted and can be found on my <a href="http://kevinhou.wix.com/projects">Project Portfolio</a>
+          , <a href="https://www.flickr.com/photos/khou22/albums">Flickr</a>
+          , <a href="https://youtube.com/kevinhou22">YouTube</a>
+          , <a href="https://www.linkedin.com/in/kevinhou22">LinkedIn</a>, etc.
+        </i>
         <hr className="project-hr"/>
         <table>
           {projectNodes}

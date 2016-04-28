@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-04-21 22:43:30
 description: "Overview, reflection, etc. on building the Uber Scheduler at my first hackathon. It won first overall!"
 category: programming
-tags: ['ionic']
+tags: ['ionic', 'javascript', 'html', 'css', 'python', 'apps']
 featured: "yes"
 ---
 This past week, a group of friends and I attended a hackathon, MenloHacks ñ an MLH (Major League Hackathon) sponsored event. This was my first hackathon and was also for one of my two partners. Our group of 3 high schoolers built an Uber scheduling app for both iOS and Android. Our app would essentially allow users to schedule uber rides ahead of time at a set date/time. Another core segment of our app was the recurring schedule component: an alarm-clock-style feature that could automatically call you an Uber on specific weekdays (i.e. every Monday, Wednesday, and Friday at 5:45 PM). We were able to complete our product within the allotted 24 hour time period. We even had time to build another project - a Google Chrome extension that censors your vulgar GitHub commits (see <a href="#">Execute Order 66</a>). I worked as the primary front end engineer and also designed the UI/UX from scratch.

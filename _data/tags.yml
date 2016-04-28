@@ -11,6 +11,10 @@ woodturning:
   slug: woodturning
   name: Woodturning
 
+cnc-wood-router:
+  slug: cnc-wood-router
+  name: CNC Wood Router
+
 wood-finish:
   slug: wood-finish
   name: Wood Finish
