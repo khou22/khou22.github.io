@@ -90,3 +90,7 @@ ionic:
 python:
   slug: python
   name: Python
+
+angularjs:
+  slug: angularjs
+  name: AngularJS

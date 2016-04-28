@@ -5,10 +5,9 @@ author: "Kevin Hou"
 date: 2016-03-13 23:30:29
 description: "How to create and use services and factories in AngularJS"
 category: programming
-tags: []
+tags: ['ionic', 'angularjs', 'javascript']
 featured: "no"
 ---
-**Blog post in progress**
 <h3 class="post-subheader">What Are Services?</h3>
 <p>In a nutshell, services are a way of making functions and variables global. They can be injected as dependencies in any controller and its functions/variables can be accessible across controllers.</p>
 
