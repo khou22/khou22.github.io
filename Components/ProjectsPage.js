@@ -23,6 +23,11 @@ var ProjectsPage = React.createClass({
           description: "A simple drag and drop interface that uses ReactJS and HTML5 to mimic the Desmos equation editor."
         },
         {
+          name: "City Strong Training",
+          slug: "http://citystrongtraining.com/",
+          description: "Freelance work for a friend of mine. I designed and built a website for his new personal training business, City Strong Training."
+        },
+        {
           name: "Stats Test Score Calculator",
           slug: "stats-test-score-calculator",
           description: "An app to automatically calculate test scores and apply a grading curve. Built for Triggs Honors Stats Classes."
@@ -98,7 +103,7 @@ var ProjectsList = React.createClass({
 
         return (
           <tr>
-            <h4 className="project-title"><a href={projectURL}>{data.name}</a></h4>
+            <h4 className="project-title"><a href={projectURL} target="_blank">{data.name}</a></h4>
             <p className="project-description">{data.description}</p>
           </tr>
         )
