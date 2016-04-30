@@ -27,7 +27,8 @@ var LandingPage = React.createClass({
   getInitialState: function() {
     var shuffleBackgrounds = true;
     var backgrounds = [
-      // "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg", //Automatically first image, so commented out
+      // "./../media/site/images/backgrounds/KHou_Segmented_Bowl.jpg", // Automatically first image, so commented out
+      "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
       "./../media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand.jpg",
       "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
       "./../media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
@@ -50,7 +51,7 @@ var LandingPage = React.createClass({
     if (shuffleBackgrounds) { //If shuffle
       shuffle(backgrounds); //Shuffle backgrounds
     }
-    var firstImage = "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg";
+    var firstImage = "./../media/site/images/backgrounds/KHou_Segmented_Bowl.jpg";
     var finalRay = [firstImage]; //Add first image
     for (var i = 0; i < backgrounds.length; i++) {
       finalRay.push(backgrounds[i]); //Add shuffled to the final array of images
@@ -86,6 +87,7 @@ var LandingPage = React.createClass({
     var backgroundStyle = {
       backgroundImage: 'url(' + URL + ')',
     };
+    // console.log("Current background image:", backgroundStyle); // Feedback
     var backgroundStyleBack = {
       backgroundImage: 'url(' + BackURL + ')',
     };
