@@ -2,6 +2,10 @@ programming:
   slug: programming
   name: Programming
 
+design:
+  slug: design
+  name: Design
+
 wood:
   slug: wood
   name: Wood

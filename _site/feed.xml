@@ -6,9 +6,43 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Apr 2016 15:13:44 -0700</pubDate>
-    <lastBuildDate>Fri, 29 Apr 2016 15:13:44 -0700</lastBuildDate>
+    <pubDate>Sun, 01 May 2016 15:19:29 -0700</pubDate>
+    <lastBuildDate>Sun, 01 May 2016 15:19:29 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>GitHub Octocat Design Challenge Winner</title>
+        <description>&lt;p&gt;I designed a logo for a project of mine that took a unique spin on the GitHub Octocat mascot. I entered it into a hackathon challenge and it was picked as the best overall design. GitHub Education has hosted this design competition many times for various hackathons. At the MenloHacks hackathon a couple weekends ago, my group and I built &lt;a href=&quot;/blog/projects/Execute-Order-66/&quot; target=&quot;_blank&quot;&gt;Execute Order 66&lt;/a&gt;, a Chrome extension that automatically censors vulgar language in GitHub repos.&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Design Process&lt;/h3&gt;
+&lt;p&gt;I took inspiration from the name of our Chrome Extension: Execute Order 66. For those out there who are not Star Wars fans, Execute Order 66 was the directive that commanded the assassination of all the Jedi. Similarly, our extension orders the destruction of all curse words in your repositories.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+It was easy decision to include the Octocat mascot in my design since we were creating a GitHub developer tool. Because of the dark nature of the phrase “Execute Order 66,” I felt that the overall design should reflect this. As a result, I designed with largely a black color palette and a Sith lightsaber to add a red highlight. For the background, I used the iconic “light speed” design from Star Wars.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;img src=&quot;./../../../../media/projects/executeOrder66/GitHub Logo.png&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Overall, I was pretty happy with my design. For one, because this was our second project, I had to design this logo in about 10 minutes. Secondly, I got a lot of exposure for it on Twitter! It was nice to know that people out there appreciated my design. It strengthened my confidence in my design skills and I’m beginning to now identify as a designer as well as a programmer. If I were to do this logo again, I would increase the resolution of my design. It’s a little low resolution, but it’s not noticeable on the &lt;a href=&quot;https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone&quot;&gt;Chrome app store&lt;/a&gt;. Feel free to download the &lt;a href=&quot;https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone&quot;&gt;Chrome Extension&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Competition Results&lt;/h3&gt;
+&lt;p&gt;Below are screenshots and links of the various Twitter announcements. About 15 people “liked” my design and I even got a couple retweets!
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;strong&gt;&lt;em&gt;Screenshots not yet added, but links are correct&lt;/em&gt;&lt;/strong&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;a href=&quot;https://twitter.com/GitHubEducation/status/722884798457335810&quot; target=&quot;_blank&quot;&gt;GitHub Education Announcement&lt;/a&gt;&lt;br /&gt;
+&lt;img src=&quot;./../../../../media/projects/executeOrder66/GitHub Logo.png&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;br /&gt;
+&lt;a href=&quot;https://twitter.com/MLHacks/status/723598523627794432&quot; target=&quot;_blank&quot;&gt;Major League Hacking Shoutout&lt;/a&gt;&lt;br /&gt;
+&lt;img src=&quot;./../../../../media/projects/executeOrder66/GitHub Logo.png&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;br /&gt;
+&lt;a href=&quot;https://twitter.com/kevinhou22/status/721793013060505601&quot; target=&quot;_blank&quot;&gt;My Original Tweet&lt;/a&gt;&lt;br /&gt;
+&lt;img src=&quot;./../../../../media/projects/executeOrder66/GitHub Logo.png&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 May 2016 07:49:19 -0700</pubDate>
+        <link>http://khou22.github.io/design/2016/05/01/github-octocat-design-challenge-winner.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/design/2016/05/01/github-octocat-design-challenge-winner.html</guid>
+        
+        <category>apps</category>
+        
+        
+        <category>design</category>
+        
+      </item>
     
       <item>
         <title>Uber Scheduler: Calling Ubers Alarm Clock Style</title>
@@ -492,90 +526,6 @@ Turns out, the steps to import Javascript libraries are very straightforward and
         <category>css</category>
         
         <category>node-js</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>NodeJS Basics - Setting Up A Local Web Server</title>
-        <description>&lt;p&gt;I’m starting a new project with a group of kids to program a plagiarism app for my school. After debating between PHP and Node.js, we decided to use Node.js as our primary ecosystem. After a bit of research and a couple of YouTube videos, I set up my own simple web server. My repository can be found &lt;a href=&quot;https://github.com/khou22/NodeJSPractice&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here are the basics:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Node.js in a nutshell runs Javascript locally from your terminal&lt;/li&gt;
-  &lt;li&gt;It takes Chrome’s V8 engine and uses it on the client side rather than attaching it to an HTML document (Javascript doesn’t have ‘document’ or ‘window’)&lt;/li&gt;
-  &lt;li&gt;Node.js can easily create a local server to compile, build, and emulate your web-based code&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I worked briefly with Node.js over the summer at Salesforce.com when I was a UX Engineer, but I had never truly dove into the compiler I was using. I was under a lot of time pressure and was behind the learning curve, so I simply accepted what came out of it.&lt;/p&gt;
-
-&lt;p&gt;It’s all coming back to me now and I’m realizing that I actually &lt;i&gt;do&lt;/i&gt; understand a great deal of what’s going on. Here are some basics that I used over the summer that people should know:&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;Node.js and NPM&lt;/b&gt;
-Node.js also built NPM - Node Package Manager - which is the default package manager for Node.js. It is responsible for downloading, importing, and including open-source packages, or libraries if you will. These packages are largely user-contributed and can be downloaded and included like so:&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;Terminal&lt;/b&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; npm install &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;packageName&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;b&gt;Javascript&lt;/b&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;packageName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Includes the package content as an object&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Packages are a super easy way to install predefined functions that can do common things. They’re incredibly simple and easy to pick up.&lt;/p&gt;
-
-&lt;p&gt;You &lt;i&gt;never&lt;/i&gt; want to include packages themselves in repositories. They take up space and are simply non-essentials. Because of the nature of open-sourced code, packages are mostly all available online to be installed by anyone. To share dependencies, you need to create a ‘package.json’ file — a file that specifies which packages should be included.&lt;/p&gt;
-
-&lt;p&gt;To create the ‘package.json’ file type, type (in Terminal):&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; npm init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;To log a dependency in the ‘package.json’:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; npm install &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;packageName&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; -S&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;If you wish to install all the packages specified in the ‘package.json’ file, simply type:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;This will install all the required modules. This sytem makes sharing code incredibly elegant and easy!&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;Including Other JS Files in Your Code&lt;/b&gt;
-It’s very easy to include other Javascript files in your code. In fact, it’s almsot identical to including a package dependency. Simply include:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;m2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;./module2&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Assumes js file&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Must export your data in module2 otherwise it just reads an empty object:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//In module2.js&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Will export an object&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//To access in other JS files, a will be stored as data.a&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;b&gt;Creating a Simple Local Web Server&lt;/b&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s very easy to start your own web server to run compiled code. It’s great for prototypes and running web apps locally. Here’s a simple web server that highlights the basic functionality:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createServer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;//Every time server hears something at port 3000, will respond with this:&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Got a request&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Returns in the terminal&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Sends the window content. The browser will display &amp;quot;Hi&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Specifies the port at which it will be served&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hope this helps! I’ll be updating my site with various Node.js content and updates on the Plargiism App. In the meantime, if you have any questions feel free to &lt;a href=&quot;mailto:kevin.ch.hou@gmail.com&quot;&gt;reach out&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 25 Oct 2015 14:16:28 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2015/10/25/nodejs-basics---setting-up-a-local-web-server.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2015/10/25/nodejs-basics---setting-up-a-local-web-server.html</guid>
-        
-        <category>node-js</category>
-        
-        <category>javascript</category>
         
         
         <category>programming</category>
