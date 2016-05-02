@@ -23,8 +23,8 @@ Below are screenshots and links of the various Twitter announcements. About 15 p
 ***Screenshots not yet added, but links are correct***
 <br class="post-line-break">
 <a href="https://twitter.com/GitHubEducation/status/722884798457335810" target="_blank">GitHub Education Announcement</a><br>
-<img src="./../../../../media/projects/executeOrder66/GitHub Logo.png" class="iPhone-screenshots-medium"><br>
+<img src="./../../../../media/projects/executeOrder66/Twitter Post - GitHub Education.jpg" class="iPhone-screenshots-medium"><br>
 <a href="https://twitter.com/MLHacks/status/723598523627794432" target="_blank">Major League Hacking Shoutout</a><br>
-<img src="./../../../../media/projects/executeOrder66/GitHub Logo.png" class="iPhone-screenshots-medium"><br>
+<img src="./../../../../media/projects/executeOrder66/Twitter Post - Major League Hacking.jpg" class="iPhone-screenshots-medium"><br>
 <a href="https://twitter.com/kevinhou22/status/721793013060505601" target="_blank">My Original Tweet</a><br>
-<img src="./../../../../media/projects/executeOrder66/GitHub Logo.png" class="iPhone-screenshots-medium">
+<img src="./../../../../media/projects/executeOrder66/Twitter Post - Kevin Hou.jpg" class="iPhone-screenshots-medium">
