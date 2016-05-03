@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 May 2016 17:53:20 -0700</pubDate>
-    <lastBuildDate>Sun, 01 May 2016 17:53:20 -0700</lastBuildDate>
+    <pubDate>Mon, 02 May 2016 18:37:45 -0700</pubDate>
+    <lastBuildDate>Mon, 02 May 2016 18:37:45 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -108,6 +108,34 @@ I created multiple designs and iterated on previous versions. Due to the 24 hour
         <category>css</category>
         
         <category>python</category>
+        
+        <category>apps</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>First Hackathon: 24 Hours Straight of Coding</title>
+        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;The Experience&lt;/h3&gt;
+&lt;p&gt;On the weekend of April 16 and 17, I attended my first ever hackathon: MenloHacks. Located at the Menlo School in Menlo, California. It was a high school hackathon sponsored by Major League Hacking (MLH) - the official sponsor for high school hackathons. I was a little bit nervous largely because I didn’t know what to expect. Part of my anxiety stemmed from the fact that I had no real baseline as to how good of a coder I really was. I had an incredibly successful summer at Salesforce where I was coding alongside other college students, but I wasn’t sure how I’d fare with the added time pressure, constraints, etc. at a hackathon.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+I have a group of four friends at school who I work on and Independent Study with. We’ve been working together for the semester (about 4 or 5 months now) and we decided to enter this hackathon together as a group. Unfortunately, one of our group members was unable to attend due to logistical issues, but he was an important part of our group nevertheless. So in the end, it was me (a senior), a freshman, and a junior. With the exception of the junior, the freshman and I had never attended a hackathon before. We both had the same mixed feelings coming in, but I think it’s safe to say that those feelings were alleviated almost immediately.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+The general atmosphere was great and the excitement was palpable. For many, this was also their first hackathon so I did not feel alone. Furthermore, my group had a great idea and an incredible team of three that we already knew had great chemistry. We each had our own roles and had worked together enough before that we knew our tasks already. I was the frontend developer and the designer.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;The Projects&lt;/h3&gt;
+&lt;p&gt;Our project idea coming in was to build an Uber scheduling app - an iOS and Android app that would allow a user to schedule rides ahead of time or on a recurring schedule. If you would like to know more, I encourage you to see my blog post on the &lt;a href=&quot;/programming/2016/04/21/uber-scheduler-calling-ubers-alarm-clock-style.html&quot; target=&quot;_blank&quot;&gt;Uber Scheduler&lt;/a&gt;. We finished this project about 3 hours before the hacking period ended so we decided to build a fun Chrome Extension called &lt;a href=&quot;https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone&quot;&gt;Execute Order 66&lt;/a&gt;. This nifty extension cleans up your GitHub repository, hiding all curse words or vulgar language that would potentially be harmful (ie. recruiters, Hackathon judges, etc.). If you would like to know more, please see the &lt;a href=&quot;/blog/projects/Execute-Order-66/&quot; target=&quot;_blank&quot;&gt;Project Page&lt;/a&gt;.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+We worked extremely hard on our two projects for the duration of the Hackathon. The official hacking period began at 12 PM on April 17th and it ended at 12 PM on April 18. It was so much fun having a full 24 hours to code that I ended up not sleeping a wink that night. I took occasional stretch breaks, but for the most part I was dialed in. I actually stayed up for 39 hours that weekend without so much as a minute napping between April 17 and April 18. I had an admitted students reception on the 18th directly after the hackathon and luckily, the adrenaline from the hackathon still carried over.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Results&lt;/h3&gt;
+&lt;p&gt;The event was very well run and did a good job at providing the creature comforts that make any high schooler’s day: food and snacks. The 24 hour period went by incredibly quickly and the overall experience was very memorable. As an added bonus, our main project - the Uber Scheduler - won the first overall prize. I also won a personal award for my logo design for Execute Order 66 (see &lt;a href=&quot;/design/2016/05/01/github-octocat-design-challenge-winner.html&quot; target=&quot;_blank&quot;&gt;blog post&lt;/a&gt;).&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Apr 2016 11:26:51 -0700</pubDate>
+        <link>http://khou22.github.io/programming/2016/04/18/first-hackathon-24-hours-straight-of-coding.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/04/18/first-hackathon-24-hours-straight-of-coding.html</guid>
         
         <category>apps</category>
         
@@ -471,61 +499,6 @@ Turns out, the steps to import Javascript libraries are very straightforward and
         <guid isPermaLink="true">http://khou22.github.io/programming/2015/11/29/theaterjs-how-to-add-and-use-javascript-libraries.html</guid>
         
         <category>javascript</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Text Analysis App: How Do You Talk To People on Facebook Versus In An Engineering Report?</title>
-        <description>&lt;p&gt;A couple weeks ago I downloaded by my &lt;a href=&quot;https://www.facebook.com/help/131112897028467/&quot;&gt;Facebook user data&lt;/a&gt;. By law, Facebook is required to package and send you your raw Facebook data…including every message you’ve ever sent.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;It was shocking how much personal information was available at my finger tips just from my Facebook profile. I was intrigued that all my Facebook messages were in once place. I decided to program an app that would sort through my messages and pick out the messages that I send. I also added in the ability to read simple text files such as my essays, emails, etc. The app can be found here:&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://khou22.github.io/blog/apps/text-analysis&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;Text-Analysis App&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;I created options to:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;FIlter out other people&#39;s messages to isolate your own data&lt;/li&gt;
-  &lt;li&gt;Filter out messages only between you and specific person(s)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Because it’s first semester senior year (college apps are in full swing) I haven’t had as much time as I’d like to work on this app. I’ve spent about a week on it and I’m currently working on adding new features. Right now it works for any text file and any Facebook message file (detailed instructions in the app).&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;I’ve learned so much in the past couple week while programming this app, the most significant being memory management. I’m dealing with millions of lines of user data (my message file was a whopping 30 mb of pure text) and my computer has crashed a lot under the strain. I’ve managed to fix most of the issues and it’s so interesting learning how to efficiently go through such massive amounts of data without overloading the browser. One of the neat options I added in was a ‘big data’ option. If checked it will filter out any word that doesn’t occur over the specified number of times, therefore decreasing the load on the browser.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;I encourage you to give it a try! You might learn something neat about the way you speak. I’ll be adding more analysis in the coming weeks including &lt;a href=&quot;#&quot; data-toggle=&quot;tooltip&quot; title=&quot;See the Flesch-Kincaid Grade Level formula&quot;&gt;writing grade level&lt;/a&gt; (according to US standards), readability, emotional state, etc. It’ll be interesting!&lt;/p&gt;
-
-&lt;p&gt;If you have any suggestions or comments feel free to &lt;a href=&quot;mailto:kevin.ch.hou@gmail.com&quot;&gt;let me know&lt;/a&gt;!&lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 Nov 2015 06:23:08 -0800</pubDate>
-        <link>http://khou22.github.io/programming/2015/11/01/text-analysis-app-how-do-you-talk-to-people-on-facebook-versus-in-an-engineering-report.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2015/11/01/text-analysis-app-how-do-you-talk-to-people-on-facebook-versus-in-an-engineering-report.html</guid>
-        
-        <category>apps</category>
-        
-        <category>javascript</category>
-        
-        <category>reactjs</category>
-        
-        <category>html</category>
-        
-        <category>css</category>
-        
-        <category>node-js</category>
         
         
         <category>programming</category>
