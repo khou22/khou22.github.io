@@ -34,7 +34,7 @@ var LandingPage = React.createClass({
       link: "https://www.flickr.com/photos/khou22/sets/72157665399225423"
     };
     var backgrounds = [
-      // "./../media/site/images/backgrounds/KHou_Segmented_Bowl.jpg", // Automatically first image, so commented out
+      // "./../media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters.jpg", // Automatically first image, so commented out
       "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
       "./../media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand.jpg",
       "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
@@ -58,7 +58,7 @@ var LandingPage = React.createClass({
     if (shuffleBackgrounds) { //If shuffle
       shuffle(backgrounds); //Shuffle backgrounds
     }
-    var firstImage = "./../media/site/images/backgrounds/KHou_Segmented_Bowl.jpg";
+    var firstImage = "./../media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters.jpg";
     var finalRay = [firstImage]; //Add first image
     for (var i = 0; i < backgrounds.length; i++) {
       finalRay.push(backgrounds[i]); //Add shuffled to the final array of images
