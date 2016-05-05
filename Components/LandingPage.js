@@ -26,6 +26,13 @@ function shuffle(array) {
 var LandingPage = React.createClass({
   getInitialState: function() {
     var shuffleBackgrounds = true;
+    var notificationData = {
+      // Types are 'alert', 'notice'
+      type: "notice",
+      // message: "New video released: Wood Turned Segmented Bowl with Inlaid Letters",
+      message: "New wood project: Wood Turned Segmented Bowl with Inlaid Letters",
+      link: "https://www.flickr.com/photos/khou22/sets/72157665399225423"
+    };
     var backgrounds = [
       // "./../media/site/images/backgrounds/KHou_Segmented_Bowl.jpg", // Automatically first image, so commented out
       "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
@@ -64,6 +71,7 @@ var LandingPage = React.createClass({
       preload(finalRay[i]); //Preload every background
     }
     return {
+      notificationData: notificationData,
       backgroundURLs: finalRay,
       currentBackground: 0 //Index in array of backgrounds
     };
@@ -97,12 +105,44 @@ var LandingPage = React.createClass({
           <ProfileBox />
           <ModalBox showModal={false} />
         </div>
+        <NotificationBar notificationData={this.state.notificationData} />
         <div className="landing-background" style={backgroundStyleBack}></div>
         <div id="backgroundDiv" className="landing-background" style={backgroundStyle}></div>
       </div>
     );
   }
 });
+
+var NotificationBar = React.createClass({
+  render: function() {
+    var message = this.props.notificationData.message;
+    var iconClass = ""; // Using bootstrap glyphicons
+    switch(this.props.notificationData.type) {
+      case "alert":
+        iconClass = "glyphicon glyphicon-alert"; // Set to alert sign
+        iconClass += " landing-alert-sign"; // Add custom class
+        break;
+      case "notice":
+        iconClass = "glyphicon-info-sign"; // Set to info sign
+        iconClass += " landing-info-sign"; // Add custom class
+        break;
+      default:
+        iconClass = "glyphicon-info-sign"; // Default is info sign
+    };
+    return (
+      <a href={this.props.notificationData.link} target="_blank">
+        <div className="landing-notification-bar">
+          <div className="landing-notification-symbol">
+            <span className={"glyphicon " + iconClass} aria-hidden="true"></span>
+          </div>
+          <div className="landing-notification-content">
+            {message}
+          </div>
+        </div>
+      </a>
+    )
+  }
+})
 
 var ProfileBox = React.createClass({
   redirect: function(page) {

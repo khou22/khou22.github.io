@@ -466,6 +466,7 @@ hr {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   background: rgba(75, 75, 75, .2);
   border-radius: 10px;
+  border-spacing: none !important; /*Override bootstrap*/
   padding: .25rem;
 }
 
@@ -481,6 +482,46 @@ hr {
   top: 15px;
   left: 15px;
   z-index: 5;
+}
+
+.landing-notification-bar {
+  position: absolute;
+  z-index: 2;
+  top: 1%;
+  right: 1%;
+  width: 300px;
+  height: 50px;
+  border-radius: 12px;
+  color: white;
+  padding: 6px;
+  padding-left: 12px;
+
+  /*Glass effect*/
+  border: 1px solid gray;
+  border-bottom: 2px solid;
+  border-bottom-color: #ccc;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(75, 75, 75, .2);
+}
+
+.landing-notification-symbol {
+  float: left;
+  width: 15%;
+  font-size: 3rem;
+}
+
+.landing-alert-sign {
+  color: #D5491F; /*Brand red*/
+}
+
+.landing-info-sign {
+  color: #3286A8; /*Brand blue*/
+}
+
+.landing-notification-content {
+  float: right;
+  width: 85%;
 }
 
 /*TheaterJS Animation*/
