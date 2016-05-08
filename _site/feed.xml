@@ -6,9 +6,38 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 May 2016 22:20:39 -0700</pubDate>
-    <lastBuildDate>Thu, 05 May 2016 22:20:39 -0700</lastBuildDate>
+    <pubDate>Sat, 07 May 2016 21:59:00 -0700</pubDate>
+    <lastBuildDate>Sat, 07 May 2016 21:59:00 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Designing My YouTube Channel Artwork</title>
+        <description>&lt;p&gt;I finally got around to designing my own YouTube channel artwork. Similar to a Facebook cover photo, YouTube’s channel artwork is the second most important image to your YouTube brand. I had just released my first “high quality” &lt;a href=&quot;https://www.youtube.com/watch?v=_ZSztfYnnC8&quot; target=&quot;_blank&quot;&gt;video&lt;/a&gt; and I wanted to improve the rest of my YouTube channel as well. Click &lt;a href=&quot;https://youtube.com/kevinhou22&quot;&gt;here&lt;/a&gt; to visit my YouTube channel.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Design Process&lt;/h3&gt;
+&lt;p&gt;I found a &lt;a href=&quot;http://2.bp.blogspot.com/-tjmufytBinc/UcvXPhPX8DI/AAAAAAAACYE/J8yVDWg25-I/s1600/YouTube-One-Channel-Template-Full-Optimized-(1).png&quot; target=&quot;_blank&quot;&gt;template&lt;/a&gt; online that detailed the dimensions for each YouTube platform. For every YouTube client (ie. mobile, TV, computer, etc.), there is a specific cropping method. I used the dimensions to create a design that would look good on all possible devices.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+I wanted to go for a minimalistic look — flat and simple seems to be the trend these days among digital design. At first, I wanted to incorporate some aspect of woodshop in my channel artwork. I tried many different methods, both subtle and blaring, to weave in my passion for woodshop. After trying and failing to add things like a wood background to my design, I decided to leave it out entirely. It would be evident for anyone looking at my channel to know that I loved woodshop. I didn’t feel like I could produce a design that I was proud of if I tried to incorporate woodworking — it would be clear I was forcing it.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+I looked at the channel artworks of some of my favorite tech and wood YouTubers. I found that YouTubers that loved wood used more image based, “stack”-style cover photos; however, my tech YouTubers favored the a cleaner look. Being a web developer and digital designer, I was in favor of the latter.&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Finished Product&lt;/h3&gt;
+&lt;h4&gt;Desktop Browser&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;./../../../../media/blog/images/YouTube Channel Artwork/Desktop Size.png&quot; /&gt;
+This is typically what a YouTuber user would see. This is the crop size for a desktop browser. A mobile device would be the same height as this, but the side edges would be trimmed inward a tiny bit.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;Full Size (For TV Clients)&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;./../../../../media/blog/images/YouTube Channel Artwork/YouTube Channel Artwork.jpg&quot; /&gt;
+This is the full resolution image. The only time a user would see this entire image would be on the TV.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 07 May 2016 14:32:05 -0700</pubDate>
+        <link>http://khou22.github.io/design/2016/05/07/designing-my-youtube-channel-artwork.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/design/2016/05/07/designing-my-youtube-channel-artwork.html</guid>
+        
+        
+        <category>design</category>
+        
+      </item>
     
       <item>
         <title>GitHub Octocat Design Challenge Winner</title>
@@ -458,50 +487,6 @@ In TextEdit, navigate to Format-&amp;gt;Make Plain Text. The keyboard shortcut c
         
         
         <category>computer</category>
-        
-      </item>
-    
-      <item>
-        <title>TheaterJS: How to Add and Use Javascript Libraries</title>
-        <description>&lt;p&gt;I am working on getting some neat, open-source Javascript libraries ported into my website. I’m trying to teach myself how to incorporate the pleathorea of user contributed libraries into my site. Over the summer, I taught myself how to use NPM dependencies — elegeant packages of Javascript code that would perform preset functions. With the millions of NPM packages out there, I wanted to use it in my own site.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-Unfortunately, I haven’t been able to build a compiler that would allow me to use NPM dependencies in my code. I’m still interested in using other people’s code in my apps so I’ve resorted to Javascript libraries. I came across a really cool one called &lt;a href=&quot;https://github.com/Zhouzi/TheaterJS&quot; target=&quot;_blank&quot;&gt;TheaterJS&lt;/a&gt;. Here’s a quick &lt;a href=&quot;http://codepen.io/Zhouzi/pen/JoRazP&quot; target=&quot;_blank&quot;&gt;demo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-Turns out, the steps to import Javascript libraries are very straightforward and simple.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Download the &lt;a href=&quot;https://github.com/Zhouzi/TheaterJS/releases&quot; target=&quot;_blank&quot;&gt;library&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Move the file into your source code. It doesn&#39;t matter where.&lt;/li&gt;
-  &lt;li&gt;
-    Link the &#39;.min.js&#39; file in the &amp;lt;\head&amp;gt; of your HTML file like so:
-    
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;path/to/library/TheaterJS-2.0.1/dist/theater.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- TheaterJS --&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-  &lt;/li&gt;
-  &lt;li&gt;
-    Now you can use the library by calling the functions defined in the documentation. TheaterJS mimics a human chat transcript. An actual demo can be found on my &lt;a href=&quot;http://khou22.github.io&quot; target=&quot;_blank&quot;&gt;landing page&lt;/a&gt;. Here&#39;s how to use TheaterJS&#39;s functions (this is the actual code I used on my landing page):
-    
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;theater&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addActor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;kevin&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;speed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;accuracy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.7&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addScene&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;kevin:Kevin Hou&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addScene&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;kevin:Welcome!&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addScene&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;kevin:Kevin Hou&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addScene&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;theater&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;theater&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-  &lt;/li&gt;
-  &lt;br /&gt;
-  Hope this helped!
-&lt;/ol&gt;
-</description>
-        <pubDate>Sun, 29 Nov 2015 13:17:51 -0800</pubDate>
-        <link>http://khou22.github.io/programming/2015/11/29/theaterjs-how-to-add-and-use-javascript-libraries.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2015/11/29/theaterjs-how-to-add-and-use-javascript-libraries.html</guid>
-        
-        <category>javascript</category>
-        
-        
-        <category>programming</category>
         
       </item>
     

@@ -31,7 +31,7 @@ var LandingPage = React.createClass({
       type: "notice",
       // message: "New video released: Wood Turned Segmented Bowl with Inlaid Letters",
       message: "New wood project: Wood Turned Segmented Bowl with Inlaid Letters",
-      link: "https://www.flickr.com/photos/khou22/sets/72157665399225423"
+      link: "https://youtu.be/_ZSztfYnnC8"
     };
     var backgrounds = [
       // "./../media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters.jpg", // Automatically first image, so commented out
