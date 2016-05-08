@@ -33,32 +33,103 @@ var LandingPage = React.createClass({
       message: "New wood project: Wood Turned Segmented Bowl with Inlaid Letters",
       link: "https://youtu.be/_ZSztfYnnC8"
     };
+    var firstImage = { // Set first image
+        name: "Wood Turned Segmented Bowl with Inlaid Letters",
+        imageURL: "./../media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters.jpg",
+        link: "https://youtu.be/_ZSztfYnnC8"
+    };
     var backgrounds = [
-      // "./../media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters.jpg", // Automatically first image, so commented out
-      "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
-      "./../media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand.jpg",
-      "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
-      "./../media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
-      "./../media/site/images/backgrounds/Walnut_and_Maple_Amplifier.jpg",
-      "./../media/site/images/backgrounds/Tropical_Wood_Phone_Stand.jpg",
-      "./../media/site/images/backgrounds/Maple_Baseball_Bat.jpg",
-      "./../media/site/images/backgrounds/Gavel.jpg",
-      "./../media/site/images/backgrounds/Walnut_and_Maple_Single_Speaker.jpg",
-      "./../media/site/images/backgrounds/Maple_and_Walnut_Visualizer.jpg",
-      "./../media/site/images/backgrounds/Fruit_Tart.jpg",
-      "./../media/site/images/backgrounds/Wood_Pens.jpg",
-      "./../media/site/images/backgrounds/MusicViz.png",
-      "./../media/site/images/backgrounds/Japanese_Square_Plate.jpg",
-      "./../media/site/images/backgrounds/Online_Sandwich_Ordering_Machine.jpg",
-      "./../media/site/images/backgrounds/Kevin_Turning_Chaote_Viga.jpg",
-      "./../media/site/images/backgrounds/Turning_Chaote_Viga.jpg"
+      {
+        name: "Walnut Poplar Salad Bowl",
+        imageURL: "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
+        link: "http://kevinhou.wix.com/projects#!walnut-and-poplar-segmented-salad-bowl/c1jkm"
+      },
+      {
+        name: "Walnut and Aluminum Headphone Stand",
+        imageURL: "./../media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157658462097054"
+      },
+      {
+        name: "Basket Weave Cutting Board",
+        imageURL: "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157652887421218"
+      },
+      {
+        name: "Bulbish Sapele Bowl",
+        imageURL: "./../media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
+        link: "http://kevinhou.wix.com/projects#!bublish-sapele-wood-bowl/c1444"
+      },
+      {
+        name: "Walnut and Maple Amplifier",
+        imageURL: "./../media/site/images/backgrounds/Walnut_and_Maple_Amplifier.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157660781288855"
+      },
+      {
+        name: "Tropical Wood Phone Stand",
+        imageURL: "./../media/site/images/backgrounds/Tropical_Wood_Phone_Stand.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157659369093144"
+      },
+      {
+        name: "Maple Baseball Bat",
+        imageURL: "./../media/site/images/backgrounds/Maple_Baseball_Bat.jpg",
+        link: "http://kevinhou.wix.com/projects#!maple-baseball-bat/ce0i"
+      },
+      {
+        name: "Sapele Wood Gavel",
+        imageURL: "./../media/site/images/backgrounds/Gavel.jpg",
+        link: "http://kevinhou.wix.com/projects#!chichipate-and-sapele-gavel/c1ryp"
+      },
+      {
+        name: "Walnut and Maple Single Speaker",
+        imageURL: "./../media/site/images/backgrounds/Walnut_and_Maple_Single_Speaker.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157660781288855"
+      },
+      {
+        name: "Maple and Walnut Speakers with Music Visualizer",
+        imageURL: "./../media/site/images/backgrounds/Maple_and_Walnut_Visualizer.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157660781288855"
+      },
+      {
+        name: "Bulbish Sapele Wood Bowl",
+        imageURL: "./../media/site/images/backgrounds/Fruit_Tart.jpg",
+        link: "http://kevinhou.wix.com/projects#!bublish-sapele-wood-bowl/c1444"
+      },
+      {
+        name: "Wood Turned Pens",
+        imageURL: "./../media/site/images/backgrounds/Wood_Pens.jpg",
+        link: "http://kevinhou.wix.com/projects#!wood-pens/cn8u"
+      },
+      {
+        name: "MusicViz - A Music Visualizer",
+        imageURL: "./../media/site/images/backgrounds/MusicViz.png",
+        link: "http://kevinhou.wix.com/projects#!musicviz/c1ku2"
+      },
+      {
+        name: "Japanese Square Plate",
+        imageURL: "./../media/site/images/backgrounds/Japanese_Square_Plate.jpg",
+        link: "http://kevinhou.wix.com/projects#!japanese-square-plate/czt2"
+      },
+      {
+        name: "Online Sandwich Ordering Machine",
+        imageURL: "./../media/site/images/backgrounds/Online_Sandwich_Ordering_Machine.jpg",
+        link: "http://kevinhou.wix.com/projects#!online-sandwich-ordering-machine/clla"
+      },
+      {
+        name: "Turning a Chaote Viga Bowl",
+        imageURL: "./../media/site/images/backgrounds/Kevin_Turning_Chaote_Viga.jpg",
+        link: "#"
+      },
+      {
+        name: "Turning a Chaote Vig Bowl",
+        imageURL: "./../media/site/images/backgrounds/Turning_Chaote_Viga.jpg",
+        link: "#"
+      }
     ];
     setTimeout(function() {document.getElementById("mainDiv").classList.add('div-fade-in');}, 1);
     preload("./../media/site/images/Profile.jpg"); //Preload profile picture
     if (shuffleBackgrounds) { //If shuffle
       shuffle(backgrounds); //Shuffle backgrounds
     }
-    var firstImage = "./../media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters.jpg";
     var finalRay = [firstImage]; //Add first image
     for (var i = 0; i < backgrounds.length; i++) {
       finalRay.push(backgrounds[i]); //Add shuffled to the final array of images
@@ -68,7 +139,7 @@ var LandingPage = React.createClass({
       setInterval(this.nextBackground.bind(this), 5000);
     }.bind(this), 7000);
     for (var i = 0; i < finalRay.length; i++) { //Cycle through backgrounds
-      preload(finalRay[i]); //Preload every background
+      preload(finalRay[i].imageURL); //Preload every background
     }
     return {
       notificationData: notificationData,
@@ -90,8 +161,9 @@ var LandingPage = React.createClass({
     setTimeout(function() {document.getElementById("backgroundDiv").classList.add('background-fade');}, 25);
   },
   render: function() {
-    var URL = this.state.backgroundURLs[this.state.currentBackground];
+    var URL = this.state.backgroundURLs[this.state.currentBackground].imageURL;
     var BackURL = this.state.currentBackground >= this.state.backgroundURLs.length-1 ? this.state.backgroundURLs[0] : this.state.backgroundURLs[this.state.currentBackground + 1];
+    BackURL = BackURL.imageURL;
     var backgroundStyle = {
       backgroundImage: 'url(' + URL + ')',
     };
@@ -106,6 +178,7 @@ var LandingPage = React.createClass({
           <ModalBox showModal={false} />
         </div>
         <NotificationBar notificationData={this.state.notificationData} />
+        <ProjectInfo projectData ={this.state.backgroundURLs[this.state.currentBackground]} />
         <div className="landing-background" style={backgroundStyleBack}></div>
         <div id="backgroundDiv" className="landing-background" style={backgroundStyle}></div>
       </div>
@@ -130,7 +203,7 @@ var NotificationBar = React.createClass({
         iconClass = "glyphicon-info-sign"; // Default is info sign
     };
     return (
-      <a href={this.props.notificationData.link} target="_blank">
+      <a href={this.props.notificationData.link} target="_blank" title="See more about this project">
         <div className="landing-notification-bar">
           <div className="landing-notification-symbol">
             <span className={"glyphicon " + iconClass} aria-hidden="true"></span>
@@ -138,6 +211,20 @@ var NotificationBar = React.createClass({
           <div className="landing-notification-content">
             {message}
           </div>
+        </div>
+      </a>
+    )
+  }
+})
+
+var ProjectInfo = React.createClass({
+  render: function() {
+    var projectName = this.props.projectData.name;
+    var projectLink = this.props.projectData.link;
+    return (
+      <a href={projectLink} target="_blank" title="See more about this background">
+        <div className="landing-project-info">
+          {projectName}
         </div>
       </a>
     )
