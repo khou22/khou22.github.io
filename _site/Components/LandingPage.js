@@ -235,13 +235,14 @@ var ProfileBox = React.createClass({
   redirect: function(page) {
     switch (page) {
       case "wood":
-        window.open("https://kevinhou.wix.com/projects#!wood/c1han", '_blank);');
+        window.open("https://kevinhou.wix.com/projects#!wood/c1han", '_blank);'); // Wix projects page
         break;
       case "blog":
         location.href="/blog";
         break;
       case "programming":
-        window.open("http://kevinhou.wix.com/projects#!woodprojects/ckra", '_blank);');
+        location.href="/blog/projects"; // Project page on website
+        window.open("http://kevinhou.wix.com/projects#!woodprojects/ckra", '_blank);'); // Wix projects page
         break;
       default:
     };
