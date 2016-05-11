@@ -90,6 +90,7 @@ var App = React.createClass({ // Main parent component
     return (
       <div>
         <Background backgroundURL = {this.state.backgroundURL} />
+        <WeatherBar />
         <WelcomeBar />
         <ProfilePicture />
         <ButtonGroup fadeTime={this.state.fadeTime} content={this.state.content[0]} index={0} />
@@ -99,6 +100,71 @@ var App = React.createClass({ // Main parent component
     );
   }
 });
+
+var WeatherBar = React.createClass({
+  getInitialState: function() {
+    this.getWeatherForecast(); // Retrieve weather
+    return { // Set initial state of weather forecast (String type)
+      weatherForecast: "Pending..."
+    }
+  },
+  getWeatherForecast: function() {
+    var parentComponenet = this; // Store the parent component so that can access in jquery function
+    $.simpleWeather({ // Call library function
+      // Documentation: http://simpleweatherjs.com/
+      location: 'San Francisco, CA',
+      woeid: '',
+      unit: 'f', // Units ('f' or 'c')
+      success: function(weather) {
+        console.log("Retrieved weather", weather); // Feedback
+
+        // Concatinate weather into string
+        var final = weather; // Store as 'final'
+
+        parentComponenet.setState({
+          weatherForecast: final // Store data
+        })
+      },
+      error: function(error) { // If error
+        console.log("Error getting weather:", error); // Feedback
+        parentComponenet.setState({
+          weatherForecast: "Could not retrieve" // Feedback
+        })
+      }
+    }); // Must bind to React component so can set state later on
+  },
+  render: function() {
+    var weather = this.state.weatherForecast; // Store weather data
+    var weatherIcon = { "background": "none" };
+    if (weather.thumbnail) { // If ajax request successful
+      // Create style with image url
+      weatherIcon = { "backgroundImage": "url(" + weather.thumbnail + ")" };
+    }
+    return (
+      <a href="#weatherChannel" title="See Weather Channel website">
+        <div className="browser-weather-bar glass">
+          <div className="browser-weather-icon" style={weatherIcon}>
+          </div>
+          <div className="browser-weather-content">
+            <h3>{ weather.city }</h3>
+            <h3>
+              { weather.temp }&deg; F
+              <span className="browser-weather-text">
+                <span className="invisible-color">
+                  |||
+                </span>
+                { weather.high }/{ weather.low }
+              </span>
+            </h3>
+            <p className="browser-weather-text">
+              { weather.currently } - { weather.text }
+            </p>
+          </div>
+        </div>
+      </a>
+    )
+  }
+})
 
 var ProfilePicture = React.createClass({
   render: function() {

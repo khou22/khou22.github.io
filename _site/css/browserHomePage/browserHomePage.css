@@ -72,6 +72,37 @@
   color: rgba(255, 255, 255, 0);
 }
 
+.browser-weather-bar {
+  position: absolute;
+  z-index: 2;
+  top: 1%;
+  right: 1%;
+  width: 275px;
+  height: 55px;
+  border-radius: 12px;
+  color: white;
+  padding: 6px;
+}
+
+.browser-weather-icon {
+  float: left;
+  width: 20%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.browser-weather-content {
+  float: right;
+  width: 68%;
+}
+
+.browser-weather-text {
+  font-size: 16px;
+  /*More grey than header weather info*/
+  color: rgba(220, 220, 220, 1);
+}
+
 .group {
   vertical-align: middle;
   text-align: center;
