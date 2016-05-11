@@ -77,8 +77,8 @@
   z-index: 2;
   top: 1%;
   right: 1%;
-  width: 275px;
-  height: 55px;
+  width: 290px;
+  /*height: 55px;*/
   border-radius: 12px;
   color: white;
   padding: 6px;
@@ -87,9 +87,10 @@
 .browser-weather-icon {
   float: left;
   width: 20%;
-  height: 100%;
-  background-size: contain;
+  height: 55px;
+  background-size: cover !important;
   background-repeat: no-repeat;
+  background-position: -15px 0%;
 }
 
 .browser-weather-content {
