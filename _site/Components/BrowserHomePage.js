@@ -136,12 +136,15 @@ var WeatherBar = React.createClass({
   render: function() {
     var weather = this.state.weatherForecast; // Store weather data
     var weatherIcon = { "background": "none" };
+    var weatherLink = "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2487956/";
     if (weather.thumbnail) { // If ajax request successful
       // Create style with image url
       weatherIcon = { "backgroundImage": "url(" + weather.thumbnail + ")" };
+      // Update link
+      weatherLink = weather.link; // Retrieve link
     }
     return (
-      <a href="#weatherChannel" title="See Weather Channel website">
+      <a href={ weatherLink } title="See Weather Channel website">
         <div className="browser-weather-bar glass">
           <div className="browser-weather-icon" style={weatherIcon}>
           </div>
@@ -243,7 +246,8 @@ var ButtonGroup = React.createClass({
   },
   clickedLink: function(linkNumber) {
     console.log("Clicked link:", linkNumber); // Feedback
-    window.open(this.state.links[linkNumber].url, '_blank'); // Opens in a new tab
+    // window.open(this.state.links[linkNumber].url, '_blank'); // Opens in a new tab
+    window.open(this.state.links[linkNumber].url, '_self'); // Opens in same tab/window
   },
   showGroup: function(state) {
     // console.log("Mouse enter/exit ", this.state.groupName, "group"); // Feedback
