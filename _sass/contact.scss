@@ -8,16 +8,59 @@ $brand-blue:      #3286A8;
 
 .contact {
   &-header {
+    width: 100%;
+
+    &-title {
+      text-align: center;
+      font-size: 5rem;
+      color: $brand-blue;
+      line-height: 12rem;
+    }
+
+    &-subtitle {
+      text-align: center;
+      font-size: 2rem;
+      color: $brand-grey;
+    }
+  }
+
+  &-info {
+    margin-top: 24px;
+
+    &-block {
+      width: 150px;
+      height: 150px;
+      margin: auto;
+    }
+
+    &-left {
+      float: left;
+      width: 50%;
+    }
+
+    &-right {
+      float: right;
+      width: 50%;
+    }
+  }
+
+  &-icon {
     color: $brand-blue;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
-  &-main-column {
-    width: 55%;
-    float: left;
-  }
-
-  &-profile-column {
-    width: 40%;
-    float: right;
+  &-details {
+    color: $brand-grey;
+    text-align: center;
+    margin: auto;
+    width: 75%;
+    word-wrap: break-word;
+    font-size: 18px;
+    line-height: 24px;
   }
 }

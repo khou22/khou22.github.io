@@ -733,13 +733,44 @@ li {
 
 /*For contact page*/
 .contact-header {
-  color: #3286A8; }
-.contact-main-column {
-  width: 55%;
-  float: left; }
-.contact-profile-column {
-  width: 40%;
-  float: right; }
+  width: 100%; }
+  .contact-header-title {
+    text-align: center;
+    font-size: 5rem;
+    color: #3286A8;
+    line-height: 12rem; }
+  .contact-header-subtitle {
+    text-align: center;
+    font-size: 2rem;
+    color: #9DB7C1; }
+.contact-info {
+  margin-top: 24px; }
+  .contact-info-block {
+    width: 150px;
+    height: 150px;
+    margin: auto; }
+  .contact-info-left {
+    float: left;
+    width: 50%; }
+  .contact-info-right {
+    float: right;
+    width: 50%; }
+.contact-icon {
+  color: #3286A8;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; }
+.contact-details {
+  color: #9DB7C1;
+  text-align: center;
+  margin: auto;
+  width: 75%;
+  word-wrap: break-word;
+  font-size: 18px;
+  line-height: 24px; }
 
 .project-hr {
   border-color: #9DB7C1 !important; }

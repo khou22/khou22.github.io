@@ -1,15 +1,35 @@
 var ContactPage = React.createClass({
+  getInitialState: function() {
+    return {
+      contactMethods: [
+        {
+          label: "Email me",
+          link: "mailto:kevin.ch.hou@gmail.com",
+          iconPath: "../../../media/site/icons/email_bw.png"
+        },
+        {
+          label: "Connect on LinkedIn",
+          link: "https://www.linkedin.com/in/kevinhou22",
+          iconPath: "../../../media/site/icons/logos/LinkedIn_bw.png"
+        }
+      ]
+    }
+  },
   render: function() {
     return (
       <div>
-        <h1 className="contact-header">Contact Me</h1>
-        <h3>Got a project idea? Suggestion? Feedback? Let me know</h3>
-        <br />
-        <div className="contact-main-column">
-          <ContactInfo />
+        <div className="contact-header">
+          <h1 className="contact-header-title">Contact Me</h1>
+          <h3 className="contact-header-subtitle">Project idea? Suggestion? Feedback? Let me know</h3>
         </div>
-        <div className="contact-profile-column">
-          <ProfilePicture />
+        <br />
+        <div className="contact-info">
+          <div className="contact-info-left">
+            <ContactInfo contactMethods={this.state.contactMethods[0]} />
+          </div>
+          <div className="contact-info-right">
+            <ContactInfo contactMethods={this.state.contactMethods[1]} />
+          </div>
         </div>
       </div>
     );
@@ -18,21 +38,20 @@ var ContactPage = React.createClass({
 
 var ContactInfo = React.createClass({
   render: function() {
+    var backgroundURL = this.props.contactMethods.iconPath;
+    var label = this.props.contactMethods.label;
+    var link = this.props.contactMethods.link;
+    iconStyle = { "backgroundImage": "url(" + backgroundURL + ")" }
     return (
-      <span>
-        <h4>Email me at: <a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a></h4>
-        <h4>Message me on <a href="https://www.linkedin.com/in/kevinhou22">LinkedIn</a></h4>
-      </span>
-    );
-  }
-})
-
-var ProfilePicture = React.createClass({
-  render: function() {
-    return (
-      <span>
-        <img src="../../media/site/images/Profile.jpg" />
-      </span>
+      <a href={link}>
+        <div className="contact-info-block">
+          <div className="contact-icon" style={iconStyle}>
+          </div>
+          <div className="contact-details">
+            { label }
+          </div>
+        </div>
+      </a>
     );
   }
 })
