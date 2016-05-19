@@ -243,15 +243,15 @@ var pageData = [
           },
           {
             title: "BigBang - Fantastic Baby:",
-            link: "https://www.youtube.com/watch?v=AAbokV76tkU&index=5&list=PL2HEDIx6Li8hDUxaa-0cLX2tNrx_brV7G"
+            link: "https://www.youtube.com/watch?v=AAbokV76tkU?list=PL2HEDIx6Li8hDUxaa-0cLX2tNrx_brV7G"
           },
           {
             title: "Girls’ Generation - Gee:",
-            link: "https://www.youtube.com/watch?v=U7mPqycQ0tQ&index=7&list=PL2HEDIx6Li8hDUxaa-0cLX2tNrx_brV7G"
+            link: "https://www.youtube.com/watch?v=U7mPqycQ0tQ?list=PL2HEDIx6Li8hDUxaa-0cLX2tNrx_brV7G"
           },
           {
             title: "Hyuna - Bubble Pop:",
-            link: "https://www.youtube.com/watch?v=bw9CALKOvAI&list=PL2HEDIx6Li8hDUxaa-0cLX2tNrx_brV7G&index=13"
+            link: "https://www.youtube.com/watch?v=bw9CALKOvAI?list=PL2HEDIx6Li8hDUxaa-0cLX2tNrx_brV7G"
           }
         ],
         images: [],
