@@ -76,7 +76,12 @@ var pageData = [
         title: "Japan",
         author: "NA",
         indent: true,
-        youTubeVideos: [],
+        youTubeVideos: [
+          {
+            title: "Salaryman 6 – Overwork in Japan",
+            link: "https://www.youtube.com/watch?v=otWl3Zu1Mr4"
+          }
+        ],
         images: [],
         content: [
           "Many stereotypes about Japan come from the country’s primary media export–anime, which are animated series that span across all genres and are directed at many different age groups. The common anime themes of innovative technology and their focus on kids and teenagers projects an image of Japan as a youthful, technologically advanced society–an image that is absorbed by many foreigners who watch these shows. While Japan is indeed developing new technology rapidly and effectively, the country has been unable to evolve and solve problems in many other areas that desperately need addressing. But what exactly are the problems that are plaguing Japan?",

@@ -92,7 +92,7 @@ body {
 
 .landing-video-play:hover {
   animation-name: expand;
-  animation-duration: 700ms;
+  animation-duration: 400ms;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
   width: 200px;
