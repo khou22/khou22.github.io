@@ -1,0 +1,104 @@
+.ea-welcome {
+  margin-top: 50px;
+  height: 70vh;
+  width: 100vw;
+  top: 0;
+  background-color: white;
+  background-size: cover;
+  position: fixed;
+  z-index: -1; /*Always on bottom*/
+}
+
+.ea-welcome-filler {
+  margin-top: 50px;
+  height: 70vh;
+  width: 100vw;
+  z-index: 0;
+  position: relative;
+}
+
+.ea-welcome-content {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  left: 7%;
+  width: 50%;
+  text-align: left;
+  color: white;
+}
+
+.ea-welcome-header {
+  font-size: 120px;
+}
+
+.ea-welcome-subheader {
+  font-size: 40px;
+}
+
+
+.ea-article-div {
+  background-color: black;
+  color: white;
+  border-top: 2px solid white;
+  padding: 24px;
+  padding-bottom: 100px;
+}
+
+.ea-article-title {
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+.ea-article-author {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.ea-article-content {
+  margin-top: 12px;
+}
+
+.ea-paragraph {
+  line-height: 20px;
+}
+
+.ea-paragraph-br {
+  line-height: 32px;
+}
+
+.ea-takeaway {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.ea-bibliography {
+  background-color: black;
+  color: white;
+  padding: 24px;
+}
+
+.ea-bibliography-title {
+  font-size: 35px; /*Smaller for some reason*/
+  text-decoration: underline;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding-top: 20px;
+}
+
+.ea-bibliography-page {
+  margin-top: 50px;
+}
+
+.ea-source-link {
+  text-decoration: underline;
+  color: white;
+  line-height: 20px;
+}
+
+/*Make videos stack next to each other*/
+.ea-youTubeVideo {
+  display: inline-block;
+  width: 46%;
+  padding: 2%;
+}

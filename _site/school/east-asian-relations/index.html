@@ -1,0 +1,146 @@
+<!-- Not using the template (no nav bar, footer, etc.)
+---
+layout: default
+---
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>East Asian Relations Final Project</title>
+
+    <!-- React -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Javascript Libraries -->
+    <script src="../../libraries/TheaterJS-2.0.1/dist/theater.min.js"></script> <!-- TheaterJS -->
+
+    <!-- Map -->
+    <script src="../../libraries/ammap/ammap.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../../libraries/ammap/ammap.css" type="text/css" media="all" />
+    <script src="../../libraries/ammap/maps/js/worldLow.js" type="text/javascript"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../../css/east-asian-relations/fontStyle.css">
+    <link rel="stylesheet" href="../../css/east-asian-relations/header.css">
+    <link rel="stylesheet" href="../../css/east-asian-relations/eastAsianLandingPage.css">
+
+    <!-- Google Analytics -->
+    <!-- Get google analytics on final site -->
+
+    <!-- Favicon -->
+    <!-- Add favicon later -->
+  </head>
+  <body>
+    <div class="site-header" style="background-color: #E53935">
+      <div class="site-title">
+        <a href="http://khou22.github.io/school/east-asian-relations/" class="site-title-link">
+          <h1>East Asian Relations</h1>
+        </a>
+      </div>
+
+      <div class="main-menu">
+        <a href="country/?c=ov" class="nav-link">Overview</a>
+        <a href="country/?c=cn" class="nav-link">China</a>
+        <a href="country/?c=jp" class="nav-link">Japan</a>
+        <a href="country/?c=nk" class="nav-link">North Korea</a>
+        <a href="country/?c=sk" class="nav-link">South Korea</a>
+        <a href="sources/" class="nav-link">Sources</a>
+      </div>
+    </div>
+    <div class="landing-page-cover">
+      <div id='videoPlaceholder'>
+      </div>
+      <div class="landing-cover-content">
+        <h4 class="landing-subtitle">East Asian Relations Presents:</h4>
+        <h1 class="landing-title">Japan is NOT China</h1>
+        <a href="#" onclick="clickedPlay()">
+          <img class="landing-video-play" src="media/Video_Play_Icon.png"/>
+        </a>
+        <script type="text/javascript">
+          var clickedPlay = function() { // Clicked play button
+            var youTubeTag = "<iframe id='youTubeVideo' width='560' height='315' src='https://www.youtube.com/embed/4wf0XRYfRBs' frameborder='0' allowfullscreen></iframe>"; // YouTube Embed
+            document.getElementById('videoPlaceholder').innerHTML = youTubeTag; // Replace the play button
+            var addFadeClass = setTimeout(function () {
+              document.getElementById('youTubeVideo').className += " video-animation"; // Add fade animation after video loads
+            }, 500);
+          }
+        </script>
+      </div>
+      <div id="scrollDown" class="scroll-down scroll-down-animation"></div>
+      <script type="text/javascript">
+        $('#scrollDown').click(function() {
+          console.log("Clicked on scroll symbol");
+          $('html,body').animate({
+            scrollTop: $("#content").offset().top - 50
+          }, '2500');
+        })
+      </script>
+      <div class="landing-background">
+        <video autoplay loop poster="media/Red_Flowers.png" class="bg-video">
+          <!-- <source src="polina.webm" type="video/webm"> -->
+          <source src="media/Red_Flowers_Compressed.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div id="content" class="landing-page-content">
+      <div class="landing-map-header">
+        <h1 class="landing-map-title">East Asian Countries</h1>
+        <h3 class="landing-map-subtitle"><i>Click on a highlighted country to view its page</i></h3>
+      </div>
+      <div id="mapdiv" style="width: 100%; height: 100%;"></div>
+      <script type="text/javascript">
+        var countries = ["China", "North Korea", "South Korea", "Japan"];
+        // $( "body" ).click(function() {
+        //   console.log("Click called");
+        //   if (document.getElementsByClassName("amcharts-description-title-div")) {
+        //     console.log("Clicked on country");
+        //   }
+        // });
+
+        // Map: https://www.amcharts.com/
+        AmCharts.makeChart( "mapdiv", {
+          "type": "map",
+          "dataProvider": {
+            "map": "worldLow",
+            // "getAreasFromMap": true, // Highlight all
+            "areas": [
+              {
+                "id": "CN",
+                "color": "#EF9A9A",
+                "description": "This is a description. Go to <a href='China'>country page</a>."
+              },
+              {
+                "id": "JP",
+                "color": "#EF5350",
+                "description": "This is a description. Go to <a href='Japan'>country page</a>."
+              },
+              {
+                "id": "KP",
+                "color": "#EF5350",
+                "description": "This is a description. Go to <a href='NorthKorea'>country page</a>."
+              },
+              {
+                "id": "KR",
+                "color": "#EF9A9A",
+                "description": "This is a description. Go to <a href='SouthKorea'>country page</a>."
+              }
+            ]
+          },
+          "areasSettings": {
+            "autoZoom": true,
+            "selectedColor": "#D50000"
+          },
+          "smallMap": {}
+
+        });
+      </script>
+    </div>
+  </body>
+</html>

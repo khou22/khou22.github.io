@@ -1,0 +1,159 @@
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0px;
+  margin: 0px;
+}
+
+.landing-page-cover {
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 5vh;
+  transform-style: preserve-3d;
+}
+
+.landing-background {
+  -webkit-filter: blur(0px) grayscale(50%) brightness(70%);
+  width: 100vw;
+  height: 105vh;
+}
+
+.bg-video {
+  /*Reference: http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+
+.glass {
+  background-color: rgba(50, 50, 50, 0.4);
+  border-bottom: 2px solid;
+  border-bottom-color: #ccc;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.landing-cover-content {
+  position: absolute;
+  z-index: 1;
+  width: 800px;
+  height: 400px;
+  text-align: center;
+  left: 50%;
+  top: 43%;
+  color: white;
+  -webkit-transform: translateX(-400px) translateY(-200px);
+}
+
+.landing-title {
+  font-size: 120px;
+  font-family: lotusFont;
+}
+
+.landing-subtitle {
+  font-size: 48px;
+  font-family: lotusFont;
+}
+
+.landing-map-header {
+  position: absolute;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 73vh;
+  text-align: center;
+  z-index: 2;
+}
+
+.landing-map-title {
+  font-size: 64px;
+}
+
+.landing-map-subtitle {
+  font-size: 24px;
+  color: #212121;
+}
+
+.landing-video-play {
+  width: 150px;
+  height: 150px;
+  margin-top: 30px !important;
+  margin: auto;
+}
+
+.scroll-down {
+  position: absolute;
+  z-index: 1;
+  background-image: url(../media/chevron_down_bw.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: white;
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-15px);
+  bottom: 10px;
+}
+
+.scroll-down-animation {
+  animation-name: bounce;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bounce {
+  from {
+    bottom: 10px;
+  }
+  to {
+    bottom: 20px;
+  }
+}
+
+.landing-page-content {
+  margin-top: 50px;
+  width: 100vw;
+  height: 94vh;
+}
+
+.video-animation {
+  /*YouTube video class*/
+  animation-name: videoEntrance;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  position: absolute;
+  z-index: 10; /*Above everything else*/
+  margin-left: 10%;
+  margin-top: 8%;
+  width: 73%;
+  height: 75%;
+}
+
+@keyframes videoEntrance {
+  from {
+    opacity: 0.0;
+    width: 0%;
+    height: 0%;
+    margin-left: 50%;
+    margin-top: 28%;
+  }
+  to {
+    opacity: 1.0;
+    width: 73%;
+    height: 75%;
+    margin-left: 10%;
+    margin-top: 8%;
+  }
+}

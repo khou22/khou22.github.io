@@ -1,0 +1,49 @@
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul, figure {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/*Override all other declarations that Jekyll imported*/
+@font-face {
+   font-family: defaultFont;
+   src: url(./../../media/site/fonts/ProximaNova/ProximaNova-Light.otf);
+}
+@font-face {
+   font-family: defaultFont_Extra_Bold;
+   src: url(./../../media/site/fonts/ProximaNova/ProximaNova-Exxtrabold.otf);
+   font-weight: bolder;
+}
+@font-face {
+   font-family: defaultFont_bold;
+   src: url(./../../media/site/fonts/ProximaNova/ProximaNova-Semibold.otf);
+   font-weight: bold;
+}
+@font-face {
+   font-family: defaultFont_Italics;
+   src: url(./../../media/site/fonts/ProximaNova/ProximaNova-LightItalic.otf);
+   font-weight: italic;
+}
+@font-face {
+   font-family: defaultFont_Bold_Italics;
+   src: url(./../../media/site/fonts/ProximaNova/ProximaNova-SemiboldIt.otf);
+   font-weight: bold italic;
+}
+
+@font-face {
+   font-family: lotusFont;
+   src: url(./../../../media/site/fonts/RagingRedLotus/RagingRedLotusBB.ttf);
+}
+
+* {
+  font-family: defaultFont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: defaultFont;
+}
+
+p, div {
+    font-family: defaultFont;
+}
