@@ -171,7 +171,7 @@ var WelcomeSection = React.createClass({
   render: function() {
     var countryName = this.props.data.countryName;
     var countrySlogan = this.props.data.countrySlogan;
-    var backgroundStyle = { "backgroundImage": "url(" + this.props.data.welcomeBackground + ")"}
+    var backgroundStyle = { "backgroundImage": "url(../media/" + this.props.data.welcomeBackground + ")"}
     return (
       <span>
         <div className="ea-welcome" style={backgroundStyle}>

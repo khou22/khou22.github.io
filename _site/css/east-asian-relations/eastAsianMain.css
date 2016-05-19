@@ -1,7 +1,8 @@
 .ea-welcome {
   margin-top: 50px;
   height: 70vh;
-  width: 100vw;
+  width: 105vw;
+  left: -2%; /*Get ride of weird borders*/
   top: 0;
   background-color: white;
   background-size: cover;

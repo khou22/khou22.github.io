@@ -4,7 +4,7 @@ var pageData = [
     countryName: "East Asia",
     countrySlug: "ov", // Shortened name
     countrySlogan: "\"East Asian countries are different? Really?\"",
-    welcomeBackground: "http://vectorish.com/wp-content/plugins/vectorish-function/file/preview/landscape-background-vector.jpg",
+    welcomeBackground: "Asian_Background.jpg",
     themeColor: "#422212",
     articles: [
       {
@@ -25,7 +25,7 @@ var pageData = [
     countryName: "China",
     countrySlug: "cn", // Shortened name
     countrySlogan: "\"We're taking over the world...right?\"",
-    welcomeBackground: "http://vignette2.wikia.nocookie.net/steamtradingcards/images/1/11/Guilty_Gear_Isuka_Background_China.jpg/revision/latest?cb=20140520060849",
+    welcomeBackground: "China_Background.jpg",
     themeColor: "#E53935",
     articles: [
       {
@@ -69,7 +69,7 @@ var pageData = [
     countryName: "Japan",
     countrySlug: "jp", // Shortened name
     countrySlogan: "The horror behind the anime...",
-    welcomeBackground: "http://www.twitrcovers.com/wp-content/uploads/2013/12/Japan-Jonasdero-l.jpg",
+    welcomeBackground: "Japan_Background.jpg",
     themeColor: "#2659C4",
     articles: [
       {
@@ -92,8 +92,8 @@ var pageData = [
   {
     countryName: "North Korea",
     countrySlug: "nk", // Shortened name
-    countrySlogan: "\"Down with the American imperialists!\"",
-    welcomeBackground: "http://www.wallpaperup.com/uploads/wallpapers/2013/02/19/41987/big_thumb_be621711dac84f62dfc982d5959f2148.jpg",
+    countrySlogan: "\"Down with the American imperialists! (Once we get electricity)\"",
+    welcomeBackground: "North_Korea_Background.jpg",
     themeColor: "#E53935",
     articles: [
       {
@@ -221,7 +221,7 @@ var pageData = [
     countryName: "South Korea",
     countrySlug: "sk", // Shortened name
     countrySlogan: "\"Eat. Sleep. K-Pop. Repeat.\"",
-    welcomeBackground: "http://www.hdwallpapers.in/walls/seoul_south_korea-wide.jpg",
+    welcomeBackground: "South_Korea_Background.jpg",
     themeColor: "#2659C4",
     articles: [
       {
