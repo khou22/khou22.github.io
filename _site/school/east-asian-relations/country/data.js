@@ -74,7 +74,7 @@ var pageData = [
     articles: [
       {
         title: "Japan",
-        author: "Pauline Unietis",
+        author: "NA",
         indent: true,
         youTubeVideos: [],
         images: [],
