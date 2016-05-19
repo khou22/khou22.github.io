@@ -584,7 +584,7 @@ var individualTakeaways = [
   },
   {
     name: "Caitlin",
-    content: "NA"
+    content: " Learning about the Chinese firewall was especially interesting for me. It pushed me to consider both how the Chinese and ourselves in the US access and respond to information."
   },
   {
     name: "Maddy",
@@ -592,7 +592,7 @@ var individualTakeaways = [
   },
   {
     name: "Luke",
-    content: "NA"
+    content: "I’ve learned a lot of great things, but most impactful has been the realization that modernization does not mean westernization. I did not consciously believe this before, but I had just been operating under that assumption. But while studying these different countries, I realized that there are more than one type of power and more than one type of way to interact with the world."
   },
   {
     name: "Tony",
