@@ -46,13 +46,13 @@ body {
 .landing-cover-content {
   position: absolute;
   z-index: 1;
-  width: 800px;
+  width: 100%;
   height: 400px;
   text-align: center;
-  left: 50%;
+  /*left: 50%;*/
   top: 43%;
   color: white;
-  -webkit-transform: translateX(-400px) translateY(-200px);
+  -webkit-transform: translateX(0px) translateY(-200px);
 }
 
 .landing-title {
@@ -179,4 +179,27 @@ body {
     margin-left: 10%;
     margin-top: 8%;
   }
+}
+
+@-webkit-keyframes blinkCurser {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes blinkCurser {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.actor__content--typing {
+  -webkit-animation: blinkCurser 500ms infinite;
+  animation: blinkCurser 500ms infinite;
+}
+
+.invisible-color {
+  color: rgba(255, 255, 255, 0);
+}
+
+.lotusFont {
+  font-family: lotusFont;
 }

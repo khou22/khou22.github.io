@@ -59,7 +59,30 @@ layout: default
       </div>
       <div class="landing-cover-content">
         <h4 class="landing-subtitle">East Asian Relations Presents:</h4>
-        <h1 class="landing-title">East Asian Misconceptions</h1>
+        <h1 class="landing-title">
+          <span class="invisible-color">|</span>
+          <span id="landing-title" class="lotusFont">East Asian Misconceptions</span>
+          <span class="actor__content--typing">|</span>
+          <script type="text/javascript">
+            // TheaterJS functionality
+            var theater = theaterJS({ local: 'fr' })
+
+            theater
+              .on('type:start, erase:start', function () {
+                // theater.getCurrentActor().$element.classList.add('actor__content--typing')
+              })
+              .on('type:end, erase:end', function () {
+                theater.getCurrentActor().$element.classList.remove('actor__content--typing')
+              })
+
+            theater
+              .addActor('landing-title', { speed: 0.6, accuracy: 0.7 })
+              .addScene('landing-title:East Asian Misconceptions', 2000)
+              .addScene('landing-title:What is J-Cool?', 1000)
+              .addScene('landing-title:North Korean Steryeotypes', 2000)
+              .addScene(theater.replay.bind(theater))
+          </script>
+        </h1>
         <a href="#" onclick="clickedPlay()" title="Play intro video">
           <img class="landing-video-play" src="media/Video_Play_Icon.png"/>
         </a>
