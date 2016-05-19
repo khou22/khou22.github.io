@@ -48,8 +48,9 @@ var pageData = [
         youTubeVideos: [],
         images: [],
         content: [
-          "China is not taking over the world and isn’t going to defeat the US or something - China currently has too much of its interests tied intimately together with its economics and so much of it is integrated into a global, modern-day economy that it risks imploding onto itself if it tries to do anything to upset the global status quo by too much. Most of China’s power is in its soft power in form of economy, not as much in military hard power. Despite frequent claims of Chinese military getting more and more powerful (which have a grain of truth to them), the Chinese military is still decidedly less powerful than that of the US. China is surrounded by countries aligned with the US (Japan, South Korea, Philippines for example) and is currently in the middle of a very difficult economic transition, so it’s got a lot of domestic issues to take care first. The Economist claimed that “It is a question of when, not if, real trouble will hit in China” with regards to a debt bust that it thinks China is going to have soon, showing that mainstream media also recognize the difficulties China is having with its economy (for further reference look at China’s stock market). There are many issues with the Chinese economy, and it may take only one of them to implode the Chinese market and send it into turmoil. Furthermore, the most recent incarnation of China’s government is also relatively young and untested, and it remains to be seen whether it can whether all kinds of challenges, such as world wars and major economic downturns and come out better than before.",
-          "As for China getting richer than the US and all such hype, as of 2014 the US is 22.3% of world economy by GDP, while China is only 13.4%. It would take China a very long time, if ever, to catch up with and exceed the economic prowess of an established superpower. Minus all kinds of structural problems, such as increasingly inefficient state-run giants (the world’s top 4 biggest banks by asset are all state-run Chinese banks, and China’s “3 oil buckets” take up 2nd to 4th in the world by revenue), centralized command economy blocking market-orientated reforms and the debt/high-risk lending issues all across China, China still has a long way to go to surpass the US."
+          "China is not taking over the world and isn’t going to defeat the US, at least not any time soon - China currently has too much of its interests tied intimately together with its economics and integrated into a global, modern-day economy that it risks imploding onto itself if it tries to do anything to upset the global status quo by so much that it becomes conceivable for China to surpass the US, both in terms of soft power and hard power.",
+          "Comparatively speaking, a lot of China’s power is in its soft power in form of economy, not as much in military hard power. Despite frequent claims of Chinese military getting more and more powerful (which is true), the Chinese military is still decidedly less powerful than that of the US in almost all critical areas, such as nuclear projection capabilities and fighter jet engines. China is surrounded by countries aligned with the US (e.g. Japan, South Korea, Philippines) and is currently in the middle of a very difficult economic transition, so it’s has domestic issues to take care first. The Economist claimed that “It is a question of when, not if, real trouble will hit in China” with regards to a debt bust that it thinks China is going to have soon, showing that mainstream media also recognize the difficulties China is having with its economy (for further reference look at China’s reliably volatile stock market). There are many serious issues with the Chinese economy, and it may take only one of them to collapse the Chinese market and send it into turmoil. Furthermore, the most recent incarnation of China’s government is also relatively young and untested, and it remains to be seen whether it can whether all kinds of challenges, such as world wars and major economic downturns and come out better than before in a complex global environment.",
+          "As for the “China getting richer than the US” hype, in 2014 the US accounted for 22.3% of world GDP, while China accounted for 13.4%. Another indicator showing the vast differences between the US and China is the total net national wealth of these two countries: in 2015 the US had one such net wealth of over 85000 billions USD, while China’s corresponding figure was slightly less than 23000 billion USD. It would take China a very long time, if ever, to catch up with and exceed the economic prowess of an established superpower like the US. Minus all kinds of structural problems, such as increasingly inefficient state-run giants (which account for the majority of China’s banking sector), centralized command economy blocking market-orientated reforms and the debt/high-risk lending issues all across China, China still has a long way to go to surpass the US."
         ]
       },
       {
@@ -340,6 +341,26 @@ var sourcesData = [
       {
         title: "History of China Timeline",
         link: "http://www.bloomberg.com/graphics/2016-us-vs-china-economy/"
+      },
+      {
+        title: "http://www.bbc.com/news/world-asia-pacific-13017882",
+        title: "http://www.bbc.com/news/world-asia-pacific-13017882"
+      },
+      {
+        title: "http://www.economist.com/news/leaders/21698240-it-question-when-not-if-real-trouble-will-hit-china-coming-debt-bust",
+        title: "http://www.economist.com/news/leaders/21698240-it-question-when-not-if-real-trouble-will-hit-china-coming-debt-bust"
+      },
+      {
+        title: "http://www.bloomberg.com/graphics/2016-us-vs-china-economy/",
+        title: "http://www.bloomberg.com/graphics/2016-us-vs-china-economy/"
+      },
+      {
+        title: "http://publications.credit-suisse.com/tasks/render/file/index.cfm?fileid=C26E3824-E868-56E0-CCA04D4BB9B9ADD5",
+        title: "http://publications.credit-suisse.com/tasks/render/file/index.cfm?fileid=C26E3824-E868-56E0-CCA04D4BB9B9ADD5"
+      },
+      {
+        title: "https://www.cia.gov/library/publications/the-world-factbook/geos/ch.html",
+        title: "https://www.cia.gov/library/publications/the-world-factbook/geos/ch.html"
       }
     ]
   },
