@@ -56,7 +56,7 @@ body {
 }
 
 .landing-title {
-  font-size: 120px;
+  font-size: 100px;
   font-family: lotusFont;
 }
 
@@ -90,10 +90,33 @@ body {
   margin: auto;
 }
 
+.landing-video-play:hover {
+  animation-name: expand;
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  width: 200px;
+  height: 200px;
+  margin-top: 5px !important;
+}
+
+@keyframes expand {
+  0% {
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    margin-top: 5px;
+  }
+}
+
 .scroll-down {
   position: absolute;
   z-index: 1;
-  background-image: url(../media/chevron_down_bw.svg);
+  background-image: url(../../school/east-asian-relations/media/chevron_down_bw.svg);
   background-size: contain;
   background-repeat: no-repeat;
   color: white;

@@ -1,3 +1,4 @@
+// console.log("TinyURL link: http://tinyurl.com/eastAsianRelations"); // So I remember
 var EastAsianRelations = React.createClass({
   getInitialState: function() {
     var countryIndex = 0;
