@@ -34,8 +34,8 @@ var ProjectsPage = React.createClass({
         },
         {
           name: "Website on East Asian Steryeotypes",
-          slug: "text-analysis",
-          image: "{{ site.baseurl }}/school/east-asian-relations",
+          slug: "{{ site.baseurl }}/school/east-asian-relations",
+          image: "",
           description: "This is a website I built from scratch for my East Asian Relations class. I was responsible for putting content online so that members of our school community could see the work we'd done that year. Because I only had a couple days to complete it, I wasn't able to add as many features as I would've liked."
         },
         {
