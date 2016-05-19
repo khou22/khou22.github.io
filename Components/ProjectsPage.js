@@ -33,6 +33,12 @@ var ProjectsPage = React.createClass({
           description: "Freelance work for a friend of mine. I designed and built a website for his new personal training business, City Strong Training."
         },
         {
+          name: "Website on East Asian Steryeotypes",
+          slug: "text-analysis",
+          image: "{{ site.baseurl }}/school/east-asian-relations",
+          description: "This is a website I built from scratch for my East Asian Relations class. I was responsible for putting content online so that members of our school community could see the work we'd done that year. Because I only had a couple days to complete it, I wasn't able to add as many features as I would've liked."
+        },
+        {
           name: "Stats Test Score Calculator",
           slug: "stats-test-score-calculator",
           image: "",
