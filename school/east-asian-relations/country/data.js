@@ -68,7 +68,7 @@ var pageData = [
   {
     countryName: "Japan",
     countrySlug: "jp", // Shortened name
-    countrySlogan: "The horror behind the anime...",
+    countrySlogan: "The crumbling society behind anime...",
     welcomeBackground: "Japan_Background.jpg",
     themeColor: "#2659C4",
     articles: [
