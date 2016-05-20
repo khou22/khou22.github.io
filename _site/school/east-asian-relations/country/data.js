@@ -9,7 +9,7 @@ var pageData = [
     articles: [
       {
         title: "Stereotype: The Issues Surrounding East Asian Countries Have No Impact Upon the US",
-        author: "Rachel Sarah",
+        author: "Rachel Cornejo",
         indent: true,
         youTubeVideos: [],
         images: [],
