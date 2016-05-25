@@ -45,6 +45,11 @@ var LandingPage = React.createClass({
         link: "http://kevinhou.wix.com/projects#!walnut-and-poplar-segmented-salad-bowl/c1jkm"
       },
       {
+        name: "Walnut and Aged Redwood Biometric Lock Box",
+        imageURL: "./..media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box.jpg",
+        link: "#"
+      }
+      {
         name: "Walnut and Aluminum Headphone Stand",
         imageURL: "./../media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand.jpg",
         link: "https://www.flickr.com/photos/khou22/albums/72157658462097054"
