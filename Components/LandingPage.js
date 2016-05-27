@@ -34,9 +34,9 @@ var LandingPage = React.createClass({
       link: "https://youtu.be/_ZSztfYnnC8"
     };
     var firstImage = { // Set first image
-        name: "Wood Turned Segmented Bowl with Inlaid Letters",
-        imageURL: "./../media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters.jpg",
-        link: "https://youtu.be/_ZSztfYnnC8"
+      name: "Walnut and Aged Redwood Biometric Lock Box",
+      imageURL: "./../media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box.jpg",
+      link: "https://www.flickr.com/photos/khou22/albums/72157668938950255"
     };
     var backgrounds = [
       {
@@ -45,10 +45,35 @@ var LandingPage = React.createClass({
         link: "http://kevinhou.wix.com/projects#!walnut-and-poplar-segmented-salad-bowl/c1jkm"
       },
       {
+        name: "Wood Turned Pens",
+        imageURL: "./../media/site/images/backgrounds/Wood_Pens_May_2016.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157660707733426"
+      },
+      {
+        name: "Wenge and Jara Wood Cable Manager",
+        imageURL: "./../media/site/images/backgrounds/Wenge_Jara_Cable_Manager.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157668939240165"
+      },
+      {
+        name: "White Mahogany Plaque",
+        imageURL: "./../media/site/images/backgrounds/White_Mahogany_Plaque.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157666393433584"
+      },
+      {
+        name: "Olive Wood Pencil Case",
+        imageURL: "./../media/site/images/backgrounds/Olive_Wood_Pencil_Case.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157668937781395"
+      },
+      {
+        name: "Maple iPhone Stand",
+        imageURL: "./../media/site/images/backgrounds/Maple_iPhone_Stand.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157668938950275"
+      },
+      {
         name: "Walnut and Aged Redwood Biometric Lock Box",
-        imageURL: "./..media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box.jpg",
-        link: "#"
-      }
+        imageURL: "./../media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157668938950255"
+      },
       {
         name: "Walnut and Aluminum Headphone Stand",
         imageURL: "./../media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand.jpg",
