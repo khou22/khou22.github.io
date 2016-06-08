@@ -7,63 +7,99 @@ var App = React.createClass({ // Main parent component
         {
           name: "School",
           groupIcon: "../../../media/site/icons/highSchool_bw.png",
+          groupIconFilter: {
+            "-webkit-filter": "invert(100%)"
+          },
           links: [
             {
               label: "Google",
               url: "https://www.google.com",
-              iconPath: "../../../media/site/icons/email_bw.png"
+              iconPath: "../../../media/site/icons/email_bw.png",
+              iconFilter: {
+                "-webkit-filter": "invert(100%)"
+              }
             },
             {
               label: "YouTube",
               url: "https://www.youtube.com",
-              iconPath: "../../../media/site/icons/logos/YouTube_bw.png"
+              iconPath: "../../../media/site/icons/logos/YouTube_bw.png",
+              iconFilter: {
+                "-webkit-filter": "invert(0%)"
+              }
             },
             {
               label: "LWHS",
               url: "http://www.lwhs.org/page",
-              iconPath: "../../../media/site/icons/highSchool_bw.png"
+              iconPath: "../../../media/site/icons/highSchool_bw.png",
+              iconFilter: {
+                "-webkit-filter": "invert(0%)"
+              }
             },
           ]
         },
         {
           name: "Personal",
           groupIcon: "../../../media/site/icons/home_bw.png",
+          groupIconFilter: {
+            "-webkit-filter": "invert(0%)"
+          },
           links: [
             {
               label: "Gmail",
               url: "https://www.gmail.com",
-              iconPath: "../../../media/site/icons/email_bw.png"
+              iconPath: "../../../media/site/icons/email_bw.png",
+              iconFilter: {
+                "-webkit-filter": "invert(0%)"
+              }
             },
             {
               label: "YouTube",
               url: "https://www.youtube.com",
-              iconPath: "../../../media/site/icons/logos/YouTube_bw.png"
+              iconPath: "../../../media/site/icons/logos/YouTube_bw.png",
+              iconFilter: {
+                "-webkit-filter": "invert(0%)"
+              }
             },
             {
               label: "Facebook",
               url: "https://www.facebook.com/",
-              iconPath: "../../../media/site/icons/logos/Facebook_bw.png"
+              iconPath: "../../../media/site/icons/logos/Facebook_bw.png",
+              iconFilter: {
+                "-webkit-filter": "invert(0%)"
+              }
             },
           ]
         },
         {
           name: "Programming",
           groupIcon: "../../../media/site/icons/code.png",
+          groupIconFilter: {
+            "-webkit-filter": "invert(0%)"
+          },
           links: [
             {
               label: "GitHub",
               url: "https://github.com/khou22",
-              iconPath: "../../../media/site/icons/logos/Github_bw.png"
+              iconPath: "../../../media/site/icons/logos/Github_bw.png",
+              iconFilter: {
+                "-webkit-filter": "invert(0%)"
+              }
             },
             {
               label: "YouTube",
               url: "https://www.youtube.com",
-              iconPath: "../../../media/site/icons/email_bw.png"
+              iconPath: "../../../media/site/icons/email_bw.png",
+              iconFilter: {
+                "-webkit-filter": "invert(0%)"
+              }
             },
             {
               label: "LWHS",
               url: "http://www.lwhs.org/page",
-              iconPath: "../../../media/site/icons/email_bw.png"
+              iconPath: "../../../media/site/icons/email_bw.png",
+              iconFilter: {
+                "-webkit-filter": "invert(0%)"
+              }
             },
           ]
         }
@@ -274,7 +310,10 @@ var ButtonGroup = React.createClass({
     var clickedLink = this.clickedLink;
     var linkNodes = this.state.links.map(function(link) {
       counter++; // Index
-      var iconStyle = { "backgroundImage": "url(" + link.iconPath + ")" }
+      // var iconStyle = { "backgroundImage": "url(" + link.iconPath + ")" }
+      var iconStyle = link.iconFilter;
+      iconStyle.backgroundImage = "url(" + link.iconPath + ")";  // Build icon style
+      // console.log(iconStyle); // Debugging
       return (
         <div style={iconStyle}
           className={"button-subgroup group-" + index + " group-" + index + "-" + counter}
@@ -283,13 +322,14 @@ var ButtonGroup = React.createClass({
         </div>
       )
     })
+    var buttonGroupStyle = this.props.content.groupIconFilter; // Apply filters
     return (
       <div className="group">
         <div className={"button-group group-" + index}
           onMouseEnter={this.showGroup.bind(this, "show")}
           onMouseOut={this.showGroup.bind(this, "hide")}
           onClick={this.clickedGroup.bind(this)} >
-          <img src={this.props.content.groupIcon} className="group-icon"/>
+          <img src={this.props.content.groupIcon} style={buttonGroupStyle} className="group-icon"/>
         </div>
         { this.state.showLinks ? (
           <span onMouseOver={this.resetShow.bind(this)} >
