@@ -9,7 +9,7 @@ tags: []
 featured: "no"
 ---
 # Localization in Swift XCode 7.3.1
-
+*** This is a blog post in progress ***
 # Prepare XCode Project
 Go to the project page → Localizations → Add a new language and select all the resources
 Sometimes the storyboards aren’t all localized. If that’s the case, you must manually localize storyboards. To do this, on the info panel on the right, can press localize and add the languages you want.
