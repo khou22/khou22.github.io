@@ -33,7 +33,7 @@ var LandingPage = React.createClass({
       message: "New wood project: Wood Turned Segmented Bowl with Inlaid Letters",
       link: "https://youtu.be/_ZSztfYnnC8"
     };
-    var firstImage = { // Set first image
+    var firstImage = { // Set first image — not working
       name: "Walnut and Aged Redwood Biometric Lock Box",
       imageURL: "./../media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box.jpg",
       link: "https://www.flickr.com/photos/khou22/albums/72157668938950255"
