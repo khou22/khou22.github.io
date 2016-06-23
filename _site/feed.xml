@@ -6,9 +6,82 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jun 2016 18:18:53 -0700</pubDate>
-    <lastBuildDate>Mon, 20 Jun 2016 18:18:53 -0700</lastBuildDate>
+    <pubDate>Wed, 22 Jun 2016 18:20:26 -0700</pubDate>
+    <lastBuildDate>Wed, 22 Jun 2016 18:20:26 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>WWDC 2016: Internationalization Best Practices</title>
+        <description>&lt;p&gt;Video (must be played in Safari): &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2016/201/&quot; target=&quot;_blank&quot;&gt;https://developer.apple.com/videos/play/wwdc2016/201/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;Formatters for Dates/Times&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Don’t use a set date format&lt;/li&gt;
+  &lt;li&gt;Chinese and English are opposite for example&lt;/li&gt;
+  &lt;li&gt;Can’t have a fixed format&lt;/li&gt;
+  &lt;li&gt;Use the predefined .shortStyle/.mediumStyle/etc.&lt;/li&gt;
+  &lt;li&gt;Works for both dates and times&lt;/li&gt;
+  &lt;li&gt;Automatically formats it for each language&lt;/li&gt;
+  &lt;li&gt;Can use a template for custom things&lt;/li&gt;
+  &lt;li&gt;But use .setLocalizedDateFormatFromTemplate(“mYd”)&lt;/li&gt;
+  &lt;li&gt;Will try and make it correct when it’s a different language&lt;/li&gt;
+  &lt;li&gt;https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Formatters for Names:&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Show names the correct way with PersonNameComponents()&lt;/li&gt;
+  &lt;li&gt;Ask for the .long/.medium/.short/.abbreviated format&lt;/li&gt;
+  &lt;li&gt;Will support different langauges&lt;/li&gt;
+  &lt;li&gt;Name parsing → full name to a set of components&lt;/li&gt;
+  &lt;li&gt;Uses a statistical model&lt;/li&gt;
+  &lt;li&gt;Not parsing based on a formula&lt;/li&gt;
+  &lt;li&gt;Supports multiple languages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Other:&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;In labels, don’t clip lines — must have the entire character showing&lt;/li&gt;
+  &lt;li&gt;Multi-line labels, consider changing the line spacing&lt;/li&gt;
+  &lt;li&gt;UIFont.preferredFont(forTextStyle: UIFontTextStyleBody)&lt;/li&gt;
+  &lt;li&gt;Automatically adjusts line height for different languages&lt;/li&gt;
+  &lt;li&gt;Icons are really important&lt;/li&gt;
+  &lt;li&gt;Avoid using words/numbers in icons&lt;/li&gt;
+  &lt;li&gt;“Photos” is a good example of an icon that doesn&#39;t tie it to a specific language&lt;/li&gt;
+  &lt;li&gt;Not left to right or right to left&lt;/li&gt;
+  &lt;li&gt;Good for all languages&lt;/li&gt;
+  &lt;li&gt;Create dedicated artwork for right to left languages&lt;/li&gt;
+  &lt;li&gt;But if you just want to flip the image, you can use the existing API&lt;/li&gt;
+  &lt;li&gt;App Store Names&lt;/li&gt;
+  &lt;li&gt;Users are most likely to download apps in their language&lt;/li&gt;
+  &lt;li&gt;Don’t always assume users will type in English&lt;/li&gt;
+  &lt;li&gt;They might run OS in English, use keyboard from another language&lt;/li&gt;
+  &lt;li&gt;Must test this before deploying&lt;/li&gt;
+  &lt;li&gt;Localized Screenshots&lt;/li&gt;
+  &lt;li&gt;Localized content/keyboard&lt;/li&gt;
+  &lt;li&gt;Want to see the experience they will have in their language&lt;/li&gt;
+  &lt;li&gt;Custom features — examples:&lt;/li&gt;
+  &lt;li&gt;Support for lunar calendar&lt;/li&gt;
+  &lt;li&gt;Templates for non-English/non-Western cultures&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Types of Formatters:&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;ByteCountFormatter&lt;/li&gt;
+  &lt;li&gt;DateFormatter&lt;/li&gt;
+  &lt;li&gt;DateComponentsFormatter&lt;/li&gt;
+  &lt;li&gt;DateIntervalFormatter&lt;/li&gt;
+  &lt;li&gt;NumberFormatter&lt;/li&gt;
+  &lt;li&gt;PersonNameComponentsFormatter&lt;/li&gt;
+  &lt;li&gt;MeasurementFormatter&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Wed, 22 Jun 2016 11:15:41 -0700</pubDate>
+        <link>http://khou22.github.io/2016/06/22/wwdc-2016-internationalization-best-practices.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/2016/06/22/wwdc-2016-internationalization-best-practices.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Internationalizing Your iOS App in XCode 7</title>
@@ -370,51 +443,6 @@ Reference: &lt;a href=&quot;http://stackoverflow.com/questions/3173320/text-prog
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/01/31/installing-and-getting-started-with-python.html</guid>
         
         <category>python</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Getting Started with Ionic: First Impressions, Tips, and Notes to Self</title>
-        <description>&lt;h1 id=&quot;working-on-the-project&quot;&gt;Working on the Project&lt;/h1&gt;
-&lt;p&gt;Open server:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;dev_appserver.py Uber&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;run-the-project&quot;&gt;Run the Project&lt;/h1&gt;
-&lt;p&gt;To run a project locally. This will automatically reload when a file is saved/modified.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ionic serve&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;To run in xcode simulator. This will automatically start the iPhone 6 simulator and run your app.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ionic run ios -l -c -s&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;To get it on “Ionic View” for my iPhone. This will upload your project to your online account and make it accessible via your iPhone “Ionic View” app.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ionic upload&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;opening-the-project-in-xcode&quot;&gt;Opening the Project in Xcode&lt;/h1&gt;
-&lt;p&gt;Open the xcode project on xcode. Will allow you to build and sync it to your device.
-/Users/KevinHou/Documents/Programming/UberScheduler/UberScheduler/platforms/ios
-Then click run&lt;/p&gt;
-
-&lt;h1 id=&quot;logging-into-ionic-command-line&quot;&gt;Logging Into Ionic (Command Line)&lt;/h1&gt;
-&lt;p&gt;To log in to Ionic. This will allow you to upload your app to Ionic view.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ionic login&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;starting-a-new-ionic-project&quot;&gt;Starting a New Ionic Project&lt;/h1&gt;
-&lt;p&gt;Good reference for starting a new Ionic project:
-&lt;a href=&quot;http://stackoverflow.com/questions/30518213/error-uploading-ionic-app&quot; target=&quot;blank&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 28 Jan 2016 12:38:34 -0800</pubDate>
-        <link>http://khou22.github.io/programming/2016/01/28/getting-started-with-ionic-first-impressions-tips-and-notes-to-self.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/01/28/getting-started-with-ionic-first-impressions-tips-and-notes-to-self.html</guid>
-        
-        <category>ionic</category>
         
         
         <category>programming</category>

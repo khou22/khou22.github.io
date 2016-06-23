@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kevin Hou's Blog</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
-">
+  <title>WWDC 2016: Internationalization Best Practices</title>
+  <meta name="description" content="Video (must be played in Safari): https://developer.apple.com/videos/play/wwdc2016/201/">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -19,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/category/">
+  <link rel="canonical" href="http://khou22.github.io/2016/06/22/wwdc-2016-internationalization-best-practices.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -164,333 +163,100 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <!-- Blog homepage -->
+        <div class="post">
+  
+    
+    
+      
+        
+      
+    
 
-<div class="home left-main">
+    
+        
+    
 
-  <h1 class="page-heading">Browse All Categories</h1>
-  <br />
-  <ul class="post-list">
-    <!-- Repeats for (maps) all posts -->
     
-      <li>
-        <h5 class="category-list">
-          <a href="programming">
-            Programming
-          </a>
-        </h5>
-      </li>
+      
     
-      <li>
-        <h5 class="category-list">
-          <a href="design">
-            Design
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="wood">
-            Wood
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="school">
-            School
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="life">
-            Life
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="work">
-            Work
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="computer">
-            Computer
-          </a>
-        </h5>
-      </li>
-    
-  </ul>
+  <header class="post-header">
+    <p class="post-return-main"><a href="/blog">
+      <
+      Return to all blogs
+    </a></p>
+    <br />
+    <h1 class="post-title">WWDC 2016: Internationalization Best Practices</h1>
+    <p class="post-meta">Jun 22, 2016 • Kevin Hou</p>
+  </header>
+  <article class="post-content">
+    <p>Video (must be played in Safari): <a href="https://developer.apple.com/videos/play/wwdc2016/201/" target="_blank">https://developer.apple.com/videos/play/wwdc2016/201/</a></p>
 
-  <p class="rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></p>
+<h1>Formatters for Dates/Times</h1>
+<ul>
+  <li>Don’t use a set date format</li>
+  <li>Chinese and English are opposite for example</li>
+  <li>Can’t have a fixed format</li>
+  <li>Use the predefined .shortStyle/.mediumStyle/etc.</li>
+  <li>Works for both dates and times</li>
+  <li>Automatically formats it for each language</li>
+  <li>Can use a template for custom things</li>
+  <li>But use .setLocalizedDateFormatFromTemplate(“mYd”)</li>
+  <li>Will try and make it correct when it’s a different language</li>
+  <li>https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/</li>
+</ul>
 
+<h1>Formatters for Names:</h1>
+<ul>
+  <li>Show names the correct way with PersonNameComponents()</li>
+  <li>Ask for the .long/.medium/.short/.abbreviated format</li>
+  <li>Will support different langauges</li>
+  <li>Name parsing → full name to a set of components</li>
+  <li>Uses a statistical model</li>
+  <li>Not parsing based on a formula</li>
+  <li>Supports multiple languages</li>
+</ul>
+
+<h1>Other:</h1>
+<ul>
+  <li>In labels, don’t clip lines — must have the entire character showing</li>
+  <li>Multi-line labels, consider changing the line spacing</li>
+  <li>UIFont.preferredFont(forTextStyle: UIFontTextStyleBody)</li>
+  <li>Automatically adjusts line height for different languages</li>
+  <li>Icons are really important</li>
+  <li>Avoid using words/numbers in icons</li>
+  <li>“Photos” is a good example of an icon that doesn't tie it to a specific language</li>
+  <li>Not left to right or right to left</li>
+  <li>Good for all languages</li>
+  <li>Create dedicated artwork for right to left languages</li>
+  <li>But if you just want to flip the image, you can use the existing API</li>
+  <li>App Store Names</li>
+  <li>Users are most likely to download apps in their language</li>
+  <li>Don’t always assume users will type in English</li>
+  <li>They might run OS in English, use keyboard from another language</li>
+  <li>Must test this before deploying</li>
+  <li>Localized Screenshots</li>
+  <li>Localized content/keyboard</li>
+  <li>Want to see the experience they will have in their language</li>
+  <li>Custom features — examples:</li>
+  <li>Support for lunar calendar</li>
+  <li>Templates for non-English/non-Western cultures</li>
+</ul>
+
+<h1>Types of Formatters:</h1>
+<ol>
+  <li>ByteCountFormatter</li>
+  <li>DateFormatter</li>
+  <li>DateComponentsFormatter</li>
+  <li>DateIntervalFormatter</li>
+  <li>NumberFormatter</li>
+  <li>PersonNameComponentsFormatter</li>
+  <li>MeasurementFormatter</li>
+</ol>
+
+  </article>
+  <p id="post-meta"></p>
 </div>
 
-<div class="right-column">
-  <div class="featured">
-    Featured posts:
-    <ol>
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/design/2016/05/01/github-octocat-design-challenge-winner.html">GitHub Octocat Design Challenge Winner</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2016/04/21/uber-scheduler-calling-ubers-alarm-clock-style.html">Uber Scheduler: Calling Ubers Alarm Clock Style</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2016/04/18/first-hackathon-24-hours-straight-of-coding.html">First Hackathon: 24 Hours Straight of Coding</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/11/01/text-analysis-app-how-do-you-talk-to-people-on-facebook-versus-in-an-engineering-report.html">Text Analysis App: How Do You Talk To People on Facebook Versus In An Engineering Report?</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/10/25/nodejs-basics---setting-up-a-local-web-server.html">NodeJS Basics - Setting Up A Local Web Server</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/08/02/best-way-to-customize-terminal.html">Best Way to Customize Terminal</a>
-          </li>
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/07/31/accessibility-enabling-voiceover-on-buttons-and-links.html">Accessibility: Enabling Voiceover on Buttons and Links</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="recent">
-    Recent posts:
-    <ol>
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/2016/06/22/wwdc-2016-internationalization-best-practices.html">WWDC 2016: Internationalization Best Practices</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/2016/06/20/internationalizing-your-ios-app-in-xcode-7.html">Internationalizing Your iOS App in XCode 7</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/2016/05/20/making-a-wood-turned-segmented-bowl-with-inlaid-letters.html">Making a Wood Turned Segmented Bowl with Inlaid Letters</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="browse-category">
-    <a href="/blog/category">
-      Browse by Category
-    </a>
-  </div>
-  <div class="browse-tag">
-    <a href="/blog/tag">
-      Browse by Tag
-    </a>
-  </div>
-</div>
       </div>
     </div>
 
