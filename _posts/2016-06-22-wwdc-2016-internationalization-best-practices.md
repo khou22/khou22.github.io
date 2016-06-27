@@ -3,14 +3,15 @@ layout: post
 title: "WWDC 2016: Internationalization Best Practices"
 author: "Kevin Hou"
 date: 2016-06-22 18:15:41
-description: ""
-category:
+description: "My thoughts, notes, and main takeaways about the WWDC workshop on internationalization."
+category: Programming
 tags: []
 featured: "no"
 ---
 Video (must be played in Safari): <a href="https://developer.apple.com/videos/play/wwdc2016/201/" target="_blank">https://developer.apple.com/videos/play/wwdc2016/201/</a>
 
-<h1>Formatters for Dates/Times</h1>
+<br class="post-line-break">
+<h3 class="post-subheader">Formatters for Dates/Times</h3>
 <ul>
   <li>Don’t use a set date format</li>
   <li>Chinese and English are opposite for example</li>
@@ -23,8 +24,8 @@ Video (must be played in Safari): <a href="https://developer.apple.com/videos/pl
   <li>Will try and make it correct when it’s a different language</li>
   <li>https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/</li>
 </ul>
-
-<h1>Formatters for Names:</h1>
+<br class="post-line-break">
+<h3 class="post-subheader">Formatters for Names:</h3>
 <ul>
   <li>Show names the correct way with PersonNameComponents()</li>
   <li>Ask for the .long/.medium/.short/.abbreviated format</li>
@@ -35,7 +36,8 @@ Video (must be played in Safari): <a href="https://developer.apple.com/videos/pl
   <li>Supports multiple languages</li>
 </ul>
 
-<h1>Other:</h1>
+<br class="post-line-break">
+<h3 class="post-subheader">Other:</h3>
 <ul>
   <li>In labels, don’t clip lines — must have the entire character showing</li>
   <li>Multi-line labels, consider changing the line spacing</li>
@@ -60,8 +62,8 @@ Video (must be played in Safari): <a href="https://developer.apple.com/videos/pl
   <li>Support for lunar calendar</li>
   <li>Templates for non-English/non-Western cultures</li>
 </ul>
-
-<h1>Types of Formatters:</h1>
+<br class="post-line-break">
+<h3 class="post-subheader">Types of Formatters:</h3>
 <ol>
   <li>ByteCountFormatter</li>
   <li>DateFormatter</li>
