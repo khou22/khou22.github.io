@@ -167,28 +167,9 @@
   
     
     
-      
-    
 
     
-        
-        
-          
-            
-                
-                
-            
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header class="post-header">
     <p class="post-return-main"><a href="/blog">
@@ -202,31 +183,31 @@
   <article class="post-content">
     <p>As a lot of you guys know, a proper if/then statement looks like this:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
   <span class="p">...</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
   <span class="p">...</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>Or something along those lines. If you want to set a value for a variable, it can take at least 6 lines of code. In a long file, adding 6 lines of code every time you want to set a variable based on an if-statement can make your code very messy. For example, to set a simple yes/no off of a boolean takes this:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;yes&quot;</span><span class="p">;</span>
+  <span class="nx">str</span> <span class="o">=</span> <span class="s2">"yes"</span><span class="p">;</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-  <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;no&quot;</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+  <span class="nx">str</span> <span class="o">=</span> <span class="s2">"no"</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>An <b>efficient, concise</b> alternative is to use this format condenses this code into one line:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">condition</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">?</span> <span class="s2">&quot;yes&quot;</span> <span class="o">:</span> <span class="s2">&quot;no&quot;</span><span class="p">;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">condition</span> <span class="o">==</span> <span class="kc">true</span> <span class="p">?</span> <span class="s2">"yes"</span> <span class="p">:</span> <span class="s2">"no"</span><span class="p">;</span></code></pre></figure>
 
 <p>This is a very simple, easy trick to greatly increase the readabitlity of your code. Instead of having an incredibely long file with lots of short lines, you can work horizontally and make use of your horizontal realistate.</p>
 
 <p>This method is particularly useful when you need many if-statements in a row. Hope this help!</p>
 
   </article>
-  <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/javascript/">Javascript</a></p>
+  <p id="post-meta">Posted with <a href="/blog/tag/javascript/">Javascript</a></p>
 </div>
 
       </div>

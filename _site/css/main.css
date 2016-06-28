@@ -701,6 +701,9 @@ li {
   width: 150px;
   display: inline-block; }
 
+.blog-tutorial-step {
+  margin-bottom: 12px; }
+
 /*For the index blog page*/
 .left-main {
   width: 78%;
