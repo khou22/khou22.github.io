@@ -17,6 +17,12 @@ Sometimes the storyboards aren’t all localized. If that’s the case, you must
 # Prepping Code
 This is for hard coded strings in the code
 You can wrap them in: NSLocalizedString(String, comment: String)
+For instances where you have hard coded strings <i>and</i> variables within the hard coded strings, you must use the String format setup. For example:
+<br>// Old setup:
+<br>let localizedString = NSLocalizedString("Test Results - \(interval)", comment: "Test results")
+<br>// New setup:
+<br>let localizedString = String.localizedStringWithFormat(NSLocalizedString("Test Results - %@", comment: "Test results date string"), interval)
+<br>The "%@" represents a placeholder in the String that will not be translated into another language, and can therefore be used as a bookmark to inject a variable into a localized string.
 
 # Adding in translations
 To Export:
