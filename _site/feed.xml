@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Jun 2016 15:16:34 -0700</pubDate>
-    <lastBuildDate>Tue, 28 Jun 2016 15:16:34 -0700</lastBuildDate>
+    <pubDate>Tue, 28 Jun 2016 15:25:57 -0700</pubDate>
+    <lastBuildDate>Tue, 28 Jun 2016 15:25:57 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -17,7 +17,7 @@
 
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Like all programmers, I googled my way through this project. This &amp;lt;a href=”http://www.thorntech.com/2015/08/need-to-create-an-onboarding-flow-for-your-mobile-app-heres-how-to-do-it-using-uipageviewcontroller-in-swift/”&amp;gt;tutorial&amp;lt;/a&amp;gt; turned out to be a gold mine, but there were plenty of visits to StackOverflow and Apple’s developer documentation.&lt;/p&gt;
+&lt;p&gt;Like all programmers, I googled my way through this project. This &lt;a href=&quot;http://www.thorntech.com/2015/08/need-to-create-an-onboarding-flow-for-your-mobile-app-heres-how-to-do-it-using-uipageviewcontroller-in-swift/&quot; target=&quot;_blank&quot;&gt;tutorial&lt;/a&gt; turned out to be a gold mine, but there were plenty of visits to StackOverflow and Apple’s developer documentation.&lt;/p&gt;
 
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 &lt;h3 class=&quot;post-subheader&quot;&gt;Tutorial&lt;/h3&gt;
@@ -25,7 +25,8 @@
 &lt;ol&gt;
 &lt;li class=&quot;blog-tutorial-step&quot;&gt;I started by creating a single view application. Instead of selecting the “Page-Based Application” template, I decided it would be best to start from scratch so that I could really understand the meat of what was going on. I created a simple landing page with a button that would connect to the “Pager” — the page view controller that houses all of the screens that would populate the side-scrolling view.&lt;/li&gt;
 
-&lt;li class=&quot;blog-tutorial-step&quot;&gt;Next, create the “Pager” by dragging a “Page View Controller” next to the main “View Controller”. You also should create a file named “Pager.swift”, import the UIKit module, and create a UIPageViewController class like so:
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
+Next, create the “Pager” by dragging a “Page View Controller” next to the main “View Controller”. You also should create a file named “Pager.swift”, import the UIKit module, and create a UIPageViewController class like so:
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kt&quot;&gt;Import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIKit&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Pager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIPageViewController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -34,11 +35,14 @@
 
 &lt;/li&gt;
 
-&lt;li class=&quot;blog-tutorial-step&quot;&gt;Go to your Main.storyboard, select the Page View Controller, and using the options on the right side, set the class to “Pager.” This connects the storyboard pager view controller element to your Pager.swift code. Also ensure that the “Transition Style” is set to “Scroll.”&lt;/li&gt;
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
+Go to your Main.storyboard, select the Page View Controller, and using the options on the right side, set the class to “Pager.” This connects the storyboard pager view controller element to your Pager.swift code. Also ensure that the “Transition Style” is set to “Scroll.”&lt;/li&gt;
 
-&lt;li class=&quot;blog-tutorial-step&quot;&gt;To reach the “Pager” in the user flow, right click (or control click) the button on the “View Controller” and drag it over the the “Pager.” This will generate a list of potential segue options. Segues are essentially roads between views. In this case, I went with a Show Detail (e.g. Replace) segue. If you build and run this application and press the button, you will be greeted by a blank screen. Don’t worry, we’ll now populate the pager screen.&lt;/li&gt;
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
+To reach the “Pager” in the user flow, right click (or control click) the button on the “View Controller” and drag it over the the “Pager.” This will generate a list of potential segue options. Segues are essentially roads between views. In this case, I went with a Show Detail (e.g. Replace) segue. If you build and run this application and press the button, you will be greeted by a blank screen. Don’t worry, we’ll now populate the pager screen.&lt;/li&gt;
 
-&lt;li class=&quot;blog-tutorial-step&quot;&gt;Create two more swift files named “PageOne.swift” and “PageTwo.swift”. Create a view controller in each:
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
+Create two more swift files named “PageOne.swift” and “PageTwo.swift”. Create a view controller in each:
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIKit&lt;/span&gt;
 
@@ -50,9 +54,11 @@
 
 &lt;/li&gt;
 
-&lt;li class=&quot;blog-tutorial-step&quot;&gt;Create two view controllers in your Main.storyboard. They do not need to have a segue from any other page. Just change the class to PageOne or PageTwo so that they connect to your swift files. You should also change the Storyboard ID to match the class name for each View Controller.&lt;/li&gt;
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
+Create two view controllers in your Main.storyboard. They do not need to have a segue from any other page. Just change the class to PageOne or PageTwo so that they connect to your swift files. You should also change the Storyboard ID to match the class name for each View Controller.&lt;/li&gt;
 
-&lt;li class=&quot;blog-tutorial-step&quot;&gt;Now, we will be working in the Pager.swift file to build the actual page-based functionality. In order to access the PageOne and PageTwo views, we create two shortcut functions that significantly condense our code in the future. Create these functions inside of your Pager class:
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
+Now, we will be working in the Pager.swift file to build the actual page-based functionality. In order to access the PageOne and PageTwo views, we create two shortcut functions that significantly condense our code in the future. Create these functions inside of your Pager class:
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getPageOne&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PageOne&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;// Retrieve the view&lt;/span&gt;
@@ -64,7 +70,9 @@
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;storyboard&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instantiateViewControllerWithIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;PageTwo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as!&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PageTwo&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;/li&gt;
 
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
 We want to set our default page to page one. In our viewDidLoad() function for the class Pager, set the first page to page one.
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Loads the first page immediately after the pager loads&lt;/span&gt;
@@ -72,7 +80,8 @@ We want to set our default page to page one. In our viewDidLoad() function for t
 
 &lt;/li&gt;
 
-&lt;li class=&quot;blog-tutorial-step&quot;&gt;To populate our pager, we must create an extension of the Pager with type: UIPageViewControllerDataSource. A Page View Controller relies on the dataSource to allow users to not only swipe between/access pages, but also to create the famous page control dots that iPhone users have grown accustomed to. Your Pager extension should look like this:
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
+To populate our pager, we must create an extension of the Pager with type: UIPageViewControllerDataSource. A Page View Controller relies on the dataSource to allow users to not only swipe between/access pages, but also to create the famous page control dots that iPhone users have grown accustomed to. Your Pager extension should look like this:
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Pager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIPageViewControllerDataSource&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 
@@ -80,7 +89,8 @@ We want to set our default page to page one. In our viewDidLoad() function for t
 
 &lt;/li&gt;
 
-&lt;li class=&quot;blog-tutorial-step&quot;&gt;To allow users to swipe, you must set up the prebuilt functions viewControllerAfterViewController and viewControllerBeforeViewController. It essentially recognizes which way you are scrolling to, and sets the new page. Add these two functions to your Pager extension:
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
+To allow users to swipe, you must set up the prebuilt functions viewControllerAfterViewController and viewControllerBeforeViewController. It essentially recognizes which way you are scrolling to, and sets the new page. Add these two functions to your Pager extension:
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pageViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pageViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIPageViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;viewControllerAfterViewController&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;viewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;// Swiping forward&lt;/span&gt;
@@ -108,7 +118,8 @@ We want to set our default page to page one. In our viewDidLoad() function for t
 
 &lt;/li&gt;
 
-&lt;li class=&quot;blog-tutorial-step&quot;&gt;Right below those functions, we want to create the page control dots:
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
+Right below those functions, we want to create the page control dots:
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;presentationCountForPageViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pageViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIPageViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;// The number of dots in the page control dots&lt;/span&gt;
@@ -124,14 +135,16 @@ We want to set our default page to page one. In our viewDidLoad() function for t
 
 &lt;/li&gt;
 
-&lt;li class=&quot;blog-tutorial-step&quot;&gt;Lastly, we want to connect the dataSource to the extension by calling:
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
+Lastly, we want to connect the dataSource to the extension by calling:
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Set dataSource: incorporates the pages&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;dataSource&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Refers to the Pager extension of type UIPageViewControllerDataSource&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;/li&gt;
 
-&lt;li class=&quot;blog-tutorial-step&quot;&gt;I also recommend setting a background color to the Pager so that the page control dots can be visible. Do this inside of your class Pager: UIPageViewController’s function viewDidLoad().
+&lt;li class=&quot;blog-tutorial-step&quot;&gt;
+I also recommend setting a background color to the Pager so that the page control dots can be visible. Do this inside of your class Pager: UIPageViewController’s function viewDidLoad().
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;lightGrayColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Set background color to white&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -139,11 +152,13 @@ We want to set our default page to page one. In our viewDidLoad() function for t
 &lt;/ol&gt;
 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Source Files&lt;/h3&gt;
-&lt;p&gt;Here are some of the key, completed source files (note: I named the Pager “OnboardingPager” instead of “Pager” as I stated in the tutorial):
-ViewController.swift
-OnboardingView.swift
-PageOne.swift
-PageTwo.swift&lt;/p&gt;
+&lt;p&gt;Here are some of the key, completed source files (note: I named the Pager “OnboardingPager” instead of “Pager” as I stated in the tutorial):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;./../../../../media/blog/source-files/making-a-simple-page-based-application-swift/ViewController.swift&quot; download=&quot;&quot;&gt;ViewController.swift&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./../../../../media/blog/source-files/making-a-simple-page-based-application-swift/OnboardingView.swift&quot; download=&quot;&quot;&gt;OnboardingView.swift&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./../../../../media/blog/source-files/making-a-simple-page-based-application-swift/PageOne.swift&quot; download=&quot;&quot;&gt;PageOne.swift&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./../../../../media/blog/source-files/making-a-simple-page-based-application-swift/PageTwo.swift&quot; download=&quot;&quot;&gt;PageTwo.swift&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Tue, 28 Jun 2016 08:10:08 -0700</pubDate>
         <link>http://khou22.github.io/programming/2016/06/28/making-a-simple-page-based-application-in-swift.html</link>
