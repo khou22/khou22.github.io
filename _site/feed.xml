@@ -6,9 +6,209 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Jun 2016 15:25:57 -0700</pubDate>
-    <lastBuildDate>Tue, 28 Jun 2016 15:25:57 -0700</lastBuildDate>
+    <pubDate>Wed, 29 Jun 2016 17:13:07 -0700</pubDate>
+    <lastBuildDate>Wed, 29 Jun 2016 17:13:07 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>WWDC 2016: Advances in UIKit Animations and Transitions</title>
+        <description>&lt;p&gt;Video (must be played in Safari): &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2016/216/&quot;&gt;https://developer.apple.com/videos/play/wwdc2016/216/&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;New animations with UIKit in iOS 10&lt;/li&gt;
+  &lt;li&gt;Create natural, smooth feeling, responsive animations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Interpolation and Pacing&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dotted = actual position&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Solid = final/goal position&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Timing function:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Linear&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Ease in&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Ease out&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Ease in and out&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Springs:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Overshoot the value and come back to the goal position&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;It affects the pacing of the animation&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;iOS 8 (WWDC 2014) introduced interruptible animations&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;If you interrupt an animation, the object no longer jumps or switches velocities so abruptly&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;UIVIewPropertyAnimator new features in iOS 10&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Interruptible animations&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Scrubbable animations&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Reversible animations&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Broad availability of timing functions (not just the usual four)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Rolling animations can be modified&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Animations as Objects&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Can get the state and position of an animation at any point&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;state: .inactive, .active, .stopped&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;isRunning: true, false&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;isReversed: true, false&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Animations are now objects, not just API calls&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;That way you can store, modify, and get values from it&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Can also stop an animation: animator.stopAnimation (false)&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Pass false in so that the object can stay right where it is in its path&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Can do something with it later&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;If you pass in true, it still stays in its place, but the animation is over for all intensive purposes&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To scrub an animation:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;animator.fractionComplete = fraction&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Like the Interpolation library&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;The fractionComplete doesn’t involve time&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;So the timing function doesn’t affect it&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;The fractionComplete relates to the position&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Reversing animations brings an object back to its start position&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Animation will be as if it never started → .start&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Can also add an animation that brings it back to its start position&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;But the animation will be complete → .end&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;iOS 10 can set custom your own timing functions&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;UICubicTimingParameters(animationCurve: .linear) // For linear&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;UICubicTimingParameters(controlPoint1: CGPoint(x: 0.0, y: 1.0), controlPoint2: CGPoint(x: 1.0, y: 0.0)) // For custom timing curve&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Also changed UISpringTimingParameters&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;UISPringTimingParameters(mass: CGFloat, stiffness: CGFloat, damping: CGFloat, initialVelocity velocity: CGVector)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Keyframe animations&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Basically regular animations, but with multiple points&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Example: Can add multiple x/y positions to an animation to create a complex path instead of just from point A to point B&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;Can do point A → B → C → … → Z&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 29 Jun 2016 09:50:49 -0700</pubDate>
+        <link>http://khou22.github.io/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Making a Simple Page Based Application in Swift</title>
@@ -543,35 +743,6 @@ We worked extremely hard on our two projects for the duration of the Hackathon. 
         
         
         <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Getting Started with the CNC Router</title>
-        <description>&lt;h2&gt;Cutting Topographical Maps on the CNC Router&lt;/h2&gt;
-&lt;p&gt;This blog post is primarily for my own notes. It&#39;s a work in progress. As my project progresses and I encounter more challenges, I will write about them here.&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;Process&lt;/b&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Import map from Google Earth plugin on SketchUp&lt;/li&gt;
-  &lt;li&gt;Geo-location → Add location&lt;/li&gt;
-  &lt;li&gt;Select show terrain&lt;/li&gt;
-  &lt;li&gt;Export from sketchup as a .3ds&lt;/li&gt;
-  &lt;li&gt;Import on Rhino as “Component / 3D Model”&lt;/li&gt;
-  &lt;li&gt;Set size&lt;/li&gt;
-  &lt;li&gt;Set Toolpath&lt;/li&gt;
-  &lt;li&gt;Cut “3D Rough Toolpath” first&lt;/li&gt;
-  &lt;li&gt;Cut “3D Finishing Toolpath”&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Sun, 06 Mar 2016 15:59:45 -0800</pubDate>
-        <link>http://khou22.github.io/wood/2016/03/06/getting-started-with-the-cnc-router.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/wood/2016/03/06/getting-started-with-the-cnc-router.html</guid>
-        
-        <category>cnc-wood-router</category>
-        
-        
-        <category>Wood</category>
         
       </item>
     
