@@ -8,7 +8,7 @@ category:
 tags: []
 featured: "no"
 ---
-Video (must be played in Safari): [https://developer.apple.com/videos/play/wwdc2016/216/](https://developer.apple.com/videos/play/wwdc2016/216/)
+Video (must be played in Safari): [https://developer.apple.com/videos/play/wwdc2016/216/](https://developer.apple.com/videos/play/wwdc2016/216/){:target="_blank"}
 
 * New animations with UIKit in iOS 10
 * Create natural, smooth feeling, responsive animations
@@ -110,3 +110,8 @@ Video (must be played in Safari): [https://developer.apple.com/videos/play/wwdc2
     * Example: Can add multiple x/y positions to an animation to create a complex path instead of just from point A to point B
 
         * Can do point A → B → C → … → Z
+
+<h3 class="post-subheader">External References</h3>
+[https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5#.2y9t95ixn](https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5#.2y9t95ixn){:target="_blank"}
+[https://developer.apple.com/reference/uikit/uiviewpropertyanimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator){:target="_blank"}
+[https://developer.apple.com/reference/uikit/uiviewanimating](https://developer.apple.com/reference/uikit/uiviewanimating){:target="_blank"}

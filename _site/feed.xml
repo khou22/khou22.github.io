@@ -6,13 +6,13 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Jun 2016 17:13:07 -0700</pubDate>
-    <lastBuildDate>Wed, 29 Jun 2016 17:13:07 -0700</lastBuildDate>
+    <pubDate>Wed, 29 Jun 2016 17:18:26 -0700</pubDate>
+    <lastBuildDate>Wed, 29 Jun 2016 17:18:26 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>WWDC 2016: Advances in UIKit Animations and Transitions</title>
-        <description>&lt;p&gt;Video (must be played in Safari): &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2016/216/&quot;&gt;https://developer.apple.com/videos/play/wwdc2016/216/&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Video (must be played in Safari): &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2016/216/&quot; target=&quot;_blank&quot;&gt;https://developer.apple.com/videos/play/wwdc2016/216/&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;New animations with UIKit in iOS 10&lt;/li&gt;
@@ -202,6 +202,11 @@
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;External References&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5#.2y9t95ixn&quot; target=&quot;_blank&quot;&gt;https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5#.2y9t95ixn&lt;/a&gt;
+&lt;a href=&quot;https://developer.apple.com/reference/uikit/uiviewpropertyanimator&quot; target=&quot;_blank&quot;&gt;https://developer.apple.com/reference/uikit/uiviewpropertyanimator&lt;/a&gt;
+&lt;a href=&quot;https://developer.apple.com/reference/uikit/uiviewanimating&quot; target=&quot;_blank&quot;&gt;https://developer.apple.com/reference/uikit/uiviewanimating&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 29 Jun 2016 09:50:49 -0700</pubDate>
         <link>http://khou22.github.io/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html</link>
