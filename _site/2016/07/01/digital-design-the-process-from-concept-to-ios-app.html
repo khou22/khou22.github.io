@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kevin Hou's Blog</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
-">
+  <title>Digital Design: The Process from Concept to iOS App</title>
+  <meta name="description" content="This is my second week working at Breathometer, a startup that builds breath analysis devices to help users better understand their health. We are nearly fin...">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -19,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/category/">
+  <link rel="canonical" href="http://khou22.github.io/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -164,353 +163,52 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <!-- Blog homepage -->
+        <div class="post">
+  
+    
+    
 
-<div class="home left-main">
+    
 
-  <h1 class="page-heading">Browse All Categories</h1>
-  <br />
-  <ul class="post-list">
-    <!-- Repeats for (maps) all posts -->
     
-      <li>
-        <h5 class="category-list">
-          <a href="programming">
-            Programming
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="design">
-            Design
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="wood">
-            Wood
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="school">
-            School
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="life">
-            Life
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="work">
-            Work
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="category-list">
-          <a href="computer">
-            Computer
-          </a>
-        </h5>
-      </li>
-    
-  </ul>
+  <header class="post-header">
+    <p class="post-return-main"><a href="/blog">
+      <
+      Return to all blogs
+    </a></p>
+    <br />
+    <h1 class="post-title">Digital Design: The Process from Concept to iOS App</h1>
+    <p class="post-meta">Jul 1, 2016 • Kevin Hou</p>
+  </header>
+  <article class="post-content">
+    <p>This is my second week working at Breathometer, a startup that builds breath analysis devices to help users better understand their health. We are nearly finished with Mint — a device that measures various chemical levels in your breath to give you an overall oral hygiene report. Another device, called Slim, measures the amount of acetone in your breath and uses it as a metric to calculate the amount of fat your body is burning.</p>
 
-  <p class="rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></p>
+<p>The development stages of Mint are essentially complete, but Slim is still in the development process. As a frontend developer and designer, I’ve been assigned the role of creating the onboarding user flow. Because I’ve never had any formal training or business-level experience in design, my design process can most definitely be improved. I met with my manager and mentor today to discuss this project, and we’ve decided that the most valuable course of action for me is to go through the entire design process correctly, so that I can internalize it for the future. I’ve done some preliminary research, and the steps are as outlined below.</p>
 
+<p>Low-Fidelity
+In order to conceptualize and put thoughts into something tangible, I used low-fidelity designs. Low-fidelity prototyping is often the first step when designing and allows you to quickly explore ideas. According to the site, &lt;a href=”https://www.usability.gov/how-to-and-tools/methods/prototyping.html” target=”_blank”&gt;usability.gov&lt;/a&gt;, low-fidelity communicates are typically either sketches or wireframes. These are intended to lay out potential ideas to pursue while also conveying the structure and overall flow. These two stages are often considered the ideation and concept validation points in the design process.</p>
+
+<p>High Fidelity
+After many cycles of low-fidelity designs, I finally arrive at an overall idea that resonates with me. I can now take the quick, generally black and white, as well as conceptual-focused sketches and wireframes, migrating them over to what are called high-fidelity designs. The designs still evolve, but the overall motif remains largely the same. High-fidelity designs are meant to add “color” to your designs in both a literal and figurative sense. They are no long static, one-pagers. Instead, they accurately represent the entire product — every screen is generally accounted for and a functional UI is sometimes implemented. While buttons and API calls are likely not active, the general user flow and UX can be seen.</p>
+
+<p>High-fidelity designs begin in software programs like Sketch, then move to other rapid prototyping tools to gain that barebones functionality. From experience, it is very important that nearly every aspect of the design be reflected in your high-fidelity designs, at the very least in Sketch. As both a designer and software developer, it is much easier to collaborate and quickly build an MVP when all the frontend components are laid out in full view. Rather than coming up with hex values, widths, etc. on the fly, all properties should be known by the end of the high-fidelity design stage. It not only makes the engineer’s life much easier, but also the designer’s.</p>
+
+<p>Image
+Here is a chart that appropriately sums up the progression from low to high-fidelity designs in relation to functionality.
+http://www.uxmatters.com/mt/archives/2010/05/images/wireframe_fig1.jpg</p>
+
+<p>Animations
+Animations are the final step in the digital design process. There’s many different methods in approaching animations — mainly the timing in which the designing takes place. Animations can be a part of the high-fidelity stage or simply a part of the development process. My coworker explained it to me from the lens of a developer and designer. Based on his experience, it’s easier to implement animations while he is building the app, rather than when he is designing.</p>
+
+<p>Many of the complex and intriguing animated designs you see online are generated in animation software with little regard to the capabilities of the developer. This is both good and bad in the sense that it allows for free creative thinking, but it can be next to impossible to correctly build in the actual app. He recommended to me that I do the same as him. As someone who both designs and codes, it makes more sense for me to throw in the animations during the building process. It will not only save time and effort, but also ensure that I don’t design a next to impossible animation that isn’t realistic.</p>
+
+<p>Conclusion
+Overall, design is a very complex and time-consuming process. It often seems unnecessary to go through all the steps I’ve listed above, but it’s incredibly important if you wish to design an engaging user experience. If you’re still not a believe that design is the centerpiece of anything and everything, I encourage you to watch Tony Fadell — designer of the first iPod and CEO/designer of Nest — during his Ted Talk on the &lt;a href=”https://www.ted.com/talks/tony_fadell_the_first_secret_of_design_is_noticing” target=”_blank”&gt;Secret of Design&lt;/a&gt;. Hope you enjoyed this post!</p>
+
+  </article>
+  <p id="post-meta"></p>
 </div>
 
-<div class="right-column">
-  <div class="featured">
-    Featured posts:
-    <ol>
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/design/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html">Digital Design: The Process from Concept to iOS App</a>
-          </li>
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2016/06/28/making-a-simple-page-based-application-in-swift.html">Making a Simple Page Based Application in Swift</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/design/2016/05/01/github-octocat-design-challenge-winner.html">GitHub Octocat Design Challenge Winner</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2016/04/21/uber-scheduler-calling-ubers-alarm-clock-style.html">Uber Scheduler: Calling Ubers Alarm Clock Style</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2016/04/18/first-hackathon-24-hours-straight-of-coding.html">First Hackathon: 24 Hours Straight of Coding</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/11/01/text-analysis-app-how-do-you-talk-to-people-on-facebook-versus-in-an-engineering-report.html">Text Analysis App: How Do You Talk To People on Facebook Versus In An Engineering Report?</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/10/25/nodejs-basics-setting-up-a-local-web-server.html">NodeJS Basics - Setting Up A Local Web Server</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/08/02/best-way-to-customize-terminal.html">Best Way to Customize Terminal</a>
-          </li>
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/07/31/accessibility-enabling-voiceover-on-buttons-and-links.html">Accessibility: Enabling Voiceover on Buttons and Links</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="recent">
-    Recent posts:
-    <ol>
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/design/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html">Digital Design: The Process from Concept to iOS App</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html">WWDC 2016: Advances in UIKit Animations and Transitions</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2016/06/28/making-a-simple-page-based-application-in-swift.html">Making a Simple Page Based Application in Swift</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="browse-category">
-    <a href="/blog/category">
-      Browse by Category
-    </a>
-  </div>
-  <div class="browse-tag">
-    <a href="/blog/tag">
-      Browse by Tag
-    </a>
-  </div>
-</div>
       </div>
     </div>
 

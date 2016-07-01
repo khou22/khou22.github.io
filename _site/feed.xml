@@ -6,9 +6,46 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Jun 2016 17:18:26 -0700</pubDate>
-    <lastBuildDate>Wed, 29 Jun 2016 17:18:26 -0700</lastBuildDate>
+    <pubDate>Fri, 01 Jul 2016 15:40:43 -0700</pubDate>
+    <lastBuildDate>Fri, 01 Jul 2016 15:40:43 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Digital Design: The Process from Concept to iOS App</title>
+        <description>&lt;p&gt;This is my second week working at Breathometer, a startup that builds breath analysis devices to help users better understand their health. We are nearly finished with Mint — a device that measures various chemical levels in your breath to give you an overall oral hygiene report. Another device, called Slim, measures the amount of acetone in your breath and uses it as a metric to calculate the amount of fat your body is burning.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+The development stages of Mint are essentially complete, but Slim is still in the development process. As a frontend developer and designer, I’ve been assigned the role of creating the onboarding user flow. Because I’ve never had any formal training or business-level experience in design, my design process can most definitely be improved. I met with my manager and mentor today to discuss this project, and we’ve decided that the most valuable course of action for me is to go through the entire design process correctly, so that I can internalize it for the future. I’ve done some preliminary research, and the steps are as outlined below.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Low Fidelity&lt;/h3&gt;
+&lt;p&gt;In order to conceptualize and put thoughts into something tangible, I used low-fidelity designs. Low-fidelity prototyping is often the first step when designing and allows you to quickly explore ideas. According to the site, &lt;a href=&quot;https://www.usability.gov/how-to-and-tools/methods/prototyping.html&quot; target=&quot;_blank&quot;&gt;usability.gov&lt;/a&gt;, low-fidelity communicates are typically either sketches or wireframes. These are intended to lay out potential ideas to pursue while also conveying the structure and overall flow. These two stages are often considered the ideation and concept validation points in the design process.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;High Fidelity&lt;/h3&gt;
+&lt;p&gt;After many cycles of low-fidelity designs, I finally arrive at an overall idea that resonates with me. I can now take the quick, generally black and white, as well as conceptual-focused sketches and wireframes, migrating them over to what are called high-fidelity designs. The designs still evolve, but the overall motif remains largely the same. High-fidelity designs are meant to add “color” to your designs in both a literal and figurative sense. They are no long static, one-pagers. Instead, they accurately represent the entire product — every screen is generally accounted for and a functional UI is sometimes implemented. While buttons and API calls are likely not active, the general user flow and UX can be seen.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+High-fidelity designs begin in software programs like Sketch, then move to other rapid prototyping tools to gain that barebones functionality. From experience, it is very important that nearly every aspect of the design be reflected in your high-fidelity designs, at the very least in Sketch. As both a designer and software developer, it is much easier to collaborate and quickly build an MVP when all the frontend components are laid out in full view. Rather than coming up with hex values, widths, etc. on the fly, all properties should be known by the end of the high-fidelity design stage. It not only makes the engineer’s life much easier, but also the designer’s.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Visual&lt;/h3&gt;
+&lt;p&gt;Here is a chart that appropriately sums up the progression from low to high-fidelity designs in relation to functionality.
+&lt;img src=&quot;http://www.uxmatters.com/mt/archives/2010/05/images/wireframe_fig1.jpg&quot; /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Animations&lt;/h3&gt;
+&lt;p&gt;Animations are the final step in the digital design process. There’s many different methods in approaching animations — mainly the timing in which the designing takes place. Animations can be a part of the high-fidelity stage or simply a part of the development process. My coworker explained it to me from the lens of a developer and designer. Based on his experience, it’s easier to implement animations while he is building the app, rather than when he is designing.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Many of the complex and intriguing animated designs you see online are generated in animation software with little regard to the capabilities of the developer. This is both good and bad in the sense that it allows for free creative thinking, but it can be next to impossible to correctly build in the actual app. He recommended to me that I do the same as him. As someone who both designs and codes, it makes more sense for me to throw in the animations during the building process. It will not only save time and effort, but also ensure that I don’t design a next to impossible animation that isn’t realistic.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Overall, design is a very complex and time-consuming process. It often seems unnecessary to go through all the steps I’ve listed above, but it’s incredibly important if you wish to design an engaging user experience. If you’re still not a believe that design is the centerpiece of anything and everything, I encourage you to watch Tony Fadell — designer of the first iPod and CEO/designer of Nest — during his Ted Talk on the &lt;a href=&quot;https://www.ted.com/talks/tony_fadell_the_first_secret_of_design_is_noticing&quot; target=&quot;_blank&quot;&gt;Secret of Design&lt;/a&gt;. Hope you enjoyed this post!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 01 Jul 2016 08:34:12 -0700</pubDate>
+        <link>http://khou22.github.io/design/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/design/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html</guid>
+        
+        <category>Apps</category>
+        
+        
+        <category>Design</category>
+        
+      </item>
     
       <item>
         <title>WWDC 2016: Advances in UIKit Animations and Transitions</title>
@@ -209,9 +246,11 @@
 &lt;a href=&quot;https://developer.apple.com/reference/uikit/uiviewanimating&quot; target=&quot;_blank&quot;&gt;https://developer.apple.com/reference/uikit/uiviewanimating&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 29 Jun 2016 09:50:49 -0700</pubDate>
-        <link>http://khou22.github.io/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html</guid>
+        <link>http://khou22.github.io/programming/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html</guid>
         
+        
+        <category>Programming</category>
         
       </item>
     
@@ -675,79 +714,6 @@ We worked extremely hard on our two projects for the duration of the Hackathon. 
         
         
         <category>Programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Introduction to Services in AngularJS</title>
-        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;What Are Services?&lt;/h3&gt;
-&lt;p&gt;In a nutshell, services are a way of making functions and variables global. They can be injected as dependencies in any controller and its functions/variables can be accessible across controllers.&lt;/p&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;Creating the Service&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    Create service file
-    
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;moduleName&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;ionic&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;ngCordova&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;serviceFunction&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testVariable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Kevin&quot;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;testVariable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;serviceVariable&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testVariable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Kevin&quot;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;testVariable&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-  &lt;/li&gt;
-
-  &lt;li&gt;
-    Make sure the names are consistent
-  &lt;/li&gt;
-
-  &lt;li&gt;
-    Add ‘geocoding’ (the module name) to the module’s dependency
-    
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;scheduledRidesCtrl&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;ui.bootstrap&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;geocoding&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-    The way I explained this to a friend is basically using the &#39;ui.bootstrap&#39; analogy. Bootstrap in its most basic form is a a compilation of CSS styling and Javascript for functionality. When we include the &#39;ui.bootstrap&#39; dependency, we are essentially including that Javascript file to be used in this controller. It&#39;s not different when we create our own services. A service is basically a group of Javascript functions. If the services is included as a dependency, it will load all those Javascript functions and make them available to use in that controller. It&#39;s a good way of selectively loading specific Javascript files so that not all of your Javascript files have to load for every page.
-  &lt;/li&gt;
-  &lt;br class=&quot;post-line-break&quot; /&gt;
-
-  &lt;li&gt;
-    Include the name of the service function in the controller’s function(…, …)
-    
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;scheduledRidesCtrl&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$ionicPopup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$timeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;serviceFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;serviceVariable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-  &lt;/li&gt;
-
-  &lt;li&gt;Can now use the functions and variables in any controller that you included the dependency for. Simply call:
-    
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;      &lt;span class=&quot;nx&quot;&gt;serviceFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Runs the service function&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;serviceVariable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Uses the service variable as a regular variable&lt;/span&gt;
-    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-  &lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Sun, 13 Mar 2016 16:30:29 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2016/03/13/introduction-to-services-in-angularjs.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/03/13/introduction-to-services-in-angularjs.html</guid>
-        
-        <category>ionic</category>
-        
-        <category>angularjs</category>
-        
-        <category>javascript</category>
-        
-        
-        <category>programming</category>
         
       </item>
     
