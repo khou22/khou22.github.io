@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Internationalizing Your iOS App in XCode 7"
+title: "Internationalizing Your iOS App in Xcode 7"
 author: "Kevin Hou"
 date: 2016-06-20 18:16:44
-description: ""
-category:
-tags: []
+description: "A quick tutorial on how to prepare your app for internationalization using Xcode's built-in localization tools."
+category: Programming
+tags: [ios, swift]
 featured: "no"
 ---
 # Localization in Swift XCode 7.3.1

@@ -3,6 +3,14 @@ apps:
   slug: apps
   name: Apps
 
+swift:
+  slug: swift
+  name: Swift
+
+ios:
+  slug: ios
+  name: iOS
+
 github-pages: #Declare the object
   slug: github-pages #Tag string for data organization - this is the same as the line above
   name: GitHub Pages #Name of the tag

@@ -167,9 +167,34 @@
   
     
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header class="post-header">
     <p class="post-return-main"><a href="/blog">
@@ -189,10 +214,10 @@
 
 <p><br /></p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">onSubmit=</span><span class="s">{this.loadFile.bind(this)}</span><span class="nt">&gt;</span>
-  Select text file: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">id=</span><span class="s">"selectedFile"</span> <span class="na">name=</span><span class="s">"text"</span> <span class="na">accept=</span><span class="s">".txt"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">onSubmit=</span><span class="s">{this.loadFile.bind(this)}</span><span class="nt">&gt;</span>
+  Select text file: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span> <span class="na">id=</span><span class="s">&quot;selectedFile&quot;</span> <span class="na">name=</span><span class="s">&quot;text&quot;</span> <span class="na">accept=</span><span class="s">&quot;.txt&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
 
 <p><i>React requires closing slashes on the inputs because it only recognizes “complete” tags.</i></p>
 
@@ -200,9 +225,9 @@
 
 <p>Now here’s where the fun happens:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">loadFile</span><span class="err">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Loading file"</span><span class="p">);</span> <span class="c1">//Feedback</span>
-  <span class="kd">var</span> <span class="nx">selectedFile</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'selectedFile'</span><span class="p">).</span><span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">//Identifying the selected file using the id of the form tag</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">loadFile</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Loading file&quot;</span><span class="p">);</span> <span class="c1">//Feedback</span>
+  <span class="kd">var</span> <span class="nx">selectedFile</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;selectedFile&#39;</span><span class="p">).</span><span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">//Identifying the selected file using the id of the form tag</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">selectedFile</span><span class="p">);</span> <span class="c1">//Feedback to make sure the file is loaded correctly</span>
   <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span> <span class="c1">//Create a document reader (built into HTML5)</span>
   <span class="nx">reader</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//Declare the asyncronous callback for when a file is loaded into the reader</span>
@@ -210,9 +235,9 @@
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span> <span class="c1">//Spits back the contents of the text file</span>
   <span class="p">}</span>
   <span class="nx">reader</span><span class="p">.</span><span class="nx">readAsText</span><span class="p">(</span><span class="nx">selectedFile</span><span class="p">);</span> <span class="c1">//Calls the reader to read our selected text file</span>
-  <span class="c1">//The reader goes to its "onload" function and executes that code</span>
+  <span class="c1">//The reader goes to its &quot;onload&quot; function and executes that code</span>
   <span class="k">return</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">//Prevents the page from auto-refreshing</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
 <p><br /></p>
 
@@ -227,7 +252,7 @@
 <a href="http://www.w3schools.com/tags/att_input_type.asp">http://www.w3schools.com/tags/att_input_type.asp</a></p>
 
   </article>
-  <p id="post-meta">Posted with <a href="/blog/tag/html/">HTML</a>, <a href="/blog/tag/javascript/">Javascript</a></p>
+  <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/html/">HTML</a>, <a href="/blog/tag/javascript/">Javascript</a></p>
 </div>
 
       </div>

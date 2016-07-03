@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-06-22 18:15:41
 description: "My thoughts, notes, and main takeaways about the WWDC workshop on internationalization."
 category: Programming
-tags: []
+tags: [swift, ios]
 featured: "no"
 ---
 Video (must be played in Safari): <a href="https://developer.apple.com/videos/play/wwdc2016/201/" target="_blank">https://developer.apple.com/videos/play/wwdc2016/201/</a>

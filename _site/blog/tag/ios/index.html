@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Internationalizing Your iOS App in XCode 7</title>
-  <meta name="description" content="Localization in Swift XCode 7.3.1** This is a blog post in progress **Prepare XCode ProjectGo to the project page → Localizations → Add a new language and se...">
+  <title>Articles by tag: ios</title>
+  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
+">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -18,7 +19,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/2016/06/20/internationalizing-your-ios-app-in-xcode-7.html">
+  <link rel="canonical" href="http://khou22.github.io/blog/tag/ios/">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -163,68 +164,106 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="post">
-  
+        <header id="post-header">
+    <h1 id="post-title">ios</h1>
+    <h4 id="post-subtitle">Articles by tag</h4>
+</header>
+
+<div id="post-content">
     
+        
+            
+            
+                <h3>2016</h3><div class="list-group">
+            
+      
+            
+      
+            <a href="/design/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html">
+                <h4>Digital Design: The Process from Concept to iOS App</h4>
+            </a>
+
+            
+        
+            
+            
+      
+            
+                
+                
+                
+            
+      
+            <a href="/programming/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html">
+                <h4>WWDC 2016: Advances in UIKit Animations and Transitions</h4>
+            </a>
+
+            
+        
+            
+            
+      
+            
+                
+                
+                
+            
+      
+            <a href="/programming/2016/06/28/making-a-simple-page-based-application-in-swift.html">
+                <h4>Making a Simple Page Based Application in Swift</h4>
+            </a>
+
+            
+        
+            
+            
+      
+            
+                
+                
+                
+            
+      
+            <a href="/programming/2016/06/22/wwdc-2016-internationalization-best-practices.html">
+                <h4>WWDC 2016: Internationalization Best Practices</h4>
+            </a>
+
+            
+        
+            
+            
+      
+            
+                
+                
+                
+            
+      
+            <a href="/programming/2016/06/20/internationalizing-your-ios-app-in-xcode-7.html">
+                <h4>Internationalizing Your iOS App in Xcode 7</h4>
+            </a>
+
+            
+        
+            
+            
+      
+            
+                
+                
+                
+            
+      
+            <a href="/design/2016/05/01/github-octocat-design-challenge-winner.html">
+                <h4>GitHub Octocat Design Challenge Winner</h4>
+            </a>
+
+            
+                </div>
+            
+        
     
-
-    
-
-    
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Internationalizing Your iOS App in XCode 7</h1>
-    <p class="post-meta">Jun 20, 2016 • Kevin Hou</p>
-  </header>
-  <article class="post-content">
-    <h1 id="localization-in-swift-xcode-731">Localization in Swift XCode 7.3.1</h1>
-<p><em>** This is a blog post in progress **</em></p>
-<h1>Prepare XCode Project</h1>
-<p>Go to the project page → Localizations → Add a new language and select all the resources
-Sometimes the storyboards aren’t all localized. If that’s the case, you must manually localize storyboards. To do this, on the info panel on the right, can press localize and add the languages you want.</p>
-
-<h1 id="prepping-code">Prepping Code</h1>
-<p>This is for hard coded strings in the code
-You can wrap them in: NSLocalizedString(String, comment: String)
-For instances where you have hard coded strings <i>and</i> variables within the hard coded strings, you must use the String format setup. For example:
-<br />// Old setup:
-<br />let localizedString = NSLocalizedString(“Test Results - (interval)”, comment: “Test results”)
-<br />// New setup:
-<br />let localizedString = String.localizedStringWithFormat(NSLocalizedString(“Test Results - %@”, comment: “Test results date string”), interval)
-<br />The “%@” represents a placeholder in the String that will not be translated into another language, and can therefore be used as a bookmark to inject a variable into a localized string.</p>
-
-<h1 id="adding-in-translations">Adding in translations</h1>
-<p>To Export:
-Delete Localizable.strings in parent so that there’s no duplicate
-Change the .xliff file (found it useful to use a simple IDE like Atom or Sublime to quickly change text. I added in ‘French: ‘ at the beginning of every translation so that I would know when the app recognizes a NSLocalizedString type)</p>
-
-<h1 id="to-import">To Import:</h1>
-<p>Import the .xliff file
-Add the newly created Localizable.strings file (in the parent) to the build phases (Target –&gt; Build Phases –&gt; Copy Bundle Resources –&gt; Add) — http://fullscreensoftware.blogspot.co.il/2011/09/xcode-4-and-localizablestrings-issue.html
-Build and run</p>
-
-<h1 id="to-add-other-languages">To add other languages:</h1>
-<p>Localize the “Localizable.strings” file and replace the content with the translations for that specific language</p>
-
-<h1 id="for-line-breaks-"><em>** For Line Breaks **</em></h1>
-<p>Typically denoted by a “\n” in the code
-It doesn’t format correctly in the .xliff file
-When you import it back into the project, it won’t recognize your translation. Instead, modify the Localizable.strings file directly. Syntax as such:
-“{Original…}\n{Original…}”=“French: {Original…}\n{Original…}”
-You must add in the “\n”s because Swift exports the “\n”s as actual line breaks, but doesn’t convert the line breaks back into “\n”s on import</p>
-
-<p>Solution:
-Change ‘\n’ to another placeholder like ‘[[n’
-Before it is injected into the frontend, replace all instances of ‘[[n’ to ‘\n’</p>
-
-  </article>
-  <p id="post-meta"></p>
 </div>
-
       </div>
     </div>
 

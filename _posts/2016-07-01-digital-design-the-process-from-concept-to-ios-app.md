@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-07-01 15:34:12
 description: "A brief overview of the design process and how important it is in app development."
 category: Design
-tags: ['Apps']
+tags: [apps, ios]
 featured: "yes"
 ---
 This is my second week working at Breathometer, a startup that builds breath analysis devices to help users better understand their health. We are nearly finished with Mint — a device that measures various chemical levels in your breath to give you an overall oral hygiene report. Another device, called Slim, measures the amount of acetone in your breath and uses it as a metric to calculate the amount of fat your body is burning.

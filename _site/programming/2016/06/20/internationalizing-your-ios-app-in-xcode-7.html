@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>NodeJS Basics - Setting Up A Local Web Server</title>
-  <meta name="description" content="I’m starting a new project with a group of kids to program a plagiarism app for my school. After debating between PHP and Node.js, we decided to use Node.js ...">
+  <title>Internationalizing Your iOS App in Xcode 7</title>
+  <meta name="description" content="Localization in Swift XCode 7.3.1** This is a blog post in progress **Prepare XCode ProjectGo to the project page → Localizations → Add a new language and se...">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -18,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2015/10/25/nodejs-basics-setting-up-a-local-web-server.html">
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/06/20/internationalizing-your-ios-app-in-xcode-7.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -167,9 +167,34 @@
   
     
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header class="post-header">
     <p class="post-return-main"><a href="/blog">
@@ -177,81 +202,52 @@
       Return to all blogs
     </a></p>
     <br />
-    <h1 class="post-title">NodeJS Basics - Setting Up A Local Web Server</h1>
-    <p class="post-meta">Oct 25, 2015 • Kevin Hou</p>
+    <h1 class="post-title">Internationalizing Your iOS App in Xcode 7</h1>
+    <p class="post-meta">Jun 20, 2016 • Kevin Hou</p>
   </header>
   <article class="post-content">
-    <p>I’m starting a new project with a group of kids to program a plagiarism app for my school. After debating between PHP and Node.js, we decided to use Node.js as our primary ecosystem. After a bit of research and a couple of YouTube videos, I set up my own simple web server. My repository can be found <a href="https://github.com/khou22/NodeJSPractice">here</a>.</p>
+    <h1 id="localization-in-swift-xcode-731">Localization in Swift XCode 7.3.1</h1>
+<p><em>** This is a blog post in progress **</em></p>
+<h1>Prepare XCode Project</h1>
+<p>Go to the project page → Localizations → Add a new language and select all the resources
+Sometimes the storyboards aren’t all localized. If that’s the case, you must manually localize storyboards. To do this, on the info panel on the right, can press localize and add the languages you want.</p>
 
-<p>Here are the basics:</p>
-<ul>
-  <li>Node.js in a nutshell runs Javascript locally from your terminal</li>
-  <li>It takes Chrome’s V8 engine and uses it on the client side rather than attaching it to an HTML document (Javascript doesn’t have ‘document’ or ‘window’)</li>
-  <li>Node.js can easily create a local server to compile, build, and emulate your web-based code</li>
-</ul>
+<h1 id="prepping-code">Prepping Code</h1>
+<p>This is for hard coded strings in the code
+You can wrap them in: NSLocalizedString(String, comment: String)
+For instances where you have hard coded strings <i>and</i> variables within the hard coded strings, you must use the String format setup. For example:
+<br />// Old setup:
+<br />let localizedString = NSLocalizedString(“Test Results - (interval)”, comment: “Test results”)
+<br />// New setup:
+<br />let localizedString = String.localizedStringWithFormat(NSLocalizedString(“Test Results - %@”, comment: “Test results date string”), interval)
+<br />The “%@” represents a placeholder in the String that will not be translated into another language, and can therefore be used as a bookmark to inject a variable into a localized string.</p>
 
-<p>I worked briefly with Node.js over the summer at Salesforce.com when I was a UX Engineer, but I had never truly dove into the compiler I was using. I was under a lot of time pressure and was behind the learning curve, so I simply accepted what came out of it.</p>
+<h1 id="adding-in-translations">Adding in translations</h1>
+<p>To Export:
+Delete Localizable.strings in parent so that there’s no duplicate
+Change the .xliff file (found it useful to use a simple IDE like Atom or Sublime to quickly change text. I added in ‘French: ‘ at the beginning of every translation so that I would know when the app recognizes a NSLocalizedString type)</p>
 
-<p>It’s all coming back to me now and I’m realizing that I actually <i>do</i> understand a great deal of what’s going on. Here are some basics that I used over the summer that people should know:</p>
+<h1 id="to-import">To Import:</h1>
+<p>Import the .xliff file
+Add the newly created Localizable.strings file (in the parent) to the build phases (Target –&gt; Build Phases –&gt; Copy Bundle Resources –&gt; Add) — http://fullscreensoftware.blogspot.co.il/2011/09/xcode-4-and-localizablestrings-issue.html
+Build and run</p>
 
-<p><b>Node.js and NPM</b>
-Node.js also built NPM - Node Package Manager - which is the default package manager for Node.js. It is responsible for downloading, importing, and including open-source packages, or libraries if you will. These packages are largely user-contributed and can be downloaded and included like so:</p>
+<h1 id="to-add-other-languages">To add other languages:</h1>
+<p>Localize the “Localizable.strings” file and replace the content with the translations for that specific language</p>
 
-<p><b>Terminal</b></p>
+<h1 id="for-line-breaks-"><em>** For Line Breaks **</em></h1>
+<p>Typically denoted by a “\n” in the code
+It doesn’t format correctly in the .xliff file
+When you import it back into the project, it won’t recognize your translation. Instead, modify the Localizable.strings file directly. Syntax as such:
+“{Original…}\n{Original…}”=“French: {Original…}\n{Original…}”
+You must add in the “\n”s because Swift exports the “\n”s as actual line breaks, but doesn’t convert the line breaks back into “\n”s on import</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$:</span> npm install <span class="o">[</span>packageName]</code></pre></figure>
-
-<p><b>Javascript</b></p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="kr">package</span> <span class="o">=</span> <span class="nx">require</span><span class="p">([</span><span class="nx">packageName</span><span class="p">]);</span> <span class="c1">//Includes the package content as an object</span></code></pre></figure>
-
-<p>Packages are a super easy way to install predefined functions that can do common things. They’re incredibly simple and easy to pick up.</p>
-
-<p>You <i>never</i> want to include packages themselves in repositories. They take up space and are simply non-essentials. Because of the nature of open-sourced code, packages are mostly all available online to be installed by anyone. To share dependencies, you need to create a ‘package.json’ file — a file that specifies which packages should be included.</p>
-
-<p>To create the ‘package.json’ file type, type (in Terminal):</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$:</span> npm init</code></pre></figure>
-
-<p>To log a dependency in the ‘package.json’:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$:</span> npm install <span class="o">[</span>packageName] -S</code></pre></figure>
-
-<p>If you wish to install all the packages specified in the ‘package.json’ file, simply type:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$:</span> npm install</code></pre></figure>
-
-<p>This will install all the required modules. This sytem makes sharing code incredibly elegant and easy!</p>
-
-<p><b>Including Other JS Files in Your Code</b>
-It’s very easy to include other Javascript files in your code. In fact, it’s almsot identical to including a package dependency. Simply include:</p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">m2</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"./module2"</span><span class="p">);</span> <span class="c1">//Assumes js file</span></code></pre></figure>
-
-<p>Must export your data in module2 otherwise it just reads an empty object:</p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//In module2.js</span>
-<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-<span class="nx">module</span><span class="p">.</span><span class="kr">export</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span> <span class="c1">//Will export an object</span>
-<span class="c1">//To access in other JS files, a will be stored as data.a</span></code></pre></figure>
-
-<p><b>Creating a Simple Local Web Server</b></p>
-
-<p>It’s very easy to start your own web server to run compiled code. It’s great for prototypes and running web apps locally. Here’s a simple web server that highlights the basic functionality:</p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">//Every time server hears something at port 3000, will respond with this:</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Got a request"</span><span class="p">);</span> <span class="c1">//Returns in the terminal</span>
-  <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"Hi"</span><span class="p">);</span> <span class="c1">//Sends the window content. The browser will display "Hi"</span>
-  <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
-<span class="p">});</span>
-
-<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span> <span class="c1">//Specifies the port at which it will be served</span></code></pre></figure>
-
-<p>Hope this helps! I’ll be updating my site with various Node.js content and updates on the Plargiism App. In the meantime, if you have any questions feel free to <a href="mailto:kevin.ch.hou@gmail.com">reach out</a></p>
+<p>Solution:
+Change ‘\n’ to another placeholder like ‘[[n’
+Before it is injected into the frontend, replace all instances of ‘[[n’ to ‘\n’</p>
 
   </article>
-  <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/node-js/">Node.js</a>, <a href="/blog/tag/javascript/">Javascript</a></p>
+  <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/ios/">iOS</a>, <a href="/blog/tag/swift/">Swift</a></p>
 </div>
 
       </div>
