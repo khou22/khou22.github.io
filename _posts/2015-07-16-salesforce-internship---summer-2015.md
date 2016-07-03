@@ -4,6 +4,7 @@ title: "Salesforce Internship - Summer 2015"
 author: "Kevin Hou"
 date:   2015-07-16 13:35:21
 description: "First thoughts on my new internship at Salesforce.com during the summer of 2015. I worked as a UX (User Experience) Engineer."
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Work
 tags: [salesforce]
 featured: "no"

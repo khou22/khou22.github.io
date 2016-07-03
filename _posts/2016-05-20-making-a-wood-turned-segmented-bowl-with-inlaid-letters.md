@@ -4,6 +4,7 @@ title: "Making a Wood Turned Segmented Bowl with Inlaid Letters"
 author: "Kevin Hou"
 date: 2016-05-20 18:48:45
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Wood
 tags: []
 featured: "no"

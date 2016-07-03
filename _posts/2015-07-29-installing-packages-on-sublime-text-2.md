@@ -4,6 +4,7 @@ title: "Installing Packages on Sublime Text 2"
 author: "Kevin Hou"
 date: 2015-07-29 10:02:30
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [sublime]
 featured: "no"

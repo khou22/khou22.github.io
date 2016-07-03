@@ -4,6 +4,7 @@ title: "Handwriting Font App (With Video and Source Code)"
 author: "Kevin Hou"
 date: 2014-12-07 18:38:01
 description: "Summary of my handwriting font app. It takes the user's handwriting, creates a font out of it, and allows them to type in their own handwriting. The file can be exported as a vector file and printed on the CNC Watercolor bot to mimic a real person's writing."
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [processing, java]
 featured: "no"

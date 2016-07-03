@@ -4,6 +4,7 @@ title: "WWDC 2016: Internationalization Best Practices"
 author: "Kevin Hou"
 date: 2016-06-22 18:15:41
 description: "My thoughts, notes, and main takeaways about the WWDC workshop on internationalization."
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [swift, ios]
 featured: "no"

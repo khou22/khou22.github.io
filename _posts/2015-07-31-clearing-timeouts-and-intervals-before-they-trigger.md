@@ -4,6 +4,7 @@ title: "Clearing Timeouts and Intervals Before They Trigger"
 author: "Kevin Hou"
 date: 2015-07-31 21:10:15
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [javascript]
 featured: "no"

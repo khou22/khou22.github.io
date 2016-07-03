@@ -4,6 +4,7 @@ title: "Digital Design: The Process from Concept to iOS App"
 author: "Kevin Hou"
 date: 2016-07-01 15:34:12
 description: "A brief overview of the design process and how important it is in app development."
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Design
 tags: [apps, ios]
 featured: "yes"

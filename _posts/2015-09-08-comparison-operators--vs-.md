@@ -4,6 +4,7 @@ title: "Comparison Operators: '==' vs. '==='"
 author: "Kevin Hou"
 date: 2015-09-08 21:41:46
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [javascript]
 featured: "no"

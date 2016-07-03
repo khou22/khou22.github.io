@@ -4,6 +4,7 @@ title: "Jekyll On El Capitan (OS X 10.11)"
 author: "Kevin Hou"
 date: 2015-10-09 23:53:42
 description: "Fixing Jekyll on after upgrading to OS X 10.11, ie. El Capitan"
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [Jekyll, osx]
 featured: "no"

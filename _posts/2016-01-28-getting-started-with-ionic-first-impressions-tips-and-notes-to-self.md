@@ -4,6 +4,7 @@ title: "Getting Started with Ionic: First Impressions, Tips, and Notes to Self"
 author: "Kevin Hou"
 date: 2016-01-28 20:38:34
 description: "Some useful commands for Ionic"
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [ionic]
 featured: "no"

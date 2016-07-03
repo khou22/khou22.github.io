@@ -4,6 +4,7 @@ title: "Internationalizing Your iOS App in Xcode 7"
 author: "Kevin Hou"
 date: 2016-06-20 18:16:44
 description: "A quick tutorial on how to prepare your app for internationalization using Xcode's built-in localization tools."
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [ios, swift]
 featured: "no"

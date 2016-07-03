@@ -4,6 +4,7 @@ title: "Intro to Media Queries"
 author: "Kevin Hou"
 date: 2015-08-03 14:17:25
 description: "A quick overview of media queries"
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [css, html]
 featured: "no"

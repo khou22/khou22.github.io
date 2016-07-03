@@ -4,6 +4,7 @@ title: "Quick, Short If/Then Statement"
 author: "Kevin Hou"
 date:   2015-07-21 14:32:00
 description: "A quicker and faster way of writing if/then statements in javascript."
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [javascript]
 featured: "no"

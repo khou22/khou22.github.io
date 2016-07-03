@@ -4,6 +4,7 @@ title: "Restarting a CSS3 Animation with Javascript in React"
 author: "Kevin Hou"
 date: 2015-07-31 21:07:45
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [css, css3, javascript, html]
 featured: "no"

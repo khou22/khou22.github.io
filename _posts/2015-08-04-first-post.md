@@ -4,6 +4,7 @@ title: "First Blog Post on Github"
 author: "Kevin Hou"
 date:   2015-08-04 16:22:08
 description: "This is my first blog post using Jekyll on Github Pages! I'm really excited to start updating this site so stay tuned!"
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Introduction 
 tags: [github-pages]
 featured: "no"

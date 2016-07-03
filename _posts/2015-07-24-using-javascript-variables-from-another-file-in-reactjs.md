@@ -4,6 +4,7 @@ title: "Using Javascript Variables From Another File in ReactJS"
 author: "Kevin Hou"
 date:   2015-07-24 11:48:41
 description: "How to import variables from another Javascript file"
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [javascript, reactjs]
 featured: "no"

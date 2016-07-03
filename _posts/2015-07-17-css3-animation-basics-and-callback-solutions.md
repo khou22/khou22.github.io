@@ -4,6 +4,7 @@ title: "CSS3 Animation Basics and Callback Solutions"
 author: "Kevin Hou"
 date:   2015-07-17 14:07:02
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [css, css3, html, reactjs, javascript]
 featured: "no"

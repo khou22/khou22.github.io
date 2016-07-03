@@ -4,6 +4,7 @@ title: "Reading a Text File Using HTML and Javascript"
 author: "Kevin Hou"
 date: 2015-10-17 20:55:04
 description: "Uploading a text file and sorting it into a string"
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [html, javascript]
 featured: "no"

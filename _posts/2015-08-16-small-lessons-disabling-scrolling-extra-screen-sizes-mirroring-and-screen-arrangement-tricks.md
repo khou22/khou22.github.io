@@ -4,6 +4,7 @@ title: "Small Lessons: Disabling Scrolling, Extra Screen Sizes, Mirroring and Sc
 author: "Kevin Hou"
 date: 2015-08-16 11:29:33
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [css, osx]
 featured: "no"

@@ -4,6 +4,7 @@ title: "Designing My YouTube Channel Artwork"
 author: "Kevin Hou"
 date: 2016-05-07 21:32:05
 description: "How to design your YouTube artwork effectively. Tips, tricks, and more."
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Design
 tags: []
 featured: "no"

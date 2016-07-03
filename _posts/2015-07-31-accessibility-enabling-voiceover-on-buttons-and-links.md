@@ -4,6 +4,7 @@ title: "Accessibility: Enabling Voiceover on Buttons and Links"
 author: "Kevin Hou"
 date: 2015-07-31 21:13:47
 description: "Adding accessibility features to your website to allow for a wider audience."
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [html]
 featured: "yes"

@@ -4,6 +4,7 @@ title: "Making a Simple Page Based Application in Swift"
 author: "Kevin Hou"
 date: 2016-06-28 15:10:08
 description: "A quick tutorial on how to make a bare-bones page-based application in Xcode 7.3 using Swift."
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [ios, swift]
 featured: "yes"

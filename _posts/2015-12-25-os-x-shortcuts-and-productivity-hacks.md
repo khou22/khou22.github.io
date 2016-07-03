@@ -4,6 +4,7 @@ title: "OS X Shortcuts and Productivity Hacks"
 author: "Kevin Hou"
 date: 2015-12-25 12:59:02
 description: "A few useful OS X tricks that will help speed up your efficiency."
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: computer
 tags: [unix, osx]
 featured: "no"

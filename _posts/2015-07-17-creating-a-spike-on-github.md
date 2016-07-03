@@ -4,6 +4,7 @@ title: "Creating a Spike on GitHub and a Good GitHub Branch Model"
 author: "Kevin Hou"
 date:   2015-07-17 13:10:57
 description: "Creating a backup of my playground files on Github. A file where you play around with technique and features is called a 'spike.'"
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [salesforce, unix, github]
 featured: "no"

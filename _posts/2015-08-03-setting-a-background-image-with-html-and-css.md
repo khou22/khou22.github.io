@@ -4,6 +4,7 @@ title: "Setting a Background Image with HTML and CSS"
 author: "Kevin Hou"
 date: 2015-08-03 17:52:15
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [html, css]
 featured: "no"

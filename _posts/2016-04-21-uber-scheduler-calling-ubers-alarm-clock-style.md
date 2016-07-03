@@ -4,6 +4,7 @@ title: "Uber Scheduler: Calling Ubers Alarm Clock Style"
 author: "Kevin Hou"
 date: 2016-04-21 22:43:30
 description: "Overview, reflection, etc. on building the Uber Scheduler at my first hackathon. It won first overall!"
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: programming
 tags: ['ionic', 'javascript', 'html', 'css', 'python', 'apps']
 featured: "yes"

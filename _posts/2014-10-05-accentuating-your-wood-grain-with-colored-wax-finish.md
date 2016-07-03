@@ -4,6 +4,7 @@ title: "Accentuating Your Wood Grain with Colored Wax Finish"
 author: "Kevin Hou"
 date: 2014-10-05 22:34:10
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Wood
 tags: [wood-finish]
 featured: "no"

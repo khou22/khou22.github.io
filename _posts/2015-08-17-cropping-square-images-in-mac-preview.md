@@ -4,6 +4,7 @@ title: "Cropping Square Images in Mac Preview"
 author: "Kevin Hou"
 author: 2015-08-17 21:37:21
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Computer
 tags: [osx]
 featured: "no"

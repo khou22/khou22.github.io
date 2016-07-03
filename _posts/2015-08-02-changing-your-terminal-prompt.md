@@ -4,6 +4,7 @@ title: "Changing Your Terminal Prompt"
 author: "Kevin Hou"
 date: 2015-08-02 21:24:49
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [unix]
 featured: "no"

@@ -4,6 +4,7 @@ title: "Making a Bare Minimum Modal"
 author: "Kevin Hou"
 date: 2015-07-31 11:05:17
 description: ""
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [html, css]
 featured: "no"
