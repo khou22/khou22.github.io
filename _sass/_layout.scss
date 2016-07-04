@@ -244,8 +244,12 @@ $content-width: 800px;
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     margin: auto;
 
+    p {
+      font-size: 20px;
+    }
+
     h2 {
-        font-size: 32px;
+        font-size: 36px;
 
         @include media-query($on-laptop) {
             font-size: 28px;
@@ -253,7 +257,7 @@ $content-width: 800px;
     }
 
     h3 {
-        font-size: 26px;
+        font-size: 30px;
 
         @include media-query($on-laptop) {
             font-size: 22px;
@@ -261,10 +265,15 @@ $content-width: 800px;
     }
 
     h4 {
-        font-size: 20px;
+        font-size: 26px;
 
         @include media-query($on-laptop) {
             font-size: 18px;
         }
     }
+}
+
+// Capitalize first letter of each blog post
+.post-content::first-letter {
+  font-size: 200%;
 }

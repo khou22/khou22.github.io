@@ -22,7 +22,7 @@ After many cycles of low-fidelity designs, I finally arrive at an overall idea t
 High-fidelity designs begin in software programs like Sketch, then move to other rapid prototyping tools to gain that barebones functionality. From experience, it is very important that nearly every aspect of the design be reflected in your high-fidelity designs, at the very least in Sketch. As both a designer and software developer, it is much easier to collaborate and quickly build an MVP when all the frontend components are laid out in full view. Rather than coming up with hex values, widths, etc. on the fly, all properties should be known by the end of the high-fidelity design stage. It not only makes the engineer’s life much easier, but also the designer’s.
 <br class="post-line-break">
 <h3 class="post-subheader">Visual</h3>
-Here is a chart that appropriately sums up the progression from low to high-fidelity designs in relation to functionality.
+Here is a chart that appropriately sums up the progression from low to high-fidelity designs in relation to functionality.<br>
 <img src="http://www.uxmatters.com/mt/archives/2010/05/images/wireframe_fig1.jpg" />
 <br class="post-line-break">
 <h3 class="post-subheader">Animations</h3>

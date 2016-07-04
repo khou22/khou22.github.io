@@ -311,21 +311,26 @@ pre {
   max-width: -webkit-calc(800px - (30px));
   max-width: calc(800px - (30px));
   margin: auto; }
+  .post-content p {
+    font-size: 20px; }
   .post-content h2 {
-    font-size: 32px; }
+    font-size: 36px; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
         font-size: 28px; } }
   .post-content h3 {
-    font-size: 26px; }
+    font-size: 30px; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
         font-size: 22px; } }
   .post-content h4 {
-    font-size: 20px; }
+    font-size: 26px; }
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
+
+.post-content::first-letter {
+  font-size: 200%; }
 
 /**
  * Syntax highlighting styles
@@ -701,11 +706,11 @@ strong {
   color: #D9F4FF !important; }
 
 .post-line-break {
-  line-height: 24px !important; }
+  line-height: 36px !important; }
 
 .post-subheader {
-  padding-top: 1.5rem;
-  padding-bottom: .5rem; }
+  padding-top: 3rem;
+  padding-bottom: 1rem; }
 
 li {
   padding-left: 12px;
