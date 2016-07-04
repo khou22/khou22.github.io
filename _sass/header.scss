@@ -5,6 +5,11 @@ $brand-green:     #80A454;
 $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 
+.site-header-content {
+  padding-left: $spacing-unit;
+  padding-right: $spacing-unit;
+}
+
 .external {
   &-bar {
     margin: auto;

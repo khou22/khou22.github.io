@@ -605,6 +605,10 @@ strong {
   color: #9DB7C1; }
 
 /*For the _includes/header.html file*/
+.site-header-content {
+  padding-left: 30px;
+  padding-right: 30px; }
+
 .external-bar {
   margin: auto;
   width: 100%; }
@@ -699,15 +703,16 @@ strong {
 
 .post-header-content {
   height: 225px;
-  max-width: -webkit-calc(1.2 * (800px - (30px)));
-  max-width: calc(1.2 * (800px - (30px)));
+  max-width: -webkit-calc(1.3 * (800px - (30px)));
+  max-width: calc(1.3 * (800px - (30px)));
   margin: auto;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
   padding-top: 12px;
   color: white; }
 
 .post-meta {
+  margin-top: 20px !important;
   color: #D9F4FF !important; }
 
 .post-return-main {
@@ -719,6 +724,10 @@ strong {
 .post-subheader {
   padding-top: 3rem;
   padding-bottom: 1rem; }
+
+.post-organization {
+  margin-top: 16px;
+  color: black; }
 
 li {
   padding-left: 12px;
@@ -904,6 +913,10 @@ li {
   height: 16px;
   display: inline-block;
   margin-right: 3px; }
+
+.site-footer-content {
+  padding-left: 30px;
+  padding-right: 30px; }
 
 .stsc-input-div {
   width: 48%;
