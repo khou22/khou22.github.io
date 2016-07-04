@@ -190,16 +190,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Installing and Getting Started with Python</h1>
-    <p class="post-meta">Jan 31, 2016 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Installing and Getting Started with Python</h1>
+      <h4 class="post-header-description">Setting up Python on my own computer.</h4>
+      <p class="post-meta">Jan 31, 2016 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <h1 id="downloading-and-installing-python">Downloading and Installing Python</h1>
 <p>First download Python from the <a href="https://www.python.org/downloads/">Python website</a>. After installing, you can install other helpful tools including <a href="https://bootstrap.pypa.io/get-pip.py">Pip</a>. Save the file as a Python file (extension: “.py”) and navigate to the file in your terminal. Run the Python script using your terminal to install:</p>

@@ -220,16 +220,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Uber Scheduler: Calling Ubers Alarm Clock Style</h1>
-    <p class="post-meta">Apr 21, 2016 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Uber Scheduler: Calling Ubers Alarm Clock Style</h1>
+      <h4 class="post-header-description">Overview, reflection, etc. on building the Uber Scheduler at my first hackathon. It won first overall!</h4>
+      <p class="post-meta">Apr 21, 2016 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>This past week, a group of friends and I attended a hackathon, MenloHacks ñ an MLH (Major League Hackathon) sponsored event. This was my first hackathon and was also for one of my two partners. Our group of 3 high schoolers built an Uber scheduling app for both iOS and Android. Our app would essentially allow users to schedule uber rides ahead of time at a set date/time. Another core segment of our app was the recurring schedule component: an alarm-clock-style feature that could automatically call you an Uber on specific weekdays (i.e. every Monday, Wednesday, and Friday at 5:45 PM). We were able to complete our product within the allotted 24 hour time period. We even had time to build another project - a Google Chrome extension that censors your vulgar GitHub commits (see <a href="#">Execute Order 66</a>). I worked as the primary front end engineer and also designed the UI/UX from scratch.
 <br class="post-line-break" />

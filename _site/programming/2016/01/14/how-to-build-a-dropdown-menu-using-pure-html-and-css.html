@@ -196,16 +196,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">How to Build a Dropdown Menu Using Pure HTML and CSS</h1>
-    <p class="post-meta">Jan 14, 2016 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">How to Build a Dropdown Menu Using Pure HTML and CSS</h1>
+      <h4 class="post-header-description">A short tutorial on how to build a navigation bar with dropdown menu options using only HTML and CSS</h4>
+      <p class="post-meta">Jan 14, 2016 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>Here is how to make a bare bones dropdown navigation menu using only CSS and HTML. There are more complicated ways of doing this using JQuery, but I’ve found this method a lot easier. I pulled code from a variety of sources — the CSS mostly came from <a href="http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php">here</a>.</p>
 

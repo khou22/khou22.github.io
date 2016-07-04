@@ -190,16 +190,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Best Way to Customize Terminal</h1>
-    <p class="post-meta">Aug 2, 2015 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Best Way to Customize Terminal</h1>
+      <h4 class="post-header-description">Customize your terminal shell to your liking. It'll look really cool.</h4>
+      <p class="post-meta">Aug 2, 2015 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>I just did a post on customizing your Terminal look and feel using manual commands in your .bash_profile file, but I just came across a puggin called “oh-my-zsh” that makes it so much easier. I literally just installed it and my terminal came alive. It looks loads better! It recognizes github directories, color codes different file types, and does countless other things.
 <br />

@@ -190,16 +190,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Comparison Operators: '==' vs. '==='</h1>
-    <p class="post-meta">Sep 8, 2015 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Comparison Operators: '==' vs. '==='</h1>
+      <h4 class="post-header-description"></h4>
+      <p class="post-meta">Sep 8, 2015 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>For the longest time, I didn’t realize that ‘===’ was a comparison operator in Javascript. I just recently learned what the difference between them was. The double equal signs tell the comparison statement to convert the two values into the same type before comparing them. The triple equal signs do not convert the values before coimparing. If the two values do not share the same type, it will simply return false. For example:</p>
 

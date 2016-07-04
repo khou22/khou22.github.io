@@ -190,16 +190,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Getting Started with the CNC Router</h1>
-    <p class="post-meta">Mar 6, 2016 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Getting Started with the CNC Router</h1>
+      <h4 class="post-header-description">Part of a wood project I'm working on. Using SketchUp and Aspire to prepare the CNC cutpath.</h4>
+      <p class="post-meta">Mar 6, 2016 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <h2>Cutting Topographical Maps on the CNC Router</h2>
 <p>This blog post is primarily for my own notes. It's a work in progress. As my project progresses and I encounter more challenges, I will write about them here.</p>

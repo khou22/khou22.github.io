@@ -193,16 +193,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Jekyll On El Capitan (OS X 10.11)</h1>
-    <p class="post-meta">Oct 9, 2015 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Jekyll On El Capitan (OS X 10.11)</h1>
+      <h4 class="post-header-description">Fixing Jekyll on after upgrading to OS X 10.11, ie. El Capitan</h4>
+      <p class="post-meta">Oct 9, 2015 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>I upgraded to OS X 10.11, officially called El Capitan, this past week and discovered a concerning bug when building my site. My terminal was unable to recognize the initiator term: “jekyll.”</p>
 

@@ -187,16 +187,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">First Blog Post on Github</h1>
-    <p class="post-meta">Aug 4, 2015 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">First Blog Post on Github</h1>
+      <h4 class="post-header-description">This is my first blog post using Jekyll on Github Pages! I'm really excited to start updating this site so stay tuned!</h4>
+      <p class="post-meta">Aug 4, 2015 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Hello</span> <span class="nx">world</span><span class="o">!</span></code></pre></div>

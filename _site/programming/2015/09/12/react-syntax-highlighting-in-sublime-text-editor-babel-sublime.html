@@ -193,16 +193,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">React Syntax Highlighting in Sublime Text Editor (Babel Sublime)</h1>
-    <p class="post-meta">Sep 12, 2015 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">React Syntax Highlighting in Sublime Text Editor (Babel Sublime)</h1>
+      <h4 class="post-header-description">Adding syntax highlighting for ReactJS in Sublime Text 2.</h4>
+      <p class="post-meta">Sep 12, 2015 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>Since I’m working with the Javascript framework, React, I would like to have a syntax highlighter in my Sublime IDE. Babel-Sublime is just what I’m looking for - it is integrated with Sublime and provides syntax highlighting for JSX code.
 <br />

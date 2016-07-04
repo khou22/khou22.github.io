@@ -202,16 +202,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Creating a Spike on GitHub and a Good GitHub Branch Model</h1>
-    <p class="post-meta">Jul 17, 2015 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Creating a Spike on GitHub and a Good GitHub Branch Model</h1>
+      <h4 class="post-header-description">Creating a backup of my playground files on Github. A file where you play around with technique and features is called a 'spike.'</h4>
+      <p class="post-meta">Jul 17, 2015 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>In programming, a spike a place to test out various methods before actually coding the finished project. For the past week, I’ve been practicing with a whole host of components that I will ultimately use in my final project such as modals, lists, animation, React components, JSON data, states, props…the list goes on and on and on. I didn’t want to lose this code because, believe it or not, it can actually be really helpful down the road. Sometime I’ll forget how I did something originally, and I’ll have to refer back to the previous file. To solve this issue, I created a Spike branch in Github.</p>
 

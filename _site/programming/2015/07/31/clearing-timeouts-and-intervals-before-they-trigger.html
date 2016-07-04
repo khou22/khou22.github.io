@@ -190,16 +190,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Clearing Timeouts and Intervals Before They Trigger</h1>
-    <p class="post-meta">Jul 31, 2015 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Clearing Timeouts and Intervals Before They Trigger</h1>
+      <h4 class="post-header-description"></h4>
+      <p class="post-meta">Jul 31, 2015 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>I’ve been working a lot with time and animation and one of the things that I had to overcome was preventing an existing timeout from triggering. I had already declared a timeout with setTimeout, but I wanted to cancel it midway.
 <br />

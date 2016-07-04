@@ -190,16 +190,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">TheaterJS: How to Add and Use Javascript Libraries</h1>
-    <p class="post-meta">Nov 29, 2015 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">TheaterJS: How to Add and Use Javascript Libraries</h1>
+      <h4 class="post-header-description">A simple tutorial on how to use Javascript libraries in your web apps. I will be using TheaterJS as an example library.</h4>
+      <p class="post-meta">Nov 29, 2015 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>I am working on getting some neat, open-source Javascript libraries ported into my website. I’m trying to teach myself how to incorporate the pleathorea of user contributed libraries into my site. Over the summer, I taught myself how to use NPM dependencies — elegeant packages of Javascript code that would perform preset functions. With the millions of NPM packages out there, I wanted to use it in my own site.</p>
 

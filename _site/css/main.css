@@ -111,12 +111,9 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(800px - (30px));
-  max-width: calc(800px - (30px));
+  width: 100%;
   margin-right: auto;
-  margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px; }
+  margin-left: auto; }
   @media screen and (max-width: 800px) {
     .wrapper {
       max-width: -webkit-calc(800px - (30px));
@@ -264,9 +261,6 @@ pre {
 .page-content {
   /*padding: $spacing-unit 0;*/
   /*Default*/
-  padding: 12px 0;
-  /*No spacing*/
-  background-image: url("./../media/site/textures/white_wall_hash.png");
   background-repeat: infinite; }
 
 .page-heading {
@@ -296,12 +290,15 @@ pre {
  */
 .post-header {
   margin-bottom: 30px; }
+  .post-header-content {
+    padding-left: 30px;
+    padding-right: 30px; }
 
 .post-title {
   font-size: 42px;
   letter-spacing: -1px;
   line-height: 1;
-  color: #3286A8; }
+  color: white; }
   @media screen and (max-width: 800px) {
     .post-title {
       font-size: 36px; } }
@@ -310,7 +307,10 @@ pre {
   color: grey; }
 
 .post-content {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  max-width: -webkit-calc(800px - (30px));
+  max-width: calc(800px - (30px));
+  margin: auto; }
   .post-content h2 {
     font-size: 32px; }
     @media screen and (max-width: 800px) {
@@ -677,8 +677,28 @@ strong {
   display: block; }
 
 /*Custom sass file for the post.scss layout*/
+.post-header-background {
+  z-index: -9999;
+  position: absolute;
+  height: 225px;
+  width: 100vw;
+  overflow-x: hidden; }
+
+.post-header-description {
+  margin-top: 12px !important;
+  margin-bottom: 6px !important;
+  color: #D9F4FF; }
+
+.post-header-content {
+  height: 225px;
+  padding-top: 12px;
+  color: white; }
+
+.post-meta {
+  color: #D9F4FF !important; }
+
 .post-return-main {
-  color: #9DB7C1 !important; }
+  color: #D9F4FF !important; }
 
 .post-line-break {
   line-height: 24px !important; }

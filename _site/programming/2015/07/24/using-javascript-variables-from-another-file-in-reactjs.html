@@ -196,16 +196,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Using Javascript Variables From Another File in ReactJS</h1>
-    <p class="post-meta">Jul 24, 2015 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Using Javascript Variables From Another File in ReactJS</h1>
+      <h4 class="post-header-description">How to import variables from another Javascript file</h4>
+      <p class="post-meta">Jul 24, 2015 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>The project I’ve been working on requires data entry that isn’t always easy to organize if they are kept locally in my React code. I’ve been declaring my data as a getInitialState() which is both inconvienient and messy. To work around this, I’m keeping my data in a seperate Javascript file called “file.js.”</p>
 

@@ -1,6 +1,47 @@
 /*Custom sass file for the post.scss layout*/
+$brand-red:       #D5491F;
+$brand-orange:    #DA8D0F;
+$brand-green:     #80A454;
+$brand-grey:      #9DB7C1;
+$brand-blue:      #3286A8;
+
+$offwhite: #D9F4FF;
+
+$post-header-height: 225px;
+
+.post-header-background {
+  z-index: -9999; // Ensure in the very back
+  position: absolute; // So that other elements can go over it
+  height: $post-header-height;
+  width: 100vw;
+  overflow-x: hidden;
+
+  // Filter
+  // -webkit-filter: blur(5px);
+  // -moz-filter: blur(5px);
+  // -o-filter: blur(5px);
+  // -ms-filter: blur(5px);
+  // filter: blur(5px);
+}
+
+.post-header-description {
+  margin-top: 12px !important;
+  margin-bottom: 6px !important;
+  color: $offwhite;
+}
+
+.post-header-content {
+  height: $post-header-height;
+  padding-top: 12px;
+  color: white;
+}
+
+.post-meta {
+  color: $offwhite !important;
+}
+
 .post-return-main {
-  color: $brand-grey !important;
+  color: $offwhite !important;
 }
 
 .post-line-break {

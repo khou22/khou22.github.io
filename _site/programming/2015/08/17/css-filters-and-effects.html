@@ -196,16 +196,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">CSS Filters and Effects</h1>
-    <p class="post-meta">Aug 17, 2015 • 2015-08-17 08:03:23 -0700</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">CSS Filters and Effects</h1>
+      <h4 class="post-header-description">How to use CSS3 animations to apply filters on images or divs.</h4>
+      <p class="post-meta">Aug 17, 2015 • 2015-08-17 08:03:23 -0700</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>Since most of the site (as of now) does not use Bootstrap as a default style tool, I’ve been doing a lot of custom CSS from scratch. My landing page is meant to mimic a sheet of glass with a semi-transparent background and border. Here’s some quick and simple CSS that can turn any div into a piece of glass:</p>
 

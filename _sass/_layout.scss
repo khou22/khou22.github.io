@@ -172,8 +172,7 @@ $brand-blue:      #3286A8;
  */
 .page-content {
     /*padding: $spacing-unit 0;*/ /*Default*/
-    padding: 12px 0; /*No spacing*/
-    background-image: url('./../media/site/textures/white_wall_hash.png');
+    // padding: 12px 0; /*No spacing*/
     background-repeat: infinite;
 }
 
@@ -213,13 +212,19 @@ $brand-blue:      #3286A8;
  */
 .post-header {
     margin-bottom: $spacing-unit;
+
+    &-content {
+      padding-left: $spacing-unit;
+      padding-right: $spacing-unit;
+    }
 }
 
 .post-title {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
-    color: $brand-blue;
+    // color: $brand-blue;
+    color: white;
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -230,8 +235,14 @@ $brand-blue:      #3286A8;
     color: grey;
 }
 
+$content-width: 800px;
+
 .post-content {
     margin-bottom: $spacing-unit;
+
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    margin: auto;
 
     h2 {
         font-size: 32px;

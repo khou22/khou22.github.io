@@ -196,16 +196,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Handwriting Font App (With Video and Source Code)</h1>
-    <p class="post-meta">Dec 7, 2014 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Handwriting Font App (With Video and Source Code)</h1>
+      <h4 class="post-header-description">Summary of my handwriting font app. It takes the user's handwriting, creates a font out of it, and allows them to type in their own handwriting. The file can be exported as a vector file and printed on the CNC Watercolor bot to mimic a real person's writing.</h4>
+      <p class="post-meta">Dec 7, 2014 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>I recently programmed my own handwriting font app using Processing, a Java-based programming language. The program prompts the user’s handwriting, stores it locally, then allows the user to type in their own handwriting. I spent many hours on this project, and I had a lot of fun making it! I was really going for a program that would not only be a challenge programming-wise, but would also be a great tool to have. The features include:</p>
 <ul>

@@ -187,16 +187,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">Visualizing a Javascript Callback</h1>
-    <p class="post-meta">Oct 1, 2015 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Visualizing a Javascript Callback</h1>
+      <h4 class="post-header-description">A cool web app that visually demonstrates how browsers execute Javascript's call stacks/event loops/callbacks.</h4>
+      <p class="post-meta">Oct 1, 2015 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>Ever wondered what technical sounding words like “asyncrhonis” or “event-loops” meant? It took me a while to figure out all the complicated terminology associated with code execution, but basically these words all relate to the order in which lines of code are run.</p>
 

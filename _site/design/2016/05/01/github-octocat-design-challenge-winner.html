@@ -196,16 +196,28 @@
             
         
     
-  <header class="post-header">
-    <p class="post-return-main"><a href="/blog">
-      <
-      Return to all blogs
-    </a></p>
-    <br />
-    <h1 class="post-title">GitHub Octocat Design Challenge Winner</h1>
-    <p class="post-meta">May 1, 2016 • Kevin Hou</p>
-    <img src="./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">GitHub Octocat Design Challenge Winner</h1>
+      <h4 class="post-header-description">I designed a logo for a project of mine that took a unique spin on the GitHub Octocat mascot. I entered it into the design challenge and won!</h4>
+      <p class="post-meta">May 1, 2016 • Kevin Hou</p>
+    </div>
   </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
   <article class="post-content">
     <p>I designed a logo for a project of mine that took a unique spin on the GitHub Octocat mascot. I entered it into a hackathon challenge and it was picked as the best overall design. GitHub Education has hosted this design competition many times for various hackathons. At the MenloHacks hackathon a couple weekends ago, my group and I built <a href="/blog/projects/Execute-Order-66/" target="_blank">Execute Order 66</a>, a Chrome extension that automatically censors vulgar language in GitHub repos.</p>
 <h3 class="post-subheader">Design Process</h3>
