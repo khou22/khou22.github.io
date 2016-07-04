@@ -290,9 +290,6 @@ pre {
  */
 .post-header {
   margin-bottom: 30px; }
-  .post-header-content {
-    padding-left: 30px;
-    padding-right: 30px; }
 
 .post-title {
   font-size: 42px;
@@ -329,9 +326,15 @@ pre {
       .post-content h4 {
         font-size: 18px; } }
 
+/*
 .post-content::first-letter {
-  font-size: 200%; }
-
+  font-size: 200%;
+  // line-height: 200%;
+}
+.post-content::first-line {
+  // line-height: 200%;
+}
+*/
 /**
  * Syntax highlighting styles
  */
@@ -696,6 +699,11 @@ strong {
 
 .post-header-content {
   height: 225px;
+  max-width: -webkit-calc(1.2 * (800px - (30px)));
+  max-width: calc(1.2 * (800px - (30px)));
+  margin: auto;
+  padding-left: 12px;
+  padding-right: 12px;
   padding-top: 12px;
   color: white; }
 

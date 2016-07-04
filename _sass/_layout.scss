@@ -213,10 +213,6 @@ $brand-blue:      #3286A8;
 .post-header {
     margin-bottom: $spacing-unit;
 
-    &-content {
-      padding-left: $spacing-unit;
-      padding-right: $spacing-unit;
-    }
 }
 
 .post-title {
@@ -274,6 +270,13 @@ $content-width: 800px;
 }
 
 // Capitalize first letter of each blog post
+// It looks bad because some posts begin with a header
+/*
 .post-content::first-letter {
   font-size: 200%;
+  // line-height: 200%;
 }
+.post-content::first-line {
+  // line-height: 200%;
+}
+*/
