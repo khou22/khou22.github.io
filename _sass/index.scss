@@ -1,10 +1,20 @@
 /*For the index blog page*/
+/*This is the blog homepage*/
 
 $brand-red:       #D5491F;
 $brand-orange:    #DA8D0F;
 $brand-green:     #80A454;
 $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
+
+.blog-homepage-content {
+  max-width: -webkit-calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
+  max-width:         calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
+  margin: auto;
+
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
 .left-main {
   width: 78%;
@@ -17,7 +27,7 @@ $brand-blue:      #3286A8;
 }
 
 .recent-link {
-  
+
 }
 
 .featured {

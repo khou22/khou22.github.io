@@ -3,63 +3,64 @@ layout: default
 ---
 
 <!-- Blog homepage -->
+<div class="blog-homepage-content">
+  <div class="home left-main">
 
-<div class="home left-main">
+    <h1 class="page-heading">Posts <span class="number-of-posts">({{site.posts.size}})</span></h1>
 
-  <h1 class="page-heading">Posts <span class="number-of-posts">({{site.posts.size}})</span></h1>
-
-  <ul class="post-list">
-    <!-- Repeats for (maps) all posts -->
-    {% for post in site.posts %}
-      <li class="post-individual">
-        <h2 style="margin-bottom: 0rem">
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <p class="post-description">
-          {{ post.description }}
-        </p>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
-
-<div class="right-column">
-  <div class="featured">
-    Featured posts:
-    <ol class="regular-font-color">
+    <ul class="post-list">
+      <!-- Repeats for (maps) all posts -->
       {% for post in site.posts %}
-        {% if post.featured != "no" %} <!-- if featured -->
-          <li>
-            <a class="recent-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </li>
-        {% endif %}
+        <li class="post-individual">
+          <h2 style="margin-bottom: 0rem">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+          <p class="post-description">
+            {{ post.description }}
+          </p>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </li>
       {% endfor %}
-    </ol>
+    </ul>
+
+    <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
   </div>
-  <div class="recent">
-    Recent posts:
-    <ol class="regular-font-color">
-      {% for post in site.posts %}
-        {% if forloop.index0 < 3 %} <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ol>
-  </div>
-  <div class="browse-category">
-    <a href="{{ site.baseurl }}/blog/category">
-      Browse by Category
-    </a>
-  </div>
-  <div class="browse-tag">
-    <a href="{{ site.baseurl }}/blog/tag">
-      Browse by Tag
-    </a>
+
+  <div class="right-column">
+    <div class="featured">
+      Featured posts:
+      <ol class="regular-font-color">
+        {% for post in site.posts %}
+          {% if post.featured != "no" %} <!-- if featured -->
+            <li>
+              <a class="recent-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+    </div>
+    <div class="recent">
+      Recent posts:
+      <ol class="regular-font-color">
+        {% for post in site.posts %}
+          {% if forloop.index0 < 3 %} <!-- Only display last 3 posts -->
+            <li>
+              <a class="recent-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+    </div>
+    <div class="browse-category">
+      <a href="{{ site.baseurl }}/blog/category">
+        Browse by Category
+      </a>
+    </div>
+    <div class="browse-tag">
+      <a href="{{ site.baseurl }}/blog/tag">
+        Browse by Tag
+      </a>
+    </div>
   </div>
 </div>
