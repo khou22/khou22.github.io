@@ -1,0 +1,517 @@
+7598f9b,Kevin Hou,5 minutes ago,Removed border from top and bottom of header
+9da3c2e,Kevin Hou,11 minutes ago,Style changes. Updated post-meta section of blog post
+3dcae77,Kevin Hou,25 minutes ago,Took out capitalization of first letters because of too many bugs
+89ae937,Kevin Hou,36 minutes ago,Updated blog content styling
+26beb10,Kevin Hou,43 minutes ago,Stylized Blog Post Header
+9cc41ba,Kevin Hou,2 hours ago,Added image property to each blog post
+31ce4c2,Kevin Hou,2 hours ago,Updated tags on blog posts
+d05736e,khou22,2 days ago,New blog post on the digital design process
+393214b,khou22,4 days ago,Update blog post
+79f8114,khou22,4 days ago,Added new blog post: Advances in UIKit Animations and Transitions
+ccd6503,khou22,5 days ago,Added source files for blog post on page based iOS app
+4cab487,khou22,5 days ago,New blog post on making a page-based app in Swift
+230f32b,Kevin Hou,5 days ago,Update 2016-06-20-internationalizing-your-ios-app-in-xcode-7.md
+985f875,Kevin Hou,7 days ago,Updated blog post
+4e4b245,Kevin Hou,9 days ago,Updated blog post
+52ff247,Kevin Hou,11 days ago,New blog post on WWDC 2016 Internationalization
+b27b76a,Kevin Hou,11 days ago,Landing Page First Image Not Working Correctly
+c371c93,Kevin Hou,12 days ago,Update 2016-06-20-internationalizing-your-ios-app-in-xcode-7.md
+7f9fd90,Kevin Hou,13 days ago,Updated blog post
+fdc7716,Kevin Hou,13 days ago,New blog post on localization
+bd599ff,Kevin Hou,2 weeks ago,Let users know 404.html is a work in progress
+b267d30,Kevin Hou,3 weeks ago,Updated build
+c271a29,Kevin Hou,3 weeks ago,Updated build
+dd150cd,Kevin Hou,4 weeks ago,Added filters for each icon
+0abac37,Kevin Hou,5 weeks ago,New blog post on the KHou bowl
+fe57525,Kevin Hou,5 weeks ago,Updated build
+1c8c75b,Kevin Hou,5 weeks ago,Updated build
+4e98d3c,Kevin Hou,5 weeks ago,Update README.md
+14d02f8,Kevin Hou,5 weeks ago,Added new projects to landing page
+cd54fa1,Kevin Hou,6 weeks ago,Added lock box image to landing page
+00f76d1,Kevin Hou,6 weeks ago,Updated build
+7d6f3b1,Kevin Hou,6 weeks ago,Updated build
+616beb2,Kevin Hou,6 weeks ago,Updated build
+6edd3b5,Kevin Hou,6 weeks ago,Fixed spelling
+5158b61,Kevin Hou,6 weeks ago,Updated content
+342d37a,Kevin Hou,6 weeks ago,Updated bibliography
+07a604a,Kevin Hou,6 weeks ago,Updated content for China
+e6cd33c,Kevin Hou,6 weeks ago,Bug fixes. Can't highlight text on landing page
+b383365,Kevin Hou,6 weeks ago,Fixed page titles. Added new video. Minor bug fixes.
+01649ac,Kevin Hou,7 weeks ago,Added favicon and google analytics
+34bba7d,Kevin Hou,7 weeks ago,Updated background image
+478ac3b,Kevin Hou,7 weeks ago,Added theater.js
+feb7baa,Kevin Hou,7 weeks ago,Bug fix
+ee1d81c,Kevin Hou,7 weeks ago,MVP Complete
+a5dc281,Kevin Hou,7 weeks ago,Updated landing page. Style changes. Bug fixes.
+0f95207,Kevin Hou,7 weeks ago,Fixed broken reference link
+b1d779c,Kevin Hou,7 weeks ago,Fixed broken link in projects page
+d99a29e,Kevin Hou,7 weeks ago,Added East Asian Relations website to the projects page
+d04bcd0,Kevin Hou,7 weeks ago,Added new images. Minor bug fixes
+e0cd6c6,Kevin Hou,7 weeks ago,Migrated to diffracted JS file for React
+bd38632,Kevin Hou,7 weeks ago,Imported East Asian Relations site
+38ed949,Kevin Hou,7 weeks ago,Updated "Contact" page
+91724b3,Kevin Hou,7 weeks ago,Updated build
+9b6efb8,Kevin Hou,7 weeks ago,Updated weather channel bar link. Button links now open in same tab
+ea6b16b,Kevin Hou,8 weeks ago,Fixed styling bug
+1b85e18,Kevin Hou,8 weeks ago,Added SimpleWeatherJS library to website. Working weather notification on browser home page.
+bf18af6,Kevin Hou,8 weeks ago,Changed programming portfolio link on landing page
+29682d3,Kevin Hou,8 weeks ago,Added project name/link for each background image on the landing page
+78dad6a,Kevin Hou,8 weeks ago,New blog post on YouTube channel artwork
+8607df0,Kevin Hou,8 weeks ago,Updated build.
+e5f4587,Kevin Hou,8 weeks ago,Added link to Khou segmented bowl YouTube video.
+b9e4498,Kevin Hou,9 weeks ago,Increased load times. Changed file size, name, etc.
+6a20390,Kevin Hou,9 weeks ago,Added notification message on landing page for announcements, new projects/videos, etc.
+928d529,Kevin Hou,9 weeks ago,Added images to project list
+24df285,Kevin Hou,9 weeks ago,Added new blog post on hackathon. Blog post is a complete final draft.
+dc36142,Kevin Hou,9 weeks ago,Added in Twitter Screenshots
+fa9cf32,Kevin Hou,9 weeks ago,New blog post on Octocat design (haven't added screenshots yet). Added new post category: Design.
+31b2eb7,Kevin Hou,9 weeks ago,Added new background to landing page
+e2a874c,Kevin Hou,9 weeks ago,Changed size to increase load times
+e0f4b46,Kevin Hou,9 weeks ago,Added KHou segmented bowl picture to website
+af06055,Kevin Hou,9 weeks ago,Updated links for projects. Continuing to add content
+b5e88db,Kevin Hou,10 weeks ago,Added tags and updated projects page
+91ea86e,Kevin Hou,10 weeks ago,Moved apps into project folder. Other minor changes to tags/categories
+b3a237f,Kevin Hou,10 weeks ago,Updated blog post. Added designs and screenshots of Uber Scheduler.
+c0014d5,Kevin Hou,10 weeks ago,Added note about pages in progress
+e990f9a,Kevin Hou,10 weeks ago,Updated blog posts and header style
+366e80d,Kevin Hou,10 weeks ago,Updated project posts
+5ee48eb,Kevin Hou,2 months ago,Updated blog post and project page for Uber Scheduler
+1fe967c,Kevin Hou,2 months ago,Updated links
+8916226,Kevin Hou,2 months ago,Update 404.html
+aeae319,Kevin Hou,2 months ago,Update README.md
+04e913c,Kevin Hou,2 months ago,Started blog post on Uber Scheduler
+b8f00b5,Kevin Hou,2 months ago,Update README.md
+f7ad4f3,Kevin Hou,3 months ago,Added Uber Scheduler and Execute Order 66 to projects page. Added some screenshots and updated header.
+ced15f1,Kevin Hou,3 months ago,Updated links and other minor changes
+29db0a4,Kevin Hou,3 months ago,Updated links and icons
+5732cee,Kevin Hou,3 months ago,Working link hover. Restructured code to make it cleaner and more efficient.
+fb159b5,Kevin Hou,3 months ago,Hover over button label reveal works. Still buggy and the icon does not disappear yet
+a695247,Kevin Hou,3 months ago,Beginning to bring the button hover effect over from the landing page to the browser home page
+879e621,Kevin Hou,3 months ago,Minor bug fixes. Added random color.
+7bf86da,Kevin Hou,3 months ago,Bug fix on blog post
+fd4ea54,Kevin Hou,3 months ago,Updated site nav bar to link drag/drop project
+4a0b96e,Kevin Hou,3 months ago,Styling updates. Can now add/delete new equations
+0046769,Kevin Hou,3 months ago,Taking a break on the Desmos drag/drop project.
+5cd9486,Kevin Hou,3 months ago,Working MVP
+5a3c9e7,Kevin Hou,3 months ago,Can move items down on the list now
+8fd28f4,Kevin Hou,3 months ago,List reordering works. Can move items up the list now.
+4116399,Kevin Hou,3 months ago,Drag and dropping somewhat works. No functionality, but it identifies what's being dragged/dropped.
+63577fd,Kevin Hou,3 months ago,Added in group icons and link icons. Minor bug fixes.
+f6f3277,Kevin Hou,3 months ago,Restructured browser home page. Much cleaner.
+ddce7aa,Kevin Hou,3 months ago,Added in click functionality for group buttons (not for subgroup buttons). Changed cursor to pointer on buttons.
+12f8a97,Kevin Hou,3 months ago,Working Animations. Added the "Personal" group of links.
+dbb26cc,Kevin Hou,3 months ago,Small Style Changes
+0ffc55d,Kevin Hou,3 months ago,Added clock. TheaterJS effect welcome text. Show/hide links. Moved profile picture. Changed design.
+64e0de9,Kevin Hou,3 months ago,Started adding button groups/subgroups
+d56734c,Kevin Hou,3 months ago,Tried to Pull Bing Wallpaper URLs. Doesn't work because of the way Bing changes their images
+5fd8f2d,Kevin Hou,3 months ago,Started working on widgets
+71be2c0,Kevin Hou,3 months ago,Updated Page Home Page Title
+4282ae0,Kevin Hou,3 months ago,Improved File Structure for Browser Home Page
+77b923c,Kevin Hou,4 months ago,Browser Home Page Google Earth Backgrounds Work. Updated site Nav Bar
+991e206,Kevin Hou,4 months ago,Updated the Good Image Indexes
+e198dd2,Kevin Hou,4 months ago,Wrote Python Functions to Standardize Writing Javascript Code
+cf5fa64,Kevin Hou,4 months ago,Improved UI. Added progress bar, etc.
+f43bb25,Kevin Hou,4 months ago,Python Script Works! Successfully integrated with the main Javascript file
+d748435,Kevin Hou,4 months ago,Python script gets all working Google Earth image links. Creates javascript file to be accessed by main Javascript file.
+6a51f2a,Kevin Hou,4 months ago,Started New App: Browser Home Page
+d7f8516,Kevin Hou,4 months ago,Updated build
+bdeaf84,Kevin Hou,4 months ago,Updated Blog Post
+b287782,Kevin Hou,4 months ago,New Blog Post on Services in Angular
+f5bd00f,Kevin Hou,4 months ago,Edited Blog Post
+380ec75,Kevin Hou,4 months ago,Edited and updated blog posts.
+3ea4663,Kevin Hou,4 months ago,New blog post on using the CNC router with SketchUp and Aspire
+17f282a,Kevin Hou,4 months ago,Added new design files
+f49cdfb,Kevin Hou,4 months ago,Updated blog post
+3855a8e,Kevin Hou,4 months ago,Linked app to the header nav bar. Also added it to the apps page
+179a1fd,Kevin Hou,4 months ago,Added support for multiple samples
+21eff9b,Kevin Hou,4 months ago,Made 2016 Presidential Election Forecast app
+206161e,Kevin Hou,4 months ago,Worked on blog post. Added in some projects to help people get started using python
+c75e301,Kevin Hou,4 months ago,Updated build
+ced6452,Kevin Hou,4 months ago,Updated build
+b0d29d8,Kevin Hou,4 months ago,Added descriptions of some of my apps.
+e37a658,Kevin Hou,5 months ago,Updated Rakefile
+1e1804e,Kevin Hou,5 months ago,Added new images: impossible geometric shapes
+4877f10,Kevin Hou,5 months ago,Updated blog post on python
+546f376,Kevin Hou,5 months ago,Added 'ionic' and 'python' tags for blog posts
+52bcdba,Kevin Hou,5 months ago,Working on Python Blog Post
+eeb8874,Kevin Hou,5 months ago,Added new blog post on python
+264ef26,Kevin Hou,5 months ago,Working on blog post about Ionic
+8439fd3,Kevin Hou,5 months ago,Added a new blog post on Ionic
+ee054d3,Kevin Hou,5 months ago,Testing atom's github integration
+06fa2f6,Kevin Hou,5 months ago,Built site locally
+180c6ff,Kevin Hou,5 months ago,Updated wallpapers page
+d050485,Kevin Hou,5 months ago,Updated build
+ca67d1f,Kevin Hou,5 months ago,Cleaned up the file system for the wallpapers page. Added 'San Francisco Wallpaper'.
+9043b82,Kevin Hou,5 months ago,Built site locally
+d76b559,Kevin Hou,5 months ago,Added description to blog post
+4ab7527,Kevin Hou,6 months ago,Updated blog post
+20e3c8d,Kevin Hou,6 months ago,Added downloadable wallpapers on wallpapers page
+d309724,Kevin Hou,6 months ago,Working on dropdown menu blog post
+fcf94b9,Kevin Hou,6 months ago,Working on new blog post
+7d63706,Kevin Hou,6 months ago,updated build.
+cbe298b,Kevin Hou,6 months ago,Added new post
+ea33b2b,Kevin Hou,6 months ago,Updated README
+88e36d6,Kevin Hou,6 months ago,Updated version
+1545623,Kevin Hou,6 months ago,Built site locally. Minor modifications.
+755f5fc,Kevin Hou,6 months ago,Added self-designed wallpapers to the wallpapers page
+724cf00,Kevin Hou,6 months ago,Added new self-designed wallpapers to site
+c41e973,Kevin Hou,6 months ago,Built site locally
+c281125,Kevin Hou,6 months ago,Added semester 2 score algorithm to the stats test score calculator
+2b143ba,Kevin Hou,6 months ago,Updated the app page to include the time calculator app.
+bb907c9,Kevin Hou,6 months ago,Built site locally
+e50a70c,Kevin Hou,6 months ago,Added leading zeros to the minutes value
+be0c87a,Kevin Hou,6 months ago,Finished time calculator MVP
+69cd9fb,Kevin Hou,6 months ago,Updated build
+9b7a70f,Kevin Hou,6 months ago,Added styling to the Time Calculator app
+cd38069,Kevin Hou,6 months ago,Updated build
+d0a2bdf,Kevin Hou,6 months ago,Time calculator now correctly averages the times and changes the frontend accordingly
+5714180,Kevin Hou,6 months ago,Built site locally
+115729f,Kevin Hou,6 months ago,Updated build
+1d76b99,Kevin Hou,6 months ago,Time calculator can now average times
+038dbe6,Kevin Hou,6 months ago,Working dynamic text field for the time calculator app
+3c6850e,Kevin Hou,6 months ago,Added Good Music Playlist Artwork to the media folder
+40643be,Kevin Hou,6 months ago,Trying to add in a dynamic form. Not working
+4b625ee,Kevin Hou,6 months ago,Built site locallY
+5ec61ec,Kevin Hou,6 months ago,Fixed minor bug
+835b8d0,Kevin Hou,6 months ago,Fixed a bug that prevented the time calculator app from loading
+66121a0,Kevin Hou,6 months ago,Updated blog post
+8aaf50c,Kevin Hou,6 months ago,Built site locally
+6286ab1,Kevin Hou,6 months ago,Added a new blog post: OS X Shortcuts and Productivity Hacks
+82107d8,Kevin Hou,6 months ago,Updated build
+33a176a,Kevin Hou,6 months ago,Updated build
+c94ae35,Kevin Hou,6 months ago,Worked on Time Calculator app
+e83d3d8,Kevin Hou,7 months ago,Working on the Time Calculator app
+a17e269,Kevin Hou,7 months ago,Added in some more time slots. Added in submit button
+18d1a28,Kevin Hou,7 months ago,Updated build
+43c13fa,Kevin Hou,7 months ago,Built site locally
+2cd79ec,Kevin Hou,7 months ago,Started working on the time calculator app. Added the scss file
+3ad7b29,Kevin Hou,7 months ago,Added work in progress label to the time calculator app
+3867379,Kevin Hou,7 months ago,Updated the footer to fix the Flickr icon styling error
+3b89ccf,Kevin Hou,7 months ago,Created time calculator page. Starting to work on the app.
+ad39523,Kevin Hou,7 months ago,Added the wallpaper page to the site header
+f44383e,Kevin Hou,7 months ago,Updated build
+8061668,Kevin Hou,7 months ago,Updated build
+12f5ec1,Kevin Hou,7 months ago,Removed React library from postcolonial-africa pages to improve rendering speed
+26fb780,Kevin Hou,7 months ago,Updated the contact me link on the nav bar
+ea05715,Kevin Hou,7 months ago,Changed the page title for the postcolonial africa landing page
+93cc875,Kevin Hou,7 months ago,Changed styling on bibliography wallpaper to improve readability
+0467e93,Kevin Hou,7 months ago,Updating the links in the nav bar so that all pages are correctly linked
+2ef926c,Kevin Hou,7 months ago,Removed citation on the pyschology page
+2e6b8d5,Kevin Hou,7 months ago,Completed nav bar. Fixed styling bug.
+7acc225,Kevin Hou,7 months ago,Populated the pyschology page
+2b7d07c,Kevin Hou,7 months ago,Functional nav bar
+fc0d2d9,Kevin Hou,7 months ago,Updated styling sheet for the blog homepage
+051da56,Kevin Hou,7 months ago,Updated styling on the site nav bar
+fd589d6,Kevin Hou,7 months ago,Working nav bar with dropdown menus. Pure CSS
+c74d0c2,Kevin Hou,7 months ago,Updated build
+af46d71,Kevin Hou,7 months ago,Stylistic changes to some backgrounds
+6573a01,Kevin Hou,7 months ago,Added glass effect to the landing page. Looks slightly better.
+48e9148,Kevin Hou,7 months ago,Added a pyschology page. Added functional button links on the landing page
+1e667ef,Kevin Hou,7 months ago,Added in links to the landing page
+3caad6e,Kevin Hou,7 months ago,Added background to the second page of the landing page.
+8cd3946,Kevin Hou,7 months ago,Created and completely populated The Lion King page. Updated the nav bar
+f4e21d2,Kevin Hou,7 months ago,Updated the Desmos iPhone project blog post
+cf6a7b0,Kevin Hou,7 months ago,Updated the nav bar
+c3866fd,Kevin Hou,7 months ago,Added nav bar to the bibliography page
+e44cc29,Kevin Hou,7 months ago,Updated styling on the bibliography
+8794877,Kevin Hou,7 months ago,Added a local version of the tarzan movie poster
+0c729a2,Kevin Hou,7 months ago,Trying to fix Tarzan movie cover
+ecb021d,Kevin Hou,7 months ago,Parallax bibliography site
+c61e18a,Kevin Hou,7 months ago,Updated build.
+5f9603c,Kevin Hou,7 months ago,Finished adding in Tarzan content. Updated the madagascar and tarzan buttons. Now functional objects.
+7528a1f,Kevin Hou,7 months ago,Ported over most of the content for Tarzan. Still need to change the cover page info.
+ba58429,Kevin Hou,7 months ago,Finalized the Madagascar page. Ready to start new pages.
+57bf235,Kevin Hou,7 months ago,Added new speaker wallpapers to the landing page.
+0cb982e,Kevin Hou,7 months ago,Added more background images. Reordered the background images for Madagascar
+191f066,Kevin Hou,7 months ago,Added more content to the postcolonial Africa project. Changed some style issues.
+31b09ee,Kevin Hou,7 months ago,Stylistic changes to the major pages. Added in a simple nav bar.
+3a422cc,Kevin Hou,7 months ago,Added quick links to the homepage for testing purposes
+6d48a89,Kevin Hou,7 months ago,Built site locally
+ed9435d,Kevin Hou,7 months ago,Built site locally
+05ee074,Kevin Hou,7 months ago,Started populating the postcolonial africa project site. Trying to fix formatting on the word cloud
+ecec6a6,Kevin Hou,7 months ago,Less delay between words on the landing page
+d616be2,Kevin Hou,7 months ago,Added scroll down bouncing arrow to landing page
+0caf074,Kevin Hou,7 months ago,Finished the first section of the landing page and changed the landing page font.
+c3cdde0,Kevin Hou,7 months ago,Functional landing page with scrollify
+dbc470e,Kevin Hou,7 months ago,Updated site locally
+8297efc,Kevin Hou,7 months ago,Landing page doesn't scroll properly
+f720f8a,Kevin Hou,7 months ago,Started working on the landing page. It doens't look very good, but it works. Need to add fonts and find better quotes.
+b6a9639,Kevin Hou,7 months ago,Made slight modifications to the stats test score calculator
+19ec2ee,Kevin Hou,7 months ago,Built site locally
+3ecf03e,Kevin Hou,7 months ago,Instead of replacing carriage returns with an empty character, replace them with a space.
+6a1bd10,Kevin Hou,7 months ago,Added Google Analytics to the Postcolonial Africa project.
+d67bf41,Kevin Hou,7 months ago,Added some content to the postcolonial Africa project.
+6bbee3f,Kevin Hou,7 months ago,Built site locally
+4d6491e,Kevin Hou,7 months ago,Added some stylistic things on the TheaterJS blog post.
+73a7fb4,Kevin Hou,7 months ago,Added a new blog post on TheaterJS
+794fc7b,Kevin Hou,7 months ago,Added a 10 second delay to the landing page slideshow so that backgrounds can load. It'll improve the UX.
+b3dae4c,Kevin Hou,7 months ago,Added trailer page. Has a spot for a YouTube video. Added some more background images.
+ed9030b,Kevin Hou,7 months ago,Changed the page title for the madagascar page
+11c208d,Kevin Hou,7 months ago,Hiding scroll bar
+6f81116,Kevin Hou,7 months ago,Changed path to the Scrollify jquery file
+b0e0888,Kevin Hou,7 months ago,Updated some styling and added new pages as examples
+a8e49b7,Kevin Hou,7 months ago,Added example page for Madagascar
+db70b30,Kevin Hou,7 months ago,Added favicon to new pages
+213d71f,Kevin Hou,7 months ago,Updated 404 page
+f6754f3,Kevin Hou,7 months ago,Added a 404 page
+38704fa,Kevin Hou,7 months ago,Added index.html file for the project itself. Haven't populated it yet.
+3a54568,Kevin Hou,7 months ago,Added scrollify jquery library to my general website. Started the website for my Postcolonial Africa site. Created a basic parallax. Set up basic infrastructure for site.
+0ed410e,Kevin Hou,7 months ago,Added Twitter handle to the site config file
+6060930,Kevin Hou,7 months ago,Built site locally
+3bf6cee,Kevin Hou,7 months ago,Added background to blog page.
+9c34522,Kevin Hou,7 months ago,Built site locally
+e44eba7,Kevin Hou,7 months ago,Improved file naming method.
+f1d2bdb,Kevin Hou,7 months ago,Replaces quotation marks in the text analysis app.
+20c416d,Kevin Hou,7 months ago,Built site locally
+49fb40a,Kevin Hou,7 months ago,Changed the name of the compressed export file on the text analysis app. Rounded the text analysis reading ease and grade level scores to the nearest hundredth.
+b21dd3f,Kevin Hou,7 months ago,Reduced the size of some background images to improve load time. Removed reference to deleted square comet wallpaper.
+99e1292,Kevin Hou,7 months ago,Redused the size of the landing page backgrounds to help it render faster. Also changed the order in which they're loaded.
+6e037f0,Kevin Hou,8 months ago,Added writing scores: readability and Flesch-Kincaid
+427a693,Kevin Hou,8 months ago,Added safety precautions to prevent user's from entering invalid or impossible scores.
+3fee42e,Kevin Hou,8 months ago,Added in some visual components
+5585f83,Kevin Hou,8 months ago,Added some minimal instructions
+ab9efff,Kevin Hou,8 months ago,Added AP score and triggs score.
+765651e,Kevin Hou,8 months ago,Created functioning stats test score convertor. Calculations are accurate. MVP deliverable.
+96a2a5e,Kevin Hou,8 months ago,Added new page for  Mariel Triggs's class: Honors Statistics. Automates the test score calculation and grading curve.
+2d31ffa,Kevin Hou,8 months ago,Fixed the youtube embed in the Javascript Callback blog post
+9a8da40,Kevin Hou,8 months ago,Reverted previous. Like seeing alumbs better than going to my Flickr photostream.
+910abb6,Kevin Hou,8 months ago,Changed path for Flickr profile
+aba033a,Kevin Hou,8 months ago,Build site locally
+ce96113,Kevin Hou,8 months ago,Removed a background from the landing page.
+f74aca5,Kevin Hou,8 months ago,Added the TheaterJS library to the landing page. Animated my name on the landing page.
+7b9eb80,Kevin Hou,8 months ago,Built locally
+abc3c42,Kevin Hou,8 months ago,Added in some CSV properties
+9d3745f,Kevin Hou,8 months ago,Added word length to the CSV file.
+6f52929,Kevin Hou,8 months ago,Realized that word count doesn't work for specific Facebook friends.
+6d382ff,Kevin Hou,8 months ago,Successfully replaces &#039 safe text to a regular apostrophe
+938e8be,Kevin Hou,8 months ago,Modified my Flickr link. Before directed to my photostream. Now directs to my albums.
+6b0389a,Kevin Hou,8 months ago,Added option to automatically download the spreadsheet data. Right now it is set to manual download.
+eb40fe2,Kevin Hou,8 months ago,Removes all spaces and punctuation before creating an excel spreadsheet. CSV exporting works
+2441356,Kevin Hou,8 months ago,Removed carriage returns from the analysis. Built the JSON object string, but it doesn't work yet. Still working on it.
+2f637fb,Kevin Hou,8 months ago,Cited the source of the JSON to CSV conversion function.
+eb466de,Kevin Hou,8 months ago,Working JSON format for the example file.
+2b59f75,Kevin Hou,8 months ago,Added JSON to CSV conversion at the end of the text analysis.
+66c3f47,Kevin Hou,8 months ago,Started modifying the footer. Adding in the Flickr link to the footer.
+635c168,Kevin Hou,8 months ago,Disabled vertical scrolling on the landing page.
+95e56fb,Kevin Hou,8 months ago,Built locally
+f0ee92d,Kevin Hou,8 months ago,Built site locally
+925259b,Kevin Hou,8 months ago,Updated the README
+ef86876,Kevin Hou,8 months ago,Added a README
+9c78d7c,Kevin Hou,8 months ago,Updated the about.md file
+d93119b,Kevin Hou,8 months ago,Built site locally. Not a real commit
+4015b65,Kevin Hou,8 months ago,Built site locally
+4f4b8d0,Kevin Hou,8 months ago,Added last lab extension
+9d93dc3,Kevin Hou,8 months ago,Added in another lab extension. Waiting on one more to bring over.
+14ebd0a,Kevin Hou,8 months ago,Added in a couple of extensions. Waiting for Julia's and Lizzy's.
+f7478aa,Kevin Hou,8 months ago,Turned on background shuffle on landing page.
+8209612,Kevin Hou,8 months ago,Added a new wallpaper: Walnut and Aluminum Headphone Stand. Turned off shuffle for the time being.
+896c549,Kevin Hou,8 months ago,Minor style changes. Mainly deals with spacing and font color.
+f4eb00c,Kevin Hou,8 months ago,Modified content of the optics lab site and added in some self-made diagrams
+ddee8f6,Kevin Hou,8 months ago,Built site to run locally
+ab4d82b,Kevin Hou,8 months ago,Removed weird bug with single quote vs double quote in syntax highlighting
+944594a,Kevin Hou,8 months ago,Changed the featured blog posts and added some extra info to the text analysis blog post
+543423d,Kevin Hou,8 months ago,Added a blog post about the text analysis app
+35e5ab4,Kevin Hou,8 months ago,Shuffles background images on landing page
+11d6456,Kevin Hou,8 months ago,Added background wallpaper for landing page: Comit Wallpaper
+24209ad,Kevin Hou,8 months ago,Added wallpapers page to share my self-designed wallpapers
+47886fd,Kevin Hou,8 months ago,Updated build. Rendered locally but didn't make any changes.
+5c4f4ca,Kevin Hou,8 months ago,Updated blog post again.
+895e2fb,Kevin Hou,8 months ago,Updated a blog post on customizing your terminal
+9453807,Kevin Hou,8 months ago,Updated the nav bar on the bottom of the lab page layout.
+6e18a0a,Kevin Hou,8 months ago,Trying to split at carriage returns, but doesn't seem to work right now.
+89f5eae,Kevin Hou,8 months ago,Fixed minor CSS. Added a basic nav bar to the optics labs.
+5b67ebb,Kevin Hou,8 months ago,Updated build to include Google Analytics. Fixed CSS width issue on the optics landing page.
+993da78,Kevin Hou,8 months ago,Added Google Analytics to the optics lab.
+f0639cb,Kevin Hou,8 months ago,Centered the nav bar on the landing page.
+46e7b3d,Kevin Hou,8 months ago,Added JSON Data for the top 100 most common words in the english dictionary according to http://www.oxforddictionaries.com/words/the-oec-facts-about-the-language
+062e06e,Kevin Hou,8 months ago,No real changes.
+ec6c1d5,Kevin Hou,8 months ago,Added new tag: NodeJS. Added new blog post on NodeJS
+9131057,Kevin Hou,8 months ago,Updated the favicon
+0423583,Kevin Hou,8 months ago,Minor CSS changes to the optics lab
+3a302e6,Kevin Hou,8 months ago,Decreased file size of background image on landing page to speed up laoding.
+e50385a,Kevin Hou,8 months ago,Added the favicon
+95eb961,Kevin Hou,8 months ago,Optimized the landing page for the optics lab for multiple screen sizes
+1e1ab15,Kevin Hou,8 months ago,Created a landing page.
+1a3983b,Kevin Hou,8 months ago,Fixed the optics branch font. Now correct
+c30f36d,Kevin Hou,8 months ago,Ported over the media and updated the css reference paths
+70b5b1d,Kevin Hou,8 months ago,Added images and reduced their file sizes
+6c0cd1f,Kevin Hou,8 months ago,Added individual lab pages
+29a7f20,Kevin Hou,8 months ago,Added index.html for optics project
+46a43bc,Kevin Hou,8 months ago,Deleted content so I can reupload
+907dcf8,Kevin Hou,8 months ago,Added contents from physics site
+4149ecb,Kevin Hou,8 months ago,Attempting to port over content
+6a5bcf2,Kevin Hou,8 months ago,Added physics project so that I can host it publically to share. Ported over from another one of my repos
+af7efc4,Kevin Hou,8 months ago,Dimmed the background when the modal is active.
+22d9a01,Kevin Hou,9 months ago,Merged the two branches
+52d4aa3,Kevin Hou,9 months ago,No real changes
+76525f5,Kevin Hou,9 months ago,Added offline data storage. Loads JSON file.
+0479ae4,Kevin Hou,9 months ago,Hiding text file info button if file is not yet submitted.
+ec8bc77,Kevin Hou,9 months ago,Moved the 'Show File Data' button next to the 'Go' button
+6506ced,Kevin Hou,9 months ago,Apostrophes, which had been previously represidented by '&3039;' are now analyzed as apostrophe characters.
+dcad537,Kevin Hou,9 months ago,Fixed the bug where multiple users weren't read. Now works.
+70e99aa,Kevin Hou,9 months ago,Added support for multiple friend conversations.
+6320067,Kevin Hou,9 months ago,Added some new user feedback to make the process a little more transparent.
+7491444,Kevin Hou,9 months ago,User can now choose to only read text in messages sent to certain people
+b4eb08f,Kevin Hou,9 months ago,Loaded file locally. No real changes.
+3c3f8b6,Kevin Hou,9 months ago,The CSS looks a lot better now. The instructions are thorough. Everything is working (as far as I can tell). Ready for consumer use.
+415087f,Kevin Hou,9 months ago,Can choose the big data threshold.
+40a5d7d,Kevin Hou,9 months ago,Big Data function works
+1674d04,Kevin Hou,9 months ago,App working again. New backend works.
+799294f,Kevin Hou,9 months ago,Newly architechtured backend works. Now starting to work on frontend
+8286133,Kevin Hou,9 months ago,I'm not sure what's happening
+4356a1e,Kevin Hou,9 months ago,No real changes
+895cc60,Kevin Hou,9 months ago,Can now upload facebook files, compress them, then re upload as having no special format
+68c1d2c,Kevin Hou,9 months ago,Uploaded files now turn to raw string text file
+148f006,Kevin Hou,9 months ago,Works with multiple files.
+711beb1,Kevin Hou,9 months ago,Formatted the word list table.
+d6ce5ce,Kevin Hou,9 months ago,Works with 4m files
+38ae192,Kevin Hou,9 months ago,Only reads your own words and messages. Ignores the person you're conversing with.
+b6316c6,Kevin Hou,9 months ago,Can specify whether or not the file is the Facebook Message Data or note
+1ca5b19,Kevin Hou,9 months ago,Can dissect facebook data for messages now. Much more efficient
+084d812,Kevin Hou,9 months ago,Attempting to find a workaround for analyzing big data.
+05bca0f,Kevin Hou,9 months ago,Adding callback timer countdown for dealing with big data.
+b6c280c,Kevin Hou,9 months ago,Can do big data! It can now sort word usage in decending order
+bea51dc,Kevin Hou,9 months ago,More elegantly sorts array of words. Found bug when dealing with big data.
+aa28644,Kevin Hou,9 months ago,Can sort word usage by decending order
+e50693f,Kevin Hou,9 months ago,Can now sort through data and create a table of word usage.
+e2da844,Kevin Hou,9 months ago,Created a new branch for web apps. Moved the text analysis app into the new branch. No longer part of the Projects branch.
+5544fa7,Kevin Hou,9 months ago,Can turn any string into an array of words. The break points that define words can be declared as well. Works with relatively big data (2500 words).
+1563798,Kevin Hou,9 months ago,File loader works for Text Analysis project. Can upload, read, and store contents of a text file.
+36d91d4,Kevin Hou,9 months ago,Added new bookmark icon
+74f9c90,Kevin Hou,9 months ago,Checking the build.
+8fb5c74,Kevin Hou,9 months ago,Changed animation on landing page. No more slide out, now just fades out. Added total number of posts on the blog home page. Updated blog home tooltip in header.
+6985674,Kevin Hou,9 months ago,Played around with parallax effect, but reverted all edits.
+91f2873,Kevin Hou,9 months ago,No real changes.
+680b01d,Kevin Hou,9 months ago,Added projects section to website.
+a7a57d2,Kevin Hou,9 months ago,Added extra spacing between the site title/icon and the navigation bar.
+eca4142,Kevin Hou,9 months ago,Fade in modal div on landing page.
+df9fbf6,Kevin Hou,9 months ago,Safari compatibility on landing page animations.
+038fedd,Kevin Hou,9 months ago,Updated the backend for posts.
+45c2bfe,Kevin Hou,9 months ago,Added YouTube icon and link to landing page and blog header.
+0dc3fc0,Kevin Hou,9 months ago,Updated blog post on Jekyll with El Capitan
+b990af5,Kevin Hou,9 months ago,Added new blog post on using Jekyll with OS X 10.11
+bb4d5a6,Kevin Hou,9 months ago,Added bookmark desktop icon
+26a5562,Kevin Hou,9 months ago,Fixed OSX 10.11 Jekyll bug.
+7a75ab6,Kevin Hou,9 months ago,Functioning contact page
+5159a1f,Kevin Hou,9 months ago,Added contact page and react library to blog.
+19c1567,Kevin Hou,9 months ago,Reformatted header nav-bar. Added contact link
+1ddec05,Kevin Hou,9 months ago,Added YouTube link to blog footer.
+b2af8d6,Kevin Hou,9 months ago,Added new blog post on Loupe - Javascript callstack visualization.
+77ea17a,Kevin Hou,9 months ago,Changed some minor formatting issues.
+2080d38,Kevin Hou,9 months ago,Changed favicon to vector image.
+c18a948,Kevin Hou,9 months ago,Updated the build.
+17924a9,Kevin Hou,10 months ago,Minor style changes. Slowly integrating the color scheme in.
+d2851f4,Kevin Hou,10 months ago,Modified a blog post.
+dc2a201,Kevin Hou,10 months ago,Changed the site font to Proxima Nova
+2daa56c,Kevin Hou,10 months ago,Checking build.
+5835e97,Kevin Hou,10 months ago,No real changes. Checking build.
+64610c3,Kevin Hou,10 months ago,No real changes
+6b5a33a,Kevin Hou,10 months ago,Added rest of the wix blog posts. Added logo to header on blog and on landing page.
+6123742,Kevin Hou,10 months ago,Updated Flickr address.
+910a128,Kevin Hou,10 months ago,Added favicon. Used personal logo.
+f834b7b,Kevin Hou,10 months ago,Decreased background image sizes to allow for faster loading.
+a4eb323,Kevin Hou,10 months ago,No real changes. Checking build.
+965555d,Kevin Hou,10 months ago,No real changes.
+875effd,Kevin Hou,10 months ago,Decreased the file size and resolution of some background images.
+bc0839c,Kevin Hou,10 months ago,Fixed school profile link on the landing page.
+cbf7f0e,Kevin Hou,10 months ago,Added featured posts back-end and front-end.
+76c9f59,Kevin Hou,10 months ago,No real changes.
+e9a861b,Kevin Hou,10 months ago,Finished adding school profile icon.
+6a15881,Kevin Hou,10 months ago,In the process of adding the school profile ot the list of external links.
+d2fa951,Kevin Hou,10 months ago,Added Google Analytics script code to every page in website.
+a23fff8,Kevin Hou,10 months ago,No real changes.
+f43ec3f,Kevin Hou,10 months ago,Previous commit fixed the linking problem.
+01a33af,Kevin Hou,10 months ago,Still fixing bug with the links.
+c76f67a,Kevin Hou,10 months ago,Fixed links in browse by category/tag pages.
+9788ee7,Kevin Hou,10 months ago,Changed the way the links are built for 'Browse all Categories'.
+f5e36a5,Kevin Hou,10 months ago,Might have fixed bug in browse by category links.
+0512096,Kevin Hou,10 months ago,Added list of recent posts on all major index pages.
+f436a33,Kevin Hou,11 months ago,Standardized github, flickr, LinkedIn urls using _config.yml file.
+b7a1664,Kevin Hou,11 months ago,Added bold-italics class. Added <em> and <strong>.
+cc2775f,Kevin Hou,11 months ago,Added italics font.
+2148aa0,Kevin Hou,11 months ago,Added bold font.
+f66db75,Kevin Hou,11 months ago,Functioning browse all tags/categories pages. Links to correct browse by tag/category page.
+3a3d76e,Kevin Hou,11 months ago,Added index page for browse by tag. Now lists out all existing tags.
+3b7cba2,Kevin Hou,11 months ago,Added browse by category index. Lists out all the different categories.
+d6c3f71,Kevin Hou,11 months ago,No real changes.
+82ebfc6,Kevin Hou,11 months ago,Working links on blog by category/tag
+8a22839,Kevin Hou,11 months ago,Build page to push to master.
+6bf19ab,Kevin Hou,11 months ago,Added two new background images.
+e33935e,Kevin Hou,11 months ago,Added a div placeholder for browse by category and browse by tag.
+87abce7,Kevin Hou,11 months ago,Added a second column to display recent posts and featured posts.
+db82d5e,Kevin Hou,11 months ago,Slightly altered nav bar
+d731ec8,Kevin Hou,11 months ago,No real changes.
+eacc5e4,Kevin Hou,11 months ago,Changed the highlight type in the CSS Filters and Effects blog post.
+065c070,Kevin Hou,11 months ago,Removed the twitter icon from the project portfolio link in the footer.
+a371b6a,Kevin Hou,11 months ago,Added button on post page to allow you to return to the main blog index page.
+8f5cfc3,Kevin Hou,11 months ago,Tag and category pages now work. Changed the posts page to link to the respective tag/category pages. Restructured the way tags and categories are organized.
+571ac52,Kevin Hou,11 months ago,Added new category: computer. New tag: OSX. New post: Cropping Square...Preview
+94d8a88,Kevin Hou,11 months ago,Added project portfolio to the blog footer.
+a9b4844,Kevin Hou,11 months ago,Changed some font sizes on the blog index page.
+257b79e,Kevin Hou,11 months ago,Added new blog post: CSS Filters and Affects
+99d4347,Kevin Hou,11 months ago,No real changes. Experimented with the position of the header.
+70537b7,Kevin Hou,11 months ago,No real changes.
+3af97b2,Kevin Hou,11 months ago,Resized the home icon.
+01e88c9,Kevin Hou,11 months ago,Added home icon to blog header.
+54ec27e,Kevin Hou,11 months ago,Resolved overlap issue between my CSS and Bootstrap on landing page.
+eefee97,Kevin Hou,11 months ago,Added bootstrap tooltips on landing page as well as blog header.
+9571d52,Kevin Hou,11 months ago,Added quick external links to the landing page.
+52ba6e7,Kevin Hou,11 months ago,Added working nav bar on blog page. Added some new icon png's.
+734790a,Kevin Hou,11 months ago,Added some common icon png's.
+efd5a34,Kevin Hou,11 months ago,Should have been no real changes.
+31958d4,Kevin Hou,11 months ago,Resized online sandwich ordering machine background.
+47d3bff,Kevin Hou,11 months ago,Added another background image: Online_Sandwich_Ordering_Machine.jpg
+dc98f76,Kevin Hou,11 months ago,Added grey tint to profile about. Makes the text more readable and pleasable to the eye. Minor tweak that imporves UX.
+5e5d998,Kevin Hou,11 months ago,Adjusted profile about transparency. Makes it look more like glass and makes text more readable.
+dd8b578,Kevin Hou,11 months ago,Added flipping profile picture. Icons and profile picture now both interactive.
+71b58d5,Kevin Hou,11 months ago,Icon buttons on landing page now have hover effect. Shows a label when hovering over icon.
+c34e2fa,Kevin Hou,11 months ago,Trying to add hover effect to landing page icons.
+df82e2f,Kevin Hou,11 months ago,Added landing page icon buttons and icon pictures in source files. Changed icon color to white. Recropped profile to center my head. Changed font color to white and changed font to defaultFont for entire site.
+9793042,Kevin Hou,11 months ago,Changed the site font.
+ac8d7a0,Kevin Hou,11 months ago,Added bootstrap to blog folder
+93daf4a,Kevin Hou,11 months ago,No real changes.
+d90bfdb,Kevin Hou,11 months ago,CSS3 entry animation on landing page: fade in
+18bc62e,Kevin Hou,11 months ago,No real changes.
+49152ee,Kevin Hou,11 months ago,Added new photos to background slideshow.
+846d8e5,Kevin Hou,11 months ago,No real changes.
+b0ff7dc,Kevin Hou,11 months ago,Added seconds to the new post template.
+2e1d95e,Kevin Hou,11 months ago,Changed new post template.
+804500a,Kevin Hou,11 months ago,Changed the font of the blog.
+7536bee,Kevin Hou,11 months ago,Added custom sass file for blog directory
+9d55e40,Kevin Hou,11 months ago,Style changes to the blog homepage.
+9df5f86,Kevin Hou,11 months ago,Added post: Using Javascript Variables...ReactJS
+41eeaae,Kevin Hou,11 months ago,Added more blog posts. Last imported: Quick, Short If/Then Statement.
+93fddcf,Kevin Hou,11 months ago,Added CSS3 Animation... post
+fd6f768,Kevin Hou,11 months ago,Added another blog post: Common React Issues...
+9ddddf9,Kevin Hou,11 months ago,Added category and tag pages. Removed the list of tags and categories from the header.
+a233e47,Kevin Hou,11 months ago,Added many blog posts from my wix website. Last blog post ported was the Salesforce Internship introduction.
+b506bcb,Kevin Hou,11 months ago,Minor formatting on transparencies. Added a new image.
+e346f4c,Kevin Hou,11 months ago,Added some new background images. Turned the shuffle back on.
+3c54313,Kevin Hou,11 months ago,Decreased the background picture file sizes. Hopefully will decrease the render time on background images.
+94a5483,Kevin Hou,11 months ago,Slideshow animation looks a lot cleaner. Added background behind background so it looks like it's sliding and replacing.
+28a920d,Kevin Hou,11 months ago,Moved profile box up on page.
+ac27b53,Kevin Hou,11 months ago,Style changes to the landing page. Added transparent box around name and profile pic.
+d455434,Kevin Hou,11 months ago,Added new backgrounds. Can shuffle background image order now.
+645cea7,Kevin Hou,11 months ago,Changed timing on slideshow slightly.
+7a8f43d,Kevin Hou,11 months ago,Added transition to slideshow. Smooth animation with opacity changes.
+caab726,Kevin Hou,11 months ago,Added slideshow in background. Preloads images.
+ae4cc8f,Kevin Hou,11 months ago,Backgrounds can now cycle. Minor style changes to landing page.
+0f656cd,Kevin Hou,11 months ago,Added profile picture. Cropped background image.
+4958c17,Kevin Hou,11 months ago,Added background image to landing page.
+afb6dd9,Kevin Hou,11 months ago,Added CSS style sheet called landingPage.css
+2353b24,Kevin Hou,11 months ago,No real changes
+61a5081,Kevin Hou,11 months ago,Started adding media. React works. Starting to construct the landing page.
+0db811c,Kevin Hou,11 months ago,Cleaning up file merges
+dcdde75,Kevin Hou,11 months ago,Bare bones tag and category system using reference: 'http://www.minddust.com/post/tags-and-categories-on-github-pages/'. Very useful post. Very useful to look at his source code. Everything works with the backend.
+03dde30,Kevin Hou,11 months ago,Added tags to Jekyll with help of blog post by Charlie Parker.
+26a3a8c,Kevin Hou,11 months ago,Changed page title for root index.html
+cb38404,Kevin Hou,11 months ago,Wrote first blog post. Changed some minor things in the config.yml file. Added landing page link for ease of access.
+4ad9bad,Kevin Hou,11 months ago,Last update with Seimith
+90f9a0c,Kevin Hou,11 months ago,Added jekyll blog
+65c9e0e,Kevin Hou,11 months ago,Bare bones landing page
+a690d74,Kevin Hou,11 months ago,Clean slate
+c4c38e5,Kevin Hou,11 months ago,Settup blog
+1f68e7a,Kevin Hou,11 months ago,Playing around with github pages in iTerm 2. Just started using oh-my-zsh
+3438cda,Kevin Hou,12 months ago,Installed Jekyll and added a blog called bloggity
+b2a46d1,Kevin Hou,12 months ago,Added node_modules and attempted to get React up and running
+5b33beb,Kevin Hou,12 months ago,Initial commit
