@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Articles by tag: ios</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
-">
+  <title>WWDC 2015: Mysteries of Auto Layout</title>
+  <meta name="description" content="Mysteries of Auto Layout, Part 1: https://developer.apple.com/videos/play/wwdc2015/218">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -19,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/tag/ios/">
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/07/01/wwdc-2015-mysteries-of-auto-layout.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -167,121 +166,104 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <header id="post-header">
-    <h1 id="post-title">ios</h1>
-    <h4 id="post-subtitle">Articles by tag</h4>
-</header>
+        <div class="post">
+  
 
-<div id="post-content">
     
-        
-            
-            
-                <h3>2016</h3><div class="list-group">
-            
-      
-            
-      
-            <a href="/programming/2016/07/01/wwdc-2015-mysteries-of-auto-layout.html">
-                <h4>WWDC 2015: Mysteries of Auto Layout</h4>
-            </a>
 
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/design/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html">
-                <h4>Digital Design: The Process from Concept to iOS App</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html">
-                <h4>WWDC 2016: Advances in UIKit Animations and Transitions</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2016/06/28/making-a-simple-page-based-application-in-swift.html">
-                <h4>Making a Simple Page Based Application in Swift</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2016/06/22/wwdc-2016-internationalization-best-practices.html">
-                <h4>WWDC 2016: Internationalization Best Practices</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2016/06/20/internationalizing-your-ios-app-in-xcode-7.html">
-                <h4>Internationalizing Your iOS App in Xcode 7</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/design/2016/05/01/github-octocat-design-challenge-winner.html">
-                <h4>GitHub Octocat Design Challenge Winner</h4>
-            </a>
-
-            
-                </div>
-            
-        
     
+
+    
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url()"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">WWDC 2015: Mysteries of Auto Layout</h1>
+      <h4 class="post-header-description">My notes and takeaways from the WWDC talk on auto layout from 2015. I know the video is a year old, but it was a good learning resource for me.</h4>
+      <p class="post-header-meta">Jul 1, 2016 • Kevin Hou</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    $('html, body').animate({
+        scrollTop: $("#blog-post-header").offset().top
+    }, 1000);
+
+  </script>
+
+  <article class="post-content">
+    <p>Mysteries of Auto Layout, Part 1: <a href="https://developer.apple.com/videos/play/wwdc2015/218" target="_blank">https://developer.apple.com/videos/play/wwdc2015/218</a>
+<br class="post-line-break" /></p>
+
+<p>Auto Layout Definition: Constraints lead to equations that layout your views automatically</p>
+
+<p><br class="post-line-break" /></p>
+<h3 class="post-subheader">Maintanable Layouts</h3>
+<ul>
+  <li>Stack View - new to iOS 9</li>
+  <li>Arrange views linearly, vertically</li>
+  <li>Manages constraints of your subviews</li>
+  <li>Horizontal or vertical</li>
+  <li><ul>Stack Views are basically for grouping elements together
+    <li>Distribution property - can distribute across the axis</li>
+    <li>Example: Fill, fill equally, fill proportionally, etc.</li>
+  </ul></li>
+  <li><ul>Stack View options:
+    <li>Axis: Vertical/horizontal</li>
+    <li>Alignment: Fill (spread itself across entire space)/leading/center/leading</li>
+    <li>Spacing (spacing between elements)</li>
+  </ul></li>
+  <li>Can stack within Stack Views</li>
+  <li>After everything is stacked within the same Stack, can add constraints so it correctly fills the superview</li>
+  <li>Control drag from Stack View to superview to add new constraints that will pin it to the screen edge</li>
+  <li>New options: Content hugging priority, content compression resistance priority</li>
+    <li><ul>Can resist changing sizes (useful for things like tab menus, buttons, etc.)</ul></li>
+  <li>Start with Stack View, use constraints as needed</li>
+<ul>
+
+<h3 class="post-subheader">Changing Constraints</h3>
+<ul>
+  <li>Don’t add/remove constraints</li>
+  <li>Instead, activate and deactivate constraints</li>
+  <li><ul>Never deactivate self.view.constraints
+    <li>Weird things will happen</li>
+    <li>Keep references to constraints you need, don’t just blindly deactivate all of them</li>
+  </ul></li>
+  <li>Can animate constraints</li>
+  <ul><li>Use self.view.layoutIfNeeded</li></ul>
+</ul>
+
+<h3 class="post-subheader">Create size constraints programmably</h3>
+<ul>
+  <li>intrinsicContentSize = automatically makes the size constraint the same size as the content within the view</li>
+  <li>Use proportions — will likely be more successful</li>
+  <ul><li>Don’t use points</li></ul>
+</ul>
+
+<h3 class="post-subheader">Constraint Priorities</h3>
+<ul>
+  <li>Don’t set a constraint as “required”</li>
+  <li>Don’t use equal priorities</li>
+  <li><ul>Set priorities a little higher or lower than the defaults:
+    <li>Scale from: 1-1000</li>
+    <li>Low: 250</li>
+    <li>High: 750</li>
+  </ul></li>
+  <li>This is good for localization — stretching UILabels, etc.</li>
+</ul>
+</ul></ul>
+
+    <div class="post-organization">
+      <p id="post-meta">Posted with <a href="/blog/tag/ios/">iOS</a>, <a href="/blog/tag/swift/">Swift</a>, <a href="/blog/tag/apps/">Apps</a></p>
+    </div>
+  </article>
 </div>
+
       </div>
     </div>
 

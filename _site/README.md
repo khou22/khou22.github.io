@@ -1,5 +1,5 @@
 # Kevin Hou's Personal Website and Blog
-Programmed in HTML, CSS, Javascript, and Ruby
+Programmed in HTML, CSS, Javascript, and Ruby. The blog is powered by Jekyll. 
 <br />
 Framework: ReactJS
 
