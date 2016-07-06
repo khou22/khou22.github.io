@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Getting Started with Ionic: First Impressions, Tips, and Notes to Self</title>
-  <meta name="description" content="Working on the ProjectOpen server:dev_appserver.py Uber">
+  <title>Comparison Operators: '==' vs. '==='</title>
+  <meta name="description" content="For the longest time, I didn’t realize that ‘===’ was a comparison operator in Javascript. I just recently learned what the difference between them was. The ...">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -18,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2016/01/28/getting-started-with-ionic-first-impressions-tips-and-notes-to-self.html">
+  <link rel="canonical" href="http://khou22.github.io/programming/2015/09/08/comparison-operators-vs.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -182,9 +182,9 @@
         Return to all blogs
       </p></a>
       <br />
-      <h1 class="post-title">Getting Started with Ionic: First Impressions, Tips, and Notes to Self</h1>
-      <h4 class="post-header-description">Some useful commands for Ionic</h4>
-      <p class="post-header-meta">Jan 28, 2016 • Kevin Hou</p>
+      <h1 class="post-title">Comparison Operators: '==' vs. '==='</h1>
+      <h4 class="post-header-description"></h4>
+      <p class="post-header-meta">Sep 8, 2015 • Kevin Hou</p>
     </div>
   </header>
 
@@ -197,40 +197,19 @@
   </script>
 
   <article class="post-content">
-    <h1 id="working-on-the-project">Working on the Project</h1>
-<p>Open server:</p>
+    <p>For the longest time, I didn’t realize that ‘===’ was a comparison operator in Javascript. I just recently learned what the difference between them was. The double equal signs tell the comparison statement to convert the two values into the same type before comparing them. The triple equal signs do not convert the values before coimparing. If the two values do not share the same type, it will simply return false. For example:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">dev_appserver.py Uber</code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">"1"</span><span class="p">;</span>
+ 
+<span class="k">if</span> <span class="p">(</span><span class="nx">str</span> <span class="o">==</span> <span class="nx">num</span><span class="p">)</span> <span class="c1">//Will return true</span>
+ 
+<span class="k">if</span> <span class="p">(</span><span class="nx">str</span> <span class="o">===</span> <span class="nx">num</span><span class="p">)</span> <span class="c1">//Will return false</span></code></pre></figure>
 
-<h1 id="run-the-project">Run the Project</h1>
-<p>To run a project locally. This will automatically reload when a file is saved/modified.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ionic serve</code></pre></figure>
-
-<p>To run in xcode simulator. This will automatically start the iPhone 6 simulator and run your app.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ionic run ios -l -c -s</code></pre></figure>
-
-<p>To get it on “Ionic View” for my iPhone. This will upload your project to your online account and make it accessible via your iPhone “Ionic View” app.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ionic upload</code></pre></figure>
-
-<h1 id="opening-the-project-in-xcode">Opening the Project in Xcode</h1>
-<p>Open the xcode project on xcode. Will allow you to build and sync it to your device.
-/Users/KevinHou/Documents/Programming/UberScheduler/UberScheduler/platforms/ios
-Then click run</p>
-
-<h1 id="logging-into-ionic-command-line">Logging Into Ionic (Command Line)</h1>
-<p>To log in to Ionic. This will allow you to upload your app to Ionic view.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ionic login</code></pre></figure>
-
-<p>#Starting a New Ionic Project
-Good reference for starting a new Ionic project:
-<a href="http://stackoverflow.com/questions/30518213/error-uploading-ionic-app" target="blank">Link</a></p>
+<p>This is a super short post, but I figured I should write it down since it was interesting and something I should remember.</p>
 
     <div class="post-organization">
-      <p id="post-meta">Posted with <a href="/blog/tag/ionic/">Ionic</a></p>
+      <p id="post-meta">Posted with <a href="/blog/tag/javascript/">Javascript</a></p>
     </div>
   </article>
 </div>

@@ -170,28 +170,9 @@
   
 
     
-      
-    
 
     
-        
-        
-          
-            
-                
-                
-            
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header id="blog-post-header" class="post-header">
     <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
@@ -229,18 +210,20 @@ Turns out, the steps to import Javascript libraries are very straightforward and
   <li>
     Link the '.min.js' file in the &lt;\head&gt; of your HTML file like so:
     
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;path/to/library/TheaterJS-2.0.1/dist/theater.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span> <span class="c">&lt;!-- TheaterJS --&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">      <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"path/to/library/TheaterJS-2.0.1/dist/theater.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span> <span class="c">&lt;!-- TheaterJS --&gt;</span>
+    </code></pre></figure>
 
   </li>
   <li>
     Now you can use the library by calling the functions defined in the documentation. TheaterJS mimics a human chat transcript. An actual demo can be found on my <a href="http://khou22.github.io" target="_blank">landing page</a>. Here's how to use TheaterJS's functions (this is the actual code I used on my landing page):
     
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">theater</span>
-        <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">&#39;kevin&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">speed</span><span class="o">:</span> <span class="mf">0.6</span><span class="p">,</span> <span class="nx">accuracy</span><span class="o">:</span> <span class="mf">0.7</span> <span class="p">})</span>
-        <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">&#39;kevin:Kevin Hou&#39;</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
-        <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">&#39;kevin:Welcome!&#39;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-        <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">&#39;kevin:Kevin Hou&#39;</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
-        <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="nx">theater</span><span class="p">.</span><span class="nx">replay</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">theater</span><span class="p">))</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">      <span class="nx">theater</span>
+        <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'kevin'</span><span class="p">,</span> <span class="p">{</span> <span class="na">speed</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span> <span class="na">accuracy</span><span class="p">:</span> <span class="mf">0.7</span> <span class="p">})</span>
+        <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'kevin:Kevin Hou'</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'kevin:Welcome!'</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'kevin:Kevin Hou'</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="nx">theater</span><span class="p">.</span><span class="nx">replay</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">theater</span><span class="p">))</span>
+    </code></pre></figure>
 
   </li>
   <br />
@@ -248,7 +231,7 @@ Turns out, the steps to import Javascript libraries are very straightforward and
 </ol>
 
     <div class="post-organization">
-      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/javascript/">Javascript</a></p>
+      <p id="post-meta">Posted with <a href="/blog/tag/javascript/">Javascript</a></p>
     </div>
   </article>
 </div>

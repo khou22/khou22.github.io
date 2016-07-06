@@ -170,34 +170,9 @@
   
 
     
-      
-    
 
     
-        
-        
-          
-            
-        
-          
-            
-        
-          
-            
-                
-                
-            
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header id="blog-post-header" class="post-header">
     <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
@@ -224,17 +199,17 @@
   <article class="post-content">
     <p>Since most of the site (as of now) does not use Bootstrap as a default style tool, I’ve been doing a lot of custom CSS from scratch. My landing page is meant to mimic a sheet of glass with a semi-transparent background and border. Here’s some quick and simple CSS that can turn any div into a piece of glass:</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.glass</span> <span class="p">{</span>
-  <span class="k">background-color</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="o">.</span><span class="m">2</span><span class="p">);</span>
-  <span class="k">border-bottom</span><span class="o">:</span> <span class="m">2px</span> <span class="k">solid</span><span class="p">;</span>
-  <span class="k">border-bottom-color</span><span class="o">:</span> <span class="m">#ccc</span><span class="p">;</span>
-  <span class="k">border-bottom-color</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">2</span><span class="p">);</span>
-  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">3px</span> <span class="m">6px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">3</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.glass</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="p">,</span> <span class="m">255</span><span class="p">,</span> <span class="m">255</span><span class="p">,</span> <span class="m">.2</span><span class="p">);</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span><span class="p">;</span>
+  <span class="nl">border-bottom-color</span><span class="p">:</span> <span class="m">#ccc</span><span class="p">;</span>
+  <span class="nl">border-bottom-color</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="p">,</span> <span class="m">255</span><span class="p">,</span> <span class="m">255</span><span class="p">,</span> <span class="m">0.2</span><span class="p">);</span>
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">3px</span> <span class="m">6px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.3</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>This setup can easily be customized by changing the values of the background-color, border-color, etc. For example, my component background is not actually transparent white. My white text was a little too hard to see against the white background, so I changed it to have a tint of grey:</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">background-color</span><span class="o">:</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">100</span><span class="o">,</span> <span class="nt">100</span><span class="o">,</span> <span class="nt">100</span><span class="o">,</span> <span class="nc">.2</span><span class="o">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">background-color</span><span class="o">:</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">100</span><span class="o">,</span> <span class="nt">100</span><span class="o">,</span> <span class="nt">100</span><span class="o">,</span> <span class="nc">.2</span><span class="o">);</span></code></pre></figure>
 
 <hr />
 
@@ -242,18 +217,18 @@
 
 <p>Simply apply this to your CSS class:</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-filter</span><span class="o">:</span> <span class="nt">grayscale</span><span class="o">(</span><span class="nt">0</span><span class="nc">.5</span><span class="o">)</span> <span class="nt">blur</span><span class="o">(</span><span class="nt">10px</span><span class="o">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-filter</span><span class="o">:</span> <span class="nt">grayscale</span><span class="o">(</span><span class="nt">0</span><span class="nc">.5</span><span class="o">)</span> <span class="nt">blur</span><span class="o">(</span><span class="nt">10px</span><span class="o">);</span></code></pre></figure>
 
 <p>or as an inline style using ReactJS:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">backgroundBlur</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">WebkitFilter</span><span class="o">:</span> <span class="s1">&#39;grayscale(0.5) blur(7px)&#39;</span>
-<span class="p">}</span> <span class="c1">//As an inline style - syntax</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">backgroundBlur</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">WebkitFilter</span><span class="p">:</span> <span class="s1">'grayscale(0.5) blur(7px)'</span>
+<span class="p">}</span> <span class="c1">//As an inline style - syntax</span></code></pre></figure>
 
 <p>Hope this helps.</p>
 
     <div class="post-organization">
-      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/reactjs/">ReactJS</a></p>
+      <p id="post-meta">Posted with <a href="/blog/tag/reactjs/">ReactJS</a></p>
     </div>
   </article>
 </div>
