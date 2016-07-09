@@ -170,9 +170,52 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header">
     <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
@@ -201,68 +244,68 @@
 
 <p>React Code:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
   <span class="nx">getInitialState</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">{</span>
-      <span class="na">animate</span><span class="p">:</span> <span class="kc">false</span>
+      <span class="nx">animate</span><span class="o">:</span> <span class="kc">false</span>
     <span class="p">}</span>
   <span class="p">},</span>
   <span class="nx">buttonClick</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">)</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
-      <span class="na">animate</span><span class="p">:</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">animate</span>
+      <span class="nx">animate</span><span class="o">:</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">animate</span>
     <span class="p">})</span>
   <span class="p">},</span>
   <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">className</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">animate</span> <span class="p">?</span> <span class="s2">"bump"</span> <span class="p">:</span> <span class="s2">""</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">className</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">animate</span> <span class="o">?</span> <span class="s2">&quot;bump&quot;</span> <span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
     <span class="k">return</span> <span class="p">(</span>
       <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
-</span>        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"animation"</span><span class="o">&gt;</span>
-          <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="s2">"truck "</span> <span class="o">+</span> <span class="nx">className</span><span class="p">}</span><span class="o">&gt;</span>
-            <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"http://gearscrm.com/wp-content/uploads/2015/04/Summer-release-logo.png"</span> <span class="o">/&gt;</span>
-          <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span>        <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span>      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span>    <span class="p">)</span>
+        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;animation&quot;</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;truck &quot;</span> <span class="o">+</span> <span class="nx">className</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;http://gearscrm.com/wp-content/uploads/2015/04/Summer-release-logo.png&quot;</span> <span class="o">/&gt;</span>
+          <span class="o">&lt;</span><span class="err">/div&gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">)</span>
   <span class="p">}</span>
-<span class="p">});</span></code></pre></figure>
+<span class="p">});</span></code></pre></div>
 
 <p>Sass (SCSS):</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@-webkit-keyframes</span> <span class="n">bounce</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@-webkit-keyframes</span> <span class="nt">bounce</span> <span class="p">{</span>
   <span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
-    <span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">0px</span><span class="p">);</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">0px</span><span class="p">);</span>
   <span class="p">}</span>
   <span class="nt">30</span><span class="o">%</span> <span class="p">{</span>
-    <span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">50px</span><span class="p">);</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">50px</span><span class="p">);</span>
   <span class="p">}</span>
   <span class="nt">60</span><span class="o">%</span> <span class="p">{</span>
-    <span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">-45px</span><span class="p">);</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">-45px</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
  
 <span class="nc">.animation</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
-  <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
-  <span class="c">/*top: 50%;
-  left: 45%;*/</span>
+  <span class="k">display</span><span class="o">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
+  <span class="c">/*top: 50%;</span>
+<span class="c">  left: 45%;*/</span>
 <span class="p">}</span>
 <span class="nc">.animation</span> <span class="nc">.truck</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
-  <span class="nl">opacity</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
-  <span class="nl">transform</span><span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
-  <span class="nl">box-shadow</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
-  <span class="nl">transition</span><span class="p">:</span> <span class="n">all</span> <span class="m">300ms</span> <span class="n">ease-in-out</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
+  <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">300</span><span class="n">ms</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
 <span class="p">}</span>
  
 <span class="nc">.animation</span> <span class="nc">.bump</span> <span class="p">{</span>
   <span class="c">/*Need webkit for codepen here for some reason*/</span>
-  <span class="nl">-webkit-animation-name</span><span class="p">:</span> <span class="n">bounce</span><span class="p">;</span>
-  <span class="nl">-webkit-animation-iteration-count</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
-  <span class="nl">-webkit-animation-duration</span><span class="p">:</span> <span class="m">800ms</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">-</span><span class="n">name</span><span class="o">:</span> <span class="n">bounce</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">-</span><span class="n">iteration</span><span class="o">-</span><span class="n">count</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">-</span><span class="n">duration</span><span class="o">:</span> <span class="m">800</span><span class="n">ms</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
 <p>The problem with this, is that the button simply toggles between true false. There is no ellegant way to set the state back to false after the animation is done. However, there are some alternatives:</p>
 
@@ -278,7 +321,7 @@
 <p>Hope this helped!</p>
 
     <div class="post-organization">
-      <p id="post-meta">Posted with <a href="/blog/tag/css/">CSS</a>, <a href="/blog/tag/css3/">CSS3</a>, <a href="/blog/tag/html/">HTML</a>, <a href="/blog/tag/reactjs/">ReactJS</a>, <a href="/blog/tag/javascript/">Javascript</a></p>
+      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/css/">CSS</a>, <a href="/blog/tag/css3/">CSS3</a>, <a href="/blog/tag/html/">HTML</a>, <a href="/blog/tag/reactjs/">ReactJS</a>, <a href="/blog/tag/javascript/">Javascript</a></p>
     </div>
   </article>
 </div>
