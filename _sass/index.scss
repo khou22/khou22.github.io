@@ -7,6 +7,10 @@ $brand-green:     #80A454;
 $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 
+.page-content {
+  
+}
+
 .blog-homepage-content {
   max-width: -webkit-calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
   max-width:         calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
