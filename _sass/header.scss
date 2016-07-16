@@ -5,6 +5,22 @@ $brand-green:     #80A454;
 $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 
+.site-header {
+  width: 100vw;
+  height: 80px;
+
+  // Overlay
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.site-header-background {
+  // background-color: $brand-blue;
+}
+
 .site-header-content {
   padding-left: $spacing-unit;
   padding-right: $spacing-unit;

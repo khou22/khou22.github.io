@@ -143,10 +143,6 @@ pre {
 /**
  * Site header
  */
-.site-header {
-  min-height: 56px;
-  position: relative; }
-
 .site-title {
   font-size: 26px;
   line-height: 56px;
@@ -602,6 +598,14 @@ strong {
   color: #9DB7C1; }
 
 /*For the _includes/header.html file*/
+.site-header {
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  background-color: rgba(255, 255, 255, 0.8); }
+
 .site-header-content {
   padding-left: 30px;
   padding-right: 30px; }
@@ -745,6 +749,13 @@ li {
 
 /*For the index blog page*/
 /*This is the blog homepage*/
+.blog-landing-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../media/site/images/Blog Image.jpg");
+  background-size: cover; }
+
 .blog-homepage-content {
   max-width: -webkit-calc(1.3 * (800px - (30px)));
   max-width: calc(1.3 * (800px - (30px)));
