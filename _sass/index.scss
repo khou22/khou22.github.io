@@ -8,13 +8,27 @@ $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 
 // Blog landing page - first half
-.blog-landing-page {
-  // Fill entire screen
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../media/site/images/Blog Image.jpg");
-  background-size: cover;
+.blog-landing {
+
+    &-page {
+      // Fill entire screen
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("../media/site/images/Blog Image.jpg");
+      background-size: cover;
+    }
+
+    &-title-div {
+      position: absolute;
+      left: 3%;
+      bottom: 25%;
+    }
+
+    &-title {
+      color: $brand-blue;
+      font-family: defaultFont_Bold !important;
+    }
 }
 
 // Blog posts - second half
