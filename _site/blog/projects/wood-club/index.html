@@ -92,6 +92,23 @@
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
+
+    // Header has two sizes — 80px and 40px — based on scrolling
+    $(document).scroll(function() {
+      var triggerDistance = 100;
+      var maxHeight = 80;
+      var minHeight = 40;
+      if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
+        // Animate fixed div to small size:
+        var percentageComplete = $(this).scrollTop()/triggerDistance;
+        console.log(percentageComplete);
+        var dynamicHeight = ((1 - percentageComplete) * (maxHeight - minHeight)) + minHeight
+        $('.site-header').css("height", dynamicHeight)
+      } else {
+        // Animate fixed div to small size
+        $('.site-header').stop().animate({ height: minHeight, 'padding-top': 0}, 100);
+      }
+    });
   </script>
 
 </header>

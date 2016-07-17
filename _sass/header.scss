@@ -7,14 +7,14 @@ $brand-blue:      #3286A8;
 
 .site-header {
   width: 100vw;
-  height: 80px;
+  height: 80px; // When the user scrolls down, the header becomes 40px tall
 
   // Overlay
   position: fixed;
   z-index: 2;
   top: 0px;
 
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, 1.0);
 }
 
 .site-header-background {

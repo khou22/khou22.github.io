@@ -605,7 +605,7 @@ strong {
   position: fixed;
   z-index: 2;
   top: 0px;
-  background-color: rgba(255, 255, 255, 0.8); }
+  background-color: white; }
 
 .site-header-content {
   padding-left: 30px;
