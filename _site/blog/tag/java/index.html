@@ -101,12 +101,15 @@
       if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
         // Animate fixed div to small size:
         var percentageComplete = $(this).scrollTop()/triggerDistance;
-        console.log(percentageComplete);
+        // console.log(percentageComplete); // Debugging
         var dynamicHeight = ((1 - percentageComplete) * (maxHeight - minHeight)) + minHeight
         $('.site-header').css("height", dynamicHeight)
       } else {
         // Animate fixed div to small size
         $('.site-header').stop().animate({ height: minHeight, 'padding-top': 0}, 100);
+      }
+      if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast
+        $('.site-header').stop().animate({ height: maxHeight, 'padding-top': 0}, 100);
       }
     });
   </script>
