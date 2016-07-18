@@ -683,11 +683,11 @@ strong {
 
 /******************************* Mobile Client *******************************/
 /*Custom sass file for the post.scss layout*/
-.post-header-placeholder {
+.header-placeholder {
   width: 100%;
   height: 80px; }
   @media (max-width: 800px) {
-    .post-header-placeholder {
+    .header-placeholder {
       display: none; } }
 
 .post-header-background {
