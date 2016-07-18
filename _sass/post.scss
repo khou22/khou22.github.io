@@ -9,6 +9,11 @@ $offwhite: #D9F4FF;
 
 $post-header-height: 225px;
 
+.post-header-placeholder {
+  width: 100%;
+  height: 80px; // Max height of header
+}
+
 .post-header-background {
   z-index: -9999; // Ensure in the very back
   position: absolute; // So that other elements can go over it

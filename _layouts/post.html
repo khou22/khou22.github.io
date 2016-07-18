@@ -41,6 +41,7 @@ layout: default
     {% else %}
       {% assign categories_content = '' %}
     {% endif %}
+  <div class="post-header-placeholder"></div>
   <header id="blog-post-header" class="post-header">
     <div class="post-header-background" style="background-image: url({{ page.image }})"></div>
     <div class="post-header-content">
@@ -57,9 +58,9 @@ layout: default
 
   <script type="text/javascript">
     // Animate scroll to the blog header immediately after page load
-    $('html, body').animate({
-        scrollTop: $("#blog-post-header").offset().top
-    }, 1000);
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
 
   </script>
 
