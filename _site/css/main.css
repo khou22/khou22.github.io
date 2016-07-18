@@ -588,6 +588,7 @@ strong {
   color: #9DB7C1; }
 
 /*For the _includes/header.html file*/
+/******************************* Desktop Client *******************************/
 .site-header {
   width: 100vw;
   height: 80px;
@@ -596,6 +597,9 @@ strong {
   top: 0px;
   background-color: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid #9DB7C1; }
+  @media (max-width: 800px) {
+    .site-header {
+      display: none; } }
 
 .site-header-background {
   height: 100%; }
@@ -616,6 +620,10 @@ strong {
   color: #3286A8; }
   .site-title, .site-title:visited {
     color: #3286A8; }
+  @media (max-width: 800px) {
+    .site-title {
+      font-size: 20px;
+      line-height: 26px; } }
 
 .site-header-content {
   height: 100%;
@@ -626,23 +634,6 @@ strong {
   width: auto;
   margin-top: 8px;
   height: 48; }
-
-.external-bar {
-  margin: auto;
-  width: 100%; }
-.external-td {
-  /*border: 1px solid black;*/
-  border-radius: 19px;
-  margin-left: 15px;
-  margin-right: 15px; }
-.external-link-box {
-  height: 32px;
-  width: 32px;
-  /*background-color: white;*/
-  margin: auto; }
-.external-link-label {
-  text-align: center;
-  color: #3286A8; }
 
 .site-nav-bar {
   float: right;
@@ -692,6 +683,7 @@ strong {
 .nav-ul .nav-li ul.dropdown .nav-li {
   display: block; }
 
+/******************************* Mobile Client *******************************/
 /*Custom sass file for the post.scss layout*/
 .post-header-background {
   z-index: -9999;
@@ -944,6 +936,23 @@ li {
 .site-footer-content {
   padding-left: 30px;
   padding-right: 30px; }
+
+.external-bar {
+  margin: auto;
+  width: 100%; }
+.external-td {
+  /*border: 1px solid black;*/
+  border-radius: 19px;
+  margin-left: 15px;
+  margin-right: 15px; }
+.external-link-box {
+  height: 32px;
+  width: 32px;
+  /*background-color: white;*/
+  margin: auto; }
+.external-link-label {
+  text-align: center;
+  color: #3286A8; }
 
 .stsc-input-div {
   width: 48%;

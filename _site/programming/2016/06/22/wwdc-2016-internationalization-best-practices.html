@@ -45,45 +45,48 @@
 
   <body>
 
-    <header class="site-header">
-  <div class="wrapper" style="height: 100%">
-    <div class="site-header-background">
-      <div class="site-header-content">
+    <header>
+  <!-- Desktop Client -->
+  <div class="site-header">
+    <div class="wrapper" style="height: 100%">
+      <div class="site-header-background">
+        <div class="site-header-content">
 
-        <a href="/" class="header-title-section">
-          <img src="/media/site/favicon.png" class="header-logo" align="left">
-          <p class="site-title">Kevin Hou's Blog</p>
-        </a>
+          <a href="/" class="header-title-section">
+            <img src="/media/site/favicon.png" class="header-logo" align="left">
+            <p class="site-title">Kevin Hou's Blog</p>
+          </a>
 
-        <!-- Site Navigation Bar -->
-        <ul class="nav-ul site-nav-bar">
-          <li class="nav-li nav-item">
-            <a href="http://khou22.github.io">Home</a>
-          </li>
-          <li class="nav-li nav-item">
-            <a href="/blog">Blog &#9662;</a>
-            <ul class="dropdown">
-              <li class="nav-li"><a href="/blog/category">Browse by Category</a></li>
-              <li class="nav-li"><a href="/blog/tag">Browse by Tag</a></li>
-            </ul>
-          </li>
-          <li class="nav-li nav-item">
-            <a href="/blog/projects">Projects &#9662;</a>
-            <ul class="dropdown">
-              <li class="nav-li"><a href="/blog/projects/Uber-Scheduler/">Uber Scheduler</a></li>
-              <li class="nav-li"><a href="/blog/projects/Execute-Order-66/">Execute Order 66</a></li>
-              <li class="nav-li"><a href="/blog/projects/text-analysis">Text Analysis</a></li>
-              <li class="nav-li"><a href="/blog/apps/drag-drop-interface/">Drag and Drop Interface</a></li>
-              <li class="nav-li"><a href="/blog/projects/browser-home-page">Custom Browser Home Page</a></li>
-              <li class="nav-li"><a href="/blog/projects">See All (14)</a></li>
-            </ul>
-          </li>
-          <li class="nav-li nav-item"><a href="/blog/contact">Contact</a></li>
-        </ul>
+          <!-- Site Navigation Bar -->
+          <ul class="nav-ul site-nav-bar">
+            <li class="nav-li nav-item">
+              <a href="http://khou22.github.io">Home</a>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/blog">Blog &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/blog/category">Browse by Category</a></li>
+                <li class="nav-li"><a href="/blog/tag">Browse by Tag</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/blog/projects">Projects &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/blog/projects/Uber-Scheduler/">Uber Scheduler</a></li>
+                <li class="nav-li"><a href="/blog/projects/Execute-Order-66/">Execute Order 66</a></li>
+                <li class="nav-li"><a href="/blog/projects/text-analysis">Text Analysis</a></li>
+                <li class="nav-li"><a href="/blog/apps/drag-drop-interface/">Drag and Drop Interface</a></li>
+                <li class="nav-li"><a href="/blog/projects/browser-home-page">Custom Browser Home Page</a></li>
+                <li class="nav-li"><a href="/blog/projects">See All (14)</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item"><a href="/blog/contact">Contact</a></li>
+          </ul>
 
+        </div>
       </div>
-    </div>
 
+    </div>
   </div>
 
   <!-- Activate Tooltips -->
@@ -91,63 +94,73 @@
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
-
     // Header has two sizes — 80px and 40px — based on scrolling
     $(document).scroll(function() {
-      var triggerDistance = 100;
-      var classesToChange = [
-        {
-          className: ".site-header",
-          styleElement: "height",
-          min: 40,
-          max: 80
-        },
-        {
-          className: ".site-title",
-          styleElement: "font-size",
-          min: 20,
-          max: 32
-        },
-        {
-          className: ".site-title",
-          styleElement: "line-height",
-          min: 2,
-          max: 3
-        },
-        {
-          className: ".header-logo",
-          styleElement: "height",
-          min: 24,
-          max: 64
-        },
-        {
-          className: ".site-nav-bar",
-          styleElement: "margin-top",
-          min: 4,
-          max: 24
+      var screenWidth = $(document).width();
+      var mobileCuttoff = 800; // Ambiguous
+      if (screenWidth > mobileCuttoff) {
+        var triggerDistance = 100;
+        var classesToChange = [
+          {
+            className: ".site-header",
+            styleElement: "height",
+            min: 40,
+            max: 80
+          },
+          {
+            className: ".site-title",
+            styleElement: "font-size",
+            min: 20,
+            max: 32
+          },
+          {
+            className: ".site-title",
+            styleElement: "line-height",
+            min: 2,
+            max: 3
+          },
+          {
+            className: ".header-logo",
+            styleElement: "height",
+            min: 24,
+            max: 64
+          },
+          {
+            className: ".site-nav-bar",
+            styleElement: "margin-top",
+            min: 4,
+            max: 24
+          }
+        ]
+        if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
+          var percentageComplete = $(this).scrollTop()/triggerDistance; // Percentage complete
+          for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
+            var currentClass = classesToChange[i] // Store
+            var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
+            $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
+          }
+        } else { // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.min);
+          }
         }
-      ]
-      if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
-        var percentageComplete = $(this).scrollTop()/triggerDistance; // Percentage complete
-        for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
-          var currentClass = classesToChange[i] // Store
-          var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
-          $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
+        if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast - max style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.max);
+          }
         }
-      } else { // Min style
-        for (var i = 0; i < classesToChange.length; i++) {
-          var currentClass = classesToChange[i]
-          $(currentClass.className).css(currentClass.styleElement, currentClass.min);
-        }
-      }
-      if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast - max style
-        for (var i = 0; i < classesToChange.length; i++) {
-          var currentClass = classesToChange[i]
-          $(currentClass.className).css(currentClass.styleElement, currentClass.max);
-        }
+      } else {
+        // If on mobile
+        // console.log("Your screen size does not support dynamic header");
       }
     });
   </script>
+
+
+  <!-- Mobile Client -->
+  
 
 </header>
 
