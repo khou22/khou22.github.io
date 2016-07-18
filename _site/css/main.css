@@ -686,6 +686,9 @@ strong {
 .post-header-placeholder {
   width: 100%;
   height: 80px; }
+  @media (max-width: 800px) {
+    .post-header-placeholder {
+      display: none; } }
 
 .post-header-background {
   z-index: -9999;
