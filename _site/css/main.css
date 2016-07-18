@@ -757,7 +757,8 @@ li {
   width: 100vw;
   height: 100vh;
   background-image: url("../media/site/images/Blog Image.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
 .blog-landing-title-div {
   position: absolute;
   left: 3%;
