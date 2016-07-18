@@ -7,6 +7,8 @@ $brand-green:     #80A454;
 $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 
+$mobile-cuttoff: 800px;
+
 // Blog landing page - first half
 .blog-landing {
 
@@ -45,11 +47,19 @@ $brand-blue:      #3286A8;
 .left-main {
   width: 78%;
   float: left;
+
+  @media(max-width: $mobile-cuttoff) {
+    width: 100%;
+  }
 }
 
 .right-column {
   width: 20%;
   float: right;
+
+  @media(max-width: $mobile-cuttoff) {
+    display: none;
+  }
 }
 
 .recent-link {

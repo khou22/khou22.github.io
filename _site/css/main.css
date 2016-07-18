@@ -118,9 +118,7 @@ pre {
   @media screen and (max-width: 800px) {
     .wrapper {
       max-width: -webkit-calc(800px - (30px));
-      max-width: calc(800px - (30px));
-      padding-right: 15px;
-      padding-left: 15px; } }
+      max-width: calc(800px - (30px)); } }
 
 /**
  * Clearfix
@@ -769,10 +767,16 @@ li {
 .left-main {
   width: 78%;
   float: left; }
+  @media (max-width: 800px) {
+    .left-main {
+      width: 100%; } }
 
 .right-column {
   width: 20%;
   float: right; }
+  @media (max-width: 800px) {
+    .right-column {
+      display: none; } }
 
 .featured {
   color: #D5491F; }
