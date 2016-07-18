@@ -1,11 +1,11 @@
 <header class="site-header">
-  <div class="wrapper">
+  <div class="wrapper" style="height: 100%">
     <div class="site-header-background">
       <div class="site-header-content">
 
-        <a class="site-title external-custom-spacing" href="{{ site.baseurl }}/">
-          <img src="{{ site.baseurl }}/media/site/favicon.png" width="48" height="48" align="middle">
-          {{ site.title }}
+        <a href="{{ site.baseurl }}/" class="header-title-section">
+          <img src="{{ site.baseurl }}/media/site/favicon.png" class="header-logo" align="left">
+          <p class="site-title">{{ site.title }}</p>
         </a>
 
         <!-- Site Navigation Bar -->
@@ -48,20 +48,56 @@
     // Header has two sizes — 80px and 40px — based on scrolling
     $(document).scroll(function() {
       var triggerDistance = 100;
-      var maxHeight = 80;
-      var minHeight = 40;
+      var classesToChange = [
+        {
+          className: ".site-header",
+          styleElement: "height",
+          min: 40,
+          max: 80
+        },
+        {
+          className: ".site-title",
+          styleElement: "font-size",
+          min: 20,
+          max: 32
+        },
+        {
+          className: ".site-title",
+          styleElement: "line-height",
+          min: 1.65,
+          max: 2
+        },
+        {
+          className: ".header-logo",
+          styleElement: "height",
+          min: 24,
+          max: 64
+        },
+        {
+          className: ".site-nav-bar",
+          styleElement: "margin-top",
+          min: 4,
+          max: 24
+        }
+      ]
       if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
-        // Animate fixed div to small size:
-        var percentageComplete = $(this).scrollTop()/triggerDistance;
-        // console.log(percentageComplete); // Debugging
-        var dynamicHeight = ((1 - percentageComplete) * (maxHeight - minHeight)) + minHeight
-        $('.site-header').css("height", dynamicHeight)
-      } else {
-        // Animate fixed div to small size
-        $('.site-header').stop().animate({ height: minHeight, 'padding-top': 0}, 100);
+        var percentageComplete = $(this).scrollTop()/triggerDistance; // Percentage complete
+        for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
+          var currentClass = classesToChange[i] // Store
+          var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
+          $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
+        }
+      } else { // Min style
+        for (var i = 0; i < classesToChange.length; i++) {
+          var currentClass = classesToChange[i]
+          $(currentClass.className).css(currentClass.styleElement, currentClass.min);
+        }
       }
-      if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast
-        $('.site-header').stop().animate({ height: maxHeight, 'padding-top': 0}, 100);
+      if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast - max style
+        for (var i = 0; i < classesToChange.length; i++) {
+          var currentClass = classesToChange[i]
+          $(currentClass.className).css(currentClass.styleElement, currentClass.max);
+        }
       }
     });
   </script>

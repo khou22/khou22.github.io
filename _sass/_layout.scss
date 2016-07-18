@@ -7,21 +7,6 @@ $brand-green:     #80A454;
 $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 
-.site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-    vertical-align: middle;
-    color: $brand-blue;
-
-    &,
-    &:visited {
-        color: $brand-blue;
-    }
-}
-
 .site-nav {
     float: right;
     line-height: 56px;

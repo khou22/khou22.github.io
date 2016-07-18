@@ -144,17 +144,6 @@ pre {
 /**
  * Site header
  */
-.site-title {
-  font-size: 26px;
-  line-height: 56px;
-  letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left;
-  vertical-align: middle;
-  color: #3286A8; }
-  .site-title, .site-title:visited {
-    color: #3286A8; }
-
 .site-nav {
   float: right;
   line-height: 56px; }
@@ -605,11 +594,38 @@ strong {
   position: fixed;
   z-index: 2;
   top: 0px;
-  background-color: white; }
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #9DB7C1; }
+
+.site-header-background {
+  height: 100%; }
+
+.header-title-section {
+  float: left;
+  position: relative;
+  display: inline-block;
+  width: 38%;
+  height: 100%; }
+
+.site-title {
+  font-size: 28px;
+  line-height: 2;
+  padding-left: 8px;
+  float: left;
+  vertical-align: middle;
+  color: #3286A8; }
+  .site-title, .site-title:visited {
+    color: #3286A8; }
 
 .site-header-content {
-  padding-left: 30px;
-  padding-right: 30px; }
+  height: 100%;
+  padding-left: 12px;
+  padding-right: 0; }
+
+.header-logo {
+  width: auto;
+  margin-top: 8px;
+  height: 48; }
 
 .external-bar {
   margin: auto;
@@ -627,33 +643,19 @@ strong {
 .external-link-label {
   text-align: center;
   color: #3286A8; }
-.external-custom-spacing {
-  margin-bottom: 12px; }
 
-.site-nav {
-  /*Media querie for width*/ }
-  .site-nav-bar {
-    margin-bottom: 0px;
-    /*Copied from .wrapper class*/
-    max-width: -webkit-calc(800px - (30px * 2));
-    max-width: calc(800px - (30px * 2));
-    margin-right: auto;
-    margin-left: auto; }
-  @media screen and (max-width: 800px) {
-    .site-nav .site-nav-bar {
-      max-width: -webkit-calc(800px - (30px));
-      max-width: calc(800px - (30px));
-      padding-right: 15px;
-      padding-left: 15px; } }
+.site-nav-bar {
+  float: right;
+  width: 60%;
+  margin-top: 24px; }
 
 /*Dropdown info from: http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php*/
 .nav-ul {
   /*padding: 0;*/
-  list-style: none;
-  margin-top: 12px; }
+  list-style: none; }
 
 .nav-item {
-  width: 24%; }
+  width: 23%; }
 
 .nav-ul .nav-li {
   display: inline-block;

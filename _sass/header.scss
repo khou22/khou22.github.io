@@ -14,16 +14,52 @@ $brand-blue:      #3286A8;
   z-index: 2;
   top: 0px;
 
-  background-color: rgba(255, 255, 255, 1.0);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid $brand-grey;
 }
 
 .site-header-background {
   // background-color: $brand-blue;
+  height: 100%;
 }
 
+.header-title-section {
+  float: left;
+  position: relative;
+  display: inline-block;
+  width: 38%;
+  height: 100%;
+}
+
+.site-title {
+  // Font size and line height dynamically set with jquery
+  font-size: 28px;
+  line-height: 2;
+
+  padding-left: 8px;
+  float: left;
+  vertical-align: middle;
+  color: $brand-blue;
+
+  &,
+  &:visited {
+    color: $brand-blue;
+  }
+}
+
+
 .site-header-content {
-  padding-left: $spacing-unit;
-  padding-right: $spacing-unit;
+  height: 100%;
+  padding-left: 12px;
+  padding-right: 0;
+}
+
+.header-logo {
+  width: auto;
+  margin-top: 8px;
+
+  // Height dynamically set with jquery
+  height: 48;
 }
 
 .external {
@@ -50,33 +86,14 @@ $brand-blue:      #3286A8;
     text-align: center;
     color: $brand-blue;
   }
-
-  &-custom-spacing {
-    margin-bottom: 12px;
-  }
 }
 
 .site-nav {
   &-bar {
-    margin-bottom: 0px;
-
-    /*Copied from .wrapper class*/
-    max-width: -webkit-calc(800px - (30px * 2));
-    max-width: calc(800px - (30px * 2));
-    margin-right: auto;
-    margin-left: auto;
-    // padding-right: 30px;
-    // padding-left: 30px;
-  }
-
-  /*Media querie for width*/
-  @media screen and (max-width: 800px) {
-    .site-nav-bar {
-      max-width: -webkit-calc(800px - (30px));
-      max-width: calc(800px - (30px));
-      padding-right: 15px;
-      padding-left: 15px;
-    }
+    float: right;
+    width: 60%;
+    // Margin-top dynamically changed by scroll
+    margin-top: 24px;
   }
 }
 
@@ -84,10 +101,9 @@ $brand-blue:      #3286A8;
 .nav-ul{
   /*padding: 0;*/
   list-style: none;
-  margin-top: 12px;
 }
 .nav-item {
-  width: 24%;
+  width: 23%;
 }
 .nav-ul .nav-li{
   display: inline-block;
