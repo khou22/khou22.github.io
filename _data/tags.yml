@@ -11,6 +11,10 @@ ios:
   slug: ios
   name: iOS
 
+xcode:
+  slug: xcode
+  name: Xcode
+
 github-pages: #Declare the object
   slug: github-pages #Tag string for data organization - this is the same as the line above
   name: GitHub Pages #Name of the tag

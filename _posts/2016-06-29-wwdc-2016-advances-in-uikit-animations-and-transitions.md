@@ -6,7 +6,7 @@ date: 2016-06-29 16:50:49
 description: "My notes and thoughts on Apple's new API calls for animations and transitions in Swift 3."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
-tags: [ios, swift, apps]
+tags: [ios, swift, apps, xcode]
 featured: "no"
 ---
 Video (must be played in Safari): [https://developer.apple.com/videos/play/wwdc2016/216/](https://developer.apple.com/videos/play/wwdc2016/216/){:target="_blank"}

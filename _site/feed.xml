@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Jul 2016 11:27:35 -0700</pubDate>
-    <lastBuildDate>Wed, 20 Jul 2016 11:27:35 -0700</lastBuildDate>
+    <pubDate>Wed, 20 Jul 2016 11:29:55 -0700</pubDate>
+    <lastBuildDate>Wed, 20 Jul 2016 11:29:55 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -148,6 +148,8 @@ I hope you found this post useful. I’m learning a lot about Xcode and especial
         
         <category>apps</category>
         
+        <category>xcode</category>
+        
         
         <category>Programming</category>
         
@@ -225,6 +227,8 @@ I hope you found this post useful. I’m learning a lot about Xcode and especial
         <category>swift</category>
         
         <category>apps</category>
+        
+        <category>xcode</category>
         
         
         <category>Programming</category>
@@ -478,6 +482,8 @@ Many of the complex and intriguing animated designs you see online are generated
         
         <category>apps</category>
         
+        <category>xcode</category>
+        
         
         <category>Programming</category>
         
@@ -639,6 +645,8 @@ I also recommend setting a background color to the Pager so that the page contro
         
         <category>swift</category>
         
+        <category>xcode</category>
+        
         
         <category>Programming</category>
         
@@ -720,6 +728,8 @@ I also recommend setting a background color to the Pager so that the page contro
         
         <category>ios</category>
         
+        <category>xcode</category>
+        
         
         <category>Programming</category>
         
@@ -774,6 +784,8 @@ Before it is injected into the frontend, replace all instances of ‘[[n’ to �
         <category>ios</category>
         
         <category>swift</category>
+        
+        <category>xcode</category>
         
         
         <category>Programming</category>
