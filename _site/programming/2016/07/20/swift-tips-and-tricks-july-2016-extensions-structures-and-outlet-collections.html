@@ -243,6 +243,24 @@
 <span class="kt">MyData</span><span class="o">.</span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Hello Kevin</span></code></pre></figure>
 
 <p><br class="post-line-break" /></p>
+<h3 class="post-subheader">Preventing Code-Breaking Typos with Structures</h3>
+<p>A common, and easily preventable, mistake in coding is to misspell image names, file paths, and other strings that could break your code. My coworker taught me this simple trick using structures to diminish the likelihood that this would happen. Essentially, you create a structure called “Images” or “FileNames” that contains all the file name strings. Instead of typing out the string every time, which can result in typos, call the variable within the structure that contains that specific file name. This way, all the strings are in one place and can easily be checked for misspellings. Here’s an example of the situation described above:
+<br class="post-line-break" />
+<b>Declaration</b></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">Images</span> <span class="p">{</span>
+    <span class="c1">// It can be useful to line them up in columns</span>
+    <span class="kd">static</span> <span class="k">let</span> <span class="nv">onboardingBackgroundImg</span>  <span class="o">=</span> <span class="s">"onboarding-background-img"</span>
+    <span class="kd">static</span> <span class="k">let</span> <span class="nv">filledPlotPoint</span>                         <span class="o">=</span> <span class="s">"filled-plot-point"</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+<b>Usage:</b></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">exampleImage</span> <span class="o">=</span> <span class="kt">UIImageView</span><span class="p">()</span> <span class="c1">// Initialize the image view</span>
+<span class="n">exampleImage</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">Images</span><span class="o">.</span><span class="n">onboardingBackgroundImg</span><span class="p">)</span> <span class="c1">// Set the image</span></code></pre></figure>
+
+<p><br class="post-line-break" /></p>
 <h3 class="post-subheader">Outlet Collections</h3>
 <p>This is a small feature in Xcode that helps you refactor your code, making it look cleaner and more readable. In the app I was building, I had five UIImageViews that I essentially treated the same — mass editing their properties. Initially, it took five lines of code, one for each image, to modify them. As an experienced coder, this felt wrong and looked wrong. The lines were basically all the same except for the names of the variables. I discovered you could group different storyboard elements together in an outlet collection — an array of UI elements. Now I could cycle through the array using a ‘for’ loop and easily make mass edits. Here’s an example:
 <br class="post-line-break" />

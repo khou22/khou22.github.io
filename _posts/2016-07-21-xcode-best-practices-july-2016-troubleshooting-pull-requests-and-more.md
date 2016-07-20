@@ -26,26 +26,34 @@ Git and other version control systems can be confusing things. I, along with mos
 When working in groups settings, this is incredibly useful both in a developer sense and a moderator sense. The code is branched so it does not accidentally break the master branch (good when you’re updated a popularly used repo or working on a group project). Usually pull requests are significant features or builds. All commit made during a pull request are also grouped together and can easily be reviewed all together by the person who is reviewing the pull request. On GitHub, you can comment on pull requests do other discussion-based actions until the code meets satisfaction and can be integrated into the main branch.
 
 <br class="post-line-break">
-<h3 class="post-subheader">Preventing Code-Breaking Typos</h3>
-A common, and easily preventable, mistake in coding is to misspell image names, file paths, and other strings that could break your code. My coworker taught me this simple trick using structures to diminish the likelihood that this would happen. Essentially, you create a structure called “Images” or “FileNames” that contains all the file name strings. Instead of typing out the string every time, which can result in typos, call the variable within the structure that contains that specific file name. This way, all the strings are in one place and can easily be checked for misspellings. Here’s an example of the situation described above:
+<h3 class="post-subheader">Using Structures for Global Constants</h3>
+In addition to using structures to store file names as I mentioned in an <a href="http://khou22.github.io/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html" target="_blank">earlier blog post</a>, it is good practice to create a file, usually named "Constants.swift", containing global structures to store values. These constants are usually accessed by multiple view controllers and make it easier to standardize. It's similar to the difference between CSS and SASS. In CSS, you must re-type the values every time, but in SASS you can create and use variables. It makes modifying values much, much easier. Here is an example of standardized colors:
 <br class="post-line-break">
 <b>Declaration</b>
 {% highlight swift %}
-struct Images {
-    static let onboardingBackgroundImg  = "onboarding-background-img"
-    static let filledPlotPoint          = "filled-plot-point"
+struct Colors {
+    static let mainColor     = UIColor(red: 225.0/255.0, green: 105.0/255.0, blue: 15.0/255.0, alpha: 1.0)
+    static let darkGrey       = UIColor(red: 100.0/255.0, green: 100.0/255.0, blue: 100.0/255.0, alpha: 1.0)
+    static let grey              = UIColor(red: 230.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 1.0)
+    static let lightGrey       = UIColor(red: 207.0/255.0, green: 207.0/255.0, blue: 207.0/255.0, alpha: 1.0)
 }
 {% endhighlight %}
 <br class="post-line-break">
-<b>Usage:</b>
+<b>Usage</b><br>
+Instead of typing in the same RGB values every instance you need a specific color, you can simply call:
 {% highlight swift %}
-let exampleImage = UIImageView() // Initialize the image view
-exampleImage.image = UIImage(named: Images.onboardingBackgroundImg) // Set the image
+let backgroundColor = Colors.mainColor
+// It's very easy to change an entire projects theme color simply by modifying a single value in the Constants.swift file
 {% endhighlight %}
+<br class="post-line-break">
+<b>Other Application</b><br>
+Other useful things to store in structures in the Constants.swift file include: screen size (SCREEN_WIDTH = UIScreen.main().bounds.size.width), device types, file names, image names, API keys, storyboard IDs, segue IDs, and any other global constants. It's good practice to do this and I encourage you to try it out. It'll make your life signficantly easier in the long run.
 
 <br class="post-line-break">
 <h3 class="post-subheader">Commenting on Code and Readability</h3>
-Commenting code is one of those practices that is well known, yet not well performed. It’s incredibly important in both personal and team settings. While most people at least understand the necessity, fewer strive for code readability. It is better practice to write readable code with fewer comments using function names, variable names, etc. than to write confusing code with paragraphs of comments. I am obviously guilty of this and I think the majority of developers could be more conscious about it.
+Commenting code is one of those practices that is well known, yet not well performed. It’s incredibly important in both personal and team settings. While most people at least understand the necessity, fewer strive for code readability. It is better practice to write readable code with fewer comments using function names, variable names, etc. than to write confusing code with paragraphs of comments. If you've ever looked at my code, I am obviously guilty of this and I think the majority of developers could be more conscious about it.
+<br class="post-line-break">
+Code readability also includes <a href="https://en.wikipedia.org/wiki/Code_refactoring" target="_blank">code refactoring</a> — the process of a restructuring existing code but not changing it's actual function. To a user, refactoring code should go unnoticed with the exception of maybe load times, speed, etc. It is important to make sure your code is concise as well as well commented and readable. Avoid hard coding and use "for" loops when you can. Another element of this (I'm not sure if this is technically considered refactoring because it's not so much resturcting) is to remove all print statements and breakpoints once the specific feature is completed and working properly.
 
 <br class="post-line-break">
 <h3 class="post-subheader">Cocoapods</h3>

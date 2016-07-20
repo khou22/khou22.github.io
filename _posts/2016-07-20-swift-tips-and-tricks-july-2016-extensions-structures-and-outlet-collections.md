@@ -52,6 +52,25 @@ MyData.greet(name) // Hello Kevin
 {% endhighlight %}
 
 <br class="post-line-break">
+<h3 class="post-subheader">Preventing Code-Breaking Typos with Structures</h3>
+A common, and easily preventable, mistake in coding is to misspell image names, file paths, and other strings that could break your code. My coworker taught me this simple trick using structures to diminish the likelihood that this would happen. Essentially, you create a structure called “Images” or “FileNames” that contains all the file name strings. Instead of typing out the string every time, which can result in typos, call the variable within the structure that contains that specific file name. This way, all the strings are in one place and can easily be checked for misspellings. Here’s an example of the situation described above:
+<br class="post-line-break">
+<b>Declaration</b>
+{% highlight swift %}
+struct Images {
+    // It can be useful to line them up in columns
+    static let onboardingBackgroundImg  = "onboarding-background-img"
+    static let filledPlotPoint                         = "filled-plot-point"
+}
+{% endhighlight %}
+<br class="post-line-break">
+<b>Usage:</b>
+{% highlight swift %}
+let exampleImage = UIImageView() // Initialize the image view
+exampleImage.image = UIImage(named: Images.onboardingBackgroundImg) // Set the image
+{% endhighlight %}
+
+<br class="post-line-break">
 <h3 class="post-subheader">Outlet Collections</h3>
 This is a small feature in Xcode that helps you refactor your code, making it look cleaner and more readable. In the app I was building, I had five UIImageViews that I essentially treated the same — mass editing their properties. Initially, it took five lines of code, one for each image, to modify them. As an experienced coder, this felt wrong and looked wrong. The lines were basically all the same except for the names of the variables. I discovered you could group different storyboard elements together in an outlet collection — an array of UI elements. Now I could cycle through the array using a ‘for’ loop and easily make mass edits. Here’s an example:
 <br class="post-line-break">
