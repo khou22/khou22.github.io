@@ -11,9 +11,7 @@ featured: "yes"
 ---
 <h3 class="post-subheader">Introduction</h3>
 I’ve been starting to hunker down and learn the basics of Swift. Because my current project at work is to build an onboarding screen, there will likely be some sort of side scrolling element to it — similar to an iPhone homescreen. Because I knew no Swift-specific data structures, principles, etc. going into this, I was learning from the ground up. It was initially really challenging because I had no basic knowledge to go off of. The intent of this side project was to learn the fundamentals of Swift, especially how Views work.
-
 <br class="post-line-break">
-
 Like all programmers, I googled my way through this project. This <a href="http://www.thorntech.com/2015/08/need-to-create-an-onboarding-flow-for-your-mobile-app-heres-how-to-do-it-using-uipageviewcontroller-in-swift/" target="_blank">tutorial</a> turned out to be a gold mine, but there were plenty of visits to StackOverflow and Apple’s developer documentation.
 
 <br class="post-line-break">

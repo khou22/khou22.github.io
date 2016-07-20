@@ -4,17 +4,16 @@ $brand-orange:    #DA8D0F;
 $brand-green:     #80A454;
 $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
-
 $offwhite: #D9F4FF;
-
 $mobile-cuttoff: 800px;
-
 $post-header-height: 225px;
+$post-font-size: 16px;
 
 .header-placeholder {
   width: 100%;
   height: 80px; // Max height of header
 
+  // Media query
   @media(max-width: $mobile-cuttoff) {
     display: none;
   }
@@ -26,13 +25,6 @@ $post-header-height: 225px;
   height: $post-header-height;
   width: 100vw;
   overflow-x: hidden;
-
-  // Filter
-  // -webkit-filter: blur(5px);
-  // -moz-filter: blur(5px);
-  // -o-filter: blur(5px);
-  // -ms-filter: blur(5px);
-  // filter: blur(5px);
 }
 
 .post-header-description {
@@ -78,9 +70,19 @@ $post-header-height: 225px;
   color: black;
 }
 
+// ******* Post content styling *******
+.post-content p {
+  font-size: $post-font-size; // Blog post font size
+}
+
 li {
+  font-size: $post-font-size;
   padding-left: 12px;
   list-style-position: inside;
+}
+
+pre {
+  font-size: 16px !important; // Make code highlighting font size bigger
 }
 
 .iPhone-screenshots-medium {

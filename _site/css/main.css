@@ -289,8 +289,6 @@ pre {
   max-width: -webkit-calc(800px - (30px));
   max-width: calc(800px - (30px));
   margin: auto; }
-  .post-content p {
-    font-size: 20px; }
   .post-content h2 {
     font-size: 36px; }
     @media screen and (max-width: 800px) {
@@ -730,9 +728,16 @@ strong {
   margin-top: 16px;
   color: black; }
 
+.post-content p {
+  font-size: 16px; }
+
 li {
+  font-size: 16px;
   padding-left: 12px;
   list-style-position: inside; }
+
+pre {
+  font-size: 16px !important; }
 
 .iPhone-screenshots-medium {
   margin: 12px;

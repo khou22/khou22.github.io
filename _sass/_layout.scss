@@ -215,10 +215,6 @@ $content-width: 800px;
     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     margin: auto;
 
-    p {
-      font-size: 20px;
-    }
-
     h2 {
         font-size: 36px;
 

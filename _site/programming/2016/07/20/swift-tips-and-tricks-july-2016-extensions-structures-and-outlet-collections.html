@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Changing Your Terminal Prompt</title>
-  <meta name="description" content="I just learned how to customize my Terminal shell to my liking. My latest customization was to change the Terminal prompt. Typically, my prompt looked like:C...">
+  <title>Swift Tips and Tricks July 2016: Extensions, Structures, and Outlet Collections</title>
+  <meta name="description" content="ExtensionsExtensions are a great way of creating custom, and most importantly, global, functions attached to certain variable types. For example, a good exam...">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -18,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2015/08/02/changing-your-terminal-prompt.html">
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -187,9 +187,9 @@
         Return to all blogs
       </p></a>
       <br />
-      <h1 class="post-title">Changing Your Terminal Prompt</h1>
-      <h4 class="post-header-description"></h4>
-      <p class="post-header-meta">Aug 2, 2015 • Kevin Hou</p>
+      <h1 class="post-title">Swift Tips and Tricks July 2016: Extensions, Structures, and Outlet Collections</h1>
+      <h4 class="post-header-description">An overview of some of the major topics I learned in the past week or so: extensions, structures, and outlet collections. I had to use these a lot in my project for work and I figured I would share.</h4>
+      <p class="post-header-meta">Jul 20, 2016 • Kevin Hou</p>
     </div>
   </header>
 
@@ -202,38 +202,65 @@
   </script>
 
   <article class="post-content">
-    <p>I just learned how to customize my Terminal shell to my liking. My latest customization was to change the Terminal prompt. Typically, my prompt looked like:</p>
+    <h3 class="post-subheader">Extensions</h3>
+<p>Extensions are a great way of creating custom, and most importantly, global, functions attached to certain variable types. For example, a good example of this is when you want to use a UIColor derived from a hex value as opposed to an rgb value. Another (less useful) example is if you want to create a function that deletes the second letter of a string or returns the number of 2’s in a number. These types of functions can be accomplished through extensions. They essentially allow for custom functions and properties, but their real strenth is that they’re global. They’re lightweight and make your code very readable. Here is the hex example and usage:
+<br class="post-line-break" />
+<b>Declaration</b></p>
 
-<p>Computer-Name: User-Name ~</p>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">extension</span> <span class="kt">Int</span> <span class="p">{</span> <span class="c1">// Can attach it to any Int value</span>
+    <span class="kd">func</span> <span class="nf">hexToColor</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UIColor</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">netHex</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// ‘self’ refers to the value the function is attached to</span>
+        <span class="k">let</span> <span class="nv">red</span> <span class="o">=</span> <span class="kt">Float</span><span class="p">((</span><span class="n">netHex</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">green</span> <span class="o">=</span> <span class="kt">Float</span><span class="p">((</span><span class="n">netHex</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">blue</span> <span class="o">=</span> <span class="kt">Float</span><span class="p">(</span><span class="n">netHex</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">colorLiteralRed</span><span class="p">:</span> <span class="n">red</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="n">green</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="n">blue</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
 
-<p>This was just too long and cluttered my screen far too much. I set about to change this. Here are the steps to remove your user name:</p>
+<p><br class="post-line-break" />
+<b>Usage:</b></p>
 
-<ol>
-  <li>Go to your route directory</li>
-  <li>Find the customizer file named “.bash_profile”. This is a hidden file so it can only be seen by using “$ ls -a”. If it is not there, do not worry, step 3 will both open and create it.</li>
-  <li>Type: “$ nano .bash_profile”</li>
-  <li>Type: “export PS1=”\h: \w “</li>
-  <li>Now type: control + O, return, control + x</li>
-  <li>Restart your terminal</li>
-</ol>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="mh">0x222222</span><span class="o">.</span><span class="nf">hexToColor</span><span class="p">()</span></code></pre></figure>
 
-<p>Your prompt should now look like:
-Computer-Name: ~</p>
+<p><br class="post-line-break" /></p>
+<h3 class="post-subheader">Structures</h3>
+<p>Structures operate similarly to extensions in the sense that they’re globally accessible. They allow the user to create global functions and variables, but unlike extensions, they do not have to be attached to a specific variable type. It is simply called by the name of the structure and the ensuing variable/function name. Here is a simple example:
+<br class="post-line-break" />
+<b>Declaration</b></p>
 
-<p>For the cleanest look, use:
-“export PS1=”\W “</p>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">MyData</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">exampleVal</span><span class="p">:</span> <span class="n">string</span> <span class="o">=</span> <span class="err">“</span><span class="kt">Hello</span> <span class="n">world</span><span class="err">”</span>
+    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">greet</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="err">“</span><span class="kt">Hello</span> <span class="err">\</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="err">”</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
 
-<p>It will render:
-~</p>
+<p><br class="post-line-break" />
+<b>Usage:</b></p>
 
-<p>For a complete list of customizations, see this link:
-http://www.ibm.com/developerworks/linux/library/l-tip-prompt/</p>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">val</span> <span class="o">=</span> <span class="kt">MyData</span><span class="o">.</span><span class="n">exampleVal</span> <span class="c1">// Hello World</span>
+<span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="err">“</span><span class="kt">Kevin</span><span class="err">”</span> <span class="c1">// Kevin</span>
+<span class="kt">MyData</span><span class="o">.</span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Hello Kevin</span></code></pre></figure>
 
-<p>Here’s a way of changing colors in your terminal:
-http://it.toolbox.com/blogs/lim/how-to-fix-colors-on-mac-osx-terminal-37214</p>
+<p><br class="post-line-break" /></p>
+<h3 class="post-subheader">Outlet Collections</h3>
+<p>This is a small feature in Xcode that helps you refactor your code, making it look cleaner and more readable. In the app I was building, I had five UIImageViews that I essentially treated the same — mass editing their properties. Initially, it took five lines of code, one for each image, to modify them. As an experienced coder, this felt wrong and looked wrong. The lines were basically all the same except for the names of the variables. I discovered you could group different storyboard elements together in an outlet collection — an array of UI elements. Now I could cycle through the array using a ‘for’ loop and easily make mass edits. Here’s an example:
+<br class="post-line-break" />
+<b>Declaration</b></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">flyingIcons</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIImageView</span><span class="p">]</span><span class="o">!</span> <span class="c1">// Right-click and drag from this outlet to the UIImageView you would like to include in this array</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+<b>Usage</b></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">for</span> <span class="n">icon</span> <span class="k">in</span> <span class="n">flyingIcons</span> <span class="p">{</span>
+            <span class="n">icon</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.75</span>
+        <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
 
     <div class="post-organization">
-      <p id="post-meta">Posted with <a href="/blog/tag/unix/">Unix</a></p>
+      <p id="post-meta">Posted with <a href="/blog/tag/ios/">iOS</a>, <a href="/blog/tag/swift/">Swift</a>, <a href="/blog/tag/apps/">Apps</a></p>
     </div>
   </article>
 </div>
