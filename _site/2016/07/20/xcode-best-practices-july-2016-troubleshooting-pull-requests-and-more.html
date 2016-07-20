@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kevin Hou's Blog</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
-">
+  <title>Xcode Best Practices July 2016: Troubleshooting, Pull Requests, and More</title>
+  <meta name="description" content="Troubleshooting XcodeXcode can be a great IDE with powerful tools like autocompletion, but sometimes it does have a tendency to “break.” Errors that pertain ...">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -19,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/tag/">
+  <link rel="canonical" href="http://khou22.github.io/2016/07/20/xcode-best-practices-july-2016-troubleshooting-pull-requests-and-more.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -169,533 +168,85 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <!-- Blog homepage -->
+        <!-- Hide scrollbar on this page -->
+<style> ::-webkit-scrollbar { display: none; } </style>
 
-<div class="home left-main">
+<div class="post">
+  
 
-  <h1 class="page-heading">Browse All Tags</h1>
-  <br />
-  <ul class="post-list">
-    <!-- Repeats for (maps) all posts -->
     
-      <li>
-        <h5 class="tag-list">
-          <a href="apps">
-            Apps
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="swift">
-            Swift
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="ios">
-            iOS
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="github-pages">
-            GitHub Pages
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="woodturning">
-            Woodturning
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="cnc-wood-router">
-            CNC Wood Router
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="wood-finish">
-            Wood Finish
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="salesforce">
-            Salesforce Internship
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="processing">
-            Processing
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="desmos">
-            Desmos
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="java">
-            Java
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="javascript">
-            Javascript
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="reactjs">
-            ReactJS
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="es6">
-            ES6
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="html">
-            HTML
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="css">
-            CSS
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="css3">
-            CSS3
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="jekyll">
-            Jekyll
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="musicviz">
-            Music Visualizer
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="node-js">
-            Node.js
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="github">
-            GitHub
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="unix">
-            Unix
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="osx">
-            OSX
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="sublime">
-            Sublime Text
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="ionic">
-            Ionic
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="python">
-            Python
-          </a>
-        </h5>
-      </li>
-    
-      <li>
-        <h5 class="tag-list">
-          <a href="angularjs">
-            AngularJS
-          </a>
-        </h5>
-      </li>
-    
-  </ul>
 
-  <p class="rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></p>
+    
 
+    
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Xcode Best Practices July 2016: Troubleshooting, Pull Requests, and More</h1>
+      <h4 class="post-header-description"></h4>
+      <p class="post-header-meta">Jul 20, 2016 • Kevin Hou</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+  </script>
+
+  <article class="post-content">
+    <p>Troubleshooting Xcode
+Xcode can be a great IDE with powerful tools like autocompletion, but sometimes it does have a tendency to “break.” Errors that pertain to linking are often examples of Xcode glitching out and temporarily self-imploding. These issues can be solved by following these steps:
+Clean: Command + Shift + K
+Deep Clean: Command + Option + Shift + K
+Delete derived data: These are like Xcode’s caches and builds. Each project has a derived data file. To wipe these clean, go to your finder. Hold option, click “Go” in the taskbar, and select “Library.” Next, go to Developer/Xcode/DerivedData/. Select all the files within that folder and delete them by moving them to the trash.
+Quit Xcode
+(Attempt to) rebuild your project</p>
+
+<p>Pull Requests
+Git and other version control systems can be confusing things. I, along with most of the developers I know, use GitHub for version control and collaboration on projects. I use GitHub on the daily (I have almost a 300 day commit streak on GitHub right now) and am still intimidated by pull requests. From what I understand, they’re essentially clean ways of merging two branches and grouping commits together.</p>
+
+<p>When working in groups settings, this is incredibly useful both in a developer sense and a moderator sense. The code is branched so it does not accidentally break the master branch (good when you’re updated a popularly used repo or working on a group project). Usually pull requests are significant features or builds. All commit made during a pull request are also grouped together and can easily be reviewed all together by the person who is reviewing the pull request. On GitHub, you can comment on pull requests do other discussion-based actions until the code meets satisfaction and can be integrated into the main branch.</p>
+
+<p>Preventing Code-Breaking Typos
+A common, and easily preventable, mistake in coding is to misspell image names, file paths, and other strings that could break your code. My coworker taught me this simple trick using structures to diminish the likelihood that this would happen. Essentially, you create a structure called “Images” or “FileNames” that contains all the file name strings. Instead of typing out the string every time, which can result in typos, call the variable within the structure that contains that specific file name. This way, all the strings are in one place and can easily be checked for misspellings. Here’s an example of the situation described above:</p>
+
+<p>struct Images {
+    static let onboardingBackgroundImg  = “onboarding-background-img”
+    static let filledPlotPoint          = “filled-plot-point”
+}</p>
+
+<p>Usage:
+let exampleImage = UIImageView() // Initialize the image view
+exampleImage.image = UIImage(named: Images.onboardingBackgroundImg) // Set the image</p>
+
+<p>Commenting on Code and Readability
+Commenting code is one of those practices that is well known, yet not well performed. It’s incredibly important in both personal and team settings. While most people at least understand the necessity, fewer strive for code readability. It is better practice to write readable code with fewer comments using function names, variable names, etc. than to write confusing code with paragraphs of comments. I am obviously guilty of this and I think the majority of developers could be more conscious about it.</p>
+
+<p>Cocoapods
+Cocoapods are good and bad depending on who you are. For those that don’t know, cocoapods are libraries built by third parties that you can integrate in your Xcode project with minimal difficulty. They’re similar to Node packages, Python modules, etc.</p>
+
+<p>When developing web apps, I love using libraries, especially Node packages; however, there is a danger in using third party code. Even though it makes your life much easier, in the long run, it could break your app or website. For example, one developer broke thousands of projects by changing 11 lines in their package. It’s a hilariously (http://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/) realistic and daunting story that could apply to your app, but in a smaller scale.</p>
+
+<p>The reason why some are opposed to Cocoapods (including one of my coworkers), is exactly that. If you have too many third party libraries, one mess up could break your project and it would be an ordeal to sift through hundreds of libraries and thousands of files in order to find what was responsible for bringing down your app.</p>
+
+<p>In my opinion, I think you should strike a balance. Cocoapods and other package managers are very useful and take a lot of the heavy lifting out of tasks for developers, but at the same time it’s dangerous to become ultra-reliant on them. You do not want your precious project to be held up entirely by code that you don’t have control over.</p>
+
+<p>I hope you found this post useful. I’m learning a lot about Xcode and especially about how to work in teams. There’s always room for growth and everyone can get better at it. Talk to you in the next one!</p>
+
+    <div class="post-organization">
+      <p id="post-meta"></p>
+    </div>
+  </article>
 </div>
 
-<div class="right-column">
-  <div class="featured">
-    Featured posts:
-    <ol>
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2016/07/20/xcode-best-practices-july-2016-troubleshooting-pull-requests-and-more.html">Xcode Best Practices July 2016: Troubleshooting, Pull Requests, and More</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html">Swift Tips and Tricks July 2016: Extensions, Structures, and Outlet Collections</a>
-          </li>
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/design/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html">Digital Design: The Process from Concept to iOS App</a>
-          </li>
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2016/06/28/making-a-simple-page-based-application-in-swift.html">Making a Simple Page Based Application in Swift</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/design/2016/05/01/github-octocat-design-challenge-winner.html">GitHub Octocat Design Challenge Winner</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2016/04/21/uber-scheduler-calling-ubers-alarm-clock-style.html">Uber Scheduler: Calling Ubers Alarm Clock Style</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2016/04/18/first-hackathon-24-hours-straight-of-coding.html">First Hackathon: 24 Hours Straight of Coding</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/11/01/text-analysis-app-how-do-you-talk-to-people-on-facebook-versus-in-an-engineering-report.html">Text Analysis App: How Do You Talk To People on Facebook Versus In An Engineering Report?</a>
-          </li>
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/10/25/nodejs-basics-setting-up-a-local-web-server.html">NodeJS Basics - Setting Up A Local Web Server</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/08/02/best-way-to-customize-terminal.html">Best Way to Customize Terminal</a>
-          </li>
-        
-      
-        
-      
-         <!-- if featured -->
-          <li>
-            <a class="recent-link" href="/programming/2015/07/31/accessibility-enabling-voiceover-on-buttons-and-links.html">Accessibility: Enabling Voiceover on Buttons and Links</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="recent">
-    Recent posts:
-    <ol>
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2016/07/20/xcode-best-practices-july-2016-troubleshooting-pull-requests-and-more.html">Xcode Best Practices July 2016: Troubleshooting, Pull Requests, and More</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html">Swift Tips and Tricks July 2016: Extensions, Structures, and Outlet Collections</a>
-          </li>
-        
-      
-         <!-- Only display last 3 posts -->
-          <li>
-            <a class="recent-link" href="/programming/2016/07/01/wwdc-2015-mysteries-of-auto-layout.html">WWDC 2015: Mysteries of Auto Layout</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </ol>
-  </div>
-  <div class="browse-category">
-    <a href="/blog/category">
-      Browse by Category
-    </a>
-  </div>
-  <div class="browse-tag">
-    <a href="/blog/tag">
-      Browse by Tag
-    </a>
-  </div>
-</div>
       </div>
     </div>
 

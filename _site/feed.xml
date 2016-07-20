@@ -6,9 +6,78 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Jul 2016 11:18:34 -0700</pubDate>
-    <lastBuildDate>Wed, 20 Jul 2016 11:18:34 -0700</lastBuildDate>
+    <pubDate>Wed, 20 Jul 2016 11:27:35 -0700</pubDate>
+    <lastBuildDate>Wed, 20 Jul 2016 11:27:35 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Xcode Best Practices July 2016: Troubleshooting, Pull Requests, and More</title>
+        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Troubleshooting Xcode&lt;/h3&gt;
+&lt;p&gt;Xcode can be a great IDE with powerful tools like autocompletion, but sometimes it does have a tendency to “break.” Errors that pertain to linking are often examples of Xcode glitching out and temporarily self-imploding. These issues can be solved by following these steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Clean: Command + Shift + K&lt;/li&gt;
+  &lt;li&gt;Deep Clean: Command + Option + Shift + K&lt;/li&gt;
+  &lt;li&gt;Delete derived data: These are like Xcode’s caches and builds. Each project has a derived data file. To wipe these clean, go to your finder. Hold option, click “Go” in the taskbar, and select “Library.” Next, go to Developer/Xcode/DerivedData/. Select all the files within that folder and delete them by moving them to the trash.&lt;/li&gt;
+  &lt;li&gt;Quit Xcode&lt;/li&gt;
+  &lt;li&gt;(Attempt to) rebuild your project&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Pull Requests&lt;/h3&gt;
+&lt;p&gt;Git and other version control systems can be confusing things. I, along with most of the developers I know, use GitHub for version control and collaboration on projects. I use GitHub on the daily (I have almost a 300 day commit streak on GitHub right now) and am still intimidated by pull requests. From what I understand, they’re essentially clean ways of merging two branches and grouping commits together.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+When working in groups settings, this is incredibly useful both in a developer sense and a moderator sense. The code is branched so it does not accidentally break the master branch (good when you’re updated a popularly used repo or working on a group project). Usually pull requests are significant features or builds. All commit made during a pull request are also grouped together and can easily be reviewed all together by the person who is reviewing the pull request. On GitHub, you can comment on pull requests do other discussion-based actions until the code meets satisfaction and can be integrated into the main branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Preventing Code-Breaking Typos&lt;/h3&gt;
+&lt;p&gt;A common, and easily preventable, mistake in coding is to misspell image names, file paths, and other strings that could break your code. My coworker taught me this simple trick using structures to diminish the likelihood that this would happen. Essentially, you create a structure called “Images” or “FileNames” that contains all the file name strings. Instead of typing out the string every time, which can result in typos, call the variable within the structure that contains that specific file name. This way, all the strings are in one place and can easily be checked for misspellings. Here’s an example of the situation described above:
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;b&gt;Declaration&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Images&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;onboardingBackgroundImg&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;onboarding-background-img&quot;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filledPlotPoint&lt;/span&gt;          &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;filled-plot-point&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;b&gt;Usage:&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;exampleImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIImageView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Initialize the image view&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;exampleImage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;named&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Images&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onboardingBackgroundImg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Set the image&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Commenting on Code and Readability&lt;/h3&gt;
+&lt;p&gt;Commenting code is one of those practices that is well known, yet not well performed. It’s incredibly important in both personal and team settings. While most people at least understand the necessity, fewer strive for code readability. It is better practice to write readable code with fewer comments using function names, variable names, etc. than to write confusing code with paragraphs of comments. I am obviously guilty of this and I think the majority of developers could be more conscious about it.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Cocoapods&lt;/h3&gt;
+&lt;p&gt;Cocoapods are good and bad depending on who you are. For those that don’t know, cocoapods are libraries built by third parties that you can integrate in your Xcode project with minimal difficulty. They’re similar to Node packages, Python modules, etc.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+When developing web apps, I love using libraries, especially Node packages; however, there is a danger in using third party code. Even though it makes your life much easier, in the long run, it could break your app or website. For example, one developer broke thousands of projects by changing 11 lines in their package. It’s a hilariously &lt;a href=&quot;http://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/&quot; target=&quot;_blank&quot;&gt;realistic and daunting story&lt;/a&gt; that could apply to your app, but in a smaller scale.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+The reason why some are opposed to Cocoapods (including one of my coworkers), is exactly that. If you have too many third party libraries, one mess up could break your project and it would be an ordeal to sift through hundreds of libraries and thousands of files in order to find what was responsible for bringing down your app.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+In my opinion, I think you should strike a balance. Cocoapods and other package managers are very useful and take a lot of the heavy lifting out of tasks for developers, but at the same time it’s dangerous to become ultra-reliant on them. You do not want your precious project to be held up entirely by code that you don’t have control over.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+I hope you found this post useful. I’m learning a lot about Xcode and especially about how to work in teams. There’s always room for growth and everyone can get better at it. Talk to you in the next one!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jul 2016 04:30:53 -0700</pubDate>
+        <link>http://khou22.github.io/programming/2016/07/20/xcode-best-practices-july-2016-troubleshooting-pull-requests-and-more.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/07/20/xcode-best-practices-july-2016-troubleshooting-pull-requests-and-more.html</guid>
+        
+        <category>ios</category>
+        
+        <category>swift</category>
+        
+        <category>apps</category>
+        
+        <category>xcode</category>
+        
+        
+        <category>Programming</category>
+        
+      </item>
     
       <item>
         <title>Swift Tips and Tricks July 2016: Extensions, Structures, and Outlet Collections</title>
@@ -750,42 +819,6 @@ This is the full resolution image. The only time a user would see this entire im
         <pubDate>Sat, 07 May 2016 14:32:05 -0700</pubDate>
         <link>http://khou22.github.io/design/2016/05/07/designing-my-youtube-channel-artwork.html</link>
         <guid isPermaLink="true">http://khou22.github.io/design/2016/05/07/designing-my-youtube-channel-artwork.html</guid>
-        
-        
-        <category>Design</category>
-        
-      </item>
-    
-      <item>
-        <title>GitHub Octocat Design Challenge Winner</title>
-        <description>&lt;p&gt;I designed a logo for a project of mine that took a unique spin on the GitHub Octocat mascot. I entered it into a hackathon challenge and it was picked as the best overall design. GitHub Education has hosted this design competition many times for various hackathons. At the MenloHacks hackathon a couple weekends ago, my group and I built &lt;a href=&quot;/blog/projects/Execute-Order-66/&quot; target=&quot;_blank&quot;&gt;Execute Order 66&lt;/a&gt;, a Chrome extension that automatically censors vulgar language in GitHub repos.&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Design Process&lt;/h3&gt;
-&lt;p&gt;I took inspiration from the name of our Chrome Extension: Execute Order 66. For those out there who are not Star Wars fans, Execute Order 66 was the directive that commanded the assassination of all the Jedi. Similarly, our extension orders the destruction of all curse words in your repositories.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-It was easy decision to include the Octocat mascot in my design since we were creating a GitHub developer tool. Because of the dark nature of the phrase “Execute Order 66,” I felt that the overall design should reflect this. As a result, I designed with largely a black color palette and a Sith lightsaber to add a red highlight. For the background, I used the iconic “light speed” design from Star Wars.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;img src=&quot;./../../../../media/projects/executeOrder66/GitHub Logo.png&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Overall, I was pretty happy with my design. For one, because this was our second project, I had to design this logo in about 10 minutes. Secondly, I got a lot of exposure for it on Twitter! It was nice to know that people out there appreciated my design. It strengthened my confidence in my design skills and I’m beginning to now identify as a designer as well as a programmer. If I were to do this logo again, I would increase the resolution of my design. It’s a little low resolution, but it’s not noticeable on the &lt;a href=&quot;https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone&quot;&gt;Chrome app store&lt;/a&gt;. Feel free to download the &lt;a href=&quot;https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone&quot;&gt;Chrome Extension&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Competition Results&lt;/h3&gt;
-&lt;p&gt;Below are screenshots and links of the various Twitter announcements. About 15 people “liked” my design and I even got a couple retweets!
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;strong&gt;&lt;em&gt;Screenshots not yet added, but links are correct&lt;/em&gt;&lt;/strong&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;a href=&quot;https://twitter.com/GitHubEducation/status/722884798457335810&quot; target=&quot;_blank&quot;&gt;GitHub Education Announcement&lt;/a&gt;&lt;br /&gt;
-&lt;img src=&quot;./../../../../media/projects/executeOrder66/Twitter Post - GitHub Education.jpg&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;br /&gt;
-&lt;a href=&quot;https://twitter.com/MLHacks/status/723598523627794432&quot; target=&quot;_blank&quot;&gt;Major League Hacking Shoutout&lt;/a&gt;&lt;br /&gt;
-&lt;img src=&quot;./../../../../media/projects/executeOrder66/Twitter Post - Major League Hacking.jpg&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;br /&gt;
-&lt;a href=&quot;https://twitter.com/kevinhou22/status/721793013060505601&quot; target=&quot;_blank&quot;&gt;My Original Tweet&lt;/a&gt;&lt;br /&gt;
-&lt;img src=&quot;./../../../../media/projects/executeOrder66/Twitter Post - Kevin Hou.jpg&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 May 2016 07:49:19 -0700</pubDate>
-        <link>http://khou22.github.io/design/2016/05/01/github-octocat-design-challenge-winner.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/design/2016/05/01/github-octocat-design-challenge-winner.html</guid>
-        
-        <category>apps</category>
-        
-        <category>ios</category>
         
         
         <category>Design</category>
