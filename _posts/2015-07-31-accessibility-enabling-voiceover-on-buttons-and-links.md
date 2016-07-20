@@ -7,7 +7,7 @@ description: "Adding accessibility features to your website to allow for a wider
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: [html]
-featured: "yes"
+featured: "no"
 ---
 Today, I discovered accessibility and assistive technology. It's really an intriguing topic and is something I've never really thought about. I think it's important in this day and age to be cognicant of who owns what technology and who has access to what. I did a paper earlier this year on the digital divide, but I took the lense of age, gender, location, etc..not of ableness. My web app is almost ready to be packaged and shipped so it's time to start putting on the finishing touches. One of these is enabling voiceover.
 <br />
@@ -23,7 +23,7 @@ I have an '\<a>' tag in my web app, and because it was an image, the voiceover f
 {% endhighlight %}
 
 Like I said earlier, the class keeps the text "Close" hidden from the UI. However, if you were to tab over to the image, the voiceover would speak "Close". It's a very useful tool to make your website more accessible to those visually impaired. To use voiceover, use the keyboard shortcut: Command + F5.
- 
+
 <b>Tab Index</b>
 Another trick for accessibility is prioritizing the tab order. To change the order in which users tab through actionable items, add the property: tabIndex. The starting value is 0. For example to tab through these two things out of order, but starting with the second one, you would do:
 {% highlight html %}
@@ -32,7 +32,7 @@ Another trick for accessibility is prioritizing the tab order. To change the ord
 {% endhighlight %}
 
 If you pressed tab, you would first highlight button 2 and then button 1.
- 
- 
- 
+
+
+
 I hope whoever reads this really takes this to heart and learns to appreciate something so remarkable as vision or health. It's important that we move forward as a society allowing the greatest number of people to effectively use technology. I am considering posting my paper of the digital divide since it's really a remarkable topic.
