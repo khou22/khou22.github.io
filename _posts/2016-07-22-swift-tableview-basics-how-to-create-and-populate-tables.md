@@ -25,7 +25,7 @@ Create a table view property
 {% endhighlight %}
 
 <br class="post-line-break">
-Initialize the class and connect it to the storyboard
+Initialize the class and connect it to the storyboard.
 {% highlight swift %}
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource { ... }
 {% endhighlight %}
@@ -46,6 +46,11 @@ func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSInde
     // Triggered when you select the row at indexPath
 }
 {% endhighlight %}
+<br class="post-line-break">
+<b>Connect dataSource and delegate</b><br>
+You must also link the table view dataSource and delegate to the view controller like so: <br>
+<img src="./../../../../media/blog/images/Swift_Table_Views.png" width="100%">
+
 <br class="post-line-break">
 <b>Register Cell Class</b><br>
 In the view controller/tableviewdelegate/datasource class, you must register the class for the table view:

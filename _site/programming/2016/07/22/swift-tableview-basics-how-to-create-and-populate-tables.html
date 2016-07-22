@@ -217,7 +217,7 @@
 <figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="o">!</span> <span class="c1">// Connect to the storyboard element</span></code></pre></figure>
 
 <p><br class="post-line-break" />
-Initialize the class and connect it to the storyboard</p>
+Initialize the class and connect it to the storyboard.</p>
 
 <figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">UITableViewDelegate</span><span class="p">,</span> <span class="kt">UITableViewDataSource</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span></code></pre></figure>
 
@@ -237,6 +237,11 @@ Setup different UITableView properties</p>
 <span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">didSelectRowAtIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Triggered when you select the row at indexPath</span>
 <span class="p">}</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+<b>Connect dataSource and delegate</b><br />
+You must also link the table view dataSource and delegate to the view controller like so: <br />
+<img src="./../../../../media/blog/images/Swift_Table_Views.png" width="100%" /></p>
 
 <p><br class="post-line-break" />
 <b>Register Cell Class</b><br />
