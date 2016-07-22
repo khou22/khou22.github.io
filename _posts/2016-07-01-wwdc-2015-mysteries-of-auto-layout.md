@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-07-01 16:33:27
 description: "My notes and takeaways from the WWDC talk on auto layout from 2015. I know the video is a year old, but it was a good learning resource for me."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [ios, swift, apps, xcode]
 featured: "no"
 ---

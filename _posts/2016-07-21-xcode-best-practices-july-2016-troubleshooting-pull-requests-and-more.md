@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-07-20 11:30:53
 description: "A few coding best practices that I learned in the past couple of weeks from my manager and mentor. These are primarily Xcode-oriented but can easily be applied to other languages and IDE's"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [ios, swift, apps, xcode]
 featured: "yes"
 ---

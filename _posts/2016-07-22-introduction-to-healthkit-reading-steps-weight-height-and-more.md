@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-07-22 09:48:15
 description: "An overview of the fundamental basics in the HealthKit API and some more complex examples to get you started."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [ios, swift, apps, xcode]
 featured: "yes"
 ---

@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-09-12 21:52:25
 description: "Adding syntax highlighting for ReactJS in Sublime Text 2."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [sublime, react]
 featured: "no"
 ---

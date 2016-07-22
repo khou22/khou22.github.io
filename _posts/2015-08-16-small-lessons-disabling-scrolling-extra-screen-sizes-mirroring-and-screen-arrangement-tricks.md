@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-08-16 11:29:33
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [css, osx]
 featured: "no"
 ---

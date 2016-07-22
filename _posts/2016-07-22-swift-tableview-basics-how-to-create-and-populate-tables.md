@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-07-22 10:46:44
 description: "A quick, bare-bones introduction to Table Views in Swift."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [ios, swift, apps, xcode]
 featured: "yes"
 ---

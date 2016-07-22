@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-08-02 21:28:50
 description: "Customize your terminal shell to your liking. It'll look really cool."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [unix]
 featured: "yes"
 ---

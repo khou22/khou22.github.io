@@ -5,7 +5,7 @@ author: "Kevin Hou"
 author: 2015-7-29 20:55:41
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [javascript, reactjs]
 featured: "no"
 ---

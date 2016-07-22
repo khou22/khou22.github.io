@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date:   2015-03-10 12:26:43
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [java, processing, musicviz]
 featured: "no"
 ---

@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date:   2015-07-16 13:10:57
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [salesforce, reactjs, javavscript]
 featured: "no"
 ---

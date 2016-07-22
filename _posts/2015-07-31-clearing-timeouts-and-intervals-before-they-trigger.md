@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-07-31 21:10:15
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [javascript]
 featured: "no"
 ---

@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-01-14 23:54:51
 description: "A short tutorial on how to build a navigation bar with dropdown menu options using only HTML and CSS"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [html, css]
 featured: "no"
 ---

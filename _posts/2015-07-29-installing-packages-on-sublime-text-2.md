@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-07-29 10:02:30
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: programming
 tags: [sublime]
 featured: "no"
 ---
