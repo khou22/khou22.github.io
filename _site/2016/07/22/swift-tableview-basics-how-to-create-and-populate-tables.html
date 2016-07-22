@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Articles by tag: Apps</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
-">
+  <title>Swift TableView Basics: How to Create and Populate Tables</title>
+  <meta name="description" content="Tutorial from: https://www.weheartswift.com/how-to-make-a-simple-table-view-with-ios-8-and-swift/">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -19,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/tag/apps/">
+  <link rel="canonical" href="http://khou22.github.io/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -169,183 +168,175 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <header id="post-header">
-    <h1 id="post-title">apps</h1>
-    <h4 id="post-subtitle">Articles by tag</h4>
-</header>
+        <!-- Hide scrollbar on this page -->
+<style> ::-webkit-scrollbar { display: none; } </style>
 
-<div id="post-content">
+<div class="post">
+  
+
     
-        
-            
-            
-                <h3>2016</h3><div class="list-group">
-            
-      
-            
-      
-            <a href="/programming/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html">
-                <h4>Swift TableView Basics: How to Create and Populate Tables</h4>
-            </a>
 
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2016/07/22/introduction-to-healthkit-reading-steps-weight-height-and-more.html">
-                <h4>Introduction to HealthKit: Reading Steps, Weight, Height, and More</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2016/07/20/xcode-best-practices-july-2016-troubleshooting-pull-requests-and-more.html">
-                <h4>Xcode Best Practices July 2016: Troubleshooting, Pull Requests, and More</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html">
-                <h4>Swift Tips and Tricks July 2016: Extensions, Structures, and Outlet Collections</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2016/07/01/wwdc-2015-mysteries-of-auto-layout.html">
-                <h4>WWDC 2015: Mysteries of Auto Layout</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/design/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html">
-                <h4>Digital Design: The Process from Concept to iOS App</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html">
-                <h4>WWDC 2016: Advances in UIKit Animations and Transitions</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/design/2016/05/01/github-octocat-design-challenge-winner.html">
-                <h4>GitHub Octocat Design Challenge Winner</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2016/04/21/uber-scheduler-calling-ubers-alarm-clock-style.html">
-                <h4>Uber Scheduler: Calling Ubers Alarm Clock Style</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-            
-      
-            <a href="/programming/2016/04/18/first-hackathon-24-hours-straight-of-coding.html">
-                <h4>First Hackathon: 24 Hours Straight of Coding</h4>
-            </a>
-
-            
-        
-            
-            
-      
-            
-                
-                
-                
-                    </div><h3>2015</h3><div class="list-group">
-                
-            
-      
-            <a href="/programming/2015/11/01/text-analysis-app-how-do-you-talk-to-people-on-facebook-versus-in-an-engineering-report.html">
-                <h4>Text Analysis App: How Do You Talk To People on Facebook Versus In An Engineering Report?</h4>
-            </a>
-
-            
-                </div>
-            
-        
     
+
+    
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
+    <div class="post-header-content">
+      <a href="/blog"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title">Swift TableView Basics: How to Create and Populate Tables</h1>
+      <h4 class="post-header-description"></h4>
+      <p class="post-header-meta">Jul 22, 2016 • Kevin Hou</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+  </script>
+
+  <article class="post-content">
+    <p>Tutorial from: https://www.weheartswift.com/how-to-make-a-simple-table-view-with-ios-8-and-swift/</p>
+
+<p>Create a table view property
+@IBOutlet weak var tableView: UITableView! // Connect to the storyboard element</p>
+
+<p>Initialize the class
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource { … }
+Connect the class to the storyboard</p>
+
+<p>Setup different UITableView properties
+// Imperative
+func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        return 0
+    }</p>
+
+<p>// Imperative
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+        return UITableViewCell()
+    }</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+}
+</code></pre>
 </div>
+
+<p>Register Cell Class
+In the view controller/tableviewdelegate/datasource class, you must register the class for the table view:
+override func viewDidLoad() {
+    super.viewDidLoad()</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell") //    tableView.setup(scrollable: false) // Turn off scrolling
+</code></pre>
+</div>
+
+<p>}</p>
+
+<p>Adding Data to Display
+First step is to declare the data. In this case we’re going to use dummy data:
+var items: [String] = [“Hello”, “World”, “Swift”]</p>
+
+<p>Using this data, we can now set the number of rows in our table view by calling the function:
+func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+    return items.count
+}</p>
+
+<p>Create the cell.
+func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+    var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier(“cell”) as UITableViewCell</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>cell.textLabel?.text = self.items[indexPath.row]
+
+return cell }
+</code></pre>
+</div>
+
+<p>Handling cell selection:
+func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    println(“You selected cell #(indexPath.row)!”)
+}</p>
+
+<p>Final code should look like this:
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet
+    var tableView: UITableView
+    var items: [String] = [“We”, “Heart”, “Swift”]</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>override func viewDidLoad() {
+    super.viewDidLoad()
+
+    self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+}
+
+
+func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+    return self.items.count;
+}
+
+func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+    var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+
+    cell.textLabel?.text = self.items[indexPath.row]
+
+    return cell
+}
+
+func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    println("You selected cell #\(indexPath.row)!")
+} }
+</code></pre>
+</div>
+
+<p>To create a custom cell with more than just a single label, follow these steps:</p>
+
+<p>Drag a Table View Cell onto your UITableView. This will automatically generate a cell labeled “Prototype” that contains a nested content view. Treat this content view as any other view and drag UI elements like text fields, images, etc. onto the content view.</p>
+
+<p>Now, create a new Swift file for the UITableViewCell class to connect your Table View Cell to some code. Initialize the class like so:
+class StepsCell: UITableViewCell {
+    // IB Outlets go here:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+}
+
+override func setSelected(selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+
+    // Configure the view for the selected state
+} }
+</code></pre>
+</div>
+
+<p>Hook up the UI elements in the content view with IBOutlets in your UITableViewCell class. It’s identical to how you would do this for any other view controller. You can add constraints, stack views, etc. Just treat the content view as you would a blank view controller.</p>
+
+<p>Now to access those UI elements in your main Table View Controller, you must use the “dequeueReusableCellWithIdentifier” command. Dequeue basically describes the manner in which data loads and unloads. If you imagine the scrolling items as a wheel, as the topmost item disappears, it reappears on the bottom. The table view is endlessly recycling the same x number of cells. This is a good approach for memory management especially when dealing with 100+ cells. Once you’ve stored the cell, you can then modify the various UI elements and return the cell to populate the table view.</p>
+
+<p>func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell {
+    var cell = self.tableView.dequeueReusableCellWithIdentifier(“StepsCell”)! as! StepsCell // Same identifier as class name
+    cell.dateLabel.text = “January (indexPath)”
+    cell.textLabel?.text = String(indexPath)
+    return cell
+}</p>
+
+<p>For populating table views with data from asynchronous requests, it can be helpful to reload your table view once you know all your data is complete
+// Reload in main queue
+dispatch_async(dispatch_get_main_queue(), { () -&gt; Void in
+    self.tableView.reloadData() // Reload
+})</p>
+
+    <div class="post-organization">
+      <p id="post-meta">Posted with <a href="/blog/tag/ios/">iOS</a>, <a href="/blog/tag/swift/">Swift</a>, <a href="/blog/tag/apps/">Apps</a>, <a href="/blog/tag/xcode/">Xcode</a></p>
+    </div>
+  </article>
+</div>
+
       </div>
     </div>
 
