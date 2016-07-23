@@ -175,9 +175,34 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header">
     <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
@@ -211,15 +236,15 @@ Aliases in your Terminal are similar in the sense that they provide shortcuts to
 <br /><br />
 For example, if I access the folder ‘myFolder’ often, I would create an alias to basically trigger the function ‘cd /Users/Kevin/Documents/myFolder.’ To do this, open ‘~/.bash_profile’ and add the following line:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">myFolderShortcut</span><span class="o">=</span><span class="s1">'cd /Users/Kevin/Documents/myFolder'</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">myFolderShortcut</span><span class="o">=</span><span class="s1">&#39;cd /Users/Kevin/Documents/myFolder&#39;</span></code></pre></div>
 
 <p><br />
 The .bash_profile file is a customizable list of user-contributed functions, aliases, etc. In some cases, the .bash_profile is loaded automatically when the Terminal starts, but I’ve found that mine doesn’t do this. Instead I type:</p>
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">source</span> .bash_profile</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">source</span> .bash_profile</code></pre></div>
 <p>whenever I first open a Terminal session.
 <br /><br />
 Now, you can type</p>
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span>myFolderShortcut</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span>myFolderShortcut</code></pre></div>
 <p>anywhere in your Terminal session and you will be directed to myFolder.
 <br /><br /></p>
 <h2>2) Faster Mac Dock Productivity</h2>
