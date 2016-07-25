@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Getting Started with the CNC Router</title>
-  <meta name="description" content="Cutting Topographical Maps on the CNC RouterThis blog post is primarily for my own notes. It's a work in progress. As my project progresses and I encounter m...">
+  <title>Common React Issue - Button Clicks</title>
+  <meta name="description" content="I’ve started to get the hang of React and ES6, but it’s only been three weeks and there are of course tons and tons of things I haven’t learned yet. I’ll go ...">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -18,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/wood/2016/03/06/getting-started-with-the-cnc-router.html">
+  <link rel="canonical" href="http://khou22.github.io/programming/2015/07/16/common-react-issue-button-clicks.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -187,9 +187,9 @@
         Return to all blogs
       </p></a>
       <br />
-      <h1 class="post-title">Getting Started with the CNC Router</h1>
-      <h4 class="post-header-description">Part of a wood project I'm working on. Using SketchUp and Aspire to prepare the CNC cutpath.</h4>
-      <p class="post-header-meta">Mar 6, 2016 • Kevin Hou</p>
+      <h1 class="post-title">Common React Issue - Button Clicks</h1>
+      <h4 class="post-header-description"></h4>
+      <p class="post-header-meta">Jul 16, 2015 • Kevin Hou</p>
     </div>
   </header>
 
@@ -202,24 +202,71 @@
   </script>
 
   <article class="post-content">
-    <h2>Cutting Topographical Maps on the CNC Router</h2>
-<p>This blog post is primarily for my own notes. It's a work in progress. As my project progresses and I encounter more challenges, I will write about them here.</p>
+    <p>I’ve started to get the hang of <b>React</b> and <b>ES6</b>, but it’s only been three weeks and there are of course tons and tons of things I haven’t learned yet. I’ll go over a couple of things that I think anyone starting to learn React could benefit from. In this blog post I’ll go over Button Clicks.</p>
 
-<p><b>Process</b></p>
+<p>React works differently from plain old Vanilla Javascript in a couple of ways. One of which is the modular structure of the code. Each module has functions within it that can be accessed only by that specific module.</p>
+
+<p>You might be encountering a couple errors:</p>
 <ol>
-  <li>Import map from Google Earth plugin on SketchUp</li>
-  <li>Geo-location → Add location</li>
-  <li>Select show terrain</li>
-  <li>Export from sketchup as a .3ds</li>
-  <li>Import on Rhino as “Component / 3D Model”</li>
-  <li>Set size</li>
-  <li>Set Toolpath</li>
-  <li>Cut “3D Rough Toolpath” first</li>
-  <li>Cut “3D Finishing Toolpath”</li>
+  <li>onClick function triggering when button loads</li>
+  <li>The onClick function doesn't recognize the function its supposed to trigger</li>
+  <li>The function refreshes the page</li>
+  <li>You can't pass parameters into the function</li>
 </ol>
+<p>See the corresponding number below for potential solutions and explanations.</p>
+
+<hr />
+
+<p><br /></p>
+
+<h4>1. Prevent onClick from automatically running</h4>
+<p>The reason it automatically runs is because you are triggering the function when referencing it. Your code may look like this:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">()}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="sr">/button&gt;</span></code></pre></figure>
+
+<p>The parentheses indicate that the function should be executed. When the page loads, it sees the parenthesis and runs the corresponding function. To fix the issue, simply remove the parenthesis. To pass parameters in, see the section below.</p>
+
+<h4>2. Force onClick to recognize function</h4>
+<p>Use</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span></code></pre></figure>
+
+<p>at the end of</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">}</span></code></pre></figure>
+
+<p>See example below.</p>
+
+<h4>3. Prevent Auto-Refresh</h4>
+<p>Simply use the: preventDefault() function</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">buttonClick</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">//Prevents auto refresh</span>
+  <span class="p">},</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span><span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>    <span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></figure>
+
+<h4>4. Passing Parameters</h4>
+<p>Add the parameters in the .bind(this) as seen below</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+  <span class="nx">buttonClick</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span><span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">num</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>    <span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></figure>
 
     <div class="post-organization">
-      <p id="post-meta">Posted with <a href="/blog/tag/cnc-wood-router/">CNC Wood Router</a></p>
+      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/salesforce/">Salesforce Internship</a>, <a href="/blog/tag/reactjs/">ReactJS</a>, </p>
     </div>
   </article>
 </div>

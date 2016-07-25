@@ -760,7 +760,8 @@ pre {
   height: 100vh;
   background-image: url("../media/site/images/Blog Image.jpg");
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  margin-bottom: 24px; }
 .blog-landing-title-div {
   position: absolute;
   left: 3%;
