@@ -14,13 +14,17 @@ $mobile-cuttoff: 800px;
 
     &-page {
       // Fill entire screen
+      top: -80px; // Offset header
       position: relative;
       width: 100vw;
       height: 100vh;
       background-image: url("../media/site/images/Blog Image.jpg");
       background-size: cover;
       background-position: center;
-      margin-bottom: 24px;
+
+      // Calculate margin bottom including header offset
+      margin-bottom: calc(-80px + 24px); // 24px margin bottom, 80px header height
+      margin-bottom: -webkit-calc(-80px + 24px);
     }
 
     &-title-div {

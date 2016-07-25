@@ -755,13 +755,15 @@ pre {
 /*For the index blog page*/
 /*This is the blog homepage*/
 .blog-landing-page {
+  top: -80px;
   position: relative;
   width: 100vw;
   height: 100vh;
   background-image: url("../media/site/images/Blog Image.jpg");
   background-size: cover;
   background-position: center;
-  margin-bottom: 24px; }
+  margin-bottom: calc(-80px + 24px);
+  margin-bottom: -webkit-calc(-80px + 24px); }
 .blog-landing-title-div {
   position: absolute;
   left: 3%;
