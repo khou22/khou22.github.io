@@ -6,9 +6,65 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Jul 2016 10:35:50 -0700</pubDate>
-    <lastBuildDate>Mon, 25 Jul 2016 10:35:50 -0700</lastBuildDate>
+    <pubDate>Mon, 25 Jul 2016 11:17:36 -0700</pubDate>
+    <lastBuildDate>Mon, 25 Jul 2016 11:17:36 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Persist Data: Storing Values Locally Using Swift</title>
+        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Overview&lt;/h3&gt;
+&lt;p&gt;One of the benefits of iOS development that I wasn’t entirely used to being a web developer, is the ability to store data locally. Apple allows apps to store data on the device in the form of &lt;a href=&quot;https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson10.html&quot; target=&quot;_blank&quot;&gt;persist data&lt;/a&gt;. Persist data can be read between app sessions and is only deleted when you remove the app from the device. This information is one of the many things the uninstall app prompt is referring to when it asks if you would like to delete the app and all its data. It is primarily used for small things like strings, boolean, integers, etc. and not for serious things like images (for that, you should use &lt;a href=&quot;https://developer.apple.com/library/watchos/documentation/Cocoa/Conceptual/CoreData/index.html&quot; target=&quot;_blank&quot;&gt;core data&lt;/a&gt;).
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Reading and writing persist data is remarkably simple, but this blog post contains some tips that will prevent crashes and improve your coding structure. There are three basic elements to persist data: keys, writing, and reading.&lt;/p&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Keys&lt;/h3&gt;
+&lt;p&gt;Keys are string phrases or words that reference a specific value or set of values in persist data. Information is stored with a key reference and can be retrieved and written using that same key. These keys are incredibly important and any typo can quickly cause bugs or crashes in your app. As highlighted in my &lt;a href=&quot;http://khou22.github.io/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html&quot; target=&quot;_blank&quot;&gt;blog post&lt;/a&gt; in the “Preventing Code-Breaking Typos with Structures” section, it is best practice to include keys as constants in a structure. This will ensure that your keys are all only explicitly typed out in one place. It makes debugging significantly easier. Here is what your keys structure will look like when storing persist data:&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Keys&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;calorieGoal&lt;/span&gt;              &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;calorieGoal&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Writing&lt;/h3&gt;
+&lt;p&gt;NSUserDefaults (aka Persist Data) are stored using the NSUserDefaults.standardUserDefaults() initializer. Instead of calling this every time you wish to use persist data, it’s easier to simply create another structure within your Constants.swift file containing the following:&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Constants&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;defaults&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSUserDefaults&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;standardUserDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+Now, instead of writing NSUserDefaults.standardUserDefaults() every time, you can simply type Constants.defaults.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+To write data locally into persist data, simply use this command:&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Dummy data&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;Constants&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Keys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;calorieGoal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Writing an integer value for a key&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Reading&lt;/h3&gt;
+&lt;p&gt;Reading data is also very simple, but there is one thing to keep in mind. If you have no written any data yet, attempting to read that nil value will result in a crash. It’s good practice to add a conditional before retrieving your persist data to prevent such conundrums from occurring. The code is shown here:&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Constants&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;objectForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Keys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;calorieGoal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Ensure the data exists&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;caloriesGoal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Constants&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;integerForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Keys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;calorieGoal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Reading data for key&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+That’s pretty much all there is to it. Now you can store data between app sessions! Hope you found this helpful.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 25 Jul 2016 04:09:16 -0700</pubDate>
+        <link>http://khou22.github.io/programming/2016/07/25/persist-data-storing-values-locally-using-swift.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/07/25/persist-data-storing-values-locally-using-swift.html</guid>
+        
+        <category>ios</category>
+        
+        <category>swift</category>
+        
+        <category>apps</category>
+        
+        <category>xcode</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Swift TableView Basics: How to Create and Populate Tables</title>
@@ -1083,63 +1139,6 @@ I also recommend setting a background color to the Pager so that the page contro
         <category>swift</category>
         
         <category>ios</category>
-        
-        <category>xcode</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Internationalizing Your iOS App in Xcode 7</title>
-        <description>&lt;h1 id=&quot;localization-in-swift-xcode-731&quot;&gt;Localization in Swift XCode 7.3.1&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;** This is a blog post in progress **&lt;/em&gt;&lt;/p&gt;
-&lt;h1&gt;Prepare XCode Project&lt;/h1&gt;
-&lt;p&gt;Go to the project page → Localizations → Add a new language and select all the resources
-Sometimes the storyboards aren’t all localized. If that’s the case, you must manually localize storyboards. To do this, on the info panel on the right, can press localize and add the languages you want.&lt;/p&gt;
-
-&lt;h1 id=&quot;prepping-code&quot;&gt;Prepping Code&lt;/h1&gt;
-&lt;p&gt;This is for hard coded strings in the code
-You can wrap them in: NSLocalizedString(String, comment: String)
-For instances where you have hard coded strings &lt;i&gt;and&lt;/i&gt; variables within the hard coded strings, you must use the String format setup. For example:
-&lt;br /&gt;// Old setup:
-&lt;br /&gt;let localizedString = NSLocalizedString(“Test Results - (interval)”, comment: “Test results”)
-&lt;br /&gt;// New setup:
-&lt;br /&gt;let localizedString = String.localizedStringWithFormat(NSLocalizedString(“Test Results - %@”, comment: “Test results date string”), interval)
-&lt;br /&gt;The “%@” represents a placeholder in the String that will not be translated into another language, and can therefore be used as a bookmark to inject a variable into a localized string.&lt;/p&gt;
-
-&lt;h1 id=&quot;adding-in-translations&quot;&gt;Adding in translations&lt;/h1&gt;
-&lt;p&gt;To Export:
-Delete Localizable.strings in parent so that there’s no duplicate
-Change the .xliff file (found it useful to use a simple IDE like Atom or Sublime to quickly change text. I added in ‘French: ‘ at the beginning of every translation so that I would know when the app recognizes a NSLocalizedString type)&lt;/p&gt;
-
-&lt;h1 id=&quot;to-import&quot;&gt;To Import:&lt;/h1&gt;
-&lt;p&gt;Import the .xliff file
-Add the newly created Localizable.strings file (in the parent) to the build phases (Target –&amp;gt; Build Phases –&amp;gt; Copy Bundle Resources –&amp;gt; Add) — http://fullscreensoftware.blogspot.co.il/2011/09/xcode-4-and-localizablestrings-issue.html
-Build and run&lt;/p&gt;
-
-&lt;h1 id=&quot;to-add-other-languages&quot;&gt;To add other languages:&lt;/h1&gt;
-&lt;p&gt;Localize the “Localizable.strings” file and replace the content with the translations for that specific language&lt;/p&gt;
-
-&lt;h1 id=&quot;for-line-breaks-&quot;&gt;&lt;em&gt;** For Line Breaks **&lt;/em&gt;&lt;/h1&gt;
-&lt;p&gt;Typically denoted by a “\n” in the code
-It doesn’t format correctly in the .xliff file
-When you import it back into the project, it won’t recognize your translation. Instead, modify the Localizable.strings file directly. Syntax as such:
-“{Original…}\n{Original…}”=“French: {Original…}\n{Original…}”
-You must add in the “\n”s because Swift exports the “\n”s as actual line breaks, but doesn’t convert the line breaks back into “\n”s on import&lt;/p&gt;
-
-&lt;p&gt;Solution:
-Change ‘\n’ to another placeholder like ‘[[n’
-Before it is injected into the frontend, replace all instances of ‘[[n’ to ‘\n’&lt;/p&gt;
-</description>
-        <pubDate>Mon, 20 Jun 2016 11:16:44 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2016/06/20/internationalizing-your-ios-app-in-xcode-7.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/06/20/internationalizing-your-ios-app-in-xcode-7.html</guid>
-        
-        <category>ios</category>
-        
-        <category>swift</category>
         
         <category>xcode</category>
         
