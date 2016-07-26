@@ -6,9 +6,63 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Jul 2016 11:17:36 -0700</pubDate>
-    <lastBuildDate>Mon, 25 Jul 2016 11:17:36 -0700</lastBuildDate>
+    <pubDate>Tue, 26 Jul 2016 14:18:13 -0700</pubDate>
+    <lastBuildDate>Tue, 26 Jul 2016 14:18:13 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Swift Segmented Control Basics: How to Setup and Utilize Segmented Controls</title>
+        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;I’m beginning to dive deeper and deeper into Swift and iOS development, but I came to the realization a couple days ago that my summer internship at Breathometer is already drawing to a close. My goal for the summer was to be able to develop my own apps from scratch by the time I leave. I’m slowly but surely gaining the confidence the and the technical prowess to be able to make more and more complex apps.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+I’ve already learned some of the key parts of most apps like views, outlets, structures, pagination, table views, animations, 3rd party integration, threading, push notifications, graphing, localization, and more. Another basic piece of any app is segmentation. Everyone’s used an app with the familiar segmented control bar — many of Apple’s stock apps use this component:
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;img src=&quot;http://kintek.com.au/assets/UISegmentedControl_Button_iOS7.jpg&quot; width=&quot;300px&quot; /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+In this blog post, I will be covering the basics of segmented controls and how to use them within an app. Like I’ve mentioned in other blog posts, the intent of these posts is not only to instruct others, but also to help me internalize what I’ve learned and give me a place that I can reference later. I guess I’ll call it my “modern” notebook. So, without further ado, here are some of the key parts of segmented controls.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Setup Storyboard&lt;/h3&gt;
+&lt;p&gt;Drag a “Segmented Control” component into the main view and apply constraints if needed. Use the right sidebar options to name the different segmented buttons.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Initiate the Segmented Control&lt;/h3&gt;
+&lt;p&gt;Open up the Assistant editor and pull up the view’s View Controller. Ctrl click and drag to create an outlet (object, not action) for the segmented control component. Name it whatever you want (in this case we’ll call it “segmentedControl”) and use the type UISegmentedControl, storage weak.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Adding Functionality&lt;/h3&gt;
+&lt;p&gt;Using the same window setup, ctrl click and drag to create an outlet Action with the event: “Value Changed.” Again, give it a name (here I’ll be using “indexChanged”) and set type to UISegmentedControl and arguments to sender. This action function will be triggered every time the index is changed. In order to get the value it was changed to, you must call the “segmentedControl” object we created earlier and call the “selectedSegmentIndex.” Here’s an example:&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;@IBAction&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;indexChanged&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sender&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UISegmentedControl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;segmentedControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;selectedSegmentIndex&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get the selected index&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Picked&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;segment&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Picked&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;segment&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;Break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+That’s about all there is to it! They’re very simple and straightforward, but can be very useful and powerful in the right situation. I’ve noticed that a common use case is when you want to apply different filters onto data sets. In my project right now, I am segmenting data by time into “Week,” “Month,” and “Year.” Those three options serve as my segments and my UITableView updated every time my index changes. Other use cases include contact filtering, segmenting information into categories on the same view controller, etc. Hope you found this helpful!
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Tutorial primarily from: &lt;a href=&quot;http://www.ioscreator.com/tutorials/segmented-control-tutorial-ios8-swift&quot; target=&quot;_blank&quot;&gt;http://www.ioscreator.com/tutorials/segmented-control-tutorial-ios8-swift&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 26 Jul 2016 07:13:16 -0700</pubDate>
+        <link>http://khou22.github.io/programming/2016/07/26/swift-segmented-control-basics-how-to-setup-and-utilize-segmented-controls.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/07/26/swift-segmented-control-basics-how-to-setup-and-utilize-segmented-controls.html</guid>
+        
+        <category>ios</category>
+        
+        <category>swift</category>
+        
+        <category>apps</category>
+        
+        <category>xcode</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Persist Data: Storing Values Locally Using Swift</title>
@@ -1056,89 +1110,6 @@ I also recommend setting a background color to the Pager so that the page contro
         <category>ios</category>
         
         <category>swift</category>
-        
-        <category>xcode</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>WWDC 2016: Internationalization Best Practices</title>
-        <description>&lt;p&gt;Video (must be played in Safari): &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2016/201/&quot; target=&quot;_blank&quot;&gt;https://developer.apple.com/videos/play/wwdc2016/201/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Formatters for Dates/Times&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Don’t use a set date format&lt;/li&gt;
-  &lt;li&gt;Chinese and English are opposite for example&lt;/li&gt;
-  &lt;li&gt;Can’t have a fixed format&lt;/li&gt;
-  &lt;li&gt;Use the predefined .shortStyle/.mediumStyle/etc.&lt;/li&gt;
-  &lt;li&gt;Works for both dates and times&lt;/li&gt;
-  &lt;li&gt;Automatically formats it for each language&lt;/li&gt;
-  &lt;li&gt;Can use a template for custom things&lt;/li&gt;
-  &lt;li&gt;But use .setLocalizedDateFormatFromTemplate(“mYd”)&lt;/li&gt;
-  &lt;li&gt;Will try and make it correct when it’s a different language&lt;/li&gt;
-  &lt;li&gt;https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSDateFormatter_Class/&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Formatters for Names:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Show names the correct way with PersonNameComponents()&lt;/li&gt;
-  &lt;li&gt;Ask for the .long/.medium/.short/.abbreviated format&lt;/li&gt;
-  &lt;li&gt;Will support different langauges&lt;/li&gt;
-  &lt;li&gt;Name parsing → full name to a set of components&lt;/li&gt;
-  &lt;li&gt;Uses a statistical model&lt;/li&gt;
-  &lt;li&gt;Not parsing based on a formula&lt;/li&gt;
-  &lt;li&gt;Supports multiple languages&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Other:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In labels, don’t clip lines — must have the entire character showing&lt;/li&gt;
-  &lt;li&gt;Multi-line labels, consider changing the line spacing&lt;/li&gt;
-  &lt;li&gt;UIFont.preferredFont(forTextStyle: UIFontTextStyleBody)&lt;/li&gt;
-  &lt;li&gt;Automatically adjusts line height for different languages&lt;/li&gt;
-  &lt;li&gt;Icons are really important&lt;/li&gt;
-  &lt;li&gt;Avoid using words/numbers in icons&lt;/li&gt;
-  &lt;li&gt;“Photos” is a good example of an icon that doesn&#39;t tie it to a specific language&lt;/li&gt;
-  &lt;li&gt;Not left to right or right to left&lt;/li&gt;
-  &lt;li&gt;Good for all languages&lt;/li&gt;
-  &lt;li&gt;Create dedicated artwork for right to left languages&lt;/li&gt;
-  &lt;li&gt;But if you just want to flip the image, you can use the existing API&lt;/li&gt;
-  &lt;li&gt;App Store Names&lt;/li&gt;
-  &lt;li&gt;Users are most likely to download apps in their language&lt;/li&gt;
-  &lt;li&gt;Don’t always assume users will type in English&lt;/li&gt;
-  &lt;li&gt;They might run OS in English, use keyboard from another language&lt;/li&gt;
-  &lt;li&gt;Must test this before deploying&lt;/li&gt;
-  &lt;li&gt;Localized Screenshots&lt;/li&gt;
-  &lt;li&gt;Localized content/keyboard&lt;/li&gt;
-  &lt;li&gt;Want to see the experience they will have in their language&lt;/li&gt;
-  &lt;li&gt;Custom features — examples:&lt;/li&gt;
-  &lt;li&gt;Support for lunar calendar&lt;/li&gt;
-  &lt;li&gt;Templates for non-English/non-Western cultures&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Types of Formatters:&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;ByteCountFormatter&lt;/li&gt;
-  &lt;li&gt;DateFormatter&lt;/li&gt;
-  &lt;li&gt;DateComponentsFormatter&lt;/li&gt;
-  &lt;li&gt;DateIntervalFormatter&lt;/li&gt;
-  &lt;li&gt;NumberFormatter&lt;/li&gt;
-  &lt;li&gt;PersonNameComponentsFormatter&lt;/li&gt;
-  &lt;li&gt;MeasurementFormatter&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Wed, 22 Jun 2016 11:15:41 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2016/06/22/wwdc-2016-internationalization-best-practices.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/06/22/wwdc-2016-internationalization-best-practices.html</guid>
-        
-        <category>swift</category>
-        
-        <category>ios</category>
         
         <category>xcode</category>
         
