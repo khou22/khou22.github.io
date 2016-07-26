@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Jul 2016 14:18:13 -0700</pubDate>
-    <lastBuildDate>Tue, 26 Jul 2016 14:18:13 -0700</lastBuildDate>
+    <pubDate>Tue, 26 Jul 2016 14:23:38 -0700</pubDate>
+    <lastBuildDate>Tue, 26 Jul 2016 14:23:38 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -25,8 +25,11 @@ In this blog post, I will be covering the basics of segmented controls and how t
 &lt;p&gt;Drag a “Segmented Control” component into the main view and apply constraints if needed. Use the right sidebar options to name the different segmented buttons.
 &lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 &lt;h3 class=&quot;post-subheader&quot;&gt;Initiate the Segmented Control&lt;/h3&gt;
-&lt;p&gt;Open up the Assistant editor and pull up the view’s View Controller. Ctrl click and drag to create an outlet (object, not action) for the segmented control component. Name it whatever you want (in this case we’ll call it “segmentedControl”) and use the type UISegmentedControl, storage weak.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Open up the Assistant editor and pull up the view’s View Controller. Ctrl click and drag to create an outlet (object, not action) for the segmented control component. Name it whatever you want (in this case we’ll call it “segmentedControl”) and use the type UISegmentedControl, storage weak.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;@IBOutlet&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;weak&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;timeFrameControl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UISegmentedControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 &lt;h3 class=&quot;post-subheader&quot;&gt;Adding Functionality&lt;/h3&gt;
 &lt;p&gt;Using the same window setup, ctrl click and drag to create an outlet Action with the event: “Value Changed.” Again, give it a name (here I’ll be using “indexChanged”) and set type to UISegmentedControl and arguments to sender. This action function will be triggered every time the index is changed. In order to get the value it was changed to, you must call the “segmentedControl” object we created earlier and call the “selectedSegmentIndex.” Here’s an example:&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 

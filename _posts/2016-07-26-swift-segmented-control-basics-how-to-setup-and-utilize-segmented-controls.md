@@ -23,6 +23,9 @@ Drag a “Segmented Control” component into the main view and apply constraint
 <br class="post-line-break">
 <h3 class="post-subheader">Initiate the Segmented Control</h3>
 Open up the Assistant editor and pull up the view’s View Controller. Ctrl click and drag to create an outlet (object, not action) for the segmented control component. Name it whatever you want (in this case we’ll call it “segmentedControl”) and use the type UISegmentedControl, storage weak.
+{% highlight swift %}
+@IBOutlet weak var timeFrameControl: UISegmentedControl!
+{% endhighlight %}
 <br class="post-line-break">
 <h3 class="post-subheader">Adding Functionality</h3>
 Using the same window setup, ctrl click and drag to create an outlet Action with the event: “Value Changed.” Again, give it a name (here I’ll be using “indexChanged”) and set type to UISegmentedControl and arguments to sender. This action function will be triggered every time the index is changed. In order to get the value it was changed to, you must call the “segmentedControl” object we created earlier and call the “selectedSegmentIndex.” Here’s an example:<br class="post-line-break">
