@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-05-01 14:49:19
 description: "I designed a logo for a project of mine that took a unique spin on the GitHub Octocat mascot. I entered it into the design challenge and won!"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Design
+category: design
 tags: [apps, ios]
 featured: "yes"
 ---
