@@ -18,13 +18,19 @@ $mobile-cuttoff: 800px;
       position: relative;
       width: 100vw;
       height: 100vh;
-      background-image: url("../media/site/images/Blog Image.jpg");
+      background-image: url("../media/site/images/Blog_Image.jpg");
       background-size: cover;
       background-position: center;
 
       // Calculate margin bottom including header offset
       margin-bottom: calc(-80px + 24px); // 24px margin bottom, 80px header height
       margin-bottom: -webkit-calc(-80px + 24px);
+
+      &-filter {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5); // Partially opaque
+      }
     }
 
     &-title-div {

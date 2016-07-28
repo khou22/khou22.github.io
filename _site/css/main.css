@@ -759,11 +759,15 @@ pre {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url("../media/site/images/Blog Image.jpg");
+  background-image: url("../media/site/images/Blog_Image.jpg");
   background-size: cover;
   background-position: center;
   margin-bottom: calc(-80px + 24px);
   margin-bottom: -webkit-calc(-80px + 24px); }
+  .blog-landing-page-filter {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); }
 .blog-landing-title-div {
   position: absolute;
   left: 3%;
