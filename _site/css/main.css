@@ -813,9 +813,10 @@ pre {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); }
   .blog-landing-page-content {
+    position: absolute;
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 17%;
+    margin-top: 200px;
     width: 60%; }
 
 .blog-homepage-content {

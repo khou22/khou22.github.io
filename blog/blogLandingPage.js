@@ -35,7 +35,14 @@ $(document).ready(function() {
           styleElement: "top",
           sections: [1],
           min: -80,
-          max: 100
+          max: 150
+        },
+        {
+          className: ".blog-landing-page-content",
+          styleElement: "margin-top",
+          sections: [1],
+          min: 200,
+          max: 300
         },
         {
           className: ".blog-landing-header",

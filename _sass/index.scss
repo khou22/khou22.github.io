@@ -53,6 +53,7 @@ $mobile-cuttoff: 800px;
     }
   }
 
+  // Landing blog page
   &-page {
     // Fill entire screen
     top: -80px; // Offset header
@@ -75,9 +76,10 @@ $mobile-cuttoff: 800px;
     }
 
     &-content {
+      position: absolute;
       margin-left: 20%;
       margin-right: 20%;
-      margin-top: 17%;
+      margin-top: 200px;
       width: 60%;
     }
   }
