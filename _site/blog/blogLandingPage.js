@@ -12,7 +12,7 @@ $(document).ready(function() {
           // console.log(percentageComplete); // Feedback
           var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
           if (currentClass.styleElement == "background-color-opacity") { // If modifying background color opacity
-            $(currentClass.className).css("background-color", "rgba(255, 255, 255, " + dynamicStyle + ")") // Apply
+            $(currentClass.className).css("background-color", "rgba(185, 185, 185, " + dynamicStyle + ")") // Apply
           } else {
             $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
           }
@@ -35,7 +35,7 @@ $(document).ready(function() {
           styleElement: "top",
           sections: [1],
           min: -80,
-          max: 40
+          max: 100
         },
         {
           className: ".blog-landing-header",
@@ -67,13 +67,13 @@ $(document).ready(function() {
 
       } else if ($(this).scrollTop() < (firstSection + transitionDistance)) {
         $("#blog-landing-header").css("position", "fixed")
-        $(".blog-landing-header").css("bottom", firstSection)
+        $(".blog-landing-header").css("bottom", firstSection + 10)
         var percentageComplete = ($(this).scrollTop() - firstSection)/transitionDistance; // Percentage complete
         interpolate(2, percentageComplete, classesToChange)
 
       } else { // Should be pinned at top of screen
         $("#blog-landing-header").css("position", "fixed")
-        $(".blog-landing-header").css("bottom", firstSection)
+        $(".blog-landing-header").css("bottom", firstSection + 10)
         percentageComplete = 1.0
         interpolate(3, percentageComplete, classesToChange)
       }

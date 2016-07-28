@@ -22,8 +22,8 @@ $mobile-cuttoff: 800px;
     &-logo {
       width: 50px;
       margin-left: 10px;
-      margin-bottom: 10px;
-      margin-top: 10px;
+      margin-bottom: 5px;
+      margin-top: 15px;
     }
 
     &-ul {
@@ -57,6 +57,7 @@ $mobile-cuttoff: 800px;
     // Fill entire screen
     top: -80px; // Offset header
     position: relative;
+    z-index: -1; // Behind other content because of parallax
     width: 100vw;
     height: 100vh;
     background-image: url("../media/site/images/Blog_Image.jpg");
@@ -77,12 +78,16 @@ $mobile-cuttoff: 800px;
 
 // Blog posts - second half
 .blog-homepage-content {
-  max-width: -webkit-calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
-  max-width:         calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
+  width: 100%;
+
+  padding-left: -webkit-calc((100% - (1.3 * (#{$content-width} - (#{$spacing-unit}))))/2);
+  padding-left:         calc((100% - (1.3 * (#{$content-width} - (#{$spacing-unit}))))/2);
+  padding-right:-webkit-calc((100% - (1.3 * (#{$content-width} - (#{$spacing-unit}))))/2);
+  padding-right:        calc((100% - (1.3 * (#{$content-width} - (#{$spacing-unit}))))/2);
   margin: auto;
 
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-top: 32px;
+  background-color: white;
 }
 
 .left-main {
