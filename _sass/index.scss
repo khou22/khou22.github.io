@@ -73,6 +73,13 @@ $mobile-cuttoff: 800px;
       height: 100vh;
       background-color: rgba(0, 0, 0, 0.5); // Partially opaque
     }
+
+    &-content {
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-top: 17%;
+      width: 60%;
+    }
   }
 }
 
@@ -91,16 +98,19 @@ $mobile-cuttoff: 800px;
 }
 
 .left-main {
-  width: 78%;
+  margin-left: 2%;
+  width: 76%;
   float: left;
 
   @media(max-width: $mobile-cuttoff) {
+    margin-left: 0%;
     width: 100%;
   }
 }
 
 .right-column {
-  width: 20%;
+  margin-right: 2%;
+  width: 18%;
   float: right;
 
   @media(max-width: $mobile-cuttoff) {

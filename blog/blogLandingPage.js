@@ -28,7 +28,7 @@ $(document).ready(function() {
     if (screenWidth > mobileCuttoff) {
       var headerHeight = 70;
       var firstSection = $(window).height() - headerHeight;
-      var transitionDistance = 100;
+      var transitionDistance = 50;
       var classesToChange = [
         {
           className: ".blog-landing-page",

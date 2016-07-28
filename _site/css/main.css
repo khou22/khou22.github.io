@@ -812,6 +812,11 @@ pre {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); }
+  .blog-landing-page-content {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 17%;
+    width: 60%; }
 
 .blog-homepage-content {
   width: 100%;
@@ -824,14 +829,17 @@ pre {
   background-color: white; }
 
 .left-main {
-  width: 78%;
+  margin-left: 2%;
+  width: 76%;
   float: left; }
   @media (max-width: 800px) {
     .left-main {
+      margin-left: 0%;
       width: 100%; } }
 
 .right-column {
-  width: 20%;
+  margin-right: 2%;
+  width: 18%;
   float: right; }
   @media (max-width: 800px) {
     .right-column {
