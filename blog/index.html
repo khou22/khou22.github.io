@@ -3,14 +3,35 @@ layout: default
 ---
 <!-- Hide scrollbar on this page -->
 <style> ::-webkit-scrollbar { display: none; } </style>
+<script src="blogLandingPage.js" type="text/javascript"></script>
+
+<div class="blog-landing-header" id="blog-landing-header">
+  <!-- Logo -->
+  <img src="{{ site.baseurl }}/media/site/favicon.png" class="blog-landing-header-logo">
+  <!-- Links -->
+  <ul class="blog-landing-header-ul">
+    <li class="blog-landing-header-li">
+      <a href="{{ site.baseurl }}">Home</a>
+    </li>
+    <li class="blog-landing-header-li">
+      <a href="{{ site.baseurl }}/blog">Blog</a>
+    </li>
+    <li class="blog-landing-header-li">
+      <a href="{{ site.baseurl }}/blog/projects">Projects</a>
+    </li>
+    <li class="blog-landing-header-li">
+      <a href="{{ site.baseurl }}/blog/contact">Contact</a>
+    </li>
+  </ul>
+</div>
 
 <!-- Blog homepage -->
 <div class="blog-landing-page">
-  <div class="blog-landing-title-div">
-    <!-- <h1 class="blog-landing-title">Welcome to my blog</h1> -->
+  <div class="blog-landing-page-filter">
+    <img src="../media/site/images/Blog_Landing_Content.png" class="blog-landing-page-content">
   </div>
 </div>
-<div class="blog-homepage-content">
+<div class="blog-homepage-content clearfix">
   <div class="home left-main">
 
     <h1 class="page-heading">Posts <span class="number-of-posts">({{site.posts.size}})</span></h1>
