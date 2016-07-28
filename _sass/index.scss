@@ -12,37 +12,67 @@ $mobile-cuttoff: 800px;
 // Blog landing page - first half
 .blog-landing {
 
-    &-page {
-      // Fill entire screen
-      top: -80px; // Offset header
+  &-header {
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    width: 100vw;
+    height: 70px;
+
+    &-logo {
+      width: 50px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    &-ul {
+      list-style: none;
+      position: absolute; // Absolute position within header div
+      bottom: 1%; // Align bottom
+      right: 0; // Align right side of screen
+      width: 45%;
+      margin-right: 1%;
+    }
+
+    &-li {
       position: relative;
+      width: 24%; // Fit all four on one line
+      display: inline-block;
+      padding-left: 0px;
+      float: right; // Text on the right side of li
+    }
+
+    &-li a {
+      margin-left: 20%;
+      color: white;
+    }
+
+    &-li a:hover {
+      color: $brand-grey
+    }
+  }
+
+  &-page {
+    // Fill entire screen
+    top: -80px; // Offset header
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../media/site/images/Blog_Image.jpg");
+    background-size: cover;
+    background-position: center;
+
+    // Calculate margin bottom including header offset
+    margin-bottom: calc(-80px + 24px); // 24px margin bottom, 80px header height
+    margin-bottom: -webkit-calc(-80px + 24px);
+
+    &-filter {
       width: 100vw;
       height: 100vh;
-      background-image: url("../media/site/images/Blog_Image.jpg");
-      background-size: cover;
-      background-position: center;
-
-      // Calculate margin bottom including header offset
-      margin-bottom: calc(-80px + 24px); // 24px margin bottom, 80px header height
-      margin-bottom: -webkit-calc(-80px + 24px);
-
-      &-filter {
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5); // Partially opaque
-      }
+      background-color: rgba(0, 0, 0, 0.5); // Partially opaque
     }
-
-    &-title-div {
-      position: absolute;
-      left: 3%;
-      bottom: 25%;
-    }
-
-    &-title {
-      color: $brand-blue;
-      font-family: defaultFont_Bold !important;
-    }
+  }
 }
 
 // Blog posts - second half
