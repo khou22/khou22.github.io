@@ -9,6 +9,12 @@ $brand-blue:      #3286A8;
 
 $mobile-cuttoff: 800px;
 
+// The entire page
+.blog-homepage {
+  perspective: 2px;
+  transform-style: preserve-3d;
+}
+
 // Blog landing page - first half
 .blog-landing {
 
@@ -58,7 +64,6 @@ $mobile-cuttoff: 800px;
     // Fill entire screen
     top: -80px; // Offset header
     position: relative;
-    z-index: -1; // Behind other content because of parallax
     width: 100vw;
     height: 100vh;
     background-image: url("../media/site/images/Blog_Image.jpg");
@@ -68,6 +73,10 @@ $mobile-cuttoff: 800px;
     // Calculate margin bottom including header offset
     margin-bottom: calc(-80px + 24px); // 24px margin bottom, 80px header height
     margin-bottom: -webkit-calc(-80px + 24px);
+
+    // Parallax
+    z-index: -2; // Behind other content
+    transform-origin: center 100%;
 
     &-filter {
       width: 100vw;
@@ -97,6 +106,9 @@ $mobile-cuttoff: 800px;
 
   padding-top: 32px;
   background-color: white;
+
+  // Parallax
+  z-index: 0;
 }
 
 .left-main {

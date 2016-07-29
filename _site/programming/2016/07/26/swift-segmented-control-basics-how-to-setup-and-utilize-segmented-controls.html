@@ -175,46 +175,9 @@
   
 
     
-      
-    
 
     
-        
-        
-          
-            
-                
-                
-            
-        
-          
-            
-                
-                
-            
-        
-          
-            
-                
-                
-            
-        
-          
-            
-                
-                
-            
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header id="blog-post-header" class="post-header">
     <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
@@ -254,22 +217,22 @@ In this blog post, I will be covering the basics of segmented controls and how t
 <h3 class="post-subheader">Initiate the Segmented Control</h3>
 <p>Open up the Assistant editor and pull up the view’s View Controller. Ctrl click and drag to create an outlet (object, not action) for the segmented control component. Name it whatever you want (in this case we’ll call it “segmentedControl”) and use the type UISegmentedControl, storage weak.</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="p">@</span><span class="kt">IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nl">timeFrameControl</span><span class="p">:</span> <span class="bp">UISegmentedControl</span><span class="o">!</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">timeFrameControl</span><span class="p">:</span> <span class="kt">UISegmentedControl</span><span class="o">!</span></code></pre></figure>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">Adding Functionality</h3>
 <p>Using the same window setup, ctrl click and drag to create an outlet Action with the event: “Value Changed.” Again, give it a name (here I’ll be using “indexChanged”) and set type to UISegmentedControl and arguments to sender. This action function will be triggered every time the index is changed. In order to get the value it was changed to, you must call the “segmentedControl” object we created earlier and call the “selectedSegmentIndex.” Here’s an example:<br class="post-line-break" /></p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="p">@</span><span class="kt">IBAction</span> <span class="n">indexChanged</span><span class="p">(</span><span class="nl">sender</span><span class="p">:</span><span class="bp">UISegmentedControl</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">switch</span> <span class="n">segmentedControl</span><span class="p">.</span><span class="n">selectedSegmentIndex</span> <span class="p">{</span> <span class="c1">// Get the selected index</span>
-        <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
-            <span class="n">print</span><span class="p">(</span><span class="err">“</span><span class="n">Picked</span> <span class="n">first</span> <span class="n">segment</span><span class="err">”</span><span class="p">)</span>
-        <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-            <span class="n">print</span><span class="p">(</span><span class="err">“</span><span class="n">Picked</span> <span class="n">second</span> <span class="n">segment</span><span class="err">”</span><span class="p">)</span>
-        <span class="k">default</span><span class="o">:</span>
-            <span class="n">Break</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">@IBAction</span> <span class="nf">indexChanged</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span><span class="kt">UISegmentedControl</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="n">segmentedControl</span><span class="o">.</span><span class="n">selectedSegmentIndex</span> <span class="p">{</span> <span class="c1">// Get the selected index</span>
+        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="err">“</span><span class="kt">Picked</span> <span class="n">first</span> <span class="n">segment</span><span class="err">”</span><span class="p">)</span>
+        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="err">“</span><span class="kt">Picked</span> <span class="n">second</span> <span class="n">segment</span><span class="err">”</span><span class="p">)</span>
+        <span class="k">default</span><span class="p">:</span>
+            <span class="kt">Break</span><span class="p">;</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p><br class="post-line-break" />
 <br class="post-line-break" />

@@ -175,34 +175,9 @@
   
 
     
-      
-    
 
     
-        
-        
-          
-            
-                
-                
-            
-        
-          
-            
-                
-                
-            
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header id="blog-post-header" class="post-header">
     <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
@@ -231,23 +206,23 @@
 
 <p>I keep my data in a JSON format, but as a string:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">&quot;Hello world!&quot;</span><span class="p">;</span> <span class="c1">//In file.js</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">"Hello world!"</span><span class="p">;</span> <span class="c1">//In file.js</span></code></pre></figure>
 
 <p>Below this line, I must export this variable so that it can be imported in the React code:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span><span class="nx">data</span><span class="o">:</span> <span class="nx">text</span><span class="p">}</span> <span class="c1">//In file.js</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span><span class="na">data</span><span class="p">:</span> <span class="nx">text</span><span class="p">}</span> <span class="c1">//In file.js</span></code></pre></figure>
 
 <p>I store my string as an object called “data.” I then import the contents of “file.js” in my main “App.jsx” file:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">file</span> <span class="nx">from</span> <span class="s1">&#39;./file.js&#39;</span><span class="p">;</span> <span class="c1">//In App.jsx</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">file</span> <span class="nx">from</span> <span class="s1">'./file.js'</span><span class="p">;</span> <span class="c1">//In App.jsx</span></code></pre></figure>
 
 <p>The contents of the object I exported in the other file is being stored as the variable “file” here. I can then convert the contents of “file” to an object:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">file</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span> <span class="c1">//&quot;data&quot; is the object within &quot;file&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">file</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span> <span class="c1">//"data" is the object within "file"</span></code></pre></figure>
 
 <p>Convert this into a usable Javascript object:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">finalData</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">finalData</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span></code></pre></figure>
 
 <p>Your string, “Hello world!”, is now stored within the variable finalData.</p>
 
