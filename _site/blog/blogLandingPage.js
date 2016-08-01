@@ -88,7 +88,7 @@ $(document).ready(function() {
       }
     } else {
       // If on mobile
-      // console.log("Your screen size does not support dynamic header");
+      console.log("Your screen size does not support dynamic header");
     }
   });
 })
