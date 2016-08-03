@@ -729,7 +729,8 @@ html[xmlns] .clearfix {
   color: #D9F4FF !important; }
 
 .post-return-main {
-  color: #D9F4FF !important; }
+  color: #D9F4FF !important;
+  cursor: pointer; }
 
 .post-line-break {
   line-height: 36px !important; }
