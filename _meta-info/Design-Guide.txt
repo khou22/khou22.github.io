@@ -1,0 +1,21 @@
+Color Scheme
+
+Red:
+#D5491F
+rgb(213,73,31)
+
+Orange:
+#DA8D0F
+rgb(218,141,15)
+
+Green:
+#80A454
+rgb(128,164,84)
+
+Blue:
+#3286A8
+rgb(50,134,168)
+
+Grey:
+#9DB7C1
+rgb(157,183,193)
