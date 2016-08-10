@@ -6,7 +6,7 @@ $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 $offwhite: #D9F4FF;
 $mobile-cuttoff: 800px;
-$post-header-height: 225px;
+$post-header-height: 245px;
 $post-font-size: 16px;
 
 .header-placeholder {
@@ -27,13 +27,20 @@ $post-font-size: 16px;
   overflow-x: hidden;
 }
 
+.post-header-title {
+  text-align: center;
+}
+
 .post-header-description {
-  margin-top: 12px !important;
+  margin-top: -webkit-calc(#{$post-header-height} * 0.1) !important;
+  margin-top:         calc(#{$post-header-height} * 0.1) !important;
   margin-bottom: 6px !important;
   color: $offwhite;
+  text-align: center;
 }
 
 .post-header-content {
+  position: relative;
   height: $post-header-height;
 
   max-width: -webkit-calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
@@ -48,8 +55,15 @@ $post-font-size: 16px;
 }
 
 .post-header-meta {
-  margin-top: 20px !important;
+  position: absolute;
   color: $offwhite !important;
+
+  // Center this element
+  width: 50%;
+  left: 25%;
+
+  bottom: 6px; // Pin to bottom of parent
+  text-align: center; // Center text
 }
 
 .post-return-main {
