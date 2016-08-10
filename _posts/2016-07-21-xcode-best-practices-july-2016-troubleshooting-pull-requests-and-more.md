@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Xcode Best Practices July 2016: Troubleshooting, Pull Requests, and More"
+title: "Xcode Best Practices July 2016: Troubleshooting, Pull Requests, Cocoapods, and More"
 author: "Kevin Hou"
 date: 2016-07-20 11:30:53
 description: "A few coding best practices that I learned in the past couple of weeks from my manager and mentor. These are primarily Xcode-oriented but can easily be applied to other languages and IDE's"
@@ -59,11 +59,14 @@ Code readability also includes <a href="https://en.wikipedia.org/wiki/Code_refac
 <h3 class="post-subheader">Cocoapods</h3>
 Cocoapods are good and bad depending on who you are. For those that don’t know, cocoapods are libraries built by third parties that you can integrate in your Xcode project with minimal difficulty. They’re similar to Node packages, Python modules, etc.
 <br class="post-line-break">
-When developing web apps, I love using libraries, especially Node packages; however, there is a danger in using third party code. Even though it makes your life much easier, in the long run, it could break your app or website. For example, one developer broke thousands of projects by changing 11 lines in their package. It’s a hilariously <a href="http://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/" target="_blank">realistic and daunting story</a> that could apply to your app, but in a smaller scale.
+When developing web apps, I love using libraries, especially Node packages; however, there is a danger in using third party code. Even though it makes your life much easier, in the long run, it could break your app or website. For example, one developer broke thousands of projects by changing 11 lines in their package. It’s a hilariously <a href="http://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/" target="_blank">realistic and daunting story</a> that could apply to your app.
 <br class="post-line-break">
 The reason why some are opposed to Cocoapods (including one of my coworkers), is exactly that. If you have too many third party libraries, one mess up could break your project and it would be an ordeal to sift through hundreds of libraries and thousands of files in order to find what was responsible for bringing down your app.
 <br class="post-line-break">
 In my opinion, I think you should strike a balance. Cocoapods and other package managers are very useful and take a lot of the heavy lifting out of tasks for developers, but at the same time it’s dangerous to become ultra-reliant on them. You do not want your precious project to be held up entirely by code that you don’t have control over.
+<br class="post-line-break">
+A quick note to self that's somewhat technical: when using Cocoapods, you must open the .workspace file in Xcode not the .xcodeproject file!<br>
+<img src="./../../../../media/blog/images/Installing_Cocoapods.png" class="iPhone-screenshots-large"><br>
 <br class="post-line-break">
 <br class="post-line-break">
 I hope you found this post useful. I’m learning a lot about Xcode and especially about how to work in teams. There’s always room for growth and everyone can get better at it. Talk to you in the next one!
