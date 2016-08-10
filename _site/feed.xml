@@ -6,9 +6,144 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Aug 2016 13:09:28 -0700</pubDate>
-    <lastBuildDate>Thu, 04 Aug 2016 13:09:28 -0700</lastBuildDate>
+    <pubDate>Wed, 10 Aug 2016 14:38:48 -0700</pubDate>
+    <lastBuildDate>Wed, 10 Aug 2016 14:38:48 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Swift Navigation Basics: How to Setup a Tab Bar App</title>
+        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;The Basics&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Setting up the Project&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Choose the Tab Bar template when prompted to create a new Xcode project&lt;/li&gt;
+  &lt;li&gt;Obviously it’s very easy to do this completely from scratch, but why go to the trouble if Xcode does it for you.&lt;/li&gt;
+  &lt;li&gt;Selecting this will set you up with a single storyboard file and two view controllers.&lt;/li&gt;
+  &lt;li&gt;Within the main.storyboard, you will find a “Tab Bar Controller” with two tabs already created.&lt;/li&gt;
+  &lt;li&gt;For learning purposes, delete the two view controllers so that you simply have a tab bar controller left.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;b&gt;The “Main” Storyboard&lt;/b&gt;&lt;br /&gt;
+Even if you decide to diffract your storyboards into multiple files, you must always have a storyboard named “main.storyboard.” Xcode automatically looks for this file when it loads so it is imperitive that it can find it, otherwise your app won’t compile and/or could crash. Within that file you must have an initial view of some sort — this will be the first view that’s loaded in your project.
+&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;b&gt;Diffracting Into Multiple Storyboard Files&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Create storyboard in new file (new -&amp;gt; iOS -&amp;gt; User Interface -&amp;gt; Storyboard)&lt;/li&gt;
+  &lt;li&gt;If you anticipate not using the navigation controller functionality, you can skip steps 3 and 4. Instead, drag a view controller onto the canvas and drag the “Tab Bar Item” onto the view.&lt;/li&gt;
+  &lt;li&gt;Drag a navigation controller onto the canvas and delete the Root Navigation Controller that it comes with. This tab bar navigation controller acts as a sort of placeholder for the tab bar controller in our main.storyboard file. Set this controller as the initial view controller.&lt;/li&gt;
+  &lt;li&gt;Now drag a view controller onto the canvas and connect it to the navigation controller using the ctrl/click drag feature. Drag from the navigation controller onto the view controller and select the “Root View Controller” relationship.&lt;/li&gt;
+  &lt;li&gt;Drag a reference object onto the main.storyboard and in the right sidebar, make sure to connect it to the correct storyboard file. A reference is like a collection of views and can be treated as such. It does not necessarily need to be connected to a tab bar controller and can be segued to like you would any view controller.&lt;/li&gt;
+  &lt;li&gt;Basically what a reference is doing is segueing to a completely different storyboard file. The reason why you need an initial view controller on each “.storyboard” file is because when you segue to the file, you need to know which view controller within the file to start on.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;b&gt;Connect the Tabs to the Storyboard&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Navigate back to your second storyboard file and ctrl-click drag from the Tab bar controller view to the reference and choose: Relationship Segue: view controllers. This will connect the storyboard reference to the toolbar in the tab bar controller.&lt;/li&gt;
+  &lt;li&gt;You will see a new item appear on the tab bar controller nav bar at the bottom of the view. The nav bar items here are somewhat irrelevant. Because we are using multiple view controllers, we must set the tab bar items using the navigation controller we created in the referenced storyboard file.&lt;/li&gt;
+  &lt;li&gt;To set the image icon, label, etc., go to the storyboard file for that specific section of the app. If you used a navigation controller follow these nested steps. If you used a simple view controller, skip to the next step.&lt;/li&gt;
+  &lt;li&gt;Find the root view controller that we connected to the navigation controller and select the tab bar item element that’s found just below “View.”&lt;/li&gt;
+  &lt;li&gt;Drag this element into the “Navigation Controller Scene” under the group “Navigation Controller” so that it’s nested next to “Navigation Bar.” Now the icon will appear on all screens in this storyboard file.&lt;/li&gt;
+  &lt;li&gt;Select the “Tab Bar Item” that you dragged into the view controller.&lt;/li&gt;
+  &lt;li&gt;Use the options toolbar on the right to set the badge number, title, image, tag, and label position. You can also choose from default, iOS items like “Favorites,” “Contacts,” and “History.”&lt;/li&gt;
+  &lt;li&gt;Your final main.storyboard should look like this:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;b&gt;Connect the Storyboard Controller to the Swift View Controllers&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Create a new Swift file for each of the UIViewController’s you’ve created, excluding the Tab Bar Controller. The reliable, minimum amount of code in this file is something like this:&lt;br /&gt;
+  
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;  &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;FavoritesViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Name of view controller&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+          &lt;span class=&quot;c1&quot;&gt;// Do any additional setup after loading the view, typically from a nib.&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;didReceiveMemoryWarning&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;didReceiveMemoryWarning&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+          &lt;span class=&quot;c1&quot;&gt;// Dispose of any resources that can be recreated.&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+  &lt;/li&gt;
+  &lt;li&gt;Use the options sidebar on the right to connect the UIViewController to a custom class. Select the name that you chose when creating the UIViewController class in your Swift file.&lt;/li&gt;
+  &lt;li&gt;Now, you should be set. You should have a set number of sections within your app. Each section has a “.storyboard” file, a single view controller within that storyboard marked as the initial view controller, a Swift UIViewController file connected to the storyboard view controller, and an icon in the toolbar. This is a bare bones example of an app with tab bar style navigation and defracted view controllers. My final product looked like this:
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+Below are some additional customizations you can choose to add to your tab bar.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Setting a Custom Icon&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;When setting a custom icon, you basically have two images: one for an unselected state and one for the selected state. The selected state is generally filled whereas the unselected state is an outline.&lt;/li&gt;
+  &lt;li&gt;&lt;ul&gt;Using Sketch or a similar graphic design tool, create the PNG files with these sizes for both icons:
+    &lt;li&gt;image.png (1x version) is 30px x 30px&lt;/li&gt;
+    &lt;li&gt;image@2x.png (2x version) is 60px x 60px&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;ul&gt;Some good guidelines:
+    &lt;li&gt;Removed all white from the image so that it was just a black image with a transparent background.&lt;/li&gt;
+    &lt;li&gt;Stay away from fills and use a 1 or 2px outline&lt;/li&gt;
+    &lt;li&gt;One for when you’re selected and one for when you’re not&lt;/li&gt;
+    &lt;li&gt;Allows you to have custom colors in the toolbar&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Import these images into Assets.xcassets. If you don’t want your icon color to change make sure you set “Render As” to “Original Image” located in the sidebar. Otherwise, it’ll use the default blue.&lt;/li&gt;
+  &lt;li&gt;Navigate to the tab item in your main.storyboard that you wish to add your custom image for. In the right sidebar, under options, there is a section called “Bar Item.” In this section, set the title (ie. the label) of your tab and select your image.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Large Center Icon in Tab Bar&lt;/h3&gt;
+&lt;p&gt;A lot of apps have a toolbar with a large center button that appears over the rest of the toolbar. It’s often a different shape and emphasizes the importance of that center tab. I recently figured out how to do this. Essentially you are creating a custom class for the tab bar and overlaying a button on top of the middle tab item. It creates a UIButton that blocks and replaces the functionality of the normal middle item. Here is the class:&lt;br /&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CustomTabBarController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UITabBarController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Remember to the Tab Bar Controller custom class on your storyboard&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Called when tab bar loads&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setupMiddleButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Sets up button&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setupMiddleButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;menuButton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;menuButtonFrame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;menuButtonFrame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bounds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuButtonFrame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;menuButtonFrame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bounds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuButtonFrame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;menuButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuButtonFrame&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;menuButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;whiteColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;menuButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cornerRadius&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuButtonFrame&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;menuButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;named&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;white-geo-flame&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;forState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIControlState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 450 x 450px&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;menuButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contentMode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ScaleAspectFit&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;menuButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addTarget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;CustomTabController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;menuButtonAction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:)),&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;forControlEvents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIControlEvents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;TouchUpInside&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addSubview&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;menuButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;layoutIfNeeded&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;menuButtonAction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sender&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;selectedIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;A more decorated example of all of this can be found at: &lt;a href=&quot;https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject&quot; target=&quot;_blank&quot;&gt;https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject&lt;/a&gt;. A bare bones tab navigation app template can be found at &lt;a href=&quot;https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate&quot; target=&quot;_blank&quot;&gt;https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 10 Aug 2016 06:52:18 -0700</pubDate>
+        <link>http://khou22.github.io/programming/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html</guid>
+        
+        <category>ios</category>
+        
+        <category>swift</category>
+        
+        <category>apps</category>
+        
+        <category>xcode</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Swift Tips and Tricks August 2016: App Navigation and Dates</title>
@@ -833,221 +968,6 @@ Many of the complex and intriguing animated designs you see online are generated
         
         
         <category>design</category>
-        
-      </item>
-    
-      <item>
-        <title>WWDC 2016: Advances in UIKit Animations and Transitions</title>
-        <description>&lt;p&gt;Video (must be played in Safari): &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2016/216/&quot; target=&quot;_blank&quot;&gt;https://developer.apple.com/videos/play/wwdc2016/216/&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;New animations with UIKit in iOS 10&lt;/li&gt;
-  &lt;li&gt;Create natural, smooth feeling, responsive animations&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;Interpolation and Pacing&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Dotted = actual position&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Solid = final/goal position&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Timing function:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Linear&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Ease in&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Ease out&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Ease in and out&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Springs:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Overshoot the value and come back to the goal position&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;It affects the pacing of the animation&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;iOS 8 (WWDC 2014) introduced interruptible animations&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;If you interrupt an animation, the object no longer jumps or switches velocities so abruptly&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;UIVIewPropertyAnimator new features in iOS 10&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Interruptible animations&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Scrubbable animations&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Reversible animations&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Broad availability of timing functions (not just the usual four)&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Rolling animations can be modified&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;Animations as Objects&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can get the state and position of an animation at any point&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;state: .inactive, .active, .stopped&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;isRunning: true, false&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;isReversed: true, false&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Animations are now objects, not just API calls&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;That way you can store, modify, and get values from it&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can also stop an animation: animator.stopAnimation (false)&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Pass false in so that the object can stay right where it is in its path&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Can do something with it later&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;If you pass in true, it still stays in its place, but the animation is over for all intensive purposes&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;To scrub an animation:&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;animator.fractionComplete = fraction&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Like the Interpolation library&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;The fractionComplete doesn’t involve time&lt;/p&gt;
-
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;p&gt;So the timing function doesn’t affect it&lt;/p&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;p&gt;The fractionComplete relates to the position&lt;/p&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Reversing animations brings an object back to its start position&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Animation will be as if it never started → .start&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can also add an animation that brings it back to its start position&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;But the animation will be complete → .end&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;iOS 10 can set custom your own timing functions&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;UICubicTimingParameters(animationCurve: .linear) // For linear&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;UICubicTimingParameters(controlPoint1: CGPoint(x: 0.0, y: 1.0), controlPoint2: CGPoint(x: 1.0, y: 0.0)) // For custom timing curve&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Also changed UISpringTimingParameters&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;UISPringTimingParameters(mass: CGFloat, stiffness: CGFloat, damping: CGFloat, initialVelocity velocity: CGVector)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Keyframe animations&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Basically regular animations, but with multiple points&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Example: Can add multiple x/y positions to an animation to create a complex path instead of just from point A to point B&lt;/p&gt;
-
-        &lt;ul&gt;
-          &lt;li&gt;Can do point A → B → C → … → Z&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;External References&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5#.2y9t95ixn&quot; target=&quot;_blank&quot;&gt;https://medium.com/swift-and-ios-writing/a-quick-look-at-uiviewpropertyanimator-a107fb9da5b5#.2y9t95ixn&lt;/a&gt;
-&lt;a href=&quot;https://developer.apple.com/reference/uikit/uiviewpropertyanimator&quot; target=&quot;_blank&quot;&gt;https://developer.apple.com/reference/uikit/uiviewpropertyanimator&lt;/a&gt;
-&lt;a href=&quot;https://developer.apple.com/reference/uikit/uiviewanimating&quot; target=&quot;_blank&quot;&gt;https://developer.apple.com/reference/uikit/uiviewanimating&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 29 Jun 2016 09:50:49 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html</guid>
-        
-        <category>ios</category>
-        
-        <category>swift</category>
-        
-        <category>apps</category>
-        
-        <category>xcode</category>
-        
-        
-        <category>programming</category>
         
       </item>
     
