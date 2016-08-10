@@ -21,8 +21,6 @@ Overall, I was pretty happy with my design. For one, because this was our second
 <h3 class="post-subheader">Competition Results</h3>
 Below are screenshots and links of the various Twitter announcements. About 15 people "liked" my design and I even got a couple retweets!
 <br class="post-line-break">
-***Screenshots not yet added, but links are correct***
-<br class="post-line-break">
 <a href="https://twitter.com/GitHubEducation/status/722884798457335810" target="_blank">GitHub Education Announcement</a><br>
 <img src="./../../../../media/projects/executeOrder66/Twitter Post - GitHub Education.jpg" class="iPhone-screenshots-medium"><br>
 <a href="https://twitter.com/MLHacks/status/723598523627794432" target="_blank">Major League Hacking Shoutout</a><br>

@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Aug 2016 14:38:48 -0700</pubDate>
-    <lastBuildDate>Wed, 10 Aug 2016 14:38:48 -0700</lastBuildDate>
+    <pubDate>Wed, 10 Aug 2016 14:51:49 -0700</pubDate>
+    <lastBuildDate>Wed, 10 Aug 2016 14:51:49 -0700</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -38,14 +38,21 @@ Even if you decide to diffract your storyboards into multiple files, you must al
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
 &lt;b&gt;Connect the Tabs to the Storyboard&lt;/b&gt;&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Navigate back to your second storyboard file and ctrl-click drag from the Tab bar controller view to the reference and choose: Relationship Segue: view controllers. This will connect the storyboard reference to the toolbar in the tab bar controller.&lt;/li&gt;
+  &lt;li&gt;Navigate back to your second storyboard file and ctrl-click drag from the Tab bar controller view to the reference and choose: Relationship Segue: view controllers. This will connect the storyboard reference to the toolbar in the tab bar controller.&lt;br /&gt;
+    &lt;img src=&quot;./../../../../media/blog/images/Tab-Bar-Navigation/Storyboard_Reference_1.png&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;br /&gt;
+    &lt;img src=&quot;./../../../../media/blog/images/Tab-Bar-Navigation/Storyboard_Reference_2.png&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;br /&gt;
+  &lt;/li&gt;
   &lt;li&gt;You will see a new item appear on the tab bar controller nav bar at the bottom of the view. The nav bar items here are somewhat irrelevant. Because we are using multiple view controllers, we must set the tab bar items using the navigation controller we created in the referenced storyboard file.&lt;/li&gt;
   &lt;li&gt;To set the image icon, label, etc., go to the storyboard file for that specific section of the app. If you used a navigation controller follow these nested steps. If you used a simple view controller, skip to the next step.&lt;/li&gt;
   &lt;li&gt;Find the root view controller that we connected to the navigation controller and select the tab bar item element that’s found just below “View.”&lt;/li&gt;
   &lt;li&gt;Drag this element into the “Navigation Controller Scene” under the group “Navigation Controller” so that it’s nested next to “Navigation Bar.” Now the icon will appear on all screens in this storyboard file.&lt;/li&gt;
   &lt;li&gt;Select the “Tab Bar Item” that you dragged into the view controller.&lt;/li&gt;
-  &lt;li&gt;Use the options toolbar on the right to set the badge number, title, image, tag, and label position. You can also choose from default, iOS items like “Favorites,” “Contacts,” and “History.”&lt;/li&gt;
-  &lt;li&gt;Your final main.storyboard should look like this:&lt;/li&gt;
+  &lt;li&gt;Use the options toolbar on the right to set the badge number, title, image, tag, and label position. You can also choose from default, iOS items like “Favorites,” “Contacts,” and “History.”&lt;br /&gt;
+    &lt;img src=&quot;./../../../../media/blog/images/Tab-Bar-Navigation/Setting_Icon.png&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;br /&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Your final main.storyboard should look like this:&lt;br /&gt;
+    &lt;img src=&quot;./../../../../media/blog/images/Tab-Bar-Navigation/Overview_of_Main_Storyboard.png&quot; class=&quot;iPhone-screenshots-large&quot; /&gt;&lt;br /&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
 &lt;b&gt;Connect the Storyboard Controller to the Swift View Controllers&lt;/b&gt;&lt;/p&gt;
@@ -66,7 +73,8 @@ Even if you decide to diffract your storyboards into multiple files, you must al
 
   &lt;/li&gt;
   &lt;li&gt;Use the options sidebar on the right to connect the UIViewController to a custom class. Select the name that you chose when creating the UIViewController class in your Swift file.&lt;/li&gt;
-  &lt;li&gt;Now, you should be set. You should have a set number of sections within your app. Each section has a “.storyboard” file, a single view controller within that storyboard marked as the initial view controller, a Swift UIViewController file connected to the storyboard view controller, and an icon in the toolbar. This is a bare bones example of an app with tab bar style navigation and defracted view controllers. My final product looked like this:
+  &lt;li&gt;Now, you should be set. You should have a set number of sections within your app. Each section has a “.storyboard” file, a single view controller within that storyboard marked as the initial view controller, a Swift UIViewController file connected to the storyboard view controller, and an icon in the toolbar. This is a bare bones example of an app with tab bar style navigation and defracted view controllers. My final product looked like this:&lt;br /&gt;
+  &lt;img src=&quot;./../../../../media/blog/images/Tab-Bar-Navigation/Finished_Tab_Bar_Project.png&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;br /&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
@@ -89,7 +97,11 @@ Below are some additional customizations you can choose to add to your tab bar.
   &lt;li&gt;Navigate to the tab item in your main.storyboard that you wish to add your custom image for. In the right sidebar, under options, there is a section called “Bar Item.” In this section, set the title (ie. the label) of your tab and select your image.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 class=&quot;post-subheader&quot;&gt;Large Center Icon in Tab Bar&lt;/h3&gt;
-&lt;p&gt;A lot of apps have a toolbar with a large center button that appears over the rest of the toolbar. It’s often a different shape and emphasizes the importance of that center tab. I recently figured out how to do this. Essentially you are creating a custom class for the tab bar and overlaying a button on top of the middle tab item. It creates a UIButton that blocks and replaces the functionality of the normal middle item. Here is the class:&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;A lot of apps have a toolbar with a large center button that appears over the rest of the toolbar. It’s often a different shape and emphasizes the importance of that center tab. I recently figured out how to do this. Essentially you are creating a custom class for the tab bar and overlaying a button on top of the middle tab item. It creates a UIButton that blocks and replaces the functionality of the normal middle item.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./../../../../media/blog/images/Tab-Bar-Navigation/Large_Center_Icon.png&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the class:&lt;br /&gt;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CustomTabBarController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UITabBarController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// Remember to the Tab Bar Controller custom class on your storyboard&lt;/span&gt;
