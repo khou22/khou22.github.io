@@ -114,6 +114,10 @@ hr {
   position: absolute;
   z-index: 1;
   opacity: 1;
+
+  /*Background image filter*/
+  -webkit-filter: grayscale(10%) brightness(90%); /* Chrome, Safari, Opera */
+  filter: grayscale(10%);
 }
 
 .content-area {

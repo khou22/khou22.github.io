@@ -180,7 +180,6 @@ var LandingPage = React.createClass({
   nextBackground: function() {
     document.getElementById("backgroundDiv").classList.remove('background-fade');
     if (this.state.currentBackground < this.state.backgroundURLs.length - 1) { //if not the last background in array
-      console.log("New background");
       this.setState({
         currentBackground: this.state.currentBackground + 1 //Go to next background index
       });
