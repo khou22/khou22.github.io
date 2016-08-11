@@ -180,6 +180,7 @@ var LandingPage = React.createClass({
   nextBackground: function() {
     document.getElementById("backgroundDiv").classList.remove('background-fade');
     if (this.state.currentBackground < this.state.backgroundURLs.length - 1) { //if not the last background in array
+      console.log("New background");
       this.setState({
         currentBackground: this.state.currentBackground + 1 //Go to next background index
       });
@@ -294,9 +295,9 @@ var ProfileBox = React.createClass({
                   <div className="profile-about-text">
                     <p style={{"fontSize": "2rem", "lineHeight": "0rem"}}>Portfolio and Blog</p>
                     <hr style={{"marginTop": "14px"}}/>
-                      Lick-Wilmerding &#39;16
+                      Princeton University &#39;20
                     <hr style={{"marginTop": "14px"}}/>
-                    <p>Wood. Coding. Computers.</p>
+                    <p>Wood. Design. Programming.</p>
                   </div>
                 </div>
               </div>

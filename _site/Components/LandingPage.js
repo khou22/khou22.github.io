@@ -294,9 +294,9 @@ var ProfileBox = React.createClass({
                   <div className="profile-about-text">
                     <p style={{"fontSize": "2rem", "lineHeight": "0rem"}}>Portfolio and Blog</p>
                     <hr style={{"marginTop": "14px"}}/>
-                      Lick-Wilmerding &#39;16
+                      Princeton University &#39;20
                     <hr style={{"marginTop": "14px"}}/>
-                    <p>Wood. Coding. Computers.</p>
+                    <p>Wood. Design. Programming.</p>
                   </div>
                 </div>
               </div>
