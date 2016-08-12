@@ -175,9 +175,46 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header">
     <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
@@ -223,31 +260,31 @@ Reading and writing persist data is remarkably simple, but this blog post contai
 <h3 class="post-subheader">Keys</h3>
 <p>Keys are string phrases or words that reference a specific value or set of values in persist data. Information is stored with a key reference and can be retrieved and written using that same key. These keys are incredibly important and any typo can quickly cause bugs or crashes in your app. As highlighted in my <a href="http://khou22.github.io/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html" target="_blank">blog post</a> in the “Preventing Code-Breaking Typos with Structures” section, it is best practice to include keys as constants in a structure. This will ensure that your keys are all only explicitly typed out in one place. It makes debugging significantly easier. Here is what your keys structure will look like when storing persist data:<br /></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">Keys</span> <span class="p">{</span>
-    <span class="kd">static</span> <span class="k">let</span> <span class="nv">calorieGoal</span>              <span class="o">=</span> <span class="s">"calorieGoal"</span>
-<span class="p">}</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Keys</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="k">let</span> <span class="n">calorieGoal</span>              <span class="o">=</span> <span class="s">&quot;calorieGoal&quot;</span>
+<span class="p">}</span></code></pre></div>
 
 <h3 class="post-subheader">Writing</h3>
 <p>NSUserDefaults (aka Persist Data) are stored using the NSUserDefaults.standardUserDefaults() initializer. Instead of calling this every time you wish to use persist data, it’s easier to simply create another structure within your Constants.swift file containing the following:<br /></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">Constants</span> <span class="p">{</span>
-    <span class="kd">static</span> <span class="k">let</span> <span class="nv">defaults</span> <span class="o">=</span> <span class="kt">NSUserDefaults</span><span class="o">.</span><span class="nf">standardUserDefaults</span><span class="p">()</span>
-<span class="p">}</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Constants</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="k">let</span> <span class="n">defaults</span> <span class="o">=</span> <span class="bp">NSUserDefaults</span><span class="p">.</span><span class="n">standardUserDefaults</span><span class="p">()</span>
+<span class="p">}</span></code></pre></div>
 
 <p><br class="post-line-break" />
 Now, instead of writing NSUserDefaults.standardUserDefaults() every time, you can simply type Constants.defaults.
 <br class="post-line-break" />
 To write data locally into persist data, simply use this command:<br /></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">value</span> <span class="o">=</span> <span class="mi">2000</span> <span class="c1">// Dummy data</span>
-<span class="kt">Constants</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="nf">setInteger</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nv">forKey</span><span class="p">:</span> <span class="kt">Keys</span><span class="o">.</span><span class="n">calorieGoal</span><span class="p">)</span> <span class="c1">// Writing an integer value for a key</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">2000</span> <span class="c1">// Dummy data</span>
+<span class="n">Constants</span><span class="p">.</span><span class="n">defaults</span><span class="p">.</span><span class="n">setInteger</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nl">forKey</span><span class="p">:</span> <span class="n">Keys</span><span class="p">.</span><span class="n">calorieGoal</span><span class="p">)</span> <span class="c1">// Writing an integer value for a key</span></code></pre></div>
 
 <h3 class="post-subheader">Reading</h3>
 <p>Reading data is also very simple, but there is one thing to keep in mind. If you have no written any data yet, attempting to read that nil value will result in a crash. It’s good practice to add a conditional before retrieving your persist data to prevent such conundrums from occurring. The code is shown here:<br /></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">if</span> <span class="p">(</span><span class="kt">Constants</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="nf">objectForKey</span><span class="p">(</span><span class="kt">Keys</span><span class="o">.</span><span class="n">calorieGoal</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Ensure the data exists</span>
-    <span class="n">caloriesGoal</span> <span class="o">=</span> <span class="kt">Constants</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="nf">integerForKey</span><span class="p">(</span><span class="kt">Keys</span><span class="o">.</span><span class="n">calorieGoal</span><span class="p">)</span> <span class="c1">// Reading data for key</span>
-<span class="p">}</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">if</span> <span class="p">(</span><span class="n">Constants</span><span class="p">.</span><span class="n">defaults</span><span class="p">.</span><span class="n">objectForKey</span><span class="p">(</span><span class="n">Keys</span><span class="p">.</span><span class="n">calorieGoal</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Ensure the data exists</span>
+    <span class="n">caloriesGoal</span> <span class="o">=</span> <span class="n">Constants</span><span class="p">.</span><span class="n">defaults</span><span class="p">.</span><span class="n">integerForKey</span><span class="p">(</span><span class="n">Keys</span><span class="p">.</span><span class="n">calorieGoal</span><span class="p">)</span> <span class="c1">// Reading data for key</span>
+<span class="p">}</span></code></pre></div>
 
 <p><br class="post-line-break" />
 That’s pretty much all there is to it. Now you can store data between app sessions! Hope you found this helpful.</p>
