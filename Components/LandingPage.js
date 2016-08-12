@@ -207,8 +207,8 @@ var LandingPage = React.createClass({
           <ProfileBox />
           <ModalBox showModal={false} />
         </div>
-        <NotificationBar notificationData={this.state.notificationData} />
-        <ProjectInfo projectData ={this.state.backgroundURLs[this.state.currentBackground]} />
+        <NotificationBar notificationData = {this.state.notificationData} />
+        <ProjectInfo projectData = {this.state.backgroundURLs[this.state.currentBackground]} />
         <div className="landing-background" style={backgroundStyleBack}></div>
         <div id="backgroundDiv" className="landing-background" style={backgroundStyle}></div>
       </div>
