@@ -201,12 +201,12 @@
   <header id="blog-post-header" class="post-header">
     <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
     <div class="post-header-content">
-      <a href="/blog"><p class="post-return-main">
+      <a onclick="blogPostBackButton()"><p class="post-return-main">
         <
         Return to all blogs
       </p></a>
       <br />
-      <h1 class="post-title">Comparison Operators: '==' vs. '==='</h1>
+      <h1 class="post-title post-header-title">Comparison Operators: '==' vs. '==='</h1>
       <h4 class="post-header-description"></h4>
       <p class="post-header-meta">Sep 8, 2015 • Kevin Hou</p>
     </div>
@@ -217,6 +217,19 @@
     // $('html, body').animate({
     //     scrollTop: $("#blog-post-header").offset().top
     // }, 1000);
+
+    var blogPostBackButton = function() {
+      var previousLink = document.referrer
+      var index = previousLink.indexOf(".html")
+      // console.log("Previous link:", previousLink);
+      // console.log(index);
+      if (index == -1) { // If not coming from a different blog post
+        window.history.back(); // Back in history (keeps window position)
+      } else { // Directed from a different blog post
+        // console.log("Back to blog");
+        window.location.href = "/blog";
+      }
+    }
 
   </script>
 

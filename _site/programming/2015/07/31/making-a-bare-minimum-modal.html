@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Making a Bare Minimum Modal</title>
-  <meta name="description" content="Here is the code for a bare minimum popup modal:HTML:&lt;div aria-hidden="false" role="dialog" className="modal"&gt;  &lt;div className="modal__container"&gt...">
+  <meta name="description" content="Here is the code for a bare minimum popup modal:HTML:&lt;div aria-hidden=&quot;false&quot; role=&quot;dialog&quot; className=&quot;modal&quot;&gt;  &lt;div c...">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -175,9 +175,34 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header">
     <div class="post-header-background" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)"></div>
@@ -219,79 +244,79 @@
 
 <p>HTML:</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">aria-hidden=</span><span class="s">"false"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">className=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"modal__container"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"modal__header"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">aria-hidden=</span><span class="s">&quot;false&quot;</span> <span class="na">role=</span><span class="s">&quot;dialog&quot;</span> <span class="na">className=</span><span class="s">&quot;modal&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">&quot;modal__container&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">&quot;modal__header&quot;</span><span class="nt">&gt;</span>
           Header
      <span class="nt">&lt;/div&gt;</span>
-     <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"modal__content"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">&quot;modal__content&quot;</span><span class="nt">&gt;</span>
           Content
      <span class="nt">&lt;/div&gt;</span>
-     <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"modal__footer"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">&quot;modal__footer&quot;</span><span class="nt">&gt;</span>
           Footer
      <span class="nt">&lt;/div&gt;</span>
    <span class="nt">&lt;/div&gt;</span>
-   <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">"modal-backdrop"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">className=</span><span class="s">&quot;modal-backdrop&quot;</span><span class="nt">&gt;</span>
    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <p>CSS:</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.modal</span> <span class="p">{</span>
-  <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
-  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="nl">bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="nl">z-index</span><span class="p">:</span> <span class="m">9001</span><span class="p">;</span>
-  <span class="err">&amp;__container</span> <span class="err">{</span>
-    <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
-    <span class="nl">-webkit-box-orient</span><span class="p">:</span> <span class="n">vertical</span><span class="p">;</span>
-    <span class="nl">-webkit-box-direction</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
-    <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">column</span><span class="p">;</span>
-    <span class="nl">-webkit-box-pack</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-    <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
-    <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
-    <span class="nl">padding</span><span class="p">:</span> <span class="m">3rem</span><span class="p">;</span>
-    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">.25rem</span><span class="p">;</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
-    <span class="nl">max-width</span><span class="p">:</span> <span class="m">40rem</span><span class="p">;</span>
-    <span class="nl">min-width</span><span class="p">:</span> <span class="m">20rem</span><span class="p">;</span>
-    <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.modal</span> <span class="p">{</span>
+  <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
+  <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="k">right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="k">bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="k">z-index</span><span class="o">:</span> <span class="m">9001</span><span class="p">;</span>
+  <span class="o">&amp;</span><span class="n">__container</span> <span class="err">{</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+    <span class="k">display</span><span class="o">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">orient</span><span class="o">:</span> <span class="n">vertical</span><span class="p">;</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="k">direction</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="n">flex</span><span class="o">-</span><span class="k">direction</span><span class="o">:</span> <span class="n">column</span><span class="p">;</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">pack</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+    <span class="k">justify</span><span class="o">-</span><span class="k">content</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">3</span><span class="n">rem</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="o">.</span><span class="m">25</span><span class="n">rem</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="k">max-width</span><span class="o">:</span> <span class="m">40</span><span class="n">rem</span><span class="p">;</span>
+    <span class="k">min-width</span><span class="o">:</span> <span class="m">20</span><span class="n">rem</span><span class="p">;</span>
+    <span class="k">height</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
   <span class="p">}</span>
   <span class="o">&amp;</span><span class="nt">__header</span> <span class="p">{</span>
-    <span class="nl">flex-shrink</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+    <span class="n">flex</span><span class="o">-</span><span class="n">shrink</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">black</span><span class="p">;</span>
   <span class="p">}</span>
   <span class="o">&amp;</span><span class="nt">__content</span> <span class="p">{</span>
-    <span class="nl">padding-top</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
-    <span class="nl">padding</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
-    <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
-    <span class="nl">overflow-y</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
-    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+    <span class="k">padding-top</span><span class="o">:</span> <span class="m">2</span><span class="n">rem</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">1</span><span class="n">rem</span><span class="p">;</span>
+    <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+    <span class="k">overflow-y</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">black</span><span class="p">;</span>
   <span class="p">}</span>
   <span class="o">&amp;</span><span class="nt">__footer</span> <span class="p">{</span>
-    <span class="nl">border-top</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="n">grey</span><span class="p">;</span>
-    <span class="nl">border-bottom-right-radius</span><span class="p">:</span> <span class="m">.25rem</span><span class="p">;</span>
-    <span class="nl">border-bottom-left-radius</span><span class="p">:</span> <span class="m">.25rem</span><span class="p">;</span>
-    <span class="nl">padding</span><span class="p">:</span> <span class="m">.75rem</span><span class="p">;</span>
-    <span class="nl">text-align</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span>
-    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+    <span class="k">border-top</span><span class="o">:</span> <span class="m">2px</span> <span class="k">solid</span> <span class="n">grey</span><span class="p">;</span>
+    <span class="k">border-bottom</span><span class="o">-</span><span class="k">right</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="o">.</span><span class="m">25</span><span class="n">rem</span><span class="p">;</span>
+    <span class="k">border-bottom</span><span class="o">-</span><span class="k">left</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="o">.</span><span class="m">25</span><span class="n">rem</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="o">.</span><span class="m">75</span><span class="n">rem</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="nb">black</span><span class="p">;</span>
   <span class="p">}</span>
   <span class="o">&amp;</span><span class="nt">-backdrop</span> <span class="p">{</span>
-    <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
-    <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-    <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-    <span class="nl">z-index</span><span class="p">:</span> <span class="m">9000</span><span class="p">;</span>
-    <span class="nl">visibility</span><span class="p">:</span> <span class="nb">visible</span><span class="p">;</span>
-    <span class="nl">opacity</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
+    <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="k">height</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="k">z-index</span><span class="o">:</span> <span class="m">9000</span><span class="p">;</span>
+    <span class="k">visibility</span><span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+    <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
   <span class="p">}</span>
-<span class="err">}</span></code></pre></figure>
+<span class="err">}</span></code></pre></div>
 
 
     <div class="post-organization">
