@@ -1,2 +1,16 @@
 /*Pendulum animations within the pendulum svg file*/
 /*Reference: https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/class*/
+.fade-loading-screen {
+  animation-name: fade-loading-screen;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-loading-screen {
+  from {
+    opacity: 1.0;
+  }
+  to {
+    opacity: 0.0;
+  }
+}

@@ -3,7 +3,14 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  z-index: 5; /* In front */
+  z-index: 6; /* In front */
 
-  background-color: black;
+  background-color: white;
+}
+
+.pendulum-animation {
+  position: absolute;
+  width: 50vw;
+  margin-left: 25vw;
+  bottom: 10%;
 }
