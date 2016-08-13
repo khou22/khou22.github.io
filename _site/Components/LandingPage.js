@@ -164,13 +164,15 @@ var LandingPage = React.createClass({
     for (var i = 0; i < backgrounds.length; i++) {
       finalRay.push(backgrounds[i]); //Add shuffled to the final array of images
     }
-    setTimeout(function() { //Start slideshow after 10 seconds
+    setTimeout(function() { //Start slideshow after 6 seconds
       document.getElementById("backgroundDiv").classList.add('background-fade'); //Add the fade animation
       setInterval(this.nextBackground.bind(this), 5000);
-    }.bind(this), 7000);
-    for (var i = 0; i < finalRay.length; i++) { //Cycle through backgrounds
-      preload(finalRay[i].imageURL); //Preload every background
-    }
+    }.bind(this), 6000);
+    setTimeout(function() {
+      for (var i = 0; i < finalRay.length; i++) { //Cycle through backgrounds
+        preload(finalRay[i].imageURL); //Preload every background
+      }
+    }.bind(this), 10000); // Delay image preload
     return {
       notificationData: notificationData,
       backgroundURLs: finalRay,
