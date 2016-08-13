@@ -1,7 +1,7 @@
 // Standard landing page
 var LoadingPage = React.createClass({
   getInitialState: function() {
-    var loadingScreenDuration = 4000;
+    var loadingScreenDuration = 5000;
     var fadeOutTime = 1000;
 
     setTimeout(this.hideLoading.bind(this), loadingScreenDuration); // Loading page lasts for 3000 seconds
