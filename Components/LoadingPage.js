@@ -7,9 +7,12 @@ var LoadingPage = React.createClass({
     setTimeout(this.hideLoading.bind(this), loadingScreenDuration); // Loading page lasts for 3000 seconds
     setTimeout(this.startFade.bind(this), loadingScreenDuration - fadeOutTime); // Loading page lasts for 3000 seconds
 
+    setTimeout(this.startLogoAnimation.bind(this), 1600); // Logo animation triggered
+
     return {
       loadingVisible: true,
-      fadeAnimation: false
+      fadeAnimation: false,
+      logoAnimation: false
     }
   },
   hideLoading: function() {
@@ -18,18 +21,25 @@ var LoadingPage = React.createClass({
     });
   },
   startFade: function() {
-    console.log("Fading");
+    // console.log("Fading");
     this.setState({
       fadeAnimation: true
+    })
+  },
+  startLogoAnimation: function() {
+    this.setState({
+      logoAnimation: true
     })
   },
   render: function() {
     if (this.state.loadingVisible) { // Showing loading screen
       var fadeAnimation = this.state.fadeAnimation ? "fade-loading-screen" : "";
-      console.log(fadeAnimation);
+
+      // Toggle between static first frame and animated logo
+      var animatedLogoSource = this.state.logoAnimation ? "./../media/site/images/animated-logo.svg" : "./../media/site/images/animated-logo-frame-1.svg";
       return (
-        <div className={"loading-page " + fadeAnimation}>
-          <object className="logo-animation" data="./../media/site/images/animated-logo.svg" type="image/svg+xml">
+        <div className={"loading-page " + fadeAnimation} id="random">
+          <object id="logoSVG" className="logo-animation" data={animatedLogoSource} type="image/svg+xml">
             Your browser does not support SVG
           </object>
           <object className="pendulum-animation" data="./../media/site/images/Pendulum.svg" type="image/svg+xml">
