@@ -29,8 +29,11 @@ var LoadingPage = React.createClass({
       console.log(fadeAnimation);
       return (
         <div className={"loading-page " + fadeAnimation}>
+          <object className="logo-animation" data="./../media/site/images/animated-logo.svg" type="image/svg+xml">
+            Your browser does not support SVG
+          </object>
           <object className="pendulum-animation" data="./../media/site/images/Pendulum.svg" type="image/svg+xml">
-            Your browser doesn't support SVG
+            Your browser does not support SVG
           </object>
         </div>
       );

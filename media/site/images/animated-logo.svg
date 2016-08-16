@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1260px" height="1260px" viewBox="-5 5 1270 1270" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+  <title>Frame 1</title>
+  <desc>Created with Sketch.</desc>
+  <defs></defs>
+  <g id="Animated-SVG-Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Frame-1" fill="#3286A8">
+      <path class="logo-left-fill-animation" d="M640,0 L640,1260 L125.002712,1260 C55.9656206,1260 0,1204.02885 0,1134.99661 L0,125.003386 C0,55.9659223 55.9604005,0 125.002712,0 L640,0 Z" id="Left-Half" fill="#3286A8">
+      </path>
+      <path class="logo-outline-animation" d="M1,118 C1,118 0.999999056,74.0000028 37.9999995,37.0000014 C75,-1.28119737e-13 118,-1.28119737e-13 118,-1.28119737e-13 L1142,-1.28119737e-13 C1142,-1.28119737e-13 1193.00006,4.00000069 1225,37.0000003 C1256.99994,70 1259,118 1259,118 L1259,1142 C1259,1142 1257.99994,1188.99994 1225,1222.99994 C1192.00006,1256.99994 1142,1260 1142,1260 L118,1260 C118,1260 77,1259.99994 38,1223 C-1,1186.00006 1,1142 1,1142 L1,118 Z" id="logo-outline" fill="none" stroke="#3286A8" stroke-width="6"></path>
+      <path d="M807.02002,331.000002 L874.999999,411.999994 L972,521.999994 C1046,608 1065,630.000019 1065,630.000009 C1065,630 945,768 807.02002,930 L901,930 L993,929.999979 L1249,630.000007 C1161,522 993,331.000001 993,331 C993,330.999999 965,331.000001 909,331.000001 L807.02002,331.000002 Z" id="H-Body">
+        <animate id="logo-animation" attributeName="d" dur="500ms" to="M640,1140 L780,1140 L780,720.292305 C783.049438,653.574618 844.555658,600.292305 920,600.292305 C995.444342,600.292305 1056.95056,653.574618 1059.89005,720.292266 L1060,1140 L1200,1140 L1200,680 C1187.924,566.58012 1067.23291,477.292305 920,477.292305 C772.76709,477.292305 652.075999,566.58012 640.852227,680 L640,1140 Z" fill="freeze" />
+        <animate id="logo-animation" attributeName="fill" dur="500ms" to="#D5491F" fill="freeze" />
+      </path>
+      <polygon id="H-Leg" points="829.612521 155.495162 694.382905 119.260495 430.387479 1104.50484 565.617095 1140.7395">
+        <animate id="logo-animation" attributeName="points" dur="500ms" to="640 120 780 120 780 1140 640 1140" fill="freeze" />
+        <animate id="logo-animation" attributeName="fill" dur="500ms" to="#D5491F" fill="freeze" />
+      </polygon>
+      <polygon class="letter-k-animation" id="K-Leg" points="829.612521 155.495162 694.382905 119.260495 430.387479 1104.50484 565.617095 1140.7395">
+        <animate id="logo-animation" attributeName="points" dur="500ms" to="500 120 640 120 640 1140 500 1140" fill="freeze" />
+      </polygon>
+      <polygon class="letter-k-animation" id="K-Carrot" points="452.009987 330 266.919991 330 10 629.99061 266.900002 929.999955 452.000832 929.999939 194.750008 629.990595">
+        <animate id="logo-animation" attributeName="points" dur="500ms" to="242.111936 540.000007 57.0160855 540.000007 314.601197 839.990617 57 1139.99996 242.09585 1139.99996 499.350833 839.990602" fill="freeze" />
+      </polygon>
+    </g>
+  </g>
+
+  <style>
+    .logo-outline-animation {
+      animation: drawLines 2000ms cubic-bezier(.6,.59,.31,1);
+    }
+
+    @keyframes drawLines {
+      0% {
+        stroke-dasharray: 5000;
+        stroke-dashoffset: 5000;
+      }
+      25% {
+        stroke-dasharray: 5000;
+        stroke-dashoffset: 5000;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .logo-left-fill-animation {
+      animation: fillLeftSide 2500ms cubic-bezier(.6,.59,.31,1);  
+    }
+
+    .letter-k-animation {
+      animation: letterKAnimation 1700ms linear;  
+      fill: #FFFFFF;
+    }
+
+    @keyframes fillLeftSide {
+      0% {
+        opacity: 0.0;
+      }
+      25% {
+        opacity: 0.0;
+      }
+      100% {
+        opacity: 1.0;
+      }
+    }
+
+    @keyframes letterKAnimation {
+      0% {
+        fill: #3286A8;
+      }
+      25% {
+        fill: #3286A8;
+      }
+      100% {
+        fill: #FFFFFF;
+      }
+    }
+  </style>
+</svg>
