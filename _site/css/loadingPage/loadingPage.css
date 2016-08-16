@@ -14,3 +14,10 @@
   margin-left: 25vw;
   bottom: 10%;
 }
+
+.logo-animation {
+  position: absolute;
+  width: 10vw;
+  margin-left: 45%;
+  top: 10%;
+}
