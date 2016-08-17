@@ -35,9 +35,9 @@ var LandingPage = React.createClass({
       display: true
     };
     var firstImage = { // Set first image — not working
-      name: "Walnut and Aged Redwood Biometric Lock Box",
-      imageURL: "./../media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box.jpg",
-      link: "https://www.flickr.com/photos/khou22/albums/72157668938950255",
+      name: "Segmented Bowl with Inlaid Letters",
+      imageURL: "./../media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters.jpg",
+      link: "https://www.flickr.com/photos/khou22/albums/72157665399225423",
       display: true
     };
     var backgrounds = [
@@ -187,7 +187,7 @@ var LandingPage = React.createClass({
     }
     var finalRay = [firstImage]; // Add first image
     for (var i = 0; i < backgrounds.length; i++) {
-      if (backgrounds.display) { // If chosen to display image
+      if (backgrounds[i].display) { // If chosen to display image
         finalRay.push(backgrounds[i]); // Add shuffled to the final array of images
       }
     }
