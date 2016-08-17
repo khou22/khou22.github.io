@@ -21,3 +21,20 @@
   margin-left: 45%;
   top: 10%;
 }
+
+.logo-position-change-animation {
+  animation-name: logoPositionChange;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes logoPositionChange {
+  to {
+    width: 64px;
+    height: 64px;
+    margin: 0;
+    top: 15px;
+    left: 15px;
+  }
+}

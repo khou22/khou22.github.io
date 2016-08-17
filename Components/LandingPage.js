@@ -31,146 +31,173 @@ var LandingPage = React.createClass({
       type: "notice",
       // message: "New video released: Wood Turned Segmented Bowl with Inlaid Letters",
       message: "New wood project: Wood Turned Segmented Bowl with Inlaid Letters",
-      link: "https://youtu.be/_ZSztfYnnC8"
+      link: "https://youtu.be/_ZSztfYnnC8",
+      display: true
     };
     var firstImage = { // Set first image — not working
       name: "Walnut and Aged Redwood Biometric Lock Box",
       imageURL: "./../media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box.jpg",
-      link: "https://www.flickr.com/photos/khou22/albums/72157668938950255"
+      link: "https://www.flickr.com/photos/khou22/albums/72157668938950255",
+      display: true
     };
     var backgrounds = [
       {
         name: "Walnut Poplar Salad Bowl",
         imageURL: "./../media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
-        link: "http://kevinhou.wix.com/projects#!walnut-and-poplar-segmented-salad-bowl/c1jkm"
+        link: "http://kevinhou.wix.com/projects#!walnut-and-poplar-segmented-salad-bowl/c1jkm",
+        display: true
       },
       {
         name: "Wood Turned Pens",
         imageURL: "./../media/site/images/backgrounds/Wood_Pens_May_2016.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157660707733426"
+        link: "https://www.flickr.com/photos/khou22/albums/72157660707733426",
+        display: true
       },
       {
         name: "Wenge and Jara Wood Cable Manager",
         imageURL: "./../media/site/images/backgrounds/Wenge_Jara_Cable_Manager.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157668939240165"
+        link: "https://www.flickr.com/photos/khou22/albums/72157668939240165",
+        display: false
       },
       {
         name: "White Mahogany Plaque",
         imageURL: "./../media/site/images/backgrounds/White_Mahogany_Plaque.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157666393433584"
+        link: "https://www.flickr.com/photos/khou22/albums/72157666393433584",
+        display: true
       },
       {
         name: "Olive Wood Pencil Case",
         imageURL: "./../media/site/images/backgrounds/Olive_Wood_Pencil_Case.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157668937781395"
+        link: "https://www.flickr.com/photos/khou22/albums/72157668937781395",
+        display: true
       },
       {
         name: "Maple iPhone Stand",
         imageURL: "./../media/site/images/backgrounds/Maple_iPhone_Stand.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157668938950275"
+        link: "https://www.flickr.com/photos/khou22/albums/72157668938950275",
+        display: true
       },
       {
         name: "Walnut and Aged Redwood Biometric Lock Box",
         imageURL: "./../media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157668938950255"
+        link: "https://www.flickr.com/photos/khou22/albums/72157668938950255",
+        display: true
       },
       {
         name: "Walnut and Aluminum Headphone Stand",
         imageURL: "./../media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157658462097054"
+        link: "https://www.flickr.com/photos/khou22/albums/72157658462097054",
+        display: true
       },
       {
         name: "Basket Weave Cutting Board",
         imageURL: "./../media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157652887421218"
+        link: "https://www.flickr.com/photos/khou22/albums/72157652887421218",
+        display: true
       },
       {
         name: "Bulbish Sapele Bowl",
         imageURL: "./../media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
-        link: "http://kevinhou.wix.com/projects#!bublish-sapele-wood-bowl/c1444"
+        link: "http://kevinhou.wix.com/projects#!bublish-sapele-wood-bowl/c1444",
+        display: true
       },
       {
         name: "Walnut and Maple Amplifier",
         imageURL: "./../media/site/images/backgrounds/Walnut_and_Maple_Amplifier.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157660781288855"
+        link: "https://www.flickr.com/photos/khou22/albums/72157660781288855",
+        display: true
       },
       {
         name: "Tropical Wood Phone Stand",
         imageURL: "./../media/site/images/backgrounds/Tropical_Wood_Phone_Stand.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157659369093144"
+        link: "https://www.flickr.com/photos/khou22/albums/72157659369093144",
+        display: false
       },
       {
         name: "Maple Baseball Bat",
         imageURL: "./../media/site/images/backgrounds/Maple_Baseball_Bat.jpg",
-        link: "http://kevinhou.wix.com/projects#!maple-baseball-bat/ce0i"
+        link: "http://kevinhou.wix.com/projects#!maple-baseball-bat/ce0i",
+        display: false
       },
       {
         name: "Sapele Wood Gavel",
         imageURL: "./../media/site/images/backgrounds/Gavel.jpg",
-        link: "http://kevinhou.wix.com/projects#!chichipate-and-sapele-gavel/c1ryp"
+        link: "http://kevinhou.wix.com/projects#!chichipate-and-sapele-gavel/c1ryp",
+        display: false
       },
       {
         name: "Walnut and Maple Single Speaker",
         imageURL: "./../media/site/images/backgrounds/Walnut_and_Maple_Single_Speaker.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157660781288855"
+        link: "https://www.flickr.com/photos/khou22/albums/72157660781288855",
+        display: true
       },
       {
         name: "Maple and Walnut Speakers with Music Visualizer",
         imageURL: "./../media/site/images/backgrounds/Maple_and_Walnut_Visualizer.jpg",
-        link: "https://www.flickr.com/photos/khou22/albums/72157660781288855"
+        link: "https://www.flickr.com/photos/khou22/albums/72157660781288855",
+        display: false
       },
       {
         name: "Bulbish Sapele Wood Bowl",
         imageURL: "./../media/site/images/backgrounds/Fruit_Tart.jpg",
-        link: "http://kevinhou.wix.com/projects#!bublish-sapele-wood-bowl/c1444"
+        link: "http://kevinhou.wix.com/projects#!bublish-sapele-wood-bowl/c1444",
+        display: true
       },
       {
         name: "Wood Turned Pens",
         imageURL: "./../media/site/images/backgrounds/Wood_Pens.jpg",
-        link: "http://kevinhou.wix.com/projects#!wood-pens/cn8u"
+        link: "http://kevinhou.wix.com/projects#!wood-pens/cn8u",
+        display: true
       },
       {
         name: "MusicViz - A Music Visualizer",
         imageURL: "./../media/site/images/backgrounds/MusicViz.png",
-        link: "http://kevinhou.wix.com/projects#!musicviz/c1ku2"
+        link: "http://kevinhou.wix.com/projects#!musicviz/c1ku2",
+        display: false
       },
       {
         name: "Japanese Square Plate",
         imageURL: "./../media/site/images/backgrounds/Japanese_Square_Plate.jpg",
-        link: "http://kevinhou.wix.com/projects#!japanese-square-plate/czt2"
+        link: "http://kevinhou.wix.com/projects#!japanese-square-plate/czt2",
+        display: true
       },
       {
         name: "Online Sandwich Ordering Machine",
         imageURL: "./../media/site/images/backgrounds/Online_Sandwich_Ordering_Machine.jpg",
-        link: "http://kevinhou.wix.com/projects#!online-sandwich-ordering-machine/clla"
+        link: "http://kevinhou.wix.com/projects#!online-sandwich-ordering-machine/clla",
+        display: true
       },
       {
         name: "Turning a Chaote Viga Bowl",
         imageURL: "./../media/site/images/backgrounds/Kevin_Turning_Chaote_Viga.jpg",
-        link: "#"
+        link: "#",
+        display: true
       },
       {
         name: "Turning a Chaote Vig Bowl",
         imageURL: "./../media/site/images/backgrounds/Turning_Chaote_Viga.jpg",
-        link: "#"
+        link: "#",
+        display: true
       }
     ];
     setTimeout(function() {document.getElementById("mainDiv").classList.add('div-fade-in');}, 1);
-    preload("./../media/site/images/Profile.jpg"); //Preload profile picture
-    if (shuffleBackgrounds) { //If shuffle
-      shuffle(backgrounds); //Shuffle backgrounds
+    preload("./../media/site/images/Profile.jpg"); // Preload profile picture
+    if (shuffleBackgrounds) { // If shuffle
+      shuffle(backgrounds); // Shuffle backgrounds
     }
-    var finalRay = [firstImage]; //Add first image
+    var finalRay = [firstImage]; // Add first image
     for (var i = 0; i < backgrounds.length; i++) {
-      finalRay.push(backgrounds[i]); //Add shuffled to the final array of images
+      if (backgrounds.display) { // If chosen to display image
+        finalRay.push(backgrounds[i]); // Add shuffled to the final array of images
+      }
     }
-    setTimeout(function() { //Start slideshow after 6 seconds
-      document.getElementById("backgroundDiv").classList.add('background-fade'); //Add the fade animation
+    setTimeout(function() { // Start slideshow after 6 seconds
+      document.getElementById("backgroundDiv").classList.add('background-fade'); // Add the fade animation
       setInterval(this.nextBackground.bind(this), 5000);
     }.bind(this), 6000);
     setTimeout(function() {
       for (var i = 0; i < finalRay.length; i++) { //Cycle through backgrounds
-        preload(finalRay[i].imageURL); //Preload every background
+        preload(finalRay[i].imageURL); // Preload every background
       }
     }.bind(this), 10000); // Delay image preload
     return {
