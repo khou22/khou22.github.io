@@ -14,7 +14,7 @@ layout: default
             {% if forloop.first %}
                 <h3>{{ post_year }}</h3><div class="list-group">
             {% endif %}
-      
+
             {% if forloop.first == false %}
                 {% assign previous_index = forloop.index0 | minus: 1 %}
                 {% capture previous_post_year %}{{ site.categories[page.category][previous_index].date | date: '%Y' }}{% endcapture %}
@@ -22,7 +22,7 @@ layout: default
                     </div><h3>{{ post_year }}</h3><div class="list-group">
                 {% endif %}
             {% endif %}
-      
+
             <a href="{{ post.url | prepend: site.baseurl }}">
                 <h4>{{ post.title }}</h4>
             </a>

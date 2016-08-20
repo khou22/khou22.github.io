@@ -5,6 +5,13 @@ $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 
 .project {
+  &-page {
+    // Page content
+    width: 90%; // Create room for x margin
+    margin: auto; // Center horizontally
+    margin-top: 12px; // Top spacing
+  }
+
   &-title {
 
   }
@@ -15,5 +22,9 @@ $brand-blue:      #3286A8;
 
   &-hr {
     border-color: $brand-grey !important;
+  }
+
+  &-header {
+
   }
 }

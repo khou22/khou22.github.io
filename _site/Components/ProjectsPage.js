@@ -91,8 +91,8 @@ var ProjectsPage = React.createClass({
   },
   render: function() {
     return (
-      <div>
-        <h1 className="contact-header">Projects</h1>
+      <div className="project-page">
+        <h1 className="project-header">Projects</h1>
         <ProjectsList data={ this.state.projectData }/>
       </div>
     );

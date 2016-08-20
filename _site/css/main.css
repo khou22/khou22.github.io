@@ -930,6 +930,10 @@ pre {
   font-size: 18px;
   line-height: 24px; }
 
+.project-page {
+  width: 90%;
+  margin: auto;
+  margin-top: 12px; }
 .project-hr {
   border-color: #9DB7C1 !important; }
 
