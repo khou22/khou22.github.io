@@ -48,6 +48,18 @@ var LandingPage = React.createClass({
         display: true
       },
       {
+        name: "Walnut and East Indian Rosewood Box",
+        imageURL: "./../media/site/images/backgrounds/Walnut_and_East_Indian_Rosewood_Box.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157669609045873",
+        display: true
+      },
+      {
+        name: "California Bay Laurel Burl Wood Bowl",
+        imageURL: "./../media/site/images/backgrounds/Turning_California_Bay_Laurel_Burl_Wood_Bowl.jpg",
+        link: "https://www.flickr.com/photos/khou22/albums/72157669596459954",
+        display: true
+      },
+      {
         name: "Wood Turned Pens",
         imageURL: "./../media/site/images/backgrounds/Wood_Pens_May_2016.jpg",
         link: "https://www.flickr.com/photos/khou22/albums/72157660707733426",
