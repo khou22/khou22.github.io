@@ -312,8 +312,8 @@ var ProfileBox = React.createClass({
         location.href="/blog";
         break;
       case "programming":
-        location.href="/blog/projects"; // Project page on website
-        window.open("http://kevinhou.wix.com/projects#!woodprojects/ckra", '_blank);'); // Wix projects page
+        location.href="/blog/programming"; // Project page on website
+        // window.open("http://kevinhou.wix.com/projects#!woodprojects/ckra", '_blank);'); // Wix projects page
         break;
       default:
     };

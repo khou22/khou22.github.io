@@ -30,13 +30,6 @@ $(document).ready(function() {
       var firstSection = $(window).height() - headerHeight;
       var transitionDistance = 50;
       var classesToChange = [
-        /*{
-          className: ".blog-landing-page",
-          styleElement: "top",
-          sections: [1],
-          min: -80,
-          max: 150
-        }, */
         {
           className: ".blog-landing-header",
           styleElement: "background-color-opacity",
