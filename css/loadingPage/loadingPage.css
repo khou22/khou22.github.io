@@ -23,10 +23,11 @@
 }
 
 .logo-position-change-animation {
+/* Turned off position change animation
   animation-name: logoPositionChange;
   animation-duration: 1000ms;
   animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards;*/
 }
 
 @keyframes logoPositionChange {
