@@ -21,21 +21,23 @@ $mobile-cuttoff: 800px;
   &-header {
     position: absolute;
     z-index: 1;
-    bottom: 10px;
+    bottom: 0px;
     width: 100vw;
     height: 70px;
+    border-bottom: 1px solid rgba(230, 230, 230, 1);
 
     &-logo {
+      position: absolute;
       width: 50px;
       margin-left: 10px;
-      margin-bottom: 5px;
+      bottom: 10px;
       margin-top: 15px;
     }
 
     &-ul {
       list-style: none;
       position: absolute; // Absolute position within header div
-      bottom: 1%; // Align bottom
+      bottom: 10%; // Align bottom
       right: 0; // Align right side of screen
       width: 45%;
       margin-right: 1%;

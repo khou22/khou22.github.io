@@ -6,7 +6,6 @@ $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 $offwhite: #D9F4FF;
 $mobile-cuttoff: 800px;
-$post-header-height: 245px;
 $post-font-size: 16px;
 
 .header-placeholder {
@@ -18,76 +17,60 @@ $post-font-size: 16px;
     display: none;
   }
 }
+.post {
 
-.post-header-background {
-  z-index: -9999; // Ensure in the very back
-  position: absolute; // So that other elements can go over it
-  height: $post-header-height;
-  width: 100vw;
-  overflow-x: hidden;
-}
+  &-header-title {
+    text-align: center;
+  }
 
-.post-header-title {
-  text-align: center;
-}
+  &-header-description {
+    color: $offwhite;
+    text-align: center;
+    margin-top: 18px !important;
+    margin-bottom: 24px !important;
+  }
 
-.post-header-description {
-  margin-top: -webkit-calc(#{$post-header-height} * 0.1) !important;
-  margin-top:         calc(#{$post-header-height} * 0.1) !important;
-  margin-bottom: 6px !important;
-  color: $offwhite;
-  text-align: center;
-}
+  &-header-content {
 
-.post-header-content {
-  position: relative;
-  height: $post-header-height;
+    max-width: -webkit-calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
+    max-width:         calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
+    margin: auto;
 
-  max-width: -webkit-calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
-  max-width:         calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
-  margin: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 
-  padding-left: 16px;
-  padding-right: 16px;
+    padding-top: 12px;
+    color: white;
+  }
 
-  padding-top: 12px;
-  color: white;
-}
+  &-header-meta {
+    color: $offwhite !important;
+    text-align: center; // Center text
+  }
 
-.post-header-meta {
-  position: absolute;
-  color: $offwhite !important;
+  &-return-main {
+    color: $offwhite !important;
+    cursor: pointer;
+  }
 
-  // Center this element
-  width: 50%;
-  left: 25%;
+  &-line-break {
+    line-height: 36px !important;
+  }
 
-  bottom: 6px; // Pin to bottom of parent
-  text-align: center; // Center text
-}
+  &-subheader {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
 
-.post-return-main {
-  color: $offwhite !important;
-  cursor: pointer;
-}
+  &-organization {
+    margin-top: 16px;
+    color: black;
+  }
 
-.post-line-break {
-  line-height: 36px !important;
-}
-
-.post-subheader {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
-}
-
-.post-organization {
-  margin-top: 16px;
-  color: black;
-}
-
-// ******* Post content styling *******
-.post-content p {
-  font-size: $post-font-size; // Blog post font size
+  // ******* Post content styling *******
+  &-content p {
+    font-size: $post-font-size; // Blog post font size
+  }
 }
 
 li {
