@@ -6,9 +6,117 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Aug 2016 20:18:10 -0400</pubDate>
-    <lastBuildDate>Sat, 27 Aug 2016 20:18:10 -0400</lastBuildDate>
+    <pubDate>Sun, 28 Aug 2016 19:16:49 -0400</pubDate>
+    <lastBuildDate>Sun, 28 Aug 2016 19:16:49 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Design Tips and Tricks August 2016: Optimizing and Animating SVG Images</title>
+        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Overview&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Codepen is useful for rapid SVG development&lt;/li&gt;
+  &lt;li&gt;SVG&#39;s are really just markdown and can be manipulated as a chunk/contained element, or individual shapes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Good Practices&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Good practice to name your shapes different things in Sketch — prevents styling issues if some had the same IDs&lt;/li&gt;
+  &lt;li&gt;Good practice to ungroup the SVG&lt;/li&gt;
+  &lt;li&gt;SVG doesn&#39;t really use shadows — generally stay away from them&lt;/li&gt;
+  &lt;li&gt;SVG&#39;s support consistent radiuses, but do not support individual points having different radius&#39;s in the same shape. If you want this, you have to flatten the shape into a path&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Optimizing SVGs&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sketch and other vector generators generate a lot of extraneous text. Use SVGEditor online to optimize SVGs and remove the extra Sketch attributes, round decimal points to make the file smaller. Can also get rid of the artboard page tag.&lt;/li&gt;
+  &lt;li&gt;Group elements in the SVG a &lt;g&gt; element so that you can apply classes
+
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Types of Animations&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Can modify the SVG however you’d like using CSS — 2D transform, scale, rotate, skew (shears them), motion path (moving along a non-linear path), morphing (changing the actual shape itself. Same shape, but different appearance), line drawing (can draw closed SVG paths), clipping and masking&lt;/li&gt;
+  &lt;br /&gt;
+  &lt;li&gt;Most basic: animate styling&lt;/li&gt;
+  &lt;li&gt;Advanced: filters, effects, distortions&lt;/li&gt;
+  &lt;br /&gt;
+  &lt;li&gt;Looping animations, constantly doing its own thing&lt;/li&gt;
+  &lt;li&gt;Dynamic, animating based on some parameter&lt;/li&gt;
+  &lt;li&gt;Interaction, animate based on interaction — so delightful&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Design Tips&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Avoid the technical limitations, forget the CSS, etc.&lt;/li&gt;
+  &lt;li&gt;What would it make you love?&lt;/li&gt;
+  &lt;li&gt;What is attention grabbing?&lt;/li&gt;
+  &lt;li&gt;What’s a clean subtle way of animating something?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Animating Using CSS&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create animations using CSS&lt;/li&gt;
+  &lt;li&gt;Good practice to make the container really big initially so that nothing ever gets cropped&lt;/li&gt;
+  &lt;li&gt;Change the SVG tag ID to classes. So it’s better compatible with CSS.&lt;/li&gt;
+  &lt;li&gt;Good to put this in the beginning so you can see what’s going on:
+    
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;svg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+  &lt;/li&gt;
+  &lt;br /&gt;
+  &lt;li&gt;When rotating: transform: rotate(27deg), remember SVGs have their own coordinate system. Make sure you set transform-origin: center. Transform-origin is a very finicky system. It’s best to use:
+    
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;transform-origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;instead&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;transform-origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;center&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+  &lt;/li&gt;
+  &lt;li&gt;If you want to transform around a specific point, set the transform-origin to that point. Best practice to use pixels so that older browsers can understand it.&lt;/li&gt;
+  &lt;br /&gt;
+  &lt;li&gt;Can group elements together in css by doing:
+    
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;class1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;class2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;class3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;b&gt;Ways of Applying Animations&lt;/b&gt;
+&lt;li&gt;Use the transition: 1s; property to animate a hover style change. You can also use Javascript to apply a class if you don’t wanna use the hover state. Can use @keyframes&lt;/li&gt;
+&lt;br /&gt;
+&lt;li&gt;Makes animations very easy so that you’re just declaring the default style and the end style on hover. CSS automatically animates the transition.&lt;/li&gt;
+&lt;br /&gt;
+&lt;li&gt;Create custom timing functions using cubic-bezier.com&lt;/li&gt;
+&lt;li&gt;Transition: .8s cubic-bezier(.85, .02, .3, .82);&lt;/li&gt;
+
+&lt;h3 class=&quot;post-subheader&quot;&gt;Resources&lt;/h3&gt;
+Video tutorial: &lt;a href=&quot;https://www.creativelive.com/courses/icon-design-with-sketch-peter-nowell#class-info&quot; target=&quot;_blank&quot;&gt;https://www.creativelive.com/courses/icon-design-with-sketch-peter-nowell#class-info&lt;/a&gt;&lt;br /&gt;
+Simple example: &lt;a href=&quot;https://codepen.io/pnowell/pen/wMYjZN&quot; target=&quot;_blank&quot;&gt;https://codepen.io/pnowell/pen/wMYjZN&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;b&gt;Complex examples:&lt;/b&gt;&lt;br /&gt;
+Many complex types of animations: &lt;a href=&quot;https://codepen.io/pnowell/pen/QyZVro&quot; target=&quot;_blank&quot;&gt;https://codepen.io/pnowell/pen/QyZVro&lt;/a&gt;&lt;br /&gt;
+Line drawing animations: &lt;a href=&quot;https://css-tricks.com/svg-line-animation-works/&quot; target=&quot;_blank&quot;&gt;https://css-tricks.com/svg-line-animation-works/&lt;/a&gt;&lt;br /&gt;
+Morphing: &lt;a href=&quot;http://codepen.io/chriscoyier/pen/DpFfE&quot; target=&quot;_blank&quot;&gt;http://codepen.io/chriscoyier/pen/DpFfE&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;b&gt;Tools mentioned:&lt;/b&gt;&lt;br /&gt;
+&lt;a href=&quot;cubic-bezier.com&quot; target=&quot;_blank&quot;&gt;cubic-bezier.com&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://petercollingridge.appspot.com/svg-editor&quot; target=&quot;_blank&quot;&gt;https://petercollingridge.appspot.com/svg-editor&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;b&gt;Animations in Swift&lt;/b&gt;&lt;br /&gt;
+Tangential side note: How to create a really cool Uber-style splash screen animation on iOS: &lt;a href=&quot;https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen?utm_campaign=iOS+Dev+Weekly&quot; target=&quot;_blank&quot;&gt;https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen?utm_campaign=iOS+Dev+Weekly&lt;/a&gt;
+&lt;/g&gt;&lt;/li&gt;&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 28 Aug 2016 14:46:35 -0400</pubDate>
+        <link>http://khou22.github.io/programming/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html</guid>
+        
+        <category>apps</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Swift Navigation Basics: How to Setup a Tab Bar App</title>
@@ -943,45 +1051,6 @@ I hope you found this post useful. I’m learning a lot about Xcode and especial
         
         
         <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Digital Design: The Process from Concept to iOS App</title>
-        <description>&lt;p&gt;This is my second week working at Breathometer, a startup that builds breath analysis devices to help users better understand their health. We are nearly finished with Mint — a device that measures various chemical levels in your breath to give you an overall oral hygiene report. Another device, called Slim, measures the amount of acetone in your breath and uses it as a metric to calculate the amount of fat your body is burning.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-The development stages of Mint are essentially complete, but Slim is still in the development process. As a frontend developer and designer, I’ve been assigned the role of creating the onboarding user flow. Because I’ve never had any formal training or business-level experience in design, my design process can most definitely be improved. I met with my manager and mentor today to discuss this project, and we’ve decided that the most valuable course of action for me is to go through the entire design process correctly, so that I can internalize it for the future. I’ve done some preliminary research, and the steps are as outlined below.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Low Fidelity&lt;/h3&gt;
-&lt;p&gt;In order to conceptualize and put thoughts into something tangible, I used low-fidelity designs. Low-fidelity prototyping is often the first step when designing and allows you to quickly explore ideas. According to the site, &lt;a href=&quot;https://www.usability.gov/how-to-and-tools/methods/prototyping.html&quot; target=&quot;_blank&quot;&gt;usability.gov&lt;/a&gt;, low-fidelity communicates are typically either sketches or wireframes. These are intended to lay out potential ideas to pursue while also conveying the structure and overall flow. These two stages are often considered the ideation and concept validation points in the design process.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;High Fidelity&lt;/h3&gt;
-&lt;p&gt;After many cycles of low-fidelity designs, I finally arrive at an overall idea that resonates with me. I can now take the quick, generally black and white, as well as conceptual-focused sketches and wireframes, migrating them over to what are called high-fidelity designs. The designs still evolve, but the overall motif remains largely the same. High-fidelity designs are meant to add “color” to your designs in both a literal and figurative sense. They are no long static, one-pagers. Instead, they accurately represent the entire product — every screen is generally accounted for and a functional UI is sometimes implemented. While buttons and API calls are likely not active, the general user flow and UX can be seen.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-High-fidelity designs begin in software programs like Sketch, then move to other rapid prototyping tools to gain that barebones functionality. From experience, it is very important that nearly every aspect of the design be reflected in your high-fidelity designs, at the very least in Sketch. As both a designer and software developer, it is much easier to collaborate and quickly build an MVP when all the frontend components are laid out in full view. Rather than coming up with hex values, widths, etc. on the fly, all properties should be known by the end of the high-fidelity design stage. It not only makes the engineer’s life much easier, but also the designer’s.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Visual&lt;/h3&gt;
-&lt;p&gt;Here is a chart that appropriately sums up the progression from low to high-fidelity designs in relation to functionality.&lt;br /&gt;
-&lt;img src=&quot;http://www.uxmatters.com/mt/archives/2010/05/images/wireframe_fig1.jpg&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Animations&lt;/h3&gt;
-&lt;p&gt;Animations are the final step in the digital design process. There’s many different methods in approaching animations — mainly the timing in which the designing takes place. Animations can be a part of the high-fidelity stage or simply a part of the development process. My coworker explained it to me from the lens of a developer and designer. Based on his experience, it’s easier to implement animations while he is building the app, rather than when he is designing.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Many of the complex and intriguing animated designs you see online are generated in animation software with little regard to the capabilities of the developer. This is both good and bad in the sense that it allows for free creative thinking, but it can be next to impossible to correctly build in the actual app. He recommended to me that I do the same as him. As someone who both designs and codes, it makes more sense for me to throw in the animations during the building process. It will not only save time and effort, but also ensure that I don’t design a next to impossible animation that isn’t realistic.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;Overall, design is a very complex and time-consuming process. It often seems unnecessary to go through all the steps I’ve listed above, but it’s incredibly important if you wish to design an engaging user experience. If you’re still not a believe that design is the centerpiece of anything and everything, I encourage you to watch Tony Fadell — designer of the first iPod and CEO/designer of Nest — during his Ted Talk on the &lt;a href=&quot;https://www.ted.com/talks/tony_fadell_the_first_secret_of_design_is_noticing&quot; target=&quot;_blank&quot;&gt;Secret of Design&lt;/a&gt;. Hope you enjoyed this post!&lt;/p&gt;
-</description>
-        <pubDate>Fri, 01 Jul 2016 11:34:12 -0400</pubDate>
-        <link>http://khou22.github.io/design/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/design/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html</guid>
-        
-        <category>apps</category>
-        
-        <category>ios</category>
-        
-        
-        <category>design</category>
         
       </item>
     
