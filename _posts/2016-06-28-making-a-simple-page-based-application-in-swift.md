@@ -7,7 +7,7 @@ description: "A quick tutorial on how to make a bare-bones page-based applicatio
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: programming
 tags: [ios, swift, xcode]
-featured: "yes"
+featured: "no"
 ---
 <h3 class="post-subheader">Introduction</h3>
 I’ve been starting to hunker down and learn the basics of Swift. Because my current project at work is to build an onboarding screen, there will likely be some sort of side scrolling element to it — similar to an iPhone homescreen. Because I knew no Swift-specific data structures, principles, etc. going into this, I was learning from the ground up. It was initially really challenging because I had no basic knowledge to go off of. The intent of this side project was to learn the fundamentals of Swift, especially how Views work.

@@ -7,7 +7,7 @@ description: "I programmed an app to analyze the user's text for patterns, word 
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: programming
 tags: [apps, javascript, reactjs, html, css, node-js]
-featured: "yes"
+featured: "no"
 ---
 
 A couple weeks ago I downloaded by my <a href="https://www.facebook.com/help/131112897028467/">Facebook user data</a>. By law, Facebook is required to package and send you your raw Facebook data...including every message you've ever sent.
