@@ -7,7 +7,7 @@ This is the Github repository I use to serve my Github Pages site. This is my ma
 
 I started building this site in August 2015. I had been writing apps in Java and had done some minor web development before then, but I wanted to start an entire public website from scratch. It lets me not only continue my passion for coding, but also to pursue my interests in design, photography, woodshop, etc. I am trying to teach myself Node JS, Ruby, and Angular JS so that I can better integrate these into my site.
 
-If you have any comments, suggestions, or feedback please let me know!
+If you have any comments, suggestions, or feedback please let me know via email!
 
 To do:
 <ul>
