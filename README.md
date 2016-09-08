@@ -9,7 +9,7 @@ I started building this site in August 2015. I had been writing apps in Java and
 
 If you have any comments, suggestions, or feedback please let me know via email!
 
-To do:
+Current to do:
 <ul>
   <li>Redo project portfolio page</li>
   <li>Finish contact me page</li>
