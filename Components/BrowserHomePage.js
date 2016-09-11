@@ -112,7 +112,7 @@ var App = React.createClass({ // Main parent component
     var arrayIndex = Math.round(Math.random() * max); // Random number between the specified max/min
     var imageIndex = goodImages[arrayIndex];
     var finalUrl = baseURL.replace("[number]", imageIndex); // Inject image index
-    console.log("Final URL:", finalUrl);
+    // console.log("Final URL:", finalUrl);
 
     return finalUrl; // Return the URL
   },
@@ -152,7 +152,7 @@ var WeatherBar = React.createClass({
       woeid: '',
       unit: 'f', // Units ('f' or 'c')
       success: function(weather) {
-        console.log("Retrieved weather", weather); // Feedback
+        // console.log("Retrieved weather", weather); // Feedback
 
         // Concatinate weather into string
         var final = weather; // Store as 'final'
