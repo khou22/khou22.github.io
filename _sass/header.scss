@@ -104,15 +104,16 @@ $mobile-cuttoff: 800px; // Width to decide whether a browser is mobile or deskto
   text-decoration: none;
 }
 .nav-ul .nav-li a:hover{ /*Link hover*/
-  color: #fff; /*Turn font color to white*/
-  background: $brand-blue;
+  color: $brand-red; /*Turn font color to white*/
+  // background: $brand-blue;
 }
 .nav-ul .nav-li ul.dropdown{
-  min-width: 125px; /* Set width of the dropdown */
-  background: #f2f2f2;
+  width: 100%;
+  background: white;
   display: none;
   position: absolute;
   z-index: 999;
+  text-align: center;
   left: 0;
 }
 .nav-ul .nav-li:hover ul.dropdown{

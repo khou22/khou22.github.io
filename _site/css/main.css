@@ -673,17 +673,16 @@ html[xmlns] .clearfix {
 
 .nav-ul .nav-li a:hover {
   /*Link hover*/
-  color: #fff;
-  /*Turn font color to white*/
-  background: #3286A8; }
+  color: #D5491F;
+  /*Turn font color to white*/ }
 
 .nav-ul .nav-li ul.dropdown {
-  min-width: 125px;
-  /* Set width of the dropdown */
-  background: #f2f2f2;
+  width: 100%;
+  background: white;
   display: none;
   position: absolute;
   z-index: 999;
+  text-align: center;
   left: 0; }
 
 .nav-ul .nav-li:hover ul.dropdown {
