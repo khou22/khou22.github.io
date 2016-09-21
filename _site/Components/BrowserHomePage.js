@@ -2,7 +2,7 @@ var App = React.createClass({ // Main parent component
   getInitialState: function() {
     return {
       backgroundURL: this.randomBackground(),
-      fadeTime: 50000,
+      fadeTime: 10000,
       content: [
         {
           name: "School",
