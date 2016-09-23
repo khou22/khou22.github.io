@@ -32,9 +32,19 @@ $mobile-cuttoff: 800px;
       margin-left: 10px;
       bottom: 10px;
       margin-top: 15px;
+
+      @media(max-width: $mobile-cuttoff) {
+        display: none;
+      }
     }
 
     &-ul {
+      // Header with links to blog, portfolio, etc.
+
+      @media(max-width: $mobile-cuttoff) {
+        display: none; // Don't display on mobile
+      }
+
       list-style: none;
       position: absolute; // Absolute position within header div
       bottom: 10%; // Align bottom
@@ -92,6 +102,13 @@ $mobile-cuttoff: 800px;
       margin-right: 20%;
       margin-top: 200px;
       width: 60%;
+
+      @media(max-width: $mobile-cuttoff) {
+        // Spacing updates for mobile
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 240px;
+      }
     }
   }
 }
@@ -107,6 +124,10 @@ $mobile-cuttoff: 800px;
   margin: auto;
 
   padding-top: 32px;
+  @media(max-width: $mobile-cuttoff) {
+    padding-top: 0px; // Remove padding on mobile site
+  }
+
   background-color: white;
 
   // Parallax

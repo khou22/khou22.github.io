@@ -728,9 +728,16 @@ html[xmlns] .clearfix {
 .post-subheader {
   padding-top: 3rem;
   padding-bottom: 1rem; }
+  @media (max-width: 800px) {
+    .post-subheader {
+      padding-top: 0; } }
 .post-organization {
   margin-top: 16px;
   color: black; }
+@media (max-width: 800px) {
+  .post-content {
+    padding-left: 6px;
+    padding-right: 6px; } }
 .post-content p {
   font-size: 16px; }
 
@@ -779,6 +786,9 @@ pre {
     margin-left: 10px;
     bottom: 10px;
     margin-top: 15px; }
+    @media (max-width: 800px) {
+      .blog-landing-header-logo {
+        display: none; } }
   .blog-landing-header-ul {
     list-style: none;
     position: absolute;
@@ -786,6 +796,9 @@ pre {
     right: 0;
     width: 45%;
     margin-right: 1%; }
+    @media (max-width: 800px) {
+      .blog-landing-header-ul {
+        display: none; } }
   .blog-landing-header-li {
     position: relative;
     width: 24%;
@@ -819,6 +832,11 @@ pre {
     margin-right: 20%;
     margin-top: 200px;
     width: 60%; }
+    @media (max-width: 800px) {
+      .blog-landing-page-content {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 240px; } }
 
 .blog-homepage-content {
   width: 100%;
@@ -830,6 +848,9 @@ pre {
   padding-top: 32px;
   background-color: white;
   z-index: 0; }
+  @media (max-width: 800px) {
+    .blog-homepage-content {
+      padding-top: 0px; } }
 
 .left-main {
   margin-left: 2%;

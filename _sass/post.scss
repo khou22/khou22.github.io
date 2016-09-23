@@ -61,11 +61,22 @@ $post-font-size: 16px;
   &-subheader {
     padding-top: 3rem;
     padding-bottom: 1rem;
+
+    @media(max-width: $mobile-cuttoff) {
+      padding-top: 0; // Remove top spacing
+    }
   }
 
   &-organization {
     margin-top: 16px;
     color: black;
+  }
+
+  &-content {
+    @media(max-width: $mobile-cuttoff) {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
   }
 
   // ******* Post content styling *******
