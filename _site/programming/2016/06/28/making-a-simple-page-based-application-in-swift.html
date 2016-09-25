@@ -228,13 +228,14 @@
 
     var blogPostBackButton = function() {
       var previousLink = document.referrer
-      var index = previousLink.indexOf(".html")
-      // console.log("Previous link:", previousLink);
-      // console.log(index);
+      var index = previousLink.indexOf("/blog")
+      console.log("Previous link:", previousLink);
+      console.log(index);
       if (index == -1) { // If not coming from a different blog post
-        window.history.back(); // Back in history (keeps window position)
+        // window.history.go(-1); // Back in history (keeps window position)
       } else { // Directed from a different blog post
         // console.log("Back to blog");
+        console.log("Back");
         window.location.href = "/blog";
       }
     }
