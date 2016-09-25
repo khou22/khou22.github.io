@@ -7,12 +7,6 @@ programmingProjects = [
     description: "An iOS app to call Ubers ahead of time or on a recurring schedule. I was the frontend engineer and designer. We built this at a hackathon and won 1st place overall."
   },
   {
-    name: "Execute Order 66",
-    slug: "Execute-Order-66",
-    image: "",
-    description: "A Google Chrome Extension that cleanses the profanity out of your GitHub repos."
-  },
-  {
     name: "Text Analysis",
     slug: "text-analysis",
     image: "",
@@ -83,5 +77,11 @@ programmingProjects = [
     slug: "wood-club",
     image: "",
     description: "The birth and evolution of Wood Club - a club I lead at my high school"
-  }
+  },
+  // {
+  //   name: "Execute Order 66",
+  //   slug: "Execute-Order-66",
+  //   image: "",
+  //   description: "A Google Chrome Extension that cleanses the profanity out of your GitHub repos."
+  // }
 ]
