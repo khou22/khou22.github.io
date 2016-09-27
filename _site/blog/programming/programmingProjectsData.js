@@ -90,12 +90,6 @@ programmingProjects = [
     image: "",
     description: "Some wallpapers I designed from the ground up. Mutliple versions for multiple different devices."
   },
-  // {
-  //   name: "Wood Club",
-  //   slug: "wood-club",
-  //   image: "",
-  //   description: "The birth and evolution of Wood Club - a club I lead at my high school"
-  // },
   {
     name: "Execute Order 66",
     slug: "https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone?hl=en-US",
