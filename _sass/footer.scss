@@ -13,14 +13,15 @@
 .external {
   &-bar {
     margin: auto;
-    width: 100%;
   }
 
   &-td {
+    display: inline-block; // Allow to go two rows on mobile
+
     /*border: 1px solid black;*/
     border-radius: 19px;
-    margin-left: 15px;
-    margin-right: 15px;
+    padding-left: 17px;
+    padding-right: 17px;
   }
 
   &-link-box {
