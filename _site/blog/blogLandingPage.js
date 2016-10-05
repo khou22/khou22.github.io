@@ -14,9 +14,9 @@ $(document).ready(function() {
           if (currentClass.styleElement == "background-color-opacity") { // If modifying background color opacity
             $(currentClass.className).css("background-color", "rgba(255, 255, 255, " + dynamicStyle + ")") // Apply
           } else if (currentClass.styleElement == "header-link-color") { // If modifying header link color
-            console.log("Modifying header link color");
-            var styleString = "rgba(" + dynamicStyle + ", " + dynamicStyle + ", " + dynamicStyle + ", 1)";
-            console.log(styleString);
+            // console.log("Modifying header link color");
+            // var styleString = "rgba(" + dynamicStyle + ", " + dynamicStyle + ", " + dynamicStyle + ", 1)";
+            // console.log(styleString);
             $(currentClass.className).css("color", styleString) // Apply
           } else {
             $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
@@ -107,7 +107,7 @@ $(document).ready(function() {
       }
     } else {
       // If on mobile
-      console.log("Your screen size does not support dynamic header");
+      // console.log("Your screen size does not support dynamic header");
     }
   });
 })
