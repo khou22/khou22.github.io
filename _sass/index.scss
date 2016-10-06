@@ -107,9 +107,44 @@ $mobile-cuttoff: 800px;
         // Spacing updates for mobile
         width: 90%;
         margin-left: 5%;
-        margin-top: 240px;
+        margin-top: 280px;
       }
     }
+  }
+}
+
+.mobile-blog-landing-header {
+  position: fixed;
+  z-index: 10; // Above everything else
+  height: 40px;
+  padding: 4px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+
+  &-ul {
+    list-style: none;
+    float: left;
+    width: 100%;
+  }
+
+  &-li {
+    display: inline-block;
+    padding-top: 4px;
+
+    &-logo {
+      display: inline-block;
+    }
+  }
+
+  &-logo {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media(min-width: $mobile-cuttoff) {
+  .mobile-blog-landing-header {
+    display: none;
   }
 }
 
