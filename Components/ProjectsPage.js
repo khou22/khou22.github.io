@@ -42,8 +42,8 @@ var ProjectsList = React.createClass({
           </tr>
         )
       });
-      console.log(index, numPerRow)
-      console.log(index % numPerRow);
+      // console.log(index, numPerRow)
+      // console.log(index % numPerRow);
       // if (index % numPerRow == 0) { // The first one in each row
       //   // Start a new row
       //   console.log("New row at", data.name)
@@ -61,7 +61,7 @@ var ProjectsList = React.createClass({
     });
     return (
       <div>
-        <i>My wood projects are unlisted and can be found on my <a href="http://kevinhou.wix.com/projects">Project Portfolio</a>
+        <i>Additional projects can be found on my <a href="http://kevinhou.wix.com/projects">Project Portfolio</a>
           , <a href="https://www.flickr.com/photos/khou22/albums">Flickr</a>
           , <a href="https://youtube.com/kevinhou22">YouTube</a>
           , <a href="https://www.linkedin.com/in/kevinhou22">LinkedIn</a>, etc.
