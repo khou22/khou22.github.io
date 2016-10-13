@@ -13,7 +13,7 @@ programmingProjects = [
     description: "Freelance work for a friend of mine. I designed and built a website for his new personal training business, City Strong Training."
   },
   {
-    name: "Website on East Asian Steryeotypes",
+    name: "Website on East Asian Stereotypes",
     slug: "{{ site.baseurl }}/school/east-asian-relations",
     image: "",
     description: "This is a website I built from scratch for my East Asian Relations class. I was responsible for putting content online so that members of our school community could see the work we'd done that year. Because I only had a couple days to complete it, I wasn't able to add as many features as I would've liked."
@@ -82,7 +82,7 @@ programmingProjects = [
     name: "Hollywood's Portrayal of Africa",
     slug: "{{ site.baseurl }}/school/postcolonial-africa/",
     image: "",
-    description: "A website I made to highlight the steryeotypes and microaggressions present in Hollywood films towards Africa. It was an interesting topic that isn't often thought about."
+    description: "A website I made to highlight the stereotypes and microaggressions present in Hollywood films towards Africa. It was an interesting topic that isn't often thought about."
   },
   {
     name: "Self-Designed Wallpapers",
