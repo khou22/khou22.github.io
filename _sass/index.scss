@@ -113,7 +113,7 @@ $mobile-cuttoff: 800px;
   }
 }
 
-.mobile-blog-landing-header {
+.mobile-blog-header {
   position: fixed;
   z-index: 10; // Above everything else
   height: 40px;
@@ -140,10 +140,20 @@ $mobile-cuttoff: 800px;
     width: 30px;
     height: 30px;
   }
+
+  &-placeholder {
+    position: relative;
+    width: 100%;
+    height: 40px;
+  }
 }
 
 @media(min-width: $mobile-cuttoff) {
-  .mobile-blog-landing-header {
+  .mobile-blog-header {
+    display: none;
+  }
+
+  .mobile-blog-header-placeholder {
     display: none;
   }
 }

@@ -838,28 +838,35 @@ pre {
         margin-left: 5%;
         margin-top: 280px; } }
 
-.mobile-blog-landing-header {
+.mobile-blog-header {
   position: fixed;
   z-index: 10;
   height: 40px;
   padding: 4px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.75); }
-  .mobile-blog-landing-header-ul {
+  .mobile-blog-header-ul {
     list-style: none;
     float: left;
     width: 100%; }
-  .mobile-blog-landing-header-li {
+  .mobile-blog-header-li {
     display: inline-block;
     padding-top: 4px; }
-    .mobile-blog-landing-header-li-logo {
+    .mobile-blog-header-li-logo {
       display: inline-block; }
-  .mobile-blog-landing-header-logo {
+  .mobile-blog-header-logo {
     width: 30px;
     height: 30px; }
+  .mobile-blog-header-placeholder {
+    position: relative;
+    width: 100%;
+    height: 40px; }
 
 @media (min-width: 800px) {
-  .mobile-blog-landing-header {
+  .mobile-blog-header {
+    display: none; }
+
+  .mobile-blog-header-placeholder {
     display: none; } }
 .blog-homepage-content {
   width: 100%;
