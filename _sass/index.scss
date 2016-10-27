@@ -11,8 +11,7 @@ $mobile-cuttoff: 800px;
 
 // The entire page
 .blog-homepage {
-  perspective: 2px;
-  transform-style: preserve-3d;
+
 }
 
 // Blog landing page - first half
@@ -89,6 +88,12 @@ $mobile-cuttoff: 800px;
     // Parallax
     z-index: -2; // Behind other content
     transform-origin: center 100%;
+
+    // Mobile
+    @media(max-width: $mobile-cuttoff) {
+      top: 0px;
+      height: 105vh;
+    }
 
     &-filter {
       width: 100vw;
@@ -170,7 +175,7 @@ $mobile-cuttoff: 800px;
 
   padding-top: 32px;
   @media(max-width: $mobile-cuttoff) {
-    padding-top: 0px; // Remove padding on mobile site
+    padding-top: 20px; // Remove padding on mobile site
   }
 
   background-color: white;

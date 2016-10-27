@@ -769,10 +769,6 @@ pre {
 
 /*For the index blog page*/
 /*This is the blog homepage*/
-.blog-homepage {
-  perspective: 2px;
-  transform-style: preserve-3d; }
-
 .blog-landing-header {
   position: absolute;
   z-index: 1;
@@ -822,6 +818,10 @@ pre {
   margin-bottom: -webkit-calc(-80px + 24px);
   z-index: -2;
   transform-origin: center 100%; }
+  @media (max-width: 800px) {
+    .blog-landing-page {
+      top: 0px;
+      height: 105vh; } }
   .blog-landing-page-filter {
     width: 100vw;
     height: 100vh;
@@ -880,7 +880,7 @@ pre {
   z-index: 0; }
   @media (max-width: 800px) {
     .blog-homepage-content {
-      padding-top: 0px; } }
+      padding-top: 20px; } }
 
 .left-main {
   margin-left: 2%;
