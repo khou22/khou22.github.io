@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Articles by tag: swift</title>
-  <meta name="description" content="A blog about programming, wood, and anything that comes to my mind. Enjoy.
-">
+  <title>Swift Core Data Basics: Storing App Data</title>
+  <meta name="description" content="">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -19,7 +18,7 @@
 
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/tag/swift/">
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/10/31/swift-core-data-basics-storing-app-data.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -189,225 +188,154 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <header id="post-header">
-    <h1 id="post-title">swift</h1>
-    <h4 id="post-subtitle">Articles by tag</h4>
-</header>
+        <!-- Hide scrollbar on this page -->
+<style> ::-webkit-scrollbar { display: none; } </style>
 
-<div id="post-content">
+<div class="post">
+  
+
+    
+      
+    
+
     
         
+        
+          
             
-            
-                <h3>2016</h3><div class="list-group">
-            
-
-            
-
-            <a href="/programming/2016/10/31/swift-core-data-basics-storing-app-data.html">
-                <h4>Swift Core Data Basics: Storing App Data</h4>
-            </a>
-
+                
+                
             
         
-            
-            
-
+          
             
                 
                 
-                
-            
-
-            <a href="/programming/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html">
-                <h4>Swift Navigation Basics: How to Setup a Tab Bar App</h4>
-            </a>
-
             
         
-            
-            
-
+          
             
                 
                 
-                
-            
-
-            <a href="/programming/2016/08/03/swift-tips-and-tricks-august-2016-app-navigation-and-dates.html">
-                <h4>Swift Tips and Tricks August 2016: App Navigation and Dates</h4>
-            </a>
-
             
         
-            
-            
-
+          
             
                 
                 
-                
-            
-
-            <a href="/programming/2016/07/26/swift-segmented-control-basics-how-to-setup-and-utilize-segmented-controls.html">
-                <h4>Swift Segmented Control Basics: How to Setup and Utilize Segmented Controls</h4>
-            </a>
-
-            
-        
-            
-            
-
-            
-                
-                
-                
-            
-
-            <a href="/programming/2016/07/25/persist-data-storing-values-locally-using-swift.html">
-                <h4>Persist Data: Storing Values Locally Using Swift</h4>
-            </a>
-
-            
-        
-            
-            
-
-            
-                
-                
-                
-            
-
-            <a href="/programming/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html">
-                <h4>Swift TableView Basics: How to Create and Populate Tables</h4>
-            </a>
-
-            
-        
-            
-            
-
-            
-                
-                
-                
-            
-
-            <a href="/programming/2016/07/22/introduction-to-healthkit-reading-steps-weight-height-and-more.html">
-                <h4>Introduction to HealthKit: Reading Steps, Weight, Height, and More</h4>
-            </a>
-
-            
-        
-            
-            
-
-            
-                
-                
-                
-            
-
-            <a href="/programming/2016/07/20/xcode-best-practices-july-2016-troubleshooting-pull-requests-and-more.html">
-                <h4>Xcode Best Practices July 2016: Troubleshooting, Pull Requests, Cocoapods, and More</h4>
-            </a>
-
-            
-        
-            
-            
-
-            
-                
-                
-                
-            
-
-            <a href="/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html">
-                <h4>Swift Tips and Tricks July 2016: Extensions, Structures, and Outlet Collections</h4>
-            </a>
-
-            
-        
-            
-            
-
-            
-                
-                
-                
-            
-
-            <a href="/programming/2016/07/01/wwdc-2015-mysteries-of-auto-layout.html">
-                <h4>WWDC 2015: Mysteries of Auto Layout</h4>
-            </a>
-
-            
-        
-            
-            
-
-            
-                
-                
-                
-            
-
-            <a href="/programming/2016/06/29/wwdc-2016-advances-in-uikit-animations-and-transitions.html">
-                <h4>WWDC 2016: Advances in UIKit Animations and Transitions</h4>
-            </a>
-
-            
-        
-            
-            
-
-            
-                
-                
-                
-            
-
-            <a href="/programming/2016/06/28/making-a-simple-page-based-application-in-swift.html">
-                <h4>Making a Simple Page Based Application in Swift</h4>
-            </a>
-
-            
-        
-            
-            
-
-            
-                
-                
-                
-            
-
-            <a href="/programming/2016/06/22/wwdc-2016-internationalization-best-practices.html">
-                <h4>WWDC 2016: Internationalization Best Practices</h4>
-            </a>
-
-            
-        
-            
-            
-
-            
-                
-                
-                
-            
-
-            <a href="/programming/2016/06/20/internationalizing-your-ios-app-in-xcode-7.html">
-                <h4>Internationalizing Your iOS App in Xcode 7</h4>
-            </a>
-
-            
-                </div>
             
         
     
+
+    
+      
+          
+            
+                
+                
+            
+        
+    
+  <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
+    <div class="post-header-content">
+      <a onclick="blogPostBackButton()"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title post-header-title">Swift Core Data Basics: Storing App Data</h1>
+      <h4 class="post-header-description">A basic overview of Core Data in Swift and Xcode featuring a short example to help you get started.</h4>
+      <p class="post-header-meta">Oct 31, 2016 • Kevin Hou</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+    var blogPostBackButton = function() {
+      var previousLink = document.referrer
+      var index = previousLink.indexOf("/blog")
+      console.log("Previous link:", previousLink);
+      console.log(index);
+      if (index == 1) { // If not coming from a different blog post
+        window.history.go(-1); // Back in history (keeps window position)
+      } else { // Directed from a different blog post
+        // console.log("Back to blog");
+        console.log("Back");
+        window.location.href = "/blog";
+      }
+    }
+
+  </script>
+
+  <article class="post-content">
+    <p>Core Data is an important component of many complex apps. An app’s lifecycle is a complicated topic, but data management can be articulated as such: When you kill an app (or shut down your phone), any data that isn’t designed to persist between sessions will be deleted. The solution is to either use persist data with NSUserDefaults or by using Apple’s Core Data. Again, Core Data is another incredibly complex topic, but this blog post should give you the necessary tools to start using it.
+<br class="post-line-break" /></p>
+<h3 class="post-subheader">Setting Up Core Data</h3>
+<p>First, create a page based application and check the Core Data options. This will initialize a Core Data stack in the AppDelegate.swift file as well as create a .xcdatamodeld file in your project’s parent folder. The heart of Core Data lives in this .xcdatamodeld file. Selecting the file will expose a powerful Xcode editor for creating entity types that you can use to store data between app sessions. You can double click the entity name to change its label and add attributes, relationships, and fetched properties. Here’s an overview of these three vocabulary words:<br />
+<b>Entity</b> — specifies the name of the things you are creating. If you are creating a Core Data structure to store different people, the entity would be “People”<br />
+<b>Attributes</b> — defines characteristics of an entity. If you again use the analogy of people, the attributes would be age, birthdate, etc.<br />
+<b>Relationships</b> — connections between multiple entities. They can be “to-many” or “to-one.” For example, an employer would have a “to-many” relationship with his or her employees whereas an employer would have a “to-one” relationship with his/her boss.<br />
+<br class="post-line-break" />
+The Core Data editor is relatively intuitive. Create an entity by pressing the “Add Entity” button in the bottom left and add attributes and relationships using the corresponding plus buttons. Like objects and classes, the entity name is uppercase whereas attributes are camel case.
+<br class="post-line-break" /></p>
+<h3 class="post-subheader">Saving to Core Data</h3>
+<p>Import the CoreData module in whichever file your view controller lives in. Core Data objects are returned as a variety of object types, but the most basic is a “NSManagedObject.” Below is an example of how you would retrieve Core Data:</p>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">// Entity: “Person”</span>
+<span class="c1">// Attribute: “name”</span>
+<span class="k">var</span> <span class="n">people</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSManagedObject</span><span class="p">]()</span>
+<span class="k">let</span> <span class="n">person</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="k">let</span> <span class="n">name</span> <span class="o">=</span> <span class="n">person</span><span class="p">.</span><span class="n">valueForKey</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">)</span> <span class="kt">as</span><span class="o">?</span> <span class="n">String</span> <span class="c1">// Xcode doesn’t know what type the value is</span></code></pre></div>
+
+<p><br class="post-line-break" /></p>
+<h3 class="post-subheader">Writing to Core Data</h3>
+<p>This function is how to save a “name” String attribute to an entity, “Person.”</p>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="nf">saveName</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">let</span> <span class="n">appDelegate</span> <span class="o">=</span> <span class="bp">UIApplication</span><span class="p">.</span><span class="n">sharedApplication</span><span class="p">().</span><span class="n">delegate</span> <span class="kt">as</span><span class="o">!</span> <span class="n">AppDelegate</span> <span class="c1">// Access the app delegate in order to save to Core Data</span>
+  <span class="k">let</span> <span class="n">managedContext</span> <span class="o">=</span> <span class="n">appDelegate</span><span class="p">.</span><span class="n">managedObjectContext</span> <span class="c1">// Get managed object context</span>
+
+  <span class="k">let</span> <span class="n">entity</span> <span class="o">=</span> <span class="bp">NSEntityDescription</span><span class="p">.</span><span class="n">entityForName</span><span class="p">(</span><span class="s">&quot;Person&quot;</span><span class="p">,</span> <span class="nl">inManagedObjectContext</span><span class="p">:</span> <span class="n">managedContext</span><span class="p">)</span> <span class="c1">// Identify the entity</span>
+
+  <span class="c1">// Create a new instance of Core Data and store temporary on the managedContext</span>
+  <span class="k">let</span> <span class="n">person</span> <span class="o">=</span> <span class="bp">NSManagedObject</span><span class="p">(</span><span class="nl">entity</span><span class="p">:</span> <span class="n">entity</span><span class="o">!</span><span class="p">,</span> <span class="nl">insertIntoManagedObjectContext</span><span class="p">:</span> <span class="n">managedContext</span><span class="p">)</span>
+
+  <span class="n">person</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nl">forKey</span><span class="p">:</span> <span class="s">&quot;name&quot;</span><span class="p">)</span> <span class="c1">// Set an attribute</span>
+
+  <span class="k">do</span> <span class="p">{</span>
+      <span class="n">try</span> <span class="n">managedContext</span><span class="p">.</span><span class="n">save</span><span class="p">()</span> <span class="c1">// Save the temporary data to Core Data</span>
+      <span class="n">people</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">person</span><span class="p">)</span> <span class="c1">// Also add to local data so don&#39;t have to be constantly reading Core Data</span>
+  <span class="p">}</span> <span class="n">catch</span> <span class="k">let</span> <span class="n">error</span> <span class="kt">as</span> <span class="bp">NSError</span> <span class="p">{</span>
+      <span class="n">print</span><span class="p">(</span><span class="s">&quot;Could not save \(error), \(error.userInfo)&quot;</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p><br class="post-line-break" /></p>
+<h3 class="post-subheader">Reading Core Data</h3>
+
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">appDelegate</span> <span class="o">=</span> <span class="bp">UIApplication</span><span class="p">.</span><span class="n">sharedApplication</span><span class="p">().</span><span class="n">delegate</span> <span class="kt">as</span><span class="o">!</span> <span class="n">AppDelegate</span> <span class="c1">// Get App Delegate</span>
+<span class="k">let</span> <span class="n">managedContext</span> <span class="o">=</span> <span class="n">appDelegate</span><span class="p">.</span><span class="n">managedObjectContext</span> <span class="c1">// Get the managed object context</span>
+
+<span class="k">let</span> <span class="n">fetchRequest</span> <span class="o">=</span> <span class="bp">NSFetchRequest</span><span class="p">(</span><span class="nl">entityName</span><span class="p">:</span> <span class="s">&quot;Person&quot;</span><span class="p">)</span> <span class="c1">// Get the entity objects from Core Data</span>
+
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">results</span> <span class="o">=</span> <span class="n">try</span> <span class="n">managedContext</span><span class="p">.</span><span class="n">executeFetchRequest</span><span class="p">(</span><span class="n">fetchRequest</span><span class="p">)</span> <span class="c1">// Fetch results</span>
+    <span class="n">people</span> <span class="o">=</span> <span class="n">results</span> <span class="kt">as</span><span class="o">!</span> <span class="p">[</span><span class="bp">NSManagedObject</span><span class="p">]</span> <span class="c1">// Store locally</span>
+<span class="p">}</span> <span class="n">catch</span> <span class="k">let</span> <span class="n">error</span> <span class="kt">as</span> <span class="bp">NSError</span> <span class="p">{</span> <span class="c1">// Catch errors</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">&quot;Could not fetch \(error), \(error.userInfo)&quot;</span><span class="p">)</span>
+<span class="p">}</span></code></pre></div>
+
+<p><br class="post-line-break" />
+Those are the basics to Core Data! This is obviously a very simple example, but it’s integral to anyone learning to build iOS apps.</p>
+
+    <div class="post-organization">
+      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/ios/">iOS</a>, <a href="/blog/tag/swift/">Swift</a>, <a href="/blog/tag/apps/">Apps</a>, <a href="/blog/tag/xcode/">Xcode</a></p>
+    </div>
+  </article>
 </div>
 
       </div>
