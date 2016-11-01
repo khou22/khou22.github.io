@@ -13,6 +13,5 @@ Current to do:
 <ul>
   <li>Redo project portfolio page</li>
   <li>Finish contact me page</li>
-  <li>Redesign and rebuild blog front end </li>
   <li>Port over portfolio content from Wix website</li>
 </ul>
