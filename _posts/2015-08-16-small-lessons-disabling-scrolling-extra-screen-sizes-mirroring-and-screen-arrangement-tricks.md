@@ -3,7 +3,7 @@ layout: post
 title: "Small Lessons: Disabling Scrolling, Extra Screen Sizes, Mirroring and Screen Arrangement Tricks"
 author: "Kevin Hou"
 date: 2015-08-16 11:29:33
-description: ""
+description: "Quick tips, tricks, and features for developers both from a technical standpoint and productivity standpoint."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: programming
 tags: [css, osx]
