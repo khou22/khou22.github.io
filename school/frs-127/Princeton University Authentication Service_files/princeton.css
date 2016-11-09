@@ -1,0 +1,303 @@
+span.error {font-size: larger;
+        font-weight: bold;
+        color: red !important;
+}
+
+span.error a {
+         text-decoration : underline;
+        font-size: larger;
+        color: red !important;
+}
+
+body  {
+    font: 11px/18px georgia, palatino, helvetica, serif;
+    margin-bottom:0;
+    margin-left:0;
+    margin-right:0;
+    margin-top:0;
+    background-color:#FFFFFF;
+    color:#000000;
+    text-align:center;
+    vertical-align: bottom;
+      }
+
+a:hover  {color:#669933;
+         }
+a  {text-decoration:none;
+    font-family: verdana, helvetica, san-serif;
+    font-weight : bold;
+    text-decoration : none;
+   }
+ 
+a:link  {font-weight : bold; 
+         text-decoration : none;
+         color:#000000;
+        }
+a:visited  {font-weight : bold; 
+            text-decoration : none;
+            color:#000000;
+           }
+
+a:active {font-weight : bold; 
+          text-decoration : underline overline; 
+         }
+blockquote  {font: 11px/18px verdana, helvetica, san-serif;
+            } 
+
+dl {margin-top: 0;
+    margin-bottom: 15px;
+   }
+dt {font: 11px/18px georgia, palatino, helvetica, serif;
+   }
+dd {font: 11px/18px georgia, palatino, helvetica, serif;
+   }
+        
+h4    {font: normal 18px verdana, helvetica, sans-serif;
+     margin-bottom: 0;
+     color: #336699;
+     background: transparent;
+    }
+
+H5  {font : bold 12px verdana, helvetica, san-serif; 
+     color : #000066; 
+    }
+p  {font: 11px/18px  verdana, helvetica, san-serif;
+   }
+
+ul  {font: 11px/18px verdana, helvetica, san-serif;
+    }
+ol  {font: 11px/18px verdana, helvetica, san-serif;
+    }
+u  {font: 11px/18px verdana, helvetica, san-serif;
+   }
+td {
+    font-family: verdana, helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.errorMessage
+   {
+    font : bold 12px verdana, helvetica, san-serif;
+    color : #FF0000;
+   }    
+.alertMessage
+   {
+    font : bold 12px verdana, helvetica, san-serif;
+    color : #FF0000;
+   }       
+
+
+/* ### # ##  ##  ### ## ## # #  # */
+/* added by mstandev 09/17/2008 for the redesign */
+/* #  ## # # # # ### # # #   ## # */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Lucida Grande", "Bitstream Vera Sans", Arial, sans-serif;
+    font-size: medium;
+    line-height: 1.3em;
+    font-weight: normal;
+    background: #fff;
+    color: #333;
+    text-align: center;
+}
+a:link, a:active, a:visited {
+    color: #ee7f2d;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:link img, a:active img, a:visited img, a:hover img {
+    border: none;
+}
+a:hover {
+    color: #333;
+}
+#toolbarcontainer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#toolbarcontainer, #footercontainer {
+    width: 575px;
+    text-align: left;
+    margin: 0 auto;
+}
+#contentcontainer
+{
+    width: 582px;
+    text-align: left;
+    margin: 0 auto;
+}
+#content
+{
+    margin: 30px;
+}
+
+#toolbar {
+    display: block;
+    }
+    
+#headercontainer {
+    /*background-color:#f60;*/
+    background-color:#ee7f2d;
+    height: 77px;
+    margin-bottom: 5px;
+}    
+#header {
+ width: 575px;
+ text-align: left;
+ margin: 0 auto;
+ /*background-color:#f60;*/
+ padding-top: 25px;
+ /*padding-left: 8px;*/
+ padding-bottom:22px;
+}
+
+#help {
+    margin-left: 340px;
+}
+.block {
+    display:block;
+    padding-left: 5px;
+    margin-top: 3px;
+    margin-bottom: 7px;
+}
+.title {
+    display: block;
+    width: 100px;
+    float: left;
+    padding-left: 50px;
+    padding-top: 4px;
+    margin-top: 5px;
+    clear: left;
+}
+.title input {
+    padding: 5px;
+}
+.title b {
+/* float:right;*/
+ padding-right:5px;
+ }
+
+#password, #username {
+    padding-top: 4px;
+    margin-top: 5px;
+    font-size: 100%;
+}
+#warn {
+    margin-top: 10px;
+}
+.right {
+    float: right;
+    padding-right: 50px;
+}
+.topRight {
+    float: right;
+    padding: 20px;
+	padding-top:0px;
+	padding-left:0px;
+	padding-bottom:0px;
+}
+.errorBlock {
+    display: block;
+    padding-bottom:5px;
+    /*margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 75%;*/
+    height: 30px;
+    text-align:center;
+    /*width: 470px;*/
+    color: red;
+}
+.wide {
+    display: block;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-size: 75%;
+    text-align:center;
+    /*width: 470px;*/
+}
+.login {
+    /*margin-bottom: 35px;*/
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    font-size: 75%;
+    text-align:center;
+}
+.box {
+    border-top: #999 solid 1px;
+/*    border-bottom: #999 solid 1px;*/
+    font-size: 80%;
+    padding-top: 15px;
+/*    padding-bottom: 15px;*/
+    padding-bottom: 15px;
+    text-align:right;
+    padding-right: 8px;
+/*    margin-bottom: 20px;*/
+}
+#footer
+{
+    clear: both;
+    float: left;
+    width: 100%;
+    background: #FFF;
+    margin-top: 1.5em;
+    /*border-top: 1px solid #CCC;*/
+    font-size: 75%;
+    padding: 0;
+}
+#footer ul
+{
+    float: left;
+    list-style: none;
+    padding: 5px 0;
+}
+#footer li
+{
+    float: left;
+    padding-right: 10px;
+}
+#footer a
+{
+    color: #ee7f2d;
+    text-decoration: none;
+}
+#footer a:hover
+{
+    color: #FC0;
+    text-decoration: underline;
+}
+#footer img
+{
+    border: none;
+}
+.alertMessage
+   {
+    font-size: 110%;
+    color: #3333;
+   }
+
+#borderContainer
+{
+    width: 583px;
+    text-align: left;
+    margin: 0 auto;
+    border:#cccccc thin solid;
+}
+
+#casTitle
+{
+    background-color:#ee7f2d;
+    color:#FFFFFF; 
+    font-size:28px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    /*font-weight:bold;*/
+    text-align:center;
+    letter-spacing: 4px;
+}
+
