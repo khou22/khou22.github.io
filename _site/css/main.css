@@ -965,6 +965,8 @@ pre {
   width: 90%;
   margin: auto;
   margin-top: 12px; }
+.project-title {
+  margin-top: 8px !important; }
 .project-hr {
   border-color: #9DB7C1 !important; }
 
