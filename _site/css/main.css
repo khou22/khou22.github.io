@@ -970,6 +970,9 @@ pre {
 .project-hr {
   border-color: #9DB7C1 !important; }
 
+.project-main {
+  padding: 12px; }
+
 /*TA is text-analysis for short*/
 .TA-header {
   color: #3286A8;
