@@ -95,5 +95,11 @@ programmingProjects = [
     slug: "https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone?hl=en-US",
     image: "#",
     description: "A Google Chrome Extension that cleanses the profanity out of your GitHub repos."
+  },
+  {
+    name: "Random Number Assignment",
+    slug: "random-number-assignment",
+    image: "#",
+    description: "Assigns a random number to inputted elements."
   }
 ]
