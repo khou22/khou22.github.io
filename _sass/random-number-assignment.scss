@@ -1,0 +1,22 @@
+.rna {
+  &-textarea-input {
+    width: 100%;
+    height: 100px;
+  }
+
+  &-element-node {
+    // Display two per line
+    width: 50%;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 40px;
+
+    // Move right
+    padding-left: 24px;
+  }
+
+  &-element-results {
+    margin: 4%;
+    width: 92%;
+  }
+}

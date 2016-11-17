@@ -1114,3 +1114,16 @@ pre {
   margin: 5%;
   border: 1px solid black;
   padding: 2%; }
+
+.rna-textarea-input {
+  width: 100%;
+  height: 100px; }
+.rna-element-node {
+  width: 50%;
+  display: inline-block;
+  font-size: 24px;
+  line-height: 40px;
+  padding-left: 24px; }
+.rna-element-results {
+  margin: 4%;
+  width: 92%; }
