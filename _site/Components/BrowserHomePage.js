@@ -123,6 +123,17 @@ var App = React.createClass({ // Main parent component
   },
   render: function() {
 
+    // Without buttons
+    return (
+      <div>
+        <Background backgroundURL = {this.state.backgroundURL} />
+        <WeatherBar />
+        <WelcomeBar />
+        <ProfilePicture />
+      </div>
+    )
+
+    // With button
     return (
       <div>
         <Background backgroundURL = {this.state.backgroundURL} />
