@@ -159,7 +159,7 @@ var WeatherBar = React.createClass({
     var parentComponenet = this; // Store the parent component so that can access in jquery function
     $.simpleWeather({ // Call library function
       // Documentation: http://simpleweatherjs.com/
-      location: 'San Francisco, CA',
+      location: 'Princeton, NJ',
       woeid: '',
       unit: 'f', // Units ('f' or 'c')
       success: function(weather) {
