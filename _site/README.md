@@ -13,5 +13,5 @@ Current to do list:
 <ul>
   <li>Redo project portfolio page</li>
   <li>Finish contact me page</li>
-  <li>Port over portfolio content from Wix website</li>
+  <li>Port over portfolio content from Wix website for woodshop</li>
 </ul>
