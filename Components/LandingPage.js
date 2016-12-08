@@ -306,7 +306,8 @@ var ProfileBox = React.createClass({
   redirect: function(page) {
     switch (page) {
       case "wood":
-        window.open("https://kevinhou.wix.com/projects#!wood/c1han", '_blank);'); // Wix projects page
+        // window.open("https://kevinhou.wix.com/projects#!wood/c1han", '_blank);'); // Wix projects page
+        window.open("https://www.flickr.com/photos/khou22/albums", '_blank);'); // Wix projects page
         break;
       case "blog":
         location.href="/blog";
