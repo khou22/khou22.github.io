@@ -225,7 +225,7 @@ var ProfilePicture = React.createClass({
         <div className="profile-text">
           Kevin Hou
           <br />
-          Lick-Wilmerding &#39;16
+          Princeton University &#39;20
         </div>
       </div>
     )
