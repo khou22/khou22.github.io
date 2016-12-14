@@ -1,6 +1,12 @@
 console.log("Loaded design projects");
 programmingProjects = [
   {
+    name: "Princeton Tonight Website",
+    slug: "http://princetontonight.com",
+    image: "",
+    description: "I designed and built Princeton Tonight's website to showcase episodes and upcoming events as well as an email subsription service. Founded in 2015, we are the only student TV production show on Princeton's campus and have hosted guests ranging from Art Garfunkel and Mike Houston to Mike Delguidice and Dave Coulier."
+  },
+  {
     name: "Uber Scheduler",
     slug: "Uber-Scheduler",
     image: "",
@@ -32,7 +38,7 @@ programmingProjects = [
   },
   {
     name: "Self-Designed Wallpapers",
-    slug: "{{ site.baseurl }}/blog/wallpapers/",
+    slug: "https://www.flickr.com/photos/khou22/albums/72157660360556320",
     image: "",
     description: "Some wallpapers I designed from the ground up. Mutliple versions for multiple different devices."
   }
