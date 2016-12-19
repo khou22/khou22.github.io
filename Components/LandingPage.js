@@ -258,6 +258,15 @@ var LandingPage = React.createClass({
 });
 
 var NotificationBar = React.createClass({
+  clickedNotification: function() {
+    var message = this.props.notificationData.message;
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Landing Page Notification',
+      eventAction: 'click',
+      eventLabel: message
+    });
+  },
   render: function() {
     var message = this.props.notificationData.message;
     var iconClass = ""; // Using bootstrap glyphicons
@@ -289,11 +298,21 @@ var NotificationBar = React.createClass({
 })
 
 var ProjectInfo = React.createClass({
+  clickedProject: function() {
+    var projectLink = this.props.projectData.link;
+    var projectName = this.props.projectData.name;
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Landing Page Project Select',
+      eventAction: 'click',
+      eventLabel: projectName
+    });
+    window.open(projectLink); // Open in new window
+  },
   render: function() {
     var projectName = this.props.projectData.name;
-    var projectLink = this.props.projectData.link;
     return (
-      <a href={projectLink} target="_blank" title="See more about this background">
+      <a onClick={this.clickedProject.bind(this)} title="See more about this background">
         <div className="landing-project-info">
           {projectName}
         </div>
@@ -307,12 +326,30 @@ var ProfileBox = React.createClass({
     switch (page) {
       case "wood":
         // window.open("https://kevinhou.wix.com/projects#!wood/c1han", '_blank);'); // Wix projects page
-        window.open("https://www.flickr.com/photos/khou22/albums", '_blank);'); // Wix projects page
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Landing Page Tab Select',
+          eventAction: 'click',
+          eventLabel: 'Wood Tab'
+        });
+        window.open("https://www.flickr.com/photos/khou22/albums", '_blank);'); // Flickr projects page
         break;
       case "blog":
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Landing Page Tab Select',
+          eventAction: 'click',
+          eventLabel: 'Blog Tab'
+        });
         location.href="/blog";
         break;
       case "programming":
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Landing Page Tab Select',
+          eventAction: 'click',
+          eventLabel: 'Programming Tab'
+        });
         location.href="/blog/programming"; // Project page on website
         // window.open("http://kevinhou.wix.com/projects#!woodprojects/ckra", '_blank);'); // Wix projects page
         break;
