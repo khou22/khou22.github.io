@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 29 Dec 2016 00:20:56 -0800</pubDate>
-    <lastBuildDate>Thu, 29 Dec 2016 00:20:56 -0800</lastBuildDate>
+    <pubDate>Sun, 01 Jan 2017 23:31:07 -0800</pubDate>
+    <lastBuildDate>Sun, 01 Jan 2017 23:31:07 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -108,8 +108,8 @@ Those are the basics to Core Data! This is obviously a very simple example, but 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Optimizing SVGs&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Sketch and other vector generators generate a lot of extraneous text. Use SVGEditor online to optimize SVGs and remove the extra Sketch attributes, round decimal points to make the file smaller. Can also get rid of the artboard page tag.&lt;/li&gt;
-  &lt;li&gt;Group elements in the SVG a &lt;g&gt; element so that you can apply classes
-
+  &lt;li&gt;Group elements in the SVG a &lt;g&gt; element so that you can apply classes&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Types of Animations&lt;/h3&gt;
 &lt;ul&gt;
