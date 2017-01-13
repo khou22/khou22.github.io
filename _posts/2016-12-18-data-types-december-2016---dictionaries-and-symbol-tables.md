@@ -40,10 +40,22 @@ dictionary.append("keyName" : "the value") // Add new item to dictionary
 {% endhighlight %}
 <br class="post-line-break">
 <b>Java:</b><br />
-
+Source: arshajii at <a href="http://stackoverflow.com/questions/13543457/how-do-you-create-a-dictionary-in-java" target="_blank">stackoverflow.com</a>
+{% highlight java %}
+// Using hashmap
+Map<String, String> map = new HashMap<String, String>();
+map.put("dog", "type of animal");
+System.out.println(map.get("dog"));{% endhighlight %}
 <br />
 <b>Python:</b><br />
-
+{% highlight python %}
+dict = {
+  'Name'    : ‘Kevin’,
+  ‘School’. : ‘Princeton University’,
+  ‘Year’.   : 1
+}
+print dict['Name'] # prints “Kevin”
+{% endhighlight %}
 <br class="post-line-break">
 <h3 class="post-subheader">General Use Cases and Benefits</h3>
 I’ve found more and more use cases in the past couple of weeks for dictionaries. It’s often very useful when you have to store a potentially uncapped number of items that aren’t easily mapped to an index of an array. Unlike searching for items within traditional arrays which take linear time, dictionary calls are of constant time.

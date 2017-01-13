@@ -265,10 +265,23 @@ In both cases described above, both the key and the value can take on any data t
 <span class="n">dictionary</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;keyName&quot;</span> <span class="o">:</span> <span class="s">&quot;the value&quot;</span><span class="p">)</span> <span class="c1">// Add new item to dictionary</span></code></pre></div>
 
 <p><br class="post-line-break" />
-<b>Java:</b><br /></p>
+<b>Java:</b><br />
+Source: arshajii at <a href="http://stackoverflow.com/questions/13543457/how-do-you-create-a-dictionary-in-java" target="_blank">stackoverflow.com</a></p>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Using hashmap</span>
+<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
+<span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;dog&quot;</span><span class="o">,</span> <span class="s">&quot;type of animal&quot;</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">map</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;dog&quot;</span><span class="o">));</span></code></pre></div>
 
 <p><br />
 <b>Python:</b><br /></p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">&#39;Name&#39;</span>    <span class="p">:</span> <span class="err">‘</span><span class="n">Kevin</span><span class="err">’</span><span class="p">,</span>
+  <span class="err">‘</span><span class="n">School</span><span class="err">’</span><span class="o">.</span> <span class="p">:</span> <span class="err">‘</span><span class="n">Princeton</span> <span class="n">University</span><span class="err">’</span><span class="p">,</span>
+  <span class="err">‘</span><span class="n">Year</span><span class="err">’</span><span class="o">.</span>   <span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+<span class="k">print</span> <span class="nb">dict</span><span class="p">[</span><span class="s">&#39;Name&#39;</span><span class="p">]</span> <span class="c"># prints “Kevin”</span></code></pre></div>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">General Use Cases and Benefits</h3>
