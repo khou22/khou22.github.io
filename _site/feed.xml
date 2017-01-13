@@ -6,9 +6,74 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 Jan 2017 01:07:59 -0800</pubDate>
-    <lastBuildDate>Mon, 09 Jan 2017 01:07:59 -0800</lastBuildDate>
+    <pubDate>Fri, 13 Jan 2017 15:10:16 -0500</pubDate>
+    <lastBuildDate>Fri, 13 Jan 2017 15:10:16 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Data Types December 2016: Dictionaries and Symbol Tables</title>
+        <description>&lt;p&gt;Recently, I’ve been learning a lot about different data structures to use in programs. Many of the common, most applicable, include linked lists, stacks, queues, double linked lists, and symbol tables. In this post I will give a brief overview of symbol tables, also known as dictionaries or hash maps, and provide some instances where symbol tables can greatly improve the quality of your code. When implemented correctly, this simple data type can improve efficiency, code readability, and run time.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;What are dictionaries and symbol tables?&lt;/h3&gt;
+&lt;p&gt;In a nutshell, a dictionary is a data type where a key and a value are matched. In order to access a value, you provide a key. To store a value, you map a key to a value. To cycle through all values in the array, you again must use keys. The easiest analogy for understanding how a dictionary works is to use just that: a dictionary.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;br /&gt;
+At it’s most basic form, a dictionary is a database of words that are assigned a definition. To find the meaning of a word, you must first look up the word. The word and its definition serve as the key and its value, respectively. In code, the value can be any data type. In some languages (i.e. Java), the data type is immutable and consistent across all values. In other languages (i.e. Javascript), the data type can vary from key to key and from word to word.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;br /&gt;
+In both cases described above, both the key and the value can take on any data type. For example, the analogy of a dictionary describes Strings mapped to Strings; however, that’s not always the case. For example, the best data structure for storing birthdays, is a String (the person’s name) mapped to a date type (the person’s birthday). For a frequency table of letters, the letter can be either a character, integer, or String and its values take on the form of integers.
+&lt;br /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Example Syntaxes&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Javascript:&lt;/b&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Create an empty array&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;dictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Add an value to the dictionary&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;    &lt;span class=&quot;s2&quot;&gt;&amp;quot;keyName&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&amp;quot;the value&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;b&gt;Swift:&lt;/b&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// New dictionary&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&amp;quot;keyName&amp;quot;&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;the value&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&amp;quot;keyName&amp;quot;&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;the value&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;keyName&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;the value&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Add new item to dictionary&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;b&gt;Java:&lt;/b&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;b&gt;Python:&lt;/b&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;General Use Cases and Benefits&lt;/h3&gt;
+&lt;p&gt;I’ve found more and more use cases in the past couple of weeks for dictionaries. It’s often very useful when you have to store a potentially uncapped number of items that aren’t easily mapped to an index of an array. Unlike searching for items within traditional arrays which take linear time, dictionary calls are of constant time.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Sometimes, items either simply cannot be matched to an integer index or prove too complicated to map to an ordered list of integers. Instead, it can be much easier to call values based off of their keys.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Examples&lt;/h3&gt;
+&lt;p&gt;Here are a variety of instances where they can used:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Retrieving data that doesn’t have an order&lt;/li&gt;
+  &lt;li&gt;Storing data that is faster with a reference key instead of an index&lt;/li&gt;
+  &lt;li&gt;Matching two different data types - connecting a enum value to an object type&lt;/li&gt;
+  &lt;li&gt;Pairing opposites so that you can use one to reference the other (“[“ matches to “]”)&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sun, 18 Dec 2016 09:57:26 -0500</pubDate>
+        <link>http://khou22.github.io/programming/2016/12/18/data-types-december-2016---dictionaries-and-symbol-tables.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/12/18/data-types-december-2016---dictionaries-and-symbol-tables.html</guid>
+        
+        <category>ios</category>
+        
+        <category>swift</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Swift Core Data Basics: Storing App Data</title>
@@ -72,7 +137,7 @@ The Core Data editor is relatively intuitive. Create an entity by pressing the �
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
 Those are the basics to Core Data! This is obviously a very simple example, but it’s integral to anyone learning to build iOS apps.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 31 Oct 2016 14:07:17 -0700</pubDate>
+        <pubDate>Mon, 31 Oct 2016 17:07:17 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/10/31/swift-core-data-basics-storing-app-data.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/10/31/swift-core-data-basics-storing-app-data.html</guid>
         
@@ -186,7 +251,7 @@ Morphing: &lt;a href=&quot;http://codepen.io/chriscoyier/pen/DpFfE&quot; target=
 Tangential side note: How to create a really cool Uber-style splash screen animation on iOS: &lt;a href=&quot;https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen?utm_campaign=iOS+Dev+Weekly&quot; target=&quot;_blank&quot;&gt;https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen?utm_campaign=iOS+Dev+Weekly&lt;/a&gt;
 &lt;/g&gt;&lt;/li&gt;&lt;/ul&gt;
 </description>
-        <pubDate>Sun, 28 Aug 2016 11:46:35 -0700</pubDate>
+        <pubDate>Sun, 28 Aug 2016 14:46:35 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html</guid>
         
@@ -236,7 +301,7 @@ I also hope to implement what I learned with user analytics into my personal web
 &lt;br class=&quot;post-line-break&quot; /&gt;
 In general, this was a great summer for me as a coder and as a team member. I learned a lot of both tangible and intangible skills that I’ll keep with me for a while and met a lot of interesting people from all walks of life. I owe it to my mentor and my manager at Breathometer, both of whom are incredible people and will do great things in the future. Thanks to everyone at Breathometer for making it a great summer and I look forward to applying what I’ve learned in the future!&lt;/p&gt;
 </description>
-        <pubDate>Wed, 24 Aug 2016 15:02:18 -0700</pubDate>
+        <pubDate>Wed, 24 Aug 2016 18:02:18 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/08/24/a-summers-journey-what-ive-learned-and-how-i-should-keep-growing.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/24/a-summers-journey-what-ive-learned-and-how-i-should-keep-growing.html</guid>
         
@@ -382,7 +447,7 @@ Below are some additional customizations you can choose to add to your tab bar.
 &lt;h3 class=&quot;post-subheader&quot;&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;A more decorated example of all of this can be found at: &lt;a href=&quot;https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject&quot; target=&quot;_blank&quot;&gt;https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject&lt;/a&gt;. A bare bones tab navigation app template can be found at &lt;a href=&quot;https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate&quot; target=&quot;_blank&quot;&gt;https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 10 Aug 2016 06:52:18 -0700</pubDate>
+        <pubDate>Wed, 10 Aug 2016 09:52:18 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html</guid>
         
@@ -475,7 +540,7 @@ The view controller we are segueing to is the “GraphScreen” and has the prop
 &lt;br class=&quot;post-line-break&quot; /&gt;
 I hope you found this blog post helpful! See you in the next one.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 03 Aug 2016 06:45:22 -0700</pubDate>
+        <pubDate>Wed, 03 Aug 2016 09:45:22 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/08/03/swift-tips-and-tricks-august-2016-app-navigation-and-dates.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/03/swift-tips-and-tricks-august-2016-app-navigation-and-dates.html</guid>
         
@@ -532,7 +597,7 @@ That’s about all there is to it! They’re very simple and straightforward, bu
 &lt;br class=&quot;post-line-break&quot; /&gt;
 Tutorial primarily from: &lt;a href=&quot;http://www.ioscreator.com/tutorials/segmented-control-tutorial-ios8-swift&quot; target=&quot;_blank&quot;&gt;http://www.ioscreator.com/tutorials/segmented-control-tutorial-ios8-swift&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Tue, 26 Jul 2016 07:13:16 -0700</pubDate>
+        <pubDate>Tue, 26 Jul 2016 10:13:16 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/07/26/swift-segmented-control-basics-how-to-setup-and-utilize-segmented-controls.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/07/26/swift-segmented-control-basics-how-to-setup-and-utilize-segmented-controls.html</guid>
         
@@ -588,7 +653,7 @@ To write data locally into persist data, simply use this command:&lt;br /&gt;&lt
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
 That’s pretty much all there is to it. Now you can store data between app sessions! Hope you found this helpful.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 25 Jul 2016 04:09:16 -0700</pubDate>
+        <pubDate>Mon, 25 Jul 2016 07:09:16 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/07/25/persist-data-storing-values-locally-using-swift.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/07/25/persist-data-storing-values-locally-using-swift.html</guid>
         
@@ -769,7 +834,7 @@ Now to access those UI elements in your main Table View Controller, you must use
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
 Tutorial from: &lt;a href=&quot;https://www.weheartswift.com/how-to-make-a-simple-table-view-with-ios-8-and-swift/&quot; target=&quot;_blank&quot;&gt;https://www.weheartswift.com/how-to-make-a-simple-table-view-with-ios-8-and-swift/&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 22 Jul 2016 03:46:44 -0700</pubDate>
+        <pubDate>Fri, 22 Jul 2016 06:46:44 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html</guid>
         
@@ -917,90 +982,9 @@ Returning steps by per day for x number of days:&lt;/p&gt;
         &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>Fri, 22 Jul 2016 02:48:15 -0700</pubDate>
+        <pubDate>Fri, 22 Jul 2016 05:48:15 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/07/22/introduction-to-healthkit-reading-steps-weight-height-and-more.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/07/22/introduction-to-healthkit-reading-steps-weight-height-and-more.html</guid>
-        
-        <category>ios</category>
-        
-        <category>swift</category>
-        
-        <category>apps</category>
-        
-        <category>xcode</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Xcode Best Practices July 2016: Troubleshooting, Pull Requests, Cocoapods, and More</title>
-        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Troubleshooting Xcode&lt;/h3&gt;
-&lt;p&gt;Xcode can be a great IDE with powerful tools like autocompletion, but sometimes it does have a tendency to “break.” Errors that pertain to linking are often examples of Xcode glitching out and temporarily self-imploding. These issues can be solved by following these steps:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Clean: Command + Shift + K&lt;/li&gt;
-  &lt;li&gt;Deep Clean: Command + Option + Shift + K&lt;/li&gt;
-  &lt;li&gt;Delete derived data: These are like Xcode’s caches and builds. Each project has a derived data file. To wipe these clean, go to your finder. Hold option, click “Go” in the taskbar, and select “Library.” Next, go to Developer/Xcode/DerivedData/. Select all the files within that folder and delete them by moving them to the trash.&lt;/li&gt;
-  &lt;li&gt;Quit Xcode&lt;/li&gt;
-  &lt;li&gt;(Attempt to) rebuild your project&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Pull Requests&lt;/h3&gt;
-&lt;p&gt;Git and other version control systems can be confusing things. I, along with most of the developers I know, use GitHub for version control and collaboration on projects. I use GitHub on the daily (I have almost a 300 day commit streak on GitHub right now) and am still intimidated by pull requests. From what I understand, they’re essentially clean ways of merging two branches and grouping commits together.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-When working in groups settings, this is incredibly useful both in a developer sense and a moderator sense. The code is branched so it does not accidentally break the master branch (good when you’re updated a popularly used repo or working on a group project). Usually pull requests are significant features or builds. All commit made during a pull request are also grouped together and can easily be reviewed all together by the person who is reviewing the pull request. On GitHub, you can comment on pull requests do other discussion-based actions until the code meets satisfaction and can be integrated into the main branch.&lt;/p&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Using Structures for Global Constants&lt;/h3&gt;
-&lt;p&gt;In addition to using structures to store file names as I mentioned in an &lt;a href=&quot;http://khou22.github.io/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html&quot; target=&quot;_blank&quot;&gt;earlier blog post&lt;/a&gt;, it is good practice to create a file, usually named “Constants.swift”, containing global structures to store values. These constants are usually accessed by multiple view controllers and make it easier to standardize. It’s similar to the difference between CSS and SASS. In CSS, you must re-type the values every time, but in SASS you can create and use variables. It makes modifying values much, much easier. Here is an example of standardized colors:
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;b&gt;Declaration&lt;/b&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Colors&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mainColor&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;225.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;105.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;15.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;darkGrey&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;grey&lt;/span&gt;              &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;230.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;230.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;230.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lightGrey&lt;/span&gt;       &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;207.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;green&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;207.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;207.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;255.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;b&gt;Usage&lt;/b&gt;&lt;br /&gt;
-Instead of typing in the same RGB values every instance you need a specific color, you can simply call:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mainColor&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// It&amp;#39;s very easy to change an entire projects theme color simply by modifying a single value in the Constants.swift file&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;b&gt;Other Application&lt;/b&gt;&lt;br /&gt;
-Other useful things to store in structures in the Constants.swift file include: screen size (SCREEN_WIDTH = UIScreen.main().bounds.size.width), device types, file names, image names, API keys, storyboard IDs, segue IDs, and any other global constants. It’s good practice to do this and I encourage you to try it out. It’ll make your life signficantly easier in the long run.&lt;/p&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Commenting on Code and Readability&lt;/h3&gt;
-&lt;p&gt;Commenting code is one of those practices that is well known, yet not well performed. It’s incredibly important in both personal and team settings. While most people at least understand the necessity, fewer strive for code readability. It is better practice to write readable code with fewer comments using function names, variable names, etc. than to write confusing code with paragraphs of comments. If you’ve ever looked at my code, I am obviously guilty of this and I think the majority of developers could be more conscious about it.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Code readability also includes &lt;a href=&quot;https://en.wikipedia.org/wiki/Code_refactoring&quot; target=&quot;_blank&quot;&gt;code refactoring&lt;/a&gt; — the process of a restructuring existing code but not changing it’s actual function. To a user, refactoring code should go unnoticed with the exception of maybe load times, speed, etc. It is important to make sure your code is concise as well as well commented and readable. Avoid hard coding and use “for” loops when you can. Another element of this (I’m not sure if this is technically considered refactoring because it’s not so much resturcting) is to remove all print statements and breakpoints once the specific feature is completed and working properly.&lt;/p&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Cocoapods&lt;/h3&gt;
-&lt;p&gt;Cocoapods are good and bad depending on who you are. For those that don’t know, cocoapods are libraries built by third parties that you can integrate in your Xcode project with minimal difficulty. They’re similar to Node packages, Python modules, etc.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-When developing web apps, I love using libraries, especially Node packages; however, there is a danger in using third party code. Even though it makes your life much easier, in the long run, it could break your app or website. For example, one developer broke thousands of projects by changing 11 lines in their package. It’s a hilariously &lt;a href=&quot;http://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/&quot; target=&quot;_blank&quot;&gt;realistic and daunting story&lt;/a&gt; that could apply to your app.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-The reason why some are opposed to Cocoapods (including one of my coworkers), is exactly that. If you have too many third party libraries, one mess up could break your project and it would be an ordeal to sift through hundreds of libraries and thousands of files in order to find what was responsible for bringing down your app.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-In my opinion, I think you should strike a balance. Cocoapods and other package managers are very useful and take a lot of the heavy lifting out of tasks for developers, but at the same time it’s dangerous to become ultra-reliant on them. You do not want your precious project to be held up entirely by code that you don’t have control over.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-A quick note to self that’s somewhat technical: when using Cocoapods, you must open the .workspace file in Xcode not the .xcodeproject file!&lt;br /&gt;
-&lt;img src=&quot;./../../../../media/blog/images/Installing_Cocoapods.png&quot; class=&quot;iPhone-screenshots-large&quot; /&gt;&lt;br /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-I hope you found this post useful. I’m learning a lot about Xcode and especially about how to work in teams. There’s always room for growth and everyone can get better at it. Talk to you in the next one!&lt;/p&gt;
-</description>
-        <pubDate>Wed, 20 Jul 2016 04:30:53 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2016/07/20/xcode-best-practices-july-2016-troubleshooting-pull-requests-and-more.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/07/20/xcode-best-practices-july-2016-troubleshooting-pull-requests-and-more.html</guid>
         
         <category>ios</category>
         
