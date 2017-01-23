@@ -384,14 +384,36 @@ if (currentHour > 18 || currentHour < 4) { // 6pm - 4am
   theater.addScene('welcome-text:Good afternoon, Kevin', 750)
 }
 
+/*********** Get quote of the day ***********/
+var quoteOfTheDay = "Kind words can be short and easy to speak, but their echoes are truly endless." // Default quote
+// Call api
+$.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?")
+  .done(update)
+  .fail(handleErr);
+
+// Completion handler
+function update(response) {
+  console.log($('#response').html())
+  console.log(JSON.stringify(response));
+  quoteOfTheDay = JSON.stringify(response)
+}
+
+// Error handler
+function handleErr(jqxhr, textStatus, err) {
+  console.log("Request Failed: " + textStatus + ", " + err);
+}
+
+/*********** Add theater strings ***********/
 var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 var month = monthNames[currentDate.getMonth()];
 var day = currentDate.getDate();
 var year = currentDate.getFullYear();
 var dateString = month + " " + day + ", " + year;
 
-theater
-  .addScene('welcome-text:Today is ' + dateString, 1500)
-  .addScene('welcome-text:How can I help you today?', 1000)
-  .addScene('welcome-text:Hover over the icons below for more...', 1000)
-  .addScene(theater.replay.bind(theater))
+theater.addScene('welcome-text:Today is ' + dateString, 1500)
+theater.addScene('welcome-text:What\'s on the agenda for today?', 1000)
+  // .addScene('welcome-text:Hover over the icons below for more...', 1000)
+
+theater.addScene(" " + quoteOfTheDay + " ", 2000)
+
+theater.addScene(theater.replay.bind(theater))
