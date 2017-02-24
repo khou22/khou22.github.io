@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Feb 2017 21:09:43 -0500</pubDate>
-    <lastBuildDate>Thu, 23 Feb 2017 21:09:43 -0500</lastBuildDate>
+    <pubDate>Thu, 23 Feb 2017 21:12:23 -0500</pubDate>
+    <lastBuildDate>Thu, 23 Feb 2017 21:12:23 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -112,7 +112,7 @@ Button: To control when we want to upload the image
 &lt;h3 class=&quot;post-subheader&quot;&gt;Final Code:&lt;/h3&gt;
 &lt;p&gt;The complete source code looks like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//  Created by Kevin on 8/4/16.&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//  Created by Kevin&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;//  Copyright © 2016 KevinHou. All rights reserved.&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
 
@@ -196,6 +196,10 @@ Button: To control when we want to upload the image
         <pubDate>Thu, 23 Feb 2017 15:53:36 -0500</pubDate>
         <link>http://khou22.github.io/programming/2017/02/23/swift-camera-basics-image-pickers-and-action-sheets.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2017/02/23/swift-camera-basics-image-pickers-and-action-sheets.html</guid>
+        
+        <category>ios</category>
+        
+        <category>swift</category>
         
         
         <category>programming</category>

@@ -6,7 +6,7 @@ date: 2017-02-23 20:53:36
 description: "An over on implementing camera selection and action sheets in Swift."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
-tags: []
+tags: [ios, swift]
 featured: "no"
 ---
 I am designing and implementing a profile screen into Breathometer’s new app and one of the key components of many profile screens is a profile picture. I’m continuing to add to my toolbox of Swift skills so I set about learning how to get pictures from either the camera app or phone’s photo library.
@@ -117,7 +117,7 @@ func imagePickerControllerDidCancel(picker: UIImagePickerController) {
 <h3 class="post-subheader">Final Code:</h3>
 The complete source code looks like this:
 {% highlight swift %}
-//  Created by Kevin on 8/4/16.
+//  Created by Kevin
 //  Copyright © 2016 KevinHou. All rights reserved.
 //
 
