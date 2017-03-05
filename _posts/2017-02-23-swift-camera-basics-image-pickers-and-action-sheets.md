@@ -198,3 +198,59 @@ class ProfileScreen: UIViewController, UIImagePickerControllerDelegate, UINaviga
 {% endhighlight %}
 
 Hope you found this helpful! You can find the source code on <a href="https://github.com/khou22/Swift-App-Templates/blob/master/SampleTabProject/SampleTabProject/ProfileScreen.swift" target="_blank">GitHub</a>.
+
+<h3 class="post-subheader">Another Example of an Action Sheet</h3>
+Here's another example of two different types of action sheets in case the first example was difficult to grasp.
+{% highlight swift %}
+Text Input Dialogue:
+// Create text modal for adding an event name prediction
+let newCategoryAlert = UIAlertController(title: "Enter Location", message: "Manually add a location suggestion", preferredStyle: .alert)
+
+// Add text field item
+newCategoryAlert.addTextField { (textField) in
+    textField.text = "" // No placeholder
+    textField.autocapitalizationType = UITextAutocapitalizationType.words // Capitalization rules
+}
+
+// Add cancel action
+newCategoryAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil)) // No action if cancelled
+
+// Add submit action
+newCategoryAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak newCategoryAlert] (_) in
+    // Get text field content
+    let textField = newCategoryAlert?.textFields![0] // Force unwrapping because we know it exists
+
+    self.currentCategory.locationFreq[(textField?.text)!] = 0 // New event name frequency entry with frequency of 0
+
+    // Update category data with new markov model
+    DataManager.updateOneCategory(with: self.currentCategory, index: self.selectedIndex)
+
+    // Refresh the table view on this page
+    self.refreshData()
+}))
+
+self.present(newCategoryAlert, animated: true, completion: nil) // Present the alert
+
+// Regular Action Sheet
+let actionSheet = UIAlertController(title: "Reset Predictions", message: "Are you sure you want to reset predictions? This cannot be undone.", preferredStyle: .actionSheet) // Create alert action sheet
+
+// Create actions
+let resetAction: UIAlertAction = UIAlertAction(title: "Reset Predictions", style: .default, handler: { (alert: UIAlertAction!) -> Void in
+    // User pressed reset all predictions
+    print("Reseting predictions")
+    self.currentCategory = Category(name: self.currentCategory.name, eventNameFreq: [ : ], locationFreq: [ : ]) // Reset predictions data
+    DataManager.updateOneCategory(with: self.currentCategory, index: self.selectedIndex)
+})
+let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { (alert: UIAlertAction!) -> Void in
+    // User pressed cancel
+})
+
+// Add actions
+actionSheet.addAction(resetAction)
+actionSheet.addAction(cancelAction)
+
+self.present(actionSheet, animated: true, completion: nil) // Present action sheet to user
+
+{% endhighlight %}
+
+Hope you found this helpful!
