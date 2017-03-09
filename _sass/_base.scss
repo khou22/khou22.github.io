@@ -20,14 +20,15 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
+    background-color: $background-color;
+    color: $text-color;
+    font-weight: 300;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    line-height: $base-line-height;
+
+    -webkit-text-size-adjust: 100%;
 }
 
 
@@ -115,12 +116,12 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
+    border-left: 4px solid $grey-color-light;
+    color: $grey-color;
     letter-spacing: -1px;
     font-style: italic;
+    font-size: 18px;
 
     > :last-child {
         margin-bottom: 0;
@@ -134,10 +135,10 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
+    font-size: 15px;
 }
 
 code {
@@ -145,13 +146,13 @@ code {
 }
 
 pre {
-    padding: 8px 12px;
     overflow-x: scroll;
+    padding: 8px 12px;
 
     > code {
-        border: 0;
         padding-right: 0;
         padding-left: 0;
+        border: 0;
     }
 }
 
@@ -161,21 +162,18 @@ pre {
  * Wrapper
  */
 .wrapper {
+    margin-right: auto;
+    margin-left: auto;
     // Default:
     // max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
     // max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-
     // Custom:
     width: 100%;
-
-    margin-right: auto;
-    margin-left: auto;
-
     // Custom: No padding
     // padding-right: $spacing-unit;
     // padding-left: $spacing-unit;
-    @extend %clearfix;
 
+    @extend %clearfix;
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
@@ -192,9 +190,9 @@ pre {
 %clearfix {
 
     &:after {
-        content: "";
         display: table;
         clear: both;
+        content: "";
     }
 }
 

@@ -1,50 +1,36 @@
 /**
  * Site header
  */
-$brand-red:       #D5491F;
-$brand-orange:    #DA8D0F;
-$brand-green:     #80A454;
-$brand-grey:      #9DB7C1;
-$brand-blue:      #3286A8;
+$brand-red:     #D5491F;
+$brand-orange:  #DA8D0F;
+$brand-green:   #80A454;
+$brand-grey:    #9DB7C1;
+$brand-blue:    #3286A8;
 
 .site-nav {
-    float: right;
+    float      : right;
     line-height: 56px;
 
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
-
     @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
+        position        : absolute;
+        top             : 9px;
+        right           : 30px;
+        border          : 1px solid $grey-color-light;
+        border-radius   : 5px;
         background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
+        text-align      : right;
 
         .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
+            display    : block;
+            float      : right;
             padding-top: 10px;
-            text-align: center;
+            width      : 36px;
+            height     : 26px;
+            text-align : center;
+            line-height: 0;
 
             > svg {
-                width: 18px;
+                width : 18px;
                 height: 15px;
 
                 path {
@@ -54,12 +40,12 @@ $brand-blue:      #3286A8;
         }
 
         .trigger {
-            clear: both;
             display: none;
+            clear  : both;
         }
 
         &:hover .trigger {
-            display: block;
+            display       : block;
             padding-bottom: 5px;
         }
 
@@ -68,97 +54,104 @@ $brand-blue:      #3286A8;
             padding: 5px 10px;
         }
     }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color      : $text-color;
+        line-height: $base-line-height;
+        // Gaps between nav items, but not on the first one
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
 }
-
-
-
 /**
  * Site footer
  */
 .site-footer {
+    padding   : $spacing-unit 0;
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
 }
 
 .footer-heading {
-    font-size: 18px;
     margin-bottom: $spacing-unit / 2;
+    font-size    : 18px;
 }
 
 .contact-list,
 .social-media-list {
-    list-style: none;
     margin-left: 0;
+    list-style : none;
 }
 
 .footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
     margin-left: -$spacing-unit / 2;
+    color      : $grey-color;
+    font-size  : 15px;
+
     @extend %clearfix;
 }
 
 .footer-col {
-    float: left;
+    float        : left;
     margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    padding-left : $spacing-unit / 2;
 }
 
 .footer-col-1 {
     width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: calc(45% - (#{$spacing-unit} / 2));
 }
-
 @include media-query($on-laptop) {
     .footer-col-1,
     .footer-col-2 {
         width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
+        width: calc(50% - (#{$spacing-unit} / 2));
     }
 
     .footer-col-3 {
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+        width: calc(100% - (#{$spacing-unit} / 2));
     }
 }
-
 @include media-query($on-palm) {
     .footer-col {
         float: none;
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+        width: calc(100% - (#{$spacing-unit} / 2));
     }
 }
-
-
-
 /**
  * Page content
  */
 .page-content {
-    /*padding: $spacing-unit 0;*/ /*Default*/
+    /*padding: $spacing-unit 0;*/
+    /*Default*/
     // padding: 12px 0; /*No spacing*/
     background-repeat: infinite;
 }
 
 .page-heading {
+    color    : $brand-red;
     font-size: 24px;
-    color: $brand-red;
 }
 
 .post-list {
     margin-left: 0;
-    list-style: none;
+    list-style : none;
 
     > li {
         margin-bottom: $spacing-unit/3;
@@ -170,32 +163,28 @@ $brand-blue:      #3286A8;
 }
 
 .post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
+    color      : $grey-color;
+    font-size  : $small-font-size;
     line-height: 3rem;
 }
 
 .post-link {
-    display: block;
+    display  : block;
     font-size: 2rem;
 }
-
-
-
 /**
  * Posts
  */
 .post-header {
     margin-bottom: $spacing-unit;
-
 }
 
 .post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
     // color: $brand-blue;
-    color: white;
+    color         : white;
+    letter-spacing: -1px;
+    font-size     : 42px;
+    line-height   : 1;
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -205,15 +194,13 @@ $brand-blue:      #3286A8;
 .post-description {
     color: grey;
 }
-
 $content-width: 800px;
 
 .post-content {
+    margin       : auto;
     margin-bottom: $spacing-unit;
-
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    margin: auto;
+    max-width    : -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width    : calc(#{$content-width} - (#{$spacing-unit}));
 
     h2 {
         font-size: 36px;
@@ -239,7 +226,6 @@ $content-width: 800px;
         }
     }
 }
-
 // Capitalize first letter of each blog post
 // It looks bad because some posts begin with a header
 /*

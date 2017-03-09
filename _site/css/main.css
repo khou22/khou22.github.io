@@ -11,14 +11,14 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #111;
+  overflow-x: hidden;
   background-color: #fdfdfd;
-  -webkit-text-size-adjust: 100%;
-  overflow-x: hidden; }
+  color: #111;
+  font-weight: 300;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -78,12 +78,12 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: #828282;
-  border-left: 4px solid #e8e8e8;
   padding-left: 15px;
-  font-size: 18px;
+  border-left: 4px solid #e8e8e8;
+  color: #828282;
   letter-spacing: -1px;
-  font-style: italic; }
+  font-style: italic;
+  font-size: 18px; }
   blockquote > :last-child {
     margin-bottom: 0; }
 
@@ -92,29 +92,29 @@ blockquote {
  */
 pre,
 code {
-  font-size: 15px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
-  background-color: #eef; }
+  background-color: #eef;
+  font-size: 15px; }
 
 code {
   padding: 1px 5px; }
 
 pre {
-  padding: 8px 12px;
-  overflow-x: scroll; }
+  overflow-x: scroll;
+  padding: 8px 12px; }
   pre > code {
-    border: 0;
     padding-right: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    border: 0; }
 
 /**
  * Wrapper
  */
 .wrapper {
-  width: 100%;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  width: 100%; }
   @media screen and (max-width: 800px) {
     .wrapper {
       max-width: -webkit-calc(800px - (30px));
@@ -124,9 +124,9 @@ pre {
  * Clearfix
  */
 .wrapper:after, .footer-col-wrapper:after {
-  content: "";
   display: table;
-  clear: both; }
+  clear: both;
+  content: ""; }
 
 /**
  * Icons
@@ -145,6 +145,37 @@ pre {
 .site-nav {
   float: right;
   line-height: 56px; }
+  @media screen and (max-width: 600px) {
+    .site-nav {
+      position: absolute;
+      top: 9px;
+      right: 30px;
+      border: 1px solid #e8e8e8;
+      border-radius: 5px;
+      background-color: #fdfdfd;
+      text-align: right; }
+      .site-nav .menu-icon {
+        display: block;
+        float: right;
+        padding-top: 10px;
+        width: 36px;
+        height: 26px;
+        text-align: center;
+        line-height: 0; }
+        .site-nav .menu-icon > svg {
+          width: 18px;
+          height: 15px; }
+          .site-nav .menu-icon > svg path {
+            fill: #424242; }
+      .site-nav .trigger {
+        display: none;
+        clear: both; }
+      .site-nav:hover .trigger {
+        display: block;
+        padding-bottom: 5px; }
+      .site-nav .page-link {
+        display: block;
+        padding: 5px 10px; } }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
@@ -152,58 +183,27 @@ pre {
     line-height: 1.5; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
-  @media screen and (max-width: 600px) {
-    .site-nav {
-      position: absolute;
-      top: 9px;
-      right: 30px;
-      background-color: #fdfdfd;
-      border: 1px solid #e8e8e8;
-      border-radius: 5px;
-      text-align: right; }
-      .site-nav .menu-icon {
-        display: block;
-        float: right;
-        width: 36px;
-        height: 26px;
-        line-height: 0;
-        padding-top: 10px;
-        text-align: center; }
-        .site-nav .menu-icon > svg {
-          width: 18px;
-          height: 15px; }
-          .site-nav .menu-icon > svg path {
-            fill: #424242; }
-      .site-nav .trigger {
-        clear: both;
-        display: none; }
-      .site-nav:hover .trigger {
-        display: block;
-        padding-bottom: 5px; }
-      .site-nav .page-link {
-        display: block;
-        padding: 5px 10px; } }
 
 /**
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #e8e8e8;
-  padding: 30px 0; }
+  padding: 30px 0;
+  border-top: 1px solid #e8e8e8; }
 
 .footer-heading {
-  font-size: 18px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  font-size: 18px; }
 
 .contact-list,
 .social-media-list {
-  list-style: none;
-  margin-left: 0; }
+  margin-left: 0;
+  list-style: none; }
 
 .footer-col-wrapper {
-  font-size: 15px;
+  margin-left: -15px;
   color: #828282;
-  margin-left: -15px; }
+  font-size: 15px; }
 
 .footer-col {
   float: left;
@@ -245,8 +245,8 @@ pre {
   background-repeat: infinite; }
 
 .page-heading {
-  font-size: 24px;
-  color: #D5491F; }
+  color: #D5491F;
+  font-size: 24px; }
 
 .post-list {
   margin-left: 0;
@@ -258,8 +258,8 @@ pre {
   padding: 7.5px; }
 
 .post-meta {
-  font-size: 14px;
   color: #828282;
+  font-size: 14px;
   line-height: 3rem; }
 
 .post-link {
@@ -273,10 +273,10 @@ pre {
   margin-bottom: 30px; }
 
 .post-title {
-  font-size: 42px;
+  color: white;
   letter-spacing: -1px;
-  line-height: 1;
-  color: white; }
+  font-size: 42px;
+  line-height: 1; }
   @media screen and (max-width: 800px) {
     .post-title {
       font-size: 36px; } }
@@ -285,10 +285,10 @@ pre {
   color: grey; }
 
 .post-content {
+  margin: auto;
   margin-bottom: 30px;
   max-width: -webkit-calc(800px - (30px));
-  max-width: calc(800px - (30px));
-  margin: auto; }
+  max-width: calc(800px - (30px)); }
   .post-content h2 {
     font-size: 36px; }
     @media screen and (max-width: 800px) {
@@ -924,20 +924,20 @@ pre {
 .contact-header {
   width: 100%; }
   .contact-header-title {
+    color: #3286A8;
     text-align: center;
     font-size: 5rem;
-    color: #3286A8;
     line-height: 12rem; }
   .contact-header-subtitle {
+    color: #9DB7C1;
     text-align: center;
-    font-size: 2rem;
-    color: #9DB7C1; }
+    font-size: 2rem; }
 .contact-info {
   margin-top: 24px; }
   .contact-info-block {
+    margin: auto;
     width: 150px;
-    height: 150px;
-    margin: auto; }
+    height: 150px; }
   .contact-info-left {
     float: left;
     width: 50%; }
@@ -945,18 +945,18 @@ pre {
     float: right;
     width: 50%; }
 .contact-icon {
-  color: #3286A8;
+  margin: auto;
   width: 50%;
   height: 50%;
-  margin: auto;
   background-position: center;
   background-size: contain;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  color: #3286A8; }
 .contact-details {
-  color: #9DB7C1;
-  text-align: center;
   margin: auto;
   width: 75%;
+  color: #9DB7C1;
+  text-align: center;
   word-wrap: break-word;
   font-size: 18px;
   line-height: 24px; }

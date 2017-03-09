@@ -11,16 +11,16 @@ $brand-blue:      #3286A8;
     width: 100%;
 
     &-title {
+      color: $brand-blue;
       text-align: center;
       font-size: 5rem;
-      color: $brand-blue;
       line-height: 12rem;
     }
 
     &-subtitle {
+      color: $brand-grey;
       text-align: center;
       font-size: 2rem;
-      color: $brand-grey;
     }
   }
 
@@ -28,9 +28,9 @@ $brand-blue:      #3286A8;
     margin-top: 24px;
 
     &-block {
+      margin: auto;
       width: 150px;
       height: 150px;
-      margin: auto;
     }
 
     &-left {
@@ -45,20 +45,20 @@ $brand-blue:      #3286A8;
   }
 
   &-icon {
-    color: $brand-blue;
+    margin: auto;
     width: 50%;
     height: 50%;
-    margin: auto;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    color: $brand-blue;
   }
 
   &-details {
-    color: $brand-grey;
-    text-align: center;
     margin: auto;
     width: 75%;
+    color: $brand-grey;
+    text-align: center;
     word-wrap: break-word;
     font-size: 18px;
     line-height: 24px;
