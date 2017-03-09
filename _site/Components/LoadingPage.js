@@ -1,14 +1,15 @@
-// Standard landing page
+// Opening loading animations for homepage
 var LoadingPage = React.createClass({
   getInitialState: function() {
-    var loadingScreenDuration = 5500;
-    var fadeOutTime = 1000;
+    var loadingScreenDuration = 5500; // Loading screen duration
+    var fadeOutTime = 1000; // Fade out time
 
     setTimeout(this.hideLoading.bind(this), loadingScreenDuration); // Loading page lasts for x seconds
     setTimeout(this.startFade.bind(this), loadingScreenDuration - fadeOutTime); // Loading page lasts for x - 1 seconds
     setTimeout(this.startLogoAnimation.bind(this), 1600); // Logo animation triggered
     setTimeout(this.startLogoPositionChange.bind(this), 4000); // Logo position change triggered
 
+    // Initial states
     return {
       loadingVisible: true,
       fadeAnimation: false,
