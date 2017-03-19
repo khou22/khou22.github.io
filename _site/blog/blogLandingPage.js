@@ -1,3 +1,11 @@
+// Click main image
+function scrollToMain() {
+  console.log("Clicked");
+  $('html, body').animate({
+      scrollTop: $("#mainContent").offset().top
+  }, 2000);
+}
+
 // Javascript for blog landing page
 $(document).ready(function() {
   // When webpage loads

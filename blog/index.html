@@ -3,7 +3,6 @@ layout: default
 ---
 <!-- Hide scrollbar on this page -->
 <style> ::-webkit-scrollbar { display: none; } </style>
-<script src="blogLandingPage.js" type="text/javascript"></script>
 
 <div class="blog-landing-header" id="blog-landing-header">
   <!-- Logo -->
@@ -31,12 +30,12 @@ layout: default
 <div class="blog-homepage">
   <div class="blog-landing-page">
     <div class="blog-landing-page-filter">
-      <div class="blog-landing-page-content">
+      <div class="blog-landing-page-content" onclick="scrollToMain()">
         <img src="../media/site/images/Blog_Landing_Content.svg" width="100%">
       </div>
     </div>
   </div>
-  <div class="blog-homepage-content clearfix">
+  <div id="mainContent" class="blog-homepage-content clearfix">
     <div class="home left-main">
 
       <h1 class="page-heading">Posts <span class="number-of-posts">({{site.posts.size}})</span></h1>
@@ -98,3 +97,6 @@ layout: default
     </div>
   </div>
 </div>
+
+<!-- Add scripts -->
+<script src="blogLandingPage.js" type="text/javascript"></script>
