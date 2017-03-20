@@ -816,7 +816,6 @@ pre {
   background-position: center;
   margin-bottom: calc(-80px + 24px);
   margin-bottom: -webkit-calc(-80px + 24px);
-  z-index: -2;
   transform-origin: center 100%; }
   @media (max-width: 800px) {
     .blog-landing-page {

@@ -2,8 +2,8 @@
 function scrollToMain() {
   console.log("Clicked");
   $('html, body').animate({
-      scrollTop: $("#mainContent").offset().top
-  }, 2000);
+      scrollTop: $("#mainContent").offset().top - 40
+  }, 750);
 }
 
 // Javascript for blog landing page
