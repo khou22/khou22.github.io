@@ -1,6 +1,12 @@
 console.log("Loaded programming projects");
 programmingProjects = [
   {
+    name: "SoFly Scanner",
+    slug: "https://devpost.com/software/sofly-scanner",
+    image: "#",
+    description: "An app that allows the user to snap a picture of a flyer, extract relevant information, and make a calendar event with the event name, location, time, date, and more. This will allow users to digitize flyers, and hopefully provide a decentralized mechanism for communities to grow close again. It won 2nd place for best Princeton app at HackPrinceton Spring 2017."
+  },
+  {
     name: "Uber Scheduler",
     slug: "Uber-Scheduler",
     image: "#",
