@@ -1,4 +1,4 @@
-console.log("Loaded programming projects");
+// console.log("Loaded programming projects");
 programmingProjects = [
   {
     name: "SoFly Scanner",
@@ -13,12 +13,6 @@ programmingProjects = [
     description: "An iOS app to call Ubers ahead of time or on a recurring schedule. I was the frontend engineer and designer. We built this at a hackathon and won 1st place overall."
   },
   {
-    name: "City Strong Training",
-    slug: "http://citystrongtraining.com/",
-    image: "#",
-    description: "Freelance work for a friend of mine. I designed and built a website for his new personal training business, City Strong Training."
-  },
-  {
     name: "Princeton Tonight Website",
     slug: "http://princetontonight.com",
     image: "",
@@ -29,6 +23,12 @@ programmingProjects = [
     slug: "{{ site.baseurl }}/school/east-asian-relations",
     image: "#",
     description: "This is a website I built from scratch for my East Asian Relations class. I was responsible for putting content online so that members of our school community could see the work we'd done that year. Because I only had a couple days to complete it, I wasn't able to add as many features as I would've liked."
+  },
+  {
+    name: "City Strong Training",
+    slug: "http://citystrongtraining.com/",
+    image: "#",
+    description: "Freelance work for a friend of mine. I designed and built a website for his new personal training business, City Strong Training."
   },
   {
     name: "Handwriting Font App",
@@ -49,6 +49,12 @@ programmingProjects = [
     description: "This is a project I made for my school. I used an Arduino Ethernet board and a receipt printer to make a machine that could process online sandwich orders for the school cafeteria."
   },
   {
+    name: "Text Analysis",
+    slug: "text-analysis",
+    image: "#",
+    description: "An app to analyze the user's text for patterns, word choice, etc. It accepts text files as well as Facebook user data."
+  },
+  {
     name: "Drag and Drop Interface",
     slug: "drag-drop-interface",
     image: "#",
@@ -65,12 +71,6 @@ programmingProjects = [
     slug: "time-calculator",
     image: "#",
     description: "An app that takes in an ambiguous number of times and outputs the average of those times. Made this for my friend who does crew."
-  },
-  {
-    name: "Text Analysis",
-    slug: "text-analysis",
-    image: "#",
-    description: "An app to analyze the user's text for patterns, word choice, etc. It accepts text files as well as Facebook user data."
   },
   {
     name: "Presidential Election Forecast 2016",
