@@ -14,8 +14,6 @@ $mobile-cuttoff: 600px;
 
 .main-grid {
   width: 100%;
-  height: 20px;
-  background-color: $primary-color;
 
   overflow: visible;
 }
@@ -52,7 +50,7 @@ $mobile-cuttoff: 600px;
     position: absolute;
     left: 5%; // Padding
     width: 95%; // Don't fill up entire tile
-    z-index: 9999; // Ensure above background
+    z-index: 0; // Ensure above background
 
     color: white; // Font color
 
@@ -75,15 +73,15 @@ $mobile-cuttoff: 600px;
   }
 
   &-title {
-    font-size: 42px;
+    font-size: 36px;
   }
 
   &-subtitle {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   &-description {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   /******   Container Structure   ******/
@@ -106,6 +104,7 @@ $mobile-cuttoff: 600px;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 
     // Sizing
     width: 100%;
