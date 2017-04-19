@@ -1,0 +1,198 @@
+/**************************************************************
+* Name: Kevin Hou
+* License: MIT
+*
+* Description: SCSS styling for tile layout for web.
+*
+* Compile:
+*   sass --watch style.scss:style.css
+**************************************************************/
+
+$primary-color: white;
+$animation-duration: .2s;
+$mobile-cuttoff: 600px;
+
+.main-grid {
+  width: 100%;
+  height: 20px;
+  background-color: $primary-color;
+
+  overflow: visible;
+}
+
+@media only screen and (max-width: $mobile-cuttoff) {
+
+  // Make it all one column
+  .tile {
+    width: 100% !important;
+    height: 350px !important;
+  }
+}
+
+.tile {
+  opacity: 0; // Start transparent
+
+  &-entrance {
+    // Entrance Animation
+    animation-name: bigEntrance;
+  	-webkit-animation-name: bigEntrance;
+
+    animation-fill-mode: forwards; // Keep the state after it's been completed
+    -webkit-animation-fill-mode: forwards;
+
+  	animation-duration: 0.5s;
+  	-webkit-animation-duration: 0.5s;
+
+  	animation-timing-function: ease-out;
+  	-webkit-animation-timing-function: ease-out;
+  }
+
+  /******   Content Styling   ******/
+  &-text {
+    position: absolute;
+    left: 5%; // Padding
+    width: 95%; // Don't fill up entire tile
+    z-index: 9999; // Ensure above background
+
+    color: white; // Font color
+
+    // Animate hover transitions
+    transition: all $animation-duration; // Applies to all changes
+    transition-timing-function: ease-in-out; // Transition timing
+
+    // Styling when hovering
+    &-hover {
+      bottom: 5% !important; // Override other positioning
+    }
+  }
+
+  &-category {
+    padding: 4px 6px 4px 6px; // Padding
+    font-size: 10px;
+    border-radius: 2px; // Round corners
+    display: inline-block; // Display to width of text
+    background-color: orange; // Default is orange
+  }
+
+  &-title {
+    font-size: 42px;
+  }
+
+  &-subtitle {
+    font-size: 26px;
+  }
+
+  &-description {
+    font-size: 16px;
+  }
+
+  /******   Container Structure   ******/
+  position: relative;
+  display: inline-block; // Wrap around
+  overflow: hidden; // Prevent the content from spilling out
+  cursor: pointer;
+
+  margin-top: -4px; // Compensate for weird spacing
+
+  // The color behind the opacity
+  background-color: black;
+
+  &-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    // Sizing
+    width: 100%;
+    height: 100%;
+
+    // Background image filter
+    // filter: blur(1px) brightness(0.8) grayscale(0.2);
+    opacity: 1; // Start completely visible
+
+    // Background image options
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    // Animate transitions
+    transition: all $animation-duration; // Applies to all changes
+    transition-timing-function: ease-in-out; // Transition timing
+
+    &-hover {
+      transform: scale(1.2, 1.2); // Scale the background image
+
+      // Filter when hovering
+      // filter: blur(0px) brightness(1) grayscale(0);
+      opacity: 0.5; // Dim so text can be visible
+    }
+  }
+}
+
+// Big entrance animation
+@keyframes bigEntrance {
+	0% {
+		transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
+		opacity: 0.2;
+	}
+	30% {
+		transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);
+		opacity: 1;
+	}
+	45% {
+		transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	60% {
+		transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	75% {
+		transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	90% {
+		transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes bigEntrance {
+	0% {
+		-webkit-transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
+		opacity: 0.2;
+	}
+	30% {
+		-webkit-transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);
+		opacity: 1;
+	}
+	45% {
+		-webkit-transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	60% {
+		-webkit-transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	75% {
+		-webkit-transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	90% {
+		-webkit-transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+}

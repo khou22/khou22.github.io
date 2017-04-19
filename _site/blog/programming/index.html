@@ -17,6 +17,8 @@
   <!-- Jquery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+  <!-- Tile Layout Library -->
+  <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://khou22.github.io/blog/programming/">
@@ -190,10 +192,13 @@
     <div class="page-content">
       <div class="wrapper">
         <div id="content" class="MainDiv"></div>
-<script type="text/jsx;harmony=true" src="programmingProjectsData.js">
-</script>
+<script src="programmingProjectsData.js"></script>
 <script type="text/jsx;harmony=true" src="../../Components/ProjectsPage.js">
 </script>
+
+<script src="convertProjectsToGrid.js"></script>
+<div id="grid"></div>
+<script type="text/jsx;harmoney-true" src="../../libraries/tile-layout-library/main.js"></script>
 
       </div>
     </div>
