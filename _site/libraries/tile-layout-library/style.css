@@ -9,7 +9,6 @@
 **************************************************************/
 .main-grid {
   width: 100%;
-  background-color: white;
   overflow: visible; }
 
 @media only screen and (max-width: 600px) {

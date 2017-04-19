@@ -51,7 +51,7 @@ var GridView = React.createClass({
     // Establish standards
     var baseWidth = this.state.gridWidth * Math.floor(100 / this.state.numColumns) / 100; // Get percentage width
     if (this.state.gridWidth != 0) {
-      baseWidth += -Math.round(baseWidth / this.state.gridWidth); // Slight amount of wiggle room
+      baseWidth += -Math.round(baseWidth / this.state.gridWidth) - 4; // Slight amount of wiggle room
     } else {
       baseWidth += -8;
     }
@@ -153,7 +153,7 @@ var Tile = React.createClass({
     // console.log(this.props.id + ": " + this.state.descriptionHeight);
     var tileTextStyle = {
       color: this.props.textColor,
-      bottom: -this.state.descriptionHeight + "px"
+      bottom: -this.state.descriptionHeight - 8 + "px"
     }
 
     var tileCategoryStyle = {

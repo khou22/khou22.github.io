@@ -6,6 +6,7 @@ var gridData = {
 }
 
 // Populate grid data from programmingProjects object
+// Prepares the gridData object
 for (var i = 0; i < programmingProjects.length; i++) {
   var currentProject = programmingProjects[i];
 
