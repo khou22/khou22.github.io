@@ -13,6 +13,9 @@ This library relies on ReactJS and Jquery so you must first include these in you
 
 <!-- Jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Stylesheet -->
+<link rel="stylesheet" type="text/css" href="tile-layout-library/style.css">
 ```
 
 ## Add grid data

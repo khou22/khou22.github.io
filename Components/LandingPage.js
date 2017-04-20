@@ -350,7 +350,7 @@ var ProfileBox = React.createClass({
           eventAction: 'click',
           eventLabel: 'Programming Tab'
         });
-        location.href="/blog/programming"; // Project page on website
+        location.href="/programming"; // Project page on website
         // window.open("http://kevinhou.wix.com/projects#!woodprojects/ckra", '_blank);'); // Wix projects page
         break;
       default:
