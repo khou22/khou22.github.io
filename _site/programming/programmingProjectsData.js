@@ -2,42 +2,42 @@ console.log("Loaded programming projects");
 programmingProjects = [
   {
     name: "SoFly Scanner",
-    subtitle: "",
+    subtitle: "HackPrinceton 2017",
     slug: "https://devpost.com/software/sofly-scanner",
     image: "placeholder.jpg",
     description: "An app that allows the user to snap a picture of a flyer, extract relevant information, and make a calendar event with the event name, location, time, date, and more. This will allow users to digitize flyers, and hopefully provide a decentralized mechanism for communities to grow close again. It won 2nd place for best Princeton app at HackPrinceton Spring 2017."
   },
   {
     name: "Uber Scheduler",
-    subtitle: "",
+    subtitle: "MenloHacks 2016",
     slug: "Uber-Scheduler",
-    image: "placeholder.jpg",
+    image: "./../media/projects/uberScheduler/Screenshots/Home%20Screen.png",
     description: "An iOS app to call Ubers ahead of time or on a recurring schedule. I was the frontend engineer and designer. We built this at a hackathon and won 1st place overall."
   },
   {
     name: "Princeton Tonight Website",
-    subtitle: "",
+    subtitle: "Princeton's first and only broadcast show.",
     slug: "http://princetontonight.com",
-    image: "placeholder.jpg",
+    image: "./../media/programming/thumbnails/princeton-tonight-thumbnail.png",
     description: "I designed and built Princeton Tonight's website to showcase episodes and upcoming events as well as an email subsription service. Founded in 2015, we are the only student TV production show on Princeton's campus and have hosted guests ranging from Art Garfunkel and Mike Houston to Mike Delguidice and Dave Coulier."
   },
   {
     name: "Website on East Asian Stereotypes",
-    subtitle: "",
+    subtitle: "Lick-Wilmerding High School 2016",
     slug: "{{ site.baseurl }}/school/east-asian-relations",
-    image: "placeholder.jpg",
+    image: "https://saylordotorg.github.io/text_world-regional-geography-people-places-and-globalization/section_13/577959bea9552816bef76e0654eddeb8.jpg",
     description: "This is a website I built from scratch for my East Asian Relations class. I was responsible for putting content online so that members of our school community could see the work we'd done that year. Because I only had a couple days to complete it, I wasn't able to add as many features as I would've liked."
   },
   {
     name: "City Strong Training",
-    subtitle: "",
+    subtitle: "Personal training and fitness.",
     slug: "http://citystrongtraining.com/",
     image: "placeholder.jpg",
     description: "Freelance work for a friend of mine. I designed and built a website for his new personal training business, City Strong Training."
   },
   {
     name: "Handwriting Font App",
-    subtitle: "",
+    subtitle: "One of my first projects.",
     slug: "https://www.youtube.com/watch?v=9qK6qmGWyB4",
     image: "placeholder.jpg",
     description: "This is a handwriting app that I programmed using java. It asks for the user's handwriting then creates a font out of it. The user can type in their handwriting and export their document to be written out using the WaterColor Bot."
