@@ -4,7 +4,7 @@ programmingProjects = [
     name: "SoFly Scanner",
     subtitle: "HackPrinceton 2017",
     slug: "https://devpost.com/software/sofly-scanner",
-    image: "placeholder.jpg",
+    image: "./../media/programming/thumbnails/so-fly-scanner.png",
     description: "An app that allows the user to snap a picture of a flyer, extract relevant information, and make a calendar event with the event name, location, time, date, and more. This will allow users to digitize flyers, and hopefully provide a decentralized mechanism for communities to grow close again. It won 2nd place for best Princeton app at HackPrinceton Spring 2017."
   },
   {
@@ -32,28 +32,28 @@ programmingProjects = [
     name: "City Strong Training",
     subtitle: "Personal training and fitness.",
     slug: "http://citystrongtraining.com/",
-    image: "placeholder.jpg",
+    image: "./../media/programming/thumbnails/city-strong-training.png",
     description: "Freelance work for a friend of mine. I designed and built a website for his new personal training business, City Strong Training."
   },
   {
     name: "Handwriting Font App",
     subtitle: "One of my first projects.",
     slug: "https://www.youtube.com/watch?v=9qK6qmGWyB4",
-    image: "placeholder.jpg",
+    image: "./../media/programming/thumbnails/handwriting-font-app.png",
     description: "This is a handwriting app that I programmed using java. It asks for the user's handwriting then creates a font out of it. The user can type in their handwriting and export their document to be written out using the WaterColor Bot."
   },
   {
-    name: "MusicViz - Live Music Visualizer",
-    subtitle: "",
+    name: "MusicViz",
+    subtitle: "A live music visualizer programmed in Java.",
     slug: "http://youtu.be/sbJhaRZhsZo",
-    image: "placeholder.jpg",
+    image: "./../media/programming/thumbnails/musicviz.png",
     description: "This is a music visualizer I programmed in Processing. You can input any music file and it will analyze the sound for beat drops, etc."
   },
   {
     name: "Online Sandwich Ordering Machine",
     subtitle: "",
     slug: "https://www.flickr.com/photos/khou22/albums/72157668990077812",
-    image: "placeholder.jpg",
+    image: "./../media/programming/thumbnails/online-sandwich-ordering.jpg",
     description: "This is a project I made for my school. I used an Arduino Ethernet board and a receipt printer to make a machine that could process online sandwich orders for the school cafeteria."
   },
   {
