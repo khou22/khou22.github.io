@@ -37,7 +37,7 @@
   .tile-text {
     position: absolute;
     left: 5%;
-    width: 95%;
+    width: 90%;
     z-index: 0;
     color: white;
     transition: all 0.2s;

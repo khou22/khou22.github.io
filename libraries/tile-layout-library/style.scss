@@ -49,7 +49,7 @@ $mobile-cuttoff: 600px;
   &-text {
     position: absolute;
     left: 5%; // Padding
-    width: 95%; // Don't fill up entire tile
+    width: 90%; // Don't fill up entire tile
     z-index: 0; // Ensure above background
 
     color: white; // Font color
