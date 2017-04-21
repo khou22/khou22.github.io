@@ -20,7 +20,7 @@ for (var i = 0; i < programmingProjects.length; i++) {
     link: projectURL,
     size: "2",
     category: {
-      label: "Programming",
+      label: currentProject.category,
       color: "orange"
     }
   }
