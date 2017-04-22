@@ -21,7 +21,7 @@ for (var i = 0; i < programmingProjects.length; i++) {
     size: "2",
     category: {
       label: currentProject.category,
-      color: "orange"
+      color: currentProject.categoryColor
     }
   }
 
