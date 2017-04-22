@@ -111,7 +111,8 @@ $mobile-cuttoff: 600px;
     height: 100%;
 
     // Background image filter
-    // filter: blur(1px) brightness(0.8) grayscale(0.2);
+    filter: brightness(0.9);
+    -webkit-filter: brightness(0.9);
     opacity: 1; // Start completely visible
 
     // Background image options
