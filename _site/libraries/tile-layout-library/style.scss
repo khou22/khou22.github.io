@@ -53,6 +53,7 @@ $mobile-cuttoff: 600px;
     z-index: 0; // Ensure above background
 
     color: white; // Font color
+    text-shadow: 1px 1px #000000; // Add shadow to make it easier to read
 
     // Animate hover transitions
     transition: all $animation-duration; // Applies to all changes

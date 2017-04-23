@@ -40,6 +40,7 @@
     width: 90%;
     z-index: 0;
     color: white;
+    text-shadow: 1px 1px #000000;
     transition: all 0.2s;
     transition-timing-function: ease-in-out; }
     .tile-text-hover {
