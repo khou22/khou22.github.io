@@ -89,10 +89,10 @@ programmingProjects = [
     description: "This is a project I made for my school. I used an Arduino Ethernet board and a receipt printer to make a machine that could process online sandwich orders for the school cafeteria."
   },
   {
-    name: "Text Analysis",
-    subtitle: "",
+    name: "Text Analysis App",
+    subtitle: "See how you speak on Facebook",
     slug: "text-analysis",
-    image: "placeholder.jpg",
+    image: "http://searchuserinterfaces.com/book/images/wordle.png",
     category: categories[ "Web App" ].name,
     categoryColor: categories[ "Web App" ].color,
     description: "An app to analyze the user's text for patterns, word choice, etc. It accepts text files as well as Facebook user data."
@@ -101,79 +101,79 @@ programmingProjects = [
     name: "Drag and Drop Interface",
     subtitle: "",
     slug: "drag-drop-interface",
-    image: "placeholder.jpg",
+    image: "https://i.stack.imgur.com/CJbiO.png",
     category: categories[ "Web App" ].name,
     categoryColor: categories[ "Web App" ].color,
     description: "A simple drag and drop interface that uses ReactJS and HTML5 to mimic the Desmos equation editor."
   },
   {
     name: "Stats Test Score Calculator",
-    subtitle: "",
+    subtitle: "Calculate test scores using the AP standard",
     slug: "stats-test-score-calculator",
-    image: "placeholder.jpg",
+    image: "./../media/programming/thumbnails/stats-test-score-calculator.png",
     category: categories[ "Web App" ].name,
     categoryColor: categories[ "Web App" ].color,
     description: "An app to automatically calculate test scores and apply a grading curve. Built for Triggs Honors Stats Classes."
   },
   {
     name: "Time Calculator",
-    subtitle: "",
+    subtitle: "Sports timer to average multiple times",
     slug: "time-calculator",
-    image: "placeholder.jpg",
+    image: "https://cdn.dribbble.com/users/15226/screenshots/411621/et_4-copy.png",
     category: categories[ "Web App" ].name,
     categoryColor: categories[ "Web App" ].color,
     description: "An app that takes in an ambiguous number of times and outputs the average of those times. Made this for my friend who does crew."
   },
   {
     name: "Presidential Election Forecast 2016",
-    subtitle: "",
+    subtitle: "A proof of concept for a statistics concept",
     slug: "presidential-election-forecast-2016",
-    image: "placeholder.jpg",
+    image: "https://g.foolcdn.com/editorial/images/185172/democrat-republican_large.jpg",
     category: categories[ "Web App" ].name,
     categoryColor: categories[ "Web App" ].color,
     description: "Runs simulations and forecasts who will win the 2016 presidential election. Right now it only simulates who will win the Republican candidacy."
   },
   {
     name: "Browser Home Page",
-    subtitle: "",
+    subtitle: "A custom homepage",
     slug: "browser-home-page",
-    image: "placeholder.jpg",
+    image: "./../media/programming/thumbnails/browser-homepage.png",
     category: categories[ "Website" ].name,
     categoryColor: categories[ "Website" ].color,
     description: "Custom browser home page with useful information and links. I set it to my tab/browser home page."
   },
   {
     name: "Honors Physics Optics Lab",
-    subtitle: "",
+    subtitle: "Honors Physics 2016",
     slug: "{{ site.baseurl }}/school/optics/",
-    image: "placeholder.jpg",
+    image: "./../media/programming/thumbnails/honors-physics-optics-lab.png",
     category: categories[ "Website" ].name,
     categoryColor: categories[ "Website" ].color,
     description: "A website I made from scratch for a physics lab on optics and waves. It was neat being able to make a website instead of a traditional website."
   },
   {
     name: "Hollywood's Portrayal of Africa",
-    subtitle: "",
+    subtitle: "Postcolonial Africa 2015",
     slug: "{{ site.baseurl }}/school/postcolonial-africa/",
-    image: "placeholder.jpg",
+    image: "./../media/programming/thumbnails/hollywood-africa-stereotypes.png",
     category: categories[ "Website" ].name,
     categoryColor: categories[ "Website" ].color,
     description: "A website I made to highlight the stereotypes and microaggressions present in Hollywood films towards Africa. It was an interesting topic that isn't often thought about."
   },
   {
     name: "Execute Order 66",
-    subtitle: "",
+    subtitle: "Block profanity in GitHub",
     slug: "https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone?hl=en-US",
-    image: "placeholder.jpg",
+    image: "./../media/projects/executeOrder66/GitHub%20Logo.png",
     category: "Chrome Extension",
     categoryColor: categories[ "Other" ].color,
     description: "A Google Chrome Extension that cleanses the profanity out of your GitHub repos."
   },
   {
     name: "Random Number Assignment",
-    subtitle: "",
+    subtitle: "Assign random numbers to each person",
     slug: "random-number-assignment",
-    image: "placeholder.jpg",
+    image: "https://cdn.dribbble.com/users/51395/screenshots/1089385/dice.jpg",
     category: categories[ "Web App" ].name,
     categoryColor: categories[ "Web App" ].color,
     description: "Assigns a random number to inputted elements."
