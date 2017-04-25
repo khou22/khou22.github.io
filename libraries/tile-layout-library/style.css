@@ -36,15 +36,24 @@
     -webkit-animation-timing-function: ease-out; }
   .tile-text {
     position: absolute;
-    left: 5%;
-    width: 90%;
+    width: 100%;
+    padding: 2% 5% 0 5%;
     z-index: 0;
+    background: -moz-linear-gradient(top, transparent 0%, black 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, transparent 0%, black 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+    /* IE6-9 */
     color: white;
     text-shadow: 1px 1px #000000;
     transition: all 0.2s;
     transition-timing-function: ease-in-out; }
     .tile-text-hover {
-      bottom: 5% !important; }
+      bottom: 0% !important;
+      padding: 2% 5% 3% 5%; }
   .tile-category {
     padding: 4px 6px 4px 6px;
     font-size: 10px;
