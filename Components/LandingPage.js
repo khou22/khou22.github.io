@@ -30,8 +30,8 @@ var LandingPage = React.createClass({
       // Types are 'alert', 'notice'
       type: "notice",
       // message: "New video released: Wood Turned Segmented Bowl with Inlaid Letters",
-      message: "New wood project: Wood Turned Segmented Bowl with Inlaid Letters",
-      link: "https://youtu.be/_ZSztfYnnC8",
+      message: "New programming project: SoFly — An iOS app to scan flyers",
+      link: "https://devpost.com/software/sofly-scanner",
       display: true
     };
     var firstImage = { // Set first image — not working
