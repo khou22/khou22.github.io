@@ -14,7 +14,7 @@ for (var i = 0; i < vscoImages.length; i++) {
     subtitle: "",
     description: "",
     image: "http://" + currentImage,
-    link: "",
+    link: "http://vsco.co/khou22/",
     size: "1",
     category: {
       label: "",
