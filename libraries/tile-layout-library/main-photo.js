@@ -124,6 +124,14 @@ var Tile = React.createClass({
   render: function() {
     var rank = this.getTileRank(); // Get the tile's rank/order
     var delay = (rank * .05) + .05; // Delay in seconds
+    var entranceAnimation = "tile-entrance"; // Standard entrance animation class
+
+    // If the 30th tile or greater, don't animate entrance
+    // Only slows down the load time
+    if (rank >= 30) {
+      delay = 0; // Don't delay (probably not neccessary since we're removing the animation)
+      entranceAnimation = "tile-skip-entrance"; // Skip the animation
+    }
 
     // Setup if opening in new window
     var target = "";
@@ -154,7 +162,7 @@ var Tile = React.createClass({
       backgroundClass += " photo-tile-background-hover"
     }
     return (
-      <a className="tile tile-entrance"
+      <a className={"tile " + entranceAnimation}
             href={this.props.link}
             style={tileStyle}
             target={target}

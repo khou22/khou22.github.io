@@ -30,8 +30,8 @@ $mobile-cuttoff: 600px;
 .tile {
   opacity: 0; // Start transparent
 
+  // Entrance Animation
   &-entrance {
-    // Entrance Animation
     animation-name: bigEntrance;
   	-webkit-animation-name: bigEntrance;
 
@@ -43,6 +43,11 @@ $mobile-cuttoff: 600px;
 
   	animation-timing-function: ease-out;
   	-webkit-animation-timing-function: ease-out;
+  }
+
+  // Skip the entrance animation
+  &-skip-entrance {
+    opacity: 1;
   }
 
   /******   Content Styling   ******/
