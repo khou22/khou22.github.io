@@ -70,6 +70,27 @@ $mobile-cuttoff: 800px;
     }
   }
 
+  // Portfolio hover styling
+  &-portfolio-dropdown {
+    position: absolute;
+    z-index: 2;
+    margin-left: 10%;
+    padding: 12px;
+    display: none; // Hide unless script displays
+    background-color: white;
+
+    &-li {
+      margin-left: 0;
+      padding-left: 0;
+      list-style: none;
+
+      a {
+        margin-left: 0;
+        color: black !important;
+      }
+    }
+  }
+
   // Landing blog page
   &-page {
     // Fill entire screen

@@ -14,8 +14,13 @@ layout: default
     <li class="blog-landing-header-li">
       <a href="{{ site.baseurl }}/blog/contact">Contact</a>
     </li>
-    <li class="blog-landing-header-li">
-      <a href="{{ site.baseurl }}/programming">Portfolio</a>
+    <li id="blog-landing-portfolio-group" class="blog-landing-header-li">
+      <a id="blog-landing-portfolio-link" href="{{ site.baseurl }}/programming">Portfolio &#9662;</a>
+      <ul id="blog-landing-portfolio-dropdown" class="blog-landing-portfolio-dropdown">
+        <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/programming">Programming</a></li>
+        <li class="blog-landing-portfolio-dropdown-li"><a href="https://www.flickr.com/photos/khou22/albums">Woodshop</a></li>
+        <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/design">Design</a></li>
+      </ul>
     </li>
     <li class="blog-landing-header-li">
       <a href="{{ site.baseurl }}/blog">Blog</a>

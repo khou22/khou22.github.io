@@ -806,6 +806,20 @@ pre {
     color: white; }
   .blog-landing-header-li a:hover {
     color: #9DB7C1; }
+.blog-landing-portfolio-dropdown {
+  position: absolute;
+  z-index: 2;
+  margin-left: 10%;
+  padding: 12px;
+  display: none;
+  background-color: white; }
+  .blog-landing-portfolio-dropdown-li {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none; }
+    .blog-landing-portfolio-dropdown-li a {
+      margin-left: 0;
+      color: black !important; }
 .blog-landing-page {
   top: -80px;
   position: relative;
