@@ -1115,7 +1115,8 @@ pre {
     font-size: 72px;
     margin-bottom: 24px !important; }
   .template-grid-header-description {
-    width: 100%;
+    width: 80%;
+    margin-left: 10% !important;
     text-align: center;
     font-size: 20px;
     margin-bottom: 24px !important; }

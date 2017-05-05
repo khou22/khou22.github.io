@@ -14,8 +14,10 @@
   }
 
   &-description {
-    width: 100%;
-    text-align: center;
+    width: 80%;
+    margin-left: 10% !important;
+
+    text-align: center; // Center text
     font-size: 20px;
     margin-bottom: 24px !important;
   }
