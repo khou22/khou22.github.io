@@ -128,7 +128,7 @@ var Tile = React.createClass({
 
     // If the 30th tile or greater, don't animate entrance
     // Only slows down the load time
-    if (rank >= 30) {
+    if (rank >= 20) {
       delay = 0; // Don't delay (probably not neccessary since we're removing the animation)
       entranceAnimation = "tile-skip-entrance"; // Skip the animation
     }
