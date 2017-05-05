@@ -48,7 +48,7 @@ $mobile-cuttoff: 600px;
   /******   Content Styling   ******/
   &-text {
     position: absolute; // Absolute positioning
-    width: 100%;
+    width: 90%;
     padding: 2% 5% 0 5%; // Pad top left and right
     z-index: 0; // Ensure above background
 
@@ -138,6 +138,30 @@ $mobile-cuttoff: 600px;
       // filter: blur(0px) brightness(1) grayscale(0);
       opacity: 0.5; // Dim so text can be visible
     }
+  }
+}
+
+.photo-tile-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // z-index: -1;
+
+  // Sizing
+  width: 100%;
+  height: 100%;
+
+  // Background image options
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  // Animate transitions
+  transition: all $animation-duration; // Applies to all changes
+  transition-timing-function: ease-in-out; // Transition timing
+
+  &-hover {
+    transform: scale(1.2, 1.2); // Scale the background image
   }
 }
 
