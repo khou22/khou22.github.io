@@ -29,7 +29,6 @@ var vscoImages = [
   "im.vsco.co/1/5596ee97bbcb95169892/58a0f9aa399e633079759951/vsco_021217.jpg?w=600&amp;dpr=2",
   "im.vsco.co/1/5596ee97bbcb95169892/589a9777da98040d8a09d237/vsco_020717.jpg?w=600&amp;dpr=2",
   "im.vsco.co/1/5596ee97bbcb95169892/589a96b7da98040d8a09d235/vsco_020717.jpg?w=600&amp;dpr=2",
-  "im.vsco.co/1/5596ee97bbcb95169892/589a96b7da98040d8a09d235/vsco_020717.jpg?w=600&amp;dpr=2",
   "im.vsco.co/1/5596ee97bbcb95169892/5890f138f5c0cc13011ce690/vsco_013117.jpg?w=600&amp;dpr=2",
   "im.vsco.co/1/5596ee97bbcb95169892/58841994f270ab480431eb26/vsco_012117.jpg?w=600&amp;dpr=2",
   "im.vsco.co/1/5596ee97bbcb95169892/587fcf462fdbfe2e964954c8/vsco_011817.jpg?w=600&amp;dpr=2",
