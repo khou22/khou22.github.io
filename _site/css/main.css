@@ -933,6 +933,51 @@ pre {
 .category-list {
   font-size: 2rem; }
 
+.portfolio-category-div {
+  position: relative;
+  width: 50%;
+  height: 400px;
+  display: inline-block;
+  overflow: hidden;
+  background-color: black; }
+.portfolio-category-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 200ms;
+  transition-timing-function: ease-in-out; }
+  .portfolio-category-background-hover {
+    transform: scale(1.2, 1.2);
+    opacity: 0.5; }
+.portfolio-category-text {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  transition: all 200ms;
+  transition-timing-function: ease-in-out;
+  font-size: 48px;
+  z-index: 2;
+  color: white;
+  opacity: 0; }
+  .portfolio-category-text-hover {
+    opacity: 1; }
+.portfolio-category-circular-logo {
+  z-index: 3;
+  position: absolute;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  border-radius: 100px; }
+
 /*For contact page*/
 .contact-header {
   width: 100%; }
