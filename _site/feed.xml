@@ -6,9 +6,75 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 May 2017 20:40:09 -0400</pubDate>
-    <lastBuildDate>Mon, 08 May 2017 20:40:09 -0400</lastBuildDate>
+    <pubDate>Tue, 09 May 2017 12:10:13 -0400</pubDate>
+    <lastBuildDate>Tue, 09 May 2017 12:10:13 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>HackPrinceton 2017: SoFly — An iOS App to Scan Flyers on Campus</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Earlier in April, a friend and I participated in HackPrinceton, Princeton University’s semi-annual hackathon that brings students from all around the country together for 36 hours. We built SoFly — an iOS app that scans flyers and lets the user share the event, create a calendar event, find the Facebook event, etc. The judges really liked it and it won runner up for the best app for Princeton Students!
+&lt;br class=&quot;post-line-break&quot; /&gt;
+I was responsible for the design, frontend, and implementing the OCR (Optical Character Recognition) processing. My partner dealt with the natural language processing to extract the event name, date, etc. from the raw text. I used Sketch to design the UX and Xcode/Swift 3 to code the frontend. We used Tesseract — Google’s OCR engine.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Check out the Devpost submission &lt;a href=&quot;https://devpost.com/software/sofly-scanner&quot;&gt;here&lt;/a&gt;.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;video-demo&quot;&gt;Video Demo&lt;/h1&gt;
+&lt;iframe src=&quot;https://player.vimeo.com/video/211174699&quot; width=&quot;100%&quot; height=&quot;500px&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;/h1&gt;
+&lt;p&gt;The motivation for our application came when we realized how much our college uses flyers to advertise events. From dance recitals, to scientific talks, events are neatly summarized and hung on campus in visible areas. A huge part of our sense of community comes from these events, and as excursions into Princeton township have shown us, events planned in non-centralized communities rely on flyers and other written media to communicate activities to others. Both of us have fond memories attending community events growing up, and we think (through some surveying of our student body) that a cause of decreased attendance at such events is due to a few factors.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;People forget. Its not a flyer they can always take with them, and so what they think is instantaneously exciting soon fades from their memory.&lt;/li&gt;
+  &lt;li&gt;It is not digital – in a world where everything else is.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;design&quot;&gt;Design&lt;/h1&gt;
+&lt;p&gt;The primary concerns for the design were largely speed and usability. Flyers are already something that people ignore because it takes too long to absorb and memorize the information. We had to create an experience that would be as painless as if you just glanced at the flyer and faster than it would take to add the event to your calendar manually. This goal made the design largely a user-experience challenge as opposed to simply making it look good. It was a lot of fun playing around with various user flows and animations.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+I think the finished product ultimately hit it on both the usability and aesthetic fronts. I put in a lot of effort into the animations (see the video above). Little things from the camera flash on the splash screen to the “scanning” loading animation took all my skill and creativity as an iOS developer to implement. It was really exciting when the finished product looked polished after only 36 hours!
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;screenshots&quot;&gt;Screenshots&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;./../../../../media/projects/soFlyScanner/splash_screen.png&quot; class=&quot;iPhone-screenshots-small&quot; /&gt;
+&lt;img src=&quot;./../../../../media/projects/soFlyScanner/camera_screen.png&quot; class=&quot;iPhone-screenshots-small&quot; /&gt;
+&lt;img src=&quot;./../../../../media/projects/soFlyScanner/loading_screen.png&quot; class=&quot;iPhone-screenshots-small&quot; /&gt;
+&lt;img src=&quot;./../../../../media/projects/soFlyScanner/generated_content.png&quot; class=&quot;iPhone-screenshots-small&quot; /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;implementation&quot;&gt;Implementation&lt;/h1&gt;
+&lt;p&gt;The application uses Optical Character Recognition techniques (along with Otsu’s method to preprocess a picture, and an exposure and alignment adjustment algorithm) to extract a dump of recognized text. This text is error prone, and quite messy, and so we use canonical Natural Language Processing algorithms to tokenize the text, and “learn” which terms are important. The Machine Learning component in this project involves a Naive Bayesian Classifier, which can categorize and weight these terms for (as of now) internal use. This compared with a “loose NFA” implementation (we coined the term to describe an overly general regex with multiple matches) whose matches were processed using an algorithm that determined the most probable match. From the flyers we extract date, time, location, and our best guess at the title of the text. We made a design choice to limit the time our OCR took, which leads to worse holistic text recognition, but still allows us to extract theses fields using our NLP methods.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;challenges&quot;&gt;Challenges&lt;/h1&gt;
+&lt;p&gt;There were a lot of challenges that we had to work through on this project. Optical Character Recognition, Machine Learning, and Natural Language Processing are all open fields of research, and our project drew on all of them. Not only was the debugging process brutal, but the implementation was not as seamless as we would’ve liked.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Because Tesseract is not intended for mobile use and not built for images (it is used by Google to scan Google Books/PDFs — ie. “clean” documents), we ran into a lot of issues. In retrospect, Tesseract was not a great choice for an OCR library, but because of our time constraint, we didn’t have enough time or people to create an AWS server. Tesseract’s one huge advantage is that it works completely offline. For our next version, we are hoping to build an AWS server to access more powerful OCR services and only use Tesseract if the user doesn’t have an Internet connection.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Another challenge we ran into was in the pre-processing of an image. I hadn’t worked with UIImages (Swift’s image data type) all that much before this project and it was really difficult manipulating images so that Tesseract could produce the best and most accurate results. The most helpful pre-processing ultimately ended up being the binary translation of the image. The algorithm would turn the image into black/white pixels based on the amount of color around each pixel. This technique worked really well because it allowed the text to be more readable against the background.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Other problems we encountered include extracting the name of the event, extracting the organization involved, reading text against a busy background, and much more. We’re hoping that a lot of these issues are solved when we use a stronger OCR service.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;All in all, it was a very successful hackathon! As we were both freshman, we were definitley the underdog in this hackathon and we made a name for ourselves! Some professors became interested in our project and want us to build it out so that students can actually use it! We will likely spend the summer completing the project so that come fall, it will be widely used on campus! It was really exciting and well worth the lack of sleep. Check out the Devpost submission &lt;a href=&quot;https://devpost.com/software/sofly-scanner&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 09 Apr 2017 07:56:00 -0400</pubDate>
+        <link>http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly--an-ios-app-to-scan-flyers-on-campus.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly--an-ios-app-to-scan-flyers-on-campus.html</guid>
+        
+        <category>ios</category>
+        
+        <category>swift</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>Swift Tips and Tricks February 2017: UI Text Field Styling and Force Touch App Shortcuts</title>
@@ -958,62 +1024,6 @@ Tutorial primarily from: &lt;a href=&quot;http://www.ioscreator.com/tutorials/se
         <pubDate>Tue, 26 Jul 2016 10:13:16 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/07/26/swift-segmented-control-basics-how-to-setup-and-utilize-segmented-controls.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/07/26/swift-segmented-control-basics-how-to-setup-and-utilize-segmented-controls.html</guid>
-        
-        <category>ios</category>
-        
-        <category>swift</category>
-        
-        <category>apps</category>
-        
-        <category>xcode</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Persist Data: Storing Values Locally Using Swift</title>
-        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Overview&lt;/h3&gt;
-&lt;p&gt;One of the benefits of iOS development that I wasn’t entirely used to being a web developer, is the ability to store data locally. Apple allows apps to store data on the device in the form of &lt;a href=&quot;https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson10.html&quot; target=&quot;_blank&quot;&gt;persist data&lt;/a&gt;. Persist data can be read between app sessions and is only deleted when you remove the app from the device. This information is one of the many things the uninstall app prompt is referring to when it asks if you would like to delete the app and all its data. It is primarily used for small things like strings, boolean, integers, etc. and not for serious things like images (for that, you should use &lt;a href=&quot;https://developer.apple.com/library/watchos/documentation/Cocoa/Conceptual/CoreData/index.html&quot; target=&quot;_blank&quot;&gt;core data&lt;/a&gt;).
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Reading and writing persist data is remarkably simple, but this blog post contains some tips that will prevent crashes and improve your coding structure. There are three basic elements to persist data: keys, writing, and reading.&lt;/p&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;Keys&lt;/h3&gt;
-&lt;p&gt;Keys are string phrases or words that reference a specific value or set of values in persist data. Information is stored with a key reference and can be retrieved and written using that same key. These keys are incredibly important and any typo can quickly cause bugs or crashes in your app. As highlighted in my &lt;a href=&quot;http://khou22.github.io/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html&quot; target=&quot;_blank&quot;&gt;blog post&lt;/a&gt; in the “Preventing Code-Breaking Typos with Structures” section, it is best practice to include keys as constants in a structure. This will ensure that your keys are all only explicitly typed out in one place. It makes debugging significantly easier. Here is what your keys structure will look like when storing persist data:&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Keys&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calorieGoal&lt;/span&gt;              &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;calorieGoal&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;Writing&lt;/h3&gt;
-&lt;p&gt;NSUserDefaults (aka Persist Data) are stored using the NSUserDefaults.standardUserDefaults() initializer. Instead of calling this every time you wish to use persist data, it’s easier to simply create another structure within your Constants.swift file containing the following:&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Constants&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defaults&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;NSUserDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;standardUserDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
-Now, instead of writing NSUserDefaults.standardUserDefaults() every time, you can simply type Constants.defaults.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-To write data locally into persist data, simply use this command:&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Dummy data&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Constants&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;calorieGoal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Writing an integer value for a key&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;Reading&lt;/h3&gt;
-&lt;p&gt;Reading data is also very simple, but there is one thing to keep in mind. If you have no written any data yet, attempting to read that nil value will result in a crash. It’s good practice to add a conditional before retrieving your persist data to prevent such conundrums from occurring. The code is shown here:&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Constants&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;objectForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;calorieGoal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Ensure the data exists&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;caloriesGoal&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Constants&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;integerForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;calorieGoal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Reading data for key&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
-That’s pretty much all there is to it. Now you can store data between app sessions! Hope you found this helpful.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 25 Jul 2016 07:09:16 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2016/07/25/persist-data-storing-values-locally-using-swift.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/07/25/persist-data-storing-values-locally-using-swift.html</guid>
         
         <category>ios</category>
         
