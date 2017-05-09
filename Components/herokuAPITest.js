@@ -16,7 +16,7 @@ var HerokuAPITest = React.createClass({
 	},
   clickedButton: function() {
     console.log("Calling Heroku API...");
-    var url = "https://guarded-lake-96979.herokuapp.com/test/2";
+    var url = "https://khou22.herokuapp.com/test/3";
     // var url = "http://localhost:5000/test/2";
 
     httpGetAsync(url, function(response) {
