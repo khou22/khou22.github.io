@@ -183,7 +183,8 @@ var WeatherBar = React.createClass({
   render: function() {
     var weather = this.state.weatherForecast; // Store weather data
     var weatherIcon = { "background": "none" };
-    var weatherLink = "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2487956/";
+    // var weatherLink = "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2487956/";
+    var weatherLink = "https://www.yahoo.com/news/weather/country/state/city-2476729/"; // Princeton, NJ
     if (weather.thumbnail) { // If ajax request successful
       // Create style with image url
       weatherIcon = { "backgroundImage": "url(" + weather.thumbnail + ")" };
