@@ -8,3 +8,6 @@ Last Updated: May 12, 2017
 
 # Things to Try
 * CSS "will-change" attribute to help optimize responsive/dynamic animations
+
+# Blog Posts
+* Redux and React Overview - 6/12/17
