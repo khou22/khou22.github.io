@@ -6,9 +6,24 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 May 2017 09:26:59 +0800</pubDate>
-    <lastBuildDate>Mon, 29 May 2017 09:26:59 +0800</lastBuildDate>
+    <pubDate>Tue, 13 Jun 2017 10:32:35 -0400</pubDate>
+    <lastBuildDate>Tue, 13 Jun 2017 10:32:35 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Intro to Redux: Getting Started with State Containers in React</title>
+        <description>
+</description>
+        <pubDate>Tue, 13 Jun 2017 06:26:07 -0400</pubDate>
+        <link>http://khou22.github.io/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</guid>
+        
+        <category>reactjs</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>HackPrinceton 2017: SoFly — An iOS App to Scan Flyers on Campus</title>
@@ -63,7 +78,7 @@ Other problems we encountered include extracting the name of the event, extracti
 &lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
 &lt;p&gt;All in all, it was a very successful hackathon! As we were both freshman, we were definitley the underdog in this hackathon and we made a name for ourselves! Some professors became interested in our project and want us to build it out so that students can actually use it! We will likely spend the summer completing the project so that come fall, it will be widely used on campus! It was really exciting and well worth the lack of sleep. Check out the Devpost submission &lt;a href=&quot;https://devpost.com/software/sofly-scanner&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
 </description>
-        <pubDate>Sun, 09 Apr 2017 19:56:00 +0800</pubDate>
+        <pubDate>Sun, 09 Apr 2017 07:56:00 -0400</pubDate>
         <link>http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly--an-ios-app-to-scan-flyers-on-campus.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly--an-ios-app-to-scan-flyers-on-campus.html</guid>
         
@@ -158,9 +173,9 @@ Design guidelines on shortcut icons: &lt;a href=&quot;https://developer.apple.co
 &lt;br class=&quot;post-line-break&quot; /&gt;
 Hope this was useful! Sorry my blog posts have been fairly minimal in writing. I haven’t had a lot of time this semester because of my heightened work load. Hope I’ll catch a break soon so I can put some more time and thought into my pieces. Thanks!&lt;/p&gt;
 </description>
-        <pubDate>Wed, 01 Mar 2017 03:16:22 +0800</pubDate>
-        <link>http://khou22.github.io/programming/2017/03/01/swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/03/01/swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts.html</guid>
+        <pubDate>Tue, 28 Feb 2017 14:16:22 -0500</pubDate>
+        <link>http://khou22.github.io/programming/2017/02/28/swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/02/28/swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts.html</guid>
         
         <category>ios</category>
         
@@ -408,9 +423,9 @@ Button: To control when we want to upload the image
 
 &lt;p&gt;Hope you found this helpful!&lt;/p&gt;
 </description>
-        <pubDate>Fri, 24 Feb 2017 04:53:36 +0800</pubDate>
-        <link>http://khou22.github.io/programming/2017/02/24/swift-camera-basics-image-pickers-and-action-sheets.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/02/24/swift-camera-basics-image-pickers-and-action-sheets.html</guid>
+        <pubDate>Thu, 23 Feb 2017 15:53:36 -0500</pubDate>
+        <link>http://khou22.github.io/programming/2017/02/23/swift-camera-basics-image-pickers-and-action-sheets.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/02/23/swift-camera-basics-image-pickers-and-action-sheets.html</guid>
         
         <category>ios</category>
         
@@ -486,7 +501,7 @@ Sometimes, items either simply cannot be matched to an integer index or prove to
   &lt;li&gt;Pairing opposites so that you can use one to reference the other (“[“ matches to “]”)&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Sun, 18 Dec 2016 22:57:26 +0800</pubDate>
+        <pubDate>Sun, 18 Dec 2016 09:57:26 -0500</pubDate>
         <link>http://khou22.github.io/programming/2016/12/18/data-types-december-2016---dictionaries-and-symbol-tables.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/12/18/data-types-december-2016---dictionaries-and-symbol-tables.html</guid>
         
@@ -561,9 +576,9 @@ The Core Data editor is relatively intuitive. Create an entity by pressing the �
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
 Those are the basics to Core Data! This is obviously a very simple example, but it’s integral to anyone learning to build iOS apps.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 01 Nov 2016 05:07:17 +0800</pubDate>
-        <link>http://khou22.github.io/programming/2016/11/01/swift-core-data-basics-storing-app-data.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/11/01/swift-core-data-basics-storing-app-data.html</guid>
+        <pubDate>Mon, 31 Oct 2016 17:07:17 -0400</pubDate>
+        <link>http://khou22.github.io/programming/2016/10/31/swift-core-data-basics-storing-app-data.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/10/31/swift-core-data-basics-storing-app-data.html</guid>
         
         <category>ios</category>
         
@@ -675,9 +690,9 @@ Morphing: &lt;a href=&quot;http://codepen.io/chriscoyier/pen/DpFfE&quot; target=
 Tangential side note: How to create a really cool Uber-style splash screen animation on iOS: &lt;a href=&quot;https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen?utm_campaign=iOS+Dev+Weekly&quot; target=&quot;_blank&quot;&gt;https://www.raywenderlich.com/133224/how-to-create-an-uber-splash-screen?utm_campaign=iOS+Dev+Weekly&lt;/a&gt;
 &lt;/g&gt;&lt;/li&gt;&lt;/ul&gt;
 </description>
-        <pubDate>Mon, 29 Aug 2016 02:46:35 +0800</pubDate>
-        <link>http://khou22.github.io/programming/2016/08/29/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/29/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html</guid>
+        <pubDate>Sun, 28 Aug 2016 14:46:35 -0400</pubDate>
+        <link>http://khou22.github.io/programming/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html</guid>
         
         <category>apps</category>
         
@@ -725,9 +740,9 @@ I also hope to implement what I learned with user analytics into my personal web
 &lt;br class=&quot;post-line-break&quot; /&gt;
 In general, this was a great summer for me as a coder and as a team member. I learned a lot of both tangible and intangible skills that I’ll keep with me for a while and met a lot of interesting people from all walks of life. I owe it to my mentor and my manager at Breathometer, both of whom are incredible people and will do great things in the future. Thanks to everyone at Breathometer for making it a great summer and I look forward to applying what I’ve learned in the future!&lt;/p&gt;
 </description>
-        <pubDate>Thu, 25 Aug 2016 06:02:18 +0800</pubDate>
-        <link>http://khou22.github.io/programming/2016/08/25/a-summers-journey-what-ive-learned-and-how-i-should-keep-growing.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/25/a-summers-journey-what-ive-learned-and-how-i-should-keep-growing.html</guid>
+        <pubDate>Wed, 24 Aug 2016 18:02:18 -0400</pubDate>
+        <link>http://khou22.github.io/programming/2016/08/24/a-summers-journey-what-ive-learned-and-how-i-should-keep-growing.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/24/a-summers-journey-what-ive-learned-and-how-i-should-keep-growing.html</guid>
         
         <category>ios</category>
         
@@ -871,7 +886,7 @@ Below are some additional customizations you can choose to add to your tab bar.
 &lt;h3 class=&quot;post-subheader&quot;&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;A more decorated example of all of this can be found at: &lt;a href=&quot;https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject&quot; target=&quot;_blank&quot;&gt;https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject&lt;/a&gt;. A bare bones tab navigation app template can be found at &lt;a href=&quot;https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate&quot; target=&quot;_blank&quot;&gt;https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 10 Aug 2016 21:52:18 +0800</pubDate>
+        <pubDate>Wed, 10 Aug 2016 09:52:18 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html</guid>
         
@@ -964,66 +979,9 @@ The view controller we are segueing to is the “GraphScreen” and has the prop
 &lt;br class=&quot;post-line-break&quot; /&gt;
 I hope you found this blog post helpful! See you in the next one.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 03 Aug 2016 21:45:22 +0800</pubDate>
+        <pubDate>Wed, 03 Aug 2016 09:45:22 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/08/03/swift-tips-and-tricks-august-2016-app-navigation-and-dates.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/03/swift-tips-and-tricks-august-2016-app-navigation-and-dates.html</guid>
-        
-        <category>ios</category>
-        
-        <category>swift</category>
-        
-        <category>apps</category>
-        
-        <category>xcode</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Swift Segmented Control Basics: How to Setup and Utilize Segmented Controls</title>
-        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Introduction&lt;/h3&gt;
-&lt;p&gt;I’m beginning to dive deeper and deeper into Swift and iOS development, but I came to the realization a couple days ago that my summer internship at Breathometer is already drawing to a close. My goal for the summer was to be able to develop my own apps from scratch by the time I leave. I’m slowly but surely gaining the confidence the and the technical prowess to be able to make more and more complex apps.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-I’ve already learned some of the key parts of most apps like views, outlets, structures, pagination, table views, animations, 3rd party integration, threading, push notifications, graphing, localization, and more. Another basic piece of any app is segmentation. Everyone’s used an app with the familiar segmented control bar — many of Apple’s stock apps use this component:
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;img src=&quot;http://kintek.com.au/assets/UISegmentedControl_Button_iOS7.jpg&quot; width=&quot;300px&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-In this blog post, I will be covering the basics of segmented controls and how to use them within an app. Like I’ve mentioned in other blog posts, the intent of these posts is not only to instruct others, but also to help me internalize what I’ve learned and give me a place that I can reference later. I guess I’ll call it my “modern” notebook. So, without further ado, here are some of the key parts of segmented controls.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Setup Storyboard&lt;/h3&gt;
-&lt;p&gt;Drag a “Segmented Control” component into the main view and apply constraints if needed. Use the right sidebar options to name the different segmented buttons.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Initiate the Segmented Control&lt;/h3&gt;
-&lt;p&gt;Open up the Assistant editor and pull up the view’s View Controller. Ctrl click and drag to create an outlet (object, not action) for the segmented control component. Name it whatever you want (in this case we’ll call it “segmentedControl”) and use the type UISegmentedControl, storage weak.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;IBOutlet&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;weak&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;timeFrameControl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UISegmentedControl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Adding Functionality&lt;/h3&gt;
-&lt;p&gt;Using the same window setup, ctrl click and drag to create an outlet Action with the event: “Value Changed.” Again, give it a name (here I’ll be using “indexChanged”) and set type to UISegmentedControl and arguments to sender. This action function will be triggered every time the index is changed. In order to get the value it was changed to, you must call the “segmentedControl” object we created earlier and call the “selectedSegmentIndex.” Here’s an example:&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;IBAction&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;indexChanged&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;sender&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;UISegmentedControl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;segmentedControl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;selectedSegmentIndex&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get the selected index&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Picked&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;segment&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Picked&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;segment&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;”&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-That’s about all there is to it! They’re very simple and straightforward, but can be very useful and powerful in the right situation. I’ve noticed that a common use case is when you want to apply different filters onto data sets. In my project right now, I am segmenting data by time into “Week,” “Month,” and “Year.” Those three options serve as my segments and my UITableView updated every time my index changes. Other use cases include contact filtering, segmenting information into categories on the same view controller, etc. Hope you found this helpful!
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Tutorial primarily from: &lt;a href=&quot;http://www.ioscreator.com/tutorials/segmented-control-tutorial-ios8-swift&quot; target=&quot;_blank&quot;&gt;http://www.ioscreator.com/tutorials/segmented-control-tutorial-ios8-swift&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 26 Jul 2016 22:13:16 +0800</pubDate>
-        <link>http://khou22.github.io/programming/2016/07/26/swift-segmented-control-basics-how-to-setup-and-utilize-segmented-controls.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/07/26/swift-segmented-control-basics-how-to-setup-and-utilize-segmented-controls.html</guid>
         
         <category>ios</category>
         

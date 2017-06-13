@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Uber Scheduler: Calling Ubers Alarm Clock Style</title>
+  <meta name="description" content="">
+
+  <!-- React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- Tile Layout Library -->
+  <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/04/21/uber-scheduler-calling-ubers-alarm-clock-style.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
+
+  <!-- Bootstrap -->
+  <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+  <!-- Google Analytics -->
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-66796355-1', 'auto');
+      ga('send', 'pageview', location.pathname);
+
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/media/site/favicon.png">
+</head>
+
+
+  <body>
+
+    <header>
+  <!-- Desktop Client -->
+  <div class="site-header" id="site-header">
+    <div class="wrapper" style="height: 100%">
+      <div class="site-header-background">
+        <div class="site-header-content">
+
+          <a href="/" class="header-title-section">
+            <img src="/media/site/favicon.png" class="header-logo" align="left">
+            <p class="site-title">Kevin Hou's Blog</p>
+          </a>
+
+          <!-- Site Navigation Bar -->
+          <ul class="nav-ul site-nav-bar">
+            <li class="nav-li nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/blog">Blog &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/blog/category">Browse by Category</a></li>
+                <li class="nav-li"><a href="/blog/tag">Browse by Tag</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/categories">Portfolio &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/programming">Programming</a></li>
+                <!-- <li class="nav-li"><a href="/blog/wood/">Woodshop</a></li> -->
+                <li class="nav-li"><a href="https://www.flickr.com/photos/khou22/albums" target="_blank">Woodshop</a></li>
+                <li class="nav-li"><a href="/design">Design</a></li>
+                <li class="nav-li"><a href="/photography">Photography</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item"><a href="/blog/contact">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="header-placeholder"></div>
+
+  <!-- Activate Tooltips -->
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    // Header has two sizes — 80px and 40px — based on scrolling
+    $(document).scroll(function() {
+      var screenWidth = $(document).width();
+      var mobileCuttoff = 800; // Ambiguous
+      if (screenWidth > mobileCuttoff) {
+        var triggerDistance = 100;
+        var classesToChange = [
+          {
+            className: ".site-header",
+            styleElement: "height",
+            min: 40,
+            max: 80
+          },
+          {
+            className: ".site-title",
+            styleElement: "font-size",
+            min: 20,
+            max: 32
+          },
+          {
+            className: ".site-title",
+            styleElement: "line-height",
+            min: 2,
+            max: 3
+          },
+          {
+            className: ".header-logo",
+            styleElement: "height",
+            min: 24,
+            max: 64
+          },
+          {
+            className: ".site-nav-bar",
+            styleElement: "margin-top",
+            min: 4,
+            max: 24
+          }
+        ]
+        if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
+          var percentageComplete = $(this).scrollTop()/triggerDistance; // Percentage complete
+          for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
+            var currentClass = classesToChange[i] // Store
+            var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
+            $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
+          }
+        } else { // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.min);
+          }
+        }
+        if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast - max style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.max);
+          }
+        }
+      } else {
+        // If on mobile
+        // console.log("Your screen size does not support dynamic header");
+      }
+    });
+  </script>
+
+
+  <!-- Mobile Client -->
+  <div class="mobile-blog-header">
+    <ul class="mobile-blog-header-ul">
+      <li class="mobile-blog-header-li-logo">
+        <a href="http://khou22.github.io">
+          <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
+        </a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/">Home</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/blog">Blog</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/programming">Portfolio</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/blog/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mobile-blog-header-placeholder">
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <!-- Hide scrollbar on this page -->
+<style> ::-webkit-scrollbar { display: none; } </style>
+
+<div class="post">
+  
+
+    
+      
+    
+
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
+    
+  <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
+    <div class="post-header-content">
+      <a onclick="blogPostBackButton()"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title post-header-title">Uber Scheduler: Calling Ubers Alarm Clock Style</h1>
+      <h4 class="post-header-description">Overview, reflection, etc. on building the Uber Scheduler at my first hackathon. It won first overall!</h4>
+      <p class="post-header-meta">Apr 21, 2016 • Kevin Hou</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+    var blogPostBackButton = function() {
+      var previousLink = document.referrer
+      var index = previousLink.indexOf("/blog")
+      console.log("Previous link:", previousLink);
+      console.log(index);
+      if (index == 1) { // If not coming from a different blog post
+        window.history.go(-1); // Back in history (keeps window position)
+      } else { // Directed from a different blog post
+        // console.log("Back to blog");
+        console.log("Back");
+        window.location.href = "/blog";
+      }
+    }
+
+  </script>
+
+  <article class="post-content">
+    <p>This past week, a group of friends and I attended a hackathon, MenloHacks ñ an MLH (Major League Hackathon) sponsored event. This was my first hackathon and was also for one of my two partners. Our group of 3 high schoolers built an Uber scheduling app for both iOS and Android. Our app would essentially allow users to schedule uber rides ahead of time at a set date/time. Another core segment of our app was the recurring schedule component: an alarm-clock-style feature that could automatically call you an Uber on specific weekdays (i.e. every Monday, Wednesday, and Friday at 5:45 PM). We were able to complete our product within the allotted 24 hour time period. We even had time to build another project - a Google Chrome extension that censors your vulgar GitHub commits (see <a href="#">Execute Order 66</a>). I worked as the primary front end engineer and also designed the UI/UX from scratch.
+<br class="post-line-break" />
+We built our app in Ionic using AngularJS for the front end and Python for our Google Cloud Engine backend. We wanted to have discipline when building the app so we concentrated on maintaining good coding practices such as commenting code, building in a scalable fashion, as well as programming code that was organized and efficient. Due to the nature of Google Cloud Engine, our app is potentially scalable to millions of users.
+<br class="post-line-break" /></p>
+<h3 class="post-subheader">Design</h3>
+<h5>Scroll down for images of my designs</h5>
+<p>This was one of my first times designing an app from ground zero. Often times I would design pages as I went or only design a single component. Because I realized the importance of the role of UX/UI design in app development, I decided to take the time to plan each page out down to the pixel. While the rest of my group coded the backend on Google Cloud Engine, I spent about 5 hours working with Sketch to come up with a simple and streamlined user flow as well as a beautiful UI. I even mocked up different variations and iterated upon my designs.
+<br class="post-line-break" />
+I used Google Material Design as inspiration and a starting block because we enjoyed its styling methodology. While many of our components were variations of existing components (a small percentage were directly copied), some of the icons and components were of my own creation that I designed to mimic the overall Material Design feel.
+<br class="post-line-break" /></p>
+<h3 class="post-subheader">Building the App</h3>
+<p>After spending about a quarter of the 24 hours designing, I began to transition to building the front end. One of my group members had already built a somewhat functional landing page, so I set about building the other pages. I found it significantly easier to build the front end when I had an accurate design to go off of. In fact, the time I saved likely outweighed the 6 or so hours it took to create the designs.
+<br class="post-line-break" />
+I created Angular services for everything relating to global variables or functions. By doing this from the beginning, it made my group member’s job of connecting the front end to the backend significantly easier. I used some open source Angular packages that sped up the coding process. the two packages I used were for the date selection modal and for the time selection modal. They can be found here:</p>
+<ol>
+  <li>Time Picker Modal: <a href="https://github.com/rajeshwarpatlolla/ionic-timepicker" target="_blank">https://github.com/rajeshwarpatlolla/ionic-timepicker&lt;/li&gt;
+  <li>Date Picker Modal: <a href="https://github.com/rajeshwarpatlolla/ionic-datepicker" target="_blank">https://github.com/rajeshwarpatlolla/ionic-datepicker</a></li>
+&lt;/ol&gt;
+<br class="post-line-break" />
+Overall, the development process went very smoothly and our group worked together well. Because this was my first hackathon, I was both happy and pleasantly surprised when we were chosen as the best overall hack that day.
+<br class="post-line-break" />
+<h3 class="post-subheader">What's Next?</h3>
+We're all pretty excited about the app and we feel it has a lot of potential. We are currently polishing up the front end and working on authorizing our app with Uber. The app has many bugs (as expected) that we're hoping to clear up so that we can begin user testing at our high school. We hope to release it on the app store soon. In the long term, we think our app could integrate with other ride-sharing services, such as Lyft, and automatically request from the service with the cheapest rate, fastest pickup time, etc. Stay tuned!
+<br class="post-line-break" />
+<h3 class="post-subheader">External Links:</h3>
+Go to our <a href="http://devpost.com/software/uber-scheduler">Devpost project page</a> to see what we submitted for the Hackathon. It contains screenshots, a narrative of our build, and more.
+<br class="post-line-break" />
+For our complete source code see our <a href="https://github.com/AlexFine/MenloHacks">GitHub Repo</a>.
+
+<h3 class="post-subheader">Design Mockups (Created with Sketch)</h3>
+I created multiple designs and iterated on previous versions. Due to the 24 hour time restriction, I only created two major versions. Below are some designs that show the evolution of the app design. I used Sketch to create the designs.
+<h4>Version 1</h4>
+<img src="./../../../../media/projects/uberScheduler/Design Mockups/Home Screen UI.png" class="iPhone-screenshots-small" />
+<img src="./../../../../media/projects/uberScheduler/Design Mockups/Edit Ride UI - Time Picker V1.png" class="iPhone-screenshots-small" />
+<img src="./../../../../media/projects/uberScheduler/Design Mockups/Edit Ride UI - General Tab V1.png" class="iPhone-screenshots-small" />
+
+<h4>Version 2 (Final Designs)</h4>
+<img src="./../../../../media/projects/uberScheduler/Screenshots/Home Screen.png" class="iPhone-screenshots-small" />
+<img src="./../../../../media/projects/uberScheduler/Design Mockups/Edit Ride UI - Location Tab.png" class="iPhone-screenshots-small" />
+<img src="./../../../../media/projects/uberScheduler/Design Mockups/Edit Ride UI - Time Picker V2.png" class="iPhone-screenshots-small" />
+<img src="./../../../../media/projects/uberScheduler/Design Mockups/Edit Ride UI - General Tab V2.png" class="iPhone-screenshots-small" />
+
+<h3 class="post-subheader">App Screenshots (Working MVP)</h3>
+<img src="./../../../../media/projects/uberScheduler/Screenshots/Home Screen.png" class="iPhone-screenshots-medium" />
+<img src="./../../../../media/projects/uberScheduler/Screenshots/General Settings.png" class="iPhone-screenshots-medium" />
+<img src="./../../../../media/projects/uberScheduler/Screenshots/Schedule Configuration.png" class="iPhone-screenshots-medium" />
+<img src="./../../../../media/projects/uberScheduler/Screenshots/Fare Estimate.png" class="iPhone-screenshots-medium" />
+</a></li></ol>
+
+    <div class="post-organization">
+      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/ionic/">Ionic</a>, <a href="/blog/tag/javascript/">Javascript</a>, <a href="/blog/tag/html/">HTML</a>, <a href="/blog/tag/css/">CSS</a>, <a href="/blog/tag/python/">Python</a>, <a href="/blog/tag/apps/">Apps</a></p>
+    </div>
+  </article>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <!-- External Links Navigation Bar -->
+  <table class="external-bar"> <!-- Custom header -->
+    <tr>
+      <td class="external-td">
+        <a href="/blog" data-toggle="tooltip" title="Blog Home">
+          <div class="external-link-box home-bw"></div>
+          <p class="external-link-label">Home</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.linkedin.com/in/kevinhou22" target="_blank" data-toggle="tooltip" title="LinkedIn">
+          <div class="external-link-box linkedin-bw"></div>
+          <p class="external-link-label">LinkedIn</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://github.com/khou22" target="_blank" data-toggle="tooltip" title="Github">
+          <div class="external-link-box github-bw"></div>
+          <p class="external-link-label">Github</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.flickr.com/photos/khou22/albums" target="_blank" data-toggle="tooltip" title="Flickr">
+          <div class="external-link-box flickr-bw"></div>
+          <p class="external-link-label">Flickr</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="http://kevinhou.wix.com/projects" target="_blank" data-toggle="tooltip" title="Portfolio">
+          <div class="external-link-box gallery-bw"></div>
+          <p class="external-link-label">Portfolio</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://youtube.com/kevinhou22" target="_blank" data-toggle="tooltip" title="YouTube Channel">
+          <div class="external-link-box youtube-bw"></div>
+          <p class="external-link-label">YouTube</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.princeton.edu/main/" target="_blank" data-toggle="tooltip" title="School Profile">
+          <div class="external-link-box highSchool-bw"></div>
+          <p class="external-link-label">School Profile</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="/blog/contact" data-toggle="tooltip" title="Contact">
+          <div class="external-link-box email-bw"></div>
+          <p class="external-link-label">Contact</p>
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="wrapper">
+
+    <div class="site-footer-content">
+
+      <h2 class="footer-heading">Kevin Hou's Blog</h2>
+
+      <div class="footer-col-wrapper">
+        <div class="footer-col  footer-col-1">
+          <ul class="contact-list">
+            <li>Kevin Hou</li>
+            <li><a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a></li>
+            <li>San Francisco Bay Area</li>
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-2">
+          <ul class="social-media-list">
+            
+            <li>
+              <a href="https://github.com/khou22" target="_blank">
+                <span class="icon  icon--github">
+                  <svg viewBox="0 0 16 16">
+                    <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                  </svg>
+                </span>
+
+                <span class="username">khou22</span>
+              </a>
+            </li>
+            
+
+            
+            <li>
+              <a href="https://www.flickr.com/photos/khou22/albums" target="_blank">
+                <div class="footer-icon-box flickr-bw"></div><span class="username">kevinhou22</span>
+              </a>
+            </li>
+            
+
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-3">
+          <p class="text">A blog about programming, wood, and anything that comes to my mind. Enjoy.
+</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
