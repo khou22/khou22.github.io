@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>ES6 Tips and Tricks June 2017:Imports, Functions, and More</title>
+  <title>ES6 Tips and Tricks June 2017: Imports, Functions, and More</title>
   <meta name="description" content="">
 
   <!-- React -->
@@ -228,7 +228,7 @@
         Return to all blogs
       </p></a>
       <br />
-      <h1 class="post-title post-header-title">ES6 Tips and Tricks June 2017:Imports, Functions, and More</h1>
+      <h1 class="post-title post-header-title">ES6 Tips and Tricks June 2017: Imports, Functions, and More</h1>
       <h4 class="post-header-description">An ongoing blog post of useful ES6 notes that I come across throughout June.</h4>
       <p class="post-header-meta">Jun 14, 2017 • Kevin Hou</p>
     </div>
@@ -258,6 +258,17 @@
 
   <article class="post-content">
     <p>I am writing this blog post because I am, again, using ES6 for my internship. I was first exposed to this variation of Javascript during my very first internship at Salesforce back in Summer 2015. It feels like a long time ago and I’ve come a <em>long</em> way since then. I am approaching ES6 with new awareness and sharper critical thinking. I felt it was useful to document some of the neat tricks I found with ES6 during my first month of my internship at Moat. A lot of this is partially review — a chance for me to shake the rust off and really solidify my skills in ES6.</p>
+
+<h1 id="useful-notes">Useful Notes</h1>
+
+<h2 id="concatenation">Concatenation</h2>
+<p>One strange thing that I’ve noticed is that some ES6 linters do not allow you to concatenate Strings using the normal ‘+’ operation. They also don’t allow you use double quotes and force you to stick to single quotes when hard coding Strings. I’m not entirely sure why this is the case and I haven’t had time to look it up yet, but I think it has something to do with the way the compiler transforms the ES6 into static ES5 files for the browser. My guess is that the compiler needs to use double quotes and doesn’t want the code to mess with its compile scripts/process. Anyways, here’s a new way you can concatenate:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">id</span> <span class="o">=</span> <span class="s1">&#39;154&#39;</span><span class="p">;</span> <span class="c1">// Notice the single quotes</span>
+
+<span class="c1">// When concatenating, use the &quot;\`&quot; quotation mark (normally shares the same key as the &#39;~&#39;)</span>
+<span class="kr">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="err">`</span><span class="o">/</span><span class="nx">data_table</span><span class="o">?</span><span class="nx">id</span><span class="o">=</span><span class="nx">$</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="err">`</span><span class="p">;</span> <span class="c1">// Result: &quot;/data_table?id=154&quot;</span></code></pre></div>
+
 
     <div class="post-organization">
       <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/es6/">ES6</a></p>
