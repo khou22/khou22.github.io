@@ -19,5 +19,6 @@ One strange thing that I've noticed is that some ES6 linters do not allow you to
 const id = '154'; // Notice the single quotes
 
 // When concatenating, use the "\`" quotation mark (normally shares the same key as the '~')
+// This works with any String convertible data type
 const link = `/data_table?id=${id}`; // Result: "/data_table?id=154"
 {% endhighlight %}
