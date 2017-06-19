@@ -3,6 +3,7 @@ Last Updated: May 12, 2017
 # To Do:
 * Redo project portfolio page
 * Finish contact me page
+* Redesign the portfolio page
 * Port over portfolio content from Wix website for woodshop
 
 # Things to Try
