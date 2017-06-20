@@ -23,4 +23,9 @@ const link = `/data_table?id=${id}`; // Result: "/data_table?id=154"
 
 <h3 class="post-subheader">Updating a Few Properties in an Object</h3>
 This will allow you to return a deep copy of your object without having to write out every single property value. It's really useful when you're updating a state in React or Redux.<br>
-<img src="./../../../../media/blog/images/ES6_June_2017_Update_Object.png" class="iPhone-screenshots-medium">
+{% highlight javascript %}
+return {
+    ...previousState,
+    propertyToUpdate: !previousState.propertyToUpdate
+};
+{% endhighlight %}
