@@ -29,3 +29,20 @@ return {
     propertyToUpdate: !previousState.propertyToUpdate
 };
 {% endhighlight %}
+<br class="post-line-break">
+<h3 class="post-subheader">Event Handler</h3>
+I came across this useful tidbit when using the <a href="https://github.com/JedWatson/react-select" target="_blank">React-Select</a> library for my project at work. It is an open source, purely React dropdown list that I would definitely recommend to anyone in need of a dropdown. I was attempting to customize the main component and found a property called arrorRender with the usage description: "Renders a custom drop-down arrow to be shown in the right-hand side of the select: arrowRenderer({ onMouseDown, isOpen })" I'm familiar with event handlers, but I had never seen this style of documentation before. What this means, is that the arrowRenderer is a function that returns a DOM node to be used in place of the default arrow icon. The function takes an object input with the properties onMouseDown and isOpen so that there can be more complex renderings. Here was my rendering function:
+{% highlight javascript %}
+// Custom dropdown icon for React-Select
+arrowRenderer(event) {
+    const dropdownArrow = '/path/to/image'; // Dropdown arrow
+    const searchIcon = '/path/to/image'; // Magnifying glass
+    const imgURL = event.isOpen ? searchIcon : dropdownArrow; // Determine which to use
+    return (
+        <span>
+            <img src={imgURL} width="100%" role="presentation" />
+        </span>
+    );
+}
+{% endhighlight %}
+In this function, I am using the isOpen state to choose which image icon to render in the select input. You may not have seen this notation before and it's definitely useful to remember.
