@@ -49,11 +49,13 @@ export default class Counter extends React.Component {
 {% endhighlight %}
 As we will see later, we will pass in the value of the counter and two functions (increment and decrement) from the store we will eventually create.
 <br class="post-line-break">
+<br class="post-line-break">
 To set up our store, we must first install redux and use the --save option to include it in our package.json:
 {% highlight bash %}
 $ npm install --save redux
 {% endhighlight %}
-
+<br class="post-line-break">
+<br class="post-line-break">
 Now we must write the code for the store itself. The store is actually an object type generated running the createStore() function in the redux package on a class. The code is included below. Notice how the function accepts an action and does not actually modify the state — it is a **pure** function. In this example, the state is the value of the counter and it is initially set to 0. It is written in ES6.
 {% highlight javascript %}
 // counterStore.js
@@ -78,7 +80,8 @@ const store = createStore(counter);
 // Export the store so that it can used in other files
 export default store;
 {% endhighlight %}
-
+<br class="post-line-break">
+<br class="post-line-break">
 Next, we will link the store with our React class so that it can dynamically update the frontend. We include the store as a local variable in the file using the require() statement:
 {% highlight javascript %}
 import store from "./counterStore";
@@ -121,6 +124,6 @@ store.subscribe(render);
 render();
 {% endhighlight %}
 <br class="post-line-break">
-
+<br class="post-line-break">
 # Closing Comments
 Hope you were able to follow this brief tutorial! It is loosely based on the free course on egghead.io on <a href="http://webpack.github.io/docs/tutorials/getting-started/" target="\_blank">Redux and React</a>. The full code can be found <a href="https://github.com/khou22/NodeJSPractice/tree/master/Redux" target="\_blank">on my GitHub</a>.

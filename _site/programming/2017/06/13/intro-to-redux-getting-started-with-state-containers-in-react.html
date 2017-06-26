@@ -297,11 +297,14 @@ It is also important that the reducer functions consider all possible inputs of 
 
 <p>As we will see later, we will pass in the value of the counter and two functions (increment and decrement) from the store we will eventually create.
 <br class="post-line-break" />
+<br class="post-line-break" />
 To set up our store, we must first install redux and use the –save option to include it in our package.json:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>npm install --save redux</code></pre></div>
 
-<p>Now we must write the code for the store itself. The store is actually an object type generated running the createStore() function in the redux package on a class. The code is included below. Notice how the function accepts an action and does not actually modify the state — it is a <strong>pure</strong> function. In this example, the state is the value of the counter and it is initially set to 0. It is written in ES6.</p>
+<p><br class="post-line-break" />
+<br class="post-line-break" />
+Now we must write the code for the store itself. The store is actually an object type generated running the createStore() function in the redux package on a class. The code is included below. Notice how the function accepts an action and does not actually modify the state — it is a <strong>pure</strong> function. In this example, the state is the value of the counter and it is initially set to 0. It is written in ES6.</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// counterStore.js</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;redux&quot;</span><span class="p">;</span> <span class="c1">// Get the createStore export</span>
@@ -325,7 +328,9 @@ To set up our store, we must first install redux and use the –save option to i
 <span class="c1">// Export the store so that it can used in other files</span>
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">store</span><span class="p">;</span></code></pre></div>
 
-<p>Next, we will link the store with our React class so that it can dynamically update the frontend. We include the store as a local variable in the file using the require() statement:</p>
+<p><br class="post-line-break" />
+<br class="post-line-break" />
+Next, we will link the store with our React class so that it can dynamically update the frontend. We include the store as a local variable in the file using the require() statement:</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">store</span> <span class="nx">from</span> <span class="s2">&quot;./counterStore&quot;</span><span class="p">;</span></code></pre></div>
 
@@ -366,10 +371,10 @@ Now we will create a rendering function, using ReactDOM to inject our HTML into 
 <span class="c1">// If we don&#39;t manually call it, there can be no changes to put it in the dom in the first place</span>
 <span class="nx">render</span><span class="p">();</span></code></pre></div>
 
-<p><br class="post-line-break" /></p>
-
-<h1 id="closing-comments">Closing Comments</h1>
-<p>Hope you were able to follow this brief tutorial! It is loosely based on the free course on egghead.io on <a href="http://webpack.github.io/docs/tutorials/getting-started/" target="\_blank">Redux and React</a>. The full code can be found <a href="https://github.com/khou22/NodeJSPractice/tree/master/Redux" target="\_blank">on my GitHub</a>.</p>
+<p><br class="post-line-break" />
+<br class="post-line-break" />
+# Closing Comments
+Hope you were able to follow this brief tutorial! It is loosely based on the free course on egghead.io on <a href="http://webpack.github.io/docs/tutorials/getting-started/" target="\_blank">Redux and React</a>. The full code can be found <a href="https://github.com/khou22/NodeJSPractice/tree/master/Redux" target="\_blank">on my GitHub</a>.</p>
 
     <div class="post-organization">
       <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/reactjs/">ReactJS</a></p>

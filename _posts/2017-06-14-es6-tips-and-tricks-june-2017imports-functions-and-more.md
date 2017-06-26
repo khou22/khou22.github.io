@@ -20,7 +20,7 @@ const id = '154'; // Notice the single quotes
 // This works with any String convertible data type
 const link = `/data_table?id=${id}`; // Result: "/data_table?id=154"
 {% endhighlight %}
-
+<br class="post-line-break">
 <h3 class="post-subheader">Updating a Few Properties in an Object</h3>
 This will allow you to return a deep copy of your object without having to write out every single property value. It's really useful when you're updating a state in React or Redux.<br>
 {% highlight javascript %}
@@ -46,3 +46,42 @@ arrowRenderer(event) {
 }
 {% endhighlight %}
 In this function, I am using the isOpen state to choose which image icon to render in the select input. You may not have seen this notation before and it's definitely useful to remember.
+<br class="post-line-break">
+Another useful event handler is the 'input' tag's built in onBlur() event that triggers when the user removes focus from the input element. Like the onFocus() handler, onBlur() can be assigned to a custom function.
+{% highlight javascript %}
+// The event handler function
+const update = () => {
+    console.log('I've been triggered');
+}
+{% endhighlight %}
+{% highlight html %}
+<!-- The HTML -->
+<input type="text" autoComplete="off" autoCorrect="off" spellCheck="false" className="select2-input" onFocus={update} onBlur={update} />
+{% endhighlight %}
+<br class="post-line-break">
+<h3 class="post-subheader">Preserving 'this' When Using React Props</h3>
+In ES6, 'this' is not generally preserved which leads to some difficult workarounds when passing functions from one component to its children. Luckily, there is a technique that can be generally applicable to most situations that solves this issue. Many linters prevent the use of '.bind(this)' so that is off the table. However, the block statement function ensures that 'this' pertains to the right scope. It is especially useful when you have to pass variables in as inputs. Here is an ES6 React example of this:
+{% highlight javascript %}
+import React, { Component } from 'react';
+
+class SomeComponent extends Component {
+    clicked(input) {
+        // 'this' refers to the component rather than the window
+        this.setState({
+            someState: input
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                Good Example
+                <button id="button" onClick={() => this.clicked(input)}>I work</button>
+
+                This won't preserve 'this' and your component will crash
+                <button id="button" onClick={this.clicked(input)}>
+            </div>
+        );
+    }
+}
+{% endhighlight %}
