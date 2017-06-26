@@ -38,7 +38,7 @@
     opacity: 1; }
   .tile-text {
     position: absolute;
-    width: 90%;
+    width: 100%;
     padding: 2% 5% 0 5%;
     z-index: 0;
     background: -moz-linear-gradient(top, transparent 0%, black 100%);
