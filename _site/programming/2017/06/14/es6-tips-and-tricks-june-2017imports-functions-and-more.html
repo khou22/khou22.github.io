@@ -276,6 +276,23 @@
     <span class="nx">propertyToUpdate</span><span class="o">:</span> <span class="o">!</span><span class="nx">previousState</span><span class="p">.</span><span class="nx">propertyToUpdate</span>
 <span class="p">};</span></code></pre></div>
 
+<p><br class="post-line-break" /></p>
+<h3 class="post-subheader">Event Handler</h3>
+<p>I came across this useful tidbit when using the <a href="https://github.com/JedWatson/react-select" target="_blank">React-Select</a> library for my project at work. It is an open source, purely React dropdown list that I would definitely recommend to anyone in need of a dropdown. I was attempting to customize the main component and found a property called arrorRender with the usage description: “Renders a custom drop-down arrow to be shown in the right-hand side of the select: arrowRenderer({ onMouseDown, isOpen })” I’m familiar with event handlers, but I had never seen this style of documentation before. What this means, is that the arrowRenderer is a function that returns a DOM node to be used in place of the default arrow icon. The function takes an object input with the properties onMouseDown and isOpen so that there can be more complex renderings. Here was my rendering function:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Custom dropdown icon for React-Select</span>
+<span class="nx">arrowRenderer</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">dropdownArrow</span> <span class="o">=</span> <span class="s1">&#39;/path/to/image&#39;</span><span class="p">;</span> <span class="c1">// Dropdown arrow</span>
+    <span class="kr">const</span> <span class="nx">searchIcon</span> <span class="o">=</span> <span class="s1">&#39;/path/to/image&#39;</span><span class="p">;</span> <span class="c1">// Magnifying glass</span>
+    <span class="kr">const</span> <span class="nx">imgURL</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">isOpen</span> <span class="o">?</span> <span class="nx">searchIcon</span> <span class="o">:</span> <span class="nx">dropdownArrow</span><span class="p">;</span> <span class="c1">// Determine which to use</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">imgURL</span><span class="p">}</span> <span class="nx">width</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span> <span class="nx">role</span><span class="o">=</span><span class="s2">&quot;presentation&quot;</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="err">/span&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<p>In this function, I am using the isOpen state to choose which image icon to render in the select input. You may not have seen this notation before and it’s definitely useful to remember.</p>
 
     <div class="post-organization">
       <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/es6/">ES6</a></p>
