@@ -29,3 +29,9 @@ Webpack: For building and compiling JSX, ES6, etc. It will create static site wi
 {% highlight bash %}
 npm i git://github.com/user/project.git#commit-ish --save
 {% endhighlight %}
+
+File structure of GitHub repo if you want to use it as a public package:
+library-name/
+    demo/
+    dist/
+    src/
