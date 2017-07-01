@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Designing My YouTube Channel Artwork</title>
+  <title>Testing APIs: Postman, Network Debugging, and JSON</title>
   <meta name="description" content="">
 
   <!-- React -->
@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/design/2016/05/07/designing-my-youtube-channel-artwork.html">
+  <link rel="canonical" href="http://khou22.github.io/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou's Blog" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -209,9 +209,9 @@
         Return to all blogs
       </p></a>
       <br />
-      <h1 class="post-title post-header-title">Designing My YouTube Channel Artwork</h1>
-      <h4 class="post-header-description">How to design your YouTube artwork effectively. Tips, tricks, and more.</h4>
-      <p class="post-header-meta">May 7, 2016 • Kevin Hou</p>
+      <h1 class="post-title post-header-title">Testing APIs: Postman, Network Debugging, and JSON</h1>
+      <h4 class="post-header-description"></h4>
+      <p class="post-header-meta">Jul 1, 2017 • Kevin Hou</p>
     </div>
   </header>
 
@@ -238,26 +238,44 @@
   </script>
 
   <article class="post-content">
-    <p>I finally got around to designing my own YouTube channel artwork. Similar to a Facebook cover photo, YouTube’s channel artwork is the second most important image to your YouTube brand. I had just released my first “high quality” <a href="https://www.youtube.com/watch?v=_ZSztfYnnC8" target="_blank">video</a> and I wanted to improve the rest of my YouTube channel as well. Click <a href="https://youtube.com/kevinhou22">here</a> to visit my YouTube channel.
+    <h1 id="postman-and-network-debugging">Postman and Network Debugging</h1>
+
+<p><a href="https://www.getpostman.com/" target="_blank">Postman</a> is a clean, powerful tool to test APIs with custom configurations to suit your API’s needs. You can choose everything from the types of request (GET, POST, etc.) and the authorization type, to cookies and header data. It includes a great UI for displaying the body of the response as raw, pretty/formatted, or as a web page. It supports tests, pre-request scripts, and useful organization tools that help you manage requests you’ve previously made.
+<br class="post-line-break" />
+I’ve been doing a lot of server work both at Moat and on my personal time. I’ve been using Postman a lot so I figured I’d share a couple of useful tips I’ve come to learn.
+<br class="post-line-break" />
+The authentication features are great for public APIs and APIs with basic levels of security, however, many APIs rely on session cookies — bits of data that tell the browser that the user is signed in and has access to the site. At first, I attempted to manually cookies to the Postman request cookies input, but I believe I left out a couple and may have had some syntax errors because my requests would bounce back empty.
+<br class="post-line-break" />
+I did some digging online and found that there’s a really neat developer tool in Chrome for this exact thing. I’ve been using the Network developer tool in Chrome religiously these past couple weeks. They display information like response time, headers, etc. — pretty much anything you could need related to an API request. Unfortunately, I find the user interface somewhat confusing and it only handles information about the request. It can’t actually call a request. Like any developer, I have to make hundreds of calls to the same endpoint, often with the same data, over and over again even after the simplest of changes. For my project at work, triggering the API required over three clicks and filling out a form before the API was even called. Doing this every time I wanted to run a POST request was a huge pain and I didn’t have time for it. Instead, I discovered that the Chrome Network Tool compiles the request as a cURL command. For those that don’t know, a cURL command is a Command Line tool to make network requests. They’re somewhat hard to format and write out for convoluted network calls, but they’re a standard in the industry. Chrome allows you to copy the request as a cURL ready to be run from the command line! To do this, open the developer tool, click the network tab, run the API (the network tab must be open when the request is made for it to record), then right click the request and select “Copy → Copy as cURL”.
+<br class="post-line-break" />
+<img src="./../../../../media/blog/images/Chrome_Copy_cURL.png" class="iPhone-screenshots-large" />
+<br class="post-line-break" />
+You can then run this command in the terminal by simply pasting the cURL into the prompt and pressing enter. This method is great for some testing like pinging a server and reading server print statements, but because I was more concerned with the request responses, I had to deal with large JSON objects — which Postman does a good job with.
+<br class="post-line-break" />
+Fortunately, Postman has a useful feature that allows users to import and export cURL commands. Make sure the cURL is still copied to your clipboard and navigate to your Postman window. In the top left corner, click the “Import” button and a modal should display. Click on the “Past Raw Text” option and past the cURL command in the text area.
+<br class="post-line-break" />
+<img src="./../../../../media/blog/images/Postman_Import_cURL.png" class="iPhone-screenshots-large" />
+<br class="post-line-break" />
+Postman will import the cURL request with all the options, cookies, etc. and automatically create the API request for you! It’ll essentially duplicate the request the browser made, except in a much better UI. Now you can use all the wonderful Postman features with any network request!
+<br class="post-line-break" />
+I haven’t run into a situation where this doesn’t work (at least with cache-based login sessions) and I’m hoping it’s a catch all. I highly recommend this method for anyone dealing with server development. If you’re still using the browser to ping your API endpoints, I guarantee that it’ll speed up your workflow.
 <br class="post-line-break" /></p>
-<h3 class="post-subheader">Design Process</h3>
-<p>I found a <a href="http://2.bp.blogspot.com/-tjmufytBinc/UcvXPhPX8DI/AAAAAAAACYE/J8yVDWg25-I/s1600/YouTube-One-Channel-Template-Full-Optimized-(1).png" target="_blank">template</a> online that detailed the dimensions for each YouTube platform. For every YouTube client (ie. mobile, TV, computer, etc.), there is a specific cropping method. I used the dimensions to create a design that would look good on all possible devices.
+
+<h1 id="dealing-with-json">Dealing with JSON</h1>
+<p>JSON, along with some of its cousins like XML, is one of the data formats that serves as the bridge between programming languages. You can think of it as the glue that holds the Internet together. When called, API’s will return data — often in JSON format — for the site’s Javascript to parse through. Because JSON isn’t anything more than a specifically formatted String, it can be used pretty much universally.
 <br class="post-line-break" />
-I wanted to go for a minimalistic look — flat and simple seems to be the trend these days among digital design. At first, I wanted to incorporate some aspect of woodshop in my channel artwork. I tried many different methods, both subtle and blaring, to weave in my passion for woodshop. After trying and failing to add things like a wood background to my design, I decided to leave it out entirely. It would be evident for anyone looking at my channel to know that I loved woodshop. I didn’t feel like I could produce a design that I was proud of if I tried to incorporate woodworking — it would be clear I was forcing it.
+As I’ve mentioned earlier, I’ve been working with massive JSON objects often — sometimes with thousands of entries in nested arrays. Debugging large, plain JSON text as a String is a nightmare. I’ve found a useful Chrome extension called JSON Viewer that automatically determines if the contents of the browser is valid JSON data and provides you with some useful tools to organize the information.
 <br class="post-line-break" />
-I looked at the channel artworks of some of my favorite tech and wood YouTubers. I found that YouTubers that loved wood used more image based, “stack”-style cover photos; however, my tech YouTubers favored the a cleaner look. Being a web developer and digital designer, I was in favor of the latter.</p>
-<h3 class="post-subheader">Finished Product</h3>
-<h4>Desktop Browser</h4>
-<p><img src="./../../../../media/blog/images/YouTube Channel Artwork/Desktop Size.png" />
-This is typically what a YouTuber user would see. This is the crop size for a desktop browser. A mobile device would be the same height as this, but the side edges would be trimmed inward a tiny bit.
+<img src="./../../../../media/blog/images/Raw_JSON_Bad.png" />
+<em>JSON With No Formatting</em>
+<br />
+<img src="./../../../../media/blog/images/JSON_Viewer_Extension.png" class="iPhone-screenshots-large" /><br />
+<em>JSON With Formatting</em>
 <br class="post-line-break" />
-<br class="post-line-break" /></p>
-<h4>Full Size (For TV Clients)</h4>
-<p><img src="./../../../../media/blog/images/YouTube Channel Artwork/YouTube Channel Artwork.jpg" />
-This is the full resolution image. The only time a user would see this entire image would be on the TV.</p>
+It turns the page into a text editor of sorts and you can compress objects and arrays very easily. It’ll use syntax highlighting and you can customize the font, text size, and more. Overall, just makes the process of looking at JSON much more enjoyable (restoring the romance in data if I may). It’s really useful when you want to compare two different objects that are separated by a massive, nested array. You can simply compress the array and it becomes infinitely cleaner to look at.</p>
 
     <div class="post-organization">
-      <p id="post-meta">Posted in <a href="/blog/category/design/">Design</a></p>
+      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a></p>
     </div>
   </article>
 </div>
