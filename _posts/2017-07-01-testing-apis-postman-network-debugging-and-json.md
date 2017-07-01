@@ -4,7 +4,7 @@ title: "Testing APIs: Postman, Network Debugging, and JSON"
 author: "Kevin Hou"
 date: 2017-07-01 17:06:18
 description: ""
-image: "./../../../../media/blog/images/API-Testing/Blog_Post_Placeholder_Image.jpg"
+image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: []
 featured: "no"
