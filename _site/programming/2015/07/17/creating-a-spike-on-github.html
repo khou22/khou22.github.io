@@ -248,6 +248,9 @@
 
 <p>Hope this helps! It’s a good way of storing your work so that you can reference it later. You might also want to store a local version of the spike by downloading the zip file just in case.</p>
 
+<p><strong>Update July 4, 2017</strong>
+Here’s a good way of untracking files (espeically those with sensitive information): <code>$ git update-index --assume-unchanged &lt;file&gt;</code>. This command simply stops tracking, it does not delete it so make sure there is no sensitive information before you add it to the repo. Use a placeholder like “API_KEY”. To rever this, use <code>$ git update-index --no-assume-unchanged &lt;file&gt;</code>. To get a list of all files that are assumed-unchanged, use: <code>$ git ls-files -v|grep '^h'</code>.</p>
+
     <div class="post-organization">
       <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/salesforce/">Salesforce Internship</a>, <a href="/blog/tag/unix/">Unix</a>, <a href="/blog/tag/github/">GitHub</a></p>
     </div>

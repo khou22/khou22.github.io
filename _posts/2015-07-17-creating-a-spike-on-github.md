@@ -18,3 +18,6 @@ I essentially backed up my spike so that I could reference it later on. To be ho
 Here is a <a href="http://nvie.com/posts/a-successful-git-branching-model/">useful article</a> about creating GitHub branches logically and neatly. It covers the importance of creating a good branch structure, especially when dealing with continuous development. Here is a cheat sheet: <a href="http://nvie.com/files/Git-branching-model.pdf">http://nvie.com/files/Git-branching-model.pdf</a>
 
 Hope this helps! It's a good way of storing your work so that you can reference it later. You might also want to store a local version of the spike by downloading the zip file just in case.
+
+**Update July 4, 2017**
+Here's a good way of untracking files (espeically those with sensitive information): `$ git update-index --assume-unchanged <file>`. This command simply stops tracking, it does not delete it so make sure there is no sensitive information before you add it to the repo. Use a placeholder like "API_KEY". To rever this, use `$ git update-index --no-assume-unchanged <file>`. To get a list of all files that are assumed-unchanged, use: `$ git ls-files -v|grep '^h'`.
