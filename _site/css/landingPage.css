@@ -223,6 +223,11 @@ hr {
   background-size: 65%;
 }
 
+.photography-icon {
+  background-image: url("./../media/site/icons/photography.png");
+  background-size: 60%;
+}
+
 .profile-picture {
   width: 200px;
   height: 200px;

@@ -353,6 +353,14 @@ var ProfileBox = React.createClass({
         location.href="/programming"; // Project page on website
         // window.open("http://kevinhou.wix.com/projects#!woodprojects/ckra", '_blank);'); // Wix projects page
         break;
+      case "photography":
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Landing Page Tab Select',
+          eventAction: 'click',
+          eventLabel: 'Photography Tab'
+        });
+        location.href="/photography";
       default:
     };
   },
@@ -386,6 +394,7 @@ var ProfileBox = React.createClass({
           <PageButton className="blog-button" redirect={this.redirect.bind(this, "wood")} iconClass="wood-icon" label="Wood" left={56}/>
           <PageButton className="blog-button" redirect={this.redirect.bind(this, "blog")} iconClass="blog-icon" label="Blog" left={160}/>
           <PageButton className="blog-button" redirect={this.redirect.bind(this, "programming")} iconClass="code-icon" label="Coding" left={264}/>
+          <PageButton className="blog-button" redirect={this.redirect.bind(this, "photography")} iconClass="photography-icon" label="Photos" left={264}/>
         </div>
       </div>
     );
