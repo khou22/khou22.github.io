@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Jul 2017 13:13:36 -0400</pubDate>
-    <lastBuildDate>Sun, 02 Jul 2017 13:13:36 -0400</lastBuildDate>
+    <pubDate>Mon, 03 Jul 2017 22:27:01 -0400</pubDate>
+    <lastBuildDate>Mon, 03 Jul 2017 22:27:01 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -69,6 +69,12 @@ It turns the page into a text editor of sorts and you can compress objects and a
 &lt;h1 id=&quot;installing-dependencies&quot;&gt;Installing Dependencies&lt;/h1&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install --save react-redux&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install --save-dev babel-core&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Global installation&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install -g eslint&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;useful-dev-tools&quot;&gt;Useful Dev Tools&lt;/h1&gt;
 &lt;p&gt;Linter: Check for coding errors — saves a trip to the browser (Airbnb’s linter is useful)

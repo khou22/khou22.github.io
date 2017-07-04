@@ -20,6 +20,14 @@ Follow the instructions and it'll attempt to create a proper package.json for yo
 {% highlight bash %}
 npm install --save react-redux
 {% endhighlight %}
+{% highlight bash %}
+npm install --save-dev babel-core
+{% endhighlight %}
+
+Global installation
+{% highlight bash %}
+npm install -g eslint
+{% endhighlight %}
 
 # Useful Dev Tools
 Linter: Check for coding errors — saves a trip to the browser (Airbnb's linter is useful)
