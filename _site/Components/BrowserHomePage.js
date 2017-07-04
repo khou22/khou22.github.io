@@ -399,12 +399,6 @@ var year = currentDate.getFullYear();
 var dateString = month + " " + day + ", " + year;
 
 /*********** Get quote of the day ***********/
-// var quoteOfTheDay = "Kind words can be short and easy to speak, but their echoes are truly endless." // Default quote
-// Call api
-$.getJSON("http://khou22.herokuapp.com/api/quotes")
-  .done(update)
-  .fail(handleErr);
-
 // Completion handler
 function update(response) {
     response = knuthShuffle(response);
@@ -434,7 +428,24 @@ function update(response) {
     theater.addScene(theater.replay.bind(theater))
 }
 
-// Error handler
-function handleErr(jqxhr, textStatus, err) {
-  console.log("Request Failed: " + textStatus + ", " + err);
+
+function make_basic_auth(user, password) {
+    var tok = user + ':' + password;
+    var hash = btoa(tok);
+    return 'Basic ' + hash;
 }
+
+var auth = make_basic_auth('admin', 'YOUR_API_KEY');
+var url = 'http://khou22.herokuapp.com/api/quotes';
+// var url = 'http://localhost:5000/api/quotes';
+
+// RAW
+const xml = new XMLHttpRequest();
+xml.open('GET', url, true);
+xml.setRequestHeader('Authorization', auth);
+xml.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        update(JSON.parse(this.responseText));
+    }
+};
+xml.send(); // Send request
