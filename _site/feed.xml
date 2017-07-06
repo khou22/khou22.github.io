@@ -9,7 +9,54 @@
     <pubDate>Thu, 06 Jul 2017 13:09:29 -0400</pubDate>
     <lastBuildDate>Thu, 06 Jul 2017 13:09:29 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
-    
+
+      <item>
+        <title>Testing APIs: Postman, Network Debugging, and JSON</title>
+        <description>&lt;h1 id=&quot;postman-and-network-debugging&quot;&gt;Postman and Network Debugging&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.getpostman.com/&quot; target=&quot;_blank&quot;&gt;Postman&lt;/a&gt; is a clean, powerful tool to test APIs with custom configurations to suit your API’s needs. You can choose everything from the types of request (GET, POST, etc.) and the authorization type, to cookies and header data. It includes a great UI for displaying the body of the response as raw, pretty/formatted, or as a web page. It supports tests, pre-request scripts, and useful organization tools that help you manage requests you’ve previously made.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+I’ve been doing a lot of server work both at Moat and on my personal time. I’ve been using Postman a lot so I figured I’d share a couple of useful tips I’ve come to learn.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+The authentication features are great for public APIs and APIs with basic levels of security, however, many APIs rely on session cookies — bits of data that tell the browser that the user is signed in and has access to the site. At first, I attempted to manually cookies to the Postman request cookies input, but I believe I left out a couple and may have had some syntax errors because my requests would bounce back empty.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+I did some digging online and found that there’s a really neat developer tool in Chrome for this exact thing. I’ve been using the Network developer tool in Chrome religiously these past couple weeks. They display information like response time, headers, etc. — pretty much anything you could need related to an API request. Unfortunately, I find the user interface somewhat confusing and it only handles information about the request. It can’t actually call a request. Like any developer, I have to make hundreds of calls to the same endpoint, often with the same data, over and over again even after the simplest of changes. For my project at work, triggering the API required over three clicks and filling out a form before the API was even called. Doing this every time I wanted to run a POST request was a huge pain and I didn’t have time for it. Instead, I discovered that the Chrome Network Tool compiles the request as a cURL command. For those that don’t know, a cURL command is a Command Line tool to make network requests. They’re somewhat hard to format and write out for convoluted network calls, but they’re a standard in the industry. Chrome allows you to copy the request as a cURL ready to be run from the command line! To do this, open the developer tool, click the network tab, run the API (the network tab must be open when the request is made for it to record), then right click the request and select “Copy → Copy as cURL”.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;img src=&quot;./../../../../media/blog/images/API-Testing/Chrome_Copy_cURL.png&quot; class=&quot;iPhone-screenshots-large&quot; /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+You can then run this command in the terminal by simply pasting the cURL into the prompt and pressing enter. This method is great for some testing like pinging a server and reading server print statements, but because I was more concerned with the request responses, I had to deal with large JSON objects — which Postman does a good job with.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Fortunately, Postman has a useful feature that allows users to import and export cURL commands. Make sure the cURL is still copied to your clipboard and navigate to your Postman window. In the top left corner, click the “Import” button and a modal should display. Click on the “Past Raw Text” option and past the cURL command in the text area.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;img src=&quot;./../../../../media/blog/images/API-Testing/Postman_Import_cURL.png&quot; class=&quot;iPhone-screenshots-large&quot; /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Postman will import the cURL request with all the options, cookies, etc. and automatically create the API request for you! It’ll essentially duplicate the request the browser made, except in a much better UI. Now you can use all the wonderful Postman features with any network request!
+&lt;br class=&quot;post-line-break&quot; /&gt;
+I haven’t run into a situation where this doesn’t work (at least with cache-based login sessions) and I’m hoping it’s a catch all. I highly recommend this method for anyone dealing with server development. If you’re still using the browser to ping your API endpoints, I guarantee that it’ll speed up your workflow.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;dealing-with-json&quot;&gt;Dealing with JSON&lt;/h1&gt;
+&lt;p&gt;JSON, along with some of its cousins like XML, is one of the data formats that serves as the bridge between programming languages. You can think of it as the glue that holds the Internet together. When called, API’s will return data — often in JSON format — for the site’s Javascript to parse through. Because JSON isn’t anything more than a specifically formatted String, it can be used pretty much universally.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+As I’ve mentioned earlier, I’ve been working with massive JSON objects often — sometimes with thousands of entries in nested arrays. Debugging large, plain JSON text as a String is a nightmare. I’ve found a useful Chrome extension called JSON Viewer that automatically determines if the contents of the browser is valid JSON data and provides you with some useful tools to organize the information.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;img src=&quot;./../../../../media/blog/images/API-Testing/Raw_JSON_Bad.png&quot; /&gt;
+&lt;em&gt;JSON With No Formatting&lt;/em&gt;
+&lt;br /&gt;
+&lt;img src=&quot;./../../../../media/blog/images/API-Testing/JSON_Viewer_Extension.png&quot; class=&quot;iPhone-screenshots-large&quot; /&gt;&lt;br /&gt;
+&lt;em&gt;JSON With Formatting&lt;/em&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+It turns the page into a text editor of sorts and you can compress objects and arrays very easily. It’ll use syntax highlighting and you can customize the font, text size, and more. Overall, just makes the process of looking at JSON much more enjoyable (restoring the romance in data if I may). It’s really useful when you want to compare two different objects that are separated by a massive, nested array. You can simply compress the array and it becomes infinitely cleaner to look at.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 01 Jul 2017 13:06:18 -0400</pubDate>
+        <link>http://khou22.github.io/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</guid>
+
+
+        <category>programming</category>
+
+      </item>
+
       <item>
         <title>NPM Basics June 2017: Creating an NPM Project</title>
         <description>&lt;h1 id=&quot;create-an-npm-environment&quot;&gt;Create an NPM Environment&lt;/h1&gt;
@@ -22,6 +69,12 @@
 &lt;h1 id=&quot;installing-dependencies&quot;&gt;Installing Dependencies&lt;/h1&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install --save react-redux&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install --save-dev babel-core&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Global installation&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install -g eslint&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;useful-dev-tools&quot;&gt;Useful Dev Tools&lt;/h1&gt;
 &lt;p&gt;Linter: Check for coding errors — saves a trip to the browser (Airbnb’s linter is useful)
@@ -40,12 +93,12 @@ library-name/
         <pubDate>Tue, 27 Jun 2017 06:17:34 -0400</pubDate>
         <link>http://khou22.github.io/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</guid>
-        
-        
+
+
         <category>programming</category>
-        
+
       </item>
-    
+
       <item>
         <title>ES6 Tips and Tricks June 2017: Imports, Functions, and More</title>
         <description>&lt;p&gt;I am writing this blog post because I am, again, using ES6 for my internship. I was first exposed to this variation of Javascript during my very first internship at Salesforce back in Summer 2015. It feels like a long time ago and I’ve come a &lt;em&gt;long&lt;/em&gt; way since then. I am approaching ES6 with new awareness and sharper critical thinking. I felt it was useful to document some of the neat tricks I found with ES6 during my first month of my internship at Moat. A lot of this is partially review — a chance for me to shake the rust off and really solidify my skills in ES6.&lt;/p&gt;
@@ -127,14 +180,14 @@ Another useful event handler is the ‘input’ tag’s built in onBlur() event 
         <pubDate>Wed, 14 Jun 2017 13:50:35 -0400</pubDate>
         <link>http://khou22.github.io/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</guid>
-        
+
         <category>es6</category>
-        
-        
+
+
         <category>programming</category>
-        
+
       </item>
-    
+
       <item>
         <title>Intro to Redux: Getting Started with State Containers in React</title>
         <description>&lt;h1 id=&quot;overview-of-redux&quot;&gt;Overview of Redux&lt;/h1&gt;
@@ -259,14 +312,14 @@ Hope you were able to follow this brief tutorial! It is loosely based on the fre
         <pubDate>Tue, 13 Jun 2017 06:26:07 -0400</pubDate>
         <link>http://khou22.github.io/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</guid>
-        
+
         <category>reactjs</category>
-        
-        
+
+
         <category>programming</category>
-        
+
       </item>
-    
+
       <item>
         <title>HackPrinceton 2017: SoFly — An iOS App to Scan Flyers on Campus</title>
         <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
@@ -323,16 +376,16 @@ Other problems we encountered include extracting the name of the event, extracti
         <pubDate>Sun, 09 Apr 2017 07:56:00 -0400</pubDate>
         <link>http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly--an-ios-app-to-scan-flyers-on-campus.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly--an-ios-app-to-scan-flyers-on-campus.html</guid>
-        
+
         <category>ios</category>
-        
+
         <category>swift</category>
-        
-        
+
+
         <category>programming</category>
-        
+
       </item>
-    
+
       <item>
         <title>Swift Tips and Tricks February 2017: UI Text Field Styling and Force Touch App Shortcuts</title>
         <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Useful UITextField Extensions&lt;/h3&gt;
@@ -418,16 +471,16 @@ Hope this was useful! Sorry my blog posts have been fairly minimal in writing. I
         <pubDate>Tue, 28 Feb 2017 14:16:22 -0500</pubDate>
         <link>http://khou22.github.io/programming/2017/02/28/swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2017/02/28/swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts.html</guid>
-        
+
         <category>ios</category>
-        
+
         <category>swift</category>
-        
-        
+
+
         <category>programming</category>
-        
+
       </item>
-    
+
       <item>
         <title>Swift Camera Basics: Image Pickers and Action Sheets</title>
         <description>&lt;p&gt;I am designing and implementing a profile screen into Breathometer’s new app and one of the key components of many profile screens is a profile picture. I’m continuing to add to my toolbox of Swift skills so I set about learning how to get pictures from either the camera app or phone’s photo library.
@@ -439,7 +492,7 @@ Button: To control when we want to upload the image
 &lt;h3 class=&quot;post-subheader&quot;&gt;Setup View Controller Class&lt;/h3&gt;
 &lt;p&gt;In order to use photos from the device, you must use the UIImagePickerControllerDelegate and the UINavigationControllerDelegate. These will give you the necessary functions to be able to retrieve your first image. The UIImagePickerControllerDelegate is responsible for initiating an image picker controller which then piggybacks with the UINavigationControllerDelegate that allows you to present the image picker using presentViewController() and dismissViewControllerAnimated(). Your view controller class should look like this:&lt;br /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;ProfileScreen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIImagePickerControllerDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UINavigationControllerDelegate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;    
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;ProfileScreen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIImagePickerControllerDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UINavigationControllerDelegate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kr&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nb&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -668,16 +721,16 @@ Button: To control when we want to upload the image
         <pubDate>Thu, 23 Feb 2017 15:53:36 -0500</pubDate>
         <link>http://khou22.github.io/programming/2017/02/23/swift-camera-basics-image-pickers-and-action-sheets.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2017/02/23/swift-camera-basics-image-pickers-and-action-sheets.html</guid>
-        
+
         <category>ios</category>
-        
+
         <category>swift</category>
-        
-        
+
+
         <category>programming</category>
-        
+
       </item>
-    
+
       <item>
         <title>Data Types December 2016: Dictionaries and Symbol Tables</title>
         <description>&lt;p&gt;Recently, I’ve been learning a lot about different data structures to use in programs. Many of the common, most applicable, include linked lists, stacks, queues, double linked lists, and symbol tables. In this post I will give a brief overview of symbol tables, also known as dictionaries or hash maps, and provide some instances where symbol tables can greatly improve the quality of your code. When implemented correctly, this simple data type can improve efficiency, code readability, and run time.
@@ -746,16 +799,16 @@ Sometimes, items either simply cannot be matched to an integer index or prove to
         <pubDate>Sun, 18 Dec 2016 09:57:26 -0500</pubDate>
         <link>http://khou22.github.io/programming/2016/12/18/data-types-december-2016---dictionaries-and-symbol-tables.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/12/18/data-types-december-2016---dictionaries-and-symbol-tables.html</guid>
-        
+
         <category>ios</category>
-        
+
         <category>swift</category>
-        
-        
+
+
         <category>programming</category>
-        
+
       </item>
-    
+
       <item>
         <title>Swift Core Data Basics: Storing App Data</title>
         <description>&lt;p&gt;Core Data is an important component of many complex apps. An app’s lifecycle is a complicated topic, but data management can be articulated as such: When you kill an app (or shut down your phone), any data that isn’t designed to persist between sessions will be deleted. The solution is to either use persist data with NSUserDefaults or by using Apple’s Core Data. Again, Core Data is another incredibly complex topic, but this blog post should give you the necessary tools to start using it.
@@ -821,20 +874,20 @@ Those are the basics to Core Data! This is obviously a very simple example, but 
         <pubDate>Mon, 31 Oct 2016 17:07:17 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/10/31/swift-core-data-basics-storing-app-data.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/10/31/swift-core-data-basics-storing-app-data.html</guid>
-        
+
         <category>ios</category>
-        
+
         <category>swift</category>
-        
+
         <category>apps</category>
-        
+
         <category>xcode</category>
-        
-        
+
+
         <category>programming</category>
-        
+
       </item>
-    
+
       <item>
         <title>Design Tips and Tricks August 2016: Optimizing and Animating SVG Images</title>
         <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Overview&lt;/h3&gt;
@@ -883,7 +936,7 @@ Those are the basics to Core Data! This is obviously a very simple example, but 
   &lt;li&gt;Good practice to make the container really big initially so that nothing ever gets cropped&lt;/li&gt;
   &lt;li&gt;Change the SVG tag ID to classes. So it’s better compatible with CSS.&lt;/li&gt;
   &lt;li&gt;Good to put this in the beginning so you can see what’s going on:
-    
+
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;svg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -892,14 +945,14 @@ Those are the basics to Core Data! This is obviously a very simple example, but 
   &lt;/li&gt;
   &lt;br /&gt;
   &lt;li&gt;When rotating: transform: rotate(27deg), remember SVGs have their own coordinate system. Make sure you set transform-origin: center. Transform-origin is a very finicky system. It’s best to use:
-    
+
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;transform-origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;instead&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;transform-origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;center&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
   &lt;/li&gt;
   &lt;li&gt;If you want to transform around a specific point, set the transform-origin to that point. Best practice to use pixels so that older browsers can understand it.&lt;/li&gt;
   &lt;br /&gt;
   &lt;li&gt;Can group elements together in css by doing:
-    
+
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;class1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;class2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;class3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -935,69 +988,13 @@ Tangential side note: How to create a really cool Uber-style splash screen anima
         <pubDate>Sun, 28 Aug 2016 14:46:35 -0400</pubDate>
         <link>http://khou22.github.io/programming/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html</link>
         <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html</guid>
-        
+
         <category>apps</category>
-        
-        
+
+
         <category>programming</category>
-        
+
       </item>
-    
-      <item>
-        <title>A Summer&#39;s Journey: What I&#39;ve Learned and How I Should Keep Growing</title>
-        <description>&lt;p&gt;This past summer (2016) I worked at a startup called Breathometer as an iOS frontend developer. Going into the summer, I was looking to work on a smaller team and get some real world experience building with Swift.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;What I Did&lt;/h3&gt;
-&lt;p&gt;&lt;b&gt;Onboarding&lt;/b&gt;&lt;br /&gt;
-My big project was to design and develop the on-boarding experience for the company’s new app. With an estimated 20,000 projected users, my project would truly be making an impact right out of the box. I did a lot of research using various tools such as &lt;a href=&quot;https://www.useronboard.com/&quot;&gt;useronboard.com&lt;/a&gt;, a website that tears down onboarding flows, and Dribble (see my design inspirations &lt;a href=&quot;https://dribbble.com/khou22/buckets/393642-Mobile-Onboarding&quot;&gt;here&lt;/a&gt;). I spent a lot of days simply researching and taking notes on what made certain mobile onboarding flows better than others. I learned a lot, including permission priming, clarity, the effect of animations, and much more. It was the culmination of my summer learning Swift 3.0, taking advantage of a lot of the new animation features that offered. I designed the onboarding flow in Sketch and coded the project itself in Xcode.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;b&gt;User Analytics&lt;/b&gt;&lt;br /&gt;
-Another one of my projects was to integrate user analytics into one of the current apps, Mint. Originally, I was only supposed to set up remote push notification capabilities, but I ended implementing both Carnival, a push notification service, as well as Google Analytics. I learned a lot about user behavior tracking and audience segmentation. It was fascinating being able to crunch a massive amount of information and simplify a person’s data into human-readable categories.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-This project also required a lot of research, especially since I had to balance cost and features between nearly ten different push notification/analytics services. I presented my findings at many points during the research process. This included slideshows and even mini app demos. I learned how to articulate my ideas in the business world. Although there were many similarities to school, I noticed that a key difference was in the execution of a presentation. Because I was essentially pitching my opinions, I had to be prepared to not only back up my ideas, but also answer questions that I couldn’t plan for ahead of time. It really helped me become a better team member and software engineer.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;b&gt;App Localization&lt;/b&gt;&lt;br /&gt;
-Finally, one of my smaller-scale projects was to internationalize Breathometer’s mobile app to expand the products internationally into five countries, including China. This involved localizing language, units, and media assets for each country. It was my first project and although it was anticipated to take a majority of my summer, I was able to complete it in only a week. It was my first time touching the Swift code base and helped me learn my way around Xcode. It was really neat learning the power of Xcode and the guidelines Apple has for localization. I watched a lot of WWDC videos and did a lot of research on various app translation platforms in order to successfully execute this project. I also learned how to write documentation so that other members of the team could replicate my work and add more localizations if needed.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;b&gt;Other Small Projects&lt;/b&gt;
-I had an ongoing project mocking up screens for Breathometer’s new app. I also spent a couple of days doing app testing and reviewing documentation.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;What I Learned&lt;/h3&gt;
-&lt;p&gt;&lt;b&gt;Learning Swift&lt;/b&gt;&lt;br /&gt;
-With the release of Swift 3.0, it was a opportune time to get my feet wet in the latest and greatest of iOS development, especially how to create cool animations. I became well versed with Xcode, Cocoapods, and other third party services (push notifications, analytics, localizations, etc.). I also got my first exposure to code efficiency.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;b&gt;Working in a Smaller Company&lt;/b&gt;&lt;br /&gt;
-I had worked at Salesforce in summer of 2015 as a web developer and designer, gaining a lot of experience working in a large company setting. I also got a lot of experience with GitHub pull requests/issues and code readability/commenting.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;b&gt;Design&lt;/b&gt;&lt;br /&gt;
-I did a lot of work in Swift building screens for both my onboarding experience and other aspects of the app. I ended up doing a lot of research on medical app UX and how to best implement animations.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;b&gt;Non-Technical Skills&lt;/b&gt;&lt;br /&gt;
-Among the various technical skills I picked up, I also spent a lot of time writing documentation, reviewing other people’s code, testing, and researching.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;What I&#39;ll Do Moving Forward&lt;/h3&gt;
-&lt;p&gt;Given my new tools, both technical and non-technical, I will do a handful of things moving forward. I hope to continue teaching myself Swift 3.0 and always have at least a bit of iOS development in my life just so I can keep the rust off. I’m planning on using the research that I did to help me make decisions with my own apps in the future. Now that I have a good footing in animations, app design, and general Swift code structure, I can build better apps.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-I also hope to implement what I learned with user analytics into my personal website. Now that I can see the power of audience segmentation and data collection, it’d be really cool to see what types of people are accessing my site and from where. I’m a fan of internet privacy so I definitely won’t be collecting sensitive information, so for anyone reading this, don’t worry.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-In general, this was a great summer for me as a coder and as a team member. I learned a lot of both tangible and intangible skills that I’ll keep with me for a while and met a lot of interesting people from all walks of life. I owe it to my mentor and my manager at Breathometer, both of whom are incredible people and will do great things in the future. Thanks to everyone at Breathometer for making it a great summer and I look forward to applying what I’ve learned in the future!&lt;/p&gt;
-</description>
-        <pubDate>Wed, 24 Aug 2016 18:02:18 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2016/08/24/a-summers-journey-what-ive-learned-and-how-i-should-keep-growing.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/08/24/a-summers-journey-what-ive-learned-and-how-i-should-keep-growing.html</guid>
-        
-        <category>ios</category>
-        
-        <category>swift</category>
-        
-        <category>apps</category>
-        
-        <category>xcode</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
+
   </channel>
 </rss>
