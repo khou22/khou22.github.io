@@ -5,7 +5,7 @@ location: San Francisco Bay Area
 school: Lick-Wilmerding High School
 email: kevin.ch.hou@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  A blog about programming, wood, and anything that comes to my mind. Enjoy.
+  Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://khou22.github.io" # the base hostname & protocol for your site
 twitter_username: kevinhou22
