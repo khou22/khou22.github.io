@@ -1,0 +1,5 @@
+@media only screen and (max-width: 800px) {
+  .landing-project-info {
+    display: none !important; /*Hide project info*/
+  }
+}

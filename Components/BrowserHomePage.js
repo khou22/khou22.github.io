@@ -369,52 +369,83 @@ React.render(
   document.getElementById('content')
 );
 
-// TheaterJS typing effect
-var theater = theaterJS({ local: 'fr' })
+// Helpful shuffle function
+var knuthShuffle = function(ray) {
+  // Create defensive copy
+  var shuffled = new Array(ray.length); // New array of length
+  for (var i = 0; i < shuffled.length; i++) { // Instantiate new object
+    shuffled[i] = ray[i]; // Copy items
+  }
 
-theater.addActor('welcome-text', { speed: 1.1, accuracy: 0.7 });
+  // Iterate through array with index i
+  // Pick integer r between 0 and i uniformly at random
+  for (var i = 0; i < shuffled.length; i++) {
+    var r = Math.round((Math.random() * i)); // Random number: [0, i)
+    // Swap a[r] and a[i]
+    var temp = shuffled[r]; // Store element at r
+    shuffled[r] = shuffled[i]; // Copy i to r
+    shuffled[i] = temp; // Copy r to i
+  }
 
-// Environmental analysis
-var currentDate = new Date();
-var currentHour = currentDate.getHours();
-if (currentHour > 18 || currentHour < 4) { // 6pm - 4am
-  theater.addScene('welcome-text:Good evening, Kevin', 750)
-} else if (currentHour < 12 && currentHour > 4) { // 4am - 12pm
-  theater.addScene('welcome-text:Good morning, Kevin', 750)
-} else { // 12pm - 6pm
-  theater.addScene('welcome-text:Good afternoon, Kevin', 750)
-}
-
-/*********** Get quote of the day ***********/
-var quoteOfTheDay = "Kind words can be short and easy to speak, but their echoes are truly endless." // Default quote
-// Call api
-$.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?")
-  .done(update)
-  .fail(handleErr);
-
-// Completion handler
-function update(response) {
-  console.log($('#response').html())
-  console.log(JSON.stringify(response));
-  quoteOfTheDay = JSON.stringify(response)
-}
-
-// Error handler
-function handleErr(jqxhr, textStatus, err) {
-  console.log("Request Failed: " + textStatus + ", " + err);
+  return shuffled; // Return array
 }
 
 /*********** Add theater strings ***********/
 var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var currentDate = new Date();
 var month = monthNames[currentDate.getMonth()];
 var day = currentDate.getDate();
 var year = currentDate.getFullYear();
 var dateString = month + " " + day + ", " + year;
 
-theater.addScene('welcome-text:Today is ' + dateString, 1500)
-theater.addScene('welcome-text:What\'s on the agenda for today?', 1000)
-  // .addScene('welcome-text:Hover over the icons below for more...', 1000)
+/*********** Get quote of the day ***********/
+// Completion handler
+function update(response) {
+    response = knuthShuffle(response);
 
-theater.addScene(" " + quoteOfTheDay + " ", 2000)
+    // TheaterJS typing effect
+    var theater = theaterJS({ local: 'fr' })
 
-theater.addScene(theater.replay.bind(theater))
+    theater.addActor('welcome-text', { speed: 1.2, accuracy: 0.7 });
+
+    // Environmental analysis
+    var currentHour = currentDate.getHours();
+    if (currentHour > 18 || currentHour < 4) { // 6pm - 4am
+        theater.addScene('welcome-text:Good evening, Kevin', 500)
+    } else if (currentHour < 12 && currentHour > 4) { // 4am - 12pm
+        theater.addScene('welcome-text:Good morning, Kevin', 500)
+    } else { // 12pm - 6pm
+        theater.addScene('welcome-text:Good afternoon, Kevin', 500)
+    }
+
+    theater.addScene('welcome-text:Today is ' + dateString, 800)
+
+    for (var i = 0; i < response.length; i++) {
+        // console.log(response[i].quote);
+        theater.addScene('welcome-text:' + response[i].quote, 750);
+    }
+
+    theater.addScene(theater.replay.bind(theater))
+}
+
+
+function make_basic_auth(user, password) {
+    var tok = user + ':' + password;
+    var hash = btoa(tok);
+    return 'Basic ' + hash;
+}
+
+var auth = make_basic_auth('admin', 'YOUR_API_KEY');
+var url = 'http://khou22.herokuapp.com/api/quotes';
+// var url = 'http://localhost:5000/api/quotes';
+
+// RAW
+const xml = new XMLHttpRequest();
+xml.open('GET', url, true);
+xml.setRequestHeader('Authorization', auth);
+xml.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        update(JSON.parse(this.responseText));
+    }
+};
+xml.send(); // Send request

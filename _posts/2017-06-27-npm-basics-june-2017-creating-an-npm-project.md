@@ -3,7 +3,7 @@ layout: post
 title: "NPM Basics June 2017: Creating an NPM Project"
 author: "Kevin Hou"
 date: 2017-06-27 10:17:34
-description: ""
+description: "The basic principle of the Node Package Manager (NPM) and how to create your own packages."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: Programming
 tags: []
@@ -19,6 +19,14 @@ Follow the instructions and it'll attempt to create a proper package.json for yo
 # Installing Dependencies
 {% highlight bash %}
 npm install --save react-redux
+{% endhighlight %}
+{% highlight bash %}
+npm install --save-dev babel-core
+{% endhighlight %}
+
+Global installation
+{% highlight bash %}
+npm install -g eslint
 {% endhighlight %}
 
 # Useful Dev Tools

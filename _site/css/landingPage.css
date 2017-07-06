@@ -33,8 +33,7 @@ dl, dd, ol, ul, figure {
 
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -189,6 +188,14 @@ hr {
   -webkit-animation-duration: 500ms;
 }
 
+.blog-button:focus {
+  outline: none;
+}
+
+.blog-button:active {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
 .icon-label {
   font-size: 2rem;
   width: 80px;
@@ -213,6 +220,11 @@ hr {
 .code-icon {
   background-image: url("./../media/site/icons/code.png");
   background-size: 65%;
+}
+
+.photography-icon {
+  background-image: url("./../media/site/icons/photography.png");
+  background-size: 60%;
 }
 
 .profile-picture {
