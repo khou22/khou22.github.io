@@ -1202,3 +1202,11 @@ pre {
 .rna-element-results {
   margin: 4%;
   width: 92%; }
+
+.design-header {
+  width: 100vw;
+  height: 75vh;
+  background-image: url(./../media/site/images/Design_Image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }

@@ -1,0 +1,12 @@
+.design {
+    &-header {
+        width: 100vw;
+        height: 75vh;
+
+        // Background image
+        background-image: url(./../media/site/images/Design_Image.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
