@@ -202,6 +202,7 @@ hr {
   height: 80px;
   position: absolute;
   margin: auto;
+  margin-left: -2px;
   bottom: -10px;
   text-align: center;
 }
