@@ -25,6 +25,10 @@ $mobile-cuttoff: 800px;
     height: 70px;
     border-bottom: 1px solid rgba(230, 230, 230, 1);
 
+    @media(max-width: $mobile-cuttoff) {
+      border: none;
+    }
+
     &-logo {
       position: absolute;
       width: 50px;
@@ -112,7 +116,7 @@ $mobile-cuttoff: 800px;
     // Mobile
     @media(max-width: $mobile-cuttoff) {
       top: 0px;
-      height: 105vh;
+      height: 100vh;
     }
 
     &-filter {
@@ -195,7 +199,7 @@ $mobile-cuttoff: 800px;
 
   padding-top: 32px;
   @media(max-width: $mobile-cuttoff) {
-    padding-top: 20px; // Remove padding on mobile site
+    padding-top: 10vh; // Fix spacing overlap issue
   }
 
   background-color: white;
@@ -210,8 +214,8 @@ $mobile-cuttoff: 800px;
   float: left;
 
   @media(max-width: $mobile-cuttoff) {
-    margin-left: 0%;
-    width: 100%;
+    margin-left: 1%;
+    width: 98%;
   }
 }
 
