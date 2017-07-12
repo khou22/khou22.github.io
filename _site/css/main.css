@@ -454,6 +454,14 @@ pre {
     color: #099; }
 
 /*Custom Sass file for blog directory*/
+/****************  Styling Font  ****************/
+@font-face {
+  font-family: handwritingFont;
+  src: url(./../media/site/fonts/LingWaiSC/LingWaiSC-Medium.otf); }
+.font-handwritten {
+  font-family: handwritingFont, cursive, sans-serif; }
+
+/****************  Default Font  ****************/
 @font-face {
   font-family: defaultFont;
   src: url(./../media/site/fonts/ProximaNova/ProximaNova-Light.otf); }
@@ -474,7 +482,7 @@ pre {
   src: url(./../media/site/fonts/ProximaNova/ProximaNova-SemiboldIt.otf);
   font-weight: bold italic; }
 * {
-  font-family: defaultFont !important; }
+  font-family: defaultFont, Arial, Helvetica; }
 
 /*Site font*/
 /*Override Bootstrap*/
