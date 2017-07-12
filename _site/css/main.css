@@ -992,11 +992,27 @@ pre {
 /*For contact page*/
 .contact-header {
   width: 100%; }
+  .contact-header-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 1px solid #3286A8;
+    margin: auto;
+    margin-top: 24px;
+    background-image: url("../media/site/images/Profile2.jpg");
+    background-position: center;
+    background-size: cover; }
   .contact-header-title {
     color: #3286A8;
     text-align: center;
     font-size: 5rem;
     line-height: 12rem; }
+    .contact-header-title-fill-in {
+      display: inline-block;
+      width: 150px;
+      height: 9rem;
+      color: #D5491F;
+      border-bottom: 1px solid #3286A8; }
   .contact-header-subtitle {
     color: #9DB7C1;
     text-align: center;

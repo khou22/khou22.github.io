@@ -10,6 +10,23 @@ $brand-blue:      #3286A8;
   &-header {
     width: 100%;
 
+    &-image {
+        // Sizing
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        border: 1px solid $brand-blue;
+
+        // Positioning
+        margin: auto;
+        margin-top: 24px;
+
+        // Image properties
+        background-image: url("../media/site/images/Profile2.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
     &-title {
       color: $brand-blue;
       text-align: center;
@@ -18,7 +35,14 @@ $brand-blue:      #3286A8;
 
       // Animated typing section
       &-fill-in {
-          
+          // Sizing and positioning
+          display: inline-block;
+          width: 150px; // Extra wide
+          height: 9rem;
+
+          // Styling
+          color: $brand-red;
+          border-bottom: 1px solid $brand-blue;
       }
     }
 

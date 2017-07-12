@@ -19,8 +19,9 @@ var ContactPage = React.createClass({
     return (
       <div>
         <div className="contact-header">
+            <div className="contact-header-image" />
           <h1 className="contact-header-title">
-              Let's <span className="contact-header-title-fill-in font-handwritten">create</span> together.
+              Let's <div className="contact-header-title-fill-in font-handwritten">create</div> together.
           </h1>
           <h3 className="contact-header-subtitle">Project idea? Suggestion? Feedback? Let me know</h3>
         </div>
