@@ -1031,11 +1031,14 @@ pre {
     padding: 7px;
     font-size: 16px;
     resize: none; }
-  .contact-form input:focus, .contact-form textarea:focus {
+  .contact-form input:focus, .contact-form textarea:focus, .contact-form-submit:hover {
     outline: none;
-    border: 1px solid #3286A8; }
+    border: 1px solid #3286A8;
+    background: rgba(200, 200, 200, 0.2); }
   .contact-form-body {
     height: 200px; }
+  .contact-form-submit {
+    background: none; }
 
 .project-page {
   width: 90%;

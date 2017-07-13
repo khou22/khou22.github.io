@@ -72,13 +72,18 @@ $brand-blue:      #3286A8;
           resize: none;
       }
 
-      input:focus, textarea:focus {
+      input:focus, textarea:focus, &-submit:hover {
           outline: none; // No focus border
           border: 1px solid $brand-blue; // Change color
+          background: rgba(200, 200, 200, 0.2);
       }
 
       &-body {
           height: 200px;
+      }
+
+      &-submit { // Submit button
+          background: none;
       }
   }
 }

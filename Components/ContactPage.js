@@ -34,15 +34,37 @@ var ContactPage = React.createClass({
 })
 
 var ContactForm = React.createClass({
-  render: function() {
-    return (
-        <form className="contact-form">
-            <input type="text" placeholder="Your email address" className="contact-form-email" />
-            <input type="text" placeholder="Subject" className="contact-form-subject" />
-            <textarea placeholder="Leave a note" className="contact-form-body" />
-        </form>
-    );
-  }
+    getInitialState: function() {
+        return {
+            data: { email: "", subject: "", body: "" }
+        }
+    },
+
+    // On input change
+    formChange: function(event) {
+        const target = event.target.id;
+        const data = this.state.data; // Get current data
+        data[target] = event.target.value; // Update property
+        this.setState({ data: data }); // Update local state
+        // console.log(`Updating ${target} to: ${event.target.value}`);
+    },
+
+    // On form submit
+    submitForm: function(event) {
+        event.preventDefault(); // Prevent reload
+        console.log('Submitting form');
+    },
+
+    render: function() {
+        return (
+            <form className="contact-form">
+                <input type="text" placeholder="Your email address" className="contact-form-email" id="email" value={this.state.data.email} onChange={this.formChange} />
+                <input type="text" placeholder="Subject" className="contact-form-subject" id="subject" value={this.state.data.subject} onChange={this.formChange} />
+                <textarea placeholder="Leave a note" className="contact-form-body" id="body" value={this.state.data.body} onChange={this.formChange} />
+                <input type="submit" className="contact-form-submit" onClick={this.submitForm}/>
+            </form>
+        );
+    }
 })
 
 React.render(
