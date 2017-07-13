@@ -1013,38 +1013,29 @@ pre {
       height: 9rem;
       color: #D5491F;
       border-bottom: 1px solid #3286A8; }
-  .contact-header-subtitle {
-    color: #9DB7C1;
-    text-align: center;
-    font-size: 2rem; }
-.contact-info {
-  margin-top: 24px; }
-  .contact-info-block {
-    margin: auto;
-    width: 150px;
-    height: 150px; }
-  .contact-info-left {
-    float: left;
-    width: 50%; }
-  .contact-info-right {
-    float: right;
-    width: 50%; }
-.contact-icon {
-  margin: auto;
-  width: 50%;
-  height: 50%;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  color: #3286A8; }
-.contact-details {
-  margin: auto;
-  width: 75%;
-  color: #9DB7C1;
-  text-align: center;
-  word-wrap: break-word;
-  font-size: 18px;
-  line-height: 24px; }
+.contact-left-half {
+  width: 49%;
+  float: left; }
+.contact-form {
+  width: 90%;
+  margin: 5%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #9DB7C1; }
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    margin: 1% 0px 1% 0px !important;
+    border: 1px solid #9DB7C1;
+    border-radius: 4px;
+    color: #3286A8;
+    padding: 7px;
+    font-size: 16px;
+    resize: none; }
+  .contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #3286A8; }
+  .contact-form-body {
+    height: 200px; }
 
 .project-page {
   width: 90%;

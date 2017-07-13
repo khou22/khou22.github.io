@@ -23,38 +23,24 @@ var ContactPage = React.createClass({
           <h1 className="contact-header-title">
               Let's <div className="contact-header-title-fill-in font-handwritten">create</div> together.
           </h1>
-          <h3 className="contact-header-subtitle">Project idea? Suggestion? Feedback? Let me know</h3>
         </div>
         <br />
-        <div className="contact-info">
-          <div className="contact-info-left">
-            <ContactInfo contactMethods={this.state.contactMethods[0]} />
-          </div>
-          <div className="contact-info-right">
-            <ContactInfo contactMethods={this.state.contactMethods[1]} />
-          </div>
+        <div className="contact-left-half">
+            <ContactForm />
         </div>
       </div>
     );
   }
 })
 
-var ContactInfo = React.createClass({
+var ContactForm = React.createClass({
   render: function() {
-    var backgroundURL = this.props.contactMethods.iconPath;
-    var label = this.props.contactMethods.label;
-    var link = this.props.contactMethods.link;
-    iconStyle = { "backgroundImage": "url(" + backgroundURL + ")" }
     return (
-      <a href={link}>
-        <div className="contact-info-block">
-          <div className="contact-icon" style={iconStyle}>
-          </div>
-          <div className="contact-details">
-            { label }
-          </div>
-        </div>
-      </a>
+        <form className="contact-form">
+            <input type="text" placeholder="Your email address" className="contact-form-email" />
+            <input type="text" placeholder="Subject" className="contact-form-subject" />
+            <textarea placeholder="Leave a note" className="contact-form-body" />
+        </form>
     );
   }
 })

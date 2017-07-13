@@ -45,51 +45,40 @@ $brand-blue:      #3286A8;
           border-bottom: 1px solid $brand-blue;
       }
     }
-
-    &-subtitle {
-      color: $brand-grey;
-      text-align: center;
-      font-size: 2rem;
-    }
   }
 
-  &-info {
-    margin-top: 24px;
-
-    &-block {
-      margin: auto;
-      width: 150px;
-      height: 150px;
-    }
-
-    &-left {
+  &-left-half {
+      width: 49%;
       float: left;
-      width: 50%;
-    }
-
-    &-right {
-      float: right;
-      width: 50%;
-    }
   }
 
-  &-icon {
-    margin: auto;
-    width: 50%;
-    height: 50%;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    color: $brand-blue;
-  }
+  &-form {
+      // Sizing
+      width: 90%;
+      margin: 5%;
+      padding: 12px;
+      border-radius: 12px;
 
-  &-details {
-    margin: auto;
-    width: 75%;
-    color: $brand-grey;
-    text-align: center;
-    word-wrap: break-word;
-    font-size: 18px;
-    line-height: 24px;
+      border: 1px solid $brand-grey;
+
+      input, textarea {
+          width: 100%;
+          margin: 1% 0px 1% 0px !important;
+          border: 1px solid $brand-grey;
+          border-radius: 4px;
+          color: $brand-blue; // Text color
+          padding: 7px;
+          font-size: 16px;
+          resize: none;
+      }
+
+      input:focus, textarea:focus {
+          outline: none; // No focus border
+          border: 1px solid $brand-blue; // Change color
+      }
+
+      &-body {
+          height: 200px;
+      }
   }
 }
