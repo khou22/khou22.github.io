@@ -19,41 +19,52 @@ var ContactPage = React.createClass({
     return (
       <div>
         <div className="contact-header">
-          <h1 className="contact-header-title">Contact Me</h1>
-          <h3 className="contact-header-subtitle">Project idea? Suggestion? Feedback? Let me know</h3>
+            <div className="contact-header-image" />
+          <h1 className="contact-header-title">
+              Let's <div className="contact-header-title-fill-in font-handwritten">create</div> together.
+          </h1>
         </div>
         <br />
-        <div className="contact-info">
-          <div className="contact-info-left">
-            <ContactInfo contactMethods={this.state.contactMethods[0]} />
-          </div>
-          <div className="contact-info-right">
-            <ContactInfo contactMethods={this.state.contactMethods[1]} />
-          </div>
+        <div className="contact-left-half">
+            <ContactForm />
         </div>
       </div>
     );
   }
 })
 
-var ContactInfo = React.createClass({
-  render: function() {
-    var backgroundURL = this.props.contactMethods.iconPath;
-    var label = this.props.contactMethods.label;
-    var link = this.props.contactMethods.link;
-    iconStyle = { "backgroundImage": "url(" + backgroundURL + ")" }
-    return (
-      <a href={link}>
-        <div className="contact-info-block">
-          <div className="contact-icon" style={iconStyle}>
-          </div>
-          <div className="contact-details">
-            { label }
-          </div>
-        </div>
-      </a>
-    );
-  }
+var ContactForm = React.createClass({
+    getInitialState: function() {
+        return {
+            data: { email: "", subject: "", body: "" }
+        }
+    },
+
+    // On input change
+    formChange: function(event) {
+        const target = event.target.id;
+        const data = this.state.data; // Get current data
+        data[target] = event.target.value; // Update property
+        this.setState({ data: data }); // Update local state
+        // console.log(`Updating ${target} to: ${event.target.value}`);
+    },
+
+    // On form submit
+    submitForm: function(event) {
+        event.preventDefault(); // Prevent reload
+        console.log('Submitting form');
+    },
+
+    render: function() {
+        return (
+            <form className="contact-form">
+                <input type="text" placeholder="Your email address" className="contact-form-email" id="email" value={this.state.data.email} onChange={this.formChange} />
+                <input type="text" placeholder="Subject" className="contact-form-subject" id="subject" value={this.state.data.subject} onChange={this.formChange} />
+                <textarea placeholder="Leave a note" className="contact-form-body" id="body" value={this.state.data.body} onChange={this.formChange} />
+                <input type="submit" className="contact-form-submit" onClick={this.submitForm}/>
+            </form>
+        );
+    }
 })
 
 React.render(

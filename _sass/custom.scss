@@ -6,6 +6,17 @@ $brand-green:     #80A454;
 $brand-grey:      #9DB7C1;
 $brand-blue:      #3286A8;
 
+/****************  Styling Font  ****************/
+@font-face {
+   font-family: handwritingFont;
+   src: url(./../media/site/fonts/LingWaiSC/LingWaiSC-Medium.otf);
+}
+
+.font-handwritten { // Apply this class to use
+    font-family: handwritingFont, cursive, sans-serif;
+}
+
+/****************  Default Font  ****************/
 @font-face {
    font-family: defaultFont;
    src: url(./../media/site/fonts/ProximaNova/ProximaNova-Light.otf);
@@ -31,7 +42,7 @@ $brand-blue:      #3286A8;
    font-weight: bold italic;
 }
 
-*{ font-family: defaultFont !important; } /*Site font*/
+*{ font-family: defaultFont, Arial, Helvetica; } /*Site font*/
 
 /*Override Bootstrap*/
 body, h1, h2, h3, h4, h5, h6,
