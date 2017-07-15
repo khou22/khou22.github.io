@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kevin Hou&#39;s Blog</title>
+    <title>Kevin Hou</title>
     <description>Kevin Hou&#39;s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 14 Jul 2017 17:52:42 -0400</pubDate>
-    <lastBuildDate>Fri, 14 Jul 2017 17:52:42 -0400</lastBuildDate>
+    <pubDate>Sat, 15 Jul 2017 01:12:20 -0400</pubDate>
+    <lastBuildDate>Sat, 15 Jul 2017 01:12:20 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>

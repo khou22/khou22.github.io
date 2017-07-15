@@ -428,21 +428,12 @@ function update(response) {
     theater.addScene(theater.replay.bind(theater))
 }
 
-
-function make_basic_auth(user, password) {
-    var tok = user + ':' + password;
-    var hash = btoa(tok);
-    return 'Basic ' + hash;
-}
-
-var auth = make_basic_auth('admin', 'YOUR_API_KEY');
-var url = 'http://khou22.herokuapp.com/api/quotes';
-// var url = 'http://localhost:5000/api/quotes';
+// var url = 'http://khou22.herokuapp.com/api/quotes';
+var url = 'http://localhost:5000/api/quotes';
 
 // RAW
 const xml = new XMLHttpRequest();
-xml.open('GET', url, true);
-xml.setRequestHeader('Authorization', auth);
+xml.open('GET', url);
 xml.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         update(JSON.parse(this.responseText));
