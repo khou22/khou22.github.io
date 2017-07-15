@@ -428,8 +428,8 @@ function update(response) {
     theater.addScene(theater.replay.bind(theater))
 }
 
-// var url = 'http://khou22.herokuapp.com/api/quotes';
-var url = 'http://localhost:5000/api/quotes';
+var url = 'http://khou22.herokuapp.com/api/quotes';
+// var url = 'http://localhost:5000/api/quotes';
 
 // RAW
 const xml = new XMLHttpRequest();
