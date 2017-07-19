@@ -50,7 +50,7 @@ programmingProjects = [
         image: "./../media/programming/thumbnails/princeton-tonight-thumbnail.png",
         category: categories[ "Website" ].name,
         categoryColor: categories[ "Website" ].color,
-        description: "I designed and built Princeton Tonight's website to showcase episodes and upcoming events as well as an email subsription service. Founded in 2015, we are the only student TV production show on Princeton's campus and have hosted guests ranging from Art Garfunkel and Mike Houston to Mike Delguidice and Dave Coulier."
+        description: "I designed and built Princeton Tonight's website to showcase episodes, blog posts, photos, and  upcoming events as well as an email subscription service. Founded in 2015, we are the only student TV production show on Princeton's campus and have hosted guests ranging from Art Garfunkel and Mike Houston to Mike Delguidice and Dave Coulier."
     },
     {
         name: "Website on East Asian Stereotypes",
