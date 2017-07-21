@@ -1,20 +1,4 @@
 var ContactPage = React.createClass({
-  getInitialState: function() {
-    return {
-      contactMethods: [
-        {
-          label: "Email me",
-          link: "mailto:kevin.ch.hou@gmail.com",
-          iconPath: "../../../media/site/icons/email_bw.png"
-        },
-        {
-          label: "Connect on LinkedIn",
-          link: "https://www.linkedin.com/in/kevinhou22",
-          iconPath: "../../../media/site/icons/logos/LinkedIn_bw.png"
-        }
-      ]
-    }
-  },
   render: function() {
     return (
       <div>
@@ -52,7 +36,17 @@ var ContactForm = React.createClass({
     // On form submit
     submitForm: function(event) {
         event.preventDefault(); // Prevent reload
-        console.log('Submitting form');
+
+        $.post("https://khou22.herokuapp.com/api/khou22/contact",
+        // $.post("http://localhost:5000/api/khou22/contact",
+        {
+            email: this.state.data.email,
+            subject: this.state.data.subject,
+            body: this.state.data.body
+        },
+        function(data, status) {
+            console.log("Data: " + data + "\nStatus: " + status);
+        });
     },
 
     render: function() {
