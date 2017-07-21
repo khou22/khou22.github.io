@@ -46,6 +46,11 @@ var ContactForm = React.createClass({
         },
         function(data, status) {
             console.log("Data: " + data + "\nStatus: " + status);
+            if (status == 'success') {
+                alert('Thank you for reaching out! I will be in touch shortly.');
+            } else {
+                alert('Email failed. If the problem persists, please contact me via LinkedIn.');
+            }
         });
     },
 
