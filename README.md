@@ -2,6 +2,7 @@
 Programmed in HTML, CSS, Javascript, and Ruby. The blog is powered by Jekyll.
 <br />
 Framework: ReactJS
+Satic Site Generator: Jekyll
 
 This is the Github repository I use to serve my Github Pages site. This is my main website that I use to centralize my pictures, projects, apps, etc. All my previous websites and social media accounts are linked from this site including my LinkedIn, YouTube, and Flickr. I am continuously updating content so stay tuned. I am currently in the process of redesigning and restructuring my blog.
 
