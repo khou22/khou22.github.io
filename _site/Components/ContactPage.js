@@ -60,21 +60,36 @@ var ContactForm = React.createClass({
     submitForm: function(event) {
         event.preventDefault(); // Prevent reload
 
-        $.post("https://khou22.herokuapp.com/api/khou22/contact",
-        // $.post("http://localhost:5000/api/khou22/contact",
-        {
-            email: this.state.data.email,
-            subject: this.state.data.subject,
-            body: this.state.data.body
-        },
-        function(data, status) {
-            console.log("Data: " + data + "\nStatus: " + status);
-            if (status == 'success') {
-                alert('Thank you for reaching out! I will be in touch shortly.');
-            } else {
-                alert('Email failed. If the problem persists, please contact me via LinkedIn.');
-            }
-        });
+        let validEntry = true;
+
+        if (this.state.data.email == "") {
+            validEntry = false;
+            alert('Please fill out the email field');
+        } else if (this.state.data.subject == "") {
+            validEntry = false;
+            alert('Please fill out the subject field');
+        } else if (this.state.data.body == "") {
+            validEntry = false;
+            alert('Please fill out the body of the email');
+        }
+
+        if (validEntry) {
+            $.post("https://khou22.herokuapp.com/api/khou22/contact",
+            // $.post("http://localhost:5000/api/khou22/contact",
+            {
+                email: this.state.data.email,
+                subject: this.state.data.subject,
+                body: this.state.data.body
+            },
+            function(data, status) {
+                console.log("Data: " + data + "\nStatus: " + status);
+                if (status == 'success') {
+                    alert('Thank you for reaching out! I will be in touch shortly.');
+                } else {
+                    alert('Email failed. If the problem persists, please contact me via LinkedIn.');
+                }
+            });
+        }
     },
 
     render: function() {
