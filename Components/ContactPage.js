@@ -12,6 +12,9 @@ var ContactPage = React.createClass({
         <div className="contact-left-half">
             <ContactForm />
         </div>
+        <div className="contact-right-half">
+            
+        </div>
       </div>
     );
   }
