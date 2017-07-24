@@ -1053,7 +1053,11 @@ pre {
     max-height: 130px;
     max-width: 120px;
     display: block;
-    margin: auto; }
+    margin: auto;
+    transition: all .2s ease-in-out; }
+  .contact-tile-icon:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2); }
 
 .project-page {
   width: 90%;
