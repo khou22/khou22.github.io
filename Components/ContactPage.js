@@ -13,7 +13,27 @@ var ContactPage = React.createClass({
             <ContactForm />
         </div>
         <div className="contact-right-half">
-            
+            <div className="contact-tile">
+                <img className="contact-tile-icon" src="../media/site/icons/iphone_icon.png" />
+                <br />
+                iOS Development
+            </div>
+            <div className="contact-tile">
+                <img className="contact-tile-icon" src="../media/site/icons/web_icon.png" />
+                <br />
+                Websites & Dynamic<br />
+                Web Apps
+            </div>
+            <div className="contact-tile">
+                <img className="contact-tile-icon" src="../media/site/icons/design_icon.png" />
+                <br />
+                UI/UX Design
+            </div>
+            <div className="contact-tile">
+                <img className="contact-tile-icon" src="../media/site/icons/photography_icon.png" />
+                <br />
+                Photography
+            </div>
         </div>
       </div>
     );

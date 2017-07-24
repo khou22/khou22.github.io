@@ -52,6 +52,11 @@ $brand-blue:      #3286A8;
       float: left;
   }
 
+  &-right-half {
+      width: 49%;
+      float: left;
+  }
+
   &-form {
       // Sizing
       width: 90%;
@@ -84,6 +89,29 @@ $brand-blue:      #3286A8;
 
       &-submit { // Submit button
           background: none;
+      }
+  }
+
+  &-tile {
+      width: 50%;
+      display: inline-block;
+
+      // Font styling
+      text-align: center;
+      color: $brand-blue;
+      font-size: 18px;
+
+      // Spacing
+      margin-bottom: 32px;
+
+      &-icon {
+          // Dimensions — whichever provides more restriction
+          max-height: 130px;
+          max-width: 120px;
+
+          // Display
+          display: block;
+          margin: auto;
       }
   }
 }
