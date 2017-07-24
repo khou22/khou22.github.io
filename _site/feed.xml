@@ -6,9 +6,43 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 23 Jul 2017 21:15:11 -0400</pubDate>
-    <lastBuildDate>Sun, 23 Jul 2017 21:15:11 -0400</lastBuildDate>
+    <pubDate>Mon, 24 Jul 2017 11:59:55 -0400</pubDate>
+    <lastBuildDate>Mon, 24 Jul 2017 11:59:55 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Design Notes July 2017: Useful Tools, Freelance, and Design Systems</title>
+        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;I’ve recently started talking to some designers at Moat — Vince Li and Josh Turk (Spelling?) [head of design at Moat] — and they’ve been giving me some really good insight into design at a big company as well as tools for myself to use. I’ve been working on the frontend Analytics engineering team, however, because of the size of the company, we do not do any design work. I’ve taken a liking to talking to designers to see what’s going on with their projects and any tips they might have for starting designers.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+One of the pieces of advice that I’ve picked up at Moat and specifically with design is from Steve Jobs when he says: “Stay a beginner”. The premise of this is great for design but applies to many different aspects of life. It is the idea that you should remain constantly questioning and relearning. If you approach a problem as a beginner every time, you are bound to find improvements and issues with the current design.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Tools&lt;/h3&gt;
+&lt;p&gt;I talked to Vince extensively about what tools he uses on a day to day for his designing. I mentioned to him that I wanted to get more into natural/organic designs like freehand with more intricate details. He uses the &lt;a href=&quot;https://us-store.wacom.com/Catalog/Pen-Tablets/Intuos-pro/wacom-intuos-pro#/undefined1&quot;&gt;Wacom Intuos Pro Medium&lt;/a&gt; and now uses it instead of a mouse. He highly recommends it for what I want to do, but he said that since the entry price is quite steep, it might be more economical to buy an iPad Pro. He let me use Moat’s iPad Pro since the design team hasn’t really gotten around to using it, and it’s been a really neat experience. I’ve been able to play around with some pretty cool apps and I’m currently debating if I can justify the also insanely high price. I’ll give it a couple weeks to see if I’m just going through a hype phase.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;b&gt;Useful Design Tools&lt;/b&gt;
+“Spotlight” Sketch Plugin: &lt;a href=&quot;http://sketchrunner.com/&quot;&gt;Runner&lt;/a&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;About Freelance&lt;/h3&gt;
+&lt;p&gt;Josh worked freelance for about a year and talked about how it’s different from a 9-5 job. He said that working as a designer in isolation is one of the hardest things about it. There’s no one to bounce ideas off of, brainstorm, or even give feedback on your work. He also recommended that freelance work, in general, should be intended to build a consistent stream of work. All too often, you can fall into the trap of building for many different clients with small tasks as opposed to building up a solid relation to a handful (he said about four) brands doing long term work. It’s better when you know the company you’re designing for well and it’s much more rewarding seeing the problem and solution play out over long periods of time. I’ll definitely keep it in mind moving forward seeing as freelance is something that I can imagine myself doing in the future.
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Design Systems&lt;/h3&gt;
+&lt;p&gt;Because of my current project at work and what I’ve experienced talking to designers recently, I really want to build my own design system/pattern/toolkit. Initially I wanted to build my own design system using the &lt;a href=&quot;http://bradfrost.com/blog/post/atomic-web-design/&quot;&gt;atomic design method&lt;/a&gt; — building buttons, fonts, icons, inputs, etc. that serve as atoms. These atoms then get stacked into molecules, which then stack into organisms, then templates, then finally to pages. It’s a really neat concept and I really want to do it eventually, but because I’m juggling 3 projects (with deadlines) and work right now, I just don’t think I’ll have the hours to devote to it. A more feasible endeavor would be a design pattern, a frontend framework, or a design toolkit — just a way of standardizing the way my buttons, headers, labels, icons, etc. look. Here are a couple of good reference examples:&lt;br /&gt;
+1. &lt;a href=&quot;http://blueprintjs.com/&quot;&gt;BlueprintJS&lt;/a&gt; - “React-based UI Toolkit”&lt;br /&gt;
+2. &lt;a href=&quot;http://patternlab.io/&quot;&gt;Pattern Lab&lt;/a&gt; — An atomic design system&lt;br /&gt;
+3. &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; — Frontend framework&lt;br /&gt;
+4. &lt;a href=&quot;https://www.lightningdesignsystem.com/&quot;&gt;Lightning Design&lt;/a&gt; - Salesforce’s Design System&lt;br /&gt;
+5. &lt;a href=&quot;https://material.io/&quot;&gt;Google Material Design&lt;/a&gt; - Google’s Design System&lt;br /&gt;
+6. &lt;a href=&quot;http://design-system.lostmy.name/&quot;&gt;Lost My Name Design System&lt;/a&gt; - A great, clean React-based design system&lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 24 Jul 2017 07:49:12 -0400</pubDate>
+        <link>http://khou22.github.io/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</guid>
+        
+        
+        <category>design</category>
+        
+      </item>
     
       <item>
         <title>Getting Started with Typescript: Thoughts, Tips, and Useful Notes</title>
@@ -874,85 +908,6 @@ Sometimes, items either simply cannot be matched to an integer index or prove to
         <category>ios</category>
         
         <category>swift</category>
-        
-        
-        <category>programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Swift Core Data Basics: Storing App Data</title>
-        <description>&lt;p&gt;Core Data is an important component of many complex apps. An app’s lifecycle is a complicated topic, but data management can be articulated as such: When you kill an app (or shut down your phone), any data that isn’t designed to persist between sessions will be deleted. The solution is to either use persist data with NSUserDefaults or by using Apple’s Core Data. Again, Core Data is another incredibly complex topic, but this blog post should give you the necessary tools to start using it.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Setting Up Core Data&lt;/h3&gt;
-&lt;p&gt;First, create a page based application and check the Core Data options. This will initialize a Core Data stack in the AppDelegate.swift file as well as create a .xcdatamodeld file in your project’s parent folder. The heart of Core Data lives in this .xcdatamodeld file. Selecting the file will expose a powerful Xcode editor for creating entity types that you can use to store data between app sessions. You can double click the entity name to change its label and add attributes, relationships, and fetched properties. Here’s an overview of these three vocabulary words:&lt;br /&gt;
-&lt;b&gt;Entity&lt;/b&gt; — specifies the name of the things you are creating. If you are creating a Core Data structure to store different people, the entity would be “People”&lt;br /&gt;
-&lt;b&gt;Attributes&lt;/b&gt; — defines characteristics of an entity. If you again use the analogy of people, the attributes would be age, birthdate, etc.&lt;br /&gt;
-&lt;b&gt;Relationships&lt;/b&gt; — connections between multiple entities. They can be “to-many” or “to-one.” For example, an employer would have a “to-many” relationship with his or her employees whereas an employer would have a “to-one” relationship with his/her boss.&lt;br /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-The Core Data editor is relatively intuitive. Create an entity by pressing the “Add Entity” button in the bottom left and add attributes and relationships using the corresponding plus buttons. Like objects and classes, the entity name is uppercase whereas attributes are camel case.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Saving to Core Data&lt;/h3&gt;
-&lt;p&gt;Import the CoreData module in whichever file your view controller lives in. Core Data objects are returned as a variety of object types, but the most basic is a “NSManagedObject.” Below is an example of how you would retrieve Core Data:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Entity: “Person”&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Attribute: “name”&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;people&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSManagedObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]()&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;people&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valueForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;as&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Xcode doesn’t know what type the value is&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Writing to Core Data&lt;/h3&gt;
-&lt;p&gt;This function is how to save a “name” String attribute to an entity, “Person.”&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;saveName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appDelegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sharedApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;as&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppDelegate&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Access the app delegate in order to save to Core Data&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;managedContext&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;managedObjectContext&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get managed object context&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;NSEntityDescription&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;entityForName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Person&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;inManagedObjectContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;managedContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Identify the entity&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// Create a new instance of Core Data and store temporary on the managedContext&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;NSManagedObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;entity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;insertIntoManagedObjectContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;managedContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Set an attribute&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;managedContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Save the temporary data to Core Data&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;people&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Also add to local data so don&amp;#39;t have to be constantly reading Core Data&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;NSError&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Could not save \(error), \(error.userInfo)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Reading Core Data&lt;/h3&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appDelegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;UIApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sharedApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;as&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppDelegate&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get App Delegate&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;managedContext&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;managedObjectContext&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get the managed object context&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fetchRequest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;NSFetchRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;entityName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Person&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get the entity objects from Core Data&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;results&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;managedContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;executeFetchRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fetchRequest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Fetch results&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;people&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;results&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;as&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSManagedObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Store locally&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;NSError&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Catch errors&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Could not fetch \(error), \(error.userInfo)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
-Those are the basics to Core Data! This is obviously a very simple example, but it’s integral to anyone learning to build iOS apps.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 31 Oct 2016 17:07:17 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2016/10/31/swift-core-data-basics-storing-app-data.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2016/10/31/swift-core-data-basics-storing-app-data.html</guid>
-        
-        <category>ios</category>
-        
-        <category>swift</category>
-        
-        <category>apps</category>
-        
-        <category>xcode</category>
         
         
         <category>programming</category>
