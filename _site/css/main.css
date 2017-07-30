@@ -1042,6 +1042,8 @@ pre {
     height: 200px; }
   .contact-form-submit {
     background: none; }
+  .contact-form-invalid {
+    border: 1px solid #D5491F !important; }
 .contact-tile {
   width: 50%;
   display: inline-block;

@@ -90,6 +90,10 @@ $brand-blue:      #3286A8;
       &-submit { // Submit button
           background: none;
       }
+
+      &-invalid {
+          border: 1px solid $brand-red !important; // Form feedback
+      }
   }
 
   &-tile {

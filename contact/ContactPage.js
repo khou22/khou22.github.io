@@ -56,11 +56,23 @@ var ContactForm = React.createClass({
         // console.log(`Updating ${target} to: ${event.target.value}`);
     },
 
+    emailValidity(email) {
+        if (email === '') return true;
+        // Email regex: https://stackoverflow.com/questions/46155/how-to-validate-email-address-in-javascript
+        const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return emailRegex.test(email);
+    },
+
     // On form submit
     submitForm: function(event) {
         event.preventDefault(); // Prevent reload
 
         let validEntry = true;
+
+        if (!emailValidity(this.state.data.email)) {
+            validEntry = false;
+            alert('Please enter a valid email');
+        }
 
         if (this.state.data.email == "") {
             validEntry = false;
@@ -93,9 +105,10 @@ var ContactForm = React.createClass({
     },
 
     render: function() {
+        const emailValidityClass = !this.emailValidity(this.state.data.email) ? 'contact-form-invalid' : '';
         return (
             <form className="contact-form">
-                <input type="text" placeholder="Your email address" className="contact-form-email" id="email" value={this.state.data.email} onChange={this.formChange} />
+                <input type="text" placeholder="Your email address" className={`contact-form-email ${emailValidityClass}`} id="email" value={this.state.data.email} onChange={this.formChange} />
                 <input type="text" placeholder="Subject" className="contact-form-subject" id="subject" value={this.state.data.subject} onChange={this.formChange} />
                 <textarea placeholder="Leave a note" className="contact-form-body" id="body" value={this.state.data.body} onChange={this.formChange} />
                 <input type="submit" className="contact-form-submit" onClick={this.submitForm}/>
