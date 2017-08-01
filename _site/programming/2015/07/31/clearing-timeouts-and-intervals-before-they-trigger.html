@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2015/07/31/clearing-timeouts-and-intervals-before-they-trigger.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2015/07/31/clearing-timeouts-and-intervals-before-they-trigger.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -243,19 +243,19 @@
 <br />
 My solution was to first declare an empty variable at the top of my React code. This line goes even before you create your class:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myTimeout</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myTimeout</span><span class="p">;</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="kr">export</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span> <span class="nx">createClass</span><span class="p">({</span>
   <span class="p">...</span>
-<span class="p">});</span></code></pre></div>
+<span class="p">});</span></code></pre></figure>
 
 <p>Next, I set my interval equal to a global variable like so:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">myTimeout</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">functionName</span><span class="p">(),</span> <span class="mi">500</span><span class="p">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">myTimeout</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">functionName</span><span class="p">(),</span> <span class="mi">500</span><span class="p">);</span></code></pre></figure>
 
 <p>My interval is now set to ‘myTimeout’ and because I declared this variable globally, it can be accessed at any scope. If I want to cancel my timeout before it has triggered I use the clearTimeout function:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">myTimeout</span><span class="p">);</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">myTimeout</span><span class="p">);</span></code></pre></figure>
 
 <p><br />
 That’s it! It’s really simple. This works with intervals as well. Simply set the inveral globally using the same method as described above and clear the interval with clearInterval(myInterval).</p>

@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2016/12/18/data-types-december-2016---dictionaries-and-symbol-tables.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2016/12/18/data-types-december-2016-dictionaries-and-symbol-tables.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -252,39 +252,39 @@ In both cases described above, both the key and the value can take on any data t
 <h3 class="post-subheader">Example Syntaxes</h3>
 <p><b>Javascript:</b><br /></p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">dictionary</span> <span class="o">=</span> <span class="p">[];</span> <span class="c1">// Create an empty array</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">dictionary</span> <span class="o">=</span> <span class="p">[];</span> <span class="c1">// Create an empty array</span>
 <span class="nx">dictionary</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="c1">// Add an value to the dictionary</span>
-    <span class="nx">key</span><span class="o">:</span>    <span class="s2">&quot;keyName&quot;</span><span class="p">,</span>
-    <span class="nx">value</span><span class="o">:</span>  <span class="s2">&quot;the value&quot;</span>
-<span class="p">});</span></code></pre></div>
+    <span class="na">key</span><span class="p">:</span>    <span class="s2">"keyName"</span><span class="p">,</span>
+    <span class="na">value</span><span class="p">:</span>  <span class="s2">"the value"</span>
+<span class="p">});</span></code></pre></figure>
 
 <p><br />
 <b>Swift:</b><br /></p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">dictionary</span> <span class="o">=</span> <span class="p">[</span> <span class="c1">// New dictionary</span>
-  <span class="s">&quot;keyName&quot;</span>       <span class="o">:</span> <span class="s">&quot;the value&quot;</span><span class="p">,</span>
-  <span class="s">&quot;keyName&quot;</span>       <span class="o">:</span> <span class="s">&quot;the value&quot;</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">dictionary</span> <span class="o">=</span> <span class="p">[</span> <span class="c1">// New dictionary</span>
+  <span class="s">"keyName"</span>       <span class="p">:</span> <span class="s">"the value"</span><span class="p">,</span>
+  <span class="s">"keyName"</span>       <span class="p">:</span> <span class="s">"the value"</span>
 <span class="p">]</span>
-<span class="n">dictionary</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;keyName&quot;</span> <span class="o">:</span> <span class="s">&quot;the value&quot;</span><span class="p">)</span> <span class="c1">// Add new item to dictionary</span></code></pre></div>
+<span class="n">dictionary</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"keyName"</span> <span class="p">:</span> <span class="s">"the value"</span><span class="p">)</span> <span class="c1">// Add new item to dictionary</span></code></pre></figure>
 
 <p><br class="post-line-break" />
 <b>Java:</b><br />
 Source: arshajii at <a href="http://stackoverflow.com/questions/13543457/how-do-you-create-a-dictionary-in-java" target="_blank">stackoverflow.com</a></p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Using hashmap</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Using hashmap</span>
 <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
-<span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;dog&quot;</span><span class="o">,</span> <span class="s">&quot;type of animal&quot;</span><span class="o">);</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">map</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;dog&quot;</span><span class="o">));</span></code></pre></div>
+<span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"dog"</span><span class="o">,</span> <span class="s">"type of animal"</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">map</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"dog"</span><span class="o">));</span></code></pre></figure>
 
 <p><br />
 <b>Python:</b><br /></p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s">&#39;Name&#39;</span>    <span class="p">:</span> <span class="err">‘</span><span class="n">Kevin</span><span class="err">’</span><span class="p">,</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">'Name'</span>    <span class="p">:</span> <span class="err">‘</span><span class="n">Kevin</span><span class="err">’</span><span class="p">,</span>
   <span class="err">‘</span><span class="n">School</span><span class="err">’</span><span class="o">.</span> <span class="p">:</span> <span class="err">‘</span><span class="n">Princeton</span> <span class="n">University</span><span class="err">’</span><span class="p">,</span>
   <span class="err">‘</span><span class="n">Year</span><span class="err">’</span><span class="o">.</span>   <span class="p">:</span> <span class="mi">1</span>
 <span class="p">}</span>
-<span class="k">print</span> <span class="nb">dict</span><span class="p">[</span><span class="s">&#39;Name&#39;</span><span class="p">]</span> <span class="c"># prints “Kevin”</span></code></pre></div>
+<span class="k">print</span> <span class="nb">dict</span><span class="p">[</span><span class="s">'Name'</span><span class="p">]</span> <span class="c"># prints “Kevin”</span></code></pre></figure>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">General Use Cases and Benefits</h3>

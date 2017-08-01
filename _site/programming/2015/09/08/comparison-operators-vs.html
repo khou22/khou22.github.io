@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Common React Issue - Button Clicks</title>
+  <title>Comparison Operators: '==' vs. '==='</title>
   <meta name="description" content="">
 
   <!-- React -->
@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2015/07/16/common-react-issue---button-clicks.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2015/09/08/comparison-operators-vs.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -209,9 +209,9 @@
         Return to all blogs
       </p></a>
       <br />
-      <h1 class="post-title post-header-title">Common React Issue - Button Clicks</h1>
+      <h1 class="post-title post-header-title">Comparison Operators: '==' vs. '==='</h1>
       <h4 class="post-header-description"></h4>
-      <p class="post-header-meta">Jul 16, 2015 • Kevin Hou</p>
+      <p class="post-header-meta">Sep 8, 2015 • Kevin Hou</p>
     </div>
   </header>
 
@@ -238,71 +238,19 @@
   </script>
 
   <article class="post-content">
-    <p>I’ve started to get the hang of <b>React</b> and <b>ES6</b>, but it’s only been three weeks and there are of course tons and tons of things I haven’t learned yet. I’ll go over a couple of things that I think anyone starting to learn React could benefit from. In this blog post I’ll go over Button Clicks.</p>
+    <p>For the longest time, I didn’t realize that ‘===’ was a comparison operator in Javascript. I just recently learned what the difference between them was. The double equal signs tell the comparison statement to convert the two values into the same type before comparing them. The triple equal signs do not convert the values before coimparing. If the two values do not share the same type, it will simply return false. For example:</p>
 
-<p>React works differently from plain old Vanilla Javascript in a couple of ways. One of which is the modular structure of the code. Each module has functions within it that can be accessed only by that specific module.</p>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">"1"</span><span class="p">;</span>
+ 
+<span class="k">if</span> <span class="p">(</span><span class="nx">str</span> <span class="o">==</span> <span class="nx">num</span><span class="p">)</span> <span class="c1">//Will return true</span>
+ 
+<span class="k">if</span> <span class="p">(</span><span class="nx">str</span> <span class="o">===</span> <span class="nx">num</span><span class="p">)</span> <span class="c1">//Will return false</span></code></pre></figure>
 
-<p>You might be encountering a couple errors:</p>
-<ol>
-  <li>onClick function triggering when button loads</li>
-  <li>The onClick function doesn't recognize the function its supposed to trigger</li>
-  <li>The function refreshes the page</li>
-  <li>You can't pass parameters into the function</li>
-</ol>
-<p>See the corresponding number below for potential solutions and explanations.</p>
-
-<hr />
-
-<p><br /></p>
-
-<h4>1. Prevent onClick from automatically running</h4>
-<p>The reason it automatically runs is because you are triggering the function when referencing it. Your code may look like this:</p>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">()}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="err">/button&gt;</span></code></pre></div>
-
-<p>The parentheses indicate that the function should be executed. When the page loads, it sees the parenthesis and runs the corresponding function. To fix the issue, simply remove the parenthesis. To pass parameters in, see the section below.</p>
-
-<h4>2. Force onClick to recognize function</h4>
-<p>Use</p>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span></code></pre></div>
-
-<p>at the end of</p>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">}</span></code></pre></div>
-
-<p>See example below.</p>
-
-<h4>3. Prevent Auto-Refresh</h4>
-<p>Simply use the: preventDefault() function</p>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
-  <span class="nx">buttonClick</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">//Prevents auto refresh</span>
-  <span class="p">},</span>
-  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span><span class="p">(</span>
-      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
-    <span class="p">)</span>
-  <span class="p">}</span>
-<span class="p">});</span></code></pre></div>
-
-<h4>4. Passing Parameters</h4>
-<p>Add the parameters in the .bind(this) as seen below</p>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
-  <span class="nx">buttonClick</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
-  <span class="p">},</span>
-  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span><span class="p">(</span>
-      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">num</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
-    <span class="p">)</span>
-  <span class="p">}</span>
-<span class="p">});</span></code></pre></div>
+<p>This is a super short post, but I figured I should write it down since it was interesting and something I should remember.</p>
 
     <div class="post-organization">
-      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/salesforce/">Salesforce Internship</a>, <a href="/blog/tag/reactjs/">ReactJS</a>, </p>
+      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/javascript/">Javascript</a></p>
     </div>
   </article>
 </div>

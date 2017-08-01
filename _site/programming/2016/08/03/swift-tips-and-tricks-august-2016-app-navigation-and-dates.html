@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2016/08/03/swift-tips-and-tricks-august-2016-app-navigation-and-dates.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2016/08/03/swift-tips-and-tricks-august-2016-app-navigation-and-dates.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -243,39 +243,39 @@
 <br class="post-line-break" />
 <b>Removing the time from a date so that all dates are from midnight that day.</b><br /></p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="n">dateWithoutTime</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">NSDate</span> <span class="p">{</span>
-  <span class="k">let</span> <span class="n">dateFormatter</span> <span class="o">=</span> <span class="bp">NSDateFormatter</span><span class="p">()</span>
-  <span class="n">dateFormatter</span><span class="p">.</span><span class="n">dateStyle</span> <span class="o">=</span> <span class="p">.</span><span class="n">MediumStyle</span> <span class="c1">// Doesn&#39;t include time component</span>
-  <span class="k">let</span> <span class="nl">dateToPrint</span><span class="p">:</span> <span class="bp">NSString</span> <span class="o">=</span> <span class="n">dateFormatter</span><span class="p">.</span><span class="n">stringFromDate</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span> <span class="kt">as</span> <span class="bp">NSString</span> <span class="c1">// Format into medium style string</span>
-  <span class="k">let</span> <span class="n">dateNoTime</span> <span class="o">=</span> <span class="n">dateFormatter</span><span class="p">.</span><span class="n">dateFromString</span><span class="p">(</span><span class="n">dateToPrint</span> <span class="kt">as</span> <span class="n">String</span><span class="p">)</span> <span class="c1">// Get a date from midnight that day</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">dateWithoutTime</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSDate</span> <span class="p">{</span>
+  <span class="k">let</span> <span class="nv">dateFormatter</span> <span class="o">=</span> <span class="kt">NSDateFormatter</span><span class="p">()</span>
+  <span class="n">dateFormatter</span><span class="o">.</span><span class="n">dateStyle</span> <span class="o">=</span> <span class="o">.</span><span class="kt">MediumStyle</span> <span class="c1">// Doesn't include time component</span>
+  <span class="k">let</span> <span class="nv">dateToPrint</span><span class="p">:</span> <span class="kt">NSString</span> <span class="o">=</span> <span class="n">dateFormatter</span><span class="o">.</span><span class="nf">stringFromDate</span><span class="p">(</span><span class="k">self</span><span class="p">)</span> <span class="k">as</span> <span class="kt">NSString</span> <span class="c1">// Format into medium style string</span>
+  <span class="k">let</span> <span class="nv">dateNoTime</span> <span class="o">=</span> <span class="n">dateFormatter</span><span class="o">.</span><span class="nf">dateFromString</span><span class="p">(</span><span class="n">dateToPrint</span> <span class="k">as</span> <span class="kt">String</span><span class="p">)</span> <span class="c1">// Get a date from midnight that day</span>
   <span class="k">return</span> <span class="n">dateNoTime</span><span class="o">!</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p><br />
 Usage:<br /></p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">currentDateNoTime</span> <span class="o">=</span> <span class="bp">NSDate</span><span class="p">().</span><span class="n">dateWithoutTime</span><span class="p">()</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">currentDateNoTime</span> <span class="o">=</span> <span class="kt">NSDate</span><span class="p">()</span><span class="o">.</span><span class="nf">dateWithoutTime</span><span class="p">()</span></code></pre></figure>
 
 <p><br class="post-line-break" />
 <b>Returning the date from “x” days ago:</b><br /></p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="n">daysAgo</span><span class="p">(</span><span class="nl">daysAgo</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">NSDate</span> <span class="p">{</span>
-  <span class="k">let</span> <span class="n">result</span> <span class="o">=</span> <span class="o">-</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">Double</span><span class="p">(</span><span class="n">daysAgo</span><span class="p">)</span>
-  <span class="k">return</span> <span class="nb">self</span><span class="p">.</span><span class="n">dateByAddingTimeInterval</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">daysAgo</span><span class="p">(</span><span class="nv">daysAgo</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSDate</span> <span class="p">{</span>
+  <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="o">-</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="kt">Double</span><span class="p">(</span><span class="n">daysAgo</span><span class="p">)</span>
+  <span class="k">return</span> <span class="k">self</span><span class="o">.</span><span class="nf">dateByAddingTimeInterval</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="p">}</span></code></pre></figure>
 
 <p><br />
 Usage:<br /></p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">sevenDaysAgo</span> <span class="o">=</span> <span class="bp">NSDate</span><span class="p">().</span><span class="n">daysAgo</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">sevenDaysAgo</span> <span class="o">=</span> <span class="kt">NSDate</span><span class="p">()</span><span class="o">.</span><span class="nf">daysAgo</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span></code></pre></figure>
 
 <p><br class="post-line-break" />
 <b>Sort an array by time:</b><b></b></p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">// recentSample is an array of HKQuantitySamples with the property: startDate</span>
-<span class="n">recentSample</span><span class="o">?</span><span class="p">.</span><span class="n">sortInPlace</span><span class="p">({</span>
-  <span class="err">$</span><span class="mf">0.0</span><span class="p">.</span><span class="n">startDate</span><span class="p">.</span><span class="n">timeIntervalSinceNow</span> <span class="o">&gt;</span> <span class="err">$</span><span class="mf">0.1</span><span class="p">.</span><span class="n">startDate</span><span class="p">.</span><span class="n">timeIntervalSinceNow</span> <span class="c1">// Sort by time</span>
-<span class="p">})</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">// recentSample is an array of HKQuantitySamples with the property: startDate</span>
+<span class="n">recentSample</span><span class="p">?</span><span class="o">.</span><span class="nf">sortInPlace</span><span class="p">({</span>
+  <span class="nv">$0</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="n">startDate</span><span class="o">.</span><span class="n">timeIntervalSinceNow</span> <span class="o">&gt;</span> <span class="nv">$0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="n">startDate</span><span class="o">.</span><span class="n">timeIntervalSinceNow</span> <span class="c1">// Sort by time</span>
+<span class="p">})</span></code></pre></figure>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">View Navigation</h3>
@@ -289,7 +289,7 @@ Usage:<br /></p>
 <p><br class="post-line-break" />
 A quick, one-line command that has been very useful in my work so far is:<br /></p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="nb">self</span><span class="p">.</span><span class="n">navigationController</span><span class="o">?</span><span class="p">.</span><span class="n">popViewControllerAnimated</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">self</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="nf">popViewControllerAnimated</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span></code></pre></figure>
 
 <p><br class="post-line-break" />
 It essentially takes the user back to the previous screen. I don’t swear to know exactly what’s going on behind the scenes, but I think this works because of the way Apple organizes views. Views are arranged in a stack with the topmost being visible. This view is then “popped” and removed — revealing the view beneath that. That’s the general idea and this command is very versatile and widely-used. For more on view controllers, I found this site very useful: <a href="https://makeapppie.com/2014/09/15/swift-swift-programmatic-navigation-view-controllers-in-swift/" target="_blank">https://makeapppie.com/2014/09/15/swift-swift-programmatic-navigation-view-controllers-in-swift/</a>.
@@ -300,12 +300,12 @@ In order to know which product you choose, the view controller you browsed in mu
 <br class="post-line-break" />
 When segueing, the function exposes the upcoming view controller as a parameter called “segue”:</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kr">override</span> <span class="k">func</span> <span class="nf">prepareForSegue</span><span class="p">(</span><span class="nl">segue</span><span class="p">:</span> <span class="bp">UIStoryboardSegue</span><span class="p">,</span> <span class="nl">sender</span><span class="p">:</span> <span class="n">AnyObject</span><span class="o">?</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">segue</span><span class="p">.</span><span class="n">identifier</span> <span class="o">==</span> <span class="s">&quot;StepsToGraphSegue&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">let</span> <span class="n">destinationVC</span> <span class="o">=</span> <span class="n">segue</span><span class="p">.</span><span class="n">destinationViewController</span> <span class="kt">as</span><span class="o">!</span> <span class="n">GraphScreen</span>
-    <span class="n">destinationVC</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="err">“</span><span class="n">Hello</span> <span class="n">World</span><span class="err">”</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">override</span> <span class="kd">func</span> <span class="nf">prepareForSegue</span><span class="p">(</span><span class="nv">segue</span><span class="p">:</span> <span class="kt">UIStoryboardSegue</span><span class="p">,</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">segue</span><span class="o">.</span><span class="n">identifier</span> <span class="o">==</span> <span class="s">"StepsToGraphSegue"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">destinationVC</span> <span class="o">=</span> <span class="n">segue</span><span class="o">.</span><span class="n">destinationViewController</span> <span class="k">as!</span> <span class="kt">GraphScreen</span>
+    <span class="n">destinationVC</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="err">“</span><span class="kt">Hello</span> <span class="kt">World</span><span class="err">”</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p><br class="post-line-break" />
 The view controller we are segueing to is the “GraphScreen” and has the property, “title” as a String. Just before segueing, you can pass any data from the first view controller into the second by setting a variable in the second view controller. I would like to do a blog post exclusively on app navigation techniques in the future.

@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -241,33 +241,33 @@
     <p>I started using TypeScript for my next project at Moat and I have to say I really love it. I’ve always been a fan of type safe language — largely for the compile-time debugging, code completion, and readability — which is why I’m such a huge fan of Swift. TypeScript has given me the structure and safety that I’ve found with Java and Swift, and has reinvigorated my love for web development. I’ve always considered web development to be somewhat of the “wild west” — not too much standardization and with no checks and balances to minimize errors.</p>
 
 <h3 class="post-subheader">Benefits</h3>
-<p>Using TypeScript has eliminated a whole category of bugs that would be present in traditional Javascript. I’m using <code>atom-typescript (v11.0.6)</code> which includes a live linter that checks my code on “compile” rather than during runtime. Because of this, my development time (after I got the hang of some syntax complications) was significantly increased. I no longer had unexpected types, undefined variables, and missing properties on objects. TypeScript can track the type of variables to ensure that functions always receive their specified inputs, variables don’t change types unless explicitly allowed, and code doesn’t attempt to access object attributes that aren’t actually there (also helps with spelling mistakes).</p>
+<p>Using TypeScript has eliminated a whole category of bugs that would be present in traditional Javascript. I’m using <code class="highlighter-rouge">atom-typescript (v11.0.6)</code> which includes a live linter that checks my code on “compile” rather than during runtime. Because of this, my development time (after I got the hang of some syntax complications) was significantly increased. I no longer had unexpected types, undefined variables, and missing properties on objects. TypeScript can track the type of variables to ensure that functions always receive their specified inputs, variables don’t change types unless explicitly allowed, and code doesn’t attempt to access object attributes that aren’t actually there (also helps with spelling mistakes).</p>
 
 <p>It has huge benefits with scalability because of the code clarity and readability. Deciphering poorly written code is a nightmare, but if it had type safety, using the interfaces alone would provide a good map of what’s going on. Furthermore, you wouldn’t have to spend ten minutes to trace the shape of the return object on a function. Team members could better understand the input and output of your code making compartmentalization and modulation a lot easier and more natural.</p>
 
 <h3 class="post-subheader">Drawbacks</h3>
 <p>One of the major drawbacks to TypeScript is efficiency. For small scale projects without many complicated objects and nested types, TypeScript might slow your development time down. TypeScript excels in complicated projects where you or a team member must use a complicated object with doubly nested arrays, objects, and dictionaries. This is where knowing exactly what variables you will have at your hands is a lifesaver.</p>
 
-<p>TypeScript can also be annoying when the type you expect to receive either doesn’t or varies. Even though you can “turn off” type safety by either not declaring a type or using <code>any</code> as the type, it’s still annoying when the linter complains about something that isn’t really within your control.</p>
+<p>TypeScript can also be annoying when the type you expect to receive either doesn’t or varies. Even though you can “turn off” type safety by either not declaring a type or using <code class="highlighter-rouge">any</code> as the type, it’s still annoying when the linter complains about something that isn’t really within your control.</p>
 
 <p>I’m sure I’ll find many more annoyances after I’ve gotten deeper into it. After all, I’ve only been using it for about a day so I’m probably naive and buying into the initial hype. Regardless, I’m having fun with TypeScript and opinions are better than no opinions.</p>
 
 <h3 class="post-subheader">Interfaces</h3>
 <p>I recognized TypeScript’s true power when I was setting up interfaces. Interfaces are like kind of like Structures in Swift without the variable declaration. They do not contain variables or values. Instead, they essentially map out an object’s shape. For example, I’ve been playing around with GitHub’s API for a project and here are two of my interfaces:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Declare shape of repository</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Declare shape of repository</span>
 <span class="kr">interface</span> <span class="nx">GitHubRepository</span> <span class="p">{</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
-    <span class="nx">id</span><span class="o">:</span> <span class="nx">number</span><span class="p">;</span>
+    <span class="nl">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+    <span class="nl">id</span><span class="p">:</span> <span class="nx">number</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kr">interface</span> <span class="nx">GitHubFile</span> <span class="p">{</span>
-    <span class="nx">type</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
-    <span class="nx">encoding</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
-    <span class="nx">path</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
-    <span class="nx">content</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+    <span class="nl">type</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+    <span class="nl">encoding</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+    <span class="nl">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+    <span class="nl">path</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+    <span class="nl">content</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>Now, I can use GitHubFile or GitHubRepository as a type just like I would with any other variable type. I have the added benefit of code completion now. When I type a variable name of type GitHubFile and press period, a list of properties and their expected type shows up. It enables IDE’s to be much smarter about their suggestions to the point where it’s honestly approaching Xcode level.
 <img src="./../../../../media/blog/images/TypeScript-Intro/atom_code_completion_typescript.png" class="iPhone-screenshots-large" /></p>
@@ -275,27 +275,27 @@
 <h3 class="post-subheader">Basic Syntaxes</h3>
 <p><b>Arrays:</b></p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">numbers</span><span class="o">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">numbers</span><span class="err">:</span> <span class="nb">Array</span><span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span></code></pre></figure>
 
 <p><b>Functions:</b></p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">getReadme</span> <span class="o">=</span> <span class="p">(</span><span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="o">:</span> <span class="nx">Promise</span><span class="o">&lt;</span><span class="nx">GitHubFile</span><span class="o">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="err">…</span> <span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">getReadme</span> <span class="o">=</span> <span class="p">(</span><span class="nx">name</span><span class="err">:</span> <span class="nx">string</span><span class="p">)</span> <span class="err">:</span> <span class="nx">Promise</span><span class="o">&lt;</span><span class="nx">GitHubFile</span><span class="o">&gt;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="err">…</span> <span class="p">}</span></code></pre></figure>
 
 <p><b>Casting:</b></p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">random</span><span class="o">:</span> <span class="nx">any</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
-<span class="kr">const</span> <span class="nx">value</span><span class="o">:</span> <span class="nx">number</span> <span class="o">=</span> <span class="nx">random</span> <span class="nx">as</span> <span class="nx">number</span><span class="p">;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">random</span><span class="err">:</span> <span class="nx">any</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">value</span><span class="err">:</span> <span class="nx">number</span> <span class="o">=</span> <span class="nx">random</span> <span class="nx">as</span> <span class="nx">number</span><span class="p">;</span></code></pre></figure>
 
 <p><b>Defining Generics:</b></p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// A promise function that declares a GitHubFile as the promise response</span>
-<span class="nx">Promise</span><span class="o">&lt;</span><span class="nx">GitHubFile</span><span class="o">&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// A promise function that declares a GitHubFile as the promise response</span>
+<span class="nx">Promise</span><span class="o">&lt;</span><span class="nx">GitHubFile</span><span class="o">&gt;</span></code></pre></figure>
 
 <h3 class="post-subheader">Final Thoughts</h3>
 <p>Overall, I’ve been very satisfied with TypeScript so far. The combination of code completion, reduced debugging time, and clean structure has made for a hugely satisfying development process. I’m thinking about refactoring my NodeJS Heroku server to TypeScript just so I can keep using it. Hope this post was helpful and I highly recommend you give TypeScript a shot!</p>
 
     <div class="post-organization">
-      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/javascript/">Javascript</a>, <a href="/blog/tag/es6/">ES6</a></p>
+      <p id="post-meta">Posted with <a href="/blog/tag/javascript/">Javascript</a>, <a href="/blog/tag/es6/">ES6</a></p>
     </div>
   </article>
 </div>
