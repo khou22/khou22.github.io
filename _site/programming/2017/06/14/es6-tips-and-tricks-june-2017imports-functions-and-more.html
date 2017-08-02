@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://khou22.github.io/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://localhost:4000">
+        <a href="http://khou22.github.io">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,9 +198,28 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -243,60 +262,60 @@
 <h3 class="post-subheader">Concatenation</h3>
 <p>One strange thing that I’ve noticed is that some ES6 linters do not allow you to concatenate Strings using the normal ‘+’ operation. They also don’t allow you use double quotes and force you to stick to single quotes when hard coding Strings. I’m not entirely sure why this is the case and I haven’t had time to look it up yet, but I think it has something to do with the way the compiler transforms the ES6 into static ES5 files for the browser. My guess is that the compiler needs to use double quotes and doesn’t want the code to mess with its compile scripts/process. Anyways, here’s a new way you can concatenate:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">id</span> <span class="o">=</span> <span class="s1">'154'</span><span class="p">;</span> <span class="c1">// Notice the single quotes</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">id</span> <span class="o">=</span> <span class="s1">&#39;154&#39;</span><span class="p">;</span> <span class="c1">// Notice the single quotes</span>
 
-<span class="c1">// When concatenating, use the "\`" quotation mark (normally shares the same key as the '~')</span>
+<span class="c1">// When concatenating, use the &quot;\`&quot; quotation mark (normally shares the same key as the &#39;~&#39;)</span>
 <span class="c1">// This works with any String convertible data type</span>
-<span class="kr">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="err">`</span><span class="o">/</span><span class="nx">data_table</span><span class="p">?</span><span class="nx">id</span><span class="o">=</span><span class="nx">$</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="err">`</span><span class="p">;</span> <span class="c1">// Result: "/data_table?id=154"</span></code></pre></figure>
+<span class="kr">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="err">`</span><span class="o">/</span><span class="nx">data_table</span><span class="o">?</span><span class="nx">id</span><span class="o">=</span><span class="nx">$</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="err">`</span><span class="p">;</span> <span class="c1">// Result: &quot;/data_table?id=154&quot;</span></code></pre></div>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">Updating a Few Properties in an Object</h3>
 <p>This will allow you to return a deep copy of your object without having to write out every single property value. It’s really useful when you’re updating a state in React or Redux.<br /></p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">return</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">return</span> <span class="p">{</span>
     <span class="p">...</span><span class="nx">previousState</span><span class="p">,</span>
-    <span class="na">propertyToUpdate</span><span class="p">:</span> <span class="o">!</span><span class="nx">previousState</span><span class="p">.</span><span class="nx">propertyToUpdate</span>
-<span class="p">};</span></code></pre></figure>
+    <span class="nx">propertyToUpdate</span><span class="o">:</span> <span class="o">!</span><span class="nx">previousState</span><span class="p">.</span><span class="nx">propertyToUpdate</span>
+<span class="p">};</span></code></pre></div>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">Event Handler</h3>
 <p>I came across this useful tidbit when using the <a href="https://github.com/JedWatson/react-select" target="_blank">React-Select</a> library for my project at work. It is an open source, purely React dropdown list that I would definitely recommend to anyone in need of a dropdown. I was attempting to customize the main component and found a property called arrorRender with the usage description: “Renders a custom drop-down arrow to be shown in the right-hand side of the select: arrowRenderer({ onMouseDown, isOpen })” I’m familiar with event handlers, but I had never seen this style of documentation before. What this means, is that the arrowRenderer is a function that returns a DOM node to be used in place of the default arrow icon. The function takes an object input with the properties onMouseDown and isOpen so that there can be more complex renderings. Here was my rendering function:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Custom dropdown icon for React-Select</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Custom dropdown icon for React-Select</span>
 <span class="nx">arrowRenderer</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">dropdownArrow</span> <span class="o">=</span> <span class="s1">'/path/to/image'</span><span class="p">;</span> <span class="c1">// Dropdown arrow</span>
-    <span class="kr">const</span> <span class="nx">searchIcon</span> <span class="o">=</span> <span class="s1">'/path/to/image'</span><span class="p">;</span> <span class="c1">// Magnifying glass</span>
-    <span class="kr">const</span> <span class="nx">imgURL</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">isOpen</span> <span class="p">?</span> <span class="nx">searchIcon</span> <span class="p">:</span> <span class="nx">dropdownArrow</span><span class="p">;</span> <span class="c1">// Determine which to use</span>
+    <span class="kr">const</span> <span class="nx">dropdownArrow</span> <span class="o">=</span> <span class="s1">&#39;/path/to/image&#39;</span><span class="p">;</span> <span class="c1">// Dropdown arrow</span>
+    <span class="kr">const</span> <span class="nx">searchIcon</span> <span class="o">=</span> <span class="s1">&#39;/path/to/image&#39;</span><span class="p">;</span> <span class="c1">// Magnifying glass</span>
+    <span class="kr">const</span> <span class="nx">imgURL</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">isOpen</span> <span class="o">?</span> <span class="nx">searchIcon</span> <span class="o">:</span> <span class="nx">dropdownArrow</span><span class="p">;</span> <span class="c1">// Determine which to use</span>
     <span class="k">return</span> <span class="p">(</span>
         <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span>
-            <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">imgURL</span><span class="p">}</span> <span class="nx">width</span><span class="o">=</span><span class="s2">"100%"</span> <span class="nx">role</span><span class="o">=</span><span class="s2">"presentation"</span> <span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
-</span>    <span class="p">);</span>
-<span class="p">}</span></code></pre></figure>
+            <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">imgURL</span><span class="p">}</span> <span class="nx">width</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span> <span class="nx">role</span><span class="o">=</span><span class="s2">&quot;presentation&quot;</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="err">/span&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span></code></pre></div>
 
 <p>In this function, I am using the isOpen state to choose which image icon to render in the select input. You may not have seen this notation before and it’s definitely useful to remember.
 <br class="post-line-break" />
 Another useful event handler is the ‘input’ tag’s built in onBlur() event that triggers when the user removes focus from the input element. Like the onFocus() handler, onBlur() can be assigned to a custom function.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The event handler function</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The event handler function</span>
 <span class="kr">const</span> <span class="nx">update</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'I'</span><span class="nx">ve</span> <span class="nx">been</span> <span class="nx">triggered</span><span class="err">'</span><span class="p">);</span>
-<span class="p">}</span></code></pre></figure>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="nx">ve</span> <span class="nx">been</span> <span class="nx">triggered</span><span class="err">&#39;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- The HTML --&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">autoComplete=</span><span class="s">"off"</span> <span class="na">autoCorrect=</span><span class="s">"off"</span> <span class="na">spellCheck=</span><span class="s">"false"</span> <span class="na">className=</span><span class="s">"select2-input"</span> <span class="na">onFocus=</span><span class="s">{update}</span> <span class="na">onBlur=</span><span class="s">{update}</span> <span class="nt">/&gt;</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- The HTML --&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">autoComplete=</span><span class="s">&quot;off&quot;</span> <span class="na">autoCorrect=</span><span class="s">&quot;off&quot;</span> <span class="na">spellCheck=</span><span class="s">&quot;false&quot;</span> <span class="na">className=</span><span class="s">&quot;select2-input&quot;</span> <span class="na">onFocus=</span><span class="s">{update}</span> <span class="na">onBlur=</span><span class="s">{update}</span> <span class="nt">/&gt;</span></code></pre></div>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">Preserving 'this' When Using React Props</h3>
 <p>In ES6, ‘this’ is not generally preserved which leads to some difficult workarounds when passing functions from one component to its children. Luckily, there is a technique that can be generally applicable to most situations that solves this issue. Many linters prevent the use of ‘.bind(this)’ so that is off the table. However, the block statement function ensures that ‘this’ pertains to the right scope. It is especially useful when you have to pass variables in as inputs. Here is an ES6 React example of this:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
 
 <span class="kr">class</span> <span class="nx">SomeComponent</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
     <span class="nx">clicked</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// 'this' refers to the component rather than the window</span>
+        <span class="c1">// &#39;this&#39; refers to the component rather than the window</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
-            <span class="na">someState</span><span class="p">:</span> <span class="nx">input</span>
+            <span class="nx">someState</span><span class="o">:</span> <span class="nx">input</span>
         <span class="p">});</span>
     <span class="p">}</span>
 
@@ -304,18 +323,18 @@ Another useful event handler is the ‘input’ tag’s built in onBlur() event 
         <span class="k">return</span> <span class="p">(</span>
             <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
                 <span class="nx">Good</span> <span class="nx">Example</span>
-                <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"button"</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">clicked</span><span class="p">(</span><span class="nx">input</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">I</span> <span class="nx">work</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
-</span>
-                <span class="nx">This</span> <span class="nx">won</span><span class="s1">'t preserve '</span><span class="k">this</span><span class="err">'</span> <span class="nx">and</span> <span class="nx">your</span> <span class="nx">component</span> <span class="nx">will</span> <span class="nx">crash</span>
-                <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"button"</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">clicked</span><span class="p">(</span><span class="nx">input</span><span class="p">)}</span><span class="o">&gt;</span>
-            <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span>        <span class="p">);</span>
+                <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;button&quot;</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">clicked</span><span class="p">(</span><span class="nx">input</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">I</span> <span class="nx">work</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+
+                <span class="nx">This</span> <span class="nx">won</span><span class="s1">&#39;t preserve &#39;</span><span class="k">this</span><span class="err">&#39;</span> <span class="nx">and</span> <span class="nx">your</span> <span class="nx">component</span> <span class="nx">will</span> <span class="nx">crash</span>
+                <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;button&quot;</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">clicked</span><span class="p">(</span><span class="nx">input</span><span class="p">)}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="err">/div&gt;</span>
+        <span class="p">);</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
 
     <div class="post-organization">
-      <p id="post-meta">Posted with <a href="/blog/tag/es6/">ES6</a></p>
+      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/es6/">ES6</a></p>
     </div>
   </article>
 </div>

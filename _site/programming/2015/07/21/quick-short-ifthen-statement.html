@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/programming/2015/07/21/quick-short-ifthen-statement.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://khou22.github.io/programming/2015/07/21/quick-short-ifthen-statement.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://localhost:4000">
+        <a href="http://khou22.github.io">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,9 +198,28 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -240,24 +259,24 @@
   <article class="post-content">
     <p>As a lot of you guys know, a proper if/then statement looks like this:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
   <span class="p">...</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
   <span class="p">...</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
 <p>Or something along those lines. If you want to set a value for a variable, it can take at least 6 lines of code. In a long file, adding 6 lines of code every time you want to set a variable based on an if-statement can make your code very messy. For example, to set a simple yes/no off of a boolean takes this:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">str</span> <span class="o">=</span> <span class="s2">"yes"</span><span class="p">;</span>
+  <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;yes&quot;</span><span class="p">;</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-  <span class="nx">str</span> <span class="o">=</span> <span class="s2">"no"</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+  <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;no&quot;</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
 <p>An <b>efficient, concise</b> alternative is to use this format condenses this code into one line:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">condition</span> <span class="o">==</span> <span class="kc">true</span> <span class="p">?</span> <span class="s2">"yes"</span> <span class="p">:</span> <span class="s2">"no"</span><span class="p">;</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">condition</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">?</span> <span class="s2">&quot;yes&quot;</span> <span class="o">:</span> <span class="s2">&quot;no&quot;</span><span class="p">;</span></code></pre></div>
 
 <p>This is a very simple, easy trick to greatly increase the readabitlity of your code. Instead of having an incredibely long file with lots of short lines, you can work horizontally and make use of your horizontal realistate.</p>
 

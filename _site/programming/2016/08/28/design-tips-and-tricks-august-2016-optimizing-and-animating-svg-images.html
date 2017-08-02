@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/programming/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://localhost:4000">
+        <a href="http://khou22.github.io">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,9 +198,28 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -285,28 +304,25 @@
   <li>Change the SVG tag ID to classes. So it’s better compatible with CSS.</li>
   <li>Good to put this in the beginning so you can see what’s going on:
     
-<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nt">svg</span> <span class="p">{</span>
-      <span class="nl">transform-origin</span><span class="p">:</span> <span class="nb">top</span> <span class="nb">left</span><span class="p">;</span>
-      <span class="nl">transform</span><span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
-    <span class="p">}</span>
-    </code></pre></figure>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">svg</span> <span class="p">{</span>
+      <span class="n">transform</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="k">top</span> <span class="k">left</span><span class="p">;</span>
+      <span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
+    <span class="p">}</span></code></pre></div>
 
   </li>
   <br />
   <li>When rotating: transform: rotate(27deg), remember SVGs have their own coordinate system. Make sure you set transform-origin: center. Transform-origin is a very finicky system. It’s best to use:
     
-<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nt">transform-origin</span><span class="o">:</span> <span class="nt">50</span><span class="o">%</span> <span class="nt">50</span><span class="o">%</span> <span class="nt">instead</span> <span class="nt">of</span> <span class="nt">transform-origin</span><span class="o">:</span> <span class="nt">center</span>
-    </code></pre></figure>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">transform-origin</span><span class="o">:</span> <span class="nt">50</span><span class="o">%</span> <span class="nt">50</span><span class="o">%</span> <span class="nt">instead</span> <span class="nt">of</span> <span class="nt">transform-origin</span><span class="o">:</span> <span class="nt">center</span></code></pre></div>
 
   </li>
   <li>If you want to transform around a specific point, set the transform-origin to that point. Best practice to use pixels so that older browsers can understand it.</li>
   <br />
   <li>Can group elements together in css by doing:
     
-<figure class="highlight"><pre><code class="language-css" data-lang="css">      <span class="nt">class1</span><span class="o">,</span> <span class="nt">class2</span><span class="o">,</span> <span class="nt">class3</span> <span class="p">{</span>
-        <span class="err">...</span>
-      <span class="p">}</span>
-    </code></pre></figure>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">class1</span><span class="o">,</span> <span class="nt">class2</span><span class="o">,</span> <span class="nt">class3</span> <span class="p">{</span>
+        <span class="o">...</span>
+      <span class="p">}</span></code></pre></div>
 
   </li>
 </ul>

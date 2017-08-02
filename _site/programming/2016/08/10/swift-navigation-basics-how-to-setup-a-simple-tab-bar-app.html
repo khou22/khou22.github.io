@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/programming/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://localhost:4000">
+        <a href="http://khou22.github.io">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,9 +198,46 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -285,17 +322,16 @@ Even if you decide to diffract your storyboards into multiple files, you must al
 <ol>
   <li>Create a new Swift file for each of the UIViewController’s you’ve created, excluding the Tab Bar Controller. The reliable, minimum amount of code in this file is something like this:<br />
   
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift">  <span class="kd">class</span> <span class="kt">FavoritesViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span> <span class="c1">// Name of view controller</span>
-      <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
-          <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">class</span> <span class="nl">FavoritesViewController</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">{</span> <span class="c1">// Name of view controller</span>
+      <span class="kr">override</span> <span class="k">func</span> <span class="n">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nb">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
           <span class="c1">// Do any additional setup after loading the view, typically from a nib.</span>
       <span class="p">}</span>
-      <span class="k">override</span> <span class="kd">func</span> <span class="nf">didReceiveMemoryWarning</span><span class="p">()</span> <span class="p">{</span>
-          <span class="k">super</span><span class="o">.</span><span class="nf">didReceiveMemoryWarning</span><span class="p">()</span>
+      <span class="kr">override</span> <span class="k">func</span> <span class="n">didReceiveMemoryWarning</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nb">super</span><span class="p">.</span><span class="n">didReceiveMemoryWarning</span><span class="p">()</span>
           <span class="c1">// Dispose of any resources that can be recreated.</span>
       <span class="p">}</span>
-  <span class="p">}</span>
-  </code></pre></figure>
+  <span class="p">}</span></code></pre></div>
 
   </li>
   <li>Use the options sidebar on the right to connect the UIViewController to a custom class. Select the name that you chose when creating the UIViewController class in your Swift file.</li>
@@ -329,39 +365,39 @@ Below are some additional customizations you can choose to add to your tab bar.
 
 <p>Here is the class:<br /></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">CustomTabBarController</span><span class="p">:</span> <span class="kt">UITabBarController</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">class</span> <span class="nl">CustomTabBarController</span><span class="p">:</span> <span class="bp">UITabBarController</span> <span class="p">{</span>
     <span class="c1">// Remember to the Tab Bar Controller custom class on your storyboard</span>
-    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// Called when tab bar loads</span>
-        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
-        <span class="k">self</span><span class="o">.</span><span class="nf">setupMiddleButton</span><span class="p">()</span> <span class="c1">// Sets up button</span>
+    <span class="kr">override</span> <span class="k">func</span> <span class="n">viewDidLoad</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// Called when tab bar loads</span>
+        <span class="nb">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">setupMiddleButton</span><span class="p">()</span> <span class="c1">// Sets up button</span>
     <span class="p">}</span>
 
-    <span class="kd">func</span> <span class="nf">setupMiddleButton</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">func</span> <span class="n">setupMiddleButton</span><span class="p">()</span> <span class="p">{</span>
 
-        <span class="k">let</span> <span class="nv">menuButton</span> <span class="o">=</span> <span class="kt">UIButton</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">64</span><span class="p">))</span>
+        <span class="k">let</span> <span class="n">menuButton</span> <span class="o">=</span> <span class="bp">UIButton</span><span class="p">(</span><span class="nl">frame</span><span class="p">:</span> <span class="bp">CGRect</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nl">width</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="mi">64</span><span class="p">))</span>
 
-        <span class="k">var</span> <span class="nv">menuButtonFrame</span> <span class="o">=</span> <span class="n">menuButton</span><span class="o">.</span><span class="n">frame</span>
-        <span class="n">menuButtonFrame</span><span class="o">.</span><span class="n">origin</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="n">menuButtonFrame</span><span class="o">.</span><span class="n">height</span>
-        <span class="n">menuButtonFrame</span><span class="o">.</span><span class="n">origin</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="n">menuButtonFrame</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span>
-        <span class="n">menuButton</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">menuButtonFrame</span>
+        <span class="k">var</span> <span class="n">menuButtonFrame</span> <span class="o">=</span> <span class="n">menuButton</span><span class="p">.</span><span class="n">frame</span>
+        <span class="n">menuButtonFrame</span><span class="p">.</span><span class="n">origin</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">.</span><span class="n">height</span> <span class="o">-</span> <span class="n">menuButtonFrame</span><span class="p">.</span><span class="n">height</span>
+        <span class="n">menuButtonFrame</span><span class="p">.</span><span class="n">origin</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">.</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="n">menuButtonFrame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">menuButton</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">menuButtonFrame</span>
 
-        <span class="n">menuButton</span><span class="o">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">whiteColor</span><span class="p">()</span>
-        <span class="n">menuButton</span><span class="o">.</span><span class="n">layer</span><span class="o">.</span><span class="n">cornerRadius</span> <span class="o">=</span> <span class="n">menuButtonFrame</span><span class="o">.</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">menuButton</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">whiteColor</span><span class="p">()</span>
+        <span class="n">menuButton</span><span class="p">.</span><span class="n">layer</span><span class="p">.</span><span class="n">cornerRadius</span> <span class="o">=</span> <span class="n">menuButtonFrame</span><span class="p">.</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span>
 
-        <span class="n">menuButton</span><span class="o">.</span><span class="nf">setImage</span><span class="p">(</span><span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"white-geo-flame"</span><span class="p">),</span> <span class="nv">forState</span><span class="p">:</span> <span class="kt">UIControlState</span><span class="o">.</span><span class="kt">Normal</span><span class="p">)</span> <span class="c1">// 450 x 450px</span>
-        <span class="n">menuButton</span><span class="o">.</span><span class="n">contentMode</span> <span class="o">=</span> <span class="o">.</span><span class="kt">ScaleAspectFit</span>
-        <span class="n">menuButton</span><span class="o">.</span><span class="nf">addTarget</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">CustomTabController.menuButtonAction(_:)</span><span class="kd">)</span><span class="p">,</span> <span class="nv">forControlEvents</span><span class="p">:</span> <span class="kt">UIControlEvents</span><span class="o">.</span><span class="kt">TouchUpInside</span><span class="p">)</span>
+        <span class="n">menuButton</span><span class="p">.</span><span class="n">setImage</span><span class="p">(</span><span class="bp">UIImage</span><span class="p">(</span><span class="nl">named</span><span class="p">:</span> <span class="s">&quot;white-geo-flame&quot;</span><span class="p">),</span> <span class="nl">forState</span><span class="p">:</span> <span class="n">UIControlState</span><span class="p">.</span><span class="n">Normal</span><span class="p">)</span> <span class="c1">// 450 x 450px</span>
+        <span class="n">menuButton</span><span class="p">.</span><span class="n">contentMode</span> <span class="o">=</span> <span class="p">.</span><span class="n">ScaleAspectFit</span>
+        <span class="n">menuButton</span><span class="p">.</span><span class="n">addTarget</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="nl">action</span><span class="p">:</span> <span class="err">#</span><span class="n">selector</span><span class="p">(</span><span class="n">CustomTabController</span><span class="p">.</span><span class="n">menuButtonAction</span><span class="p">(</span><span class="nl">_</span><span class="p">:)),</span> <span class="nl">forControlEvents</span><span class="p">:</span> <span class="n">UIControlEvents</span><span class="p">.</span><span class="n">TouchUpInside</span><span class="p">)</span>
 
-        <span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">menuButton</span><span class="p">)</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">addSubview</span><span class="p">(</span><span class="n">menuButton</span><span class="p">)</span>
 
 
-        <span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">layoutIfNeeded</span><span class="p">()</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">layoutIfNeeded</span><span class="p">()</span>
     <span class="p">}</span>
 
-    <span class="kd">func</span> <span class="nf">menuButtonAction</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">self</span><span class="o">.</span><span class="n">selectedIndex</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">func</span> <span class="n">menuButtonAction</span><span class="p">(</span><span class="nl">sender</span><span class="p">:</span> <span class="bp">UIButton</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">self</span><span class="p">.</span><span class="n">selectedIndex</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
 <h3 class="post-subheader">Conclusion</h3>
 <p>A more decorated example of all of this can be found at: <a href="https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject" target="_blank">https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject</a>. A bare bones tab navigation app template can be found at <a href="https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate" target="_blank">https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate</a>.</p>

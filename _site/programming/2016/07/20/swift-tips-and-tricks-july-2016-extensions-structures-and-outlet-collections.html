@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://localhost:4000">
+        <a href="http://khou22.github.io">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,9 +198,46 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -243,20 +280,20 @@
 <br class="post-line-break" />
 <b>Declaration</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">extension</span> <span class="kt">Int</span> <span class="p">{</span> <span class="c1">// Can attach it to any Int value</span>
-    <span class="kd">func</span> <span class="nf">hexToColor</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UIColor</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">netHex</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// ‘self’ refers to the value the function is attached to</span>
-        <span class="k">let</span> <span class="nv">red</span> <span class="o">=</span> <span class="kt">Float</span><span class="p">((</span><span class="n">netHex</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">)</span>
-        <span class="k">let</span> <span class="nv">green</span> <span class="o">=</span> <span class="kt">Float</span><span class="p">((</span><span class="n">netHex</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">)</span>
-        <span class="k">let</span> <span class="nv">blue</span> <span class="o">=</span> <span class="kt">Float</span><span class="p">(</span><span class="n">netHex</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">colorLiteralRed</span><span class="p">:</span> <span class="n">red</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="n">green</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="n">blue</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">extension</span> <span class="n">Int</span> <span class="p">{</span> <span class="c1">// Can attach it to any Int value</span>
+    <span class="k">func</span> <span class="n">hexToColor</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">UIColor</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="n">netHex</span> <span class="o">=</span> <span class="nb">self</span> <span class="c1">// ‘self’ refers to the value the function is attached to</span>
+        <span class="k">let</span> <span class="n">red</span> <span class="o">=</span> <span class="n">Float</span><span class="p">((</span><span class="n">netHex</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">)</span>
+        <span class="k">let</span> <span class="n">green</span> <span class="o">=</span> <span class="n">Float</span><span class="p">((</span><span class="n">netHex</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">)</span>
+        <span class="k">let</span> <span class="n">blue</span> <span class="o">=</span> <span class="n">Float</span><span class="p">(</span><span class="n">netHex</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">UIColor</span><span class="p">(</span><span class="nl">colorLiteralRed</span><span class="p">:</span> <span class="n">red</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="nl">green</span><span class="p">:</span> <span class="n">green</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="nl">blue</span><span class="p">:</span> <span class="n">blue</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="nl">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
 <p><br class="post-line-break" />
 <b>Usage:</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="mh">0x222222</span><span class="o">.</span><span class="nf">hexToColor</span><span class="p">()</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nl">backgroundColor</span><span class="p">:</span> <span class="bp">UIColor</span> <span class="o">=</span> <span class="mh">0x222222</span><span class="p">.</span><span class="n">hexToColor</span><span class="p">()</span></code></pre></div>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">Structures</h3>
@@ -264,19 +301,19 @@
 <br class="post-line-break" />
 <b>Declaration</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">MyData</span> <span class="p">{</span>
-    <span class="kd">static</span> <span class="k">var</span> <span class="nv">exampleVal</span><span class="p">:</span> <span class="n">string</span> <span class="o">=</span> <span class="err">“</span><span class="kt">Hello</span> <span class="n">world</span><span class="err">”</span>
-    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">greet</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nf">print</span><span class="p">(</span><span class="err">“</span><span class="kt">Hello</span> <span class="err">\</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="err">”</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">MyData</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="k">var</span> <span class="nl">exampleVal</span><span class="p">:</span> <span class="n">string</span> <span class="o">=</span> <span class="err">“</span><span class="n">Hello</span> <span class="n">world</span><span class="err">”</span>
+    <span class="k">static</span> <span class="k">func</span> <span class="n">greet</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">print</span><span class="p">(</span><span class="err">“</span><span class="n">Hello</span> <span class="err">\</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="err">”</span><span class="p">)</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
 <p><br class="post-line-break" />
 <b>Usage:</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">val</span> <span class="o">=</span> <span class="kt">MyData</span><span class="o">.</span><span class="n">exampleVal</span> <span class="c1">// Hello World</span>
-<span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="err">“</span><span class="kt">Kevin</span><span class="err">”</span> <span class="c1">// Kevin</span>
-<span class="kt">MyData</span><span class="o">.</span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Hello Kevin</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">val</span> <span class="o">=</span> <span class="n">MyData</span><span class="p">.</span><span class="n">exampleVal</span> <span class="c1">// Hello World</span>
+<span class="k">let</span> <span class="n">name</span> <span class="o">=</span> <span class="err">“</span><span class="n">Kevin</span><span class="err">”</span> <span class="c1">// Kevin</span>
+<span class="n">MyData</span><span class="p">.</span><span class="n">greet</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1">// Hello Kevin</span></code></pre></div>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">Preventing Code-Breaking Typos with Structures</h3>
@@ -284,17 +321,17 @@
 <br class="post-line-break" />
 <b>Declaration</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">Images</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">struct</span> <span class="n">Images</span> <span class="p">{</span>
     <span class="c1">// It can be useful to line them up in columns</span>
-    <span class="kd">static</span> <span class="k">let</span> <span class="nv">onboardingBackgroundImg</span>  <span class="o">=</span> <span class="s">"onboarding-background-img"</span>
-    <span class="kd">static</span> <span class="k">let</span> <span class="nv">filledPlotPoint</span>                         <span class="o">=</span> <span class="s">"filled-plot-point"</span>
-<span class="p">}</span></code></pre></figure>
+    <span class="k">static</span> <span class="k">let</span> <span class="n">onboardingBackgroundImg</span>  <span class="o">=</span> <span class="s">&quot;onboarding-background-img&quot;</span>
+    <span class="k">static</span> <span class="k">let</span> <span class="n">filledPlotPoint</span>                         <span class="o">=</span> <span class="s">&quot;filled-plot-point&quot;</span>
+<span class="p">}</span></code></pre></div>
 
 <p><br class="post-line-break" />
 <b>Usage:</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">exampleImage</span> <span class="o">=</span> <span class="kt">UIImageView</span><span class="p">()</span> <span class="c1">// Initialize the image view</span>
-<span class="n">exampleImage</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">Images</span><span class="o">.</span><span class="n">onboardingBackgroundImg</span><span class="p">)</span> <span class="c1">// Set the image</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">exampleImage</span> <span class="o">=</span> <span class="bp">UIImageView</span><span class="p">()</span> <span class="c1">// Initialize the image view</span>
+<span class="n">exampleImage</span><span class="p">.</span><span class="n">image</span> <span class="o">=</span> <span class="bp">UIImage</span><span class="p">(</span><span class="nl">named</span><span class="p">:</span> <span class="n">Images</span><span class="p">.</span><span class="n">onboardingBackgroundImg</span><span class="p">)</span> <span class="c1">// Set the image</span></code></pre></div>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">Outlet Collections</h3>
@@ -302,15 +339,15 @@
 <br class="post-line-break" />
 <b>Declaration</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">@IBOutlet</span> <span class="k">var</span> <span class="nv">flyingIcons</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIImageView</span><span class="p">]</span><span class="o">!</span> <span class="c1">// Right-click and drag from this outlet to the UIImageView you would like to include in this array</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="p">@</span><span class="kt">IBOutlet</span> <span class="k">var</span> <span class="nl">flyingIcons</span><span class="p">:</span> <span class="p">[</span><span class="bp">UIImageView</span><span class="p">]</span><span class="o">!</span> <span class="c1">// Right-click and drag from this outlet to the UIImageView you would like to include in this array</span></code></pre></div>
 
 <p><br class="post-line-break" />
 <b>Usage</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">for</span> <span class="n">icon</span> <span class="k">in</span> <span class="n">flyingIcons</span> <span class="p">{</span>
-            <span class="n">icon</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.75</span>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">for</span> <span class="n">icon</span> <span class="k">in</span> <span class="n">flyingIcons</span> <span class="p">{</span>
+            <span class="n">icon</span><span class="p">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.75</span>
         <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
 
     <div class="post-organization">

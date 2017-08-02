@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/programming/2016/07/22/introduction-to-healthkit-reading-steps-weight-height-and-more.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/07/22/introduction-to-healthkit-reading-steps-weight-height-and-more.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://localhost:4000">
+        <a href="http://khou22.github.io">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,9 +198,46 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -249,40 +286,40 @@
 <h3 class="post-subheader">Authorizing and Integrating with HealthKit</h3>
 <p>Nested within the authorizeHealthKit function:</p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">authorizeHealthKit</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="nv">success</span><span class="p">:</span><span class="kt">Bool</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span><span class="kt">NSError</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="p">{</span>
-<span class="p">}</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="nf">authorizeHealthKit</span><span class="p">(</span><span class="nl">completion</span><span class="p">:</span> <span class="p">((</span><span class="nl">success</span><span class="p">:</span><span class="n">Bool</span><span class="p">,</span> <span class="nl">error</span><span class="p">:</span><span class="bp">NSError</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span></code></pre></div>
 
 <p><br class="post-line-break" />
 <b>Get Healthkit information to read</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">healthKitTypesToRead</span> <span class="o">=</span> <span class="kt">NSSet</span><span class="p">(</span><span class="nv">objects</span><span class="p">:</span>
-  <span class="kt">HKObjectType</span><span class="o">.</span><span class="nf">characteristicTypeForIdentifier</span><span class="p">(</span><span class="kt">HKCharacteristicTypeIdentifierDateOfBirth</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="kt">HKObjectType</span><span class="o">.</span><span class="nf">characteristicTypeForIdentifier</span><span class="p">(</span><span class="kt">HKCharacteristicTypeIdentifierBiologicalSex</span><span class="p">)</span><span class="o">!</span><span class="p">,</span>
-  <span class="kt">HKObjectType</span><span class="o">.</span><span class="nf">quantityTypeForIdentifier</span><span class="p">(</span><span class="kt">HKQuantityTypeIdentifierHeight</span><span class="p">)</span><span class="o">!</span><span class="p">,</span>
-  <span class="kt">HKObjectType</span><span class="o">.</span><span class="nf">quantityTypeForIdentifier</span><span class="p">(</span><span class="kt">HKQuantityTypeIdentifierBodyMass</span><span class="p">)</span><span class="o">!</span>
-<span class="p">)</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">healthKitTypesToRead</span> <span class="o">=</span> <span class="bp">NSSet</span><span class="p">(</span><span class="nl">objects</span><span class="p">:</span>
+  <span class="n">HKObjectType</span><span class="p">.</span><span class="n">characteristicTypeForIdentifier</span><span class="p">(</span><span class="n">HKCharacteristicTypeIdentifierDateOfBirth</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="n">HKObjectType</span><span class="p">.</span><span class="n">characteristicTypeForIdentifier</span><span class="p">(</span><span class="n">HKCharacteristicTypeIdentifierBiologicalSex</span><span class="p">)</span><span class="o">!</span><span class="p">,</span>
+  <span class="n">HKObjectType</span><span class="p">.</span><span class="n">quantityTypeForIdentifier</span><span class="p">(</span><span class="n">HKQuantityTypeIdentifierHeight</span><span class="p">)</span><span class="o">!</span><span class="p">,</span>
+  <span class="n">HKObjectType</span><span class="p">.</span><span class="n">quantityTypeForIdentifier</span><span class="p">(</span><span class="n">HKQuantityTypeIdentifierBodyMass</span><span class="p">)</span><span class="o">!</span>
+<span class="p">)</span></code></pre></div>
 
 <p><br class="post-line-break" />
 <b>Healthkit information to write</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">healthKitTypesToWrite</span> <span class="o">=</span> <span class="kt">NSSet</span><span class="p">(</span><span class="nv">objects</span><span class="p">:</span>
-            <span class="kt">HKObjectType</span><span class="o">.</span><span class="nf">quantityTypeForIdentifier</span><span class="p">(</span><span class="kt">HKQuantityTypeIdentifierBodyMass</span><span class="p">)</span><span class="o">!</span>
-        <span class="p">)</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">healthKitTypesToWrite</span> <span class="o">=</span> <span class="bp">NSSet</span><span class="p">(</span><span class="nl">objects</span><span class="p">:</span>
+            <span class="n">HKObjectType</span><span class="p">.</span><span class="n">quantityTypeForIdentifier</span><span class="p">(</span><span class="n">HKQuantityTypeIdentifierBodyMass</span><span class="p">)</span><span class="o">!</span>
+        <span class="p">)</span></code></pre></div>
 
 <p><br class="post-line-break" />
 To actually get data from healthkit, create a function within the class. This one, for example, gets your birthdate from health kit:
 <br /></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">getBirthdateFromHealthKit</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AnyObject</span> <span class="p">{</span>
-        <span class="k">var</span> <span class="nv">birthdate</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="n">getBirthdateFromHealthKit</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">AnyObject</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nl">birthdate</span><span class="p">:</span> <span class="n">AnyObject</span><span class="o">!</span>
         <span class="k">do</span> <span class="p">{</span>
-            <span class="n">birthdate</span> <span class="o">=</span> <span class="k">try</span> <span class="n">healthKitStore</span><span class="o">.</span><span class="nf">dateOfBirth</span><span class="p">()</span>
-        <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
-            <span class="nf">print</span><span class="p">(</span><span class="s">"No birthday listed, or permission denied"</span><span class="p">)</span>
-            <span class="n">birthdate</span> <span class="o">=</span> <span class="s">"Not Set"</span>
+            <span class="n">birthdate</span> <span class="o">=</span> <span class="n">try</span> <span class="n">healthKitStore</span><span class="p">.</span><span class="n">dateOfBirth</span><span class="p">()</span>
+        <span class="p">}</span> <span class="n">catch</span> <span class="p">{</span>
+            <span class="n">print</span><span class="p">(</span><span class="s">&quot;No birthday listed, or permission denied&quot;</span><span class="p">)</span>
+            <span class="n">birthdate</span> <span class="o">=</span> <span class="s">&quot;Not Set&quot;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">birthdate</span>
-    <span class="p">}</span></code></pre></figure>
+    <span class="p">}</span></code></pre></div>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">More complex example</h3>
@@ -290,81 +327,81 @@ To actually get data from healthkit, create a function within the class. This on
 <br class="post-line-break" />
 Returning steps by per day for x number of days:</p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">readStepsByDay</span><span class="p">(</span><span class="nv">sinceDaysAgo</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(([</span><span class="kt">HKQuantitySample</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="kt">NSError</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">HKQuantityType</span> <span class="o">=</span> <span class="kt">HKQuantityType</span><span class="o">.</span><span class="nf">quantityTypeForIdentifier</span><span class="p">(</span><span class="kt">HKQuantityTypeIdentifierStepCount</span><span class="p">)</span><span class="o">!</span>
-        <span class="k">let</span> <span class="nv">currentDate</span> <span class="o">=</span> <span class="kt">NSDate</span><span class="p">()</span><span class="o">.</span><span class="nf">dateWithoutTime</span><span class="p">()</span> <span class="c1">// Get current date</span>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="nf">readStepsByDay</span><span class="p">(</span><span class="nl">sinceDaysAgo</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="p">(([</span><span class="n">HKQuantitySample</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="bp">NSError</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Void</span><span class="p">)</span><span class="o">!</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nl">type</span><span class="p">:</span> <span class="n">HKQuantityType</span> <span class="o">=</span> <span class="n">HKQuantityType</span><span class="p">.</span><span class="n">quantityTypeForIdentifier</span><span class="p">(</span><span class="n">HKQuantityTypeIdentifierStepCount</span><span class="p">)</span><span class="o">!</span>
+        <span class="k">let</span> <span class="n">currentDate</span> <span class="o">=</span> <span class="bp">NSDate</span><span class="p">().</span><span class="n">dateWithoutTime</span><span class="p">()</span> <span class="c1">// Get current date</span>
 
-        <span class="k">var</span> <span class="nv">stepData</span><span class="p">:</span> <span class="p">[</span><span class="kt">HKQuantitySample</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">var</span> <span class="nl">stepData</span><span class="p">:</span> <span class="p">[</span><span class="n">HKQuantitySample</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="k">for</span> <span class="n">daysAgo</span> <span class="k">in</span> <span class="mi">1</span><span class="o">...</span><span class="n">sinceDaysAgo</span> <span class="p">{</span>
-            <span class="k">let</span> <span class="nv">startDate</span><span class="p">:</span> <span class="kt">NSDate</span> <span class="o">=</span> <span class="n">currentDate</span><span class="o">.</span><span class="nf">daysAgo</span><span class="p">(</span><span class="n">daysAgo</span><span class="p">)</span> <span class="c1">// Set start date</span>
-            <span class="k">let</span> <span class="nv">endDate</span><span class="p">:</span> <span class="kt">NSDate</span> <span class="o">=</span> <span class="n">currentDate</span><span class="o">.</span><span class="nf">daysAgo</span><span class="p">(</span><span class="n">daysAgo</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// Next day</span>
-            <span class="k">let</span> <span class="nv">predicate</span> <span class="o">=</span> <span class="kt">HKQuery</span><span class="o">.</span><span class="nf">predicateForSamplesWithStartDate</span><span class="p">(</span><span class="n">startDate</span><span class="p">,</span> <span class="nv">endDate</span><span class="p">:</span> <span class="n">endDate</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="o">.</span><span class="kt">None</span><span class="p">)</span> <span class="c1">// Set parameters</span>
+        <span class="k">for</span> <span class="n">daysAgo</span> <span class="k">in</span> <span class="mf">1.</span><span class="p">..</span><span class="n">sinceDaysAgo</span> <span class="p">{</span>
+            <span class="k">let</span> <span class="nl">startDate</span><span class="p">:</span> <span class="bp">NSDate</span> <span class="o">=</span> <span class="n">currentDate</span><span class="p">.</span><span class="n">daysAgo</span><span class="p">(</span><span class="n">daysAgo</span><span class="p">)</span> <span class="c1">// Set start date</span>
+            <span class="k">let</span> <span class="nl">endDate</span><span class="p">:</span> <span class="bp">NSDate</span> <span class="o">=</span> <span class="n">currentDate</span><span class="p">.</span><span class="n">daysAgo</span><span class="p">(</span><span class="n">daysAgo</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// Next day</span>
+            <span class="k">let</span> <span class="n">predicate</span> <span class="o">=</span> <span class="n">HKQuery</span><span class="p">.</span><span class="n">predicateForSamplesWithStartDate</span><span class="p">(</span><span class="n">startDate</span><span class="p">,</span> <span class="nl">endDate</span><span class="p">:</span> <span class="n">endDate</span><span class="p">,</span> <span class="nl">options</span><span class="p">:</span> <span class="p">.</span><span class="n">None</span><span class="p">)</span> <span class="c1">// Set parameters</span>
             <span class="c1">// Getting all step counts within that day</span>
-            <span class="k">let</span> <span class="nv">sampleQuery</span> <span class="o">=</span> <span class="kt">HKStatisticsQuery</span><span class="p">(</span><span class="nv">quantityType</span><span class="p">:</span> <span class="n">type</span><span class="p">,</span> <span class="nv">quantitySamplePredicate</span><span class="p">:</span> <span class="n">predicate</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="kt">CumulativeSum</span><span class="p">],</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">sampleQuery</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">error</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
+            <span class="k">let</span> <span class="n">sampleQuery</span> <span class="o">=</span> <span class="n">HKStatisticsQuery</span><span class="p">(</span><span class="nl">quantityType</span><span class="p">:</span> <span class="n">type</span><span class="p">,</span> <span class="nl">quantitySamplePredicate</span><span class="p">:</span> <span class="n">predicate</span><span class="p">,</span> <span class="nl">options</span><span class="p">:</span> <span class="p">[.</span><span class="n">CumulativeSum</span><span class="p">],</span> <span class="nl">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">sampleQuery</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">error</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Void</span> <span class="k">in</span>
 
-                <span class="k">if</span> <span class="k">let</span> <span class="nv">queryError</span> <span class="o">=</span> <span class="n">error</span> <span class="p">{</span>
-                    <span class="nf">completion</span><span class="p">(</span><span class="kc">nil</span><span class="p">,</span> <span class="n">queryError</span><span class="p">)</span> <span class="c1">// End the master function</span>
-                    <span class="nf">print</span><span class="p">(</span><span class="s">"Completion nil"</span><span class="p">)</span>
+                <span class="k">if</span> <span class="k">let</span> <span class="n">queryError</span> <span class="o">=</span> <span class="n">error</span> <span class="p">{</span>
+                    <span class="n">completion</span><span class="p">(</span><span class="nb">nil</span><span class="p">,</span> <span class="n">queryError</span><span class="p">)</span> <span class="c1">// End the master function</span>
+                    <span class="n">print</span><span class="p">(</span><span class="s">&quot;Completion nil&quot;</span><span class="p">)</span>
                     <span class="k">return</span>
                 <span class="p">}</span>
-                <span class="k">if</span> <span class="n">completion</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="n">completion</span> <span class="o">!=</span> <span class="nb">nil</span> <span class="p">{</span>
                     <span class="c1">// Create KHQuantitySample for this day</span>
-                    <span class="k">let</span> <span class="nv">units</span> <span class="o">=</span> <span class="kt">HKUnit</span><span class="o">.</span><span class="nf">countUnit</span><span class="p">()</span>
-                    <span class="k">var</span> <span class="nv">quantity</span><span class="p">:</span> <span class="kt">HKQuantity</span> <span class="o">=</span> <span class="kt">HKQuantity</span><span class="p">(</span><span class="nv">unit</span><span class="p">:</span> <span class="n">units</span><span class="p">,</span> <span class="nv">doubleValue</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">)</span>
-                    <span class="k">if</span> <span class="k">let</span> <span class="nv">value</span> <span class="o">=</span> <span class="n">result</span><span class="p">?</span><span class="o">.</span><span class="nf">sumQuantity</span><span class="p">()?</span><span class="o">.</span><span class="nf">doubleValueForUnit</span><span class="p">(</span><span class="kt">HKUnit</span><span class="o">.</span><span class="nf">countUnit</span><span class="p">())</span> <span class="p">{</span>
-                        <span class="n">quantity</span> <span class="o">=</span> <span class="kt">HKQuantity</span><span class="p">(</span><span class="nv">unit</span><span class="p">:</span> <span class="n">units</span><span class="p">,</span> <span class="nv">doubleValue</span><span class="p">:</span> <span class="n">value</span><span class="p">)</span>
+                    <span class="k">let</span> <span class="n">units</span> <span class="o">=</span> <span class="n">HKUnit</span><span class="p">.</span><span class="n">countUnit</span><span class="p">()</span>
+                    <span class="k">var</span> <span class="nl">quantity</span><span class="p">:</span> <span class="n">HKQuantity</span> <span class="o">=</span> <span class="n">HKQuantity</span><span class="p">(</span><span class="nl">unit</span><span class="p">:</span> <span class="n">units</span><span class="p">,</span> <span class="nl">doubleValue</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">result</span><span class="o">?</span><span class="p">.</span><span class="n">sumQuantity</span><span class="p">()</span><span class="o">?</span><span class="p">.</span><span class="n">doubleValueForUnit</span><span class="p">(</span><span class="n">HKUnit</span><span class="p">.</span><span class="n">countUnit</span><span class="p">())</span> <span class="p">{</span>
+                        <span class="n">quantity</span> <span class="o">=</span> <span class="n">HKQuantity</span><span class="p">(</span><span class="nl">unit</span><span class="p">:</span> <span class="n">units</span><span class="p">,</span> <span class="nl">doubleValue</span><span class="p">:</span> <span class="n">value</span><span class="p">)</span>
                     <span class="p">}</span>
-                    <span class="k">let</span> <span class="nv">currentData</span> <span class="o">=</span> <span class="kt">HKQuantitySample</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">HKQuantityType</span><span class="o">.</span><span class="nf">quantityTypeForIdentifier</span><span class="p">(</span><span class="kt">HKQuantityTypeIdentifierStepCount</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="nv">quantity</span><span class="p">:</span> <span class="n">quantity</span><span class="p">,</span> <span class="nv">startDate</span><span class="p">:</span> <span class="n">startDate</span><span class="p">,</span> <span class="nv">endDate</span><span class="p">:</span> <span class="n">endDate</span><span class="p">)</span> <span class="c1">// Initiate HKQuantitySample</span>
-                    <span class="n">stepData</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">currentData</span><span class="p">)</span> <span class="c1">// Add data to array</span>
+                    <span class="k">let</span> <span class="n">currentData</span> <span class="o">=</span> <span class="n">HKQuantitySample</span><span class="p">(</span><span class="nl">type</span><span class="p">:</span> <span class="n">HKQuantityType</span><span class="p">.</span><span class="n">quantityTypeForIdentifier</span><span class="p">(</span><span class="n">HKQuantityTypeIdentifierStepCount</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="nl">quantity</span><span class="p">:</span> <span class="n">quantity</span><span class="p">,</span> <span class="nl">startDate</span><span class="p">:</span> <span class="n">startDate</span><span class="p">,</span> <span class="nl">endDate</span><span class="p">:</span> <span class="n">endDate</span><span class="p">)</span> <span class="c1">// Initiate HKQuantitySample</span>
+                    <span class="n">stepData</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">currentData</span><span class="p">)</span> <span class="c1">// Add data to array</span>
 
-                    <span class="k">if</span> <span class="n">stepData</span><span class="o">.</span><span class="n">count</span> <span class="o">==</span> <span class="n">sinceDaysAgo</span> <span class="p">{</span> <span class="c1">// If got all data</span>
+                    <span class="k">if</span> <span class="n">stepData</span><span class="p">.</span><span class="n">count</span> <span class="o">==</span> <span class="n">sinceDaysAgo</span> <span class="p">{</span> <span class="c1">// If got all data</span>
                         <span class="c1">// If all days are properly fetched -&gt; return [HKQuanitity] sample to master function</span>
-                        <span class="n">stepData</span><span class="o">.</span><span class="nf">sortInPlace</span><span class="p">({</span> <span class="c1">// Sort by time</span>
-                            <span class="nv">$0</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="n">startDate</span><span class="o">.</span><span class="n">timeIntervalSinceNow</span> <span class="o">&gt;</span> <span class="nv">$0</span><span class="o">.</span><span class="mi">1</span><span class="o">.</span><span class="n">startDate</span><span class="o">.</span><span class="n">timeIntervalSinceNow</span>
+                        <span class="n">stepData</span><span class="p">.</span><span class="n">sortInPlace</span><span class="p">({</span> <span class="c1">// Sort by time</span>
+                            <span class="err">$</span><span class="mf">0.0</span><span class="p">.</span><span class="n">startDate</span><span class="p">.</span><span class="n">timeIntervalSinceNow</span> <span class="o">&gt;</span> <span class="err">$</span><span class="mf">0.1</span><span class="p">.</span><span class="n">startDate</span><span class="p">.</span><span class="n">timeIntervalSinceNow</span>
                         <span class="p">})</span>
-                        <span class="nf">completion</span><span class="p">(</span><span class="n">stepData</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span> <span class="c1">// Return error free</span>
+                        <span class="n">completion</span><span class="p">(</span><span class="n">stepData</span><span class="p">,</span> <span class="nb">nil</span><span class="p">)</span> <span class="c1">// Return error free</span>
                     <span class="p">}</span>
                 <span class="p">}</span>
             <span class="p">})</span>
 
-            <span class="k">self</span><span class="o">.</span><span class="n">healthKitStore</span><span class="o">.</span><span class="nf">executeQuery</span><span class="p">(</span><span class="n">sampleQuery</span><span class="p">)</span> <span class="c1">// Fire the call</span>
+            <span class="nb">self</span><span class="p">.</span><span class="n">healthKitStore</span><span class="p">.</span><span class="n">executeQuery</span><span class="p">(</span><span class="n">sampleQuery</span><span class="p">)</span> <span class="c1">// Fire the call</span>
         <span class="p">}</span>
-    <span class="p">}</span></code></pre></figure>
+    <span class="p">}</span></code></pre></div>
 
 <p><br class="post-line-break" />
 <b>Extensions Used</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">extension</span> <span class="kt">NSDate</span> <span class="p">{</span>
-    <span class="kd">func</span> <span class="nf">daysAgo</span><span class="p">(</span><span class="nv">daysAgo</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSDate</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="o">-</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="kt">Double</span><span class="p">(</span><span class="n">daysAgo</span><span class="p">)</span>
-        <span class="k">return</span> <span class="k">self</span><span class="o">.</span><span class="nf">dateByAddingTimeInterval</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">extension</span> <span class="bp">NSDate</span> <span class="p">{</span>
+    <span class="k">func</span> <span class="n">daysAgo</span><span class="p">(</span><span class="nl">daysAgo</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">NSDate</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="n">result</span> <span class="o">=</span> <span class="o">-</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">Double</span><span class="p">(</span><span class="n">daysAgo</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">self</span><span class="p">.</span><span class="n">dateByAddingTimeInterval</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
     <span class="p">}</span>
 
-    <span class="kd">func</span> <span class="nf">dateWithoutTime</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSDate</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">dateFormatter</span> <span class="o">=</span> <span class="kt">NSDateFormatter</span><span class="p">()</span>
-        <span class="n">dateFormatter</span><span class="o">.</span><span class="n">dateStyle</span> <span class="o">=</span> <span class="o">.</span><span class="kt">MediumStyle</span> <span class="c1">// Doesn't include time component</span>
-        <span class="k">let</span> <span class="nv">dateToPrint</span><span class="p">:</span> <span class="kt">NSString</span> <span class="o">=</span> <span class="n">dateFormatter</span><span class="o">.</span><span class="nf">stringFromDate</span><span class="p">(</span><span class="k">self</span><span class="p">)</span> <span class="k">as</span> <span class="kt">NSString</span> <span class="c1">// Format into medium style string</span>
-        <span class="k">let</span> <span class="nv">dateNoTime</span> <span class="o">=</span> <span class="n">dateFormatter</span><span class="o">.</span><span class="nf">dateFromString</span><span class="p">(</span><span class="n">dateToPrint</span> <span class="k">as</span> <span class="kt">String</span><span class="p">)</span> <span class="c1">// Get a date from midnight that day</span>
+    <span class="k">func</span> <span class="n">dateWithoutTime</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="bp">NSDate</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="n">dateFormatter</span> <span class="o">=</span> <span class="bp">NSDateFormatter</span><span class="p">()</span>
+        <span class="n">dateFormatter</span><span class="p">.</span><span class="n">dateStyle</span> <span class="o">=</span> <span class="p">.</span><span class="n">MediumStyle</span> <span class="c1">// Doesn&#39;t include time component</span>
+        <span class="k">let</span> <span class="nl">dateToPrint</span><span class="p">:</span> <span class="bp">NSString</span> <span class="o">=</span> <span class="n">dateFormatter</span><span class="p">.</span><span class="n">stringFromDate</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span> <span class="kt">as</span> <span class="bp">NSString</span> <span class="c1">// Format into medium style string</span>
+        <span class="k">let</span> <span class="n">dateNoTime</span> <span class="o">=</span> <span class="n">dateFormatter</span><span class="p">.</span><span class="n">dateFromString</span><span class="p">(</span><span class="n">dateToPrint</span> <span class="kt">as</span> <span class="n">String</span><span class="p">)</span> <span class="c1">// Get a date from midnight that day</span>
         <span class="k">return</span> <span class="n">dateNoTime</span><span class="o">!</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
 <p><br class="post-line-break" />
 <b>Usage:</b></p>
 
-<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kt">HealthKitManager</span><span class="p">()</span><span class="o">.</span><span class="nf">readStepsByDay</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">mostRecentSteps</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">HealthKitManager</span><span class="p">().</span><span class="n">readStepsByDay</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">mostRecentSteps</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
 
             <span class="c1">// Catch error</span>
-            <span class="k">if</span><span class="p">(</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">)</span> <span class="p">{</span>
-                <span class="nf">print</span><span class="p">(</span><span class="s">"Error reading weight from HealthKit Store: </span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">localizedDescription</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">// Feedback</span>
+            <span class="k">if</span><span class="p">(</span> <span class="n">error</span> <span class="o">!=</span> <span class="nb">nil</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="n">print</span><span class="p">(</span><span class="s">&quot;Error reading weight from HealthKit Store: \(error.localizedDescription)&quot;</span><span class="p">)</span> <span class="c1">// Feedback</span>
                 <span class="k">return</span> <span class="c1">// End function</span>
             <span class="p">}</span>
 
             <span class="k">for</span> <span class="n">dayCount</span> <span class="k">in</span> <span class="n">mostRecentSteps</span> <span class="p">{</span>
-                <span class="nf">print</span><span class="p">(</span><span class="n">dayCount</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="nf">doubleValueForUnit</span><span class="p">(</span><span class="kt">HKUnit</span><span class="o">.</span><span class="nf">countUnit</span><span class="p">()))</span>
+                <span class="n">print</span><span class="p">(</span><span class="n">dayCount</span><span class="p">.</span><span class="n">quantity</span><span class="p">.</span><span class="n">doubleValueForUnit</span><span class="p">(</span><span class="n">HKUnit</span><span class="p">.</span><span class="n">countUnit</span><span class="p">()))</span>
             <span class="p">}</span>
-        <span class="p">})</span></code></pre></figure>
+        <span class="p">})</span></code></pre></div>
 
 
     <div class="post-organization">

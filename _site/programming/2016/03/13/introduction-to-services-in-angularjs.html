@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/programming/2016/03/13/introduction-to-services-in-angularjs.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://khou22.github.io/programming/2016/03/13/introduction-to-services-in-angularjs.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://localhost:4000">
+        <a href="http://khou22.github.io">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,9 +198,40 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -246,18 +277,17 @@
   <li>
     Create service file
     
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="err">‘</span><span class="nx">moduleName</span><span class="err">’</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ionic'</span><span class="p">,</span> <span class="s1">'ngCordova'</span><span class="p">])</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="err">‘</span><span class="nx">moduleName</span><span class="err">’</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ionic&#39;</span><span class="p">,</span> <span class="s1">&#39;ngCordova&#39;</span><span class="p">])</span>
       <span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="err">‘</span><span class="nx">serviceFunction</span><span class="err">’</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">testVariable</span> <span class="o">=</span> <span class="s2">"Kevin"</span>
+        <span class="kd">var</span> <span class="nx">testVariable</span> <span class="o">=</span> <span class="s2">&quot;Kevin&quot;</span>
         <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
           <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">testVariable</span><span class="p">)</span>
         <span class="p">};</span>
       <span class="p">})</span>
       <span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="err">‘</span><span class="nx">serviceVariable</span><span class="err">’</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">testVariable</span> <span class="o">=</span> <span class="s2">"Kevin"</span>
+        <span class="kd">var</span> <span class="nx">testVariable</span> <span class="o">=</span> <span class="s2">&quot;Kevin&quot;</span>
         <span class="k">return</span> <span class="nx">testVariable</span>
-      <span class="p">})</span>
-    </code></pre></figure>
+      <span class="p">})</span></code></pre></div>
 
   </li>
 
@@ -268,8 +298,7 @@
   <li>
     Add ‘geocoding’ (the module name) to the module’s dependency
     
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'scheduledRidesCtrl'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'ui.bootstrap'</span><span class="p">,</span> <span class="s1">'geocoding'</span><span class="p">])</span>
-    </code></pre></figure>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;scheduledRidesCtrl&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ui.bootstrap&#39;</span><span class="p">,</span> <span class="s1">&#39;geocoding&#39;</span><span class="p">])</span></code></pre></div>
 
     The way I explained this to a friend is basically using the 'ui.bootstrap' analogy. Bootstrap in its most basic form is a a compilation of CSS styling and Javascript for functionality. When we include the 'ui.bootstrap' dependency, we are essentially including that Javascript file to be used in this controller. It's not different when we create our own services. A service is basically a group of Javascript functions. If the services is included as a dependency, it will load all those Javascript functions and make them available to use in that controller. It's a good way of selectively loading specific Javascript files so that not all of your Javascript files have to load for every page.
   </li>
@@ -278,18 +307,16 @@
   <li>
     Include the name of the service function in the controller’s function(…, …)
     
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">'scheduledRidesCtrl'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$ionicPopup</span><span class="p">,</span> <span class="nx">$timeout</span><span class="p">,</span> <span class="nx">serviceFunction</span><span class="p">,</span> <span class="nx">serviceVariable</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">&#39;scheduledRidesCtrl&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$ionicPopup</span><span class="p">,</span> <span class="nx">$timeout</span><span class="p">,</span> <span class="nx">serviceFunction</span><span class="p">,</span> <span class="nx">serviceVariable</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="p">}</span>
-    </code></pre></figure>
+    <span class="p">}</span></code></pre></div>
 
   </li>
 
   <li>Can now use the functions and variables in any controller that you included the dependency for. Simply call:
     
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">      <span class="nx">serviceFunction</span><span class="p">();</span> <span class="c1">// Runs the service function</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">serviceVariable</span><span class="p">);</span> <span class="c1">// Uses the service variable as a regular variable</span>
-    </code></pre></figure>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">serviceFunction</span><span class="p">();</span> <span class="c1">// Runs the service function</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">serviceVariable</span><span class="p">);</span> <span class="c1">// Uses the service variable as a regular variable</span></code></pre></div>
 
   </li>
 </ol>

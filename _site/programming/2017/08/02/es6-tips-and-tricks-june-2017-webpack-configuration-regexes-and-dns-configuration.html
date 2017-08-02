@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Common React Issue - Button Clicks</title>
+  <title>ES6 Tips and Tricks June 2017: Webpack Loaders, Regexes, and DNS Configuration</title>
   <meta name="description" content="">
 
   <!-- React -->
@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/programming/2015/07/16/common-react-issue-button-clicks.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://khou22.github.io/programming/2017/08/02/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://localhost:4000">
+        <a href="http://khou22.github.io">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,9 +198,34 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -209,9 +234,9 @@
         Return to all blogs
       </p></a>
       <br />
-      <h1 class="post-title post-header-title">Common React Issue - Button Clicks</h1>
-      <h4 class="post-header-description"></h4>
-      <p class="post-header-meta">Jul 16, 2015 • Kevin Hou</p>
+      <h1 class="post-title post-header-title">ES6 Tips and Tricks June 2017: Webpack Loaders, Regexes, and DNS Configuration</h1>
+      <h4 class="post-header-description">A somewhat random assortment of things I've learned and felt worth noting including how to do a local DNA override, using SVGs in Webpack, how to retrieve the current directory path in-line, and more.</h4>
+      <p class="post-header-meta">Aug 2, 2017 • Kevin Hou</p>
     </div>
   </header>
 
@@ -238,71 +263,102 @@
   </script>
 
   <article class="post-content">
-    <p>I’ve started to get the hang of <b>React</b> and <b>ES6</b>, but it’s only been three weeks and there are of course tons and tons of things I haven’t learned yet. I’ll go over a couple of things that I think anyone starting to learn React could benefit from. In this blog post I’ll go over Button Clicks.</p>
+    <h3 class="post-subheader">Using Raw Files with Webpack</h3>
+<p>There are some files that are best used when imported as their raw contents. This includes, but is not limited to file extensions like: <code>.svg</code>, <code>.md</code>, and <code>.txt</code>. For these situations, you must use the <code>raw-loader</code> in your <code>webpack.config</code> file:</p>
 
-<p>React works differently from plain old Vanilla Javascript in a couple of ways. One of which is the modular structure of the code. Each module has functions within it that can be accessed only by that specific module.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span> <span class="c1">// Load markdown as raw text</span>
+    <span class="nx">test</span><span class="o">:</span> <span class="sr">/\.md/</span><span class="p">,</span>
+    <span class="nx">exclude</span><span class="o">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;raw-loader&#39;</span>
+<span class="p">}</span></code></pre></div>
 
-<p>You might be encountering a couple errors:</p>
-<ol>
-  <li>onClick function triggering when button loads</li>
-  <li>The onClick function doesn't recognize the function its supposed to trigger</li>
-  <li>The function refreshes the page</li>
-  <li>You can't pass parameters into the function</li>
-</ol>
-<p>See the corresponding number below for potential solutions and explanations.</p>
+<p>Using an <code>.svg</code> file in React:<br /></p>
 
-<hr />
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">svgData</span> <span class="nx">from</span> <span class="s1">&#39;./image.svg&#39;</span><span class="p">;</span>
 
-<p><br /></p>
+<span class="cm">/* React render() */</span>
+<span class="o">&lt;</span><span class="nx">span</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;loading&quot;</span> <span class="nx">dangerouslySetInnerHTML</span><span class="o">=</span> <span class="err">/&gt;</span></code></pre></div>
 
-<h4>1. Prevent onClick from automatically running</h4>
-<p>The reason it automatically runs is because you are triggering the function when referencing it. Your code may look like this:</p>
+<h3 class="post-subheader">Cleaning up Log Statements</h3>
+<p>Developers use <code>console.log</code> statements religiously — it’s the best way of debugging and tracking a browser or computer’s path through the code. One problem that arises is that <code>console.log</code> statements are accidentally left in, which doesn’t reflect well if the log statements are clearly debuggers, or simply left in commented out. When deploying to production, <code>console.log</code> statements should be removed. Because they permeate every corner of the project, I’ve found it’s easiest to remove them using regexes: Find &amp; Replace. Here are the regexes for finding all lines with <code>console.log</code> statements:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">()}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="sr">/button&gt;</span></code></pre></figure>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Commented out statements</span>
+<span class="s2">&quot;\n *\/\/ console\.log\(.*\)&quot;</span>
 
-<p>The parentheses indicate that the function should be executed. When the page loads, it sees the parenthesis and runs the corresponding function. To fix the issue, simply remove the parenthesis. To pass parameters in, see the section below.</p>
+<span class="c1">// Active statements</span>
+<span class="s2">&quot;\n *console\.log\(.*\)&quot;</span>
 
-<h4>2. Force onClick to recognize function</h4>
-<p>Use</p>
+<span class="c1">// Commented out or still active</span>
+<span class="s2">&quot;\n *\/?\/? console\.log\(.*\)&quot;</span></code></pre></div>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)</span></code></pre></figure>
+<h3 class="post-subheader">Common Regex Statements</h3>
+<p>I’ve started using regexes (regular expressions) more and more in my projects — specifically in Javascript — and I’ve found them very elegant and fun to use. I learned them briefly in class at school, but never really implemented them in full. My <a href="https://devpost.com/software/sofly-scanner">hackathon project</a> did use a bit of natural language processing, however, it wasn’t to a huge scale. We mostly stuck to date and location parsing.
+<br class="post-line-break" />
+Here’s a simple email validation regex match statement in Javascript:</p>
 
-<p>at the end of</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">validQuery</span> <span class="o">=</span> <span class="s1">&#39;email@test.com&#39;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">invalidQuery</span> <span class="o">=</span> <span class="s1">&#39;I am not an email address&#39;</span><span class="p">;</span>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">}</span></code></pre></figure>
+<span class="c1">// Email regex from: https://stackoverflow.com/questions/46155/how-to-validate-email-address-in-javascript</span>
+<span class="c1">// Notice: uses &#39;/&#39; instead of quotes</span>
+<span class="kr">const</span> <span class="nx">emailRegex</span> <span class="o">=</span> <span class="sr">/^(([^&lt;&gt;()\[\]\\.,;:\s@&quot;]+(\.[^&lt;&gt;()\[\]\\.,;:\s@&quot;]+)*)|(&quot;.+&quot;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/</span><span class="p">;</span>
 
-<p>See example below.</p>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emailRegex</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">validQuery</span><span class="p">));</span> <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">emailRegex</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">invalidQuery</span><span class="p">));</span> <span class="c1">// false</span></code></pre></div>
 
-<h4>3. Prevent Auto-Refresh</h4>
-<p>Simply use the: preventDefault() function</p>
+<h3 class="post-subheader">Getting the Current Directory in Javascript</h3>
+<p>It’s really important that you use a reliable path resolving system when configuring your web apps. Packages like <code>ExpressJS</code> and <code>Webpack</code> rely on file paths to build and serve up your app so it’s essential that the way you get your current directory is reliable. There are a handful of ways of getting your current directory and navigating through it:<br />
+<strong>Getting Directory</strong>:<br />
+1. Default: <code>__dirname // Often global — can simply access by calling this variable</code><br />
+2. Using environment variables: <code>const __dirname = process.env.PWD;</code></p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
-  <span class="nx">buttonClick</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">//Prevents auto refresh</span>
-  <span class="p">},</span>
-  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span><span class="p">(</span>
-      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
-</span>    <span class="p">)</span>
-  <span class="p">}</span>
-<span class="p">});</span></code></pre></figure>
+<p><strong>Navigating Files</strong>:<br />
+Use the <code>path</code> library:</p>
 
-<h4>4. Passing Parameters</h4>
-<p>Add the parameters in the .bind(this) as seen below</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+<span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;./client/dist&#39;</span><span class="p">)</span> <span class="c1">// Resolves the file path</span></code></pre></div>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
-  <span class="nx">buttonClick</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
-  <span class="p">},</span>
-  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span><span class="p">(</span>
-      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">num</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
-</span>    <span class="p">)</span>
-  <span class="p">}</span>
-<span class="p">});</span></code></pre></figure>
+<h3 class="post-subheader">Modifying Local DNS</h3>
+<p>Computers can easily be configured to change the Domain Name System (DNS). What this means is that you can override and map certain IP addresses to different URL names. For example, at work, I develop on my own Dev Box — a section of a computer somewhere that hosts my files. Because Moat has hundreds of these, it’s not economical to buy a domain name for each box. Instead, they are left unnamed and can only be accessed from the browser using their public IP address. When I’m modifying code, I hook into their private IP addresses. Instead of typing in the exact IP address every time you want to view your code, which is long and can easily be butchered, you can modify your local DNS and map that specific IP address to a human-readable URL.
+<br class="post-line-break" />
+Navigate to <code>/etc/</code> (<code>$ cd /etc/</code>) — notice it is prepended using a forward-slash, indiciating it is in the base directory. Next, open <code>hosts</code> using VI, VIM, NANO, or any other text editor. Now modify that file using the following structure.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">IP</span> <span class="nx">Address</span><span class="o">&gt;</span>    <span class="o">&lt;</span><span class="nx">URL</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="p">...</span> <span class="o">&lt;</span><span class="nx">URL</span> <span class="nx">N</span><span class="o">&gt;</span>
+<span class="mf">12.345</span><span class="p">.</span><span class="mf">67.89</span>    <span class="nx">admin</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">com</span>
+<span class="mf">01.234</span><span class="p">.</span><span class="mf">56.78</span>    <span class="nx">test1</span><span class="p">.</span><span class="nx">com</span> <span class="nx">test2</span><span class="p">.</span><span class="nx">com</span></code></pre></div>
+
+<h3 class="post-subheader">Common IP Ranges</h3>
+<p>Private IPv4 address spaces (<a href="https://en.wikipedia.org/wiki/Private_network">Source</a>)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>RFC1918 name</th>
+      <th style="text-align: center">IP address range</th>
+      <th style="text-align: right">Mask bits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>24-bit block</td>
+      <td style="text-align: center">10.0.0.0 - 10.255.255.25</td>
+      <td style="text-align: right">8 bits</td>
+    </tr>
+    <tr>
+      <td>20-bit block</td>
+      <td style="text-align: center">172.16.0.0 – 172.31.255.255</td>
+      <td style="text-align: right">12 bits</td>
+    </tr>
+    <tr>
+      <td>16-bit block</td>
+      <td style="text-align: center">192.168.0.0 – 192.168.255.255</td>
+      <td style="text-align: right">16 bits</td>
+    </tr>
+  </tbody>
+</table>
 
     <div class="post-organization">
-      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/salesforce/">Salesforce Internship</a>, <a href="/blog/tag/reactjs/">ReactJS</a>, </p>
+      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/es6/">ES6</a>, <a href="/blog/tag/javascript/">Javascript</a></p>
     </div>
   </article>
 </div>

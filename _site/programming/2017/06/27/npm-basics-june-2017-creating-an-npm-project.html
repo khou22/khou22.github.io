@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://khou22.github.io/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://localhost:4000">
+        <a href="http://khou22.github.io">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,9 +198,23 @@
   
 
     
-
+      
+        
+      
     
 
+    
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -241,19 +255,19 @@
     <h1 id="create-an-npm-environment">Create an NPM Environment</h1>
 <p>First, you need to create an NPM environment for your library so that NPM knows what dependencies and scripts are associated with the library. Run:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm init</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm init</code></pre></div>
 
 <p>Follow the instructions and it’ll attempt to create a proper package.json for your project.</p>
 
 <h1 id="installing-dependencies">Installing Dependencies</h1>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install --save react-redux</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install --save react-redux</code></pre></div>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install --save-dev babel-core</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install --save-dev babel-core</code></pre></div>
 
 <p>Global installation</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install -g eslint</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install -g eslint</code></pre></div>
 
 <h1 id="useful-dev-tools">Useful Dev Tools</h1>
 <p>Linter: Check for coding errors — saves a trip to the browser (Airbnb’s linter is useful)
@@ -261,7 +275,7 @@ Webpack: For building and compiling JSX, ES6, etc. It will create static site wi
 
 <h1 id="use-github-repo-as-the-public-npm-package">Use GitHub Repo as the Public NPM Package</h1>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm i git://github.com/user/project.git#commit-ish --save</code></pre></figure>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm i git://github.com/user/project.git#commit-ish --save</code></pre></div>
 
 <p>File structure of GitHub repo if you want to use it as a public package:
 library-name/
@@ -270,7 +284,7 @@ library-name/
     src/</p>
 
     <div class="post-organization">
-      <p id="post-meta">Posted</p>
+      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a></p>
     </div>
   </article>
 </div>

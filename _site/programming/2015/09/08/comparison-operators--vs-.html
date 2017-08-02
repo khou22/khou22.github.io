@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Salesforce Internship - Summer 2015</title>
+  <title>Comparison Operators: '==' vs. '==='</title>
   <meta name="description" content="">
 
   <!-- React -->
@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/work/2015/07/16/salesforce-internship-summer-2015.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="http://khou22.github.io/programming/2015/09/08/comparison-operators--vs-.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://localhost:4000">
+        <a href="http://khou22.github.io">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,9 +198,28 @@
   
 
     
-
+      
     
 
+    
+        
+        
+          
+            
+                
+                
+            
+        
+    
+
+    
+      
+          
+            
+                
+                
+            
+        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -209,9 +228,9 @@
         Return to all blogs
       </p></a>
       <br />
-      <h1 class="post-title post-header-title">Salesforce Internship - Summer 2015</h1>
-      <h4 class="post-header-description">First thoughts on my new internship at Salesforce.com during the summer of 2015. I worked as a UX (User Experience) Engineer.</h4>
-      <p class="post-header-meta">Jul 16, 2015 • Kevin Hou</p>
+      <h1 class="post-title post-header-title">Comparison Operators: '==' vs. '==='</h1>
+      <h4 class="post-header-description"></h4>
+      <p class="post-header-meta">Sep 8, 2015 • Kevin Hou</p>
     </div>
   </header>
 
@@ -238,28 +257,19 @@
   </script>
 
   <article class="post-content">
-    <p><img width="250" style="margin-left: 10%" src="http://www.amzur.com/wp-content/uploads/2015/04/Salesforce_Logo.png" /></p>
+    <p>For the longest time, I didn’t realize that ‘===’ was a comparison operator in Javascript. I just recently learned what the difference between them was. The double equal signs tell the comparison statement to convert the two values into the same type before comparing them. The triple equal signs do not convert the values before coimparing. If the two values do not share the same type, it will simply return false. For example:</p>
 
-<p>I’ve been interning at Salesforce.com for the past couple weeks this summer and I figured I would keep a section of my blog devoted to my thoughts, experiences, and anything that comes to mind! I’ve been working as an Engineer on the UX Design team. Unfortunately, I can’t disclose my current project, but I will be able to show you guys in the future. I started working at Salesforce on June 22nd and these past three weeks have been some of my favorite weeks of my life! I’ve met so many amazing people and learned a ton of new skills. It’s truly a blessing to have this opportunity and I intend to make the most of it.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span><span class="p">;</span>
+ 
+<span class="k">if</span> <span class="p">(</span><span class="nx">str</span> <span class="o">==</span> <span class="nx">num</span><span class="p">)</span> <span class="c1">//Will return true</span>
+ 
+<span class="k">if</span> <span class="p">(</span><span class="nx">str</span> <span class="o">===</span> <span class="nx">num</span><span class="p">)</span> <span class="c1">//Will return false</span></code></pre></div>
 
-<p><br /></p>
-
-<p>Here’s some background on the kinds of things I’m doing/using while I’m working here:</p>
-<ul class="no-style">
-  <li><b>Computer:</b> Macbook Pro 15" Retina from 2014 with 2.8 GHz Intel Core i7, 16 gb of ram, and a 512 gb SSD</li>
-  <li><b>Applications:</b> Sublime Text 2, iTerm 2, Sketch, Slack, Chrome</li>
-  <li><b>Languages:</b> HTML, CSS, SCSS, Vanilla Javascript, React, ES6, and a little bit of Angular in the beginning</li>
-  <li><b>Websites:</b> Github, Codeschool, Codeacademy, W3Schools, Codepen.io, Heroku, Gmail</li>
-</ul>
-
-<p><br /></p>
-
-<p>I am one of two high schoolers in the Futureforce intern program at Salesforce.com, so the learning curve is pretty steep. I’m doing my best and I’ve really learned a lot!</p>
-
-<p>I’ll be posting about various topics including bug solutions, life advice, and my perspective on what the corporate life is like (hint: free ice cream).</p>
+<p>This is a super short post, but I figured I should write it down since it was interesting and something I should remember.</p>
 
     <div class="post-organization">
-      <p id="post-meta">Posted with <a href="/blog/tag/salesforce/">Salesforce Internship</a></p>
+      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/javascript/">Javascript</a></p>
     </div>
   </article>
 </div>
