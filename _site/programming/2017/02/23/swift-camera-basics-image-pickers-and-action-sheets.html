@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2017/02/23/swift-camera-basics-image-pickers-and-action-sheets.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2017/02/23/swift-camera-basics-image-pickers-and-action-sheets.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,34 +198,9 @@
   
 
     
-      
-    
 
     
-        
-        
-          
-            
-                
-                
-            
-        
-          
-            
-                
-                
-            
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -272,37 +247,37 @@ Button: To control when we want to upload the image
 <h3 class="post-subheader">Setup View Controller Class</h3>
 <p>In order to use photos from the device, you must use the UIImagePickerControllerDelegate and the UINavigationControllerDelegate. These will give you the necessary functions to be able to retrieve your first image. The UIImagePickerControllerDelegate is responsible for initiating an image picker controller which then piggybacks with the UINavigationControllerDelegate that allows you to present the image picker using presentViewController() and dismissViewControllerAnimated(). Your view controller class should look like this:<br /></p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">class</span> <span class="nl">ProfileScreen</span><span class="p">:</span> <span class="bp">UIViewController</span><span class="p">,</span> <span class="bp">UIImagePickerControllerDelegate</span><span class="p">,</span> <span class="bp">UINavigationControllerDelegate</span> <span class="p">{</span>    
-    <span class="kr">override</span> <span class="k">func</span> <span class="n">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">ProfileScreen</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">UIImagePickerControllerDelegate</span><span class="p">,</span> <span class="kt">UINavigationControllerDelegate</span> <span class="p">{</span>    
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <h3 class="post-subheader">Connect Storyboard to Code</h3>
 <p>Create an outlet for the imageView and an action outlet for the button:</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="p">@</span><span class="kt">IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nl">profilePictureImageView</span><span class="p">:</span> <span class="bp">UIImageView</span><span class="o">!</span> <span class="c1">// Image view we want to display the image in</span>
-<span class="p">@</span><span class="kt">IBAction</span> <span class="k">func</span> <span class="n">selectProfilePicture</span><span class="p">(</span><span class="nl">sender</span><span class="p">:</span> <span class="n">AnyObject</span><span class="p">)</span> <span class="p">{</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">profilePictureImageView</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="o">!</span> <span class="c1">// Image view we want to display the image in</span>
+<span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">selectProfilePicture</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span></code></pre></figure>
 
 <h3 class="post-subheader">Setup Image Picker</h3>
 <p>Initialize the UIImagePickerController under the UIImageView outlet we created earlier:</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">imagePicker</span> <span class="o">=</span> <span class="bp">UIImagePickerController</span><span class="p">()</span> <span class="c1">// Initialize an image picker view controller type</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">imagePicker</span> <span class="o">=</span> <span class="kt">UIImagePickerController</span><span class="p">()</span> <span class="c1">// Initialize an image picker view controller type</span></code></pre></figure>
 
 <p>Now we can create a function that will serve up the image picker. It accepts a sourceType as an input so that the image picker knows whether to show the actual camera interface or the photo library interface. There are three main parts in displaying an image picker: editing, source type, and presenting. Source type can be from the camera, the camera roll, or the photo library. The presentation component is what actually presents the imagePicker controller.</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="nf">pickImage</span><span class="p">(</span><span class="nl">sourceType</span><span class="p">:</span> <span class="n">UIImagePickerControllerSourceType</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">imagePicker</span><span class="p">.</span><span class="n">allowsEditing</span> <span class="o">=</span> <span class="nb">false</span> <span class="c1">// Prevent editing</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">pickImage</span><span class="p">(</span><span class="nv">sourceType</span><span class="p">:</span> <span class="kt">UIImagePickerControllerSourceType</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">imagePicker</span><span class="o">.</span><span class="n">allowsEditing</span> <span class="o">=</span> <span class="kc">false</span> <span class="c1">// Prevent editing</span>
 
   <span class="c1">// Three sources: .PhotoLibrary, .Camera, .SavedPhotosAlbum</span>
-  <span class="nb">self</span><span class="p">.</span><span class="n">imagePicker</span><span class="p">.</span><span class="n">sourceType</span> <span class="o">=</span> <span class="n">sourceType</span> <span class="c1">// Type of image selection</span>
+  <span class="k">self</span><span class="o">.</span><span class="n">imagePicker</span><span class="o">.</span><span class="n">sourceType</span> <span class="o">=</span> <span class="n">sourceType</span> <span class="c1">// Type of image selection</span>
 
   <span class="c1">// Presenting image picker view controller on top of stack</span>
-  <span class="nb">self</span><span class="p">.</span><span class="n">presentViewController</span><span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">imagePicker</span><span class="p">,</span> <span class="nl">animated</span><span class="p">:</span> <span class="nb">true</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="p">{</span>
-      <span class="n">print</span><span class="p">(</span><span class="s">&quot;Opening image picker view controller&quot;</span><span class="p">)</span>
+  <span class="k">self</span><span class="o">.</span><span class="nf">presentViewController</span><span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">imagePicker</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"Opening image picker view controller"</span><span class="p">)</span>
   <span class="p">})</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <h3 class="post-subheader">Create Action Sheet</h3>
 <p>We want the user to be able to specify if they want to use their camera or the photo library to select an image. We give them this option by creating an action sheet. An action sheet looks like this:<br />
@@ -310,196 +285,196 @@ Button: To control when we want to upload the image
 
 <p>Because we want this action sheet to appear when the button is pressed, we place this bit of code in the action outlet. The code is straightforward and intuitive:</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">imageSourcePicker</span> <span class="o">=</span> <span class="n">UIAlertController</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Select Profile Picture&quot;</span><span class="p">,</span> <span class="nl">message</span><span class="p">:</span> <span class="s">&quot;Please select an image picker method&quot;</span><span class="p">,</span> <span class="nl">preferredStyle</span><span class="p">:</span> <span class="p">.</span><span class="n">ActionSheet</span><span class="p">)</span> <span class="c1">// Initialize action sheet type</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">imageSourcePicker</span> <span class="o">=</span> <span class="kt">UIAlertController</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Select Profile Picture"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Please select an image picker method"</span><span class="p">,</span> <span class="nv">preferredStyle</span><span class="p">:</span> <span class="o">.</span><span class="kt">ActionSheet</span><span class="p">)</span> <span class="c1">// Initialize action sheet type</span>
 
-<span class="k">let</span> <span class="n">cameraAction</span> <span class="o">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Take a picture&quot;</span><span class="p">,</span> <span class="nl">style</span><span class="p">:</span> <span class="p">.</span><span class="n">Default</span><span class="p">,</span> <span class="nl">handler</span><span class="p">:</span> <span class="p">{</span> <span class="n">action</span> <span class="k">in</span>
-    <span class="nb">self</span><span class="p">.</span><span class="n">pickImage</span><span class="p">(.</span><span class="n">Camera</span><span class="p">)</span> <span class="c1">// Presents picker</span>
+<span class="k">let</span> <span class="nv">cameraAction</span> <span class="o">=</span> <span class="kt">UIAlertAction</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Take a picture"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="kt">Default</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="p">{</span> <span class="n">action</span> <span class="k">in</span>
+    <span class="k">self</span><span class="o">.</span><span class="nf">pickImage</span><span class="p">(</span><span class="o">.</span><span class="kt">Camera</span><span class="p">)</span> <span class="c1">// Presents picker</span>
 <span class="p">})</span>
 
-<span class="k">let</span> <span class="n">cameraRoll</span> <span class="o">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Choose from camera roll&quot;</span><span class="p">,</span> <span class="nl">style</span><span class="p">:</span> <span class="p">.</span><span class="n">Default</span><span class="p">,</span> <span class="nl">handler</span><span class="p">:</span> <span class="p">{</span> <span class="n">action</span> <span class="k">in</span>
-    <span class="nb">self</span><span class="p">.</span><span class="n">pickImage</span><span class="p">(.</span><span class="n">PhotoLibrary</span><span class="p">)</span> <span class="c1">// Presents picker</span>
+<span class="k">let</span> <span class="nv">cameraRoll</span> <span class="o">=</span> <span class="kt">UIAlertAction</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Choose from camera roll"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="kt">Default</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="p">{</span> <span class="n">action</span> <span class="k">in</span>
+    <span class="k">self</span><span class="o">.</span><span class="nf">pickImage</span><span class="p">(</span><span class="o">.</span><span class="kt">PhotoLibrary</span><span class="p">)</span> <span class="c1">// Presents picker</span>
 <span class="p">})</span>
 
 <span class="c1">// Add actions</span>
-<span class="n">imageSourcePicker</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">cameraAction</span><span class="p">)</span>
-<span class="n">imageSourcePicker</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">cameraRoll</span><span class="p">)</span>
+<span class="n">imageSourcePicker</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="n">cameraAction</span><span class="p">)</span>
+<span class="n">imageSourcePicker</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="n">cameraRoll</span><span class="p">)</span>
 
-<span class="n">presentViewController</span><span class="p">(</span><span class="n">imageSourcePicker</span><span class="p">,</span> <span class="nl">animated</span><span class="p">:</span> <span class="nb">true</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="nb">nil</span><span class="p">)</span></code></pre></div>
+<span class="nf">presentViewController</span><span class="p">(</span><span class="n">imageSourcePicker</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span></code></pre></figure>
 
 <h3 class="post-subheader">Setup the UIImagePickerControllerDelegate Methods</h3>
 <p>We must set the imagePicker delegate to self in viewDidLoad():</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">imagePicker</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span> <span class="c1">// States that this view controller will also handle the events</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">imagePicker</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// States that this view controller will also handle the events</span></code></pre></figure>
 
 <p>Now we can write the methods. There are two image picker functions are essential:</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">imagePickerController</span><span class="p">(</span><span class="nl">picker</span><span class="p">:</span> <span class="bp">UIImagePickerController</span><span class="p">,</span> <span class="n">didFinishPickingMediaWithInfo</span> <span class="nl">info</span><span class="p">:</span> <span class="p">[</span><span class="nl">String</span> <span class="p">:</span> <span class="n">AnyObject</span><span class="p">])</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="nf">imagePickerController</span><span class="p">(</span><span class="nv">picker</span><span class="p">:</span> <span class="kt">UIImagePickerController</span><span class="p">,</span> <span class="n">didFinishPickingMediaWithInfo</span> <span class="nv">info</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">AnyObject</span><span class="p">])</span></code></pre></figure>
 
 <p>This function is triggered when you return a valid image. The selected image is passed in as part of the info object.</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="nf">imagePickerController</span><span class="p">(</span><span class="nl">picker</span><span class="p">:</span> <span class="bp">UIImagePickerController</span><span class="p">,</span> <span class="n">didFinishPickingMediaWithInfo</span> <span class="nl">info</span><span class="p">:</span> <span class="p">[</span><span class="nl">String</span> <span class="p">:</span> <span class="n">AnyObject</span><span class="p">])</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="k">let</span> <span class="n">pickedImage</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="n">UIImagePickerControllerOriginalImage</span><span class="p">]</span> <span class="kt">as</span><span class="o">?</span> <span class="bp">UIImage</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">imagePickerController</span><span class="p">(</span><span class="nv">picker</span><span class="p">:</span> <span class="kt">UIImagePickerController</span><span class="p">,</span> <span class="n">didFinishPickingMediaWithInfo</span> <span class="nv">info</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">AnyObject</span><span class="p">])</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="k">let</span> <span class="nv">pickedImage</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="kt">UIImagePickerControllerOriginalImage</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">UIImage</span> <span class="p">{</span>
     <span class="c1">// If returned a valid image</span>
-    <span class="n">profilePictureImageView</span><span class="p">.</span><span class="n">contentMode</span> <span class="o">=</span> <span class="p">.</span><span class="n">ScaleAspectFit</span> <span class="c1">// Set content setting</span>
-    <span class="n">profilePictureImageView</span><span class="p">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pickedImage</span> <span class="c1">// Set image</span>
+    <span class="n">profilePictureImageView</span><span class="o">.</span><span class="n">contentMode</span> <span class="o">=</span> <span class="o">.</span><span class="kt">ScaleAspectFit</span> <span class="c1">// Set content setting</span>
+    <span class="n">profilePictureImageView</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pickedImage</span> <span class="c1">// Set image</span>
   <span class="p">}</span>
 
   <span class="c1">// Dismiss the image picker controller</span>
-  <span class="n">dismissViewControllerAnimated</span><span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="p">{</span>
-    <span class="n">print</span><span class="p">(</span><span class="s">&quot;Dismissed image picker controller&quot;</span><span class="p">)</span>
+  <span class="nf">dismissViewControllerAnimated</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Dismissed image picker controller"</span><span class="p">)</span>
   <span class="p">})</span>
 <span class="p">}</span>
 
 
-<span class="n">imagePickerControllerDidCancel</span><span class="p">(</span><span class="nl">picker</span><span class="p">:</span> <span class="bp">UIImagePickerController</span><span class="p">)</span>
-<span class="n">This</span> <span class="kt">is</span> <span class="n">triggered</span> <span class="n">when</span> <span class="n">the</span> <span class="n">image</span> <span class="n">selection</span> <span class="n">flow</span> <span class="kt">is</span> <span class="n">cancelled</span>
-<span class="k">func</span> <span class="n">imagePickerControllerDidCancel</span><span class="p">(</span><span class="nl">picker</span><span class="p">:</span> <span class="bp">UIImagePickerController</span><span class="p">)</span> <span class="p">{</span>
+<span class="nf">imagePickerControllerDidCancel</span><span class="p">(</span><span class="nv">picker</span><span class="p">:</span> <span class="kt">UIImagePickerController</span><span class="p">)</span>
+<span class="kt">This</span> <span class="k">is</span> <span class="n">triggered</span> <span class="n">when</span> <span class="n">the</span> <span class="n">image</span> <span class="n">selection</span> <span class="n">flow</span> <span class="k">is</span> <span class="n">cancelled</span>
+<span class="kd">func</span> <span class="nf">imagePickerControllerDidCancel</span><span class="p">(</span><span class="nv">picker</span><span class="p">:</span> <span class="kt">UIImagePickerController</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// Dismiss the image picker controller</span>
-  <span class="n">dismissViewControllerAnimated</span><span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="p">{</span>
-    <span class="n">print</span><span class="p">(</span><span class="s">&quot;Cancelled image picker flow&quot;</span><span class="p">)</span>
+  <span class="nf">dismissViewControllerAnimated</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Cancelled image picker flow"</span><span class="p">)</span>
   <span class="p">})</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <h3 class="post-subheader">Final Code:</h3>
 <p>The complete source code looks like this:</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">//  Created by Kevin</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">//  Created by Kevin</span>
 <span class="c1">//  Copyright © 2016 KevinHou. All rights reserved.</span>
 <span class="c1">//</span>
 
-<span class="k">import</span> <span class="n">Foundation</span>
-<span class="k">import</span> <span class="n">UIKit</span>
+<span class="kd">import</span> <span class="kt">Foundation</span>
+<span class="kd">import</span> <span class="kt">UIKit</span>
 
-<span class="k">class</span> <span class="nl">ProfileScreen</span><span class="p">:</span> <span class="bp">UIViewController</span><span class="p">,</span> <span class="bp">UIImagePickerControllerDelegate</span><span class="p">,</span> <span class="bp">UINavigationControllerDelegate</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="kt">ProfileScreen</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">UIImagePickerControllerDelegate</span><span class="p">,</span> <span class="kt">UINavigationControllerDelegate</span> <span class="p">{</span>
 
     <span class="c1">// Image picker controller delegate allows you to select an image from the camera or the photo library</span>
     <span class="c1">// Navigation controller delegate allows image picker to appear and dissapear like a normal view controller</span>
 
-    <span class="p">@</span><span class="kt">IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nl">profilePictureImageView</span><span class="p">:</span> <span class="bp">UIImageView</span><span class="o">!</span> <span class="c1">// Image view we want to display the image in</span>
+    <span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">profilePictureImageView</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="o">!</span> <span class="c1">// Image view we want to display the image in</span>
 
-    <span class="k">let</span> <span class="n">imagePicker</span> <span class="o">=</span> <span class="bp">UIImagePickerController</span><span class="p">()</span> <span class="c1">// Initialize an image picker view controller type</span>
+    <span class="k">let</span> <span class="nv">imagePicker</span> <span class="o">=</span> <span class="kt">UIImagePickerController</span><span class="p">()</span> <span class="c1">// Initialize an image picker view controller type</span>
 
-    <span class="kr">override</span> <span class="k">func</span> <span class="n">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
 
-        <span class="n">imagePicker</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span> <span class="c1">// States that this view controller will also handle the events</span>
+        <span class="n">imagePicker</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span> <span class="c1">// States that this view controller will also handle the events</span>
     <span class="p">}</span>
 
-    <span class="p">@</span><span class="kt">IBAction</span> <span class="k">func</span> <span class="n">selectProfilePicture</span><span class="p">(</span><span class="nl">sender</span><span class="p">:</span> <span class="n">AnyObject</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">selectProfilePicture</span><span class="p">(</span><span class="nv">sender</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="k">let</span> <span class="n">imageSourcePicker</span> <span class="o">=</span> <span class="n">UIAlertController</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Select Profile Picture&quot;</span><span class="p">,</span> <span class="nl">message</span><span class="p">:</span> <span class="s">&quot;Please select an image picker method&quot;</span><span class="p">,</span> <span class="nl">preferredStyle</span><span class="p">:</span> <span class="p">.</span><span class="n">ActionSheet</span><span class="p">)</span> <span class="c1">// Initialize action sheet type</span>
+        <span class="k">let</span> <span class="nv">imageSourcePicker</span> <span class="o">=</span> <span class="kt">UIAlertController</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Select Profile Picture"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Please select an image picker method"</span><span class="p">,</span> <span class="nv">preferredStyle</span><span class="p">:</span> <span class="o">.</span><span class="kt">ActionSheet</span><span class="p">)</span> <span class="c1">// Initialize action sheet type</span>
 
-        <span class="k">let</span> <span class="n">cameraAction</span> <span class="o">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Take a picture&quot;</span><span class="p">,</span> <span class="nl">style</span><span class="p">:</span> <span class="p">.</span><span class="n">Default</span><span class="p">,</span> <span class="nl">handler</span><span class="p">:</span> <span class="p">{</span> <span class="n">action</span> <span class="k">in</span>
-            <span class="nb">self</span><span class="p">.</span><span class="n">pickImage</span><span class="p">(.</span><span class="n">Camera</span><span class="p">)</span> <span class="c1">// Presents picker</span>
+        <span class="k">let</span> <span class="nv">cameraAction</span> <span class="o">=</span> <span class="kt">UIAlertAction</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Take a picture"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="kt">Default</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="p">{</span> <span class="n">action</span> <span class="k">in</span>
+            <span class="k">self</span><span class="o">.</span><span class="nf">pickImage</span><span class="p">(</span><span class="o">.</span><span class="kt">Camera</span><span class="p">)</span> <span class="c1">// Presents picker</span>
         <span class="p">})</span>
 
-        <span class="k">let</span> <span class="n">cameraRoll</span> <span class="o">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Choose from camera roll&quot;</span><span class="p">,</span> <span class="nl">style</span><span class="p">:</span> <span class="p">.</span><span class="n">Default</span><span class="p">,</span> <span class="nl">handler</span><span class="p">:</span> <span class="p">{</span> <span class="n">action</span> <span class="k">in</span>
-            <span class="nb">self</span><span class="p">.</span><span class="n">pickImage</span><span class="p">(.</span><span class="n">PhotoLibrary</span><span class="p">)</span> <span class="c1">// Presents picker</span>
+        <span class="k">let</span> <span class="nv">cameraRoll</span> <span class="o">=</span> <span class="kt">UIAlertAction</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Choose from camera roll"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="kt">Default</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="p">{</span> <span class="n">action</span> <span class="k">in</span>
+            <span class="k">self</span><span class="o">.</span><span class="nf">pickImage</span><span class="p">(</span><span class="o">.</span><span class="kt">PhotoLibrary</span><span class="p">)</span> <span class="c1">// Presents picker</span>
         <span class="p">})</span>
 
         <span class="c1">// Add actions</span>
-        <span class="n">imageSourcePicker</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">cameraAction</span><span class="p">)</span>
-        <span class="n">imageSourcePicker</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">cameraRoll</span><span class="p">)</span>
+        <span class="n">imageSourcePicker</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="n">cameraAction</span><span class="p">)</span>
+        <span class="n">imageSourcePicker</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="n">cameraRoll</span><span class="p">)</span>
 
-        <span class="n">presentViewController</span><span class="p">(</span><span class="n">imageSourcePicker</span><span class="p">,</span> <span class="nl">animated</span><span class="p">:</span> <span class="nb">true</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="nb">nil</span><span class="p">)</span>
+        <span class="nf">presentViewController</span><span class="p">(</span><span class="n">imageSourcePicker</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
 
     <span class="p">}</span>
 
-    <span class="k">func</span> <span class="n">pickImage</span><span class="p">(</span><span class="nl">sourceType</span><span class="p">:</span> <span class="n">UIImagePickerControllerSourceType</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">imagePicker</span><span class="p">.</span><span class="n">allowsEditing</span> <span class="o">=</span> <span class="nb">false</span> <span class="c1">// Prevent editing</span>
+    <span class="kd">func</span> <span class="nf">pickImage</span><span class="p">(</span><span class="nv">sourceType</span><span class="p">:</span> <span class="kt">UIImagePickerControllerSourceType</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">imagePicker</span><span class="o">.</span><span class="n">allowsEditing</span> <span class="o">=</span> <span class="kc">false</span> <span class="c1">// Prevent editing</span>
 
         <span class="c1">// Three sources: .PhotoLibrary, .Camera, .SavedPhotosAlbum</span>
-        <span class="nb">self</span><span class="p">.</span><span class="n">imagePicker</span><span class="p">.</span><span class="n">sourceType</span> <span class="o">=</span> <span class="n">sourceType</span> <span class="c1">// Type of image selection</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">imagePicker</span><span class="o">.</span><span class="n">sourceType</span> <span class="o">=</span> <span class="n">sourceType</span> <span class="c1">// Type of image selection</span>
 
         <span class="c1">// Presenting image picker view controller on top of stack</span>
-        <span class="nb">self</span><span class="p">.</span><span class="n">presentViewController</span><span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">imagePicker</span><span class="p">,</span> <span class="nl">animated</span><span class="p">:</span> <span class="nb">true</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="p">{</span>
-            <span class="n">print</span><span class="p">(</span><span class="s">&quot;Opening image picker view controller&quot;</span><span class="p">)</span>
+        <span class="k">self</span><span class="o">.</span><span class="nf">presentViewController</span><span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">imagePicker</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"Opening image picker view controller"</span><span class="p">)</span>
         <span class="p">})</span>
     <span class="p">}</span>
 
 
     <span class="c1">// MARK: - UIImagePickerControllerDelegate Methods</span>
 
-    <span class="k">func</span> <span class="n">imagePickerController</span><span class="p">(</span><span class="nl">picker</span><span class="p">:</span> <span class="bp">UIImagePickerController</span><span class="p">,</span> <span class="n">didFinishPickingMediaWithInfo</span> <span class="nl">info</span><span class="p">:</span> <span class="p">[</span><span class="nl">String</span> <span class="p">:</span> <span class="n">AnyObject</span><span class="p">])</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="k">let</span> <span class="n">pickedImage</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="n">UIImagePickerControllerOriginalImage</span><span class="p">]</span> <span class="kt">as</span><span class="o">?</span> <span class="bp">UIImage</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">imagePickerController</span><span class="p">(</span><span class="nv">picker</span><span class="p">:</span> <span class="kt">UIImagePickerController</span><span class="p">,</span> <span class="n">didFinishPickingMediaWithInfo</span> <span class="nv">info</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">AnyObject</span><span class="p">])</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">pickedImage</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="kt">UIImagePickerControllerOriginalImage</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">UIImage</span> <span class="p">{</span>
             <span class="c1">// If returned a valid image</span>
-            <span class="n">profilePictureImageView</span><span class="p">.</span><span class="n">contentMode</span> <span class="o">=</span> <span class="p">.</span><span class="n">ScaleAspectFit</span> <span class="c1">// Set content setting</span>
-            <span class="n">profilePictureImageView</span><span class="p">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pickedImage</span> <span class="c1">// Set image</span>
+            <span class="n">profilePictureImageView</span><span class="o">.</span><span class="n">contentMode</span> <span class="o">=</span> <span class="o">.</span><span class="kt">ScaleAspectFit</span> <span class="c1">// Set content setting</span>
+            <span class="n">profilePictureImageView</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pickedImage</span> <span class="c1">// Set image</span>
         <span class="p">}</span>
 
         <span class="c1">// Dismiss the image picker view controller</span>
-        <span class="n">dismissViewControllerAnimated</span><span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="p">{</span>
-            <span class="n">print</span><span class="p">(</span><span class="s">&quot;Dismissed image picker view controller&quot;</span><span class="p">)</span>
+        <span class="nf">dismissViewControllerAnimated</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"Dismissed image picker view controller"</span><span class="p">)</span>
         <span class="p">})</span>
     <span class="p">}</span>
 
-    <span class="k">func</span> <span class="n">imagePickerControllerDidCancel</span><span class="p">(</span><span class="nl">picker</span><span class="p">:</span> <span class="bp">UIImagePickerController</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">imagePickerControllerDidCancel</span><span class="p">(</span><span class="nv">picker</span><span class="p">:</span> <span class="kt">UIImagePickerController</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// Dismiss the image picker view controller</span>
-        <span class="n">dismissViewControllerAnimated</span><span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="p">{</span>
-            <span class="n">print</span><span class="p">(</span><span class="s">&quot;Cancelled: Dismissed image picker view controller&quot;</span><span class="p">)</span>
+        <span class="nf">dismissViewControllerAnimated</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"Cancelled: Dismissed image picker view controller"</span><span class="p">)</span>
         <span class="p">})</span>
     <span class="p">}</span>
 
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p>Hope you found this helpful! You can find the source code on <a href="https://github.com/khou22/Swift-App-Templates/blob/master/SampleTabProject/SampleTabProject/ProfileScreen.swift" target="_blank">GitHub</a>.</p>
 
 <h3 class="post-subheader">Another Example of an Action Sheet</h3>
 <p>Here’s another example of two different types of action sheets in case the first example was difficult to grasp.</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="n">Text</span> <span class="n">Input</span> <span class="nl">Dialogue</span><span class="p">:</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kt">Text</span> <span class="kt">Input</span> <span class="kt">Dialogue</span><span class="p">:</span>
 <span class="c1">// Create text modal for adding an event name prediction</span>
-<span class="k">let</span> <span class="n">newCategoryAlert</span> <span class="o">=</span> <span class="n">UIAlertController</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Enter Location&quot;</span><span class="p">,</span> <span class="nl">message</span><span class="p">:</span> <span class="s">&quot;Manually add a location suggestion&quot;</span><span class="p">,</span> <span class="nl">preferredStyle</span><span class="p">:</span> <span class="p">.</span><span class="n">alert</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">newCategoryAlert</span> <span class="o">=</span> <span class="kt">UIAlertController</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Enter Location"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Manually add a location suggestion"</span><span class="p">,</span> <span class="nv">preferredStyle</span><span class="p">:</span> <span class="o">.</span><span class="n">alert</span><span class="p">)</span>
 
 <span class="c1">// Add text field item</span>
-<span class="n">newCategoryAlert</span><span class="p">.</span><span class="n">addTextField</span> <span class="p">{</span> <span class="p">(</span><span class="n">textField</span><span class="p">)</span> <span class="k">in</span>
-    <span class="n">textField</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">&quot;&quot;</span> <span class="c1">// No placeholder</span>
-    <span class="n">textField</span><span class="p">.</span><span class="n">autocapitalizationType</span> <span class="o">=</span> <span class="n">UITextAutocapitalizationType</span><span class="p">.</span><span class="n">words</span> <span class="c1">// Capitalization rules</span>
+<span class="n">newCategoryAlert</span><span class="o">.</span><span class="n">addTextField</span> <span class="p">{</span> <span class="p">(</span><span class="n">textField</span><span class="p">)</span> <span class="k">in</span>
+    <span class="n">textField</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">""</span> <span class="c1">// No placeholder</span>
+    <span class="n">textField</span><span class="o">.</span><span class="n">autocapitalizationType</span> <span class="o">=</span> <span class="kt">UITextAutocapitalizationType</span><span class="o">.</span><span class="n">words</span> <span class="c1">// Capitalization rules</span>
 <span class="p">}</span>
 
 <span class="c1">// Add cancel action</span>
-<span class="n">newCategoryAlert</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">UIAlertAction</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Cancel&quot;</span><span class="p">,</span> <span class="nl">style</span><span class="p">:</span> <span class="p">.</span><span class="k">default</span><span class="p">,</span> <span class="nl">handler</span><span class="p">:</span> <span class="nb">nil</span><span class="p">))</span> <span class="c1">// No action if cancelled</span>
+<span class="n">newCategoryAlert</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="kt">UIAlertAction</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Cancel"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="k">default</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kc">nil</span><span class="p">))</span> <span class="c1">// No action if cancelled</span>
 
 <span class="c1">// Add submit action</span>
-<span class="n">newCategoryAlert</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">UIAlertAction</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;OK&quot;</span><span class="p">,</span> <span class="nl">style</span><span class="p">:</span> <span class="p">.</span><span class="k">default</span><span class="p">,</span> <span class="nl">handler</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="n">newCategoryAlert</span><span class="p">]</span> <span class="p">(</span><span class="n">_</span><span class="p">)</span> <span class="k">in</span>
+<span class="n">newCategoryAlert</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="kt">UIAlertAction</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"OK"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="k">default</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="n">newCategoryAlert</span><span class="p">]</span> <span class="p">(</span><span class="n">_</span><span class="p">)</span> <span class="k">in</span>
     <span class="c1">// Get text field content</span>
-    <span class="k">let</span> <span class="n">textField</span> <span class="o">=</span> <span class="n">newCategoryAlert</span><span class="o">?</span><span class="p">.</span><span class="n">textFields</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">// Force unwrapping because we know it exists</span>
+    <span class="k">let</span> <span class="nv">textField</span> <span class="o">=</span> <span class="n">newCategoryAlert</span><span class="p">?</span><span class="o">.</span><span class="n">textFields</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">// Force unwrapping because we know it exists</span>
 
-    <span class="nb">self</span><span class="p">.</span><span class="n">currentCategory</span><span class="p">.</span><span class="n">locationFreq</span><span class="p">[(</span><span class="n">textField</span><span class="o">?</span><span class="p">.</span><span class="n">text</span><span class="p">)</span><span class="o">!</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// New event name frequency entry with frequency of 0</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">currentCategory</span><span class="o">.</span><span class="n">locationFreq</span><span class="p">[(</span><span class="n">textField</span><span class="p">?</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="o">!</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">// New event name frequency entry with frequency of 0</span>
 
     <span class="c1">// Update category data with new markov model</span>
-    <span class="n">DataManager</span><span class="p">.</span><span class="n">updateOneCategory</span><span class="p">(</span><span class="nl">with</span><span class="p">:</span> <span class="nb">self</span><span class="p">.</span><span class="n">currentCategory</span><span class="p">,</span> <span class="nl">index</span><span class="p">:</span> <span class="nb">self</span><span class="p">.</span><span class="n">selectedIndex</span><span class="p">)</span>
+    <span class="kt">DataManager</span><span class="o">.</span><span class="nf">updateOneCategory</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">currentCategory</span><span class="p">,</span> <span class="nv">index</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">selectedIndex</span><span class="p">)</span>
 
     <span class="c1">// Refresh the table view on this page</span>
-    <span class="nb">self</span><span class="p">.</span><span class="n">refreshData</span><span class="p">()</span>
+    <span class="k">self</span><span class="o">.</span><span class="nf">refreshData</span><span class="p">()</span>
 <span class="p">}))</span>
 
-<span class="nb">self</span><span class="p">.</span><span class="n">present</span><span class="p">(</span><span class="n">newCategoryAlert</span><span class="p">,</span> <span class="nl">animated</span><span class="p">:</span> <span class="nb">true</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="nb">nil</span><span class="p">)</span> <span class="c1">// Present the alert</span>
+<span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">newCategoryAlert</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span> <span class="c1">// Present the alert</span>
 
 <span class="c1">// Regular Action Sheet</span>
-<span class="k">let</span> <span class="n">actionSheet</span> <span class="o">=</span> <span class="n">UIAlertController</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Reset Predictions&quot;</span><span class="p">,</span> <span class="nl">message</span><span class="p">:</span> <span class="s">&quot;Are you sure you want to reset predictions? This cannot be undone.&quot;</span><span class="p">,</span> <span class="nl">preferredStyle</span><span class="p">:</span> <span class="p">.</span><span class="n">actionSheet</span><span class="p">)</span> <span class="c1">// Create alert action sheet</span>
+<span class="k">let</span> <span class="nv">actionSheet</span> <span class="o">=</span> <span class="kt">UIAlertController</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Reset Predictions"</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"Are you sure you want to reset predictions? This cannot be undone."</span><span class="p">,</span> <span class="nv">preferredStyle</span><span class="p">:</span> <span class="o">.</span><span class="n">actionSheet</span><span class="p">)</span> <span class="c1">// Create alert action sheet</span>
 
 <span class="c1">// Create actions</span>
-<span class="k">let</span> <span class="nl">resetAction</span><span class="p">:</span> <span class="n">UIAlertAction</span> <span class="o">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Reset Predictions&quot;</span><span class="p">,</span> <span class="nl">style</span><span class="p">:</span> <span class="p">.</span><span class="k">default</span><span class="p">,</span> <span class="nl">handler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="nl">alert</span><span class="p">:</span> <span class="n">UIAlertAction</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Void</span> <span class="k">in</span>
+<span class="k">let</span> <span class="nv">resetAction</span><span class="p">:</span> <span class="kt">UIAlertAction</span> <span class="o">=</span> <span class="kt">UIAlertAction</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Reset Predictions"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="k">default</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="nv">alert</span><span class="p">:</span> <span class="kt">UIAlertAction</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
     <span class="c1">// User pressed reset all predictions</span>
-    <span class="n">print</span><span class="p">(</span><span class="s">&quot;Reseting predictions&quot;</span><span class="p">)</span>
-    <span class="nb">self</span><span class="p">.</span><span class="n">currentCategory</span> <span class="o">=</span> <span class="n">Category</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="nb">self</span><span class="p">.</span><span class="n">currentCategory</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="nl">eventNameFreq</span><span class="p">:</span> <span class="p">[</span> <span class="o">:</span> <span class="p">],</span> <span class="nl">locationFreq</span><span class="p">:</span> <span class="p">[</span> <span class="o">:</span> <span class="p">])</span> <span class="c1">// Reset predictions data</span>
-    <span class="n">DataManager</span><span class="p">.</span><span class="n">updateOneCategory</span><span class="p">(</span><span class="nl">with</span><span class="p">:</span> <span class="nb">self</span><span class="p">.</span><span class="n">currentCategory</span><span class="p">,</span> <span class="nl">index</span><span class="p">:</span> <span class="nb">self</span><span class="p">.</span><span class="n">selectedIndex</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Reseting predictions"</span><span class="p">)</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">currentCategory</span> <span class="o">=</span> <span class="kt">Category</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">currentCategory</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nv">eventNameFreq</span><span class="p">:</span> <span class="p">[</span> <span class="p">:</span> <span class="p">],</span> <span class="nv">locationFreq</span><span class="p">:</span> <span class="p">[</span> <span class="p">:</span> <span class="p">])</span> <span class="c1">// Reset predictions data</span>
+    <span class="kt">DataManager</span><span class="o">.</span><span class="nf">updateOneCategory</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">currentCategory</span><span class="p">,</span> <span class="nv">index</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">selectedIndex</span><span class="p">)</span>
 <span class="p">})</span>
-<span class="k">let</span> <span class="nl">cancelAction</span><span class="p">:</span> <span class="n">UIAlertAction</span> <span class="o">=</span> <span class="n">UIAlertAction</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Cancel&quot;</span><span class="p">,</span> <span class="nl">style</span><span class="p">:</span> <span class="p">.</span><span class="n">cancel</span><span class="p">,</span> <span class="nl">handler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="nl">alert</span><span class="p">:</span> <span class="n">UIAlertAction</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Void</span> <span class="k">in</span>
+<span class="k">let</span> <span class="nv">cancelAction</span><span class="p">:</span> <span class="kt">UIAlertAction</span> <span class="o">=</span> <span class="kt">UIAlertAction</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Cancel"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">cancel</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="nv">alert</span><span class="p">:</span> <span class="kt">UIAlertAction</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
     <span class="c1">// User pressed cancel</span>
 <span class="p">})</span>
 
 <span class="c1">// Add actions</span>
-<span class="n">actionSheet</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">resetAction</span><span class="p">)</span>
-<span class="n">actionSheet</span><span class="p">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">cancelAction</span><span class="p">)</span>
+<span class="n">actionSheet</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="n">resetAction</span><span class="p">)</span>
+<span class="n">actionSheet</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="n">cancelAction</span><span class="p">)</span>
 
-<span class="nb">self</span><span class="p">.</span><span class="n">present</span><span class="p">(</span><span class="n">actionSheet</span><span class="p">,</span> <span class="nl">animated</span><span class="p">:</span> <span class="nb">true</span><span class="p">,</span> <span class="nl">completion</span><span class="p">:</span> <span class="nb">nil</span><span class="p">)</span> <span class="c1">// Present action sheet to user</span></code></pre></div>
+<span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">actionSheet</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span> <span class="c1">// Present action sheet to user</span></code></pre></figure>
 
 <p>Hope you found this helpful!</p>
 
     <div class="post-organization">
-      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/ios/">iOS</a>, <a href="/blog/tag/swift/">Swift</a></p>
+      <p id="post-meta">Posted with <a href="/blog/tag/ios/">iOS</a>, <a href="/blog/tag/swift/">Swift</a></p>
     </div>
   </article>
 </div>

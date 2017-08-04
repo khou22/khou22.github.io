@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2017/02/28/swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2017/02/28/swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,34 +198,9 @@
   
 
     
-      
-    
 
     
-        
-        
-          
-            
-                
-                
-            
-        
-          
-            
-                
-                
-            
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -273,45 +248,45 @@ Here is an extension for a UITextField that gives two functionalities. The first
 It’s very useful for the number pad input which doesn’t the native “Done,” “Return,” etc. buttons on the keyboard itself.
 <br class="post-line-break" /></p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">extension</span> <span class="bp">UITextField</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">extension</span> <span class="kt">UITextField</span> <span class="p">{</span>
 
     <span class="c1">// Set border to none in Storyboard and then call this function to add just a bottom border</span>
-    <span class="k">func</span> <span class="n">addBottomBorder</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="n">bottomBorder</span> <span class="o">=</span> <span class="bp">CALayer</span><span class="p">()</span>
-        <span class="k">let</span> <span class="n">width</span> <span class="o">=</span> <span class="n">CGFloat</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1">// Border width</span>
-        <span class="n">bottomBorder</span><span class="p">.</span><span class="n">borderColor</span> <span class="o">=</span> <span class="n">Colors</span><span class="p">.</span><span class="n">red</span><span class="p">.</span><span class="n">cgColor</span> <span class="c1">// Border color</span>
-        <span class="n">bottomBorder</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="bp">CGRect</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span> <span class="nb">self</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span> <span class="o">-</span> <span class="n">width</span><span class="p">,</span> <span class="nl">width</span><span class="p">:</span>  <span class="nb">self</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="nb">self</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)</span> <span class="c1">// Frame</span>
+    <span class="kd">func</span> <span class="nf">addBottomBorder</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">bottomBorder</span> <span class="o">=</span> <span class="kt">CALayer</span><span class="p">()</span>
+        <span class="k">let</span> <span class="nv">width</span> <span class="o">=</span> <span class="kt">CGFloat</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1">// Border width</span>
+        <span class="n">bottomBorder</span><span class="o">.</span><span class="n">borderColor</span> <span class="o">=</span> <span class="kt">Colors</span><span class="o">.</span><span class="n">red</span><span class="o">.</span><span class="n">cgColor</span> <span class="c1">// Border color</span>
+        <span class="n">bottomBorder</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="n">width</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span>  <span class="k">self</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">height</span><span class="p">)</span> <span class="c1">// Frame</span>
 
-        <span class="n">bottomBorder</span><span class="p">.</span><span class="n">borderWidth</span> <span class="o">=</span> <span class="n">width</span> <span class="c1">// Apply border width</span>
-        <span class="nb">self</span><span class="p">.</span><span class="n">layer</span><span class="p">.</span><span class="n">addSublayer</span><span class="p">(</span><span class="n">bottomBorder</span><span class="p">)</span> <span class="c1">// Add to text field</span>
-        <span class="nb">self</span><span class="p">.</span><span class="n">layer</span><span class="p">.</span><span class="n">masksToBounds</span> <span class="o">=</span> <span class="nb">true</span>
+        <span class="n">bottomBorder</span><span class="o">.</span><span class="n">borderWidth</span> <span class="o">=</span> <span class="n">width</span> <span class="c1">// Apply border width</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">layer</span><span class="o">.</span><span class="nf">addSublayer</span><span class="p">(</span><span class="n">bottomBorder</span><span class="p">)</span> <span class="c1">// Add to text field</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">layer</span><span class="o">.</span><span class="n">masksToBounds</span> <span class="o">=</span> <span class="kc">true</span>
     <span class="p">}</span>
 
     <span class="c1">// Add done button to number keyboard</span>
     <span class="c1">// Source: https://gist.github.com/jplazcano87/8b5d3bc89c3578e45c3e</span>
-    <span class="k">func</span> <span class="n">addDoneButtonOnKeyboard</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nl">doneToolbar</span><span class="p">:</span> <span class="bp">UIToolbar</span> <span class="o">=</span> <span class="bp">UIToolbar</span><span class="p">(</span><span class="nl">frame</span><span class="p">:</span> <span class="bp">CGRect</span><span class="p">(</span><span class="nl">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nl">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nl">width</span><span class="p">:</span> <span class="mi">320</span><span class="p">,</span> <span class="nl">height</span><span class="p">:</span> <span class="mi">50</span><span class="p">))</span> <span class="c1">// Create keyboard toolbar</span>
-        <span class="n">doneToolbar</span><span class="p">.</span><span class="n">barStyle</span> <span class="o">=</span> <span class="p">.</span><span class="k">default</span> <span class="c1">// Set style</span>
+    <span class="kd">func</span> <span class="nf">addDoneButtonOnKeyboard</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">doneToolbar</span><span class="p">:</span> <span class="kt">UIToolbar</span> <span class="o">=</span> <span class="kt">UIToolbar</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">320</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">50</span><span class="p">))</span> <span class="c1">// Create keyboard toolbar</span>
+        <span class="n">doneToolbar</span><span class="o">.</span><span class="n">barStyle</span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span> <span class="c1">// Set style</span>
 
-        <span class="k">let</span> <span class="nl">blankFlexSpace</span><span class="p">:</span> <span class="bp">UIBarButtonItem</span> <span class="o">=</span> <span class="bp">UIBarButtonItem</span><span class="p">(</span><span class="nl">barButtonSystemItem</span><span class="p">:</span> <span class="p">.</span><span class="n">flexibleSpace</span><span class="p">,</span> <span class="nl">target</span><span class="p">:</span> <span class="nb">nil</span><span class="p">,</span> <span class="nl">action</span><span class="p">:</span> <span class="nb">nil</span><span class="p">)</span> <span class="c1">// Add blank spacing item to left of done button</span>
-        <span class="k">let</span> <span class="nl">doneButton</span><span class="p">:</span> <span class="bp">UIBarButtonItem</span> <span class="o">=</span> <span class="bp">UIBarButtonItem</span><span class="p">(</span><span class="nl">title</span><span class="p">:</span> <span class="s">&quot;Done&quot;</span><span class="p">,</span> <span class="nl">style</span><span class="p">:</span> <span class="p">.</span><span class="n">done</span><span class="p">,</span> <span class="nl">target</span><span class="p">:</span> <span class="nb">self</span><span class="p">,</span> <span class="nl">action</span><span class="p">:</span> <span class="err">#</span><span class="n">selector</span><span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">doneButtonAction</span><span class="p">))</span> <span class="c1">// Add done button</span>
+        <span class="k">let</span> <span class="nv">blankFlexSpace</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span> <span class="o">=</span> <span class="kt">UIBarButtonItem</span><span class="p">(</span><span class="nv">barButtonSystemItem</span><span class="p">:</span> <span class="o">.</span><span class="n">flexibleSpace</span><span class="p">,</span> <span class="nv">target</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span> <span class="c1">// Add blank spacing item to left of done button</span>
+        <span class="k">let</span> <span class="nv">doneButton</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span> <span class="o">=</span> <span class="kt">UIBarButtonItem</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Done"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">done</span><span class="p">,</span> <span class="nv">target</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">self.doneButtonAction</span><span class="kd">)</span><span class="p">)</span> <span class="c1">// Add done button</span>
 
-        <span class="n">doneToolbar</span><span class="p">.</span><span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="n">blankFlexSpace</span><span class="p">,</span> <span class="n">doneButton</span><span class="p">]</span> <span class="c1">// Create array of the items and add to toolbar</span>
-        <span class="n">doneToolbar</span><span class="p">.</span><span class="n">sizeToFit</span><span class="p">()</span> <span class="c1">// Fit to screen size</span>
+        <span class="n">doneToolbar</span><span class="o">.</span><span class="n">items</span> <span class="o">=</span> <span class="p">[</span><span class="n">blankFlexSpace</span><span class="p">,</span> <span class="n">doneButton</span><span class="p">]</span> <span class="c1">// Create array of the items and add to toolbar</span>
+        <span class="n">doneToolbar</span><span class="o">.</span><span class="nf">sizeToFit</span><span class="p">()</span> <span class="c1">// Fit to screen size</span>
 
-        <span class="nb">self</span><span class="p">.</span><span class="n">inputAccessoryView</span> <span class="o">=</span> <span class="n">doneToolbar</span> <span class="c1">// Add toolbar to keyboard</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">inputAccessoryView</span> <span class="o">=</span> <span class="n">doneToolbar</span> <span class="c1">// Add toolbar to keyboard</span>
 
     <span class="p">}</span>
 
     <span class="c1">// Function called when done button pressed</span>
     <span class="c1">// Put manually put under action</span>
-    <span class="k">func</span> <span class="n">doneButtonAction</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nb">self</span><span class="p">.</span><span class="n">resignFirstResponder</span><span class="p">()</span> <span class="c1">// Desselect</span>
+    <span class="kd">func</span> <span class="nf">doneButtonAction</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="nf">resignFirstResponder</span><span class="p">()</span> <span class="c1">// Desselect</span>
     <span class="p">}</span>
 
     <span class="c1">// MARK - End of adding done button to number pad</span>
 
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p><br class="post-line-break" />
 One of the things on my bucket list is to build and publish my own libraries. This would not only improve my own development and production speed, but also give you tools/UI tweaks that you might find useful. I don’t typically use libraries in my projects, but I do see their benefit. Because I’m focusing on the learning right now, I’ve been building my own “libraries” from scratch as a teaching tool for myself. Hopefully I can push one of those out to you all soon!
@@ -320,21 +295,21 @@ One of the things on my bucket list is to build and publish my own libraries. Th
 <p>First you must setup your Info.plist file to give your app permission to use Force Touch app shortcuts. Here is a useful tutorial for doing just that: <a href="https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW36" target="_blank">developer.apple.com</a>
 <br class="post-line-break" /></p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">// Launch a specific screen as initial VC</span>
-<span class="n">private</span> <span class="k">func</span> <span class="nf">launchInitialVC</span><span class="p">(</span><span class="n">viewController</span> <span class="nl">identifier</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nb">self</span><span class="p">.</span><span class="n">window</span> <span class="o">=</span> <span class="bp">UIWindow</span><span class="p">(</span><span class="nl">frame</span><span class="p">:</span> <span class="bp">UIScreen</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">bounds</span><span class="p">)</span>
-    <span class="k">let</span> <span class="n">storyboard</span> <span class="o">=</span> <span class="bp">UIStoryboard</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="s">&quot;Main&quot;</span><span class="p">,</span> <span class="nl">bundle</span><span class="p">:</span> <span class="nb">nil</span><span class="p">)</span>
-    <span class="k">let</span> <span class="n">initialViewController</span> <span class="o">=</span> <span class="n">storyboard</span><span class="p">.</span><span class="n">instantiateInitialViewController</span><span class="p">()</span> <span class="kt">as</span><span class="o">!</span> <span class="bp">UINavigationController</span>
-    <span class="nb">self</span><span class="p">.</span><span class="n">window</span><span class="o">?</span><span class="p">.</span><span class="n">rootViewController</span> <span class="o">=</span> <span class="n">initialViewController</span>
-    <span class="nb">self</span><span class="p">.</span><span class="n">window</span><span class="o">?</span><span class="p">.</span><span class="n">makeKeyAndVisible</span><span class="p">()</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">// Launch a specific screen as initial VC</span>
+<span class="kd">private</span> <span class="kd">func</span> <span class="nf">launchInitialVC</span><span class="p">(</span><span class="n">viewController</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">window</span> <span class="o">=</span> <span class="kt">UIWindow</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">UIScreen</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">storyboard</span> <span class="o">=</span> <span class="kt">UIStoryboard</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Main"</span><span class="p">,</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">initialViewController</span> <span class="o">=</span> <span class="n">storyboard</span><span class="o">.</span><span class="nf">instantiateInitialViewController</span><span class="p">()</span> <span class="k">as!</span> <span class="kt">UINavigationController</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">window</span><span class="p">?</span><span class="o">.</span><span class="n">rootViewController</span> <span class="o">=</span> <span class="n">initialViewController</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">window</span><span class="p">?</span><span class="o">.</span><span class="nf">makeKeyAndVisible</span><span class="p">()</span>
 
     <span class="c1">// Perform required segues and navigations</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">identifier</span> <span class="o">==</span> <span class="n">Storyboard</span><span class="p">.</span><span class="n">editEventDetails</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// If launching edit details screen</span>
-        <span class="n">initialViewController</span><span class="p">.</span><span class="n">pushViewController</span><span class="p">(</span><span class="n">storyboard</span><span class="p">.</span><span class="n">instantiateViewController</span><span class="p">(</span><span class="nl">withIdentifier</span><span class="p">:</span> <span class="n">Storyboard</span><span class="p">.</span><span class="n">categorySelection</span><span class="p">),</span> <span class="nl">animated</span><span class="p">:</span> <span class="nb">false</span><span class="p">)</span>
-        <span class="k">let</span> <span class="n">categorySelection</span> <span class="o">=</span> <span class="n">initialViewController</span><span class="p">.</span><span class="n">topViewController</span> <span class="kt">as</span><span class="o">!</span> <span class="n">CategorySelection</span>
-        <span class="n">categorySelection</span><span class="p">.</span><span class="n">newEventNoCategory</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">identifier</span> <span class="o">==</span> <span class="kt">Storyboard</span><span class="o">.</span><span class="n">editEventDetails</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// If launching edit details screen</span>
+        <span class="n">initialViewController</span><span class="o">.</span><span class="nf">pushViewController</span><span class="p">(</span><span class="n">storyboard</span><span class="o">.</span><span class="nf">instantiateViewController</span><span class="p">(</span><span class="nv">withIdentifier</span><span class="p">:</span> <span class="kt">Storyboard</span><span class="o">.</span><span class="n">categorySelection</span><span class="p">),</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">categorySelection</span> <span class="o">=</span> <span class="n">initialViewController</span><span class="o">.</span><span class="n">topViewController</span> <span class="k">as!</span> <span class="kt">CategorySelection</span>
+        <span class="n">categorySelection</span><span class="o">.</span><span class="nf">newEventNoCategory</span><span class="p">(</span><span class="k">self</span><span class="p">)</span>
     <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p><br />
 <b>Here are some other useful tools for giving your app Force Touch capabilities:</b><br />
@@ -344,7 +319,7 @@ Design guidelines on shortcut icons: <a href="https://developer.apple.com/refere
 Hope this was useful! Sorry my blog posts have been fairly minimal in writing. I haven’t had a lot of time this semester because of my heightened work load. Hope I’ll catch a break soon so I can put some more time and thought into my pieces. Thanks!</p>
 
     <div class="post-organization">
-      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/ios/">iOS</a>, <a href="/blog/tag/swift/">Swift</a></p>
+      <p id="post-meta">Posted with <a href="/blog/tag/ios/">iOS</a>, <a href="/blog/tag/swift/">Swift</a></p>
     </div>
   </article>
 </div>

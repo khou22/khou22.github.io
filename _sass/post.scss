@@ -122,19 +122,35 @@ article {
     li {
         list-style-position: outside;
     }
-    
+
     h1 {
         margin-bottom: 12px;
+    }
+
+    p {
+        line-height: 22px;
     }
 
     ol {
         padding-left: 40px;
     }
 
+    ul {
+        padding-left: 40px;
+    }
+
     // In-line code blocks
-    code {
+    .highlighter-rouge {
         font-size: 12px !important;
         padding: 2px 2px;
+        color: #111;
+        background-color: #eee;
+        border: 1px solid #dbdbdb;
+    }
+
+    // Code blocks
+    pre {
+        font-size: 12px !important;
     }
 
     // Bold

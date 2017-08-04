@@ -2,227 +2,233 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kevin Hou</title>
-    <description>Kevin Hou&#39;s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
+    <description>Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
 </description>
-    <link>http://khou22.github.io/</link>
-    <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Aug 2017 17:40:46 -0400</pubDate>
-    <lastBuildDate>Fri, 04 Aug 2017 17:40:46 -0400</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 04 Aug 2017 19:54:39 -0400</pubDate>
+    <lastBuildDate>Fri, 04 Aug 2017 19:54:39 -0400</lastBuildDate>
+    <generator>Jekyll v3.5.1</generator>
     
       <item>
         <title>My Custom VIM Configuration: Installation, Usage, and Capabilities</title>
         <description>&lt;h1 id=&quot;setting-up-vim&quot;&gt;Setting Up VIM&lt;/h1&gt;
-&lt;p&gt;VIM is configured using a &lt;code&gt;.vimrc&lt;/code&gt; file in your root directory (&lt;code&gt;~/.vimrc&lt;/code&gt;) and serves as the configuration file. It is similar to a &lt;code&gt;.bashrc&lt;/code&gt; or &lt;code&gt;.bash_profile&lt;/code&gt; in the sense that it must be sourced to reflect changes, but VIM automatically takes care of when it launches. Ensure that the &lt;code&gt;~/.vimrc&lt;/code&gt; file exists and if not, create one. Now here’s how the complete setup:&lt;/p&gt;
+&lt;p&gt;VIM is configured using a &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file in your root directory (&lt;code class=&quot;highlighter-rouge&quot;&gt;~/.vimrc&lt;/code&gt;) and serves as the configuration file. It is similar to a &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.bash_profile&lt;/code&gt; in the sense that it must be sourced to reflect changes, but VIM automatically takes care of when it launches. Ensure that the &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.vimrc&lt;/code&gt; file exists and if not, create one. Now here’s how the complete setup:
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;strong&gt;Step 1&lt;/strong&gt;&lt;br /&gt;
+Copy/paste the contents of my configuration file into your &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;strong&gt;Step 2&lt;/strong&gt;&lt;br /&gt;
+Like I said earlier, I’m using &lt;a href=&quot;https://github.com/junegunn/vim-plug&quot;&gt;vim-plug&lt;/a&gt; as my package manager service. Install &lt;code class=&quot;highlighter-rouge&quot;&gt;vim-plug&lt;/code&gt; using:&lt;/p&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;strong&gt;Step 3&lt;/strong&gt;&lt;br /&gt;
+Open VIM - type &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt; to open the VIM command line. You will be using this a lot. Type &lt;code class=&quot;highlighter-rouge&quot;&gt;PlugInstall&lt;/code&gt; and press Enter.&lt;br /&gt;
+VIM has a handful of common “listener keys” that let VIM know you are about to perform a custom key command. This includes &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt;, etc.&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;em&gt;Note&lt;/em&gt;: Sometimes need to source the &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file first:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;:source %
+:PlugInstall&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;strong&gt;Step 4&lt;/strong&gt;&lt;br /&gt;
+Install &lt;strong&gt;MacVim&lt;/strong&gt;&lt;br /&gt;
+Some plugins will require a higher version of VIM than the out-of-the-box built-in default for Macs. Many references online have recommended using &lt;a href=&quot;macvim-dev.github.io&quot;&gt;MacVim&lt;/a&gt; and aliasing its CL interface to “replace” the default. Add this to your &lt;code class=&quot;highlighter-rouge&quot;&gt;.bash_profile&lt;/code&gt; after you’ve installed MacVim:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Mac VIM Alias&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;vim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/Applications/MacVim.app/Contents/MacOS/Vim'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;strong&gt;Step 5&lt;/strong&gt;&lt;br /&gt;
+There are a few plugins that require additional installations that don’t get setup automatically using &lt;code class=&quot;highlighter-rouge&quot;&gt;vim-plug&lt;/code&gt;. Follow the steps below to configure these libraries:&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Pathogen&lt;/code&gt; — Package loader&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir -p ~/.vim/autoload ~/.vim/bundle &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AG&lt;/code&gt; - For project file grepping&lt;/strong&gt;
+(‘AG’ stands for the silver element in periodic table)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;brew install the_silver_searcher&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YouCompleteMe&lt;/code&gt; - Autocomplete&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Copy/paste the contents of my configuration file into your &lt;code&gt;.vimrc&lt;/code&gt; file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Like I said earlier, I’m using &lt;a href=&quot;https://github.com/junegunn/vim-plug&quot;&gt;vim-plug&lt;/a&gt; as my package manager service. Install &lt;code&gt;vim-plug&lt;/code&gt; using:&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -fLo ~/.vim/autoload/plug.vim --create-dirs &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Open VIM - type &lt;code&gt;:&lt;/code&gt; to open the VIM command line. You will be using this a lot. Type &lt;code&gt;PlugInstall&lt;/code&gt; and press Enter.
+  &lt;li&gt;Install Cmake: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ brew install CMake&lt;/code&gt;
     &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;VIM has a handful of common “listener keys” that let VIM know you are about to perform a custom key command. This includes &lt;code&gt;:&lt;/code&gt;, &lt;code&gt;,&lt;/code&gt;, &lt;code&gt;/&lt;/code&gt;, etc.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: Sometimes need to source the &lt;code&gt;.vimrc&lt;/code&gt; file first:&lt;/p&gt;
-      &lt;/li&gt;
+      &lt;li&gt;On dev box (Ubuntu): &lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo apt-get install cmake&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Finish install: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ python ~/.vim/plugged/YouCompleteMe/install.py&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;:source %
-        :PlugInstall&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solarized Colorscheme for VIM&lt;/code&gt; — Theme&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Install into &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle&lt;/code&gt; folder. Create it if the directory doesn’t exist.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.vim/bundle
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;git clone git://github.com/altercation/vim-colors-solarized.git&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Install &lt;strong&gt;MacVim&lt;/strong&gt;&lt;br /&gt;
- Some plugins will require a higher version of VIM than the out-of-the-box built-in default for Macs. Many references online have recommended using &lt;a href=&quot;macvim-dev.github.io&quot;&gt;MacVim&lt;/a&gt; and aliasing its CL interface to “replace” the default. Add this to your &lt;code&gt;.bash_profile&lt;/code&gt; after you’ve installed MacVim:&lt;/li&gt;
+  &lt;li&gt;Set the theme in &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Mac VIM Alias&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;vim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/Applications/MacVim.app/Contents/MacOS/Vim&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;syntax &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot; Use 'light' if want the light theme
+set background=dark
+colorscheme solarized&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
+&lt;strong&gt;NERDTree - Project Heiarchy in Sidebar&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;There are a few plugins that require additional installations that don’t get setup automatically using &lt;code&gt;vim-plug&lt;/code&gt;. Follow the steps below to configure these libraries:&lt;br /&gt;
- &lt;strong&gt;&lt;code&gt;Pathogen&lt;/code&gt; — Package loader&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Ensure you have a &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.vim/bundle/&lt;/code&gt; directory&lt;/li&gt;
+  &lt;li&gt;Install using: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;NERDTree will automatically open when VIM opens because of this command in the &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt;:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir -p ~/.vim/autoload ~/.vim/bundle &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;pre&gt;&lt;code&gt;__`AG` - For project file grepping__
-(&#39;AG&#39; stands for the silver element in periodic table)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;brew install the_silver_searcher&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;pre&gt;&lt;code&gt;__`YouCompleteMe` - Autocomplete__
-1. Install Cmake: `$ brew install CMake`
-    * On dev box (Ubuntu): `$ sudo apt-get install cmake`
-2. Finish install: `$ python ~/.vim/plugged/YouCompleteMe/install.py`
-
-__`Solarized Colorscheme for VIM` — Theme__
-1. Install into `bundle` folder. Create it if the directory doesn&#39;t exist.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.vim/bundle
-        &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone git://github.com/altercation/vim-colors-solarized.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;pre&gt;&lt;code&gt;2. Set the theme in `.vimrc`.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;syntax &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt;
-        &lt;span class=&quot;err&quot;&gt;&amp;quot;&lt;/span&gt; Use &lt;span class=&quot;s1&quot;&gt;&amp;#39;light&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; want the light theme
-        &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;dark 
-        colorscheme solarized&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;pre&gt;&lt;code&gt;__NERDTree - Project Heiarchy in Sidebar__
-1. Ensure you have a `~/.vim/bundle/` directory
-2. Install using: `$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree`
-3. NERDTree will automatically open when VIM opens because of this command in the `.vimrc`:
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;autocmd vimenter * NERDTree&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;autocmd vimenter &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; NERDTree&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h1 id=&quot;commands&quot;&gt;Commands&lt;/h1&gt;
 
-&lt;h3 id=&quot;vim-environment&quot;&gt;VIM Environment&lt;/h3&gt;
-&lt;p&gt;Launch VIM: &lt;code&gt;$ vim &amp;lt;file/directory (optional)&amp;gt;&lt;/code&gt;&lt;br /&gt;
-Close current pane: &lt;code&gt;:q&lt;/code&gt;&lt;br /&gt;
-Quitting all panes: &lt;code&gt;:qa&lt;/code&gt;&lt;br /&gt;
-Save: &lt;code&gt;:w&lt;/code&gt;&lt;br /&gt;
-Save &amp;amp; Quit: &lt;code&gt;:wq&lt;/code&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;VIM Environment&lt;/h3&gt;
+&lt;p&gt;Launch VIM: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ vim &amp;lt;file/directory (optional)&amp;gt;&lt;/code&gt;&lt;br /&gt;
+Close current pane: &lt;code class=&quot;highlighter-rouge&quot;&gt;:q&lt;/code&gt;&lt;br /&gt;
+Quitting all panes: &lt;code class=&quot;highlighter-rouge&quot;&gt;:qa&lt;/code&gt;&lt;br /&gt;
+Save: &lt;code class=&quot;highlighter-rouge&quot;&gt;:w&lt;/code&gt;&lt;br /&gt;
+Save &amp;amp; Quit: &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;switching-input-modes&quot;&gt;Switching input modes&lt;/h3&gt;
-&lt;p&gt;Highlight mode: &lt;code&gt;v&lt;/code&gt;&lt;br /&gt;
-Insert mode (keyboard and arrow keys will work like normal): &lt;code&gt;i&lt;/code&gt;&lt;br /&gt;
-Viewing mode (if in highlight or insert mode): &lt;code&gt;Esc&lt;/code&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Switching input modes&lt;/h3&gt;
+&lt;p&gt;Highlight mode: &lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt;&lt;br /&gt;
+Insert mode (keyboard and arrow keys will work like normal): &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;&lt;br /&gt;
+Viewing mode (if in highlight or insert mode): &lt;code class=&quot;highlighter-rouge&quot;&gt;Esc&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;navigating-in-file-non-insert-mode&quot;&gt;Navigating In-File (Non-Insert Mode)&lt;/h3&gt;
-&lt;p&gt;Go to line: &lt;code&gt;&amp;lt;Line-Number&amp;gt;&lt;/code&gt; + &lt;code&gt;Shift&lt;/code&gt; + &lt;code&gt;G&lt;/code&gt;&lt;br /&gt;
-Back one word: &lt;code&gt;b&lt;/code&gt;&lt;br /&gt;
-Forward one word: &lt;code&gt;w&lt;/code&gt;&lt;br /&gt;
-Move to first non-blank character of line (Like &lt;code&gt;Command + Left&lt;/code&gt;): &lt;code&gt;_&lt;/code&gt;&lt;br /&gt;
-Move to last non-blank character of line (Like &lt;code&gt;Command + Right&lt;/code&gt;): &lt;code&gt;g_&lt;/code&gt;&lt;br /&gt;
-Beginning of line: &lt;code&gt;0&lt;/code&gt;&lt;br /&gt;
-End of line: &lt;code&gt;Shift + 4&lt;/code&gt; (&lt;code&gt;$&lt;/code&gt;)&lt;br /&gt;
-Page up: &lt;code&gt;Control + B&lt;/code&gt;&lt;br /&gt;
-Page Down: &lt;code&gt;Control + F&lt;/code&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Navigating In-File (Non-Insert Mode)&lt;/h3&gt;
+&lt;p&gt;Go to line: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Line-Number&amp;gt;&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;G&lt;/code&gt;&lt;br /&gt;
+Back one word: &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;&lt;br /&gt;
+Forward one word: &lt;code class=&quot;highlighter-rouge&quot;&gt;w&lt;/code&gt;&lt;br /&gt;
+Move to first non-blank character of line (Like &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + Left&lt;/code&gt;): &lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;&lt;br /&gt;
+Move to last non-blank character of line (Like &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + Right&lt;/code&gt;): &lt;code class=&quot;highlighter-rouge&quot;&gt;g_&lt;/code&gt;&lt;br /&gt;
+Beginning of line: &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;&lt;br /&gt;
+End of line: &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + 4&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;$&lt;/code&gt;)&lt;br /&gt;
+Page up: &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + B&lt;/code&gt;&lt;br /&gt;
+Page Down: &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + F&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Arrow key mappings:&lt;/strong&gt;&lt;br /&gt;
-Up: &lt;code&gt;k&lt;/code&gt;&lt;br /&gt;
-Down: &lt;code&gt;j&lt;/code&gt;&lt;br /&gt;
-Left: &lt;code&gt;h&lt;/code&gt;&lt;br /&gt;
-Right: &lt;code&gt;l&lt;/code&gt;&lt;/p&gt;
+Up: &lt;code class=&quot;highlighter-rouge&quot;&gt;k&lt;/code&gt;&lt;br /&gt;
+Down: &lt;code class=&quot;highlighter-rouge&quot;&gt;j&lt;/code&gt;&lt;br /&gt;
+Left: &lt;code class=&quot;highlighter-rouge&quot;&gt;h&lt;/code&gt;&lt;br /&gt;
+Right: &lt;code class=&quot;highlighter-rouge&quot;&gt;l&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Move &lt;code&gt;x&lt;/code&gt; positions: &lt;code&gt;&amp;lt;number&amp;gt; + &amp;lt;key&amp;gt;&lt;/code&gt;&lt;br /&gt;
-Example: Move down 10 lines: &lt;code&gt;10 + j&lt;/code&gt;&lt;br /&gt;
+&lt;p&gt;Move &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; positions: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;number&amp;gt; + &amp;lt;key&amp;gt;&lt;/code&gt;&lt;br /&gt;
+Example: Move down 10 lines: &lt;code class=&quot;highlighter-rouge&quot;&gt;10 + j&lt;/code&gt;&lt;br /&gt;
 &lt;strong&gt;Note&lt;/strong&gt;: Syntax supported by all navigation commands&lt;/p&gt;
 
-&lt;h3 id=&quot;opening-files&quot;&gt;Opening Files&lt;/h3&gt;
-&lt;p&gt;Fuzzy Search - Searches file names — &lt;code&gt;,t&lt;/code&gt;
-To cancel: &lt;code&gt;Command&lt;/code&gt; + &lt;code&gt;C&lt;/code&gt; or &lt;code&gt;:q&lt;/code&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Opening Files&lt;/h3&gt;
+&lt;p&gt;Fuzzy Search - Searches file names — &lt;code class=&quot;highlighter-rouge&quot;&gt;,t&lt;/code&gt;
+To cancel: &lt;code class=&quot;highlighter-rouge&quot;&gt;Command&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;C&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;:q&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;grepping&quot;&gt;Grepping&lt;/h3&gt;
-&lt;p&gt;Global find (searches content of file in project) — &lt;code&gt;,a&lt;/code&gt;&lt;br /&gt;
-The “current project” is whatever directory you &lt;code&gt;$ vim&lt;/code&gt; into&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Grepping&lt;/h3&gt;
+&lt;p&gt;Global find (searches content of file in project) — &lt;code class=&quot;highlighter-rouge&quot;&gt;,a&lt;/code&gt;&lt;br /&gt;
+The “current project” is whatever directory you &lt;code class=&quot;highlighter-rouge&quot;&gt;$ vim&lt;/code&gt; into&lt;/p&gt;
 
-&lt;p&gt;Search within file: &lt;code&gt;\&amp;lt;keyword on page&amp;gt;&lt;/code&gt;
-    * &lt;code&gt;n&lt;/code&gt; goes to next
-    * &lt;code&gt;Shift + N&lt;/code&gt; goes back&lt;/p&gt;
+&lt;p&gt;Search within file: &lt;code class=&quot;highlighter-rouge&quot;&gt;\&amp;lt;keyword on page&amp;gt;&lt;/code&gt;
+    * &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; goes to next
+    * &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + N&lt;/code&gt; goes back&lt;/p&gt;
 
-&lt;p&gt;Search and replace: &lt;code&gt;:%s/foo/bar/g&lt;/code&gt; (Replace &lt;code&gt;foo&lt;/code&gt; with &lt;code&gt;bar&lt;/code&gt; no confirmation. For confirmation, use &lt;code&gt;gc&lt;/code&gt; instead of &lt;code&gt;g&lt;/code&gt; at end)&lt;/p&gt;
+&lt;p&gt;Search and replace: &lt;code class=&quot;highlighter-rouge&quot;&gt;:%s/foo/bar/g&lt;/code&gt; (Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;bar&lt;/code&gt; no confirmation. For confirmation, use &lt;code class=&quot;highlighter-rouge&quot;&gt;gc&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;g&lt;/code&gt; at end)&lt;/p&gt;
 
-&lt;h3 id=&quot;highlighting-mode&quot;&gt;Highlighting mode&lt;/h3&gt;
-&lt;p&gt;Highlighting an entire line: &lt;code&gt;Shift + V&lt;/code&gt;
-Highlighting mode: &lt;code&gt;v&lt;/code&gt;
-Copy/yank: &lt;code&gt;y&lt;/code&gt;
-Paste: &lt;code&gt;p&lt;/code&gt;
-Paste above: &lt;code&gt;Shift + P&lt;/code&gt;
-Pasting in insert mode (having copied using the operating system): &lt;code&gt;Command + v&lt;/code&gt;
-Paste from clipboard with auto-indenting: &lt;code&gt;:set paste&lt;/code&gt; + &lt;code&gt;Command + V&lt;/code&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Highlighting mode&lt;/h3&gt;
+&lt;p&gt;Highlighting an entire line: &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + V&lt;/code&gt;
+Highlighting mode: &lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt;
+Copy/yank: &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;
+Paste: &lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt;
+Paste above: &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + P&lt;/code&gt;
+Pasting in insert mode (having copied using the operating system): &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + v&lt;/code&gt;
+Paste from clipboard with auto-indenting: &lt;code class=&quot;highlighter-rouge&quot;&gt;:set paste&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + V&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;panes&quot;&gt;Panes&lt;/h3&gt;
-&lt;p&gt;Opening new panes, start with: &lt;code&gt;control + w&lt;/code&gt;:
-    * &lt;code&gt;v&lt;/code&gt; is vertical split (focus on the new pane)&lt;br /&gt;
-    * &lt;code&gt;s&lt;/code&gt; is horizontal split&lt;br /&gt;
-    * &lt;code&gt;=&lt;/code&gt; makes all panes equal size&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Panes&lt;/h3&gt;
+&lt;p&gt;Opening new panes, start with: &lt;code class=&quot;highlighter-rouge&quot;&gt;control + w&lt;/code&gt;:
+    * &lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt; is vertical split (focus on the new pane)&lt;br /&gt;
+    * &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt; is horizontal split&lt;br /&gt;
+    * &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; makes all panes equal size&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Switch panes:&lt;/strong&gt;&lt;br /&gt;
-Move up: &lt;code&gt;control + j&lt;/code&gt;&lt;br /&gt;
-Move down: &lt;code&gt;control + k&lt;/code&gt;&lt;br /&gt;
-Move left: &lt;code&gt;control + h&lt;/code&gt;&lt;br /&gt;
-Move right: &lt;code&gt;control + l&lt;/code&gt;&lt;br /&gt;
-Close all except current: &lt;code&gt;control + o&lt;/code&gt;&lt;/p&gt;
+Move up: &lt;code class=&quot;highlighter-rouge&quot;&gt;control + j&lt;/code&gt;&lt;br /&gt;
+Move down: &lt;code class=&quot;highlighter-rouge&quot;&gt;control + k&lt;/code&gt;&lt;br /&gt;
+Move left: &lt;code class=&quot;highlighter-rouge&quot;&gt;control + h&lt;/code&gt;&lt;br /&gt;
+Move right: &lt;code class=&quot;highlighter-rouge&quot;&gt;control + l&lt;/code&gt;&lt;br /&gt;
+Close all except current: &lt;code class=&quot;highlighter-rouge&quot;&gt;control + o&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;other&quot;&gt;Other&lt;/h3&gt;
-&lt;p&gt;Undo: &lt;code&gt;u&lt;/code&gt;&lt;br /&gt;
-Redo: &lt;code&gt;control&lt;/code&gt; + &lt;code&gt;r&lt;/code&gt;&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Other&lt;/h3&gt;
+&lt;p&gt;Undo: &lt;code class=&quot;highlighter-rouge&quot;&gt;u&lt;/code&gt;&lt;br /&gt;
+Redo: &lt;code class=&quot;highlighter-rouge&quot;&gt;control&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Delete: &lt;code&gt;d&lt;/code&gt; –&amp;gt; Format: &lt;code&gt;d&lt;/code&gt; + &lt;code&gt;number (optional, default 1)&lt;/code&gt; + &lt;code&gt;action&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;d&lt;/code&gt; + &lt;code&gt;4&lt;/code&gt; + &lt;code&gt;w&lt;/code&gt; would delete the four next words&lt;/p&gt;
+&lt;p&gt;Delete: &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; –&amp;gt; Format: &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;number (optional, default 1)&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;4&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;w&lt;/code&gt; would delete the four next words&lt;/p&gt;
 
 &lt;p&gt;Creating new file from CL in VIM:
-&lt;code&gt;$ vim &amp;lt;file-name&amp;gt;&lt;/code&gt;&lt;br /&gt;
-Make sure you save before you quit using &lt;code&gt;:w&lt;/code&gt;&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ vim &amp;lt;file-name&amp;gt;&lt;/code&gt;&lt;br /&gt;
+Make sure you save before you quit using &lt;code class=&quot;highlighter-rouge&quot;&gt;:w&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Quitting: &lt;code&gt;:q&lt;/code&gt;&lt;br /&gt;
-Quitting without saving (and not being prompted): &lt;code&gt;:q!&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Quitting: &lt;code class=&quot;highlighter-rouge&quot;&gt;:q&lt;/code&gt;&lt;br /&gt;
+Quitting without saving (and not being prompted): &lt;code class=&quot;highlighter-rouge&quot;&gt;:q!&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Using &lt;code&gt;easymotion&lt;/code&gt;&lt;/strong&gt;&lt;br /&gt;
-Easymotion is a plugin that allows you to quickly move through the current file by highlighting all possible next positions for your cursor and adding a hotkey to them. Instead of typing &lt;code&gt;/div&lt;/code&gt; and pressing &lt;code&gt;n&lt;/code&gt; to cycle through to the instance of &lt;code&gt;div&lt;/code&gt; that you’re looking for in your code, you can simply type &lt;code&gt;s&lt;/code&gt; to initiate the &lt;code&gt;easymotion&lt;/code&gt; grepping, &lt;code&gt;di&lt;/code&gt; as your two character query (configurable in &lt;code&gt;.vimrc&lt;/code&gt; file), and type the key that is placed on the instance of what you’re looking for.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;easymotion&lt;/code&gt;&lt;/strong&gt;&lt;br /&gt;
+Easymotion is a plugin that allows you to quickly move through the current file by highlighting all possible next positions for your cursor and adding a hotkey to them. Instead of typing &lt;code class=&quot;highlighter-rouge&quot;&gt;/div&lt;/code&gt; and pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; to cycle through to the instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt; that you’re looking for in your code, you can simply type &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt; to initiate the &lt;code class=&quot;highlighter-rouge&quot;&gt;easymotion&lt;/code&gt; grepping, &lt;code class=&quot;highlighter-rouge&quot;&gt;di&lt;/code&gt; as your two character query (configurable in &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file), and type the key that is placed on the instance of what you’re looking for.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Commenting&lt;/strong&gt;&lt;br /&gt;
-To comment a line you’ve highlighted, type &lt;code&gt;gc&lt;/code&gt;&lt;br /&gt;
-To comment a line without highlighting, type &lt;code&gt;gcc&lt;/code&gt;&lt;/p&gt;
+To comment a line you’ve highlighted, type &lt;code class=&quot;highlighter-rouge&quot;&gt;gc&lt;/code&gt;&lt;br /&gt;
+To comment a line without highlighting, type &lt;code class=&quot;highlighter-rouge&quot;&gt;gcc&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;explorer&quot;&gt;Explorer&lt;/h3&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Explorer&lt;/h3&gt;
 &lt;p&gt;Opening up explorer:&lt;br /&gt;
-&lt;code&gt;:Explore&lt;/code&gt; or &lt;code&gt;:Exp&lt;/code&gt; + &lt;code&gt;Tab&lt;/code&gt; to complete it for you&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;:Explore&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;:Exp&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Tab&lt;/code&gt; to complete it for you&lt;/p&gt;
 
-&lt;p&gt;Navigation using &lt;code&gt;hjkl&lt;/code&gt;.&lt;br /&gt;
-When opening a file:
-1. Enter opens in same pane
-2. &lt;code&gt;o&lt;/code&gt; splits horizontally (opens below)
-3. &lt;code&gt;v&lt;/code&gt; splits vertically (opens to the side)&lt;/p&gt;
+&lt;p&gt;Navigation using &lt;code class=&quot;highlighter-rouge&quot;&gt;hjkl&lt;/code&gt;.&lt;br /&gt;
+When opening a file:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Enter opens in same pane&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;o&lt;/code&gt; splits horizontally (opens below)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt; splits vertically (opens to the side)&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;&lt;code&gt;-&lt;/code&gt; Up one level to parent&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt; Up one level to parent&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;gg&lt;/code&gt; - top of file/pane
-&lt;code&gt;Shift + G&lt;/code&gt; - bottom
-Go to line number: &lt;code&gt;&amp;lt;Line #&amp;gt; + Shift + G&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gg&lt;/code&gt; - top of file/pane
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + G&lt;/code&gt; - bottom
+Go to line number: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Line #&amp;gt; + Shift + G&lt;/code&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;additional-plugins-and-customizations&quot;&gt;Additional Plugins and Customizations&lt;/h1&gt;
-&lt;p&gt;### All Plugins
-* comment_vim
-* typescript-vim
-* vim-fugitive
-* supertab
-* tabular
-* rename.vim
-* goyo.vim
-* vim-vroom
-* auto_mkdir
-* ctrlp.vim
-* ag.vim
-* ctrlp-cmatcher
-* ack.vim
-* YouCompleteMe
-* indentline
-* vim-gitgutter
-* vim-airline
-* vim-multiple-cursors
-* vim-easymotion&lt;/p&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;All Plugins&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;comment_vim&lt;/li&gt;
+  &lt;li&gt;typescript-vim&lt;/li&gt;
+  &lt;li&gt;vim-fugitive&lt;/li&gt;
+  &lt;li&gt;supertab&lt;/li&gt;
+  &lt;li&gt;tabular&lt;/li&gt;
+  &lt;li&gt;rename.vim&lt;/li&gt;
+  &lt;li&gt;goyo.vim&lt;/li&gt;
+  &lt;li&gt;vim-vroom&lt;/li&gt;
+  &lt;li&gt;auto_mkdir&lt;/li&gt;
+  &lt;li&gt;ctrlp.vim&lt;/li&gt;
+  &lt;li&gt;ag.vim&lt;/li&gt;
+  &lt;li&gt;ctrlp-cmatcher&lt;/li&gt;
+  &lt;li&gt;ack.vim&lt;/li&gt;
+  &lt;li&gt;YouCompleteMe&lt;/li&gt;
+  &lt;li&gt;indentline&lt;/li&gt;
+  &lt;li&gt;vim-gitgutter&lt;/li&gt;
+  &lt;li&gt;vim-airline&lt;/li&gt;
+  &lt;li&gt;vim-multiple-cursors&lt;/li&gt;
+  &lt;li&gt;vim-easymotion&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;languages&quot;&gt;Languages&lt;/h3&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Languages&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;vim-coffee-script&lt;/li&gt;
   &lt;li&gt;vim-elixir&lt;/li&gt;
@@ -233,39 +239,36 @@ Go to line number: &lt;code&gt;&amp;lt;Line #&amp;gt; + Shift + G&lt;/code&gt;&l
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;further-customizations&quot;&gt;Further Customizations&lt;/h1&gt;
-&lt;p&gt;## Adding a Plug In
-1. Add the plugin to the &lt;code&gt;.vimrc&lt;/code&gt; file:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Plug &lt;span class=&quot;s1&quot;&gt;&amp;#39;Valloric/YouCompleteMe&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;h3 class=&quot;post-subheader&quot;&gt;Adding a Plug In&lt;/h3&gt;
 &lt;ol&gt;
-  &lt;li&gt;Source the file: &lt;code&gt;:source %&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Install the plugins: &lt;code&gt;:PlugInstall&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Add the plugin to the &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file: &lt;code class=&quot;highlighter-rouge&quot;&gt;Plug 'Valloric/YouCompleteMe'&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Source the file: &lt;code class=&quot;highlighter-rouge&quot;&gt;:source %&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Install the plugins: &lt;code class=&quot;highlighter-rouge&quot;&gt;:PlugInstall&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;suggestions&quot;&gt;Suggestions&lt;/h2&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Suggestions&lt;/h3&gt;
 &lt;ol&gt;
-  &lt;li&gt;Change &lt;code&gt;caps lock&lt;/code&gt; to &lt;code&gt;escape&lt;/code&gt; in System Preferecnes -&amp;gt; Keyboard -&amp;gt; Modifiers&lt;/li&gt;
+  &lt;li&gt;Change &lt;code class=&quot;highlighter-rouge&quot;&gt;caps lock&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;escape&lt;/code&gt; in System Preferecnes -&amp;gt; Keyboard -&amp;gt; Modifiers&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;in-development&quot;&gt;In Development&lt;/h2&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;In Development&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Undo closing a pane (reopen last pane)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;faqs&quot;&gt;FAQs&lt;/h2&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;FAQs&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;Does the mouse work? Yes!&lt;/li&gt;
-  &lt;li&gt;Open VIM tutorial: &lt;code&gt;$ vimtutor&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;What does &lt;code&gt;&amp;lt;C&amp;gt;&lt;/code&gt; map to? It maps to &lt;code&gt;Control&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Open VIM tutorial: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ vimtutor&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;What does &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;C&amp;gt;&lt;/code&gt; map to? It maps to &lt;code class=&quot;highlighter-rouge&quot;&gt;Control&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Fri, 04 Aug 2017 13:18:02 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</guid>
+        <link>http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</guid>
         
         
-        <category>programming</category>
+        <category>Programming</category>
         
       </item>
     
@@ -281,82 +284,84 @@ I’ll probably end up doing a more in-depth post on my thoughts after using it 
 &lt;br class=&quot;post-line-break&quot; /&gt;
 I’ll probably be fairly confident with my setup by the time school rolls around so I’m hoping I can start developing in VIM for all my personal, club, school, and work projects by the end of the summer. The learning curve is a bit steep, but once I’ve put in some practice I’m sure I’ll be faster than I was on Atom or Sublime. I think the difference is really that VIM is so malleable and lightweight that the you can keep pushing the upper bound of your macros, grepping, navigation speed, etc. — your productivity doesn’t ceiling out like it would on a normal text editor.
 &lt;br class=&quot;post-line-break&quot; /&gt;
-Check out my next blog post to see my personal VIM configuration — I’ve spent a fair amount of time messing around with it and I’m really enjoying it so far so definitely take a look if you’re at all interested.&lt;/p&gt;
+Check out my &lt;a href=&quot;http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html&quot;&gt;next blog post&lt;/a&gt; to see my personal VIM configuration — I’ve spent a fair amount of time messing around with it and I’m really enjoying it so far so definitely take a look if you’re at all interested.&lt;/p&gt;
 </description>
         <pubDate>Thu, 03 Aug 2017 13:02:56 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
+        <link>http://localhost:4000/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
         
         
-        <category>programming</category>
+        <category>Programming</category>
         
       </item>
     
       <item>
         <title>ES6 Tips and Tricks June 2017: Webpack Loaders, Regexes, and DNS Configuration</title>
         <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Using Raw Files with Webpack&lt;/h3&gt;
-&lt;p&gt;There are some files that are best used when imported as their raw contents. This includes, but is not limited to file extensions like: &lt;code&gt;.svg&lt;/code&gt;, &lt;code&gt;.md&lt;/code&gt;, and &lt;code&gt;.txt&lt;/code&gt;. For these situations, you must use the &lt;code&gt;raw-loader&lt;/code&gt; in your &lt;code&gt;webpack.config&lt;/code&gt; file:&lt;/p&gt;
+&lt;p&gt;There are some files that are best used when imported as their raw contents. This includes, but is not limited to file extensions like: &lt;code class=&quot;highlighter-rouge&quot;&gt;.svg&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.md&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;.txt&lt;/code&gt;. For these situations, you must use the &lt;code class=&quot;highlighter-rouge&quot;&gt;raw-loader&lt;/code&gt; in your &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config&lt;/code&gt; file:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Load markdown as raw text&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/\.md/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/node_modules/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;loader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;raw-loader&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Load markdown as raw text&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;md/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;node_modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;loader&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'raw-loader'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Using an &lt;code&gt;.svg&lt;/code&gt; file in React:&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Using an &lt;code class=&quot;highlighter-rouge&quot;&gt;.svg&lt;/code&gt; file in React:&lt;br /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;svgData&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;./image.svg&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;svgData&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./image.svg'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;cm&quot;&gt;/* React render() */&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;loading&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dangerouslySetInnerHTML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;loading&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dangerouslySetInnerHTML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Cleaning up Log Statements&lt;/h3&gt;
-&lt;p&gt;Developers use &lt;code&gt;console.log&lt;/code&gt; statements religiously — it’s the best way of debugging and tracking a browser or computer’s path through the code. One problem that arises is that &lt;code&gt;console.log&lt;/code&gt; statements are accidentally left in, which doesn’t reflect well if the log statements are clearly debuggers, or simply left in commented out. When deploying to production, &lt;code&gt;console.log&lt;/code&gt; statements should be removed. Because they permeate every corner of the project, I’ve found it’s easiest to remove them using regexes: Find &amp;amp; Replace. Here are the regexes for finding all lines with &lt;code&gt;console.log&lt;/code&gt; statements:&lt;/p&gt;
+&lt;p&gt;Developers use &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log&lt;/code&gt; statements religiously — it’s the best way of debugging and tracking a browser or computer’s path through the code. One problem that arises is that &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log&lt;/code&gt; statements are accidentally left in, which doesn’t reflect well if the log statements are clearly debuggers, or simply left in commented out. When deploying to production, &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log&lt;/code&gt; statements should be removed. Because they permeate every corner of the project, I’ve found it’s easiest to remove them using regexes: Find &amp;amp; Replace. Here are the regexes for finding all lines with &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log&lt;/code&gt; statements:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Commented out statements&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&amp;quot;\n *\/\/ console\.log\(.*\)&amp;quot;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Commented out statements&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;\n *\/\/ console\.log\(.*\)&quot;&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// Active statements&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&amp;quot;\n *console\.log\(.*\)&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;\n *console\.log\(.*\)&quot;&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// Commented out or still active&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&amp;quot;\n *\/?\/? console\.log\(.*\)&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;\n *\/?\/? console\.log\(.*\)&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Common Regex Statements&lt;/h3&gt;
 &lt;p&gt;I’ve started using regexes (regular expressions) more and more in my projects — specifically in Javascript — and I’ve found them very elegant and fun to use. I learned them briefly in class at school, but never really implemented them in full. My &lt;a href=&quot;https://devpost.com/software/sofly-scanner&quot;&gt;hackathon project&lt;/a&gt; did use a bit of natural language processing, however, it wasn’t to a huge scale. We mostly stuck to date and location parsing.
 &lt;br class=&quot;post-line-break&quot; /&gt;
 Here’s a simple email validation regex match statement in Javascript:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;validQuery&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;email@test.com&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;invalidQuery&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;I am not an email address&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;validQuery&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'email@test.com'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;invalidQuery&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'I am not an email address'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// Email regex from: https://stackoverflow.com/questions/46155/how-to-validate-email-address-in-javascript&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Notice: uses &amp;#39;/&amp;#39; instead of quotes&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;emailRegex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^(([^&amp;lt;&amp;gt;()\[\]\\.,;:\s@&amp;quot;]+(\.[^&amp;lt;&amp;gt;()\[\]\\.,;:\s@&amp;quot;]+)*)|(&amp;quot;.+&amp;quot;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Notice: uses '/' instead of quotes&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;emailRegex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;(([^&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;&amp;lt;&amp;gt;()&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\]\\&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;.,;:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\s&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;@&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;(\.[^&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;&amp;lt;&amp;gt;()&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\]\\&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;.,;:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\s&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;@&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;&quot;.+&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;((\[[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{1,3}\.[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{1,3}\.[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{1,3}\.[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{1,3}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;(([&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;a-zA-Z&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\-&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;a-zA-Z&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{2,}))&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;emailRegex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;validQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;emailRegex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;invalidQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;emailRegex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;invalidQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Getting the Current Directory in Javascript&lt;/h3&gt;
-&lt;p&gt;It’s really important that you use a reliable path resolving system when configuring your web apps. Packages like &lt;code&gt;ExpressJS&lt;/code&gt; and &lt;code&gt;Webpack&lt;/code&gt; rely on file paths to build and serve up your app so it’s essential that the way you get your current directory is reliable. There are a handful of ways of getting your current directory and navigating through it:&lt;br /&gt;
-&lt;strong&gt;Getting Directory&lt;/strong&gt;:&lt;br /&gt;
-1. Default: &lt;code&gt;__dirname // Often global — can simply access by calling this variable&lt;/code&gt;&lt;br /&gt;
-2. Using environment variables: &lt;code&gt;const __dirname = process.env.PWD;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;It’s really important that you use a reliable path resolving system when configuring your web apps. Packages like &lt;code class=&quot;highlighter-rouge&quot;&gt;ExpressJS&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Webpack&lt;/code&gt; rely on file paths to build and serve up your app so it’s essential that the way you get your current directory is reliable. There are a handful of ways of getting your current directory and navigating through it:&lt;br /&gt;
+&lt;strong&gt;Getting Directory&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Default: &lt;code class=&quot;highlighter-rouge&quot;&gt;__dirname // Often global — can simply access by calling this variable&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Using environment variables: &lt;code class=&quot;highlighter-rouge&quot;&gt;const __dirname = process.env.PWD;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;Navigating Files&lt;/strong&gt;:&lt;br /&gt;
-Use the &lt;code&gt;path&lt;/code&gt; library:&lt;/p&gt;
+Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; library:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;path&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;./client/dist&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Resolves the file path&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'path'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./client/dist'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Resolves the file path&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Modifying Local DNS&lt;/h3&gt;
 &lt;p&gt;Computers can easily be configured to change the Domain Name System (DNS). What this means is that you can override and map certain IP addresses to different URL names. For example, at work, I develop on my own Dev Box — a section of a computer somewhere that hosts my files. Because Moat has hundreds of these, it’s not economical to buy a domain name for each box. Instead, they are left unnamed and can only be accessed from the browser using their public IP address. When I’m modifying code, I hook into their private IP addresses. Instead of typing in the exact IP address every time you want to view your code, which is long and can easily be butchered, you can modify your local DNS and map that specific IP address to a human-readable URL.
 &lt;br class=&quot;post-line-break&quot; /&gt;
-Navigate to &lt;code&gt;/etc/&lt;/code&gt; (&lt;code&gt;$ cd /etc/&lt;/code&gt;) — notice it is prepended using a forward-slash, indiciating it is in the base directory. Next, open &lt;code&gt;hosts&lt;/code&gt; using VI, VIM, NANO, or any other text editor. Now modify that file using the following structure.&lt;/p&gt;
+Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;$ cd /etc/&lt;/code&gt;) — notice it is prepended using a forward-slash, indiciating it is in the base directory. Next, open &lt;code class=&quot;highlighter-rouge&quot;&gt;hosts&lt;/code&gt; using VI, VIM, NANO, or any other text editor. Now modify that file using the following structure.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;IP&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;IP&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;mf&quot;&gt;12.345&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;67.89&lt;/span&gt;    &lt;span class=&quot;nx&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;com&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;01.234&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;56.78&lt;/span&gt;    &lt;span class=&quot;nx&quot;&gt;test1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;com&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;test2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;mf&quot;&gt;01.234&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;56.78&lt;/span&gt;    &lt;span class=&quot;nx&quot;&gt;test1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;com&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;test2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Common IP Ranges&lt;/h3&gt;
 &lt;p&gt;Private IPv4 address spaces (&lt;a href=&quot;https://en.wikipedia.org/wiki/Private_network&quot;&gt;Source&lt;/a&gt;)&lt;/p&gt;
@@ -389,15 +394,15 @@ Navigate to &lt;code&gt;/etc/&lt;/code&gt; (&lt;code&gt;$ cd /etc/&lt;/code&gt;)
 &lt;/table&gt;
 </description>
         <pubDate>Mon, 31 Jul 2017 12:50:16 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</guid>
+        <link>http://localhost:4000/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</guid>
         
         <category>es6</category>
         
         <category>javascript</category>
         
         
-        <category>programming</category>
+        <category>Programming</category>
         
       </item>
     
@@ -418,17 +423,19 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
 &lt;p&gt;Josh worked freelance for about a year and talked about how it’s different from a 9-5 job. He said that working as a designer in isolation is one of the hardest things about it. There’s no one to bounce ideas off of, brainstorm, or even give feedback on your work. He also recommended that freelance work, in general, should be intended to build a consistent stream of work. All too often, you can fall into the trap of building for many different clients with small tasks as opposed to building up a solid relation to a handful (he said about four) brands doing long term work. It’s better when you know the company you’re designing for well and it’s much more rewarding seeing the problem and solution play out over long periods of time. I’ll definitely keep it in mind moving forward seeing as freelance is something that I can imagine myself doing in the future.
 &lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 &lt;h3 class=&quot;post-subheader&quot;&gt;Design Systems&lt;/h3&gt;
-&lt;p&gt;Because of my current project at work and what I’ve experienced talking to designers recently, I really want to build my own design system/pattern/toolkit. Initially I wanted to build my own design system using the &lt;a href=&quot;http://bradfrost.com/blog/post/atomic-web-design/&quot;&gt;atomic design method&lt;/a&gt; — building buttons, fonts, icons, inputs, etc. that serve as atoms. These atoms then get stacked into molecules, which then stack into organisms, then templates, then finally to pages. It’s a really neat concept and I really want to do it eventually, but because I’m juggling 3 projects (with deadlines) and work right now, I just don’t think I’ll have the hours to devote to it. A more feasible endeavor would be a design pattern, a frontend framework, or a design toolkit — just a way of standardizing the way my buttons, headers, labels, icons, etc. look. Here are a couple of good reference examples:&lt;br /&gt;
-1. &lt;a href=&quot;http://blueprintjs.com/&quot;&gt;BlueprintJS&lt;/a&gt; - “React-based UI Toolkit”&lt;br /&gt;
-2. &lt;a href=&quot;http://patternlab.io/&quot;&gt;Pattern Lab&lt;/a&gt; — An atomic design system&lt;br /&gt;
-3. &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; — Frontend framework&lt;br /&gt;
-4. &lt;a href=&quot;https://www.lightningdesignsystem.com/&quot;&gt;Lightning Design&lt;/a&gt; - Salesforce’s Design System&lt;br /&gt;
-5. &lt;a href=&quot;https://material.io/&quot;&gt;Google Material Design&lt;/a&gt; - Google’s Design System&lt;br /&gt;
-6. &lt;a href=&quot;http://design-system.lostmy.name/&quot;&gt;Lost My Name Design System&lt;/a&gt; - A great, clean React-based design system&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Because of my current project at work and what I’ve experienced talking to designers recently, I really want to build my own design system/pattern/toolkit. Initially I wanted to build my own design system using the &lt;a href=&quot;http://bradfrost.com/blog/post/atomic-web-design/&quot;&gt;atomic design method&lt;/a&gt; — building buttons, fonts, icons, inputs, etc. that serve as atoms. These atoms then get stacked into molecules, which then stack into organisms, then templates, then finally to pages. It’s a really neat concept and I really want to do it eventually, but because I’m juggling 3 projects (with deadlines) and work right now, I just don’t think I’ll have the hours to devote to it. A more feasible endeavor would be a design pattern, a frontend framework, or a design toolkit — just a way of standardizing the way my buttons, headers, labels, icons, etc. look. Here are a couple of good reference examples:&lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blueprintjs.com/&quot;&gt;BlueprintJS&lt;/a&gt; - “React-based UI Toolkit”&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://patternlab.io/&quot;&gt;Pattern Lab&lt;/a&gt; — An atomic design system&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; — Frontend framework&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lightningdesignsystem.com/&quot;&gt;Lightning Design&lt;/a&gt; - Salesforce’s Design System&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://material.io/&quot;&gt;Google Material Design&lt;/a&gt; - Google’s Design System&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://design-system.lostmy.name/&quot;&gt;Lost My Name Design System&lt;/a&gt; - A great, clean React-based design system&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         <pubDate>Mon, 24 Jul 2017 07:49:12 -0400</pubDate>
-        <link>http://khou22.github.io/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</guid>
+        <link>http://localhost:4000/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</link>
+        <guid isPermaLink="true">http://localhost:4000/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</guid>
         
         
         <category>design</category>
@@ -440,33 +447,33 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
         <description>&lt;p&gt;I started using TypeScript for my next project at Moat and I have to say I really love it. I’ve always been a fan of type safe language — largely for the compile-time debugging, code completion, and readability — which is why I’m such a huge fan of Swift. TypeScript has given me the structure and safety that I’ve found with Java and Swift, and has reinvigorated my love for web development. I’ve always considered web development to be somewhat of the “wild west” — not too much standardization and with no checks and balances to minimize errors.&lt;/p&gt;
 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Benefits&lt;/h3&gt;
-&lt;p&gt;Using TypeScript has eliminated a whole category of bugs that would be present in traditional Javascript. I’m using &lt;code&gt;atom-typescript (v11.0.6)&lt;/code&gt; which includes a live linter that checks my code on “compile” rather than during runtime. Because of this, my development time (after I got the hang of some syntax complications) was significantly increased. I no longer had unexpected types, undefined variables, and missing properties on objects. TypeScript can track the type of variables to ensure that functions always receive their specified inputs, variables don’t change types unless explicitly allowed, and code doesn’t attempt to access object attributes that aren’t actually there (also helps with spelling mistakes).&lt;/p&gt;
+&lt;p&gt;Using TypeScript has eliminated a whole category of bugs that would be present in traditional Javascript. I’m using &lt;code class=&quot;highlighter-rouge&quot;&gt;atom-typescript (v11.0.6)&lt;/code&gt; which includes a live linter that checks my code on “compile” rather than during runtime. Because of this, my development time (after I got the hang of some syntax complications) was significantly increased. I no longer had unexpected types, undefined variables, and missing properties on objects. TypeScript can track the type of variables to ensure that functions always receive their specified inputs, variables don’t change types unless explicitly allowed, and code doesn’t attempt to access object attributes that aren’t actually there (also helps with spelling mistakes).&lt;/p&gt;
 
 &lt;p&gt;It has huge benefits with scalability because of the code clarity and readability. Deciphering poorly written code is a nightmare, but if it had type safety, using the interfaces alone would provide a good map of what’s going on. Furthermore, you wouldn’t have to spend ten minutes to trace the shape of the return object on a function. Team members could better understand the input and output of your code making compartmentalization and modulation a lot easier and more natural.&lt;/p&gt;
 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Drawbacks&lt;/h3&gt;
 &lt;p&gt;One of the major drawbacks to TypeScript is efficiency. For small scale projects without many complicated objects and nested types, TypeScript might slow your development time down. TypeScript excels in complicated projects where you or a team member must use a complicated object with doubly nested arrays, objects, and dictionaries. This is where knowing exactly what variables you will have at your hands is a lifesaver.&lt;/p&gt;
 
-&lt;p&gt;TypeScript can also be annoying when the type you expect to receive either doesn’t or varies. Even though you can “turn off” type safety by either not declaring a type or using &lt;code&gt;any&lt;/code&gt; as the type, it’s still annoying when the linter complains about something that isn’t really within your control.&lt;/p&gt;
+&lt;p&gt;TypeScript can also be annoying when the type you expect to receive either doesn’t or varies. Even though you can “turn off” type safety by either not declaring a type or using &lt;code class=&quot;highlighter-rouge&quot;&gt;any&lt;/code&gt; as the type, it’s still annoying when the linter complains about something that isn’t really within your control.&lt;/p&gt;
 
 &lt;p&gt;I’m sure I’ll find many more annoyances after I’ve gotten deeper into it. After all, I’ve only been using it for about a day so I’m probably naive and buying into the initial hype. Regardless, I’m having fun with TypeScript and opinions are better than no opinions.&lt;/p&gt;
 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Interfaces&lt;/h3&gt;
 &lt;p&gt;I recognized TypeScript’s true power when I was setting up interfaces. Interfaces are like kind of like Structures in Swift without the variable declaration. They do not contain variables or values. Instead, they essentially map out an object’s shape. For example, I’ve been playing around with GitHub’s API for a project and here are two of my interfaces:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Declare shape of repository&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Declare shape of repository&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GitHubRepository&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;kr&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GitHubFile&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&quot;nl&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now, I can use GitHubFile or GitHubRepository as a type just like I would with any other variable type. I have the added benefit of code completion now. When I type a variable name of type GitHubFile and press period, a list of properties and their expected type shows up. It enables IDE’s to be much smarter about their suggestions to the point where it’s honestly approaching Xcode level.
 &lt;img src=&quot;./../../../../media/blog/images/TypeScript-Intro/atom_code_completion_typescript.png&quot; class=&quot;iPhone-screenshots-large&quot; /&gt;&lt;/p&gt;
@@ -474,35 +481,35 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Basic Syntaxes&lt;/h3&gt;
 &lt;p&gt;&lt;b&gt;Arrays:&lt;/b&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;b&gt;Functions:&lt;/b&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getReadme&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GitHubFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;…&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getReadme&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GitHubFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;…&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;b&gt;Casting:&lt;/b&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;any&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;any&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;random&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;b&gt;Defining Generics:&lt;/b&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// A promise function that declares a GitHubFile as the promise response&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GitHubFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// A promise function that declares a GitHubFile as the promise response&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;GitHubFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Final Thoughts&lt;/h3&gt;
 &lt;p&gt;Overall, I’ve been very satisfied with TypeScript so far. The combination of code completion, reduced debugging time, and clean structure has made for a hugely satisfying development process. I’m thinking about refactoring my NodeJS Heroku server to TypeScript just so I can keep using it. Hope this post was helpful and I highly recommend you give TypeScript a shot!&lt;/p&gt;
 </description>
         <pubDate>Fri, 14 Jul 2017 13:40:33 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</guid>
+        <link>http://localhost:4000/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</guid>
         
         <category>javascript</category>
         
         <category>es6</category>
         
         
-        <category>programming</category>
+        <category>Programming</category>
         
       </item>
     
@@ -545,11 +552,11 @@ As I’ve mentioned earlier, I’ve been working with massive JSON objects often
 It turns the page into a text editor of sorts and you can compress objects and arrays very easily. It’ll use syntax highlighting and you can customize the font, text size, and more. Overall, just makes the process of looking at JSON much more enjoyable (restoring the romance in data if I may). It’s really useful when you want to compare two different objects that are separated by a massive, nested array. You can simply compress the array and it becomes infinitely cleaner to look at.&lt;/p&gt;
 </description>
         <pubDate>Sat, 01 Jul 2017 13:06:18 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</guid>
+        <link>http://localhost:4000/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</guid>
         
         
-        <category>programming</category>
+        <category>Programming</category>
         
       </item>
     
@@ -558,19 +565,19 @@ It turns the page into a text editor of sorts and you can compress objects and a
         <description>&lt;h1 id=&quot;create-an-npm-environment&quot;&gt;Create an NPM Environment&lt;/h1&gt;
 &lt;p&gt;First, you need to create an NPM environment for your library so that NPM knows what dependencies and scripts are associated with the library. Run:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm init&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Follow the instructions and it’ll attempt to create a proper package.json for your project.&lt;/p&gt;
 
 &lt;h1 id=&quot;installing-dependencies&quot;&gt;Installing Dependencies&lt;/h1&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install --save react-redux&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install --save react-redux&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install --save-dev babel-core&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install --save-dev babel-core&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Global installation&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install -g eslint&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install -g eslint&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h1 id=&quot;useful-dev-tools&quot;&gt;Useful Dev Tools&lt;/h1&gt;
 &lt;p&gt;Linter: Check for coding errors — saves a trip to the browser (Airbnb’s linter is useful)
@@ -578,7 +585,7 @@ Webpack: For building and compiling JSX, ES6, etc. It will create static site wi
 
 &lt;h1 id=&quot;use-github-repo-as-the-public-npm-package&quot;&gt;Use GitHub Repo as the Public NPM Package&lt;/h1&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm i git://github.com/user/project.git#commit-ish --save&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm i git://github.com/user/project.git#commit-ish --save&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;File structure of GitHub repo if you want to use it as a public package:
 library-name/
@@ -587,11 +594,11 @@ library-name/
     src/&lt;/p&gt;
 </description>
         <pubDate>Tue, 27 Jun 2017 06:17:34 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</guid>
+        <link>http://localhost:4000/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</guid>
         
         
-        <category>programming</category>
+        <category>Programming</category>
         
       </item>
     
@@ -602,60 +609,60 @@ library-name/
 &lt;h3 class=&quot;post-subheader&quot;&gt;Concatenation&lt;/h3&gt;
 &lt;p&gt;One strange thing that I’ve noticed is that some ES6 linters do not allow you to concatenate Strings using the normal ‘+’ operation. They also don’t allow you use double quotes and force you to stick to single quotes when hard coding Strings. I’m not entirely sure why this is the case and I haven’t had time to look it up yet, but I think it has something to do with the way the compiler transforms the ES6 into static ES5 files for the browser. My guess is that the compiler needs to use double quotes and doesn’t want the code to mess with its compile scripts/process. Anyways, here’s a new way you can concatenate:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;154&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Notice the single quotes&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'154'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Notice the single quotes&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;// When concatenating, use the &amp;quot;\`&amp;quot; quotation mark (normally shares the same key as the &amp;#39;~&amp;#39;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// When concatenating, use the &quot;\`&quot; quotation mark (normally shares the same key as the '~')&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// This works with any String convertible data type&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data_table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Result: &amp;quot;/data_table?id=154&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Result: &quot;/data_table?id=154&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 &lt;h3 class=&quot;post-subheader&quot;&gt;Updating a Few Properties in an Object&lt;/h3&gt;
 &lt;p&gt;This will allow you to return a deep copy of your object without having to write out every single property value. It’s really useful when you’re updating a state in React or Redux.&lt;br /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;previousState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;propertyToUpdate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;previousState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;propertyToUpdate&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&quot;na&quot;&gt;propertyToUpdate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;previousState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;propertyToUpdate&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 &lt;h3 class=&quot;post-subheader&quot;&gt;Event Handler&lt;/h3&gt;
 &lt;p&gt;I came across this useful tidbit when using the &lt;a href=&quot;https://github.com/JedWatson/react-select&quot; target=&quot;_blank&quot;&gt;React-Select&lt;/a&gt; library for my project at work. It is an open source, purely React dropdown list that I would definitely recommend to anyone in need of a dropdown. I was attempting to customize the main component and found a property called arrorRender with the usage description: “Renders a custom drop-down arrow to be shown in the right-hand side of the select: arrowRenderer({ onMouseDown, isOpen })” I’m familiar with event handlers, but I had never seen this style of documentation before. What this means, is that the arrowRenderer is a function that returns a DOM node to be used in place of the default arrow icon. The function takes an object input with the properties onMouseDown and isOpen so that there can be more complex renderings. Here was my rendering function:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Custom dropdown icon for React-Select&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Custom dropdown icon for React-Select&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;arrowRenderer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dropdownArrow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/path/to/image&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Dropdown arrow&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchIcon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/path/to/image&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Magnifying glass&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;imgURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isOpen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchIcon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dropdownArrow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Determine which to use&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dropdownArrow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/path/to/image'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Dropdown arrow&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchIcon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/path/to/image'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Magnifying glass&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;imgURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isOpen&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchIcon&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dropdownArrow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Determine which to use&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imgURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;100%&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;presentation&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/span&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imgURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;presentation&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/span&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;In this function, I am using the isOpen state to choose which image icon to render in the select input. You may not have seen this notation before and it’s definitely useful to remember.
 &lt;br class=&quot;post-line-break&quot; /&gt;
 Another useful event handler is the ‘input’ tag’s built in onBlur() event that triggers when the user removes focus from the input element. Like the onFocus() handler, onBlur() can be assigned to a custom function.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// The event handler function&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// The event handler function&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;I&amp;#39;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ve&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;been&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;triggered&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'I'&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ve&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;been&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;triggered&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- The HTML --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autoComplete=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;off&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autoCorrect=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;off&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;spellCheck=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;false&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;className=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;select2-input&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onFocus=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;{update}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onBlur=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;{update}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- The HTML --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autoComplete=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;off&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;autoCorrect=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;off&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;spellCheck=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;className=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;select2-input&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onFocus=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;{update}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onBlur=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;{update}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Preserving &#39;this&#39; When Using React Props&lt;/h3&gt;
+&lt;h3 class=&quot;post-subheader&quot;&gt;Preserving 'this' When Using React Props&lt;/h3&gt;
 &lt;p&gt;In ES6, ‘this’ is not generally preserved which leads to some difficult workarounds when passing functions from one component to its children. Luckily, there is a technique that can be generally applicable to most situations that solves this issue. Many linters prevent the use of ‘.bind(this)’ so that is off the table. However, the block statement function ensures that ‘this’ pertains to the right scope. It is especially useful when you have to pass variables in as inputs. Here is an ES6 React example of this:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;react&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'react'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SomeComponent&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;clicked&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// &amp;#39;this&amp;#39; refers to the component rather than the window&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// 'this' refers to the component rather than the window&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;someState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;someState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
@@ -663,24 +670,24 @@ Another useful event handler is the ‘input’ tag’s built in onBlur() event 
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
             &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
                 &lt;span class=&quot;nx&quot;&gt;Good&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Example&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;button&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;clicked&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;I&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/button&amp;gt;&lt;/span&gt;
-
-                &lt;span class=&quot;nx&quot;&gt;This&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;won&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;t preserve &amp;#39;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;will&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;crash&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;button&amp;quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;clicked&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/div&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;button&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;clicked&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;I&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;work&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;This&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;won&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'t preserve '&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;your&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;will&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;crash&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;button&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;clicked&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Wed, 14 Jun 2017 13:50:35 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</guid>
+        <link>http://localhost:4000/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</guid>
         
         <category>es6</category>
         
         
-        <category>programming</category>
+        <category>Programming</category>
         
       </item>
     
@@ -693,60 +700,62 @@ Another useful event handler is the ‘input’ tag’s built in onBlur() event 
 State changes will result in a callback called the reducer function. It is imperative that this function be a pure function and it must return a new object, &lt;em&gt;not a reference to the input&lt;/em&gt;. In most cases, you do not need to recreate the entire object. You can keep the references to the objects properties, but the master reference must be different — just change the variable(s) that need to be changed.&lt;br /&gt;
 &lt;em&gt;Sidenote: You can use an expect(…).toEqual(…) to debug in Javascript. They act like Java assertion statements&lt;/em&gt;
 &lt;br class=&quot;post-line-break&quot; /&gt;
-It is also important that the reducer functions consider all possible inputs of an action. By convention, undefined inputs will return the initial statement. A reducer accepts a state and an action. In the following implementation, here are a few important redux API’s to keep in mind:
-* store = createStore(instanceVarToUpdate) lets Redux know which instance to watch
-* store.getState() → get value of variable
-* store.subscribe(() =&amp;gt; { … }); // Callback when variable changes — does not run during the initial state
-* store.dispatch() → A function call that triggers an action manually
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+It is also important that the reducer functions consider all possible inputs of an action. By convention, undefined inputs will return the initial statement. A reducer accepts a state and an action. In the following implementation, here are a few important redux API’s to keep in mind:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;store = createStore(instanceVarToUpdate) lets Redux know which instance to watch&lt;/li&gt;
+  &lt;li&gt;store.getState() → get value of variable&lt;/li&gt;
+  &lt;li&gt;store.subscribe(() =&amp;gt; { … }); // Callback when variable changes — does not run during the initial state&lt;/li&gt;
+  &lt;li&gt;store.dispatch() → A function call that triggers an action manually
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;implementation&quot;&gt;Implementation&lt;/h1&gt;
 &lt;p&gt;There are a few main pieces when implementing Redux with ReactJS. It centers around the ‘store’ or class that controls the global instance variables. In this explanation, we will use a simple counter as the example store. It simply tracks a number and has two API endpoint actions: increment by one, decrement by one.&lt;/p&gt;
 
 &lt;p&gt;First, we must write out a simple React component so that we have something to connect our redux store to. Install the React NPM package so that we can use the framework.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install --save react&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm install --save react&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now we must create the controller (written in ES6).&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;react&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Import the React NPM package&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Import the React NPM package&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// React Component&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Rendering function&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
       &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/h1&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onIncrement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/button&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onDecrement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Subtract&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/button&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/div&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onIncrement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onDecrement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Subtract&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;As we will see later, we will pass in the value of the counter and two functions (increment and decrement) from the store we will eventually create.
 &lt;br class=&quot;post-line-break&quot; /&gt;
 &lt;br class=&quot;post-line-break&quot; /&gt;
 To set up our store, we must first install redux and use the –save option to include it in our package.json:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install --save redux&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm install --save redux&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
 &lt;br class=&quot;post-line-break&quot; /&gt;
 Now we must write the code for the store itself. The store is actually an object type generated running the createStore() function in the redux package on a class. The code is included below. Notice how the function accepts an action and does not actually modify the state — it is a &lt;strong&gt;pure&lt;/strong&gt; function. In this example, the state is the value of the counter and it is initially set to 0. It is written in ES6.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// counterStore.js&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createStore&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;redux&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get the createStore export&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// counterStore.js&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createStore&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;redux&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get the createStore export&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// Setup the Redux instance&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;counter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Initially at 0&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Feedback&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Use a switch to determine what action to take&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;INCREMENT&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'INCREMENT'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;DECREMENT&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'DECREMENT'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -755,64 +764,64 @@ Now we must write the code for the store itself. The store is actually an object
 &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// Export the store so that it can used in other files&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
 &lt;br class=&quot;post-line-break&quot; /&gt;
 Next, we will link the store with our React class so that it can dynamically update the frontend. We include the store as a local variable in the file using the require() statement:&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;./counterStore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./counterStore&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;em&gt;Side Note: In ES6, you can include exports from other JS files using brackets or no brackets. If there is a default export statement in the file, you do not have to use brackets and any import statement will simply load the default export as the variable name you specified. If you do not have a default export, want to access a number of different exports, or want to access a specific export, you must use the brackets and use the exact name of the export. (&lt;a href=&quot;https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281&quot;&gt;citation&lt;/a&gt;)&lt;/em&gt;
 &lt;br class=&quot;post-line-break&quot; /&gt;
 Now we will create a rendering function, using ReactDOM to inject our HTML into the DOM.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;./style.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Include CSS stylesheet&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;react&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Include React&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ReactDom&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;react-dom&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ReactDOM to load our component into the page&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;./style.css&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Include CSS stylesheet&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Include React&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ReactDom&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;react-dom&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ReactDOM to load our component into the page&lt;/span&gt;
 
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;./content&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get our Counter React component&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;./counterStore&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Don&amp;#39;t use brackets because it is the default export&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./content&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get our Counter React component&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./counterStore&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Don't use brackets because it is the default export&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// Render function so that we can set it as a callback every time the store variable instance is modified&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// We are also passing in the counter value and increment/decrement functions&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// The component is rendered in the element with the id: &amp;#39;main&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// The component is rendered in the element with the id: 'main'&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;ReactDom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt;
       &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
       &lt;span class=&quot;nx&quot;&gt;onIncrement&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dispatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;INCREMENT&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dispatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'INCREMENT'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
       &lt;span class=&quot;nx&quot;&gt;onDecrement&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dispatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;DECREMENT&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dispatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'DECREMENT'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;main&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;sr&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,
+&lt;/span&gt;    &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'main'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// Subscribe to the live updates&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// This will run the function &amp;#39;render&amp;#39; every time the store encounters a change&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// This will run the function 'render' every time the store encounters a change&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subscribe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// Call it once manually to push it into the DOM because it will only render on a change&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// If we don&amp;#39;t manually call it, there can be no changes to put it in the dom in the first place&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;c1&quot;&gt;// If we don't manually call it, there can be no changes to put it in the dom in the first place&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-# Closing Comments
-Hope you were able to follow this brief tutorial! It is loosely based on the free course on egghead.io on &lt;a href=&quot;http://webpack.github.io/docs/tutorials/getting-started/&quot; target=&quot;\_blank&quot;&gt;Redux and React&lt;/a&gt;. The full code can be found &lt;a href=&quot;https://github.com/khou22/NodeJSPractice/tree/master/Redux&quot; target=&quot;\_blank&quot;&gt;on my GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;closing-comments&quot;&gt;Closing Comments&lt;/h1&gt;
+&lt;p&gt;Hope you were able to follow this brief tutorial! It is loosely based on the free course on egghead.io on &lt;a href=&quot;http://webpack.github.io/docs/tutorials/getting-started/&quot; target=&quot;\_blank&quot;&gt;Redux and React&lt;/a&gt;. The full code can be found &lt;a href=&quot;https://github.com/khou22/NodeJSPractice/tree/master/Redux&quot; target=&quot;\_blank&quot;&gt;on my GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 13 Jun 2017 06:26:07 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</guid>
+        <link>http://localhost:4000/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</guid>
         
         <category>reactjs</category>
         
         
-        <category>programming</category>
+        <category>Programming</category>
         
       </item>
     
@@ -870,15 +879,15 @@ Other problems we encountered include extracting the name of the event, extracti
 &lt;p&gt;All in all, it was a very successful hackathon! As we were both freshman, we were definitley the underdog in this hackathon and we made a name for ourselves! Some professors became interested in our project and want us to build it out so that students can actually use it! We will likely spend the summer completing the project so that come fall, it will be widely used on campus! It was really exciting and well worth the lack of sleep. Check out the Devpost submission &lt;a href=&quot;https://devpost.com/software/sofly-scanner&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
 </description>
         <pubDate>Sun, 09 Apr 2017 07:56:00 -0400</pubDate>
-        <link>http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly--an-ios-app-to-scan-flyers-on-campus.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly--an-ios-app-to-scan-flyers-on-campus.html</guid>
+        <link>http://localhost:4000/programming/2017/04/09/hackprinceton-2017-sofly-an-ios-app-to-scan-flyers-on-campus.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2017/04/09/hackprinceton-2017-sofly-an-ios-app-to-scan-flyers-on-campus.html</guid>
         
         <category>ios</category>
         
         <category>swift</category>
         
         
-        <category>programming</category>
+        <category>Programming</category>
         
       </item>
     

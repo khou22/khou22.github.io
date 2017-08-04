@@ -779,11 +779,20 @@ article li {
   list-style-position: outside; }
 article h1 {
   margin-bottom: 12px; }
+article p {
+  line-height: 22px; }
 article ol {
   padding-left: 40px; }
-article code {
+article ul {
+  padding-left: 40px; }
+article .highlighter-rouge {
   font-size: 12px !important;
-  padding: 2px 2px; }
+  padding: 2px 2px;
+  color: #111;
+  background-color: #eee;
+  border: 1px solid #dbdbdb; }
+article pre {
+  font-size: 12px !important; }
 article strong {
   color: black; }
 

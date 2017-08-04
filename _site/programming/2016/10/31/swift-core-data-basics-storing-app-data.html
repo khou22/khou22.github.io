@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2016/10/31/swift-core-data-basics-storing-app-data.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2016/10/31/swift-core-data-basics-storing-app-data.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,46 +198,9 @@
   
 
     
-      
-    
 
     
-        
-        
-          
-            
-                
-                
-            
-        
-          
-            
-                
-                
-            
-        
-          
-            
-                
-                
-            
-        
-          
-            
-                
-                
-            
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -288,49 +251,49 @@ The Core Data editor is relatively intuitive. Create an entity by pressing the �
 <h3 class="post-subheader">Saving to Core Data</h3>
 <p>Import the CoreData module in whichever file your view controller lives in. Core Data objects are returned as a variety of object types, but the most basic is a “NSManagedObject.” Below is an example of how you would retrieve Core Data:</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">// Entity: “Person”</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">// Entity: “Person”</span>
 <span class="c1">// Attribute: “name”</span>
-<span class="k">var</span> <span class="n">people</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSManagedObject</span><span class="p">]()</span>
-<span class="k">let</span> <span class="n">person</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="k">let</span> <span class="n">name</span> <span class="o">=</span> <span class="n">person</span><span class="p">.</span><span class="n">valueForKey</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">)</span> <span class="kt">as</span><span class="o">?</span> <span class="n">String</span> <span class="c1">// Xcode doesn’t know what type the value is</span></code></pre></div>
+<span class="k">var</span> <span class="nv">people</span> <span class="o">=</span> <span class="p">[</span><span class="kt">NSManagedObject</span><span class="p">]()</span>
+<span class="k">let</span> <span class="nv">person</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="n">person</span><span class="o">.</span><span class="nf">valueForKey</span><span class="p">(</span><span class="s">"name"</span><span class="p">)</span> <span class="k">as?</span> <span class="kt">String</span> <span class="c1">// Xcode doesn’t know what type the value is</span></code></pre></figure>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">Writing to Core Data</h3>
 <p>This function is how to save a “name” String attribute to an entity, “Person.”</p>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">func</span> <span class="nf">saveName</span><span class="p">(</span><span class="nl">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">let</span> <span class="n">appDelegate</span> <span class="o">=</span> <span class="bp">UIApplication</span><span class="p">.</span><span class="n">sharedApplication</span><span class="p">().</span><span class="n">delegate</span> <span class="kt">as</span><span class="o">!</span> <span class="n">AppDelegate</span> <span class="c1">// Access the app delegate in order to save to Core Data</span>
-  <span class="k">let</span> <span class="n">managedContext</span> <span class="o">=</span> <span class="n">appDelegate</span><span class="p">.</span><span class="n">managedObjectContext</span> <span class="c1">// Get managed object context</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">saveName</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">let</span> <span class="nv">appDelegate</span> <span class="o">=</span> <span class="kt">UIApplication</span><span class="o">.</span><span class="nf">sharedApplication</span><span class="p">()</span><span class="o">.</span><span class="n">delegate</span> <span class="k">as!</span> <span class="kt">AppDelegate</span> <span class="c1">// Access the app delegate in order to save to Core Data</span>
+  <span class="k">let</span> <span class="nv">managedContext</span> <span class="o">=</span> <span class="n">appDelegate</span><span class="o">.</span><span class="n">managedObjectContext</span> <span class="c1">// Get managed object context</span>
 
-  <span class="k">let</span> <span class="n">entity</span> <span class="o">=</span> <span class="bp">NSEntityDescription</span><span class="p">.</span><span class="n">entityForName</span><span class="p">(</span><span class="s">&quot;Person&quot;</span><span class="p">,</span> <span class="nl">inManagedObjectContext</span><span class="p">:</span> <span class="n">managedContext</span><span class="p">)</span> <span class="c1">// Identify the entity</span>
+  <span class="k">let</span> <span class="nv">entity</span> <span class="o">=</span> <span class="kt">NSEntityDescription</span><span class="o">.</span><span class="nf">entityForName</span><span class="p">(</span><span class="s">"Person"</span><span class="p">,</span> <span class="nv">inManagedObjectContext</span><span class="p">:</span> <span class="n">managedContext</span><span class="p">)</span> <span class="c1">// Identify the entity</span>
 
   <span class="c1">// Create a new instance of Core Data and store temporary on the managedContext</span>
-  <span class="k">let</span> <span class="n">person</span> <span class="o">=</span> <span class="bp">NSManagedObject</span><span class="p">(</span><span class="nl">entity</span><span class="p">:</span> <span class="n">entity</span><span class="o">!</span><span class="p">,</span> <span class="nl">insertIntoManagedObjectContext</span><span class="p">:</span> <span class="n">managedContext</span><span class="p">)</span>
+  <span class="k">let</span> <span class="nv">person</span> <span class="o">=</span> <span class="kt">NSManagedObject</span><span class="p">(</span><span class="nv">entity</span><span class="p">:</span> <span class="n">entity</span><span class="o">!</span><span class="p">,</span> <span class="nv">insertIntoManagedObjectContext</span><span class="p">:</span> <span class="n">managedContext</span><span class="p">)</span>
 
-  <span class="n">person</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nl">forKey</span><span class="p">:</span> <span class="s">&quot;name&quot;</span><span class="p">)</span> <span class="c1">// Set an attribute</span>
+  <span class="n">person</span><span class="o">.</span><span class="nf">setValue</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nv">forKey</span><span class="p">:</span> <span class="s">"name"</span><span class="p">)</span> <span class="c1">// Set an attribute</span>
 
   <span class="k">do</span> <span class="p">{</span>
-      <span class="n">try</span> <span class="n">managedContext</span><span class="p">.</span><span class="n">save</span><span class="p">()</span> <span class="c1">// Save the temporary data to Core Data</span>
-      <span class="n">people</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">person</span><span class="p">)</span> <span class="c1">// Also add to local data so don&#39;t have to be constantly reading Core Data</span>
-  <span class="p">}</span> <span class="n">catch</span> <span class="k">let</span> <span class="n">error</span> <span class="kt">as</span> <span class="bp">NSError</span> <span class="p">{</span>
-      <span class="n">print</span><span class="p">(</span><span class="s">&quot;Could not save \(error), \(error.userInfo)&quot;</span><span class="p">)</span>
+      <span class="k">try</span> <span class="n">managedContext</span><span class="o">.</span><span class="nf">save</span><span class="p">()</span> <span class="c1">// Save the temporary data to Core Data</span>
+      <span class="n">people</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">person</span><span class="p">)</span> <span class="c1">// Also add to local data so don't have to be constantly reading Core Data</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="k">as</span> <span class="kt">NSError</span> <span class="p">{</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"Could not save </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">, </span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">userInfo</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span></code></pre></figure>
 
 <p><br class="post-line-break" /></p>
 <h3 class="post-subheader">Reading Core Data</h3>
 
-<div class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="n">appDelegate</span> <span class="o">=</span> <span class="bp">UIApplication</span><span class="p">.</span><span class="n">sharedApplication</span><span class="p">().</span><span class="n">delegate</span> <span class="kt">as</span><span class="o">!</span> <span class="n">AppDelegate</span> <span class="c1">// Get App Delegate</span>
-<span class="k">let</span> <span class="n">managedContext</span> <span class="o">=</span> <span class="n">appDelegate</span><span class="p">.</span><span class="n">managedObjectContext</span> <span class="c1">// Get the managed object context</span>
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">appDelegate</span> <span class="o">=</span> <span class="kt">UIApplication</span><span class="o">.</span><span class="nf">sharedApplication</span><span class="p">()</span><span class="o">.</span><span class="n">delegate</span> <span class="k">as!</span> <span class="kt">AppDelegate</span> <span class="c1">// Get App Delegate</span>
+<span class="k">let</span> <span class="nv">managedContext</span> <span class="o">=</span> <span class="n">appDelegate</span><span class="o">.</span><span class="n">managedObjectContext</span> <span class="c1">// Get the managed object context</span>
 
-<span class="k">let</span> <span class="n">fetchRequest</span> <span class="o">=</span> <span class="bp">NSFetchRequest</span><span class="p">(</span><span class="nl">entityName</span><span class="p">:</span> <span class="s">&quot;Person&quot;</span><span class="p">)</span> <span class="c1">// Get the entity objects from Core Data</span>
+<span class="k">let</span> <span class="nv">fetchRequest</span> <span class="o">=</span> <span class="kt">NSFetchRequest</span><span class="p">(</span><span class="nv">entityName</span><span class="p">:</span> <span class="s">"Person"</span><span class="p">)</span> <span class="c1">// Get the entity objects from Core Data</span>
 
 <span class="k">do</span> <span class="p">{</span>
-    <span class="k">let</span> <span class="n">results</span> <span class="o">=</span> <span class="n">try</span> <span class="n">managedContext</span><span class="p">.</span><span class="n">executeFetchRequest</span><span class="p">(</span><span class="n">fetchRequest</span><span class="p">)</span> <span class="c1">// Fetch results</span>
-    <span class="n">people</span> <span class="o">=</span> <span class="n">results</span> <span class="kt">as</span><span class="o">!</span> <span class="p">[</span><span class="bp">NSManagedObject</span><span class="p">]</span> <span class="c1">// Store locally</span>
-<span class="p">}</span> <span class="n">catch</span> <span class="k">let</span> <span class="n">error</span> <span class="kt">as</span> <span class="bp">NSError</span> <span class="p">{</span> <span class="c1">// Catch errors</span>
-    <span class="n">print</span><span class="p">(</span><span class="s">&quot;Could not fetch \(error), \(error.userInfo)&quot;</span><span class="p">)</span>
-<span class="p">}</span></code></pre></div>
+    <span class="k">let</span> <span class="nv">results</span> <span class="o">=</span> <span class="k">try</span> <span class="n">managedContext</span><span class="o">.</span><span class="nf">executeFetchRequest</span><span class="p">(</span><span class="n">fetchRequest</span><span class="p">)</span> <span class="c1">// Fetch results</span>
+    <span class="n">people</span> <span class="o">=</span> <span class="n">results</span> <span class="k">as!</span> <span class="p">[</span><span class="kt">NSManagedObject</span><span class="p">]</span> <span class="c1">// Store locally</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="k">let</span> <span class="nv">error</span> <span class="k">as</span> <span class="kt">NSError</span> <span class="p">{</span> <span class="c1">// Catch errors</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Could not fetch </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">, </span><span class="se">\(</span><span class="n">error</span><span class="o">.</span><span class="n">userInfo</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span></code></pre></figure>
 
 <p><br class="post-line-break" />
 Those are the basics to Core Data! This is obviously a very simple example, but it’s integral to anyone learning to build iOS apps.</p>

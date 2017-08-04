@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2015/07/31/accessibility-enabling-voiceover-on-buttons-and-links.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2015/07/31/accessibility-enabling-voiceover-on-buttons-and-links.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,28 +198,9 @@
   
 
     
-      
-    
 
     
-        
-        
-          
-            
-                
-                
-            
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -267,15 +248,15 @@ I’m sure a lot of people have tabbed through webpages before. It’s great for
 <br />
 I have an ‘&lt;a&gt;’ tag in my web app, and because it was an image, the voiceover function on the Mac couldn’t read a label. To solve this, I added this right above the image inside of the parent div:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">className=</span><span class="s">&quot;assistive-text&quot;</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/span&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">className=</span><span class="s">"assistive-text"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/span&gt;</span></code></pre></figure>
 
 <p>Like I said earlier, the class keeps the text “Close” hidden from the UI. However, if you were to tab over to the image, the voiceover would speak “Close”. It’s a very useful tool to make your website more accessible to those visually impaired. To use voiceover, use the keyboard shortcut: Command + F5.</p>
 
 <p><b>Tab Index</b>
 Another trick for accessibility is prioritizing the tab order. To change the order in which users tab through actionable items, add the property: tabIndex. The starting value is 0. For example to tab through these two things out of order, but starting with the second one, you would do:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">tabIndex=</span><span class="s">1</span><span class="nt">&gt;</span>Button 1<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">tabIndex=</span><span class="s">0</span><span class="nt">&gt;</span>Button 2<span class="nt">&lt;/button&gt;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">tabIndex=</span><span class="s">1</span><span class="nt">&gt;</span>Button 1<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">tabIndex=</span><span class="s">0</span><span class="nt">&gt;</span>Button 2<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <p>If you pressed tab, you would first highlight button 2 and then button 1.</p>
 

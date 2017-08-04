@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2015/07/29/installing-packages-on-sublime-text-2.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2015/07/29/installing-packages-on-sublime-text-2.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,28 +198,9 @@
   
 
     
-      
-    
 
     
-        
-        
-          
-            
-                
-                
-            
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -265,7 +246,8 @@
   <li>
     Install Package Control by opening up Sublime's consol (View --&gt; Show Console) and paste the following:
     
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">urllib2</span><span class="p">,</span><span class="nx">os</span><span class="p">,</span><span class="nx">hashlib</span><span class="p">;</span> <span class="nx">h</span> <span class="o">=</span> <span class="s1">&#39;eb2297e1a458f27d836c04bb0cbaf282&#39;</span> <span class="o">+</span> <span class="s1">&#39;d0e7a3098092775ccb37ca9d6b2e4b7d&#39;</span><span class="p">;</span> <span class="nx">pf</span> <span class="o">=</span> <span class="s1">&#39;Package Control.sublime-package&#39;</span><span class="p">;</span> <span class="nx">ipp</span> <span class="o">=</span> <span class="nx">sublime</span><span class="p">.</span><span class="nx">installed_packages_path</span><span class="p">();</span> <span class="nx">os</span><span class="p">.</span><span class="nx">makedirs</span><span class="p">(</span> <span class="nx">ipp</span> <span class="p">)</span> <span class="k">if</span> <span class="nx">not</span> <span class="nx">os</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">exists</span><span class="p">(</span><span class="nx">ipp</span><span class="p">)</span> <span class="k">else</span> <span class="nx">None</span><span class="p">;</span> <span class="nx">urllib2</span><span class="p">.</span><span class="nx">install_opener</span><span class="p">(</span> <span class="nx">urllib2</span><span class="p">.</span><span class="nx">build_opener</span><span class="p">(</span> <span class="nx">urllib2</span><span class="p">.</span><span class="nx">ProxyHandler</span><span class="p">())</span> <span class="p">);</span> <span class="nx">by</span> <span class="o">=</span> <span class="nx">urllib2</span><span class="p">.</span><span class="nx">urlopen</span><span class="p">(</span> <span class="s1">&#39;http://packagecontrol.io/&#39;</span> <span class="o">+</span> <span class="nx">pf</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;%20&#39;</span><span class="p">)).</span><span class="nx">read</span><span class="p">();</span> <span class="nx">dh</span> <span class="o">=</span> <span class="nx">hashlib</span><span class="p">.</span><span class="nx">sha256</span><span class="p">(</span><span class="nx">by</span><span class="p">).</span><span class="nx">hexdigest</span><span class="p">();</span> <span class="nx">open</span><span class="p">(</span> <span class="nx">os</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span> <span class="nx">ipp</span><span class="p">,</span> <span class="nx">pf</span><span class="p">),</span> <span class="s1">&#39;wb&#39;</span> <span class="p">).</span><span class="nx">write</span><span class="p">(</span><span class="nx">by</span><span class="p">)</span> <span class="k">if</span> <span class="nx">dh</span> <span class="o">==</span> <span class="nx">h</span> <span class="k">else</span> <span class="nx">None</span><span class="p">;</span> <span class="nx">print</span><span class="p">(</span><span class="s1">&#39;Error validating download (got %s instead of %s), please try manual install&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">dh</span><span class="p">,</span> <span class="nx">h</span><span class="p">)</span> <span class="k">if</span> <span class="nx">dh</span> <span class="o">!=</span> <span class="nx">h</span> <span class="k">else</span> <span class="s1">&#39;Please restart Sublime Text to finish installation&#39;</span><span class="p">)</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="kr">import</span> <span class="nx">urllib2</span><span class="p">,</span><span class="nx">os</span><span class="p">,</span><span class="nx">hashlib</span><span class="p">;</span> <span class="nx">h</span> <span class="o">=</span> <span class="s1">'eb2297e1a458f27d836c04bb0cbaf282'</span> <span class="o">+</span> <span class="s1">'d0e7a3098092775ccb37ca9d6b2e4b7d'</span><span class="p">;</span> <span class="nx">pf</span> <span class="o">=</span> <span class="s1">'Package Control.sublime-package'</span><span class="p">;</span> <span class="nx">ipp</span> <span class="o">=</span> <span class="nx">sublime</span><span class="p">.</span><span class="nx">installed_packages_path</span><span class="p">();</span> <span class="nx">os</span><span class="p">.</span><span class="nx">makedirs</span><span class="p">(</span> <span class="nx">ipp</span> <span class="p">)</span> <span class="k">if</span> <span class="nx">not</span> <span class="nx">os</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">exists</span><span class="p">(</span><span class="nx">ipp</span><span class="p">)</span> <span class="k">else</span> <span class="nx">None</span><span class="p">;</span> <span class="nx">urllib2</span><span class="p">.</span><span class="nx">install_opener</span><span class="p">(</span> <span class="nx">urllib2</span><span class="p">.</span><span class="nx">build_opener</span><span class="p">(</span> <span class="nx">urllib2</span><span class="p">.</span><span class="nx">ProxyHandler</span><span class="p">())</span> <span class="p">);</span> <span class="nx">by</span> <span class="o">=</span> <span class="nx">urllib2</span><span class="p">.</span><span class="nx">urlopen</span><span class="p">(</span> <span class="s1">'http://packagecontrol.io/'</span> <span class="o">+</span> <span class="nx">pf</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">'%20'</span><span class="p">)).</span><span class="nx">read</span><span class="p">();</span> <span class="nx">dh</span> <span class="o">=</span> <span class="nx">hashlib</span><span class="p">.</span><span class="nx">sha256</span><span class="p">(</span><span class="nx">by</span><span class="p">).</span><span class="nx">hexdigest</span><span class="p">();</span> <span class="nx">open</span><span class="p">(</span> <span class="nx">os</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span> <span class="nx">ipp</span><span class="p">,</span> <span class="nx">pf</span><span class="p">),</span> <span class="s1">'wb'</span> <span class="p">).</span><span class="nx">write</span><span class="p">(</span><span class="nx">by</span><span class="p">)</span> <span class="k">if</span> <span class="nx">dh</span> <span class="o">==</span> <span class="nx">h</span> <span class="k">else</span> <span class="nx">None</span><span class="p">;</span> <span class="nx">print</span><span class="p">(</span><span class="s1">'Error validating download (got %s instead of %s), please try manual install'</span> <span class="o">%</span> <span class="p">(</span><span class="nx">dh</span><span class="p">,</span> <span class="nx">h</span><span class="p">)</span> <span class="k">if</span> <span class="nx">dh</span> <span class="o">!=</span> <span class="nx">h</span> <span class="k">else</span> <span class="s1">'Please restart Sublime Text to finish installation'</span><span class="p">)</span>
+    </code></pre></figure>
 
     Press enter.
   </li>

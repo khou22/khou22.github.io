@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,23 +198,9 @@
   
 
     
-      
-        
-      
-    
 
     
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -253,216 +239,222 @@
 
   <article class="post-content">
     <h1 id="setting-up-vim">Setting Up VIM</h1>
-<p>VIM is configured using a <code>.vimrc</code> file in your root directory (<code>~/.vimrc</code>) and serves as the configuration file. It is similar to a <code>.bashrc</code> or <code>.bash_profile</code> in the sense that it must be sourced to reflect changes, but VIM automatically takes care of when it launches. Ensure that the <code>~/.vimrc</code> file exists and if not, create one. Now here’s how the complete setup:</p>
+<p>VIM is configured using a <code class="highlighter-rouge">.vimrc</code> file in your root directory (<code class="highlighter-rouge">~/.vimrc</code>) and serves as the configuration file. It is similar to a <code class="highlighter-rouge">.bashrc</code> or <code class="highlighter-rouge">.bash_profile</code> in the sense that it must be sourced to reflect changes, but VIM automatically takes care of when it launches. Ensure that the <code class="highlighter-rouge">~/.vimrc</code> file exists and if not, create one. Now here’s how the complete setup:
+<br class="post-line-break" />
+<strong>Step 1</strong><br />
+Copy/paste the contents of my configuration file into your <code class="highlighter-rouge">.vimrc</code> file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.
+<br class="post-line-break" />
+<strong>Step 2</strong><br />
+Like I said earlier, I’m using <a href="https://github.com/junegunn/vim-plug">vim-plug</a> as my package manager service. Install <code class="highlighter-rouge">vim-plug</code> using:</p>
 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</code></pre></figure>
+
+<p><br class="post-line-break" />
+<strong>Step 3</strong><br />
+Open VIM - type <code class="highlighter-rouge">:</code> to open the VIM command line. You will be using this a lot. Type <code class="highlighter-rouge">PlugInstall</code> and press Enter.<br />
+VIM has a handful of common “listener keys” that let VIM know you are about to perform a custom key command. This includes <code class="highlighter-rouge">:</code>, <code class="highlighter-rouge">,</code>, <code class="highlighter-rouge">/</code>, etc.<br />
+<br class="post-line-break" />
+<em>Note</em>: Sometimes need to source the <code class="highlighter-rouge">.vimrc</code> file first:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">:source %
+:PlugInstall</code></pre></figure>
+
+<p><br class="post-line-break" />
+<strong>Step 4</strong><br />
+Install <strong>MacVim</strong><br />
+Some plugins will require a higher version of VIM than the out-of-the-box built-in default for Macs. Many references online have recommended using <a href="macvim-dev.github.io">MacVim</a> and aliasing its CL interface to “replace” the default. Add this to your <code class="highlighter-rouge">.bash_profile</code> after you’ve installed MacVim:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Mac VIM Alias</span>
+<span class="nb">alias </span><span class="nv">vim</span><span class="o">=</span><span class="s1">'/Applications/MacVim.app/Contents/MacOS/Vim'</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+<strong>Step 5</strong><br />
+There are a few plugins that require additional installations that don’t get setup automatically using <code class="highlighter-rouge">vim-plug</code>. Follow the steps below to configure these libraries:<br />
+<br class="post-line-break" />
+<strong><code class="highlighter-rouge">Pathogen</code> — Package loader</strong></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir -p ~/.vim/autoload ~/.vim/bundle <span class="o">&amp;&amp;</span> curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim</code></pre></figure>
+
+<p><br class="post-line-break" />
+<strong><code class="highlighter-rouge">AG</code> - For project file grepping</strong>
+(‘AG’ stands for the silver element in periodic table)</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">brew install the_silver_searcher</code></pre></figure>
+
+<p><br class="post-line-break" />
+<strong><code class="highlighter-rouge">YouCompleteMe</code> - Autocomplete</strong></p>
 <ol>
-  <li>
-    <p>Copy/paste the contents of my configuration file into your <code>.vimrc</code> file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.</p>
-  </li>
-  <li>
-    <p>Like I said earlier, I’m using <a href="https://github.com/junegunn/vim-plug">vim-plug</a> as my package manager service. Install <code>vim-plug</code> using:</p>
-  </li>
-</ol>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">curl -fLo ~/.vim/autoload/plug.vim --create-dirs <span class="se">\</span>
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</code></pre></div>
-
-<ol>
-  <li>Open VIM - type <code>:</code> to open the VIM command line. You will be using this a lot. Type <code>PlugInstall</code> and press Enter.
+  <li>Install Cmake: <code class="highlighter-rouge">$ brew install CMake</code>
     <ul>
-      <li>
-        <p>VIM has a handful of common “listener keys” that let VIM know you are about to perform a custom key command. This includes <code>:</code>, <code>,</code>, <code>/</code>, etc.</p>
-      </li>
-      <li>
-        <p><em>Note</em>: Sometimes need to source the <code>.vimrc</code> file first:</p>
-      </li>
+      <li>On dev box (Ubuntu): <code class="highlighter-rouge">$ sudo apt-get install cmake</code></li>
     </ul>
   </li>
+  <li>Finish install: <code class="highlighter-rouge">$ python ~/.vim/plugged/YouCompleteMe/install.py</code></li>
 </ol>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">:source %
-        :PlugInstall</code></pre></div>
+<p><br class="post-line-break" />
+<strong><code class="highlighter-rouge">Solarized Colorscheme for VIM</code> — Theme</strong></p>
+<ol>
+  <li>Install into <code class="highlighter-rouge">bundle</code> folder. Create it if the directory doesn’t exist.</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">cd</span> ~/.vim/bundle
+<span class="gp">$ </span>git clone git://github.com/altercation/vim-colors-solarized.git</code></pre></figure>
 
 <ol>
-  <li>Install <strong>MacVim</strong><br />
- Some plugins will require a higher version of VIM than the out-of-the-box built-in default for Macs. Many references online have recommended using <a href="macvim-dev.github.io">MacVim</a> and aliasing its CL interface to “replace” the default. Add this to your <code>.bash_profile</code> after you’ve installed MacVim:</li>
+  <li>Set the theme in <code class="highlighter-rouge">.vimrc</code>.</li>
 </ol>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Mac VIM Alias</span>
-    <span class="nb">alias </span><span class="nv">vim</span><span class="o">=</span><span class="s1">&#39;/Applications/MacVim.app/Contents/MacOS/Vim&#39;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">syntax <span class="nb">enable</span>
+<span class="s2">" Use 'light' if want the light theme
+set background=dark
+colorscheme solarized</span></code></pre></figure>
 
+<p><br class="post-line-break" />
+<strong>NERDTree - Project Heiarchy in Sidebar</strong></p>
 <ol>
-  <li>There are a few plugins that require additional installations that don’t get setup automatically using <code>vim-plug</code>. Follow the steps below to configure these libraries:<br />
- <strong><code>Pathogen</code> — Package loader</strong></li>
+  <li>Ensure you have a <code class="highlighter-rouge">~/.vim/bundle/</code> directory</li>
+  <li>Install using: <code class="highlighter-rouge">$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree</code></li>
+  <li>NERDTree will automatically open when VIM opens because of this command in the <code class="highlighter-rouge">.vimrc</code>:</li>
 </ol>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir -p ~/.vim/autoload ~/.vim/bundle <span class="o">&amp;&amp;</span> curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim</code></pre></div>
-
-<pre><code>__`AG` - For project file grepping__
-('AG' stands for the silver element in periodic table)
-</code></pre>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install the_silver_searcher</code></pre></div>
-
-<pre><code>__`YouCompleteMe` - Autocomplete__
-1. Install Cmake: `$ brew install CMake`
-    * On dev box (Ubuntu): `$ sudo apt-get install cmake`
-2. Finish install: `$ python ~/.vim/plugged/YouCompleteMe/install.py`
-
-__`Solarized Colorscheme for VIM` — Theme__
-1. Install into `bundle` folder. Create it if the directory doesn't exist.
-</code></pre>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd</span> ~/.vim/bundle
-        <span class="nv">$ </span>git clone git://github.com/altercation/vim-colors-solarized.git</code></pre></div>
-
-<pre><code>2. Set the theme in `.vimrc`.
-</code></pre>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">syntax <span class="nb">enable</span>
-        <span class="err">&quot;</span> Use <span class="s1">&#39;light&#39;</span> <span class="k">if</span> want the light theme
-        <span class="nb">set </span><span class="nv">background</span><span class="o">=</span>dark 
-        colorscheme solarized</code></pre></div>
-
-<pre><code>__NERDTree - Project Heiarchy in Sidebar__
-1. Ensure you have a `~/.vim/bundle/` directory
-2. Install using: `$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree`
-3. NERDTree will automatically open when VIM opens because of this command in the `.vimrc`:
-</code></pre>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">autocmd vimenter * NERDTree</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">autocmd vimenter <span class="k">*</span> NERDTree</code></pre></figure>
 
 <h1 id="commands">Commands</h1>
 
-<h3 id="vim-environment">VIM Environment</h3>
-<p>Launch VIM: <code>$ vim &lt;file/directory (optional)&gt;</code><br />
-Close current pane: <code>:q</code><br />
-Quitting all panes: <code>:qa</code><br />
-Save: <code>:w</code><br />
-Save &amp; Quit: <code>:wq</code></p>
+<h3 class="post-subheader">VIM Environment</h3>
+<p>Launch VIM: <code class="highlighter-rouge">$ vim &lt;file/directory (optional)&gt;</code><br />
+Close current pane: <code class="highlighter-rouge">:q</code><br />
+Quitting all panes: <code class="highlighter-rouge">:qa</code><br />
+Save: <code class="highlighter-rouge">:w</code><br />
+Save &amp; Quit: <code class="highlighter-rouge">:wq</code></p>
 
-<h3 id="switching-input-modes">Switching input modes</h3>
-<p>Highlight mode: <code>v</code><br />
-Insert mode (keyboard and arrow keys will work like normal): <code>i</code><br />
-Viewing mode (if in highlight or insert mode): <code>Esc</code></p>
+<h3 class="post-subheader">Switching input modes</h3>
+<p>Highlight mode: <code class="highlighter-rouge">v</code><br />
+Insert mode (keyboard and arrow keys will work like normal): <code class="highlighter-rouge">i</code><br />
+Viewing mode (if in highlight or insert mode): <code class="highlighter-rouge">Esc</code></p>
 
-<h3 id="navigating-in-file-non-insert-mode">Navigating In-File (Non-Insert Mode)</h3>
-<p>Go to line: <code>&lt;Line-Number&gt;</code> + <code>Shift</code> + <code>G</code><br />
-Back one word: <code>b</code><br />
-Forward one word: <code>w</code><br />
-Move to first non-blank character of line (Like <code>Command + Left</code>): <code>_</code><br />
-Move to last non-blank character of line (Like <code>Command + Right</code>): <code>g_</code><br />
-Beginning of line: <code>0</code><br />
-End of line: <code>Shift + 4</code> (<code>$</code>)<br />
-Page up: <code>Control + B</code><br />
-Page Down: <code>Control + F</code></p>
+<h3 class="post-subheader">Navigating In-File (Non-Insert Mode)</h3>
+<p>Go to line: <code class="highlighter-rouge">&lt;Line-Number&gt;</code> + <code class="highlighter-rouge">Shift</code> + <code class="highlighter-rouge">G</code><br />
+Back one word: <code class="highlighter-rouge">b</code><br />
+Forward one word: <code class="highlighter-rouge">w</code><br />
+Move to first non-blank character of line (Like <code class="highlighter-rouge">Command + Left</code>): <code class="highlighter-rouge">_</code><br />
+Move to last non-blank character of line (Like <code class="highlighter-rouge">Command + Right</code>): <code class="highlighter-rouge">g_</code><br />
+Beginning of line: <code class="highlighter-rouge">0</code><br />
+End of line: <code class="highlighter-rouge">Shift + 4</code> (<code class="highlighter-rouge">$</code>)<br />
+Page up: <code class="highlighter-rouge">Control + B</code><br />
+Page Down: <code class="highlighter-rouge">Control + F</code></p>
 
 <p><strong>Arrow key mappings:</strong><br />
-Up: <code>k</code><br />
-Down: <code>j</code><br />
-Left: <code>h</code><br />
-Right: <code>l</code></p>
+Up: <code class="highlighter-rouge">k</code><br />
+Down: <code class="highlighter-rouge">j</code><br />
+Left: <code class="highlighter-rouge">h</code><br />
+Right: <code class="highlighter-rouge">l</code></p>
 
-<p>Move <code>x</code> positions: <code>&lt;number&gt; + &lt;key&gt;</code><br />
-Example: Move down 10 lines: <code>10 + j</code><br />
+<p>Move <code class="highlighter-rouge">x</code> positions: <code class="highlighter-rouge">&lt;number&gt; + &lt;key&gt;</code><br />
+Example: Move down 10 lines: <code class="highlighter-rouge">10 + j</code><br />
 <strong>Note</strong>: Syntax supported by all navigation commands</p>
 
-<h3 id="opening-files">Opening Files</h3>
-<p>Fuzzy Search - Searches file names — <code>,t</code>
-To cancel: <code>Command</code> + <code>C</code> or <code>:q</code></p>
+<h3 class="post-subheader">Opening Files</h3>
+<p>Fuzzy Search - Searches file names — <code class="highlighter-rouge">,t</code>
+To cancel: <code class="highlighter-rouge">Command</code> + <code class="highlighter-rouge">C</code> or <code class="highlighter-rouge">:q</code></p>
 
-<h3 id="grepping">Grepping</h3>
-<p>Global find (searches content of file in project) — <code>,a</code><br />
-The “current project” is whatever directory you <code>$ vim</code> into</p>
+<h3 class="post-subheader">Grepping</h3>
+<p>Global find (searches content of file in project) — <code class="highlighter-rouge">,a</code><br />
+The “current project” is whatever directory you <code class="highlighter-rouge">$ vim</code> into</p>
 
-<p>Search within file: <code>\&lt;keyword on page&gt;</code>
-    * <code>n</code> goes to next
-    * <code>Shift + N</code> goes back</p>
+<p>Search within file: <code class="highlighter-rouge">\&lt;keyword on page&gt;</code>
+    * <code class="highlighter-rouge">n</code> goes to next
+    * <code class="highlighter-rouge">Shift + N</code> goes back</p>
 
-<p>Search and replace: <code>:%s/foo/bar/g</code> (Replace <code>foo</code> with <code>bar</code> no confirmation. For confirmation, use <code>gc</code> instead of <code>g</code> at end)</p>
+<p>Search and replace: <code class="highlighter-rouge">:%s/foo/bar/g</code> (Replace <code class="highlighter-rouge">foo</code> with <code class="highlighter-rouge">bar</code> no confirmation. For confirmation, use <code class="highlighter-rouge">gc</code> instead of <code class="highlighter-rouge">g</code> at end)</p>
 
-<h3 id="highlighting-mode">Highlighting mode</h3>
-<p>Highlighting an entire line: <code>Shift + V</code>
-Highlighting mode: <code>v</code>
-Copy/yank: <code>y</code>
-Paste: <code>p</code>
-Paste above: <code>Shift + P</code>
-Pasting in insert mode (having copied using the operating system): <code>Command + v</code>
-Paste from clipboard with auto-indenting: <code>:set paste</code> + <code>Command + V</code></p>
+<h3 class="post-subheader">Highlighting mode</h3>
+<p>Highlighting an entire line: <code class="highlighter-rouge">Shift + V</code>
+Highlighting mode: <code class="highlighter-rouge">v</code>
+Copy/yank: <code class="highlighter-rouge">y</code>
+Paste: <code class="highlighter-rouge">p</code>
+Paste above: <code class="highlighter-rouge">Shift + P</code>
+Pasting in insert mode (having copied using the operating system): <code class="highlighter-rouge">Command + v</code>
+Paste from clipboard with auto-indenting: <code class="highlighter-rouge">:set paste</code> + <code class="highlighter-rouge">Command + V</code></p>
 
-<h3 id="panes">Panes</h3>
-<p>Opening new panes, start with: <code>control + w</code>:
-    * <code>v</code> is vertical split (focus on the new pane)<br />
-    * <code>s</code> is horizontal split<br />
-    * <code>=</code> makes all panes equal size</p>
+<h3 class="post-subheader">Panes</h3>
+<p>Opening new panes, start with: <code class="highlighter-rouge">control + w</code>:
+    * <code class="highlighter-rouge">v</code> is vertical split (focus on the new pane)<br />
+    * <code class="highlighter-rouge">s</code> is horizontal split<br />
+    * <code class="highlighter-rouge">=</code> makes all panes equal size</p>
 
 <p><strong>Switch panes:</strong><br />
-Move up: <code>control + j</code><br />
-Move down: <code>control + k</code><br />
-Move left: <code>control + h</code><br />
-Move right: <code>control + l</code><br />
-Close all except current: <code>control + o</code></p>
+Move up: <code class="highlighter-rouge">control + j</code><br />
+Move down: <code class="highlighter-rouge">control + k</code><br />
+Move left: <code class="highlighter-rouge">control + h</code><br />
+Move right: <code class="highlighter-rouge">control + l</code><br />
+Close all except current: <code class="highlighter-rouge">control + o</code></p>
 
-<h3 id="other">Other</h3>
-<p>Undo: <code>u</code><br />
-Redo: <code>control</code> + <code>r</code></p>
+<h3 class="post-subheader">Other</h3>
+<p>Undo: <code class="highlighter-rouge">u</code><br />
+Redo: <code class="highlighter-rouge">control</code> + <code class="highlighter-rouge">r</code></p>
 
-<p>Delete: <code>d</code> –&gt; Format: <code>d</code> + <code>number (optional, default 1)</code> + <code>action</code><br />
-<code>d</code> + <code>4</code> + <code>w</code> would delete the four next words</p>
+<p>Delete: <code class="highlighter-rouge">d</code> –&gt; Format: <code class="highlighter-rouge">d</code> + <code class="highlighter-rouge">number (optional, default 1)</code> + <code class="highlighter-rouge">action</code><br />
+<code class="highlighter-rouge">d</code> + <code class="highlighter-rouge">4</code> + <code class="highlighter-rouge">w</code> would delete the four next words</p>
 
 <p>Creating new file from CL in VIM:
-<code>$ vim &lt;file-name&gt;</code><br />
-Make sure you save before you quit using <code>:w</code></p>
+<code class="highlighter-rouge">$ vim &lt;file-name&gt;</code><br />
+Make sure you save before you quit using <code class="highlighter-rouge">:w</code></p>
 
-<p>Quitting: <code>:q</code><br />
-Quitting without saving (and not being prompted): <code>:q!</code></p>
+<p>Quitting: <code class="highlighter-rouge">:q</code><br />
+Quitting without saving (and not being prompted): <code class="highlighter-rouge">:q!</code></p>
 
-<p><strong>Using <code>easymotion</code></strong><br />
-Easymotion is a plugin that allows you to quickly move through the current file by highlighting all possible next positions for your cursor and adding a hotkey to them. Instead of typing <code>/div</code> and pressing <code>n</code> to cycle through to the instance of <code>div</code> that you’re looking for in your code, you can simply type <code>s</code> to initiate the <code>easymotion</code> grepping, <code>di</code> as your two character query (configurable in <code>.vimrc</code> file), and type the key that is placed on the instance of what you’re looking for.</p>
+<p><strong>Using <code class="highlighter-rouge">easymotion</code></strong><br />
+Easymotion is a plugin that allows you to quickly move through the current file by highlighting all possible next positions for your cursor and adding a hotkey to them. Instead of typing <code class="highlighter-rouge">/div</code> and pressing <code class="highlighter-rouge">n</code> to cycle through to the instance of <code class="highlighter-rouge">div</code> that you’re looking for in your code, you can simply type <code class="highlighter-rouge">s</code> to initiate the <code class="highlighter-rouge">easymotion</code> grepping, <code class="highlighter-rouge">di</code> as your two character query (configurable in <code class="highlighter-rouge">.vimrc</code> file), and type the key that is placed on the instance of what you’re looking for.</p>
 
 <p><strong>Commenting</strong><br />
-To comment a line you’ve highlighted, type <code>gc</code><br />
-To comment a line without highlighting, type <code>gcc</code></p>
+To comment a line you’ve highlighted, type <code class="highlighter-rouge">gc</code><br />
+To comment a line without highlighting, type <code class="highlighter-rouge">gcc</code></p>
 
-<h3 id="explorer">Explorer</h3>
+<h3 class="post-subheader">Explorer</h3>
 <p>Opening up explorer:<br />
-<code>:Explore</code> or <code>:Exp</code> + <code>Tab</code> to complete it for you</p>
+<code class="highlighter-rouge">:Explore</code> or <code class="highlighter-rouge">:Exp</code> + <code class="highlighter-rouge">Tab</code> to complete it for you</p>
 
-<p>Navigation using <code>hjkl</code>.<br />
-When opening a file:
-1. Enter opens in same pane
-2. <code>o</code> splits horizontally (opens below)
-3. <code>v</code> splits vertically (opens to the side)</p>
+<p>Navigation using <code class="highlighter-rouge">hjkl</code>.<br />
+When opening a file:</p>
+<ol>
+  <li>Enter opens in same pane</li>
+  <li><code class="highlighter-rouge">o</code> splits horizontally (opens below)</li>
+  <li><code class="highlighter-rouge">v</code> splits vertically (opens to the side)</li>
+</ol>
 
-<p><code>-</code> Up one level to parent</p>
+<p><code class="highlighter-rouge">-</code> Up one level to parent</p>
 
-<p><code>gg</code> - top of file/pane
-<code>Shift + G</code> - bottom
-Go to line number: <code>&lt;Line #&gt; + Shift + G</code></p>
+<p><code class="highlighter-rouge">gg</code> - top of file/pane
+<code class="highlighter-rouge">Shift + G</code> - bottom
+Go to line number: <code class="highlighter-rouge">&lt;Line #&gt; + Shift + G</code></p>
 
 <h1 id="additional-plugins-and-customizations">Additional Plugins and Customizations</h1>
-<p>### All Plugins
-* comment_vim
-* typescript-vim
-* vim-fugitive
-* supertab
-* tabular
-* rename.vim
-* goyo.vim
-* vim-vroom
-* auto_mkdir
-* ctrlp.vim
-* ag.vim
-* ctrlp-cmatcher
-* ack.vim
-* YouCompleteMe
-* indentline
-* vim-gitgutter
-* vim-airline
-* vim-multiple-cursors
-* vim-easymotion</p>
+<h3 class="post-subheader">All Plugins</h3>
+<ul>
+  <li>comment_vim</li>
+  <li>typescript-vim</li>
+  <li>vim-fugitive</li>
+  <li>supertab</li>
+  <li>tabular</li>
+  <li>rename.vim</li>
+  <li>goyo.vim</li>
+  <li>vim-vroom</li>
+  <li>auto_mkdir</li>
+  <li>ctrlp.vim</li>
+  <li>ag.vim</li>
+  <li>ctrlp-cmatcher</li>
+  <li>ack.vim</li>
+  <li>YouCompleteMe</li>
+  <li>indentline</li>
+  <li>vim-gitgutter</li>
+  <li>vim-airline</li>
+  <li>vim-multiple-cursors</li>
+  <li>vim-easymotion</li>
+</ul>
 
-<h3 id="languages">Languages</h3>
+<h3 class="post-subheader">Languages</h3>
 <ul>
   <li>vim-coffee-script</li>
   <li>vim-elixir</li>
@@ -473,35 +465,32 @@ Go to line number: <code>&lt;Line #&gt; + Shift + G</code></p>
 </ul>
 
 <h1 id="further-customizations">Further Customizations</h1>
-<p>## Adding a Plug In
-1. Add the plugin to the <code>.vimrc</code> file:</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">Plug <span class="s1">&#39;Valloric/YouCompleteMe&#39;</span></code></pre></div>
-
+<h3 class="post-subheader">Adding a Plug In</h3>
 <ol>
-  <li>Source the file: <code>:source %</code></li>
-  <li>Install the plugins: <code>:PlugInstall</code></li>
+  <li>Add the plugin to the <code class="highlighter-rouge">.vimrc</code> file: <code class="highlighter-rouge">Plug 'Valloric/YouCompleteMe'</code></li>
+  <li>Source the file: <code class="highlighter-rouge">:source %</code></li>
+  <li>Install the plugins: <code class="highlighter-rouge">:PlugInstall</code></li>
 </ol>
 
-<h2 id="suggestions">Suggestions</h2>
+<h3 class="post-subheader">Suggestions</h3>
 <ol>
-  <li>Change <code>caps lock</code> to <code>escape</code> in System Preferecnes -&gt; Keyboard -&gt; Modifiers</li>
+  <li>Change <code class="highlighter-rouge">caps lock</code> to <code class="highlighter-rouge">escape</code> in System Preferecnes -&gt; Keyboard -&gt; Modifiers</li>
 </ol>
 
-<h2 id="in-development">In Development</h2>
+<h3 class="post-subheader">In Development</h3>
 <ul>
   <li>Undo closing a pane (reopen last pane)</li>
 </ul>
 
-<h2 id="faqs">FAQs</h2>
+<h3 class="post-subheader">FAQs</h3>
 <ol>
   <li>Does the mouse work? Yes!</li>
-  <li>Open VIM tutorial: <code>$ vimtutor</code></li>
-  <li>What does <code>&lt;C&gt;</code> map to? It maps to <code>Control</code></li>
+  <li>Open VIM tutorial: <code class="highlighter-rouge">$ vimtutor</code></li>
+  <li>What does <code class="highlighter-rouge">&lt;C&gt;</code> map to? It maps to <code class="highlighter-rouge">Control</code></li>
 </ol>
 
     <div class="post-organization">
-      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a></p>
+      <p id="post-meta">Posted</p>
     </div>
   </article>
 </div>

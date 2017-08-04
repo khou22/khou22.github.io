@@ -20,8 +20,8 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/programming/2015/08/16/small-lessons-disabling-scrolling-extra-screen-sizes-mirroring-and-screen-arrangement-tricks.html">
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
+  <link rel="canonical" href="http://localhost:4000/programming/2015/08/16/small-lessons-disabling-scrolling-extra-screen-sizes-mirroring-and-screen-arrangement-tricks.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -165,7 +165,7 @@
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
-        <a href="http://khou22.github.io">
+        <a href="http://localhost:4000">
           <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
         </a>
       </li>
@@ -198,34 +198,9 @@
   
 
     
-      
-    
 
     
-        
-        
-          
-            
-                
-                
-            
-        
-          
-            
-                
-                
-            
-        
-    
 
-    
-      
-          
-            
-                
-                
-            
-        
     
   <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
     <div class="post-header-content">
@@ -265,11 +240,11 @@
   <article class="post-content">
     <p>I’ve been dealing with some really weirdly-sized images for my project and this have given me all sorts of issues in terms of scaling, cropping, and scrolling. There are many instances where I don’t have any content off the screen, but there is still a side scroll. I’ve tried inspecting my elements to see which part of my code is responsible for the extra white space, but to no avail. I settled with just disabling the side scroll for this app. Here’s how you do it:</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">Simply</span> <span class="nt">add</span> <span class="nt">this</span> <span class="nt">to</span> <span class="nt">your</span> <span class="nt">CSS</span><span class="o">:</span>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">Simply</span> <span class="nt">add</span> <span class="nt">this</span> <span class="nt">to</span> <span class="nt">your</span> <span class="nt">CSS</span><span class="o">:</span>
 <span class="nt">html</span><span class="o">,</span> <span class="nt">body</span> <span class="p">{</span>
-  <span class="k">max-width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-  <span class="k">overflow-x</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">overflow-x</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <hr />
 
