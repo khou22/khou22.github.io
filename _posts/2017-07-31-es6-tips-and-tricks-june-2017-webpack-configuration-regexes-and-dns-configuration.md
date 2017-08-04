@@ -12,11 +12,14 @@ featured: "yes"
 <h3 class="post-subheader">Using Raw Files with Webpack</h3>
 There are some files that are best used when imported as their raw contents. This includes, but is not limited to file extensions like: `.svg`, `.md`, and `.txt`. For these situations, you must use the `raw-loader` in your `webpack.config` file:  
 {% highlight javascript %}
-{ // Load markdown as raw text
+// Load markdown as raw text
+...
+{
     test: /\.md/,
     exclude: /node_modules/,
     loader: 'raw-loader'
 }
+...
 {% endhighlight %}
 
 Using an `.svg` file in React:<br>

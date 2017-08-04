@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Aug 2017 19:54:39 -0400</pubDate>
-    <lastBuildDate>Fri, 04 Aug 2017 19:54:39 -0400</lastBuildDate>
+    <pubDate>Fri, 04 Aug 2017 19:56:27 -0400</pubDate>
+    <lastBuildDate>Fri, 04 Aug 2017 19:56:27 -0400</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
       <item>
@@ -300,11 +300,14 @@ Check out my &lt;a href=&quot;http://localhost:4000/programming/2017/08/04/my-cu
         <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Using Raw Files with Webpack&lt;/h3&gt;
 &lt;p&gt;There are some files that are best used when imported as their raw contents. This includes, but is not limited to file extensions like: &lt;code class=&quot;highlighter-rouge&quot;&gt;.svg&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.md&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;.txt&lt;/code&gt;. For these situations, you must use the &lt;code class=&quot;highlighter-rouge&quot;&gt;raw-loader&lt;/code&gt; in your &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config&lt;/code&gt; file:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Load markdown as raw text&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Load markdown as raw text&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nl&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;md/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;node_modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;loader&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'raw-loader'&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Using an &lt;code class=&quot;highlighter-rouge&quot;&gt;.svg&lt;/code&gt; file in React:&lt;br /&gt;&lt;/p&gt;
 

@@ -241,11 +241,14 @@
     <h3 class="post-subheader">Using Raw Files with Webpack</h3>
 <p>There are some files that are best used when imported as their raw contents. This includes, but is not limited to file extensions like: <code class="highlighter-rouge">.svg</code>, <code class="highlighter-rouge">.md</code>, and <code class="highlighter-rouge">.txt</code>. For these situations, you must use the <code class="highlighter-rouge">raw-loader</code> in your <code class="highlighter-rouge">webpack.config</code> file:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span> <span class="c1">// Load markdown as raw text</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Load markdown as raw text</span>
+<span class="p">...</span>
+<span class="p">{</span>
     <span class="nl">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">md/</span><span class="p">,</span>
     <span class="nx">exclude</span><span class="err">:</span> <span class="o">/</span><span class="nx">node_modules</span><span class="o">/</span><span class="p">,</span>
     <span class="nx">loader</span><span class="err">:</span> <span class="s1">'raw-loader'</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span>
+<span class="p">...</span></code></pre></figure>
 
 <p>Using an <code class="highlighter-rouge">.svg</code> file in React:<br /></p>
 
