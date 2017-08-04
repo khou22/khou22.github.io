@@ -9,110 +9,136 @@ $mobile-cuttoff: 800px;
 $post-font-size: 16px;
 
 .header-placeholder {
-  width: 100%;
-  height: 80px; // Max height of header
+    width: 100%;
+    height: 80px; // Max height of header
 
-  // Media query
-  @media(max-width: $mobile-cuttoff) {
-    display: none;
-  }
+    // Media query
+    @media(max-width: $mobile-cuttoff) {
+        display: none;
+    }
 }
 .post {
 
-  &-header-title {
-    text-align: center;
-  }
-
-  &-header-description {
-    color: $offwhite;
-    text-align: center;
-    margin-top: 18px !important;
-    margin-bottom: 24px !important;
-  }
-
-  &-header-content {
-
-    max-width: -webkit-calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
-    max-width:         calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
-    margin: auto;
-
-    padding-left: 16px;
-    padding-right: 16px;
-
-    padding-top: 12px;
-    padding-bottom: 12px;
-    color: white;
-  }
-
-  &-header-meta {
-    color: $offwhite !important;
-    text-align: center; // Center text
-  }
-
-  &-return-main {
-    color: $offwhite !important;
-    cursor: pointer;
-  }
-
-  &-line-break {
-    line-height: 36px !important;
-  }
-
-  &-subheader {
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-
-    @media(max-width: $mobile-cuttoff) {
-      padding-top: 0; // Remove top spacing
+    &-header-title {
+        text-align: center;
     }
-  }
 
-  &-organization {
-    margin-top: 16px;
-    color: black;
-  }
-
-  &-content {
-    @media(max-width: $mobile-cuttoff) {
-      padding-left: 6px;
-      padding-right: 6px;
+    &-header-description {
+        color: $offwhite;
+        text-align: center;
+        margin-top: 18px !important;
+        margin-bottom: 24px !important;
     }
-  }
 
-  // ******* Post content styling *******
-  &-content p {
-    font-size: $post-font-size; // Blog post font size
-  }
+    &-header-content {
+
+        max-width: -webkit-calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
+        max-width:         calc(1.3 * (#{$content-width} - (#{$spacing-unit})));
+        margin: auto;
+
+        padding-left: 16px;
+        padding-right: 16px;
+
+        padding-top: 12px;
+        padding-bottom: 12px;
+        color: white;
+    }
+
+    &-header-meta {
+        color: $offwhite !important;
+        text-align: center; // Center text
+    }
+
+    &-return-main {
+        color: $offwhite !important;
+        cursor: pointer;
+    }
+
+    &-line-break {
+        line-height: 36px !important;
+    }
+
+    &-subheader {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+
+        @media(max-width: $mobile-cuttoff) {
+            padding-top: 0; // Remove top spacing
+        }
+    }
+
+    &-organization {
+        margin-top: 16px;
+        color: black;
+    }
+
+    &-content {
+        @media(max-width: $mobile-cuttoff) {
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+    }
+
+    // ******* Post content styling *******
+    &-content p {
+        font-size: $post-font-size; // Blog post font size
+    }
 }
 
 li {
-  font-size: $post-font-size;
-  padding-left: 12px;
-  list-style-position: inside;
+    font-size: $post-font-size;
+    padding-left: 12px;
+    list-style-position: inside;
 }
 
 pre {
-  font-size: 16px !important; // Make code highlighting font size bigger
+    font-size: 16px !important; // Make code highlighting font size bigger
 }
 
 .iPhone-screenshots-large {
-  margin: 18px;
-  width: 600px;
-  display: inline-block;
+    margin: 18px;
+    width: 600px;
+    display: inline-block;
 }
 
 .iPhone-screenshots-medium {
-  margin: 14px;
-  width: 300px;
-  display: inline-block;
+    margin: 14px;
+    width: 300px;
+    display: inline-block;
 }
 
 .iPhone-screenshots-small {
-  margin: 10px;
-  width: 150px;
-  display: inline-block;
+    margin: 10px;
+    width: 150px;
+    display: inline-block;
 }
 
 .blog-tutorial-step {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+// Blog Markdown Styling
+article {
+    li {
+        list-style-position: outside;
+    }
+    
+    h1 {
+        margin-bottom: 12px;
+    }
+
+    ol {
+        padding-left: 40px;
+    }
+
+    // In-line code blocks
+    code {
+        font-size: 12px !important;
+        padding: 2px 2px;
+    }
+
+    // Bold
+    strong {
+        color: black;
+    }
 }

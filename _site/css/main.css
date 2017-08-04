@@ -775,6 +775,18 @@ pre {
 .blog-tutorial-step {
   margin-bottom: 12px; }
 
+article li {
+  list-style-position: outside; }
+article h1 {
+  margin-bottom: 12px; }
+article ol {
+  padding-left: 40px; }
+article code {
+  font-size: 12px !important;
+  padding: 2px 2px; }
+article strong {
+  color: black; }
+
 /*For the index blog page*/
 /*This is the blog homepage*/
 .blog-landing-header {
