@@ -140,17 +140,27 @@ article {
     }
 
     // In-line code blocks
-    .highlighter-rouge {
+    .highlighter-rouge { // For Jekyll 3.0
         font-size: 12px !important;
-        padding: 2px 2px;
+        border-radius: 4px;
         color: #111;
         background-color: #eee;
         border: 1px solid #dbdbdb;
+        margin: 8px 0;
+    }
+
+    // In-line code blocks
+    figure { // Using liquid — Jekyll 2.0
+        border: 1px solid gray;
+        border-radius: 4px;
+        margin: 8px 0 !important;
     }
 
     // Code blocks
     pre {
-        font-size: 12px !important;
+        font-size: 14px !important;
+        border: none;
+        padding: 8px;
     }
 
     // Bold
