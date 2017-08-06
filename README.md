@@ -10,6 +10,9 @@ I started building this site in August 2015. I had been writing apps in Java and
 
 If you have any comments, suggestions, or feedback please let me know via email or LinkedIn!
 
+# Gems
+Uses `bundle`. Installation: `gem install bundler`.
+
 # Usage
 Using shortcut:
 `$ ./serve.sh`

@@ -8,6 +8,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://khou22.github.io" # the base hostname & protocol for your site
+
+# External links
 twitter_username: kevinhou22
 github_username:  khou22
 LinkedIn_url: "https://www.linkedin.com/in/kevinhou22"
@@ -17,8 +19,12 @@ flickr_url: "https://www.flickr.com/photos/khou22/albums"
 vsco_url: "http://vsco.co/khou22/"
 school_profile: "https://www.princeton.edu/main/"
 
+plugins: [jekyll-paginate]
+
 # Build settings
 markdown: kramdown
+paginate: 12 # Number of blog posts per page when browsing
+paginate_path: "/blog/page:num/"
 
 # Bug fixes
 excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed/

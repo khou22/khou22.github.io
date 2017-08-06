@@ -964,6 +964,11 @@ article strong {
 .right-column ol {
   margin-left: 12px; }
 
+.pagination {
+  width: 100%;
+  text-align: center;
+  font-size: 16px; }
+
 /*Custom sass for anything to do with tags*/
 .tag-list {
   font-size: 2rem; }
