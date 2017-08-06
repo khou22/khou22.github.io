@@ -850,8 +850,15 @@ article strong {
   z-index: 2;
   margin-left: 10%;
   padding: 12px;
+  border-radius: 5px;
   display: none;
-  background-color: white; }
+  /* Glass effect */
+  border: 1px solid gray;
+  border-bottom: 2px solid;
+  border-bottom-color: #ccc;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.8); }
   .blog-landing-portfolio-dropdown-li {
     margin-left: 0;
     padding-left: 0;
@@ -859,6 +866,8 @@ article strong {
     .blog-landing-portfolio-dropdown-li a {
       margin-left: 0;
       color: black !important; }
+    .blog-landing-portfolio-dropdown-li a:hover {
+      color: #888 !important; }
 .blog-landing-page {
   top: -80px;
   position: relative;

@@ -80,8 +80,16 @@ $mobile-cuttoff: 800px;
     z-index: 2;
     margin-left: 10%;
     padding: 12px;
+    border-radius: 5px;
     display: none; // Hide unless script displays
-    background-color: white;
+
+    /* Glass effect */
+    border: 1px solid gray;
+    border-bottom: 2px solid;
+    border-bottom-color: #ccc;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, .8);
 
     &-li {
       margin-left: 0;
@@ -91,6 +99,10 @@ $mobile-cuttoff: 800px;
       a {
         margin-left: 0;
         color: black !important;
+      }
+
+      a:hover {
+          color: #888 !important;
       }
     }
   }
