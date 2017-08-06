@@ -24,7 +24,7 @@ flickr_url: "https://www.flickr.com/photos/khou22/albums"
 vsco_url: "http://vsco.co/khou22/"
 school_profile: "https://www.princeton.edu/main/"
 
-plugins: [jekyll-paginate, jekyll-seo-tag]
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
 
 # Build settings
 markdown: kramdown
@@ -41,6 +41,8 @@ social:
     - https://www.linkedin.com/in/kevinhou22
     - https://github.com/khou22
 # google_site_verification:
+
+# SEO site map generation
 
 # Bug fixes
 excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed/
