@@ -4,62 +4,98 @@ layout: default
 <!-- Hide scrollbar on this page -->
 <style> ::-webkit-scrollbar { display: none; } </style>
 
-<div class="blog-landing-header" id="blog-landing-header">
-  <!-- Logo -->
-  <a href="{{ site.url }}">
-    <img src="{{ site.baseurl }}/media/site/favicon.png" class="blog-landing-header-logo">
-  </a>
-  <!-- Links -->
-  <ul class="blog-landing-header-ul">
-    <li class="blog-landing-header-li">
-      <a href="{{ site.baseurl }}/contact">Contact</a>
-    </li>
-    <li id="blog-landing-portfolio-group" class="blog-landing-header-li">
-      <a id="blog-landing-portfolio-link" href="{{ site.baseurl }}/categories">Portfolio &#9662;</a>
-      <ul id="blog-landing-portfolio-dropdown" class="blog-landing-portfolio-dropdown">
-        <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/programming">Programming</a></li>
-        <li class="blog-landing-portfolio-dropdown-li"><a href="https://www.flickr.com/photos/khou22/albums">Woodshop</a></li>
-        <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/design">Design</a></li>
-        <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/photography">Photography</a></li>
+<!-- Concatinate blog homepage url -->
+{% capture blogHomepage %}{{ site.baseurl }}/blog/{% endcapture %}
+
+<!-- Only show custom nav bar if on first page of blog -->
+{% if page.url == blogHomepage %}
+    <div class="blog-landing-header" id="blog-landing-header">
+      <!-- Logo -->
+      <a href="{{ site.url }}">
+        <img src="{{ site.baseurl }}/media/site/favicon.png" class="blog-landing-header-logo">
+      </a>
+      <!-- Links -->
+      <ul class="blog-landing-header-ul">
+        <li class="blog-landing-header-li">
+          <a href="{{ site.baseurl }}/contact">Contact</a>
+        </li>
+        <li id="blog-landing-portfolio-group" class="blog-landing-header-li">
+          <a id="blog-landing-portfolio-link" href="{{ site.baseurl }}/categories">Portfolio &#9662;</a>
+          <ul id="blog-landing-portfolio-dropdown" class="blog-landing-portfolio-dropdown">
+            <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/programming">Programming</a></li>
+            <li class="blog-landing-portfolio-dropdown-li"><a href="https://www.flickr.com/photos/khou22/albums">Woodshop</a></li>
+            <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/design">Design</a></li>
+            <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/photography">Photography</a></li>
+          </ul>
+        </li>
+        <li class="blog-landing-header-li">
+          <a href="{{ site.baseurl }}/blog">Blog</a>
+        </li>
+        <li class="blog-landing-header-li">
+          <a href="{{ site.baseurl }}/">Home</a>
+        </li>
       </ul>
-    </li>
-    <li class="blog-landing-header-li">
-      <a href="{{ site.baseurl }}/blog">Blog</a>
-    </li>
-    <li class="blog-landing-header-li">
-      <a href="{{ site.baseurl }}/">Home</a>
-    </li>
-  </ul>
-</div>
+    </div>
+{% endif %}
 
 <!-- Blog homepage -->
 <div class="blog-homepage">
-  <div class="blog-landing-page">
-    <div class="blog-landing-page-filter">
-      <div class="blog-landing-page-content" onclick="scrollToMain()">
-        <img src="../media/site/images/Blog_Landing_Content.png" width="100%">
-      </div>
-    </div>
-  </div>
+    {% if page.url == blogHomepage %}
+       <!-- First page of blog -->
+       <div class="blog-landing-page">
+         <div class="blog-landing-page-filter">
+           <div class="blog-landing-page-content" onclick="scrollToMain()">
+             <img src="{{ "/media/site/images/Blog_Landing_Content.png" | prepend: site.baseurl }}" width="100%">
+           </div>
+         </div>
+       </div>
+    {% endif %}
+
   <div id="mainContent" class="blog-homepage-content clearfix">
     <div class="home left-main">
 
-      <h1 class="page-heading">Posts <span class="number-of-posts">({{site.posts.size}})</span></h1>
+        {% if page.url == blogHomepage %}
+            <!-- If on first page -->
+            <h1 class="page-heading">Posts <span class="number-of-posts">({{site.posts.size}})</span></h1>
+        {% else %}
+            <!-- If on any other page -->
+            <h1 class="page-heading">Posts <span class="number-of-posts">(Page {{paginator.page}})</span></h1>
+        {% endif %}
 
       <ul class="post-list">
-        <!-- Repeats for (maps) all posts -->
-        {% for post in site.posts %}
-          <li class="post-individual">
-            <h2 style="margin-bottom: 0rem">
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-            <p class="post-description">
-              {{ post.description }}
-            </p>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-          </li>
+
+        <!-- This loops through the paginated posts -->
+        {% for post in paginator.posts %}
+            <li class="post-individual">
+              <h2 style="margin-bottom: 0rem">
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              </h2>
+              <p class="post-description">
+                {{ post.description }}
+              </p>
+              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </li>
         {% endfor %}
       </ul>
+
+      {% if paginator.total_pages > 1 %}
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous">< Previous</a>
+          <!-- 3 spaces -->
+          &nbsp;&nbsp;&nbsp;
+        {% endif %}
+
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+        {% if paginator.next_page %}
+        <!-- 3 spaces -->
+            &nbsp;&nbsp;&nbsp;
+          <a href="{{ paginator.next_page_path }}" class="next">Next ></a>
+        {% endif %}
+
+        </div>
+    {% endif %}
 
       <!-- <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
@@ -105,4 +141,8 @@ layout: default
 </div>
 
 <!-- Add scripts -->
-<script src="blogLandingPage.js" type="text/javascript"></script>
+
+<!-- Only for first page of blog -->
+{% if page.url == blogHomepage %}
+   <script src="{{ "/blog/blogLandingPage.js" | prepend: site.baseurl }}" type="text/javascript"></script>
+{% endif %}
