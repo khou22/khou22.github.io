@@ -2,7 +2,7 @@
 layout: post
 title: "CSS Filters and Effects"
 author: "Kevin Hou"
-author: 2015-08-17 15:03:23
+date: 2015-08-17 15:03:23
 description: "How to use CSS3 animations to apply filters on images or divs."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: programming

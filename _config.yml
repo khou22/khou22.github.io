@@ -1,6 +1,11 @@
 # Site settings
 title: Kevin Hou
-author: Kevin Hou
+author:
+  login: khou22
+  email: kevin.ch.hou@gmail.com
+  display_name: Kevin Hou
+  first_name: Kevin
+  last_name: Hou
 location: San Francisco Bay Area
 school: Lick-Wilmerding High School
 email: kevin.ch.hou@gmail.com
@@ -19,12 +24,23 @@ flickr_url: "https://www.flickr.com/photos/khou22/albums"
 vsco_url: "http://vsco.co/khou22/"
 school_profile: "https://www.princeton.edu/main/"
 
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-seo-tag]
 
 # Build settings
 markdown: kramdown
 paginate: 12 # Number of blog posts per page when browsing
 paginate_path: "/blog/page:num/"
+
+# SEO Tagging
+twitter:
+  username: kevinhou22
+social:
+  name: Kevin Hou
+  links:
+    - https://twitter.com/kevinhou22
+    - https://www.linkedin.com/in/kevinhou22
+    - https://github.com/khou22
+# google_site_verification:
 
 # Bug fixes
 excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed/
