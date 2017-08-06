@@ -24,7 +24,7 @@ flickr_url: "https://www.flickr.com/photos/khou22/albums"
 vsco_url: "http://vsco.co/khou22/"
 school_profile: "https://www.princeton.edu/main/"
 
-plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
+gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
 
 # Build settings
 markdown: kramdown

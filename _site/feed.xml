@@ -4,10 +4,10 @@
     <title>Kevin Hou</title>
     <description>Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Aug 2017 18:56:10 -0400</pubDate>
-    <lastBuildDate>Sun, 06 Aug 2017 18:56:10 -0400</lastBuildDate>
+    <link>http://khou22.github.io/</link>
+    <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 06 Aug 2017 19:00:20 -0400</pubDate>
+    <lastBuildDate>Sun, 06 Aug 2017 19:00:20 -0400</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -280,8 +280,8 @@ Go to line number: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Line 
 &lt;/ol&gt;
 </description>
         <pubDate>Fri, 04 Aug 2017 13:18:02 -0400</pubDate>
-        <link>http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</guid>
+        <link>http://khou22.github.io/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</guid>
         
         
         <category>Programming</category>
@@ -303,8 +303,8 @@ I’ll probably be fairly confident with my setup by the time school rolls aroun
 Check out my &lt;a href=&quot;http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html&quot;&gt;next blog post&lt;/a&gt; to see my personal VIM configuration — I’ve spent a fair amount of time messing around with it and I’m really enjoying it so far so definitely take a look if you’re at all interested.&lt;/p&gt;
 </description>
         <pubDate>Thu, 03 Aug 2017 13:02:56 -0400</pubDate>
-        <link>http://localhost:4000/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
+        <link>http://khou22.github.io/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
         
         
         <category>Programming</category>
@@ -413,8 +413,8 @@ Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/&lt;/code&gt; (
 &lt;/table&gt;
 </description>
         <pubDate>Mon, 31 Jul 2017 12:50:16 -0400</pubDate>
-        <link>http://localhost:4000/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</guid>
+        <link>http://khou22.github.io/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</guid>
         
         <category>es6</category>
         
@@ -453,8 +453,8 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
 &lt;/ol&gt;
 </description>
         <pubDate>Mon, 24 Jul 2017 07:49:12 -0400</pubDate>
-        <link>http://localhost:4000/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</link>
-        <guid isPermaLink="true">http://localhost:4000/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</guid>
+        <link>http://khou22.github.io/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</guid>
         
         
         <category>design</category>
@@ -520,8 +520,8 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
 &lt;p&gt;Overall, I’ve been very satisfied with TypeScript so far. The combination of code completion, reduced debugging time, and clean structure has made for a hugely satisfying development process. I’m thinking about refactoring my NodeJS Heroku server to TypeScript just so I can keep using it. Hope this post was helpful and I highly recommend you give TypeScript a shot!&lt;/p&gt;
 </description>
         <pubDate>Fri, 14 Jul 2017 13:40:33 -0400</pubDate>
-        <link>http://localhost:4000/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</guid>
+        <link>http://khou22.github.io/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</guid>
         
         <category>javascript</category>
         
@@ -571,8 +571,8 @@ As I’ve mentioned earlier, I’ve been working with massive JSON objects often
 It turns the page into a text editor of sorts and you can compress objects and arrays very easily. It’ll use syntax highlighting and you can customize the font, text size, and more. Overall, just makes the process of looking at JSON much more enjoyable (restoring the romance in data if I may). It’s really useful when you want to compare two different objects that are separated by a massive, nested array. You can simply compress the array and it becomes infinitely cleaner to look at.&lt;/p&gt;
 </description>
         <pubDate>Sat, 01 Jul 2017 13:06:18 -0400</pubDate>
-        <link>http://localhost:4000/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</guid>
+        <link>http://khou22.github.io/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</guid>
         
         
         <category>Programming</category>
@@ -613,8 +613,8 @@ library-name/
     src/&lt;/p&gt;
 </description>
         <pubDate>Tue, 27 Jun 2017 06:17:34 -0400</pubDate>
-        <link>http://localhost:4000/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</guid>
+        <link>http://khou22.github.io/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</guid>
         
         
         <category>Programming</category>
@@ -700,8 +700,8 @@ Another useful event handler is the ‘input’ tag’s built in onBlur() event 
 
 </description>
         <pubDate>Wed, 14 Jun 2017 13:50:35 -0400</pubDate>
-        <link>http://localhost:4000/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</guid>
+        <link>http://khou22.github.io/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</guid>
         
         <category>es6</category>
         
@@ -834,8 +834,8 @@ Now we will create a rendering function, using ReactDOM to inject our HTML into 
 &lt;p&gt;Hope you were able to follow this brief tutorial! It is loosely based on the free course on egghead.io on &lt;a href=&quot;http://webpack.github.io/docs/tutorials/getting-started/&quot; target=&quot;\_blank&quot;&gt;Redux and React&lt;/a&gt;. The full code can be found &lt;a href=&quot;https://github.com/khou22/NodeJSPractice/tree/master/Redux&quot; target=&quot;\_blank&quot;&gt;on my GitHub&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 13 Jun 2017 06:26:07 -0400</pubDate>
-        <link>http://localhost:4000/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</guid>
+        <link>http://khou22.github.io/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</guid>
         
         <category>reactjs</category>
         
@@ -898,8 +898,8 @@ Other problems we encountered include extracting the name of the event, extracti
 &lt;p&gt;All in all, it was a very successful hackathon! As we were both freshman, we were definitley the underdog in this hackathon and we made a name for ourselves! Some professors became interested in our project and want us to build it out so that students can actually use it! We will likely spend the summer completing the project so that come fall, it will be widely used on campus! It was really exciting and well worth the lack of sleep. Check out the Devpost submission &lt;a href=&quot;https://devpost.com/software/sofly-scanner&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
 </description>
         <pubDate>Sun, 09 Apr 2017 07:56:00 -0400</pubDate>
-        <link>http://localhost:4000/programming/2017/04/09/hackprinceton-2017-sofly-an-ios-app-to-scan-flyers-on-campus.html</link>
-        <guid isPermaLink="true">http://localhost:4000/programming/2017/04/09/hackprinceton-2017-sofly-an-ios-app-to-scan-flyers-on-campus.html</guid>
+        <link>http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly-an-ios-app-to-scan-flyers-on-campus.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly-an-ios-app-to-scan-flyers-on-campus.html</guid>
         
         <category>ios</category>
         
