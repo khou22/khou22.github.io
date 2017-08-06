@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>amCharts Responsive</title>
+  <meta name="description" content="Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
+">
+
+  <!-- React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- Tile Layout Library -->
+  <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/libraries/ammap/plugins/responsive/">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+
+  <!-- Bootstrap -->
+  <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+  <!-- Google Analytics -->
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-66796355-1', 'auto');
+      ga('send', 'pageview', location.pathname);
+
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/media/site/favicon.png">
+
+    <!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>amCharts Responsive | Kevin Hou</title>
+<meta property="og:title" content="amCharts Responsive" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area." />
+<meta property="og:description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area." />
+<link rel="canonical" href="http://localhost:4000/libraries/ammap/plugins/responsive/" />
+<meta property="og:url" content="http://localhost:4000/libraries/ammap/plugins/responsive/" />
+<meta property="og:site_name" content="Kevin Hou" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kevinhou22" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"WebPage","headline":"amCharts Responsive","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.","url":"http://localhost:4000/libraries/ammap/plugins/responsive/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+
+  <body>
+
+    <header>
+  <!-- Desktop Client -->
+  <div class="site-header" id="site-header">
+    <div class="wrapper" style="height: 100%">
+      <div class="site-header-background">
+        <div class="site-header-content">
+
+          <a href="/" class="header-title-section">
+            <img src="/media/site/favicon.png" class="header-logo" align="left">
+            <p class="site-title">Kevin Hou</p>
+          </a>
+
+          <!-- Site Navigation Bar -->
+          <ul class="nav-ul site-nav-bar">
+            <li class="nav-li nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/blog">Blog &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/blog/category">Browse by Category</a></li>
+                <li class="nav-li"><a href="/blog/tag">Browse by Tag</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/categories">Portfolio &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/programming">Programming</a></li>
+                <!-- <li class="nav-li"><a href="/blog/wood/">Woodshop</a></li> -->
+                <li class="nav-li"><a href="https://www.flickr.com/photos/khou22/albums" target="_blank">Woodshop</a></li>
+                <li class="nav-li"><a href="/design">Design</a></li>
+                <li class="nav-li"><a href="/photography">Photography</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item"><a href="/contact">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="header-placeholder"></div>
+
+  <!-- Activate Tooltips -->
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    // Header has two sizes — 80px and 40px — based on scrolling
+    $(document).scroll(function() {
+      var screenWidth = $(document).width();
+      var mobileCuttoff = 800; // Ambiguous
+      if (screenWidth > mobileCuttoff) {
+        var triggerDistance = 100;
+        var classesToChange = [
+          {
+            className: ".site-header",
+            styleElement: "height",
+            min: 40,
+            max: 80
+          },
+          {
+            className: ".site-title",
+            styleElement: "font-size",
+            min: 20,
+            max: 32
+          },
+          {
+            className: ".site-title",
+            styleElement: "line-height",
+            min: 2,
+            max: 3
+          },
+          {
+            className: ".header-logo",
+            styleElement: "height",
+            min: 24,
+            max: 64
+          },
+          {
+            className: ".site-nav-bar",
+            styleElement: "margin-top",
+            min: 4,
+            max: 24
+          }
+        ]
+        if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
+          var percentageComplete = $(this).scrollTop()/triggerDistance; // Percentage complete
+          for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
+            var currentClass = classesToChange[i] // Store
+            var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
+            $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
+          }
+        } else { // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.min);
+          }
+        }
+        if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast - max style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.max);
+          }
+        }
+      } else {
+        // If on mobile
+        // console.log("Your screen size does not support dynamic header");
+      }
+    });
+  </script>
+
+
+  <!-- Mobile Client -->
+  <div class="mobile-blog-header">
+    <ul class="mobile-blog-header-ul">
+      <li class="mobile-blog-header-li-logo">
+        <a href="http://localhost:4000">
+          <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
+        </a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/">Home</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/blog">Blog</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/categories">Portfolio</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mobile-blog-header-placeholder">
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">amCharts Responsive</h1>
+  </header>
+
+  <article class="post-content">
+    <h1 id="amcharts-responsive">amCharts Responsive</h1>
+
+<p>Version: 1.0.2</p>
+
+<h2 id="description">Description</h2>
+
+<p>Use this plugin to enable “responsive” features for amCharts’ JavaScript Charts,
+JavaScript Stock Chart, or JavaScript Maps.</p>
+
+<p>“Responsive” chart or map will modify it’s features dynamically (even as you
+resize the container) based on the available area. For example: a full fledged 
+line chart with legend guides, labels, titles and other elements will be 
+displayed in all its glory if container is big enough.</p>
+
+<p>If the container shrinks (i.e. you resize a browser window or view it on an
+iPad), it starts “compacting” the chart. First the legend is removed. Shrink it
+even further, axis titles are removed and its value labels are moved inside the
+plot area. Going even smaller, bullets, labels gone. All the way to the
+sparkline representation of the chart.</p>
+
+<p>Plugin brings a universal set of pre-defined rules that you can use to instantly
+enable responsiveness. Those are custom-tailored for each chart/map type and
+will probably fit your requirements out-of the-box. All you need to do is to
+enable “responsive” plugin for your chart instance.</p>
+
+<p>You can modify those defaults rules, or make your own list. The plugin allows
+that. (see further down this file for instructions)</p>
+
+<h2 id="usage">Usage</h2>
+
+<ol>
+  <li>Include the minified version of file of this plugin. I.e.:</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;script src="amcharts/plugins/responsive/responsive.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre>
+</div>
+
+<p>(this needs to go after all the other amCharts includes)</p>
+
+<ol>
+  <li>Add the following setting to your chart configuration:</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
+  ...,
+  "responsive": {
+    "enabled": true
+  }
+} );
+</code></pre>
+</div>
+
+<p>Or if you are using non-JSON setup:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>chart.responsive = {
+  "enabled": true
+};
+</code></pre>
+</div>
+
+<p>That’s it.</p>
+
+<h2 id="advanced-use">Advanced use</h2>
+
+<h3 id="rules">Rules</h3>
+
+<p>You can modify (or completely overwrite) the default responsive rules used by
+the plugin.</p>
+
+<p>A plugin works by checking chart area dimensions after each resize. (or after
+initial build / mobile device orientation change) It then overrides particular
+settings suitable for these particular dimensions.</p>
+
+<p>Override rules are implemented by defining chart rules, or just “rules” moving
+forward. Each rule has two things:</p>
+
+<ol>
+  <li>Dimension conditions;</li>
+  <li>Overrides. (a set of properties to override for this particular rule)</li>
+</ol>
+
+<p>A rule is an object, for example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"minWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"maxWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"maxHeight"</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"minHeight"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"overrides"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"precision"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"legend"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"valueAxes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"inside"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>The above rule will be applicable to a chart that is between 200px and 400px in
+width and height.</p>
+
+<p>It is not necessary to add all of the dimensional properties. You just neat at
+least one.</p>
+
+<p>So for example to make the rule apply to all charts with width 400px or lower,
+you would do something like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"maxWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"overrides"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"precision"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"legend"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"valueAxes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"inside"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>Please note that there are several other conditional properties besides the ones
+that deal with chart’s dimensions:</p>
+
+<ul>
+  <li>
+    <p>“rotate” (true|false) - set this property if you want to make this rule
+applicable to rotated serial chart only (i.e. bar chart)</p>
+  </li>
+  <li>
+    <p>“legendPosition” (“top|bottom|left|right”) - set this property if you want the
+rule applied only when the chart legend is set to particular position.
+Please note that this does not check whether the legend is enabled at all.</p>
+  </li>
+</ul>
+
+<p>Now, on to explaining “overrides”. It’s an object, that contains properties that
+you want to override the chart’s initial ones with.</p>
+
+<p>It can be either simple properties, like “fontSize” or “precision”, or complext
+types like object, or array.</p>
+
+<p>To override a property of a child object, such as “legend”, you would simply go
+with JSON representation of the properties you need to override. I.e.:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"legend": {
+  "enabled": false
+}
+</code></pre>
+</div>
+
+<p>This will look for a “legend” property in chart object, then change it’s
+“enabled” property to false.</p>
+
+<h3 id="overriding-arrays-of-objects">Overriding arrays of objects</h3>
+
+<p>Some objects in charts are collected in arrays, i.e. “graphs”, “valueAxes”, etc.</p>
+
+<p>There are some ways to override their properties as well.</p>
+
+<p>To override properties for ALL objects in the array, you would provide an
+override instruction as an object. I.e.:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"graphs": {
+  "bullet": "round",
+  "lineThickness": 5
+}
+</code></pre>
+</div>
+
+<p>The above will add a round bullet and set line thickness to all of the graphs on
+the chart.</p>
+
+<p>You can also target individual items in the array. There are two ways to do
+that:</p>
+
+<p>a) Use “id” property;
+b) Apply using the same index.</p>
+
+<p>To individually apply property overrides, you will need to supply override
+instructions as an array:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"graphs": [
+  {
+    "id": "g1",
+    "bullet": "round",
+    "lineThickness": 5
+  }
+]
+</code></pre>
+</div>
+
+<p>The above will apply the same properties for the graph with an id of “g1” only.
+It will not touch the rest of the graphs.</p>
+
+<p>Please note that original graph definition in your chart settings needs to have
+the “id” property set so this plugin can target it.</p>
+
+<p>Or you can omit the “id” and just apply overrides in the same order as you have
+them defined. I.e.:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"graphs": [
+  {
+    "bullet": "round"
+  },
+  {
+    "bullet": "square"
+  }
+]
+</code></pre>
+</div>
+
+<p>The above will apply round bullets to the first defined graph, and square
+bullets to the second graph.</p>
+
+<h3 id="chaining-multiple-rules">Chaining multiple rules</h3>
+
+<p>The cool pat is that you can daisy-chain the override rules, much like in CSS.</p>
+
+<p>The plugin will examine all of the rules if their dimensional conditions match
+current chart condition and will apply their overrides in the same order they
+are defined.</p>
+
+<p>Consider this rule set:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"responsive": {
+  "enabled": true,
+  "rules": [
+    // at 400px wide, we hide legend
+    {
+      "maxWidth": 400,
+      "overrides": {
+        "legend": {
+          "enabled"
+        }
+      }
+    },
+
+    // at 300px or less, we move value axis labels inside plot area
+    // the legend is still hidden because the above rule is still applicable
+    {
+      "maxWidth": 300,
+      "overrides": {
+        "valueAxes": {
+          "inside": true
+        }
+      }
+    },
+
+    // at 200 px we hide value axis labels altogether
+    {
+      "maxWidth": 200,
+      "overrides": {
+        "valueAxes": {
+          "labelsEnabled": false
+        }
+      }
+    }
+
+  ]
+}
+</code></pre>
+</div>
+
+<p>In case several rules modify the same property, the last one will always “win”.</p>
+
+<h3 id="combining-custom-rules-with-pre-defined-ones">Combining custom rules with pre-defined ones</h3>
+
+<p>The plugin will combine your custom rules with pre-defined ones automatically.</p>
+
+<p>In case you want to go pure and set only your own responsive rules, you can set
+property “addDefaultRules” to false. I.e.:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"responsive": {
+  "enabled": true,
+  "addDefaultRules": false,
+  "rules": [
+    {
+      "maxWidth": 400,
+      "overrides": {
+        "legend": {
+          "enabled"
+        }
+      }
+    }
+  ]
+}
+</code></pre>
+</div>
+
+<p>When your custom rules are combined with pre-defined ones, yours are appended at
+the end of the list. This means that your rules will always have the “last
+word”.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>This plugin requires at least 3.13 version of JavaScript Charts, JavaScript
+Stock Chart or JavaScript Maps.</p>
+
+<p>Any older versions will be ignored by this plugin. The charts will function but
+no responsive rules will be applied to them.</p>
+
+<h2 id="demos">Demos</h2>
+
+<p>Run the index.html in the subdirectory /examples. It will allow viewing misc
+chart types at various resolutions.</p>
+
+<h2 id="extending-this-plugin">Extending this plugin</h2>
+
+<p>You’re encouraged to modify, extend and make derivative plugins out of this
+plugin.</p>
+
+<p>You can modify files, included in this archive or, better yet, fork this project
+on GitHub:</p>
+
+<p>https://github.com/amcharts/responsive</p>
+
+<p>We’re curious types. Please let us know (contact@amcharts.com) if you do create
+something new out of this plugin.</p>
+
+<h2 id="license">License</h2>
+
+<p>This plugin is licensed under Apache License 2.0.</p>
+
+<p>This basically means you’re free to use or modify this plugin, even make your
+own versions or completely different products out of it.</p>
+
+<p>Please see attached file “license.txt” for the complete license or online here:</p>
+
+<p>http://www.apache.org/licenses/LICENSE-2.0</p>
+
+<h2 id="contact-us">Contact us</h2>
+
+<ul>
+  <li>Email:contact@amcharts.com</li>
+  <li>Web: http://www.amcharts.com/</li>
+  <li>Facebook: https://www.facebook.com/amcharts</li>
+  <li>Twitter: https://twitter.com/amcharts</li>
+</ul>
+
+<h2 id="changelog">Changelog</h2>
+
+<h3 id="102">1.0.2</h3>
+<ul>
+  <li>Fixed a bug where the plugin was causing an error when chart/map container was being hidden</li>
+</ul>
+
+<h3 id="101">1.0.1</h3>
+<ul>
+  <li>Fixed bug with overrides being overwritten with chart object in some cases</li>
+  <li>V3.14 compatibility</li>
+</ul>
+
+<h3 id="10">1.0</h3>
+<ul>
+  <li>Added support for GANTT chart type (available sin JavaScript Charts V3.14)</li>
+</ul>
+
+<h3 id="092">0.9.2</h3>
+<ul>
+  <li>Fixed a custom rules being applied in the wrong order</li>
+</ul>
+
+<h3 id="091">0.9.1</h3>
+<ul>
+  <li>Made all examples use minified version of the plugin</li>
+  <li>Introduced removal of grid lines on micro charts</li>
+  <li>Tweaked legend hiding dimensions for pie chart</li>
+</ul>
+
+<h3 id="09">0.9</h3>
+<ul>
+  <li>Initial release</li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <!-- External Links Navigation Bar -->
+  <table class="external-bar"> <!-- Custom header -->
+    <tr>
+      <td class="external-td">
+        <a href="/blog" data-toggle="tooltip" title="Blog Home">
+          <div class="external-link-box home-bw"></div>
+          <p class="external-link-label">Home</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.linkedin.com/in/kevinhou22" target="_blank" data-toggle="tooltip" title="LinkedIn">
+          <div class="external-link-box linkedin-bw"></div>
+          <p class="external-link-label">LinkedIn</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://github.com/khou22" target="_blank" data-toggle="tooltip" title="Github">
+          <div class="external-link-box github-bw"></div>
+          <p class="external-link-label">Github</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.flickr.com/photos/khou22/albums" target="_blank" data-toggle="tooltip" title="Flickr">
+          <div class="external-link-box flickr-bw"></div>
+          <p class="external-link-label">Flickr</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="http://kevinhou.wix.com/projects" target="_blank" data-toggle="tooltip" title="Portfolio">
+          <div class="external-link-box gallery-bw"></div>
+          <p class="external-link-label">Portfolio</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://youtube.com/kevinhou22" target="_blank" data-toggle="tooltip" title="YouTube Channel">
+          <div class="external-link-box youtube-bw"></div>
+          <p class="external-link-label">YouTube</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.princeton.edu/main/" target="_blank" data-toggle="tooltip" title="School Profile">
+          <div class="external-link-box highSchool-bw"></div>
+          <p class="external-link-label">School Profile</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="/blog/contact" data-toggle="tooltip" title="Contact">
+          <div class="external-link-box email-bw"></div>
+          <p class="external-link-label">Contact</p>
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="wrapper">
+
+    <div class="site-footer-content">
+
+      <h2 class="footer-heading">Kevin Hou</h2>
+
+      <div class="footer-col-wrapper">
+        <div class="footer-col  footer-col-1">
+          <ul class="contact-list">
+            <li>{"login"=>"khou22", "email"=>"kevin.ch.hou@gmail.com", "display_name"=>"Kevin Hou", "first_name"=>"Kevin", "last_name"=>"Hou", "twitter"=>nil}</li>
+            <li><a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a></li>
+            <li>San Francisco Bay Area</li>
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-2">
+          <ul class="social-media-list">
+            
+            <li>
+              <a href="https://github.com/khou22" target="_blank">
+                <span class="icon  icon--github">
+                  <svg viewBox="0 0 16 16">
+                    <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                  </svg>
+                </span>
+
+                <span class="username">khou22</span>
+              </a>
+            </li>
+            
+
+            
+            <li>
+              <a href="https://www.flickr.com/photos/khou22/albums" target="_blank">
+                <div class="footer-icon-box flickr-bw"></div><span class="username">kevinhou22</span>
+              </a>
+            </li>
+            
+
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-3">
+          <p class="text">Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
+</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

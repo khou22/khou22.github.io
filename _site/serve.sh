@@ -7,4 +7,4 @@
 # Options:
 # --future allows you to see blog posts dated in the future
 # --livereload turns on live reloading
-jekyll serve --watch --future --livereload
+bundle exec jekyll serve --watch --future --livereload
