@@ -11,4 +11,5 @@ group :jekyll_plugins do
     gem 'jekyll-livereload' # Live reload when making a change
     gem 'jekyll-seo-tag' # Automatic SEO Tagging
     gem 'jekyll-sitemap' # Automatic SEO sitemap generation
+    gem 'jekyll-feed' # RSS feed
 end

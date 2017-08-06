@@ -231,6 +231,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-admin (~> 0.3.0)
+  jekyll-feed
   jekyll-livereload
   jekyll-paginate
   jekyll-seo-tag
