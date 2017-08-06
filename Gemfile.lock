@@ -5,8 +5,13 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     backports (3.8.0)
     colorator (1.1.0)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
+    eventmachine (1.2.5)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
+    http_parser.rb (0.6.0)
     jekyll (3.5.1)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -23,6 +28,9 @@ GEM
       jekyll (~> 3.3)
       sinatra (~> 1.4)
       sinatra-contrib (~> 1.4)
+    jekyll-livereload (0.2.2)
+      em-websocket (~> 0.5)
+      jekyll (~> 3.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
@@ -71,6 +79,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll-admin (~> 0.3.0)
+  jekyll-livereload
   jekyll-paginate
 
 BUNDLED WITH
