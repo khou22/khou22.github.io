@@ -81,6 +81,7 @@ VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and 
 #### 	mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)
 	1. Ensure there exists a folder: `~/.vim/plugin`
 	2. Add [mru.vim](https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim) to the `plugin` folder
+        `curl "https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim" -o "mru.vim"`
 	3. Additional configurations can be found [here](http://www.vim.org/scripts/script.php?script_id=521)
 	4. To use `mru.vim`, type `:MRU` in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from
 
