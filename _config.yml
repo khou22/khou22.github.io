@@ -24,12 +24,15 @@ flickr_url: "https://www.flickr.com/photos/khou22/albums"
 vsco_url: "http://vsco.co/khou22/"
 school_profile: "https://www.princeton.edu/main/"
 
-gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap, jekyll-feed]
+gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap, jekyll-feed, jekyll-autoprefixer]
 
 # Build settings
 markdown: kramdown
 paginate: 15 # Number of blog posts per page when browsing
 paginate_path: "/blog/page:num/"
+
+autoprefixer:
+    only_production: true
 
 # SEO Tagging
 twitter:
