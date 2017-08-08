@@ -7,7 +7,7 @@ description: "An overview of some of the major topics I learned in the past week
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: programming
 tags: [ios, swift, apps, xcode]
-featured: "yes"
+featured: "no"
 ---
 <h3 class="post-subheader">Extensions</h3>
 Extensions are a great way of creating custom, and most importantly, global, functions attached to certain variable types. For example, a good example of this is when you want to use a UIColor derived from a hex value as opposed to an rgb value. Another (less useful) example is if you want to create a function that deletes the second letter of a string or returns the number of 2’s in a number. These types of functions can be accomplished through extensions. They essentially allow for custom functions and properties, but their real strenth is that they’re global. They’re lightweight and make your code very readable. Here is the hex example and usage:
