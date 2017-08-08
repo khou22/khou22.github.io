@@ -28,7 +28,7 @@ gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap, jekyll-feed]
 
 # Build settings
 markdown: kramdown
-paginate: 12 # Number of blog posts per page when browsing
+paginate: 15 # Number of blog posts per page when browsing
 paginate_path: "/blog/page:num/"
 
 # SEO Tagging

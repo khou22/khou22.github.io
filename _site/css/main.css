@@ -340,7 +340,7 @@ article strong { color: black; }
 .blog-landing-page { top: -80px; position: relative; width: 100vw; height: 100vh; background-image: url("../media/site/images/Blog_Image.jpg"); background-size: cover; background-position: center; margin-bottom: calc(-80px + 24px); margin-bottom: -webkit-calc(-80px + 24px); transform-origin: center 100%; }
 @media (max-width: 800px) { .blog-landing-page { top: 0px; height: 100vh; } }
 .blog-landing-page-filter { width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5); }
-.blog-landing-page-content { position: absolute; margin-left: 20%; margin-right: 20%; margin-top: 200px; width: 60%; }
+.blog-landing-page-content { position: absolute; margin-left: 20%; margin-right: 20%; margin-top: 200px; width: 60%; animation: fadeIn 2s ease-in-out; cursor: pointer; }
 @media (max-width: 800px) { .blog-landing-page-content { width: 90%; margin-left: 5%; margin-top: 280px; } }
 
 .mobile-blog-header { position: fixed; z-index: 10; height: 40px; padding: 4px; width: 100%; background-color: rgba(255, 255, 255, 0.75); }
@@ -374,6 +374,10 @@ article strong { color: black; }
 /*Custom sass for anything to do with tags*/
 .tag-list { font-size: 2rem; }
 
+@keyframes fadeIn { from { opacity: 0; }
+  to { opacity: 1; } }
+@keyframes fadeOut { from { opacity: 1; }
+  to { opacity: 0; } }
 /*Custom sass for anything to do with categories*/
 .category-list { font-size: 2rem; }
 

@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Aug 2017 19:45:50 -0400</pubDate>
-    <lastBuildDate>Sun, 06 Aug 2017 19:45:50 -0400</lastBuildDate>
+    <pubDate>Mon, 07 Aug 2017 20:12:59 -0400</pubDate>
+    <lastBuildDate>Mon, 07 Aug 2017 20:12:59 -0400</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -101,7 +101,13 @@
         &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; autocmd vimenter * NERDTree
 &lt;/code&gt;&lt;/pre&gt;
         &lt;/div&gt;
+        &lt;h4 id=&quot;mruvim--quick-access-to-most-recently-used-files-for-unix-systems&quot;&gt;mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)&lt;/h4&gt;
       &lt;/li&gt;
+      &lt;li&gt;Ensure there exists a folder: &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.vim/plugin&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Add &lt;a href=&quot;https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim&quot;&gt;mru.vim&lt;/a&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;plugin&lt;/code&gt; folder
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;curl &quot;https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim&quot; -o &quot;mru.vim&quot;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Additional configurations can be found &lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=521&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;To use &lt;code class=&quot;highlighter-rouge&quot;&gt;mru.vim&lt;/code&gt;, type &lt;code class=&quot;highlighter-rouge&quot;&gt;:MRU&lt;/code&gt; in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ol&gt;

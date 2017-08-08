@@ -143,6 +143,8 @@ $mobile-cuttoff: 800px;
       margin-right: 20%;
       margin-top: 200px;
       width: 60%;
+      animation: fadeIn 2s ease-in-out;
+      cursor: pointer;
 
       @media(max-width: $mobile-cuttoff) {
         // Spacing updates for mobile
