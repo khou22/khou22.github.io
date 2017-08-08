@@ -313,11 +313,14 @@ pre { font-size: 16px !important; }
 .blog-tutorial-step { margin-bottom: 12px; }
 
 article li { list-style-position: outside; }
-article h1 { margin-bottom: 12px; }
+article h1 { margin-top: 24px !important; margin-bottom: 12px !important; }
+article h2 { margin-top: 22px !important; margin-bottom: 10px !important; }
+article h3 { margin-top: 20px !important; margin-bottom: 8px !important; }
+article h4 { margin-top: 18px !important; margin-bottom: 6px !important; }
 article p { line-height: 22px; }
 article ol { padding-left: 40px; }
 article ul { padding-left: 40px; }
-article .highlighter-rouge { font-size: 12px !important; border-radius: 4px; color: #111; background-color: #eee; border: 1px solid #dbdbdb; margin: 8px 0; }
+article .highlighter-rouge { font-size: 70% !important; border-radius: 4px; color: #111; background-color: #eee; border: 1px solid #dbdbdb; margin: 8px 0; }
 article figure { border: 1px solid gray; border-radius: 4px; margin: 8px 0 !important; }
 article pre { font-size: 14px !important; border: none; padding: 8px; }
 article strong { color: black; }

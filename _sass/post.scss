@@ -124,7 +124,23 @@ article {
     }
 
     h1 {
-        margin-bottom: 12px;
+        margin-top: 24px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    h2 {
+        margin-top: 22px !important;
+        margin-bottom: 10px !important;
+    }
+
+    h3 {
+        margin-top: 20px !important;
+        margin-bottom: 8px !important;
+    }
+
+    h4 {
+        margin-top: 18px !important;
+        margin-bottom: 6px !important;
     }
 
     p {
@@ -141,7 +157,7 @@ article {
 
     // In-line code blocks
     .highlighter-rouge { // For Jekyll 3.0
-        font-size: 12px !important;
+        font-size: 70% !important;
         border-radius: 4px;
         color: #111;
         background-color: #eee;

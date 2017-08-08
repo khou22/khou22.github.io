@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 07 Aug 2017 20:12:59 -0400</pubDate>
-    <lastBuildDate>Mon, 07 Aug 2017 20:12:59 -0400</lastBuildDate>
+    <pubDate>Mon, 07 Aug 2017 20:28:22 -0400</pubDate>
+    <lastBuildDate>Mon, 07 Aug 2017 20:28:22 -0400</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -70,47 +70,45 @@
           &lt;li&gt;On dev box (Ubuntu): &lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo apt-get install cmake&lt;/code&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;Finish install: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ python ~/.vim/plugged/YouCompleteMe/install.py&lt;/code&gt;
-        &lt;h4 id=&quot;solarized-colorscheme-for-vim--theme&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solarized Colorscheme for VIM&lt;/code&gt; — Theme&lt;/h4&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Install into &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle&lt;/code&gt; folder. Create it if the directory doesn’t exist.&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ cd ~/.vim/bundle
- $ git clone git://github.com/altercation/vim-colors-solarized.git
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Set the theme in &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt;.&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; syntax enable
- &quot; Use 'light' if want the light theme
- set background=dark
- colorscheme solarized
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-    &lt;h4 id=&quot;nerdtree---project-heiarchy-in-sidebar&quot;&gt;NERDTree - Project Heiarchy in Sidebar&lt;/h4&gt;
-    &lt;ol&gt;
-      &lt;li&gt;Ensure you have a &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.vim/bundle/&lt;/code&gt; directory&lt;/li&gt;
-      &lt;li&gt;Install using: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;NERDTree will automatically open when VIM opens because of this command in the &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt;:&lt;/p&gt;
-
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; autocmd vimenter * NERDTree
-&lt;/code&gt;&lt;/pre&gt;
-        &lt;/div&gt;
-        &lt;h4 id=&quot;mruvim--quick-access-to-most-recently-used-files-for-unix-systems&quot;&gt;mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)&lt;/h4&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Ensure there exists a folder: &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.vim/plugin&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Add &lt;a href=&quot;https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim&quot;&gt;mru.vim&lt;/a&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;plugin&lt;/code&gt; folder
- &lt;code class=&quot;highlighter-rouge&quot;&gt;curl &quot;https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim&quot; -o &quot;mru.vim&quot;&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Additional configurations can be found &lt;a href=&quot;http://www.vim.org/scripts/script.php?script_id=521&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;To use &lt;code class=&quot;highlighter-rouge&quot;&gt;mru.vim&lt;/code&gt;, type &lt;code class=&quot;highlighter-rouge&quot;&gt;:MRU&lt;/code&gt; in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from&lt;/li&gt;
+      &lt;li&gt;Finish install: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ python ~/.vim/plugged/YouCompleteMe/install.py&lt;/code&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h4 id=&quot;solarized-colorscheme-for-vim--theme&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solarized Colorscheme for VIM&lt;/code&gt; — Theme&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Install into `bundle` folder. Create it if the directory doesn't exist.
+
+```
+$ cd ~/.vim/bundle
+$ git clone git://github.com/altercation/vim-colors-solarized.git
+```
+
+2. Set the theme in `.vimrc`.
+
+```
+syntax enable
+&quot; Use 'light' if want the light theme
+set background=dark
+colorscheme solarized
+``` ####    NERDTree - Project Heiarchy in Sidebar
+1. Ensure you have a `~/.vim/bundle/` directory
+2. Install using: `$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree`
+3. NERDTree will automatically open when VIM opens because of this command in the `.vimrc`:
+
+    ```
+    autocmd vimenter * NERDTree
+    ```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;mruvim--quick-access-to-most-recently-used-files-for-unix-systems&quot;&gt;mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Ensure there exists a folder: `~/.vim/plugin`
+2. Add [mru.vim](https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim) to the `plugin` folder
+    `curl &quot;https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim&quot; -o &quot;mru.vim&quot;`
+3. Additional configurations can be found [here](http://www.vim.org/scripts/script.php?script_id=521)
+4. To use `mru.vim`, type `:MRU` in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h1 id=&quot;commands&quot;&gt;Commands&lt;/h1&gt;
 

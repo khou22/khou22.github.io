@@ -317,47 +317,45 @@
           <li>On dev box (Ubuntu): <code class="highlighter-rouge">$ sudo apt-get install cmake</code></li>
         </ul>
       </li>
-      <li>Finish install: <code class="highlighter-rouge">$ python ~/.vim/plugged/YouCompleteMe/install.py</code>
-        <h4 id="solarized-colorscheme-for-vim--theme"><code class="highlighter-rouge">Solarized Colorscheme for VIM</code> — Theme</h4>
-      </li>
-      <li>Install into <code class="highlighter-rouge">bundle</code> folder. Create it if the directory doesn’t exist.</li>
-    </ol>
-
-    <div class="highlighter-rouge"><pre class="highlight"><code> $ cd ~/.vim/bundle
- $ git clone git://github.com/altercation/vim-colors-solarized.git
-</code></pre>
-    </div>
-
-    <ol>
-      <li>Set the theme in <code class="highlighter-rouge">.vimrc</code>.</li>
-    </ol>
-
-    <div class="highlighter-rouge"><pre class="highlight"><code> syntax enable
- " Use 'light' if want the light theme
- set background=dark
- colorscheme solarized
-</code></pre>
-    </div>
-    <h4 id="nerdtree---project-heiarchy-in-sidebar">NERDTree - Project Heiarchy in Sidebar</h4>
-    <ol>
-      <li>Ensure you have a <code class="highlighter-rouge">~/.vim/bundle/</code> directory</li>
-      <li>Install using: <code class="highlighter-rouge">$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree</code></li>
-      <li>
-        <p>NERDTree will automatically open when VIM opens because of this command in the <code class="highlighter-rouge">.vimrc</code>:</p>
-
-        <div class="highlighter-rouge"><pre class="highlight"><code> autocmd vimenter * NERDTree
-</code></pre>
-        </div>
-        <h4 id="mruvim--quick-access-to-most-recently-used-files-for-unix-systems">mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)</h4>
-      </li>
-      <li>Ensure there exists a folder: <code class="highlighter-rouge">~/.vim/plugin</code></li>
-      <li>Add <a href="https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim">mru.vim</a> to the <code class="highlighter-rouge">plugin</code> folder
- <code class="highlighter-rouge">curl "https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim" -o "mru.vim"</code></li>
-      <li>Additional configurations can be found <a href="http://www.vim.org/scripts/script.php?script_id=521">here</a></li>
-      <li>To use <code class="highlighter-rouge">mru.vim</code>, type <code class="highlighter-rouge">:MRU</code> in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from</li>
+      <li>Finish install: <code class="highlighter-rouge">$ python ~/.vim/plugged/YouCompleteMe/install.py</code></li>
     </ol>
   </li>
 </ol>
+
+<h4 id="solarized-colorscheme-for-vim--theme"><code class="highlighter-rouge">Solarized Colorscheme for VIM</code> — Theme</h4>
+<div class="highlighter-rouge"><pre class="highlight"><code>1. Install into `bundle` folder. Create it if the directory doesn't exist.
+
+```
+$ cd ~/.vim/bundle
+$ git clone git://github.com/altercation/vim-colors-solarized.git
+```
+
+2. Set the theme in `.vimrc`.
+
+```
+syntax enable
+" Use 'light' if want the light theme
+set background=dark
+colorscheme solarized
+``` ####    NERDTree - Project Heiarchy in Sidebar
+1. Ensure you have a `~/.vim/bundle/` directory
+2. Install using: `$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree`
+3. NERDTree will automatically open when VIM opens because of this command in the `.vimrc`:
+
+    ```
+    autocmd vimenter * NERDTree
+    ```
+</code></pre>
+</div>
+
+<h4 id="mruvim--quick-access-to-most-recently-used-files-for-unix-systems">mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)</h4>
+<div class="highlighter-rouge"><pre class="highlight"><code>1. Ensure there exists a folder: `~/.vim/plugin`
+2. Add [mru.vim](https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim) to the `plugin` folder
+    `curl "https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim" -o "mru.vim"`
+3. Additional configurations can be found [here](http://www.vim.org/scripts/script.php?script_id=521)
+4. To use `mru.vim`, type `:MRU` in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from
+</code></pre>
+</div>
 
 <h1 id="commands">Commands</h1>
 

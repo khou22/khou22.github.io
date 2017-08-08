@@ -54,6 +54,7 @@ VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and 
     1. Install Cmake: `$ brew install CMake`
         * On dev box (Ubuntu): `$ sudo apt-get install cmake`
     2. Finish install: `$ python ~/.vim/plugged/YouCompleteMe/install.py`
+
 ####    `Solarized Colorscheme for VIM` — Theme
     1. Install into `bundle` folder. Create it if the directory doesn't exist.
 
@@ -78,6 +79,7 @@ VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and 
         ```
         autocmd vimenter * NERDTree
         ```
+
 #### 	mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)
 	1. Ensure there exists a folder: `~/.vim/plugin`
 	2. Add [mru.vim](https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim) to the `plugin` folder
