@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 07 Aug 2017 21:10:35 -0400</pubDate>
-    <lastBuildDate>Mon, 07 Aug 2017 21:10:35 -0400</lastBuildDate>
+    <pubDate>Tue, 08 Aug 2017 19:22:34 -0400</pubDate>
+    <lastBuildDate>Tue, 08 Aug 2017 19:22:34 -0400</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -122,6 +122,8 @@ Save &amp;amp; Quit: &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/cod
 &lt;h3 id=&quot;switching-input-modes&quot;&gt;Switching input modes&lt;/h3&gt;
 &lt;p&gt;Highlight mode: &lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt;&lt;br /&gt;
 Insert mode (keyboard and arrow keys will work like normal): &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;&lt;br /&gt;
+Insert new line below and enter insert mode: &lt;code class=&quot;highlighter-rouge&quot;&gt;o&lt;/code&gt;&lt;br /&gt;
+Delete and enter insert mode: &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt;&lt;br /&gt;
 Viewing mode (if in highlight or insert mode): &lt;code class=&quot;highlighter-rouge&quot;&gt;Esc&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;navigating-in-file-non-insert-mode&quot;&gt;Navigating In-File (Non-Insert Mode)&lt;/h3&gt;
@@ -184,6 +186,8 @@ Close all except current: &lt;code class=&quot;highlighter-rouge&quot;&gt;contro
 &lt;h3 id=&quot;other&quot;&gt;Other&lt;/h3&gt;
 &lt;p&gt;Undo: &lt;code class=&quot;highlighter-rouge&quot;&gt;u&lt;/code&gt;&lt;br /&gt;
 Redo: &lt;code class=&quot;highlighter-rouge&quot;&gt;control&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Repeating the last command: &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Delete: &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; –&amp;gt; Format: &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;number (optional, default 1)&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt;&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;4&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;w&lt;/code&gt; would delete the four next words&lt;/p&gt;

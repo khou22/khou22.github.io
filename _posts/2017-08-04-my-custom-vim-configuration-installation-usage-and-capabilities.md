@@ -99,6 +99,8 @@ Save & Quit: `:wq`
 ### Switching input modes
 Highlight mode: `v`  
 Insert mode (keyboard and arrow keys will work like normal): `i`  
+Insert new line below and enter insert mode: `o`  
+Delete and enter insert mode: `s`  
 Viewing mode (if in highlight or insert mode): `Esc`  
 
 ### Navigating In-File (Non-Insert Mode)
@@ -162,6 +164,8 @@ Close all except current: `control + o`
 ### Other
 Undo: `u`  
 Redo: `control` + `r`  
+
+Repeating the last command: `.`  
 
 Delete: `d` --> Format: `d` + `number (optional, default 1)` + `action`  
 `d` + `4` + `w` would delete the four next words
