@@ -130,6 +130,7 @@ The "current project" is whatever directory you `$ vim` into
 Search within file: `\<keyword on page>`
     * `n` goes to next
     * `Shift + N` goes back
+    * `:noh` clears the highlighted words on the page from the search
 
 Search and replace: `:%s/foo/bar/g` (Replace `foo` with `bar` no confirmation. For confirmation, use `gc` instead of `g` at end)
 
