@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Aug 2017 19:45:50 -0400</pubDate>
-    <lastBuildDate>Sun, 06 Aug 2017 19:45:50 -0400</lastBuildDate>
+    <pubDate>Tue, 08 Aug 2017 19:22:34 -0400</pubDate>
+    <lastBuildDate>Tue, 08 Aug 2017 19:22:34 -0400</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -70,41 +70,45 @@
           &lt;li&gt;On dev box (Ubuntu): &lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo apt-get install cmake&lt;/code&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;Finish install: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ python ~/.vim/plugged/YouCompleteMe/install.py&lt;/code&gt;
-        &lt;h4 id=&quot;solarized-colorscheme-for-vim--theme&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solarized Colorscheme for VIM&lt;/code&gt; — Theme&lt;/h4&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Install into &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle&lt;/code&gt; folder. Create it if the directory doesn’t exist.&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ cd ~/.vim/bundle
- $ git clone git://github.com/altercation/vim-colors-solarized.git
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Set the theme in &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt;.&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; syntax enable
- &quot; Use 'light' if want the light theme
- set background=dark
- colorscheme solarized
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-    &lt;h4 id=&quot;nerdtree---project-heiarchy-in-sidebar&quot;&gt;NERDTree - Project Heiarchy in Sidebar&lt;/h4&gt;
-    &lt;ol&gt;
-      &lt;li&gt;Ensure you have a &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.vim/bundle/&lt;/code&gt; directory&lt;/li&gt;
-      &lt;li&gt;Install using: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;NERDTree will automatically open when VIM opens because of this command in the &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt;:&lt;/p&gt;
-
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; autocmd vimenter * NERDTree
-&lt;/code&gt;&lt;/pre&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
+      &lt;li&gt;Finish install: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ python ~/.vim/plugged/YouCompleteMe/install.py&lt;/code&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h4 id=&quot;solarized-colorscheme-for-vim--theme&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solarized Colorscheme for VIM&lt;/code&gt; — Theme&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Install into `bundle` folder. Create it if the directory doesn't exist.
+
+```
+$ cd ~/.vim/bundle
+$ git clone git://github.com/altercation/vim-colors-solarized.git
+```
+
+2. Set the theme in `.vimrc`.
+
+```
+syntax enable
+&quot; Use 'light' if want the light theme
+set background=dark
+colorscheme solarized
+``` ####    NERDTree - Project Heiarchy in Sidebar
+1. Ensure you have a `~/.vim/bundle/` directory
+2. Install using: `$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree`
+3. NERDTree will automatically open when VIM opens because of this command in the `.vimrc`:
+
+    ```
+    autocmd vimenter * NERDTree
+    ```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;mruvim--quick-access-to-most-recently-used-files-for-unix-systems&quot;&gt;mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Ensure there exists a folder: `~/.vim/plugin`
+2. Add [mru.vim](https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim) to the `plugin` folder
+    `curl &quot;https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim&quot; -o &quot;mru.vim&quot;`
+3. Additional configurations can be found [here](http://www.vim.org/scripts/script.php?script_id=521)
+4. To use `mru.vim`, type `:MRU` in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h1 id=&quot;commands&quot;&gt;Commands&lt;/h1&gt;
 
@@ -118,6 +122,8 @@ Save &amp;amp; Quit: &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/cod
 &lt;h3 id=&quot;switching-input-modes&quot;&gt;Switching input modes&lt;/h3&gt;
 &lt;p&gt;Highlight mode: &lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt;&lt;br /&gt;
 Insert mode (keyboard and arrow keys will work like normal): &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;&lt;br /&gt;
+Insert new line below and enter insert mode: &lt;code class=&quot;highlighter-rouge&quot;&gt;o&lt;/code&gt;&lt;br /&gt;
+Delete and enter insert mode: &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt;&lt;br /&gt;
 Viewing mode (if in highlight or insert mode): &lt;code class=&quot;highlighter-rouge&quot;&gt;Esc&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;navigating-in-file-non-insert-mode&quot;&gt;Navigating In-File (Non-Insert Mode)&lt;/h3&gt;
@@ -180,6 +186,8 @@ Close all except current: &lt;code class=&quot;highlighter-rouge&quot;&gt;contro
 &lt;h3 id=&quot;other&quot;&gt;Other&lt;/h3&gt;
 &lt;p&gt;Undo: &lt;code class=&quot;highlighter-rouge&quot;&gt;u&lt;/code&gt;&lt;br /&gt;
 Redo: &lt;code class=&quot;highlighter-rouge&quot;&gt;control&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Repeating the last command: &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Delete: &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; –&amp;gt; Format: &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;number (optional, default 1)&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;action&lt;/code&gt;&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;4&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;w&lt;/code&gt; would delete the four next words&lt;/p&gt;

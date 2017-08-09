@@ -12,4 +12,5 @@ group :jekyll_plugins do
     gem 'jekyll-seo-tag' # Automatic SEO Tagging
     gem 'jekyll-sitemap' # Automatic SEO sitemap generation
     gem 'jekyll-feed' # RSS feed
+    gem 'jekyll-autoprefixer' # Prefix CSS properties for compatibility
 end

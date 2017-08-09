@@ -54,6 +54,7 @@ VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and 
     1. Install Cmake: `$ brew install CMake`
         * On dev box (Ubuntu): `$ sudo apt-get install cmake`
     2. Finish install: `$ python ~/.vim/plugged/YouCompleteMe/install.py`
+
 ####    `Solarized Colorscheme for VIM` — Theme
     1. Install into `bundle` folder. Create it if the directory doesn't exist.
 
@@ -78,9 +79,11 @@ VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and 
         ```
         autocmd vimenter * NERDTree
         ```
+
 #### 	mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)
 	1. Ensure there exists a folder: `~/.vim/plugin`
 	2. Add [mru.vim](https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim) to the `plugin` folder
+        `curl "https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim" -o "mru.vim"`
 	3. Additional configurations can be found [here](http://www.vim.org/scripts/script.php?script_id=521)
 	4. To use `mru.vim`, type `:MRU` in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from
 
@@ -96,6 +99,8 @@ Save & Quit: `:wq`
 ### Switching input modes
 Highlight mode: `v`  
 Insert mode (keyboard and arrow keys will work like normal): `i`  
+Insert new line below and enter insert mode: `o`  
+Delete and enter insert mode: `s`  
 Viewing mode (if in highlight or insert mode): `Esc`  
 
 ### Navigating In-File (Non-Insert Mode)
@@ -160,6 +165,8 @@ Close all except current: `control + o`
 ### Other
 Undo: `u`  
 Redo: `control` + `r`  
+
+Repeating the last command: `.`  
 
 Delete: `d` --> Format: `d` + `number (optional, default 1)` + `action`  
 `d` + `4` + `w` would delete the four next words

@@ -7,7 +7,7 @@ description: "An overview of the fundamental basics in the HealthKit API and som
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: programming
 tags: [ios, swift, apps, xcode]
-featured: "yes"
+featured: "no"
 ---
 <h3 class="post-subheader">Project Objectives</h3>
 I was instructed to integrate HealthKit information — specifically pulling steps data — into Breathometer's upcoming app. I'm realitively new to Swift having only started a month ago, so this project was a way for me to get more familiar with the language and IDE. My task was to pull the data from HealhtKit then populate a table within a page of the app. This data could then be used for visualizations, analysis, etc. Here are my main learning goals for this project:

@@ -7,7 +7,7 @@ description: "A overview of my 2016 summer at Breathometer including my projects
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: programming
 tags: [ios, swift, apps, xcode]
-featured: "yes"
+featured: "no"
 ---
 This past summer (2016) I worked at a startup called Breathometer as an iOS frontend developer. Going into the summer, I was looking to work on a smaller team and get some real world experience building with Swift.
 <br class="post-line-break">

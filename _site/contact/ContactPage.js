@@ -1,11 +1,23 @@
 var ContactPage = React.createClass({
+
+    componentDidMount: function() {
+        // TheaterJS typing effect
+        var theater = theaterJS({ local: 'fr' })
+        theater.addActor('action-text', { speed: 1.0, accuracy: 0.8 });
+        const actions = ['build', 'develop', 'startup']; // Actions to type into blank
+        for (let i = 0; i < actions.length; i++) {
+            theater.addScene('action-text:' + actions[i], 1000);
+        }
+        theater.addScene(theater.replay.bind(theater));
+    },
+
   render: function() {
     return (
       <div>
         <div className="contact-header">
             <div className="contact-header-image" />
           <h1 className="contact-header-title">
-              Let's <div className="contact-header-title-fill-in font-handwritten">create</div> together.
+              Let's <div className="contact-header-title-fill-in">&#160;<span id="action-text" className="font-handwritten">create</span>&#160;</div> together.
           </h1>
         </div>
         <br />
@@ -111,7 +123,7 @@ var ContactForm = React.createClass({
                 <input type="text" placeholder="Your email address" className={`contact-form-email ${emailValidityClass}`} id="email" value={this.state.data.email} onChange={this.formChange} />
                 <input type="text" placeholder="Subject" className="contact-form-subject" id="subject" value={this.state.data.subject} onChange={this.formChange} />
                 <textarea placeholder="Leave a note" className="contact-form-body" id="body" value={this.state.data.body} onChange={this.formChange} />
-                <input type="submit" className="contact-form-submit" onClick={this.submitForm}/>
+                <input type="submit" className="contact-form-submit" onClick={this.submitForm} />
             </form>
         );
     }
