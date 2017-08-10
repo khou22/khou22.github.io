@@ -12,7 +12,7 @@ featured: "yes"
 # Setting Up VIM
 VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and serves as the configuration file. It is similar to a `.bashrc` or `.bash_profile` in the sense that it must be sourced to reflect changes, but VIM automatically takes care of when it launches. Ensure that the `~/.vimrc` file exists and if not, create one. Now here's how the complete setup:
 
-1. Copy/paste the contents of my configuration file into your `.vimrc` file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.
+1. Copy/paste the contents of [my configuration file](https://github.com/khou22/dev-tools/blob/master/vim/.vimrc) into your `.vimrc` file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.
 
 2. Like I said earlier, I'm using [vim-plug](https://github.com/junegunn/vim-plug) as my package manager service. Install `vim-plug` using:
 
@@ -143,6 +143,7 @@ Search and replace: `:%s/foo/bar/g` (Replace `foo` with `bar` no confirmation. F
 Highlighting an entire line: `Shift + V`
 Highlighting mode: `v`
 Copy/yank: `y`
+Copy file contents to clipboard: `:% !pbcopy`
 Paste: `p`
 Paste above: `Shift + P`
 Pasting in insert mode (having copied using the operating system): `Command + v`
