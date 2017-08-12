@@ -264,7 +264,7 @@
 
 <ol>
   <li>
-    <p>Copy/paste the contents of my configuration file into your <code class="highlighter-rouge">.vimrc</code> file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.</p>
+    <p>Copy/paste the contents of <a href="https://github.com/khou22/dev-tools/blob/master/vim/.vimrc">my configuration file</a> into your <code class="highlighter-rouge">.vimrc</code> file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.</p>
   </li>
   <li>
     <p>Like I said earlier, I’m using <a href="https://github.com/junegunn/vim-plug">vim-plug</a> as my package manager service. Install <code class="highlighter-rouge">vim-plug</code> using:</p>
@@ -404,7 +404,8 @@ The “current project” is whatever directory you <code class="highlighter-rou
 
 <p>Search within file: <code class="highlighter-rouge">\&lt;keyword on page&gt;</code>
     * <code class="highlighter-rouge">n</code> goes to next
-    * <code class="highlighter-rouge">Shift + N</code> goes back</p>
+    * <code class="highlighter-rouge">Shift + N</code> goes back
+    * <code class="highlighter-rouge">:noh</code> clears the highlighted words on the page from the search</p>
 
 <p>Search and replace: <code class="highlighter-rouge">:%s/foo/bar/g</code> (Replace <code class="highlighter-rouge">foo</code> with <code class="highlighter-rouge">bar</code> no confirmation. For confirmation, use <code class="highlighter-rouge">gc</code> instead of <code class="highlighter-rouge">g</code> at end)</p>
 
@@ -412,6 +413,7 @@ The “current project” is whatever directory you <code class="highlighter-rou
 <p>Highlighting an entire line: <code class="highlighter-rouge">Shift + V</code>
 Highlighting mode: <code class="highlighter-rouge">v</code>
 Copy/yank: <code class="highlighter-rouge">y</code>
+Copy file contents to clipboard: <code class="highlighter-rouge">:% !pbcopy</code>
 Paste: <code class="highlighter-rouge">p</code>
 Paste above: <code class="highlighter-rouge">Shift + P</code>
 Pasting in insert mode (having copied using the operating system): <code class="highlighter-rouge">Command + v</code>
