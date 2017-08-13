@@ -6,7 +6,7 @@ var LoadingPage = React.createClass({
 
     setTimeout(this.hideLoading.bind(this), loadingScreenDuration); // Loading page lasts for x seconds
     setTimeout(this.startFade.bind(this), loadingScreenDuration - fadeOutTime); // Loading page lasts for x - 1 seconds
-    setTimeout(this.startLogoAnimation.bind(this), 1600); // Logo animation triggered
+    setTimeout(this.startLogoAnimation.bind(this), 500); // Logo animation triggered
     setTimeout(this.startLogoPositionChange.bind(this), 4000); // Logo position change triggered
 
     // Initial states
@@ -43,13 +43,15 @@ var LoadingPage = React.createClass({
       var fadeAnimation = this.state.fadeAnimation ? "fade-loading-screen" : "";
 
       // Toggle between static first frame and animated logo
-      var animatedLogoSource = this.state.logoAnimation ? "./../media/site/images/animated-logo.svg" : "./../media/site/images/animated-logo-frame-1.svg";
+        var animatedLogo = this.state.logoAnimation ? (
+          <object id="logoSVG" className={"logo-animation " + logoPositionChange} data={"./../media/site/images/animated-logo.svg"} type="image/svg+xml">
+            Your browser does not support SVG
+          </object>
+        ) : <span data-note="Browser doesn't support animated SVGs" />;
       var logoPositionChange = this.state.logoPositionChange ? "logo-position-change-animation" : ""
       return (
         <div className={"loading-page " + fadeAnimation}>
-          <object id="logoSVG" className={"logo-animation " + logoPositionChange} data={animatedLogoSource} type="image/svg+xml">
-            Your browser does not support SVG
-          </object>
+            {animatedLogo}
           <object className="pendulum-animation" data="./../media/site/images/Pendulum.svg" type="image/svg+xml">
             Your browser does not support SVG
           </object>
