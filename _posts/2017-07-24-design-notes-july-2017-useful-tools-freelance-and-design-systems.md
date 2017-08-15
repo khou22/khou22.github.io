@@ -25,9 +25,12 @@ Josh worked freelance for about a year and talked about how it’s different fro
 <br class="post-line-break">
 <h3 class="post-subheader">Design Systems</h3>
 Because of my current project at work and what I’ve experienced talking to designers recently, I really want to build my own design system/pattern/toolkit. Initially I wanted to build my own design system using the [atomic design method](http://bradfrost.com/blog/post/atomic-web-design/) — building buttons, fonts, icons, inputs, etc. that serve as atoms. These atoms then get stacked into molecules, which then stack into organisms, then templates, then finally to pages. It’s a really neat concept and I really want to do it eventually, but because I’m juggling 3 projects (with deadlines) and work right now, I just don’t think I’ll have the hours to devote to it. A more feasible endeavor would be a design pattern, a frontend framework, or a design toolkit — just a way of standardizing the way my buttons, headers, labels, icons, etc. look. Here are a couple of good reference examples:<br>
-1. [BlueprintJS](http://blueprintjs.com/) - "React-based UI Toolkit"<br>
-2. [Pattern Lab](http://patternlab.io/) — An atomic design system<br>
-3. [Bootstrap](http://getbootstrap.com/) — Frontend framework<br>
-4. [Lightning Design](https://www.lightningdesignsystem.com/) - Salesforce's Design System<br>
-5. [Google Material Design](https://material.io/) - Google's Design System<br>
-6. [Lost My Name Design System](http://design-system.lostmy.name/) - A great, clean React-based design system<br>
+1. [BlueprintJS](http://blueprintjs.com/) - "React-based UI Toolkit"  
+2. [Pattern Lab](http://patternlab.io/) — An atomic design system  
+3. [Bootstrap](http://getbootstrap.com/) — Frontend framework  
+4. [Lightning Design](https://www.lightningdesignsystem.com/) - Salesforce's Design System  
+5. [Google Material Design](https://material.io/) - Google's Design System  
+6. [Lost My Name Design System](http://design-system.lostmy.name/) - A great, clean React-based design system  
+
+And here are some useful articles on how to make your own:
+1. [How to construct a design system](https://medium.freecodecamp.org/how-to-construct-a-design-system-864adbf2a117) - Useful for how to begin from scratch
