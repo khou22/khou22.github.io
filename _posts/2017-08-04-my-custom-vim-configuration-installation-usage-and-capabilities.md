@@ -153,7 +153,7 @@ Paste from clipboard with auto-indenting: `:set paste` + `Command + V`
 ### Panes
 Opening new panes, start with: `control + w`:
     * `v` is vertical split (focus on the new pane)  
-    * `s` is horizontal split  
+    * `o` is horizontal split  
     * `=` makes all panes equal size  
 
 __Switch panes:__  
