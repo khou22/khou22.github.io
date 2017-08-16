@@ -53,7 +53,7 @@ VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and 
     
     __Dev Box (Ubuntu)__  
     ```
-    apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+    sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
     ```
 
 ####    `YouCompleteMe` - Autocomplete
