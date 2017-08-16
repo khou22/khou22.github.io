@@ -50,6 +50,12 @@ VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and 
     ```
     brew install the_silver_searcher
     ```
+    
+    __Dev Box (Ubuntu)__  
+    ```
+    apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+    ```
+
 ####    `YouCompleteMe` - Autocomplete
     1. Install Cmake: `$ brew install CMake`
         * On dev box (Ubuntu): `$ sudo apt-get install cmake`
