@@ -173,6 +173,8 @@ Close all except current: `control + o`
 Undo: `u`  
 Redo: `control` + `r`  
 
+Highlight cursor in vim: `Command + /`  
+
 Repeating the last command: `.`  
 
 Delete: `d` --> Format: `d` + `number (optional, default 1)` + `action`  
