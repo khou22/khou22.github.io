@@ -31,6 +31,7 @@ Because of my current project at work and what I’ve experienced talking to des
 4. [Lightning Design](https://www.lightningdesignsystem.com/) - Salesforce's Design System  
 5. [Google Material Design](https://material.io/) - Google's Design System  
 6. [Lost My Name Design System](http://design-system.lostmy.name/) - A great, clean React-based design system  
+7. [Semantic UI React](https://react.semantic-ui.com/) - A Reactified component library
 
 And here are some useful articles on how to make your own:
 1. [How to construct a design system](https://medium.freecodecamp.org/how-to-construct-a-design-system-864adbf2a117) - Useful for how to begin from scratch
