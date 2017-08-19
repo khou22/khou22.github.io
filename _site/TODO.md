@@ -5,6 +5,7 @@ Last Updated: May 12, 2017
 * Finish contact me page
 * Redesign the portfolio page
 * Port over portfolio content from Wix website for woodshop
+* Add Dribble profile to external links
 
 # Things to Try
 * CSS "will-change" attribute to help optimize responsive/dynamic animations

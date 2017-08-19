@@ -310,17 +310,21 @@
     <div class="highlighter-rouge"><pre class="highlight"><code> brew install the_silver_searcher
 </code></pre>
     </div>
-    <h4 id="youcompleteme---autocomplete"><code class="highlighter-rouge">YouCompleteMe</code> - Autocomplete</h4>
-    <ol>
-      <li>Install Cmake: <code class="highlighter-rouge">$ brew install CMake</code>
-        <ul>
-          <li>On dev box (Ubuntu): <code class="highlighter-rouge">$ sudo apt-get install cmake</code></li>
-        </ul>
-      </li>
-      <li>Finish install: <code class="highlighter-rouge">$ python ~/.vim/plugged/YouCompleteMe/install.py</code></li>
-    </ol>
   </li>
 </ol>
+
+<p>   <strong>Dev Box (Ubuntu)</strong><br />
+    <code class="highlighter-rouge">
+    sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+   </code></p>
+
+<h4 id="youcompleteme---autocomplete"><code class="highlighter-rouge">YouCompleteMe</code> - Autocomplete</h4>
+<div class="highlighter-rouge"><pre class="highlight"><code>1. Install Cmake: `$ brew install CMake`
+    * On dev box (Ubuntu): `$ sudo apt-get install cmake`
+    * To install Typescript support: `$ npm install -g typescript`
+2. Finish install: `$ cd ~/.vim/plugged/YouCompleteMe &amp;&amp; ./install.py --all`
+</code></pre>
+</div>
 
 <h4 id="solarized-colorscheme-for-vim--theme"><code class="highlighter-rouge">Solarized Colorscheme for VIM</code> — Theme</h4>
 <div class="highlighter-rouge"><pre class="highlight"><code>1. Install into `bundle` folder. Create it if the directory doesn't exist.
@@ -422,7 +426,7 @@ Paste from clipboard with auto-indenting: <code class="highlighter-rouge">:set p
 <h3 id="panes">Panes</h3>
 <p>Opening new panes, start with: <code class="highlighter-rouge">control + w</code>:
     * <code class="highlighter-rouge">v</code> is vertical split (focus on the new pane)<br />
-    * <code class="highlighter-rouge">s</code> is horizontal split<br />
+    * <code class="highlighter-rouge">o</code> is horizontal split<br />
     * <code class="highlighter-rouge">=</code> makes all panes equal size</p>
 
 <p><strong>Switch panes:</strong><br />
@@ -435,6 +439,8 @@ Close all except current: <code class="highlighter-rouge">control + o</code></p>
 <h3 id="other">Other</h3>
 <p>Undo: <code class="highlighter-rouge">u</code><br />
 Redo: <code class="highlighter-rouge">control</code> + <code class="highlighter-rouge">r</code></p>
+
+<p>Highlight cursor in vim: <code class="highlighter-rouge">Command + /</code></p>
 
 <p>Repeating the last command: <code class="highlighter-rouge">.</code></p>
 

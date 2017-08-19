@@ -59,7 +59,8 @@ VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and 
 ####    `YouCompleteMe` - Autocomplete
     1. Install Cmake: `$ brew install CMake`
         * On dev box (Ubuntu): `$ sudo apt-get install cmake`
-    2. Finish install: `$ python ~/.vim/plugged/YouCompleteMe/install.py`
+        * To install Typescript support: `$ npm install -g typescript`
+    2. Finish install: `$ cd ~/.vim/plugged/YouCompleteMe && ./install.py --all`
 
 ####    `Solarized Colorscheme for VIM` — Theme
     1. Install into `bundle` folder. Create it if the directory doesn't exist.

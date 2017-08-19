@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 12 Aug 2017 21:52:36 -0400</pubDate>
-    <lastBuildDate>Sat, 12 Aug 2017 21:52:36 -0400</lastBuildDate>
+    <pubDate>Sat, 19 Aug 2017 03:17:35 -0400</pubDate>
+    <lastBuildDate>Sat, 19 Aug 2017 03:17:35 -0400</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -63,17 +63,21 @@
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; brew install the_silver_searcher
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
-    &lt;h4 id=&quot;youcompleteme---autocomplete&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YouCompleteMe&lt;/code&gt; - Autocomplete&lt;/h4&gt;
-    &lt;ol&gt;
-      &lt;li&gt;Install Cmake: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ brew install CMake&lt;/code&gt;
-        &lt;ul&gt;
-          &lt;li&gt;On dev box (Ubuntu): &lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo apt-get install cmake&lt;/code&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Finish install: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ python ~/.vim/plugged/YouCompleteMe/install.py&lt;/code&gt;&lt;/li&gt;
-    &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;p&gt;   &lt;strong&gt;Dev Box (Ubuntu)&lt;/strong&gt;&lt;br /&gt;
+    &lt;code class=&quot;highlighter-rouge&quot;&gt;
+    sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+   &lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;youcompleteme---autocomplete&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YouCompleteMe&lt;/code&gt; - Autocomplete&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Install Cmake: `$ brew install CMake`
+    * On dev box (Ubuntu): `$ sudo apt-get install cmake`
+    * To install Typescript support: `$ npm install -g typescript`
+2. Finish install: `$ cd ~/.vim/plugged/YouCompleteMe &amp;amp;&amp;amp; ./install.py --all`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h4 id=&quot;solarized-colorscheme-for-vim--theme&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Solarized Colorscheme for VIM&lt;/code&gt; — Theme&lt;/h4&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Install into `bundle` folder. Create it if the directory doesn't exist.
@@ -175,7 +179,7 @@ Paste from clipboard with auto-indenting: &lt;code class=&quot;highlighter-rouge
 &lt;h3 id=&quot;panes&quot;&gt;Panes&lt;/h3&gt;
 &lt;p&gt;Opening new panes, start with: &lt;code class=&quot;highlighter-rouge&quot;&gt;control + w&lt;/code&gt;:
     * &lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt; is vertical split (focus on the new pane)&lt;br /&gt;
-    * &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt; is horizontal split&lt;br /&gt;
+    * &lt;code class=&quot;highlighter-rouge&quot;&gt;o&lt;/code&gt; is horizontal split&lt;br /&gt;
     * &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; makes all panes equal size&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Switch panes:&lt;/strong&gt;&lt;br /&gt;
@@ -188,6 +192,8 @@ Close all except current: &lt;code class=&quot;highlighter-rouge&quot;&gt;contro
 &lt;h3 id=&quot;other&quot;&gt;Other&lt;/h3&gt;
 &lt;p&gt;Undo: &lt;code class=&quot;highlighter-rouge&quot;&gt;u&lt;/code&gt;&lt;br /&gt;
 Redo: &lt;code class=&quot;highlighter-rouge&quot;&gt;control&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Highlight cursor in vim: &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + /&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Repeating the last command: &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;&lt;/p&gt;
 
@@ -454,12 +460,18 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Design Systems&lt;/h3&gt;
 &lt;p&gt;Because of my current project at work and what I’ve experienced talking to designers recently, I really want to build my own design system/pattern/toolkit. Initially I wanted to build my own design system using the &lt;a href=&quot;http://bradfrost.com/blog/post/atomic-web-design/&quot;&gt;atomic design method&lt;/a&gt; — building buttons, fonts, icons, inputs, etc. that serve as atoms. These atoms then get stacked into molecules, which then stack into organisms, then templates, then finally to pages. It’s a really neat concept and I really want to do it eventually, but because I’m juggling 3 projects (with deadlines) and work right now, I just don’t think I’ll have the hours to devote to it. A more feasible endeavor would be a design pattern, a frontend framework, or a design toolkit — just a way of standardizing the way my buttons, headers, labels, icons, etc. look. Here are a couple of good reference examples:&lt;br /&gt;&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blueprintjs.com/&quot;&gt;BlueprintJS&lt;/a&gt; - “React-based UI Toolkit”&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://patternlab.io/&quot;&gt;Pattern Lab&lt;/a&gt; — An atomic design system&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; — Frontend framework&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.lightningdesignsystem.com/&quot;&gt;Lightning Design&lt;/a&gt; - Salesforce’s Design System&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://material.io/&quot;&gt;Google Material Design&lt;/a&gt; - Google’s Design System&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://design-system.lostmy.name/&quot;&gt;Lost My Name Design System&lt;/a&gt; - A great, clean React-based design system&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blueprintjs.com/&quot;&gt;BlueprintJS&lt;/a&gt; - “React-based UI Toolkit”&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://patternlab.io/&quot;&gt;Pattern Lab&lt;/a&gt; — An atomic design system&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; — Frontend framework&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lightningdesignsystem.com/&quot;&gt;Lightning Design&lt;/a&gt; - Salesforce’s Design System&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://material.io/&quot;&gt;Google Material Design&lt;/a&gt; - Google’s Design System&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://design-system.lostmy.name/&quot;&gt;Lost My Name Design System&lt;/a&gt; - A great, clean React-based design system&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://react.semantic-ui.com/&quot;&gt;Semantic UI React&lt;/a&gt; - A Reactified component library&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And here are some useful articles on how to make your own:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.freecodecamp.org/how-to-construct-a-design-system-864adbf2a117&quot;&gt;How to construct a design system&lt;/a&gt; - Useful for how to begin from scratch&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Mon, 24 Jul 2017 07:49:12 -0400</pubDate>
