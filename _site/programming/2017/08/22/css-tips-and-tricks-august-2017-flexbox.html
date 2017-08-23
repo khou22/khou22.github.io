@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kevin Hou</title>
-  <meta name="description" content="Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
-">
+  <title>CSS Tips and Tricks August 2017: Flexbox</title>
+  <meta name="description" content="">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -21,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.github.io/blog/page6/">
+  <link rel="canonical" href="http://khou22.github.io/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.github.io/feed.xml" />
 
   <!-- Bootstrap -->
@@ -45,19 +44,23 @@
     <link rel="icon" type="image/png" href="/media/site/favicon.png">
 
     <!-- Begin Jekyll SEO tag v2.2.3 -->
-<title>Kevin Hou | Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.</title>
-<meta property="og:title" content="Kevin Hou" />
+<title>CSS Tips and Tricks August 2017: Flexbox | Kevin Hou</title>
+<meta property="og:title" content="CSS Tips and Tricks August 2017: Flexbox" />
+<meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area." />
-<meta property="og:description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area." />
-<link rel="canonical" href="http://khou22.github.io/blog/page6/" />
-<meta property="og:url" content="http://khou22.github.io/blog/page6/" />
+<meta name="description" content="A brief introduction to the world of flexbox — a powerful layout and alignment tool." />
+<meta property="og:description" content="A brief introduction to the world of flexbox — a powerful layout and alignment tool." />
+<link rel="canonical" href="http://khou22.github.io/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html" />
+<meta property="og:url" content="http://khou22.github.io/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html" />
 <meta property="og:site_name" content="Kevin Hou" />
-<link rel="prev" href="http://khou22.github.io/blog/page5/">
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="http://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-08-22T11:47:59-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@kevinhou22" />
+<meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"Kevin Hou","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.","url":"http://khou22.github.io/blog/page6/"}</script>
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"CSS Tips and Tricks August 2017: Flexbox","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2017-08-22T11:47:59-07:00","dateModified":"2017-08-22T11:47:59-07:00","description":"A brief introduction to the world of flexbox — a powerful layout and alignment tool.","mainEntityOfPage":{"@type":"WebPage","@id":"http://khou22.github.io/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html"},"url":"http://khou22.github.io/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -212,448 +215,127 @@
         <!-- Hide scrollbar on this page -->
 <style> ::-webkit-scrollbar { display: none; } </style>
 
-<!-- Concatinate blog homepage url -->
+<div class="post">
+  
 
-
-<!-- Only show custom nav bar if on first page of blog -->
-
-
-<!-- Blog homepage -->
-<div class="blog-homepage">
     
 
-  <div id="mainContent" class="blog-homepage-content clearfix">
-    <div class="home left-main">
-
-        
-            <!-- If on any other page -->
-            <h1 class="page-heading">Posts <span class="number-of-posts">(Page 6)</span></h1>
-        
-
-      <ul class="post-list">
-
-        <!-- This loops through the paginated posts -->
-        
-            <li class="post-individual">
-              <h2 style="margin-bottom: 0rem">
-                <a class="post-link" href="/programming/2014/12/07/handwriting-font-app-with-video-and-source-code.html">Handwriting Font App (With Video and Source Code)</a>
-              </h2>
-              <p class="post-description">
-                Summary of my handwriting font app. It takes the user's handwriting, creates a font out of it, and allows them to type in their own handwriting. The file can be exported as a vector file and printed on the CNC Watercolor bot to mimic a real person's writing.
-              </p>
-              <span class="post-meta">Dec 7, 2014</span>
-            </li>
-        
-            <li class="post-individual">
-              <h2 style="margin-bottom: 0rem">
-                <a class="post-link" href="/wood/2014/10/05/accentuating-your-wood-grain-with-colored-wax-finish.html">Accentuating Your Wood Grain with Colored Wax Finish</a>
-              </h2>
-              <p class="post-description">
-                
-              </p>
-              <span class="post-meta">Oct 5, 2014</span>
-            </li>
-        
-      </ul>
-
-      
-      <div class="pagination">
-        
-          <a href="/blog/page5/" class="previous">< Previous</a>
-          <!-- 3 spaces -->
-          &nbsp;&nbsp;&nbsp;
-        
-
-        <span class="page_number ">Page: 6 of 6</span>
-
-        
-
-        </div>
     
 
-      <!-- <p class="rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></p> -->
-
+    
+  <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
+    <div class="post-header-content">
+      <a onclick="blogPostBackButton()"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title post-header-title">CSS Tips and Tricks August 2017: Flexbox</h1>
+      <h4 class="post-header-description">A brief introduction to the world of flexbox — a powerful layout and alignment tool.</h4>
+      <p class="post-header-meta">Aug 22, 2017 • Kevin Hou</p>
     </div>
+  </header>
 
-    <div class="right-column">
-      <div class="featured">
-        Featured posts:
-        <ol class="regular-font-color">
-          
-            
-          
-             <!-- if featured -->
-              <li>
-                <a class="recent-link" href="/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html">My Custom VIM Configuration: Installation, Usage, and Capabilities</a>
-              </li>
-            
-          
-            
-          
-             <!-- if featured -->
-              <li>
-                <a class="recent-link" href="/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html">ES6 Tips and Tricks June 2017: Webpack Loaders, Regexes, and DNS Configuration</a>
-              </li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-             <!-- if featured -->
-              <li>
-                <a class="recent-link" href="/programming/2017/04/09/hackprinceton-2017-sofly-an-ios-app-to-scan-flyers-on-campus.html">HackPrinceton 2017: SoFly — An iOS App to Scan Flyers on Campus</a>
-              </li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-             <!-- if featured -->
-              <li>
-                <a class="recent-link" href="/programming/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html">Swift Navigation Basics: How to Setup a Tab Bar App</a>
-              </li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-             <!-- if featured -->
-              <li>
-                <a class="recent-link" href="/programming/2016/07/20/xcode-best-practices-july-2016-troubleshooting-pull-requests-and-more.html">Xcode Best Practices July 2016: Troubleshooting, Pull Requests, Cocoapods, and More</a>
-              </li>
-            
-          
-            
-          
-            
-          
-             <!-- if featured -->
-              <li>
-                <a class="recent-link" href="/design/2016/07/01/digital-design-the-process-from-concept-to-ios-app.html">Digital Design: The Process from Concept to iOS App</a>
-              </li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-             <!-- if featured -->
-              <li>
-                <a class="recent-link" href="/programming/2016/04/21/uber-scheduler-calling-ubers-alarm-clock-style.html">Uber Scheduler: Calling Ubers Alarm Clock Style</a>
-              </li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-        </ol>
-      </div>
-      <div class="recent">
-        Recent posts:
-        <ol class="regular-font-color">
-          
-             <!-- Only display last 3 posts -->
-              <li>
-                <a class="recent-link" href="/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html">CSS Tips and Tricks August 2017: Flexbox</a>
-              </li>
-            
-          
-             <!-- Only display last 3 posts -->
-              <li>
-                <a class="recent-link" href="/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html">My Custom VIM Configuration: Installation, Usage, and Capabilities</a>
-              </li>
-            
-          
-             <!-- Only display last 3 posts -->
-              <li>
-                <a class="recent-link" href="/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html">Introduction to VIM: Transitioning to Command Line Text Editing</a>
-              </li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-        </ol>
-      </div>
-      <div class="browse-category">
-        <a href="/blog/category">
-          Browse by Category
-        </a>
-      </div>
-      <div class="browse-tag">
-        <a href="/blog/tag">
-          Browse by Tag
-        </a>
-      </div>
-    </div>
-  </div>
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+    var blogPostBackButton = function() {
+      var previousLink = document.referrer
+      var index = previousLink.indexOf("/blog")
+      console.log("Previous link:", previousLink);
+      console.log(index);
+      if (index == 1) { // If not coming from a different blog post
+        window.history.go(-1); // Back in history (keeps window position)
+      } else { // Directed from a different blog post
+        // console.log("Back to blog");
+        console.log("Back");
+        window.location.href = "/blog";
+      }
+    }
+
+  </script>
+
+  <article class="post-content">
+    <h2 id="introduction">Introduction</h2>
+<p>I’ve been starting to work with CSS flexbox for one of my projects at work that has some very sophisticated alignment, spacing, sizing, and positioning specifications. It’s heavy in animations and must respond dynamically to window dimension changes. One of my co-workers advised that I try out flexbox since it specializes in these types of properties.</p>
+
+<p>This post will cover the main properties and what they do. For more information, here are some useful resources:</p>
+<ol>
+  <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox guide</a></li>
+  <li><a href="http://www.flexboxdefense.com/">Gamification to learn flexbox</a></li>
+  <li><a href="https://philipwalton.github.io/solved-by-flexbox/">Challenges that were solved with flexbox</a></li>
+</ol>
+
+<h2 id="parent-properties">Parent Properties</h2>
+
+<h3 id="allowing-flexbox-properties">Allowing Flexbox Properties</h3>
+<p>You must first specify that the div should respond to flex CSS properties by setting <code class="highlighter-rouge">display: flex</code> in the parent.</p>
+
+<h3 id="axis--cross-axis">Axis &amp; Cross-Axis:</h3>
+<p>http://www.flexboxdefense.com/images/flexbox-column-a0e8dc099b07e1cfd6eaa6da2525cf54.png</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+    <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">row</span> <span class="err">|</span> <span class="n">row-reverse</span> <span class="err">|</span> <span class="n">column</span> <span class="err">|</span> <span class="n">column-reverse</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
 </div>
 
-<!-- Add scripts -->
+<h3 id="justify-content-cross-axishorizontal-spacing">justify-content (cross-axis/horizontal spacing)</h3>
+<p>The <code class="highlighter-rouge">justify-content</code> property is a fancy way of saying horizontal alignment. You can align <code class="highlighter-rouge">flex-start</code> (left), <code class="highlighter-rouge">center</code> (center), <code class="highlighter-rouge">flex-end</code> (right), <code class="highlighter-rouge">space-between</code> (space items evenly using their widths), or <code class="highlighter-rouge">space-around</code> (space all items so that they have equal space between them).</p>
 
-<!-- Only for first page of blog -->
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+    <span class="nl">justify-content</span><span class="p">:</span> <span class="n">flex-start</span> <span class="err">|</span> <span class="n">flex-end</span> <span class="err">|</span> <span class="nb">center</span> <span class="err">|</span> <span class="n">space-between</span> <span class="err">|</span> <span class="n">space-around</span> <span class="err">|</span> <span class="n">space-evenly</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
+<h3 id="align-items-across-cross-axisvertical-spacing">align-items (across cross-axis/vertical spacing)</h3>
+<p>The <code class="highlighter-rouge">align-items</code> property allows you position a container’s items across its cross-axis — basically meaning vertically. There are three possible values: <code class="highlighter-rouge">flex-start</code> (top), <code class="highlighter-rouge">flex-end</code> (bottom), and <code class="highlighter-rouge">center</code> (vertically in the middle).</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+    <span class="nl">align-items</span><span class="p">:</span> <span class="n">flex-start</span> <span class="err">|</span> <span class="n">flex-end</span> <span class="err">|</span> <span class="nb">center</span> <span class="err">|</span> <span class="nb">baseline</span> <span class="err">|</span> <span class="n">stretch</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="flex-wrap">flex-wrap</h3>
+<p>Can determine whetehr or not the children are capable of wrapping.</p>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.container</span><span class="p">{</span>
+    <span class="nl">flex-wrap</span><span class="p">:</span> <span class="nb">nowrap</span> <span class="err">|</span> <span class="n">wrap</span> <span class="err">|</span> <span class="n">wrap-reverse</span><span class="p">;</span> <span class="c">/* default nowrap */</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h2 id="child-properties">Child Properties</h2>
+
+<h3 id="order-order-of-items">order (order of items)</h3>
+<p>This can be set to display the children in an order different from when they appear. It accepts an interger value as its parameter and they are all relative — that is, they do not need to be sequential. Making the first component <code class="highlighter-rouge">-10</code> and the second component <code class="highlighter-rouge">0</code> has no difference from making the first component <code class="highlighter-rouge">1</code> and the second component <code class="highlighter-rouge">2</code>.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.item</span> <span class="p">{</span>
+    <span class="nl">order</span><span class="p">:</span> <span class="err">$</span><span class="n">integer</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="flexflex-growflex-shrink-proportion-they-scale-to-fill-their-container">flex/flex-grow/flex-shrink (proportion they scale to fill their container)</h3>
+<p>This property describes the item’s ability to scale and fill the container. Like <code class="highlighter-rouge">order</code>, the numbers are all relative so having an item with <code class="highlighter-rouge">flex: 1</code> (or <code class="highlighter-rouge">flex-shrink</code>/<code class="highlighter-rouge">flex-grow</code> if you want to set them independelty) will scale half the size of an item of the same parent with <code class="highlighter-rouge">flex: 2</code>. Negative numbers are not allowed.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.item</span> <span class="p">{</span>
+    <span class="nl">flex</span><span class="p">:</span> <span class="err">$</span><span class="n">number</span><span class="p">;</span> <span class="c">/* default is 0 */</span>
+    <span class="nl">flex-grow</span><span class="p">:</span> <span class="err">$</span><span class="n">number</span><span class="p">;</span>
+    <span class="nl">flex-shrink</span><span class="p">:</span> <span class="err">$</span><span class="n">number</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+    <div class="post-organization">
+      <p id="post-meta">Posted in <a href="/blog/category/programming/">Programming</a> with <a href="/blog/tag/css/">CSS</a></p>
+    </div>
+  </article>
+</div>
 
       </div>
     </div>
@@ -723,7 +405,7 @@
       <div class="footer-col-wrapper">
         <div class="footer-col  footer-col-1">
           <ul class="contact-list">
-            <li>{"login"=>"khou22", "email"=>"kevin.ch.hou@gmail.com", "display_name"=>"Kevin Hou", "first_name"=>"Kevin", "last_name"=>"Hou", "twitter"=>nil}</li>
+            <li>{"login"=>"khou22", "email"=>"kevin.ch.hou@gmail.com", "display_name"=>"Kevin Hou", "first_name"=>"Kevin", "last_name"=>"Hou"}</li>
             <li><a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a></li>
             <li>San Francisco Bay Area</li>
           </ul>

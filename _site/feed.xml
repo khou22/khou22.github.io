@@ -6,9 +6,94 @@
 </description>
     <link>http://khou22.github.io/</link>
     <atom:link href="http://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 Aug 2017 11:56:45 -0700</pubDate>
-    <lastBuildDate>Fri, 18 Aug 2017 11:56:45 -0700</lastBuildDate>
+    <pubDate>Tue, 22 Aug 2017 18:56:32 -0700</pubDate>
+    <lastBuildDate>Tue, 22 Aug 2017 18:56:32 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
+    
+      <item>
+        <title>CSS Tips and Tricks August 2017: Flexbox</title>
+        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I’ve been starting to work with CSS flexbox for one of my projects at work that has some very sophisticated alignment, spacing, sizing, and positioning specifications. It’s heavy in animations and must respond dynamically to window dimension changes. One of my co-workers advised that I try out flexbox since it specializes in these types of properties.&lt;/p&gt;
+
+&lt;p&gt;This post will cover the main properties and what they do. For more information, here are some useful resources:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&quot;&gt;Flexbox guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.flexboxdefense.com/&quot;&gt;Gamification to learn flexbox&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://philipwalton.github.io/solved-by-flexbox/&quot;&gt;Challenges that were solved with flexbox&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;parent-properties&quot;&gt;Parent Properties&lt;/h2&gt;
+
+&lt;h3 id=&quot;allowing-flexbox-properties&quot;&gt;Allowing Flexbox Properties&lt;/h3&gt;
+&lt;p&gt;You must first specify that the div should respond to flex CSS properties by setting &lt;code class=&quot;highlighter-rouge&quot;&gt;display: flex&lt;/code&gt; in the parent.&lt;/p&gt;
+
+&lt;h3 id=&quot;axis--cross-axis&quot;&gt;Axis &amp;amp; Cross-Axis:&lt;/h3&gt;
+&lt;p&gt;http://www.flexboxdefense.com/images/flexbox-column-a0e8dc099b07e1cfd6eaa6da2525cf54.png&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-direction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row-reverse&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column-reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;justify-content-cross-axishorizontal-spacing&quot;&gt;justify-content (cross-axis/horizontal spacing)&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;justify-content&lt;/code&gt; property is a fancy way of saying horizontal alignment. You can align &lt;code class=&quot;highlighter-rouge&quot;&gt;flex-start&lt;/code&gt; (left), &lt;code class=&quot;highlighter-rouge&quot;&gt;center&lt;/code&gt; (center), &lt;code class=&quot;highlighter-rouge&quot;&gt;flex-end&lt;/code&gt; (right), &lt;code class=&quot;highlighter-rouge&quot;&gt;space-between&lt;/code&gt; (space items evenly using their widths), or &lt;code class=&quot;highlighter-rouge&quot;&gt;space-around&lt;/code&gt; (space all items so that they have equal space between them).&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;justify-content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-start&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-end&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space-between&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space-around&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;space-evenly&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;align-items-across-cross-axisvertical-spacing&quot;&gt;align-items (across cross-axis/vertical spacing)&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;align-items&lt;/code&gt; property allows you position a container’s items across its cross-axis — basically meaning vertically. There are three possible values: &lt;code class=&quot;highlighter-rouge&quot;&gt;flex-start&lt;/code&gt; (top), &lt;code class=&quot;highlighter-rouge&quot;&gt;flex-end&lt;/code&gt; (bottom), and &lt;code class=&quot;highlighter-rouge&quot;&gt;center&lt;/code&gt; (vertically in the middle).&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-start&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex-end&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;baseline&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stretch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;flex-wrap&quot;&gt;flex-wrap&lt;/h3&gt;
+&lt;p&gt;Can determine whetehr or not the children are capable of wrapping.&lt;/p&gt;
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-wrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nowrap&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wrap-reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* default nowrap */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;child-properties&quot;&gt;Child Properties&lt;/h2&gt;
+
+&lt;h3 id=&quot;order-order-of-items&quot;&gt;order (order of items)&lt;/h3&gt;
+&lt;p&gt;This can be set to display the children in an order different from when they appear. It accepts an interger value as its parameter and they are all relative — that is, they do not need to be sequential. Making the first component &lt;code class=&quot;highlighter-rouge&quot;&gt;-10&lt;/code&gt; and the second component &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt; has no difference from making the first component &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; and the second component &lt;code class=&quot;highlighter-rouge&quot;&gt;2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;integer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;flexflex-growflex-shrink-proportion-they-scale-to-fill-their-container&quot;&gt;flex/flex-grow/flex-shrink (proportion they scale to fill their container)&lt;/h3&gt;
+&lt;p&gt;This property describes the item’s ability to scale and fill the container. Like &lt;code class=&quot;highlighter-rouge&quot;&gt;order&lt;/code&gt;, the numbers are all relative so having an item with &lt;code class=&quot;highlighter-rouge&quot;&gt;flex: 1&lt;/code&gt; (or &lt;code class=&quot;highlighter-rouge&quot;&gt;flex-shrink&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;flex-grow&lt;/code&gt; if you want to set them independelty) will scale half the size of an item of the same parent with &lt;code class=&quot;highlighter-rouge&quot;&gt;flex: 2&lt;/code&gt;. Negative numbers are not allowed.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* default is 0 */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-grow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-shrink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 22 Aug 2017 11:47:59 -0700</pubDate>
+        <link>http://khou22.github.io/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</link>
+        <guid isPermaLink="true">http://khou22.github.io/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</guid>
+        
+        <category>css</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
     
       <item>
         <title>My Custom VIM Configuration: Installation, Usage, and Capabilities</title>
@@ -860,72 +945,6 @@ Now we will create a rendering function, using ReactDOM to inject our HTML into 
         <guid isPermaLink="true">http://khou22.github.io/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</guid>
         
         <category>reactjs</category>
-        
-        
-        <category>Programming</category>
-        
-      </item>
-    
-      <item>
-        <title>HackPrinceton 2017: SoFly — An iOS App to Scan Flyers on Campus</title>
-        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Earlier in April, a friend and I participated in HackPrinceton, Princeton University’s semi-annual hackathon that brings students from all around the country together for 36 hours. We built SoFly — an iOS app that scans flyers and lets the user share the event, create a calendar event, find the Facebook event, etc. The judges really liked it and it won runner up for the best app for Princeton Students!
-&lt;br class=&quot;post-line-break&quot; /&gt;
-I was responsible for the design, frontend, and implementing the OCR (Optical Character Recognition) processing. My partner dealt with the natural language processing to extract the event name, date, etc. from the raw text. I used Sketch to design the UX and Xcode/Swift 3 to code the frontend. We used Tesseract — Google’s OCR engine.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Check out the Devpost submission &lt;a href=&quot;https://devpost.com/software/sofly-scanner&quot;&gt;here&lt;/a&gt;.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;video-demo&quot;&gt;Video Demo&lt;/h1&gt;
-&lt;iframe src=&quot;https://player.vimeo.com/video/211174699&quot; width=&quot;100%&quot; height=&quot;500px&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;motivation&quot;&gt;Motivation&lt;/h1&gt;
-&lt;p&gt;The motivation for our application came when we realized how much our college uses flyers to advertise events. From dance recitals, to scientific talks, events are neatly summarized and hung on campus in visible areas. A huge part of our sense of community comes from these events, and as excursions into Princeton township have shown us, events planned in non-centralized communities rely on flyers and other written media to communicate activities to others. Both of us have fond memories attending community events growing up, and we think (through some surveying of our student body) that a cause of decreased attendance at such events is due to a few factors.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;People forget. Its not a flyer they can always take with them, and so what they think is instantaneously exciting soon fades from their memory.&lt;/li&gt;
-  &lt;li&gt;It is not digital – in a world where everything else is.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;design&quot;&gt;Design&lt;/h1&gt;
-&lt;p&gt;The primary concerns for the design were largely speed and usability. Flyers are already something that people ignore because it takes too long to absorb and memorize the information. We had to create an experience that would be as painless as if you just glanced at the flyer and faster than it would take to add the event to your calendar manually. This goal made the design largely a user-experience challenge as opposed to simply making it look good. It was a lot of fun playing around with various user flows and animations.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-I think the finished product ultimately hit it on both the usability and aesthetic fronts. I put in a lot of effort into the animations (see the video above). Little things from the camera flash on the splash screen to the “scanning” loading animation took all my skill and creativity as an iOS developer to implement. It was really exciting when the finished product looked polished after only 36 hours!
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;screenshots&quot;&gt;Screenshots&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;./../../../../media/projects/soFlyScanner/splash_screen.png&quot; class=&quot;iPhone-screenshots-small&quot; /&gt;
-&lt;img src=&quot;./../../../../media/projects/soFlyScanner/camera_screen.png&quot; class=&quot;iPhone-screenshots-small&quot; /&gt;
-&lt;img src=&quot;./../../../../media/projects/soFlyScanner/loading_screen.png&quot; class=&quot;iPhone-screenshots-small&quot; /&gt;
-&lt;img src=&quot;./../../../../media/projects/soFlyScanner/generated_content.png&quot; class=&quot;iPhone-screenshots-small&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;implementation&quot;&gt;Implementation&lt;/h1&gt;
-&lt;p&gt;The application uses Optical Character Recognition techniques (along with Otsu’s method to preprocess a picture, and an exposure and alignment adjustment algorithm) to extract a dump of recognized text. This text is error prone, and quite messy, and so we use canonical Natural Language Processing algorithms to tokenize the text, and “learn” which terms are important. The Machine Learning component in this project involves a Naive Bayesian Classifier, which can categorize and weight these terms for (as of now) internal use. This compared with a “loose NFA” implementation (we coined the term to describe an overly general regex with multiple matches) whose matches were processed using an algorithm that determined the most probable match. From the flyers we extract date, time, location, and our best guess at the title of the text. We made a design choice to limit the time our OCR took, which leads to worse holistic text recognition, but still allows us to extract theses fields using our NLP methods.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;challenges&quot;&gt;Challenges&lt;/h1&gt;
-&lt;p&gt;There were a lot of challenges that we had to work through on this project. Optical Character Recognition, Machine Learning, and Natural Language Processing are all open fields of research, and our project drew on all of them. Not only was the debugging process brutal, but the implementation was not as seamless as we would’ve liked.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Because Tesseract is not intended for mobile use and not built for images (it is used by Google to scan Google Books/PDFs — ie. “clean” documents), we ran into a lot of issues. In retrospect, Tesseract was not a great choice for an OCR library, but because of our time constraint, we didn’t have enough time or people to create an AWS server. Tesseract’s one huge advantage is that it works completely offline. For our next version, we are hoping to build an AWS server to access more powerful OCR services and only use Tesseract if the user doesn’t have an Internet connection.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Another challenge we ran into was in the pre-processing of an image. I hadn’t worked with UIImages (Swift’s image data type) all that much before this project and it was really difficult manipulating images so that Tesseract could produce the best and most accurate results. The most helpful pre-processing ultimately ended up being the binary translation of the image. The algorithm would turn the image into black/white pixels based on the amount of color around each pixel. This technique worked really well because it allowed the text to be more readable against the background.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Other problems we encountered include extracting the name of the event, extracting the organization involved, reading text against a busy background, and much more. We’re hoping that a lot of these issues are solved when we use a stronger OCR service.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
-&lt;p&gt;All in all, it was a very successful hackathon! As we were both freshman, we were definitley the underdog in this hackathon and we made a name for ourselves! Some professors became interested in our project and want us to build it out so that students can actually use it! We will likely spend the summer completing the project so that come fall, it will be widely used on campus! It was really exciting and well worth the lack of sleep. Check out the Devpost submission &lt;a href=&quot;https://devpost.com/software/sofly-scanner&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
-</description>
-        <pubDate>Sun, 09 Apr 2017 04:56:00 -0700</pubDate>
-        <link>http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly-an-ios-app-to-scan-flyers-on-campus.html</link>
-        <guid isPermaLink="true">http://khou22.github.io/programming/2017/04/09/hackprinceton-2017-sofly-an-ios-app-to-scan-flyers-on-campus.html</guid>
-        
-        <category>ios</category>
-        
-        <category>swift</category>
         
         
         <category>Programming</category>
