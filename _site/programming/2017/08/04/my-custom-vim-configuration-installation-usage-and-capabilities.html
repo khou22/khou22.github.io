@@ -260,6 +260,9 @@
 
   <article class="post-content">
     <h1 id="setting-up-vim">Setting Up VIM</h1>
+
+<h2 id="configuring-your-environment">Configuring Your Environment</h2>
+
 <p>VIM is configured using a <code class="highlighter-rouge">.vimrc</code> file in your root directory (<code class="highlighter-rouge">~/.vimrc</code>) and serves as the configuration file. It is similar to a <code class="highlighter-rouge">.bashrc</code> or <code class="highlighter-rouge">.bash_profile</code> in the sense that it must be sourced to reflect changes, but VIM automatically takes care of when it launches. Ensure that the <code class="highlighter-rouge">~/.vimrc</code> file exists and if not, create one. Now here’s how the complete setup:</p>
 
 <ol>
@@ -298,27 +301,32 @@
 </code></pre>
     </div>
   </li>
-  <li>There are a few plugins that require additional installations that don’t get setup automatically using <code class="highlighter-rouge">vim-plug</code>. Follow the steps below to configure these libraries:
-    <h4 id="pathogen--package-loader"><code class="highlighter-rouge">Pathogen</code> — Package loader</h4>
-
-    <div class="highlighter-rouge"><pre class="highlight"><code> mkdir -p ~/.vim/autoload ~/.vim/bundle &amp;&amp; curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-</code></pre>
-    </div>
-    <h4 id="ag---for-project-file-grepping"><code class="highlighter-rouge">AG</code> - For project file grepping</h4>
-    <p>(‘AG’ stands for the silver element in periodic table)</p>
-
-    <div class="highlighter-rouge"><pre class="highlight"><code> brew install the_silver_searcher
-</code></pre>
-    </div>
-  </li>
 </ol>
 
-<p>   <strong>Dev Box (Ubuntu)</strong><br />
-    <code class="highlighter-rouge">
-    sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
-   </code></p>
+<p>Your VIM is now properly configured to work with the plugins that we have included in the <code class="highlighter-rouge">.vimrc</code>; however, some plugins require additional installations that I will described next.</p>
 
-<h4 id="youcompleteme---autocomplete"><code class="highlighter-rouge">YouCompleteMe</code> - Autocomplete</h4>
+<h2 id="installing-plugins">Installing Plugins</h2>
+
+<p>There are a few plugins that require additional installations that don’t get setup automatically using <code class="highlighter-rouge">vim-plug</code>. Follow the steps below to configure these libraries:</p>
+
+<h4 id="pathogen--package-loader">Pathogen — Package loader</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mkdir -p ~/.vim/autoload ~/.vim/bundle &amp;&amp; curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+</code></pre>
+</div>
+
+<h4 id="ag---for-project-file-grepping">AG - For project file grepping</h4>
+<p>(‘AG’ stands for the silver element in periodic table)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>brew install the_silver_searcher
+</code></pre>
+</div>
+
+<p>   <strong>Dev Box (Ubuntu)</strong><br />
+   <code class="highlighter-rouge">
+sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+</code></p>
+<h4 id="youcompleteme---autocomplete">YouCompleteMe - Autocomplete</h4>
 <div class="highlighter-rouge"><pre class="highlight"><code>1. Install Cmake: `$ brew install CMake`
     * On dev box (Ubuntu): `$ sudo apt-get install cmake`
     * To install Typescript support: `$ npm install -g typescript`
@@ -326,40 +334,49 @@
 </code></pre>
 </div>
 
-<h4 id="solarized-colorscheme-for-vim--theme"><code class="highlighter-rouge">Solarized Colorscheme for VIM</code> — Theme</h4>
-<div class="highlighter-rouge"><pre class="highlight"><code>1. Install into `bundle` folder. Create it if the directory doesn't exist.
+<h4 id="solarized-colorscheme-for-vim--theme">Solarized Colorscheme for VIM — Theme</h4>
+<ol>
+  <li>
+    <p>Install into <code class="highlighter-rouge">bundle</code> folder. Create it if the directory doesn’t exist.</p>
 
-```
-$ cd ~/.vim/bundle
-$ git clone git://github.com/altercation/vim-colors-solarized.git
-```
-
-2. Set the theme in `.vimrc`.
-
-```
-syntax enable
-" Use 'light' if want the light theme
-set background=dark
-colorscheme solarized
-``` ####    NERDTree - Project Heiarchy in Sidebar
-1. Ensure you have a `~/.vim/bundle/` directory
-2. Install using: `$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree`
-3. NERDTree will automatically open when VIM opens because of this command in the `.vimrc`:
-
-    ```
-    autocmd vimenter * NERDTree
-    ```
+    <div class="highlighter-rouge"><pre class="highlight"><code> $ cd ~/.vim/bundle
+ $ git clone git://github.com/altercation/vim-colors-solarized.git
 </code></pre>
-</div>
+    </div>
+  </li>
+  <li>
+    <p>Set the theme in <code class="highlighter-rouge">.vimrc</code>.</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> syntax enable
+ " Use 'light' if want the light theme
+ set background=dark
+ colorscheme solarized
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h4 id="nerdtree---project-heiarchy-in-sidebar">NERDTree - Project Heiarchy in Sidebar</h4>
+<ol>
+  <li>Ensure you have a <code class="highlighter-rouge">~/.vim/bundle/</code> directory</li>
+  <li>Install using: <code class="highlighter-rouge">$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree</code></li>
+  <li>
+    <p>NERDTree will automatically open when VIM opens because of this command in the <code class="highlighter-rouge">.vimrc</code>:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> autocmd vimenter * NERDTree
+</code></pre>
+    </div>
+  </li>
+</ol>
 
 <h4 id="mruvim--quick-access-to-most-recently-used-files-for-unix-systems">mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)</h4>
-<div class="highlighter-rouge"><pre class="highlight"><code>1. Ensure there exists a folder: `~/.vim/plugin`
-2. Add [mru.vim](https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim) to the `plugin` folder
-    `curl "https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim" -o "mru.vim"`
-3. Additional configurations can be found [here](http://www.vim.org/scripts/script.php?script_id=521)
-4. To use `mru.vim`, type `:MRU` in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from
-</code></pre>
-</div>
+<ol>
+  <li>Ensure there exists a folder: <code class="highlighter-rouge">~/.vim/plugin</code></li>
+  <li>Add <a href="https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim">mru.vim</a> to the <code class="highlighter-rouge">plugin</code> folder
+ <code class="highlighter-rouge">curl "https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim" -o "mru.vim"</code></li>
+  <li>Additional configurations can be found <a href="http://www.vim.org/scripts/script.php?script_id=521">here</a></li>
+  <li>To use <code class="highlighter-rouge">mru.vim</code>, type <code class="highlighter-rouge">:MRU</code> in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from</li>
+</ol>
 
 <h1 id="commands">Commands</h1>
 

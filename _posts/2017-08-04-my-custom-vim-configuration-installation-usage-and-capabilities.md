@@ -10,6 +10,9 @@ tags: []
 featured: "yes"
 ---
 # Setting Up VIM
+
+## Configuring Your Environment
+
 VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and serves as the configuration file. It is similar to a `.bashrc` or `.bash_profile` in the sense that it must be sourced to reflect changes, but VIM automatically takes care of when it launches. Ensure that the `~/.vimrc` file exists and if not, create one. Now here's how the complete setup:
 
 1. Copy/paste the contents of [my configuration file](https://github.com/khou22/dev-tools/blob/master/vim/.vimrc) into your `.vimrc` file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.
@@ -38,61 +41,67 @@ VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and 
     alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
     ```
 
-5. There are a few plugins that require additional installations that don't get setup automatically using `vim-plug`. Follow the steps below to configure these libraries:
-####    `Pathogen` — Package loader
+Your VIM is now properly configured to work with the plugins that we have included in the `.vimrc`; however, some plugins require additional installations that I will described next.
 
-    ```
-    mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-    ```
-####    `AG` - For project file grepping
+## Installing Plugins
+
+There are a few plugins that require additional installations that don't get setup automatically using `vim-plug`. Follow the steps below to configure these libraries:
+
+#### Pathogen — Package loader
+
+```
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+```
+
+#### AG - For project file grepping
 ('AG' stands for the silver element in periodic table)
 
-    ```
-    brew install the_silver_searcher
-    ```
+```
+brew install the_silver_searcher
+```
     
-    __Dev Box (Ubuntu)__  
-    ```
-    sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
-    ```
-
-####    `YouCompleteMe` - Autocomplete
+   __Dev Box (Ubuntu)__  
+   ```
+sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+```
+#### YouCompleteMe - Autocomplete
     1. Install Cmake: `$ brew install CMake`
         * On dev box (Ubuntu): `$ sudo apt-get install cmake`
         * To install Typescript support: `$ npm install -g typescript`
     2. Finish install: `$ cd ~/.vim/plugged/YouCompleteMe && ./install.py --all`
 
-####    `Solarized Colorscheme for VIM` — Theme
-    1. Install into `bundle` folder. Create it if the directory doesn't exist.
+#### Solarized Colorscheme for VIM — Theme
+1. Install into `bundle` folder. Create it if the directory doesn't exist.
+
+	```
+	$ cd ~/.vim/bundle
+	$ git clone git://github.com/altercation/vim-colors-solarized.git
+	```
+
+2. Set the theme in `.vimrc`.
+
+	```
+	syntax enable
+	" Use 'light' if want the light theme
+	set background=dark
+	colorscheme solarized
+	```
+
+#### NERDTree - Project Heiarchy in Sidebar
+1. Ensure you have a `~/.vim/bundle/` directory
+2. Install using: `$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree`
+3. NERDTree will automatically open when VIM opens because of this command in the `.vimrc`:
 
     ```
-    $ cd ~/.vim/bundle
-    $ git clone git://github.com/altercation/vim-colors-solarized.git
+    autocmd vimenter * NERDTree
     ```
 
-    2. Set the theme in `.vimrc`.
-
-    ```
-    syntax enable
-    " Use 'light' if want the light theme
-    set background=dark
-    colorscheme solarized
-    ```
-####    NERDTree - Project Heiarchy in Sidebar
-    1. Ensure you have a `~/.vim/bundle/` directory
-    2. Install using: `$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree`
-    3. NERDTree will automatically open when VIM opens because of this command in the `.vimrc`:
-
-        ```
-        autocmd vimenter * NERDTree
-        ```
-
-#### 	mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)
-	1. Ensure there exists a folder: `~/.vim/plugin`
-	2. Add [mru.vim](https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim) to the `plugin` folder
-        `curl "https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim" -o "mru.vim"`
-	3. Additional configurations can be found [here](http://www.vim.org/scripts/script.php?script_id=521)
-	4. To use `mru.vim`, type `:MRU` in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from
+#### mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)
+1. Ensure there exists a folder: `~/.vim/plugin`
+2. Add [mru.vim](https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim) to the `plugin` folder
+    `curl "https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim" -o "mru.vim"`
+3. Additional configurations can be found [here](http://www.vim.org/scripts/script.php?script_id=521)
+4. To use `mru.vim`, type `:MRU` in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from
 
 # Commands
 
