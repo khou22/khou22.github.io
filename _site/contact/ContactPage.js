@@ -81,7 +81,7 @@ var ContactForm = React.createClass({
 
         let validEntry = true;
 
-        if (!emailValidity(this.state.data.email)) {
+        if (!this.emailValidity(this.state.data.email)) {
             validEntry = false;
             alert('Please enter a valid email');
         }

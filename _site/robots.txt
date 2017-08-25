@@ -1,1 +1,1 @@
-Sitemap: http://khou22.github.io/sitemap.xml
+Sitemap: https://khou22.github.io/sitemap.xml
