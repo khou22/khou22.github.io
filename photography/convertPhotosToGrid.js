@@ -1,6 +1,7 @@
 var gridData = {
     columns: 4,
     textColor: "white",
+    modal: true,
     openNewWindow: true,
     data: []
 }
@@ -20,16 +21,9 @@ for (var i = 0; i < vscoImages.length; i++) {
     preloadImage(rawImageLink); // Preload
 
     var gridItem = {
-        title: "",
-        subtitle: "",
-        description: "",
         image: "http://" + currentImage,
         link: rawImageLink,
         size: "1",
-        category: {
-            label: "",
-            color: "clear"
-        }
     }
 
     gridData.data.push(gridItem); // Add to data

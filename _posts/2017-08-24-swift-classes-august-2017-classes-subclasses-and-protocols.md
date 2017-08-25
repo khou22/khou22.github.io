@@ -115,6 +115,9 @@ That's all very confusing, but here's a step by step on how they work and how to
         private func buttonPressed() {
             print("I was pressed")
             self.delegate.buttonWasPressed(someValue: 1)
+            
+            // For optional protocols
+            self.delegate?.buttonWasReleased?() // Optional so don't force otherwise app will crash
         }
     }
     ```
