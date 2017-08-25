@@ -4,11 +4,185 @@
     <title>Kevin Hou</title>
     <description>Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
 </description>
-    <link>https://khou22.github.io/</link>
-    <atom:link href="https://khou22.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 Aug 2017 17:08:24 -0700</pubDate>
-    <lastBuildDate>Thu, 24 Aug 2017 17:08:24 -0700</lastBuildDate>
+    <link>http://khou22.com/</link>
+    <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 24 Aug 2017 22:53:24 -0700</pubDate>
+    <lastBuildDate>Thu, 24 Aug 2017 22:53:24 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
+    
+      <item>
+        <title>Swift Classes August 2017: Classes, Subclasses, and Protocols</title>
+        <description>&lt;h1 id=&quot;swift-classes-august-2017-classes-subclasses-and-protocols&quot;&gt;Swift Classes August 2017: Classes, Subclasses, and Protocols&lt;/h1&gt;
+
+&lt;h3 id=&quot;classes&quot;&gt;Classes&lt;/h3&gt;
+&lt;p&gt;In this post, I will cover the basics of Swift classes, subclasses, and their protocols/delegates. Classes are a foundational piece of computer science and software development. They allow developers to create &lt;em&gt;instances&lt;/em&gt; of a certain type of object with pre-defined methods (functions) and instance variables (properties). For example, a class might be a &lt;code class=&quot;highlighter-rouge&quot;&gt;car&lt;/code&gt; with an instance variable: &lt;code class=&quot;highlighter-rouge&quot;&gt;wheels = 4&lt;/code&gt; and a method: &lt;code class=&quot;highlighter-rouge&quot;&gt;driveForward()&lt;/code&gt;. Here is what it would look like in Swift 3:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Declaration&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Immutable and only accessible within this class&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// No initial value&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;wheels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;// Mutable and accessible outside of this class&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Initial value 1&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;passengers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;// Called when a new instance of &quot;Car&quot; is created&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;wheels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wheels&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wheels&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Set instance variable&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;// Can be called on an instance of &quot;Car&quot;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;driveForward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Usage&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;porche&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;wheels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;porche&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;passengers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;porche&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;driveForward&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;All cars have wheels and they all the ability to drive forward — that is why these become part of the class. Classes are a way of standardizing objects that have similar properties, just different values. This method of creating classes is what allows for modular-code, an essential aspect of computing and engineering.&lt;/p&gt;
+
+&lt;h3 id=&quot;subclasses&quot;&gt;Subclasses&lt;/h3&gt;
+&lt;p&gt;Subclasses are a way of building on top of existing classes. For example, if we continue with our example of the class &lt;code class=&quot;highlighter-rouge&quot;&gt;Car&lt;/code&gt;, a subclass could be &lt;code class=&quot;highlighter-rouge&quot;&gt;Tesla&lt;/code&gt;. They share very similar properties, but Tesla’s have key features that set them apart from cars. &lt;code class=&quot;highlighter-rouge&quot;&gt;Tesla&lt;/code&gt; would inherit all the essential properties and methods from &lt;code class=&quot;highlighter-rouge&quot;&gt;Car&lt;/code&gt;, but add on its own special components. Here is an example:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Tesla&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Inherit &quot;Car&quot;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;charge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Any instance of Tesla would still have the same constructor and properties like &lt;code class=&quot;highlighter-rouge&quot;&gt;wheels&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;driveForward()&lt;/code&gt;, but would include a new method &lt;code class=&quot;highlighter-rouge&quot;&gt;charge()&lt;/code&gt; unique to instances of type &lt;code class=&quot;highlighter-rouge&quot;&gt;Tesla&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;protocols--delegates&quot;&gt;Protocols &amp;amp; Delegates&lt;/h3&gt;
+&lt;p&gt;Protocols are a way of enforcing a parent or other class conforms to a set of methods. It’s a somewhat complicated topic and it makes the most sense once you’ve worked with Swift for a little bit, but here are some easy example.&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+The easiest example of a protocol is when you create a sublcass of a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIViewController&lt;/code&gt;. By subclassing, you are adding on top of the existing class &lt;code class=&quot;highlighter-rouge&quot;&gt;UIViewController&lt;/code&gt;. You are also given the option to override certain functions like &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLoad()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidLayoutSubviews()&lt;/code&gt;. These methods are optional protocols in &lt;code class=&quot;highlighter-rouge&quot;&gt;UIViewController&lt;/code&gt; made available to you because the delegate — what is responsible for satisfying the protocols — is set to the new subclass.&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+That’s all very confusing, but here’s a step by step on how they work and how to create your own class with protocols. It might clear up your confusion.&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a class that has an event listener.&lt;/p&gt;
+
+    &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeClass&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIButton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        
+     &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+        
+     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buttonPressed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;I was pressed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;This function, &lt;code class=&quot;highlighter-rouge&quot;&gt;buttonPressed()&lt;/code&gt;, will be run every time the button is pressed. This begs the question, how will the &lt;code class=&quot;highlighter-rouge&quot;&gt;UIViewController&lt;/code&gt; that contains an instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;SomeClass&lt;/code&gt; detect when the button was pressed? It can create an interval timer that checks every 1/10 of a second to see if the button state has changed, but that’s neither efficient nor practical. Instead we must use a protocol.&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a protocol.&lt;/p&gt;
+
+    &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;protocol&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buttonWasPressed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;someValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Passes back a parameter&lt;/span&gt;
+     &lt;span class=&quot;kd&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buttonWasReleased&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Optional protocol&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Notice the first protocol passes back a value. This is useful when you want the parent to be able to listen and track when a specific value has changed. You can simply trigger the protocol every time the value is changed and pass the value as the parameter. The second parameter doesn’t take a paramter, but it is optional. This means that the parent class doesn’t need to include &lt;code class=&quot;highlighter-rouge&quot;&gt;buttonWasReleased()&lt;/code&gt; in order to conform to the protocol &lt;code class=&quot;highlighter-rouge&quot;&gt;SomeDelegate&lt;/code&gt;.&lt;br /&gt;
+ &lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Establish the protocol as an instance variable named &lt;code class=&quot;highlighter-rouge&quot;&gt;delegate&lt;/code&gt;.&lt;/p&gt;
+
+    &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeClass&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;weak&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Call the appropriate protocol method in your class to trigger the listener.&lt;/p&gt;
+
+    &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeClass&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+     &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+
+     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buttonPressed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;I was pressed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buttonWasPressed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;someValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;This new line triggers the protocol method &lt;code class=&quot;highlighter-rouge&quot;&gt;buttonWasPressed&lt;/code&gt; and passes the value &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; up to the parent. Now we’ll cover how to actually use this in your class.&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In your &lt;code class=&quot;highlighter-rouge&quot;&gt;UIViewController&lt;/code&gt; subclass, add the protocol as a class to conform to.&lt;/p&gt;
+
+    &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeDelegate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Connect or create the instance of the class and attach &lt;code class=&quot;highlighter-rouge&quot;&gt;self&lt;/code&gt; as the delegate. This will tell the protocol that this current class will conform to the protocol.&lt;/p&gt;
+
+    &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeDelegate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeClass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;example&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add the protocol as a function. If everything was set up correctly, the method should auto-complete.&lt;/p&gt;
+
+    &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeDelegate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        
+     &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+        
+     &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buttonWasPressed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;someValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Button was pressed with value: &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someValue&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That’s it! Now every time the function &lt;code class=&quot;highlighter-rouge&quot;&gt;buttonPressed()&lt;/code&gt; is run, it will run &lt;code class=&quot;highlighter-rouge&quot;&gt;buttonWasPressed()&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;SomeViewController&lt;/code&gt; and pass a value. This is a great way of communicating between a child and parent when some event is triggered by the user.&lt;br /&gt;
+&lt;br class=&quot;post-line-break&quot; /&gt;
+Hope this tutorial helped! It’s been a few months since I did any iOS dev (got caught up in a lot of web dev because of work) so I hope my explanations and code were clear and clean.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 24 Aug 2017 15:44:37 -0700</pubDate>
+        <link>http://khou22.com/programming/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</link>
+        <guid isPermaLink="true">http://khou22.com/programming/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</guid>
+        
+        <category>ios</category>
+        
+        
+        <category>Programming</category>
+        
+      </item>
     
       <item>
         <title>CSS Tips and Tricks August 2017: Flexbox</title>
@@ -85,8 +259,8 @@
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 22 Aug 2017 11:47:59 -0700</pubDate>
-        <link>https://khou22.github.io/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</link>
-        <guid isPermaLink="true">https://khou22.github.io/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</guid>
+        <link>http://khou22.com/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</link>
+        <guid isPermaLink="true">http://khou22.com/programming/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</guid>
         
         <category>css</category>
         
@@ -398,8 +572,8 @@ Go to line number: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Line 
 &lt;/ol&gt;
 </description>
         <pubDate>Fri, 04 Aug 2017 10:18:02 -0700</pubDate>
-        <link>https://khou22.github.io/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</link>
-        <guid isPermaLink="true">https://khou22.github.io/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</guid>
+        <link>http://khou22.com/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</link>
+        <guid isPermaLink="true">http://khou22.com/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</guid>
         
         
         <category>Programming</category>
@@ -421,8 +595,8 @@ I’ll probably be fairly confident with my setup by the time school rolls aroun
 Check out my &lt;a href=&quot;http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html&quot;&gt;next blog post&lt;/a&gt; to see my personal VIM configuration — I’ve spent a fair amount of time messing around with it and I’m really enjoying it so far so definitely take a look if you’re at all interested.&lt;/p&gt;
 </description>
         <pubDate>Thu, 03 Aug 2017 10:02:56 -0700</pubDate>
-        <link>https://khou22.github.io/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
-        <guid isPermaLink="true">https://khou22.github.io/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
+        <link>http://khou22.com/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
+        <guid isPermaLink="true">http://khou22.com/programming/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
         
         
         <category>Programming</category>
@@ -531,8 +705,8 @@ Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/&lt;/code&gt; (
 &lt;/table&gt;
 </description>
         <pubDate>Mon, 31 Jul 2017 09:50:16 -0700</pubDate>
-        <link>https://khou22.github.io/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</link>
-        <guid isPermaLink="true">https://khou22.github.io/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</guid>
+        <link>http://khou22.com/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</link>
+        <guid isPermaLink="true">http://khou22.com/programming/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</guid>
         
         <category>es6</category>
         
@@ -577,8 +751,8 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
 &lt;/ol&gt;
 </description>
         <pubDate>Mon, 24 Jul 2017 04:49:12 -0700</pubDate>
-        <link>https://khou22.github.io/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</link>
-        <guid isPermaLink="true">https://khou22.github.io/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</guid>
+        <link>http://khou22.com/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</link>
+        <guid isPermaLink="true">http://khou22.com/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</guid>
         
         
         <category>design</category>
@@ -644,8 +818,8 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
 &lt;p&gt;Overall, I’ve been very satisfied with TypeScript so far. The combination of code completion, reduced debugging time, and clean structure has made for a hugely satisfying development process. I’m thinking about refactoring my NodeJS Heroku server to TypeScript just so I can keep using it. Hope this post was helpful and I highly recommend you give TypeScript a shot!&lt;/p&gt;
 </description>
         <pubDate>Fri, 14 Jul 2017 10:40:33 -0700</pubDate>
-        <link>https://khou22.github.io/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</link>
-        <guid isPermaLink="true">https://khou22.github.io/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</guid>
+        <link>http://khou22.com/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</link>
+        <guid isPermaLink="true">http://khou22.com/programming/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</guid>
         
         <category>javascript</category>
         
@@ -695,8 +869,8 @@ As I’ve mentioned earlier, I’ve been working with massive JSON objects often
 It turns the page into a text editor of sorts and you can compress objects and arrays very easily. It’ll use syntax highlighting and you can customize the font, text size, and more. Overall, just makes the process of looking at JSON much more enjoyable (restoring the romance in data if I may). It’s really useful when you want to compare two different objects that are separated by a massive, nested array. You can simply compress the array and it becomes infinitely cleaner to look at.&lt;/p&gt;
 </description>
         <pubDate>Sat, 01 Jul 2017 10:06:18 -0700</pubDate>
-        <link>https://khou22.github.io/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</link>
-        <guid isPermaLink="true">https://khou22.github.io/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</guid>
+        <link>http://khou22.com/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</link>
+        <guid isPermaLink="true">http://khou22.com/programming/2017/07/01/testing-apis-postman-network-debugging-and-json.html</guid>
         
         
         <category>Programming</category>
@@ -737,8 +911,8 @@ library-name/
     src/&lt;/p&gt;
 </description>
         <pubDate>Tue, 27 Jun 2017 03:17:34 -0700</pubDate>
-        <link>https://khou22.github.io/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</link>
-        <guid isPermaLink="true">https://khou22.github.io/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</guid>
+        <link>http://khou22.com/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</link>
+        <guid isPermaLink="true">http://khou22.com/programming/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html</guid>
         
         
         <category>Programming</category>
@@ -824,144 +998,10 @@ Another useful event handler is the ‘input’ tag’s built in onBlur() event 
 
 </description>
         <pubDate>Wed, 14 Jun 2017 10:50:35 -0700</pubDate>
-        <link>https://khou22.github.io/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</link>
-        <guid isPermaLink="true">https://khou22.github.io/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</guid>
+        <link>http://khou22.com/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</link>
+        <guid isPermaLink="true">http://khou22.com/programming/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html</guid>
         
         <category>es6</category>
-        
-        
-        <category>Programming</category>
-        
-      </item>
-    
-      <item>
-        <title>Intro to Redux: Getting Started with State Containers in React</title>
-        <description>&lt;h1 id=&quot;overview-of-redux&quot;&gt;Overview of Redux&lt;/h1&gt;
-&lt;p&gt;Redux is a way of keeping all states consolidated in one master, global javascript object (called a Redux tree) and accessed using a store. In order to understand the basics, it is important to recognize the difference between pure and impure functions. Pure functions have no observable side effects on the database or server; in fact, the return values depend solely on the values of the arguments. If you put in the same arguments, you should get the exact same output every time. An impure function does not do this. It may modify the DOM or change a database.&lt;br /&gt;
-&lt;em&gt;Sidenote: You can deep freeze your input variable to ensure that your function is pure&lt;/em&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-State changes will result in a callback called the reducer function. It is imperative that this function be a pure function and it must return a new object, &lt;em&gt;not a reference to the input&lt;/em&gt;. In most cases, you do not need to recreate the entire object. You can keep the references to the objects properties, but the master reference must be different — just change the variable(s) that need to be changed.&lt;br /&gt;
-&lt;em&gt;Sidenote: You can use an expect(…).toEqual(…) to debug in Javascript. They act like Java assertion statements&lt;/em&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-It is also important that the reducer functions consider all possible inputs of an action. By convention, undefined inputs will return the initial statement. A reducer accepts a state and an action. In the following implementation, here are a few important redux API’s to keep in mind:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;store = createStore(instanceVarToUpdate) lets Redux know which instance to watch&lt;/li&gt;
-  &lt;li&gt;store.getState() → get value of variable&lt;/li&gt;
-  &lt;li&gt;store.subscribe(() =&amp;gt; { … }); // Callback when variable changes — does not run during the initial state&lt;/li&gt;
-  &lt;li&gt;store.dispatch() → A function call that triggers an action manually
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;implementation&quot;&gt;Implementation&lt;/h1&gt;
-&lt;p&gt;There are a few main pieces when implementing Redux with ReactJS. It centers around the ‘store’ or class that controls the global instance variables. In this explanation, we will use a simple counter as the example store. It simply tracks a number and has two API endpoint actions: increment by one, decrement by one.&lt;/p&gt;
-
-&lt;p&gt;First, we must write out a simple React component so that we have something to connect our redux store to. Install the React NPM package so that we can use the framework.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm install --save react&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now we must create the controller (written in ES6).&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Import the React NPM package&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// React Component&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Component&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Rendering function&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onIncrement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onDecrement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Subtract&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;As we will see later, we will pass in the value of the counter and two functions (increment and decrement) from the store we will eventually create.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-To set up our store, we must first install redux and use the –save option to include it in our package.json:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm install --save redux&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Now we must write the code for the store itself. The store is actually an object type generated running the createStore() function in the redux package on a class. The code is included below. Notice how the function accepts an action and does not actually modify the state — it is a &lt;strong&gt;pure&lt;/strong&gt; function. In this example, the state is the value of the counter and it is initially set to 0. It is written in ES6.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// counterStore.js&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createStore&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;redux&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get the createStore export&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Setup the Redux instance&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;counter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Initially at 0&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Feedback&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Use a switch to determine what action to take&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'INCREMENT'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'DECREMENT'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Use the function above as the callback and generate a store type&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createStore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Export the store so that it can used in other files&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Next, we will link the store with our React class so that it can dynamically update the frontend. We include the store as a local variable in the file using the require() statement:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./counterStore&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;em&gt;Side Note: In ES6, you can include exports from other JS files using brackets or no brackets. If there is a default export statement in the file, you do not have to use brackets and any import statement will simply load the default export as the variable name you specified. If you do not have a default export, want to access a number of different exports, or want to access a specific export, you must use the brackets and use the exact name of the export. (&lt;a href=&quot;https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import/36796281&quot;&gt;citation&lt;/a&gt;)&lt;/em&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Now we will create a rendering function, using ReactDOM to inject our HTML into the DOM.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;./style.css&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Include CSS stylesheet&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Include React&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ReactDom&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;react-dom&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// ReactDOM to load our component into the page&lt;/span&gt;
-
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./content&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Get our Counter React component&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;./counterStore&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Don't use brackets because it is the default export&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Render function so that we can set it as a callback every time the store variable instance is modified&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// We are also passing in the counter value and increment/decrement functions&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// The component is rendered in the element with the id: 'main'&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;ReactDom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Counter&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;onIncrement&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dispatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'INCREMENT'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;onDecrement&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dispatch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'DECREMENT'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;sr&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,
-&lt;/span&gt;    &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'main'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Subscribe to the live updates&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// This will run the function 'render' every time the store encounters a change&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subscribe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Call it once manually to push it into the DOM because it will only render on a change&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// If we don't manually call it, there can be no changes to put it in the dom in the first place&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h1 id=&quot;closing-comments&quot;&gt;Closing Comments&lt;/h1&gt;
-&lt;p&gt;Hope you were able to follow this brief tutorial! It is loosely based on the free course on egghead.io on &lt;a href=&quot;http://webpack.github.io/docs/tutorials/getting-started/&quot; target=&quot;\_blank&quot;&gt;Redux and React&lt;/a&gt;. The full code can be found &lt;a href=&quot;https://github.com/khou22/NodeJSPractice/tree/master/Redux&quot; target=&quot;\_blank&quot;&gt;on my GitHub&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 13 Jun 2017 03:26:07 -0700</pubDate>
-        <link>https://khou22.github.io/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</link>
-        <guid isPermaLink="true">https://khou22.github.io/programming/2017/06/13/intro-to-redux-getting-started-with-state-containers-in-react.html</guid>
-        
-        <category>reactjs</category>
         
         
         <category>Programming</category>
