@@ -88,11 +88,14 @@ That's all very confusing, but here's a step by step on how they work and how to
     ``` swift
     protocol SomeDelegate: class {
         func buttonWasPressed(someValue: Int) // Passes back a parameter
-        optional func buttonWasReleased() // Optional protocol
+    }
+    
+    @objc protocol SomeDelegate: class {
+    	@objc optional func buttonWasReleased() // Optional protocol
     }
     ```
     
-    Notice the first protocol passes back a value. This is useful when you want the parent to be able to listen and track when a specific value has changed. You can simply trigger the protocol every time the value is changed and pass the value as the parameter. The second parameter doesn't take a paramter, but it is optional. This means that the parent class doesn't need to include `buttonWasReleased()` in order to conform to the protocol `SomeDelegate`.  
+    Notice the first protocol passes back a value. This is useful when you want the parent to be able to listen and track when a specific value has changed. You can simply trigger the protocol every time the value is changed and pass the value as the parameter. The second protocol example doesn't take a paramter, but it is optional. This means that the parent class doesn't need to include `buttonWasReleased()` in order to conform to the protocol `SomeDelegate`. Notice the use of the `@objc` tags.  
     <br class="post-line-break">
 3. Establish the protocol as an instance variable named `delegate`.
 

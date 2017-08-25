@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 Aug 2017 22:53:24 -0700</pubDate>
-    <lastBuildDate>Thu, 24 Aug 2017 22:53:24 -0700</lastBuildDate>
+    <pubDate>Thu, 24 Aug 2017 22:58:14 -0700</pubDate>
+    <lastBuildDate>Thu, 24 Aug 2017 22:58:14 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -92,12 +92,15 @@ That’s all very confusing, but here’s a step by step on how they work and ho
 
     &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;protocol&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
      &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buttonWasPressed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;someValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Passes back a parameter&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buttonWasReleased&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Optional protocol&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+ &lt;span class=&quot;kd&quot;&gt;@objc&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;protocol&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SomeDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ 	&lt;span class=&quot;kd&quot;&gt;@objc&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buttonWasReleased&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Optional protocol&lt;/span&gt;
  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
 
-    &lt;p&gt;Notice the first protocol passes back a value. This is useful when you want the parent to be able to listen and track when a specific value has changed. You can simply trigger the protocol every time the value is changed and pass the value as the parameter. The second parameter doesn’t take a paramter, but it is optional. This means that the parent class doesn’t need to include &lt;code class=&quot;highlighter-rouge&quot;&gt;buttonWasReleased()&lt;/code&gt; in order to conform to the protocol &lt;code class=&quot;highlighter-rouge&quot;&gt;SomeDelegate&lt;/code&gt;.&lt;br /&gt;
+    &lt;p&gt;Notice the first protocol passes back a value. This is useful when you want the parent to be able to listen and track when a specific value has changed. You can simply trigger the protocol every time the value is changed and pass the value as the parameter. The second protocol example doesn’t take a paramter, but it is optional. This means that the parent class doesn’t need to include &lt;code class=&quot;highlighter-rouge&quot;&gt;buttonWasReleased()&lt;/code&gt; in order to conform to the protocol &lt;code class=&quot;highlighter-rouge&quot;&gt;SomeDelegate&lt;/code&gt;. Notice the use of the &lt;code class=&quot;highlighter-rouge&quot;&gt;@objc&lt;/code&gt; tags.&lt;br /&gt;
  &lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
