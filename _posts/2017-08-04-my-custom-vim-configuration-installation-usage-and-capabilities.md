@@ -259,6 +259,11 @@ Go to line number: `<Line #> + Shift + G`
 2. Source the file: `:source %`
 3. Install the plugins: `:PlugInstall`
 
+# Removing Plugins
+1. Remove the `Plug` line from the `.vimrc` file
+2. Source the `.vimrc` file
+3. Clean VIM by typing `:PlugClean` and pressing `y` to confirm deletion of plugin
+
 ## Suggestions
 1. Change `caps lock` to `escape` in System Preferecnes -> Keyboard -> Modifiers
 

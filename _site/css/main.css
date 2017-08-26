@@ -409,6 +409,8 @@ article strong { color: black; }
 .contact-tile-icon { max-height: 130px; max-width: 120px; display: block; margin: auto; transition: all .2s ease-in-out; }
 .contact-tile-icon:hover { transform: scale(1.2); -webkit-transform: scale(1.2); }
 
+.photography-grid { width: 90%; margin: auto; }
+
 .project-page { width: 90%; margin: auto; margin-top: 12px; }
 .project-title { margin-top: 8px !important; }
 .project-hr { border-color: #9DB7C1 !important; }
