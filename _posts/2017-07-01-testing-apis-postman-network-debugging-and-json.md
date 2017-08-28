@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2017-07-01 17:06:18
 description: "A couple of tools, tips, and tricks when developing APIs to improve your workflow."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: configuration
 tags: []
 featured: "no"
 ---

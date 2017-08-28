@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-08-24 22:02:18
 description: "A overview of my 2016 summer at Breathometer including my projects, what I learned, and what I hope to do going forward."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: life
 tags: [ios, swift, apps, xcode]
 featured: "no"
 ---

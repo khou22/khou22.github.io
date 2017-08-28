@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-10-25 21:16:28
 description: "Quick start guide of the Javascript runtime environment, Node.js, and its basic functionalities."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [node-js, javascript]
 featured: "no"
 ---

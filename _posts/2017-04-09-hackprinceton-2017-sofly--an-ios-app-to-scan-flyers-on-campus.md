@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2017-04-09 11:56:00
 description: "An app to digitize flyers and generate calendar events. It won runner app for Best App for Students at Princeton's hackathon!"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: ios
 tags: [ios, swift]
 featured: "yes"
 ---

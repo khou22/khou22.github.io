@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2017-07-14 17:40:33
 description: "A short introduction into TypeScript as well as a reflection on my thoughts and opinions about it."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: web
 tags: [javascript, es6]
 featured: "no"
 ---

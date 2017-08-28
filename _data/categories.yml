@@ -1,6 +1,22 @@
+ios:
+    slug: ios
+    name: iOS Development
+
+web:
+    slug: web
+    name: Web Development
+
+hardware:
+    slug: hardware
+    name: Hardware Projects
+
 programming:
   slug: programming
-  name: Programming
+  name: General Programming
+
+configuration:
+    slug: configuration
+    name: Developer Tools
 
 design:
   slug: design
@@ -8,7 +24,7 @@ design:
 
 wood:
   slug: wood
-  name: Wood
+  name: Woodshop
 
 school:
   slug: school
@@ -18,10 +34,6 @@ life:
   slug: life
   name: Life
 
-work:
-  slug: work
-  name: Work
-
 computer:
   slug: computer
-  name: Computer
+  name: Computer Hacks

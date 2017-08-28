@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-03-13 23:30:29
 description: "How to create and use services and factories in AngularJS"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: ['ionic', 'angularjs', 'javascript']
 featured: "no"
 ---

@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-06-29 16:50:49
 description: "My notes and thoughts on Apple's new API calls for animations and transitions in Swift 3."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: ios
 tags: [ios, swift, apps, xcode]
 featured: "no"
 ---

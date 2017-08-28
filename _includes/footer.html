@@ -58,12 +58,12 @@
 
     <div class="site-footer-content">
 
-      <h2 class="footer-heading">{{ site.title }}</h2>
+      <h2 class="footer-heading">{{ site.full_title }}</h2>
 
       <div class="footer-col-wrapper">
         <div class="footer-col  footer-col-1">
           <ul class="contact-list">
-            <li>{{ site.author }}</li>
+            <li>{{ site.author.display_name }}</li>
             <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             <li>{{ site.location }}</li>
           </ul>

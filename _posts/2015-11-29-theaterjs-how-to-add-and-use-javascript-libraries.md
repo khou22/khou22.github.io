@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-11-29 21:17:51
 description: "A simple tutorial on how to use Javascript libraries in your web apps. I will be using TheaterJS as an example library."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [javascript]
 featured: "no"
 ---

@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-7-29 20:55:41
 description: "An example of a React-based, ES6 number counter."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [javascript, reactjs]
 featured: "no"
 ---

@@ -14,9 +14,9 @@ For the longest time, I didn't realize that '===' was a comparison operator in J
 {% highlight javascript %}
 var num = 1;
 var str = "1";
- 
+
 if (str == num) //Will return true
- 
+
 if (str === num) //Will return false
 {% endhighlight %}
 

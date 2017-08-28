@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-08-03 23:39:39
 description: "An overview of one of ReactJS's useful lifecycle events: componentWillReceiveProps"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [reactjs]
 featured: "no"
 ---
@@ -18,5 +18,5 @@ componentWillReceiveProps(props) {
   ...
 }
 {% endhighlight %}
- 
+
 Try this out when you can! It's really useful.

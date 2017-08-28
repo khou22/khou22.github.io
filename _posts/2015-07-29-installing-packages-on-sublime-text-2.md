@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-07-29 10:02:30
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: configuration
 tags: [sublime]
 featured: "no"
 ---
@@ -43,5 +43,5 @@ Steps:
     Done! You can now use the package.
   </li>
 </ol>
- 
+
 SublimeHighlight can be found <a href="https://github.com/n1k0/SublimeHighlight">here</a>

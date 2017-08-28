@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Swift TableView Basics: How to Create and Populate Tables</title>
+  <meta name="description" content="">
+
+  <!-- React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- Tile Layout Library -->
+  <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/ios/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+
+  <!-- Bootstrap -->
+  <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+  <!-- Google Analytics -->
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-66796355-1', 'auto');
+      ga('send', 'pageview', location.pathname);
+
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/media/site/favicon.png">
+
+    <!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>Swift TableView Basics: How to Create and Populate Tables | Kevin Hou</title>
+<meta property="og:title" content="Swift TableView Basics: How to Create and Populate Tables" />
+<meta name="author" content="Kevin Hou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A quick, bare-bones introduction to Table Views in Swift." />
+<meta property="og:description" content="A quick, bare-bones introduction to Table Views in Swift." />
+<link rel="canonical" href="http://localhost:4000/ios/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html" />
+<meta property="og:url" content="http://localhost:4000/ios/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html" />
+<meta property="og:site_name" content="Kevin Hou" />
+<meta property="og:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-07-22T03:46:44-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@kevinhou22" />
+<meta name="twitter:creator" content="@Kevin Hou" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Swift TableView Basics: How to Create and Populate Tables","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2016-07-22T03:46:44-07:00","dateModified":"2016-07-22T03:46:44-07:00","description":"A quick, bare-bones introduction to Table Views in Swift.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ios/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html"},"url":"http://localhost:4000/ios/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+
+  <body>
+
+    <header>
+  <!-- Desktop Client -->
+  <div class="site-header" id="site-header">
+    <div class="wrapper" style="height: 100%">
+      <div class="site-header-background">
+        <div class="site-header-content">
+
+          <a href="/" class="header-title-section">
+            <img src="/media/site/favicon.png" class="header-logo" align="left">
+            <p class="site-title">Kevin Hou</p>
+          </a>
+
+          <!-- Site Navigation Bar -->
+          <ul class="nav-ul site-nav-bar">
+            <li class="nav-li nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/blog">Blog &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/blog/category">Browse by Category</a></li>
+                <li class="nav-li"><a href="/blog/tag">Browse by Tag</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/categories">Portfolio &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/programming">Programming</a></li>
+                <!-- <li class="nav-li"><a href="/blog/wood/">Woodshop</a></li> -->
+                <li class="nav-li"><a href="https://www.flickr.com/photos/khou22/albums" target="_blank">Woodshop</a></li>
+                <li class="nav-li"><a href="/design">Design</a></li>
+                <li class="nav-li"><a href="/photography">Photography</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item"><a href="/contact">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="header-placeholder"></div>
+
+  <!-- Activate Tooltips -->
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    // Header has two sizes — 80px and 40px — based on scrolling
+    $(document).scroll(function() {
+      var screenWidth = $(document).width();
+      var mobileCuttoff = 800; // Ambiguous
+      if (screenWidth > mobileCuttoff) {
+        var triggerDistance = 100;
+        var classesToChange = [
+          {
+            className: ".site-header",
+            styleElement: "height",
+            min: 40,
+            max: 80
+          },
+          {
+            className: ".site-title",
+            styleElement: "font-size",
+            min: 20,
+            max: 32
+          },
+          {
+            className: ".site-title",
+            styleElement: "line-height",
+            min: 2,
+            max: 3
+          },
+          {
+            className: ".header-logo",
+            styleElement: "height",
+            min: 24,
+            max: 64
+          },
+          {
+            className: ".site-nav-bar",
+            styleElement: "margin-top",
+            min: 4,
+            max: 24
+          }
+        ]
+        if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
+          var percentageComplete = $(this).scrollTop()/triggerDistance; // Percentage complete
+          for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
+            var currentClass = classesToChange[i] // Store
+            var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
+            $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
+          }
+        } else { // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.min);
+          }
+        }
+        if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast - max style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.max);
+          }
+        }
+      } else {
+        // If on mobile
+        // console.log("Your screen size does not support dynamic header");
+      }
+    });
+  </script>
+
+
+  <!-- Mobile Client -->
+  <div class="mobile-blog-header">
+    <ul class="mobile-blog-header-ul">
+      <li class="mobile-blog-header-li-logo">
+        <a href="http://localhost:4000">
+          <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
+        </a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/">Home</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/blog">Blog</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/categories">Portfolio</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mobile-blog-header-placeholder">
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <!-- Hide scrollbar on this page -->
+<style> ::-webkit-scrollbar { display: none; } </style>
+
+<div class="post">
+  
+
+    
+
+    
+
+    
+  <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
+    <div class="post-header-content">
+      <a onclick="blogPostBackButton()"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title post-header-title">Swift TableView Basics: How to Create and Populate Tables</h1>
+      <h4 class="post-header-description">A quick, bare-bones introduction to Table Views in Swift.</h4>
+      <p class="post-header-meta">Jul 22, 2016 • Kevin Hou</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+    var blogPostBackButton = function() {
+      var previousLink = document.referrer
+      var index = previousLink.indexOf("/blog")
+      console.log("Previous link:", previousLink);
+      console.log(index);
+      if (index == 1) { // If not coming from a different blog post
+        window.history.go(-1); // Back in history (keeps window position)
+      } else { // Directed from a different blog post
+        // console.log("Back to blog");
+        console.log("Back");
+        window.location.href = "/blog";
+      }
+    }
+
+  </script>
+
+  <article class="post-content">
+    <h3 class="post-subheader">Project Objectives</h3>
+<p>I was instructed to integrate HealthKit information — specifically pulling steps data — into Breathometer’s upcoming app. I’m realitively new to Swift having only started a month ago, so this project was a way for me to get more familiar with the language and IDE. My task was to pull the data from HealhtKit then populate a table within a page of the app. This data could then be used for visualizations, analysis, etc. Here are my main learning goals for this project:</p>
+<ol>
+  <li>Learn how to integrate with HealthKit and pull data from a “3rd party” source (<a href="http://khou22.github.io/programming/2016/07/22/introduction-to-healthkit-reading-steps-weight-height-and-more.html" target="_blank">see last post</a>)</li>
+  <li>Learn the fundamentals of table views, populating views, etc. so that I can develop a better understanding of Swift frontend</li>
+</ol>
+<p><br class="post-line-break" /></p>
+
+<h3 class="post-subheader">Setting Up the Table</h3>
+<p>Create a table view property
+<br class="post-line-break" /></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="o">!</span> <span class="c1">// Connect to the storyboard element</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+Initialize the class and connect it to the storyboard.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">UITableViewDelegate</span><span class="p">,</span> <span class="kt">UITableViewDataSource</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+Setup different UITableView properties</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">// Imperative</span>
+<span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">numberOfRowsInSection</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">0</span>
+<span class="p">}</span>
+
+<span class="c1">// Imperative</span>
+<span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">cellForRowAtIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kt">UITableViewCell</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">didSelectRowAtIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Triggered when you select the row at indexPath</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+<b>Connect dataSource and delegate</b><br />
+You must also link the table view dataSource and delegate to the view controller like so: <br />
+<img src="./../../../../media/blog/images/Swift_Table_Views.png" width="100%" /></p>
+
+<p><br class="post-line-break" />
+<b>Register Cell Class</b><br />
+In the view controller/tableviewdelegate/datasource class, you must register the class for the table view:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+    <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">registerClass</span><span class="p">(</span><span class="kt">UITableViewCell</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">forCellReuseIdentifier</span><span class="p">:</span> <span class="s">"cell"</span><span class="p">)</span>
+<span class="c1">//    tableView.setup(scrollable: false) // Turn off scrolling</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 class="post-subheader">Adding Data to Display</h3>
+<p>First step is to declare the data. In this case we’re going to use dummy data:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Hello"</span><span class="p">,</span> <span class="s">"World"</span><span class="p">,</span> <span class="s">"Swift"</span><span class="p">]</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+Using this data, we can now set the number of rows in our table view by calling the function:</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">numberOfRowsInSection</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">items</span><span class="o">.</span><span class="n">count</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+<b>Create the Cell</b><br /></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">cellForRowAtIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">cell</span><span class="p">:</span><span class="kt">UITableViewCell</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">dequeueReusableCellWithIdentifier</span><span class="p">(</span><span class="s">"cell"</span><span class="p">)</span> <span class="k">as</span> <span class="kt">UITableViewCell</span>
+
+    <span class="n">cell</span><span class="o">.</span><span class="n">textLabel</span><span class="p">?</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">indexPath</span><span class="o">.</span><span class="n">row</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">cell</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+<b>Handling Cell Selection</b><br /></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">didSelectRowAtIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">println</span><span class="p">(</span><span class="s">"You selected cell #</span><span class="se">\(</span><span class="n">indexPath</span><span class="o">.</span><span class="n">row</span><span class="se">)</span><span class="s">!"</span><span class="p">)</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+<b>Final code</b><br /></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">UITableViewDelegate</span><span class="p">,</span> <span class="kt">UITableViewDataSource</span> <span class="p">{</span>
+    <span class="kd">@IBOutlet</span>
+    <span class="k">var</span> <span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span>
+    <span class="k">var</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"We"</span><span class="p">,</span> <span class="s">"Heart"</span><span class="p">,</span> <span class="s">"Swift"</span><span class="p">]</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+        <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">registerClass</span><span class="p">(</span><span class="kt">UITableViewCell</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">forCellReuseIdentifier</span><span class="p">:</span> <span class="s">"cell"</span><span class="p">)</span>
+    <span class="p">}</span>
+
+
+    <span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">numberOfRowsInSection</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">self</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">count</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">cellForRowAtIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">cell</span><span class="p">:</span><span class="kt">UITableViewCell</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">dequeueReusableCellWithIdentifier</span><span class="p">(</span><span class="s">"cell"</span><span class="p">)</span> <span class="k">as</span> <span class="kt">UITableViewCell</span>
+
+        <span class="n">cell</span><span class="o">.</span><span class="n">textLabel</span><span class="p">?</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">items</span><span class="p">[</span><span class="n">indexPath</span><span class="o">.</span><span class="n">row</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">cell</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">didSelectRowAtIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">println</span><span class="p">(</span><span class="s">"You selected cell #</span><span class="se">\(</span><span class="n">indexPath</span><span class="o">.</span><span class="n">row</span><span class="se">)</span><span class="s">!"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><br class="post-line-break" /></p>
+<h3 class="post-subheader">Custom Cell Layout</h3>
+<p>By default, all table view cells have the text label and detail label values. To create a custom cell with more than just those two labels, follow these steps:
+<br class="post-line-break" />
+Drag a Table View Cell onto your UITableView. This will automatically generate a cell labeled “Prototype” that contains a nested content view. Treat this content view as any other view and drag UI elements like text fields, images, etc. onto the content view.
+<br class="post-line-break" />
+Now, create a new Swift file for the UITableViewCell class to connect your Table View Cell to some code. Initialize the class like so:
+<br class="post-line-break" /></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">class</span> <span class="kt">StepsCell</span><span class="p">:</span> <span class="kt">UITableViewCell</span> <span class="p">{</span>
+    <span class="c1">// IB Outlets go here:</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">awakeFromNib</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">awakeFromNib</span><span class="p">()</span>
+        <span class="c1">// Initialization code</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">setSelected</span><span class="p">(</span><span class="nv">selected</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">setSelected</span><span class="p">(</span><span class="n">selected</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="n">animated</span><span class="p">)</span>
+
+        <span class="c1">// Configure the view for the selected state</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+Hook up the UI elements in the content view with IBOutlets in your UITableViewCell class. It’s identical to how you would do this for any other view controller. You can add constraints, stack views, etc. Just treat the content view as you would a blank view controller.
+<br class="post-line-break" />
+Now to access those UI elements in your main Table View Controller, you must use the “dequeueReusableCellWithIdentifier” command. Dequeue basically describes the manner in which data loads and unloads. If you imagine the scrolling items as a wheel, as the topmost item disappears, it reappears on the bottom. The table view is endlessly recycling the same x number of cells. This is a good approach for memory management especially when dealing with 100+ cells. Once you’ve stored the cell, you can then modify the various UI elements and return the cell to populate the table view.
+<br class="post-line-break" /></p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">tableView</span><span class="p">(</span><span class="nv">tableView</span><span class="p">:</span> <span class="kt">UITableView</span><span class="p">,</span> <span class="n">cellForRowAtIndexPath</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">NSIndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">cell</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">dequeueReusableCellWithIdentifier</span><span class="p">(</span><span class="s">"StepsCell"</span><span class="p">)</span><span class="o">!</span> <span class="k">as!</span> <span class="kt">StepsCell</span> <span class="c1">// Same identifier as class name</span>
+    <span class="n">cell</span><span class="o">.</span><span class="n">dateLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">"January </span><span class="se">\(</span><span class="n">indexPath</span><span class="se">)</span><span class="s">"</span>
+    <span class="n">cell</span><span class="o">.</span><span class="n">textLabel</span><span class="p">?</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(</span><span class="n">indexPath</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cell</span>
+<span class="p">}</span></code></pre></figure>
+
+<h3 class="post-subheader">Other Helpful Topics</h3>
+<p>For populating table views with data from asynchronous requests, it can be helpful to reload your table view once you know all your data is complete</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="c1">// Reload in main queue</span>
+<span class="nf">dispatch_async</span><span class="p">(</span><span class="nf">dispatch_get_main_queue</span><span class="p">(),</span> <span class="p">{</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">reloadData</span><span class="p">()</span> <span class="c1">// Reload</span>
+<span class="p">})</span></code></pre></figure>
+
+<p><br class="post-line-break" />
+Tutorial from: <a href="https://www.weheartswift.com/how-to-make-a-simple-table-view-with-ios-8-and-swift/" target="_blank">https://www.weheartswift.com/how-to-make-a-simple-table-view-with-ios-8-and-swift/</a></p>
+
+    <div class="post-organization">
+      <p id="post-meta">Posted in <a href="/blog/category/ios/">iOS Development</a> with <a href="/blog/tag/ios/">iOS</a>, <a href="/blog/tag/swift/">Swift</a>, <a href="/blog/tag/apps/">Apps</a>, <a href="/blog/tag/xcode/">Xcode</a></p>
+    </div>
+  </article>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <!-- External Links Navigation Bar -->
+  <table class="external-bar"> <!-- Custom header -->
+    <tr>
+      <td class="external-td">
+        <a href="/blog" data-toggle="tooltip" title="Blog Home">
+          <div class="external-link-box home-bw"></div>
+          <p class="external-link-label">Home</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.linkedin.com/in/kevinhou22" target="_blank" data-toggle="tooltip" title="LinkedIn">
+          <div class="external-link-box linkedin-bw"></div>
+          <p class="external-link-label">LinkedIn</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://github.com/khou22" target="_blank" data-toggle="tooltip" title="Github">
+          <div class="external-link-box github-bw"></div>
+          <p class="external-link-label">Github</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.flickr.com/photos/khou22/albums" target="_blank" data-toggle="tooltip" title="Flickr">
+          <div class="external-link-box flickr-bw"></div>
+          <p class="external-link-label">Flickr</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="http://kevinhou.wix.com/projects" target="_blank" data-toggle="tooltip" title="Portfolio">
+          <div class="external-link-box gallery-bw"></div>
+          <p class="external-link-label">Portfolio</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://youtube.com/kevinhou22" target="_blank" data-toggle="tooltip" title="YouTube Channel">
+          <div class="external-link-box youtube-bw"></div>
+          <p class="external-link-label">YouTube</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.princeton.edu/main/" target="_blank" data-toggle="tooltip" title="School Profile">
+          <div class="external-link-box highSchool-bw"></div>
+          <p class="external-link-label">School Profile</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="/blog/contact" data-toggle="tooltip" title="Contact">
+          <div class="external-link-box email-bw"></div>
+          <p class="external-link-label">Contact</p>
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="wrapper">
+
+    <div class="site-footer-content">
+
+      <h2 class="footer-heading">Kevin Hou's Portfolio and Blog</h2>
+
+      <div class="footer-col-wrapper">
+        <div class="footer-col  footer-col-1">
+          <ul class="contact-list">
+            <li>Kevin Hou</li>
+            <li><a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a></li>
+            <li>San Francisco Bay Area</li>
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-2">
+          <ul class="social-media-list">
+            
+            <li>
+              <a href="https://github.com/khou22" target="_blank">
+                <span class="icon  icon--github">
+                  <svg viewBox="0 0 16 16">
+                    <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                  </svg>
+                </span>
+
+                <span class="username">khou22</span>
+              </a>
+            </li>
+            
+
+            
+            <li>
+              <a href="https://www.flickr.com/photos/khou22/albums" target="_blank">
+                <div class="footer-icon-box flickr-bw"></div><span class="username">kevinhou22</span>
+              </a>
+            </li>
+            
+
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-3">
+          <p class="text">Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
+</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

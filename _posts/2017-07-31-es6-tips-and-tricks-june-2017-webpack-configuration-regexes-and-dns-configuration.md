@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2017-07-31 16:50:16
 description: "A somewhat random assortment of things I've learned and felt worth noting including how to do a local DNA override, using SVGs in Webpack, how to retrieve the current directory path in-line, and more."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: web
 tags: [es6, javascript]
 featured: "yes"
 ---

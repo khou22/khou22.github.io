@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-07-31 21:10:15
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [javascript]
 featured: "no"
 ---
@@ -21,7 +21,7 @@ module.export = React. createClass({
   ...
 });
 {% endhighlight %}
- 
+
 Next, I set my interval equal to a global variable like so:
 {% highlight JavaScript %}
 myTimeout = setTimeout(functionName(), 500);
@@ -33,5 +33,5 @@ clearTimeout(myTimeout);
 {% endhighlight %}
 <br />
 That's it! It's really simple. This works with intervals as well. Simply set the inveral globally using the same method as described above and clear the interval with clearInterval(myInterval).
- 
+
 Hope this helps!

@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-07-26 14:13:16
 description: "A short tutorial on segmented controls in Swift as well as a brief explanation on why I write these blog posts."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: ios
 tags: [ios, swift, apps, xcode]
 featured: "no"
 ---

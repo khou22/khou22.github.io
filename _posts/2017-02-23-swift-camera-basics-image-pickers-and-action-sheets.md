@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2017-02-23 20:53:36
 description: "An over on implementing camera selection and action sheets in Swift."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: ios
 tags: [ios, swift]
 featured: "no"
 ---

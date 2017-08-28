@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2017-08-22 18:47:59
 description: "A brief introduction to the world of flexbox — a powerful layout and alignment tool."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [css]
 featured: "no"
 ---

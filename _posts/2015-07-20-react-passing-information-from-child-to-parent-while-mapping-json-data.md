@@ -5,12 +5,12 @@ author: "Kevin Hou"
 date:   2015-07-20 15:43:23
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [reactjs, salesforce, javascript, html, es6]
 featured: "no"
 ---
 I've had a lot of issues in the past week trying to figure out how to pass information from the child component to the parent component while mapping JSON data.
- 
+
 Here's what it looks like to pass information from the child component to the parent component:
 {% highlight javascript %}
 module.exports = React.createClass({
@@ -23,7 +23,7 @@ module.exports = React.createClass({
     )
   }
 });
- 
+
 const Child = React.createClass({
   render() {
     return (
@@ -31,7 +31,7 @@ const Child = React.createClass({
   )
 });
 {% endhighlight %}
- 
+
 Here's what it looks like to map a JSON object:
 {% highlight javascript %}
 var contactNodes = this.props.contacts.map(function (contact) {
@@ -44,9 +44,9 @@ var contactNodes = this.props.contacts.map(function (contact) {
   }
 });
 {% endhighlight %}
- 
+
 Unfortunately, it's difficult to combine these two things because when using "this.handleClick", "this" refers to the current object it is in. When you map data, "this" refers to contactNodes, not the component; therefore, you cannot refer to a function while mapping JSON data. I finally figured out a simple way around this issue. Instead of including all my HTML in the return while mapping, I used the map function to set states. Then I passed those states into the components in the regular render() function. This allowed me to use functions because the "this" would refer to the correct object.
- 
+
 Example:
 {% highlight javascript %}
 module.exports = React.createClass({

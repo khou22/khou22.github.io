@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-10-01 18:26:42
 description: "A cool web app that visually demonstrates how browsers execute Javascript's call stacks/event loops/callbacks."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [Javascript]
 featured: "no"
 ---

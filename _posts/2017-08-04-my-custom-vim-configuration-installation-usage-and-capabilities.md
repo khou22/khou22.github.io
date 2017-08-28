@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2017-08-04 17:18:02
 description: "My personal — and favorite — VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: configuration
 tags: []
 featured: "yes"
 ---
@@ -59,7 +59,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 ```
 brew install the_silver_searcher
 ```
-    
+
    __Dev Box (Ubuntu)__  
    ```
 sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev

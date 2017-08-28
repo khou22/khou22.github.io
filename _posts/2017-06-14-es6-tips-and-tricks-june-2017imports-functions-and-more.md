@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2017-06-14 17:50:35
 description: "An ongoing blog post of useful ES6 notes that I come across throughout June."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: web
 tags: [es6]
 featured: "no"
 ---

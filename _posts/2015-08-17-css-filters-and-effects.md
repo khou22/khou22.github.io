@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-08-17 15:03:23
 description: "How to use CSS3 animations to apply filters on images or divs."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [CSS, CSS3, reactjs]
 featured: "no"
 ---

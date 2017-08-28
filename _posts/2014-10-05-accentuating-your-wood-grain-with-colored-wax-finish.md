@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2014-10-05 22:34:10
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Wood
+category: wood
 tags: [wood-finish]
 featured: "no"
 ---
@@ -20,7 +20,7 @@ I came across this video in my youTube "Recommended" playlist. I was intrigued b
   <li>Make sure the wax is dry and doesn't smir. Apply another finish (this man used watco oil) to seal in the wax and remove the excess wax. Apply many times to remove all the wax that is not in the grain. The thinner in the finish wipes off the excess.</li>
   <li>Wipe dry. The wax, oil, and varnish should be sealed in the wood.</li>
 </ol>
- 
+
 I plan on using this method soon! I will most likely post pictures or even film the process. Below is a list of all recommended materials:
 <br />
 <br />

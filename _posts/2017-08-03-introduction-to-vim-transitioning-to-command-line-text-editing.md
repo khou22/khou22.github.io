@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2017-08-03 17:02:56
 description: "Why I'm trying to use VIM after all these years and short reflection on what I think so far."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: configuration
 tags: []
 featured: "no"
 ---

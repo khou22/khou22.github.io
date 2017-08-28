@@ -5,11 +5,11 @@ author: "Kevin Hou"
 date: 2015-10-09 23:53:42
 description: "Fixing Jekyll on after upgrading to OS X 10.11, ie. El Capitan"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [Jekyll, osx]
 featured: "no"
 ---
-I upgraded to OS X 10.11, officially called El Capitan, this past week and discovered a concerning bug when building my site. My terminal was unable to recognize the initiator term: "jekyll." 
+I upgraded to OS X 10.11, officially called El Capitan, this past week and discovered a concerning bug when building my site. My terminal was unable to recognize the initiator term: "jekyll."
 
 <br />
 

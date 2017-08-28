@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-07-25 11:09:16
 description: "A short tutorial on how to read and write persist data — data that is stored between app sessions."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: ios
 tags: [ios, swift, apps, xcode]
 featured: "no"
 ---

@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2017-08-24 22:44:37
 description: "The basics of classes and subclasses as well as a detailed tutorial on setting up your own custom protocols and delegates."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
+category: ios
 tags: [ios]
 featured: "yes"
 ---
@@ -21,16 +21,16 @@ class Car {
     // Immutable and only accessible within this class
     // No initial value
     private let wheels: Int
-    
+
     // Mutable and accessible outside of this class
     // Initial value 1
     public var passengers: Int = 1
-    
+
     // Called when a new instance of "Car" is created
     init(wheels: Int) {
         self.wheels = wheels // Set instance variable
     }
-    
+
     // Can be called on an instance of "Car"
     public func driveForward() -> void {
         ...
@@ -72,15 +72,15 @@ That's all very confusing, but here's a step by step on how they work and how to
     ``` swift
     class SomeClass {
         private let button: UIButton = UIButton()
-        
+
         ...
-        
+
         private func buttonPressed() {
             print("I was pressed")
         }
     }
     ```
-    
+
     This function, `buttonPressed()`, will be run every time the button is pressed. This begs the question, how will the `UIViewController` that contains an instance of `SomeClass` detect when the button was pressed? It can create an interval timer that checks every 1/10 of a second to see if the button state has changed, but that's neither efficient nor practical. Instead we must use a protocol.  
 <br class="post-line-break">
 2. Create a protocol.
@@ -89,12 +89,12 @@ That's all very confusing, but here's a step by step on how they work and how to
     protocol SomeDelegate: class {
         func buttonWasPressed(someValue: Int) // Passes back a parameter
     }
-    
+
     @objc protocol SomeDelegate: class {
     	@objc optional func buttonWasReleased() // Optional protocol
     }
     ```
-    
+
     Notice the first protocol passes back a value. This is useful when you want the parent to be able to listen and track when a specific value has changed. You can simply trigger the protocol every time the value is changed and pass the value as the parameter. The second protocol example doesn't take a paramter, but it is optional. This means that the parent class doesn't need to include `buttonWasReleased()` in order to conform to the protocol `SomeDelegate`. Notice the use of the `@objc` tags.  
     <br class="post-line-break">
 3. Establish the protocol as an instance variable named `delegate`.
@@ -115,7 +115,7 @@ That's all very confusing, but here's a step by step on how they work and how to
         private func buttonPressed() {
             print("I was pressed")
             self.delegate.buttonWasPressed(someValue: 1)
-            
+
             // For optional protocols
             self.delegate?.buttonWasReleased?() // Optional so don't force otherwise app will crash
         }
@@ -147,9 +147,9 @@ That's all very confusing, but here's a step by step on how they work and how to
 
     ``` swift
     class SomeViewController: UIViewController, SomeDelegate {
-        
+
         ...
-        
+
         func buttonWasPressed(someValue: Int) {
             print("Button was pressed with value: \(someValue)")
         }
@@ -160,4 +160,3 @@ That's all very confusing, but here's a step by step on how they work and how to
 That's it! Now every time the function `buttonPressed()` is run, it will run `buttonWasPressed()` in `SomeViewController` and pass a value. This is a great way of communicating between a child and parent when some event is triggered by the user.  
 <br class="post-line-break">
 Hope this tutorial helped! It's been a few months since I did any iOS dev (got caught up in a lot of web dev because of work) so I hope my explanations and code were clear and clean.
-

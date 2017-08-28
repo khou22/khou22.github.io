@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-10-31 21:07:17
 description: "A basic overview of Core Data in Swift and Xcode featuring a short example to help you get started."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: ios
 tags: [ios, swift, apps, xcode]
 featured: "no"
 ---

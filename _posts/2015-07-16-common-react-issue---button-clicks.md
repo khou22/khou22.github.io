@@ -5,14 +5,14 @@ author: "Kevin Hou"
 date:   2015-07-16 13:10:57
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [salesforce, reactjs, javavscript]
 featured: "no"
 ---
 I've started to get the hang of <b>React</b> and <b>ES6</b>, but it's only been three weeks and there are of course tons and tons of things I haven't learned yet. I'll go over a couple of things that I think anyone starting to learn React could benefit from. In this blog post I'll go over Button Clicks.
- 
+
 React works differently from plain old Vanilla Javascript in a couple of ways. One of which is the modular structure of the code. Each module has functions within it that can be accessed only by that specific module.
- 
+
 You might be encountering a couple errors:
 <ol>
   <li>onClick function triggering when button loads</li>
@@ -40,7 +40,7 @@ Use
 at the end of
 {% highlight javascript %}{this.buttonClick}{% endhighlight %}
 See example below.
- 
+
 <h4>3. Prevent Auto-Refresh</h4>
 Simply use the: preventDefault() function
 
@@ -56,8 +56,8 @@ module.exports = React.createClass({
   }
 });
 {% endhighlight %}
- 
- 
+
+
 <h4>4. Passing Parameters</h4>
 Add the parameters in the .bind(this) as seen below
 

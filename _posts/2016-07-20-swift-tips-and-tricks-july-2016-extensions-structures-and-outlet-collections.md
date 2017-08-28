@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-07-20 11:05:04
 description: "An overview of some of the major topics I learned in the past week or so: extensions, structures, and outlet collections. I had to use these a lot in my project for work and I figured I would share."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: ios
 tags: [ios, swift, apps, xcode]
 featured: "no"
 ---

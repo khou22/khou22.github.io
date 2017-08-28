@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2016-03-06 23:59:45
 description: "Part of a wood project I'm working on. Using SketchUp and Aspire to prepare the CNC cutpath."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Wood
+category: wood
 tags: ['cnc-wood-router']
 featured: "no"
 ---

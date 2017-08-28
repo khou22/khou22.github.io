@@ -5,7 +5,7 @@ author: "Kevin Hou"
 date: 2015-08-03 17:52:15
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: programming
+category: web
 tags: [html, css]
 featured: "no"
 ---
@@ -33,5 +33,5 @@ CSS:
     margin-top: 0rem;
 }
 {% endhighlight %}
- 
+
 The background-size trait is uniqe in that the values I used were either contain or cover. Cover will fill the entire div and will scale/zoom in order to accomplish that. Contain will fit the image to either the width or height, whichever is the limiting agent. The extra space will be filled with the background color.
