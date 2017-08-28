@@ -2,4 +2,39 @@
   .landing-project-info {
     display: none !important; /*Hide project info*/
   }
+
+  .content-area {
+      width: 90%;
+      top: 70px;
+      left: 5%;
+      margin: auto;
+  }
+
+  .cardDiv {
+      margin: auto;
+      width: 200px;
+  }
+
+  .landing-notification-bar { /* Hide notification bar */
+      display: none;
+  }
+
+  .blog-button {
+      width: 60px;
+      height: 60px;
+  }
+
+  .landing-logo {
+      width: 40px;
+      height: 40px;
+  }
+
+  .profile-name {
+      font-size: 6rem;
+  }
+
+
+  .nav-bar {
+    left: 44%;
+  }
 }
