@@ -19,9 +19,14 @@
       display: none;
   }
 
-  .blog-button {
+  .blog-button, .icon-label {
       width: 60px;
       height: 60px;
+  }
+
+  .icon-label {
+      bottom: -4px;
+      font-size: 1.5rem;
   }
 
   .landing-logo {
