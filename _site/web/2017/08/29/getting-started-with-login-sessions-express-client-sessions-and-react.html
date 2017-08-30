@@ -371,7 +371,7 @@
 <h3 id="set-a-browser-cookie-from-an-api-response">Set a browser cookie from an API response</h3>
 <p>Now that we know how to send a cookie back from the server, we must now inject that cookie into the browser so the session can actually be tied to a browser. The <code class="highlighter-rouge">client-session</code> package automatically sets the appropriate cookie on the response header as <code class="highlighter-rouge">Set-Cookie</code>. This indicates to the browser to store the response as a cookie. Any response with the property <code class="highlighter-rouge">Set-Cookie</code>, as seen below, will do just that.</p>
 
-<p>[Screenshot ‘Set-Cookie Response.png’]</p>
+<p><img class="iPhone-screenshots-large" src="./../../../../media/blog/images/set-cookie-response.png" /></p>
 
 <p>In order for the client to allow setting a cookie, the <code class="highlighter-rouge">fetch</code> request must be <code class="highlighter-rouge">same-origin</code>. This is a security feature that ensures malicious cookies have a harder time. I’m using <code class="highlighter-rouge">whatwg-fetch</code> and in my fetch request, I set <code class="highlighter-rouge">credentials: 'same-origin'</code>:</p>
 

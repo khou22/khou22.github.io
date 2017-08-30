@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Aug 2017 21:35:08 -0700</pubDate>
-    <lastBuildDate>Tue, 29 Aug 2017 21:35:08 -0700</lastBuildDate>
+    <pubDate>Tue, 29 Aug 2017 22:57:55 -0700</pubDate>
+    <lastBuildDate>Tue, 29 Aug 2017 22:57:55 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -124,7 +124,7 @@
 &lt;h3 id=&quot;set-a-browser-cookie-from-an-api-response&quot;&gt;Set a browser cookie from an API response&lt;/h3&gt;
 &lt;p&gt;Now that we know how to send a cookie back from the server, we must now inject that cookie into the browser so the session can actually be tied to a browser. The &lt;code class=&quot;highlighter-rouge&quot;&gt;client-session&lt;/code&gt; package automatically sets the appropriate cookie on the response header as &lt;code class=&quot;highlighter-rouge&quot;&gt;Set-Cookie&lt;/code&gt;. This indicates to the browser to store the response as a cookie. Any response with the property &lt;code class=&quot;highlighter-rouge&quot;&gt;Set-Cookie&lt;/code&gt;, as seen below, will do just that.&lt;/p&gt;
 
-&lt;p&gt;[Screenshot ‘Set-Cookie Response.png’]&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;iPhone-screenshots-large&quot; src=&quot;./../../../../media/blog/images/set-cookie-response.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In order for the client to allow setting a cookie, the &lt;code class=&quot;highlighter-rouge&quot;&gt;fetch&lt;/code&gt; request must be &lt;code class=&quot;highlighter-rouge&quot;&gt;same-origin&lt;/code&gt;. This is a security feature that ensures malicious cookies have a harder time. I’m using &lt;code class=&quot;highlighter-rouge&quot;&gt;whatwg-fetch&lt;/code&gt; and in my fetch request, I set &lt;code class=&quot;highlighter-rouge&quot;&gt;credentials: 'same-origin'&lt;/code&gt;:&lt;/p&gt;
 
