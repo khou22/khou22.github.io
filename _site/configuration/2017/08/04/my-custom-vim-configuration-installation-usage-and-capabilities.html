@@ -48,8 +48,8 @@
 <meta property="og:title" content="My Custom VIM Configuration: Installation, Usage, and Capabilities" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="My personal — and favorite — VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package." />
-<meta property="og:description" content="My personal — and favorite — VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package." />
+<meta name="description" content="My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package." />
+<meta property="og:description" content="My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package." />
 <link rel="canonical" href="http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html" />
 <meta property="og:url" content="http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html" />
 <meta property="og:site_name" content="Kevin Hou" />
@@ -60,7 +60,7 @@
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"My Custom VIM Configuration: Installation, Usage, and Capabilities","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://khou22.com/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2017-08-04T10:18:02-07:00","dateModified":"2017-08-04T10:18:02-07:00","description":"My personal — and favorite — VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package.","mainEntityOfPage":{"@type":"WebPage","@id":"http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html"},"url":"http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html"}</script>
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"My Custom VIM Configuration: Installation, Usage, and Capabilities","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://khou22.com/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2017-08-04T10:18:02-07:00","dateModified":"2017-08-04T10:18:02-07:00","description":"My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package.","mainEntityOfPage":{"@type":"WebPage","@id":"http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html"},"url":"http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -231,7 +231,7 @@
       </p></a>
       <br />
       <h1 class="post-title post-header-title">My Custom VIM Configuration: Installation, Usage, and Capabilities</h1>
-      <h4 class="post-header-description">My personal — and favorite — VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package.</h4>
+      <h4 class="post-header-description">My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package.</h4>
       <p class="post-header-meta">Aug 4, 2017 • Kevin Hou</p>
     </div>
   </header>
@@ -259,15 +259,13 @@
   </script>
 
   <article class="post-content">
-    <h1 id="setting-up-vim">Setting Up VIM</h1>
-
-<h2 id="configuring-your-environment">Configuring Your Environment</h2>
+    <h1 id="configuring-your-environment">Configuring Your Environment</h1>
 
 <p>VIM is configured using a <code class="highlighter-rouge">.vimrc</code> file in your root directory (<code class="highlighter-rouge">~/.vimrc</code>) and serves as the configuration file. It is similar to a <code class="highlighter-rouge">.bashrc</code> or <code class="highlighter-rouge">.bash_profile</code> in the sense that it must be sourced to reflect changes, but VIM automatically takes care of when it launches. Ensure that the <code class="highlighter-rouge">~/.vimrc</code> file exists and if not, create one. Now here’s how the complete setup:</p>
 
 <ol>
   <li>
-    <p>Copy/paste the contents of <a href="https://github.com/khou22/dev-tools/blob/master/vim/.vimrc">my configuration file</a> into your <code class="highlighter-rouge">.vimrc</code> file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.</p>
+    <p>Copy/paste the contents of <a href="https://github.com/khou22/dev-tools/blob/master/vim/.vimrc">the configuration file</a> into your <code class="highlighter-rouge">.vimrc</code> file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.</p>
   </li>
   <li>
     <p>Like I said earlier, I’m using <a href="https://github.com/junegunn/vim-plug">vim-plug</a> as my package manager service. Install <code class="highlighter-rouge">vim-plug</code> using:</p>
@@ -305,7 +303,7 @@
 
 <p>Your VIM is now properly configured to work with the plugins that we have included in the <code class="highlighter-rouge">.vimrc</code>; however, some plugins require additional installations that I will described next.</p>
 
-<h2 id="installing-plugins">Installing Plugins</h2>
+<h1 id="installing-plugins">Installing Plugins</h1>
 
 <p>There are a few plugins that require additional installations that don’t get setup automatically using <code class="highlighter-rouge">vim-plug</code>. Follow the steps below to configure these libraries:</p>
 
@@ -327,12 +325,15 @@
 sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 </code></p>
 <h4 id="youcompleteme---autocomplete">YouCompleteMe - Autocomplete</h4>
-<div class="highlighter-rouge"><pre class="highlight"><code>1. Install Cmake: `$ brew install CMake`
-    * On dev box (Ubuntu): `$ sudo apt-get install cmake`
-    * To install Typescript support: `$ npm install -g typescript`
-2. Finish install: `$ cd ~/.vim/plugged/YouCompleteMe &amp;&amp; ./install.py --all`
-</code></pre>
-</div>
+<ol>
+  <li>Install Cmake: <code class="highlighter-rouge">$ brew install CMake</code>
+    <ul>
+      <li>On dev box (Ubuntu): <code class="highlighter-rouge">$ sudo apt-get install cmake</code></li>
+      <li>To install Typescript support: <code class="highlighter-rouge">$ npm install -g typescript</code></li>
+    </ul>
+  </li>
+  <li>Finish install: <code class="highlighter-rouge">$ cd ~/.vim/plugged/YouCompleteMe &amp;&amp; ./install.py --all</code></li>
+</ol>
 
 <h4 id="solarized-colorscheme-for-vim--theme">Solarized Colorscheme for VIM — Theme</h4>
 <ol>

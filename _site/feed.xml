@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 29 Aug 2017 21:18:45 -0700</pubDate>
-    <lastBuildDate>Tue, 29 Aug 2017 21:18:45 -0700</lastBuildDate>
+    <pubDate>Tue, 29 Aug 2017 21:26:14 -0700</pubDate>
+    <lastBuildDate>Tue, 29 Aug 2017 21:26:14 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -651,15 +651,13 @@ Hope this tutorial helped! It’s been a few months since I did any iOS dev (got
     
       <item>
         <title>My Custom VIM Configuration: Installation, Usage, and Capabilities</title>
-        <description>&lt;h1 id=&quot;setting-up-vim&quot;&gt;Setting Up VIM&lt;/h1&gt;
-
-&lt;h2 id=&quot;configuring-your-environment&quot;&gt;Configuring Your Environment&lt;/h2&gt;
+        <description>&lt;h1 id=&quot;configuring-your-environment&quot;&gt;Configuring Your Environment&lt;/h1&gt;
 
 &lt;p&gt;VIM is configured using a &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file in your root directory (&lt;code class=&quot;highlighter-rouge&quot;&gt;~/.vimrc&lt;/code&gt;) and serves as the configuration file. It is similar to a &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;.bash_profile&lt;/code&gt; in the sense that it must be sourced to reflect changes, but VIM automatically takes care of when it launches. Ensure that the &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.vimrc&lt;/code&gt; file exists and if not, create one. Now here’s how the complete setup:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Copy/paste the contents of &lt;a href=&quot;https://github.com/khou22/dev-tools/blob/master/vim/.vimrc&quot;&gt;my configuration file&lt;/a&gt; into your &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.&lt;/p&gt;
+    &lt;p&gt;Copy/paste the contents of &lt;a href=&quot;https://github.com/khou22/dev-tools/blob/master/vim/.vimrc&quot;&gt;the configuration file&lt;/a&gt; into your &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt; file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Like I said earlier, I’m using &lt;a href=&quot;https://github.com/junegunn/vim-plug&quot;&gt;vim-plug&lt;/a&gt; as my package manager service. Install &lt;code class=&quot;highlighter-rouge&quot;&gt;vim-plug&lt;/code&gt; using:&lt;/p&gt;
@@ -697,7 +695,7 @@ Hope this tutorial helped! It’s been a few months since I did any iOS dev (got
 
 &lt;p&gt;Your VIM is now properly configured to work with the plugins that we have included in the &lt;code class=&quot;highlighter-rouge&quot;&gt;.vimrc&lt;/code&gt;; however, some plugins require additional installations that I will described next.&lt;/p&gt;
 
-&lt;h2 id=&quot;installing-plugins&quot;&gt;Installing Plugins&lt;/h2&gt;
+&lt;h1 id=&quot;installing-plugins&quot;&gt;Installing Plugins&lt;/h1&gt;
 
 &lt;p&gt;There are a few plugins that require additional installations that don’t get setup automatically using &lt;code class=&quot;highlighter-rouge&quot;&gt;vim-plug&lt;/code&gt;. Follow the steps below to configure these libraries:&lt;/p&gt;
 
@@ -719,12 +717,15 @@ Hope this tutorial helped! It’s been a few months since I did any iOS dev (got
 sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 &lt;/code&gt;&lt;/p&gt;
 &lt;h4 id=&quot;youcompleteme---autocomplete&quot;&gt;YouCompleteMe - Autocomplete&lt;/h4&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Install Cmake: `$ brew install CMake`
-    * On dev box (Ubuntu): `$ sudo apt-get install cmake`
-    * To install Typescript support: `$ npm install -g typescript`
-2. Finish install: `$ cd ~/.vim/plugged/YouCompleteMe &amp;amp;&amp;amp; ./install.py --all`
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;Install Cmake: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ brew install CMake&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;On dev box (Ubuntu): &lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo apt-get install cmake&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;To install Typescript support: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ npm install -g typescript&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Finish install: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ cd ~/.vim/plugged/YouCompleteMe &amp;amp;&amp;amp; ./install.py --all&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h4 id=&quot;solarized-colorscheme-for-vim--theme&quot;&gt;Solarized Colorscheme for VIM — Theme&lt;/h4&gt;
 &lt;ol&gt;

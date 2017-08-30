@@ -3,19 +3,17 @@ layout: post
 title: "My Custom VIM Configuration: Installation, Usage, and Capabilities"
 author: "Kevin Hou"
 date: 2017-08-04 17:18:02
-description: "My personal — and favorite — VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package."
+description: "My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: configuration
 tags: []
 featured: "yes"
 ---
-# Setting Up VIM
-
-## Configuring Your Environment
+# Configuring Your Environment
 
 VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and serves as the configuration file. It is similar to a `.bashrc` or `.bash_profile` in the sense that it must be sourced to reflect changes, but VIM automatically takes care of when it launches. Ensure that the `~/.vimrc` file exists and if not, create one. Now here's how the complete setup:
 
-1. Copy/paste the contents of [my configuration file](https://github.com/khou22/dev-tools/blob/master/vim/.vimrc) into your `.vimrc` file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.
+1. Copy/paste the contents of [the configuration file](https://github.com/khou22/dev-tools/blob/master/vim/.vimrc) into your `.vimrc` file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.
 
 2. Like I said earlier, I'm using [vim-plug](https://github.com/junegunn/vim-plug) as my package manager service. Install `vim-plug` using:
 
@@ -43,7 +41,7 @@ VIM is configured using a `.vimrc` file in your root directory (`~/.vimrc`) and 
 
 Your VIM is now properly configured to work with the plugins that we have included in the `.vimrc`; however, some plugins require additional installations that I will described next.
 
-## Installing Plugins
+# Installing Plugins
 
 There are a few plugins that require additional installations that don't get setup automatically using `vim-plug`. Follow the steps below to configure these libraries:
 
@@ -65,10 +63,10 @@ brew install the_silver_searcher
 sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 ```
 #### YouCompleteMe - Autocomplete
-    1. Install Cmake: `$ brew install CMake`
-        * On dev box (Ubuntu): `$ sudo apt-get install cmake`
-        * To install Typescript support: `$ npm install -g typescript`
-    2. Finish install: `$ cd ~/.vim/plugged/YouCompleteMe && ./install.py --all`
+1. Install Cmake: `$ brew install CMake`
+    * On dev box (Ubuntu): `$ sudo apt-get install cmake`
+    * To install Typescript support: `$ npm install -g typescript`
+2. Finish install: `$ cd ~/.vim/plugged/YouCompleteMe && ./install.py --all`
 
 #### Solarized Colorscheme for VIM — Theme
 1. Install into `bundle` folder. Create it if the directory doesn't exist.
