@@ -38,6 +38,19 @@ interface GitHubFile {
     name: string;
     path: string;
     content: string;
+    someFunction: { (parameter1: string ): number }; // someFunction(parameter1: 'Hello')
+}
+{% endhighlight %}
+
+You can also merge and extend interfaces like so:
+{% highlight javascript %}
+import * as express from 'express';
+
+// Adds onto the original interface from 'Express'
+interface Request extends express.Request {
+	session {
+		username: string;
+	}
 }
 {% endhighlight %}
 
