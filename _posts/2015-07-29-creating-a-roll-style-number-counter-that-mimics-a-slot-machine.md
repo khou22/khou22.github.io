@@ -6,7 +6,7 @@ date: 2015-7-29 20:55:41
 description: "An example of a React-based, ES6 number counter."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: web
-tags: [javascript, reactjs]
+tags: [reactjs, es6, javascript, sourceCode]
 featured: "no"
 ---
 I found a really cool way of making a number counter engaging. A co-worker at Salesforce, named Amy Lee, created a simple React component designed to mimic a slot machine. Instead of simply changing the number, the function "animates" the change and rolls up to that number. The cool thing about this is that it works for any number and it requires no CSS3 animation. It looks neat, especially with huge numbers!

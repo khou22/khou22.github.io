@@ -17,3 +17,6 @@ Uses `bundle`. Installation: `gem install bundler`.
 Using shortcut:
 `$ ./serve.sh`
 Must first allow file to run commands by running: `chmod +x serve.sh`
+
+# Tag Manager
+The python script `tag-generator.py` contains an array of a list of all tags that I use. When run, it will create all neccessary files in the `_data/` and `blog/tags/` folders. To delete tags, remove all files except for `index.html` from `blog/tags/` and run `tag-generator.py`.

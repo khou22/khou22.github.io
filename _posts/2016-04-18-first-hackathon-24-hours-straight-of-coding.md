@@ -6,7 +6,7 @@ date: 2016-04-18 18:26:51
 description: "A recap of my weekend at my first hackathon!"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: life
-tags: ['apps']
+tags: [project, reflection, hackathon]
 featured: "no"
 ---
 <h3 class="post-subheader">The Experience</h3>

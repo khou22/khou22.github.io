@@ -6,7 +6,7 @@ date: 2015-11-01 14:23:08
 description: "I programmed an app to analyze the user's text for patterns, word choice, writing level, etc. It's still being developed, but the basic functionality works. Give it a try! You might learn something about yourself. It works with any '.txt' file or with your Facebook message user data."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: web
-tags: [apps, javascript, reactjs, html, css, node-js]
+tags: [project, javascript, reactjs, html, css, nodejs]
 featured: "no"
 ---
 

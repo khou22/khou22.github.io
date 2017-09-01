@@ -6,7 +6,7 @@ date: 2014-10-05 22:34:10
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: wood
-tags: [wood-finish]
+tags: []
 featured: "no"
 ---
 

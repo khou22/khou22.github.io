@@ -6,7 +6,7 @@ date: 2017-07-24 11:49:12
 description: "Some useful design tools I've picked up and interesting notes about freelance work (not limited to design specifically) as well as my thoughts on design systems."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: design
-tags: []
+tags: [designProcess]
 featured: "no"
 ---
 <h3 class="post-subheader">Introduction</h3>

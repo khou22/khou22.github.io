@@ -6,7 +6,7 @@ date: 2016-08-28 18:46:35
 description: "My notes from an online seminar I tuned into that describes how to create and animate SVG images."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: design
-tags: ['apps']
+tags: [graphicDesign, userExperience, userInterface, tutorial]
 featured: "no"
 ---
 <h3 class="post-subheader">Overview</h3>

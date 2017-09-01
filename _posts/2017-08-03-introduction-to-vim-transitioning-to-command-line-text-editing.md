@@ -6,7 +6,7 @@ date: 2017-08-03 17:02:56
 description: "Why I'm trying to use VIM after all these years and short reflection on what I think so far."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: configuration
-tags: []
+tags: [vim]
 featured: "no"
 ---
 I'm testing out VIM (contractions: "Vi IMproved") — a command-line editor — to see if I should make the switch from Atom/Sublime to VIM. I've been using Sublime since I started developing in December of 2014 and I only recently picked up Atom my senior year of high school back in the fall of 2015. I've always enjoyed text editors and have had my fair share of GUI clients: Sublime 2, Atom, Brackets, XCode (although a bit different because it's not for web), and a handful of others.

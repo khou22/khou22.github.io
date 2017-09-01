@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 31 Aug 2017 20:04:00 -0700</pubDate>
-    <lastBuildDate>Thu, 31 Aug 2017 20:04:00 -0700</lastBuildDate>
+    <pubDate>Fri, 01 Sep 2017 15:41:07 -0700</pubDate>
+    <lastBuildDate>Fri, 01 Sep 2017 15:41:07 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -147,7 +147,7 @@
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;logout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;previousUser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Save the previous user&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Reset the cookies&lt;/span&gt;
-    
+
     &lt;span class=&quot;c1&quot;&gt;// Response to client&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -183,6 +183,18 @@
         <pubDate>Tue, 29 Aug 2017 14:33:04 -0700</pubDate>
         <link>http://khou22.com/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html</link>
         <guid isPermaLink="true">http://khou22.com/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html</guid>
+        
+        <category>expressServer</category>
+        
+        <category>backendServer</category>
+        
+        <category>es6</category>
+        
+        <category>javascript</category>
+        
+        <category>tutorial</category>
+        
+        <category>sourceCode</category>
         
         
         <category>web</category>
@@ -271,7 +283,7 @@ redux-thunk
     &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Provider&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Entry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Provider&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,
-&lt;/span&gt;    
+&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// The target in the DOM you are rendering to&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// This will be in the client/dist/index.html&lt;/span&gt;
     &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'main'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -348,11 +360,11 @@ redux-thunk
 		&lt;span class=&quot;kr&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 		&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
 	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	
+
 	&lt;span class=&quot;nx&quot;&gt;randomFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 		&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
 	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	
+
 	&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
   			&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -559,6 +571,18 @@ redux-thunk
         <link>http://khou22.com/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html</link>
         <guid isPermaLink="true">http://khou22.com/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html</guid>
         
+        <category>reactjs</category>
+        
+        <category>redux</category>
+        
+        <category>javascript</category>
+        
+        <category>es6</category>
+        
+        <category>tutorial</category>
+        
+        <category>sourceCode</category>
+        
         
         <category>web</category>
         
@@ -736,7 +760,9 @@ Hope this tutorial helped! It’s been a few months since I did any iOS dev (got
         <link>http://khou22.com/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</link>
         <guid isPermaLink="true">http://khou22.com/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</guid>
         
-        <category>ios</category>
+        <category>swift</category>
+        
+        <category>tutorial</category>
         
         
         <category>ios</category>
@@ -822,6 +848,8 @@ Hope this tutorial helped! It’s been a few months since I did any iOS dev (got
         <guid isPermaLink="true">http://khou22.com/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</guid>
         
         <category>css</category>
+        
+        <category>tutorial</category>
         
         
         <category>web</category>
@@ -1142,6 +1170,10 @@ Go to line number: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Line 
         <link>http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</link>
         <guid isPermaLink="true">http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</guid>
         
+        <category>vim</category>
+        
+        <category>sourceCode</category>
+        
         
         <category>configuration</category>
         
@@ -1164,6 +1196,8 @@ Check out my &lt;a href=&quot;http://localhost:4000/programming/2017/08/04/my-cu
         <pubDate>Thu, 03 Aug 2017 10:02:56 -0700</pubDate>
         <link>http://khou22.com/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
         <guid isPermaLink="true">http://khou22.com/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
+        
+        <category>vim</category>
         
         
         <category>configuration</category>
@@ -1279,6 +1313,8 @@ Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/&lt;/code&gt; (
         
         <category>javascript</category>
         
+        <category>tutorial</category>
+        
         
         <category>web</category>
         
@@ -1320,6 +1356,8 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
         <pubDate>Mon, 24 Jul 2017 04:49:12 -0700</pubDate>
         <link>http://khou22.com/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</link>
         <guid isPermaLink="true">http://khou22.com/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</guid>
+        
+        <category>designProcess</category>
         
         
         <category>design</category>
@@ -1404,6 +1442,10 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
         
         <category>es6</category>
         
+        <category>expressServer</category>
+        
+        <category>backendServer</category>
+        
         
         <category>web</category>
         
@@ -1450,6 +1492,10 @@ It turns the page into a text editor of sorts and you can compress objects and a
         <pubDate>Sat, 01 Jul 2017 10:06:18 -0700</pubDate>
         <link>http://khou22.com/configuration/2017/07/01/testing-apis-postman-network-debugging-and-json.html</link>
         <guid isPermaLink="true">http://khou22.com/configuration/2017/07/01/testing-apis-postman-network-debugging-and-json.html</guid>
+        
+        <category>backendServer</category>
+        
+        <category>expressServer</category>
         
         
         <category>configuration</category>

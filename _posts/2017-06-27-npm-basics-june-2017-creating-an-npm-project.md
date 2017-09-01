@@ -6,7 +6,7 @@ date: 2017-06-27 10:17:34
 description: "The basic principle of the Node Package Manager (NPM) and how to create your own packages."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: web
-tags: []
+tags: [packageManager, github]
 featured: "no"
 ---
 # Create an NPM Environment

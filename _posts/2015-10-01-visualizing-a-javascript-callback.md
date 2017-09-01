@@ -6,7 +6,7 @@ date: 2015-10-01 18:26:42
 description: "A cool web app that visually demonstrates how browsers execute Javascript's call stacks/event loops/callbacks."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: web
-tags: [Javascript]
+tags: [reactjs, javascript]
 featured: "no"
 ---
 Ever wondered what technical sounding words like "asyncrhonis" or "event-loops" meant? It took me a while to figure out all the complicated terminology associated with code execution, but basically these words all relate to the order in which lines of code are run.

@@ -6,7 +6,7 @@ date: 2016-07-20 11:30:53
 description: "A few coding best practices that I learned in the past couple of weeks from my manager and mentor. These are primarily Xcode-oriented but can easily be applied to other languages and IDE's"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: configuration
-tags: [ios, swift, apps, xcode]
+tags: [swift, xcode, packageManager, github]
 featured: "yes"
 ---
 <h3 class="post-subheader">Troubleshooting Xcode</h3>

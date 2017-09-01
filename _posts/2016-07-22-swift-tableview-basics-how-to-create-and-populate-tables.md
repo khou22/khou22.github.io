@@ -6,7 +6,7 @@ date: 2016-07-22 10:46:44
 description: "A quick, bare-bones introduction to Table Views in Swift."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: ios
-tags: [ios, swift, apps, xcode]
+tags: [swift, xcode, tutorial, sourceCode]
 featured: "no"
 ---
 <h3 class="post-subheader">Project Objectives</h3>

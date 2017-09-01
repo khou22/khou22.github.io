@@ -6,7 +6,7 @@ date: 2016-06-22 18:15:41
 description: "My thoughts, notes, and main takeaways about the WWDC workshop on internationalization."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: ios
-tags: [swift, ios, xcode]
+tags: [swift, xcode, reflection]
 featured: "no"
 ---
 Video (must be played in Safari): <a href="https://developer.apple.com/videos/play/wwdc2016/201/" target="_blank">https://developer.apple.com/videos/play/wwdc2016/201/</a>

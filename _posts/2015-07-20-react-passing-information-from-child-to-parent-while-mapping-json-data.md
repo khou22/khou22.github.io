@@ -6,7 +6,7 @@ date:   2015-07-20 15:43:23
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: web
-tags: [reactjs, salesforce, javascript, html, es6]
+tags: [reactjs, es6, css, html, javascript, sourceCode]
 featured: "no"
 ---
 I've had a lot of issues in the past week trying to figure out how to pass information from the child component to the parent component while mapping JSON data.

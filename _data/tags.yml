@@ -1,112 +1,138 @@
-# Add this structure for every new tag
-apps:
-  slug: apps
-  name: Apps
-
-swift:
-  slug: swift
-  name: Swift
-
-ios:
-  slug: ios
-  name: iOS
+# Last updated: 2017-09-01 15:39:18
 
 xcode:
   slug: xcode
   name: Xcode
 
-github-pages: #Declare the object
-  slug: github-pages #Tag string for data organization - this is the same as the line above
-  name: GitHub Pages #Name of the tag
-
-woodturning:
-  slug: woodturning
-  name: Woodturning
-
-cnc-wood-router:
-  slug: cnc-wood-router
-  name: CNC Wood Router
-
-wood-finish:
-  slug: wood-finish
-  name: Wood Finish
-
-salesforce:
-  slug: salesforce
-  name: Salesforce Internship
-
-processing:
-  slug: processing
-  name: Processing
-
-desmos:
-  slug: desmos
-  name: Desmos
-
-java:
-  slug: java
-  name: Java
-
-javascript:
-  slug: javascript
-  name: Javascript
-
-reactjs:
-  slug: reactjs
-  name: ReactJS
-
-es6:
-  slug: es6
-  name: ES6
-
-html:
-  slug: html
-  name: HTML
-
-css:
-  slug: css
-  name: CSS
-
-css3:
-  slug: css3
-  name: CSS3
-
-jekyll:
-  slug: jekyll
-  name: Jekyll
-
-musicviz:
-  slug: musicviz
-  name: Music Visualizer
-
-node-js:
-  slug: node-js
-  name: Node.js
-
-github:
-  slug: github
-  name: GitHub
-
-unix:
-  slug: unix
-  name: Unix
-
-osx:
-  slug: osx
-  name: OSX
-
-sublime:
-  slug: sublime
-  name: Sublime Text
+swift:
+  slug: swift
+  name: Swift
 
 ionic:
   slug: ionic
   name: Ionic
 
-python:
-  slug: python
-  name: Python
+javascript:
+  slug: javascript
+  name: Javascript
+
+nodejs:
+  slug: nodejs
+  name: NodeJS
+
+reactjs:
+  slug: reactjs
+  name: ReactJS
+
+redux:
+  slug: redux
+  name: Redux
+
+database:
+  slug: database
+  name: Database
+
+es6:
+  slug: es6
+  name: ES6
+
+css:
+  slug: css
+  name: CSS
+
+html:
+  slug: html
+  name: HTML
 
 angularjs:
   slug: angularjs
   name: AngularJS
+
+expressServer:
+  slug: expressServer
+  name: Express Server
+
+python:
+  slug: python
+  name: Python
+
+packageManager:
+  slug: packageManager
+  name: Package Manager
+
+java:
+  slug: java
+  name: Java
+
+processing:
+  slug: processing
+  name: Processing
+
+designProcess:
+  slug: designProcess
+  name: Design Process
+
+userExperience:
+  slug: userExperience
+  name: User Experience
+
+userInterface:
+  slug: userInterface
+  name: User Interface
+
+graphicDesign:
+  slug: graphicDesign
+  name: Graphic Design
+
+unix:
+  slug: unix
+  name: Unix
+
+macos:
+  slug: macos
+  name: MacOS
+
+vim:
+  slug: vim
+  name: VIM
+
+terminal:
+  slug: terminal
+  name: Terminal
+
+github:
+  slug: github
+  name: GitHub
+
+animations:
+  slug: animations
+  name: Animations
+
+backendServer:
+  slug: backendServer
+  name: Backend Server
+
+reflection:
+  slug: reflection
+  name: Reflection
+
+tutorial:
+  slug: tutorial
+  name: Tutorial
+
+sourceCode:
+  slug: sourceCode
+  name: Source Code
+
+internship:
+  slug: internship
+  name: Internship
+
+project:
+  slug: project
+  name: Project
+
+hackathon:
+  slug: hackathon
+  name: Hackathon
+

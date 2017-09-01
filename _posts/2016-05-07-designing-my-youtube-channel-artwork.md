@@ -6,7 +6,7 @@ date: 2016-05-07 21:32:05
 description: "How to design your YouTube artwork effectively. Tips, tricks, and more."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: design
-tags: []
+tags: [graphicDesign]
 featured: "no"
 ---
 I finally got around to designing my own YouTube channel artwork. Similar to a Facebook cover photo, YouTube's channel artwork is the second most important image to your YouTube brand. I had just released my first "high quality" <a href="https://www.youtube.com/watch?v=_ZSztfYnnC8" target="_blank">video</a> and I wanted to improve the rest of my YouTube channel as well. Click <a href="https://youtube.com/kevinhou22">here</a> to visit my YouTube channel.

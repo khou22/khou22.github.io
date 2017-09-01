@@ -6,7 +6,7 @@ date: 2017-08-04 17:18:02
 description: "My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: configuration
-tags: []
+tags: [vim, sourceCode]
 featured: "yes"
 ---
 # Configuring Your Environment

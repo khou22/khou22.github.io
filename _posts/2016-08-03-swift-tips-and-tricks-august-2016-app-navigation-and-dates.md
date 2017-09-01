@@ -6,7 +6,7 @@ date: 2016-08-03 13:45:22
 description: "A blog post covering some useful extensions and commands relating to code-based view controller navigation and date types."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: ios
-tags: [ios, swift, apps, xcode]
+tags: [swift, xcode, tutorial, sourceCode]
 featured: "no"
 ---
 <h3 class="post-subheader">Dates</h3>

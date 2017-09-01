@@ -6,7 +6,7 @@ date: 2017-07-14 17:40:33
 description: "A short introduction into TypeScript as well as a reflection on my thoughts and opinions about it."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: web
-tags: [javascript, es6]
+tags: [javascript, es6, expressServer, backendServer]
 featured: "no"
 ---
 I started using TypeScript for my next project at Moat and I have to say I really love it. I’ve always been a fan of type safe language — largely for the compile-time debugging, code completion, and readability — which is why I’m such a huge fan of Swift. TypeScript has given me the structure and safety that I’ve found with Java and Swift, and has reinvigorated my love for web development. I’ve always considered web development to be somewhat of the “wild west” — not too much standardization and with no checks and balances to minimize errors.

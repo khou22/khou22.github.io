@@ -394,7 +394,7 @@
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">export</span> <span class="kr">const</span> <span class="nx">logout</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="err">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="err">:</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="kr">const</span> <span class="nx">previousUser</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span> <span class="c1">// Save the previous user</span>
     <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span> <span class="c1">// Reset the cookies</span>
-    
+
     <span class="c1">// Response to client</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">({</span>
         <span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -428,7 +428,7 @@
 <p>In my React-Redux-Router app, I make this API request on entry so that my local redux state contains information about my user right on load. This allows me to populate sections of my app like a ‘Profile’ section as well as restricting certain routes.</p>
 
     <div class="post-organization">
-      <p id="post-meta">Posted in <a href="/blog/category/web/">Web Development</a></p>
+      <p id="post-meta">Posted in <a href="/blog/category/web/">Web Development</a> with <a href="/blog/tag/expressServer/">Express Server</a>, <a href="/blog/tag/backendServer/">Backend Server</a>, <a href="/blog/tag/es6/">ES6</a>, <a href="/blog/tag/javascript/">Javascript</a>, <a href="/blog/tag/tutorial/">Tutorial</a>, <a href="/blog/tag/sourceCode/">Source Code</a></p>
     </div>
   </article>
 </div>

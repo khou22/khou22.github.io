@@ -6,7 +6,7 @@ date: 2016-05-01 14:49:19
 description: "I designed a logo for a project of mine that took a unique spin on the GitHub Octocat mascot. I entered it into the design challenge and won!"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: design
-tags: [apps, ios]
+tags: [hackathon, graphicDesign]
 featured: "no"
 ---
 I designed a logo for a project of mine that took a unique spin on the GitHub Octocat mascot. I entered it into a hackathon challenge and it was picked as the best overall design. GitHub Education has hosted this design competition many times for various hackathons. At the MenloHacks hackathon a couple weekends ago, my group and I built <a href="{{ site.baseurl }}/blog/projects/Execute-Order-66/" target="_blank">Execute Order 66</a>, a Chrome extension that automatically censors vulgar language in GitHub repos.

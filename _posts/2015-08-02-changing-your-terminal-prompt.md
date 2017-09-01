@@ -6,7 +6,7 @@ date: 2015-08-02 21:24:49
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: configuration
-tags: [unix]
+tags: [terminal]
 featured: "no"
 ---
 I just learned how to customize my Terminal shell to my liking. My latest customization was to change the Terminal prompt. Typically, my prompt looked like:

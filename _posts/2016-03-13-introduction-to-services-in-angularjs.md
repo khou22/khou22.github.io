@@ -6,7 +6,7 @@ date: 2016-03-13 23:30:29
 description: "How to create and use services and factories in AngularJS"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: web
-tags: ['ionic', 'angularjs', 'javascript']
+tags: [ionic, javascript, angularjs]
 featured: "no"
 ---
 <h3 class="post-subheader">What Are Services?</h3>

@@ -6,7 +6,7 @@ date: 2017-02-28 19:16:22
 description: "A couple of useful extensions for iOS UITextFields (bottom borders and a done button for the numerical keypad) as well as a short example of how to implement Force Touch app shortcut capabilities into your app."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: ios
-tags: [ios, swift]
+tags: [swift, tutorial]
 featured: "no"
 ---
 <h3 class="post-subheader">Useful UITextField Extensions</h3>

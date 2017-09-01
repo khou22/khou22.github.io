@@ -1,6 +1,6 @@
 ---
 layout: blog_by_tag
-title: 'Articles by tag: swift'
+title: 'Articles by tag: Swift'
 tag: swift
-permalink: /blog/tag/swift/
+permalink: /blog/tag/swift
 ---

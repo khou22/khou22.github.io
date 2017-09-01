@@ -6,7 +6,7 @@ date: 2015-10-25 21:16:28
 description: "Quick start guide of the Javascript runtime environment, Node.js, and its basic functionalities."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: web
-tags: [node-js, javascript]
+tags: [nodejs, javascript]
 featured: "no"
 ---
 I'm starting a new project with a group of kids to program a plagiarism app for my school. After debating between PHP and Node.js, we decided to use Node.js as our primary ecosystem. After a bit of research and a couple of YouTube videos, I set up my own simple web server. My repository can be found <a href="https://github.com/khou22/NodeJSPractice">here</a>.

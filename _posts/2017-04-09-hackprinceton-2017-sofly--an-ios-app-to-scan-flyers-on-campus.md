@@ -6,7 +6,7 @@ date: 2017-04-09 11:56:00
 description: "An app to digitize flyers and generate calendar events. It won runner app for Best App for Students at Princeton's hackathon!"
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: ios
-tags: [ios, swift]
+tags: [swift, hackathon, project, reflection, designProcess, userExperience]
 featured: "yes"
 ---
 # Introduction

@@ -6,7 +6,7 @@ date: 2017-07-01 17:06:18
 description: "A couple of tools, tips, and tricks when developing APIs to improve your workflow."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: configuration
-tags: []
+tags: [backendServer, expressServer]
 featured: "no"
 ---
 # Postman and Network Debugging

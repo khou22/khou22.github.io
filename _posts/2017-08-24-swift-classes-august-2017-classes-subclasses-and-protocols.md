@@ -6,7 +6,7 @@ date: 2017-08-24 22:44:37
 description: "The basics of classes and subclasses as well as a detailed tutorial on setting up your own custom protocols and delegates."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: ios
-tags: [ios]
+tags: [swift, tutorial]
 featured: "yes"
 ---
 # Swift Classes August 2017: Classes, Subclasses, and Protocols

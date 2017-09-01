@@ -6,7 +6,7 @@ date: 2015-07-29 10:02:30
 description: ""
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: configuration
-tags: [sublime]
+tags: [packageManager]
 featured: "no"
 ---
 It's actually very easy. I tried to install SublimeHighlight so that I could export/copy portions my code as a rich text files (RTF - Rich Text Formal) instead of plain text.

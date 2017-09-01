@@ -6,7 +6,7 @@ date: 2017-08-29 21:16:59
 description: "An introduction into React-Redux — a framework for building web applications. This tutorial is implemented with ES6 and Webpack."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: web
-tags: []
+tags: [reactjs, redux, javascript, es6, tutorial, sourceCode]
 featured: "yes"
 ---
 ## Introduction
@@ -90,7 +90,7 @@ render(
     <Provider store={store}>
         <Entry />
     </Provider>,
-    
+
     // The target in the DOM you are rendering to
     // This will be in the client/dist/index.html
     document.getElementById('main')
@@ -167,11 +167,11 @@ class Loading extends Component {
 		super(props);
 		...
 	}
-	
+
 	randomFunction(input) {
 		...
 	}
-	
+
 	render() {
 		return (
   			<div>

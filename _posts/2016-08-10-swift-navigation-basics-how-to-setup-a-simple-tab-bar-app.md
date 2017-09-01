@@ -6,7 +6,7 @@ date: 2016-08-10 13:52:18
 description: "A tutorial on how to build a simple app that uses the iOS native navigation bar. It includes extensions and best practices in addition to all the bare bones requirements."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: ios
-tags: [ios, swift, apps, xcode]
+tags: [swift, xcode, tutorial, sourceCode]
 featured: "yes"
 ---
 <h3 class="post-subheader">The Basics</h3>

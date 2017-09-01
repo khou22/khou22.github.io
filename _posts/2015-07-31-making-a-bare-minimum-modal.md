@@ -6,7 +6,7 @@ date: 2015-07-31 11:05:17
 description: "A quick tutorial on how to make a modal in pure HTML and CSS — good reference."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: web
-tags: [html, css]
+tags: [html, css, sourceCode]
 featured: "no"
 ---
 Here is the code for a bare minimum popup modal:

@@ -6,7 +6,7 @@ date: 2015-08-16 11:29:33
 description: "Quick tips, tricks, and features for developers both from a technical standpoint and productivity standpoint."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: web
-tags: [css, osx]
+tags: [macos, css]
 featured: "no"
 ---
 I've been dealing with some really weirdly-sized images for my project and this have given me all sorts of issues in terms of scaling, cropping, and scrolling. There are many instances where I don't have any content off the screen, but there is still a side scroll. I've tried inspecting my elements to see which part of my code is responsible for the extra white space, but to no avail. I settled with just disabling the side scroll for this app. Here's how you do it:

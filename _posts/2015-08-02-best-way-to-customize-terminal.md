@@ -6,7 +6,7 @@ date: 2015-08-02 21:28:50
 description: "Customize your terminal shell to your liking. It'll look really cool."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: configuration
-tags: [unix]
+tags: [terminal]
 featured: "no"
 ---
 I just did a post on customizing your Terminal look and feel using manual commands in your .bash_profile file, but I just came across a puggin called "oh-my-zsh" that makes it so much easier. I literally just installed it and my terminal came alive. It looks loads better! It recognizes github directories, color codes different file types, and does countless other things.
