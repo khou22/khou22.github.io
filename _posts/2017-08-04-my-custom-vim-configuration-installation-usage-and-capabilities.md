@@ -151,7 +151,8 @@ Search within file: `\<keyword on page>`
     * `Shift + N` goes back
     * `:noh` clears the highlighted words on the page from the search
 
-Search and replace: `:%s/foo/bar/g` (Replace `foo` with `bar` no confirmation. For confirmation, use `gc` instead of `g` at end)
+Search and replace: `:%s/foo/bar/g` (Replace `foo` with `bar` no confirmation. For confirmation, use `gc` instead of `g` at end)  
+Highlight all occurances of current word under cursor and go to first instance (while not in highlight mode): `#`
 
 ### Highlighting mode
 Highlighting an entire line: `Shift + V`
