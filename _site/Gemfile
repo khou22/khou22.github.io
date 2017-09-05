@@ -1,5 +1,5 @@
 # Usage:
-# Instllation: `$ bundle`
+# Installation: `$ bundle`
 
 source 'https://rubygems.org'
 

@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 Sep 2017 17:30:58 -0700</pubDate>
-    <lastBuildDate>Sat, 02 Sep 2017 17:30:58 -0700</lastBuildDate>
+    <pubDate>Mon, 04 Sep 2017 17:19:53 -0700</pubDate>
+    <lastBuildDate>Mon, 04 Sep 2017 17:19:53 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -1028,17 +1028,20 @@ The “current project” is whatever directory you &lt;code class=&quot;highlig
     * &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + N&lt;/code&gt; goes back
     * &lt;code class=&quot;highlighter-rouge&quot;&gt;:noh&lt;/code&gt; clears the highlighted words on the page from the search&lt;/p&gt;
 
-&lt;p&gt;Search and replace: &lt;code class=&quot;highlighter-rouge&quot;&gt;:%s/foo/bar/g&lt;/code&gt; (Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;bar&lt;/code&gt; no confirmation. For confirmation, use &lt;code class=&quot;highlighter-rouge&quot;&gt;gc&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;g&lt;/code&gt; at end)&lt;/p&gt;
+&lt;p&gt;Search and replace: &lt;code class=&quot;highlighter-rouge&quot;&gt;:%s/foo/bar/g&lt;/code&gt; (Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;bar&lt;/code&gt; no confirmation. For confirmation, use &lt;code class=&quot;highlighter-rouge&quot;&gt;gc&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;g&lt;/code&gt; at end)&lt;br /&gt;
+Highlight all occurances of current word under cursor and go to first instance (while not in highlight mode): &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;highlighting-mode&quot;&gt;Highlighting mode&lt;/h3&gt;
-&lt;p&gt;Highlighting an entire line: &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + V&lt;/code&gt;
-Highlighting mode: &lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt;
-Copy/yank: &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;
-Copy file contents to clipboard: &lt;code class=&quot;highlighter-rouge&quot;&gt;:% !pbcopy&lt;/code&gt;
-Paste: &lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt;
-Paste above: &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + P&lt;/code&gt;
-Pasting in insert mode (having copied using the operating system): &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + v&lt;/code&gt;
-Paste from clipboard with auto-indenting: &lt;code class=&quot;highlighter-rouge&quot;&gt;:set paste&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + V&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Highlighting an entire line: &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + V&lt;/code&gt;&lt;br /&gt;
+Highlighting mode: &lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt;&lt;br /&gt;
+Copy/yank: &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;&lt;br /&gt;
+Copy file contents to clipboard: &lt;code class=&quot;highlighter-rouge&quot;&gt;:% !pbcopy&lt;/code&gt;&lt;br /&gt;
+Paste: &lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt;&lt;br /&gt;
+Paste above: &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + P&lt;/code&gt;&lt;br /&gt;
+Pasting in insert mode (having copied using the operating system): &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + v&lt;/code&gt;&lt;br /&gt;
+Paste from clipboard with auto-indenting: &lt;code class=&quot;highlighter-rouge&quot;&gt;:set paste&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Command + V&lt;/code&gt;&lt;br /&gt;
+Yank/copy the inner word (word under cursor): &lt;code class=&quot;highlighter-rouge&quot;&gt;yiw&lt;/code&gt;&lt;br /&gt;
+Highlight the inner word (word under cursor): &lt;code class=&quot;highlighter-rouge&quot;&gt;viw&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;panes&quot;&gt;Panes&lt;/h3&gt;
 &lt;p&gt;Opening new panes, start with: &lt;code class=&quot;highlighter-rouge&quot;&gt;control + w&lt;/code&gt;:
@@ -1328,10 +1331,11 @@ Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/&lt;/code&gt; (
 One of the pieces of advice that I’ve picked up at Moat and specifically with design is from Steve Jobs when he says: “Stay a beginner”. The premise of this is great for design but applies to many different aspects of life. It is the idea that you should remain constantly questioning and relearning. If you approach a problem as a beginner every time, you are bound to find improvements and issues with the current design.
 &lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 &lt;h3 class=&quot;post-subheader&quot;&gt;Tools&lt;/h3&gt;
-&lt;p&gt;I talked to Vince extensively about what tools he uses on a day to day for his designing. I mentioned to him that I wanted to get more into natural/organic designs like freehand with more intricate details. He uses the &lt;a href=&quot;https://us-store.wacom.com/Catalog/Pen-Tablets/Intuos-pro/wacom-intuos-pro#/undefined1&quot;&gt;Wacom Intuos Pro Medium&lt;/a&gt; and now uses it instead of a mouse. He highly recommends it for what I want to do, but he said that since the entry price is quite steep, it might be more economical to buy an iPad Pro. He let me use Moat’s iPad Pro since the design team hasn’t really gotten around to using it, and it’s been a really neat experience. I’ve been able to play around with some pretty cool apps and I’m currently debating if I can justify the also insanely high price. I’ll give it a couple weeks to see if I’m just going through a hype phase.
+&lt;p&gt;I talked to Vince extensively about what tools he uses on a day to day for his designing. I mentioned to him that I wanted to get more into natural/organic designs like freehand with more intricate details. He uses the &lt;a href=&quot;https://us-store.wacom.com/Catalog/Pen-Tablets/Intuos-pro/wacom-intuos-pro#/undefined1&quot;&gt;Wacom Intuos Pro Medium&lt;/a&gt; and now uses it instead of a mouse. He highly recommends it for what I want to do, but he said that since the entry price is quite steep, it might be more economical to buy an iPad Pro. He let me use Moat’s iPad Pro since the design team hasn’t really gotten around to using it, and it’s been a really neat experience. I’ve been able to play around with some pretty cool apps and I’m currently debating if I can justify the also insanely high price. I’ll give it a couple weeks to see if I’m just going through a hype phase.&lt;br /&gt;
 &lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;b&gt;Useful Design Tools&lt;/b&gt;
-“Spotlight” Sketch Plugin: &lt;a href=&quot;http://sketchrunner.com/&quot;&gt;Runner&lt;/a&gt;
+&lt;b&gt;Useful Design Tools&lt;/b&gt;&lt;br /&gt;
+“Spotlight” - Sketch Plugin: &lt;a href=&quot;http://sketchrunner.com/&quot;&gt;Runner&lt;/a&gt;&lt;br /&gt;
+“Google Fonts” - Batch Download Common Fonts: &lt;a href=&quot;http://www.sketchappsources.com/blog/post/how-to-solve-missing-fonts-in-sketch-app&quot;&gt;Blog Post on This&lt;/a&gt;&lt;br /&gt;
 &lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 &lt;h3 class=&quot;post-subheader&quot;&gt;About Freelance&lt;/h3&gt;
 &lt;p&gt;Josh worked freelance for about a year and talked about how it’s different from a 9-5 job. He said that working as a designer in isolation is one of the hardest things about it. There’s no one to bounce ideas off of, brainstorm, or even give feedback on your work. He also recommended that freelance work, in general, should be intended to build a consistent stream of work. All too often, you can fall into the trap of building for many different clients with small tasks as opposed to building up a solid relation to a handful (he said about four) brands doing long term work. It’s better when you know the company you’re designing for well and it’s much more rewarding seeing the problem and solution play out over long periods of time. I’ll definitely keep it in mind moving forward seeing as freelance is something that I can imagine myself doing in the future.

@@ -155,14 +155,16 @@ Search and replace: `:%s/foo/bar/g` (Replace `foo` with `bar` no confirmation. F
 Highlight all occurances of current word under cursor and go to first instance (while not in highlight mode): `#`
 
 ### Highlighting mode
-Highlighting an entire line: `Shift + V`
-Highlighting mode: `v`
-Copy/yank: `y`
-Copy file contents to clipboard: `:% !pbcopy`
-Paste: `p`
-Paste above: `Shift + P`
-Pasting in insert mode (having copied using the operating system): `Command + v`
-Paste from clipboard with auto-indenting: `:set paste` + `Command + V`
+Highlighting an entire line: `Shift + V`  
+Highlighting mode: `v`  
+Copy/yank: `y`  
+Copy file contents to clipboard: `:% !pbcopy`  
+Paste: `p`  
+Paste above: `Shift + P`  
+Pasting in insert mode (having copied using the operating system): `Command + v`  
+Paste from clipboard with auto-indenting: `:set paste` + `Command + V`  
+Yank/copy the inner word (word under cursor): `yiw`  
+Highlight the inner word (word under cursor): `viw`  
 
 
 ### Panes
