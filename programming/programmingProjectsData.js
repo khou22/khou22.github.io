@@ -26,6 +26,15 @@ programmingProjects = [
         description: "An app that allows the user to snap a picture of a flyer, extract relevant information, and make a calendar event with the event name, location, time, date, and more. This will allow users to digitize flyers, and hopefully provide a decentralized mechanism for communities to grow close again. It won 2nd place for best Princeton app at HackPrinceton Spring 2017."
     },
     {
+        name: "Heroku Server & Client Web App",
+        subtitle: "Express, Typescript, PostGres, Sequelize, Heroku",
+        slug: "http://khou22.herokuapp.com/",
+        image: "./../media/programming/thumbnails/khou22-apis.png",
+        category: categories[ "Web App" ].name,
+        categoryColor: categories[ "Web App" ].color,
+        description: "A personal web app with a client, server, and database that implements Basic Auth security as well as user sessions using cookies, login/profile pages. The client hosts various web apps that I've built for clients — each page requires user authentication. The server hosts various RESTful API endpoints that I use for my various apps and projects. Stack: React-Redux-Router, Typescript, Webpack, Postgres, Express, Node, Heroku."
+    },
+    {
         name: "Tile Layout Library",
         subtitle: "My first open-source library.",
         slug: "https://github.com/khou22/Tile-Layout-Web",
@@ -73,11 +82,20 @@ programmingProjects = [
     {
         name: "Handwriting Font App",
         subtitle: "One of my first projects.",
-        slug: "https://www.youtube.com/watch?v=9qK6qmGWyB4",
+        slug: "http://filmfestival.princetontonight.com",
         image: "./../media/programming/thumbnails/handwriting-font-app.png",
         category: categories[ "Java App" ].name,
         categoryColor: categories[ "Java App" ].color,
         description: "This is a handwriting app that I programmed using java. It asks for the user's handwriting then creates a font out of it. The user can type in their handwriting and export their document to be written out using the WaterColor Bot."
+    },
+    {
+        name: "Princeton Film Festival Website",
+        subtitle: "A website for film executives and hobbyists to discover more about the festival.",
+        slug: "http://filmfestival.princetontonight.com/",
+        image: "./../media/programming/thumbnails/film-festival.png",
+        category: categories[ "Website" ].name,
+        categoryColor: categories[ "Website" ].color,
+        description: "This was a site built for the Princeton Film Festival — a brand new conference to bring executives from top film companies to Princeton's campus to mentor, educate, and speak to high school and college students interested in the film industry."
     },
     {
         name: "MusicViz",
@@ -105,6 +123,15 @@ programmingProjects = [
         category: categories[ "Web App" ].name,
         categoryColor: categories[ "Web App" ].color,
         description: "An app to analyze the user's text for patterns, word choice, etc. It accepts text files as well as Facebook user data."
+    },
+    {
+        name: "Open-Source VIM Configuration",
+        subtitle: "My personal, well-documented VIM configuration",
+        slug: "https://github.com/khou22/dev-tools",
+        image: "https://ucarecdn.com/18f71672-5e94-4f74-9cf4-b840507509b0/",
+        category: categories[ "Other" ].name,
+        categoryColor: categories[ "Other" ].color,
+        description: "This is the complete documentation of my VIM configuration. It includes support for various languages such as Babel and Typescript as well as autocomplete, file grepping, etc. I decided to write extensive documentation per the request of my coworkers and friends."
     },
     {
         name: "Drag and Drop Interface",
@@ -182,7 +209,7 @@ programmingProjects = [
         name: "Random Number Assignment",
         subtitle: "Assign random numbers to each person",
         slug: "random-number-assignment",
-        image: "https://cdn.dribbble.com/users/51395/screenshots/1089385/dice.jpg",
+        image: "./../media/programming/thumbnails/random-number.jpg",
         category: categories[ "Web App" ].name,
         categoryColor: categories[ "Web App" ].color,
         description: "Assigns a random number to inputted elements."
