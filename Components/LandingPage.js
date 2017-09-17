@@ -29,9 +29,8 @@ var LandingPage = React.createClass({
     var notificationData = {
       // Types are 'alert', 'notice'
       type: "notice",
-      // message: "New video released: Wood Turned Segmented Bowl with Inlaid Letters",
-      message: "New programming project: SoFly — An iOS app to scan flyers",
-      link: "https://devpost.com/software/sofly-scanner",
+      message: "New iOS App: Slate — A painless way to schedule calendar events",
+      link: "http://slate.khou22.com",
       display: true
     };
     var firstImage = { // Set first image — not working
