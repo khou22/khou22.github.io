@@ -17,6 +17,15 @@ categories["Other"] = { name: "Other", color: gray };
 
 programmingProjects = [
     {
+        name: "Slate Scheduler",
+        subtitle: "Painlessly schedule calendar events.",
+        slug: "http://slate.khou22.com",
+        image: "./../media/projects/slate/slate-scheduler.png",
+        category: categories[ "iOS App" ].name,
+        categoryColor: categories[ "iOS App" ].color,
+        description: "Publically available on the Apple app store! A fun UX and iOS engineering project to make scheduling calendar events a smoother and more enjoyable experience. It uses basic machine learning to build a model of your calendar and predict your event so you don't need to type anything in. It also does away with a lot of poor UI elements like date pickers."
+    },
+    {
         name: "SoFly Scanner",
         subtitle: "HackPrinceton 2017",
         slug: "https://devpost.com/software/sofly-scanner",
