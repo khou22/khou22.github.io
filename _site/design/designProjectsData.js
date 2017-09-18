@@ -13,6 +13,15 @@ programmingProjects = [
         description: "An app that allows the user to snap a picture of a flyer, extract relevant information, and make a calendar event with the event name, location, time, date, and more. This will allow users to digitize flyers, and hopefully provide a decentralized mechanism for communities to grow close again. It won 2nd place for best Princeton app at HackPrinceton Spring 2017."
     },
     {
+        name: "Slate Scheduler",
+        subtitle: "Painlessly schedule calendar events.",
+        slug: "http://slate.khou22.com",
+        image: "./../media/projects/slate/slate-scheduler.png",
+        category: categories[ "iOS App" ].name,
+        categoryColor: categories[ "iOS App" ].color,
+        description: "Publically available on the Apple app store! A fun UX and iOS engineering project to make scheduling calendar events a smoother and more enjoyable experience. It uses basic machine learning to build a model of your calendar and predict your event so you don't need to type anything in. It also does away with a lot of poor UI elements like date pickers."
+    },
+    {
         name: "Uber Scheduler",
         slug: "Uber-Scheduler",
         image: "",
