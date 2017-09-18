@@ -14,18 +14,21 @@ programmingProjects = [
     },
     {
         name: "Slate Scheduler",
-        subtitle: "Painlessly schedule calendar events.",
         slug: "http://slate.khou22.com",
         image: "./../media/projects/slate/slate-scheduler.png",
-        category: categories[ "iOS App" ].name,
-        categoryColor: categories[ "iOS App" ].color,
         description: "Publically available on the Apple app store! A fun UX and iOS engineering project to make scheduling calendar events a smoother and more enjoyable experience. It uses basic machine learning to build a model of your calendar and predict your event so you don't need to type anything in. It also does away with a lot of poor UI elements like date pickers."
     },
     {
         name: "Uber Scheduler",
-        slug: "Uber-Scheduler",
-        image: "",
+        slug: "{{ site.baseurl }}/programming/Uber-Scheduler",
+        image: "./../media/projects/uberScheduler/Screenshots/Home%20Screen.png",
         description: "An iOS app to call Ubers ahead of time or on a recurring schedule. I was the frontend engineer and designer. We built this at a hackathon and won 1st place overall."
+    },
+    {
+        name: "Princeton University Snapchat Geofilter",
+        slug: "{{ site.baseurl }}/media/design/snapchat-geofilters/whitman-geofilter.png",
+        image: "./../media/design/snapchat-geofilters/whitman-geofilter.png",
+        description: "I designed a geofilter for Princeton students and visitors alike after noticing that my residential college was the only one out of 6 that didn't have one. It serves the 6000 undergraduate students."
     },
     {
         name: "City Strong Training",
