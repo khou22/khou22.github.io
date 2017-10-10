@@ -152,7 +152,8 @@ Search within file: `\<keyword on page>`
     * `:noh` clears the highlighted words on the page from the search
 
 Search and replace: `:%s/foo/bar/g` (Replace `foo` with `bar` no confirmation. For confirmation, use `gc` instead of `g` at end)  
-Highlight all occurances of current word under cursor and go to first instance (while not in highlight mode): `#`
+Highlight all occurances of current word under cursor and go to first instance (while not in highlight mode): `#`  
+To refresh NerdTree's listing of files, navigate to the NerdTree pane and press `Shift + R`  
 
 ### Highlighting mode
 Highlighting an entire line: `Shift + V`  
