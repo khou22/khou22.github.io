@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 04 Oct 2017 16:48:32 -0400</pubDate>
-    <lastBuildDate>Wed, 04 Oct 2017 16:48:32 -0400</lastBuildDate>
+    <pubDate>Wed, 11 Oct 2017 18:17:08 -0400</pubDate>
+    <lastBuildDate>Wed, 11 Oct 2017 18:17:08 -0400</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -1029,7 +1029,8 @@ The “current project” is whatever directory you &lt;code class=&quot;highlig
     * &lt;code class=&quot;highlighter-rouge&quot;&gt;:noh&lt;/code&gt; clears the highlighted words on the page from the search&lt;/p&gt;
 
 &lt;p&gt;Search and replace: &lt;code class=&quot;highlighter-rouge&quot;&gt;:%s/foo/bar/g&lt;/code&gt; (Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;bar&lt;/code&gt; no confirmation. For confirmation, use &lt;code class=&quot;highlighter-rouge&quot;&gt;gc&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;g&lt;/code&gt; at end)&lt;br /&gt;
-Highlight all occurances of current word under cursor and go to first instance (while not in highlight mode): &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt;&lt;/p&gt;
+Highlight all occurances of current word under cursor and go to first instance (while not in highlight mode): &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt;&lt;br /&gt;
+To refresh NerdTree’s listing of files, navigate to the NerdTree pane and press &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + R&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;highlighting-mode&quot;&gt;Highlighting mode&lt;/h3&gt;
 &lt;p&gt;Highlighting an entire line: &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + V&lt;/code&gt;&lt;br /&gt;
