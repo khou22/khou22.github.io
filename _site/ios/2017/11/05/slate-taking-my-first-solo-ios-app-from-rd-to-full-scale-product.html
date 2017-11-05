@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Slate: Taking My First Solo iOS App from R&D to Full Scale Product</title>
+  <meta name="description" content="">
+
+  <!-- React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <!-- Tile Layout Library -->
+  <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://khou22.com/ios/2017/11/05/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html">
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.com/feed.xml" />
+
+  <!-- Bootstrap -->
+  <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+  <!-- Pinterest -->
+  <meta name="p:domain_verify" content="ba077b9ffb934c298dbb2516fb42bdee"/>
+
+  <!-- Google Analytics -->
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-66796355-1', 'auto');
+      ga('send', 'pageview', location.pathname);
+
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/media/site/favicon.png">
+
+    <!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>Slate: Taking My First Solo iOS App from R&amp;D to Full Scale Product | Kevin Hou</title>
+<meta property="og:title" content="Slate: Taking My First Solo iOS App from R&amp;D to Full Scale Product" />
+<meta name="author" content="Kevin Hou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A detailed post about my journey in publishing my first iOS app." />
+<meta property="og:description" content="A detailed post about my journey in publishing my first iOS app." />
+<link rel="canonical" href="http://khou22.com/ios/2017/11/05/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html" />
+<meta property="og:url" content="http://khou22.com/ios/2017/11/05/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html" />
+<meta property="og:site_name" content="Kevin Hou" />
+<meta property="og:image" content="http://khou22.com/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-11-05T08:40:26-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@kevinhou22" />
+<meta name="twitter:creator" content="@Kevin Hou" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Slate: Taking My First Solo iOS App from R&amp;D to Full Scale Product","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://khou22.com/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2017-11-05T08:40:26-05:00","dateModified":"2017-11-05T08:40:26-05:00","description":"A detailed post about my journey in publishing my first iOS app.","mainEntityOfPage":{"@type":"WebPage","@id":"http://khou22.com/ios/2017/11/05/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html"},"url":"http://khou22.com/ios/2017/11/05/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header>
+  <!-- Desktop Client -->
+  <div class="site-header" id="site-header">
+    <div class="wrapper" style="height: 100%">
+      <div class="site-header-background">
+        <div class="site-header-content">
+
+          <a href="/" class="header-title-section">
+            <img src="/media/site/favicon.png" class="header-logo" align="left">
+            <p class="site-title">Kevin Hou</p>
+          </a>
+
+          <!-- Site Navigation Bar -->
+          <ul class="nav-ul site-nav-bar">
+            <li class="nav-li nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/blog">Blog &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/blog/category">Browse by Category</a></li>
+                <li class="nav-li"><a href="/blog/tag">Browse by Tag</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/categories">Portfolio &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/programming">Programming</a></li>
+                <!-- <li class="nav-li"><a href="/blog/wood/">Woodshop</a></li> -->
+                <li class="nav-li"><a href="https://www.flickr.com/photos/khou22/albums" target="_blank">Woodshop</a></li>
+                <li class="nav-li"><a href="/design">Design</a></li>
+                <li class="nav-li"><a href="/photography">Photography</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item"><a href="/contact">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="header-placeholder"></div>
+
+  <!-- Activate Tooltips -->
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    // Header has two sizes — 80px and 40px — based on scrolling
+    $(document).scroll(function() {
+      var screenWidth = $(document).width();
+      var mobileCuttoff = 800; // Ambiguous
+      if (screenWidth > mobileCuttoff) {
+        var triggerDistance = 100;
+        var classesToChange = [
+          {
+            className: ".site-header",
+            styleElement: "height",
+            min: 40,
+            max: 80
+          },
+          {
+            className: ".site-title",
+            styleElement: "font-size",
+            min: 20,
+            max: 32
+          },
+          {
+            className: ".site-title",
+            styleElement: "line-height",
+            min: 2,
+            max: 3
+          },
+          {
+            className: ".header-logo",
+            styleElement: "height",
+            min: 24,
+            max: 64
+          },
+          {
+            className: ".site-nav-bar",
+            styleElement: "margin-top",
+            min: 4,
+            max: 24
+          }
+        ]
+        if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
+          var percentageComplete = $(this).scrollTop()/triggerDistance; // Percentage complete
+          for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
+            var currentClass = classesToChange[i] // Store
+            var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
+            $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
+          }
+        } else { // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.min);
+          }
+        }
+        if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast - max style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.max);
+          }
+        }
+      } else {
+        // If on mobile
+        // console.log("Your screen size does not support dynamic header");
+      }
+    });
+  </script>
+
+
+  <!-- Mobile Client -->
+  <div class="mobile-blog-header">
+    <ul class="mobile-blog-header-ul">
+      <li class="mobile-blog-header-li-logo">
+        <a href="http://khou22.com">
+          <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
+        </a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/">Home</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/blog">Blog</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/categories">Portfolio</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mobile-blog-header-placeholder">
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <!-- Hide scrollbar on this page -->
+<style> ::-webkit-scrollbar { display: none; } </style>
+
+<div class="post">
+  
+
+    
+
+    
+
+    
+  <header id="blog-post-header" class="post-header" style="background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg)">
+    <div class="post-header-content">
+      <a onclick="blogPostBackButton()"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title post-header-title">Slate: Taking My First Solo iOS App from R&D to Full Scale Product</h1>
+      <h4 class="post-header-description">A detailed post about my journey in publishing my first iOS app.</h4>
+      <p class="post-header-meta">Nov 5, 2017 • Kevin Hou</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+    var blogPostBackButton = function() {
+      var previousLink = document.referrer
+      var index = previousLink.indexOf("/blog")
+      console.log("Previous link:", previousLink);
+      console.log(index);
+      if (index == 1) { // If not coming from a different blog post
+        window.history.go(-1); // Back in history (keeps window position)
+      } else { // Directed from a different blog post
+        // console.log("Back to blog");
+        console.log("Back");
+        window.location.href = "/blog";
+      }
+    }
+
+  </script>
+
+  <article class="post-content">
+    <h1 id="introduction">Introduction</h1>
+<p>I just released my first solo iOS app, <a href="http://slate.khou22.com">Slate Scheduler</a>, on the App Store a couple months ago. It can be found on the <a href="https://itunes.apple.com/us/app/slate-scheduler/id1221189245?ls=1&amp;mt=8">Apple App Store</a>. Because of school and other commitments, I only just finished this blog post detailing the research, design, and implementation.</p>
+
+<h3 id="inspiration">Inspiration</h3>
+<p>The inspiration for this project was that, as a busy college student, I was scheduling basically the same calendar events all too often and each time it would still take me an average of 30 seconds to do on my phone. I found that 90% of my scheduled events were “irregularly repeating” events, that is, they had the same event names and locations, the only thing that changed were their times.</p>
+
+<p><br class="post-line-break" /></p>
+
+<p>Think about having dinner with someone. I’d have dinner with Person A, let’s call him/her Alex. Alex and I get a meal once a week when we can, generally between 5 PM and 8 PM, and typically at one of three dining halls on campus. As you can see, there is a consistency in options, but because Google Calendar or iOS Calendar only allow you to copy events exactly, there was no way for me to pick and choose which parts of past events I wanted to include in the calendar event for my dinner with Alex next week. This meant that I’d have to create my calendar event for dinner with Alex every single time, going through the monotonous process of typing in the name, searching a location, and using a hurrendous date picker for the time of dinner.</p>
+
+<p><br class="post-line-break" /></p>
+
+<p>Frustrated, I took a macroscopic and critical look at the “mainstream” calendar apps, narrowing my painpoints to two main problems:</p>
+<ol>
+  <li>Existing apps, like the iOS and Google calendar clients, were designed for completeness — migrating all features from the desktop to mobile — resulting in a bloated product that didn’t keep simplicity in mind.</li>
+  <li>The interface for scheduling events largely remained the same across all clients: date pickers, checkboxes, scrolling — a slow but accepted and standardized user experience.</li>
+</ol>
+
+<p>I decided that I wanted to solve this horrific problem of calendar event scheduling by building a user-experience so simple and painless, that you would prefer it to your powerful desktop calendar clients.</p>
+
+<h1 id="designing-the-user-experience">Designing the User-Experience</h1>
+<h3 id="research--identifying-the-problem">Research &amp; Identifying the Problem</h3>
+<p>When researching, I discovered that every app pretty much has the same UI for creating an event. As someone who schedules four of five events a day, spending 30 seconds populating a form felt sluggish and irritating. I found myself increasingly annoyed at how limited the market was.</p>
+
+<p><br class="post-line-break" /></p>
+
+<p>Certain features, that would feel natural to include, simply didn’t exist. For example, in Google Calendar, pressing “Done” (ie. the return key) would simply close the keyboard instead of focusing on the next logical text box below it. Pressing the location text box would take you to a completely new page — adding two more screen clicks than it “should” take.</p>
+
+<p><br class="post-line-break" /></p>
+
+<p>Like I mentioned earlier, another the huge point of frustration was the fact that once you pressed “Create New Event”, there was no way for you to check your current schedule simultaneously. No mainstream calendar client that I researched had this feature.</p>
+
+<h3 id="defining-the-challenge">Defining the Challenge</h3>
+<p>The challenge was to attack this basic task of adding a calendar event from your phone in a way that was quick, intuitive, and yet still powerful. I had to create a user-experience that would minimize taps, keyboard key presses, and especially, screen switches. Furthermore, I had to add the ability for users to see their availability on any given day so that they could view their schedules while creating the event.</p>
+
+<h3 id="formulating-ideas">Formulating Ideas</h3>
+<p>I approached my “solution” by looking through the eyes of a perspective user. What exactly do users want? What feels intuitive? Because I naturally have my own bias and style of scheduling events, what changes to the user experience can be generalized to any person wishing to schedule evets?</p>
+
+<p><br class="post-line-break" /></p>
+
+<p>I first identified my core target audience. This app was to be a scheduler — used for frequent, but inconsistent events. The busy student, parent, or professional using this to schedule meetings, meals, and other random events, would generally have no desire to change their notification time, add guests, select a color for the event, add a note, etc. These are all features that <em>could</em> be useful on the desktop, but ultimately, wouldn’t be touched except for in specific edge cases. After asking friends, family, and coworkers, I found that this was consistent across the <em>majority</em> of people who I would be targeting.</p>
+
+<p><br class="post-line-break" /></p>
+
+<p>With this in mind, I could then trim down fields that my user wouldn’t need: guests, custom notification times (a default for all events will do), event color, notes, URL &amp; file attachments, free/busy selection, visibility, travel time (automatically taken care of automatically by iOS/Mac), and event privacy. This left the bare neccessities:</p>
+<ol>
+  <li>Name of the event</li>
+  <li>Start and end time</li>
+  <li>Location</li>
+</ol>
+
+<p><br class="post-line-break" /></p>
+
+<p>These three elements can be broken into two groups: text fields and dates. Text fields were an easier component to tackle, but it took some thought to generate a good date picking user experience.</p>
+
+<h3 id="designing-the-text-fields">Designing the Text Fields</h3>
+<p>The text fields ultimately came down to minimizing the number of keyboard key presses. A lot of time is wasted typing the same event name and loction over and over again. I decided that every text field should have a list of text suggests based on historical data: events that you add frequently would have a higher liklihood of showing up. It’d be an autocomplete text field that would double as a search box of sorts (think Google search suggestions). This would make “typing” the names of events a matter of simply pressing the suggestion or searching then selecting.</p>
+
+<p>[GIF of this]</p>
+
+<p><br class="post-line-break" /></p>
+
+<p>The location input would work in the same way. Most location search boxes direct you to a new, fullscreen search page which both feels annoying and takes longer. With these autocomplete text fields, all interaction could take place on the same page.</p>
+
+<p>[GIF of Apple Calendar’s location search]
+[GIF of Slate’s location search]</p>
+
+<p><br class="post-line-break" /></p>
+
+<p>I also wanted an easy way to prepend a room number or some sort of text before the location. With most calendar clients, because you’d be searching for an exact location, you wouldn’t have the ability to both search for a real location and add a room number. I solved this problem by splitting the location text field into two: a main location field with Google maps searching and a smaller text field to add a small chunk of text before the actual location.</p>
+
+<p><br class="post-line-break" /></p>
+
+<p>Another dead-simple, but unfortunately left out features is the ability to press the return key on the keyboard to move to the next text field. In Slate, you can easily zip between the required text fields. Pressing “Return” or a listed suggestion will take you to the next text field. Currently, the flow goes from event name to location and then to room number.</p>
+
+<h3 id="designing-the-date-picking">Designing the Date Picking</h3>
+<p>Instead of the clunky scrolling date and time pickers, I decided to take a more elegant approach and avoid this method as much as possible. Because scheduling events generally happens within the next week or two, I created a horizontal scrolling date picker that better served the goal of selecting a date.</p>
+
+<h1 id="engineering--the-implementation">Engineering — The Implementation</h1>
+<p>Slate uses a predictive model that strengthens with usage to allow you to schedule calendar events quickly and easily without the painpoints of date pickers, multiple pages, and many other irritating, but commonly used, UI standards. I’ve built and will open-source many of the components that I built for this project including autocomplete text boxes and rounding step sliders.</p>
+
+<p><br class="post-line-break" /></p>
+
+<p>I will not focus on the implementation as much simply because I’ve already covered a lot of the topics in other blog posts. Here are some of the few blog posts:</p>
+
+<ol>
+  <li><a href="http://khou22.com/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html">Swift Classes August 2017: Classes, Subclasses, and Protocols</a></li>
+  <li><a href="http://khou22.com/ios/2017/02/28/swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts.html">Swift Tips and Tricks February 2017: UI Text Field Styling and Force Touch App Shortcuts</a></li>
+  <li><a href="http://khou22.com/programming/2016/12/18/data-types-december-2016-dictionaries-and-symbol-tables.html">Data Types December 2016: Dictionaries and Symbol Tables</a></li>
+  <li><a href="http://khou22.com/ios/2016/10/31/swift-core-data-basics-storing-app-data.html">Swift Core Data Basics: Storing App Data</a></li>
+  <li><a href="http://khou22.com/ios/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html">Swift Navigation Basics: How to Setup a Tab Bar App</a></li>
+  <li><a href="http://khou22.com/ios/2016/07/25/persist-data-storing-values-locally-using-swift.html">Persist Data: Storing Values Locally Using Swift</a></li>
+  <li>And many more that can be found in the <a href="http://khou22.com/blog/category/ios/">iOS category of my blog site</a></li>
+</ol>
+
+<h1 id="what-i-learned">What I Learned</h1>
+<p>I learned a whole lot from this project both from a UX design standpoint as well as from an engineering, marketing, and critical thinking perspective. Unlike my previous iOS apps, I wanted to make this a fullscale, end-to-end project. This meant that instead of simply designing and building, I also researched, user tested, implemented Google Analytics, marketed, built a static website to promote it, asked my friends and family on social media to download it — in short, I took full ownership of it. This was not a siloed project that only me and 4 other random strangers would use. I wanted this to be a polished product strong enough to withstand any situation, clickpath, or permission error possible.</p>
+
+<p><br class="post-line-break" /></p>
+
+<p>I’ve built upwards of 20 or 30 coding projects to varying degrees, but Slate is definitely one of my most polished products. It gives me immense satisfaction and joy seeing people from all around the world using my app and even sharing it with their friends that I’ll never actually meet. It’s that knowledge that someone out in the world is touching my work — the thousands of lines of code that I carefully crafted — that is truly the fire that keeps me doing what I love: building for others. I can’t deny that I love coding for the sake of coding, but I believe a solution to a challenge can only be great, if there’s someone out there who gets to appreciate it.</p>
+
+    <div class="post-organization">
+      <p id="post-meta">Posted in <a href="/blog/category/ios/">iOS Development</a> with <a href="/blog/tag/swift">Swift</a>, <a href="/blog/tag/project">Project</a>, <a href="/blog/tag/reflection">Reflection</a>, <a href="/blog/tag/designProcess">Design Process</a>, <a href="/blog/tag/userExperience">User Experience</a></p>
+    </div>
+  </article>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <!-- External Links Navigation Bar -->
+  <table class="external-bar"> <!-- Custom header -->
+    <tr>
+      <td class="external-td">
+        <a href="/blog" data-toggle="tooltip" title="Blog Home">
+          <div class="external-link-box home-bw"></div>
+          <p class="external-link-label">Home</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.linkedin.com/in/kevinhou22" target="_blank" data-toggle="tooltip" title="LinkedIn">
+          <div class="external-link-box linkedin-bw"></div>
+          <p class="external-link-label">LinkedIn</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://github.com/khou22" target="_blank" data-toggle="tooltip" title="Github">
+          <div class="external-link-box github-bw"></div>
+          <p class="external-link-label">Github</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.flickr.com/photos/khou22/albums" target="_blank" data-toggle="tooltip" title="Flickr">
+          <div class="external-link-box flickr-bw"></div>
+          <p class="external-link-label">Flickr</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="http://kevinhou.wix.com/projects" target="_blank" data-toggle="tooltip" title="Portfolio">
+          <div class="external-link-box gallery-bw"></div>
+          <p class="external-link-label">Portfolio</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://youtube.com/kevinhou22" target="_blank" data-toggle="tooltip" title="YouTube Channel">
+          <div class="external-link-box youtube-bw"></div>
+          <p class="external-link-label">YouTube</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.princeton.edu/main/" target="_blank" data-toggle="tooltip" title="School Profile">
+          <div class="external-link-box highSchool-bw"></div>
+          <p class="external-link-label">School Profile</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="/blog/contact" data-toggle="tooltip" title="Contact">
+          <div class="external-link-box email-bw"></div>
+          <p class="external-link-label">Contact</p>
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="wrapper">
+
+    <div class="site-footer-content">
+
+      <h2 class="footer-heading">Kevin Hou's Portfolio and Blog</h2>
+
+      <div class="footer-col-wrapper">
+        <div class="footer-col  footer-col-1">
+          <ul class="contact-list">
+            <li>Kevin Hou</li>
+            <li><a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a></li>
+            <li>San Francisco Bay Area</li>
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-2">
+          <ul class="social-media-list">
+            
+            <li>
+              <a href="https://github.com/khou22" target="_blank">
+                <span class="icon  icon--github">
+                  <svg viewBox="0 0 16 16">
+                    <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                  </svg>
+                </span>
+
+                <span class="username">khou22</span>
+              </a>
+            </li>
+            
+
+            
+            <li>
+              <a href="https://www.flickr.com/photos/khou22/albums" target="_blank">
+                <div class="footer-icon-box flickr-bw"></div><span class="username">kevinhou22</span>
+              </a>
+            </li>
+            
+
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-3">
+          <p class="text">Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
+</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

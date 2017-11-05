@@ -6,9 +6,132 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 Oct 2017 17:52:24 -0400</pubDate>
-    <lastBuildDate>Fri, 13 Oct 2017 17:52:24 -0400</lastBuildDate>
+    <pubDate>Sun, 05 Nov 2017 13:48:06 -0500</pubDate>
+    <lastBuildDate>Sun, 05 Nov 2017 13:48:06 -0500</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
+    
+      <item>
+        <title>Slate: Taking My First Solo iOS App from R&amp;D to Full Scale Product</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;I just released my first solo iOS app, &lt;a href=&quot;http://slate.khou22.com&quot;&gt;Slate Scheduler&lt;/a&gt;, on the App Store a couple months ago. It can be found on the &lt;a href=&quot;https://itunes.apple.com/us/app/slate-scheduler/id1221189245?ls=1&amp;amp;mt=8&quot;&gt;Apple App Store&lt;/a&gt;. Because of school and other commitments, I only just finished this blog post detailing the research, design, and implementation.&lt;/p&gt;
+
+&lt;h3 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h3&gt;
+&lt;p&gt;The inspiration for this project was that, as a busy college student, I was scheduling basically the same calendar events all too often and each time it would still take me an average of 30 seconds to do on my phone. I found that 90% of my scheduled events were “irregularly repeating” events, that is, they had the same event names and locations, the only thing that changed were their times.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Think about having dinner with someone. I’d have dinner with Person A, let’s call him/her Alex. Alex and I get a meal once a week when we can, generally between 5 PM and 8 PM, and typically at one of three dining halls on campus. As you can see, there is a consistency in options, but because Google Calendar or iOS Calendar only allow you to copy events exactly, there was no way for me to pick and choose which parts of past events I wanted to include in the calendar event for my dinner with Alex next week. This meant that I’d have to create my calendar event for dinner with Alex every single time, going through the monotonous process of typing in the name, searching a location, and using a hurrendous date picker for the time of dinner.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Frustrated, I took a macroscopic and critical look at the “mainstream” calendar apps, narrowing my painpoints to two main problems:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Existing apps, like the iOS and Google calendar clients, were designed for completeness — migrating all features from the desktop to mobile — resulting in a bloated product that didn’t keep simplicity in mind.&lt;/li&gt;
+  &lt;li&gt;The interface for scheduling events largely remained the same across all clients: date pickers, checkboxes, scrolling — a slow but accepted and standardized user experience.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I decided that I wanted to solve this horrific problem of calendar event scheduling by building a user-experience so simple and painless, that you would prefer it to your powerful desktop calendar clients.&lt;/p&gt;
+
+&lt;h1 id=&quot;designing-the-user-experience&quot;&gt;Designing the User-Experience&lt;/h1&gt;
+&lt;h3 id=&quot;research--identifying-the-problem&quot;&gt;Research &amp;amp; Identifying the Problem&lt;/h3&gt;
+&lt;p&gt;When researching, I discovered that every app pretty much has the same UI for creating an event. As someone who schedules four of five events a day, spending 30 seconds populating a form felt sluggish and irritating. I found myself increasingly annoyed at how limited the market was.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Certain features, that would feel natural to include, simply didn’t exist. For example, in Google Calendar, pressing “Done” (ie. the return key) would simply close the keyboard instead of focusing on the next logical text box below it. Pressing the location text box would take you to a completely new page — adding two more screen clicks than it “should” take.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Like I mentioned earlier, another the huge point of frustration was the fact that once you pressed “Create New Event”, there was no way for you to check your current schedule simultaneously. No mainstream calendar client that I researched had this feature.&lt;/p&gt;
+
+&lt;h3 id=&quot;defining-the-challenge&quot;&gt;Defining the Challenge&lt;/h3&gt;
+&lt;p&gt;The challenge was to attack this basic task of adding a calendar event from your phone in a way that was quick, intuitive, and yet still powerful. I had to create a user-experience that would minimize taps, keyboard key presses, and especially, screen switches. Furthermore, I had to add the ability for users to see their availability on any given day so that they could view their schedules while creating the event.&lt;/p&gt;
+
+&lt;h3 id=&quot;formulating-ideas&quot;&gt;Formulating Ideas&lt;/h3&gt;
+&lt;p&gt;I approached my “solution” by looking through the eyes of a perspective user. What exactly do users want? What feels intuitive? Because I naturally have my own bias and style of scheduling events, what changes to the user experience can be generalized to any person wishing to schedule evets?&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I first identified my core target audience. This app was to be a scheduler — used for frequent, but inconsistent events. The busy student, parent, or professional using this to schedule meetings, meals, and other random events, would generally have no desire to change their notification time, add guests, select a color for the event, add a note, etc. These are all features that &lt;em&gt;could&lt;/em&gt; be useful on the desktop, but ultimately, wouldn’t be touched except for in specific edge cases. After asking friends, family, and coworkers, I found that this was consistent across the &lt;em&gt;majority&lt;/em&gt; of people who I would be targeting.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With this in mind, I could then trim down fields that my user wouldn’t need: guests, custom notification times (a default for all events will do), event color, notes, URL &amp;amp; file attachments, free/busy selection, visibility, travel time (automatically taken care of automatically by iOS/Mac), and event privacy. This left the bare neccessities:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Name of the event&lt;/li&gt;
+  &lt;li&gt;Start and end time&lt;/li&gt;
+  &lt;li&gt;Location&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These three elements can be broken into two groups: text fields and dates. Text fields were an easier component to tackle, but it took some thought to generate a good date picking user experience.&lt;/p&gt;
+
+&lt;h3 id=&quot;designing-the-text-fields&quot;&gt;Designing the Text Fields&lt;/h3&gt;
+&lt;p&gt;The text fields ultimately came down to minimizing the number of keyboard key presses. A lot of time is wasted typing the same event name and loction over and over again. I decided that every text field should have a list of text suggests based on historical data: events that you add frequently would have a higher liklihood of showing up. It’d be an autocomplete text field that would double as a search box of sorts (think Google search suggestions). This would make “typing” the names of events a matter of simply pressing the suggestion or searching then selecting.&lt;/p&gt;
+
+&lt;p&gt;[GIF of this]&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The location input would work in the same way. Most location search boxes direct you to a new, fullscreen search page which both feels annoying and takes longer. With these autocomplete text fields, all interaction could take place on the same page.&lt;/p&gt;
+
+&lt;p&gt;[GIF of Apple Calendar’s location search]
+[GIF of Slate’s location search]&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I also wanted an easy way to prepend a room number or some sort of text before the location. With most calendar clients, because you’d be searching for an exact location, you wouldn’t have the ability to both search for a real location and add a room number. I solved this problem by splitting the location text field into two: a main location field with Google maps searching and a smaller text field to add a small chunk of text before the actual location.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another dead-simple, but unfortunately left out features is the ability to press the return key on the keyboard to move to the next text field. In Slate, you can easily zip between the required text fields. Pressing “Return” or a listed suggestion will take you to the next text field. Currently, the flow goes from event name to location and then to room number.&lt;/p&gt;
+
+&lt;h3 id=&quot;designing-the-date-picking&quot;&gt;Designing the Date Picking&lt;/h3&gt;
+&lt;p&gt;Instead of the clunky scrolling date and time pickers, I decided to take a more elegant approach and avoid this method as much as possible. Because scheduling events generally happens within the next week or two, I created a horizontal scrolling date picker that better served the goal of selecting a date.&lt;/p&gt;
+
+&lt;h1 id=&quot;engineering--the-implementation&quot;&gt;Engineering — The Implementation&lt;/h1&gt;
+&lt;p&gt;Slate uses a predictive model that strengthens with usage to allow you to schedule calendar events quickly and easily without the painpoints of date pickers, multiple pages, and many other irritating, but commonly used, UI standards. I’ve built and will open-source many of the components that I built for this project including autocomplete text boxes and rounding step sliders.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I will not focus on the implementation as much simply because I’ve already covered a lot of the topics in other blog posts. Here are some of the few blog posts:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://khou22.com/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html&quot;&gt;Swift Classes August 2017: Classes, Subclasses, and Protocols&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://khou22.com/ios/2017/02/28/swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts.html&quot;&gt;Swift Tips and Tricks February 2017: UI Text Field Styling and Force Touch App Shortcuts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://khou22.com/programming/2016/12/18/data-types-december-2016-dictionaries-and-symbol-tables.html&quot;&gt;Data Types December 2016: Dictionaries and Symbol Tables&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://khou22.com/ios/2016/10/31/swift-core-data-basics-storing-app-data.html&quot;&gt;Swift Core Data Basics: Storing App Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://khou22.com/ios/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html&quot;&gt;Swift Navigation Basics: How to Setup a Tab Bar App&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://khou22.com/ios/2016/07/25/persist-data-storing-values-locally-using-swift.html&quot;&gt;Persist Data: Storing Values Locally Using Swift&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;And many more that can be found in the &lt;a href=&quot;http://khou22.com/blog/category/ios/&quot;&gt;iOS category of my blog site&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;what-i-learned&quot;&gt;What I Learned&lt;/h1&gt;
+&lt;p&gt;I learned a whole lot from this project both from a UX design standpoint as well as from an engineering, marketing, and critical thinking perspective. Unlike my previous iOS apps, I wanted to make this a fullscale, end-to-end project. This meant that instead of simply designing and building, I also researched, user tested, implemented Google Analytics, marketed, built a static website to promote it, asked my friends and family on social media to download it — in short, I took full ownership of it. This was not a siloed project that only me and 4 other random strangers would use. I wanted this to be a polished product strong enough to withstand any situation, clickpath, or permission error possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve built upwards of 20 or 30 coding projects to varying degrees, but Slate is definitely one of my most polished products. It gives me immense satisfaction and joy seeing people from all around the world using my app and even sharing it with their friends that I’ll never actually meet. It’s that knowledge that someone out in the world is touching my work — the thousands of lines of code that I carefully crafted — that is truly the fire that keeps me doing what I love: building for others. I can’t deny that I love coding for the sake of coding, but I believe a solution to a challenge can only be great, if there’s someone out there who gets to appreciate it.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Nov 2017 08:40:26 -0500</pubDate>
+        <link>http://khou22.com/ios/2017/11/05/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html</link>
+        <guid isPermaLink="true">http://khou22.com/ios/2017/11/05/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html</guid>
+        
+        <category>swift</category>
+        
+        <category>project</category>
+        
+        <category>reflection</category>
+        
+        <category>designProcess</category>
+        
+        <category>userExperience</category>
+        
+        
+        <category>ios</category>
+        
+      </item>
     
       <item>
         <title>Getting Started with Login Sessions: Express, Client Sessions, and React</title>
@@ -1453,57 +1576,6 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
         
         
         <category>web</category>
-        
-      </item>
-    
-      <item>
-        <title>Testing APIs: Postman, Network Debugging, and JSON</title>
-        <description>&lt;h1 id=&quot;postman-and-network-debugging&quot;&gt;Postman and Network Debugging&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.getpostman.com/&quot; target=&quot;_blank&quot;&gt;Postman&lt;/a&gt; is a clean, powerful tool to test APIs with custom configurations to suit your API’s needs. You can choose everything from the types of request (GET, POST, etc.) and the authorization type, to cookies and header data. It includes a great UI for displaying the body of the response as raw, pretty/formatted, or as a web page. It supports tests, pre-request scripts, and useful organization tools that help you manage requests you’ve previously made.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-I’ve been doing a lot of server work both at Moat and on my personal time. I’ve been using Postman a lot so I figured I’d share a couple of useful tips I’ve come to learn.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-The authentication features are great for public APIs and APIs with basic levels of security, however, many APIs rely on session cookies — bits of data that tell the browser that the user is signed in and has access to the site. At first, I attempted to manually cookies to the Postman request cookies input, but I believe I left out a couple and may have had some syntax errors because my requests would bounce back empty.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-I did some digging online and found that there’s a really neat developer tool in Chrome for this exact thing. I’ve been using the Network developer tool in Chrome religiously these past couple weeks. They display information like response time, headers, etc. — pretty much anything you could need related to an API request. Unfortunately, I find the user interface somewhat confusing and it only handles information about the request. It can’t actually call a request. Like any developer, I have to make hundreds of calls to the same endpoint, often with the same data, over and over again even after the simplest of changes. For my project at work, triggering the API required over three clicks and filling out a form before the API was even called. Doing this every time I wanted to run a POST request was a huge pain and I didn’t have time for it. Instead, I discovered that the Chrome Network Tool compiles the request as a cURL command. For those that don’t know, a cURL command is a Command Line tool to make network requests. They’re somewhat hard to format and write out for convoluted network calls, but they’re a standard in the industry. Chrome allows you to copy the request as a cURL ready to be run from the command line! To do this, open the developer tool, click the network tab, run the API (the network tab must be open when the request is made for it to record), then right click the request and select “Copy → Copy as cURL”.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;img src=&quot;./../../../../media/blog/images/API-Testing/Chrome_Copy_cURL.png&quot; class=&quot;iPhone-screenshots-large&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-You can then run this command in the terminal by simply pasting the cURL into the prompt and pressing enter. This method is great for some testing like pinging a server and reading server print statements, but because I was more concerned with the request responses, I had to deal with large JSON objects — which Postman does a good job with.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Fortunately, Postman has a useful feature that allows users to import and export cURL commands. Make sure the cURL is still copied to your clipboard and navigate to your Postman window. In the top left corner, click the “Import” button and a modal should display. Click on the “Past Raw Text” option and past the cURL command in the text area.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;img src=&quot;./../../../../media/blog/images/API-Testing/Postman_Import_cURL.png&quot; class=&quot;iPhone-screenshots-large&quot; /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Postman will import the cURL request with all the options, cookies, etc. and automatically create the API request for you! It’ll essentially duplicate the request the browser made, except in a much better UI. Now you can use all the wonderful Postman features with any network request!
-&lt;br class=&quot;post-line-break&quot; /&gt;
-I haven’t run into a situation where this doesn’t work (at least with cache-based login sessions) and I’m hoping it’s a catch all. I highly recommend this method for anyone dealing with server development. If you’re still using the browser to ping your API endpoints, I guarantee that it’ll speed up your workflow.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;dealing-with-json&quot;&gt;Dealing with JSON&lt;/h1&gt;
-&lt;p&gt;JSON, along with some of its cousins like XML, is one of the data formats that serves as the bridge between programming languages. You can think of it as the glue that holds the Internet together. When called, API’s will return data — often in JSON format — for the site’s Javascript to parse through. Because JSON isn’t anything more than a specifically formatted String, it can be used pretty much universally.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-As I’ve mentioned earlier, I’ve been working with massive JSON objects often — sometimes with thousands of entries in nested arrays. Debugging large, plain JSON text as a String is a nightmare. I’ve found a useful Chrome extension called JSON Viewer that automatically determines if the contents of the browser is valid JSON data and provides you with some useful tools to organize the information.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;img src=&quot;./../../../../media/blog/images/API-Testing/Raw_JSON_Bad.png&quot; /&gt;
-&lt;em&gt;JSON With No Formatting&lt;/em&gt;
-&lt;br /&gt;
-&lt;img src=&quot;./../../../../media/blog/images/API-Testing/JSON_Viewer_Extension.png&quot; class=&quot;iPhone-screenshots-large&quot; /&gt;&lt;br /&gt;
-&lt;em&gt;JSON With Formatting&lt;/em&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-It turns the page into a text editor of sorts and you can compress objects and arrays very easily. It’ll use syntax highlighting and you can customize the font, text size, and more. Overall, just makes the process of looking at JSON much more enjoyable (restoring the romance in data if I may). It’s really useful when you want to compare two different objects that are separated by a massive, nested array. You can simply compress the array and it becomes infinitely cleaner to look at.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 01 Jul 2017 13:06:18 -0400</pubDate>
-        <link>http://khou22.com/configuration/2017/07/01/testing-apis-postman-network-debugging-and-json.html</link>
-        <guid isPermaLink="true">http://khou22.com/configuration/2017/07/01/testing-apis-postman-network-debugging-and-json.html</guid>
-        
-        <category>backendServer</category>
-        
-        <category>expressServer</category>
-        
-        
-        <category>configuration</category>
         
       </item>
     
