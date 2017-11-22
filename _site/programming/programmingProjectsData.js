@@ -26,8 +26,17 @@ programmingProjects = [
         description: "Publically available on the Apple app store! A fun UX and iOS engineering project to make scheduling calendar events a smoother and more enjoyable experience. It uses basic machine learning to build a model of your calendar and predict your event so you don't need to type anything in. It also does away with a lot of poor UI elements like date pickers."
     },
     {
+        name: "HTMLexa",
+        subtitle: "HackPrinceton Spring 2017 Finalist",
+        slug: "https://devpost.com/software/htmlexa",
+        image: "./../media/programming/thumbnails/htmlexa.png",
+        category: categories[ "Web App" ].name,
+        categoryColor: categories[ "Web App" ].color,
+        description: "An Alexa Skill and Web App that allows people to build full-scale websites with his or her voice. We aimed to improve the accessibility of website creation through machine learning and a well-crafted user-experience spanning both the voice and digital spectrums."
+    },
+    {
         name: "SoFly Scanner",
-        subtitle: "HackPrinceton 2017",
+        subtitle: "HackPrinceton Spring 2017 Winner",
         slug: "https://devpost.com/software/sofly-scanner",
         image: "./../media/programming/thumbnails/so-fly-scanner.png",
         category: categories[ "iOS App" ].name,
@@ -54,7 +63,7 @@ programmingProjects = [
     },
     {
         name: "Uber Scheduler",
-        subtitle: "MenloHacks 2016",
+        subtitle: "MenloHacks 2016 Winner",
         slug: "Uber-Scheduler",
         image: "./../media/projects/uberScheduler/Screenshots/Home%20Screen.png",
         category: categories[ "iOS App" ].name,
