@@ -9,6 +9,8 @@ category: ios
 tags: [swift, project, reflection, designProcess, userExperience]
 featured: "no"
 ---
+<img src="./../../../../media/blog/images/Slate-Scheduler/banner.png">
+
 # Introduction
 I just released my first solo iOS app, [Slate Scheduler](http://slate.khou22.com), on the App Store a couple months ago. It can be found on the [Apple App Store](https://itunes.apple.com/us/app/slate-scheduler/id1221189245?ls=1&mt=8). Because of school and other commitments, I only just finished this blog post detailing the research, design, and implementation.
 
