@@ -65,14 +65,14 @@ These three elements can be broken into two groups: text fields and dates. Text 
 ### Designing the Text Fields
 The text fields ultimately came down to minimizing the number of keyboard key presses. A lot of time is wasted typing the same event name and loction over and over again. I decided that every text field should have a list of text suggests based on historical data: events that you add frequently would have a higher liklihood of showing up. It'd be an autocomplete text field that would double as a search box of sorts (think Google search suggestions). This would make "typing" the names of events a matter of simply pressing the suggestion or searching then selecting.
 
-[GIF of this]
+<img src="./../../../../media/blog/images/Slate-Scheduler/autocomplete-search.gif" class="iPhone-screenshots-medium">
 
 <br class="post-line-break">
 
 The location input would work in the same way. Most location search boxes direct you to a new, fullscreen search page which both feels annoying and takes longer. With these autocomplete text fields, all interaction could take place on the same page.
 
-[GIF of Apple Calendar's location search]
-[GIF of Slate's location search]
+<img src="./../../../../media/blog/images/Slate-Scheduler/ios-calendar-app-location-search.gif" class="iPhone-screenshots-medium">
+<img src="./../../../../media/blog/images/Slate-Scheduler/slate-location-search.gif" class="iPhone-screenshots-medium">
 
 <br class="post-line-break">
 
@@ -106,3 +106,8 @@ I learned a whole lot from this project both from a UX design standpoint as well
 <br class="post-line-break">
 
 I've built upwards of 20 or 30 coding projects to varying degrees, but Slate is definitely one of my most polished products. It gives me immense satisfaction and joy seeing people from all around the world using my app and even sharing it with their friends that I'll never actually meet. It's that knowledge that someone out in the world is touching my work — the thousands of lines of code that I carefully crafted — that is truly the fire that keeps me doing what I love: building for others. I can't deny that I love coding for the sake of coding, but I believe a solution to a challenge can only be great, if there's someone out there who gets to appreciate it.
+
+### Acknowledgements
+I'd like to thank my family and friends for their love and support during Slate's development. To everyone who beta tested, gave feedback, and rated/reviewed — I give you a huge thank you. You keep me doing what I do and I can't be more appreciative.
+
+The GIFs in this blog post were created on [ezgif.com](https://ezgif.com).

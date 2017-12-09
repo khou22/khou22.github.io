@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Nov 2017 14:08:57 -0500</pubDate>
-    <lastBuildDate>Sat, 25 Nov 2017 14:08:57 -0500</lastBuildDate>
+    <pubDate>Sat, 09 Dec 2017 08:22:49 -0500</pubDate>
+    <lastBuildDate>Sat, 09 Dec 2017 08:22:49 -0500</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -72,14 +72,14 @@
 &lt;h3 id=&quot;designing-the-text-fields&quot;&gt;Designing the Text Fields&lt;/h3&gt;
 &lt;p&gt;The text fields ultimately came down to minimizing the number of keyboard key presses. A lot of time is wasted typing the same event name and loction over and over again. I decided that every text field should have a list of text suggests based on historical data: events that you add frequently would have a higher liklihood of showing up. It’d be an autocomplete text field that would double as a search box of sorts (think Google search suggestions). This would make “typing” the names of events a matter of simply pressing the suggestion or searching then selecting.&lt;/p&gt;
 
-&lt;p&gt;[GIF of this]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./../../../../media/blog/images/Slate-Scheduler/autocomplete-search.gif&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The location input would work in the same way. Most location search boxes direct you to a new, fullscreen search page which both feels annoying and takes longer. With these autocomplete text fields, all interaction could take place on the same page.&lt;/p&gt;
 
-&lt;p&gt;[GIF of Apple Calendar’s location search]
-[GIF of Slate’s location search]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./../../../../media/blog/images/Slate-Scheduler/ios-calendar-app-location-search.gif&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;
+&lt;img src=&quot;./../../../../media/blog/images/Slate-Scheduler/slate-location-search.gif&quot; class=&quot;iPhone-screenshots-medium&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 
@@ -115,6 +115,11 @@
 &lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I’ve built upwards of 20 or 30 coding projects to varying degrees, but Slate is definitely one of my most polished products. It gives me immense satisfaction and joy seeing people from all around the world using my app and even sharing it with their friends that I’ll never actually meet. It’s that knowledge that someone out in the world is touching my work — the thousands of lines of code that I carefully crafted — that is truly the fire that keeps me doing what I love: building for others. I can’t deny that I love coding for the sake of coding, but I believe a solution to a challenge can only be great, if there’s someone out there who gets to appreciate it.&lt;/p&gt;
+
+&lt;h3 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h3&gt;
+&lt;p&gt;I’d like to thank my family and friends for their love and support during Slate’s development. To everyone who beta tested, gave feedback, and rated/reviewed — I give you a huge thank you. You keep me doing what I do and I can’t be more appreciative.&lt;/p&gt;
+
+&lt;p&gt;The GIFs in this blog post were created on &lt;a href=&quot;https://ezgif.com&quot;&gt;ezgif.com&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 05 Nov 2017 08:40:26 -0500</pubDate>
         <link>http://khou22.com/ios/2017/11/05/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html</link>
