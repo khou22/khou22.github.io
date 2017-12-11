@@ -2,7 +2,7 @@
 layout: post
 title: "Slate: Taking My First Solo iOS App from R&D to Full Scale Product"
 author: "Kevin Hou"
-date: 2017-11-05 13:40:26
+date: 2017-12-03 10:12:15
 description: "A detailed post about my journey in publishing my first iOS app."
 image: "./../../../../media/blog/images/Slate-Scheduler/banner.png"
 category: ios
