@@ -4,7 +4,7 @@ title: "Slate: Taking My First Solo iOS App from R&D to Full Scale Product"
 author: "Kevin Hou"
 date: 2017-11-05 13:40:26
 description: "A detailed post about my journey in publishing my first iOS app."
-image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "./../../../../media/blog/images/Slate-Scheduler/banner.png"
 category: ios
 tags: [swift, project, reflection, designProcess, userExperience]
 featured: "no"

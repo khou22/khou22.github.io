@@ -18,6 +18,9 @@ $post-font-size: 16px;
     }
 }
 .post {
+    &-header {
+        background-image: url(./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg);
+    }
 
     &-header-title {
         text-align: center;
