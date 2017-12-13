@@ -12,7 +12,7 @@ featured: "no"
 <img src="./../../../../media/blog/images/Slate-Scheduler/banner.png">
 
 # Introduction
-I just released my first solo iOS app, [Slate Scheduler](http://slate.khou22.com), on the App Store a couple months ago. It can be found on the [Apple App Store](https://itunes.apple.com/us/app/slate-scheduler/id1221189245?ls=1&mt=8). Because of school and other commitments, I only just finished this blog post detailing the research, design, and implementation.
+I released my first solo iOS app, <a href="http://slate.khou22.com" target="_blank">Slate Scheduler</a>, on the App Store a couple months ago. It can be found on the <a href="https://itunes.apple.com/us/app/slate-scheduler/id1221189245?ls=1&mt=8" target="_blank">Apple App Store</a>. Because of school and other commitments, I only just finished this blog post detailing the research, design, and implementation.
 
 ### Inspiration
 The inspiration for this project was that, as a busy college student, I was scheduling basically the same calendar events all too often and each time it would still take me an average of 30 seconds to do on my phone. I found that 90% of my scheduled events were "irregularly repeating" events, that is, they had the same event names and locations, the only thing that changed were their times.
