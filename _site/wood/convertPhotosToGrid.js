@@ -1,5 +1,5 @@
 var gridData = {
-    columns: 2,
+    columns: 3,
     textColor: "white",
     modal: true,
     openNewWindow: true,
