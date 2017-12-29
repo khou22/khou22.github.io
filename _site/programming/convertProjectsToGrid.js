@@ -18,7 +18,7 @@ for (var i = 0; i < programmingProjects.length; i++) {
     var currentProject = programmingProjects[i];
 
     var projectURL = currentProject.slug.replace("{{ site.baseurl }}", "http://khou22.github.io");
-    preloadImage(currentProject.image); // Preload image for better UX
+    // preloadImage(currentProject.image); // Preload image for better UX
 
     var gridItem = {
         title: currentProject.name,

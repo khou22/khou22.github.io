@@ -10,7 +10,7 @@ var PortfolioCategory = React.createClass({
         {
           name: "Woodshop",
           image: "./../media/site/images/woodshop_background.png",
-          link: "https://www.flickr.com/photos/khou22/albums"
+            link: "{{ site.baseurl }}/wood"
         },
         {
           name: "Design",

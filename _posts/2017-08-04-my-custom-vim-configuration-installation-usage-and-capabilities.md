@@ -222,6 +222,10 @@ When opening a file:
 `Shift + G` - bottom
 Go to line number: `<Line #> + Shift + G`
 
+### Using the Command Line
+You can use or view the command line without leaving the VIM environment.  
+`:!` takes you to a read-only fullscreen command prompt to see your history
+
 # Additional Plugins and Customizations
 ### All Plugins
 * comment_vim

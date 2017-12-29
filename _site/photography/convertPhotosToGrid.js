@@ -18,7 +18,7 @@ for (var i = 0; i < vscoImages.length; i++) {
     var rawImageLink = "http://" + currentImage.substring(0, currentImage.length);
     rawImageLink = rawImageLink.replace("?w=600", "?w=1200"); // Higher resolution
 
-    preloadImage(rawImageLink); // Preload
+    // preloadImage(rawImageLink); // Preload
 
     var gridItem = {
         image: "http://" + currentImage,
