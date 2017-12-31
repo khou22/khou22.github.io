@@ -331,7 +331,8 @@ var ProfileBox = React.createClass({
           eventAction: 'click',
           eventLabel: 'Wood Tab'
         });
-        window.open("https://www.flickr.com/photos/khou22/albums", '_blank);'); // Flickr projects page
+        // window.open("https://www.flickr.com/photos/khou22/albums", '_blank);'); // Flickr projects page
+        location.href = "/wood";
         break;
       case "blog":
         ga('send', {
@@ -340,7 +341,7 @@ var ProfileBox = React.createClass({
           eventAction: 'click',
           eventLabel: 'Blog Tab'
         });
-        location.href="/blog";
+        location.href = "/blog";
         break;
       case "programming":
         ga('send', {
@@ -349,7 +350,7 @@ var ProfileBox = React.createClass({
           eventAction: 'click',
           eventLabel: 'Programming Tab'
         });
-        location.href="/programming"; // Project page on website
+        location.href = "/programming"; // Project page on website
         // window.open("http://kevinhou.wix.com/projects#!woodprojects/ckra", '_blank);'); // Wix projects page
         break;
       case "photography":
@@ -359,7 +360,7 @@ var ProfileBox = React.createClass({
           eventAction: 'click',
           eventLabel: 'Photography Tab'
         });
-        location.href="/photography";
+        location.href = "/photography";
       default:
     };
   },
