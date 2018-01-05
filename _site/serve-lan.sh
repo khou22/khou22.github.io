@@ -6,6 +6,6 @@
 # Start build/local server — must be at end of script
 # Options:
 # --future allows you to see blog posts dated in the future
+# --incremental turns on incremental builds for faster build times
 # --livereload turns on live reloading# --host=0.0.0.0 makes it available over local networks to other machiens pointing at this machine's private IP address
-bundle exec jekyll serve --watch --future --livereload --host=0.0.0.0
-
+bundle exec jekyll serve --watch --future --livereload --incremental --host=0.0.0.0
