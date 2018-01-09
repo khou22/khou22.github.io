@@ -146,6 +146,7 @@ To cancel: `Command` + `C` or `:q`
 Global find (searches content of file in project) — `,a`  
 The "current project" is whatever directory you `$ vim` into  
 
+Search the selected word: `Shift + 8`
 Search within file: `\<keyword on page>`
     * `n` goes to next
     * `Shift + N` goes back

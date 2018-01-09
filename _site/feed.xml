@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Jan 2018 22:35:42 -0800</pubDate>
-    <lastBuildDate>Thu, 04 Jan 2018 22:35:42 -0800</lastBuildDate>
+    <pubDate>Tue, 09 Jan 2018 15:32:21 -0500</pubDate>
+    <lastBuildDate>Tue, 09 Jan 2018 15:32:21 -0500</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -121,7 +121,7 @@
 
 &lt;p&gt;The GIFs in this blog post were created on &lt;a href=&quot;https://ezgif.com&quot;&gt;ezgif.com&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 03 Dec 2017 02:12:15 -0800</pubDate>
+        <pubDate>Sun, 03 Dec 2017 05:12:15 -0500</pubDate>
         <link>http://khou22.com/ios/2017/12/03/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html</link>
         <guid isPermaLink="true">http://khou22.com/ios/2017/12/03/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html</guid>
         
@@ -310,7 +310,7 @@
 
 &lt;p&gt;In my React-Redux-Router app, I make this API request on entry so that my local redux state contains information about my user right on load. This allows me to populate sections of my app like a ‘Profile’ section as well as restricting certain routes.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 29 Aug 2017 14:33:04 -0700</pubDate>
+        <pubDate>Tue, 29 Aug 2017 17:33:04 -0400</pubDate>
         <link>http://khou22.com/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html</link>
         <guid isPermaLink="true">http://khou22.com/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html</guid>
         
@@ -697,7 +697,7 @@ redux-thunk
 &lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
 &lt;p&gt;If you put all those pieces together you should end up with your first, boilerplate React/Redux application! It’s a really useful tool and a great addition to any stack — especially those that already use React. I will be working with this stack very shortly on a personal project as well as some business projects so I’ll be sure to keep you all updated on what I’ll continue to learn!&lt;/p&gt;
 </description>
-        <pubDate>Tue, 29 Aug 2017 14:16:59 -0700</pubDate>
+        <pubDate>Tue, 29 Aug 2017 17:16:59 -0400</pubDate>
         <link>http://khou22.com/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html</link>
         <guid isPermaLink="true">http://khou22.com/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html</guid>
         
@@ -886,7 +886,7 @@ That’s all very confusing, but here’s a step by step on how they work and ho
 &lt;br class=&quot;post-line-break&quot; /&gt;
 Hope this tutorial helped! It’s been a few months since I did any iOS dev (got caught up in a lot of web dev because of work) so I hope my explanations and code were clear and clean.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 24 Aug 2017 15:44:37 -0700</pubDate>
+        <pubDate>Thu, 24 Aug 2017 18:44:37 -0400</pubDate>
         <link>http://khou22.com/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</link>
         <guid isPermaLink="true">http://khou22.com/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</guid>
         
@@ -973,7 +973,7 @@ Hope this tutorial helped! It’s been a few months since I did any iOS dev (got
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Tue, 22 Aug 2017 11:47:59 -0700</pubDate>
+        <pubDate>Tue, 22 Aug 2017 14:47:59 -0400</pubDate>
         <link>http://khou22.com/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</link>
         <guid isPermaLink="true">http://khou22.com/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</guid>
         
@@ -1153,7 +1153,8 @@ To cancel: &lt;code class=&quot;highlighter-rouge&quot;&gt;Command&lt;/code&gt; 
 &lt;p&gt;Global find (searches content of file in project) — &lt;code class=&quot;highlighter-rouge&quot;&gt;,a&lt;/code&gt;&lt;br /&gt;
 The “current project” is whatever directory you &lt;code class=&quot;highlighter-rouge&quot;&gt;$ vim&lt;/code&gt; into&lt;/p&gt;
 
-&lt;p&gt;Search within file: &lt;code class=&quot;highlighter-rouge&quot;&gt;\&amp;lt;keyword on page&amp;gt;&lt;/code&gt;
+&lt;p&gt;Search the selected word: &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + 8&lt;/code&gt;
+Search within file: &lt;code class=&quot;highlighter-rouge&quot;&gt;\&amp;lt;keyword on page&amp;gt;&lt;/code&gt;
     * &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; goes to next
     * &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + N&lt;/code&gt; goes back
     * &lt;code class=&quot;highlighter-rouge&quot;&gt;:noh&lt;/code&gt; clears the highlighted words on the page from the search&lt;/p&gt;
@@ -1304,7 +1305,7 @@ Go to line number: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Line 
   &lt;li&gt;What does &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;C&amp;gt;&lt;/code&gt; map to? It maps to &lt;code class=&quot;highlighter-rouge&quot;&gt;Control&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Fri, 04 Aug 2017 10:18:02 -0700</pubDate>
+        <pubDate>Fri, 04 Aug 2017 13:18:02 -0400</pubDate>
         <link>http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</link>
         <guid isPermaLink="true">http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</guid>
         
@@ -1331,7 +1332,7 @@ I’ll probably be fairly confident with my setup by the time school rolls aroun
 &lt;br class=&quot;post-line-break&quot; /&gt;
 Check out my &lt;a href=&quot;http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html&quot;&gt;next blog post&lt;/a&gt; to see my personal VIM configuration — I’ve spent a fair amount of time messing around with it and I’m really enjoying it so far so definitely take a look if you’re at all interested.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 03 Aug 2017 10:02:56 -0700</pubDate>
+        <pubDate>Thu, 03 Aug 2017 13:02:56 -0400</pubDate>
         <link>http://khou22.com/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
         <guid isPermaLink="true">http://khou22.com/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
         
@@ -1443,7 +1444,7 @@ Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/&lt;/code&gt; (
   &lt;/tbody&gt;
 &lt;/table&gt;
 </description>
-        <pubDate>Mon, 31 Jul 2017 09:50:16 -0700</pubDate>
+        <pubDate>Mon, 31 Jul 2017 12:50:16 -0400</pubDate>
         <link>http://khou22.com/web/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</link>
         <guid isPermaLink="true">http://khou22.com/web/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</guid>
         
@@ -1492,7 +1493,7 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
   &lt;li&gt;&lt;a href=&quot;https://medium.freecodecamp.org/how-to-construct-a-design-system-864adbf2a117&quot;&gt;How to construct a design system&lt;/a&gt; - Useful for how to begin from scratch&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Mon, 24 Jul 2017 04:49:12 -0700</pubDate>
+        <pubDate>Mon, 24 Jul 2017 07:49:12 -0400</pubDate>
         <link>http://khou22.com/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</link>
         <guid isPermaLink="true">http://khou22.com/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</guid>
         
@@ -1573,7 +1574,7 @@ One of the pieces of advice that I’ve picked up at Moat and specifically with 
 &lt;h3 class=&quot;post-subheader&quot;&gt;Final Thoughts&lt;/h3&gt;
 &lt;p&gt;Overall, I’ve been very satisfied with TypeScript so far. The combination of code completion, reduced debugging time, and clean structure has made for a hugely satisfying development process. I’m thinking about refactoring my NodeJS Heroku server to TypeScript just so I can keep using it. Hope this post was helpful and I highly recommend you give TypeScript a shot!&lt;/p&gt;
 </description>
-        <pubDate>Fri, 14 Jul 2017 10:40:33 -0700</pubDate>
+        <pubDate>Fri, 14 Jul 2017 13:40:33 -0400</pubDate>
         <link>http://khou22.com/web/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</link>
         <guid isPermaLink="true">http://khou22.com/web/2017/07/14/getting-started-with-typescript-thoughts-tips-and-useful-notes.html</guid>
         
