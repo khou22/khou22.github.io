@@ -20,6 +20,7 @@ I talked to Vince extensively about what tools he uses on a day to day for his d
 <b>Useful Design Tools</b><br />
 “Spotlight” - Sketch Plugin: [Runner](http://sketchrunner.com/)<br />
 “Google Fonts” - Batch Download Common Fonts: [Blog Post on This](http://www.sketchappsources.com/blog/post/how-to-solve-missing-fonts-in-sketch-app)<br />
+"Laws of UX" - Good design guidelines: [lawofux.com](https://lawsofux.com)<br />
 <br class="post-line-break">
 <h3 class="post-subheader">About Freelance</h3>
 Josh worked freelance for about a year and talked about how it’s different from a 9-5 job. He said that working as a designer in isolation is one of the hardest things about it. There’s no one to bounce ideas off of, brainstorm, or even give feedback on your work. He also recommended that freelance work, in general, should be intended to build a consistent stream of work. All too often, you can fall into the trap of building for many different clients with small tasks as opposed to building up a solid relation to a handful (he said about four) brands doing long term work. It’s better when you know the company you’re designing for well and it’s much more rewarding seeing the problem and solution play out over long periods of time. I’ll definitely keep it in mind moving forward seeing as freelance is something that I can imagine myself doing in the future.
