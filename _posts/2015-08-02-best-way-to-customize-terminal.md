@@ -32,4 +32,4 @@ $: sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/inst
 {% endhighlight %}
 
 ## Themes
-You can download terminal themes and color schemes from their [GitHub](https://github.com/mbadolato/iTerm2-Color-Schemes). The files for color presets can be imported from `./schemes/".
+You can download terminal themes and color schemes from their [GitHub](https://github.com/mbadolato/iTerm2-Color-Schemes). The files for color presets can be imported from `./schemes/". You can browse screenshots of all the color schemes [here](http://iterm2colorschemes.com).
