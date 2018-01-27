@@ -1,7 +1,7 @@
 Last Updated: May 12, 2017
 
 # To Do:
-* Add ability to search blog posts
+* Add ability to search blog posts. Possible [library](http://jekyll.tips/jekyll-casts/jekyll-search-using-lunr-js/)
 * Redo project portfolio page
 * Finish contact me page
 * Redesign the portfolio page
