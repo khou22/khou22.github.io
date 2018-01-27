@@ -1,6 +1,7 @@
 Last Updated: May 12, 2017
 
 # To Do:
+* Add ability to search blog posts
 * Redo project portfolio page
 * Finish contact me page
 * Redesign the portfolio page
