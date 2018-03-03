@@ -44,6 +44,15 @@ programmingProjects = [
         description: "An app that allows the user to snap a picture of a flyer, extract relevant information, and make a calendar event with the event name, location, time, date, and more. This will allow users to digitize flyers, and hopefully provide a decentralized mechanism for communities to grow close again. It won 2nd place for best Princeton app at HackPrinceton Spring 2017."
     },
     {
+        name: "Paw Printers",
+        subtitle: "An app for Princeton students.",
+        slug: "https://pawprinters.herokuapp.com",
+        image: "./../media/programming/thumbnails/paw-printers.png",
+        category: categories[ "Web App" ].name,
+        categoryColor: categories[ "Web App" ].color,
+        description: "Paw Printers is an app that helps you find the nearest printer on campus. Simply choose whether you want a black and white printer, color printer, or scanner, and it will navigate you to the closest option! I built this over one of my breaks using ExpressJS, Heroku, and ReactJS."
+    },
+    {
         name: "Heroku Server & Client Web App",
         subtitle: "Express, Typescript, PostGres, Sequelize, Heroku",
         slug: "http://khou22.herokuapp.com/",
