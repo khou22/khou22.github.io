@@ -189,7 +189,7 @@ var WeatherBar = React.createClass({
       // Create style with image url
       weatherIcon = { "backgroundImage": "url(" + weather.thumbnail + ")" };
       // Update link
-      weatherLink = weather.link; // Retrieve link
+      // weatherLink = weather.link; // Retrieve link
     }
     return (
       <a href={ weatherLink } title="See Weather Channel website">
