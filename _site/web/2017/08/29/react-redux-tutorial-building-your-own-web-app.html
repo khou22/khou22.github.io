@@ -218,6 +218,18 @@
         <!-- Hide scrollbar on this page -->
 <style> ::-webkit-scrollbar { display: none; } </style>
 
+<!-- Page scroll progress bar -->
+<script src="/libraries/prognroll/src/prognroll.min.js"></script>
+<script>
+    // Initialize the scroll progress bar
+    $(function() {
+        $("body").prognroll({
+            height: 2, // Progress bar height
+            color: "#3286A8", // Progress bar background color
+        });
+    });
+</script>
+
 <div class="post">
   
 
