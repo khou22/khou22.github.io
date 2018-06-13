@@ -350,7 +350,10 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
   <li>Finish install: <code class="highlighter-rouge">$ cd ~/.vim/plugged/YouCompleteMe &amp;&amp; ./install.py --all</code></li>
 </ol>
 
-<h4 id="solarized-colorscheme-for-vim--theme">Solarized Colorscheme for VIM — Theme</h4>
+<h4 id="theme-and-colorscheme">Theme and Colorscheme</h4>
+<p><strong>(Dark: Solarized | Light: PaperColor)</strong></p>
+
+<p><br /></p>
 <ol>
   <li>
     <p>Install into <code class="highlighter-rouge">bundle</code> folder. Create it if the directory doesn’t exist.</p>
@@ -369,6 +372,13 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
  colorscheme solarized
 </code></pre>
     </div>
+  </li>
+  <li>
+    <p>The current default theme is <code class="highlighter-rouge">solarized-dark</code> however, if your iTerm profile name contains the the word <code class="highlighter-rouge">light</code> (case insensitive), the theme will be <code class="highlighter-rouge">PaperColor</code> with a light background.</p>
+    <ul>
+      <li>Can also switch the colorscheme in your session by typing: <code class="highlighter-rouge">:colorscheme papercolor</code>. Available themes: papercolor, carbonized.</li>
+      <li><strong>Asside:</strong> the current bashrc <strong>does not</strong> contains this, but there’s a neat script from <a href="http://metalelf0.github.io/vim/2016/12/19/switch-vim-colorscheme-based-on-iterm-profile.html">Metalelfo Blog</a> that changes the colorscheme to dark/light depending on the iTerm profile name. Also, if you name your iTerm profile ‘solarized’ for example, it’ll change the vim theme to ‘solarized’ if it exists.</li>
+    </ul>
   </li>
 </ol>
 
@@ -401,7 +411,8 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 Close current pane: <code class="highlighter-rouge">:q</code><br />
 Quitting all panes: <code class="highlighter-rouge">:qa</code><br />
 Save: <code class="highlighter-rouge">:w</code><br />
-Save &amp; Quit: <code class="highlighter-rouge">:wq</code></p>
+Save &amp; Quit: <code class="highlighter-rouge">:wq</code><br />
+Run a terminal command: <code class="highlighter-rouge">:! &lt;your-command&gt;</code></p>
 
 <h3 id="switching-input-modes">Switching input modes</h3>
 <p>Highlight mode: <code class="highlighter-rouge">v</code><br />

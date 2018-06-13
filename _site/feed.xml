@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Jun 2018 01:06:24 -0700</pubDate>
-    <lastBuildDate>Wed, 06 Jun 2018 01:06:24 -0700</lastBuildDate>
+    <pubDate>Wed, 13 Jun 2018 14:36:42 -0700</pubDate>
+    <lastBuildDate>Wed, 13 Jun 2018 14:36:42 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -1064,7 +1064,10 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
   &lt;li&gt;Finish install: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ cd ~/.vim/plugged/YouCompleteMe &amp;amp;&amp;amp; ./install.py --all&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;solarized-colorscheme-for-vim--theme&quot;&gt;Solarized Colorscheme for VIM — Theme&lt;/h4&gt;
+&lt;h4 id=&quot;theme-and-colorscheme&quot;&gt;Theme and Colorscheme&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;(Dark: Solarized | Light: PaperColor)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;Install into &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle&lt;/code&gt; folder. Create it if the directory doesn’t exist.&lt;/p&gt;
@@ -1083,6 +1086,13 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
  colorscheme solarized
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The current default theme is &lt;code class=&quot;highlighter-rouge&quot;&gt;solarized-dark&lt;/code&gt; however, if your iTerm profile name contains the the word &lt;code class=&quot;highlighter-rouge&quot;&gt;light&lt;/code&gt; (case insensitive), the theme will be &lt;code class=&quot;highlighter-rouge&quot;&gt;PaperColor&lt;/code&gt; with a light background.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Can also switch the colorscheme in your session by typing: &lt;code class=&quot;highlighter-rouge&quot;&gt;:colorscheme papercolor&lt;/code&gt;. Available themes: papercolor, carbonized.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Asside:&lt;/strong&gt; the current bashrc &lt;strong&gt;does not&lt;/strong&gt; contains this, but there’s a neat script from &lt;a href=&quot;http://metalelf0.github.io/vim/2016/12/19/switch-vim-colorscheme-based-on-iterm-profile.html&quot;&gt;Metalelfo Blog&lt;/a&gt; that changes the colorscheme to dark/light depending on the iTerm profile name. Also, if you name your iTerm profile ‘solarized’ for example, it’ll change the vim theme to ‘solarized’ if it exists.&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -1115,7 +1125,8 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 Close current pane: &lt;code class=&quot;highlighter-rouge&quot;&gt;:q&lt;/code&gt;&lt;br /&gt;
 Quitting all panes: &lt;code class=&quot;highlighter-rouge&quot;&gt;:qa&lt;/code&gt;&lt;br /&gt;
 Save: &lt;code class=&quot;highlighter-rouge&quot;&gt;:w&lt;/code&gt;&lt;br /&gt;
-Save &amp;amp; Quit: &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;&lt;/p&gt;
+Save &amp;amp; Quit: &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;&lt;br /&gt;
+Run a terminal command: &lt;code class=&quot;highlighter-rouge&quot;&gt;:! &amp;lt;your-command&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;switching-input-modes&quot;&gt;Switching input modes&lt;/h3&gt;
 &lt;p&gt;Highlight mode: &lt;code class=&quot;highlighter-rouge&quot;&gt;v&lt;/code&gt;&lt;br /&gt;

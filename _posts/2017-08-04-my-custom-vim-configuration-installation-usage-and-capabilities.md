@@ -68,7 +68,10 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
     * To install Typescript support: `$ npm install -g typescript`
 2. Finish install: `$ cd ~/.vim/plugged/YouCompleteMe && ./install.py --all`
 
-#### Solarized Colorscheme for VIM — Theme
+#### Theme and Colorscheme
+**(Dark: Solarized | Light: PaperColor)**
+
+<br>
 1. Install into `bundle` folder. Create it if the directory doesn't exist.
 
 	```
@@ -84,6 +87,10 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 	set background=dark
 	colorscheme solarized
 	```
+
+3. The current default theme is `solarized-dark` however, if your iTerm profile name contains the the word `light` (case insensitive), the theme will be `PaperColor` with a light background.
+    * Can also switch the colorscheme in your session by typing: `:colorscheme papercolor`. Available themes: papercolor, carbonized.
+    * **Asside:** the current bashrc **does not** contains this, but there's a neat script from [Metalelfo Blog](http://metalelf0.github.io/vim/2016/12/19/switch-vim-colorscheme-based-on-iterm-profile.html) that changes the colorscheme to dark/light depending on the iTerm profile name. Also, if you name your iTerm profile 'solarized' for example, it'll change the vim theme to 'solarized' if it exists.
 
 #### NERDTree - Project Heiarchy in Sidebar
 1. Ensure you have a `~/.vim/bundle/` directory
@@ -109,6 +116,7 @@ Close current pane: `:q`
 Quitting all panes: `:qa`  
 Save: `:w`  
 Save & Quit: `:wq`  
+Run a terminal command: `:! <your-command>`  
 
 ### Switching input modes
 Highlight mode: `v`  
