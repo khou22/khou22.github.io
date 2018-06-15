@@ -6,12 +6,87 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Jun 2018 16:08:14 -0700</pubDate>
-    <lastBuildDate>Thu, 14 Jun 2018 16:08:14 -0700</lastBuildDate>
+    <pubDate>Fri, 15 Jun 2018 11:32:34 -0700</pubDate>
+    <lastBuildDate>Fri, 15 Jun 2018 11:32:34 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
-        <title>Machine Learning Code Snippets: June 2018</title>
+        <title>Algorithm Best Practices June 2018&amp;#58 Recrusive Tree Search Functions</title>
+        <description>&lt;h1 id=&quot;introduction-to-recurssion&quot;&gt;Introduction to Recurssion&lt;/h1&gt;
+&lt;p&gt;Recursive functions can be a massive headache for all developers involved if the code is not properly documented, formatted, and abstracted. For those that don’t know, a recursive function is a function that calls itself. The University of Wisconsin Madison defines it as follows:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A recursive function (DEF) is a function which either calls itself or is in a potential cycle of function calls. As the definition specifies, there are two types of recursive functions. Consider a function which calls itself: we call this type of recursion immediate recursion.&lt;/p&gt;
+
+  &lt;p&gt;— &lt;a href=&quot;http://pages.cs.wisc.edu/~calvin/cs110/RECURSION.html&quot;&gt;University of Wisconsin - Madison&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Recursive functions can do a variety of neat things and replicate a lot of nature’s phenemenons such as fractals.
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*XgBEkiVz9Dbl4EwenofHmA.jpeg&quot; width=&quot;50%&quot; /&gt;
+&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/SierpinskiTriangle.svg/220px-SierpinskiTriangle.svg.png&quot; width=&quot;49%&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;challenges&quot;&gt;Challenges&lt;/h1&gt;
+&lt;p&gt;Code that can run itself can lead to a whole host of issues. The most common is a “stack overflow”. This is when a recurssive function calls itself over and over, never terminating, and pushes its function calls onto the “&lt;a href=&quot;https://en.wikipedia.org/wiki/Call_stack&quot;&gt;call stack&lt;/a&gt;” until the computer can’t handle it anymore and shuts down - hence a “stack overflow.” This is one of the many easy traps of recurssive programming.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, recurssive code is difficult to read, especially if you’re not the one who wrote it. Without proper code etiquite, it can get incredibely confusing.&lt;/p&gt;
+
+&lt;h1 id=&quot;solution-and-modularization&quot;&gt;Solution and Modularization&lt;/h1&gt;
+&lt;p&gt;The solution to these problems is to a) write code that works b) document your code. In this section, I’ll show you a technique I learned from my coworker, Brian Lonsdorf, that clearly abstracts the different pieces of recurssion into modular, isolated functions. This not only helps keep the code organized, but combined with the correct commenting, can result in clear and concise code.&lt;/p&gt;
+
+&lt;p&gt;The code below was written in Python 3 and demonstrates a simple depth-first search using an accumulator object that is pass-by-reference. The coolest parts about this code in my opinion was the implementation of a visitor function and an accumulator. Using these methods, handling data and performing the main logic is clearly compartmentalized. This ensures the main recursive logic isn’t affected by your logic and prevents bugs (like stack overflows) from occuring.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Python 3&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Kevin Hou (khou22.com)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# The condition function that determines if a node has child nodes&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# This ensures the code terminates eventually&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;hasChildren&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'children'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Visitor function&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# This function is called on every node the search function visits&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# This is where your main logic should go&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;visitor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accumulator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# In this situation, we're simply checking if it's a leaf and storing it in our accumulator if it is&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasChildren&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Check if it's a leaf node&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;accumulator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Add to accumulator if leaf&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# The recursive function that calls itself&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Searches a node, applies a visitor function, and searches each child node&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;searchChildren&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visitor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;visitor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Visitor function&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# Recrusively search if possible&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hasChildren&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;children&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'children'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Get child nodes&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;searchChildren&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visitor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Search each child node&lt;/span&gt;
+            
+&lt;span class=&quot;c&quot;&gt;# Get all SLDS components&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getLeaves&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;accumulator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Pass-by-reference accumulator object&lt;/span&gt;
+    
+    &lt;span class=&quot;c&quot;&gt;# Initial search call with visitor function&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;searchChildren&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visitor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accumulator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 15 Jun 2018 04:22:18 -0700</pubDate>
+        <link>http://khou22.com/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html</link>
+        <guid isPermaLink="true">http://khou22.com/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html</guid>
+        
+        <category>python</category>
+        
+        <category>sourceCode</category>
+        
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Machine Learning Code Snippets&amp;#58 June 2018</title>
         <description>&lt;p&gt;This blog post contains a number of useful code snippets, functions, and classes that will help with machine learning in Jupyter Notebooks. Specific usage instructions as well as dependencies&lt;/p&gt;
 
 &lt;h2 id=&quot;modifying-and-selecting-information-from-a-dataframe&quot;&gt;Modifying and Selecting Information from a DataFrame&lt;/h2&gt;
@@ -80,10 +155,12 @@
         <link>http://khou22.com/programming/2018/06/14/machine-learning-code-snippets-june-2018.html</link>
         <guid isPermaLink="true">http://khou22.com/programming/2018/06/14/machine-learning-code-snippets-june-2018.html</guid>
         
+        <category>python</category>
+        
         <category>sourceCode</category>
         
         
-        <category>Programming</category>
+        <category>programming</category>
         
       </item>
     
@@ -1544,52 +1621,6 @@ Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/&lt;/code&gt; (
         
         
         <category>web</category>
-        
-      </item>
-    
-      <item>
-        <title>Design Notes July 2017: Useful Tools, Freelance, and Design Systems</title>
-        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Introduction&lt;/h3&gt;
-&lt;p&gt;I’ve recently started talking to some designers at Moat — Vince Li and Josh Turk (Spelling?) [head of design at Moat] — and they’ve been giving me some really good insight into design at a big company as well as tools for myself to use. I’ve been working on the frontend Analytics engineering team, however, because of the size of the company, we do not do any design work. I’ve taken a liking to talking to designers to see what’s going on with their projects and any tips they might have for starting designers.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-One of the pieces of advice that I’ve picked up at Moat and specifically with design is from Steve Jobs when he says: “Stay a beginner”. The premise of this is great for design but applies to many different aspects of life. It is the idea that you should remain constantly questioning and relearning. If you approach a problem as a beginner every time, you are bound to find improvements and issues with the current design.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Tools&lt;/h3&gt;
-&lt;p&gt;I talked to Vince extensively about what tools he uses on a day to day for his designing. I mentioned to him that I wanted to get more into natural/organic designs like freehand with more intricate details. He uses the &lt;a href=&quot;https://us-store.wacom.com/Catalog/Pen-Tablets/Intuos-pro/wacom-intuos-pro#/undefined1&quot;&gt;Wacom Intuos Pro Medium&lt;/a&gt; and now uses it instead of a mouse. He highly recommends it for what I want to do, but he said that since the entry price is quite steep, it might be more economical to buy an iPad Pro. He let me use Moat’s iPad Pro since the design team hasn’t really gotten around to using it, and it’s been a really neat experience. I’ve been able to play around with some pretty cool apps and I’m currently debating if I can justify the also insanely high price. I’ll give it a couple weeks to see if I’m just going through a hype phase.&lt;br /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;
-&lt;b&gt;Useful Design Tools&lt;/b&gt;&lt;br /&gt;
-“Spotlight” - Sketch Plugin: &lt;a href=&quot;http://sketchrunner.com/&quot;&gt;Runner&lt;/a&gt;&lt;br /&gt;
-“Google Fonts” - Batch Download Common Fonts: &lt;a href=&quot;http://www.sketchappsources.com/blog/post/how-to-solve-missing-fonts-in-sketch-app&quot;&gt;Blog Post on This&lt;/a&gt;&lt;br /&gt;
-“Laws of UX” - Good design guidelines: &lt;a href=&quot;https://lawsofux.com&quot;&gt;lawofux.com&lt;/a&gt;&lt;br /&gt;
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;About Freelance&lt;/h3&gt;
-&lt;p&gt;Josh worked freelance for about a year and talked about how it’s different from a 9-5 job. He said that working as a designer in isolation is one of the hardest things about it. There’s no one to bounce ideas off of, brainstorm, or even give feedback on your work. He also recommended that freelance work, in general, should be intended to build a consistent stream of work. All too often, you can fall into the trap of building for many different clients with small tasks as opposed to building up a solid relation to a handful (he said about four) brands doing long term work. It’s better when you know the company you’re designing for well and it’s much more rewarding seeing the problem and solution play out over long periods of time. I’ll definitely keep it in mind moving forward seeing as freelance is something that I can imagine myself doing in the future.
-&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
-&lt;h3 class=&quot;post-subheader&quot;&gt;Design Systems&lt;/h3&gt;
-&lt;p&gt;Because of my current project at work and what I’ve experienced talking to designers recently, I really want to build my own design system/pattern/toolkit. Initially I wanted to build my own design system using the &lt;a href=&quot;http://bradfrost.com/blog/post/atomic-web-design/&quot;&gt;atomic design method&lt;/a&gt; — building buttons, fonts, icons, inputs, etc. that serve as atoms. These atoms then get stacked into molecules, which then stack into organisms, then templates, then finally to pages. It’s a really neat concept and I really want to do it eventually, but because I’m juggling 3 projects (with deadlines) and work right now, I just don’t think I’ll have the hours to devote to it. A more feasible endeavor would be a design pattern, a frontend framework, or a design toolkit — just a way of standardizing the way my buttons, headers, labels, icons, etc. look. Here are a couple of good reference examples:&lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blueprintjs.com/&quot;&gt;BlueprintJS&lt;/a&gt; - “React-based UI Toolkit”&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://patternlab.io/&quot;&gt;Pattern Lab&lt;/a&gt; — An atomic design system&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; — Frontend framework&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.lightningdesignsystem.com/&quot;&gt;Lightning Design&lt;/a&gt; - Salesforce’s Design System&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://material.io/&quot;&gt;Google Material Design&lt;/a&gt; - Google’s Design System&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://design-system.lostmy.name/&quot;&gt;Lost My Name Design System&lt;/a&gt; - A great, clean React-based design system&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://react.semantic-ui.com/&quot;&gt;Semantic UI React&lt;/a&gt; - A Reactified component library&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;And here are some useful articles on how to make your own:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.freecodecamp.org/how-to-construct-a-design-system-864adbf2a117&quot;&gt;How to construct a design system&lt;/a&gt; - Useful for how to begin from scratch&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Mon, 24 Jul 2017 04:49:12 -0700</pubDate>
-        <link>http://khou22.com/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</link>
-        <guid isPermaLink="true">http://khou22.com/design/2017/07/24/design-notes-july-2017-useful-tools-freelance-and-design-systems.html</guid>
-        
-        <category>designProcess</category>
-        
-        
-        <category>design</category>
         
       </item>
     

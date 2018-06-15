@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Machine Learning Code Snippets: June 2018"
+title: "Machine Learning Code Snippets&#58 June 2018"
 author: "Kevin Hou"
 date: 2018-06-14 16:05:23
 description: "Useful code snippets, functions, and classes that will make you more efficient with Pandas, Numpy, and Jupyter Notebooks."
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: Programming
-tags: [sourceCode]
+category: programming
+tags: [python, sourceCode]
 featured: "yes"
 ---
 This blog post contains a number of useful code snippets, functions, and classes that will help with machine learning in Jupyter Notebooks. Specific usage instructions as well as dependencies 

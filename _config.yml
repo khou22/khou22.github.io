@@ -31,6 +31,7 @@ gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap, jekyll-feed, jekyll-auto
 markdown: kramdown
 paginate: 15 # Number of blog posts per page when browsing
 paginate_path: "/blog/page:num/"
+future: true
 
 autoprefixer:
     only_production: true
