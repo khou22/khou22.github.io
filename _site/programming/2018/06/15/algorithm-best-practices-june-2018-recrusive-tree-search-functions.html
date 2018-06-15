@@ -274,8 +274,10 @@
   </script>
 
   <article class="post-content">
-    <h1 id="introduction-to-recurssion">Introduction to Recurssion</h1>
+    <h1 id="introduction-to-recursion">Introduction to Recursion</h1>
 <p>Recursive functions can be a massive headache for all developers involved if the code is not properly documented, formatted, and abstracted. For those that don’t know, a recursive function is a function that calls itself. The University of Wisconsin Madison defines it as follows:</p>
+
+<p><br class="post-line-break" /></p>
 
 <blockquote>
   <p>A recursive function (DEF) is a function which either calls itself or is in a potential cycle of function calls. As the definition specifies, there are two types of recursive functions. Consider a function which calls itself: we call this type of recursion immediate recursion.</p>
@@ -283,17 +285,23 @@
   <p>— <a href="http://pages.cs.wisc.edu/~calvin/cs110/RECURSION.html">University of Wisconsin - Madison</a></p>
 </blockquote>
 
-<p>Recursive functions can do a variety of neat things and replicate a lot of nature’s phenemenons such as fractals.
+<p><br class="post-line-break" /></p>
+
+<p>Recursive functions can do a variety of neat things and replicate a lot of natural phenomenons such as fractals.
 <img src="https://cdn-images-1.medium.com/max/1600/1*XgBEkiVz9Dbl4EwenofHmA.jpeg" width="50%" />
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/SierpinskiTriangle.svg/220px-SierpinskiTriangle.svg.png" width="49%" /></p>
 
 <h1 id="challenges">Challenges</h1>
-<p>Code that can run itself can lead to a whole host of issues. The most common is a “stack overflow”. This is when a recurssive function calls itself over and over, never terminating, and pushes its function calls onto the “<a href="https://en.wikipedia.org/wiki/Call_stack">call stack</a>” until the computer can’t handle it anymore and shuts down - hence a “stack overflow.” This is one of the many easy traps of recurssive programming.</p>
+<p>Code that can run itself can lead to a whole host of issues. The most common is a “stack overflow”. This is when a recursive function calls itself over and over, never terminating, and pushes its function calls onto the “<a href="https://en.wikipedia.org/wiki/Call_stack">call stack</a>” until the computer can’t handle it anymore and shuts down - hence a “stack overflow.” This is one of the many easy traps of recursive programming.</p>
 
-<p>Furthermore, recurssive code is difficult to read, especially if you’re not the one who wrote it. Without proper code etiquite, it can get incredibely confusing.</p>
+<p><br class="post-line-break" /></p>
+
+<p>Furthermore, recursive code is difficult to read, especially if you’re not the one who wrote it. Without proper code etiquette, it can get incredibly confusing.</p>
 
 <h1 id="solution-and-modularization">Solution and Modularization</h1>
-<p>The solution to these problems is to a) write code that works b) document your code. In this section, I’ll show you a technique I learned from my coworker, Brian Lonsdorf, that clearly abstracts the different pieces of recurssion into modular, isolated functions. This not only helps keep the code organized, but combined with the correct commenting, can result in clear and concise code.</p>
+<p>The solution to these problems is to a) write code that works b) document your code. In this section, I’ll show you a technique I learned from my coworker, Brian Lonsdorf, that clearly abstracts the different pieces of recursion into modular, isolated functions. This not only helps keep the code organized, but combined with the correct commenting, can result in clear and concise code.</p>
+
+<p><br class="post-line-break" /></p>
 
 <p>The code below was written in Python 3 and demonstrates a simple depth-first search using an accumulator object that is pass-by-reference. The coolest parts about this code in my opinion was the implementation of a visitor function and an accumulator. Using these methods, handling data and performing the main logic is clearly compartmentalized. This ensures the main recursive logic isn’t affected by your logic and prevents bugs (like stack overflows) from occuring.</p>
 
@@ -319,7 +327,7 @@
 <span class="k">def</span> <span class="nf">searchChildren</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">visitor</span><span class="p">):</span>
     <span class="n">visitor</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="c"># Visitor function</span>
 
-    <span class="c"># Recrusively search if possible</span>
+    <span class="c"># Recursively search if possible</span>
     <span class="k">if</span> <span class="n">hasChildren</span><span class="p">(</span><span class="n">element</span><span class="p">):</span>
         <span class="n">children</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="s">'children'</span><span class="p">]</span> <span class="c"># Get child nodes</span>
         <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">child</span><span class="p">:</span> <span class="n">searchChildren</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">visitor</span><span class="p">),</span> <span class="n">children</span><span class="p">))</span> <span class="c"># Search each child node</span>

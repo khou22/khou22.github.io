@@ -70,5 +70,7 @@ df.head(5) # First 5 rows
 
 Running `df.describe()` will print a table of all columns and their respective counts (how many non-null values in the column), mean, std (standard deviation), min, 25%, 50%, 75%, and max. Sometimes the row name doens't get included. This can be fixed by passing in the argument "include='all'" as follows: `df.describe(include='all')`.
 
+<br class="post-line-break">
+
 Running `df.head(n)` will print the first n rows of your dataset and can give you a good understanding of the form of your data. While the `describe()` function is good at showing you basic distributions, the `head()` function will show you what your data actually looks like quickly and easily.
 

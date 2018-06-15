@@ -6,14 +6,16 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 15 Jun 2018 11:32:34 -0700</pubDate>
-    <lastBuildDate>Fri, 15 Jun 2018 11:32:34 -0700</lastBuildDate>
+    <pubDate>Fri, 15 Jun 2018 11:39:18 -0700</pubDate>
+    <lastBuildDate>Fri, 15 Jun 2018 11:39:18 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
         <title>Algorithm Best Practices June 2018&amp;#58 Recrusive Tree Search Functions</title>
-        <description>&lt;h1 id=&quot;introduction-to-recurssion&quot;&gt;Introduction to Recurssion&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;introduction-to-recursion&quot;&gt;Introduction to Recursion&lt;/h1&gt;
 &lt;p&gt;Recursive functions can be a massive headache for all developers involved if the code is not properly documented, formatted, and abstracted. For those that don’t know, a recursive function is a function that calls itself. The University of Wisconsin Madison defines it as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;A recursive function (DEF) is a function which either calls itself or is in a potential cycle of function calls. As the definition specifies, there are two types of recursive functions. Consider a function which calls itself: we call this type of recursion immediate recursion.&lt;/p&gt;
@@ -21,17 +23,23 @@
   &lt;p&gt;— &lt;a href=&quot;http://pages.cs.wisc.edu/~calvin/cs110/RECURSION.html&quot;&gt;University of Wisconsin - Madison&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Recursive functions can do a variety of neat things and replicate a lot of nature’s phenemenons such as fractals.
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Recursive functions can do a variety of neat things and replicate a lot of natural phenomenons such as fractals.
 &lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*XgBEkiVz9Dbl4EwenofHmA.jpeg&quot; width=&quot;50%&quot; /&gt;
 &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/SierpinskiTriangle.svg/220px-SierpinskiTriangle.svg.png&quot; width=&quot;49%&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;challenges&quot;&gt;Challenges&lt;/h1&gt;
-&lt;p&gt;Code that can run itself can lead to a whole host of issues. The most common is a “stack overflow”. This is when a recurssive function calls itself over and over, never terminating, and pushes its function calls onto the “&lt;a href=&quot;https://en.wikipedia.org/wiki/Call_stack&quot;&gt;call stack&lt;/a&gt;” until the computer can’t handle it anymore and shuts down - hence a “stack overflow.” This is one of the many easy traps of recurssive programming.&lt;/p&gt;
+&lt;p&gt;Code that can run itself can lead to a whole host of issues. The most common is a “stack overflow”. This is when a recursive function calls itself over and over, never terminating, and pushes its function calls onto the “&lt;a href=&quot;https://en.wikipedia.org/wiki/Call_stack&quot;&gt;call stack&lt;/a&gt;” until the computer can’t handle it anymore and shuts down - hence a “stack overflow.” This is one of the many easy traps of recursive programming.&lt;/p&gt;
 
-&lt;p&gt;Furthermore, recurssive code is difficult to read, especially if you’re not the one who wrote it. Without proper code etiquite, it can get incredibely confusing.&lt;/p&gt;
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Furthermore, recursive code is difficult to read, especially if you’re not the one who wrote it. Without proper code etiquette, it can get incredibly confusing.&lt;/p&gt;
 
 &lt;h1 id=&quot;solution-and-modularization&quot;&gt;Solution and Modularization&lt;/h1&gt;
-&lt;p&gt;The solution to these problems is to a) write code that works b) document your code. In this section, I’ll show you a technique I learned from my coworker, Brian Lonsdorf, that clearly abstracts the different pieces of recurssion into modular, isolated functions. This not only helps keep the code organized, but combined with the correct commenting, can result in clear and concise code.&lt;/p&gt;
+&lt;p&gt;The solution to these problems is to a) write code that works b) document your code. In this section, I’ll show you a technique I learned from my coworker, Brian Lonsdorf, that clearly abstracts the different pieces of recursion into modular, isolated functions. This not only helps keep the code organized, but combined with the correct commenting, can result in clear and concise code.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The code below was written in Python 3 and demonstrates a simple depth-first search using an accumulator object that is pass-by-reference. The coolest parts about this code in my opinion was the implementation of a visitor function and an accumulator. Using these methods, handling data and performing the main logic is clearly compartmentalized. This ensures the main recursive logic isn’t affected by your logic and prevents bugs (like stack overflows) from occuring.&lt;/p&gt;
 
@@ -57,7 +65,7 @@
 &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;searchChildren&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visitor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;visitor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Visitor function&lt;/span&gt;
 
-    &lt;span class=&quot;c&quot;&gt;# Recrusively search if possible&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Recursively search if possible&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hasChildren&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;children&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'children'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Get child nodes&lt;/span&gt;
         &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;searchChildren&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visitor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Search each child node&lt;/span&gt;
@@ -147,6 +155,8 @@
 &lt;/div&gt;
 
 &lt;p&gt;Running &lt;code class=&quot;highlighter-rouge&quot;&gt;df.describe()&lt;/code&gt; will print a table of all columns and their respective counts (how many non-null values in the column), mean, std (standard deviation), min, 25%, 50%, 75%, and max. Sometimes the row name doens’t get included. This can be fixed by passing in the argument “include=’all’” as follows: &lt;code class=&quot;highlighter-rouge&quot;&gt;df.describe(include='all')&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;br class=&quot;post-line-break&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Running &lt;code class=&quot;highlighter-rouge&quot;&gt;df.head(n)&lt;/code&gt; will print the first n rows of your dataset and can give you a good understanding of the form of your data. While the &lt;code class=&quot;highlighter-rouge&quot;&gt;describe()&lt;/code&gt; function is good at showing you basic distributions, the &lt;code class=&quot;highlighter-rouge&quot;&gt;head()&lt;/code&gt; function will show you what your data actually looks like quickly and easily.&lt;/p&gt;
 

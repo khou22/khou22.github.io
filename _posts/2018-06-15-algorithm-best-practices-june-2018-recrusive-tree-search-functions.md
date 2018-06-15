@@ -9,24 +9,32 @@ category: programming
 tags: [python, sourceCode]
 featured: "no"
 ---
-# Introduction to Recurssion
+# Introduction to Recursion
 Recursive functions can be a massive headache for all developers involved if the code is not properly documented, formatted, and abstracted. For those that don't know, a recursive function is a function that calls itself. The University of Wisconsin Madison defines it as follows:
+
+<br class="post-line-break">
 
 > A recursive function (DEF) is a function which either calls itself or is in a potential cycle of function calls. As the definition specifies, there are two types of recursive functions. Consider a function which calls itself: we call this type of recursion immediate recursion.
 > 
 > — [University of Wisconsin - Madison](http://pages.cs.wisc.edu/~calvin/cs110/RECURSION.html)
 
-Recursive functions can do a variety of neat things and replicate a lot of nature's phenemenons such as fractals.
+<br class="post-line-break">
+
+Recursive functions can do a variety of neat things and replicate a lot of natural phenomenons such as fractals.
 <img src="https://cdn-images-1.medium.com/max/1600/1*XgBEkiVz9Dbl4EwenofHmA.jpeg" width="50%">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/SierpinskiTriangle.svg/220px-SierpinskiTriangle.svg.png" width="49%">
 
 # Challenges
-Code that can run itself can lead to a whole host of issues. The most common is a "stack overflow". This is when a recurssive function calls itself over and over, never terminating, and pushes its function calls onto the "[call stack](https://en.wikipedia.org/wiki/Call_stack)" until the computer can't handle it anymore and shuts down - hence a "stack overflow." This is one of the many easy traps of recurssive programming.
+Code that can run itself can lead to a whole host of issues. The most common is a "stack overflow". This is when a recursive function calls itself over and over, never terminating, and pushes its function calls onto the "[call stack](https://en.wikipedia.org/wiki/Call_stack)" until the computer can't handle it anymore and shuts down - hence a "stack overflow." This is one of the many easy traps of recursive programming.
 
-Furthermore, recurssive code is difficult to read, especially if you're not the one who wrote it. Without proper code etiquite, it can get incredibely confusing.
+<br class="post-line-break">
+
+Furthermore, recursive code is difficult to read, especially if you're not the one who wrote it. Without proper code etiquette, it can get incredibly confusing.
 
 # Solution and Modularization
-The solution to these problems is to a) write code that works b) document your code. In this section, I'll show you a technique I learned from my coworker, Brian Lonsdorf, that clearly abstracts the different pieces of recurssion into modular, isolated functions. This not only helps keep the code organized, but combined with the correct commenting, can result in clear and concise code.
+The solution to these problems is to a) write code that works b) document your code. In this section, I'll show you a technique I learned from my coworker, Brian Lonsdorf, that clearly abstracts the different pieces of recursion into modular, isolated functions. This not only helps keep the code organized, but combined with the correct commenting, can result in clear and concise code.
+
+<br class="post-line-break">
 
 The code below was written in Python 3 and demonstrates a simple depth-first search using an accumulator object that is pass-by-reference. The coolest parts about this code in my opinion was the implementation of a visitor function and an accumulator. Using these methods, handling data and performing the main logic is clearly compartmentalized. This ensures the main recursive logic isn't affected by your logic and prevents bugs (like stack overflows) from occuring.
 
@@ -53,7 +61,7 @@ def visitor(element, accumulator):
 def searchChildren(node, visitor):
     visitor(node) # Visitor function
 
-    # Recrusively search if possible
+    # Recursively search if possible
     if hasChildren(element):
         children = element['children'] # Get child nodes
         list(map(lambda child: searchChildren(child, visitor), children)) # Search each child node
