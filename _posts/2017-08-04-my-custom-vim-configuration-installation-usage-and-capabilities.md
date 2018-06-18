@@ -149,6 +149,8 @@ __Note__: Syntax supported by all navigation commands
 ### Opening Files
 Fuzzy Search - Searches file names — `,t`
 To cancel: `Command` + `C` or `:q`
+Reload buffer (file) due to external changes: `:e`  
+Refresh NerdTree file tree: While in NerdTree pane, `Shift` + `R`  
 
 ### Grepping
 Global find (searches content of file in project) — `,a`  
@@ -234,6 +236,7 @@ Go to line number: `<Line #> + Shift + G`
 ### Using the Command Line
 You can use or view the command line without leaving the VIM environment.  
 `:!` takes you to a read-only fullscreen command prompt to see your history
+`:! <usual-terminal-command>` will allow you to enter commands  
 
 # Additional Plugins and Customizations
 ### All Plugins

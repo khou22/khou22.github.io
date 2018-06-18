@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 15 Jun 2018 11:39:18 -0700</pubDate>
-    <lastBuildDate>Fri, 15 Jun 2018 11:39:18 -0700</lastBuildDate>
+    <pubDate>Mon, 18 Jun 2018 15:20:56 -0700</pubDate>
+    <lastBuildDate>Mon, 18 Jun 2018 15:20:56 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -1322,7 +1322,9 @@ Example: Move down 10 lines: &lt;code class=&quot;highlighter-rouge&quot;&gt;10 
 
 &lt;h3 id=&quot;opening-files&quot;&gt;Opening Files&lt;/h3&gt;
 &lt;p&gt;Fuzzy Search - Searches file names — &lt;code class=&quot;highlighter-rouge&quot;&gt;,t&lt;/code&gt;
-To cancel: &lt;code class=&quot;highlighter-rouge&quot;&gt;Command&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;C&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;:q&lt;/code&gt;&lt;/p&gt;
+To cancel: &lt;code class=&quot;highlighter-rouge&quot;&gt;Command&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;C&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;:q&lt;/code&gt;
+Reload buffer (file) due to external changes: &lt;code class=&quot;highlighter-rouge&quot;&gt;:e&lt;/code&gt;&lt;br /&gt;
+Refresh NerdTree file tree: While in NerdTree pane, &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;grepping&quot;&gt;Grepping&lt;/h3&gt;
 &lt;p&gt;Global find (searches content of file in project) — &lt;code class=&quot;highlighter-rouge&quot;&gt;,a&lt;/code&gt;&lt;br /&gt;
@@ -1408,7 +1410,8 @@ Go to line number: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Line 
 
 &lt;h3 id=&quot;using-the-command-line&quot;&gt;Using the Command Line&lt;/h3&gt;
 &lt;p&gt;You can use or view the command line without leaving the VIM environment.&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;:!&lt;/code&gt; takes you to a read-only fullscreen command prompt to see your history&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;:!&lt;/code&gt; takes you to a read-only fullscreen command prompt to see your history
+&lt;code class=&quot;highlighter-rouge&quot;&gt;:! &amp;lt;usual-terminal-command&amp;gt;&lt;/code&gt; will allow you to enter commands&lt;/p&gt;
 
 &lt;h1 id=&quot;additional-plugins-and-customizations&quot;&gt;Additional Plugins and Customizations&lt;/h1&gt;
 &lt;h3 id=&quot;all-plugins&quot;&gt;All Plugins&lt;/h3&gt;
