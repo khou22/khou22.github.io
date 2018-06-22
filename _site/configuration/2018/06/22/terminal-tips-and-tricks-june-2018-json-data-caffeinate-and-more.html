@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Articles by tag: Terminal</title>
-  <meta name="description" content="Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
-">
+  <title>Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More</title>
+  <meta name="description" content="">
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -21,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://khou22.com/blog/tag/terminal">
+  <link rel="canonical" href="http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html">
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://khou22.com/feed.xml" />
 
   <!-- Bootstrap -->
@@ -48,18 +47,23 @@
     <link rel="icon" type="image/png" href="/media/site/favicon.png">
 
     <!-- Begin Jekyll SEO tag v2.2.3 -->
-<title>Articles by tag: Terminal | Kevin Hou</title>
-<meta property="og:title" content="Articles by tag: Terminal" />
+<title>Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More | Kevin Hou</title>
+<meta property="og:title" content="Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More" />
+<meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area." />
-<meta property="og:description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area." />
-<link rel="canonical" href="http://khou22.com/blog/tag/terminal" />
-<meta property="og:url" content="http://khou22.com/blog/tag/terminal" />
+<meta name="description" content="A collection of helpful command line tips and tricks that I’ve collected over the past couple of months." />
+<meta property="og:description" content="A collection of helpful command line tips and tricks that I’ve collected over the past couple of months." />
+<link rel="canonical" href="http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html" />
+<meta property="og:url" content="http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html" />
 <meta property="og:site_name" content="Kevin Hou" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="http://khou22.com/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-06-22T06:43:42-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@kevinhou22" />
+<meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"Articles by tag: Terminal","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.","url":"http://khou22.com/blog/tag/terminal"}</script>
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://khou22.com/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2018-06-22T06:43:42-07:00","dateModified":"2018-06-22T06:43:42-07:00","description":"A collection of helpful command line tips and tricks that I’ve collected over the past couple of months.","mainEntityOfPage":{"@type":"WebPage","@id":"http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html"},"url":"http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -211,96 +215,171 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="tag-content">
-    <header id="post-header">
-        <h1 id="post-title">terminal</h1>
-        <h4 id="post-subtitle">Articles by tag</h4>
-    </header>
+        <!-- Hide scrollbar on this page -->
+<style> ::-webkit-scrollbar { display: none; } </style>
+
+<!-- Page scroll progress bar -->
+<script src="/libraries/prognroll/src/prognroll.min.js"></script>
+<script>
+    // Initialize the scroll progress bar
+    $(function() {
+        $("body").prognroll({
+            height: 2, // Progress bar height
+            color: "#3286A8", // Progress bar background color
+        });
+    });
+</script>
+
+<div class="post">
+  
+
     
-    <hr>
 
-    <div id="post-content">
-        
-            
-                
-                
-                    <h3>2018</h3><div class="list-group">
-                
+    
 
-                
-
-                <a href="/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html">
-                    <h4>Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More</h4>
-                </a>
-
-                
-            
-                
-                
-
-                
-                    
-                    
-                    
-                        </div><h3>2015</h3><div class="list-group">
-                    
-                
-
-                <a href="/configuration/2015/12/25/os-x-shortcuts-and-productivity-hacks.html">
-                    <h4>OS X Shortcuts and Productivity Hacks</h4>
-                </a>
-
-                
-            
-                
-                
-
-                
-                    
-                    
-                    
-                
-
-                <a href="/configuration/2015/08/02/best-way-to-customize-terminal.html">
-                    <h4>Best Way to Customize Terminal</h4>
-                </a>
-
-                
-            
-                
-                
-
-                
-                    
-                    
-                    
-                
-
-                <a href="/configuration/2015/08/02/changing-your-terminal-prompt.html">
-                    <h4>Changing Your Terminal Prompt</h4>
-                </a>
-
-                
-            
-                
-                
-
-                
-                    
-                    
-                    
-                
-
-                <a href="/programming/2015/07/17/creating-a-spike-on-github.html">
-                    <h4>Creating a Spike on GitHub and a Good GitHub Branch Model</h4>
-                </a>
-
-                
-                    </div>
-                
-            
-        
+    
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-content">
+      <a onclick="blogPostBackButton()"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title post-header-title">Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More</h1>
+      <h4 class="post-header-description">A collection of helpful command line tips and tricks that I've collected over the past couple of months.</h4>
+      <p class="post-header-meta">Jun 22, 2018 • Kevin Hou</p>
     </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+    var blogPostBackButton = function() {
+      var previousLink = document.referrer
+      var index = previousLink.indexOf("/blog")
+      console.log("Previous link:", previousLink);
+      console.log(index);
+      if (index == 1) { // If not coming from a different blog post
+        window.history.go(-1); // Back in history (keeps window position)
+      } else { // Directed from a different blog post
+        // console.log("Back to blog");
+        console.log("Back");
+        window.location.href = "/blog";
+      }
+    }
+
+  </script>
+
+  <article class="post-content">
+    <h1 id="inspecting-json-data">Inspecting JSON Data</h1>
+<p>Instead of spending time writing code to view JSON or using a JSON viewer app, which can both be incredibely slow with large JSON files, you can use <code class="highlighter-rouge">NodeJS</code> to inspect JSON objects. Simply start the Node console:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>node
+</code></pre>
+</div>
+
+<p>Next, you can import the JSON and navigate the tree object to your heart’s content.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;</span> <span class="c1">// Import JSON</span>
+<span class="o">&gt;&gt;</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./path/to/json'</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> 
+<span class="o">&gt;&gt;</span> <span class="cm">/* `_` references the last output
+&gt;&gt;  *   In this case: _ = require(...)
+&gt;&gt;  */</span>
+<span class="o">&gt;&gt;</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">_</span>
+<span class="o">&gt;&gt;</span> 
+<span class="o">&gt;&gt;</span> <span class="c1">// Traverse JSON tree</span>
+<span class="o">&gt;&gt;</span> <span class="nx">r</span><span class="p">.</span><span class="nx">data</span>
+</code></pre>
+</div>
+
+<h1 id="prevent-mac-from-sleeping">Prevent Mac from Sleeping</h1>
+<p>Mac’s contain a built in terminal function called <code class="highlighter-rouge">Caffeinate</code>. While one could download the free <a href="http://lightheadsw.com/caffeine/">“Caffeine” app</a> from the Mac App Store, the command line provides an easy alternative. It offers more control and in my opinion is easier to interpret. To activate, simply type:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>caffeinate <span class="c"># Indefinite amount of time</span>
+</code></pre>
+</div>
+
+<h4 id="options">Options:</h4>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>-d	<span class="c"># Prevent display from sleeping</span>
+-i	<span class="c"># Prevent system from idle sleeping</span>
+-s	<span class="c"># Prevent system from lseeping (only when plugged in)</span>
+-u	<span class="c"># Resets the system timeout and/or will wake the computer</span>
+-t &lt;seconds&gt; <span class="c"># Specifies timeout in seconds from the time the command is run</span>
+</code></pre>
+</div>
+
+<h1 id="ssh-tricks">SSH Tricks</h1>
+
+<h3 id="ssh-shortcut">SSH Shortcut</h3>
+<p>Modify your <code class="highlighter-rouge">~/.ssh/config</code> file and add:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Host aliasName
+    Hostname some.example.com
+    Port 2222
+    User username
+</code></pre>
+</div>
+
+<p>Usage: <code class="highlighter-rouge">$ ssh aliasName</code></p>
+
+<h1 id="iterm-specific">iTerm Specific</h1>
+<p>Pressing <code class="highlighter-rouge">&lt;Command&gt;</code> and <code class="highlighter-rouge">;</code> at the same time will open an autocomplete dropdown selection in iTerm.</p>
+
+<h1 id="general-tricks">General Tricks</h1>
+<p>Searching for command history:<br />
+<code class="highlighter-rouge">$ history</code> to see all recent commands<br />
+<code class="highlighter-rouge">Control + r</code> to search through your recent history and use as your current command.</p>
+
+<p>Count how many lines of code in a given directory:<br />
+<code class="highlighter-rouge">$ find . -name "*.*" -exec wc -l {} \;</code></p>
+
+<p>Show your permission on a directory:<br />
+<code class="highlighter-rouge">$ ls -ld &lt;directory&gt;</code></p>
+
+<p>Show the size of the files in a directory:<br />
+<code class="highlighter-rouge">$ ls -lh</code></p>
+
+<p>Print certain files all in one column:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ls -1. <span class="k">*</span>.jpg <span class="c"># 1 column, JPGs</span>
+</code></pre>
+</div>
+
+<p>Mark file as not executable:<br />
+<code class="highlighter-rouge">$ chmod -x fileName</code></p>
+
+<p>Copy contents of file to the clipboard:<br />
+<code class="highlighter-rouge">$ cat file.txt | pbcopy</code> or <code class="highlighter-rouge">$ pbcopy &lt; file.txt</code></p>
+
+<p>Show a mini calendar view:<br />
+<code class="highlighter-rouge">$ cal</code></p>
+
+<p>Count number of columns in CSV file:<br />
+`$ head -1 data_set/background-one.csv | sed ‘s/[^,]//g’ | wc -c$</p>
+
+<p>Open URLs without copy pasting:<br />
+<code class="highlighter-rouge">Command + Click</code></p>
+
+<p>Delete word:<br />
+<code class="highlighter-rouge">Control + w</code></p>
+
+<p>Grepping (Searches for string in directory):<br />
+<code class="highlighter-rouge">grep -r someString .</code>. Useful <a href="https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/">doc</a></p>
+
+<p>It’s also helpful to note that you can use regexes on most commands. For example:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>killall -9 prefix_<span class="k">*</span> <span class="c"># All processes that begin with "prefix_"</span>
+rm -f <span class="k">*</span>_vs_<span class="k">*</span> <span class="c"># Forcibly remove all files with names that have "_vs_" in them</span>
+</code></pre>
+</div>
+
+
+    <div class="post-organization">
+      <p id="post-meta">Posted in <a href="/blog/category/configuration/">Developer Tools</a> with <a href="/blog/tag/terminal">Terminal</a></p>
+    </div>
+  </article>
 </div>
 
       </div>

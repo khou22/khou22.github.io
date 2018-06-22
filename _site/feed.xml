@@ -6,9 +6,124 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Jun 2018 15:20:56 -0700</pubDate>
-    <lastBuildDate>Mon, 18 Jun 2018 15:20:56 -0700</lastBuildDate>
+    <pubDate>Fri, 22 Jun 2018 13:46:23 -0700</pubDate>
+    <lastBuildDate>Fri, 22 Jun 2018 13:46:23 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
+    
+      <item>
+        <title>Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More</title>
+        <description>&lt;h1 id=&quot;inspecting-json-data&quot;&gt;Inspecting JSON Data&lt;/h1&gt;
+&lt;p&gt;Instead of spending time writing code to view JSON or using a JSON viewer app, which can both be incredibely slow with large JSON files, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;NodeJS&lt;/code&gt; to inspect JSON objects. Simply start the Node console:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;node
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Next, you can import the JSON and navigate the tree object to your heart’s content.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Import JSON&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./path/to/json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* `_` references the last output
+&amp;gt;&amp;gt;  *   In this case: _ = require(...)
+&amp;gt;&amp;gt;  */&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Traverse JSON tree&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;prevent-mac-from-sleeping&quot;&gt;Prevent Mac from Sleeping&lt;/h1&gt;
+&lt;p&gt;Mac’s contain a built in terminal function called &lt;code class=&quot;highlighter-rouge&quot;&gt;Caffeinate&lt;/code&gt;. While one could download the free &lt;a href=&quot;http://lightheadsw.com/caffeine/&quot;&gt;“Caffeine” app&lt;/a&gt; from the Mac App Store, the command line provides an easy alternative. It offers more control and in my opinion is easier to interpret. To activate, simply type:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;caffeinate &lt;span class=&quot;c&quot;&gt;# Indefinite amount of time&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;options&quot;&gt;Options:&lt;/h4&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-d	&lt;span class=&quot;c&quot;&gt;# Prevent display from sleeping&lt;/span&gt;
+-i	&lt;span class=&quot;c&quot;&gt;# Prevent system from idle sleeping&lt;/span&gt;
+-s	&lt;span class=&quot;c&quot;&gt;# Prevent system from lseeping (only when plugged in)&lt;/span&gt;
+-u	&lt;span class=&quot;c&quot;&gt;# Resets the system timeout and/or will wake the computer&lt;/span&gt;
+-t &amp;lt;seconds&amp;gt; &lt;span class=&quot;c&quot;&gt;# Specifies timeout in seconds from the time the command is run&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;ssh-tricks&quot;&gt;SSH Tricks&lt;/h1&gt;
+
+&lt;h3 id=&quot;ssh-shortcut&quot;&gt;SSH Shortcut&lt;/h3&gt;
+&lt;p&gt;Modify your &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.ssh/config&lt;/code&gt; file and add:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host aliasName
+    Hostname some.example.com
+    Port 2222
+    User username
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Usage: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ ssh aliasName&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;iterm-specific&quot;&gt;iTerm Specific&lt;/h1&gt;
+&lt;p&gt;Pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Command&amp;gt;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;;&lt;/code&gt; at the same time will open an autocomplete dropdown selection in iTerm.&lt;/p&gt;
+
+&lt;h1 id=&quot;general-tricks&quot;&gt;General Tricks&lt;/h1&gt;
+&lt;p&gt;Searching for command history:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ history&lt;/code&gt; to see all recent commands&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Control + r&lt;/code&gt; to search through your recent history and use as your current command.&lt;/p&gt;
+
+&lt;p&gt;Count how many lines of code in a given directory:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ find . -name &quot;*.*&quot; -exec wc -l {} \;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Show your permission on a directory:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ ls -ld &amp;lt;directory&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Show the size of the files in a directory:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ ls -lh&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Print certain files all in one column:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ls -1. &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.jpg &lt;span class=&quot;c&quot;&gt;# 1 column, JPGs&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Mark file as not executable:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ chmod -x fileName&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Copy contents of file to the clipboard:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ cat file.txt | pbcopy&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;$ pbcopy &amp;lt; file.txt&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Show a mini calendar view:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ cal&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Count number of columns in CSV file:&lt;br /&gt;
+`$ head -1 data_set/background-one.csv | sed ‘s/[^,]//g’ | wc -c$&lt;/p&gt;
+
+&lt;p&gt;Open URLs without copy pasting:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Command + Click&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Delete word:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Control + w&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Grepping (Searches for string in directory):&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;grep -r someString .&lt;/code&gt;. Useful &lt;a href=&quot;https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/&quot;&gt;doc&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s also helpful to note that you can use regexes on most commands. For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;killall -9 prefix_&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# All processes that begin with &quot;prefix_&quot;&lt;/span&gt;
+rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Forcibly remove all files with names that have &quot;_vs_&quot; in them&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 22 Jun 2018 06:43:42 -0700</pubDate>
+        <link>http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html</link>
+        <guid isPermaLink="true">http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html</guid>
+        
+        <category>terminal</category>
+        
+        
+        <category>configuration</category>
+        
+      </item>
     
       <item>
         <title>Algorithm Best Practices June 2018&amp;#58 Recrusive Tree Search Functions</title>
@@ -1518,122 +1633,6 @@ Check out my &lt;a href=&quot;http://localhost:4000/programming/2017/08/04/my-cu
         
         
         <category>configuration</category>
-        
-      </item>
-    
-      <item>
-        <title>ES6 Tips and Tricks June 2017: Webpack Loaders, Regexes, and DNS Configuration</title>
-        <description>&lt;h3 class=&quot;post-subheader&quot;&gt;Using Raw Files with Webpack&lt;/h3&gt;
-&lt;p&gt;There are some files that are best used when imported as their raw contents. This includes, but is not limited to file extensions like: &lt;code class=&quot;highlighter-rouge&quot;&gt;.svg&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;.md&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;.txt&lt;/code&gt;. For these situations, you must use the &lt;code class=&quot;highlighter-rouge&quot;&gt;raw-loader&lt;/code&gt; in your &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config&lt;/code&gt; file:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Load markdown as raw text&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;md/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;node_modules&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;loader&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'raw-loader'&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Using an &lt;code class=&quot;highlighter-rouge&quot;&gt;.svg&lt;/code&gt; file in React:&lt;br /&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;svgData&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./image.svg'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;cm&quot;&gt;/* React render() */&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;loading&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dangerouslySetInnerHTML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;Cleaning up Log Statements&lt;/h3&gt;
-&lt;p&gt;Developers use &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log&lt;/code&gt; statements religiously — it’s the best way of debugging and tracking a browser or computer’s path through the code. One problem that arises is that &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log&lt;/code&gt; statements are accidentally left in, which doesn’t reflect well if the log statements are clearly debuggers, or simply left in commented out. When deploying to production, &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log&lt;/code&gt; statements should be removed. Because they permeate every corner of the project, I’ve found it’s easiest to remove them using regexes: Find &amp;amp; Replace. Here are the regexes for finding all lines with &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log&lt;/code&gt; statements:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Commented out statements&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&quot;\n *\/\/ console\.log\(.*\)&quot;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Active statements&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&quot;\n *console\.log\(.*\)&quot;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Commented out or still active&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&quot;\n *\/?\/? console\.log\(.*\)&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;Common Regex Statements&lt;/h3&gt;
-&lt;p&gt;I’ve started using regexes (regular expressions) more and more in my projects — specifically in Javascript — and I’ve found them very elegant and fun to use. I learned them briefly in class at school, but never really implemented them in full. My &lt;a href=&quot;https://devpost.com/software/sofly-scanner&quot;&gt;hackathon project&lt;/a&gt; did use a bit of natural language processing, however, it wasn’t to a huge scale. We mostly stuck to date and location parsing.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Here’s a simple email validation regex match statement in Javascript:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;validQuery&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'email@test.com'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;invalidQuery&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'I am not an email address'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Email regex from: https://stackoverflow.com/questions/46155/how-to-validate-email-address-in-javascript&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Notice: uses '/' instead of quotes&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;emailRegex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;(([^&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;&amp;lt;&amp;gt;()&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\]\\&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;.,;:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\s&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;@&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;(\.[^&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;&amp;lt;&amp;gt;()&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\]\\&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;.,;:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\s&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;@&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;&quot;.+&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;((\[[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{1,3}\.[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{1,3}\.[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{1,3}\.[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{1,3}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;(([&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;a-zA-Z&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\-&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;a-zA-Z&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{2,}))&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;emailRegex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;validQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;emailRegex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;invalidQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;Getting the Current Directory in Javascript&lt;/h3&gt;
-&lt;p&gt;It’s really important that you use a reliable path resolving system when configuring your web apps. Packages like &lt;code class=&quot;highlighter-rouge&quot;&gt;ExpressJS&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Webpack&lt;/code&gt; rely on file paths to build and serve up your app so it’s essential that the way you get your current directory is reliable. There are a handful of ways of getting your current directory and navigating through it:&lt;br /&gt;
-&lt;strong&gt;Getting Directory&lt;/strong&gt;:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Default: &lt;code class=&quot;highlighter-rouge&quot;&gt;__dirname // Often global — can simply access by calling this variable&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Using environment variables: &lt;code class=&quot;highlighter-rouge&quot;&gt;const __dirname = process.env.PWD;&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Navigating Files&lt;/strong&gt;:&lt;br /&gt;
-Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; library:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'path'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./client/dist'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Resolves the file path&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;Modifying Local DNS&lt;/h3&gt;
-&lt;p&gt;Computers can easily be configured to change the Domain Name System (DNS). What this means is that you can override and map certain IP addresses to different URL names. For example, at work, I develop on my own Dev Box — a section of a computer somewhere that hosts my files. Because Moat has hundreds of these, it’s not economical to buy a domain name for each box. Instead, they are left unnamed and can only be accessed from the browser using their public IP address. When I’m modifying code, I hook into their private IP addresses. Instead of typing in the exact IP address every time you want to view your code, which is long and can easily be butchered, you can modify your local DNS and map that specific IP address to a human-readable URL.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Navigate to &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;$ cd /etc/&lt;/code&gt;) — notice it is prepended using a forward-slash, indiciating it is in the base directory. Next, open &lt;code class=&quot;highlighter-rouge&quot;&gt;hosts&lt;/code&gt; using VI, VIM, NANO, or any other text editor. Now modify that file using the following structure.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;IP&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;12.345&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;67.89&lt;/span&gt;    &lt;span class=&quot;nx&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;com&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;01.234&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;56.78&lt;/span&gt;    &lt;span class=&quot;nx&quot;&gt;test1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;com&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;test2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 class=&quot;post-subheader&quot;&gt;Common IP Ranges&lt;/h3&gt;
-&lt;p&gt;Private IPv4 address spaces (&lt;a href=&quot;https://en.wikipedia.org/wiki/Private_network&quot;&gt;Source&lt;/a&gt;)&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;RFC1918 name&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;IP address range&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Mask bits&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;24-bit block&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;10.0.0.0 - 10.255.255.25&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;8 bits&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;20-bit block&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;172.16.0.0 – 172.31.255.255&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;12 bits&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;16-bit block&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;192.168.0.0 – 192.168.255.255&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;16 bits&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-        <pubDate>Mon, 31 Jul 2017 09:50:16 -0700</pubDate>
-        <link>http://khou22.com/web/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</link>
-        <guid isPermaLink="true">http://khou22.com/web/2017/07/31/es6-tips-and-tricks-june-2017-webpack-configuration-regexes-and-dns-configuration.html</guid>
-        
-        <category>es6</category>
-        
-        <category>javascript</category>
-        
-        <category>tutorial</category>
-        
-        
-        <category>web</category>
         
       </item>
     
