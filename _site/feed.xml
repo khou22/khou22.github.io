@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Jun 2018 13:46:23 -0700</pubDate>
-    <lastBuildDate>Fri, 22 Jun 2018 13:46:23 -0700</lastBuildDate>
+    <pubDate>Mon, 25 Jun 2018 15:22:39 -0700</pubDate>
+    <lastBuildDate>Mon, 25 Jun 2018 15:22:39 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -1423,7 +1423,9 @@ Move to last non-blank character of line (Like &lt;code class=&quot;highlighter-
 Beginning of line: &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;&lt;br /&gt;
 End of line: &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift + 4&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;$&lt;/code&gt;)&lt;br /&gt;
 Page up: &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + B&lt;/code&gt;&lt;br /&gt;
-Page Down: &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + F&lt;/code&gt;&lt;/p&gt;
+Page Down: &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + F&lt;/code&gt;&lt;br /&gt;
+Delete row: &lt;code class=&quot;highlighter-rouge&quot;&gt;D + D&lt;/code&gt;&lt;br /&gt;
+Delete key in front of cursor: &lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Arrow key mappings:&lt;/strong&gt;&lt;br /&gt;
 Up: &lt;code class=&quot;highlighter-rouge&quot;&gt;k&lt;/code&gt;&lt;br /&gt;

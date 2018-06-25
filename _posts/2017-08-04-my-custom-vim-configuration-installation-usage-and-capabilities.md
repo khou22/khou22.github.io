@@ -135,6 +135,8 @@ Beginning of line: `0`
 End of line: `Shift + 4` (`$`)  
 Page up: `Control + B`  
 Page Down: `Control + F`  
+Delete row: `D + D`  
+Delete key in front of cursor: `X`  
 
 __Arrow key mappings:__  
 Up: `k`  
