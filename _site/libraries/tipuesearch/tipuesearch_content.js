@@ -1032,76 +1032,6 @@ var tipuesearch = {"pages": [
   
   
   {
-    "title": "KHou | Portfolio",
-    "text": "",
-    "tags": "",
-    "url": "/categories/"
-  },
-
-  
-  
-  
-  {
-    "title": "KHou | Programming",
-    "text": "Programming Programming projects from the past couple of years written in a variety of languages and for a variety of purposes. Most are released to the public while some remain as algorithms or proofs of concept.",
-    "tags": "",
-    "url": "/programming/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/programming/time-calculator/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "Browse All Tags Xcode Swift Ionic Javascript NodeJS ReactJS Redux Database ES6 CSS HTML AngularJS Express Server Python Package Manager Java Processing Design Process User Experience User Interface Graphic Design Unix MacOS VIM Terminal GitHub Animations Backend Server Reflection Tutorial Source Code Internship Project Hackathon Featured posts: Machine Learning Code Snippets&#58 June 2018 Getting Started with Login Sessions: Express, Client Sessions, and React React Redux Tutorial: Building Your Own Web App Swift Classes August 2017: Classes, Subclasses, and Protocols My Custom VIM Configuration: Installation, Usage, and Capabilities ES6 Tips and Tricks June 2017: Webpack Loaders, Regexes, and DNS Configuration HackPrinceton 2017: SoFly — An iOS App to Scan Flyers on Campus Swift Navigation Basics: How to Setup a Tab Bar App Xcode Best Practices July 2016: Troubleshooting, Pull Requests, Cocoapods, and More Digital Design: The Process from Concept to iOS App Uber Scheduler: Calling Ubers Alarm Clock Style Recent posts: Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More Algorithm Best Practices June 2018&#58 Recrusive Tree Search Functions Machine Learning Code Snippets&#58 June 2018 Browse by Category Browse by Tag",
-    "tags": "",
-    "url": "/blog/tag/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/programming/presidential-election-forecast-2016/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/programming/random-number-assignment/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "Wood Club I am the co-leader of Wood Club at my high school. Here is the progression of the club since the beginning of school until now. Historically, wood club hasn't been a very active club, but I wanted to change that this year! My co-leader is Nathan Craik, a junior at my school who is also a wood turning enthusiast. First Meeting Out of the 60 sign ups, we had 7 people show up...which doesn't sound like a lot, but is actually really good relative to some other clubs! There were 5 freshman and 1 sophomore so we had a relatively young crowd. Club Faire We got around 60 sign ups which I was really happy about! We handed out candy to whoever signed up and used our wood projects to attract the attention of passers by.",
-    "tags": "",
-    "url": "/programming/wood-club/"
-  },
-
-  
-  
-  
-  {
     "title": "",
     "text": "Browse All Categories iOS Development Web Development Hardware Projects General Programming Developer Tools Design Woodshop School Life Computer Hacks Featured posts: Machine Learning Code Snippets&#58 June 2018 Getting Started with Login Sessions: Express, Client Sessions, and React React Redux Tutorial: Building Your Own Web App Swift Classes August 2017: Classes, Subclasses, and Protocols My Custom VIM Configuration: Installation, Usage, and Capabilities ES6 Tips and Tricks June 2017: Webpack Loaders, Regexes, and DNS Configuration HackPrinceton 2017: SoFly — An iOS App to Scan Flyers on Campus Swift Navigation Basics: How to Setup a Tab Bar App Xcode Best Practices July 2016: Troubleshooting, Pull Requests, Cocoapods, and More Digital Design: The Process from Concept to iOS App Uber Scheduler: Calling Ubers Alarm Clock Style Recent posts: Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More Algorithm Best Practices June 2018&#58 Recrusive Tree Search Functions Machine Learning Code Snippets&#58 June 2018 Browse by Category Browse by Tag",
     "tags": "",
@@ -1112,90 +1042,10 @@ var tipuesearch = {"pages": [
   
   
   {
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/programming/Uber-Scheduler/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "*** Page Content/Design in Progress *** Inspiration Emotions run high when coding and there is always member of the team that swears a little too much in github commits. Normally this is ok, but when you have hackathon officials or potential partners reviewing it, those vulgar swear words might not give off the gold impression you're striving for. What it does It simply executes order 66. It cleanses the entire repo of all the jedi, I mean curse words. How we built it A google chrome extension that replaces all curse words you see on github. Challenges we ran into We initially found it challenging to find and replace the words. Accomplishments that we're proud of Well, it works. So we're proud of that. Also it allows us to feel the satisfaction of expressing our feelings towards stupid bugs accurately without harming our professional appearance. What we learned Google extensions are fun and straightforward to build. What's next for Execute Order 66 If history tells us anything, they curse word rebellion will fight back. *for those who don't know what \"execute order 66\" it's the order from Star Wars that was given by the sith lord to kill all Jedi's. In our case the curse words are the Jedi's. Built With: javascript Try it out on the Chrome App Store Insert pictures and twitter links here It won the contest for the best Octocat Design at the hackathon! See the Twitter announcement",
-    "tags": "",
-    "url": "/programming/Execute-Order-66/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/programming/text-analysis/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/programming/stats-test-score-calculator/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/search/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "Contact Portfolio &#9662; Programming Woodshop Design Photography Blog Home Posts (84) Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More A collection of helpful command line tips and tricks that I've collected over the past couple of months. Jun 22, 2018 Algorithm Best Practices June 2018&#58 Recrusive Tree Search Functions A tutorial on some best practices for designing recursive functions. Jun 15, 2018 Machine Learning Code Snippets&#58 June 2018 Useful code snippets, functions, and classes that will make you more efficient with Pandas, Numpy, and Jupyter Notebooks. Jun 14, 2018 Slate: Taking My First Solo iOS App from R&D to Full Scale Product A detailed post about my journey in publishing my first iOS app. Dec 3, 2017 Getting Started with Login Sessions: Express, Client Sessions, and React A tutorial on how to set up your own web app with login authentication, cookies, and sessions using Node and Express. Aug 29, 2017 React Redux Tutorial: Building Your Own Web App An introduction into React-Redux — a framework for building web applications. This tutorial is implemented with ES6 and Webpack. Aug 29, 2017 Swift Classes August 2017: Classes, Subclasses, and Protocols The basics of classes and subclasses as well as a detailed tutorial on setting up your own custom protocols and delegates. Aug 24, 2017 CSS Tips and Tricks August 2017: Flexbox A brief introduction to the world of flexbox — a powerful layout and alignment tool. Aug 22, 2017 My Custom VIM Configuration: Installation, Usage, and Capabilities My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package. Aug 4, 2017 Introduction to VIM: Transitioning to Command Line Text Editing Why I'm trying to use VIM after all these years and short reflection on what I think so far. Aug 3, 2017 ES6 Tips and Tricks June 2017: Webpack Loaders, Regexes, and DNS Configuration A somewhat random assortment of things I've learned and felt worth noting including how to do a local DNA override, using SVGs in Webpack, how to retrieve the current directory path in-line, and more. Jul 31, 2017 Design Notes July 2017: Useful Tools, Freelance, and Design Systems Some useful design tools I've picked up and interesting notes about freelance work (not limited to design specifically) as well as my thoughts on design systems. Jul 24, 2017 Getting Started with Typescript: Thoughts, Tips, and Useful Notes A short introduction into TypeScript as well as a reflection on my thoughts and opinions about it. Jul 14, 2017 Testing APIs: Postman, Network Debugging, and JSON A couple of tools, tips, and tricks when developing APIs to improve your workflow. Jul 1, 2017 NPM Basics June 2017: Creating an NPM Project The basic principle of the Node Package Manager (NPM) and how to create your own packages. Jun 27, 2017 Page: 1 of 6 &nbsp;&nbsp;&nbsp; Next > Featured posts: Machine Learning Code Snippets&#58 June 2018 Getting Started with Login Sessions: Express, Client Sessions, and React React Redux Tutorial: Building Your Own Web App Swift Classes August 2017: Classes, Subclasses, and Protocols My Custom VIM Configuration: Installation, Usage, and Capabilities ES6 Tips and Tricks June 2017: Webpack Loaders, Regexes, and DNS Configuration HackPrinceton 2017: SoFly — An iOS App to Scan Flyers on Campus Swift Navigation Basics: How to Setup a Tab Bar App Xcode Best Practices July 2016: Troubleshooting, Pull Requests, Cocoapods, and More Digital Design: The Process from Concept to iOS App Uber Scheduler: Calling Ubers Alarm Clock Style Recent posts: Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More Algorithm Best Practices June 2018&#58 Recrusive Tree Search Functions Machine Learning Code Snippets&#58 June 2018 Browse by Category Browse by Tag",
-    "tags": "",
-    "url": "/blog/"
-  },
-
-  
-  
-  
-  {
-    "title": "Kevin’s Wood Portfolio",
-    "text": "",
-    "tags": "",
-    "url": "/blog/wood/"
-  },
-
-  
-  
-  
-  {
     "title": "KHou | Design",
     "text": "Design Portfolio UI/UX design, graphic design — often for my personal programming projects.",
     "tags": "",
     "url": "/design/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "",
-    "tags": "",
-    "url": "/blog/wallpapers/"
   },
 
   
@@ -1222,10 +1072,150 @@ var tipuesearch = {"pages": [
   
   
   {
+    "title": "Kevin’s Wood Portfolio",
+    "text": "",
+    "tags": "",
+    "url": "/blog/wood/"
+  },
+
+  
+  
+  
+  {
     "title": "KHou | Woodshop",
     "text": "Wood Wood projects that can be found on my Flickr",
     "tags": "",
     "url": "/wood/"
+  },
+
+  
+  
+  
+  {
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/blog/wallpapers/"
+  },
+
+  
+  
+  
+  {
+    "title": "Search Results | KHou22",
+    "text": "Blog Search",
+    "tags": "",
+    "url": "/blog/search/"
+  },
+
+  
+  
+  
+  {
+    "title": "",
+    "text": "Browse All Tags Xcode Swift Ionic Javascript NodeJS ReactJS Redux Database ES6 CSS HTML AngularJS Express Server Python Package Manager Java Processing Design Process User Experience User Interface Graphic Design Unix MacOS VIM Terminal GitHub Animations Backend Server Reflection Tutorial Source Code Internship Project Hackathon Featured posts: Machine Learning Code Snippets&#58 June 2018 Getting Started with Login Sessions: Express, Client Sessions, and React React Redux Tutorial: Building Your Own Web App Swift Classes August 2017: Classes, Subclasses, and Protocols My Custom VIM Configuration: Installation, Usage, and Capabilities ES6 Tips and Tricks June 2017: Webpack Loaders, Regexes, and DNS Configuration HackPrinceton 2017: SoFly — An iOS App to Scan Flyers on Campus Swift Navigation Basics: How to Setup a Tab Bar App Xcode Best Practices July 2016: Troubleshooting, Pull Requests, Cocoapods, and More Digital Design: The Process from Concept to iOS App Uber Scheduler: Calling Ubers Alarm Clock Style Recent posts: Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More Algorithm Best Practices June 2018&#58 Recrusive Tree Search Functions Machine Learning Code Snippets&#58 June 2018 Browse by Category Browse by Tag",
+    "tags": "",
+    "url": "/blog/tag/"
+  },
+
+  
+  
+  
+  {
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/programming/stats-test-score-calculator/"
+  },
+
+  
+  
+  
+  {
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/programming/text-analysis/"
+  },
+
+  
+  
+  
+  {
+    "title": "",
+    "text": "*** Page Content/Design in Progress *** Inspiration Emotions run high when coding and there is always member of the team that swears a little too much in github commits. Normally this is ok, but when you have hackathon officials or potential partners reviewing it, those vulgar swear words might not give off the gold impression you're striving for. What it does It simply executes order 66. It cleanses the entire repo of all the jedi, I mean curse words. How we built it A google chrome extension that replaces all curse words you see on github. Challenges we ran into We initially found it challenging to find and replace the words. Accomplishments that we're proud of Well, it works. So we're proud of that. Also it allows us to feel the satisfaction of expressing our feelings towards stupid bugs accurately without harming our professional appearance. What we learned Google extensions are fun and straightforward to build. What's next for Execute Order 66 If history tells us anything, they curse word rebellion will fight back. *for those who don't know what \"execute order 66\" it's the order from Star Wars that was given by the sith lord to kill all Jedi's. In our case the curse words are the Jedi's. Built With: javascript Try it out on the Chrome App Store Insert pictures and twitter links here It won the contest for the best Octocat Design at the hackathon! See the Twitter announcement",
+    "tags": "",
+    "url": "/programming/Execute-Order-66/"
+  },
+
+  
+  
+  
+  {
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/programming/Uber-Scheduler/"
+  },
+
+  
+  
+  
+  {
+    "title": "",
+    "text": "Wood Club I am the co-leader of Wood Club at my high school. Here is the progression of the club since the beginning of school until now. Historically, wood club hasn't been a very active club, but I wanted to change that this year! My co-leader is Nathan Craik, a junior at my school who is also a wood turning enthusiast. First Meeting Out of the 60 sign ups, we had 7 people show up...which doesn't sound like a lot, but is actually really good relative to some other clubs! There were 5 freshman and 1 sophomore so we had a relatively young crowd. Club Faire We got around 60 sign ups which I was really happy about! We handed out candy to whoever signed up and used our wood projects to attract the attention of passers by.",
+    "tags": "",
+    "url": "/programming/wood-club/"
+  },
+
+  
+  
+  
+  {
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/programming/random-number-assignment/"
+  },
+
+  
+  
+  
+  {
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/programming/presidential-election-forecast-2016/"
+  },
+
+  
+  
+  
+  {
+    "title": "",
+    "text": "",
+    "tags": "",
+    "url": "/programming/time-calculator/"
+  },
+
+  
+  
+  
+  {
+    "title": "KHou | Programming",
+    "text": "Programming Programming projects from the past couple of years written in a variety of languages and for a variety of purposes. Most are released to the public while some remain as algorithms or proofs of concept.",
+    "tags": "",
+    "url": "/programming/"
+  },
+
+  
+  
+  
+  {
+    "title": "KHou | Portfolio",
+    "text": "",
+    "tags": "",
+    "url": "/categories/"
   },
 
   
@@ -1316,16 +1306,6 @@ var tipuesearch = {"pages": [
     "text": "",
     "tags": "",
     "url": "/blog/tag/packageManager"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "Contact Portfolio &#9662; Programming Woodshop Design Photography Blog Home",
-    "tags": "",
-    "url": "/blog/page1.html"
   },
 
   
@@ -1596,56 +1576,6 @@ var tipuesearch = {"pages": [
     "text": "/************************************************************** * Name: Kevin Hou * License: MIT **************************************************************/ # Usage ## Include head This library relies on ReactJS and Jquery so you must first include these in your : ```html ``` ## Add grid data This library accepts a JS object of this format: ```javascript // Must be named 'gridData' var gridData = { columns: 5, // Number of columns textColor: \"white\", // Tile text color data: [ // All tile data { title: \"Title\", // Title subtitle: \"Subtitle...\", // Subtitle description: \"Lorem ipsum dolor sit amet...\", image: \"image.png\", // Tile background image link: \"#\", // Link when click size: \"1\", // Number of horizontal blocks this tile will take up category: { label: \"Category\", color: \"#FFFFFF\" } }, ... // Rest of tiles ] }; ``` You can either include a data.js file if you have a lot of data: ```html ``` or you can embed them in the ``` ## Include grid It is important the gridData comes *before* you include the second script tag. ```html ```",
     "tags": "",
     "url": "/libraries/tile-layout-library/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "{% capture blogHomepage %}{{ site.baseurl }}/blog/{% endcapture %} {% if page.url == blogHomepage %} Contact Portfolio &#9662; Programming Woodshop Design Photography Blog Home {% endif %} {% if page.url == blogHomepage %} {% endif %} {% if page.url == blogHomepage %} Posts ({{site.posts.size}}) {% else %} Posts (Page {{paginator.page}}) {% endif %} {% for post in paginator.posts %} {{ post.title }} {{ post.description }} {{ post.date | date: \"%b %-d, %Y\" }} {% endfor %} {% if paginator.total_pages > 1 %} {% if paginator.previous_page %} &nbsp;&nbsp;&nbsp; {% endif %} Page: {{ paginator.page }} of {{ paginator.total_pages }} {% if paginator.next_page %} &nbsp;&nbsp;&nbsp; Next > {% endif %} {% endif %} Featured posts: {% for post in site.posts %} {% if post.featured != \"no\" %} {{ post.title }} {% endif %} {% endfor %} Recent posts: {% for post in site.posts %} {% if forloop.index0 {{ post.title }} {% endif %} {% endfor %} Browse by Category Browse by Tag {% if page.url == blogHomepage %} {% endif %}",
-    "tags": "",
-    "url": "/blog/page2/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "{% capture blogHomepage %}{{ site.baseurl }}/blog/{% endcapture %} {% if page.url == blogHomepage %} Contact Portfolio &#9662; Programming Woodshop Design Photography Blog Home {% endif %} {% if page.url == blogHomepage %} {% endif %} {% if page.url == blogHomepage %} Posts ({{site.posts.size}}) {% else %} Posts (Page {{paginator.page}}) {% endif %} {% for post in paginator.posts %} {{ post.title }} {{ post.description }} {{ post.date | date: \"%b %-d, %Y\" }} {% endfor %} {% if paginator.total_pages > 1 %} {% if paginator.previous_page %} &nbsp;&nbsp;&nbsp; {% endif %} Page: {{ paginator.page }} of {{ paginator.total_pages }} {% if paginator.next_page %} &nbsp;&nbsp;&nbsp; Next > {% endif %} {% endif %} Featured posts: {% for post in site.posts %} {% if post.featured != \"no\" %} {{ post.title }} {% endif %} {% endfor %} Recent posts: {% for post in site.posts %} {% if forloop.index0 {{ post.title }} {% endif %} {% endfor %} Browse by Category Browse by Tag {% if page.url == blogHomepage %} {% endif %}",
-    "tags": "",
-    "url": "/blog/page3/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "{% capture blogHomepage %}{{ site.baseurl }}/blog/{% endcapture %} {% if page.url == blogHomepage %} Contact Portfolio &#9662; Programming Woodshop Design Photography Blog Home {% endif %} {% if page.url == blogHomepage %} {% endif %} {% if page.url == blogHomepage %} Posts ({{site.posts.size}}) {% else %} Posts (Page {{paginator.page}}) {% endif %} {% for post in paginator.posts %} {{ post.title }} {{ post.description }} {{ post.date | date: \"%b %-d, %Y\" }} {% endfor %} {% if paginator.total_pages > 1 %} {% if paginator.previous_page %} &nbsp;&nbsp;&nbsp; {% endif %} Page: {{ paginator.page }} of {{ paginator.total_pages }} {% if paginator.next_page %} &nbsp;&nbsp;&nbsp; Next > {% endif %} {% endif %} Featured posts: {% for post in site.posts %} {% if post.featured != \"no\" %} {{ post.title }} {% endif %} {% endfor %} Recent posts: {% for post in site.posts %} {% if forloop.index0 {{ post.title }} {% endif %} {% endfor %} Browse by Category Browse by Tag {% if page.url == blogHomepage %} {% endif %}",
-    "tags": "",
-    "url": "/blog/page4/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "{% capture blogHomepage %}{{ site.baseurl }}/blog/{% endcapture %} {% if page.url == blogHomepage %} Contact Portfolio &#9662; Programming Woodshop Design Photography Blog Home {% endif %} {% if page.url == blogHomepage %} {% endif %} {% if page.url == blogHomepage %} Posts ({{site.posts.size}}) {% else %} Posts (Page {{paginator.page}}) {% endif %} {% for post in paginator.posts %} {{ post.title }} {{ post.description }} {{ post.date | date: \"%b %-d, %Y\" }} {% endfor %} {% if paginator.total_pages > 1 %} {% if paginator.previous_page %} &nbsp;&nbsp;&nbsp; {% endif %} Page: {{ paginator.page }} of {{ paginator.total_pages }} {% if paginator.next_page %} &nbsp;&nbsp;&nbsp; Next > {% endif %} {% endif %} Featured posts: {% for post in site.posts %} {% if post.featured != \"no\" %} {{ post.title }} {% endif %} {% endfor %} Recent posts: {% for post in site.posts %} {% if forloop.index0 {{ post.title }} {% endif %} {% endfor %} Browse by Category Browse by Tag {% if page.url == blogHomepage %} {% endif %}",
-    "tags": "",
-    "url": "/blog/page5/"
-  },
-
-  
-  
-  
-  {
-    "title": "",
-    "text": "{% capture blogHomepage %}{{ site.baseurl }}/blog/{% endcapture %} {% if page.url == blogHomepage %} Contact Portfolio &#9662; Programming Woodshop Design Photography Blog Home {% endif %} {% if page.url == blogHomepage %} {% endif %} {% if page.url == blogHomepage %} Posts ({{site.posts.size}}) {% else %} Posts (Page {{paginator.page}}) {% endif %} {% for post in paginator.posts %} {{ post.title }} {{ post.description }} {{ post.date | date: \"%b %-d, %Y\" }} {% endfor %} {% if paginator.total_pages > 1 %} {% if paginator.previous_page %} &nbsp;&nbsp;&nbsp; {% endif %} Page: {{ paginator.page }} of {{ paginator.total_pages }} {% if paginator.next_page %} &nbsp;&nbsp;&nbsp; Next > {% endif %} {% endif %} Featured posts: {% for post in site.posts %} {% if post.featured != \"no\" %} {{ post.title }} {% endif %} {% endfor %} Recent posts: {% for post in site.posts %} {% if forloop.index0 {{ post.title }} {% endif %} {% endfor %} Browse by Category Browse by Tag {% if page.url == blogHomepage %} {% endif %}",
-    "tags": "",
-    "url": "/blog/page6/"
   }
 
 ]};
