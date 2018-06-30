@@ -37,6 +37,8 @@ future: true
 tipue_search:
   include:
     pages: true
+  exclude:
+    files: [search.html]
 
 autoprefixer:
     only_production: true

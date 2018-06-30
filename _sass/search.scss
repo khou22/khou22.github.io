@@ -1,7 +1,24 @@
+$brand-red:       #D5491F;
+$brand-orange:    #DA8D0F;
+$brand-green:     #80A454;
+$brand-grey:      #9DB7C1;
+$brand-blue:      #3286A8;
+
+// Search page
 .search {
     &-main {
         width: 80%;
         margin: auto;
         margin-top: 24px;
+
+        h1 {
+            margin-bottom: 24px !important;
+        }
     }
+}
+
+// Tipue Search Override
+.tipue_search_content_title {
+    font-size: 24px;
+    color: $brand-blue;
 }
