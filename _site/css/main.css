@@ -440,7 +440,7 @@ article strong { color: black; }
 
 .site-footer-content { padding-left: 30px; padding-right: 30px; }
 
-.external-bar { margin: auto; }
+.external-bar { margin: auto; margin-bottom: 12px; }
 .external-td { display: inline-block; /*border: 1px solid black;*/ border-radius: 19px; padding-left: 17px; padding-right: 17px; }
 .external-link-box { height: 32px; width: 32px; /*background-color: white;*/ margin: auto; }
 .external-link-label { text-align: center; color: #3286A8; }
@@ -469,3 +469,5 @@ article strong { color: black; }
 .rna-element-results { margin: 4%; width: 92%; }
 
 .design-header { width: 100vw; height: 75vh; background-image: url(./../media/site/images/Design_Image.png); background-position: center; background-repeat: no-repeat; background-size: cover; }
+
+.blog-search button { width: 100%; margin: 12px 0px; padding: 8px; background: white; border-radius: 4px; border: 1px solid #3286A8; }
