@@ -33,6 +33,11 @@ paginate: 15 # Number of blog posts per page when browsing
 paginate_path: "/blog/page:num/"
 future: true
 
+# Site search settings
+tipue_search:
+  include:
+    pages: true
+
 autoprefixer:
     only_production: true
 

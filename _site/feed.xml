@@ -4,10 +4,10 @@
     <title>Kevin Hou</title>
     <description>Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
 </description>
-    <link>http://khou22.com/</link>
-    <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Jun 2018 14:45:10 -0700</pubDate>
-    <lastBuildDate>Sat, 30 Jun 2018 14:45:10 -0700</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 30 Jun 2018 15:05:00 -0700</pubDate>
+    <lastBuildDate>Sat, 30 Jun 2018 15:05:00 -0700</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -115,8 +115,8 @@ rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&q
 
 </description>
         <pubDate>Fri, 22 Jun 2018 06:43:42 -0700</pubDate>
-        <link>http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html</link>
-        <guid isPermaLink="true">http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html</guid>
+        <link>http://localhost:4000/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html</link>
+        <guid isPermaLink="true">http://localhost:4000/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html</guid>
         
         <category>terminal</category>
         
@@ -196,8 +196,8 @@ rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&q
 
 </description>
         <pubDate>Fri, 15 Jun 2018 04:22:18 -0700</pubDate>
-        <link>http://khou22.com/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html</link>
-        <guid isPermaLink="true">http://khou22.com/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html</guid>
+        <link>http://localhost:4000/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html</guid>
         
         <category>python</category>
         
@@ -277,8 +277,8 @@ rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&q
 
 </description>
         <pubDate>Thu, 14 Jun 2018 09:05:23 -0700</pubDate>
-        <link>http://khou22.com/programming/2018/06/14/machine-learning-code-snippets-june-2018.html</link>
-        <guid isPermaLink="true">http://khou22.com/programming/2018/06/14/machine-learning-code-snippets-june-2018.html</guid>
+        <link>http://localhost:4000/programming/2018/06/14/machine-learning-code-snippets-june-2018.html</link>
+        <guid isPermaLink="true">http://localhost:4000/programming/2018/06/14/machine-learning-code-snippets-june-2018.html</guid>
         
         <category>python</category>
         
@@ -401,8 +401,8 @@ rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&q
 &lt;p&gt;The GIFs in this blog post were created on &lt;a href=&quot;https://ezgif.com&quot;&gt;ezgif.com&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 03 Dec 2017 02:12:15 -0800</pubDate>
-        <link>http://khou22.com/ios/2017/12/03/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html</link>
-        <guid isPermaLink="true">http://khou22.com/ios/2017/12/03/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html</guid>
+        <link>http://localhost:4000/ios/2017/12/03/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html</link>
+        <guid isPermaLink="true">http://localhost:4000/ios/2017/12/03/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html</guid>
         
         <category>swift</category>
         
@@ -590,8 +590,8 @@ rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&q
 &lt;p&gt;In my React-Redux-Router app, I make this API request on entry so that my local redux state contains information about my user right on load. This allows me to populate sections of my app like a ‘Profile’ section as well as restricting certain routes.&lt;/p&gt;
 </description>
         <pubDate>Tue, 29 Aug 2017 14:33:04 -0700</pubDate>
-        <link>http://khou22.com/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html</link>
-        <guid isPermaLink="true">http://khou22.com/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html</guid>
+        <link>http://localhost:4000/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html</guid>
         
         <category>expressServer</category>
         
@@ -977,8 +977,8 @@ redux-thunk
 &lt;p&gt;If you put all those pieces together you should end up with your first, boilerplate React/Redux application! It’s a really useful tool and a great addition to any stack — especially those that already use React. I will be working with this stack very shortly on a personal project as well as some business projects so I’ll be sure to keep you all updated on what I’ll continue to learn!&lt;/p&gt;
 </description>
         <pubDate>Tue, 29 Aug 2017 14:16:59 -0700</pubDate>
-        <link>http://khou22.com/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html</link>
-        <guid isPermaLink="true">http://khou22.com/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html</guid>
+        <link>http://localhost:4000/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html</guid>
         
         <category>reactjs</category>
         
@@ -1166,8 +1166,8 @@ That’s all very confusing, but here’s a step by step on how they work and ho
 Hope this tutorial helped! It’s been a few months since I did any iOS dev (got caught up in a lot of web dev because of work) so I hope my explanations and code were clear and clean.&lt;/p&gt;
 </description>
         <pubDate>Thu, 24 Aug 2017 15:44:37 -0700</pubDate>
-        <link>http://khou22.com/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</link>
-        <guid isPermaLink="true">http://khou22.com/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</guid>
+        <link>http://localhost:4000/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</link>
+        <guid isPermaLink="true">http://localhost:4000/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</guid>
         
         <category>swift</category>
         
@@ -1253,8 +1253,8 @@ Hope this tutorial helped! It’s been a few months since I did any iOS dev (got
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 22 Aug 2017 11:47:59 -0700</pubDate>
-        <link>http://khou22.com/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</link>
-        <guid isPermaLink="true">http://khou22.com/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</guid>
+        <link>http://localhost:4000/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</guid>
         
         <category>css</category>
         
@@ -1601,8 +1601,8 @@ Go to line number: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Line 
 &lt;/ol&gt;
 </description>
         <pubDate>Fri, 04 Aug 2017 10:18:02 -0700</pubDate>
-        <link>http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</link>
-        <guid isPermaLink="true">http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</guid>
+        <link>http://localhost:4000/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</link>
+        <guid isPermaLink="true">http://localhost:4000/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</guid>
         
         <category>vim</category>
         
@@ -1628,8 +1628,8 @@ I’ll probably be fairly confident with my setup by the time school rolls aroun
 Check out my &lt;a href=&quot;http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html&quot;&gt;next blog post&lt;/a&gt; to see my personal VIM configuration — I’ve spent a fair amount of time messing around with it and I’m really enjoying it so far so definitely take a look if you’re at all interested.&lt;/p&gt;
 </description>
         <pubDate>Thu, 03 Aug 2017 10:02:56 -0700</pubDate>
-        <link>http://khou22.com/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
-        <guid isPermaLink="true">http://khou22.com/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
+        <link>http://localhost:4000/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
+        <guid isPermaLink="true">http://localhost:4000/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
         
         <category>vim</category>
         

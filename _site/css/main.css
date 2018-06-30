@@ -445,6 +445,8 @@ article strong { color: black; }
 .external-link-box { height: 32px; width: 32px; /*background-color: white;*/ margin: auto; }
 .external-link-label { text-align: center; color: #3286A8; }
 
+.search-main { width: 80%; margin: auto; margin-top: 24px; }
+
 .stsc-input-div { width: 48%; float: left; border: 1px solid black; padding: 5%; line-height: 24px; }
 .stsc-output-div { width: 48%; float: right; border: 1px solid black; padding: 8%; font-size: 24px; }
 .stsc-score { color: #3286A8; }
