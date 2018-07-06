@@ -111,4 +111,5 @@ killall -9 prefix_* # All processes that begin with "prefix_"
 rm -f *_vs_* # Forcibly remove all files with names that have "_vs_" in them
 ```
 
+I know this doesn't fall under the Terminal category, but I thought this was a cool trick. If you `Option` + `Click` on a window, all the other windows in that desktop will be hidden.
 
