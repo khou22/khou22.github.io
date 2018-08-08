@@ -30,11 +30,11 @@
 
     <!-- Site Searching -->
     <!-- {% if page.tipue_search_active or layout.tipue_search_active %} -->
-    <link rel="stylesheet" href="{{ "/libraries/tipuesearch/css/normalize.css" | relative_url }}">
-    <script src="{{ "/libraries/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
-    <link rel="stylesheet" href="{{ "/libraries/tipuesearch/css/tipuesearch.css" | relative_url }}">
-    <script src="{{ "/libraries/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
-    <script src="{{ "/libraries/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
+    <link rel="stylesheet" href="{{ "/libraries/tipuesearch/css/normalize.css" | prepend: site.basurl }}">
+    <script src="{{ "/libraries/tipuesearch/tipuesearch_content.js" | prepend: site.basurl }}"></script>
+    <link rel="stylesheet" href="{{ "/libraries/tipuesearch/css/tipuesearch.css" | prepend: site.basurl }}">
+    <script src="{{ "/libraries/tipuesearch/tipuesearch_set.js" | prepend: site.basurl }}"></script>
+    <script src="{{ "/libraries/tipuesearch/tipuesearch.min.js" | prepend: site.basurl }}"></script>
     <!-- {% endif %} -->
 
     <!-- Google Analytics -->
