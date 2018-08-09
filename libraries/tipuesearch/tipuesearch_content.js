@@ -77,6 +77,6 @@ var tipuesearch = {"pages": [
     "text": {{ document.content | strip_html | normalize_whitespace | jsonify }},
     "tags": {{ taxonomies | join: " " | normalize_whitespace | jsonify }},
     "url": {{ document.url | relative_url | jsonify }}
-  }{% unless forloop.last -%},{% endunless %}
+}{% if forloop.last == false %},{% endif %}
 {% endfor %}
 ]};
