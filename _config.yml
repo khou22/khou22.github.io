@@ -23,6 +23,7 @@ portfolio_url: "http://kevinhou.wix.com/projects"
 youtube_url: "https://youtube.com/kevinhou22"
 flickr_url: "https://www.flickr.com/photos/khou22/albums"
 vsco_url: "http://vsco.co/khou22/"
+instagram_url: "https://www.instagram.com/lifeofkhou/" # Photo instagram
 school_profile: "https://www.princeton.edu/main/"
 
 gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap, jekyll-feed, jekyll-autoprefixer]
