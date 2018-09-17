@@ -9,7 +9,6 @@ category: configuration
 tags: [terminal]
 featured: "no"
 ---
-
 # Inspecting JSON Data
 Instead of spending time writing code to view JSON or using a JSON viewer app, which can both be incredibely slow with large JSON files, you can use `NodeJS` to inspect JSON objects. Simply start the Node console:
 
@@ -22,12 +21,12 @@ Next, you can import the JSON and navigate the tree object to your heart's conte
 ``` javascript
 >> // Import JSON
 >> require('./path/to/json')
->> 
+>>
 >> /* `_` references the last output
 >>  *   In this case: _ = require(...)
 >>  */
 >> r = _
->> 
+>>
 >> // Traverse JSON tree
 >> r.data
 ```
@@ -68,6 +67,9 @@ Pressing `<Command>` and `;` at the same time will open an autocomplete dropdown
 Searching for command history:  
 `$ history` to see all recent commands  
 `Control + r` to search through your recent history and use as your current command.
+
+Count how many files are in a given directory:  
+`$ find DIR_NAME -type f | wc -l`
 
 Count how many lines of code in a given directory:  
 `$ find . -name "*.*" -exec wc -l {} \;`
@@ -111,5 +113,8 @@ killall -9 prefix_* # All processes that begin with "prefix_"
 rm -f *_vs_* # Forcibly remove all files with names that have "_vs_" in them
 ```
 
-I know this doesn't fall under the Terminal category, but I thought this was a cool trick. If you `Option` + `Click` on a window, all the other windows in that desktop will be hidden.
+Paste into a new file:
 
+``` bash
+$ pbpaste > fileName
+```

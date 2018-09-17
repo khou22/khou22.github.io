@@ -284,12 +284,12 @@
 
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;</span> <span class="c1">// Import JSON</span>
 <span class="o">&gt;&gt;</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./path/to/json'</span><span class="p">)</span>
-<span class="o">&gt;&gt;</span> 
+<span class="o">&gt;&gt;</span>
 <span class="o">&gt;&gt;</span> <span class="cm">/* `_` references the last output
 &gt;&gt;  *   In this case: _ = require(...)
 &gt;&gt;  */</span>
 <span class="o">&gt;&gt;</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">_</span>
-<span class="o">&gt;&gt;</span> 
+<span class="o">&gt;&gt;</span>
 <span class="o">&gt;&gt;</span> <span class="c1">// Traverse JSON tree</span>
 <span class="o">&gt;&gt;</span> <span class="nx">r</span><span class="p">.</span><span class="nx">data</span>
 </code></pre>
@@ -331,6 +331,9 @@
 <p>Searching for command history:<br />
 <code class="highlighter-rouge">$ history</code> to see all recent commands<br />
 <code class="highlighter-rouge">Control + r</code> to search through your recent history and use as your current command.</p>
+
+<p>Count how many files are in a given directory:<br />
+<code class="highlighter-rouge">$ find DIR_NAME -type f | wc -l</code></p>
 
 <p>Count how many lines of code in a given directory:<br />
 <code class="highlighter-rouge">$ find . -name "*.*" -exec wc -l {} \;</code></p>
@@ -374,8 +377,11 @@ rm -f <span class="k">*</span>_vs_<span class="k">*</span> <span class="c"># For
 </code></pre>
 </div>
 
-<p>I know this doesn’t fall under the Terminal category, but I thought this was a cool trick. If you <code class="highlighter-rouge">Option</code> + <code class="highlighter-rouge">Click</code> on a window, all the other windows in that desktop will be hidden.</p>
+<p>Paste into a new file:</p>
 
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>pbpaste &gt; fileName
+</code></pre>
+</div>
 
     <div class="post-organization">
       <p id="post-meta">Posted in <a href="/blog/category/configuration/">Developer Tools</a> with <a href="/blog/tag/terminal">Terminal</a></p>

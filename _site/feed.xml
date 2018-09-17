@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 17 Sep 2018 10:36:00 -0400</pubDate>
-    <lastBuildDate>Mon, 17 Sep 2018 10:36:00 -0400</lastBuildDate>
+    <pubDate>Mon, 17 Sep 2018 14:41:34 -0400</pubDate>
+    <lastBuildDate>Mon, 17 Sep 2018 14:41:34 -0400</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -101,12 +101,12 @@
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Import JSON&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./path/to/json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* `_` references the last output
 &amp;gt;&amp;gt;  *   In this case: _ = require(...)
 &amp;gt;&amp;gt;  */&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Traverse JSON tree&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -148,6 +148,9 @@
 &lt;p&gt;Searching for command history:&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;$ history&lt;/code&gt; to see all recent commands&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + r&lt;/code&gt; to search through your recent history and use as your current command.&lt;/p&gt;
+
+&lt;p&gt;Count how many files are in a given directory:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;$ find DIR_NAME -type f | wc -l&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Count how many lines of code in a given directory:&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;$ find . -name &quot;*.*&quot; -exec wc -l {} \;&lt;/code&gt;&lt;/p&gt;
@@ -191,8 +194,11 @@ rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&q
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;I know this doesn’t fall under the Terminal category, but I thought this was a cool trick. If you &lt;code class=&quot;highlighter-rouge&quot;&gt;Option&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Click&lt;/code&gt; on a window, all the other windows in that desktop will be hidden.&lt;/p&gt;
+&lt;p&gt;Paste into a new file:&lt;/p&gt;
 
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;pbpaste &amp;gt; fileName
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Fri, 22 Jun 2018 09:43:42 -0400</pubDate>
         <link>http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html</link>
