@@ -6,8 +6,8 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Aug 2018 21:00:16 -0700</pubDate>
-    <lastBuildDate>Mon, 13 Aug 2018 21:00:16 -0700</lastBuildDate>
+    <pubDate>Mon, 17 Sep 2018 10:22:16 -0400</pubDate>
+    <lastBuildDate>Mon, 17 Sep 2018 10:22:16 -0400</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -116,7 +116,7 @@ rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&q
 &lt;p&gt;I know this doesn’t fall under the Terminal category, but I thought this was a cool trick. If you &lt;code class=&quot;highlighter-rouge&quot;&gt;Option&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Click&lt;/code&gt; on a window, all the other windows in that desktop will be hidden.&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 22 Jun 2018 06:43:42 -0700</pubDate>
+        <pubDate>Fri, 22 Jun 2018 09:43:42 -0400</pubDate>
         <link>http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html</link>
         <guid isPermaLink="true">http://khou22.com/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html</guid>
         
@@ -197,7 +197,7 @@ rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&q
 &lt;/div&gt;
 
 </description>
-        <pubDate>Fri, 15 Jun 2018 04:22:18 -0700</pubDate>
+        <pubDate>Fri, 15 Jun 2018 07:22:18 -0400</pubDate>
         <link>http://khou22.com/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html</link>
         <guid isPermaLink="true">http://khou22.com/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html</guid>
         
@@ -278,7 +278,7 @@ rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&q
 &lt;p&gt;Running &lt;code class=&quot;highlighter-rouge&quot;&gt;df.head(n)&lt;/code&gt; will print the first n rows of your dataset and can give you a good understanding of the form of your data. While the &lt;code class=&quot;highlighter-rouge&quot;&gt;describe()&lt;/code&gt; function is good at showing you basic distributions, the &lt;code class=&quot;highlighter-rouge&quot;&gt;head()&lt;/code&gt; function will show you what your data actually looks like quickly and easily.&lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 14 Jun 2018 09:05:23 -0700</pubDate>
+        <pubDate>Thu, 14 Jun 2018 12:05:23 -0400</pubDate>
         <link>http://khou22.com/programming/2018/06/14/machine-learning-code-snippets-june-2018.html</link>
         <guid isPermaLink="true">http://khou22.com/programming/2018/06/14/machine-learning-code-snippets-june-2018.html</guid>
         
@@ -402,7 +402,7 @@ rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&q
 
 &lt;p&gt;The GIFs in this blog post were created on &lt;a href=&quot;https://ezgif.com&quot;&gt;ezgif.com&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 03 Dec 2017 02:12:15 -0800</pubDate>
+        <pubDate>Sun, 03 Dec 2017 05:12:15 -0500</pubDate>
         <link>http://khou22.com/ios/2017/12/03/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html</link>
         <guid isPermaLink="true">http://khou22.com/ios/2017/12/03/slate-taking-my-first-solo-ios-app-from-rd-to-full-scale-product.html</guid>
         
@@ -591,7 +591,7 @@ rm -f &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;_vs_&lt;span class=&quot;k&q
 
 &lt;p&gt;In my React-Redux-Router app, I make this API request on entry so that my local redux state contains information about my user right on load. This allows me to populate sections of my app like a ‘Profile’ section as well as restricting certain routes.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 29 Aug 2017 14:33:04 -0700</pubDate>
+        <pubDate>Tue, 29 Aug 2017 17:33:04 -0400</pubDate>
         <link>http://khou22.com/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html</link>
         <guid isPermaLink="true">http://khou22.com/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html</guid>
         
@@ -978,7 +978,7 @@ redux-thunk
 &lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
 &lt;p&gt;If you put all those pieces together you should end up with your first, boilerplate React/Redux application! It’s a really useful tool and a great addition to any stack — especially those that already use React. I will be working with this stack very shortly on a personal project as well as some business projects so I’ll be sure to keep you all updated on what I’ll continue to learn!&lt;/p&gt;
 </description>
-        <pubDate>Tue, 29 Aug 2017 14:16:59 -0700</pubDate>
+        <pubDate>Tue, 29 Aug 2017 17:16:59 -0400</pubDate>
         <link>http://khou22.com/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html</link>
         <guid isPermaLink="true">http://khou22.com/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html</guid>
         
@@ -1167,7 +1167,7 @@ That’s all very confusing, but here’s a step by step on how they work and ho
 &lt;br class=&quot;post-line-break&quot; /&gt;
 Hope this tutorial helped! It’s been a few months since I did any iOS dev (got caught up in a lot of web dev because of work) so I hope my explanations and code were clear and clean.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 24 Aug 2017 15:44:37 -0700</pubDate>
+        <pubDate>Thu, 24 Aug 2017 18:44:37 -0400</pubDate>
         <link>http://khou22.com/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</link>
         <guid isPermaLink="true">http://khou22.com/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html</guid>
         
@@ -1254,7 +1254,7 @@ Hope this tutorial helped! It’s been a few months since I did any iOS dev (got
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Tue, 22 Aug 2017 11:47:59 -0700</pubDate>
+        <pubDate>Tue, 22 Aug 2017 14:47:59 -0400</pubDate>
         <link>http://khou22.com/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</link>
         <guid isPermaLink="true">http://khou22.com/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html</guid>
         
@@ -1602,7 +1602,7 @@ Go to line number: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Line 
   &lt;li&gt;What does &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;C&amp;gt;&lt;/code&gt; map to? It maps to &lt;code class=&quot;highlighter-rouge&quot;&gt;Control&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Fri, 04 Aug 2017 10:18:02 -0700</pubDate>
+        <pubDate>Fri, 04 Aug 2017 13:18:02 -0400</pubDate>
         <link>http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</link>
         <guid isPermaLink="true">http://khou22.com/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html</guid>
         
@@ -1629,7 +1629,7 @@ I’ll probably be fairly confident with my setup by the time school rolls aroun
 &lt;br class=&quot;post-line-break&quot; /&gt;
 Check out my &lt;a href=&quot;http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html&quot;&gt;next blog post&lt;/a&gt; to see my personal VIM configuration — I’ve spent a fair amount of time messing around with it and I’m really enjoying it so far so definitely take a look if you’re at all interested.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 03 Aug 2017 10:02:56 -0700</pubDate>
+        <pubDate>Thu, 03 Aug 2017 13:02:56 -0400</pubDate>
         <link>http://khou22.com/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
         <guid isPermaLink="true">http://khou22.com/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
         
