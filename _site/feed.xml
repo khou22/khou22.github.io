@@ -6,9 +6,87 @@
 </description>
     <link>http://khou22.com/</link>
     <atom:link href="http://khou22.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 17 Sep 2018 10:22:16 -0400</pubDate>
-    <lastBuildDate>Mon, 17 Sep 2018 10:22:16 -0400</lastBuildDate>
+    <pubDate>Mon, 17 Sep 2018 10:36:00 -0400</pubDate>
+    <lastBuildDate>Mon, 17 Sep 2018 10:36:00 -0400</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
+    
+      <item>
+        <title>Getting Started With TMUX: A Terminal Multiplexer</title>
+        <description>&lt;p&gt;TMUX is a terminal multiplexer that allows you to have a GNU-like experience while staying entirely within your terminal client. It works hand in hand with VIM (or emacs) and gives you a lot of powerful tools that are typically only available to you if you use a GUI.&lt;/p&gt;
+
+&lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;brew install tmux
+
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;tmux -V
+&lt;span class=&quot;c&quot;&gt;# &amp;gt; tmux 2.7 when I did this&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Entering TMUX session: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ tmux new&lt;/code&gt; (Note: you must type &lt;code class=&quot;highlighter-rouge&quot;&gt;$ source activate&lt;/code&gt; to use some packages, your Conda environment, etc.)
+&lt;img src=&quot;/media/blog/images/tmux/initialized.png&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exiting TMUX session: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ tmux exit&lt;/code&gt;. This is not the only way to return to your original terminal session. In fact, one of the strengths of TMUX is that you can run a TMUX session in the background.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;using-tmux-commands&quot;&gt;Using TMUX Commands&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; to enter a TMUX command. Nothing will visually change&lt;/li&gt;
+  &lt;li&gt;After pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt;, can type &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt; to get the TMUX prompt&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;managing-sessions&quot;&gt;Managing Sessions&lt;/h1&gt;
+&lt;p&gt;After you’ve created a session, you can temporarily exit or &lt;code class=&quot;highlighter-rouge&quot;&gt;detatch&lt;/code&gt; this session. To do this, press &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; then &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt; to detatch.&lt;/p&gt;
+
+&lt;p&gt;To see a list of suspended sessions, you can type &lt;code class=&quot;highlighter-rouge&quot;&gt;$ tmux ls&lt;/code&gt;. To get back to a sesion, type &lt;code class=&quot;highlighter-rouge&quot;&gt;$ tmux attach-session -t &amp;lt;id&amp;gt;&lt;/code&gt; (shortcut: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ tmux a -t &amp;lt;id&amp;gt;&lt;/code&gt;). You can also use &lt;code class=&quot;highlighter-rouge&quot;&gt;$tmux a #&lt;/code&gt; to go to the most recent session.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/media/blog/images/tmux/session.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;switching-between-session&quot;&gt;Switching Between Session&lt;/h2&gt;
+&lt;p&gt;Once you’re in a TMUX session, you can press &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt; to get a dialogue of the open sessions with a preview of what they look like. You can also use &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;(&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;)&lt;/code&gt; to move left/right between existing session. To get a read-only list from your main shell, you can type &lt;code class=&quot;highlighter-rouge&quot;&gt;$ tmux ls&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To kill the session you’re currently in, type: &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;: kill-session&lt;/code&gt;. You can also do this from your main shell: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ tmux kill-session -t &amp;lt;name or id&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To kill all sessions, type: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ tmux kill-server&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;naming&quot;&gt;Naming&lt;/h2&gt;
+&lt;p&gt;Instead of relying on ambiguous ID numbers, you can also attach names to session. To start a session using a name, type: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ tmux new -s &amp;lt;name of session&amp;gt;&lt;/code&gt;. To get back to that session, use the name of the session in place of the ID: &lt;code class=&quot;highlighter-rouge&quot;&gt;$tmux a -t &amp;lt;name of session&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;panes&quot;&gt;Panes&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Split horizontally: &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; then &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Split vertically: &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; then &lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Move pane left/right: &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; then &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;}&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Move between panes using &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; and any of the arrow keys&lt;/li&gt;
+  &lt;li&gt;Show pane numbers &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; then &lt;code class=&quot;highlighter-rouge&quot;&gt;q&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Switch to pane &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;q&lt;/code&gt;, then &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;pane number&amp;gt;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Close pane: &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; then &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Resizing: &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; then &lt;code class=&quot;highlighter-rouge&quot;&gt;:resize-p &amp;lt;direction&amp;gt; &amp;lt;num-cells&amp;gt;&lt;/code&gt;. The direction is &lt;code class=&quot;highlighter-rouge&quot;&gt;-U&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;-D&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;-L&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;-R&lt;/code&gt; for up, down, left, and right, respectively.&lt;/li&gt;
+  &lt;li&gt;In my &lt;code class=&quot;highlighter-rouge&quot;&gt;.tmux.conf&lt;/code&gt; file, I turned on mouse interaction so I can switch panes using my mouse clicks. You can also drag to resize panes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;copy-mode&quot;&gt;Copy Mode&lt;/h1&gt;
+&lt;p&gt;One of the other strengths is that you can enter “copy mode” to copy certain parts of the terminal. To enter this mode, press &lt;code class=&quot;highlighter-rouge&quot;&gt;Control + b&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;[&lt;/code&gt;. You can now navigate using VI bindings press &lt;code class=&quot;highlighter-rouge&quot;&gt;Enter&lt;/code&gt; to copy. There are a number of helpful commands that you can use that can be found here: &lt;a href=&quot;https://tmuxcheatsheet.com&quot;&gt;https://tmuxcheatsheet.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Handy &lt;a href=&quot;https://tmuxcheatsheet.com&quot;&gt;TMUX cheat sheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 17 Sep 2018 06:26:07 -0400</pubDate>
+        <link>http://khou22.com/configuration/2018/09/17/getting-started-with-tmux-a-terminal-multiplexer.html</link>
+        <guid isPermaLink="true">http://khou22.com/configuration/2018/09/17/getting-started-with-tmux-a-terminal-multiplexer.html</guid>
+        
+        <category>terminal</category>
+        
+        
+        <category>configuration</category>
+        
+      </item>
     
       <item>
         <title>Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More</title>
@@ -1609,31 +1687,6 @@ Go to line number: &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Line 
         <category>vim</category>
         
         <category>sourceCode</category>
-        
-        
-        <category>configuration</category>
-        
-      </item>
-    
-      <item>
-        <title>Introduction to VIM: Transitioning to Command Line Text Editing</title>
-        <description>&lt;p&gt;I’m testing out VIM (contractions: “Vi IMproved”) — a command-line editor — to see if I should make the switch from Atom/Sublime to VIM. I’ve been using Sublime since I started developing in December of 2014 and I only recently picked up Atom my senior year of high school back in the fall of 2015. I’ve always enjoyed text editors and have had my fair share of GUI clients: Sublime 2, Atom, Brackets, XCode (although a bit different because it’s not for web), and a handful of others.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Up until now I’ve always argued that ext editors are much more useful than terminal editors because of their functionality, power, and customization; I was willing to look over their slow performance and limited upper-bound on configuration. Specifically for work-related projects, I have to develop and write code on my virtual machine in the cloud, meaning that I could either edit from the terminal or use an FTP plugin on Sublime/Atom (meaning I would have to manage double copies of everything). I decided that since it’s the summer, I’d have time to try out VIM and see if I want it to be daily driver during the school year because, I have to admit, it has its major benefits.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-I didn’t want to start from scratch and thankfully my coworker, Steve Aragon, is a master at VIM and has been using it for the past two years or so. He has a base configuration that he got from a friend of his so I used his a base and added some of my own customizations.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-I’ll probably end up doing a more in-depth post on my thoughts after using it extensively, but my initial thoughts have been fairly positive. The keystrokes take some getting used to. They’re so drastically different from my daily workflow that it’s difficult to adopt, but I can already sense it becoming more muscle memory. Keep in mind that I’ve been using VIM for probably 6 hours total now — much of which is for configuration — I don’t really have enough time logged to make an accurate review of my experience. I love how fast it is and the extensive customizations that I can make. There are plenty of handy plugins (I’m using &lt;a href=&quot;https://github.com/junegunn/vim-plug&quot;&gt;vim-plug&lt;/a&gt;). I’m sticking with my usual iTerm 2 which is significantly faster than any visual text editor, especially Atom, and I’m able to modify the code on my dev box directly as opposed to syncing it from my local machine.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-I’ll probably be fairly confident with my setup by the time school rolls around so I’m hoping I can start developing in VIM for all my personal, club, school, and work projects by the end of the summer. The learning curve is a bit steep, but once I’ve put in some practice I’m sure I’ll be faster than I was on Atom or Sublime. I think the difference is really that VIM is so malleable and lightweight that the you can keep pushing the upper bound of your macros, grepping, navigation speed, etc. — your productivity doesn’t ceiling out like it would on a normal text editor.
-&lt;br class=&quot;post-line-break&quot; /&gt;
-Check out my &lt;a href=&quot;http://localhost:4000/programming/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html&quot;&gt;next blog post&lt;/a&gt; to see my personal VIM configuration — I’ve spent a fair amount of time messing around with it and I’m really enjoying it so far so definitely take a look if you’re at all interested.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 03 Aug 2017 13:02:56 -0400</pubDate>
-        <link>http://khou22.com/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</link>
-        <guid isPermaLink="true">http://khou22.com/configuration/2017/08/03/introduction-to-vim-transitioning-to-command-line-text-editing.html</guid>
-        
-        <category>vim</category>
         
         
         <category>configuration</category>
