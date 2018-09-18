@@ -28,8 +28,12 @@ layout: default
             <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/photography">Photography</a></li>
           </ul>
         </li>
-        <li class="blog-landing-header-li">
-          <a href="{{ site.baseurl }}/blog">Blog</a>
+        <li id="blog-landing-blog-group" class="blog-landing-header-li">
+          <a id="blog-landing-blog-link" href="{{ site.baseurl }}/blog">Blog &#9662;</a>
+          <ul id="blog-landing-blog-dropdown" class="blog-landing-portfolio-dropdown">
+            <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/blog/category">By Category</a></li>
+            <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/blog/tag">By Tag</a></li>
+          </ul>
         </li>
         <li class="blog-landing-header-li">
           <a href="{{ site.baseurl }}/">Home</a>

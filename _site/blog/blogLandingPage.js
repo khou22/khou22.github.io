@@ -37,6 +37,32 @@ $(document).ready(function() {
     dropdown.style.display = "none"; // Hide
   })
 
+  // TODO: Duplicate code as for "blog-landing-portfolio-link" --> NEED TO REFACTOR
+  $("#blog-landing-blog-link").hover(function() {
+    // console.log("Hovering");
+    var dropdown = document.getElementById('blog-landing-blog-dropdown');
+    var scrollTop = $(document).scrollTop(); // Distance from top
+
+    // Position
+    // 24px will align perfectly
+    // Determine if should be on top or bottom
+    if (scrollTop < 60) { // Arbitrary
+      dropdown.style.bottom = "22px"; // Above
+      dropdown.style.top = null; // Reset
+    } else {
+      dropdown.style.top = "22px"; // Below
+      dropdown.style.bottom = null; // Reset
+    }
+
+    // Display
+    dropdown.style.display = "block"; // Show
+  })
+  $("#blog-landing-blog-group").mouseleave(function() {
+    // console.log("Mouse left");
+    var dropdown = document.getElementById('blog-landing-blog-dropdown');
+    dropdown.style.display = "none"; // Hide
+  })
+
   var interpolate = function(section, percentageComplete, classesToChange) {
     for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
       var currentClass = classesToChange[i] // Store
