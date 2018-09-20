@@ -26,23 +26,23 @@ for (var i = 0; i < vscoData.length; i++) {
 }
 
 // Get images from personal database
-fetch('http://khou22.herokuapp.com/api/photos/sources')
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(myJson) {
-        for (var i = 0; i < myJson.length; i++) {
-            // Build grid item
-            var gridItem = {
-                image: myJson[i],
-                link: myJson[i],
-                size: "1",
-            }
-
-            // Uncomment if want personal database photos
-            // gridData.data.unshift(gridItem);
-        }
-    });
+// fetch('http://khou22.herokuapp.com/api/photos/sources')
+//     .then(function(response) {
+//         return response.json();
+//     })
+//     .then(function(myJson) {
+//         for (var i = 0; i < myJson.length; i++) {
+//             // Build grid item
+//             var gridItem = {
+//                 image: myJson[i],
+//                 link: myJson[i],
+//                 size: "1",
+//             }
+//
+//             // Uncomment if want personal database photos
+//             // gridData.data.unshift(gridItem);
+//         }
+//     });
 
 /****** Old ******/
 // // Populate grid data
