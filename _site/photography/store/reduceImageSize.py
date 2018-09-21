@@ -16,8 +16,14 @@ for item in dirs:
         f, e = os.path.splitext(filePath)
 
         widthPercent = (width/float(img.size[0]))
-        height = int((float(img.size[1]) * float(widthPercent)))
+        height = int(float(img.size[1]) * float(widthPercent))
+
+        if width > height: # If landscape
+            height = width
+            heightPercentage = height/float(img.size[1])
+            width = int(float(img.size[0] * float(heightPercentage)))
 
         img = img.resize((width, height), Image.ANTIALIAS)
 
         img.save(f + '.jpg', 'JPEG', quality=90)
+        print("Finished %s.jpg" % f)
