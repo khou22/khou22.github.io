@@ -2,7 +2,7 @@ var gridData = {
     columns: 4,
     textColor: "white",
     modal: true,
-    openNewWindow: true,
+    openNewWindow: false,
     data: []
 }
 
