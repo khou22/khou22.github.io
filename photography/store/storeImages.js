@@ -1,4 +1,4 @@
-// Last updated: 2018-09-20 22:04:06
+// Last updated: 2018-09-20 22:05:59
 const storeImages = [
   "../../media/store/KHOU-0417-PRINT.jpg",
   "../../media/store/KHOU-0934-PRINT.jpg",
@@ -24,13 +24,11 @@ const storeImages = [
   "../../media/store/KHOU-0922-PRINT.jpg",
   "../../media/store/KHOU-0389-PRINT.jpg",
   "../../media/store/KHOU5--PRINT.jpg",
-  "../../media/store/KHOU-0719-PRINT.jpg",
   "../../media/store/KHOU-0541-PRINT.jpg",
   "../../media/store/KHOU-0786-PRINT.jpg",
   "../../media/store/KHOU--PRINT.jpg",
   "../../media/store/KHOU-0059-PRINT.jpg",
   "../../media/store/KHOU5-0763-PRINT.jpg",
   "../../media/store/KHOU-0984-PRINT.jpg",
-  "../../media/store/KHOU--PRINT-2.jpg",
   "../../media/store/KHOU-0385-PRINT.jpg",
 ];
