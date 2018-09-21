@@ -7,14 +7,13 @@ import io
 from datetime import datetime
 
 # Options
-outputFileName = "storeImages-[date].js"
+outputFileName = "storeImages.js"
 
 imageList = glob.glob('../../media/store/*')
 
 print("%d new image(s) found" % len(imageList))
 
 ################   Output to JS File   ################
-outputFileName = outputFileName.replace("[date]", str(calendar.timegm(time.gmtime()))) # Add epoche timestamp
 print("Writing to file " + outputFileName)
 try:
     with io.FileIO(outputFileName, 'w') as outputFile: # Writing file and creating file if it doesn't exist
