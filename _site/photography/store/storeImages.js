@@ -1,5 +1,6 @@
-// Last updated: 2018-09-20 22:16:00
+// Last updated: 2018-09-21 20:06:43
 const storeImages = [
+  "../../media/store/KHOU-0020-PRINT.jpg",
   "../../media/store/KHOU-0417-PRINT.jpg",
   "../../media/store/KHOU-0934-PRINT.jpg",
   "../../media/store/KHOU-0377-PRINT.jpg",
@@ -13,6 +14,7 @@ const storeImages = [
   "../../media/store/KHOU4-0394-PRINT.jpg",
   "../../media/store/KHOU-0568-PRINT.jpg",
   "../../media/store/KHOU-0788-PRINT.jpg",
+  "../../media/store/KHOU-0027-PRINT.jpg",
   "../../media/store/KHOU4-0593-PRINT.jpg",
   "../../media/store/KHOU5-0001-PRINT.jpg",
   "../../media/store/KHOU-0339-PRINT.jpg",
@@ -24,11 +26,14 @@ const storeImages = [
   "../../media/store/KHOU-0922-PRINT.jpg",
   "../../media/store/KHOU-0389-PRINT.jpg",
   "../../media/store/KHOU5--PRINT.jpg",
+  "../../media/store/KHOU-0719-PRINT.jpg",
   "../../media/store/KHOU-0541-PRINT.jpg",
   "../../media/store/KHOU-0786-PRINT.jpg",
   "../../media/store/KHOU--PRINT.jpg",
   "../../media/store/KHOU-0059-PRINT.jpg",
   "../../media/store/KHOU5-0763-PRINT.jpg",
   "../../media/store/KHOU-0984-PRINT.jpg",
+  "../../media/store/KHOU-0031-PRINT.jpg",
+  "../../media/store/KHOU--PRINT-2.jpg",
   "../../media/store/KHOU-0385-PRINT.jpg",
 ];
