@@ -22,10 +22,13 @@ try:
 
         # Cycle through data
         for image in imageList:
-            outputFile.write("  \"%s\",\n" % image)
+            fileName = image.split("/")[-1:][0] # Get last element which is the image file name
+            outputFile.write("    {\n")
+            outputFile.write("        name: \"%s\",\n" % fileName)
+            outputFile.write("        url: \"%s\",\n" % image)
+            outputFile.write("    },\n")
 
         outputFile.write("];") # Close array
         outputFile.close()
 except IOError as (errno, strerror):
     print "I/O error({0}): {1}".format(errno, strerror)
-

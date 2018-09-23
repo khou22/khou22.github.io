@@ -13,9 +13,12 @@ var preloadImage = function(url) {
 };
 
 for (var i = 0; i < storeImages.length; i++) {
+    let imageObj = storeImages[i]
+
     // Build grid item
     var gridItem = {
-        image: storeImages[i],
+        image: imageObj.url,
+        caption: imageObj.name,
         link: "#",
         size: "1",
     }
