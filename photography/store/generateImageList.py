@@ -5,11 +5,15 @@ import calendar
 import time
 import io
 from datetime import datetime
+import urllib
 
 # Options
 outputFileName = "storeImages.js"
 
-imageList = glob.glob('../../media/store/*')
+# Lookup directory
+base = "../../media/store" 
+
+imageList = glob.glob('%s/*' % base)
 
 print("%d new image(s) found" % len(imageList))
 
@@ -23,9 +27,10 @@ try:
         # Cycle through data
         for image in imageList:
             fileName = image.split("/")[-1:][0] # Get last element which is the image file name
+            slug = "%s/%s" % (base, urllib.quote(fileName, safe=''))
             outputFile.write("    {\n")
             outputFile.write("        name: \"%s\",\n" % fileName)
-            outputFile.write("        url: \"%s\",\n" % image)
+            outputFile.write("        url: \"%s\",\n" % slug)
             outputFile.write("    },\n")
 
         outputFile.write("];") # Close array
