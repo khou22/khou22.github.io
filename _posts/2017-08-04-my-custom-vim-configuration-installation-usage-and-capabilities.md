@@ -154,6 +154,10 @@ To cancel: `Command` + `C` or `:q`
 Reload buffer (file) due to external changes: `:e`  
 Refresh NerdTree file tree: While in NerdTree pane, `Shift` + `R`  
 
+Can also open multiple files into the buffer (especially helpful when you don't have plugins): `vim file1 file2`  
+Listing open buffers: `:args`  
+Switching between files. Next: `:n`. Previous: `:N`.  
+
 ### Grepping
 Global find (searches content of file in project) — `,a`  
 The "current project" is whatever directory you `$ vim` into  
