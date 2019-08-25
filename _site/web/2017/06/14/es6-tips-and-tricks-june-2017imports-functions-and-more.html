@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ES6 Tips and Tricks June 2017: Imports, Functions, and More</title>
+    <meta name="description" content="">
+
+    <!-- React -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Tile Layout Library -->
+    <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/web/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html">
+    <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+    <!-- Pinterest -->
+    <meta name="p:domain_verify" content="ba077b9ffb934c298dbb2516fb42bdee"/>
+
+    <!-- Semantic UI -->
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66796355-1', 'auto');
+        ga('send', 'pageview', location.pathname);
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/media/site/favicon.png">
+
+    <!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>ES6 Tips and Tricks June 2017: Imports, Functions, and More | Kevin Hou</title>
+<meta property="og:title" content="ES6 Tips and Tricks June 2017: Imports, Functions, and More" />
+<meta name="author" content="Kevin Hou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An ongoing blog post of useful ES6 notes that I come across throughout June." />
+<meta property="og:description" content="An ongoing blog post of useful ES6 notes that I come across throughout June." />
+<link rel="canonical" href="http://localhost:4000/web/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html" />
+<meta property="og:url" content="http://localhost:4000/web/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html" />
+<meta property="og:site_name" content="Kevin Hou" />
+<meta property="og:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-06-14T10:50:35-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@kevinhou22" />
+<meta name="twitter:creator" content="@Kevin Hou" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"ES6 Tips and Tricks June 2017: Imports, Functions, and More","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2017-06-14T10:50:35-07:00","dateModified":"2017-06-14T10:50:35-07:00","description":"An ongoing blog post of useful ES6 notes that I come across throughout June.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html"},"url":"http://localhost:4000/web/2017/06/14/es6-tips-and-tricks-june-2017imports-functions-and-more.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+
+  <body>
+
+    <header>
+  <!-- Desktop Client -->
+  <div class="site-header" id="site-header">
+    <div class="wrapper" style="height: 100%">
+      <div class="site-header-background">
+        <div class="site-header-content">
+
+          <a href="/" class="header-title-section">
+            <img src="/media/site/favicon.png" class="header-logo" align="left">
+            <p class="site-title">Kevin Hou</p>
+          </a>
+
+          <!-- Site Navigation Bar -->
+          <ul class="nav-ul site-nav-bar">
+            <li class="nav-li nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/blog">Blog &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/blog/category">Browse by Category</a></li>
+                <li class="nav-li"><a href="/blog/tag">Browse by Tag</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/categories">Portfolio &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/programming">Programming</a></li>
+                <li class="nav-li"><a href="/wood/">Woodshop</a></li>
+                <!-- <li class="nav&#45;li"><a href="https://www.flickr.com/photos/khou22/albums" target="_blank">Woodshop</a></li> -->
+                <li class="nav-li"><a href="/design">Design</a></li>
+                <li class="nav-li"><a href="/photography">Photography</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item"><a href="/contact">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="header-placeholder"></div>
+
+  <!-- Activate Tooltips -->
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    // Header has two sizes — 80px and 40px — based on scrolling
+    $(document).scroll(function() {
+      var screenWidth = $(document).width();
+      var mobileCuttoff = 800; // Ambiguous
+      if (screenWidth > mobileCuttoff) {
+        var triggerDistance = 100;
+        var classesToChange = [
+          {
+            className: ".site-header",
+            styleElement: "height",
+            min: 40,
+            max: 80
+          },
+          {
+            className: ".site-title",
+            styleElement: "font-size",
+            min: 20,
+            max: 32
+          },
+          {
+            className: ".site-title",
+            styleElement: "line-height",
+            min: 2,
+            max: 3
+          },
+          {
+            className: ".header-logo",
+            styleElement: "height",
+            min: 24,
+            max: 64
+          },
+          {
+            className: ".site-nav-bar",
+            styleElement: "margin-top",
+            min: 4,
+            max: 24
+          }
+        ]
+        if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
+          var percentageComplete = $(this).scrollTop()/triggerDistance; // Percentage complete
+          for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
+            var currentClass = classesToChange[i] // Store
+            var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
+            $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
+          }
+        } else { // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.min);
+          }
+        }
+        if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast - max style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.max);
+          }
+        }
+      } else {
+        // If on mobile
+        // console.log("Your screen size does not support dynamic header");
+      }
+    });
+  </script>
+
+
+  <!-- Mobile Client -->
+  <div class="mobile-blog-header">
+    <ul class="mobile-blog-header-ul">
+      <li class="mobile-blog-header-li-logo">
+        <a href="http://localhost:4000">
+          <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
+        </a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/">Home</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/blog">Blog</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/categories">Portfolio</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mobile-blog-header-placeholder">
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <!-- Hide scrollbar on this page -->
+<style> ::-webkit-scrollbar { display: none; } </style>
+
+<!-- Page scroll progress bar -->
+<script src="/libraries/prognroll/src/prognroll.min.js"></script>
+<script>
+    // Initialize the scroll progress bar
+    $(function() {
+        $("body").prognroll({
+            height: 2, // Progress bar height
+            color: "#3286A8", // Progress bar background color
+        });
+    });
+</script>
+
+<div class="post">
+  
+
+    
+
+    
+
+    
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-content">
+      <a onclick="blogPostBackButton()"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title post-header-title">ES6 Tips and Tricks June 2017: Imports, Functions, and More</h1>
+      <h4 class="post-header-description">An ongoing blog post of useful ES6 notes that I come across throughout June.</h4>
+      <p class="post-header-meta">Jun 14, 2017 • Kevin Hou</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+    var blogPostBackButton = function() {
+      var previousLink = document.referrer
+      var index = previousLink.indexOf("/blog")
+      console.log("Previous link:", previousLink);
+      console.log(index);
+      if (index == 1) { // If not coming from a different blog post
+        window.history.go(-1); // Back in history (keeps window position)
+      } else { // Directed from a different blog post
+        // console.log("Back to blog");
+        console.log("Back");
+        window.location.href = "/blog";
+      }
+    }
+
+  </script>
+
+  <article class="post-content">
+    <p>I am writing this blog post because I am, again, using ES6 for my internship. I was first exposed to this variation of Javascript during my very first internship at Salesforce back in Summer 2015. It feels like a long time ago and I’ve come a <em>long</em> way since then. I am approaching ES6 with new awareness and sharper critical thinking. I felt it was useful to document some of the neat tricks I found with ES6 during my first month of my internship at Moat. A lot of this is partially review — a chance for me to shake the rust off and really solidify my skills in ES6.</p>
+
+<h3 class="post-subheader">Concatenation</h3>
+<p>One strange thing that I’ve noticed is that some ES6 linters do not allow you to concatenate Strings using the normal ‘+’ operation. They also don’t allow you use double quotes and force you to stick to single quotes when hard coding Strings. I’m not entirely sure why this is the case and I haven’t had time to look it up yet, but I think it has something to do with the way the compiler transforms the ES6 into static ES5 files for the browser. My guess is that the compiler needs to use double quotes and doesn’t want the code to mess with its compile scripts/process. Anyways, here’s a new way you can concatenate:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">id</span> <span class="o">=</span> <span class="s1">'154'</span><span class="p">;</span> <span class="c1">// Notice the single quotes</span>
+
+<span class="c1">// When concatenating, use the "\`" quotation mark (normally shares the same key as the '~')</span>
+<span class="c1">// This works with any String convertible data type</span>
+<span class="kr">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="err">`</span><span class="o">/</span><span class="nx">data_table</span><span class="p">?</span><span class="nx">id</span><span class="o">=</span><span class="nx">$</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="err">`</span><span class="p">;</span> <span class="c1">// Result: "/data_table?id=154"</span></code></pre></figure>
+
+<p><br class="post-line-break" /></p>
+<h3 class="post-subheader">Updating a Few Properties in an Object</h3>
+<p>This will allow you to return a deep copy of your object without having to write out every single property value. It’s really useful when you’re updating a state in React or Redux.<br /></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">return</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">previousState</span><span class="p">,</span>
+    <span class="na">propertyToUpdate</span><span class="p">:</span> <span class="o">!</span><span class="nx">previousState</span><span class="p">.</span><span class="nx">propertyToUpdate</span>
+<span class="p">};</span></code></pre></figure>
+
+<p><br class="post-line-break" /></p>
+<h3 class="post-subheader">Event Handler</h3>
+<p>I came across this useful tidbit when using the <a href="https://github.com/JedWatson/react-select" target="_blank">React-Select</a> library for my project at work. It is an open source, purely React dropdown list that I would definitely recommend to anyone in need of a dropdown. I was attempting to customize the main component and found a property called arrorRender with the usage description: “Renders a custom drop-down arrow to be shown in the right-hand side of the select: arrowRenderer({ onMouseDown, isOpen })” I’m familiar with event handlers, but I had never seen this style of documentation before. What this means, is that the arrowRenderer is a function that returns a DOM node to be used in place of the default arrow icon. The function takes an object input with the properties onMouseDown and isOpen so that there can be more complex renderings. Here was my rendering function:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Custom dropdown icon for React-Select</span>
+<span class="nx">arrowRenderer</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">dropdownArrow</span> <span class="o">=</span> <span class="s1">'/path/to/image'</span><span class="p">;</span> <span class="c1">// Dropdown arrow</span>
+    <span class="kr">const</span> <span class="nx">searchIcon</span> <span class="o">=</span> <span class="s1">'/path/to/image'</span><span class="p">;</span> <span class="c1">// Magnifying glass</span>
+    <span class="kr">const</span> <span class="nx">imgURL</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">isOpen</span> <span class="p">?</span> <span class="nx">searchIcon</span> <span class="p">:</span> <span class="nx">dropdownArrow</span><span class="p">;</span> <span class="c1">// Determine which to use</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">imgURL</span><span class="p">}</span> <span class="nx">width</span><span class="o">=</span><span class="s2">"100%"</span> <span class="nx">role</span><span class="o">=</span><span class="s2">"presentation"</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>In this function, I am using the isOpen state to choose which image icon to render in the select input. You may not have seen this notation before and it’s definitely useful to remember.
+<br class="post-line-break" />
+Another useful event handler is the ‘input’ tag’s built in onBlur() event that triggers when the user removes focus from the input element. Like the onFocus() handler, onBlur() can be assigned to a custom function.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// The event handler function</span>
+<span class="kr">const</span> <span class="nx">update</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'I'</span><span class="nx">ve</span> <span class="nx">been</span> <span class="nx">triggered</span><span class="err">'</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- The HTML --&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">autoComplete=</span><span class="s">"off"</span> <span class="na">autoCorrect=</span><span class="s">"off"</span> <span class="na">spellCheck=</span><span class="s">"false"</span> <span class="na">className=</span><span class="s">"select2-input"</span> <span class="na">onFocus=</span><span class="s">{update}</span> <span class="na">onBlur=</span><span class="s">{update}</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p><br class="post-line-break" /></p>
+<h3 class="post-subheader">Preserving 'this' When Using React Props</h3>
+<p>In ES6, ‘this’ is not generally preserved which leads to some difficult workarounds when passing functions from one component to its children. Luckily, there is a technique that can be generally applicable to most situations that solves this issue. Many linters prevent the use of ‘.bind(this)’ so that is off the table. However, the block statement function ensures that ‘this’ pertains to the right scope. It is especially useful when you have to pass variables in as inputs. Here is an ES6 React example of this:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">SomeComponent</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">clicked</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 'this' refers to the component rather than the window</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+            <span class="na">someState</span><span class="p">:</span> <span class="nx">input</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+                <span class="nx">Good</span> <span class="nx">Example</span>
+                <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"button"</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">clicked</span><span class="p">(</span><span class="nx">input</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">I</span> <span class="nx">work</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>
+                <span class="nx">This</span> <span class="nx">won</span><span class="s1">'t preserve '</span><span class="k">this</span><span class="err">'</span> <span class="nx">and</span> <span class="nx">your</span> <span class="nx">component</span> <span class="nx">will</span> <span class="nx">crash</span>
+                <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"button"</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">clicked</span><span class="p">(</span><span class="nx">input</span><span class="p">)}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+
+    <div class="post-organization">
+      <p id="post-meta">Posted in <a href="/blog/category/web/">Web Development</a> with <a href="/blog/tag/javascript">Javascript</a>, <a href="/blog/tag/es6">ES6</a></p>
+    </div>
+  </article>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <!-- External Links Navigation Bar -->
+  <table class="external-bar"> <!-- Custom header -->
+    <tr>
+      <td class="external-td">
+        <a href="/blog" data-toggle="tooltip" title="Blog Home">
+          <div class="external-link-box home-bw"></div>
+          <p class="external-link-label">Home</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.linkedin.com/in/kevinhou22" target="_blank" data-toggle="tooltip" title="LinkedIn">
+          <div class="external-link-box linkedin-bw"></div>
+          <p class="external-link-label">LinkedIn</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://github.com/khou22" target="_blank" data-toggle="tooltip" title="Github">
+          <div class="external-link-box github-bw"></div>
+          <p class="external-link-label">Github</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.flickr.com/photos/khou22/albums" target="_blank" data-toggle="tooltip" title="Flickr">
+          <div class="external-link-box flickr-bw"></div>
+          <p class="external-link-label">Flickr</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="http://kevinhou.wix.com/projects" target="_blank" data-toggle="tooltip" title="Portfolio">
+          <div class="external-link-box gallery-bw"></div>
+          <p class="external-link-label">Portfolio</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://youtube.com/kevinhou22" target="_blank" data-toggle="tooltip" title="YouTube Channel">
+          <div class="external-link-box youtube-bw"></div>
+          <p class="external-link-label">YouTube</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.princeton.edu/main/" target="_blank" data-toggle="tooltip" title="School Profile">
+          <div class="external-link-box highSchool-bw"></div>
+          <p class="external-link-label">School Profile</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="/blog/contact" data-toggle="tooltip" title="Contact">
+          <div class="external-link-box email-bw"></div>
+          <p class="external-link-label">Contact</p>
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="wrapper">
+
+    <div class="site-footer-content">
+
+      <h2 class="footer-heading">Kevin Hou's Portfolio and Blog</h2>
+
+      <div class="footer-col-wrapper">
+        <div class="footer-col  footer-col-1">
+          <ul class="contact-list">
+            <li>Kevin Hou</li>
+            <li><a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a></li>
+            <li>San Francisco Bay Area</li>
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-2">
+          <ul class="social-media-list">
+            
+            <li>
+              <a href="https://github.com/khou22" target="_blank">
+                <span class="icon  icon--github">
+                  <svg viewBox="0 0 16 16">
+                    <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                  </svg>
+                </span>
+
+                <span class="username">khou22</span>
+              </a>
+            </li>
+            
+
+            
+            <li>
+              <a href="https://www.flickr.com/photos/khou22/albums" target="_blank">
+                <div class="footer-icon-box flickr-bw"></div><span class="username">kevinhou22</span>
+              </a>
+            </li>
+            
+
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-3">
+          <p class="text">Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
+</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

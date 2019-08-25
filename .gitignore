@@ -2,3 +2,4 @@
 media/site/images/.DS_Store
 vendor/
 .bundle/
+node_modules/

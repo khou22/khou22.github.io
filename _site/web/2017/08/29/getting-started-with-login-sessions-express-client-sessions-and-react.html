@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Getting Started with Login Sessions: Express, Client Sessions, and React</title>
+    <meta name="description" content="">
+
+    <!-- React -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Tile Layout Library -->
+    <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html">
+    <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+    <!-- Pinterest -->
+    <meta name="p:domain_verify" content="ba077b9ffb934c298dbb2516fb42bdee"/>
+
+    <!-- Semantic UI -->
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-66796355-1', 'auto');
+        ga('send', 'pageview', location.pathname);
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/media/site/favicon.png">
+
+    <!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>Getting Started with Login Sessions: Express, Client Sessions, and React | Kevin Hou</title>
+<meta property="og:title" content="Getting Started with Login Sessions: Express, Client Sessions, and React" />
+<meta name="author" content="Kevin Hou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A tutorial on how to set up your own web app with login authentication, cookies, and sessions using Node and Express." />
+<meta property="og:description" content="A tutorial on how to set up your own web app with login authentication, cookies, and sessions using Node and Express." />
+<link rel="canonical" href="http://localhost:4000/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html" />
+<meta property="og:url" content="http://localhost:4000/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html" />
+<meta property="og:site_name" content="Kevin Hou" />
+<meta property="og:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-08-29T14:33:04-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@kevinhou22" />
+<meta name="twitter:creator" content="@Kevin Hou" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"Getting Started with Login Sessions: Express, Client Sessions, and React","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2017-08-29T14:33:04-07:00","dateModified":"2017-08-29T14:33:04-07:00","description":"A tutorial on how to set up your own web app with login authentication, cookies, and sessions using Node and Express.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html"},"url":"http://localhost:4000/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+
+  <body>
+
+    <header>
+  <!-- Desktop Client -->
+  <div class="site-header" id="site-header">
+    <div class="wrapper" style="height: 100%">
+      <div class="site-header-background">
+        <div class="site-header-content">
+
+          <a href="/" class="header-title-section">
+            <img src="/media/site/favicon.png" class="header-logo" align="left">
+            <p class="site-title">Kevin Hou</p>
+          </a>
+
+          <!-- Site Navigation Bar -->
+          <ul class="nav-ul site-nav-bar">
+            <li class="nav-li nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/blog">Blog &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/blog/category">Browse by Category</a></li>
+                <li class="nav-li"><a href="/blog/tag">Browse by Tag</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/categories">Portfolio &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li"><a href="/programming">Programming</a></li>
+                <li class="nav-li"><a href="/wood/">Woodshop</a></li>
+                <!-- <li class="nav&#45;li"><a href="https://www.flickr.com/photos/khou22/albums" target="_blank">Woodshop</a></li> -->
+                <li class="nav-li"><a href="/design">Design</a></li>
+                <li class="nav-li"><a href="/photography">Photography</a></li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item"><a href="/contact">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="header-placeholder"></div>
+
+  <!-- Activate Tooltips -->
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    // Header has two sizes — 80px and 40px — based on scrolling
+    $(document).scroll(function() {
+      var screenWidth = $(document).width();
+      var mobileCuttoff = 800; // Ambiguous
+      if (screenWidth > mobileCuttoff) {
+        var triggerDistance = 100;
+        var classesToChange = [
+          {
+            className: ".site-header",
+            styleElement: "height",
+            min: 40,
+            max: 80
+          },
+          {
+            className: ".site-title",
+            styleElement: "font-size",
+            min: 20,
+            max: 32
+          },
+          {
+            className: ".site-title",
+            styleElement: "line-height",
+            min: 2,
+            max: 3
+          },
+          {
+            className: ".header-logo",
+            styleElement: "height",
+            min: 24,
+            max: 64
+          },
+          {
+            className: ".site-nav-bar",
+            styleElement: "margin-top",
+            min: 4,
+            max: 24
+          }
+        ]
+        if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
+          var percentageComplete = $(this).scrollTop()/triggerDistance; // Percentage complete
+          for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
+            var currentClass = classesToChange[i] // Store
+            var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
+            $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
+          }
+        } else { // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.min);
+          }
+        }
+        if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast - max style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i]
+            $(currentClass.className).css(currentClass.styleElement, currentClass.max);
+          }
+        }
+      } else {
+        // If on mobile
+        // console.log("Your screen size does not support dynamic header");
+      }
+    });
+  </script>
+
+
+  <!-- Mobile Client -->
+  <div class="mobile-blog-header">
+    <ul class="mobile-blog-header-ul">
+      <li class="mobile-blog-header-li-logo">
+        <a href="http://localhost:4000">
+          <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
+        </a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/">Home</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/blog">Blog</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/categories">Portfolio</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mobile-blog-header-placeholder">
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <!-- Hide scrollbar on this page -->
+<style> ::-webkit-scrollbar { display: none; } </style>
+
+<!-- Page scroll progress bar -->
+<script src="/libraries/prognroll/src/prognroll.min.js"></script>
+<script>
+    // Initialize the scroll progress bar
+    $(function() {
+        $("body").prognroll({
+            height: 2, // Progress bar height
+            color: "#3286A8", // Progress bar background color
+        });
+    });
+</script>
+
+<div class="post">
+  
+
+    
+
+    
+
+    
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-content">
+      <a onclick="blogPostBackButton()"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title post-header-title">Getting Started with Login Sessions: Express, Client Sessions, and React</h1>
+      <h4 class="post-header-description">A tutorial on how to set up your own web app with login authentication, cookies, and sessions using Node and Express.</h4>
+      <p class="post-header-meta">Aug 29, 2017 • Kevin Hou</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+    var blogPostBackButton = function() {
+      var previousLink = document.referrer
+      var index = previousLink.indexOf("/blog")
+      console.log("Previous link:", previousLink);
+      console.log(index);
+      if (index == 1) { // If not coming from a different blog post
+        window.history.go(-1); // Back in history (keeps window position)
+      } else { // Directed from a different blog post
+        // console.log("Back to blog");
+        console.log("Back");
+        window.location.href = "/blog";
+      }
+    }
+
+  </script>
+
+  <article class="post-content">
+    <h2 id="introduction">Introduction</h2>
+
+<h3 id="what-is-a-cookie">What is a cookie?</h3>
+<p>A cookie is a piece of data attached to the header of an Internet request. It’s the browsers way of storing data about a website. A site might use cookies to track what’s in your shopping cart, when your last visit was, or who’s logged in to your site which is what we will be covering in this blog post.</p>
+
+<h3 id="how-does-it-work">How does it work?</h3>
+<p>In short, the user logs in and sends their username and password to an API endpoint on the server. If authenticated, the server will send back and set a cookie with the session on the browser (ie. client). Until the cookie expires, all communication between the client and the server will include a cookie, or encrypted string, that can be used for authentiction, sessions, etc.</p>
+
+<h3 id="my-stack">My Stack</h3>
+<p>I’m running an ES6, React-Redux-Router client web app compiled with Webpack and served by my server. My server is an Express, Typescript, Webpack, NodeJS app connected to a Postgres database and Sequelize as my database API interface. My entire setup runs on Heroku.</p>
+
+<h2 id="server-side">Server-Side</h2>
+
+<h3 id="middleware-enabling-cookies">Middleware: Enabling Cookies</h3>
+<p>We must first setup the infrastructure for cookies using <code class="highlighter-rouge">client-sessions</code>. This involves using middleware to both configure and “enable” cookies. We use create a middleware with the specified configuration:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">sessions</span><span class="p">({</span>
+	<span class="na">cookieName</span><span class="p">:</span> <span class="s1">'session'</span><span class="p">,</span> <span class="c1">// cookie name dictates the key name added to the request object</span>
+	<span class="na">secret</span><span class="p">:</span> <span class="s1">'somecrazykeythatyoushouldkeephidden'</span><span class="p">,</span> <span class="c1">// store in environment variables</span>
+	<span class="na">duration</span><span class="p">:</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="c1">// how long the session will stay valid in ms</span>
+	<span class="na">activeDuration</span><span class="p">:</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">5</span><span class="p">,</span> <span class="c1">// if expiresIn &lt; activeDuration, the session will be extended by activeDuration milliseconds</span>
+<span class="p">}));</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">secret</code> key should be kept secret for security reasons. This serves as the encryption method for the cookie contents. Because a cookie is just a string attached to a header, it can be theoretically available to the public; however, you don’t want your user or curious browsers to see what you are setting as it could contain sensitive information. It often contains email addresses, authentication tokens, and if the developer really has no sense of security, passwords.</p>
+
+<p>In order to keep all this information confidential, we use a long string as our key and perform an LFSR (Linear Feedback Shift Register) — an effective type of encryption. Because the key is stored on the server (keep it as an <code class="highlighter-rouge">process.env</code> variable if your code is open-source), the server can decrypt it as well. If you are curious about LFSR, feel free to check out a <a href="https://github.com/khou22/Coding-Techniques-and-Algorithms/blob/master/Linear%20Feedback%20Shift%20Register.py">version I wrote</a> in python.</p>
+
+<h3 id="restricting-access-based-on-cookies">Restricting access based on cookies</h3>
+<p>Once a cookie is set, you can easily use this cookie to restrict access to various parts of your app. <code class="highlighter-rouge">client-sessions</code> handles the decryption so the cooke simply becomes another variable that you can read in that is attached to the <code class="highlighter-rouge">request</code> variable in <code class="highlighter-rouge">Express</code>. Instead of adding logic to every individual route or controller, I added my authentication logic to my middleware like so:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// APIs that client must be logged in for</span>
+    <span class="c1">// Best practice: APIs that are accessible via the client but require a login</span>
+    <span class="c1">// APIs are already protected by a Basic Auth, this is just a safegaurd</span>
+    <span class="kr">const</span> <span class="nx">blacklisted</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">'\/api\/users\/create'</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">originalUrl</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'No session'</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">blacklisted</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">'|'</span><span class="p">),</span> <span class="s1">'i'</span><span class="p">).</span><span class="nx">test</span><span class="p">(</span><span class="nx">path</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// If on the blacklist</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">401</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s1">'Please log in'</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// Allowed</span>
+            <span class="nx">next</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">next</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>Because I already encrypt my server and client with <a href="https://en.wikipedia.org/wiki/Basic_access_authentication">Basic Authentication</a>, I did not need to have restricted access on every part of my app. I instead created a blacklist of url regexes that require authentication. If a request is made to that URL or set of URLs, the request will be cut short and a 401 unauthorized response will be returned telling the user/client ot log in.</p>
+
+<h2 id="client-side">Client-Side</h2>
+
+<h3 id="logging-in">Logging In</h3>
+<p>In order to set a cookie on the client-side, we need a <code class="highlighter-rouge">/api/login</code> endpoint that checks against a database of users and sets a cookie. I’m using <code class="highlighter-rouge">Sequelize</code> so the database management is fairly straightforward. My login route hits this function below:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">export</span> <span class="kr">const</span> <span class="nx">login</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="err">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="err">:</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span> <span class="c1">// Takes in values in the body</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">username</span> <span class="o">===</span> <span class="kc">undefined</span> <span class="o">||</span> <span class="nx">data</span><span class="p">.</span><span class="nx">password</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Empty authentication</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">({</span>
+            <span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="na">error</span><span class="p">:</span> <span class="s1">'Please submit a username and password'</span><span class="p">,</span>
+        <span class="p">});</span>
+        <span class="k">return</span><span class="p">;</span> <span class="c1">// Terminate</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">User</span> <span class="c1">// Sequelize - perform a lookup in the database</span>
+        <span class="p">.</span><span class="nx">findOne</span><span class="p">({</span>
+            <span class="na">where</span><span class="p">:</span> <span class="p">{</span>
+                <span class="na">username</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">username</span><span class="p">,</span>
+                <span class="na">password</span><span class="p">:</span> <span class="nx">data</span><span class="p">.</span><span class="nx">password</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">})</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="na">user</span><span class="p">:</span> <span class="nx">User</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">user</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// No user — Invalid credentials</span>
+                <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">({</span> <span class="c1">// Send response</span>
+                    <span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="na">error</span><span class="p">:</span> <span class="s1">'Invalid username &amp; password'</span><span class="p">,</span>
+                <span class="p">});</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="c1">// Valid credentials</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">Successfully</span> <span class="nx">logged</span> <span class="k">in</span> <span class="na">user</span><span class="p">:</span> <span class="nx">$</span><span class="p">{</span><span class="nx">user</span><span class="p">.</span><span class="nx">username</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+            <span class="k">delete</span> <span class="nx">user</span><span class="p">.</span><span class="nx">password</span><span class="p">;</span> <span class="c1">// Don't send back password for security reasons</span>
+            <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="nx">user</span><span class="p">;</span> <span class="c1">// Set the cookie</span>
+
+            <span class="c1">// Send a message back to the client</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">({</span>
+                <span class="na">success</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nx">user</span><span class="p">,</span> <span class="c1">// Send user</span>
+            <span class="p">});</span>
+        <span class="p">})</span>
+        <span class="c1">// Error with sequelize</span>
+        <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="na">error</span><span class="p">:</span> <span class="nb">Error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">400</span><span class="p">).</span><span class="nx">send</span><span class="p">({</span>
+                <span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+                <span class="nx">error</span><span class="p">,</span>
+            <span class="p">});</span>
+        <span class="p">});</span> <span class="c1">// Error in request</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="set-a-browser-cookie-from-an-api-response">Set a browser cookie from an API response</h3>
+<p>Now that we know how to send a cookie back from the server, we must now inject that cookie into the browser so the session can actually be tied to a browser. The <code class="highlighter-rouge">client-session</code> package automatically sets the appropriate cookie on the response header as <code class="highlighter-rouge">Set-Cookie</code>. This indicates to the browser to store the response as a cookie. Any response with the property <code class="highlighter-rouge">Set-Cookie</code>, as seen below, will do just that.</p>
+
+<p><img class="iPhone-screenshots-large" src="./../../../../media/blog/images/set-cookie-response.png" /></p>
+
+<p>In order for the client to allow setting a cookie, the <code class="highlighter-rouge">fetch</code> request must be <code class="highlighter-rouge">same-origin</code>. This is a security feature that ensures malicious cookies have a harder time. I’m using <code class="highlighter-rouge">whatwg-fetch</code> and in my fetch request, I set <code class="highlighter-rouge">credentials: 'same-origin'</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
+	<span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span>
+   	<span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+   		<span class="na">Accept</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">,</span>
+	   	<span class="s2">"Content-Type"</span><span class="p">:</span> <span class="s2">"application/json"</span>
+    <span class="p">},</span>
+    <span class="na">credentials</span><span class="p">:</span> <span class="s1">'same-origin'</span><span class="p">,</span> <span class="c1">// Will set cookie 'set-cookie' only if this is set to 'same-origin'</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>In this situtation, there was a successful login from the login page that sent back a cookie. The browser set this cookie in the header so every request to my domain will include this cookie in the future — at least until it expires. The cookie was encrypted on the server side and can only be decrypted by the server. It also has an expiration date so a user’s session will expire.</p>
+
+<h3 id="logging-out">Logging Out</h3>
+<p>Logging out is much more straightforward. It simply involves removing the cookie from the headers — thus reseting the cookie on the client-side.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">export</span> <span class="kr">const</span> <span class="nx">logout</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="err">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="err">:</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">previousUser</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span> <span class="c1">// Save the previous user</span>
+    <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span> <span class="c1">// Reset the cookies</span>
+
+    <span class="c1">// Response to client</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">({</span>
+        <span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="na">user</span><span class="p">:</span> <span class="nx">previousUser</span><span class="p">,</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="getting-user-information-after-load">Getting User Information after Load</h3>
+<p>Cookies only allow information to be sent back from the server, so we need a seperate method to get information <em>about</em> the user like their name, email, etc. We do this by creating a method that returns unencrypted data about the user based on the session cookie. It’s also a helpful API for determining if a user is currently signed in. Here’s an example:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">export</span> <span class="kr">const</span> <span class="nx">currentUser</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="err">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="err">:</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">delete</span> <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">password</span><span class="p">;</span> <span class="c1">// Remove password</span>
+        <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">logged_in</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="na">user</span><span class="p">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">,</span>
+        <span class="p">};</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">logged_in</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="p">};</span>
+        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>In my React-Redux-Router app, I make this API request on entry so that my local redux state contains information about my user right on load. This allows me to populate sections of my app like a ‘Profile’ section as well as restricting certain routes.</p>
+
+    <div class="post-organization">
+      <p id="post-meta">Posted in <a href="/blog/category/web/">Web Development</a> with <a href="/blog/tag/expressServer">Express Server</a>, <a href="/blog/tag/backendServer">Backend Server</a>, <a href="/blog/tag/es6">ES6</a>, <a href="/blog/tag/javascript">Javascript</a>, <a href="/blog/tag/tutorial">Tutorial</a>, <a href="/blog/tag/sourceCode">Source Code</a></p>
+    </div>
+  </article>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <!-- External Links Navigation Bar -->
+  <table class="external-bar"> <!-- Custom header -->
+    <tr>
+      <td class="external-td">
+        <a href="/blog" data-toggle="tooltip" title="Blog Home">
+          <div class="external-link-box home-bw"></div>
+          <p class="external-link-label">Home</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.linkedin.com/in/kevinhou22" target="_blank" data-toggle="tooltip" title="LinkedIn">
+          <div class="external-link-box linkedin-bw"></div>
+          <p class="external-link-label">LinkedIn</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://github.com/khou22" target="_blank" data-toggle="tooltip" title="Github">
+          <div class="external-link-box github-bw"></div>
+          <p class="external-link-label">Github</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.flickr.com/photos/khou22/albums" target="_blank" data-toggle="tooltip" title="Flickr">
+          <div class="external-link-box flickr-bw"></div>
+          <p class="external-link-label">Flickr</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="http://kevinhou.wix.com/projects" target="_blank" data-toggle="tooltip" title="Portfolio">
+          <div class="external-link-box gallery-bw"></div>
+          <p class="external-link-label">Portfolio</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://youtube.com/kevinhou22" target="_blank" data-toggle="tooltip" title="YouTube Channel">
+          <div class="external-link-box youtube-bw"></div>
+          <p class="external-link-label">YouTube</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="https://www.princeton.edu/main/" target="_blank" data-toggle="tooltip" title="School Profile">
+          <div class="external-link-box highSchool-bw"></div>
+          <p class="external-link-label">School Profile</p>
+        </a>
+      </td>
+      <td class="external-td">
+        <a href="/blog/contact" data-toggle="tooltip" title="Contact">
+          <div class="external-link-box email-bw"></div>
+          <p class="external-link-label">Contact</p>
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="wrapper">
+
+    <div class="site-footer-content">
+
+      <h2 class="footer-heading">Kevin Hou's Portfolio and Blog</h2>
+
+      <div class="footer-col-wrapper">
+        <div class="footer-col  footer-col-1">
+          <ul class="contact-list">
+            <li>Kevin Hou</li>
+            <li><a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a></li>
+            <li>San Francisco Bay Area</li>
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-2">
+          <ul class="social-media-list">
+            
+            <li>
+              <a href="https://github.com/khou22" target="_blank">
+                <span class="icon  icon--github">
+                  <svg viewBox="0 0 16 16">
+                    <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                  </svg>
+                </span>
+
+                <span class="username">khou22</span>
+              </a>
+            </li>
+            
+
+            
+            <li>
+              <a href="https://www.flickr.com/photos/khou22/albums" target="_blank">
+                <div class="footer-icon-box flickr-bw"></div><span class="username">kevinhou22</span>
+              </a>
+            </li>
+            
+
+          </ul>
+        </div>
+
+        <div class="footer-col  footer-col-3">
+          <p class="text">Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
+</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

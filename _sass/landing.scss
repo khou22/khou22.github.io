@@ -1,0 +1,21 @@
+.landing {
+  &-parallax {
+    &-container {
+      display: block;
+      height: 100vh;
+    }
+    &-container div {
+      position: fixed;
+      top: 0;
+      background-position: center !important;
+      transform: translateY(0px);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    &-img {
+      max-height: 100%;
+    }
+  }
+}

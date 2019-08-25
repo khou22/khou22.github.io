@@ -1,101 +1,42 @@
-<!-- index.html -->
-<!DOCTYPE html>
+---
+layout: empty
+title: "Kevin Hou"
+---
 
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Kevin Hou's Website</title>
-    <meta name="description" content="Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id="landing-parallax-container" class="landing-parallax-container">
+  <div>
+    <img
+      class="landing-parallax-image"
+      src="{{
+        'media/landing/hong-kong/Background.png' | prepend: site.baseurl
+      }} "
+    />
+  </div>
+  <div>
+    <img
+      class="landing-parallax-image"
+      src="{{
+        'media/landing/hong-kong/Buildings.png' | prepend: site.baseurl
+      }} "
+    />
+  </div>
+</div>
+<div id="landing-content">
+  <h1>Welcome</h1>
+  <p>Kevin Hou</p>
+</div>
 
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="css/landingPage.css">
-    <link rel="stylesheet" href="css/loadingPage/loadingPage.css">
-    <link rel="stylesheet" href="css/landingPage-mobile.css">
-    <link rel="icon" type="image/png" href="media/site/favicon.png">
-    <link rel="stylesheet" href="css/loadingPage/loadingPageAnimations.css">
-
-    <!-- Javascript Libraries -->
-    <script src="libraries/TheaterJS-2.0.1/dist/theater.min.js"></script> <!-- TheaterJS -->
-
-    <!-- For media queries -->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
-  <body>
-    <!-- Hide scrollbar on this page -->
-    <style> ::-webkit-scrollbar { display: none; } </style>
-
-    <div id="loadingPage"></div>
-    <script type="text/jsx;harmony=true" src="Components/LoadingPage.js"></script>
-
-    <div id="content" class="MainDiv"></div>
-    <script type="text/jsx;harmony=true" src="Components/LandingPage.js"></script>
-
-    <a href="https://khou22.github.io" title="Kevin Hou's Website">
-      <img src="media/site/logo/initials_logo.png" width="64" height="64" class="landing-logo" title="Kevin Hou's Website">
-    </a>
-
-    <!-- Bottom Menu -->
-    <table class="nav-bar">
-      <tr>
-        <td>
-          <a href="https://www.linkedin.com/in/kevinhou22" target="_blank" data-toggle="tooltip" title="LinkedIn">
-            <div class="nav-link-box linkedin-bw"></div>
-          </a>
-        </td>
-        <td>
-          <a href="https://github.com/khou22" target="_blank" data-toggle="tooltip" title="Github">
-            <div class="nav-link-box github-bw"></div>
-          </a>
-        </td>
-        <td>
-          <a href="https://www.flickr.com/photos/khou22/" target="_blank" data-toggle="tooltip" title="Flickr">
-            <div class="nav-link-box flickr-bw"></div>
-          </a>
-        </td>
-        <td>
-          <a href="http://kevinhou.wix.com/projects" target="_blank" data-toggle="tooltip" title="Portfolio">
-            <div class="nav-link-box gallery-bw"></div>
-          </a>
-        </td>
-        <td>
-          <a href="https://youtube.com/kevinhou22" target="_blank" data-toggle="tooltip" title="YouTube">
-            <div class="nav-link-box youtube-bw"></div>
-          </a>
-        </td>
-        <td>
-          <div class="nav-td">
-            <a href="https://www.princeton.edu/main/" target="_blank" data-toggle="tooltip" title="School Profile">
-              <div class="nav-link-box highSchool-bw"></div>
-            </a>
-          </div>
-        </td>
-      </tr>
-    </table>
-
-    <!-- Activate Tooltips -->
-    <script type="text/javascript">
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
-    </script>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-66796355-1', 'auto');
-      ga('send', 'pageview', location.pathname);
-
-    </script>
-  </body>
-</html>
+<script>
+  window.addEventListener(
+    "scroll",
+    () => {
+      let parent = document.getElementById("landing-parallax-container");
+      let children = parent.getElementsByTagName("div");
+      for (let i = 0; i < children.length; i++) {
+        children[i].style.transform =
+          "translateY(-" + (window.pageYOffset * i) / children.length + "px)";
+      }
+    },
+    false
+  );
+</script>
