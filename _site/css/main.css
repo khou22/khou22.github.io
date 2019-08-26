@@ -207,7 +207,7 @@ a:active { text-decoration: none !important; }
 
 b { font-family: defaultFont_bold !important; }
 
-i { font-family: defaultFont_Italics !important; }
+i { font-family: defaultFont_Italics; }
 
 em { font-family: defaultFont_Italics !important; }
 
@@ -239,7 +239,7 @@ strong { font-family: defaultFont_bold !important; color: red; }
 
 .youtube-bw { background-image: url(./../media/site/icons/logos/YouTube_bw.png); background-size: contain; width: 100%; height: 100%; }
 
-.regular-font-color { color: #9DB7C1; }
+.regular-font-color { color: #9db7c1; }
 
 .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 
@@ -472,6 +472,7 @@ article strong { color: black; }
 
 .blog-search button { width: 100%; margin: 12px 0px; padding: 8px; background: white; border-radius: 4px; border: 1px solid #3286A8; }
 
+.landing-header { position: fixed; top: 0; width: 100%; z-index: 2; }
 .landing-parallax-container { display: block; height: 100vh; }
 .landing-parallax-container-content { display: flex; flex-direction: column; align-items: center; margin-top: 8%; }
 .landing-parallax-container-content p { line-height: 2.25em; font-size: 1.75em; }
