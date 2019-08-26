@@ -643,28 +643,28 @@
 
 /* Red */
 .ui.red.table {
-  border-top: 0.2em solid #DB2828;
+  border-top: 0.2em solid #D95C5C;
 }
 .ui.inverted.red.table {
-  background-color: #DB2828 !important;
+  background-color: #D95C5C !important;
   color: #FFFFFF !important;
 }
 
 /* Orange */
 .ui.orange.table {
-  border-top: 0.2em solid #F2711C;
+  border-top: 0.2em solid #E07B53;
 }
 .ui.inverted.orange.table {
-  background-color: #F2711C !important;
+  background-color: #E07B53 !important;
   color: #FFFFFF !important;
 }
 
 /* Yellow */
 .ui.yellow.table {
-  border-top: 0.2em solid #FBBD08;
+  border-top: 0.2em solid #F2C61F;
 }
 .ui.inverted.yellow.table {
-  background-color: #FBBD08 !important;
+  background-color: #F2C61F !important;
   color: #FFFFFF !important;
 }
 
@@ -679,10 +679,10 @@
 
 /* Green */
 .ui.green.table {
-  border-top: 0.2em solid #21BA45;
+  border-top: 0.2em solid #5BBD72;
 }
 .ui.inverted.green.table {
-  background-color: #21BA45 !important;
+  background-color: #5BBD72 !important;
   color: #FFFFFF !important;
 }
 
@@ -697,10 +697,10 @@
 
 /* Blue */
 .ui.blue.table {
-  border-top: 0.2em solid #2185D0;
+  border-top: 0.2em solid #3B83C0;
 }
 .ui.inverted.blue.table {
-  background-color: #2185D0 !important;
+  background-color: #3B83C0 !important;
   color: #FFFFFF !important;
 }
 
@@ -715,19 +715,19 @@
 
 /* Purple */
 .ui.purple.table {
-  border-top: 0.2em solid #A333C8;
+  border-top: 0.2em solid #564F8A;
 }
 .ui.inverted.purple.table {
-  background-color: #A333C8 !important;
+  background-color: #564F8A !important;
   color: #FFFFFF !important;
 }
 
 /* Pink */
 .ui.pink.table {
-  border-top: 0.2em solid #E03997;
+  border-top: 0.2em solid #D9499A;
 }
 .ui.inverted.pink.table {
-  background-color: #E03997 !important;
+  background-color: #D9499A !important;
   color: #FFFFFF !important;
 }
 
@@ -742,10 +742,10 @@
 
 /* Grey */
 .ui.grey.table {
-  border-top: 0.2em solid #767676;
+  border-top: 0.2em solid #CCCCCC;
 }
 .ui.inverted.grey.table {
-  background-color: #767676 !important;
+  background-color: #CCCCCC !important;
   color: #FFFFFF !important;
 }
 

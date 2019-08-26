@@ -12,6 +12,9 @@ If you have any comments, suggestions, or feedback please let me know via email 
 # Gems
 Uses `bundle`. Installation: `gem install bundler`.
 
+# Semantic UI
+https://semantic-ui.com/introduction/getting-started.html
+
 # Usage
 Using shortcut:
 `$ ./serve.sh`

@@ -1,3 +1,41 @@
 /*******************************
      User Global Variables
 *******************************/
+
+/*-------------------
+     Fonts
+--------------------*/
+
+@headerFont        : 'defaultFont', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : 'defaultFont', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@fontSmoothing     : antialiased;
+
+@importGoogleFonts : true;
+@googleFontName    : 'Lato';
+@googleFontSizes   : '400,700,400italic,700italic';
+@googleFontFamily  : '@{googleFontName}:@{googleFontSizes}';
+
+/*-------------------
+    Base Sizes
+--------------------*/
+
+@emSize      : 14px;
+@fontSize    : 14px;
+
+/*-------------------
+    Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+@blue             : #3B83C0;
+@green            : #5BBD72;
+@orange           : #E07B53;
+@pink             : #D9499A;
+@purple           : #564F8A;
+@red              : #D95C5C;
+@teal             : #00B5AD;
+@yellow           : #F2C61F;
+
+@black            : #1B1C1D;
+@grey             : #CCCCCC;
+@white            : #FFFFFF;

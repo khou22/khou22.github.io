@@ -473,8 +473,9 @@ article strong { color: black; }
 .blog-search button { width: 100%; margin: 12px 0px; padding: 8px; background: white; border-radius: 4px; border: 1px solid #3286A8; }
 
 .landing-parallax-container { display: block; height: 100vh; }
-.landing-parallax-container-content { position: absolute; top: 0; width: 100%; display: flex; justify-content: center; align-content: center; flex-direction: column; align-items: center; }
-.landing-parallax-container-content-logo { width: 80px; }
+.landing-parallax-container-content { display: flex; flex-direction: column; align-items: center; margin-top: 8%; }
+.landing-parallax-container-content p { line-height: 2.25em; font-size: 1.75em; }
+.landing-parallax-container-content-logo { width: 80px; height: 80px; }
 .landing-parallax-container div { position: fixed; top: 0; background-position: center !important; transform: translateY(0px); height: 100%; width: 100%; display: flex; justify-content: center; }
 .landing-parallax-image { width: 100%; height: 100%; object-fit: cover; }
 .landing-parallax-content { position: relative; background-color: #fff; color: #000; padding: 100px; }
