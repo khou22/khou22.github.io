@@ -14,6 +14,7 @@ Uses `bundle`. Installation: `gem install bundler`.
 
 # Semantic UI
 https://semantic-ui.com/introduction/getting-started.html
+[Potential themes](https://semantic-ui-forest.com/themes/semantic-ui/v2/flat)
 
 # Usage
 Using shortcut:

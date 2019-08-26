@@ -8,12 +8,19 @@ exclude_from_search: true
 <!-- No changes on this page besides the redirect will be visible to user! -->
 
 <!-- Hide scrollbar on this page -->
-<style> ::-webkit-scrollbar { display: none; } </style>
+<style>
+  ::-webkit-scrollbar {
+    display: none;
+  }
+</style>
 
 <div class="blog-landing-header" id="blog-landing-header">
   <!-- Logo -->
   <a href="{{ site.url }}">
-    <img src="{{ site.baseurl }}/media/site/favicon.png" class="blog-landing-header-logo">
+    <img
+      src="{{ site.baseurl }}/media/site/favicon.png"
+      class="blog-landing-header-logo"
+    />
   </a>
   <!-- Links -->
   <ul class="blog-landing-header-ul">
@@ -21,12 +28,25 @@ exclude_from_search: true
       <a href="{{ site.baseurl }}/contact">Contact</a>
     </li>
     <li id="blog-landing-portfolio-group" class="blog-landing-header-li">
-      <a id="blog-landing-portfolio-link" href="{{ site.baseurl }}/categories">Portfolio &#9662;</a>
-      <ul id="blog-landing-portfolio-dropdown" class="blog-landing-portfolio-dropdown">
-        <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/programming">Programming</a></li>
-        <li class="blog-landing-portfolio-dropdown-li"><a href="https://www.flickr.com/photos/khou22/albums">Woodshop</a></li>
-        <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/design">Design</a></li>
-        <li class="blog-landing-portfolio-dropdown-li"><a href="{{ site.baseurl }}/photography">Photography</a></li>
+      <a id="blog-landing-portfolio-link" href="{{ site.baseurl }}/categories"
+        >Portfolio &#9662;</a
+      >
+      <ul
+        id="blog-landing-portfolio-dropdown"
+        class="blog-landing-portfolio-dropdown"
+      >
+        <li class="blog-landing-portfolio-dropdown-li">
+          <a href="{{ site.baseurl }}/programming">Programming</a>
+        </li>
+        <li class="blog-landing-portfolio-dropdown-li">
+          <a href="https://www.flickr.com/photos/khou22/albums">Woodshop</a>
+        </li>
+        <li class="blog-landing-portfolio-dropdown-li">
+          <a href="{{ site.baseurl }}/design">Design</a>
+        </li>
+        <li class="blog-landing-portfolio-dropdown-li">
+          <a href="{{ site.baseurl }}/photography">Photography</a>
+        </li>
       </ul>
     </li>
     <li class="blog-landing-header-li">
@@ -39,6 +59,6 @@ exclude_from_search: true
 </div>
 
 <script>
-    // Similar behavior as an HTTP redirect - Redirect immediately to normal page 1
-    window.location.replace("{{ "/blog" | prepend: site.baseurl }}");
+  // Similar behavior as an HTTP redirect - Redirect immediately to normal page 1
+  window.location.replace("{{ "/blog" | prepend: site.baseurl }}");
 </script>

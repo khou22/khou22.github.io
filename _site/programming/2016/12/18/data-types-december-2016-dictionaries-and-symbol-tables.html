@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -99,16 +98,18 @@
 
 
   <body>
-
     <header>
   <!-- Desktop Client -->
   <div class="site-header" id="site-header">
     <div class="wrapper" style="height: 100%">
       <div class="site-header-background">
         <div class="site-header-content">
-
           <a href="/" class="header-title-section">
-            <img src="/media/site/favicon.png" class="header-logo" align="left">
+            <img
+              src="/media/site/favicon.png"
+              class="header-logo"
+              align="left"
+            />
             <p class="site-title">Kevin Hou</p>
           </a>
 
@@ -120,35 +121,49 @@
             <li class="nav-li nav-item">
               <a href="/blog">Blog &#9662;</a>
               <ul class="dropdown">
-                <li class="nav-li"><a href="/blog/category">Browse by Category</a></li>
-                <li class="nav-li"><a href="/blog/tag">Browse by Tag</a></li>
+                <li class="nav-li">
+                  <a href="/blog/category"
+                    >Browse by Category</a
+                  >
+                </li>
+                <li class="nav-li">
+                  <a href="/blog/tag">Browse by Tag</a>
+                </li>
               </ul>
             </li>
             <li class="nav-li nav-item">
               <a href="/categories">Portfolio &#9662;</a>
               <ul class="dropdown">
-                <li class="nav-li"><a href="/programming">Programming</a></li>
-                <li class="nav-li"><a href="/wood/">Woodshop</a></li>
+                <li class="nav-li">
+                  <a href="/programming">Programming</a>
+                </li>
+                <li class="nav-li">
+                  <a href="/wood/">Woodshop</a>
+                </li>
                 <!-- <li class="nav&#45;li"><a href="https://www.flickr.com/photos/khou22/albums" target="_blank">Woodshop</a></li> -->
-                <li class="nav-li"><a href="/design">Design</a></li>
-                <li class="nav-li"><a href="/photography">Photography</a></li>
+                <li class="nav-li">
+                  <a href="/design">Design</a>
+                </li>
+                <li class="nav-li">
+                  <a href="/photography">Photography</a>
+                </li>
               </ul>
             </li>
-            <li class="nav-li nav-item"><a href="/contact">Contact</a></li>
+            <li class="nav-li nav-item">
+              <a href="/contact">Contact</a>
+            </li>
           </ul>
-
         </div>
       </div>
-
     </div>
   </div>
   <div class="header-placeholder"></div>
 
   <!-- Activate Tooltips -->
   <script type="text/javascript">
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
     // Header has two sizes — 80px and 40px — based on scrolling
     $(document).scroll(function() {
       var screenWidth = $(document).width();
@@ -186,24 +201,39 @@
             min: 4,
             max: 24
           }
-        ]
-        if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
-          var percentageComplete = $(this).scrollTop()/triggerDistance; // Percentage complete
-          for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
-            var currentClass = classesToChange[i] // Store
-            var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
-            $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
-          }
-        } else { // Min style
+        ];
+        if ($(this).scrollTop() < triggerDistance) {
+          // Distance until changing header height
+          var percentageComplete = $(this).scrollTop() / triggerDistance; // Percentage complete
           for (var i = 0; i < classesToChange.length; i++) {
-            var currentClass = classesToChange[i]
-            $(currentClass.className).css(currentClass.styleElement, currentClass.min);
+            // Cycle through all style changes
+            var currentClass = classesToChange[i]; // Store
+            var dynamicStyle =
+              (1 - percentageComplete) * (currentClass.max - currentClass.min) +
+              currentClass.min; // Calculate
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              dynamicStyle
+            ); // Apply
+          }
+        } else {
+          // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i];
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              currentClass.min
+            );
           }
         }
-        if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast - max style
+        if ($(this).scrollTop() <= 5) {
+          // Just in case you scroll too fast - max style
           for (var i = 0; i < classesToChange.length; i++) {
-            var currentClass = classesToChange[i]
-            $(currentClass.className).css(currentClass.styleElement, currentClass.max);
+            var currentClass = classesToChange[i];
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              currentClass.max
+            );
           }
         }
       } else {
@@ -213,13 +243,15 @@
     });
   </script>
 
-
   <!-- Mobile Client -->
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
         <a href="http://localhost:4000">
-          <img src="/media/site/favicon.png" class="mobile-blog-header-logo">
+          <img
+            src="/media/site/favicon.png"
+            class="mobile-blog-header-logo"
+          />
         </a>
       </li>
       <li class="mobile-blog-header-li">
@@ -236,9 +268,7 @@
       </li>
     </ul>
   </div>
-  <div class="mobile-blog-header-placeholder">
-  </div>
-
+  <div class="mobile-blog-header-placeholder"></div>
 </header>
 
 
@@ -376,54 +406,92 @@ Sometimes, items either simply cannot be matched to an integer index or prove to
     </div>
 
     <footer class="site-footer">
-
   <!-- External Links Navigation Bar -->
-  <table class="external-bar"> <!-- Custom header -->
+  <table class="external-bar">
+    <!-- Custom header -->
     <tr>
       <td class="external-td">
-        <a href="/blog" data-toggle="tooltip" title="Blog Home">
+        <a
+          href="/blog"
+          data-toggle="tooltip"
+          title="Blog Home"
+        >
           <div class="external-link-box home-bw"></div>
           <p class="external-link-label">Home</p>
         </a>
       </td>
       <td class="external-td">
-        <a href="https://www.linkedin.com/in/kevinhou22" target="_blank" data-toggle="tooltip" title="LinkedIn">
+        <a
+          href="https://www.linkedin.com/in/kevinhou22"
+          target="_blank"
+          data-toggle="tooltip"
+          title="LinkedIn"
+        >
           <div class="external-link-box linkedin-bw"></div>
           <p class="external-link-label">LinkedIn</p>
         </a>
       </td>
       <td class="external-td">
-        <a href="https://github.com/khou22" target="_blank" data-toggle="tooltip" title="Github">
+        <a
+          href="https://github.com/khou22"
+          target="_blank"
+          data-toggle="tooltip"
+          title="Github"
+        >
           <div class="external-link-box github-bw"></div>
           <p class="external-link-label">Github</p>
         </a>
       </td>
       <td class="external-td">
-        <a href="https://www.flickr.com/photos/khou22/albums" target="_blank" data-toggle="tooltip" title="Flickr">
+        <a
+          href="https://www.flickr.com/photos/khou22/albums"
+          target="_blank"
+          data-toggle="tooltip"
+          title="Flickr"
+        >
           <div class="external-link-box flickr-bw"></div>
           <p class="external-link-label">Flickr</p>
         </a>
       </td>
       <td class="external-td">
-        <a href="http://kevinhou.wix.com/projects" target="_blank" data-toggle="tooltip" title="Portfolio">
+        <a
+          href="http://kevinhou.wix.com/projects"
+          target="_blank"
+          data-toggle="tooltip"
+          title="Portfolio"
+        >
           <div class="external-link-box gallery-bw"></div>
           <p class="external-link-label">Portfolio</p>
         </a>
       </td>
       <td class="external-td">
-        <a href="https://youtube.com/kevinhou22" target="_blank" data-toggle="tooltip" title="YouTube Channel">
+        <a
+          href="https://youtube.com/kevinhou22"
+          target="_blank"
+          data-toggle="tooltip"
+          title="YouTube Channel"
+        >
           <div class="external-link-box youtube-bw"></div>
           <p class="external-link-label">YouTube</p>
         </a>
       </td>
       <td class="external-td">
-        <a href="https://www.princeton.edu/main/" target="_blank" data-toggle="tooltip" title="School Profile">
+        <a
+          href="https://www.princeton.edu/main/"
+          target="_blank"
+          data-toggle="tooltip"
+          title="School Profile"
+        >
           <div class="external-link-box highSchool-bw"></div>
           <p class="external-link-label">School Profile</p>
         </a>
       </td>
       <td class="external-td">
-        <a href="/blog/contact" data-toggle="tooltip" title="Contact">
+        <a
+          href="/blog/contact"
+          data-toggle="tooltip"
+          title="Contact"
+        >
           <div class="external-link-box email-bw"></div>
           <p class="external-link-label">Contact</p>
         </a>
@@ -432,16 +500,16 @@ Sometimes, items either simply cannot be matched to an integer index or prove to
   </table>
 
   <div class="wrapper">
-
     <div class="site-footer-content">
-
       <h2 class="footer-heading">Kevin Hou's Portfolio and Blog</h2>
 
       <div class="footer-col-wrapper">
         <div class="footer-col  footer-col-1">
           <ul class="contact-list">
             <li>Kevin Hou</li>
-            <li><a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a></li>
+            <li>
+              <a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a>
+            </li>
             <li>San Francisco Bay Area</li>
           </ul>
         </div>
@@ -450,26 +518,30 @@ Sometimes, items either simply cannot be matched to an integer index or prove to
           <ul class="social-media-list">
             
             <li>
-              <a href="https://github.com/khou22" target="_blank">
+              <a
+                href="https://github.com/khou22"
+                target="_blank"
+              >
                 <span class="icon  icon--github">
                   <svg viewBox="0 0 16 16">
-                    <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                    <path
+                      fill="#828282"
+                      d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"
+                    />
                   </svg>
                 </span>
 
                 <span class="username">khou22</span>
               </a>
             </li>
-            
-
-            
+             
             <li>
               <a href="https://www.flickr.com/photos/khou22/albums" target="_blank">
-                <div class="footer-icon-box flickr-bw"></div><span class="username">kevinhou22</span>
+                <div class="footer-icon-box flickr-bw"></div>
+                <span class="username">kevinhou22</span>
               </a>
             </li>
             
-
           </ul>
         </div>
 
@@ -478,14 +550,9 @@ Sometimes, items either simply cannot be matched to an integer index or prove to
 </p>
         </div>
       </div>
-
     </div>
-
   </div>
-
 </footer>
 
-
   </body>
-
 </html>

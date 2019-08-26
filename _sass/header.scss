@@ -1,9 +1,9 @@
 /*For the _includes/header.html file*/
-$brand-red:       #D5491F;
-$brand-orange:    #DA8D0F;
-$brand-green:     #80A454;
-$brand-grey:      #9DB7C1;
-$brand-blue:      #3286A8;
+$brand-red: #d5491f;
+$brand-orange: #da8d0f;
+$brand-green: #80a454;
+$brand-grey: #9db7c1;
+$brand-blue: #3286a8;
 
 $mobile-cuttoff: 800px; // Width to decide whether a browser is mobile or desktop
 
@@ -20,7 +20,7 @@ $mobile-cuttoff: 800px; // Width to decide whether a browser is mobile or deskto
   background-color: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid $brand-grey;
 
-  @media(max-width: $mobile-cuttoff) {
+  @media (max-width: $mobile-cuttoff) {
     display: none;
   }
 }
@@ -53,12 +53,11 @@ $mobile-cuttoff: 800px; // Width to decide whether a browser is mobile or deskto
     color: $brand-blue;
   }
 
-  @media(max-width: $mobile-cuttoff) {
+  @media (max-width: $mobile-cuttoff) {
     font-size: 20px;
     line-height: 26px;
   }
 }
-
 
 .site-header-content {
   height: 100%;
@@ -84,30 +83,32 @@ $mobile-cuttoff: 800px; // Width to decide whether a browser is mobile or deskto
 }
 
 /*Dropdown info from: http://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php*/
-.nav-ul{
+.nav-ul {
   /*padding: 0;*/
   list-style: none;
 }
 .nav-item {
   width: 23%;
 }
-.nav-ul .nav-li{
+.nav-ul .nav-li {
   display: inline-block;
   position: relative;
   line-height: 21px;
   text-align: center;
 }
-.nav-ul .nav-li a{ /*Links in nav bar*/
+.nav-ul .nav-li a {
+  /*Links in nav bar*/
   display: block;
   padding: 8px 12px;
   color: $brand-blue;
   text-decoration: none;
 }
-.nav-ul .nav-li a:hover{ /*Link hover*/
+.nav-ul .nav-li a:hover {
+  /*Link hover*/
   color: $brand-red; /*Turn font color to white*/
   // background: $brand-blue;
 }
-.nav-ul .nav-li ul.dropdown{
+.nav-ul .nav-li ul.dropdown {
   width: 100%;
   background: white;
   display: none;
@@ -116,15 +117,13 @@ $mobile-cuttoff: 800px; // Width to decide whether a browser is mobile or deskto
   text-align: center;
   left: 0;
 }
-.nav-ul .nav-li:hover ul.dropdown{
+.nav-ul .nav-li:hover ul.dropdown {
   display: block; /* Display the dropdown */
 }
-.nav-ul .nav-li ul.dropdown .nav-li{
+.nav-ul .nav-li ul.dropdown .nav-li {
   display: block;
 }
 
-
 /******************************* Mobile Client *******************************/
 .mobile {
-
 }

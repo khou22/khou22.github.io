@@ -1,30 +1,30 @@
 /*For contact page*/
 
-$brand-red:       #D5491F;
-$brand-orange:    #DA8D0F;
-$brand-green:     #80A454;
-$brand-grey:      #9DB7C1;
-$brand-blue:      #3286A8;
+$brand-red: #d5491f;
+$brand-orange: #da8d0f;
+$brand-green: #80a454;
+$brand-grey: #9db7c1;
+$brand-blue: #3286a8;
 
 .contact {
   &-header {
     width: 100%;
 
     &-image {
-        // Sizing
-        width: 200px;
-        height: 200px;
-        border-radius: 100px;
-        border: 1px solid $brand-blue;
+      // Sizing
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      border: 1px solid $brand-blue;
 
-        // Positioning
-        margin: auto;
-        margin-top: 24px;
+      // Positioning
+      margin: auto;
+      margin-top: 24px;
 
-        // Image properties
-        background-image: url("../media/site/images/Profile2.jpg");
-        background-position: center;
-        background-size: cover;
+      // Image properties
+      background-image: url("../media/site/images/Profile2.jpg");
+      background-position: center;
+      background-size: cover;
     }
 
     &-title {
@@ -35,94 +35,98 @@ $brand-blue:      #3286A8;
 
       // Animated typing section
       &-fill-in {
-          // Sizing and positioning
-          display: inline-block;
-          width: 150px; // Extra wide
-          height: 9rem;
+        // Sizing and positioning
+        display: inline-block;
+        width: 150px; // Extra wide
+        height: 9rem;
 
-          // Styling
-          color: $brand-red;
-          border-bottom: 1px solid $brand-blue;
+        // Styling
+        color: $brand-red;
+        border-bottom: 1px solid $brand-blue;
       }
     }
   }
 
   &-left-half {
-      width: 49%;
-      float: left;
+    width: 49%;
+    float: left;
   }
 
   &-right-half {
-      width: 49%;
-      float: left;
+    width: 49%;
+    float: left;
   }
 
   &-form {
-      // Sizing
-      width: 90%;
-      margin: 5%;
-      padding: 12px;
-      border-radius: 12px;
+    // Sizing
+    width: 90%;
+    margin: 5%;
+    padding: 12px;
+    border-radius: 12px;
 
+    border: 1px solid $brand-grey;
+
+    input,
+    textarea {
+      width: 100%;
+      margin: 1% 0px 1% 0px !important;
       border: 1px solid $brand-grey;
+      border-radius: 4px;
+      color: $brand-blue; // Text color
+      padding: 7px;
+      font-size: 16px;
+      resize: none;
+    }
 
-      input, textarea {
-          width: 100%;
-          margin: 1% 0px 1% 0px !important;
-          border: 1px solid $brand-grey;
-          border-radius: 4px;
-          color: $brand-blue; // Text color
-          padding: 7px;
-          font-size: 16px;
-          resize: none;
-      }
+    input:focus,
+    textarea:focus,
+    &-submit:hover {
+      outline: none; // No focus border
+      border: 1px solid $brand-blue; // Change color
+      background: rgba(200, 200, 200, 0.2);
+    }
 
-      input:focus, textarea:focus, &-submit:hover {
-          outline: none; // No focus border
-          border: 1px solid $brand-blue; // Change color
-          background: rgba(200, 200, 200, 0.2);
-      }
+    &-body {
+      height: 200px;
+    }
 
-      &-body {
-          height: 200px;
-      }
+    &-submit {
+      // Submit button
+      background: none;
+    }
 
-      &-submit { // Submit button
-          background: none;
-      }
-
-      &-invalid {
-          border: 1px solid $brand-red !important; // Form feedback
-      }
+    &-invalid {
+      border: 1px solid $brand-red !important; // Form feedback
+    }
   }
 
   &-tile {
-      width: 50%;
-      display: inline-block;
+    width: 50%;
+    display: inline-block;
 
-      // Font styling
-      text-align: center;
-      color: $brand-blue;
-      font-size: 18px;
+    // Font styling
+    text-align: center;
+    color: $brand-blue;
+    font-size: 18px;
 
-      // Spacing
-      margin-bottom: 32px;
+    // Spacing
+    margin-bottom: 32px;
 
-      &-icon {
-          // Dimensions — whichever provides more restriction
-          max-height: 130px;
-          max-width: 120px;
+    &-icon {
+      // Dimensions — whichever provides more restriction
+      max-height: 130px;
+      max-width: 120px;
 
-          // Display
-          display: block;
-          margin: auto;
+      // Display
+      display: block;
+      margin: auto;
 
-          transition: all .2s ease-in-out; // Animation handling
-      }
+      transition: all 0.2s ease-in-out; // Animation handling
+    }
 
-      &-icon:hover {
-          transform: scale(1.2);
-          -webkit-transform: scale(1.2);
-      }
+    &-icon:hover {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+    }
   }
 }
