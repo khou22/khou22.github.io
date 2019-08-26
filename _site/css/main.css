@@ -87,7 +87,7 @@ pre > code { padding-right: 0; padding-left: 0; border: 0; }
 /** Page content */
 .page-content { /*padding: $spacing-unit 0;*/ /*Default*/ background-repeat: infinite; }
 
-.page-heading { color: #D5491F; font-size: 24px; }
+.page-heading { color: #d5491f; font-size: 24px; }
 
 .post-list { margin-left: 0; list-style: none; }
 .post-list > li { margin-bottom: 10px; }
@@ -96,7 +96,7 @@ pre > code { padding-right: 0; padding-left: 0; border: 0; }
 
 .post-meta { color: #828282; font-size: 14px; line-height: 3rem; }
 
-.post-link { display: block; font-size: 2rem; }
+.post-link { display: block; }
 
 /** Posts */
 .post-header { margin-bottom: 30px; }
