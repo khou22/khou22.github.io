@@ -3,11 +3,12 @@ layout: empty
 title: "Kevin Hou"
 ---
 
-<!-- Header -->
-<div class="landing-header">
+<!-- MARK: Header -->
+<div id="headerContainer" class="landing-header menu-expanded">
   <div class="ui compact menu">
-    <a class="item">
+    <a id="menu-icon" class="item">
       <i class="angle left icon"></i>
+      <!-- Close -->
     </a>
     <a class="item" href="blog">
       Blog
@@ -22,41 +23,91 @@ title: "Kevin Hou"
       Photo
     </a>
   </div>
+
+  <script>
+    const menuIcon = document.getElementById("menu-icon");
+    menuIcon.addEventListener("click", () => {
+      console.log("Clicked menu icon");
+      const EXPANDED_CLASS = "menu-expanded";
+      const CONTRACTED_CLASS = "menu-contracted";
+      var headerContainer = document.getElementById("headerContainer");
+      const isExpanded = headerContainer.classList.contains(EXPANDED_CLASS);
+      console.log(isExpanded);
+      if (isExpanded) {
+        // Expanded -> Contracted
+        headerContainer.classList.remove(EXPANDED_CLASS);
+        headerContainer.classList.add(CONTRACTED_CLASS);
+
+        console.log(menuIcon.offsetWidth);
+        headerContainer.style.width = `${menuIcon.offsetWidth}px`;
+      } else {
+        // Contracted -> Expanded
+        headerContainer.classList.remove(CONTRACTED_CLASS);
+        headerContainer.classList.add(EXPANDED_CLASS);
+
+        headerContainer.style.width = "auto";
+      }
+    });
+  </script>
 </div>
 
+<!-- MARK: Landing Cover -->
 <div id="landing-parallax-container" class="landing-parallax-container">
   <div>
     <img
       class="landing-parallax-image"
-      src="{{
-        'media/landing/hong-kong/Background.png' | prepend: site.baseurl
-      }} "
+      src="{{ 'media/landing/hong-kong/0.png' | prepend: site.baseurl }} "
     />
   </div>
+
+  <!-- Personal logo and name - second furthest back to give sense of depth -->
   <div>
     <span class="landing-parallax-container-content">
-      <img
+      <!-- <img
         class="landing-parallax-container-content-logo"
         src="media/site/logo/initials_logo_shadow.png"
+      /> -->
+      <img
+        class="landing-parallax-container-content-logo"
+        src="media/site/logo/initials_logo_animated.svg"
       />
-      <p>Kevin Hou</p>
+      <p class="landing-parallax-container-content-name">Kevin Hou</p>
     </span>
   </div>
   <div>
     <img
       class="landing-parallax-image"
-      src="{{
-        'media/landing/hong-kong/Buildings.png' | prepend: site.baseurl
-      }} "
+      src="{{ 'media/landing/hong-kong/1.png' | prepend: site.baseurl }} "
+    />
+  </div>
+  <div>
+    <img
+      class="landing-parallax-image"
+      src="{{ 'media/landing/hong-kong/2.png' | prepend: site.baseurl }} "
     />
   </div>
 </div>
-<div id="landing-parallax-content" class="landing-parallax-content">
+
+<!-- MARK: Transition gradient to next section -->
+<div style="position: relative">
+  <div class="landing-parallax-transition">
+    <img
+      class="landing-parallax-transition-gradient"
+      src="{{ 'media/site/gradients/black.png' | prepend: site.baseurl }} "
+    />
+  </div>
+
+  <div class="landing-parallax-transition-spacer"></div>
+</div>
+
+<!-- MARK: Content -->
+<div class="landing-section">
   <h1>Welcome</h1>
   <p>Kevin Hou</p>
   <img src="{{ 'media/landing/image_tiles.png' | prepend: site.baseurl }}" />
 </div>
 
+<!-- MARK: Parallax logic -->
 <script>
   window.addEventListener(
     "scroll",
