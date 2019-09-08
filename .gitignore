@@ -4,3 +4,4 @@ vendor/
 .bundle/
 node_modules/
 .jekyll-metadata
+node_modules

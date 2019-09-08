@@ -472,7 +472,9 @@ article strong { color: black; }
 
 .blog-search button { width: 100%; margin: 12px 0px; padding: 8px; background: white; border-radius: 4px; border: 1px solid #3286a8; }
 
-.landing-header { position: fixed; top: 0; overflow: hidden; z-index: 2; border-radius: 4px; }
+.landing-navigation { position: fixed; top: 0; overflow: hidden; z-index: 2; border-radius: 4px; margin: 1em; }
+.landing-social { position: fixed; top: 0; right: 0; z-index: 2; margin: 1em; }
+.landing-social-icon { width: 24px !important; }
 .landing-parallax-container { display: block; height: 100vh; }
 .landing-parallax-container-content { display: flex; flex-direction: column; align-items: center; margin-top: 8%; }
 .landing-parallax-container-content-logo { width: 80px; height: 80px; }

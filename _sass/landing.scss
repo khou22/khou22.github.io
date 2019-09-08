@@ -1,10 +1,23 @@
 .landing {
-  &-header {
+  &-navigation {
     position: fixed;
     top: 0;
     overflow: hidden;
     z-index: 2;
     border-radius: 4px; // Same as semantic UI
+    margin: 1em;
+  }
+
+  &-social {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    margin: 1em;
+
+    &-icon {
+      width: 24px !important;
+    }
   }
 
   &-parallax {
