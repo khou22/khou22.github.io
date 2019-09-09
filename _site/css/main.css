@@ -65,7 +65,7 @@ pre > code { padding-right: 0; padding-left: 0; border: 0; }
 .site-nav .page-link:not(:first-child) { margin-left: 20px; }
 
 /** Site footer */
-.site-footer { padding: 30px 0; border-top: 1px solid #e8e8e8; }
+.site-footer { margin-top: 30px; padding: 30px 0; border-top: 1px solid #e8e8e8; }
 
 .footer-heading { margin-bottom: 15px; font-size: 18px; }
 
@@ -216,28 +216,6 @@ strong { font-family: defaultFont_bold !important; color: red; }
 .bold-italics { font-family: defaultFont_Bold_Italics !important; }
 
 .no-style { list-style: none; margin: 0 !important; }
-
-.email-bw { background-image: url(./../media/site/icons/email_bw.png); background-size: contain; width: 100%; height: 100%; }
-
-.facebook-bw { background-image: url(./../media/site/icons/logos/Facebook_bw.png); background-size: contain; width: 100%; height: 100%; width: 100%; height: 100%; }
-
-.flickr-bw { background-image: url(./../media/site/icons/logos/Flickr_bw.png); background-size: contain; width: 100%; height: 100%; }
-
-.gallery-bw { background-image: url(./../media/site/icons/gallery_bw.png); background-size: contain; width: 100%; height: 100%; }
-
-.github-bw { background-image: url(./../media/site/icons/logos/Github_bw.png); background-size: contain; width: 100%; height: 100%; }
-
-.home-bw { background-image: url(./../media/site/icons/home_bw.png); background-size: contain; width: 100%; height: 100%; }
-
-.highSchool-bw { background-image: url(./../media/site/icons/highSchool_bw.png); background-size: contain; width: 100%; height: 100%; }
-
-.instagram-bw { background-image: url(./../media/site/icons/logos/Instagram_bw.png); background-size: contain; width: 100%; height: 100%; }
-
-.linkedin-bw { background-image: url(./../media/site/icons/logos/LinkedIn_bw.png); background-size: contain; width: 100%; height: 100%; }
-
-.twitter-bw { background-image: url(./../media/site/icons/logos/Twitter_bw.png); background-size: contain; width: 100%; height: 100%; }
-
-.youtube-bw { background-image: url(./../media/site/icons/logos/YouTube_bw.png); background-size: contain; width: 100%; height: 100%; }
 
 .regular-font-color { color: #9db7c1; }
 
@@ -440,10 +418,9 @@ article strong { color: black; }
 
 .site-footer-content { padding-left: 30px; padding-right: 30px; }
 
-.external-bar { margin: auto; margin-bottom: 12px; }
-.external-td { display: inline-block; /*border: 1px solid black;*/ border-radius: 19px; padding-left: 17px; padding-right: 17px; }
-.external-link-box { height: 32px; width: 32px; /*background-color: white;*/ margin: auto; }
-.external-link-label { text-align: center; color: #3286a8; }
+.footer-external { margin: auto; }
+.footer-external a { height: 32px; }
+.footer-external img { height: 32px; }
 
 .search-main { width: 80%; margin: auto; margin-top: 24px; }
 .search-main h1 { margin-bottom: 24px !important; }
@@ -492,3 +469,25 @@ article strong { color: black; }
 .landing-section-two-computer { margin: auto; width: 85%; margin-left: 7.5%; }
 .landing-section-two-computer-text { position: absolute; top: 42%; width: 100%; text-align: center; color: white; }
 .landing-section-three-image { width: 50%; margin-top: 10%; margin-left: 25%; }
+
+.email-bw { background-image: url(./../media/site/icons/email_bw.png); background-size: contain; width: 100%; height: 100%; }
+
+.facebook-bw { background-image: url(./../media/site/icons/logos/Facebook_bw.png); background-size: contain; width: 100%; height: 100%; width: 100%; height: 100%; }
+
+.flickr-bw { background-image: url(./../media/site/icons/logos/Flickr_bw.png); background-size: contain; width: 100%; height: 100%; }
+
+.gallery-bw { background-image: url(./../media/site/icons/gallery_bw.png); background-size: contain; width: 100%; height: 100%; }
+
+.github-bw { background-image: url(./../media/site/icons/logos/Github_bw.png); background-size: contain; width: 100%; height: 100%; }
+
+.home-bw { background-image: url(./../media/site/icons/home_bw.png); background-size: contain; width: 100%; height: 100%; }
+
+.highSchool-bw { background-image: url(./../media/site/icons/highSchool_bw.png); background-size: contain; width: 100%; height: 100%; }
+
+.instagram-bw { background-image: url(./../media/site/icons/logos/Instagram_bw.png); background-size: contain; width: 100%; height: 100%; }
+
+.linkedin-bw { background-image: url(./../media/site/icons/logos/LinkedIn_bw.png); background-size: contain; width: 100%; height: 100%; }
+
+.twitter-bw { background-image: url(./../media/site/icons/logos/Twitter_bw.png); background-size: contain; width: 100%; height: 100%; }
+
+.youtube-bw { background-image: url(./../media/site/icons/logos/YouTube_bw.png); background-size: contain; width: 100%; height: 100%; }

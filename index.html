@@ -195,7 +195,10 @@ title: "Kevin Hou"
           src="{{ 'media/landing/computer.png' | prepend: site.baseurl }}"
           class="landing-section-two-computer"
         />
-        <h2 class="ui header inverted landing-section-two-computer-text">
+        <h2
+          class="ui header inverted landing-section-two-computer-text"
+          id="computer"
+        >
           Hello, World.
         </h2>
       </div>
@@ -217,6 +220,33 @@ title: "Kevin Hou"
     </div>
   </div>
 </div>
+<script src="{{
+    'libraries/TheaterJS-2.0.1/dist/theater.min.js' | prepend: site.baseurl
+  }}"></script>
+<!-- TheaterJS -->
+<script>
+  var theater = theaterJS({ local: "en" });
+
+  theater
+    .on("type:start, erase:start", function() {
+      theater
+        .getCurrentActor()
+        .$element.classList.add("actor__content--typing");
+    })
+    .on("type:end, erase:end", function() {
+      theater
+        .getCurrentActor()
+        .$element.classList.remove("actor__content--typing");
+    });
+
+  theater
+    .addActor("computer", { speed: 0.4, accuracy: 0.7 })
+    .addScene("computer:Hello, World", 2000)
+    .addScene("computer:Welcome!", 1000)
+    .addScene("computer:Hello, World", 3000)
+    .addScene("computer:Welcome!", 2000)
+    .addScene(theater.replay.bind(theater));
+</script>
 
 <div class="landing-section">
   <div class="ui grid">
@@ -248,3 +278,5 @@ title: "Kevin Hou"
     </div>
   </div>
 </div>
+
+{% include footer.html %}

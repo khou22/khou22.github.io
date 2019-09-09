@@ -7,7 +7,7 @@ description: "A tutorial on how to build a simple app that uses the iOS native n
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: ios
 tags: [swift, xcode, tutorial, sourceCode]
-featured: "yes"
+featured: "no"
 ---
 <h3 class="post-subheader">The Basics</h3>
 <b>Setting up the Project</b>

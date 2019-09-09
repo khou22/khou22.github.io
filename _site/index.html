@@ -286,7 +286,10 @@
           src="media/landing/computer.png"
           class="landing-section-two-computer"
         />
-        <h2 class="ui header inverted landing-section-two-computer-text">
+        <h2
+          class="ui header inverted landing-section-two-computer-text"
+          id="computer"
+        >
           Hello, World.
         </h2>
       </div>
@@ -308,6 +311,31 @@
     </div>
   </div>
 </div>
+<script src="libraries/TheaterJS-2.0.1/dist/theater.min.js"></script>
+<!-- TheaterJS -->
+<script>
+  var theater = theaterJS({ local: "en" });
+
+  theater
+    .on("type:start, erase:start", function() {
+      theater
+        .getCurrentActor()
+        .$element.classList.add("actor__content--typing");
+    })
+    .on("type:end, erase:end", function() {
+      theater
+        .getCurrentActor()
+        .$element.classList.remove("actor__content--typing");
+    });
+
+  theater
+    .addActor("computer", { speed: 0.4, accuracy: 0.7 })
+    .addScene("computer:Hello, World", 2000)
+    .addScene("computer:Welcome!", 1000)
+    .addScene("computer:Hello, World", 3000)
+    .addScene("computer:Welcome!", 2000)
+    .addScene(theater.replay.bind(theater));
+</script>
 
 <div class="landing-section">
   <div class="ui grid">
@@ -339,6 +367,52 @@
     </div>
   </div>
 </div>
+
+<footer class="site-footer">
+  <div class="ui grid">
+    <div class="one wide column"></div>
+
+    <div class="four wide column">
+      <h1 class="ui header">Kevin Hou</h1>
+      <h3 class="ui header">
+        <a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a>
+      </h3>
+      <h4 class="ui header">
+        <i>San Francisco Bay Area</i>
+      </h4>
+    </div>
+
+    <div class="four wide column footer-external">
+      <h4 class="ui header"><i>Social</i></h4>
+      <a href="https://www.instagram.com/lifeofkhou/" target="_blank">
+        <img
+          src="https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300"
+        />
+      </a>
+      <a href="https://www.linkedin.com/in/kevinhou22" target="_blank">
+        <img
+          src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png"
+        />
+      </a>
+      <a href="https://youtube.com/kevinhou22" target="_blank">
+        <img
+          src="https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/512/youtube.png"
+        />
+      </a>
+      <a href="https://github.com/khou22" target="_blank">
+        <img src="https://image.flaticon.com/icons/svg/25/25231.svg" />
+      </a>
+    </div>
+
+    <div class="six wide column">
+      <p class="text">Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
+</p>
+    </div>
+
+    <div class="one wide column"></div>
+  </div>
+</footer>
+
 
   </body>
 </html>

@@ -7,7 +7,7 @@ description: "The basics of classes and subclasses as well as a detailed tutoria
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: ios
 tags: [swift, tutorial]
-featured: "yes"
+featured: "no"
 ---
 # Swift Classes August 2017: Classes, Subclasses, and Protocols
 
