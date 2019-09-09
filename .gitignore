@@ -1,7 +1,8 @@
-.DS_Store
+*.DS_Store
 media/site/images/.DS_Store
 vendor/
 .bundle/
 node_modules/
-.jekyll-metadata
+*.jekyll-metadata
 node_modules
+*.pyc
