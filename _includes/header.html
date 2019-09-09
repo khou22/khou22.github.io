@@ -4,9 +4,12 @@
     <div class="wrapper" style="height: 100%">
       <div class="site-header-background">
         <div class="site-header-content">
-
           <a href="{{ site.baseurl }}/" class="header-title-section">
-            <img src="{{ site.baseurl }}/media/site/favicon.png" class="header-logo" align="left">
+            <img
+              src="{{ site.baseurl }}/media/site/favicon.png"
+              class="header-logo"
+              align="left"
+            />
             <p class="site-title">{{ site.title }}</p>
           </a>
 
@@ -18,35 +21,49 @@
             <li class="nav-li nav-item">
               <a href="{{ site.baseurl }}/blog">Blog &#9662;</a>
               <ul class="dropdown">
-                <li class="nav-li"><a href="{{ site.baseurl }}/blog/category">Browse by Category</a></li>
-                <li class="nav-li"><a href="{{ site.baseurl }}/blog/tag">Browse by Tag</a></li>
+                <li class="nav-li">
+                  <a href="{{ site.baseurl }}/blog/category"
+                    >Browse by Category</a
+                  >
+                </li>
+                <li class="nav-li">
+                  <a href="{{ site.baseurl }}/blog/tag">Browse by Tag</a>
+                </li>
               </ul>
             </li>
             <li class="nav-li nav-item">
               <a href="{{ site.basurl }}/categories">Portfolio &#9662;</a>
               <ul class="dropdown">
-                <li class="nav-li"><a href="{{ site.baseurl }}/programming">Programming</a></li>
-                <li class="nav-li"><a href="{{ site.baseurl }}/wood/">Woodshop</a></li>
+                <li class="nav-li">
+                  <a href="{{ site.baseurl }}/programming">Programming</a>
+                </li>
+                <li class="nav-li">
+                  <a href="{{ site.baseurl }}/wood/">Woodshop</a>
+                </li>
                 <!-- <li class="nav&#45;li"><a href="https://www.flickr.com/photos/khou22/albums" target="_blank">Woodshop</a></li> -->
-                <li class="nav-li"><a href="{{ site.baseurl }}/design">Design</a></li>
-                <li class="nav-li"><a href="{{ site.baseurl }}/photography">Photography</a></li>
+                <li class="nav-li">
+                  <a href="{{ site.baseurl }}/design">Design</a>
+                </li>
+                <li class="nav-li">
+                  <a href="{{ site.baseurl }}/photography">Photography</a>
+                </li>
               </ul>
             </li>
-            <li class="nav-li nav-item"><a href="{{  site.baseurl  }}/contact">Contact</a></li>
+            <li class="nav-li nav-item">
+              <a href="{{ site.baseurl }}/contact">Contact</a>
+            </li>
           </ul>
-
         </div>
       </div>
-
     </div>
   </div>
   <div class="header-placeholder"></div>
 
   <!-- Activate Tooltips -->
   <script type="text/javascript">
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
     // Header has two sizes — 80px and 40px — based on scrolling
     $(document).scroll(function() {
       var screenWidth = $(document).width();
@@ -84,24 +101,39 @@
             min: 4,
             max: 24
           }
-        ]
-        if ($(this).scrollTop() < triggerDistance) { // Distance until changing header height
-          var percentageComplete = $(this).scrollTop()/triggerDistance; // Percentage complete
-          for (var i = 0; i < classesToChange.length; i++) { // Cycle through all style changes
-            var currentClass = classesToChange[i] // Store
-            var dynamicStyle = ((1 - percentageComplete) * (currentClass.max - currentClass.min)) + currentClass.min // Calculate
-            $(currentClass.className).css(currentClass.styleElement, dynamicStyle) // Apply
-          }
-        } else { // Min style
+        ];
+        if ($(this).scrollTop() < triggerDistance) {
+          // Distance until changing header height
+          var percentageComplete = $(this).scrollTop() / triggerDistance; // Percentage complete
           for (var i = 0; i < classesToChange.length; i++) {
-            var currentClass = classesToChange[i]
-            $(currentClass.className).css(currentClass.styleElement, currentClass.min);
+            // Cycle through all style changes
+            var currentClass = classesToChange[i]; // Store
+            var dynamicStyle =
+              (1 - percentageComplete) * (currentClass.max - currentClass.min) +
+              currentClass.min; // Calculate
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              dynamicStyle
+            ); // Apply
+          }
+        } else {
+          // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i];
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              currentClass.min
+            );
           }
         }
-        if ($(this).scrollTop() <= 5) { // Just in case you scroll too fast - max style
+        if ($(this).scrollTop() <= 5) {
+          // Just in case you scroll too fast - max style
           for (var i = 0; i < classesToChange.length; i++) {
-            var currentClass = classesToChange[i]
-            $(currentClass.className).css(currentClass.styleElement, currentClass.max);
+            var currentClass = classesToChange[i];
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              currentClass.max
+            );
           }
         }
       } else {
@@ -111,13 +143,15 @@
     });
   </script>
 
-
   <!-- Mobile Client -->
   <div class="mobile-blog-header">
     <ul class="mobile-blog-header-ul">
       <li class="mobile-blog-header-li-logo">
         <a href="{{ site.url }}">
-          <img src="{{ site.baseurl }}/media/site/favicon.png" class="mobile-blog-header-logo">
+          <img
+            src="{{ site.baseurl }}/media/site/favicon.png"
+            class="mobile-blog-header-logo"
+          />
         </a>
       </li>
       <li class="mobile-blog-header-li">
@@ -134,7 +168,5 @@
       </li>
     </ul>
   </div>
-  <div class="mobile-blog-header-placeholder">
-  </div>
-
+  <div class="mobile-blog-header-placeholder"></div>
 </header>

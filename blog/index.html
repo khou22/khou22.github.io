@@ -60,10 +60,10 @@ layout: default
 
         {% if page.url == blogHomepage %}
             <!-- If on first page -->
-            <h1 class="page-heading">Posts <span class="number-of-posts">({{site.posts.size}})</span></h1>
+            <h1 class="ui header">Posts <span class="number-of-posts">({{site.posts.size}})</span></h1>
         {% else %}
             <!-- If on any other page -->
-            <h1 class="page-heading">Posts <span class="number-of-posts">(Page {{paginator.page}})</span></h1>
+            <h1 class="ui header">Posts <span class="number-of-posts">(Page {{paginator.page}})</span></h1>
         {% endif %}
 
       <ul class="post-list">
@@ -71,7 +71,7 @@ layout: default
         <!-- This loops through the paginated posts -->
         {% for post in paginator.posts %}
             <li class="post-individual">
-              <h2 style="margin-bottom: 0rem">
+              <h2 style="margin-bottom: 0rem" class="ui header">
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
               </h2>
               <p class="post-description">

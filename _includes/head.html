@@ -1,46 +1,90 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <title>
+    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+  </title>
+  <meta
+    name="description"
+    content="{% if page.excerpt %}{{
+      page.excerpt | strip_html | strip_newlines | truncate: 160
+    }}{% else %}{{ site.description }}{% endif %}"
+  />
 
-    <!-- React -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+  <!-- React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
 
-    <!-- Jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- Jquery -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"
+  ></script>
 
-    <!-- Tile Layout Library -->
-    <link rel="stylesheet" type="text/css" href="{{ "/libraries/tile-layout-library/style.css" | prepend: site.baseurl }}">
+  <!-- Tile Layout Library -->
+  <link rel="stylesheet" type="text/css" href="{{
+    "/libraries/tile-layout-library/style.css" | prepend: site.baseurl
+  }}"> <link rel="stylesheet" href="{{
+    "/css/main.css" | prepend: site.baseurl
+  }}">
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+  <link rel="alternate" type="application/rss+xml" title="{{
+    site.title
+  }}" href="{{
+    "/feed.xml" | prepend: site.baseurl | prepend: site.url
+  }}" />
 
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <!-- Bootstrap -->
+  <!-- <link href="{{ "/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet"> -->
+  <!-- <script src="{{ "/css/bootstrap-3.3.5-dist/js/bootstrap.min.js" | prepend: site.baseurl }}"></script> -->
 
-    <!-- Bootstrap -->
-    <link href="{{ "/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{{ "/css/bootstrap-3.3.5-dist/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+  <!-- Pinterest -->
+  <meta name="p:domain_verify" content="ba077b9ffb934c298dbb2516fb42bdee" />
 
-    <!-- Pinterest -->
-    <meta name="p:domain_verify" content="ba077b9ffb934c298dbb2516fb42bdee"/>
+  <!-- Semantic UI -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ '/semantic/dist/semantic.min.css' | prepend: site.baseurl }}"
+  />
+  <script src="{{
+      '/semantic/dist/semantic.min.js' | prepend: site.baseurl
+    }}"></script>
 
-    <!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <!-- Google Analytics -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function() {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "//www.google-analytics.com/analytics.js",
+      "ga"
+    );
 
-        ga('create', 'UA-66796355-1', 'auto');
-        ga('send', 'pageview', location.pathname);
-    </script>
+    ga("create", "UA-66796355-1", "auto");
+    ga("send", "pageview", location.pathname);
+  </script>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ "/media/site/favicon.png" | prepend: site.baseurl }}">
-
-    {% seo %}
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{
+    "/media/site/favicon.png" | prepend: site.baseurl
+  }}"> {% seo %}
 </head>

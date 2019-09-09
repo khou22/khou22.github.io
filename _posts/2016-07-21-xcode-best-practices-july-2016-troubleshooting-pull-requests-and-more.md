@@ -7,7 +7,7 @@ description: "A few coding best practices that I learned in the past couple of w
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: configuration
 tags: [swift, xcode, packageManager, github]
-featured: "yes"
+featured: "no"
 ---
 <h3 class="post-subheader">Troubleshooting Xcode</h3>
 Xcode can be a great IDE with powerful tools like autocompletion, but sometimes it does have a tendency to “break.” Errors that pertain to linking are often examples of Xcode glitching out and temporarily self-imploding. These issues can be solved by following these steps:

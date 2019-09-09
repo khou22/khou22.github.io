@@ -1,33 +1,30 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
-
-
 
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
+$base-font-size: 16px;
+$small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit: 30px;
 
-$text-color:       #111;
+$text-color: #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color: #2a7ae2;
 
-$grey-color:       #828282;
+$grey-color: #828282;
 $grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-dark: darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width: 800px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
+$on-palm: 600px;
+$on-laptop: 800px;
 
 // Using media queries with like this:
 // @include media-query($on-palm) {
@@ -37,37 +34,15 @@ $on-laptop:        800px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
-
-
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 // Import custom sass files for use in the blog site
-@import
-        "base",
-        "layout",
-        "syntax-highlighting",
-        "custom",
-        "header",
-        "post",
-        "index",
-        "tag",
-        "animations",
-        "category",
-        "categories",
-        "contact",
-        "photography",
-        "projects",
-        "text-analysis-app",
-        "footer",
-        "search",
-        "stats-test-score-calculator",
-        "templates",
-        "time-calculator",
-        "random-number-assignment",
-        "design",
-        "blog"
-;
+@import "base", "layout", "syntax-highlighting", "custom", "header", "post",
+  "index", "tag", "animations", "category", "categories", "contact",
+  "photography", "projects", "text-analysis-app", "footer", "search",
+  "stats-test-score-calculator", "templates", "time-calculator",
+  "random-number-assignment", "design", "blog", "landing", "icons";

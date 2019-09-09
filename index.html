@@ -1,101 +1,282 @@
-<!-- index.html -->
-<!DOCTYPE html>
+---
+layout: empty
+title: "Kevin Hou"
+---
 
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Kevin Hou's Website</title>
-    <meta name="description" content="Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="css/landingPage.css">
-    <link rel="stylesheet" href="css/loadingPage/loadingPage.css">
-    <link rel="stylesheet" href="css/landingPage-mobile.css">
-    <link rel="icon" type="image/png" href="media/site/favicon.png">
-    <link rel="stylesheet" href="css/loadingPage/loadingPageAnimations.css">
-
-    <!-- Javascript Libraries -->
-    <script src="libraries/TheaterJS-2.0.1/dist/theater.min.js"></script> <!-- TheaterJS -->
-
-    <!-- For media queries -->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
-  <body>
-    <!-- Hide scrollbar on this page -->
-    <style> ::-webkit-scrollbar { display: none; } </style>
-
-    <div id="loadingPage"></div>
-    <script type="text/jsx;harmony=true" src="Components/LoadingPage.js"></script>
-
-    <div id="content" class="MainDiv"></div>
-    <script type="text/jsx;harmony=true" src="Components/LandingPage.js"></script>
-
-    <a href="https://khou22.github.io" title="Kevin Hou's Website">
-      <img src="media/site/logo/initials_logo.png" width="64" height="64" class="landing-logo" title="Kevin Hou's Website">
+<!-- MARK: Navigation Bar -->
+<div id="headerContainer" class="landing-navigation menu-expanded">
+  <div class="ui compact menu">
+    <a id="menu-icon" class="item">
+      <i id="menu-icon-arrow" class="angle left icon"></i>
+      <i id="menu-icon-menu" class="bars icon" style="display: none"></i>
     </a>
+    <a class="item" href="blog">
+      Blog
+    </a>
+    <a class="item" href="programming">
+      Coding
+    </a>
+    <a class="item" href="wood">
+      Wood
+    </a>
+    <a class="item" href="photography">
+      Photo
+    </a>
+  </div>
 
-    <!-- Bottom Menu -->
-    <table class="nav-bar">
-      <tr>
-        <td>
-          <a href="https://www.linkedin.com/in/kevinhou22" target="_blank" data-toggle="tooltip" title="LinkedIn">
-            <div class="nav-link-box linkedin-bw"></div>
-          </a>
-        </td>
-        <td>
-          <a href="https://github.com/khou22" target="_blank" data-toggle="tooltip" title="Github">
-            <div class="nav-link-box github-bw"></div>
-          </a>
-        </td>
-        <td>
-          <a href="https://www.flickr.com/photos/khou22/" target="_blank" data-toggle="tooltip" title="Flickr">
-            <div class="nav-link-box flickr-bw"></div>
-          </a>
-        </td>
-        <td>
-          <a href="http://kevinhou.wix.com/projects" target="_blank" data-toggle="tooltip" title="Portfolio">
-            <div class="nav-link-box gallery-bw"></div>
-          </a>
-        </td>
-        <td>
-          <a href="https://youtube.com/kevinhou22" target="_blank" data-toggle="tooltip" title="YouTube">
-            <div class="nav-link-box youtube-bw"></div>
-          </a>
-        </td>
-        <td>
-          <div class="nav-td">
-            <a href="https://www.princeton.edu/main/" target="_blank" data-toggle="tooltip" title="School Profile">
-              <div class="nav-link-box highSchool-bw"></div>
-            </a>
-          </div>
-        </td>
-      </tr>
-    </table>
+  <script>
+    const menuIcon = document.getElementById("menu-icon");
+    menuIcon.addEventListener("click", () => {
+      console.log("Clicked menu icon");
+      const EXPANDED_CLASS = "menu-expanded";
+      const CONTRACTED_CLASS = "menu-contracted";
+      var headerContainer = document.getElementById("headerContainer");
+      const isExpanded = headerContainer.classList.contains(EXPANDED_CLASS);
+      if (isExpanded) {
+        // Expanded -> Contracted
+        headerContainer.classList.remove(EXPANDED_CLASS);
+        headerContainer.classList.add(CONTRACTED_CLASS);
 
-    <!-- Activate Tooltips -->
-    <script type="text/javascript">
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
-    </script>
+        document.getElementById("menu-icon-arrow").style.display = "none";
+        document.getElementById("menu-icon-menu").style.display = "block";
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        console.log(menuIcon.offsetWidth);
+        headerContainer.style.width = `${menuIcon.offsetWidth}px`;
+      } else {
+        // Contracted -> Expanded
+        headerContainer.classList.remove(CONTRACTED_CLASS);
+        headerContainer.classList.add(EXPANDED_CLASS);
 
-      ga('create', 'UA-66796355-1', 'auto');
-      ga('send', 'pageview', location.pathname);
+        document.getElementById("menu-icon-menu").style.display = "none";
+        document.getElementById("menu-icon-arrow").style.display = "block";
 
-    </script>
-  </body>
-</html>
+        headerContainer.style.width = "auto";
+      }
+    });
+  </script>
+</div>
+
+<!-- Social Icons -->
+<div class="landing-social">
+  <div class="ui vertical icon menu">
+    <a class="item" href="{{ site.instagram_url }}" target="_blank">
+      <img
+        class="landing-social-icon"
+        src="https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300"
+      />
+    </a>
+    <a class="item" href="{{ site.LinkedIn_url }}" target="_blank">
+      <img
+        class="landing-social-icon"
+        src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png"
+      />
+    </a>
+    <a class="item" href="{{ site.youtube_url }}" target="_blank">
+      <img
+        class="landing-social-icon"
+        src="https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/512/youtube.png"
+      />
+    </a>
+    <a
+      class="item"
+      href="https://github.com/{{ site.github_username }}"
+      target="_blank"
+    >
+      <img
+        class="landing-social-icon"
+        src="https://image.flaticon.com/icons/svg/25/25231.svg"
+      />
+    </a>
+  </div>
+</div>
+
+<!-- MARK: Landing Cover -->
+<div id="landing-parallax-container" class="landing-parallax-container">
+  <div>
+    <img
+      class="landing-parallax-image"
+      src="{{ 'media/landing/hong-kong/0.png' | prepend: site.baseurl }} "
+    />
+  </div>
+
+  <!-- Personal logo and name - second furthest back to give sense of depth -->
+  <div>
+    <span class="landing-parallax-container-content">
+      <!-- <img
+        class="landing-parallax-container-content-logo"
+        src="media/site/logo/initials_logo_shadow.png"
+      /> -->
+      <img
+        class="landing-parallax-container-content-logo"
+        src="media/site/logo/initials_logo_animated.svg"
+      />
+      <p class="landing-parallax-container-content-name">Kevin Hou</p>
+    </span>
+  </div>
+  <div>
+    <img
+      class="landing-parallax-image"
+      src="{{ 'media/landing/hong-kong/1.png' | prepend: site.baseurl }} "
+    />
+  </div>
+  <div>
+    <img
+      class="landing-parallax-image"
+      src="{{ 'media/landing/hong-kong/2.png' | prepend: site.baseurl }} "
+    />
+  </div>
+</div>
+
+<!-- MARK: Transition gradient to next section -->
+<div style="position: relative">
+  <div class="landing-parallax-transition">
+    <img
+      class="landing-parallax-transition-gradient"
+      src="{{ 'media/site/gradients/black.png' | prepend: site.baseurl }} "
+    />
+  </div>
+
+  <div class="landing-parallax-transition-spacer"></div>
+</div>
+
+<!-- MARK: Parallax logic -->
+<script>
+  window.addEventListener(
+    "scroll",
+    () => {
+      let parent = document.getElementById("landing-parallax-container");
+      let children = parent.getElementsByTagName("div");
+      for (let i = 0; i < children.length; i++) {
+        children[i].style.transform =
+          "translateY(-" + (window.pageYOffset * i) / children.length + "px)";
+      }
+    },
+    false
+  );
+</script>
+
+<!-- MARK: Content -->
+<div class="landing-section">
+  <div class="ui grid stackable landing-section-grid">
+    <div class="two column row">
+      <div class="column">
+        <div class="landing-section-text">
+          <h1 class="ui header">Kevin Hou</h1>
+          <i>Student. Builder. Engineer.</i>
+          <p>
+            A full stack engineer by trade and a creator by heart. Enjoys the
+            process of creation whether it be in the physical — woodshop,
+            blacksmithing, circuity — or the digital — software engineering,
+            photography, and film.
+          </p>
+          <br />
+          <p>
+            Currently studying computer science at Princeton University with
+            certificates in entrepreneurship and statistics and machine
+            learning.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <img
+          src="{{ 'media/landing/image_tiles.png' | prepend: site.baseurl }}"
+          class="landing-section-one-images"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="landing-section-two">
+  <div class="ui grid stackable landing-section-grid">
+    <div class="two column row">
+      <div class="column">
+        <img
+          src="{{ 'media/landing/computer.png' | prepend: site.baseurl }}"
+          class="landing-section-two-computer"
+        />
+        <h2
+          class="ui header inverted landing-section-two-computer-text"
+          id="computer"
+        >
+          Hello, World.
+        </h2>
+      </div>
+      <div class="column">
+        <div class="landing-section-text landing-section-two-text">
+          <h1 class="ui header inverted">Software Engineer</h1>
+          <p>
+            Full stack software engineer with concentrations in frontend
+            development and machine learning. Rapidly growing love for system
+            architecture and design.
+          </p>
+          <br />
+          <p>
+            See complete list of
+            <a href="{{ site.baseurl }}/programming">projects</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{{
+    'libraries/TheaterJS-2.0.1/dist/theater.min.js' | prepend: site.baseurl
+  }}"></script>
+<!-- TheaterJS -->
+<script>
+  var theater = theaterJS({ local: "en" });
+
+  theater
+    .on("type:start, erase:start", function() {
+      theater
+        .getCurrentActor()
+        .$element.classList.add("actor__content--typing");
+    })
+    .on("type:end, erase:end", function() {
+      theater
+        .getCurrentActor()
+        .$element.classList.remove("actor__content--typing");
+    });
+
+  theater
+    .addActor("computer", { speed: 0.4, accuracy: 0.7 })
+    .addScene("computer:Hello, World", 2000)
+    .addScene("computer:Welcome!", 1000)
+    .addScene("computer:Hello, World", 3000)
+    .addScene("computer:Welcome!", 2000)
+    .addScene(theater.replay.bind(theater));
+</script>
+
+<div class="landing-section">
+  <div class="ui grid stackable landing-section-grid">
+    <div class="two column row">
+      <div class="column">
+        <div class="landing-section-text">
+          <h1 class="ui header">Artist</h1>
+          <i>Physical and Digital</i>
+          <p>
+            An avid photographer, woodworker, and designer. Has always had an
+            appreciation for asthetics and enjoys the intersection of
+            engineering and artisty.
+          </p>
+          <br />
+          <p>
+            Always willing to pick up a new craft whether it be leather shop,
+            glass making, or filmography. The past couple of years have been
+            devoted to photography and videography (see
+            <a href="{{ site.baseurl }}/photogrpahy">portfolio</a>).
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <img
+          src="{{ 'media/site/icons/design_icon.png' | prepend: site.baseurl }}"
+          class="landing-section-three-image"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}

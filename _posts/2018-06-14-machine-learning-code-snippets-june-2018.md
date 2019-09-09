@@ -7,7 +7,7 @@ description: "Useful code snippets, functions, and classes that will make you mo
 image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
 category: programming
 tags: [python, sourceCode]
-featured: "yes"
+featured: "no"
 ---
 This blog post contains a number of useful code snippets, functions, and classes that will help with machine learning in Jupyter Notebooks. Specific usage instructions as well as dependencies 
 

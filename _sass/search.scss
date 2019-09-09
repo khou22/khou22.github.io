@@ -1,24 +1,24 @@
-$brand-red:       #D5491F;
-$brand-orange:    #DA8D0F;
-$brand-green:     #80A454;
-$brand-grey:      #9DB7C1;
-$brand-blue:      #3286A8;
+$brand-red: #d5491f;
+$brand-orange: #da8d0f;
+$brand-green: #80a454;
+$brand-grey: #9db7c1;
+$brand-blue: #3286a8;
 
 // Search page
 .search {
-    &-main {
-        width: 80%;
-        margin: auto;
-        margin-top: 24px;
+  &-main {
+    width: 80%;
+    margin: auto;
+    margin-top: 24px;
 
-        h1 {
-            margin-bottom: 24px !important;
-        }
+    h1 {
+      margin-bottom: 24px !important;
     }
+  }
 }
 
 // Tipue Search Override
 .tipue_search_content_title {
-    font-size: 24px;
-    color: $brand-blue;
+  font-size: 24px;
+  color: $brand-blue;
 }

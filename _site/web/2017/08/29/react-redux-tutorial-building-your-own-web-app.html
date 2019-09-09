@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>
+    React Redux Tutorial: Building Your Own Web App
+  </title>
+  <meta
+    name="description"
+    content=""
+  />
+
+  <!-- React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+  <!-- Jquery -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Tile Layout Library -->
+  <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css"> <link rel="stylesheet" href="/css/main.css">
+  <link
+    rel="canonical"
+    href="http://localhost:4000/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html"
+  />
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+
+  <!-- Bootstrap -->
+  <!-- <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <script src="/css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script> -->
+
+  <!-- Pinterest -->
+  <meta name="p:domain_verify" content="ba077b9ffb934c298dbb2516fb42bdee" />
+
+  <!-- Semantic UI -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/semantic/dist/semantic.min.css"
+  />
+  <script src="/semantic/dist/semantic.min.js"></script>
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function() {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "//www.google-analytics.com/analytics.js",
+      "ga"
+    );
+
+    ga("create", "UA-66796355-1", "auto");
+    ga("send", "pageview", location.pathname);
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/media/site/favicon.png"> <!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>React Redux Tutorial: Building Your Own Web App | Kevin Hou</title>
+<meta property="og:title" content="React Redux Tutorial: Building Your Own Web App" />
+<meta name="author" content="Kevin Hou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An introduction into React-Redux — a framework for building web applications. This tutorial is implemented with ES6 and Webpack." />
+<meta property="og:description" content="An introduction into React-Redux — a framework for building web applications. This tutorial is implemented with ES6 and Webpack." />
+<link rel="canonical" href="http://localhost:4000/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html" />
+<meta property="og:url" content="http://localhost:4000/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html" />
+<meta property="og:site_name" content="Kevin Hou" />
+<meta property="og:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-08-29T17:16:59-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@kevinhou22" />
+<meta name="twitter:creator" content="@Kevin Hou" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"React Redux Tutorial: Building Your Own Web App","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2017-08-29T17:16:59-04:00","dateModified":"2017-08-29T17:16:59-04:00","description":"An introduction into React-Redux — a framework for building web applications. This tutorial is implemented with ES6 and Webpack.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html"},"url":"http://localhost:4000/web/2017/08/29/react-redux-tutorial-building-your-own-web-app.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+
+  <body>
+    <header>
+  <!-- Desktop Client -->
+  <div class="site-header" id="site-header">
+    <div class="wrapper" style="height: 100%">
+      <div class="site-header-background">
+        <div class="site-header-content">
+          <a href="/" class="header-title-section">
+            <img
+              src="/media/site/favicon.png"
+              class="header-logo"
+              align="left"
+            />
+            <p class="site-title">Kevin Hou</p>
+          </a>
+
+          <!-- Site Navigation Bar -->
+          <ul class="nav-ul site-nav-bar">
+            <li class="nav-li nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/blog">Blog &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li">
+                  <a href="/blog/category"
+                    >Browse by Category</a
+                  >
+                </li>
+                <li class="nav-li">
+                  <a href="/blog/tag">Browse by Tag</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/categories">Portfolio &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li">
+                  <a href="/programming">Programming</a>
+                </li>
+                <li class="nav-li">
+                  <a href="/wood/">Woodshop</a>
+                </li>
+                <!-- <li class="nav&#45;li"><a href="https://www.flickr.com/photos/khou22/albums" target="_blank">Woodshop</a></li> -->
+                <li class="nav-li">
+                  <a href="/design">Design</a>
+                </li>
+                <li class="nav-li">
+                  <a href="/photography">Photography</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-placeholder"></div>
+
+  <!-- Activate Tooltips -->
+  <script type="text/javascript">
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    // Header has two sizes — 80px and 40px — based on scrolling
+    $(document).scroll(function() {
+      var screenWidth = $(document).width();
+      var mobileCuttoff = 800; // Ambiguous
+      if (screenWidth > mobileCuttoff) {
+        var triggerDistance = 100;
+        var classesToChange = [
+          {
+            className: ".site-header",
+            styleElement: "height",
+            min: 40,
+            max: 80
+          },
+          {
+            className: ".site-title",
+            styleElement: "font-size",
+            min: 20,
+            max: 32
+          },
+          {
+            className: ".site-title",
+            styleElement: "line-height",
+            min: 2,
+            max: 3
+          },
+          {
+            className: ".header-logo",
+            styleElement: "height",
+            min: 24,
+            max: 64
+          },
+          {
+            className: ".site-nav-bar",
+            styleElement: "margin-top",
+            min: 4,
+            max: 24
+          }
+        ];
+        if ($(this).scrollTop() < triggerDistance) {
+          // Distance until changing header height
+          var percentageComplete = $(this).scrollTop() / triggerDistance; // Percentage complete
+          for (var i = 0; i < classesToChange.length; i++) {
+            // Cycle through all style changes
+            var currentClass = classesToChange[i]; // Store
+            var dynamicStyle =
+              (1 - percentageComplete) * (currentClass.max - currentClass.min) +
+              currentClass.min; // Calculate
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              dynamicStyle
+            ); // Apply
+          }
+        } else {
+          // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i];
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              currentClass.min
+            );
+          }
+        }
+        if ($(this).scrollTop() <= 5) {
+          // Just in case you scroll too fast - max style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i];
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              currentClass.max
+            );
+          }
+        }
+      } else {
+        // If on mobile
+        // console.log("Your screen size does not support dynamic header");
+      }
+    });
+  </script>
+
+  <!-- Mobile Client -->
+  <div class="mobile-blog-header">
+    <ul class="mobile-blog-header-ul">
+      <li class="mobile-blog-header-li-logo">
+        <a href="http://localhost:4000">
+          <img
+            src="/media/site/favicon.png"
+            class="mobile-blog-header-logo"
+          />
+        </a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/">Home</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/blog">Blog</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/categories">Portfolio</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mobile-blog-header-placeholder"></div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <!-- Hide scrollbar on this page -->
+<style> ::-webkit-scrollbar { display: none; } </style>
+
+<!-- Page scroll progress bar -->
+<script src="/libraries/prognroll/src/prognroll.min.js"></script>
+<script>
+    // Initialize the scroll progress bar
+    $(function() {
+        $("body").prognroll({
+            height: 2, // Progress bar height
+            color: "#3286A8", // Progress bar background color
+        });
+    });
+</script>
+
+<div class="post">
+  
+
+    
+
+    
+
+    
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-content">
+      <a onclick="blogPostBackButton()"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title post-header-title">React Redux Tutorial: Building Your Own Web App</h1>
+      <h4 class="post-header-description">An introduction into React-Redux — a framework for building web applications. This tutorial is implemented with ES6 and Webpack.</h4>
+      <p class="post-header-meta">Aug 29, 2017 • Kevin Hou</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+    var blogPostBackButton = function() {
+      var previousLink = document.referrer
+      var index = previousLink.indexOf("/blog")
+      console.log("Previous link:", previousLink);
+      console.log(index);
+      if (index == 1) { // If not coming from a different blog post
+        window.history.go(-1); // Back in history (keeps window position)
+      } else { // Directed from a different blog post
+        // console.log("Back to blog");
+        console.log("Back");
+        window.location.href = "/blog";
+      }
+    }
+
+  </script>
+
+  <article class="post-content">
+    <h2 id="introduction">Introduction</h2>
+<p>Redux has been making a strong appearance recently in the world of web development. In a nutshell, it is essentially a way of keeping and consolidating props outside of the React components. The goal is to eliminate the need for local states and use the React components for purely rendering and small minor helper functions. The creators of Redux set out to tackle the challenge many developers faced, myself included, of passing properties between many components.</p>
+
+<p>I’ve been working with React since it’s birth for about 3 years now and I’ve been a huge fan ever since. I started using Redux this past summer at Moat (Now Oracle as of August 1st) and it’s been a great addition to my skillset and productivity because of the ways in which it improves large-scale React web apps.</p>
+
+<p>In this post, I will cover the basics of React/Redux as well as its benefits. Redux works by using React components, containers, actions, and reducers. Reducers receive action dispatches and update the Redux state. All Redux state changes must be routed through the reducer. Additionally, all actions must be connected to components through containers. Component can only update the local state by triggering actions. In short, reducers sit on top of the state, actions triggers reducers, containers connect components with states as well as actions, and components display client-facing components.</p>
+
+<h2 id="overview">Overview</h2>
+
+<h3 id="typical-file-structure">Typical file structure:</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>client/src/  
++-- Actions  
+|   +-- Section1Actions.js
+|   +-- Section2Actions.js
++-- Components  
+|   +-- Section1
+|   |   +-- Components1.jsx  
+|   |   +-- Components2.jsx  
+|   +-- Section2  
+|   |   +-- Components3.jsx  
+|   |   +-- Components4.jsx  
++-- Constants  
+|   +-- MainActionTypes.js  
+|   +-- OtherConstants.js  
++-- Containers  
+|   +-- EntryContainer.js  
+|   +-- Section1Container.js  
+|   +-- Section2Container.js  
++-- Reducers  
+|   +-- Section1Reducer.js  
+|   +-- Section2Reducer.js  
+|   +-- index.js  
++-- Styles  
+|   +-- main.scss  
+|   +-- Section1Styles.scss  
+|   +-- Section2Styles.scss  
++-- ConfigureStore.js.  
++-- index.js  
+</code></pre>
+</div>
+
+<h3 id="dependencies">Dependencies</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>react
+react-dom
+react-redux
+redux
+redux-logger
+redux-thunk
+</code></pre>
+</div>
+
+<h1 id="boilerplate-code">Boilerplate Code</h1>
+
+<h2 id="1-entry-point">1. Entry-Point</h2>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// client/src/index.js</span>
+
+<span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react-dom'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Provider</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react-redux'</span><span class="p">;</span>
+
+<span class="c1">// This imports a redux store that we will get into next</span>
+<span class="kr">import</span> <span class="nx">store</span> <span class="nx">from</span> <span class="s1">'./ConfigureStore.js'</span><span class="p">;</span>
+
+<span class="c1">// I've found it helpful to use a generic entry container that houses subsequent containers</span>
+<span class="kr">import</span> <span class="nx">Entry</span> <span class="nx">from</span> <span class="s1">'./Containers/EntryContainer'</span><span class="p">;</span>
+
+<span class="c1">// Can call actions on render which can be helpful for fetch requests</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">someAction</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'./Actions/MainActions'</span><span class="p">;</span>
+
+<span class="c1">// Import styleguide (optional) that doesn't correspond to a specific component</span>
+<span class="kr">import</span> <span class="s1">'./Styles/main.scss'</span><span class="p">;</span> <span class="c1">// Get styleguide</span>
+
+<span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">(</span><span class="nx">fetchRepos</span><span class="p">());</span> <span class="c1">// Fetch the fe-component repos</span>
+
+<span class="nx">render</span><span class="p">(</span>
+	<span class="c1">// Must wrap with the provider and store</span>
+    <span class="o">&lt;</span><span class="nx">Provider</span> <span class="nx">store</span><span class="o">=</span><span class="p">{</span><span class="nx">store</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Entry</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/Provider&gt;</span><span class="err">,
+</span>
+    <span class="c1">// The target in the DOM you are rendering to</span>
+    <span class="c1">// This will be in the client/dist/index.html</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'main'</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre>
+</div>
+
+<h2 id="2-configuring-the-store">2. Configuring the Store</h2>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// client/src/ConfigureStore.js</span>
+
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">createStore</span><span class="p">,</span> <span class="nx">applyMiddleware</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'redux'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">thunkMiddleware</span> <span class="nx">from</span> <span class="s1">'redux-thunk'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">createLogger</span> <span class="nx">from</span> <span class="s1">'redux-logger'</span><span class="p">;</span> <span class="c1">// For debugging in the console</span>
+
+<span class="kr">import</span> <span class="nx">mainReducer</span> <span class="nx">from</span> <span class="s1">'./Reducers'</span><span class="p">;</span> <span class="c1">// Import the reducer (client/src/Reducers/index.js)</span>
+
+<span class="c1">// Thunk middleware is used to allow functions to be passed as actions</span>
+<span class="kr">const</span> <span class="nx">middlewares</span> <span class="o">=</span> <span class="p">[</span><span class="nx">thunkMiddleware</span><span class="p">];</span>
+
+<span class="c1">// If debug mode is on, log state changes and actions to the console</span>
+<span class="kr">const</span> <span class="nx">debuggerMode</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// Can also be determined by process.ENV variables</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">debuggerMode</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">loggerMiddleware</span> <span class="o">=</span> <span class="nx">createLogger</span><span class="p">();</span>
+    <span class="nx">middlewares</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">loggerMiddleware</span><span class="p">);</span> <span class="c1">// Add middleware</span>
+<span class="p">}</span>
+
+<span class="c1">// Creates store that handles the complete state tree of app</span>
+<span class="c1">// This is exported and used by the provider</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">mainReducer</span><span class="p">,</span> <span class="nx">applyMiddleware</span><span class="p">(...</span><span class="nx">middlewares</span><span class="p">));</span>
+</code></pre>
+</div>
+
+<h2 id="3-creating-a-component">3. Creating a Component</h2>
+<p>Components are the purely frontend, client-side rendering piece of the puzzle. They should have limited logic and mainly act as pure functions. They are connected to containers which feed them props, but for now we will simply be creating a component with property requirements.</p>
+
+<p><strong>Pure Functional Component (Just Rendering)</strong></p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// client/src/Components/&lt;folder-name&gt;/&lt;component-name&gt;.jsx</span>
+
+<span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">PropTypes</span> <span class="nx">from</span> <span class="s1">'prop-types'</span><span class="p">;</span> <span class="c1">// For enforcing prop types</span>
+
+<span class="kr">import</span> <span class="s1">'../../Styles/&lt;component-name&gt;.scss'</span><span class="p">;</span> <span class="c1">// Import the corresponding stylesheet</span>
+
+<span class="kr">const</span> <span class="nx">ComponentName</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+	<span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+		<span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span>
+   <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="p">);</span>
+
+<span class="c1">// Declare which props are what type and if they are optional</span>
+<span class="nx">ComponentName</span><span class="p">.</span><span class="nx">propTypes</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="na">message</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">string</span><span class="p">.</span><span class="nx">isRequired</span><span class="p">,</span>
+	<span class="na">someObject</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">shape</span><span class="p">({</span>
+		<span class="na">name</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">string</span><span class="p">.</span><span class="nx">isRequired</span><span class="p">,</span>
+		<span class="na">age</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">number</span><span class="p">,</span>
+		<span class="na">numbers</span><span class="p">:</span> <span class="nx">PropTypes</span><span class="p">.</span><span class="nx">arrayOf</span><span class="p">(</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">number</span><span class="p">).</span><span class="nx">isRequired</span><span class="p">,</span>
+	<span class="p">}),</span> <span class="c1">// Not required</span>
+<span class="p">};</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">ComponentName</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p><strong>More Logic-Heavy Component</strong></p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// client/src/Components/&lt;folder-name&gt;/&lt;component-name&gt;.jsx</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span> <span class="c1">// Must import the Component class type</span>
+
+<span class="kr">import</span> <span class="s1">'../../Styles/&lt;component-name&gt;.scss'</span><span class="p">;</span> <span class="c1">// Import sass file for this component</span>
+
+<span class="kr">class</span> <span class="nx">Loading</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+	<span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Can now use other functions</span>
+		<span class="kr">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+		<span class="p">...</span>
+	<span class="p">}</span>
+
+	<span class="nx">randomFunction</span><span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">{</span>
+		<span class="p">...</span>
+	<span class="p">}</span>
+
+	<span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="p">(</span>
+  			<span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+          	<span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span>
+          <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>       <span class="p">)</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">ComponentName</span><span class="p">.</span><span class="nx">propTypes</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="p">...</span>
+<span class="p">};</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">ComponentName</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<h2 id="4-action-types">4. Action Types</h2>
+<p>All actions must dispatch an object that dictates to a reducer what it should do. The way the reducer registers what type of logic to carry out is by a unique <code class="highlighter-rouge">action.type</code>. These are stored in the <code class="highlighter-rouge">Constants/MainActionTypes.js</code> file. It looks something like this:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// client/src/Constants/MainActionTypes.js</span>
+
+<span class="c1">// Loading Actions</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">REQUEST_SENT</span> <span class="o">=</span> <span class="s1">'REQUEST_SENT'</span><span class="p">;</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">REQUEST_SUCCESS</span> <span class="o">=</span> <span class="s1">'REQUEST_SUCCESS'</span><span class="p">;</span>
+
+<span class="c1">// API Actions</span>
+<span class="p">...</span>
+</code></pre>
+</div>
+
+<h2 id="5-reducers">5. Reducers</h2>
+<p>Reducers respond to actions when they dispatch a return object. These objects are picked up by the reducers and some logic is carried out that can update the state. Reducer functionality should be kept at a minimum and it is very important that they remain pure-functions — that is, they only rely on input, no other information, for calculating an output. A reducer looks like this:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// client/src/Reducers/SomeReducer.js</span>
+
+<span class="c1">// This gives you access to the action types we created in step 4</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">types</span> <span class="nx">from</span> <span class="s1">'../Constants/MainActionTypes'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">initialState</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">someValue</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// Default initial state for this variable</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">someReducer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="nx">initialState</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="c1">// The app can decide what to do based on the action type</span>
+	<span class="c1">// The return object for this function will be the new state</span>
+   <span class="k">switch</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">case</span> <span class="nx">types</span><span class="p">.</span><span class="na">SOME_ACTION_TYPE</span><span class="p">:</span>
+           <span class="k">return</span> <span class="p">{</span>
+               <span class="p">...</span><span class="nx">state</span><span class="p">,</span>
+               <span class="na">someValue</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+           <span class="p">};</span>
+       <span class="nl">default</span><span class="p">:</span> <span class="c1">// Default, no state change</span>
+           <span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
+   <span class="p">};</span>
+   <span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">someReducer</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>The reducers are then consolidated into one file in the <code class="highlighter-rouge">Reducers/index.js</code> file:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// client/src/Reducers/index.js</span>
+
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">combineReducers</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'redux'</span><span class="p">;</span>
+
+<span class="c1">// Import all the reducers</span>
+<span class="kr">import</span> <span class="nx">someReducer</span> <span class="nx">from</span> <span class="s1">'./someReducer'</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="kr">import</span> <span class="nx">anotherReducer</span> <span class="nx">from</span> <span class="s1">'./anotherReducer'</span><span class="p">;</span>
+
+<span class="c1">// Export for use in the entry index.js file</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">combineReducers</span><span class="p">({</span>
+	<span class="c1">// 'name' refers to the name of the reducer you will use to access the variables associated with it</span>
+    <span class="na">name</span><span class="p">:</span> <span class="nx">someReducer</span><span class="p">,</span>
+    <span class="p">...</span>
+    <span class="na">another</span><span class="p">:</span> <span class="nx">anotherReducer</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<h2 id="6-actions">6. Actions</h2>
+<p>Actions are like any function except that the only thing that really matters is their return object. Actions are dispatched (thanks to <code class="highlighter-rouge">redux-thunk</code>) and their return objects are what the reducers receive and interpret; therefore, it is imperitive that the action return has <code class="highlighter-rouge">type</code> value associated with it. We will set them using the <code class="highlighter-rouge">MainActionTypes.js</code> constants we wrote earlier so that there are no typos. Actions are generally referenced in the container and attached to a component as a prop as we’ll see in step 7.</p>
+
+<p><strong>Standard action:</strong></p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// client/src/Actions/mainActions.js</span>
+
+<span class="kr">import</span> <span class="s1">'whatwg-fetch'</span><span class="p">;</span> <span class="c1">// Fetch requests</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">types</span> <span class="nx">from</span> <span class="s1">'../Constants/MainActionTypes'</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">updatingVariables</span> <span class="o">=</span> <span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">({</span>
+    <span class="na">type</span><span class="p">:</span> <span class="nx">types</span><span class="p">.</span><span class="nx">SOME_ACTION</span><span class="p">,</span>
+    <span class="na">name</span><span class="p">:</span> <span class="nx">val</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p><strong>Sample async fetch-request:</strong></p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// client/src/Actions/mainActions.js</span>
+
+<span class="kr">import</span> <span class="s1">'whatwg-fetch'</span><span class="p">;</span> <span class="c1">// Fetch requests</span>
+<span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">types</span> <span class="nx">from</span> <span class="s1">'../Constants/MainActionTypes'</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">fetchJSON</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">'...'</span><span class="p">;</span>
+
+   <span class="c1">// Returning a promise allows you to use the 'dispatch' function in the child scope</span>
+   <span class="k">return</span> <span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+       <span class="nx">dispatch</span><span class="p">(</span><span class="nx">requestSent</span><span class="p">(</span><span class="nx">url</span><span class="p">));</span> <span class="c1">// Actions can dispatch other actions</span>
+
+		<span class="c1">// Return the contents of the fetch promise</span>
+		<span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span> <span class="c1">// See watwg-fetch for docs</span>
+           <span class="na">credentials</span><span class="p">:</span> <span class="s1">'same-origin'</span><span class="p">,</span> <span class="c1">// If same origin</span>
+       <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span> <span class="c1">// Parse response</span>
+       <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">json</span> <span class="o">=&gt;</span> <span class="p">{</span>
+           <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Received data'</span><span class="p">);</span>
+           <span class="nx">dispatch</span><span class="p">(</span><span class="nx">receivedData</span><span class="p">(</span><span class="nx">json</span><span class="p">));</span>
+           <span class="k">return</span> <span class="nx">json</span><span class="p">;</span> <span class="c1">// Return it as a promise — will be the result of the original action</span>
+           <span class="c1">// Example:</span>
+           <span class="c1">//	 this.props.fetchJSON().then((response) { ... }).catch((error) { ...});</span>
+       <span class="p">})</span>
+       <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// Catch any errors</span>
+           <span class="nx">dispatch</span><span class="p">(</span><span class="nx">actionError</span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+       <span class="p">});</span>
+   <span class="p">};</span>
+<span class="p">};</span>
+</code></pre>
+</div>
+
+<h2 id="7-containers">7. Containers</h2>
+<p>Containers put steps 3-5 together and lets you package the component, reducer, and constants all together. Containers connect the actions, redux state values, and reducers to the components as props. When you want to render the contents of the container, you include the <code class="highlighter-rouge">&lt;ContainerName /&gt;</code> as opposed to its child <code class="highlighter-rouge">&lt;ComponentName /&gt;</code>.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// client/src/Containers/someContainer.js</span>
+
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">connect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react-redux'</span><span class="p">;</span>
+
+<span class="c1">// Get the component</span>
+<span class="kr">import</span> <span class="nx">SomeComponent</span> <span class="nx">from</span> <span class="s1">'../Components/SomeComponent'</span><span class="p">;</span>
+
+<span class="c1">// Import actions you'd like to make usable to a component</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">someAction</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'../Actions/MainActions'</span><span class="p">;</span>
+
+<span class="c1">// Map the redux states to props</span>
+<span class="kr">const</span> <span class="nx">mapStateToProps</span> <span class="o">=</span> <span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">({</span>
+	<span class="c1">// 'name' is the name of the reducer you specified in step 5 in the file:</span>
+	<span class="c1">// client/src/Reducers/index.js</span>
+   <span class="na">someValue</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">someValue</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Map actions to props</span>
+<span class="kr">const</span> <span class="nx">mapDispatchToProps</span> <span class="o">=</span> <span class="p">(</span><span class="nx">dispatch</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">({</span>
+	<span class="na">viewComponent</span><span class="p">:</span> <span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+        <span class="nx">dispatch</span><span class="p">(</span><span class="nx">someAction</span><span class="p">(</span><span class="nx">input</span><span class="p">))</span>
+   <span class="p">),</span>
+<span class="p">});</span>
+
+<span class="c1">// Connects your component to the store using the previously defined functions</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">connect</span><span class="p">(</span>
+    <span class="nx">mapStateToProps</span><span class="p">,</span> <span class="c1">// Add the states</span>
+    <span class="nx">mapDispatchToProps</span> <span class="c1">// Add the actions</span>
+<span class="p">)(</span><span class="nx">SomeComponent</span><span class="p">);</span> <span class="c1">// Connect them to the component</span>
+</code></pre>
+</div>
+
+<p>To use the container, simply include it like so:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">PropTypes</span> <span class="nx">from</span> <span class="s1">'prop-types'</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="nx">SomeContainer</span> <span class="nx">from</span> <span class="s1">'../Containers/SomeContainer'</span><span class="p">;</span> <span class="c1">// Get container</span>
+
+<span class="kr">class</span> <span class="nx">Entry</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+	<span class="nx">constructor</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+   		<span class="kr">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
+		<span class="p">...</span>
+   <span class="p">}</span>
+
+   <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+      	<span class="k">return</span> <span class="p">(</span>
+           <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+               <span class="o">&lt;</span><span class="nx">SomeContainer</span> <span class="o">/&gt;</span>
+           <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>       <span class="p">)</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">Entry</span><span class="p">.</span><span class="nx">propTypes</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="p">...</span>
+<span class="p">};</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">Entry</span><span class="p">;</span>
+
+</code></pre>
+</div>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>If you put all those pieces together you should end up with your first, boilerplate React/Redux application! It’s a really useful tool and a great addition to any stack — especially those that already use React. I will be working with this stack very shortly on a personal project as well as some business projects so I’ll be sure to keep you all updated on what I’ll continue to learn!</p>
+
+    <div class="post-organization">
+      <p id="post-meta">Posted in <a href="/blog/category/web/">Web Development</a> with <a href="/blog/tag/reactjs">ReactJS</a>, <a href="/blog/tag/redux">Redux</a>, <a href="/blog/tag/javascript">Javascript</a>, <a href="/blog/tag/es6">ES6</a>, <a href="/blog/tag/tutorial">Tutorial</a>, <a href="/blog/tag/sourceCode">Source Code</a></p>
+    </div>
+  </article>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="ui grid stackable">
+    <div class="one wide column"></div>
+
+    <div class="four wide column">
+      <h1 class="ui header">Kevin Hou</h1>
+      <h3 class="ui header">
+        <a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a>
+      </h3>
+      <h4 class="ui header">
+        <i>San Francisco Bay Area</i>
+      </h4>
+    </div>
+
+    <div class="four wide column footer-external">
+      <h4 class="ui header"><i>Social</i></h4>
+      <a href="https://www.instagram.com/lifeofkhou/" target="_blank">
+        <img
+          src="https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300"
+        />
+      </a>
+      <a href="https://www.linkedin.com/in/kevinhou22" target="_blank">
+        <img
+          src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png"
+        />
+      </a>
+      <a href="https://youtube.com/kevinhou22" target="_blank">
+        <img
+          src="https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/512/youtube.png"
+        />
+      </a>
+      <a href="https://github.com/khou22" target="_blank">
+        <img src="https://image.flaticon.com/icons/svg/25/25231.svg" />
+      </a>
+    </div>
+
+    <div class="six wide column">
+      <p class="text">Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
+</p>
+    </div>
+
+    <div class="one wide column"></div>
+  </div>
+</footer>
+
+  </body>
+</html>

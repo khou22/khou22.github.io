@@ -1,179 +1,125 @@
 /*Custom Sass file for blog directory*/
 
-$brand-red:       #D5491F;
-$brand-orange:    #DA8D0F;
-$brand-green:     #80A454;
-$brand-grey:      #9DB7C1;
-$brand-blue:      #3286A8;
+$brand-red: #d5491f;
+$brand-orange: #da8d0f;
+$brand-green: #80a454;
+$brand-grey: #9db7c1;
+$brand-blue: #3286a8;
 
 /****************  Styling Font  ****************/
 @font-face {
-   font-family: handwritingFont;
-   src: url(./../media/site/fonts/LingWaiSC/LingWaiSC-Medium.otf);
+  font-family: handwritingFont;
+  src: url(./../media/site/fonts/LingWaiSC/LingWaiSC-Medium.otf);
 }
 
-.font-handwritten { // Apply this class to use
-    font-family: handwritingFont, cursive, sans-serif;
+.font-handwritten {
+  // Apply this class to use
+  font-family: handwritingFont, cursive, sans-serif;
 }
 
 /****************  Default Font  ****************/
 @font-face {
-   font-family: defaultFont;
-   src: url(./../media/site/fonts/ProximaNova/ProximaNova-Light.otf);
+  font-family: defaultFont;
+  src: url(./../media/site/fonts/ProximaNova/ProximaNova-Light.otf);
 }
 @font-face {
-   font-family: defaultFont_Extra_Bold;
-   src: url(./../media/site/fonts/ProximaNova/ProximaNova-Exxtrabold.otf);
-   font-weight: bolder;
+  font-family: defaultFont_Extra_Bold;
+  src: url(./../media/site/fonts/ProximaNova/ProximaNova-Exxtrabold.otf);
+  font-weight: bolder;
 }
 @font-face {
-   font-family: defaultFont_bold;
-   src: url(./../media/site/fonts/ProximaNova/ProximaNova-Semibold.otf);
-   font-weight: bold;
+  font-family: defaultFont_bold;
+  src: url(./../media/site/fonts/ProximaNova/ProximaNova-Semibold.otf);
+  font-weight: bold;
 }
 @font-face {
-   font-family: defaultFont_Italics;
-   src: url(./../media/site/fonts/ProximaNova/ProximaNova-LightItalic.otf);
-   font-weight: italic;
+  font-family: defaultFont_Italics;
+  src: url(./../media/site/fonts/ProximaNova/ProximaNova-LightItalic.otf);
+  font-weight: italic;
 }
 @font-face {
-   font-family: defaultFont_Bold_Italics;
-   src: url(./../media/site/fonts/ProximaNova/ProximaNova-SemiboldIt.otf);
-   font-weight: bold italic;
+  font-family: defaultFont_Bold_Italics;
+  src: url(./../media/site/fonts/ProximaNova/ProximaNova-SemiboldIt.otf);
+  font-weight: bold italic;
 }
 
-*{ font-family: defaultFont, Arial, Helvetica; } /*Site font*/
+* {
+  font-family: defaultFont, Arial, Helvetica;
+} /*Site font*/
 
 /*Override Bootstrap*/
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-dl, dd, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+figure {
   margin: 0 !important;
 }
 
 hr {
-   border-color: black !important;
+  border-color: black !important;
 }
 
-a:hover { text-decoration: none !important; }
-a:active { text-decoration: none !important; }
+a:hover {
+  text-decoration: none !important;
+}
+a:active {
+  text-decoration: none !important;
+}
 
-b { font-family: defaultFont_bold !important; }
-i { font-family: defaultFont_Italics !important; }
-em { font-family: defaultFont_Italics !important; }
+b {
+  font-family: defaultFont_bold !important;
+}
+i {
+  font-family: defaultFont_Italics;
+}
+em {
+  font-family: defaultFont_Italics !important;
+}
 strong {
-   font-family: defaultFont_bold !important;
-   color: red;
+  font-family: defaultFont_bold !important;
+  color: red;
 }
-.bold-italics { font-family: defaultFont_Bold_Italics !important; }
+.bold-italics {
+  font-family: defaultFont_Bold_Italics !important;
+}
 
 .no-style {
-   list-style: none;
-   margin: 0 !important;
-}
-
-.email-bw {
-   background-image: url(./../media/site/icons/email_bw.png);
-   background-size: contain;
-   width: 100%;
-   height: 100%;
-}
-
-.facebook-bw {
-   background-image: url(./../media/site/icons/logos/Facebook_bw.png);
-   background-size: contain;
-   width: 100%;
-   height: 100%;
-   width: 100%;
-   height: 100%;
-}
-
-.flickr-bw {
-   background-image: url(./../media/site/icons/logos/Flickr_bw.png);
-   background-size: contain;
-   width: 100%;
-   height: 100%;
-}
-
-.gallery-bw {
-   background-image: url(./../media/site/icons/gallery_bw.png);
-   background-size: contain;
-   width: 100%;
-   height: 100%;
-}
-
-.github-bw {
-   background-image: url(./../media/site/icons/logos/Github_bw.png);
-   background-size: contain;
-   width: 100%;
-   height: 100%;
-}
-
-.home-bw {
-   background-image: url(./../media/site/icons/home_bw.png);
-   background-size: contain;
-   width: 100%;
-   height: 100%;
-}
-
-.highSchool-bw {
-   background-image: url(./../media/site/icons/highSchool_bw.png);
-   background-size: contain;
-   width: 100%;
-   height: 100%;
-}
-
-.instagram-bw {
-   background-image: url(./../media/site/icons/logos/Instagram_bw.png);
-   background-size: contain;
-   width: 100%;
-   height: 100%;
-}
-
-.linkedin-bw {
-   background-image: url(./../media/site/icons/logos/LinkedIn_bw.png);
-   background-size: contain;
-   width: 100%;
-   height: 100%;
-}
-
-.twitter-bw {
-   background-image: url(./../media/site/icons/logos/Twitter_bw.png);
-   background-size: contain;
-   width: 100%;
-   height: 100%;
-}
-
-.youtube-bw {
-   background-image: url(./../media/site/icons/logos/YouTube_bw.png);
-   background-size: contain;
-   width: 100%;
-   height: 100%;
+  list-style: none;
+  margin: 0 !important;
 }
 
 .regular-font-color {
-   color: $brand-grey;
+  color: $brand-grey;
 }
 
 // Fix issue where parent height is always 0
 // http://stackoverflow.com/questions/12540436/height-of-parent-div-is-zero-even-if-it-has-child-with-finite-heights
 .clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clearfix {
-    // display: inline-block;
+  // display: inline-block;
 }
 
 html[xmlns] .clearfix {
-    display: block;
+  display: block;
 }
 
 * html .clearfix {
-    height: 1%;
+  height: 1%;
 }

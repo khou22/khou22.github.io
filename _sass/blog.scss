@@ -1,18 +1,18 @@
-$brand-red:       #D5491F;
-$brand-orange:    #DA8D0F;
-$brand-green:     #80A454;
-$brand-grey:      #9DB7C1;
-$brand-blue:      #3286A8;
+$brand-red: #d5491f;
+$brand-orange: #da8d0f;
+$brand-green: #80a454;
+$brand-grey: #9db7c1;
+$brand-blue: #3286a8;
 
 .blog {
-    &-search {
-        button {
-            width: 100%;
-            margin: 12px 0px;
-            padding: 8px;
-            background: white;
-            border-radius: 4px;
-            border: 1px solid $brand-blue;
-        }
+  &-search {
+    button {
+      width: 100%;
+      margin: 12px 0px;
+      padding: 8px;
+      background: white;
+      border-radius: 4px;
+      border: 1px solid $brand-blue;
     }
+  }
 }

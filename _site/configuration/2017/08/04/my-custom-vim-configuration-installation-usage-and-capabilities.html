@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>
+    My Custom VIM Configuration: Installation, Usage, and Capabilities
+  </title>
+  <meta
+    name="description"
+    content=""
+  />
+
+  <!-- React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+  <!-- Jquery -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Tile Layout Library -->
+  <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css"> <link rel="stylesheet" href="/css/main.css">
+  <link
+    rel="canonical"
+    href="http://localhost:4000/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html"
+  />
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+
+  <!-- Bootstrap -->
+  <!-- <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <script src="/css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script> -->
+
+  <!-- Pinterest -->
+  <meta name="p:domain_verify" content="ba077b9ffb934c298dbb2516fb42bdee" />
+
+  <!-- Semantic UI -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/semantic/dist/semantic.min.css"
+  />
+  <script src="/semantic/dist/semantic.min.js"></script>
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function() {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "//www.google-analytics.com/analytics.js",
+      "ga"
+    );
+
+    ga("create", "UA-66796355-1", "auto");
+    ga("send", "pageview", location.pathname);
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/media/site/favicon.png"> <!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>My Custom VIM Configuration: Installation, Usage, and Capabilities | Kevin Hou</title>
+<meta property="og:title" content="My Custom VIM Configuration: Installation, Usage, and Capabilities" />
+<meta name="author" content="Kevin Hou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package." />
+<meta property="og:description" content="My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package." />
+<link rel="canonical" href="http://localhost:4000/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html" />
+<meta property="og:url" content="http://localhost:4000/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html" />
+<meta property="og:site_name" content="Kevin Hou" />
+<meta property="og:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-08-04T13:18:02-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@kevinhou22" />
+<meta name="twitter:creator" content="@Kevin Hou" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"BlogPosting","headline":"My Custom VIM Configuration: Installation, Usage, and Capabilities","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2017-08-04T13:18:02-04:00","dateModified":"2017-08-04T13:18:02-04:00","description":"My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html"},"url":"http://localhost:4000/configuration/2017/08/04/my-custom-vim-configuration-installation-usage-and-capabilities.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+
+  <body>
+    <header>
+  <!-- Desktop Client -->
+  <div class="site-header" id="site-header">
+    <div class="wrapper" style="height: 100%">
+      <div class="site-header-background">
+        <div class="site-header-content">
+          <a href="/" class="header-title-section">
+            <img
+              src="/media/site/favicon.png"
+              class="header-logo"
+              align="left"
+            />
+            <p class="site-title">Kevin Hou</p>
+          </a>
+
+          <!-- Site Navigation Bar -->
+          <ul class="nav-ul site-nav-bar">
+            <li class="nav-li nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/blog">Blog &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li">
+                  <a href="/blog/category"
+                    >Browse by Category</a
+                  >
+                </li>
+                <li class="nav-li">
+                  <a href="/blog/tag">Browse by Tag</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/categories">Portfolio &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li">
+                  <a href="/programming">Programming</a>
+                </li>
+                <li class="nav-li">
+                  <a href="/wood/">Woodshop</a>
+                </li>
+                <!-- <li class="nav&#45;li"><a href="https://www.flickr.com/photos/khou22/albums" target="_blank">Woodshop</a></li> -->
+                <li class="nav-li">
+                  <a href="/design">Design</a>
+                </li>
+                <li class="nav-li">
+                  <a href="/photography">Photography</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-placeholder"></div>
+
+  <!-- Activate Tooltips -->
+  <script type="text/javascript">
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    // Header has two sizes — 80px and 40px — based on scrolling
+    $(document).scroll(function() {
+      var screenWidth = $(document).width();
+      var mobileCuttoff = 800; // Ambiguous
+      if (screenWidth > mobileCuttoff) {
+        var triggerDistance = 100;
+        var classesToChange = [
+          {
+            className: ".site-header",
+            styleElement: "height",
+            min: 40,
+            max: 80
+          },
+          {
+            className: ".site-title",
+            styleElement: "font-size",
+            min: 20,
+            max: 32
+          },
+          {
+            className: ".site-title",
+            styleElement: "line-height",
+            min: 2,
+            max: 3
+          },
+          {
+            className: ".header-logo",
+            styleElement: "height",
+            min: 24,
+            max: 64
+          },
+          {
+            className: ".site-nav-bar",
+            styleElement: "margin-top",
+            min: 4,
+            max: 24
+          }
+        ];
+        if ($(this).scrollTop() < triggerDistance) {
+          // Distance until changing header height
+          var percentageComplete = $(this).scrollTop() / triggerDistance; // Percentage complete
+          for (var i = 0; i < classesToChange.length; i++) {
+            // Cycle through all style changes
+            var currentClass = classesToChange[i]; // Store
+            var dynamicStyle =
+              (1 - percentageComplete) * (currentClass.max - currentClass.min) +
+              currentClass.min; // Calculate
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              dynamicStyle
+            ); // Apply
+          }
+        } else {
+          // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i];
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              currentClass.min
+            );
+          }
+        }
+        if ($(this).scrollTop() <= 5) {
+          // Just in case you scroll too fast - max style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i];
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              currentClass.max
+            );
+          }
+        }
+      } else {
+        // If on mobile
+        // console.log("Your screen size does not support dynamic header");
+      }
+    });
+  </script>
+
+  <!-- Mobile Client -->
+  <div class="mobile-blog-header">
+    <ul class="mobile-blog-header-ul">
+      <li class="mobile-blog-header-li-logo">
+        <a href="http://localhost:4000">
+          <img
+            src="/media/site/favicon.png"
+            class="mobile-blog-header-logo"
+          />
+        </a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/">Home</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/blog">Blog</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/categories">Portfolio</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mobile-blog-header-placeholder"></div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <!-- Hide scrollbar on this page -->
+<style> ::-webkit-scrollbar { display: none; } </style>
+
+<!-- Page scroll progress bar -->
+<script src="/libraries/prognroll/src/prognroll.min.js"></script>
+<script>
+    // Initialize the scroll progress bar
+    $(function() {
+        $("body").prognroll({
+            height: 2, // Progress bar height
+            color: "#3286A8", // Progress bar background color
+        });
+    });
+</script>
+
+<div class="post">
+  
+
+    
+
+    
+
+    
+  <header id="blog-post-header" class="post-header">
+    <div class="post-header-content">
+      <a onclick="blogPostBackButton()"><p class="post-return-main">
+        <
+        Return to all blogs
+      </p></a>
+      <br />
+      <h1 class="post-title post-header-title">My Custom VIM Configuration: Installation, Usage, and Capabilities</h1>
+      <h4 class="post-header-description">My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package.</h4>
+      <p class="post-header-meta">Aug 4, 2017 • Kevin Hou</p>
+    </div>
+  </header>
+
+  <script type="text/javascript">
+    // Animate scroll to the blog header immediately after page load
+    // $('html, body').animate({
+    //     scrollTop: $("#blog-post-header").offset().top
+    // }, 1000);
+
+    var blogPostBackButton = function() {
+      var previousLink = document.referrer
+      var index = previousLink.indexOf("/blog")
+      console.log("Previous link:", previousLink);
+      console.log(index);
+      if (index == 1) { // If not coming from a different blog post
+        window.history.go(-1); // Back in history (keeps window position)
+      } else { // Directed from a different blog post
+        // console.log("Back to blog");
+        console.log("Back");
+        window.location.href = "/blog";
+      }
+    }
+
+  </script>
+
+  <article class="post-content">
+    <h1 id="configuring-your-environment">Configuring Your Environment</h1>
+
+<p>VIM is configured using a <code class="highlighter-rouge">.vimrc</code> file in your root directory (<code class="highlighter-rouge">~/.vimrc</code>) and serves as the configuration file. It is similar to a <code class="highlighter-rouge">.bashrc</code> or <code class="highlighter-rouge">.bash_profile</code> in the sense that it must be sourced to reflect changes, but VIM automatically takes care of when it launches. Ensure that the <code class="highlighter-rouge">~/.vimrc</code> file exists and if not, create one. Now here’s how the complete setup:</p>
+
+<ol>
+  <li>
+    <p>Copy/paste the contents of <a href="https://github.com/khou22/dev-tools/blob/master/vim/.vimrc">the configuration file</a> into your <code class="highlighter-rouge">.vimrc</code> file or replace the file itself. This will give you all the configurations that I use. Before you are done, you need to install the packages that are used in the configuration.</p>
+  </li>
+  <li>
+    <p>Like I said earlier, I’m using <a href="https://github.com/junegunn/vim-plug">vim-plug</a> as my package manager service. Install <code class="highlighter-rouge">vim-plug</code> using:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+</code></pre>
+    </div>
+  </li>
+  <li>Open VIM - type <code class="highlighter-rouge">:</code> to open the VIM command line. You will be using this a lot. Type <code class="highlighter-rouge">PlugInstall</code> and press Enter.
+    <ul>
+      <li>
+        <p>VIM has a handful of common “listener keys” that let VIM know you are about to perform a custom key command. This includes <code class="highlighter-rouge">:</code>, <code class="highlighter-rouge">,</code>, <code class="highlighter-rouge">/</code>, etc.</p>
+      </li>
+      <li>
+        <p><em>Note</em>: Sometimes need to source the <code class="highlighter-rouge">.vimrc</code> file first:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>  :source %
+  :PlugInstall
+</code></pre>
+        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Install <strong>MacVim</strong><br />
+ Some plugins will require a higher version of VIM than the out-of-the-box built-in default for Macs. Many references online have recommended using <a href="macvim-dev.github.io">MacVim</a> and aliasing its CL interface to “replace” the default. Add this to your <code class="highlighter-rouge">.bash_profile</code> after you’ve installed MacVim:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> # Mac VIM Alias
+ alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<p>Your VIM is now properly configured to work with the plugins that we have included in the <code class="highlighter-rouge">.vimrc</code>; however, some plugins require additional installations that I will described next.</p>
+
+<h1 id="installing-plugins">Installing Plugins</h1>
+
+<p>There are a few plugins that require additional installations that don’t get setup automatically using <code class="highlighter-rouge">vim-plug</code>. Follow the steps below to configure these libraries:</p>
+
+<h4 id="pathogen--package-loader">Pathogen — Package loader</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mkdir -p ~/.vim/autoload ~/.vim/bundle &amp;&amp; curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+</code></pre>
+</div>
+
+<h4 id="ag---for-project-file-grepping">AG - For project file grepping</h4>
+<p>(‘AG’ stands for the silver element in periodic table)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>brew install the_silver_searcher
+</code></pre>
+</div>
+
+<p>   <strong>Dev Box (Ubuntu)</strong><br />
+   <code class="highlighter-rouge">
+sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+</code></p>
+<h4 id="youcompleteme---autocomplete">YouCompleteMe - Autocomplete</h4>
+<ol>
+  <li>Install Cmake: <code class="highlighter-rouge">$ brew install CMake</code>
+    <ul>
+      <li>On dev box (Ubuntu): <code class="highlighter-rouge">$ sudo apt-get install cmake</code></li>
+      <li>To install Typescript support: <code class="highlighter-rouge">$ npm install -g typescript</code></li>
+    </ul>
+  </li>
+  <li>Finish install: <code class="highlighter-rouge">$ cd ~/.vim/plugged/YouCompleteMe &amp;&amp; ./install.py --all</code></li>
+</ol>
+
+<h4 id="theme-and-colorscheme">Theme and Colorscheme</h4>
+<p><strong>(Dark: Solarized | Light: PaperColor)</strong></p>
+
+<p><br /></p>
+<ol>
+  <li>
+    <p>Install into <code class="highlighter-rouge">bundle</code> folder. Create it if the directory doesn’t exist.</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> $ cd ~/.vim/bundle
+ $ git clone git://github.com/altercation/vim-colors-solarized.git
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Set the theme in <code class="highlighter-rouge">.vimrc</code>.</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> syntax enable
+ " Use 'light' if want the light theme
+ set background=dark
+ colorscheme solarized
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>The current default theme is <code class="highlighter-rouge">solarized-dark</code> however, if your iTerm profile name contains the the word <code class="highlighter-rouge">light</code> (case insensitive), the theme will be <code class="highlighter-rouge">PaperColor</code> with a light background.</p>
+    <ul>
+      <li>Can also switch the colorscheme in your session by typing: <code class="highlighter-rouge">:colorscheme papercolor</code>. Available themes: papercolor, carbonized.</li>
+      <li><strong>Asside:</strong> the current bashrc <strong>does not</strong> contains this, but there’s a neat script from <a href="http://metalelf0.github.io/vim/2016/12/19/switch-vim-colorscheme-based-on-iterm-profile.html">Metalelfo Blog</a> that changes the colorscheme to dark/light depending on the iTerm profile name. Also, if you name your iTerm profile ‘solarized’ for example, it’ll change the vim theme to ‘solarized’ if it exists.</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="nerdtree---project-heiarchy-in-sidebar">NERDTree - Project Heiarchy in Sidebar</h4>
+<ol>
+  <li>Ensure you have a <code class="highlighter-rouge">~/.vim/bundle/</code> directory</li>
+  <li>Install using: <code class="highlighter-rouge">$ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree</code></li>
+  <li>
+    <p>NERDTree will automatically open when VIM opens because of this command in the <code class="highlighter-rouge">.vimrc</code>:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> autocmd vimenter * NERDTree
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h4 id="mruvim--quick-access-to-most-recently-used-files-for-unix-systems">mru.vim — Quick Access to Most Recently Used Files (For Unix Systems)</h4>
+<ol>
+  <li>Ensure there exists a folder: <code class="highlighter-rouge">~/.vim/plugin</code></li>
+  <li>Add <a href="https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim">mru.vim</a> to the <code class="highlighter-rouge">plugin</code> folder
+ <code class="highlighter-rouge">curl "https://raw.githubusercontent.com/yegappan/mru/master/plugin/mru.vim" -o "mru.vim"</code></li>
+  <li>Additional configurations can be found <a href="http://www.vim.org/scripts/script.php?script_id=521">here</a></li>
+  <li>To use <code class="highlighter-rouge">mru.vim</code>, type <code class="highlighter-rouge">:MRU</code> in VIM and you will open up an interactive mini window listing your most recently used files that you can then browse and open files from</li>
+</ol>
+
+<h1 id="commands">Commands</h1>
+
+<h3 id="vim-environment">VIM Environment</h3>
+<p>Launch VIM: <code class="highlighter-rouge">$ vim &lt;file/directory (optional)&gt;</code><br />
+Close current pane: <code class="highlighter-rouge">:q</code><br />
+Quitting all panes: <code class="highlighter-rouge">:qa</code><br />
+Save: <code class="highlighter-rouge">:w</code><br />
+Save &amp; Quit: <code class="highlighter-rouge">:wq</code><br />
+Run a terminal command: <code class="highlighter-rouge">:! &lt;your-command&gt;</code></p>
+
+<h3 id="switching-input-modes">Switching input modes</h3>
+<p>Highlight mode: <code class="highlighter-rouge">v</code><br />
+Insert mode (keyboard and arrow keys will work like normal): <code class="highlighter-rouge">i</code><br />
+Insert new line below and enter insert mode: <code class="highlighter-rouge">o</code><br />
+Delete and enter insert mode: <code class="highlighter-rouge">s</code><br />
+Viewing mode (if in highlight or insert mode): <code class="highlighter-rouge">Esc</code></p>
+
+<h3 id="navigating-in-file-non-insert-mode">Navigating In-File (Non-Insert Mode)</h3>
+<p>Go to line: <code class="highlighter-rouge">&lt;Line-Number&gt;</code> + <code class="highlighter-rouge">Shift</code> + <code class="highlighter-rouge">G</code><br />
+Back one word: <code class="highlighter-rouge">b</code><br />
+Forward one word: <code class="highlighter-rouge">w</code><br />
+Move to first non-blank character of line (Like <code class="highlighter-rouge">Command + Left</code>): <code class="highlighter-rouge">_</code><br />
+Move to last non-blank character of line (Like <code class="highlighter-rouge">Command + Right</code>): <code class="highlighter-rouge">g_</code><br />
+Beginning of line: <code class="highlighter-rouge">0</code><br />
+End of line: <code class="highlighter-rouge">Shift + 4</code> (<code class="highlighter-rouge">$</code>)<br />
+Page up: <code class="highlighter-rouge">Control + B</code><br />
+Page Down: <code class="highlighter-rouge">Control + F</code><br />
+Delete row: <code class="highlighter-rouge">D + D</code><br />
+Delete key in front of cursor: <code class="highlighter-rouge">X</code></p>
+
+<p><strong>Arrow key mappings:</strong><br />
+Up: <code class="highlighter-rouge">k</code><br />
+Down: <code class="highlighter-rouge">j</code><br />
+Left: <code class="highlighter-rouge">h</code><br />
+Right: <code class="highlighter-rouge">l</code></p>
+
+<p>Move <code class="highlighter-rouge">x</code> positions: <code class="highlighter-rouge">&lt;number&gt; + &lt;key&gt;</code><br />
+Example: Move down 10 lines: <code class="highlighter-rouge">10 + j</code><br />
+<strong>Note</strong>: Syntax supported by all navigation commands</p>
+
+<h3 id="opening-files">Opening Files</h3>
+<p>Fuzzy Search - Searches file names — <code class="highlighter-rouge">,t</code>
+To cancel: <code class="highlighter-rouge">Command</code> + <code class="highlighter-rouge">C</code> or <code class="highlighter-rouge">:q</code>
+Reload buffer (file) due to external changes: <code class="highlighter-rouge">:e</code><br />
+Refresh NerdTree file tree: While in NerdTree pane, <code class="highlighter-rouge">Shift</code> + <code class="highlighter-rouge">R</code></p>
+
+<p>Can also open multiple files into the buffer (especially helpful when you don’t have plugins): <code class="highlighter-rouge">vim file1 file2</code><br />
+Listing open buffers: <code class="highlighter-rouge">:args</code><br />
+Switching between files. Next: <code class="highlighter-rouge">:n</code>. Previous: <code class="highlighter-rouge">:N</code>.</p>
+
+<h3 id="grepping">Grepping</h3>
+<p>Global find (searches content of file in project) — <code class="highlighter-rouge">,a</code><br />
+The “current project” is whatever directory you <code class="highlighter-rouge">$ vim</code> into</p>
+
+<p>Search the selected word: <code class="highlighter-rouge">Shift + 8</code>
+Search within file: <code class="highlighter-rouge">\&lt;keyword on page&gt;</code>
+    * <code class="highlighter-rouge">n</code> goes to next
+    * <code class="highlighter-rouge">Shift + N</code> goes back
+    * <code class="highlighter-rouge">:noh</code> clears the highlighted words on the page from the search</p>
+
+<p>Search and replace: <code class="highlighter-rouge">:%s/foo/bar/g</code> (Replace <code class="highlighter-rouge">foo</code> with <code class="highlighter-rouge">bar</code> no confirmation. For confirmation, use <code class="highlighter-rouge">gc</code> instead of <code class="highlighter-rouge">g</code> at end)<br />
+Highlight all occurances of current word under cursor and go to first instance (while not in highlight mode): <code class="highlighter-rouge">#</code><br />
+To refresh NerdTree’s listing of files, navigate to the NerdTree pane and press <code class="highlighter-rouge">Shift + R</code></p>
+
+<h3 id="highlighting-mode">Highlighting mode</h3>
+<p>Highlighting an entire line: <code class="highlighter-rouge">Shift + V</code><br />
+Highlighting mode: <code class="highlighter-rouge">v</code><br />
+Copy/yank: <code class="highlighter-rouge">y</code><br />
+Copy file contents to clipboard: <code class="highlighter-rouge">:% !pbcopy</code><br />
+Paste: <code class="highlighter-rouge">p</code><br />
+Paste above: <code class="highlighter-rouge">Shift + P</code><br />
+Pasting in insert mode (having copied using the operating system): <code class="highlighter-rouge">Command + v</code><br />
+Paste from clipboard with auto-indenting: <code class="highlighter-rouge">:set paste</code> + <code class="highlighter-rouge">Command + V</code><br />
+Yank/copy the inner word (word under cursor): <code class="highlighter-rouge">yiw</code><br />
+Highlight the inner word (word under cursor): <code class="highlighter-rouge">viw</code></p>
+
+<h3 id="panes">Panes</h3>
+<p>Opening new panes, start with: <code class="highlighter-rouge">control + w</code>:
+    * <code class="highlighter-rouge">v</code> is vertical split (focus on the new pane)<br />
+    * <code class="highlighter-rouge">o</code> is horizontal split<br />
+    * <code class="highlighter-rouge">=</code> makes all panes equal size</p>
+
+<p><strong>Switch panes:</strong><br />
+Move up: <code class="highlighter-rouge">control + j</code><br />
+Move down: <code class="highlighter-rouge">control + k</code><br />
+Move left: <code class="highlighter-rouge">control + h</code><br />
+Move right: <code class="highlighter-rouge">control + l</code><br />
+Close all except current: <code class="highlighter-rouge">control + o</code></p>
+
+<h3 id="other">Other</h3>
+<p>Undo: <code class="highlighter-rouge">u</code><br />
+Redo: <code class="highlighter-rouge">control</code> + <code class="highlighter-rouge">r</code></p>
+
+<p>Highlight cursor in vim: <code class="highlighter-rouge">Command + /</code></p>
+
+<p>Repeating the last command: <code class="highlighter-rouge">.</code></p>
+
+<p>Delete: <code class="highlighter-rouge">d</code> –&gt; Format: <code class="highlighter-rouge">d</code> + <code class="highlighter-rouge">number (optional, default 1)</code> + <code class="highlighter-rouge">action</code><br />
+<code class="highlighter-rouge">d</code> + <code class="highlighter-rouge">4</code> + <code class="highlighter-rouge">w</code> would delete the four next words</p>
+
+<p>Creating new file from CL in VIM:
+<code class="highlighter-rouge">$ vim &lt;file-name&gt;</code><br />
+Make sure you save before you quit using <code class="highlighter-rouge">:w</code></p>
+
+<p>Quitting: <code class="highlighter-rouge">:q</code><br />
+Quitting without saving (and not being prompted): <code class="highlighter-rouge">:q!</code></p>
+
+<p><strong>Using <code class="highlighter-rouge">easymotion</code></strong><br />
+Easymotion is a plugin that allows you to quickly move through the current file by highlighting all possible next positions for your cursor and adding a hotkey to them. Instead of typing <code class="highlighter-rouge">/div</code> and pressing <code class="highlighter-rouge">n</code> to cycle through to the instance of <code class="highlighter-rouge">div</code> that you’re looking for in your code, you can simply type <code class="highlighter-rouge">s</code> to initiate the <code class="highlighter-rouge">easymotion</code> grepping, <code class="highlighter-rouge">di</code> as your two character query (configurable in <code class="highlighter-rouge">.vimrc</code> file), and type the key that is placed on the instance of what you’re looking for.</p>
+
+<p><strong>Commenting</strong><br />
+To comment a line you’ve highlighted, type <code class="highlighter-rouge">gc</code><br />
+To comment a line without highlighting, type <code class="highlighter-rouge">gcc</code></p>
+
+<h3 id="explorer">Explorer</h3>
+<p>Opening up explorer:<br />
+<code class="highlighter-rouge">:Explore</code> or <code class="highlighter-rouge">:Exp</code> + <code class="highlighter-rouge">Tab</code> to complete it for you</p>
+
+<p>Navigation using <code class="highlighter-rouge">hjkl</code>.<br />
+When opening a file:</p>
+<ol>
+  <li>Enter opens in same pane</li>
+  <li><code class="highlighter-rouge">o</code> splits horizontally (opens below)</li>
+  <li><code class="highlighter-rouge">v</code> splits vertically (opens to the side)</li>
+</ol>
+
+<p><code class="highlighter-rouge">-</code> Up one level to parent</p>
+
+<p><code class="highlighter-rouge">gg</code> - top of file/pane
+<code class="highlighter-rouge">Shift + G</code> - bottom
+Go to line number: <code class="highlighter-rouge">&lt;Line #&gt; + Shift + G</code></p>
+
+<h3 id="using-the-command-line">Using the Command Line</h3>
+<p>You can use or view the command line without leaving the VIM environment.<br />
+<code class="highlighter-rouge">:!</code> takes you to a read-only fullscreen command prompt to see your history
+<code class="highlighter-rouge">:! &lt;usual-terminal-command&gt;</code> will allow you to enter commands</p>
+
+<h1 id="additional-plugins-and-customizations">Additional Plugins and Customizations</h1>
+<h3 id="all-plugins">All Plugins</h3>
+<ul>
+  <li>comment_vim</li>
+  <li>typescript-vim</li>
+  <li>vim-fugitive</li>
+  <li>supertab</li>
+  <li>tabular</li>
+  <li>rename.vim</li>
+  <li>goyo.vim</li>
+  <li>vim-vroom</li>
+  <li>auto_mkdir</li>
+  <li>ctrlp.vim</li>
+  <li>ag.vim</li>
+  <li>ctrlp-cmatcher</li>
+  <li>ack.vim</li>
+  <li>YouCompleteMe</li>
+  <li>indentline</li>
+  <li>vim-gitgutter</li>
+  <li>vim-airline</li>
+  <li>vim-multiple-cursors</li>
+  <li>vim-easymotion</li>
+</ul>
+
+<h3 id="languages">Languages</h3>
+<ul>
+  <li>vim-coffee-script</li>
+  <li>vim-elixir</li>
+  <li>vim-emoji</li>
+  <li>vim-rails</li>
+  <li>vim-javascript</li>
+  <li>vim-jsx</li>
+</ul>
+
+<h1 id="further-customizations">Further Customizations</h1>
+<h2 id="adding-a-plug-in">Adding a Plug In</h2>
+<ol>
+  <li>Add the plugin to the <code class="highlighter-rouge">.vimrc</code> file:
+    <div class="highlighter-rouge"><pre class="highlight"><code> Plug 'Valloric/YouCompleteMe'
+</code></pre>
+    </div>
+  </li>
+  <li>Source the file: <code class="highlighter-rouge">:source %</code></li>
+  <li>Install the plugins: <code class="highlighter-rouge">:PlugInstall</code></li>
+</ol>
+
+<h1 id="removing-plugins">Removing Plugins</h1>
+<ol>
+  <li>Remove the <code class="highlighter-rouge">Plug</code> line from the <code class="highlighter-rouge">.vimrc</code> file</li>
+  <li>Source the <code class="highlighter-rouge">.vimrc</code> file</li>
+  <li>Clean VIM by typing <code class="highlighter-rouge">:PlugClean</code> and pressing <code class="highlighter-rouge">y</code> to confirm deletion of plugin</li>
+</ol>
+
+<h2 id="suggestions">Suggestions</h2>
+<ol>
+  <li>Change <code class="highlighter-rouge">caps lock</code> to <code class="highlighter-rouge">escape</code> in System Preferecnes -&gt; Keyboard -&gt; Modifiers</li>
+</ol>
+
+<h2 id="in-development">In Development</h2>
+<ul>
+  <li>Undo closing a pane (reopen last pane)</li>
+</ul>
+
+<h2 id="faqs">FAQs</h2>
+<ol>
+  <li>Does the mouse work? Yes!</li>
+  <li>Open VIM tutorial: <code class="highlighter-rouge">$ vimtutor</code></li>
+  <li>What does <code class="highlighter-rouge">&lt;C&gt;</code> map to? It maps to <code class="highlighter-rouge">Control</code></li>
+</ol>
+
+    <div class="post-organization">
+      <p id="post-meta">Posted in <a href="/blog/category/configuration/">Developer Tools</a> with <a href="/blog/tag/vim">VIM</a>, <a href="/blog/tag/sourceCode">Source Code</a></p>
+    </div>
+  </article>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="ui grid stackable">
+    <div class="one wide column"></div>
+
+    <div class="four wide column">
+      <h1 class="ui header">Kevin Hou</h1>
+      <h3 class="ui header">
+        <a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a>
+      </h3>
+      <h4 class="ui header">
+        <i>San Francisco Bay Area</i>
+      </h4>
+    </div>
+
+    <div class="four wide column footer-external">
+      <h4 class="ui header"><i>Social</i></h4>
+      <a href="https://www.instagram.com/lifeofkhou/" target="_blank">
+        <img
+          src="https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300"
+        />
+      </a>
+      <a href="https://www.linkedin.com/in/kevinhou22" target="_blank">
+        <img
+          src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png"
+        />
+      </a>
+      <a href="https://youtube.com/kevinhou22" target="_blank">
+        <img
+          src="https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/512/youtube.png"
+        />
+      </a>
+      <a href="https://github.com/khou22" target="_blank">
+        <img src="https://image.flaticon.com/icons/svg/25/25231.svg" />
+      </a>
+    </div>
+
+    <div class="six wide column">
+      <p class="text">Kevin Hou's portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.
+</p>
+    </div>
+
+    <div class="one wide column"></div>
+  </div>
+</footer>
+
+  </body>
+</html>

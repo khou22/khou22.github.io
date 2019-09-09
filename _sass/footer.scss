@@ -10,30 +10,16 @@
   padding-right: $spacing-unit;
 }
 
-.external {
-  &-bar {
+.footer {
+  &-external {
     margin: auto;
-    margin-bottom: 12px;
-  }
 
-  &-td {
-    display: inline-block; // Allow to go two rows on mobile
+    a {
+      height: 32px;
+    }
 
-    /*border: 1px solid black;*/
-    border-radius: 19px;
-    padding-left: 17px;
-    padding-right: 17px;
-  }
-
-  &-link-box {
-    height: 32px;
-    width: 32px;
-    /*background-color: white;*/
-    margin: auto;
-  }
-
-  &-link-label {
-    text-align: center;
-    color: $brand-blue;
+    img {
+      height: 32px;
+    }
   }
 }
