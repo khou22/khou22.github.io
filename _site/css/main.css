@@ -65,7 +65,7 @@ pre > code { padding-right: 0; padding-left: 0; border: 0; }
 .site-nav .page-link:not(:first-child) { margin-left: 20px; }
 
 /** Site footer */
-.site-footer { margin-top: 30px; padding: 30px 0; border-top: 1px solid #e8e8e8; }
+.site-footer { padding: 30px 0; border-top: 1px solid #e8e8e8; background: white; z-index: 2; position: absolute; }
 
 .footer-heading { margin-bottom: 15px; font-size: 18px; }
 

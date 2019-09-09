@@ -72,9 +72,12 @@ $brand-blue: #3286a8;
  * Site footer
  */
 .site-footer {
-  margin-top: $spacing-unit;
   padding: $spacing-unit 0;
   border-top: 1px solid $grey-color-light;
+
+  background: white;
+  z-index: 2;
+  position: absolute;
 }
 
 .footer-heading {
