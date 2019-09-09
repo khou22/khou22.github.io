@@ -7,7 +7,8 @@ title: "Kevin Hou"
 <div id="headerContainer" class="landing-navigation menu-expanded">
   <div class="ui compact menu">
     <a id="menu-icon" class="item">
-      <i class="angle left icon"></i>
+      <i id="menu-icon-arrow" class="angle left icon"></i>
+      <i id="menu-icon-menu" class="bars icon" style="display: none"></i>
     </a>
     <a class="item" href="blog">
       Blog
@@ -31,11 +32,13 @@ title: "Kevin Hou"
       const CONTRACTED_CLASS = "menu-contracted";
       var headerContainer = document.getElementById("headerContainer");
       const isExpanded = headerContainer.classList.contains(EXPANDED_CLASS);
-      console.log(isExpanded);
       if (isExpanded) {
         // Expanded -> Contracted
         headerContainer.classList.remove(EXPANDED_CLASS);
         headerContainer.classList.add(CONTRACTED_CLASS);
+
+        document.getElementById("menu-icon-arrow").style.display = "none";
+        document.getElementById("menu-icon-menu").style.display = "block";
 
         console.log(menuIcon.offsetWidth);
         headerContainer.style.width = `${menuIcon.offsetWidth}px`;
@@ -43,6 +46,9 @@ title: "Kevin Hou"
         // Contracted -> Expanded
         headerContainer.classList.remove(CONTRACTED_CLASS);
         headerContainer.classList.add(EXPANDED_CLASS);
+
+        document.getElementById("menu-icon-menu").style.display = "none";
+        document.getElementById("menu-icon-arrow").style.display = "block";
 
         headerContainer.style.width = "auto";
       }
@@ -53,22 +59,32 @@ title: "Kevin Hou"
 <!-- Social Icons -->
 <div class="landing-social">
   <div class="ui vertical icon menu">
-    <a class="item">
+    <a class="item" href="{{ site.instagram_url }}" target="_blank">
       <img
         class="landing-social-icon"
         src="https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300"
       />
     </a>
-    <a class="item">
+    <a class="item" href="{{ site.LinkedIn_url }}" target="_blank">
       <img
         class="landing-social-icon"
-        src="https://cdn3.iconfinder.com/data/icons/transparent-on-dark-grey/500/icon-04-512.png"
+        src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png"
       />
     </a>
-    <a class="item">
+    <a class="item" href="{{ site.youtube_url }}" target="_blank">
       <img
         class="landing-social-icon"
-        src="https://image.flaticon.com/icons/png/512/87/87390.png"
+        src="https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/512/youtube.png"
+      />
+    </a>
+    <a
+      class="item"
+      href="https://github.com/{{ site.github_username }}"
+      target="_blank"
+    >
+      <img
+        class="landing-social-icon"
+        src="https://image.flaticon.com/icons/svg/25/25231.svg"
       />
     </a>
   </div>
@@ -123,13 +139,6 @@ title: "Kevin Hou"
   <div class="landing-parallax-transition-spacer"></div>
 </div>
 
-<!-- MARK: Content -->
-<div class="landing-section">
-  <h1>Welcome</h1>
-  <p>Kevin Hou</p>
-  <img src="{{ 'media/landing/image_tiles.png' | prepend: site.baseurl }}" />
-</div>
-
 <!-- MARK: Parallax logic -->
 <script>
   window.addEventListener(
@@ -145,3 +154,97 @@ title: "Kevin Hou"
     false
   );
 </script>
+
+<!-- MARK: Content -->
+<div class="landing-section">
+  <div class="ui grid">
+    <div class="two column row">
+      <div class="column">
+        <div class="landing-section-text">
+          <h1 class="ui header">Kevin Hou</h1>
+          <i>Student. Builder. Engineer.</i>
+          <p>
+            A full stack engineer by trade and a creator by heart. Enjoys the
+            process of creation whether it be in the physical — woodshop,
+            blacksmithing, circuity — or the digital — software engineering,
+            photography, and film.
+          </p>
+          <br />
+          <p>
+            Currently studying computer science at Princeton University with
+            certificates in entrepreneurship and statistics and machine
+            learning.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <img
+          src="{{ 'media/landing/image_tiles.png' | prepend: site.baseurl }}"
+          class="landing-section-one-images"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="landing-section-two">
+  <div class="ui grid">
+    <div class="two column row">
+      <div class="column">
+        <img
+          src="{{ 'media/landing/computer.png' | prepend: site.baseurl }}"
+          class="landing-section-two-computer"
+        />
+        <h2 class="ui header inverted landing-section-two-computer-text">
+          Hello, World.
+        </h2>
+      </div>
+      <div class="column">
+        <div class="landing-section-text landing-section-two-text">
+          <h1 class="ui header inverted">Software Engineer</h1>
+          <p>
+            Full stack software engineer with concentrations in frontend
+            development and machine learning. Rapidly growing love for system
+            architecture and design.
+          </p>
+          <br />
+          <p>
+            See complete list of
+            <a href="{{ site.baseurl }}/programming">projects</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="landing-section">
+  <div class="ui grid">
+    <div class="two column row">
+      <div class="column">
+        <div class="landing-section-text">
+          <h1 class="ui header">Artist</h1>
+          <i>Physical and Digital</i>
+          <p>
+            An avid photographer, woodworker, and designer. Has always had an
+            appreciation for asthetics and enjoys the intersection of
+            engineering and artisty.
+          </p>
+          <br />
+          <p>
+            Always willing to pick up a new craft whether it be leather shop,
+            glass making, or filmography. The past couple of years have been
+            devoted to photography and videography (see
+            <a href="{{ site.baseurl }}/photogrpahy">portfolio</a>).
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <img
+          src="{{ 'media/site/icons/design_icon.png' | prepend: site.baseurl }}"
+          class="landing-section-three-image"
+        />
+      </div>
+    </div>
+  </div>
+</div>

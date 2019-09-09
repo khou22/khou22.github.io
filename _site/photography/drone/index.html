@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>
-    Kevin Hou
+    Test Photography Gallery
   </title>
   <meta
     name="description"
@@ -29,7 +29,7 @@
   <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css"> <link rel="stylesheet" href="/css/main.css">
   <link
     rel="canonical"
-    href="http://localhost:4000/meta.html"
+    href="http://localhost:4000/photography/drone/"
   />
   <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
 
@@ -76,18 +76,18 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/media/site/favicon.png"> <!-- Begin Jekyll SEO tag v2.2.3 -->
-<title>Kevin Hou | Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.</title>
-<meta property="og:title" content="Kevin Hou" />
+<title>Test Photography Gallery | Kevin Hou</title>
+<meta property="og:title" content="Test Photography Gallery" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area." />
 <meta property="og:description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area." />
-<link rel="canonical" href="http://localhost:4000/meta.html" />
-<meta property="og:url" content="http://localhost:4000/meta.html" />
+<link rel="canonical" href="http://localhost:4000/photography/drone/" />
+<meta property="og:url" content="http://localhost:4000/photography/drone/" />
 <meta property="og:site_name" content="Kevin Hou" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@kevinhou22" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"Kevin Hou","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.","url":"http://localhost:4000/meta.html"}</script>
+{"@context":"http://schema.org","@type":"WebPage","headline":"Test Photography Gallery","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. @khou22 Princeton Class of 2020. Lick-Wilmerding High School Class of 2016. San Francisco Bay Area.","url":"http://localhost:4000/photography/drone/"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script src="http://127.0.0.1:35729/livereload.js"></script></head>
@@ -270,17 +270,117 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="post">
-  <header class="post-header">
-    <h1 class="post-title"></h1>
-  </header>
+        <!-- Contents of a page that uses the gallery will be the JSON object. -->
 
-  <article class="post-content">
-    <h1>Last Build Date</h1>
-<p>Mon, 09 Sep 2019 00:14:59 -0400</p>
+<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="/libraries/gh-gallery/css/style.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="/libraries/gh-gallery/css/zoom.css"
+/>
 
-  </article>
+<h1>Test Photography Gallery</h1>
+
+<script>
+  const GALLERY_IMAGES = {
+    test: [
+      {
+        width: 5472,
+        height: 3648,
+        compressed: false,
+        placeholder_path:
+          "https://khou22-photos.s3.amazonaws.com/DEV-KHOU4-Fisherman's Wharf Drone-6ca15a53-ed5b-4ab9-99b0-7f1a567f5b47.jpg",
+        path:
+          "https://khou22-photos.s3.amazonaws.com/DEV-KHOU4-Fisherman's Wharf Drone-6ca15a53-ed5b-4ab9-99b0-7f1a567f5b47.jpg"
+      },
+      {
+        width: 2400,
+        height: 3000,
+        compressed: false,
+        placeholder_path:
+          "https://khou22-photos.s3.amazonaws.com/DEV-KHOU5-Lombard Street Sunrise Drone-461ed212-4bf2-415d-84fb-1f821cdb4093.jpg",
+        path:
+          "https://khou22-photos.s3.amazonaws.com/DEV-KHOU5-Lombard Street Sunrise Drone-461ed212-4bf2-415d-84fb-1f821cdb4093.jpg"
+      },
+      {
+        width: 6130,
+        height: 4087,
+        compressed: false,
+        placeholder_path:
+          "https://khou22-photos.s3.amazonaws.com/DEV-KHOU5-Hong Kong Downtown Horizon Drone Pinewood Battery-d306e273-7f4d-4d88-a5b4-54cd2c199af1.jpg",
+        path:
+          "https://khou22-photos.s3.amazonaws.com/DEV-KHOU5-Hong Kong Downtown Horizon Drone Pinewood Battery-d306e273-7f4d-4d88-a5b4-54cd2c199af1.jpg"
+      },
+      {
+        width: 4048,
+        height: 3032,
+        compressed: false,
+        placeholder_path:
+          "https://khou22-photos.s3.amazonaws.com/DEV-KHOU5-Palace of Fine Arts Street with Cars Drone-c80af696-abe8-4e42-bfc1-9559e7099aeb.jpg",
+        path:
+          "https://khou22-photos.s3.amazonaws.com/DEV-KHOU5-Palace of Fine Arts Street with Cars Drone-c80af696-abe8-4e42-bfc1-9559e7099aeb.jpg"
+      },
+      {
+        width: 4030,
+        height: 3019,
+        compressed: false,
+        placeholder_path:
+          "https://khou22-photos.s3.amazonaws.com/DEV-KHOU5-Marin High School Swimming Pool Drone Top Down-c55c8ffe-25e8-4a23-bd5c-450a919ba4d7.jpg",
+        path:
+          "https://khou22-photos.s3.amazonaws.com/DEV-KHOU5-Marin High School Swimming Pool Drone Top Down-c55c8ffe-25e8-4a23-bd5c-450a919ba4d7.jpg"
+      }
+    ]
+  };
+</script>
+
+<div id="container">
+  <div id="gallery"></div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+<script src="/libraries/gh-gallery/js/gallery.js"></script>
+<script src="/libraries/gh-gallery/js/transition.js"></script>
+<script src="/libraries/gh-gallery/js/zoom.min.js"></script>
+<script>
+  var COLUMNS = 'columns';
+  var ROWS = 'rows';
+  var SQUARES = 'squares';
+
+  var columns = COLUMNS;
+  var rows = ROWS;
+  var squares = SQUARES;
+
+  var layoutStyle = ROWS;
+
+  var configuration = {
+      spacing: 10,
+      shuffle: false,
+      columns: 4,
+      maxHeight: 400
+  };
+</script>
+<script>
+  const id = "gallery";
+  var renderer;
+  switch (layoutStyle) {
+    case COLUMNS:
+      renderer = new VerticalRenderer(id);
+      break;
+    case ROWS:
+      renderer = new HorizontalRenderer(id);
+      break;
+    case SQUARES:
+      renderer = new SquareRenderer(id);
+      break;
+  }
+  var config = new Config(GALLERY_IMAGES, configuration);
+  renderer.render(config);
+  lazyload();
+</script>
 
       </div>
     </div>

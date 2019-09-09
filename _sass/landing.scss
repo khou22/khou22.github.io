@@ -88,5 +88,48 @@
   &-section {
     position: relative;
     background-color: #fff;
+
+    &-text {
+      padding: 5rem;
+      text-align: left;
+    }
+
+    &-one {
+      &-images {
+        margin-top: -25vh;
+      }
+    }
+
+    &-two {
+      position: relative;
+      background-color: black;
+      color: white;
+
+      &-text {
+        text-align: right;
+      }
+
+      &-computer {
+        margin: auto;
+        width: 85%;
+        margin-left: 7.5%;
+
+        &-text {
+          position: absolute;
+          top: 42%;
+          width: 100%;
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+
+    &-three {
+      &-image {
+        width: 50%;
+        margin-top: 10%;
+        margin-left: 25%;
+      }
+    }
   }
 }

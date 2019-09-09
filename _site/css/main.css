@@ -485,3 +485,10 @@ article strong { color: black; }
 .landing-parallax-transition-gradient { height: 100%; width: 100%; object-fit: fill; }
 .landing-parallax-transition-spacer { height: 300px; background-color: black; width: 100%; }
 .landing-section { position: relative; background-color: #fff; }
+.landing-section-text { padding: 5rem; text-align: left; }
+.landing-section-one-images { margin-top: -25vh; }
+.landing-section-two { position: relative; background-color: black; color: white; }
+.landing-section-two-text { text-align: right; }
+.landing-section-two-computer { margin: auto; width: 85%; margin-left: 7.5%; }
+.landing-section-two-computer-text { position: absolute; top: 42%; width: 100%; text-align: center; color: white; }
+.landing-section-three-image { width: 50%; margin-top: 10%; margin-left: 25%; }
