@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>
+    City
+  </title>
+  <meta
+    name="description"
+    content="Kevin Hou's portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science '20. Lick-Wilmerding High School '16. San Francisco Bay Area.
+"
+  />
+
+  <!-- React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+  <!-- Jquery -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Tile Layout Library -->
+  <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css"> <link rel="stylesheet" href="/css/main.css">
+  <link
+    rel="canonical"
+    href="http://localhost:4000/photography/city/"
+  />
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+
+  <!-- Bootstrap -->
+  <!-- <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <script src="/css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script> -->
+
+  <!-- Pinterest -->
+  <meta name="p:domain_verify" content="ba077b9ffb934c298dbb2516fb42bdee" />
+
+  <!-- Semantic UI -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/semantic/dist/semantic.min.css"
+  />
+  <script src="/semantic/dist/semantic.min.js"></script>
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function() {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "//www.google-analytics.com/analytics.js",
+      "ga"
+    );
+
+    ga("create", "UA-66796355-1", "auto");
+    ga("send", "pageview", location.pathname);
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/media/site/favicon.png"> <!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>City | Kevin Hou</title>
+<meta property="og:title" content="City" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area." />
+<meta property="og:description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area." />
+<link rel="canonical" href="http://localhost:4000/photography/city/" />
+<meta property="og:url" content="http://localhost:4000/photography/city/" />
+<meta property="og:site_name" content="Kevin Hou" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kevinhou22" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"WebPage","headline":"City","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","url":"http://localhost:4000/photography/city/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+
+  <body>
+    <header>
+  <!-- Desktop Client -->
+  <div class="site-header" id="site-header">
+    <div class="wrapper" style="height: 100%">
+      <div class="site-header-background">
+        <div class="site-header-content">
+          <a href="/" class="header-title-section">
+            <img
+              src="/media/site/favicon.png"
+              class="header-logo"
+              align="left"
+            />
+            <p class="site-title">Kevin Hou</p>
+          </a>
+
+          <!-- Site Navigation Bar -->
+          <ul class="nav-ul site-nav-bar">
+            <li class="nav-li nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/blog">Blog &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li">
+                  <a href="/blog/category"
+                    >Browse by Category</a
+                  >
+                </li>
+                <li class="nav-li">
+                  <a href="/blog/tag">Browse by Tag</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/categories">Portfolio &#9662;</a>
+              <ul class="dropdown">
+                <li class="nav-li">
+                  <a href="/programming">Programming</a>
+                </li>
+                <li class="nav-li">
+                  <a href="/wood/">Woodshop</a>
+                </li>
+                <!-- <li class="nav&#45;li"><a href="https://www.flickr.com/photos/khou22/albums" target="_blank">Woodshop</a></li> -->
+                <li class="nav-li">
+                  <a href="/design">Design</a>
+                </li>
+                <li class="nav-li">
+                  <a href="/photography">Photography</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-li nav-item">
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-placeholder"></div>
+
+  <!-- Activate Tooltips -->
+  <script type="text/javascript">
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    // Header has two sizes — 80px and 40px — based on scrolling
+    $(document).scroll(function() {
+      var screenWidth = $(document).width();
+      var mobileCuttoff = 800; // Ambiguous
+      if (screenWidth > mobileCuttoff) {
+        var triggerDistance = 100;
+        var classesToChange = [
+          {
+            className: ".site-header",
+            styleElement: "height",
+            min: 40,
+            max: 80
+          },
+          {
+            className: ".site-title",
+            styleElement: "font-size",
+            min: 20,
+            max: 32
+          },
+          {
+            className: ".site-title",
+            styleElement: "line-height",
+            min: 2,
+            max: 3
+          },
+          {
+            className: ".header-logo",
+            styleElement: "height",
+            min: 24,
+            max: 64
+          },
+          {
+            className: ".site-nav-bar",
+            styleElement: "margin-top",
+            min: 4,
+            max: 24
+          }
+        ];
+        if ($(this).scrollTop() < triggerDistance) {
+          // Distance until changing header height
+          var percentageComplete = $(this).scrollTop() / triggerDistance; // Percentage complete
+          for (var i = 0; i < classesToChange.length; i++) {
+            // Cycle through all style changes
+            var currentClass = classesToChange[i]; // Store
+            var dynamicStyle =
+              (1 - percentageComplete) * (currentClass.max - currentClass.min) +
+              currentClass.min; // Calculate
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              dynamicStyle
+            ); // Apply
+          }
+        } else {
+          // Min style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i];
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              currentClass.min
+            );
+          }
+        }
+        if ($(this).scrollTop() <= 5) {
+          // Just in case you scroll too fast - max style
+          for (var i = 0; i < classesToChange.length; i++) {
+            var currentClass = classesToChange[i];
+            $(currentClass.className).css(
+              currentClass.styleElement,
+              currentClass.max
+            );
+          }
+        }
+      } else {
+        // If on mobile
+        // console.log("Your screen size does not support dynamic header");
+      }
+    });
+  </script>
+
+  <!-- Mobile Client -->
+  <div class="mobile-blog-header">
+    <ul class="mobile-blog-header-ul">
+      <li class="mobile-blog-header-li-logo">
+        <a href="http://localhost:4000">
+          <img
+            src="/media/site/favicon.png"
+            class="mobile-blog-header-logo"
+          />
+        </a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/">Home</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/blog">Blog</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/categories">Portfolio</a>
+      </li>
+      <li class="mobile-blog-header-li">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mobile-blog-header-placeholder"></div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <!-- Contents of a page that uses the gallery will be the JSON object. -->
+
+<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="/libraries/gh-gallery/css/style.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="/libraries/gh-gallery/css/zoom.css"
+/>
+
+<!-- <h1>City</h1> -->
+
+<!-- Autogen via generate.py -->
+<!-- 2019-09-10 19:37:13 -->
+<script>
+  const GALLERY_IMAGES = {
+    'City': [
+      {
+        name: "San Francisco Lombard Street Sunrise Drone Vertical.jpg",
+        compressed: false,
+        path: "../../database/San Francisco Lombard Street Sunrise Drone Vertical.jpg",
+        placeholder_path: "../../database/San Francisco Lombard Street Sunrise Drone Vertical.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Monster Mansion Vertical.jpg",
+        compressed: false,
+        path: "../../database/Monster Mansion Vertical.jpg",
+        placeholder_path: "../../database/Monster Mansion Vertical.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "New York City Park Ave Looking Downtown in Rain.jpg",
+        compressed: false,
+        path: "../../database/New York City Park Ave Looking Downtown in Rain.jpg",
+        placeholder_path: "../../database/New York City Park Ave Looking Downtown in Rain.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Ping Shek Estate Drone Top Down (Vertical).jpg",
+        compressed: false,
+        path: "../../database/Ping Shek Estate Drone Top Down (Vertical).jpg",
+        placeholder_path: "../../database/Ping Shek Estate Drone Top Down (Vertical).jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "San Francisco California and Powell Street Trolly.jpg",
+        compressed: false,
+        path: "../../database/San Francisco California and Powell Street Trolly.jpg",
+        placeholder_path: "../../database/San Francisco California and Powell Street Trolly.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Shibuya Taxi Motion Blur.jpg",
+        compressed: false,
+        path: "../../database/Shibuya Taxi Motion Blur.jpg",
+        placeholder_path: "../../database/Shibuya Taxi Motion Blur.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Shinjuku, Tokyo, Japan (Horizontal).jpg",
+        compressed: false,
+        path: "../../database/Shinjuku, Tokyo, Japan (Horizontal).jpg",
+        placeholder_path: "../../database/Shinjuku, Tokyo, Japan (Horizontal).jpg",
+        width: 1800,
+        height: 1200,
+      },
+      {
+        name: "Transamerica Building San Francisco Drone Vertical.jpg",
+        compressed: false,
+        path: "../../database/Transamerica Building San Francisco Drone Vertical.jpg",
+        placeholder_path: "../../database/Transamerica Building San Francisco Drone Vertical.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "San Francisco Downtown Twilight Sunset Drone Panorama.jpg",
+        compressed: false,
+        path: "../../database/San Francisco Downtown Twilight Sunset Drone Panorama.jpg",
+        placeholder_path: "../../database/San Francisco Downtown Twilight Sunset Drone Panorama.jpg",
+        width: 2831,
+        height: 1200,
+      },
+      {
+        name: "Sai Wan, Hong Kong Drone - Vertical.jpg",
+        compressed: false,
+        path: "../../database/Sai Wan, Hong Kong Drone - Vertical.jpg",
+        placeholder_path: "../../database/Sai Wan, Hong Kong Drone - Vertical.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Monster Mansion Head On Vertical.jpg",
+        compressed: false,
+        path: "../../database/Monster Mansion Head On Vertical.jpg",
+        placeholder_path: "../../database/Monster Mansion Head On Vertical.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Mong Kok, Hong Kong Neon Signs 1.jpg",
+        compressed: false,
+        path: "../../database/Mong Kok, Hong Kong Neon Signs 1.jpg",
+        placeholder_path: "../../database/Mong Kok, Hong Kong Neon Signs 1.jpg",
+        width: 1499,
+        height: 1200,
+      },
+      {
+        name: "Marina Bay Sands Drone (Vertical).jpg",
+        compressed: false,
+        path: "../../database/Marina Bay Sands Drone (Vertical).jpg",
+        placeholder_path: "../../database/Marina Bay Sands Drone (Vertical).jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Ladies Market Balcony Long Exposure.jpg",
+        compressed: false,
+        path: "../../database/Ladies Market Balcony Long Exposure.jpg",
+        placeholder_path: "../../database/Ladies Market Balcony Long Exposure.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Ladies Market Balcony Lens Ball.jpg",
+        compressed: false,
+        path: "../../database/Ladies Market Balcony Lens Ball.jpg",
+        placeholder_path: "../../database/Ladies Market Balcony Lens Ball.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Kowloon ICC Skyline.jpg",
+        compressed: false,
+        path: "../../database/Kowloon ICC Skyline.jpg",
+        placeholder_path: "../../database/Kowloon ICC Skyline.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Kowloon Bay Drone (Vertical).jpg",
+        compressed: false,
+        path: "../../database/Kowloon Bay Drone (Vertical).jpg",
+        placeholder_path: "../../database/Kowloon Bay Drone (Vertical).jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Golden Gate Bridge Looking Down From Marin Lookout.jpg",
+        compressed: false,
+        path: "../../database/Golden Gate Bridge Looking Down From Marin Lookout.jpg",
+        placeholder_path: "../../database/Golden Gate Bridge Looking Down From Marin Lookout.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Hong Kong Red Taxi Motion Blur (Horizontal).jpg",
+        compressed: false,
+        path: "../../database/Hong Kong Red Taxi Motion Blur (Horizontal).jpg",
+        placeholder_path: "../../database/Hong Kong Red Taxi Motion Blur (Horizontal).jpg",
+        width: 1500,
+        height: 1200,
+      },
+      {
+        name: "Hong Kong Skyline Day Drone - Vertical.jpg",
+        compressed: false,
+        path: "../../database/Hong Kong Skyline Day Drone - Vertical.jpg",
+        placeholder_path: "../../database/Hong Kong Skyline Day Drone - Vertical.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Jiufen, Taiwan Drone - Vertical.jpg",
+        compressed: false,
+        path: "../../database/Jiufen, Taiwan Drone - Vertical.jpg",
+        placeholder_path: "../../database/Jiufen, Taiwan Drone - Vertical.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Hong Kong Downtown Horizon Drone Pinewood Battery.jpg",
+        compressed: false,
+        path: "../../database/Hong Kong Downtown Horizon Drone Pinewood Battery.jpg",
+        placeholder_path: "../../database/Hong Kong Downtown Horizon Drone Pinewood Battery.jpg",
+        width: 1799,
+        height: 1200,
+      },
+      {
+        name: "Kennedy Town Drone Panorama.jpg",
+        compressed: false,
+        path: "../../database/Kennedy Town Drone Panorama.jpg",
+        placeholder_path: "../../database/Kennedy Town Drone Panorama.jpg",
+        width: 2705,
+        height: 1200,
+      },
+      {
+        name: "Temple Street Market Overview.jpg",
+        compressed: false,
+        path: "../../database/Temple Street Market Overview.jpg",
+        placeholder_path: "../../database/Temple Street Market Overview.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Embarcadero Drone Ferry Building Night Vertical.jpg",
+        compressed: false,
+        path: "../../database/Embarcadero Drone Ferry Building Night Vertical.jpg",
+        placeholder_path: "../../database/Embarcadero Drone Ferry Building Night Vertical.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Embarcadero Drone Ferry Building Daytime Vertical.jpg",
+        compressed: false,
+        path: "../../database/Embarcadero Drone Ferry Building Daytime Vertical.jpg",
+        placeholder_path: "../../database/Embarcadero Drone Ferry Building Daytime Vertical.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Downtown San Francisco Drone Vertical Powell Street Intersection.jpg",
+        compressed: false,
+        path: "../../database/Downtown San Francisco Drone Vertical Powell Street Intersection.jpg",
+        placeholder_path: "../../database/Downtown San Francisco Drone Vertical Powell Street Intersection.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Downtown San Francisco From South East - Horizontal.jpg",
+        compressed: false,
+        path: "../../database/Downtown San Francisco From South East - Horizontal.jpg",
+        placeholder_path: "../../database/Downtown San Francisco From South East - Horizontal.jpg",
+        width: 1499,
+        height: 1200,
+      },
+      {
+        name: "Golden Gate Bridge San Francisco Night Moon Vertical.jpg",
+        compressed: false,
+        path: "../../database/Golden Gate Bridge San Francisco Night Moon Vertical.jpg",
+        placeholder_path: "../../database/Golden Gate Bridge San Francisco Night Moon Vertical.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Golden Gate Bridge Through Fence.jpg",
+        compressed: false,
+        path: "../../database/Golden Gate Bridge Through Fence.jpg",
+        placeholder_path: "../../database/Golden Gate Bridge Through Fence.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Sai Wan Drone (Vertical).jpg",
+        compressed: false,
+        path: "../../database/Sai Wan Drone (Vertical).jpg",
+        placeholder_path: "../../database/Sai Wan Drone (Vertical).jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Empire State Building Daytime Telephoto.jpg",
+        compressed: false,
+        path: "../../database/Empire State Building Daytime Telephoto.jpg",
+        placeholder_path: "../../database/Empire State Building Daytime Telephoto.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Airplane Wing Over New York at Night.jpg",
+        compressed: false,
+        path: "../../database/Airplane Wing Over New York at Night.jpg",
+        placeholder_path: "../../database/Airplane Wing Over New York at Night.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "San Francisco Ferry Building Through Buildings.jpg",
+        compressed: false,
+        path: "../../database/San Francisco Ferry Building Through Buildings.jpg",
+        placeholder_path: "../../database/San Francisco Ferry Building Through Buildings.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "San Francisco Hills Trolley Downtown Vertical.jpg",
+        compressed: false,
+        path: "../../database/San Francisco Hills Trolley Downtown Vertical.jpg",
+        placeholder_path: "../../database/San Francisco Hills Trolley Downtown Vertical.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Embarcadero Drone Ferry Building Night Horizontal.jpg",
+        compressed: false,
+        path: "../../database/Embarcadero Drone Ferry Building Night Horizontal.jpg",
+        placeholder_path: "../../database/Embarcadero Drone Ferry Building Night Horizontal.jpg",
+        width: 1800,
+        height: 1200,
+      },
+      {
+        name: "New York Looking Down Street from High Line - Vertical.jpg",
+        compressed: false,
+        path: "../../database/New York Looking Down Street from High Line - Vertical.jpg",
+        placeholder_path: "../../database/New York Looking Down Street from High Line - Vertical.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Hong Kong Night Skyline (Vertical).jpg",
+        compressed: false,
+        path: "../../database/Hong Kong Night Skyline (Vertical).jpg",
+        placeholder_path: "../../database/Hong Kong Night Skyline (Vertical).jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Hong Kong Skyline Panorama.jpg",
+        compressed: false,
+        path: "../../database/Hong Kong Skyline Panorama.jpg",
+        placeholder_path: "../../database/Hong Kong Skyline Panorama.jpg",
+        width: 2645,
+        height: 1200,
+      },
+      {
+        name: "Top of the Rock Sign.jpg",
+        compressed: false,
+        path: "../../database/Top of the Rock Sign.jpg",
+        placeholder_path: "../../database/Top of the Rock Sign.jpg",
+        width: 1500,
+        height: 1200,
+      },
+      {
+        name: "Blair Arch Tigerlilies Drone (8x10).jpg",
+        compressed: false,
+        path: "../../database/Blair Arch Tigerlilies Drone (8x10).jpg",
+        placeholder_path: "../../database/Blair Arch Tigerlilies Drone (8x10).jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Blair Arch Drone Landscape.jpg",
+        compressed: false,
+        path: "../../database/Blair Arch Drone Landscape.jpg",
+        placeholder_path: "../../database/Blair Arch Drone Landscape.jpg",
+        width: 1527,
+        height: 1200,
+      },
+      {
+        name: "Lombard Street Drone.jpg",
+        compressed: false,
+        path: "../../database/Lombard Street Drone.jpg",
+        placeholder_path: "../../database/Lombard Street Drone.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Patton Hall Drone.jpg",
+        compressed: false,
+        path: "../../database/Patton Hall Drone.jpg",
+        placeholder_path: "../../database/Patton Hall Drone.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Lombard Street Drone Vertical Angled.jpg",
+        compressed: false,
+        path: "../../database/Lombard Street Drone Vertical Angled.jpg",
+        placeholder_path: "../../database/Lombard Street Drone Vertical Angled.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Yin Yang Golden Gate Bridge Light Painting.jpg",
+        compressed: false,
+        path: "../../database/Yin Yang Golden Gate Bridge Light Painting.jpg",
+        placeholder_path: "../../database/Yin Yang Golden Gate Bridge Light Painting.jpg",
+        width: 1500,
+        height: 1200,
+      },
+      {
+        name: "Larry Bao Two Man Crew Rowing Boat Top Down.jpg",
+        compressed: false,
+        path: "../../database/Larry Bao Two Man Crew Rowing Boat Top Down.jpg",
+        placeholder_path: "../../database/Larry Bao Two Man Crew Rowing Boat Top Down.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Marin High School Tennis Courts Drone Top Down.jpg",
+        compressed: false,
+        path: "../../database/Marin High School Tennis Courts Drone Top Down.jpg",
+        placeholder_path: "../../database/Marin High School Tennis Courts Drone Top Down.jpg",
+        width: 1200,
+        height: 1602,
+      },
+      {
+        name: "Times Square Santa.jpg",
+        compressed: false,
+        path: "../../database/Times Square Santa.jpg",
+        placeholder_path: "../../database/Times Square Santa.jpg",
+        width: 1200,
+        height: 1799,
+      },
+      {
+        name: "Times Square Long Exposure Cars.jpg",
+        compressed: false,
+        path: "../../database/Times Square Long Exposure Cars.jpg",
+        placeholder_path: "../../database/Times Square Long Exposure Cars.jpg",
+        width: 1800,
+        height: 1200,
+      },
+      {
+        name: "Times Square Taxi (Side).jpg",
+        compressed: false,
+        path: "../../database/Times Square Taxi (Side).jpg",
+        placeholder_path: "../../database/Times Square Taxi (Side).jpg",
+        width: 1800,
+        height: 1200,
+      },
+      {
+        name: "Time Square Taxi.jpg",
+        compressed: false,
+        path: "../../database/Time Square Taxi.jpg",
+        placeholder_path: "../../database/Time Square Taxi.jpg",
+        width: 1200,
+        height: 1800,
+      },
+      {
+        name: "New York Street Artist (Front).jpg",
+        compressed: false,
+        path: "../../database/New York Street Artist (Front).jpg",
+        placeholder_path: "../../database/New York Street Artist (Front).jpg",
+        width: 1200,
+        height: 1799,
+      },
+      {
+        name: "Times Square Screens.jpg",
+        compressed: false,
+        path: "../../database/Times Square Screens.jpg",
+        placeholder_path: "../../database/Times Square Screens.jpg",
+        width: 1200,
+        height: 1800,
+      },
+      {
+        name: "San Francisco Trolley at Night.jpg",
+        compressed: false,
+        path: "../../database/San Francisco Trolley at Night.jpg",
+        placeholder_path: "../../database/San Francisco Trolley at Night.jpg",
+        width: 1200,
+        height: 1799,
+      },
+      {
+        name: "Looking Down Market Street Puddle Sunset.jpg",
+        compressed: false,
+        path: "../../database/Looking Down Market Street Puddle Sunset.jpg",
+        placeholder_path: "../../database/Looking Down Market Street Puddle Sunset.jpg",
+        width: 1200,
+        height: 1799,
+      },
+      {
+        name: "Shibuya Crossing Bike Motion Blur.jpg",
+        compressed: false,
+        path: "../../database/Shibuya Crossing Bike Motion Blur.jpg",
+        placeholder_path: "../../database/Shibuya Crossing Bike Motion Blur.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Shibuya Shopping Tokyo Vertical.jpg",
+        compressed: false,
+        path: "../../database/Shibuya Shopping Tokyo Vertical.jpg",
+        placeholder_path: "../../database/Shibuya Shopping Tokyo Vertical.jpg",
+        width: 1200,
+        height: 1500,
+      },
+      {
+        name: "Shibuya Crossing Wide Angle.jpg",
+        compressed: false,
+        path: "../../database/Shibuya Crossing Wide Angle.jpg",
+        placeholder_path: "../../database/Shibuya Crossing Wide Angle.jpg",
+        width: 1800,
+        height: 1200,
+      },
+      {
+        name: "Tokyo Shrine.jpg",
+        compressed: false,
+        path: "../../database/Tokyo Shrine.jpg",
+        placeholder_path: "../../database/Tokyo Shrine.jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Shinjuku, Tokyo, Japan (Vertical).jpg",
+        compressed: false,
+        path: "../../database/Shinjuku, Tokyo, Japan (Vertical).jpg",
+        placeholder_path: "../../database/Shinjuku, Tokyo, Japan (Vertical).jpg",
+        width: 1200,
+        height: 1499,
+      },
+      {
+        name: "Taipei, Taiwan Foggy Skyline.jpg",
+        compressed: false,
+        path: "../../database/Taipei, Taiwan Foggy Skyline.jpg",
+        placeholder_path: "../../database/Taipei, Taiwan Foggy Skyline.jpg",
+        width: 1800,
+        height: 1200,
+      },
+      {
+        name: "Ximen, Taiwan Long Exposure.jpg",
+        compressed: false,
+        path: "../../database/Ximen, Taiwan Long Exposure.jpg",
+        placeholder_path: "../../database/Ximen, Taiwan Long Exposure.jpg",
+        width: 1800,
+        height: 1200,
+      },
+      {
+        name: "Jiufen, Taiwan Drone - Horizontal.jpg",
+        compressed: false,
+        path: "../../database/Jiufen, Taiwan Drone - Horizontal.jpg",
+        placeholder_path: "../../database/Jiufen, Taiwan Drone - Horizontal.jpg",
+        width: 1799,
+        height: 1200,
+      },
+    ]
+  };
+</script>
+
+<div id="container" style="margin-top: 24px">
+  <div id="gallery"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+<script src="/libraries/gh-gallery/js/gallery.js"></script>
+<script src="/libraries/gh-gallery/js/transition.js"></script>
+<script src="/libraries/gh-gallery/js/zoom.min.js"></script>
+<script>
+  var COLUMNS = 'columns';
+  var ROWS = 'rows';
+  var SQUARES = 'squares';
+
+  var columns = COLUMNS;
+  var rows = ROWS;
+  var squares = SQUARES;
+
+  var layoutStyle = ROWS;
+
+  var configuration = {
+      spacing: 10,
+      shuffle: false,
+      columns: 4,
+      maxHeight: 400
+  };
+</script>
+<script>
+  const id = "gallery";
+  var renderer;
+  switch (layoutStyle) {
+    case COLUMNS:
+      renderer = new VerticalRenderer(id);
+      break;
+    case ROWS:
+      renderer = new HorizontalRenderer(id);
+      break;
+    case SQUARES:
+      renderer = new SquareRenderer(id);
+      break;
+  }
+  var config = new Config(GALLERY_IMAGES, configuration);
+  renderer.render(config);
+  lazyload();
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="ui grid stackable">
+    <div class="one wide column"></div>
+
+    <div class="four wide column">
+      <h1 class="ui header">Kevin Hou</h1>
+      <h3 class="ui header">
+        <a href="mailto:kevin.ch.hou@gmail.com">kevin.ch.hou@gmail.com</a>
+      </h3>
+      <h4 class="ui header">
+        <i>San Francisco Bay Area</i>
+      </h4>
+    </div>
+
+    <div class="four wide column footer-external">
+      <h4 class="ui header"><i>Social</i></h4>
+      <a href="https://www.instagram.com/lifeofkhou/" target="_blank">
+        <img
+          src="https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=300"
+        />
+      </a>
+      <a href="https://www.linkedin.com/in/kevinhou22" target="_blank">
+        <img
+          src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png"
+        />
+      </a>
+      <a href="https://youtube.com/kevinhou22" target="_blank">
+        <img
+          src="https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/512/youtube.png"
+        />
+      </a>
+      <a href="https://github.com/khou22" target="_blank">
+        <img src="https://image.flaticon.com/icons/svg/25/25231.svg" />
+      </a>
+    </div>
+
+    <div class="six wide column">
+      <p class="text">Kevin Hou's portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science '20. Lick-Wilmerding High School '16. San Francisco Bay Area.
+</p>
+    </div>
+
+    <div class="one wide column"></div>
+  </div>
+</footer>
+
+  </body>
+</html>
