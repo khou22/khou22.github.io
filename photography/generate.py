@@ -11,9 +11,11 @@ from datetime import datetime
 
 from imageManager import ImageManager
 
+# TODO: Create the small size placeholder and the large size for faster lazy loading
+
 # Options
 JSON_DIRECTORY = "json"
-MAX_WIDTH = 600
+MAX_WIDTH = 1200
 
 collectionList = glob.glob('%s/*.json' % JSON_DIRECTORY)
 
