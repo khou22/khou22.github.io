@@ -3,4 +3,212 @@ layout: default
 title: "KHou Photography"
 ---
 
-Photography
+<div id="slideshow" class="photography-landing-slideshow">
+  <div class="photography-landing-slideshow-slide">
+    <img
+      src="{{
+        '/database/Bear Valley Bloods Ridge Sunset Drone Landscape Orange Panorama.jpg'
+          | prepend: site.baseurl
+      }}"
+    />
+    <div class="photography-landing-slideshow-slide-title">
+      <h1 class="ui header">Drone</h1>
+      <a href="{{ '/photography/drone' | pepend: site.baseurl }}">
+        <button class="ui button">See All</button>
+      </a>
+    </div>
+  </div>
+  <div class="photography-landing-slideshow-slide">
+    <img
+      src="{{
+        '/database/San Francisco Downtown Twilight Sunset Drone Panorama.jpg'
+          | prepend: site.baseurl
+      }}"
+    />
+    <div class="photography-landing-slideshow-slide-title">
+      <h1 class="ui header">San Francisco</h1>
+      <a href="{{ '/photography/san-francisco' | pepend: site.baseurl }}">
+        <button class="ui button">See All</button>
+      </a>
+    </div>
+  </div>
+  <div class="photography-landing-slideshow-slide">
+    <img
+      src="{{
+        '/database/Hong Kong Downtown Horizon Drone Pinewood Battery.jpg'
+          | prepend: site.baseurl
+      }}"
+    />
+    <div class="photography-landing-slideshow-slide-title">
+      <h1 class="ui header">Hong Kong</h1>
+      <a href="{{ '/photography/hong-kong' | pepend: site.baseurl }}">
+        <button class="ui button">See All</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  $("#slideshow > div:gt(0)").hide();
+
+  setInterval(function() {
+    $("#slideshow > div:first")
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo("#slideshow");
+  }, 3000);
+</script>
+
+<div class="photography-landing-wrapper">
+  <h1 class="ui header photography-landing-header">Categories</h1>
+  <div class="photography-grid-container">
+    <div class="ui link cards photography-grid">
+      <a href="drone">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="{{ '/media/photography/drone.jpg' | prepend: site.baseurl }}"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Drone</a>
+          </div>
+        </div>
+      </a>
+      <a href="night">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="{{ '/media/photography/night.jpg' | prepend: site.baseurl }}"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Night</a>
+          </div>
+        </div>
+      </a>
+      <a href="sunsets">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="{{
+                '/media/photography/sunsets.jpg' | prepend: site.baseurl
+              }}"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Sunsets</a>
+          </div>
+        </div>
+      </a>
+      <a href="mountains">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="{{
+                '/media/photography/mountains.jpg' | prepend: site.baseurl
+              }}"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Mountains</a>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <h1 class="ui header photography-landing-header">By Destination</h1>
+
+  <div class="photography-grid-container">
+    <div class="ui link cards photography-grid">
+      <a href="hong-kong">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="{{
+                '/media/photography/hong-kong.jpg' | prepend: site.baseurl
+              }}"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Hong Kong</a>
+          </div>
+        </div>
+      </a>
+
+      <a href="san-francisco">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="{{
+                '/media/photography/san-francisco.jpg' | prepend: site.baseurl
+              }}"
+            />
+          </div>
+          <div class="content">
+            <a class="header">San Francisco</a>
+          </div>
+        </div>
+      </a>
+
+      <a href="princeton">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="{{
+                '/media/photography/princeton.jpg' | prepend: site.baseurl
+              }}"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Princeton</a>
+          </div>
+        </div>
+      </a>
+
+      <a href="korea">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="{{ '/media/photography/korea.jpg' | prepend: site.baseurl }}"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Seoul, Korea</a>
+          </div>
+        </div>
+      </a>
+
+      <a href="japan">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="{{ '/media/photography/japan.jpg' | prepend: site.baseurl }}"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Tokyo, Japan</a>
+          </div>
+        </div>
+      </a>
+
+      <a href="taiwan">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="{{
+                '/media/photography/taiwan.jpg' | prepend: site.baseurl
+              }}"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Taiwan</a>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -390,7 +390,17 @@ article strong { color: black; }
 .contact-tile-icon { max-height: 130px; max-width: 120px; display: block; margin: auto; transition: all 0.2s ease-in-out; }
 .contact-tile-icon:hover { transform: scale(1.2); -webkit-transform: scale(1.2); }
 
-.photography-grid { width: 90%; margin: auto; }
+.photography-grid { margin: auto; width: 2000px !important; margin-bottom: 12px; }
+.photography-grid-container { width: 100%; overflow-x: scroll; overflow-y: hidden; }
+
+.photography-landing-wrapper { max-width: 1000px; margin: auto; text-align: center; }
+.photography-landing-header { margin-top: 50px !important; margin-bottom: 8px !important; }
+.photography-landing-slideshow { position: relative; width: 100%; height: 500px; }
+.photography-landing-slideshow-slide { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; align-items: center; display: flex; justify-content: center; background-color: black; }
+.photography-landing-slideshow-slide img { width: 100%; opacity: 0.8; }
+.photography-landing-slideshow-slide-title { position: absolute; display: flex; flex-direction: column; text-align: center; }
+.photography-landing-slideshow-slide-title h1 { font-size: 4rem !important; color: white !important; text-shadow: 2px 2px rgba(0, 0, 0, 0.7); }
+.photography-landing-slideshow-slide-title button { margin-top: 24px !important; }
 
 .project-page { width: 90%; margin: auto; margin-top: 12px; }
 .project-title { margin-top: 8px !important; }
