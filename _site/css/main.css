@@ -390,10 +390,10 @@ article strong { color: black; }
 .contact-tile-icon { max-height: 130px; max-width: 120px; display: block; margin: auto; transition: all 0.2s ease-in-out; }
 .contact-tile-icon:hover { transform: scale(1.2); -webkit-transform: scale(1.2); }
 
-.photography-grid { margin: auto; width: 2000px !important; margin-bottom: 12px; }
+.photography-grid { margin: auto; width: 2000px !important; margin-bottom: 8px !important; }
 .photography-grid-container { width: 100%; overflow-x: scroll; overflow-y: hidden; }
 
-.photography-landing-wrapper { max-width: 1000px; margin: auto; text-align: center; }
+.photography-landing-wrapper { max-width: 1000px; margin: auto; text-align: center; margin-bottom: 24px; }
 .photography-landing-header { margin-top: 50px !important; margin-bottom: 8px !important; }
 .photography-landing-slideshow { position: relative; width: 100%; height: 500px; }
 .photography-landing-slideshow-slide { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; align-items: center; display: flex; justify-content: center; background-color: black; }

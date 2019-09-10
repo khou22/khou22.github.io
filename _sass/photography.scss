@@ -2,7 +2,7 @@
   &-grid {
     margin: auto;
     width: 2000px !important;
-    margin-bottom: 12px;
+    margin-bottom: 8px !important;
 
     &-container {
       width: 100%;
@@ -17,6 +17,8 @@
     max-width: 1000px;
     margin: auto;
     text-align: center;
+
+    margin-bottom: 24px;
   }
 
   &-header {
