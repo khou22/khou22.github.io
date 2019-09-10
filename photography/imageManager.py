@@ -55,5 +55,8 @@ class ImageManager:
         img.save("%s/%s" % (self.directory, imageName), 'JPEG', quality=100)
         print("Saving %s/%s" % (self.directory, imageName))
 
+        # Save local mapping
+        self.images[imageName] = localPath
+
         # On success, retrun the local path
         return localPath, width, height
