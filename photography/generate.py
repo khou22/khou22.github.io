@@ -15,7 +15,8 @@ from imageManager import ImageManager
 
 # Options
 JSON_DIRECTORY = "json"
-MAX_WIDTH = 1200
+MAX_WIDTH = 1600
+PLACEHOLDER_WIDTH = 600
 
 collectionList = glob.glob('%s/*.json' % JSON_DIRECTORY)
 
@@ -62,11 +63,13 @@ for collectionSource in collectionList:
 
                 # Check if image has already been downloaded
                 imagePath = ''
+                placeholderPath = ''
                 if manager.exists(photo['name']):
-                    imagePath, width, height = manager.getSrc(photo['name'])
+                    imagePath, placeholderPath, width, height = manager.getSrc(photo['name'])
                     print("%s already exists in DB" % photo['name'])
                 else:
-                    imagePath, width, height = manager.create(photo['name'], photo['url'], MAX_WIDTH)
+                    print("Saving %s" % photo['name'])
+                    imagePath, placeholderPath, width, height = manager.create(photo['name'], photo['url'], MAX_WIDTH, PLACEHOLDER_WIDTH)
 
                 photoObject['name'] = photo['name']
                 photoObject['src'] = imagePath
@@ -78,7 +81,7 @@ for collectionSource in collectionList:
                 outputFile.write("        name: \"%s\",\n" % photoObject['name'])
                 outputFile.write("        compressed: true,\n")
                 outputFile.write("        path: \"../%s\",\n" % photoObject['src'])
-                outputFile.write("        compressed_path: \"../%s?new=1\",\n" % photoObject['src'])
+                outputFile.write("        compressed_path: \"../../database/%s\",\n" % placeholderPath)
                 outputFile.write("        placeholder_path: \"../%s\",\n" % photoObject['src'])
                 outputFile.write("        width: %d,\n" % photoObject['width'])
                 outputFile.write("        height: %d,\n" % photoObject['height'])
