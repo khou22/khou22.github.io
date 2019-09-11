@@ -23,17 +23,26 @@ layout: default
   <div class="header" id="modalTitle">
     Modal Title
   </div>
-  <input id="modalTitleSelectable" value="Modal Title" style="opacity:0" />
+  <input
+    id="modalTitleSelectable"
+    value="Modal Title"
+    style="opacity:0;height:1"
+  />
   <div class="image content">
     <img
-      class="ui centered medium image"
+      class="ui centered image photography-modal-image"
       id="modalImage"
-      src="/images/wireframe/image.png"
+      src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081"
     />
   </div>
   <div class="actions">
-    <div class="ui button" onClick="closeModal()">Close</div>
-    <div class="ui button" onClick="copyName()">Copy Name</div>
+    <div class="ui button negative" onClick="closeModal()">
+      Close
+    </div>
+    <div class="ui button positive" onClick="copyName()">
+      <i class="copy icon"></i>
+      Copy Name
+    </div>
   </div>
 </div>
 <script>
@@ -42,7 +51,7 @@ layout: default
   var openModal = function(name, src) {
     document.getElementById("modalImage").setAttribute("src", src);
     document.getElementById("modalTitle").innerText = name;
-    document.getElementById("modalTitleSelectable").innerText = name;
+    document.getElementById("modalTitleSelectable").value = name;
     $(".ui.modal").modal("show");
   };
 
@@ -109,3 +118,5 @@ layout: default
   renderer.render(config);
   lazyload();
 </script>
+
+{% include photoStoreButton.html %}
