@@ -40,7 +40,7 @@ for collectionSource in collectionList:
             # Liquid meta
             outputFile.write("---\n")
             outputFile.write("layout: gallery\n")
-            outputFile.write("title: \"%s\"\n" % collectionName)
+            outputFile.write("title: \"%s - KHou Photography\"\n" % collectionName)
             outputFile.write("layout_style: ROWS\n")
             outputFile.write("spacing: 10\n")
             outputFile.write("shuffle: false\n")
@@ -76,8 +76,9 @@ for collectionSource in collectionList:
                 # Write out to JS file
                 outputFile.write("      {\n")
                 outputFile.write("        name: \"%s\",\n" % photoObject['name'])
-                outputFile.write("        compressed: false,\n")
+                outputFile.write("        compressed: true,\n")
                 outputFile.write("        path: \"../%s\",\n" % photoObject['src'])
+                outputFile.write("        compressed_path: \"../%s?new=1\",\n" % photoObject['src'])
                 outputFile.write("        placeholder_path: \"../%s\",\n" % photoObject['src'])
                 outputFile.write("        width: %d,\n" % photoObject['width'])
                 outputFile.write("        height: %d,\n" % photoObject['height'])
