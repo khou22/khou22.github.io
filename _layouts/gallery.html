@@ -18,6 +18,47 @@ layout: default
 
 <!-- <h1>{{ page.title }}</h1> -->
 
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header" id="modalTitle">
+    Modal Title
+  </div>
+  <input id="modalTitleSelectable" value="Modal Title" style="opacity:0" />
+  <div class="image content">
+    <img
+      class="ui centered medium image"
+      id="modalImage"
+      src="/images/wireframe/image.png"
+    />
+  </div>
+  <div class="actions">
+    <div class="ui button" onClick="closeModal()">Close</div>
+    <div class="ui button" onClick="copyName()">Copy Name</div>
+  </div>
+</div>
+<script>
+  $(".ui.modal").modal();
+
+  var openModal = function(name, src) {
+    document.getElementById("modalImage").setAttribute("src", src);
+    document.getElementById("modalTitle").innerText = name;
+    document.getElementById("modalTitleSelectable").innerText = name;
+    $(".ui.modal").modal("show");
+  };
+
+  var copyName = function() {
+    var fileName = document.getElementById("modalTitleSelectable");
+    fileName.select();
+    fileName.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+  };
+
+  var closeModal = function() {
+    $(".ui.modal").modal("hide");
+  };
+</script>
+
+<!-- JS Object -->
 {{ content }}
 <div id="container" style="margin-top: 24px">
   <div id="gallery"></div>

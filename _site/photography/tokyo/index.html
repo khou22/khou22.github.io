@@ -286,13 +286,54 @@
 
 <!-- <h1>Japan - KHou Photography</h1> -->
 
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header" id="modalTitle">
+    Modal Title
+  </div>
+  <input id="modalTitleSelectable" value="Modal Title" style="opacity:0" />
+  <div class="image content">
+    <img
+      class="ui centered medium image"
+      id="modalImage"
+      src="/images/wireframe/image.png"
+    />
+  </div>
+  <div class="actions">
+    <div class="ui button" onClick="closeModal()">Close</div>
+    <div class="ui button" onClick="copyName()">Copy Name</div>
+  </div>
+</div>
+<script>
+  $(".ui.modal").modal();
+
+  var openModal = function(name, src) {
+    document.getElementById("modalImage").setAttribute("src", src);
+    document.getElementById("modalTitle").innerText = name;
+    document.getElementById("modalTitleSelectable").innerText = name;
+    $(".ui.modal").modal("show");
+  };
+
+  var copyName = function() {
+    var fileName = document.getElementById("modalTitleSelectable");
+    fileName.select();
+    fileName.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+  };
+
+  var closeModal = function() {
+    $(".ui.modal").modal("hide");
+  };
+</script>
+
+<!-- JS Object -->
 <!-- Autogen via generate.py -->
-<!-- 2019-09-11 14:29:38 -->
+<!-- 2019-09-11 15:44:53 -->
 <script>
   const GALLERY_IMAGES = {
     'Japan': [
       {
-        name: "Shibuya Taxi Motion Blur.jpg",
+        name: "Shibuya Taxi Motion Blur",
         compressed: true,
         path: "../../database/Shibuya Taxi Motion Blur.jpg",
         compressed_path: "../../database/Shibuya Taxi Motion Blur.placeholder.jpg",
@@ -301,7 +342,7 @@
         height: 2000,
       },
       {
-        name: "Shinjuku, Tokyo, Japan (Horizontal).jpg",
+        name: "Shinjuku, Tokyo, Japan (Horizontal)",
         compressed: true,
         path: "../../database/Shinjuku, Tokyo, Japan (Horizontal).jpg",
         compressed_path: "../../database/Shinjuku, Tokyo, Japan (Horizontal).placeholder.jpg",
@@ -310,7 +351,7 @@
         height: 1600,
       },
       {
-        name: "Temple Street Market Overview.jpg",
+        name: "Temple Street Market Overview",
         compressed: true,
         path: "../../database/Temple Street Market Overview.jpg",
         compressed_path: "../../database/Temple Street Market Overview.placeholder.jpg",
@@ -319,7 +360,7 @@
         height: 2000,
       },
       {
-        name: "Tokyo Soba Noodles NIght Market Chef.jpg",
+        name: "Tokyo Soba Noodles NIght Market Chef",
         compressed: true,
         path: "../../database/Tokyo Soba Noodles NIght Market Chef.jpg",
         compressed_path: "../../database/Tokyo Soba Noodles NIght Market Chef.placeholder.jpg",
@@ -328,7 +369,7 @@
         height: 1999,
       },
       {
-        name: "Shibuya Crossing Bike Motion Blur.jpg",
+        name: "Shibuya Crossing Bike Motion Blur",
         compressed: true,
         path: "../../database/Shibuya Crossing Bike Motion Blur.jpg",
         compressed_path: "../../database/Shibuya Crossing Bike Motion Blur.placeholder.jpg",
@@ -337,7 +378,7 @@
         height: 1999,
       },
       {
-        name: "Shibuya Crossing Taxi Motion Blur.jpg",
+        name: "Shibuya Crossing Taxi Motion Blur",
         compressed: true,
         path: "../../database/Shibuya Crossing Taxi Motion Blur.jpg",
         compressed_path: "../../database/Shibuya Crossing Taxi Motion Blur.placeholder.jpg",
@@ -346,7 +387,7 @@
         height: 2000,
       },
       {
-        name: "Shibuya Shopping Tokyo Vertical.jpg",
+        name: "Shibuya Shopping Tokyo Vertical",
         compressed: true,
         path: "../../database/Shibuya Shopping Tokyo Vertical.jpg",
         compressed_path: "../../database/Shibuya Shopping Tokyo Vertical.placeholder.jpg",
@@ -355,7 +396,7 @@
         height: 2000,
       },
       {
-        name: "Shibuya Crossing Wide Angle.jpg",
+        name: "Shibuya Crossing Wide Angle",
         compressed: true,
         path: "../../database/Shibuya Crossing Wide Angle.jpg",
         compressed_path: "../../database/Shibuya Crossing Wide Angle.placeholder.jpg",
@@ -364,7 +405,7 @@
         height: 1600,
       },
       {
-        name: "Tokyo Cherry Blossums.jpg",
+        name: "Tokyo Cherry Blossums",
         compressed: true,
         path: "../../database/Tokyo Cherry Blossums.jpg",
         compressed_path: "../../database/Tokyo Cherry Blossums.placeholder.jpg",
@@ -373,7 +414,7 @@
         height: 1999,
       },
       {
-        name: "Shibuya Shopping Tokyo Landscape.jpg",
+        name: "Shibuya Shopping Tokyo Landscape",
         compressed: true,
         path: "../../database/Shibuya Shopping Tokyo Landscape.jpg",
         compressed_path: "../../database/Shibuya Shopping Tokyo Landscape.placeholder.jpg",
@@ -382,7 +423,7 @@
         height: 1600,
       },
       {
-        name: "Tokyo Subway.jpg",
+        name: "Tokyo Subway",
         compressed: true,
         path: "../../database/Tokyo Subway.jpg",
         compressed_path: "../../database/Tokyo Subway.placeholder.jpg",
@@ -391,7 +432,7 @@
         height: 2000,
       },
       {
-        name: "Tokyo Shrine.jpg",
+        name: "Tokyo Shrine",
         compressed: true,
         path: "../../database/Tokyo Shrine.jpg",
         compressed_path: "../../database/Tokyo Shrine.placeholder.jpg",
@@ -400,7 +441,7 @@
         height: 1999,
       },
       {
-        name: "Hie Shrine, Tokyo, Japan.jpg",
+        name: "Hie Shrine, Tokyo, Japan",
         compressed: true,
         path: "../../database/Hie Shrine, Tokyo, Japan.jpg",
         compressed_path: "../../database/Hie Shrine, Tokyo, Japan.placeholder.jpg",
@@ -409,7 +450,7 @@
         height: 1999,
       },
       {
-        name: "Tokyo Cherry Blossum Arcade.jpg",
+        name: "Tokyo Cherry Blossum Arcade",
         compressed: true,
         path: "../../database/Tokyo Cherry Blossum Arcade.jpg",
         compressed_path: "../../database/Tokyo Cherry Blossum Arcade.placeholder.jpg",
@@ -418,7 +459,7 @@
         height: 2000,
       },
       {
-        name: "Shinjuku, Tokyo, Japan (Vertical).jpg",
+        name: "Shinjuku, Tokyo, Japan (Vertical)",
         compressed: true,
         path: "../../database/Shinjuku, Tokyo, Japan (Vertical).jpg",
         compressed_path: "../../database/Shinjuku, Tokyo, Japan (Vertical).placeholder.jpg",

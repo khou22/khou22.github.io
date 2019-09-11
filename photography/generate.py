@@ -71,7 +71,7 @@ for collectionSource in collectionList:
                     print("Saving %s" % photo['name'])
                     imagePath, placeholderPath, width, height = manager.create(photo['name'], photo['url'], MAX_WIDTH, PLACEHOLDER_WIDTH)
 
-                photoObject['name'] = photo['name']
+                photoObject['name'] = os.path.splitext(photo['name'])[0]
                 photoObject['src'] = imagePath
                 photoObject['width'] = width
                 photoObject['height'] = height

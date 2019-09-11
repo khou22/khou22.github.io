@@ -286,13 +286,54 @@
 
 <!-- <h1>Princeton - KHou Photography</h1> -->
 
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header" id="modalTitle">
+    Modal Title
+  </div>
+  <input id="modalTitleSelectable" value="Modal Title" style="opacity:0" />
+  <div class="image content">
+    <img
+      class="ui centered medium image"
+      id="modalImage"
+      src="/images/wireframe/image.png"
+    />
+  </div>
+  <div class="actions">
+    <div class="ui button" onClick="closeModal()">Close</div>
+    <div class="ui button" onClick="copyName()">Copy Name</div>
+  </div>
+</div>
+<script>
+  $(".ui.modal").modal();
+
+  var openModal = function(name, src) {
+    document.getElementById("modalImage").setAttribute("src", src);
+    document.getElementById("modalTitle").innerText = name;
+    document.getElementById("modalTitleSelectable").innerText = name;
+    $(".ui.modal").modal("show");
+  };
+
+  var copyName = function() {
+    var fileName = document.getElementById("modalTitleSelectable");
+    fileName.select();
+    fileName.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+  };
+
+  var closeModal = function() {
+    $(".ui.modal").modal("hide");
+  };
+</script>
+
+<!-- JS Object -->
 <!-- Autogen via generate.py -->
-<!-- 2019-09-11 14:29:38 -->
+<!-- 2019-09-11 15:44:53 -->
 <script>
   const GALLERY_IMAGES = {
     'Princeton': [
       {
-        name: "Blair Arch Tigerlilies Drone (8x10).jpg",
+        name: "Blair Arch Tigerlilies Drone (8x10)",
         compressed: true,
         path: "../../database/Blair Arch Tigerlilies Drone (8x10).jpg",
         compressed_path: "../../database/Blair Arch Tigerlilies Drone (8x10).placeholder.jpg",
@@ -301,7 +342,7 @@
         height: 1999,
       },
       {
-        name: "Blair Arch Drone Landscape.jpg",
+        name: "Blair Arch Drone Landscape",
         compressed: true,
         path: "../../database/Blair Arch Drone Landscape.jpg",
         compressed_path: "../../database/Blair Arch Drone Landscape.placeholder.jpg",
@@ -310,7 +351,7 @@
         height: 1200,
       },
       {
-        name: "1903 Hall and Cuyler Hall Drone.jpg",
+        name: "1903 Hall and Cuyler Hall Drone",
         compressed: true,
         path: "../../database/1903 Hall and Cuyler Hall Drone.jpg",
         compressed_path: "../../database/1903 Hall and Cuyler Hall Drone.placeholder.jpg",
@@ -319,7 +360,7 @@
         height: 1200,
       },
       {
-        name: "1903 Hall Drone Top Down.jpg",
+        name: "1903 Hall Drone Top Down",
         compressed: true,
         path: "../../database/1903 Hall Drone Top Down.jpg",
         compressed_path: "../../database/1903 Hall Drone Top Down.placeholder.jpg",
@@ -328,7 +369,7 @@
         height: 1200,
       },
       {
-        name: "Patton Hall Drone.jpg",
+        name: "Patton Hall Drone",
         compressed: true,
         path: "../../database/Patton Hall Drone.jpg",
         compressed_path: "../../database/Patton Hall Drone.placeholder.jpg",
@@ -337,7 +378,7 @@
         height: 2000,
       },
       {
-        name: "Lake Carnegie Landscape Fall Season.jpg",
+        name: "Lake Carnegie Landscape Fall Season",
         compressed: true,
         path: "../../database/Lake Carnegie Landscape Fall Season.jpg",
         compressed_path: "../../database/Lake Carnegie Landscape Fall Season.placeholder.jpg",
@@ -346,7 +387,7 @@
         height: 1200,
       },
       {
-        name: "Larry Bao Two Man Crew Rowing Boat Top Down.jpg",
+        name: "Larry Bao Two Man Crew Rowing Boat Top Down",
         compressed: true,
         path: "../../database/Larry Bao Two Man Crew Rowing Boat Top Down.jpg",
         compressed_path: "../../database/Larry Bao Two Man Crew Rowing Boat Top Down.placeholder.jpg",
@@ -355,7 +396,7 @@
         height: 2000,
       },
       {
-        name: "Princeton Football Field (Down).jpg",
+        name: "Princeton Football Field (Down)",
         compressed: true,
         path: "../../database/Princeton Football Field (Down).jpg",
         compressed_path: "../../database/Princeton Football Field (Down).placeholder.jpg",

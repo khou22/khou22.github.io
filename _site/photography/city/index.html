@@ -286,13 +286,54 @@
 
 <!-- <h1>City - KHou Photography</h1> -->
 
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header" id="modalTitle">
+    Modal Title
+  </div>
+  <input id="modalTitleSelectable" value="Modal Title" style="opacity:0" />
+  <div class="image content">
+    <img
+      class="ui centered medium image"
+      id="modalImage"
+      src="/images/wireframe/image.png"
+    />
+  </div>
+  <div class="actions">
+    <div class="ui button" onClick="closeModal()">Close</div>
+    <div class="ui button" onClick="copyName()">Copy Name</div>
+  </div>
+</div>
+<script>
+  $(".ui.modal").modal();
+
+  var openModal = function(name, src) {
+    document.getElementById("modalImage").setAttribute("src", src);
+    document.getElementById("modalTitle").innerText = name;
+    document.getElementById("modalTitleSelectable").innerText = name;
+    $(".ui.modal").modal("show");
+  };
+
+  var copyName = function() {
+    var fileName = document.getElementById("modalTitleSelectable");
+    fileName.select();
+    fileName.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+  };
+
+  var closeModal = function() {
+    $(".ui.modal").modal("hide");
+  };
+</script>
+
+<!-- JS Object -->
 <!-- Autogen via generate.py -->
-<!-- 2019-09-11 14:29:38 -->
+<!-- 2019-09-11 15:44:53 -->
 <script>
   const GALLERY_IMAGES = {
     'City': [
       {
-        name: "Monster Mansion Vertical.jpg",
+        name: "Monster Mansion Vertical",
         compressed: true,
         path: "../../database/Monster Mansion Vertical.jpg",
         compressed_path: "../../database/Monster Mansion Vertical.placeholder.jpg",
@@ -301,7 +342,7 @@
         height: 1999,
       },
       {
-        name: "New York City Park Ave Looking Downtown in Rain.jpg",
+        name: "New York City Park Ave Looking Downtown in Rain",
         compressed: true,
         path: "../../database/New York City Park Ave Looking Downtown in Rain.jpg",
         compressed_path: "../../database/New York City Park Ave Looking Downtown in Rain.placeholder.jpg",
@@ -310,7 +351,7 @@
         height: 1999,
       },
       {
-        name: "Ping Shek Estate Drone Top Down (Vertical).jpg",
+        name: "Ping Shek Estate Drone Top Down (Vertical)",
         compressed: true,
         path: "../../database/Ping Shek Estate Drone Top Down (Vertical).jpg",
         compressed_path: "../../database/Ping Shek Estate Drone Top Down (Vertical).placeholder.jpg",
@@ -319,7 +360,7 @@
         height: 1999,
       },
       {
-        name: "San Francisco California and Powell Street Trolly.jpg",
+        name: "San Francisco California and Powell Street Trolly",
         compressed: true,
         path: "../../database/San Francisco California and Powell Street Trolly.jpg",
         compressed_path: "../../database/San Francisco California and Powell Street Trolly.placeholder.jpg",
@@ -328,7 +369,7 @@
         height: 1999,
       },
       {
-        name: "Shibuya Taxi Motion Blur.jpg",
+        name: "Shibuya Taxi Motion Blur",
         compressed: true,
         path: "../../database/Shibuya Taxi Motion Blur.jpg",
         compressed_path: "../../database/Shibuya Taxi Motion Blur.placeholder.jpg",
@@ -337,7 +378,7 @@
         height: 2000,
       },
       {
-        name: "Shinjuku, Tokyo, Japan (Horizontal).jpg",
+        name: "Shinjuku, Tokyo, Japan (Horizontal)",
         compressed: true,
         path: "../../database/Shinjuku, Tokyo, Japan (Horizontal).jpg",
         compressed_path: "../../database/Shinjuku, Tokyo, Japan (Horizontal).placeholder.jpg",
@@ -346,7 +387,7 @@
         height: 1600,
       },
       {
-        name: "Transamerica Building San Francisco Drone Vertical.jpg",
+        name: "Transamerica Building San Francisco Drone Vertical",
         compressed: true,
         path: "../../database/Transamerica Building San Francisco Drone Vertical.jpg",
         compressed_path: "../../database/Transamerica Building San Francisco Drone Vertical.placeholder.jpg",
@@ -355,7 +396,7 @@
         height: 1999,
       },
       {
-        name: "San Francisco Downtown Twilight Sunset Drone Panorama.jpg",
+        name: "San Francisco Downtown Twilight Sunset Drone Panorama",
         compressed: true,
         path: "../../database/San Francisco Downtown Twilight Sunset Drone Panorama.jpg",
         compressed_path: "../../database/San Francisco Downtown Twilight Sunset Drone Panorama.placeholder.jpg",
@@ -364,7 +405,7 @@
         height: 1600,
       },
       {
-        name: "Sai Wan, Hong Kong Drone - Vertical.jpg",
+        name: "Sai Wan, Hong Kong Drone - Vertical",
         compressed: true,
         path: "../../database/Sai Wan, Hong Kong Drone - Vertical.jpg",
         compressed_path: "../../database/Sai Wan, Hong Kong Drone - Vertical.placeholder.jpg",
@@ -373,7 +414,7 @@
         height: 1999,
       },
       {
-        name: "Monster Mansion Head On Vertical.jpg",
+        name: "Monster Mansion Head On Vertical",
         compressed: true,
         path: "../../database/Monster Mansion Head On Vertical.jpg",
         compressed_path: "../../database/Monster Mansion Head On Vertical.placeholder.jpg",
@@ -382,7 +423,7 @@
         height: 1999,
       },
       {
-        name: "Mong Kok, Hong Kong Neon Signs 1.jpg",
+        name: "Mong Kok, Hong Kong Neon Signs 1",
         compressed: true,
         path: "../../database/Mong Kok, Hong Kong Neon Signs 1.jpg",
         compressed_path: "../../database/Mong Kok, Hong Kong Neon Signs 1.placeholder.jpg",
@@ -391,7 +432,7 @@
         height: 1600,
       },
       {
-        name: "Marina Bay Sands Drone (Vertical).jpg",
+        name: "Marina Bay Sands Drone (Vertical)",
         compressed: true,
         path: "../../database/Marina Bay Sands Drone (Vertical).jpg",
         compressed_path: "../../database/Marina Bay Sands Drone (Vertical).placeholder.jpg",
@@ -400,7 +441,7 @@
         height: 1999,
       },
       {
-        name: "Ladies Market Balcony Long Exposure.jpg",
+        name: "Ladies Market Balcony Long Exposure",
         compressed: true,
         path: "../../database/Ladies Market Balcony Long Exposure.jpg",
         compressed_path: "../../database/Ladies Market Balcony Long Exposure.placeholder.jpg",
@@ -409,7 +450,7 @@
         height: 2000,
       },
       {
-        name: "Ladies Market Balcony Lens Ball.jpg",
+        name: "Ladies Market Balcony Lens Ball",
         compressed: true,
         path: "../../database/Ladies Market Balcony Lens Ball.jpg",
         compressed_path: "../../database/Ladies Market Balcony Lens Ball.placeholder.jpg",
@@ -418,7 +459,7 @@
         height: 2000,
       },
       {
-        name: "Kowloon ICC Skyline.jpg",
+        name: "Kowloon ICC Skyline",
         compressed: true,
         path: "../../database/Kowloon ICC Skyline.jpg",
         compressed_path: "../../database/Kowloon ICC Skyline.placeholder.jpg",
@@ -427,7 +468,7 @@
         height: 1999,
       },
       {
-        name: "Kowloon Bay Drone (Vertical).jpg",
+        name: "Kowloon Bay Drone (Vertical)",
         compressed: true,
         path: "../../database/Kowloon Bay Drone (Vertical).jpg",
         compressed_path: "../../database/Kowloon Bay Drone (Vertical).placeholder.jpg",
@@ -436,7 +477,7 @@
         height: 2000,
       },
       {
-        name: "Golden Gate Bridge Looking Down From Marin Lookout.jpg",
+        name: "Golden Gate Bridge Looking Down From Marin Lookout",
         compressed: true,
         path: "../../database/Golden Gate Bridge Looking Down From Marin Lookout.jpg",
         compressed_path: "../../database/Golden Gate Bridge Looking Down From Marin Lookout.placeholder.jpg",
@@ -445,7 +486,7 @@
         height: 1999,
       },
       {
-        name: "Hong Kong Red Taxi Motion Blur (Horizontal).jpg",
+        name: "Hong Kong Red Taxi Motion Blur (Horizontal)",
         compressed: true,
         path: "../../database/Hong Kong Red Taxi Motion Blur (Horizontal).jpg",
         compressed_path: "../../database/Hong Kong Red Taxi Motion Blur (Horizontal).placeholder.jpg",
@@ -454,7 +495,7 @@
         height: 1600,
       },
       {
-        name: "Hong Kong Skyline Day Drone - Vertical.jpg",
+        name: "Hong Kong Skyline Day Drone - Vertical",
         compressed: true,
         path: "../../database/Hong Kong Skyline Day Drone - Vertical.jpg",
         compressed_path: "../../database/Hong Kong Skyline Day Drone - Vertical.placeholder.jpg",
@@ -463,7 +504,7 @@
         height: 1999,
       },
       {
-        name: "Jiufen, Taiwan Drone - Vertical.jpg",
+        name: "Jiufen, Taiwan Drone - Vertical",
         compressed: true,
         path: "../../database/Jiufen, Taiwan Drone - Vertical.jpg",
         compressed_path: "../../database/Jiufen, Taiwan Drone - Vertical.placeholder.jpg",
@@ -472,7 +513,7 @@
         height: 2000,
       },
       {
-        name: "Hong Kong Downtown Horizon Drone Pinewood Battery.jpg",
+        name: "Hong Kong Downtown Horizon Drone Pinewood Battery",
         compressed: true,
         path: "../../database/Hong Kong Downtown Horizon Drone Pinewood Battery.jpg",
         compressed_path: "../../database/Hong Kong Downtown Horizon Drone Pinewood Battery.placeholder.jpg",
@@ -481,7 +522,7 @@
         height: 1600,
       },
       {
-        name: "Kennedy Town Drone Panorama.jpg",
+        name: "Kennedy Town Drone Panorama",
         compressed: true,
         path: "../../database/Kennedy Town Drone Panorama.jpg",
         compressed_path: "../../database/Kennedy Town Drone Panorama.placeholder.jpg",
@@ -490,7 +531,7 @@
         height: 1600,
       },
       {
-        name: "Temple Street Market Overview.jpg",
+        name: "Temple Street Market Overview",
         compressed: true,
         path: "../../database/Temple Street Market Overview.jpg",
         compressed_path: "../../database/Temple Street Market Overview.placeholder.jpg",
@@ -499,7 +540,7 @@
         height: 2000,
       },
       {
-        name: "Embarcadero Drone Ferry Building Night Vertical.jpg",
+        name: "Embarcadero Drone Ferry Building Night Vertical",
         compressed: true,
         path: "../../database/Embarcadero Drone Ferry Building Night Vertical.jpg",
         compressed_path: "../../database/Embarcadero Drone Ferry Building Night Vertical.placeholder.jpg",
@@ -508,7 +549,7 @@
         height: 1999,
       },
       {
-        name: "Embarcadero Drone Ferry Building Daytime Vertical.jpg",
+        name: "Embarcadero Drone Ferry Building Daytime Vertical",
         compressed: true,
         path: "../../database/Embarcadero Drone Ferry Building Daytime Vertical.jpg",
         compressed_path: "../../database/Embarcadero Drone Ferry Building Daytime Vertical.placeholder.jpg",
@@ -517,7 +558,7 @@
         height: 2000,
       },
       {
-        name: "Downtown San Francisco Drone Vertical Powell Street Intersection.jpg",
+        name: "Downtown San Francisco Drone Vertical Powell Street Intersection",
         compressed: true,
         path: "../../database/Downtown San Francisco Drone Vertical Powell Street Intersection.jpg",
         compressed_path: "../../database/Downtown San Francisco Drone Vertical Powell Street Intersection.placeholder.jpg",
@@ -526,7 +567,7 @@
         height: 2000,
       },
       {
-        name: "Downtown San Francisco From South East - Horizontal.jpg",
+        name: "Downtown San Francisco From South East - Horizontal",
         compressed: true,
         path: "../../database/Downtown San Francisco From South East - Horizontal.jpg",
         compressed_path: "../../database/Downtown San Francisco From South East - Horizontal.placeholder.jpg",
@@ -535,7 +576,7 @@
         height: 1600,
       },
       {
-        name: "Golden Gate Bridge San Francisco Night Moon Vertical.jpg",
+        name: "Golden Gate Bridge San Francisco Night Moon Vertical",
         compressed: true,
         path: "../../database/Golden Gate Bridge San Francisco Night Moon Vertical.jpg",
         compressed_path: "../../database/Golden Gate Bridge San Francisco Night Moon Vertical.placeholder.jpg",
@@ -544,7 +585,7 @@
         height: 2000,
       },
       {
-        name: "Golden Gate Bridge Through Fence.jpg",
+        name: "Golden Gate Bridge Through Fence",
         compressed: true,
         path: "../../database/Golden Gate Bridge Through Fence.jpg",
         compressed_path: "../../database/Golden Gate Bridge Through Fence.placeholder.jpg",
@@ -553,7 +594,7 @@
         height: 1999,
       },
       {
-        name: "Sai Wan Drone (Vertical).jpg",
+        name: "Sai Wan Drone (Vertical)",
         compressed: true,
         path: "../../database/Sai Wan Drone (Vertical).jpg",
         compressed_path: "../../database/Sai Wan Drone (Vertical).placeholder.jpg",
@@ -562,7 +603,7 @@
         height: 1999,
       },
       {
-        name: "Empire State Building Daytime Telephoto.jpg",
+        name: "Empire State Building Daytime Telephoto",
         compressed: true,
         path: "../../database/Empire State Building Daytime Telephoto.jpg",
         compressed_path: "../../database/Empire State Building Daytime Telephoto.placeholder.jpg",
@@ -571,7 +612,7 @@
         height: 2000,
       },
       {
-        name: "Airplane Wing Over New York at Night.jpg",
+        name: "Airplane Wing Over New York at Night",
         compressed: true,
         path: "../../database/Airplane Wing Over New York at Night.jpg",
         compressed_path: "../../database/Airplane Wing Over New York at Night.placeholder.jpg",
@@ -580,7 +621,7 @@
         height: 2000,
       },
       {
-        name: "San Francisco Ferry Building Through Buildings.jpg",
+        name: "San Francisco Ferry Building Through Buildings",
         compressed: true,
         path: "../../database/San Francisco Ferry Building Through Buildings.jpg",
         compressed_path: "../../database/San Francisco Ferry Building Through Buildings.placeholder.jpg",
@@ -589,7 +630,7 @@
         height: 2000,
       },
       {
-        name: "San Francisco Hills Trolley Downtown Vertical.jpg",
+        name: "San Francisco Hills Trolley Downtown Vertical",
         compressed: true,
         path: "../../database/San Francisco Hills Trolley Downtown Vertical.jpg",
         compressed_path: "../../database/San Francisco Hills Trolley Downtown Vertical.placeholder.jpg",
@@ -598,7 +639,7 @@
         height: 2000,
       },
       {
-        name: "Embarcadero Drone Ferry Building Night Horizontal.jpg",
+        name: "Embarcadero Drone Ferry Building Night Horizontal",
         compressed: true,
         path: "../../database/Embarcadero Drone Ferry Building Night Horizontal.jpg",
         compressed_path: "../../database/Embarcadero Drone Ferry Building Night Horizontal.placeholder.jpg",
@@ -607,7 +648,7 @@
         height: 1600,
       },
       {
-        name: "New York Looking Down Street from High Line - Vertical.jpg",
+        name: "New York Looking Down Street from High Line - Vertical",
         compressed: true,
         path: "../../database/New York Looking Down Street from High Line - Vertical.jpg",
         compressed_path: "../../database/New York Looking Down Street from High Line - Vertical.placeholder.jpg",
@@ -616,7 +657,7 @@
         height: 1999,
       },
       {
-        name: "Hong Kong Night Skyline (Vertical).jpg",
+        name: "Hong Kong Night Skyline (Vertical)",
         compressed: true,
         path: "../../database/Hong Kong Night Skyline (Vertical).jpg",
         compressed_path: "../../database/Hong Kong Night Skyline (Vertical).placeholder.jpg",
@@ -625,7 +666,7 @@
         height: 2000,
       },
       {
-        name: "Hong Kong Skyline Panorama.jpg",
+        name: "Hong Kong Skyline Panorama",
         compressed: true,
         path: "../../database/Hong Kong Skyline Panorama.jpg",
         compressed_path: "../../database/Hong Kong Skyline Panorama.placeholder.jpg",
@@ -634,7 +675,7 @@
         height: 1600,
       },
       {
-        name: "Top of the Rock Sign.jpg",
+        name: "Top of the Rock Sign",
         compressed: true,
         path: "../../database/Top of the Rock Sign.jpg",
         compressed_path: "../../database/Top of the Rock Sign.placeholder.jpg",
@@ -643,7 +684,7 @@
         height: 1600,
       },
       {
-        name: "Blair Arch Tigerlilies Drone (8x10).jpg",
+        name: "Blair Arch Tigerlilies Drone (8x10)",
         compressed: true,
         path: "../../database/Blair Arch Tigerlilies Drone (8x10).jpg",
         compressed_path: "../../database/Blair Arch Tigerlilies Drone (8x10).placeholder.jpg",
@@ -652,7 +693,7 @@
         height: 1999,
       },
       {
-        name: "Blair Arch Drone Landscape.jpg",
+        name: "Blair Arch Drone Landscape",
         compressed: true,
         path: "../../database/Blair Arch Drone Landscape.jpg",
         compressed_path: "../../database/Blair Arch Drone Landscape.placeholder.jpg",
@@ -661,7 +702,7 @@
         height: 1200,
       },
       {
-        name: "Lombard Street Drone.jpg",
+        name: "Lombard Street Drone",
         compressed: true,
         path: "../../database/Lombard Street Drone.jpg",
         compressed_path: "../../database/Lombard Street Drone.placeholder.jpg",
@@ -670,7 +711,7 @@
         height: 2000,
       },
       {
-        name: "Patton Hall Drone.jpg",
+        name: "Patton Hall Drone",
         compressed: true,
         path: "../../database/Patton Hall Drone.jpg",
         compressed_path: "../../database/Patton Hall Drone.placeholder.jpg",
@@ -679,7 +720,7 @@
         height: 2000,
       },
       {
-        name: "Lombard Street Drone Vertical Angled.jpg",
+        name: "Lombard Street Drone Vertical Angled",
         compressed: true,
         path: "../../database/Lombard Street Drone Vertical Angled.jpg",
         compressed_path: "../../database/Lombard Street Drone Vertical Angled.placeholder.jpg",
@@ -688,7 +729,7 @@
         height: 1999,
       },
       {
-        name: "Yin Yang Golden Gate Bridge Light Painting.jpg",
+        name: "Yin Yang Golden Gate Bridge Light Painting",
         compressed: true,
         path: "../../database/Yin Yang Golden Gate Bridge Light Painting.jpg",
         compressed_path: "../../database/Yin Yang Golden Gate Bridge Light Painting.placeholder.jpg",
@@ -697,7 +738,7 @@
         height: 1600,
       },
       {
-        name: "Larry Bao Two Man Crew Rowing Boat Top Down.jpg",
+        name: "Larry Bao Two Man Crew Rowing Boat Top Down",
         compressed: true,
         path: "../../database/Larry Bao Two Man Crew Rowing Boat Top Down.jpg",
         compressed_path: "../../database/Larry Bao Two Man Crew Rowing Boat Top Down.placeholder.jpg",
@@ -706,7 +747,7 @@
         height: 2000,
       },
       {
-        name: "Marin High School Tennis Courts Drone Top Down.jpg",
+        name: "Marin High School Tennis Courts Drone Top Down",
         compressed: true,
         path: "../../database/Marin High School Tennis Courts Drone Top Down.jpg",
         compressed_path: "../../database/Marin High School Tennis Courts Drone Top Down.placeholder.jpg",
@@ -715,7 +756,7 @@
         height: 2136,
       },
       {
-        name: "Times Square Santa.jpg",
+        name: "Times Square Santa",
         compressed: true,
         path: "../../database/Times Square Santa.jpg",
         compressed_path: "../../database/Times Square Santa.placeholder.jpg",
@@ -724,7 +765,7 @@
         height: 2399,
       },
       {
-        name: "Times Square Long Exposure Cars.jpg",
+        name: "Times Square Long Exposure Cars",
         compressed: true,
         path: "../../database/Times Square Long Exposure Cars.jpg",
         compressed_path: "../../database/Times Square Long Exposure Cars.placeholder.jpg",
@@ -733,7 +774,7 @@
         height: 1600,
       },
       {
-        name: "Times Square Taxi (Side).jpg",
+        name: "Times Square Taxi (Side)",
         compressed: true,
         path: "../../database/Times Square Taxi (Side).jpg",
         compressed_path: "../../database/Times Square Taxi (Side).placeholder.jpg",
@@ -742,7 +783,7 @@
         height: 1600,
       },
       {
-        name: "Time Square Taxi.jpg",
+        name: "Time Square Taxi",
         compressed: true,
         path: "../../database/Time Square Taxi.jpg",
         compressed_path: "../../database/Time Square Taxi.placeholder.jpg",
@@ -751,7 +792,7 @@
         height: 2400,
       },
       {
-        name: "New York Street Artist (Front).jpg",
+        name: "New York Street Artist (Front)",
         compressed: true,
         path: "../../database/New York Street Artist (Front).jpg",
         compressed_path: "../../database/New York Street Artist (Front).placeholder.jpg",
@@ -760,7 +801,7 @@
         height: 2399,
       },
       {
-        name: "Times Square Screens.jpg",
+        name: "Times Square Screens",
         compressed: true,
         path: "../../database/Times Square Screens.jpg",
         compressed_path: "../../database/Times Square Screens.placeholder.jpg",
@@ -769,7 +810,7 @@
         height: 2400,
       },
       {
-        name: "San Francisco Trolley at Night.jpg",
+        name: "San Francisco Trolley at Night",
         compressed: true,
         path: "../../database/San Francisco Trolley at Night.jpg",
         compressed_path: "../../database/San Francisco Trolley at Night.placeholder.jpg",
@@ -778,7 +819,7 @@
         height: 2399,
       },
       {
-        name: "Looking Down Market Street Puddle Sunset.jpg",
+        name: "Looking Down Market Street Puddle Sunset",
         compressed: true,
         path: "../../database/Looking Down Market Street Puddle Sunset.jpg",
         compressed_path: "../../database/Looking Down Market Street Puddle Sunset.placeholder.jpg",
@@ -787,7 +828,7 @@
         height: 2399,
       },
       {
-        name: "Shibuya Crossing Bike Motion Blur.jpg",
+        name: "Shibuya Crossing Bike Motion Blur",
         compressed: true,
         path: "../../database/Shibuya Crossing Bike Motion Blur.jpg",
         compressed_path: "../../database/Shibuya Crossing Bike Motion Blur.placeholder.jpg",
@@ -796,7 +837,7 @@
         height: 1999,
       },
       {
-        name: "Shibuya Shopping Tokyo Vertical.jpg",
+        name: "Shibuya Shopping Tokyo Vertical",
         compressed: true,
         path: "../../database/Shibuya Shopping Tokyo Vertical.jpg",
         compressed_path: "../../database/Shibuya Shopping Tokyo Vertical.placeholder.jpg",
@@ -805,7 +846,7 @@
         height: 2000,
       },
       {
-        name: "Shibuya Crossing Wide Angle.jpg",
+        name: "Shibuya Crossing Wide Angle",
         compressed: true,
         path: "../../database/Shibuya Crossing Wide Angle.jpg",
         compressed_path: "../../database/Shibuya Crossing Wide Angle.placeholder.jpg",
@@ -814,7 +855,7 @@
         height: 1600,
       },
       {
-        name: "Tokyo Shrine.jpg",
+        name: "Tokyo Shrine",
         compressed: true,
         path: "../../database/Tokyo Shrine.jpg",
         compressed_path: "../../database/Tokyo Shrine.placeholder.jpg",
@@ -823,7 +864,7 @@
         height: 1999,
       },
       {
-        name: "Shinjuku, Tokyo, Japan (Vertical).jpg",
+        name: "Shinjuku, Tokyo, Japan (Vertical)",
         compressed: true,
         path: "../../database/Shinjuku, Tokyo, Japan (Vertical).jpg",
         compressed_path: "../../database/Shinjuku, Tokyo, Japan (Vertical).placeholder.jpg",
@@ -832,7 +873,7 @@
         height: 1999,
       },
       {
-        name: "Taipei, Taiwan Foggy Skyline.jpg",
+        name: "Taipei, Taiwan Foggy Skyline",
         compressed: true,
         path: "../../database/Taipei, Taiwan Foggy Skyline.jpg",
         compressed_path: "../../database/Taipei, Taiwan Foggy Skyline.placeholder.jpg",
@@ -841,7 +882,7 @@
         height: 1600,
       },
       {
-        name: "Ximen, Taiwan Long Exposure.jpg",
+        name: "Ximen, Taiwan Long Exposure",
         compressed: true,
         path: "../../database/Ximen, Taiwan Long Exposure.jpg",
         compressed_path: "../../database/Ximen, Taiwan Long Exposure.placeholder.jpg",
@@ -850,7 +891,7 @@
         height: 1600,
       },
       {
-        name: "Jiufen, Taiwan Drone - Horizontal.jpg",
+        name: "Jiufen, Taiwan Drone - Horizontal",
         compressed: true,
         path: "../../database/Jiufen, Taiwan Drone - Horizontal.jpg",
         compressed_path: "../../database/Jiufen, Taiwan Drone - Horizontal.placeholder.jpg",

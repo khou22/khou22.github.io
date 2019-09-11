@@ -286,13 +286,54 @@
 
 <!-- <h1>Taiwan - KHou Photography</h1> -->
 
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header" id="modalTitle">
+    Modal Title
+  </div>
+  <input id="modalTitleSelectable" value="Modal Title" style="opacity:0" />
+  <div class="image content">
+    <img
+      class="ui centered medium image"
+      id="modalImage"
+      src="/images/wireframe/image.png"
+    />
+  </div>
+  <div class="actions">
+    <div class="ui button" onClick="closeModal()">Close</div>
+    <div class="ui button" onClick="copyName()">Copy Name</div>
+  </div>
+</div>
+<script>
+  $(".ui.modal").modal();
+
+  var openModal = function(name, src) {
+    document.getElementById("modalImage").setAttribute("src", src);
+    document.getElementById("modalTitle").innerText = name;
+    document.getElementById("modalTitleSelectable").innerText = name;
+    $(".ui.modal").modal("show");
+  };
+
+  var copyName = function() {
+    var fileName = document.getElementById("modalTitleSelectable");
+    fileName.select();
+    fileName.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+  };
+
+  var closeModal = function() {
+    $(".ui.modal").modal("hide");
+  };
+</script>
+
+<!-- JS Object -->
 <!-- Autogen via generate.py -->
-<!-- 2019-09-11 14:29:38 -->
+<!-- 2019-09-11 15:44:52 -->
 <script>
   const GALLERY_IMAGES = {
     'Taiwan': [
       {
-        name: "Taipei Park Bird Watching Dylan Fursty Dark Edit Black Bird.jpg",
+        name: "Taipei Park Bird Watching Dylan Fursty Dark Edit Black Bird",
         compressed: true,
         path: "../../database/Taipei Park Bird Watching Dylan Fursty Dark Edit Black Bird.jpg",
         compressed_path: "../../database/Taipei Park Bird Watching Dylan Fursty Dark Edit Black Bird.placeholder.jpg",
@@ -301,7 +342,7 @@
         height: 2000,
       },
       {
-        name: "Taipei Park Bird Watching Dylan Fursty Dark Edit White Bird.jpg",
+        name: "Taipei Park Bird Watching Dylan Fursty Dark Edit White Bird",
         compressed: true,
         path: "../../database/Taipei Park Bird Watching Dylan Fursty Dark Edit White Bird.jpg",
         compressed_path: "../../database/Taipei Park Bird Watching Dylan Fursty Dark Edit White Bird.placeholder.jpg",
@@ -310,7 +351,7 @@
         height: 1999,
       },
       {
-        name: "Taipei Park Bird Watching Dylan Fursty Dark Edit White Bird Flying.jpg",
+        name: "Taipei Park Bird Watching Dylan Fursty Dark Edit White Bird Flying",
         compressed: true,
         path: "../../database/Taipei Park Bird Watching Dylan Fursty Dark Edit White Bird Flying.jpg",
         compressed_path: "../../database/Taipei Park Bird Watching Dylan Fursty Dark Edit White Bird Flying.placeholder.jpg",
@@ -319,7 +360,7 @@
         height: 1600,
       },
       {
-        name: "Chiang Kai Shek Memorial With Moon At Night.jpg",
+        name: "Chiang Kai Shek Memorial With Moon At Night",
         compressed: true,
         path: "../../database/Chiang Kai Shek Memorial With Moon At Night.jpg",
         compressed_path: "../../database/Chiang Kai Shek Memorial With Moon At Night.placeholder.jpg",
@@ -328,7 +369,7 @@
         height: 2000,
       },
       {
-        name: "Taipei, Taiwan Foggy Skyline.jpg",
+        name: "Taipei, Taiwan Foggy Skyline",
         compressed: true,
         path: "../../database/Taipei, Taiwan Foggy Skyline.jpg",
         compressed_path: "../../database/Taipei, Taiwan Foggy Skyline.placeholder.jpg",
@@ -337,7 +378,7 @@
         height: 1600,
       },
       {
-        name: "Ximen, Taiwan Long Exposure.jpg",
+        name: "Ximen, Taiwan Long Exposure",
         compressed: true,
         path: "../../database/Ximen, Taiwan Long Exposure.jpg",
         compressed_path: "../../database/Ximen, Taiwan Long Exposure.placeholder.jpg",
@@ -346,7 +387,7 @@
         height: 1600,
       },
       {
-        name: "Chiang Kai Shek at Night.jpg",
+        name: "Chiang Kai Shek at Night",
         compressed: true,
         path: "../../database/Chiang Kai Shek at Night.jpg",
         compressed_path: "../../database/Chiang Kai Shek at Night.placeholder.jpg",
@@ -355,7 +396,7 @@
         height: 1600,
       },
       {
-        name: "Taipei 101 Binoculars.jpg",
+        name: "Taipei 101 Binoculars",
         compressed: true,
         path: "../../database/Taipei 101 Binoculars.jpg",
         compressed_path: "../../database/Taipei 101 Binoculars.placeholder.jpg",

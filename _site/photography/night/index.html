@@ -286,13 +286,54 @@
 
 <!-- <h1>Night - KHou Photography</h1> -->
 
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header" id="modalTitle">
+    Modal Title
+  </div>
+  <input id="modalTitleSelectable" value="Modal Title" style="opacity:0" />
+  <div class="image content">
+    <img
+      class="ui centered medium image"
+      id="modalImage"
+      src="/images/wireframe/image.png"
+    />
+  </div>
+  <div class="actions">
+    <div class="ui button" onClick="closeModal()">Close</div>
+    <div class="ui button" onClick="copyName()">Copy Name</div>
+  </div>
+</div>
+<script>
+  $(".ui.modal").modal();
+
+  var openModal = function(name, src) {
+    document.getElementById("modalImage").setAttribute("src", src);
+    document.getElementById("modalTitle").innerText = name;
+    document.getElementById("modalTitleSelectable").innerText = name;
+    $(".ui.modal").modal("show");
+  };
+
+  var copyName = function() {
+    var fileName = document.getElementById("modalTitleSelectable");
+    fileName.select();
+    fileName.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+  };
+
+  var closeModal = function() {
+    $(".ui.modal").modal("hide");
+  };
+</script>
+
+<!-- JS Object -->
 <!-- Autogen via generate.py -->
-<!-- 2019-09-11 14:29:38 -->
+<!-- 2019-09-11 15:44:53 -->
 <script>
   const GALLERY_IMAGES = {
     'Night': [
       {
-        name: "Embarcadero Drone Ferry Building Night Vertical.jpg",
+        name: "Embarcadero Drone Ferry Building Night Vertical",
         compressed: true,
         path: "../../database/Embarcadero Drone Ferry Building Night Vertical.jpg",
         compressed_path: "../../database/Embarcadero Drone Ferry Building Night Vertical.placeholder.jpg",
@@ -301,7 +342,7 @@
         height: 1999,
       },
       {
-        name: "Golden Gate Bridge San Francisco Night Moon Vertical.jpg",
+        name: "Golden Gate Bridge San Francisco Night Moon Vertical",
         compressed: true,
         path: "../../database/Golden Gate Bridge San Francisco Night Moon Vertical.jpg",
         compressed_path: "../../database/Golden Gate Bridge San Francisco Night Moon Vertical.placeholder.jpg",
@@ -310,7 +351,7 @@
         height: 2000,
       },
       {
-        name: "Airplane Wing Over New York at Night.jpg",
+        name: "Airplane Wing Over New York at Night",
         compressed: true,
         path: "../../database/Airplane Wing Over New York at Night.jpg",
         compressed_path: "../../database/Airplane Wing Over New York at Night.placeholder.jpg",
@@ -319,7 +360,7 @@
         height: 2000,
       },
       {
-        name: "Embarcadero Drone Ferry Building Night Horizontal.jpg",
+        name: "Embarcadero Drone Ferry Building Night Horizontal",
         compressed: true,
         path: "../../database/Embarcadero Drone Ferry Building Night Horizontal.jpg",
         compressed_path: "../../database/Embarcadero Drone Ferry Building Night Horizontal.placeholder.jpg",
@@ -328,7 +369,7 @@
         height: 1600,
       },
       {
-        name: "Hong Kong Night Skyline (Vertical).jpg",
+        name: "Hong Kong Night Skyline (Vertical)",
         compressed: true,
         path: "../../database/Hong Kong Night Skyline (Vertical).jpg",
         compressed_path: "../../database/Hong Kong Night Skyline (Vertical).placeholder.jpg",
@@ -337,7 +378,7 @@
         height: 2000,
       },
       {
-        name: "Cliff House Sutro Baths at Night.jpg",
+        name: "Cliff House Sutro Baths at Night",
         compressed: true,
         path: "../../database/Cliff House Sutro Baths at Night.jpg",
         compressed_path: "../../database/Cliff House Sutro Baths at Night.placeholder.jpg",
@@ -346,7 +387,7 @@
         height: 1600,
       },
       {
-        name: "San Francisco Trolley at Night.jpg",
+        name: "San Francisco Trolley at Night",
         compressed: true,
         path: "../../database/San Francisco Trolley at Night.jpg",
         compressed_path: "../../database/San Francisco Trolley at Night.placeholder.jpg",

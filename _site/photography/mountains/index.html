@@ -286,13 +286,54 @@
 
 <!-- <h1>Mountains - KHou Photography</h1> -->
 
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header" id="modalTitle">
+    Modal Title
+  </div>
+  <input id="modalTitleSelectable" value="Modal Title" style="opacity:0" />
+  <div class="image content">
+    <img
+      class="ui centered medium image"
+      id="modalImage"
+      src="/images/wireframe/image.png"
+    />
+  </div>
+  <div class="actions">
+    <div class="ui button" onClick="closeModal()">Close</div>
+    <div class="ui button" onClick="copyName()">Copy Name</div>
+  </div>
+</div>
+<script>
+  $(".ui.modal").modal();
+
+  var openModal = function(name, src) {
+    document.getElementById("modalImage").setAttribute("src", src);
+    document.getElementById("modalTitle").innerText = name;
+    document.getElementById("modalTitleSelectable").innerText = name;
+    $(".ui.modal").modal("show");
+  };
+
+  var copyName = function() {
+    var fileName = document.getElementById("modalTitleSelectable");
+    fileName.select();
+    fileName.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+  };
+
+  var closeModal = function() {
+    $(".ui.modal").modal("hide");
+  };
+</script>
+
+<!-- JS Object -->
 <!-- Autogen via generate.py -->
-<!-- 2019-09-11 14:29:38 -->
+<!-- 2019-09-11 15:44:53 -->
 <script>
   const GALLERY_IMAGES = {
     'Mountains': [
       {
-        name: "Napa Valley Drone Landscape Sunset House.jpg",
+        name: "Napa Valley Drone Landscape Sunset House",
         compressed: true,
         path: "../../database/Napa Valley Drone Landscape Sunset House.jpg",
         compressed_path: "../../database/Napa Valley Drone Landscape Sunset House.placeholder.jpg",
@@ -301,7 +342,7 @@
         height: 1200,
       },
       {
-        name: "Marin Headlands Sunset Road.jpg",
+        name: "Marin Headlands Sunset Road",
         compressed: true,
         path: "../../database/Marin Headlands Sunset Road.jpg",
         compressed_path: "../../database/Marin Headlands Sunset Road.placeholder.jpg",
@@ -310,7 +351,7 @@
         height: 2000,
       },
       {
-        name: "Marin Headlands Hills Silhouette.jpg",
+        name: "Marin Headlands Hills Silhouette",
         compressed: true,
         path: "../../database/Marin Headlands Hills Silhouette.jpg",
         compressed_path: "../../database/Marin Headlands Hills Silhouette.placeholder.jpg",
@@ -319,7 +360,7 @@
         height: 2000,
       },
       {
-        name: "Mai Chau Rice Paddies Sunset Panorama 2.jpg",
+        name: "Mai Chau Rice Paddies Sunset Panorama 2",
         compressed: true,
         path: "../../database/Mai Chau Rice Paddies Sunset Panorama 2.jpg",
         compressed_path: "../../database/Mai Chau Rice Paddies Sunset Panorama 2.placeholder.jpg",
@@ -328,7 +369,7 @@
         height: 1600,
       },
       {
-        name: "Jiufen, Taiwan Drone - Vertical.jpg",
+        name: "Jiufen, Taiwan Drone - Vertical",
         compressed: true,
         path: "../../database/Jiufen, Taiwan Drone - Vertical.jpg",
         compressed_path: "../../database/Jiufen, Taiwan Drone - Vertical.placeholder.jpg",
@@ -337,7 +378,7 @@
         height: 2000,
       },
       {
-        name: "Bear Valley Bloods Ridge Sunset Drone Vertical Dark.jpg",
+        name: "Bear Valley Bloods Ridge Sunset Drone Vertical Dark",
         compressed: true,
         path: "../../database/Bear Valley Bloods Ridge Sunset Drone Vertical Dark.jpg",
         compressed_path: "../../database/Bear Valley Bloods Ridge Sunset Drone Vertical Dark.placeholder.jpg",
@@ -346,7 +387,7 @@
         height: 1999,
       },
       {
-        name: "Bear Valley Bloods Ridge Sunset Drone Landscape Dark.jpg",
+        name: "Bear Valley Bloods Ridge Sunset Drone Landscape Dark",
         compressed: true,
         path: "../../database/Bear Valley Bloods Ridge Sunset Drone Landscape Dark.jpg",
         compressed_path: "../../database/Bear Valley Bloods Ridge Sunset Drone Landscape Dark.placeholder.jpg",
@@ -355,7 +396,7 @@
         height: 1200,
       },
       {
-        name: "Bear Valley Bloods Ridge Sunset Drone Landscape Orange Panorama.jpg",
+        name: "Bear Valley Bloods Ridge Sunset Drone Landscape Orange Panorama",
         compressed: true,
         path: "../../database/Bear Valley Bloods Ridge Sunset Drone Landscape Orange Panorama.jpg",
         compressed_path: "../../database/Bear Valley Bloods Ridge Sunset Drone Landscape Orange Panorama.placeholder.jpg",
@@ -364,7 +405,7 @@
         height: 1200,
       },
       {
-        name: "Bear Valley Bloods Ridge Sunset Drone Vertical Pink Bright Far.jpg",
+        name: "Bear Valley Bloods Ridge Sunset Drone Vertical Pink Bright Far",
         compressed: true,
         path: "../../database/Bear Valley Bloods Ridge Sunset Drone Vertical Pink Bright Far.jpg",
         compressed_path: "../../database/Bear Valley Bloods Ridge Sunset Drone Vertical Pink Bright Far.placeholder.jpg",
@@ -373,7 +414,7 @@
         height: 1999,
       },
       {
-        name: "Downtown San Francisco From South East - Horizontal.jpg",
+        name: "Downtown San Francisco From South East - Horizontal",
         compressed: true,
         path: "../../database/Downtown San Francisco From South East - Horizontal.jpg",
         compressed_path: "../../database/Downtown San Francisco From South East - Horizontal.placeholder.jpg",
@@ -382,7 +423,7 @@
         height: 1600,
       },
       {
-        name: "Bear Valley Mountains Drone Landscape.jpg",
+        name: "Bear Valley Mountains Drone Landscape",
         compressed: true,
         path: "../../database/Bear Valley Mountains Drone Landscape.jpg",
         compressed_path: "../../database/Bear Valley Mountains Drone Landscape.placeholder.jpg",
@@ -391,7 +432,7 @@
         height: 1600,
       },
       {
-        name: "Bear Valley Bear Lake Drone Vertical.jpg",
+        name: "Bear Valley Bear Lake Drone Vertical",
         compressed: true,
         path: "../../database/Bear Valley Bear Lake Drone Vertical.jpg",
         compressed_path: "../../database/Bear Valley Bear Lake Drone Vertical.placeholder.jpg",
@@ -400,7 +441,7 @@
         height: 1999,
       },
       {
-        name: "Marin Headlands Sunset Hills Landscape.jpg",
+        name: "Marin Headlands Sunset Hills Landscape",
         compressed: true,
         path: "../../database/Marin Headlands Sunset Hills Landscape.jpg",
         compressed_path: "../../database/Marin Headlands Sunset Hills Landscape.placeholder.jpg",

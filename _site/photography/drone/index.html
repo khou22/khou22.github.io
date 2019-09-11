@@ -286,13 +286,54 @@
 
 <!-- <h1>Drone - KHou Photography</h1> -->
 
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header" id="modalTitle">
+    Modal Title
+  </div>
+  <input id="modalTitleSelectable" value="Modal Title" style="opacity:0" />
+  <div class="image content">
+    <img
+      class="ui centered medium image"
+      id="modalImage"
+      src="/images/wireframe/image.png"
+    />
+  </div>
+  <div class="actions">
+    <div class="ui button" onClick="closeModal()">Close</div>
+    <div class="ui button" onClick="copyName()">Copy Name</div>
+  </div>
+</div>
+<script>
+  $(".ui.modal").modal();
+
+  var openModal = function(name, src) {
+    document.getElementById("modalImage").setAttribute("src", src);
+    document.getElementById("modalTitle").innerText = name;
+    document.getElementById("modalTitleSelectable").innerText = name;
+    $(".ui.modal").modal("show");
+  };
+
+  var copyName = function() {
+    var fileName = document.getElementById("modalTitleSelectable");
+    fileName.select();
+    fileName.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+  };
+
+  var closeModal = function() {
+    $(".ui.modal").modal("hide");
+  };
+</script>
+
+<!-- JS Object -->
 <!-- Autogen via generate.py -->
-<!-- 2019-09-11 14:29:38 -->
+<!-- 2019-09-11 15:44:53 -->
 <script>
   const GALLERY_IMAGES = {
     'Drone': [
       {
-        name: "Ping Shek Estate Drone Top Down (Vertical).jpg",
+        name: "Ping Shek Estate Drone Top Down (Vertical)",
         compressed: true,
         path: "../../database/Ping Shek Estate Drone Top Down (Vertical).jpg",
         compressed_path: "../../database/Ping Shek Estate Drone Top Down (Vertical).placeholder.jpg",
@@ -301,7 +342,7 @@
         height: 1999,
       },
       {
-        name: "Shek Lek Pui Reservoir Drone (Vertical).jpg",
+        name: "Shek Lek Pui Reservoir Drone (Vertical)",
         compressed: true,
         path: "../../database/Shek Lek Pui Reservoir Drone (Vertical).jpg",
         compressed_path: "../../database/Shek Lek Pui Reservoir Drone (Vertical).placeholder.jpg",
@@ -310,7 +351,7 @@
         height: 2400,
       },
       {
-        name: "Transamerica Building San Francisco Drone Vertical.jpg",
+        name: "Transamerica Building San Francisco Drone Vertical",
         compressed: true,
         path: "../../database/Transamerica Building San Francisco Drone Vertical.jpg",
         compressed_path: "../../database/Transamerica Building San Francisco Drone Vertical.placeholder.jpg",
@@ -319,7 +360,7 @@
         height: 1999,
       },
       {
-        name: "Napa Valley Drone Landscape Sunset House.jpg",
+        name: "Napa Valley Drone Landscape Sunset House",
         compressed: true,
         path: "../../database/Napa Valley Drone Landscape Sunset House.jpg",
         compressed_path: "../../database/Napa Valley Drone Landscape Sunset House.placeholder.jpg",
@@ -328,7 +369,7 @@
         height: 1200,
       },
       {
-        name: "Seoul, Korea Temple Drone Top Down.jpg",
+        name: "Seoul, Korea Temple Drone Top Down",
         compressed: true,
         path: "../../database/Seoul, Korea Temple Drone Top Down.jpg",
         compressed_path: "../../database/Seoul, Korea Temple Drone Top Down.placeholder.jpg",
@@ -337,7 +378,7 @@
         height: 1999,
       },
       {
-        name: "San Francisco Downtown Twilight Sunset Drone Panorama.jpg",
+        name: "San Francisco Downtown Twilight Sunset Drone Panorama",
         compressed: true,
         path: "../../database/San Francisco Downtown Twilight Sunset Drone Panorama.jpg",
         compressed_path: "../../database/San Francisco Downtown Twilight Sunset Drone Panorama.placeholder.jpg",
@@ -346,7 +387,7 @@
         height: 1600,
       },
       {
-        name: "Sai Wan, Hong Kong Drone - Vertical.jpg",
+        name: "Sai Wan, Hong Kong Drone - Vertical",
         compressed: true,
         path: "../../database/Sai Wan, Hong Kong Drone - Vertical.jpg",
         compressed_path: "../../database/Sai Wan, Hong Kong Drone - Vertical.placeholder.jpg",
@@ -355,7 +396,7 @@
         height: 1999,
       },
       {
-        name: "Sai Wan Drone 2 (Vertical).jpg",
+        name: "Sai Wan Drone 2 (Vertical)",
         compressed: true,
         path: "../../database/Sai Wan Drone 2 (Vertical).jpg",
         compressed_path: "../../database/Sai Wan Drone 2 (Vertical).placeholder.jpg",
@@ -364,7 +405,7 @@
         height: 1907,
       },
       {
-        name: "Marina Bay Sands Drone (Vertical).jpg",
+        name: "Marina Bay Sands Drone (Vertical)",
         compressed: true,
         path: "../../database/Marina Bay Sands Drone (Vertical).jpg",
         compressed_path: "../../database/Marina Bay Sands Drone (Vertical).placeholder.jpg",
@@ -373,7 +414,7 @@
         height: 1999,
       },
       {
-        name: "Kowloon Bay Drone (Vertical).jpg",
+        name: "Kowloon Bay Drone (Vertical)",
         compressed: true,
         path: "../../database/Kowloon Bay Drone (Vertical).jpg",
         compressed_path: "../../database/Kowloon Bay Drone (Vertical).placeholder.jpg",
@@ -382,7 +423,7 @@
         height: 2000,
       },
       {
-        name: "Gardens by the Bay (Vertical Drone).jpg",
+        name: "Gardens by the Bay (Vertical Drone)",
         compressed: true,
         path: "../../database/Gardens by the Bay (Vertical Drone).jpg",
         compressed_path: "../../database/Gardens by the Bay (Vertical Drone).placeholder.jpg",
@@ -391,7 +432,7 @@
         height: 1999,
       },
       {
-        name: "Hong Kong Skyline Day Drone - Vertical.jpg",
+        name: "Hong Kong Skyline Day Drone - Vertical",
         compressed: true,
         path: "../../database/Hong Kong Skyline Day Drone - Vertical.jpg",
         compressed_path: "../../database/Hong Kong Skyline Day Drone - Vertical.placeholder.jpg",
@@ -400,7 +441,7 @@
         height: 1999,
       },
       {
-        name: "Jiufen, Taiwan Drone - Vertical.jpg",
+        name: "Jiufen, Taiwan Drone - Vertical",
         compressed: true,
         path: "../../database/Jiufen, Taiwan Drone - Vertical.jpg",
         compressed_path: "../../database/Jiufen, Taiwan Drone - Vertical.placeholder.jpg",
@@ -409,7 +450,7 @@
         height: 2000,
       },
       {
-        name: "High Island Reservoir East Dam Drone Top Down.jpg",
+        name: "High Island Reservoir East Dam Drone Top Down",
         compressed: true,
         path: "../../database/High Island Reservoir East Dam Drone Top Down.jpg",
         compressed_path: "../../database/High Island Reservoir East Dam Drone Top Down.placeholder.jpg",
@@ -418,7 +459,7 @@
         height: 1600,
       },
       {
-        name: "Hong Kong Downtown Horizon Drone Pinewood Battery.jpg",
+        name: "Hong Kong Downtown Horizon Drone Pinewood Battery",
         compressed: true,
         path: "../../database/Hong Kong Downtown Horizon Drone Pinewood Battery.jpg",
         compressed_path: "../../database/Hong Kong Downtown Horizon Drone Pinewood Battery.placeholder.jpg",
@@ -427,7 +468,7 @@
         height: 1600,
       },
       {
-        name: "Kennedy Town Drone Panorama.jpg",
+        name: "Kennedy Town Drone Panorama",
         compressed: true,
         path: "../../database/Kennedy Town Drone Panorama.jpg",
         compressed_path: "../../database/Kennedy Town Drone Panorama.placeholder.jpg",
@@ -436,7 +477,7 @@
         height: 1600,
       },
       {
-        name: "Bear Valley Bloods Ridge Sunset Drone Vertical Dark.jpg",
+        name: "Bear Valley Bloods Ridge Sunset Drone Vertical Dark",
         compressed: true,
         path: "../../database/Bear Valley Bloods Ridge Sunset Drone Vertical Dark.jpg",
         compressed_path: "../../database/Bear Valley Bloods Ridge Sunset Drone Vertical Dark.placeholder.jpg",
@@ -445,7 +486,7 @@
         height: 1999,
       },
       {
-        name: "Embarcadero Drone Ferry Building Night Vertical.jpg",
+        name: "Embarcadero Drone Ferry Building Night Vertical",
         compressed: true,
         path: "../../database/Embarcadero Drone Ferry Building Night Vertical.jpg",
         compressed_path: "../../database/Embarcadero Drone Ferry Building Night Vertical.placeholder.jpg",
@@ -454,7 +495,7 @@
         height: 1999,
       },
       {
-        name: "Big Wave Beach, Hong Kong Top Down Drone.jpg",
+        name: "Big Wave Beach, Hong Kong Top Down Drone",
         compressed: true,
         path: "../../database/Big Wave Beach, Hong Kong Top Down Drone.jpg",
         compressed_path: "../../database/Big Wave Beach, Hong Kong Top Down Drone.placeholder.jpg",
@@ -463,7 +504,7 @@
         height: 2000,
       },
       {
-        name: "Bear Valley Bloods Ridge Sunset Drone Landscape Dark.jpg",
+        name: "Bear Valley Bloods Ridge Sunset Drone Landscape Dark",
         compressed: true,
         path: "../../database/Bear Valley Bloods Ridge Sunset Drone Landscape Dark.jpg",
         compressed_path: "../../database/Bear Valley Bloods Ridge Sunset Drone Landscape Dark.placeholder.jpg",
@@ -472,7 +513,7 @@
         height: 1200,
       },
       {
-        name: "Embarcadero Drone Ferry Building Daytime Vertical.jpg",
+        name: "Embarcadero Drone Ferry Building Daytime Vertical",
         compressed: true,
         path: "../../database/Embarcadero Drone Ferry Building Daytime Vertical.jpg",
         compressed_path: "../../database/Embarcadero Drone Ferry Building Daytime Vertical.placeholder.jpg",
@@ -481,7 +522,7 @@
         height: 2000,
       },
       {
-        name: "Bear Valley Bloods Ridge Sunset Drone Landscape Orange Panorama.jpg",
+        name: "Bear Valley Bloods Ridge Sunset Drone Landscape Orange Panorama",
         compressed: true,
         path: "../../database/Bear Valley Bloods Ridge Sunset Drone Landscape Orange Panorama.jpg",
         compressed_path: "../../database/Bear Valley Bloods Ridge Sunset Drone Landscape Orange Panorama.placeholder.jpg",
@@ -490,7 +531,7 @@
         height: 1200,
       },
       {
-        name: "Downtown San Francisco Drone Vertical Powell Street Intersection.jpg",
+        name: "Downtown San Francisco Drone Vertical Powell Street Intersection",
         compressed: true,
         path: "../../database/Downtown San Francisco Drone Vertical Powell Street Intersection.jpg",
         compressed_path: "../../database/Downtown San Francisco Drone Vertical Powell Street Intersection.placeholder.jpg",
@@ -499,7 +540,7 @@
         height: 2000,
       },
       {
-        name: "Bear Valley Bloods Ridge Sunset Drone Vertical Pink Bright Far.jpg",
+        name: "Bear Valley Bloods Ridge Sunset Drone Vertical Pink Bright Far",
         compressed: true,
         path: "../../database/Bear Valley Bloods Ridge Sunset Drone Vertical Pink Bright Far.jpg",
         compressed_path: "../../database/Bear Valley Bloods Ridge Sunset Drone Vertical Pink Bright Far.placeholder.jpg",
@@ -508,7 +549,7 @@
         height: 1999,
       },
       {
-        name: "Sai Wan Drone (Vertical).jpg",
+        name: "Sai Wan Drone (Vertical)",
         compressed: true,
         path: "../../database/Sai Wan Drone (Vertical).jpg",
         compressed_path: "../../database/Sai Wan Drone (Vertical).placeholder.jpg",
@@ -517,7 +558,7 @@
         height: 1999,
       },
       {
-        name: "Boats Top Down Drone.jpg",
+        name: "Boats Top Down Drone",
         compressed: true,
         path: "../../database/Boats Top Down Drone.jpg",
         compressed_path: "../../database/Boats Top Down Drone.placeholder.jpg",
@@ -526,7 +567,7 @@
         height: 1999,
       },
       {
-        name: "Bear Valley Mountains Drone Landscape.jpg",
+        name: "Bear Valley Mountains Drone Landscape",
         compressed: true,
         path: "../../database/Bear Valley Mountains Drone Landscape.jpg",
         compressed_path: "../../database/Bear Valley Mountains Drone Landscape.placeholder.jpg",
@@ -535,7 +576,7 @@
         height: 1600,
       },
       {
-        name: "Bear Valley Bear Lake Drone Vertical.jpg",
+        name: "Bear Valley Bear Lake Drone Vertical",
         compressed: true,
         path: "../../database/Bear Valley Bear Lake Drone Vertical.jpg",
         compressed_path: "../../database/Bear Valley Bear Lake Drone Vertical.placeholder.jpg",
@@ -544,7 +585,7 @@
         height: 1999,
       },
       {
-        name: "Downtown San Francisco Birds Eye View Top Down Powell Street Intersection Drone.jpg",
+        name: "Downtown San Francisco Birds Eye View Top Down Powell Street Intersection Drone",
         compressed: true,
         path: "../../database/Downtown San Francisco Birds Eye View Top Down Powell Street Intersection Drone.jpg",
         compressed_path: "../../database/Downtown San Francisco Birds Eye View Top Down Powell Street Intersection Drone.placeholder.jpg",
@@ -553,7 +594,7 @@
         height: 2000,
       },
       {
-        name: "Embarcadero Drone Ferry Building Night Horizontal.jpg",
+        name: "Embarcadero Drone Ferry Building Night Horizontal",
         compressed: true,
         path: "../../database/Embarcadero Drone Ferry Building Night Horizontal.jpg",
         compressed_path: "../../database/Embarcadero Drone Ferry Building Night Horizontal.placeholder.jpg",
@@ -562,7 +603,7 @@
         height: 1600,
       },
       {
-        name: "THS Tennis Court Drone (Drone Art).jpg",
+        name: "THS Tennis Court Drone (Drone Art)",
         compressed: true,
         path: "../../database/THS Tennis Court Drone (Drone Art).jpg",
         compressed_path: "../../database/THS Tennis Court Drone (Drone Art).placeholder.jpg",
@@ -571,7 +612,7 @@
         height: 2000,
       },
       {
-        name: "Blair Arch Tigerlilies Drone (8x10).jpg",
+        name: "Blair Arch Tigerlilies Drone (8x10)",
         compressed: true,
         path: "../../database/Blair Arch Tigerlilies Drone (8x10).jpg",
         compressed_path: "../../database/Blair Arch Tigerlilies Drone (8x10).placeholder.jpg",
@@ -580,7 +621,7 @@
         height: 1999,
       },
       {
-        name: "Blair Arch Drone Landscape.jpg",
+        name: "Blair Arch Drone Landscape",
         compressed: true,
         path: "../../database/Blair Arch Drone Landscape.jpg",
         compressed_path: "../../database/Blair Arch Drone Landscape.placeholder.jpg",
@@ -589,7 +630,7 @@
         height: 1200,
       },
       {
-        name: "1903 Hall and Cuyler Hall Drone.jpg",
+        name: "1903 Hall and Cuyler Hall Drone",
         compressed: true,
         path: "../../database/1903 Hall and Cuyler Hall Drone.jpg",
         compressed_path: "../../database/1903 Hall and Cuyler Hall Drone.placeholder.jpg",
@@ -598,7 +639,7 @@
         height: 1200,
       },
       {
-        name: "1903 Hall Drone Top Down.jpg",
+        name: "1903 Hall Drone Top Down",
         compressed: true,
         path: "../../database/1903 Hall Drone Top Down.jpg",
         compressed_path: "../../database/1903 Hall Drone Top Down.placeholder.jpg",
@@ -607,7 +648,7 @@
         height: 1200,
       },
       {
-        name: "Lombard Street Drone.jpg",
+        name: "Lombard Street Drone",
         compressed: true,
         path: "../../database/Lombard Street Drone.jpg",
         compressed_path: "../../database/Lombard Street Drone.placeholder.jpg",
@@ -616,7 +657,7 @@
         height: 2000,
       },
       {
-        name: "Marin High School Swimming Pool Drone Top Down.jpg",
+        name: "Marin High School Swimming Pool Drone Top Down",
         compressed: true,
         path: "../../database/Marin High School Swimming Pool Drone Top Down.jpg",
         compressed_path: "../../database/Marin High School Swimming Pool Drone Top Down.placeholder.jpg",
@@ -625,7 +666,7 @@
         height: 1600,
       },
       {
-        name: "Patton Hall Drone.jpg",
+        name: "Patton Hall Drone",
         compressed: true,
         path: "../../database/Patton Hall Drone.jpg",
         compressed_path: "../../database/Patton Hall Drone.placeholder.jpg",
@@ -634,7 +675,7 @@
         height: 2000,
       },
       {
-        name: "Lombard Street Drone Vertical Angled.jpg",
+        name: "Lombard Street Drone Vertical Angled",
         compressed: true,
         path: "../../database/Lombard Street Drone Vertical Angled.jpg",
         compressed_path: "../../database/Lombard Street Drone Vertical Angled.placeholder.jpg",
@@ -643,7 +684,7 @@
         height: 1999,
       },
       {
-        name: "THS Tennis Court Drone (Top Down).jpg",
+        name: "THS Tennis Court Drone (Top Down)",
         compressed: true,
         path: "../../database/THS Tennis Court Drone (Top Down).jpg",
         compressed_path: "../../database/THS Tennis Court Drone (Top Down).placeholder.jpg",
@@ -652,7 +693,7 @@
         height: 1600,
       },
       {
-        name: "Marin High School Tennis Courts Drone Top Down.jpg",
+        name: "Marin High School Tennis Courts Drone Top Down",
         compressed: true,
         path: "../../database/Marin High School Tennis Courts Drone Top Down.jpg",
         compressed_path: "../../database/Marin High School Tennis Courts Drone Top Down.placeholder.jpg",
@@ -661,7 +702,7 @@
         height: 2136,
       },
       {
-        name: "Palace of Fine Arts Street with Cars Drone.jpg",
+        name: "Palace of Fine Arts Street with Cars Drone",
         compressed: true,
         path: "../../database/Palace of Fine Arts Street with Cars Drone.jpg",
         compressed_path: "../../database/Palace of Fine Arts Street with Cars Drone.placeholder.jpg",
