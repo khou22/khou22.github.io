@@ -390,7 +390,7 @@ article strong { color: black; }
 .contact-tile-icon { max-height: 130px; max-width: 120px; display: block; margin: auto; transition: all 0.2s ease-in-out; }
 .contact-tile-icon:hover { transform: scale(1.2); -webkit-transform: scale(1.2); }
 
-.photography-grid { margin: auto; width: 2900px !important; margin-bottom: 8px !important; }
+.photography-grid { margin: auto; width: 3100px !important; margin-bottom: 8px !important; }
 .photography-grid-container { width: 100%; overflow-x: scroll; overflow-y: hidden; }
 .photography-modal-image { max-height: 70vh; max-width: 100% !important; }
 .photography-store-container { position: fixed; bottom: 24px; right: 12px; width: 200px; height: 40px; z-index: 5; }
