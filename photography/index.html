@@ -65,6 +65,20 @@ title: "KHou Photography"
   <h1 class="ui header photography-landing-header">Categories</h1>
   <div class="photography-grid-container">
     <div class="ui link cards photography-grid">
+      <a href="featured">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="{{
+                '/media/photography/featured.jpg' | prepend: site.baseurl
+              }}"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Featured</a>
+          </div>
+        </div>
+      </a>
       <a href="drone">
         <div class="ui card">
           <div class="image">
@@ -253,6 +267,22 @@ title: "KHou Photography"
         </div>
         <div class="content">
           <a class="header">Taiwan</a>
+        </div>
+      </div>
+    </a>
+
+    <a href="cross-country-road-trip">
+      <div class="ui card">
+        <div class="image">
+          <img
+            src="{{
+              '/media/photography/cross-country-road-trip.jpg'
+                | prepend: site.baseurl
+            }}"
+          />
+        </div>
+        <div class="content">
+          <a class="header">Cross Country Road Trip</a>
         </div>
       </div>
     </a>
