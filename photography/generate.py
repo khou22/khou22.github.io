@@ -88,6 +88,6 @@ for collectionSource in collectionList:
                 outputFile.write("      },\n")
 
 
-            outputFile.write("    ]\n")
+            outputFile.write("    ].reverse()\n")
             outputFile.write("  };\n")
             outputFile.write("</script>\n")
