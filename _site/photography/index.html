@@ -272,241 +272,275 @@
       <div class="wrapper">
         <div id="slideshow" class="photography-landing-slideshow">
   <div class="photography-landing-slideshow-slide">
-    <img
-      src="/database/Bear Valley Bloods Ridge Sunset Drone Landscape Orange Panorama.jpg"
-    />
+    <img src="/media/photography/cover/featured.jpg" />
     <div class="photography-landing-slideshow-slide-title">
-      <h1 class="ui header">Drone</h1>
-      <a href="/photography/drone">
+      <h1 class="ui header">Featured</h1>
+      <a href="/photography/featured">
         <button class="ui button">See All</button>
       </a>
     </div>
   </div>
-  <div class="photography-landing-slideshow-slide">
-    <img
-      src="/database/San Francisco Downtown Twilight Sunset Drone Panorama.jpg"
-    />
-    <div class="photography-landing-slideshow-slide-title">
-      <h1 class="ui header">San Francisco</h1>
-      <a href="/photography/san-francisco">
-        <button class="ui button">See All</button>
-      </a>
+    <div class="photography-landing-slideshow-slide">
+      <img
+        src="/database/Bear Valley Bloods Ridge Sunset Drone Landscape Orange Panorama.jpg"
+      />
+      <div class="photography-landing-slideshow-slide-title">
+        <h1 class="ui header">Drone</h1>
+        <a href="/photography/drone">
+          <button class="ui button">See All</button>
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="photography-landing-slideshow-slide">
-    <img
-      src="/database/Hong Kong Downtown Horizon Drone Pinewood Battery.jpg"
-    />
-    <div class="photography-landing-slideshow-slide-title">
-      <h1 class="ui header">Hong Kong</h1>
-      <a href="/photography/hong-kong">
-        <button class="ui button">See All</button>
-      </a>
+    <div class="photography-landing-slideshow-slide">
+      <img
+        src="/database/San Francisco Downtown Twilight Sunset Drone Panorama.jpg"
+      />
+      <div class="photography-landing-slideshow-slide-title">
+        <h1 class="ui header">San Francisco</h1>
+        <a href="/photography/san-francisco">
+          <button class="ui button">See All</button>
+        </a>
+      </div>
     </div>
-  </div>
-</div>
-
-<script>
-  $("#slideshow > div:gt(0)").hide();
-
-  setInterval(function() {
-    $("#slideshow > div:first")
-      .fadeOut(1000)
-      .next()
-      .fadeIn(1000)
-      .end()
-      .appendTo("#slideshow");
-  }, 3000);
-</script>
-
-<div class="photography-landing-wrapper">
-  <h1 class="ui header photography-landing-header">Categories</h1>
-  <div class="photography-grid-container">
-    <div class="ui link cards photography-grid">
-      <a href="drone">
-        <div class="ui card">
-          <div class="image">
-            <img
-              src="/media/photography/drone.jpg"
-            />
-          </div>
-          <div class="content">
-            <a class="header">Drone</a>
-          </div>
-        </div>
-      </a>
-      <a href="city">
-        <div class="ui card">
-          <div class="image">
-            <img
-              src="/media/photography/city.jpg"
-            />
-          </div>
-          <div class="content">
-            <a class="header">Urban</a>
-          </div>
-        </div>
-      </a>
-      <a href="night">
-        <div class="ui card">
-          <div class="image">
-            <img
-              src="/media/photography/night.jpg"
-            />
-          </div>
-          <div class="content">
-            <a class="header">Night</a>
-          </div>
-        </div>
-      </a>
-      <a href="sunsets">
-        <div class="ui card">
-          <div class="image">
-            <img
-              src="/media/photography/sunsets.jpg"
-            />
-          </div>
-          <div class="content">
-            <a class="header">Sunsets</a>
-          </div>
-        </div>
-      </a>
-      <a href="water">
-        <div class="ui card">
-          <div class="image">
-            <img
-              src="/media/photography/water.jpg"
-            />
-          </div>
-          <div class="content">
-            <a class="header">Water</a>
-          </div>
-        </div>
-      </a>
-      <a href="mountains">
-        <div class="ui card">
-          <div class="image">
-            <img
-              src="/media/photography/mountains.jpg"
-            />
-          </div>
-          <div class="content">
-            <a class="header">Mountains</a>
-          </div>
-        </div>
-      </a>
-      <a href="nature">
-        <div class="ui card">
-          <div class="image">
-            <img
-              src="/media/photography/nature.jpg"
-            />
-          </div>
-          <div class="content">
-            <a class="header">Nature</a>
-          </div>
-        </div>
-      </a>
-      <a href="road">
-        <div class="ui card">
-          <div class="image">
-            <img
-              src="/media/photography/road.jpg"
-            />
-          </div>
-          <div class="content">
-            <a class="header">Roads</a>
-          </div>
-        </div>
-      </a>
+    <div class="photography-landing-slideshow-slide">
+      <img
+        src="/database/Hong Kong Downtown Horizon Drone Pinewood Battery.jpg"
+      />
+      <div class="photography-landing-slideshow-slide-title">
+        <h1 class="ui header">Hong Kong</h1>
+        <a href="/photography/hong-kong">
+          <button class="ui button">See All</button>
+        </a>
+      </div>
     </div>
   </div>
 
-  <h1 class="ui header photography-landing-header">By Destination</h1>
+  <script>
+    $("#slideshow > div:gt(0)").hide();
 
-  <div class="ui link cards" style="justify-content: center;">
-    <a href="hong-kong">
-      <div class="ui card">
-        <div class="image">
-          <img
-            src="/media/photography/hong-kong.jpg"
-          />
-        </div>
-        <div class="content">
-          <a class="header">Hong Kong</a>
-        </div>
-      </div>
-    </a>
+    setInterval(function() {
+      $("#slideshow > div:first")
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .end()
+        .appendTo("#slideshow");
+    }, 3000);
+  </script>
 
-    <a href="san-francisco">
-      <div class="ui card">
-        <div class="image">
-          <img
-            src="/media/photography/san-francisco.jpg"
-          />
-        </div>
-        <div class="content">
-          <a class="header">San Francisco</a>
-        </div>
+  <div class="photography-landing-wrapper">
+    <h1 class="ui header photography-landing-header">Categories</h1>
+    <div class="photography-grid-container">
+      <div class="ui link cards photography-grid">
+        <a href="featured">
+          <div class="ui card">
+            <div class="image">
+              <img
+                src="/media/photography/featured.jpg"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Featured</a>
+            </div>
+          </div>
+        </a>
+        <a href="drone">
+          <div class="ui card">
+            <div class="image">
+              <img
+                src="/media/photography/drone.jpg"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Drone</a>
+            </div>
+          </div>
+        </a>
+        <a href="city">
+          <div class="ui card">
+            <div class="image">
+              <img
+                src="/media/photography/city.jpg"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Urban</a>
+            </div>
+          </div>
+        </a>
+        <a href="night">
+          <div class="ui card">
+            <div class="image">
+              <img
+                src="/media/photography/night.jpg"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Night</a>
+            </div>
+          </div>
+        </a>
+        <a href="sunsets">
+          <div class="ui card">
+            <div class="image">
+              <img
+                src="/media/photography/sunsets.jpg"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Sunsets</a>
+            </div>
+          </div>
+        </a>
+        <a href="water">
+          <div class="ui card">
+            <div class="image">
+              <img
+                src="/media/photography/water.jpg"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Water</a>
+            </div>
+          </div>
+        </a>
+        <a href="mountains">
+          <div class="ui card">
+            <div class="image">
+              <img
+                src="/media/photography/mountains.jpg"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Mountains</a>
+            </div>
+          </div>
+        </a>
+        <a href="nature">
+          <div class="ui card">
+            <div class="image">
+              <img
+                src="/media/photography/nature.jpg"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Nature</a>
+            </div>
+          </div>
+        </a>
+        <a href="road">
+          <div class="ui card">
+            <div class="image">
+              <img
+                src="/media/photography/road.jpg"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Roads</a>
+            </div>
+          </div>
+        </a>
       </div>
-    </a>
+    </div>
 
-    <a href="princeton">
-      <div class="ui card">
-        <div class="image">
-          <img
-            src="/media/photography/princeton.jpg"
-          />
-        </div>
-        <div class="content">
-          <a class="header">Princeton, New Jersey</a>
-        </div>
-      </div>
-    </a>
+    <h1 class="ui header photography-landing-header">By Destination</h1>
 
-    <a href="korea">
-      <div class="ui card">
-        <div class="image">
-          <img
-            src="/media/photography/korea.jpg"
-          />
+    <div class="ui link cards" style="justify-content: center;">
+      <a href="hong-kong">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="/media/photography/hong-kong.jpg"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Hong Kong</a>
+          </div>
         </div>
-        <div class="content">
-          <a class="header">Seoul, Korea</a>
-        </div>
-      </div>
-    </a>
+      </a>
 
-    <a href="tokyo">
-      <div class="ui card">
-        <div class="image">
-          <img
-            src="/media/photography/japan.jpg"
-          />
+      <a href="san-francisco">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="/media/photography/san-francisco.jpg"
+            />
+          </div>
+          <div class="content">
+            <a class="header">San Francisco</a>
+          </div>
         </div>
-        <div class="content">
-          <a class="header">Tokyo, Japan</a>
-        </div>
-      </div>
-    </a>
+      </a>
 
-    <a href="taiwan">
-      <div class="ui card">
-        <div class="image">
-          <img
-            src="/media/photography/taiwan.jpg"
-          />
+      <a href="princeton">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="/media/photography/princeton.jpg"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Princeton, New Jersey</a>
+          </div>
         </div>
-        <div class="content">
-          <a class="header">Taiwan</a>
+      </a>
+
+      <a href="korea">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="/media/photography/korea.jpg"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Seoul, Korea</a>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
+
+      <a href="tokyo">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="/media/photography/japan.jpg"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Tokyo, Japan</a>
+          </div>
+        </div>
+      </a>
+
+      <a href="taiwan">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="/media/photography/taiwan.jpg"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Taiwan</a>
+          </div>
+        </div>
+      </a>
+
+      <a href="cross-country-road-trip">
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="/media/photography/cross-country-road-trip.jpg"
+            />
+          </div>
+          <div class="content">
+            <a class="header">Cross Country Road Trip</a>
+          </div>
+        </div>
+      </a>
+    </div>
   </div>
-</div>
 
-<div class="photography-store-container">
-  <a href="" target="_blank">
+  <div class="photography-store-container">
+  <a href="https://forms.gle/caxTwfACGLqLbnqV6" target="_blank">
     <button class="ui active button positive photography-store-button">
       <i class="shopping cart icon"></i>
       Order Prints
@@ -514,6 +548,7 @@
   </a>
 </div>
 
+</div>
 
       </div>
     </div>
