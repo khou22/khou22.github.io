@@ -473,7 +473,12 @@
 
     <script>
       var storeClick = function() {
-        ga("send", "event", "Photography", "click", "Store");
+        ga("send", "event", {
+          eventCategory: "Photography",
+          eventAction: "click",
+          eventLabel: "Store",
+          transport: "beacon"
+        });
         window.open("https://forms.gle/caxTwfACGLqLbnqV6", "_blank");
       };
     </script>

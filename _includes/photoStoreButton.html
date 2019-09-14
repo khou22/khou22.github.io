@@ -7,7 +7,12 @@
 
     <script>
       var storeClick = function() {
-        ga("send", "event", "Photography", "click", "Store");
+        ga("send", "event", {
+          eventCategory: "Photography",
+          eventAction: "click",
+          eventLabel: "Store",
+          transport: "beacon"
+        });
         window.open("{{ site.photography_store_order_form }}", "_blank");
       };
     </script>
