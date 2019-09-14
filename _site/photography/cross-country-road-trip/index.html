@@ -501,11 +501,18 @@
 </script>
 
 <div class="photography-store-container">
-  <a href="https://forms.gle/caxTwfACGLqLbnqV6" target="_blank">
+  <a onclick="storeClick()">
     <button class="ui active button positive photography-store-button">
       <i class="shopping cart icon"></i>
       $25 Print + Frame
     </button>
+
+    <script>
+      var storeClick = function() {
+        ga("send", "event", "Photography", "click", "Store");
+        window.open("https://forms.gle/caxTwfACGLqLbnqV6", "_blank");
+      };
+    </script>
   </a>
 </div>
 
