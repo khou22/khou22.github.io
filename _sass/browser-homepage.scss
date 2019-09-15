@@ -1,0 +1,34 @@
+.browser-homepage {
+  width: 100%;
+  height: 100%;
+
+  &-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-content {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+
+    &-bookmarks {
+      width: 100%;
+      height: calc(100% - 200px);
+      padding: 12px;
+    }
+  }
+}

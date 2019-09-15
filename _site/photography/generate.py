@@ -91,3 +91,21 @@ for collectionSource in collectionList:
             outputFile.write("    ].reverse()\n")
             outputFile.write("  };\n")
             outputFile.write("</script>\n")
+
+
+################   Generate JS Object with All URLs   ################
+allPhotoNames = manager.getAllNames()
+with open("allImages.js", 'w') as outputFile:
+    outputFile.write("// Autogen via generate.py \n")
+    outputFile.write("// %s \n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+
+    outputFile.write("const ALL_DATABASE_PHOTOS = [\n")
+
+    for photoName in allPhotoNames:
+        filePath, placeholderFileName, width, height = manager.getSrc(photoName)
+        outputFile.write("    {\n")
+        outputFile.write("        url: \"/database/%s\",\n" % photoName)
+        outputFile.write("        horizontal: %s\n" % str(width > height).lower())
+        outputFile.write("    },\n")
+    
+    outputFile.write("];\n")

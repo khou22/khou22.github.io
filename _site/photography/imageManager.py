@@ -19,6 +19,7 @@ class ImageManager:
 
         self.images = {}
         self.placeholderImages = {}
+        self.allFileNames = []
         imageList = glob.glob('%s/*.jpg' % directory) # TODO: only jpeg images right now
         imagePlaceholderList = glob.glob('%s/*placeholder.jpg' % directory)
 
@@ -32,6 +33,10 @@ class ImageManager:
         for imagePath in imageList:
             fileName = os.path.basename(imagePath)
             self.images[fileName] = imagePath
+            self.allFileNames.append(fileName)
+    
+    def getAllNames(self):
+        return self.allFileNames;
     
     def fileNameWithoutExt(self, fileName):
         return os.path.splitext(os.path.basename(fileName))[0]
