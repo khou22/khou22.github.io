@@ -520,3 +520,4 @@ article strong { color: black; }
 .browser-homepage-content { position: absolute; top: 15%; left: 25%; width: 50%; height: 50%; display: flex; justify-content: center; flex-direction: column; align-items: center; }
 .browser-homepage-content img { width: 200px; height: 200px; }
 .browser-homepage-content-bookmarks { width: 100%; height: calc(100% - 200px); padding: 12px; }
+.browser-homepage-bookmarks-grid div { border: 1px solid white; }

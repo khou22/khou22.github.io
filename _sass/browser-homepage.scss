@@ -31,4 +31,12 @@
       padding: 12px;
     }
   }
+
+  &-bookmarks {
+    &-grid {
+      div {
+        border: 1px solid white;
+      }
+    }
+  }
 }
