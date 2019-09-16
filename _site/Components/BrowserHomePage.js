@@ -1,4 +1,5 @@
-var App = React.createClass({ // Main parent component
+var App = React.createClass({
+  // Main parent component
   getInitialState: function() {
     return {
       backgroundURL: this.randomBackground(),
@@ -34,7 +35,7 @@ var App = React.createClass({ // Main parent component
               iconFilter: {
                 "-webkit-filter": "invert(0%)"
               }
-            },
+            }
           ]
         },
         {
@@ -67,7 +68,7 @@ var App = React.createClass({ // Main parent component
               iconFilter: {
                 "-webkit-filter": "invert(0%)"
               }
-            },
+            }
           ]
         },
         {
@@ -100,15 +101,16 @@ var App = React.createClass({ // Main parent component
               iconFilter: {
                 "-webkit-filter": "invert(0%)"
               }
-            },
+            }
           ]
         }
       ]
-    }
+    };
   },
   randomBackground: function() {
     var max = goodImages.length; // Array of good images from the Python Script
-    var baseURL = "https://www.gstatic.com/prettyearth/assets/full/[number].jpg"; // Template URL
+    var baseURL =
+      "https://www.gstatic.com/prettyearth/assets/full/[number].jpg"; // Template URL
     var arrayIndex = Math.round(Math.random() * max); // Random number between the specified max/min
     var imageIndex = goodImages[arrayIndex];
     var finalUrl = baseURL.replace("[number]", imageIndex); // Inject image index
@@ -122,27 +124,38 @@ var App = React.createClass({ // Main parent component
     });
   },
   render: function() {
-
     // Without buttons
     return (
       <div>
-        <Background backgroundURL = {this.state.backgroundURL} />
+        <Background backgroundURL={this.state.backgroundURL} />
         <WeatherBar />
         <WelcomeBar />
         <ProfilePicture />
       </div>
-    )
+    );
 
     // With button
     return (
       <div>
-        <Background backgroundURL = {this.state.backgroundURL} />
+        <Background backgroundURL={this.state.backgroundURL} />
         <WeatherBar />
         <WelcomeBar />
         <ProfilePicture />
-        <ButtonGroup fadeTime={this.state.fadeTime} content={this.state.content[0]} index={0} />
-        <ButtonGroup fadeTime={this.state.fadeTime} content={this.state.content[1]} index={1} />
-        <ButtonGroup fadeTime={this.state.fadeTime} content={this.state.content[2]} index={2} />
+        <ButtonGroup
+          fadeTime={this.state.fadeTime}
+          content={this.state.content[0]}
+          index={0}
+        />
+        <ButtonGroup
+          fadeTime={this.state.fadeTime}
+          content={this.state.content[1]}
+          index={1}
+        />
+        <ButtonGroup
+          fadeTime={this.state.fadeTime}
+          content={this.state.content[2]}
+          index={2}
+        />
       </div>
     );
   }
@@ -151,17 +164,19 @@ var App = React.createClass({ // Main parent component
 var WeatherBar = React.createClass({
   getInitialState: function() {
     this.getWeatherForecast(); // Retrieve weather
-    return { // Set initial state of weather forecast (String type)
+    return {
+      // Set initial state of weather forecast (String type)
       weatherForecast: "Pending..."
-    }
+    };
   },
   getWeatherForecast: function() {
     var parentComponenet = this; // Store the parent component so that can access in jquery function
-    $.simpleWeather({ // Call library function
+    $.simpleWeather({
+      // Call library function
       // Documentation: http://simpleweatherjs.com/
-      location: 'Princeton, NJ',
-      woeid: '',
-      unit: 'f', // Units ('f' or 'c')
+      location: "Princeton, NJ",
+      woeid: "",
+      unit: "f", // Units ('f' or 'c')
       success: function(weather) {
         // console.log("Retrieved weather", weather); // Feedback
 
@@ -170,79 +185,78 @@ var WeatherBar = React.createClass({
 
         parentComponenet.setState({
           weatherForecast: final // Store data
-        })
+        });
       },
-      error: function(error) { // If error
+      error: function(error) {
+        // If error
         console.log("Error getting weather:", error); // Feedback
         parentComponenet.setState({
           weatherForecast: "Could not retrieve" // Feedback
-        })
+        });
       }
     }); // Must bind to React component so can set state later on
   },
   render: function() {
     var weather = this.state.weatherForecast; // Store weather data
-    var weatherIcon = { "background": "none" };
+    var weatherIcon = { background: "none" };
     // var weatherLink = "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2487956/";
-    var weatherLink = "https://www.yahoo.com/news/weather/country/state/city-2476729/"; // Princeton, NJ
-    if (weather.thumbnail) { // If ajax request successful
+    var weatherLink =
+      "https://www.yahoo.com/news/weather/country/state/city-2476729/"; // Princeton, NJ
+    if (weather.thumbnail) {
+      // If ajax request successful
       // Create style with image url
-      weatherIcon = { "backgroundImage": "url(" + weather.thumbnail + ")" };
+      weatherIcon = { backgroundImage: "url(" + weather.thumbnail + ")" };
       // Update link
       // weatherLink = weather.link; // Retrieve link
     }
     return (
-      <a href={ weatherLink } title="See Weather Channel website">
+      <a href={weatherLink} title="See Weather Channel website">
         <div className="browser-weather-bar glass">
-          <div className="browser-weather-icon" style={weatherIcon}>
-          </div>
+          <div className="browser-weather-icon" style={weatherIcon}></div>
           <div className="browser-weather-content">
-            <h3>{ weather.city }</h3>
+            <h3>{weather.city}</h3>
             <h3>
-              { weather.temp }&deg; F
+              {weather.temp}&deg; F
               <span className="browser-weather-text">
-                <span className="invisible-color">
-                  |||
-                </span>
-                { weather.high }/{ weather.low }
+                <span className="invisible-color">|||</span>
+                {weather.high}/{weather.low}
               </span>
             </h3>
             <p className="browser-weather-text">
-              { weather.currently } - { weather.text }
+              {weather.currently} - {weather.text}
             </p>
           </div>
         </div>
       </a>
-    )
+    );
   }
-})
+});
 
 var ProfilePicture = React.createClass({
   render: function() {
     return (
       <div>
-        <div className="profile-picture">
-        </div>
+        <div className="profile-picture"></div>
         <div className="profile-text">
           Kevin Hou
           <br />
           Princeton University &#39;20
         </div>
       </div>
-    )
+    );
   }
-})
+});
 
 var WelcomeBar = React.createClass({
   getInitialState: function() {
     setInterval(() => {
       this.setState({
         currentTime: this.getCurrentTime()
-      })
-    }, 500)
+      });
+    }, 500);
     return {
       currentTime: this.getCurrentTime()
-    }
+    };
   },
   getCurrentTime: function() {
     var today = new Date(); // Get current date
@@ -250,7 +264,8 @@ var WelcomeBar = React.createClass({
     if (h > 12) {
       h = h % 12; // 12 hour time, not military time
     }
-    if (h == 0) { // If hour is 12 or 24
+    if (h == 0) {
+      // If hour is 12 or 24
       h = "12";
     }
     var m = today.getMinutes();
@@ -262,7 +277,7 @@ var WelcomeBar = React.createClass({
       s = "0" + s; // Add a leading zero
     }
     var str = h + ":" + m + ":" + s; // Create string
-    return str // Return the string
+    return str; // Return the string
   },
   render: function() {
     return (
@@ -274,35 +289,36 @@ var WelcomeBar = React.createClass({
           <span className="actor__content--typing">|</span>
         </p>
       </div>
-    )
+    );
   }
-})
+});
 
 var ButtonGroup = React.createClass({
   getInitialState: function() {
     return {
       showLinks: false,
       groupName: this.props.content.name,
-      links: this.props.content.links,
-    }
+      links: this.props.content.links
+    };
   },
   clickedGroup: function() {
     // console.log("Clicked", this.state.groupName, "group"); // Feedback
-    for (var i = 0; i < this.state.links.length; i++) { // Cycle through all links in group
-      window.open(this.state.links[i].url, '_blank'); // Open links in a new tab
+    for (var i = 0; i < this.state.links.length; i++) {
+      // Cycle through all links in group
+      window.open(this.state.links[i].url, "_blank"); // Open links in a new tab
     }
   },
   clickedLink: function(linkNumber) {
     console.log("Clicked link:", linkNumber); // Feedback
     // window.open(this.state.links[linkNumber].url, '_blank'); // Opens in a new tab
-    window.open(this.state.links[linkNumber].url, '_self'); // Opens in same tab/window
+    window.open(this.state.links[linkNumber].url, "_self"); // Opens in same tab/window
   },
   showGroup: function(state) {
     // console.log("Mouse enter/exit ", this.state.groupName, "group"); // Feedback
     if (state == "show") {
       this.setState({
         showLinks: true
-      })
+      });
     } else {
       var hideTimer = setTimeout(() => {
         this.setState({ showLinks: false });
@@ -324,63 +340,71 @@ var ButtonGroup = React.createClass({
       counter++; // Index
       // var iconStyle = { "backgroundImage": "url(" + link.iconPath + ")" }
       var iconStyle = link.iconFilter;
-      iconStyle.backgroundImage = "url(" + link.iconPath + ")";  // Build icon style
+      iconStyle.backgroundImage = "url(" + link.iconPath + ")"; // Build icon style
       // console.log(iconStyle); // Debugging
       return (
-        <div style={iconStyle}
-          className={"button-subgroup group-" + index + " group-" + index + "-" + counter}
-          onClick={clickedLink.bind(this, counter)} >
+        <div
+          style={iconStyle}
+          className={
+            "button-subgroup group-" + index + " group-" + index + "-" + counter
+          }
+          onClick={clickedLink.bind(this, counter)}
+        >
           <div className="icon-label">{link.label}</div>
         </div>
-      )
-    })
+      );
+    });
     var buttonGroupStyle = this.props.content.groupIconFilter; // Apply filters
     return (
       <div className="group">
-        <div className={"button-group group-" + index}
+        <div
+          className={"button-group group-" + index}
           onMouseEnter={this.showGroup.bind(this, "show")}
           onMouseOut={this.showGroup.bind(this, "hide")}
-          onClick={this.clickedGroup.bind(this)} >
-          <img src={this.props.content.groupIcon} style={buttonGroupStyle} className="group-icon"/>
+          onClick={this.clickedGroup.bind(this)}
+        >
+          <img
+            src={this.props.content.groupIcon}
+            style={buttonGroupStyle}
+            className="group-icon"
+          />
         </div>
-        { this.state.showLinks ? (
-          <span onMouseOver={this.resetShow.bind(this)} >
-            { linkNodes }
-          </span>
-        ) : null }
+        {this.state.showLinks ? (
+          <span onMouseOver={this.resetShow.bind(this)}>{linkNodes}</span>
+        ) : null}
       </div>
-    )
+    );
   }
 });
 
 var Background = React.createClass({
   render: function() {
-    var backgroundStyle = { backgroundImage: 'url(' + this.props.backgroundURL + ')' };
+    var backgroundStyle = {
+      backgroundImage: "url(" + this.props.backgroundURL + ")"
+    };
     // var backgroundStyle = { background: 'black' };
-    return (
-      <div className="background" style={backgroundStyle}>
-      </div>
-    )
+    return <div className="background" style={backgroundStyle}></div>;
   }
-})
+});
 
 React.render(
   React.createElement(App, null),
-  document.getElementById('content')
+  document.getElementById("content")
 );
 
 // Helpful shuffle function
 var knuthShuffle = function(ray) {
   // Create defensive copy
   var shuffled = new Array(ray.length); // New array of length
-  for (var i = 0; i < shuffled.length; i++) { // Instantiate new object
+  for (var i = 0; i < shuffled.length; i++) {
+    // Instantiate new object
     shuffled[i] = ray[i]; // Copy items
   }
 
   // Iterate through array with index i
   // Pick integer r between 0 and i uniformly at random
   for (var i = 0; i < shuffled.length; i++) {
-    var r = Math.round((Math.random() * i)); // Random number: [0, i)
+    var r = Math.round(Math.random() * i); // Random number: [0, i)
     // Swap a[r] and a[i]
     var temp = shuffled[r]; // Store element at r
     shuffled[r] = shuffled[i]; // Copy i to r
@@ -388,10 +412,23 @@ var knuthShuffle = function(ray) {
   }
 
   return shuffled; // Return array
-}
+};
 
 /*********** Add theater strings ***********/
-var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
 var currentDate = new Date();
 var month = monthNames[currentDate.getMonth()];
 var day = currentDate.getDate();
@@ -401,42 +438,45 @@ var dateString = month + " " + day + ", " + year;
 /*********** Get quote of the day ***********/
 // Completion handler
 function update(response) {
-    response = knuthShuffle(response);
+  response = knuthShuffle(response);
 
-    // TheaterJS typing effect
-    var theater = theaterJS({ local: 'fr' })
+  // TheaterJS typing effect
+  var theater = theaterJS({ local: "fr" });
 
-    theater.addActor('welcome-text', { speed: 1.2, accuracy: 0.7 });
+  theater.addActor("welcome-text", { speed: 1.2, accuracy: 0.7 });
 
-    // Environmental analysis
-    var currentHour = currentDate.getHours();
-    if (currentHour > 18 || currentHour < 4) { // 6pm - 4am
-        theater.addScene('welcome-text:Good evening, Kevin', 500)
-    } else if (currentHour < 12 && currentHour > 4) { // 4am - 12pm
-        theater.addScene('welcome-text:Good morning, Kevin', 500)
-    } else { // 12pm - 6pm
-        theater.addScene('welcome-text:Good afternoon, Kevin', 500)
-    }
+  // Environmental analysis
+  var currentHour = currentDate.getHours();
+  if (currentHour > 18 || currentHour < 4) {
+    // 6pm - 4am
+    theater.addScene("welcome-text:Good evening, Kevin", 500);
+  } else if (currentHour < 12 && currentHour > 4) {
+    // 4am - 12pm
+    theater.addScene("welcome-text:Good morning, Kevin", 500);
+  } else {
+    // 12pm - 6pm
+    theater.addScene("welcome-text:Good afternoon, Kevin", 500);
+  }
 
-    theater.addScene('welcome-text:Today is ' + dateString, 800)
+  theater.addScene("welcome-text:Today is " + dateString, 800);
 
-    for (var i = 0; i < response.length; i++) {
-        // console.log(response[i].quote);
-        theater.addScene('welcome-text:' + response[i].quote, 750);
-    }
+  for (var i = 0; i < response.length; i++) {
+    // console.log(response[i].quote);
+    theater.addScene("welcome-text:" + response[i].quote, 750);
+  }
 
-    theater.addScene(theater.replay.bind(theater))
+  theater.addScene(theater.replay.bind(theater));
 }
 
-var url = 'http://khou22.herokuapp.com/api/quotes';
+var url = "http://khou22.herokuapp.com/api/quotes";
 // var url = 'http://localhost:5000/api/quotes';
 
 // RAW
 const xml = new XMLHttpRequest();
-xml.open('GET', url);
+xml.open("GET", url);
 xml.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        update(JSON.parse(this.responseText));
-    }
+  if (this.readyState == 4 && this.status == 200) {
+    update(JSON.parse(this.responseText));
+  }
 };
 xml.send(); // Send request
