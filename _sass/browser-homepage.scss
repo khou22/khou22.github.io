@@ -9,6 +9,18 @@
     object-position: center;
   }
 
+  &-logo {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 8rem;
+    height: 8rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
   &-content {
     position: absolute;
     top: 15%;
