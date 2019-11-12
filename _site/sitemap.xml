@@ -409,6 +409,9 @@
 <loc>http://localhost:4000/photography/night/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/wood/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/photography/store/</loc>
 </url>
 <url>
@@ -427,7 +430,7 @@
 <loc>http://localhost:4000/blog/tag/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/programming/Uber-Scheduler/</loc>
+<loc>http://localhost:4000/photography/bear-valley/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/design/</loc>
@@ -499,7 +502,7 @@
 <loc>http://localhost:4000/programming/Execute-Order-66/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/wood/</loc>
+<loc>http://localhost:4000/programming/Uber-Scheduler/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/programming/wood-club/</loc>
