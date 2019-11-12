@@ -13,5 +13,5 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap' # Automatic SEO sitemap generation
     gem 'jekyll-feed' # RSS feed
     gem 'jekyll-autoprefixer' # Prefix CSS properties for compatibility
-    gem 'nokogiri',' ~> 1.8.1' # Fixes security vulnerability
+    gem 'nokogiri','~> 1.10.4' # Fixes security vulnerability
 end
