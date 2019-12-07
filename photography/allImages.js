@@ -1,9 +1,13 @@
 // Autogen via generate.py 
-// 2019-11-20 16:52:30 
+// 2019-12-07 16:52:06 
 const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Lombard Street Drone.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Seattle Orange Cityscape Drone Horizontal.jpg",
+        horizontal: true
     },
     {
         url: "/database/Mori Point Pacifica Long Exposure Rocks.jpg",
@@ -30,11 +34,19 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Greenwich Golf Course Summer Drone Vertical.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Grand Teton Astro with Grass (USA Road Trip).jpg",
         horizontal: false
     },
     {
         url: "/database/Korea Palace Through Trees.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Lake Carnegie Fall Drone Vertical.jpg",
         horizontal: false
     },
     {
@@ -94,6 +106,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Times Square New York Street Artist Neon Cyberpunk.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/1903 Hall Drone Top Down.jpg",
         horizontal: true
     },
@@ -112,6 +128,14 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Napa Valley Drone Landscape Sunset House.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Seattle Vertical Drone Space Needle Sunset.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/New York Times Square Taxi Car Neon Cyberpunk.jpg",
+        horizontal: false
     },
     {
         url: "/database/Airplane Wing Over New York at Night.jpg",
@@ -183,6 +207,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Golden Gate Bridge Through Fence.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Sunrise Lombard Street Drone Head On Vertical.jpg",
         horizontal: false
     },
     {
@@ -258,6 +286,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Taiwan Ximen Long Exposure Crossing Walk Cyberpunk Neon.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Patton Hall Drone.jpg",
         horizontal: false
     },
@@ -276,6 +308,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Ladies Market Balcony Long Exposure.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Ximen, Taiwan Long Exposure Cars Neon Cyberpunk.jpg",
+        horizontal: true
     },
     {
         url: "/database/ (USA Road Trip)-6.jpg",
@@ -378,12 +414,20 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Princeton Canal Vertical Reflection Drone.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/New York Street Artist (Front).jpg",
         horizontal: false
     },
     {
         url: "/database/Shifen Waterfall Long Exposure Taiwan.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Tokyo Shinjuku Alley Cyberpunk Neon.jpg",
+        horizontal: false
     },
     {
         url: "/database/Mai Chau Rice Paddies Sunset Panorama 2.jpg",
@@ -423,6 +467,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Ping Shek Estate Drone Top Down (Vertical).jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Lake Carnegie Boat in Still Water Sunset Vertical.jpg",
         horizontal: false
     },
     {
@@ -478,6 +526,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Lensball Mong Kok Neon Cyberpunk.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/High Island Reservoir East Dam Drone Top Down.jpg",
         horizontal: true
     },
@@ -495,6 +547,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/San Francisco Trolley at Night.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Ladies Market Balcony Lens Ball Cyberpunk.jpg",
         horizontal: false
     },
     {
