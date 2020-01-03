@@ -1,5 +1,5 @@
 // Autogen via generate.py 
-// 2019-12-07 16:52:06 
+// 2020-01-02 17:26:34 
 const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Lombard Street Drone.jpg",
@@ -378,6 +378,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Princeton Graduate College at Night Stars.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Seoul, Korea SIgns in Alleyway.jpg",
         horizontal: false
     },
@@ -552,6 +556,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Ladies Market Balcony Lens Ball Cyberpunk.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Princeton Football - Powers Field (Down).jpg",
+        horizontal: true
     },
     {
         url: "/database/Mori Point Pacifica Sunset.jpg",
