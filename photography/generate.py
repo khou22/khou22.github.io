@@ -20,6 +20,10 @@ PLACEHOLDER_WIDTH = 600
 
 collectionList = glob.glob('%s/*.json' % JSON_DIRECTORY)
 
+# Collect all image objects
+allImageNames = set()
+allImages = []
+
 ################   Read JSON   ################
 
 print("%d Collection(s) Found" % len(collectionList))
@@ -87,6 +91,11 @@ for collectionSource in collectionList:
                 outputFile.write("        height: %d,\n" % photoObject['height'])
                 outputFile.write("      },\n")
 
+                # Add to master collection
+                if photoObject['name'] not in allImageNames:
+                    allImageNames.add(photoObject['name'])
+                    allImages.append(photo)
+
 
             outputFile.write("    ].reverse()\n")
             outputFile.write("  };\n")
@@ -109,3 +118,60 @@ with open("allImages.js", 'w') as outputFile:
         outputFile.write("    },\n")
     
     outputFile.write("];\n")
+
+################   Master Collection With All Photos   ################
+if not os.path.exists('master'):
+    os.makedirs('master')
+with open("master/index.html", 'w') as outputFile:
+    # Liquid meta
+    outputFile.write("---\n")
+    outputFile.write("layout: gallery\n")
+    outputFile.write("title: \"All Photos | KHou Photography\"\n")
+    outputFile.write("layout_style: ROWS\n")
+    outputFile.write("spacing: 10\n")
+    outputFile.write("shuffle: true\n")
+    outputFile.write("columns: 5\n")
+    outputFile.write("max_height: 300\n")
+    outputFile.write("---\n")
+    outputFile.write("\n")
+
+    outputFile.write("<!-- Autogen via generate.py -->\n")
+    outputFile.write("<!-- %s -->\n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+
+    outputFile.write("<script>\n")
+    outputFile.write("  const GALLERY_IMAGES = {\n")
+    outputFile.write("    'All Photos': [\n")
+
+    # For each photo
+    for photo in allImages:
+        photoObject = {}
+
+        # Check if image has already been downloaded
+        imagePath = ''
+        placeholderPath = ''
+        if manager.exists(photo['name']):
+            imagePath, placeholderPath, width, height = manager.getSrc(photo['name'])
+            print("%s already exists in DB" % photo['name'])
+        else:
+            print("Saving %s" % photo['name'])
+            imagePath, placeholderPath, width, height = manager.create(photo['name'], photo['url'], MAX_WIDTH, PLACEHOLDER_WIDTH)
+
+        photoObject['name'] = os.path.splitext(photo['name'])[0]
+        photoObject['src'] = imagePath
+        photoObject['width'] = width
+        photoObject['height'] = height
+
+        # Write out to JS file
+        outputFile.write("      {\n")
+        outputFile.write("        name: \"%s\",\n" % photoObject['name'])
+        outputFile.write("        compressed: true,\n")
+        outputFile.write("        path: \"../%s\",\n" % photoObject['src'])
+        outputFile.write("        compressed_path: \"../../database/%s\",\n" % placeholderPath)
+        outputFile.write("        placeholder_path: \"../%s\",\n" % photoObject['src'])
+        outputFile.write("        width: %d,\n" % photoObject['width'])
+        outputFile.write("        height: %d,\n" % photoObject['height'])
+        outputFile.write("      },\n")
+
+    outputFile.write("    ]\n")
+    outputFile.write("  };\n")
+    outputFile.write("</script>\n")
