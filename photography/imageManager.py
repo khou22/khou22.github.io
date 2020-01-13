@@ -92,7 +92,7 @@ class ImageManager:
             widthPlaceholder = int(float(img.size[0] * float(heightPlaceholderPercentage)))
 
         imgResize = imgResize.resize((widthPlaceholder, heightPlaceholder), Image.ANTIALIAS)
-        imgResize.save(imagePlaceholderPath, 'JPEG', quality=100)
+        imgResize.save(imagePlaceholderPath, 'JPEG', quality=90)
 
 
         # Save local mapping

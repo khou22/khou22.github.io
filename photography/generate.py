@@ -16,7 +16,7 @@ from imageManager import ImageManager
 # Options
 JSON_DIRECTORY = "json"
 MAX_WIDTH = 1600
-PLACEHOLDER_WIDTH = 600
+PLACEHOLDER_WIDTH = 500
 
 collectionList = glob.glob('%s/*.json' % JSON_DIRECTORY)
 

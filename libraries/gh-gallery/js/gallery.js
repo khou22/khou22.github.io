@@ -65,7 +65,7 @@ class Renderer {
       image.setAttribute("id", photo.name);
       image.setAttribute("data-original", photo.originalSrc());
       image.setAttribute("data-src", photo.compresedSrc());
-      image.src = photo.placeholderSrc();
+      image.src = photo.placeholderSrc(); // Lazyloading placeholder
       image.classList.add("lazyload");
     } else {
       // Original
