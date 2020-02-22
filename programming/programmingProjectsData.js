@@ -69,7 +69,7 @@ programmingProjects = [
   {
     name: "Photo Analysis Content Management System",
     subtitle: "Intelligent photo CMS in the cloud",
-    slug: "http://khou22.herokuapp.com/upload",
+    slug: "http://khou22.herokuapp.com/",
     image: "./../media/programming/thumbnails/photo-analysis.png",
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
@@ -85,6 +85,16 @@ programmingProjects = [
     categoryColor: categories["Web App"].color,
     description:
       "A personal web app with a client, server, and database that implements Basic Auth security as well as user sessions using cookies, login/profile pages. The client hosts various web apps that I've built for clients — each page requires user authentication. The server hosts various RESTful API endpoints that I use for my various apps and projects. Stack: React-Redux-Router, Typescript, Webpack, Postgres, Express, Node, Heroku."
+  },
+  {
+    name: "Ask Ava",
+    subtitle: "Y-Combinator Hacks 2019",
+    slug: "https://devpost.com/software/ava-69yuo1",
+    image: "./../media/programming/thumbnails/ask-ava.jpeg",
+    category: categories["Web App"].name,
+    categoryColor: categories["Web App"].color,
+    description:
+      "A voice assistant that will answer your questions using an exerpt from your favorite podcasts. Implenents a BERT QA system."
   },
   {
     name: "Tile Layout Library",
@@ -115,6 +125,16 @@ programmingProjects = [
     categoryColor: categories["Website"].color,
     description:
       "I designed and built Princeton Tonight's website to showcase episodes, blog posts, photos, and  upcoming events as well as an email subscription service. Founded in 2015, we are the only student TV production show on Princeton's campus and have hosted guests ranging from Art Garfunkel and Mike Houston to Mike Delguidice and Dave Coulier."
+  },
+  {
+    name: "Discover Artist Betting Platform",
+    subtitle: "Stanford Treehacks 2020",
+    slug: "https://devpost.com/software/discover-artist-betting",
+    image: "./../media/programming/thumbnails/discover-artist-betting.jpg",
+    category: categories["Web App"].name,
+    categoryColor: categories["Web App"].color,
+    description:
+      "A betting platform that uses Spotify's monthly listeners as a stock ticker."
   },
   {
     name: "Website on East Asian Stereotypes",

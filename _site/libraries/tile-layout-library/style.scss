@@ -9,7 +9,7 @@
 **************************************************************/
 
 $primary-color: white;
-$animation-duration: .2s;
+$animation-duration: 0.2s;
 $mobile-cuttoff: 600px;
 
 .main-grid {
@@ -19,7 +19,6 @@ $mobile-cuttoff: 600px;
 }
 
 @media only screen and (max-width: $mobile-cuttoff) {
-
   // Make it all one column
   .tile {
     width: 100% !important;
@@ -33,16 +32,16 @@ $mobile-cuttoff: 600px;
   // Entrance Animation
   &-entrance {
     animation-name: bigEntrance;
-  	-webkit-animation-name: bigEntrance;
+    -webkit-animation-name: bigEntrance;
 
     animation-fill-mode: forwards; // Keep the state after it's been completed
     -webkit-animation-fill-mode: forwards;
 
-  	animation-duration: 0.5s;
-  	-webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
 
-  	animation-timing-function: ease-out;
-  	-webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
   }
 
   // Skip the entrance animation
@@ -57,9 +56,21 @@ $mobile-cuttoff: 600px;
     padding: 2% 5% 0 5%; // Pad top left and right
     z-index: 0; // Ensure above background
 
-    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
     color: white; // Font color
@@ -82,6 +93,7 @@ $mobile-cuttoff: 600px;
     border-radius: 2px; // Round corners
     display: inline-block; // Display to width of text
     background-color: orange; // Default is orange
+    top: -6px;
   }
 
   &-title {
@@ -172,63 +184,63 @@ $mobile-cuttoff: 600px;
 
 // Big entrance animation
 @keyframes bigEntrance {
-	0% {
-		transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
-		opacity: 0.2;
-	}
-	30% {
-		transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);
-		opacity: 1;
-	}
-	45% {
-		transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);
-		opacity: 1;
-	}
-	60% {
-		transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);
-		opacity: 1;
-	}
-	75% {
-		transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);
-		opacity: 1;
-	}
-	90% {
-		transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);
-		opacity: 1;
-	}
-	100% {
-		transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
-		opacity: 1;
-	}
+  0% {
+    transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
+    opacity: 0.2;
+  }
+  30% {
+    transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);
+    opacity: 1;
+  }
+  45% {
+    transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes bigEntrance {
-	0% {
-		-webkit-transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
-		opacity: 0.2;
-	}
-	30% {
-		-webkit-transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);
-		opacity: 1;
-	}
-	45% {
-		-webkit-transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);
-		opacity: 1;
-	}
-	60% {
-		-webkit-transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);
-		opacity: 1;
-	}
-	75% {
-		-webkit-transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);
-		opacity: 1;
-	}
-	90% {
-		-webkit-transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
-		opacity: 1;
-	}
+  0% {
+    -webkit-transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
+    opacity: 0.2;
+  }
+  30% {
+    -webkit-transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);
+    opacity: 1;
+  }
+  45% {
+    -webkit-transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);
+    opacity: 1;
+  }
+  90% {
+    -webkit-transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
+    opacity: 1;
+  }
 }
