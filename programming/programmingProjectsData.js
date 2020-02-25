@@ -150,7 +150,8 @@ programmingProjects = [
   {
     name: "City Strong Training",
     subtitle: "Personal training and fitness.",
-    slug: "http://citystrongtraining.com/",
+    // slug: "http://citystrongtraining.com/",
+    slug: "#",
     image: "./../media/programming/thumbnails/city-strong-training.png",
     category: categories["Website"].name,
     categoryColor: categories["Website"].color,
@@ -160,7 +161,8 @@ programmingProjects = [
   {
     name: "Handwriting Font App",
     subtitle: "One of my first projects.",
-    slug: "http://filmfestival.princetontonight.com",
+    // slug: "http://filmfestival.princetontonight.com",
+    slug: "#",
     image: "./../media/programming/thumbnails/handwriting-font-app.png",
     category: categories["Java App"].name,
     categoryColor: categories["Java App"].color,
@@ -171,7 +173,8 @@ programmingProjects = [
     name: "Princeton Film Festival Website",
     subtitle:
       "A website for film executives and hobbyists to discover more about the festival.",
-    slug: "http://filmfestival.princetontonight.com/",
+    // slug: "http://filmfestival.princetontonight.com/",
+    slug: "#",
     image: "./../media/programming/thumbnails/film-festival.png",
     category: categories["Website"].name,
     categoryColor: categories["Website"].color,
