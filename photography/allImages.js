@@ -1,5 +1,5 @@
 // Autogen via generate.py 
-// 2020-04-05 22:39:55 
+// 2020-04-05 23:14:29 
 const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Lombard Street Drone.jpg",
@@ -70,8 +70,16 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Vatican Fountain Landscape.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/DSLR With Lensball Image on Screen.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Rome, Italy Meat and Cheese Restaurant.jpg",
+        horizontal: true
     },
     {
         url: "/database/Street Market Vendor Talking to Tourist.jpg",
@@ -154,6 +162,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Ponte di Mezzo Bridge.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Seoul, Korea Drone Vertical Downtown.jpg",
         horizontal: false
     },
@@ -230,6 +242,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Statue of David, Florence, Italy.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Sai Wan Drone 2 (Vertical).jpg",
         horizontal: false
     },
@@ -274,6 +290,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/The Flavors of a Sunset in Florence, Italy.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/ (USA Road Trip)-7.jpg",
         horizontal: true
     },
@@ -306,6 +326,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Ponte Vittorio Emanuele II Bridge in Italy (Across from St. Angelo Bridge).jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Ladies Market Balcony Long Exposure.jpg",
         horizontal: false
     },
@@ -314,12 +338,24 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Man Walking Bike in Front of Duomo in Florence.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Portrait in Front of Vatican on Bridge at Sunset.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/ (USA Road Trip)-6.jpg",
         horizontal: false
     },
     {
         url: "/database/ (USA Road Trip)-4.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Florence Portrait View of City Looking Down Road.jpg",
+        horizontal: false
     },
     {
         url: "/database/Korean Market Street Food Vendor.jpg",
@@ -342,7 +378,15 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Arch of Constantine, Rome.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Hong Kong Night Skyline (Vertical).jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/St. Angelo Bridge with Vatican in Background.jpg",
         horizontal: false
     },
     {
@@ -382,11 +426,19 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Fruit Market Stand in Florence, Italy.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Seoul, Korea SIgns in Alleyway.jpg",
         horizontal: false
     },
     {
         url: "/database/San Francisco Hills Trolley Downtown Vertical.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Bike in Pisa, Italy.jpg",
         horizontal: false
     },
     {
@@ -418,11 +470,19 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Christmas Tree Bokeh Outside Duomo in Florence.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Princeton Canal Vertical Reflection Drone.jpg",
         horizontal: false
     },
     {
         url: "/database/New York Street Artist (Front).jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Italy House in Small Courtyard.jpg",
         horizontal: false
     },
     {
@@ -446,7 +506,15 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Coffee Shop Counter in Florence, Italy.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Bear Valley Bloods Ridge Sunset Drone Vertical Pink Bright Far.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Trolley in Milan, Italy in Rain.jpg",
         horizontal: false
     },
     {
@@ -482,6 +550,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Colosseum and Ancient Ruins in Rome.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Tokyo Shrine.jpg",
         horizontal: false
     },
@@ -491,6 +563,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Bear Valley Bear Lake Drone Vertical.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Florence Duomo Architecture.jpg",
         horizontal: false
     },
     {
@@ -514,6 +590,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Pantheon, Rome, Italy.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Sai Wan Drone (Vertical).jpg",
         horizontal: false
     },
@@ -528,6 +608,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Ferry Building at Sunset Long Exposure Vertical.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Bridge with Vatican in the Background.jpg",
+        horizontal: true
     },
     {
         url: "/database/Lensball Mong Kok Neon Cyberpunk.jpg",
@@ -550,12 +634,24 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Restaurant at Night in Rome, Italy.jpg",
+        horizontal: true
+    },
+    {
+        url: "/database/Florence View from Piazzale Michelangelo at Sunset.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/San Francisco Trolley at Night.jpg",
         horizontal: false
     },
     {
         url: "/database/Ladies Market Balcony Lens Ball Cyberpunk.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/St. Angelo Bridge in Rome, Italy.jpg",
+        horizontal: true
     },
     {
         url: "/database/Princeton Football - Powers Field (Down).jpg",
@@ -568,6 +664,14 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Hong Kong Skyline Panorama.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Panorama of Arno River in Pisa, Italy.jpg",
+        horizontal: true
+    },
+    {
+        url: "/database/Museum Ceiling Artwork in Florence, Italy.jpg",
+        horizontal: false
     },
     {
         url: "/database/Yin Yang Golden Gate Bridge Light Painting.jpg",
@@ -618,11 +722,19 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Pizza in Rome, Italy.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Korea Cherry Blossums.jpg",
         horizontal: false
     },
     {
         url: "/database/Mong Kong Lens Ball Neon Signs (Vertical).jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Rain Walking Motion Blur in Milan.jpg",
         horizontal: false
     },
     {
@@ -658,6 +770,14 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Meat Shop in Florence, Italy.jpg",
+        horizontal: true
+    },
+    {
+        url: "/database/Trevi Fountain in Rome, Italy.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Hong Kong Skyline Day Drone - Vertical.jpg",
         horizontal: false
     },
@@ -688,6 +808,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Ximen, Taiwan Long Exposure.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Campanile di Giotto Across from the Duomo.jpg",
+        horizontal: false
     },
     {
         url: "/database/Seoul, Korea Alleyway.jpg",

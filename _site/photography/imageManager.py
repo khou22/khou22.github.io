@@ -39,7 +39,12 @@ class ImageManager:
         return self.allFileNames;
     
     def fileNameWithoutExt(self, fileName):
-        return os.path.splitext(os.path.basename(fileName))[0]
+        splitFileName = os.path.splitext(os.path.basename(fileName))
+        if 'Angelo' in fileName:
+            print(fileName)
+            print(splitFileName)
+
+        return splitFileName[0]
     
     def fileNamePlaceholder(self, fileName):
         return "%s.placeholder.jpg" % self.fileNameWithoutExt(fileName)
@@ -52,7 +57,7 @@ class ImageManager:
 
     def getSrc(self, image):
         filePath = self.images[image]
-        placeholderFileName = self.fileNamePlaceholder(self.fileNameWithoutExt(filePath))
+        placeholderFileName = self.fileNamePlaceholder(filePath)
         img = Image.open(filePath)
         return filePath, placeholderFileName, img.width, img.height
     
