@@ -69,6 +69,7 @@ class ImageManager:
         imagePlaceholderPath = "%s/%s.placeholder.jpg" % (self.directory, imageFileName)
 
         # Download image
+        print("Downloading source: %s" % src)
         response = requests.get(src)
         img = Image.open(BytesIO(response.content))
 

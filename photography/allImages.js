@@ -1,5 +1,5 @@
 // Autogen via generate.py 
-// 2020-04-05 23:14:29 
+// 2020-04-06 17:18:21 
 const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Lombard Street Drone.jpg",
@@ -92,6 +92,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Marina Bay Sands Drone (Vertical).jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Roman Forum Ruins.jpg",
+        horizontal: true
     },
     {
         url: "/database/Boats Top Down Drone.jpg",
