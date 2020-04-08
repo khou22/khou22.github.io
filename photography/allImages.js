@@ -1,5 +1,5 @@
 // Autogen via generate.py 
-// 2020-04-08 02:06:39 
+// 2020-04-08 13:28:32 
 const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Lombard Street Drone.jpg",
@@ -63,6 +63,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Sunset Sillhouette Horizontal Las Terrenas, Dominican Republic.jpg",
+        horizontal: true
+    },
+    {
+        url: "/database/Bear Valley Drone Landscape of Valley.jpg",
         horizontal: true
     },
     {
@@ -130,6 +134,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/San Francisco Downtown from Airplane at Night (Portrait).jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Kennedy Town Drone Panorama.jpg",
         horizontal: true
     },
@@ -144,6 +152,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/1903 Hall Drone Top Down.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Outside Penn Station New York Wide Angle.jpg",
+        horizontal: false
     },
     {
         url: "/database/Times Square Taxi (Side).jpg",
@@ -310,6 +322,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Sunset on Cuyler Courtyard at Princeton University.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Seoul Tower, Seoul, Tokyo.jpg",
         horizontal: false
     },
@@ -384,6 +400,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Ponte Vittorio Emanuele II Bridge in Italy (Across from St. Angelo Bridge).jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Bike Wheel on Ground Sunset 1903 Courtyard.jpg",
+        horizontal: false
     },
     {
         url: "/database/Ladies Market Balcony Long Exposure.jpg",
@@ -466,6 +486,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/San Francisco Downtown First Drone Flight.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/San Francisco Ferry Building Through Buildings.jpg",
         horizontal: false
     },
@@ -518,6 +542,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/New York Hudson Yards Rooftop Panorama.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Ping Shek Estate Basketball Hoop.jpg",
         horizontal: false
     },
@@ -560,6 +588,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Shifen Waterfall Long Exposure Taiwan.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/1903 Courtyard Sunset Down Stairs.jpg",
+        horizontal: false
     },
     {
         url: "/database/Tokyo Shinjuku Alley Cyberpunk Neon.jpg",
@@ -670,6 +702,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/New York Dear Irving on Hudson Rooftop Intersection.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Times Square Lens Ball.jpg",
         horizontal: false
     },
@@ -750,6 +786,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Small World Coffee on Cloudy Day.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/St. Angelo Bridge in Rome, Italy.jpg",
         horizontal: true
     },
@@ -815,6 +855,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Mong Kok, Hong Kong Neon Signs 2.jpg",
+        horizontal: true
+    },
+    {
+        url: "/database/Fisherman's Wharf at Sunset by Drone.jpg",
         horizontal: true
     },
     {

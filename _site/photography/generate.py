@@ -68,14 +68,19 @@ for collectionSource in collectionList:
                 # Check if image has already been downloaded
                 imagePath = ''
                 placeholderPath = ''
-                if manager.exists(photo['name']):
-                    imagePath, placeholderPath, width, height = manager.getSrc(photo['name'])
-                    print("%s already exists in DB" % photo['name'])
-                else:
-                    print("Saving %s" % photo['name'])
-                    imagePath, placeholderPath, width, height = manager.create(photo['name'], photo['url'], MAX_WIDTH, PLACEHOLDER_WIDTH)
 
-                photoObject['name'] = os.path.splitext(photo['name'])[0]
+                photoName = photo['name']
+                if ('.jpg' not in photoName): photoName = "%s.jpg" % photo['name']
+                print("Finding %s" % photoName)
+
+                if manager.exists(photoName):
+                    imagePath, placeholderPath, width, height = manager.getSrc(photoName)
+                    print("%s already exists in DB" % photoName)
+                else:
+                    print("Saving %s" % photoName)
+                    imagePath, placeholderPath, width, height = manager.create(photoName, photo['url'], MAX_WIDTH, PLACEHOLDER_WIDTH)
+
+                photoObject['name'] = os.path.splitext(photoName)[0]
                 photoObject['src'] = imagePath
                 photoObject['width'] = width
                 photoObject['height'] = height
@@ -149,14 +154,19 @@ with open("master/index.html", 'w') as outputFile:
         # Check if image has already been downloaded
         imagePath = ''
         placeholderPath = ''
-        if manager.exists(photo['name']):
-            imagePath, placeholderPath, width, height = manager.getSrc(photo['name'])
-            print("%s already exists in DB" % photo['name'])
-        else:
-            print("Saving %s" % photo['name'])
-            imagePath, placeholderPath, width, height = manager.create(photo['name'], photo['url'], MAX_WIDTH, PLACEHOLDER_WIDTH)
 
-        photoObject['name'] = os.path.splitext(photo['name'])[0]
+        photoName = photo['name']
+        if ('.jpg' not in photoName): photoName = "%s.jpg" % photo['name']
+        print("Finding %s" % photoName)
+
+        if manager.exists(photoName):
+            imagePath, placeholderPath, width, height = manager.getSrc(photoName)
+            print("%s already exists in DB" % photoName)
+        else:
+            print("Saving %s" % photoName)
+            imagePath, placeholderPath, width, height = manager.create(photoName, photo['url'], MAX_WIDTH, PLACEHOLDER_WIDTH)
+
+        photoObject['name'] = os.path.splitext(photoName)[0]
         photoObject['src'] = imagePath
         photoObject['width'] = width
         photoObject['height'] = height
