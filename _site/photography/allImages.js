@@ -1,5 +1,5 @@
 // Autogen via generate.py 
-// 2020-04-06 17:18:21 
+// 2020-04-08 01:54:36 
 const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Lombard Street Drone.jpg",
@@ -58,6 +58,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Sunset Sillhouette Horizontal Las Terrenas, Dominican Republic.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Transamerica Building San Francisco Drone Vertical.jpg",
         horizontal: false
     },
@@ -110,6 +114,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Top Down Beach Peninsula Las Terrenas Dominican Republic.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Kennedy Town Drone Panorama.jpg",
         horizontal: true
     },
@@ -158,6 +166,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Sunset Sillhouette Vertical Las Terrenas, Dominican Republic.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Bear Valley Bloods Ridge Sunset Drone Vertical Dark.jpg",
         horizontal: false
     },
@@ -175,6 +187,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Kowloon Bay Drone (Vertical).jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Man Lying on Beach Top Down Drone Las Terrenas, Domincan Republic.jpg",
         horizontal: false
     },
     {
@@ -302,6 +318,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Landscape Panorama of Las Terrenas, Dominican Republic.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Shek Lek Pui Reservoir Drone (Vertical).jpg",
         horizontal: false
     },
@@ -323,6 +343,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Time Square Taxi.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Drone Vertical of Las Terrenas Dominican Republic.jpg",
         horizontal: false
     },
     {
@@ -364,6 +388,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Korean Market Street Food Vendor.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Top Down Beach Houses Drone Las Terrenas Dominican Republic.jpg",
+        horizontal: true
     },
     {
         url: "/database/Golden Gate Bridge Looking Down From Marin Lookout.jpg",
@@ -522,6 +550,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Palm Tree Shadows Top Down Drone Las Terrenas, Dominican Republic.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Kowloon ICC Skyline.jpg",
         horizontal: false
     },
@@ -532,6 +564,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Hong Kong Red Taxi Motion Blur (Horizontal).jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Single Person Lying on Beach Top Down Drone Las Terrenas Dominican Republic.jpg",
+        horizontal: false
     },
     {
         url: "/database/Taipei Park Bird Watching Dylan Fursty Dark Edit White Bird Flying.jpg",
@@ -698,6 +734,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Long Exposure Wave Top Down Drone Las Terrenas Dominican Republic.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Bear Valley Mountains Drone Landscape.jpg",
         horizontal: true
     },
@@ -766,6 +806,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Dominican Republic Las Terrenas Daytime Beach House Panorama.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Monster Mansion Vertical.jpg",
         horizontal: false
     },
@@ -786,8 +830,16 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Group of People Lying on a Beach Towel Drone Top Down.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Times Square Screens.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Top Down Ocean Shore Texture Las Terrenas Dominican Republic.jpg",
+        horizontal: true
     },
     {
         url: "/database/Hong Kong Motorbike Motion Blur (Horizontal).jpg",
@@ -807,6 +859,14 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/ (USA Road Trip).jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Crashing Waves into Coastline Dominican Republic Drone Top Down.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Shore Stimulations (Dominican Republic Top Down Drone Beach).jpg",
         horizontal: false
     },
     {
