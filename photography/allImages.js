@@ -1,5 +1,5 @@
 // Autogen via generate.py 
-// 2020-04-08 01:57:41 
+// 2020-04-08 02:06:39 
 const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Lombard Street Drone.jpg",
@@ -19,6 +19,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/San Francisco Lombard Street Sunrise Drone Vertical.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Washington DC Capitol Building Zoom Day.jpg",
         horizontal: false
     },
     {
@@ -98,8 +102,16 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Capitol Building Walking Towards Building on Street.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Roman Forum Ruins.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Washington Monument in Front of Lincoln Memorial At Night.jpg",
+        horizontal: false
     },
     {
         url: "/database/Boats Top Down Drone.jpg",
@@ -162,6 +174,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Capitol Building Panorama Day.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Jiufen, Taiwan Drone - Vertical.jpg",
         horizontal: false
     },
@@ -206,6 +222,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Artechouse DC Silhouette 3.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Tokyo Cherry Blossum Arcade.jpg",
         horizontal: false
     },
@@ -224,6 +244,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Clean Trahs Philly.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Artechouse DC Silhouette 2.jpg",
+        horizontal: false
     },
     {
         url: "/database/San Francisco Downtown Twilight Sunset Drone Panorama.jpg",
@@ -292,6 +316,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Phi Phi Island, Thailand Panorama.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Artechouse DC Silhouette 1.jpg",
+        horizontal: false
     },
     {
         url: "/database/Seoul, Korea Drone Panorama.jpg",
@@ -446,6 +474,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Supreme Court Landscape Nine Seats.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Tsim Sha Tsui Lensball Long Exposure.jpg",
         horizontal: false
     },
@@ -455,6 +487,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Princeton Graduate College at Night Stars.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Washington Monument Night Silohouette Self Portrait With Stars.jpg",
         horizontal: false
     },
     {
@@ -495,6 +531,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Bear Valley Bear Lake Paddleboarding Vertical.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Desmond Standing in Front of Capitol Building.jpg",
         horizontal: false
     },
     {
@@ -582,6 +622,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Washington Monument Sunset Red White Blue Sky.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Lake Carnegie Boat in Still Water Sunset Vertical.jpg",
         horizontal: false
     },
@@ -604,6 +648,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Bear Valley Bear Lake Drone Vertical.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Capitol Building Night Landscape Zoom.jpg",
+        horizontal: true
     },
     {
         url: "/database/Florence Duomo Architecture.jpg",
@@ -642,8 +690,16 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Capitol Building Lens Ball.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Lake Carnegie Landscape Fall Season.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Washington Monument Zoom Abstract Day.jpg",
+        horizontal: false
     },
     {
         url: "/database/Ferry Building at Sunset Long Exposure Vertical.jpg",
@@ -660,6 +716,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/High Island Reservoir East Dam Drone Top Down.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Washington DC Subway.jpg",
+        horizontal: false
     },
     {
         url: "/database/Korean Market Shoe Stand.jpg",
@@ -755,6 +815,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Mong Kok, Hong Kong Neon Signs 2.jpg",
+        horizontal: true
+    },
+    {
+        url: "/database/Washington Monument Sunset Panorama.jpg",
         horizontal: true
     },
     {

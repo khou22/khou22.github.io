@@ -472,6 +472,9 @@
 <loc>http://localhost:4000/photography/water/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/photography/panoramas/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/photography/seattle/</loc>
 </url>
 <url>
@@ -500,9 +503,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/photography/master/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/photography/dominican-republic/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/blog/</loc>
@@ -864,6 +864,10 @@
 <url>
 <loc>http://localhost:4000/old-landing/index.html</loc>
 <lastmod>2019-09-08T23:16:16-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/photography/dominican-republic/index.html</loc>
+<lastmod>2020-04-08T02:06:39-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/programming/drag-drop-interface/index.html</loc>
