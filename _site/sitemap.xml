@@ -415,7 +415,7 @@
 <loc>http://localhost:4000/photography/featured/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/wood/</loc>
+<loc>http://localhost:4000/photography/cyberpunk/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/photography/mountains/</loc>
@@ -425,6 +425,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/photography/bear-valley/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/photography/washington-dc/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/photography/store/</loc>
@@ -445,7 +448,7 @@
 <loc>http://localhost:4000/blog/tag/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/photography/cyberpunk/</loc>
+<loc>http://localhost:4000/programming/Execute-Order-66/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/design/</loc>
@@ -514,7 +517,7 @@
 <loc>http://localhost:4000/programming/text-analysis/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/programming/Execute-Order-66/</loc>
+<loc>http://localhost:4000/wood/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/programming/Uber-Scheduler/</loc>
