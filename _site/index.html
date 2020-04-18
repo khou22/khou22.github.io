@@ -91,7 +91,7 @@
   <div class="ui compact menu">
     <a id="menu-icon" class="item">
       <i id="menu-icon-arrow" class="angle left icon"></i>
-      <i id="menu-icon-menu" class="bars icon" style="display: none"></i>
+      <i id="menu-icon-menu" class="bars icon" style="display: none;"></i>
     </a>
     <a class="item" href="blog">
       Blog
@@ -136,6 +136,22 @@
         headerContainer.style.width = "auto";
       }
     });
+
+    // Automatic scroll down a little to show parallax effect
+    setTimeout(function () {
+      if ($(window).scrollTop() < 40) {
+        $("html,body").animate(
+          {
+            scrollTop: $(window).scrollTop() + 100,
+          },
+          2500
+        );
+      }
+
+      setTimeout(function () {
+        $("#scroll-down-arrow").hide(1000);
+      }, 3000);
+    }, 1000);
   </script>
 </div>
 
@@ -211,11 +227,16 @@
 </div>
 
 <!-- MARK: Transition gradient to next section -->
-<div style="position: relative">
+<div style="position: relative;">
   <div class="landing-parallax-transition">
     <img
       class="landing-parallax-transition-gradient"
       src="media/site/gradients/black.png "
+    />
+    <img
+      id="scroll-down-arrow"
+      class="landing-parallax-transition-scroll-down"
+      src="media/site/icons/chevron_down_bw.svg "
     />
   </div>
 
@@ -309,12 +330,12 @@
   var theater = theaterJS({ local: "en" });
 
   theater
-    .on("type:start, erase:start", function() {
+    .on("type:start, erase:start", function () {
       theater
         .getCurrentActor()
         .$element.classList.add("actor__content--typing");
     })
-    .on("type:end, erase:end", function() {
+    .on("type:end, erase:end", function () {
       theater
         .getCurrentActor()
         .$element.classList.remove("actor__content--typing");

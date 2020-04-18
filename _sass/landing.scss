@@ -85,6 +85,18 @@
         object-fit: fill;
       }
 
+      &-scroll-down {
+        position: absolute;
+        left: 50%;
+        width: 20px;
+        top: 140%;
+
+        animation-name: bounce;
+        animation-timing-function: ease-in-out;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+
       &-spacer {
         height: 300px;
         background-color: black;
