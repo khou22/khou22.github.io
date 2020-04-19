@@ -28,7 +28,7 @@ programmingProjects = [
   },
   {
     name: "HTMLexa",
-    subtitle: "HackPrinceton Spring 2017 Finalist",
+    subtitle: "HackPrinceton Fall 2017 Finalist",
     slug: "https://devpost.com/software/htmlexa",
     image: "./../media/programming/thumbnails/htmlexa.png",
     category: categories["Web App"].name,
