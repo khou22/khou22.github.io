@@ -24,7 +24,17 @@ programmingProjects = [
     category: categories["iOS App"].name,
     categoryColor: categories["iOS App"].color,
     description:
-      "Publically available on the Apple app store! A fun UX and iOS engineering project to make scheduling calendar events a smoother and more enjoyable experience. It uses basic machine learning to build a model of your calendar and predict your event so you don't need to type anything in. It also does away with a lot of poor UI elements like date pickers."
+      "Publically available on the Apple app store! A fun UX and iOS engineering project to make scheduling calendar events a smoother and more enjoyable experience. It uses basic machine learning to build a model of your calendar and predict your event so you don't need to type anything in. It also does away with a lot of poor UI elements like date pickers.",
+  },
+  {
+    name: "Lookbook",
+    subtitle: "Photo curration",
+    slug: "https://www.getlookbook.com",
+    image: "./../media/projects/lookbook/hero.png",
+    category: categories["Web App"].name,
+    categoryColor: categories["Web App"].color,
+    description:
+      "Helping marketers and photographers currate massive collections of images using computer vision.",
   },
   {
     name: "HTMLexa",
@@ -34,7 +44,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "An Alexa Skill and Web App that allows people to build full-scale websites with his or her voice. We aimed to improve the accessibility of website creation through machine learning and a well-crafted user-experience spanning both the voice and digital spectrums."
+      "An Alexa Skill and Web App that allows people to build full-scale websites with his or her voice. We aimed to improve the accessibility of website creation through machine learning and a well-crafted user-experience spanning both the voice and digital spectrums.",
   },
   {
     name: "SoFly Scanner",
@@ -44,7 +54,7 @@ programmingProjects = [
     category: categories["iOS App"].name,
     categoryColor: categories["iOS App"].color,
     description:
-      "An app that allows the user to snap a picture of a flyer, extract relevant information, and make a calendar event with the event name, location, time, date, and more. This will allow users to digitize flyers, and hopefully provide a decentralized mechanism for communities to grow close again. It won 2nd place for best Princeton app at HackPrinceton Spring 2017."
+      "An app that allows the user to snap a picture of a flyer, extract relevant information, and make a calendar event with the event name, location, time, date, and more. This will allow users to digitize flyers, and hopefully provide a decentralized mechanism for communities to grow close again. It won 2nd place for best Princeton app at HackPrinceton Spring 2017.",
   },
   {
     name: "Paw Printers",
@@ -54,7 +64,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "Paw Printers is an app that helps you find the nearest printer on campus. Simply choose whether you want a black and white printer, color printer, or scanner, and it will navigate you to the closest option! I built this over one of my breaks using ExpressJS, Heroku, and ReactJS."
+      "Paw Printers is an app that helps you find the nearest printer on campus. Simply choose whether you want a black and white printer, color printer, or scanner, and it will navigate you to the closest option! I built this over one of my breaks using ExpressJS, Heroku, and ReactJS.",
   },
   {
     name: "Freelance Web Design Company",
@@ -64,7 +74,7 @@ programmingProjects = [
     category: categories["Website"].name,
     categoryColor: categories["Website"].color,
     description:
-      "Started freelance venture to design and develop client websites."
+      "Started freelance venture to design and develop client websites.",
   },
   {
     name: "Photo Analysis Content Management System",
@@ -74,7 +84,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "A content manager with object detection, facial recognition, color analysis, meta-data stripping, etc. for photos to provide intelligent querying and safe S3 image retrieval for websites. Powers my photography store."
+      "A content manager with object detection, facial recognition, color analysis, meta-data stripping, etc. for photos to provide intelligent querying and safe S3 image retrieval for websites. Powers my photography store.",
   },
   {
     name: "Personal Heroku Server",
@@ -84,7 +94,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "A personal web app with a client, server, and database that implements Basic Auth security as well as user sessions using cookies, login/profile pages. The client hosts various web apps that I've built for clients — each page requires user authentication. The server hosts various RESTful API endpoints that I use for my various apps and projects. Stack: React-Redux-Router, Typescript, Webpack, Postgres, Express, Node, Heroku."
+      "A personal web app with a client, server, and database that implements Basic Auth security as well as user sessions using cookies, login/profile pages. The client hosts various web apps that I've built for clients — each page requires user authentication. The server hosts various RESTful API endpoints that I use for my various apps and projects. Stack: React-Redux-Router, Typescript, Webpack, Postgres, Express, Node, Heroku.",
   },
   {
     name: "Ask Ava",
@@ -94,7 +104,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "A voice assistant that will answer your questions using an exerpt from your favorite podcasts. Implenents a BERT QA system."
+      "A voice assistant that will answer your questions using an exerpt from your favorite podcasts. Implenents a BERT QA system.",
   },
   {
     name: "Tile Layout Library",
@@ -104,7 +114,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "A ReactJS-based NPM package for a tile grid UI — what my programming portfolio page (the page you're on) is actually actively using."
+      "A ReactJS-based NPM package for a tile grid UI — what my programming portfolio page (the page you're on) is actually actively using.",
   },
   {
     name: "Uber Scheduler",
@@ -114,7 +124,7 @@ programmingProjects = [
     category: categories["iOS App"].name,
     categoryColor: categories["iOS App"].color,
     description:
-      "An iOS app to call Ubers ahead of time or on a recurring schedule. I was the frontend engineer and designer. We built this at a hackathon and won 1st place overall."
+      "An iOS app to call Ubers ahead of time or on a recurring schedule. I was the frontend engineer and designer. We built this at a hackathon and won 1st place overall.",
   },
   {
     name: "Princeton Tonight Website",
@@ -124,7 +134,7 @@ programmingProjects = [
     category: categories["Website"].name,
     categoryColor: categories["Website"].color,
     description:
-      "I designed and built Princeton Tonight's website to showcase episodes, blog posts, photos, and  upcoming events as well as an email subscription service. Founded in 2015, we are the only student TV production show on Princeton's campus and have hosted guests ranging from Art Garfunkel and Mike Houston to Mike Delguidice and Dave Coulier."
+      "I designed and built Princeton Tonight's website to showcase episodes, blog posts, photos, and  upcoming events as well as an email subscription service. Founded in 2015, we are the only student TV production show on Princeton's campus and have hosted guests ranging from Art Garfunkel and Mike Houston to Mike Delguidice and Dave Coulier.",
   },
   {
     name: "Discover Artist Betting Platform",
@@ -134,7 +144,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "A betting platform that uses Spotify's monthly listeners as a stock ticker."
+      "A betting platform that uses Spotify's monthly listeners as a stock ticker.",
   },
   {
     name: "Website on East Asian Stereotypes",
@@ -145,7 +155,7 @@ programmingProjects = [
     category: categories["Website"].name,
     categoryColor: categories["Website"].color,
     description:
-      "This is a website I built from scratch for my East Asian Relations class. I was responsible for putting content online so that members of our school community could see the work we'd done that year. Because I only had a couple days to complete it, I wasn't able to add as many features as I would've liked."
+      "This is a website I built from scratch for my East Asian Relations class. I was responsible for putting content online so that members of our school community could see the work we'd done that year. Because I only had a couple days to complete it, I wasn't able to add as many features as I would've liked.",
   },
   {
     name: "City Strong Training",
@@ -156,7 +166,7 @@ programmingProjects = [
     category: categories["Website"].name,
     categoryColor: categories["Website"].color,
     description:
-      "Freelance work for a friend of mine. I designed and built a website for his new personal training business, City Strong Training."
+      "Freelance work for a friend of mine. I designed and built a website for his new personal training business, City Strong Training.",
   },
   {
     name: "Handwriting Font App",
@@ -167,7 +177,7 @@ programmingProjects = [
     category: categories["Java App"].name,
     categoryColor: categories["Java App"].color,
     description:
-      "This is a handwriting app that I programmed using java. It asks for the user's handwriting then creates a font out of it. The user can type in their handwriting and export their document to be written out using the WaterColor Bot."
+      "This is a handwriting app that I programmed using java. It asks for the user's handwriting then creates a font out of it. The user can type in their handwriting and export their document to be written out using the WaterColor Bot.",
   },
   {
     name: "Princeton Film Festival Website",
@@ -179,7 +189,7 @@ programmingProjects = [
     category: categories["Website"].name,
     categoryColor: categories["Website"].color,
     description:
-      "This was a site built for the Princeton Film Festival — a brand new conference to bring executives from top film companies to Princeton's campus to mentor, educate, and speak to high school and college students interested in the film industry."
+      "This was a site built for the Princeton Film Festival — a brand new conference to bring executives from top film companies to Princeton's campus to mentor, educate, and speak to high school and college students interested in the film industry.",
   },
   {
     name: "MusicViz",
@@ -189,7 +199,7 @@ programmingProjects = [
     category: categories["Java App"].name,
     categoryColor: categories["Java App"].color,
     description:
-      "This is a music visualizer I programmed in Processing. You can input any music file and it will analyze the sound for beat drops, etc."
+      "This is a music visualizer I programmed in Processing. You can input any music file and it will analyze the sound for beat drops, etc.",
   },
   {
     name: "Online Sandwich Ordering Machine",
@@ -199,7 +209,7 @@ programmingProjects = [
     category: "Arduino",
     categoryColor: categories["Other"].color,
     description:
-      "This is a project I made for my school. I used an Arduino Ethernet board and a receipt printer to make a machine that could process online sandwich orders for the school cafeteria."
+      "This is a project I made for my school. I used an Arduino Ethernet board and a receipt printer to make a machine that could process online sandwich orders for the school cafeteria.",
   },
   {
     name: "Text Analysis App",
@@ -209,7 +219,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "An app to analyze the user's text for patterns, word choice, etc. It accepts text files as well as Facebook user data."
+      "An app to analyze the user's text for patterns, word choice, etc. It accepts text files as well as Facebook user data.",
   },
   {
     name: "Open-Source VIM Configuration",
@@ -219,7 +229,7 @@ programmingProjects = [
     category: categories["Other"].name,
     categoryColor: categories["Other"].color,
     description:
-      "This is the complete documentation of my VIM configuration. It includes support for various languages such as Babel and Typescript as well as autocomplete, file grepping, etc. I decided to write extensive documentation per the request of my coworkers and friends."
+      "This is the complete documentation of my VIM configuration. It includes support for various languages such as Babel and Typescript as well as autocomplete, file grepping, etc. I decided to write extensive documentation per the request of my coworkers and friends.",
   },
   {
     name: "Drag and Drop Interface",
@@ -229,7 +239,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "A simple drag and drop interface that uses ReactJS and HTML5 to mimic the Desmos equation editor."
+      "A simple drag and drop interface that uses ReactJS and HTML5 to mimic the Desmos equation editor.",
   },
   {
     name: "Stats Test Score Calculator",
@@ -239,7 +249,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "An app to automatically calculate test scores and apply a grading curve. Built for Triggs Honors Stats Classes."
+      "An app to automatically calculate test scores and apply a grading curve. Built for Triggs Honors Stats Classes.",
   },
   {
     name: "Time Calculator",
@@ -250,7 +260,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "An app that takes in an ambiguous number of times and outputs the average of those times. Made this for my friend who does crew."
+      "An app that takes in an ambiguous number of times and outputs the average of those times. Made this for my friend who does crew.",
   },
   {
     name: "Presidential Election Forecast 2016",
@@ -261,7 +271,7 @@ programmingProjects = [
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
     description:
-      "Runs simulations and forecasts who will win the 2016 presidential election. Right now it only simulates who will win the Republican candidacy."
+      "Runs simulations and forecasts who will win the 2016 presidential election. Right now it only simulates who will win the Republican candidacy.",
   },
   {
     name: "Browser Home Page",
@@ -271,7 +281,7 @@ programmingProjects = [
     category: categories["Website"].name,
     categoryColor: categories["Website"].color,
     description:
-      "Custom browser home page with useful information and links. I set it to my tab/browser home page."
+      "Custom browser home page with useful information and links. I set it to my tab/browser home page.",
   },
   {
     name: "Honors Physics Optics Lab",
@@ -281,7 +291,7 @@ programmingProjects = [
     category: categories["Website"].name,
     categoryColor: categories["Website"].color,
     description:
-      "A website I made from scratch for a physics lab on optics and waves. It was neat being able to make a website instead of a traditional website."
+      "A website I made from scratch for a physics lab on optics and waves. It was neat being able to make a website instead of a traditional website.",
   },
   {
     name: "Hollywood's Portrayal of Africa",
@@ -291,7 +301,7 @@ programmingProjects = [
     category: categories["Website"].name,
     categoryColor: categories["Website"].color,
     description:
-      "A website I made to highlight the stereotypes and microaggressions present in Hollywood films towards Africa. It was an interesting topic that isn't often thought about."
+      "A website I made to highlight the stereotypes and microaggressions present in Hollywood films towards Africa. It was an interesting topic that isn't often thought about.",
   },
   {
     name: "Execute Order 66",
@@ -302,7 +312,7 @@ programmingProjects = [
     category: "Chrome Extension",
     categoryColor: categories["Other"].color,
     description:
-      "A Google Chrome Extension that cleanses the profanity out of your GitHub repos."
+      "A Google Chrome Extension that cleanses the profanity out of your GitHub repos.",
   },
   {
     name: "Random Number Assignment",
@@ -311,6 +321,6 @@ programmingProjects = [
     image: "./../media/programming/thumbnails/random-number.jpg",
     category: categories["Web App"].name,
     categoryColor: categories["Web App"].color,
-    description: "Assigns a random number to inputted elements."
-  }
+    description: "Assigns a random number to inputted elements.",
+  },
 ];
