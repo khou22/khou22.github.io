@@ -937,15 +937,15 @@
   <a onclick="storeClick()">
     <button class="ui active button positive photography-store-button">
       <i class="shopping cart icon"></i>
-      $25 Print + Frame
+      $40 Print
     </button>
 
     <script>
-      var storeClick = function() {
+      var storeClick = function () {
         gtag("event", "click", {
           event_category: "Photography",
           event_label: "Order Form",
-          transport: "Beacon"
+          transport: "Beacon",
         });
         window.open("https://forms.gle/caxTwfACGLqLbnqV6", "_blank");
       };
