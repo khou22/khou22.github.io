@@ -6,6 +6,16 @@
 }
 
 .photo {
+  &-wrapper {
+    margin: auto;
+    margin-bottom: 36px;
+    max-width: 1000px;
+  }
+
+  &-description {
+    margin-top: 12px !important;
+  }
+
   &-go-back {
     cursor: pointer;
   }

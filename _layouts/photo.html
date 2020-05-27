@@ -12,13 +12,13 @@ layout: default
 
 <div class="page-content" style="margin-top: 24px;">
   <div class="wrapper">
-    <div class="post-content">
+    <div class="photo-wrapper">
       <a onclick="goBack()" class="photo-go-back">< Back to Homepage</a>
       <div
         class="ui stackable relaxed two column grid"
         style="margin-top: 12px;"
       >
-        <div class="ten wide column">
+        <div class="nine wide column">
           <span class="zoom" id="photo-zoom">
             <img
               src="{{ page.source }}"
@@ -27,13 +27,17 @@ layout: default
             />
           </span>
         </div>
-        <div class="six wide column">
+        <div class="seven wide column">
           <h1 class="ui header">
             {{ page.photoName }}
           </h1>
 
           <!-- Price -->
           <h3 class="ui header">Price: <span id="price">$30</span></h3>
+
+          <p class="photo-description">
+            High-quality photo prints to decorate any room. Great as gifts.
+          </p>
 
           <!-- Size Selection -->
           <div class="ui form photo-sizes">
@@ -62,7 +66,7 @@ layout: default
             data-item-id="{{ page.photoName }} (8x10)"
             data-item-price="30"
             data-item-url="{{ page.photoName | prepend: site.baseurl }}"
-            data-item-description="High-quality photo."
+            data-item-description="High-quality photo prints to decorate any room. Great as gifts."
             data-item-image="{{ page.placeholder }}"
             data-item-name="{{ page.photoName }} (8x10)"
             data-item-custom1-name="Additional Notes"
