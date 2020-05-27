@@ -33,7 +33,9 @@ layout: default
           </h1>
 
           <!-- Price -->
-          <h3 class="ui header">Price: <span id="price">$30</span></h3>
+          <h3 class="ui header photo-price">
+            Price: <span id="price">$30</span>
+          </h3>
 
           <p class="photo-description">
             High-quality photo prints to decorate any room. Great as gifts.
@@ -62,7 +64,7 @@ layout: default
 
           <button
             id="snipcart-add-item-button"
-            class="snipcart-add-item ui button positive"
+            class="snipcart-add-item ui button primary"
             data-item-id="{{ page.photoName }} (8x10)"
             data-item-price="30"
             data-item-url="{{ page.photoName | prepend: site.baseurl }}"
@@ -76,7 +78,8 @@ layout: default
           </button>
 
           <p class="photo-custom-size">
-            Don't see a size you're looking for? I do custom orders
+            Don't see a size you're looking for? I do custom orders (panorama,
+            three panels, etc.)
             <a href="{{ site.photography_custom_order_form }}" target="_blank"
               >by request.</a
             >
