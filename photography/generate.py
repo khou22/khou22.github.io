@@ -124,6 +124,32 @@ with open("allImages.js", 'w') as outputFile:
     
     outputFile.write("];\n")
 
+################   Generate a Product Page for Each Photo   ################
+if not os.path.exists('photos'):
+    os.makedirs('photos')
+
+for photoName in allPhotoNames:
+    photoNameNoExtension = os.path.splitext(photoName)[0]
+    photoProductPage = 'photos/%s' % photoNameNoExtension
+    if not os.path.exists(photoProductPage):
+        os.makedirs(photoProductPage)
+
+    filePath, placeholderFileName, width, height = manager.getSrc(photoName)
+    with open("%s/index.html" % photoProductPage, 'w') as outputFile:
+        outputFile.write("---\n")
+        outputFile.write("layout: photo\n")
+        outputFile.write("title: \"Print Details - KHou Photography\"\n")
+        outputFile.write("photoName: \"%s\"\n" % photoNameNoExtension)
+        outputFile.write("source: \"../../%s\"\n" % filePath)
+        outputFile.write("placeholder: \"../../../database/%s\"\n" % placeholderFileName)
+        outputFile.write("width: \"%s\"\n" % width)
+        outputFile.write("height: \"%s\"\n" % height)
+        outputFile.write("---\n")
+        outputFile.write("\n")
+
+        outputFile.write("<!-- Autogen via generate.py -->\n")
+        outputFile.write("<!-- %s -->\n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+
 ################   Master Collection With All Photos   ################
 if not os.path.exists('master'):
     os.makedirs('master')

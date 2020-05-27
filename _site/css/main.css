@@ -533,3 +533,9 @@ article strong { color: black; }
 .browser-homepage-bookmarks-grid div { padding: 3rem; }
 .browser-homepage-bookmark { width: 100%; height: 100%; display: flex !important; justify-content: center; align-content: center; flex-direction: column; text-align: center; border-radius: 50%; background: white; padding: 12px; }
 .browser-homepage-bookmark img { margin: 0 15%; width: 70%; height: auto; }
+
+@media (min-width: 800px) { .snipcart-item-line__product { padding-left: 2rem !important; } }
+
+.photo-go-back { cursor: pointer; }
+.photo-sizes { margin: 24px 0; }
+.photo-custom-size { margin-top: 18px !important; color: grey; }

@@ -1,0 +1,21 @@
+// Snipcart Override
+.snipcart-item-line__product {
+  @media (min-width: $mobile-cuttoff) {
+    padding-left: 2rem !important;
+  }
+}
+
+.photo {
+  &-go-back {
+    cursor: pointer;
+  }
+
+  &-sizes {
+    margin: 24px 0;
+  }
+
+  &-custom-size {
+    margin-top: 18px !important;
+    color: grey;
+  }
+}
