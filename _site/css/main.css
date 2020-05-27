@@ -539,3 +539,13 @@ article strong { color: black; }
 .photo-go-back { cursor: pointer; }
 .photo-sizes { margin: 24px 0; }
 .photo-custom-size { margin-top: 18px !important; color: grey; }
+
+/* these styles are for the demo, but are not required for the plugin */
+.zoom { display: inline-block; position: relative; }
+
+/* magnifying glass icon */
+.zoom:after { content: ""; display: block; width: 33px; height: 33px; position: absolute; top: 0; right: 0; background: url(icon.png); }
+
+.zoom img { display: block; }
+
+.zoom img::selection { background-color: transparent; }

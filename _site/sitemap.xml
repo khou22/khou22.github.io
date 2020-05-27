@@ -1411,6 +1411,9 @@
 <loc>http://localhost:4000/libraries/ammap/plugins/responsive/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/libraries/jquery-zoom/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/libraries/tile-layout-library/</loc>
 </url>
 <url>
@@ -1612,6 +1615,10 @@
 <url>
 <loc>http://localhost:4000/libraries/ammap/plugins/responsive/examples/xy.html</loc>
 <lastmod>2016-11-21T13:46:40-08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/libraries/jquery-zoom/demo.html</loc>
+<lastmod>2018-04-26T11:33:25-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/libraries/prognroll/index.html</loc>

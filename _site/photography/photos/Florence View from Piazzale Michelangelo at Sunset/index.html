@@ -311,6 +311,8 @@
 </div>
 
 
+<script src="/libraries/jquery-zoom/jquery.zoom.js"></script>
+
 <div class="page-content" style="margin-top: 24px;">
   <div class="wrapper">
     <div class="post-content">
@@ -319,10 +321,16 @@
         class="ui stackable relaxed two column grid"
         style="margin-top: 12px;"
       >
-        <div class="column">
-          <img src="../../../database/Florence View from Piazzale Michelangelo at Sunset.jpg" class="photo-image" />
+        <div class="ten wide column">
+          <span class="zoom" id="photo-zoom">
+            <img
+              src="../../../database/Florence View from Piazzale Michelangelo at Sunset.jpg"
+              class="photo-image"
+              alt="Florence View from Piazzale Michelangelo at Sunset"
+            />
+          </span>
         </div>
-        <div class="column">
+        <div class="six wide column">
           <h1 class="ui header">
             Florence View from Piazzale Michelangelo at Sunset
           </h1>
@@ -399,6 +407,10 @@
           </p>
 
           <script>
+            $(document).ready(function () {
+              $("#photo-zoom").zoom();
+            });
+
             function setPrice(size, price) {
               // Update price text
               document.getElementById("price").innerText = `$${price}`;
@@ -426,7 +438,6 @@
               .checkbox()
               .checkbox({
                 onChecked: function () {
-                  console.log("Chose 8x10");
                   setPrice("8x10", "30");
                 },
               });
@@ -437,7 +448,6 @@
               .checkbox()
               .checkbox({
                 onChecked: function () {
-                  console.log("Chose 11x14");
                   setPrice("11x14", "40");
                 },
               });
@@ -448,7 +458,6 @@
               .checkbox()
               .checkbox({
                 onChecked: function () {
-                  console.log("Chose 16x20");
                   setPrice("16x20", "80");
                 },
               });
@@ -459,7 +468,6 @@
               .checkbox()
               .checkbox({
                 onChecked: function () {
-                  console.log("Chose 24x30");
                   setPrice("24x30", "150");
                 },
               });
