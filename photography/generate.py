@@ -125,6 +125,14 @@ with open("allImages.js", 'w') as outputFile:
     outputFile.write("];\n")
 
 ################   Generate a Product Page for Each Photo   ################
+    # This is hard coded into the config.yml (MUST BE UPDATED IF CONFIG.YML UPDATED)
+photography_print_options = [
+  ["8x10", 29],
+  ["11x14", 39],
+  ["16x20", 79],
+  ["24x30", 149],
+]
+
 if not os.path.exists('photos'):
     os.makedirs('photos')
 
@@ -149,6 +157,21 @@ for photoName in allPhotoNames:
 
         outputFile.write("<!-- Autogen via generate.py -->\n")
         outputFile.write("<!-- %s -->\n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    
+    # Product JSON for Snipcart
+    for printOption in photography_print_options:
+        size, price = printOption
+        jsonUrl = "%s/%s.json" % (photoProductPage, size)
+
+        id = "%s (%s)" % (photoNameNoExtension, size)
+        url = "/photography/photos/%s/%s.json" % (photoNameNoExtension, size)
+
+        with open(jsonUrl, 'w') as outputFile:
+            outputFile.write("{\n")
+            outputFile.write("\t\"id\": \"%s\",\n" % id)
+            outputFile.write("\t\"price\": \"%.2f\",\n" % price)
+            outputFile.write("\t\"url\": \"%s\",\n" % url)
+            outputFile.write("}\n")
 
 ################   Master Collection With All Photos   ################
 if not os.path.exists('master'):
