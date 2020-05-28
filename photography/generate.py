@@ -169,7 +169,7 @@ for photoName in allPhotoNames:
         with open(jsonUrl, 'w') as outputFile:
             outputFile.write("{\n")
             outputFile.write("\t\"id\": \"%s\",\n" % id)
-            outputFile.write("\t\"price\": \"%.2f\",\n" % price)
+            outputFile.write("\t\"price\": %.2f,\n" % price)
             outputFile.write("\t\"url\": \"%s\",\n" % url)
             outputFile.write("}\n")
 
