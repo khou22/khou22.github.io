@@ -15,7 +15,10 @@
   />
 
   <!-- Thumbnail preview -->
-  <meta property="og:image" content="/media/meta/thumbnail-preview.jpg" />
+  <meta
+    property="og:image"
+    content="/media/meta/thumbnail-preview.jpg"
+  />
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -29,12 +32,14 @@
   ></script>
 
   <!-- Tile Layout Library -->
-  <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css"> <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css"> <link
+  rel="stylesheet" href="/css/main.css">
   <link
     rel="canonical"
     href="http://localhost:4000/photography/master/"
   />
-  <link rel="alternate" type="application/rss+xml" title="Kevin Hou" href="http://localhost:4000/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou"
+  href="http://localhost:4000/feed.xml" />
 
   <!-- Bootstrap -->
   <!-- <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -50,6 +55,12 @@
     href="/semantic/dist/semantic.min.css"
   />
   <script src="/semantic/dist/semantic.min.js"></script>
+
+  <!-- Snipcart -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.snipcart.com/themes/v3.0.14/default/snipcart.css"
+  />
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script
@@ -67,7 +78,12 @@
   </script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/media/site/favicon.png"> <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="/media/site/favicon.png"
+  />
+  <!-- Begin Jekyll SEO tag v2.2.3 -->
 <title>All Photos KHou Photography | Kevin Hou</title>
 <meta property="og:title" content="All Photos KHou Photography" />
 <meta property="og:locale" content="en_US" />
@@ -287,7 +303,7 @@
     class="disabled"
     id="modalTitleSelectable"
     value="Modal Title"
-    style="opacity:0;height:1"
+    style="opacity: 0; height: 1;"
     readonly="true"
   />
   <div class="image content">
@@ -310,28 +326,34 @@
 <script>
   $(".ui.modal").modal();
 
-  var openModal = function(name, src) {
-    document.getElementById("modalImage").setAttribute("src", src);
-    document.getElementById("modalTitle").innerText = name;
-    document.getElementById("modalTitleSelectable").value = name;
-    $(".ui.modal").modal("show");
+  var openModal = function (name, src) {
+    // Open the product page on click
+    location.href = `/photography/photos/${name}`;
+
+    // If using the modal
+    if (false) {
+      document.getElementById("modalImage").setAttribute("src", src);
+      document.getElementById("modalTitle").innerText = name;
+      document.getElementById("modalTitleSelectable").value = name;
+      $(".ui.modal").modal("show");
+    }
   };
 
-  var copyName = function() {
+  var copyName = function () {
     var fileName = document.getElementById("modalTitleSelectable");
     fileName.select();
     fileName.setSelectionRange(0, 99999); /*For mobile devices*/
     document.execCommand("copy");
   };
 
-  var closeModal = function() {
+  var closeModal = function () {
     $(".ui.modal").modal("hide");
   };
 </script>
 
 <!-- JS Object -->
 <!-- Autogen via generate.py -->
-<!-- 2020-04-08 13:28:32 -->
+<!-- 2020-05-27 16:51:00 -->
 <script>
   const GALLERY_IMAGES = {
     'All Photos': [
@@ -2580,7 +2602,7 @@
   };
 </script>
 
-<div id="container" style="margin-top: 24px">
+<div id="container" style="margin-top: 24px;">
   <a href="/photography">< Back to Homepage</a>
   <div id="gallery"></div>
 </div>
@@ -2625,11 +2647,19 @@
   lazyload();
 </script>
 
+<!-- Snipcart -->
+<div
+  hidden
+  id="snipcart"
+  data-api-key="MWYwNzMxOWQtNDgwNy00ZGFjLWE3ODgtNWFhZmJjMTY0ZDlhNjM3MjYyMDUyOTg3ODE1NDc2"
+></div>
+<script src="https://cdn.snipcart.com/themes/v3.0.14/default/snipcart.js"></script>
+
 <div class="photography-store-container">
-  <a onclick="storeClick()">
+  <a class="snipcart-checkout">
     <button class="ui active button positive photography-store-button">
       <i class="shopping cart icon"></i>
-      $40 Print
+      <span class="snipcart-items-count"></span>
     </button>
 
     <script>

@@ -1,0 +1,129 @@
+---
+layout: default
+---
+
+<!-- NOTES:
+    Initial product is hard coded to 8x10 
+-->
+
+{% include photoStoreButton.html %}
+
+<script src="{{ '/libraries/jquery-zoom/jquery.zoom.js' | prepend: site.baseurl }}"></script>
+
+<div class="page-content" style="margin-top: 24px;">
+  <div class="wrapper">
+    <div class="photo-wrapper">
+      <a onclick="goBack()" class="photo-go-back">< Back to Homepage</a>
+      <div
+        class="ui stackable relaxed two column grid"
+        style="margin-top: 12px;"
+      >
+        <div class="nine wide column">
+          <span class="zoom" id="photo-zoom">
+            <img
+              src="{{ page.source }}"
+              class="photo-image"
+              alt="{{ page.photoName }}"
+            />
+          </span>
+        </div>
+        <div class="seven wide column">
+          <h1 class="ui header">
+            {{ page.photoName }}
+          </h1>
+
+          <!-- Price -->
+          <h3 class="ui header photo-price">
+            Price: <span id="price">$30</span>
+          </h3>
+
+          <p class="photo-description">
+            High-quality photo prints to decorate any room. Great as gifts.
+          </p>
+
+          <!-- Size Selection -->
+          <div class="ui form photo-sizes">
+            <div class="grouped fields">
+              <label>Sizes Available</label>
+
+              <!-- Iterate to generate options -->
+              {% for printOption in site.photography_print_options %}
+              <div class="field">
+                <div class="ui radio checkbox size_{{ printOption[0] }}">
+                  {% if forloop.first %}
+                  <input type="radio" name="printSize" checked="checked" />
+                  {% else %}
+                  <input type="radio" name="printSize" />
+                  {% endif %}
+                  <label>{{ printOption[0] }}</label>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <button
+            id="snipcart-add-item-button"
+            class="snipcart-add-item ui button primary"
+            data-item-id="{{ page.photoName }} (8x10)"
+            data-item-price="30"
+            data-item-url="{{ site.url }}/photography/photos/{{ page.photoName}}"
+            data-item-description="High-quality photo prints to decorate any room. Great as gifts."
+            data-item-image="{{ page.placeholder }}"
+            data-item-name="{{ page.photoName }} (8x10)"
+            data-item-custom1-name="Additional Notes"
+            data-item-custom1-type="textarea"
+          >
+            Add to cart
+          </button>
+
+          <p class="photo-custom-size">
+            Don't see a size you're looking for? I do custom orders (panorama,
+            three panels, etc.)
+            <a href="{{ site.photography_custom_order_form }}" target="_blank"
+              >by request.</a
+            >
+          </p>
+
+          <script>
+            $(document).ready(function () {
+              $("#photo-zoom").zoom();
+            });
+
+            function setPrice(size, price) {
+              // Update price text
+              document.getElementById("price").innerText = `$${price}`;
+
+              // Update product information
+              var button = document.getElementById("snipcart-add-item-button");
+
+              var productNameWithSize = `{{ page.photoName }} ${size}`;
+              button.setAttribute("data-item-id", productNameWithSize);
+              button.setAttribute("data-item-name", productNameWithSize);
+              button.setAttribute("data-item-price", price);
+
+              console.log(button.dataset);
+            }
+
+            function goBack() {
+              console.log("Going back");
+              window.history.back(); // Back in history (keeps window position)
+            }
+          </script>
+
+          {% for printOption in site.photography_print_options %}
+          <script>
+            $(".size_{{ printOption[0] }}.checkbox")
+              .checkbox()
+              .checkbox({
+                onChecked: function () {
+                  setPrice("{{ printOption[0] }}", "{{ printOption[1] }}");
+                },
+              });
+          </script>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

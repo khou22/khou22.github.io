@@ -14,7 +14,10 @@
   />
 
   <!-- Thumbnail preview -->
-  <meta property="og:image" content="{{ site.baseurl }}/media/meta/thumbnail-preview.jpg" />
+  <meta
+    property="og:image"
+    content="{{ site.baseurl }}/media/meta/thumbnail-preview.jpg"
+  />
 
   <!-- React -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
@@ -29,19 +32,14 @@
 
   <!-- Tile Layout Library -->
   <link rel="stylesheet" type="text/css" href="{{
-    "/libraries/tile-layout-library/style.css" | prepend: site.baseurl
-  }}"> <link rel="stylesheet" href="{{
-    "/css/main.css" | prepend: site.baseurl
-  }}">
+  "/libraries/tile-layout-library/style.css" | prepend: site.baseurl }}"> <link
+  rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link
     rel="canonical"
     href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
   />
-  <link rel="alternate" type="application/rss+xml" title="{{
-    site.title
-  }}" href="{{
-    "/feed.xml" | prepend: site.baseurl | prepend: site.url
-  }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+  href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
   <!-- Bootstrap -->
   <!-- <link href="{{ "/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet"> -->
@@ -60,6 +58,12 @@
       '/semantic/dist/semantic.min.js' | prepend: site.baseurl
     }}"></script>
 
+  <!-- Snipcart -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.snipcart.com/themes/v3.0.14/default/snipcart.css"
+  />
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script
     async
@@ -76,7 +80,11 @@
   </script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="{{
-    "/media/site/favicon.png" | prepend: site.baseurl
-  }}"> {% seo %}
+  <link
+    rel="icon"
+    type="image/png"
+    href="{{ '/media/site/favicon.png' |
+  prepend: site.baseurl }}"
+  />
+  {% seo %}
 </head>

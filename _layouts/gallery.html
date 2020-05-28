@@ -27,7 +27,7 @@ layout: default
     class="disabled"
     id="modalTitleSelectable"
     value="Modal Title"
-    style="opacity:0;height:1"
+    style="opacity: 0; height: 1;"
     readonly="true"
   />
   <div class="image content">
@@ -50,28 +50,34 @@ layout: default
 <script>
   $(".ui.modal").modal();
 
-  var openModal = function(name, src) {
-    document.getElementById("modalImage").setAttribute("src", src);
-    document.getElementById("modalTitle").innerText = name;
-    document.getElementById("modalTitleSelectable").value = name;
-    $(".ui.modal").modal("show");
+  var openModal = function (name, src) {
+    // Open the product page on click
+    location.href = `{{ '/photography' | prepend: site.baseurl }}/photos/${name}`;
+
+    // If using the modal
+    if (false) {
+      document.getElementById("modalImage").setAttribute("src", src);
+      document.getElementById("modalTitle").innerText = name;
+      document.getElementById("modalTitleSelectable").value = name;
+      $(".ui.modal").modal("show");
+    }
   };
 
-  var copyName = function() {
+  var copyName = function () {
     var fileName = document.getElementById("modalTitleSelectable");
     fileName.select();
     fileName.setSelectionRange(0, 99999); /*For mobile devices*/
     document.execCommand("copy");
   };
 
-  var closeModal = function() {
+  var closeModal = function () {
     $(".ui.modal").modal("hide");
   };
 </script>
 
 <!-- JS Object -->
 {{ content }}
-<div id="container" style="margin-top: 24px">
+<div id="container" style="margin-top: 24px;">
   <a href="{{ '/photography' | pepend: site.baseurl }}">< Back to Homepage</a>
   <div id="gallery"></div>
 </div>
