@@ -337,7 +337,7 @@
 
           <!-- Price -->
           <h3 class="ui header photo-price">
-            Price: <span id="price">$30</span>
+            Price: <span id="price">$29</span>
           </h3>
 
           <p class="photo-description">
@@ -394,8 +394,8 @@
             id="snipcart-add-item-button"
             class="snipcart-add-item ui button primary"
             data-item-id="Time Square Taxi (8x10)"
-            data-item-price="30"
-            data-item-url="http://localhost:4000/photography/photos/Time Square Taxi"
+            data-item-price="29"
+            data-item-url="http://localhost:4000/photography/photos/Time Square Taxi/8x10.json"
             data-item-description="High-quality photo prints to decorate any room. Great as gifts."
             data-item-image="/database/Time Square Taxi.placeholder.jpg"
             data-item-name="Time Square Taxi (8x10)"
@@ -428,6 +428,10 @@
               var productNameWithSize = `Time Square Taxi ${size}`;
               button.setAttribute("data-item-id", productNameWithSize);
               button.setAttribute("data-item-name", productNameWithSize);
+              button.setAttribute(
+                "data-item-url",
+                `http://localhost:4000/photography/photos/Time Square Taxi/${size}.json`
+              );
               button.setAttribute("data-item-price", price);
 
               console.log(button.dataset);
@@ -445,7 +449,7 @@
               .checkbox()
               .checkbox({
                 onChecked: function () {
-                  setPrice("8x10", "30");
+                  setPrice("8x10", "29");
                 },
               });
           </script>
@@ -455,7 +459,7 @@
               .checkbox()
               .checkbox({
                 onChecked: function () {
-                  setPrice("11x14", "40");
+                  setPrice("11x14", "39");
                 },
               });
           </script>
@@ -465,7 +469,7 @@
               .checkbox()
               .checkbox({
                 onChecked: function () {
-                  setPrice("16x20", "80");
+                  setPrice("16x20", "79");
                 },
               });
           </script>
@@ -475,7 +479,7 @@
               .checkbox()
               .checkbox({
                 onChecked: function () {
-                  setPrice("24x30", "150");
+                  setPrice("24x30", "149");
                 },
               });
           </script>
