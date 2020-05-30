@@ -4,3 +4,4 @@ vendor/
 node_modules/
 **.jekyll-metadata
 **.pyc
+_site/
