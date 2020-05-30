@@ -9,6 +9,36 @@ import requests
 from PIL import Image
 
 
+'''
+Pinned to bottom right corner
+'''
+def watermark_with_transparency(base_image: Image,
+                                watermark: Image,
+                                size: float, offset: float) -> Image:
+    width, height = base_image.size
+    watermark_width, watermark_height = watermark.size
+
+    # Configure watermark positioning based on base image
+    watermarkFinalWidth = int(round(size * width))
+    watermarkFinalHeight = int(
+        round((watermarkFinalWidth / watermark_width) * watermark_height))
+    watermarkX = width - watermarkFinalWidth - int(round(offset * width))
+    watermarkY = height - watermarkFinalHeight - int(round(offset * height))
+
+    watermark_resized = watermark.resize(
+        (watermarkFinalWidth, watermarkFinalHeight), resample=Image.NEAREST)
+    watermark_box = (watermarkX, watermarkY, watermarkX +
+                     watermarkFinalWidth, watermarkY + watermarkFinalHeight)
+
+    print("Width: %d  |  Height: %d" %
+          (watermarkFinalWidth, watermarkFinalHeight))
+
+    transparent = Image.new('RGBA', (width, height), (0, 0, 0, 0))
+    transparent.paste(base_image, (0, 0))
+    transparent.paste(watermark_resized, watermark_box, mask=watermark_resized)
+    transparent = transparent.convert("RGB")
+    return transparent
+
 class ImageManager:
 
     def __init__(self, directory):
@@ -84,8 +114,14 @@ class ImageManager:
             heightPercentage = height/float(img.size[1])
             width = int(float(img.size[0] * float(heightPercentage)))
 
-        # Save large resize to file
+        # Apply resize
         imgResize = img.resize((width, height), Image.ANTIALIAS)
+
+        # Watermark the image
+        watermark = Image.open('watermark.png')
+        imgResize = watermark_with_transparency(imgResize, watermark, size=0.13, offset=0.01)
+
+        # Save the resized image
         imgResize.save(imagePath, 'JPEG', quality=100)
 
         # Placeholder image
