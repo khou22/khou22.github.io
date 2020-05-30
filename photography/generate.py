@@ -24,6 +24,8 @@ collectionList = glob.glob('%s/*.json' % JSON_DIRECTORY)
 allImageNames = set()
 allImages = []
 
+generateTimestamps = False
+
 ################   Read JSON   ################
 
 print("%d Collection(s) Found" % len(collectionList))
@@ -55,7 +57,8 @@ for collectionSource in collectionList:
             outputFile.write("\n")
 
             outputFile.write("<!-- Autogen via generate.py -->\n")
-            outputFile.write("<!-- %s -->\n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+            if (generateTimestamps):
+                outputFile.write("<!-- %s -->\n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
             outputFile.write("<script>\n")
             outputFile.write("  const GALLERY_IMAGES = {\n")
@@ -111,7 +114,8 @@ for collectionSource in collectionList:
 allPhotoNames = manager.getAllNames()
 with open("allImages.js", 'w') as outputFile:
     outputFile.write("// Autogen via generate.py \n")
-    outputFile.write("// %s \n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    if (generateTimestamps):
+        outputFile.write("// %s \n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
     outputFile.write("const ALL_DATABASE_PHOTOS = [\n")
 
@@ -156,7 +160,8 @@ for photoName in allPhotoNames:
         outputFile.write("\n")
 
         outputFile.write("<!-- Autogen via generate.py -->\n")
-        outputFile.write("<!-- %s -->\n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        if (generateTimestamps):
+            outputFile.write("<!-- %s -->\n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     
     # Product JSON for Snipcart
     for printOption in photography_print_options:
@@ -190,7 +195,8 @@ with open("master/index.html", 'w') as outputFile:
     outputFile.write("\n")
 
     outputFile.write("<!-- Autogen via generate.py -->\n")
-    outputFile.write("<!-- %s -->\n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    if (generateTimestamps):
+        outputFile.write("<!-- %s -->\n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
     outputFile.write("<script>\n")
     outputFile.write("  const GALLERY_IMAGES = {\n")
