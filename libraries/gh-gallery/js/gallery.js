@@ -29,7 +29,7 @@ class Renderer {
   render(config) {}
 
   getPhotos(config, photos) {
-    var photos = photos.map(p => {
+    var photos = photos.map((p) => {
       return new Photo(p);
     });
     if (config.shuffle) {
@@ -65,6 +65,7 @@ class Renderer {
       image.setAttribute("id", photo.name);
       image.setAttribute("data-original", photo.originalSrc());
       image.setAttribute("data-src", photo.compresedSrc());
+      image.setAttribute("loading", "lazy");
       image.src = photo.placeholderSrc(); // Lazyloading placeholder
       image.classList.add("lazyload");
     } else {
