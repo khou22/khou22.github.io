@@ -425,7 +425,10 @@
 
           <script>
             $(document).ready(function () {
-              $("#photo-zoom").zoom();
+              // Only use zoom on mobile
+              if ($(window).width() > 480 && $(window).height() > 480) {
+                $("#photo-zoom").zoom();
+              }
             });
 
             function setPrice(size, price) {

@@ -3,6 +3,17 @@ layout: default
 title: "KHou Photography"
 ---
 
+<style>
+  /* Fix oversized width on mobile */
+  @media only screen and (max-width: 600px) {
+    html {
+      width: 100vw;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+  }
+</style>
+
 <div id="slideshow" class="photography-landing-slideshow">
   <div class="photography-landing-slideshow-slide">
     <img src="{{ '/media/photography/cover/featured.jpg' | prepend: site.baseurl }}" />
