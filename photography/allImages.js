@@ -809,6 +809,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Princeton Football Field (Down).jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Christmas Tree Bokeh Outside Duomo in Florence.jpg",
         horizontal: false
     },
