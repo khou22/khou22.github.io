@@ -557,6 +557,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Presidio in San Francisco (Satellite).jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Friends on Bear Valley Cliff During Sunset.jpg",
         horizontal: false
     },
@@ -1135,6 +1139,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Mori Point Pacifica Sunset.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Washington DC Satellite Overview.jpg",
+        horizontal: false
     },
     {
         url: "/database/Hong Kong Skyline Panorama.jpg",
