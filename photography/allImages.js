@@ -109,6 +109,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Main Post Presidio San Francisco.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Bear Valley Drone Landscape of Valley.jpg",
         horizontal: true
     },
@@ -382,6 +386,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Marin Headlands Hills Silhouette.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Pilot's Row Presidio San Francisco.jpg",
         horizontal: false
     },
     {

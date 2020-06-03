@@ -976,6 +976,9 @@
 <loc>http://localhost:4000/photography/photos/Loneliest%20Road%20Vertical%20Drone/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/photography/photos/Main%20Post%20Presidio%20San%20Francisco/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/photography/photos/Times%20Square%20Taxi%20(Behind)/</loc>
 </url>
 <url>
@@ -1384,6 +1387,9 @@
 <loc>http://localhost:4000/photography/photos/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/photography/photos/Pilot's%20Row%20Presidio%20San%20Francisco/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/photography/photos/%20(USA%20Road%20Trip)-7/</loc>
 </url>
 <url>
@@ -1399,13 +1405,13 @@
 <loc>http://localhost:4000/photography/photos/1903%20Courtyard%20Milky%20Way%20Wide%20Angle/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/photography/photos/Seoul,%20Korea%20Alleyway/</loc>
+<loc>http://localhost:4000/wood/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/photography/photos/Museum%20Ceiling%20Artwork%20in%20Florence,%20Italy/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/wood/</loc>
+<loc>http://localhost:4000/photography/photos/New%20York%20Looking%20Down%20Street%20from%20High%20Line%20-%20Vertical/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/photography/photos/New%20York%20City%20Park%20Ave%20Looking%20Downtown%20in%20Rain/</loc>
@@ -1570,7 +1576,7 @@
 <loc>http://localhost:4000/blog/tag/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/photography/photos/New%20York%20Looking%20Down%20Street%20from%20High%20Line%20-%20Vertical/</loc>
+<loc>http://localhost:4000/photography/photos/Seoul,%20Korea%20Alleyway/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/design/</loc>
