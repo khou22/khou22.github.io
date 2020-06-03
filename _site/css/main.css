@@ -490,6 +490,10 @@ article strong { color: black; }
 
 .blog-search button { width: 100%; margin: 12px 0px; padding: 8px; background: white; border-radius: 4px; border: 1px solid #3286a8; }
 
+.error-background { background-image: url("/media/site/images/404.jpg"); background-size: cover; background-position: center; width: 100vw; height: 100vh; }
+.error-logo { width: 100px; height: 100px; }
+.error-content { display: flex; flex-direction: column; align-content: center; text-align: center; position: absolute; bottom: 10%; left: 0; width: 100%; color: white; }
+
 .landing-navigation { position: fixed; top: 0; overflow: hidden; z-index: 2; border-radius: 4px; margin: 1em; }
 .landing-social { position: fixed; top: 0; right: 0; z-index: 2; margin: 1em; }
 @media (max-width: 800px) { .landing-social { top: 64px; } }

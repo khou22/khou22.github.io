@@ -1,38 +1,130 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Kevin Hou's Website</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-    />
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <title>
+    Kevin Hou
+  </title>
+  <meta
+    name="description"
+    content="Kevin Hou's portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science '20. Lick-Wilmerding High School '16. San Francisco Bay Area.
+"
+  />
 
-    <link rel="stylesheet" href="css/404page.css" />
-    <link rel="icon" type="image/png" href="media/site/favicon.png" />
+  <!-- Thumbnail preview -->
+  <meta
+    property="og:image"
+    content="http://localhost:4000/media/meta/thumbnail-preview.jpg"
+  />
+  <meta
+    property="image"
+    content="http://localhost:4000/media/meta/thumbnail-preview.jpg"
+  />
+  <meta
+    property="og:image:secure_url"
+    content="https://khou22.com/media/meta/thumbnail-preview.jpg"
+  />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" />
 
-    <!-- Javascript Libraries -->
-    <script src="libraries/TheaterJS-2.0.1/dist/theater.min.js"></script>
-    <!-- TheaterJS -->
-  </head>
+  <!-- React -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+  <!-- Jquery -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Tile Layout Library -->
+  <link rel="stylesheet" type="text/css" href="/libraries/tile-layout-library/style.css"> <link
+  rel="stylesheet" href="/css/main.css">
+  <link
+    rel="canonical"
+    href="http://localhost:4000/404.html"
+  />
+  <link rel="alternate" type="application/rss+xml" title="Kevin Hou"
+  href="http://localhost:4000/feed.xml" />
+
+  <!-- Bootstrap -->
+  <!-- <link href="/css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <script src="/css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script> -->
+
+  <!-- Pinterest -->
+  <meta name="p:domain_verify" content="ba077b9ffb934c298dbb2516fb42bdee" />
+
+  <!-- Semantic UI -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/semantic/dist/semantic.min.css"
+  />
+  <script src="/semantic/dist/semantic.min.js"></script>
+
+  <!-- Snipcart -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.snipcart.com/themes/v3.0.14/default/snipcart.css"
+  />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-66796355-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-66796355-1");
+  </script>
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="/media/site/favicon.png"
+  />
+  <!-- Begin Jekyll SEO tag v2.2.3 -->
+<title>Kevin Hou | Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.</title>
+<meta property="og:title" content="Kevin Hou" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area." />
+<meta property="og:description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area." />
+<link rel="canonical" href="http://localhost:4000/404.html" />
+<meta property="og:url" content="http://localhost:4000/404.html" />
+<meta property="og:site_name" content="Kevin Hou" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@kevinhou22" />
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"WebPage","headline":"Kevin Hou","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","url":"http://localhost:4000/404.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+
   <body>
-    <div>
-      <div id="content" class="MainDiv"></div>
-      <h1>
-        This is a page in progress. Working on the design and dev right now.
-      </h1>
-      <h2>
-        In the meantime, return to
-        <a href="http://khou22.github.io">home page</a>.
-      </h2>
-    </div>
+    <div class="error-background">
+  <img
+    class="error-logo"
+    src="/media/site/logo/initials_logo.png"
+  />
+</div>
+
+<div class="error-content">
+  <h1>Not sure how you got here...sorry about that!</h1>
+  <a href="/">
+    <h2>Go Home</h2>
+  </a>
+</div>
+
   </body>
 </html>

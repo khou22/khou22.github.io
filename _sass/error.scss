@@ -1,0 +1,27 @@
+.error {
+  &-background {
+    background-image: url("/media/site/images/404.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    color: white;
+  }
+}
