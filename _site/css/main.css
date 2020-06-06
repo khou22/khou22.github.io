@@ -422,6 +422,17 @@ article strong { color: black; }
 .photo-go-back { cursor: pointer; }
 .photo-sizes { margin: 24px 0; }
 .photo-custom-size { margin-top: 18px !important; color: grey; }
+.photo-product-slider-container { display: flex; justify-content: center; min-height: 450px; }
+.photo-product-couch { bottom: 0; position: absolute; max-height: 50%; }
+.photo-product-slider { width: 100%; opacity: 0; z-index: 1; }
+.photo-product-slider#photo-product-slider-2 { position: absolute; top: 0; height: calc(100% - 50px); display: flex; justify-content: center; }
+.photo-product-slider#photo-product-slider-3 { position: absolute; top: 0; height: calc(100% - 50px); display: flex; justify-content: center; }
+.photo-product-slider#photo-product-slider-4 { position: absolute; top: 0; height: calc(100% - 50px); display: flex; justify-content: center; }
+.photo-product-slider#photo-product-slider-5 { position: absolute; top: 0; height: calc(100% - 50px); display: flex; justify-content: center; }
+.photo-product-slider-selected { opacity: 1; z-index: 2; }
+.photo-product-control { margin-top: 6px; background-color: white; z-index: 3; text-align: center; }
+.photo-product-control span { height: 12px; width: 12px; background-color: #bbb; border-radius: 50%; display: inline-block; margin: 2px; cursor: pointer; }
+.photo-product-control-selected { background-color: black !important; }
 
 /* these styles are for the demo, but are not required for the plugin */
 .zoom { display: inline-block; position: relative; }
@@ -432,6 +443,14 @@ article strong { color: black; }
 .zoom img { display: block; }
 
 .zoom img::selection { background-color: transparent; }
+
+.frame-container { max-width: 35%; max-height: 35%; margin: 9% auto; }
+
+.frame-img { border: solid 2px; border-bottom-color: #ffe; border-left-color: #eed; border-right-color: #eed; border-top-color: #ccb; max-height: 100%; max-width: 100%; }
+
+.frame { background-color: #ddc; border: solid 1.25vmin #eee; border-bottom-color: #fff; border-left-color: #eee; border-radius: 2px; border-right-color: #eee; border-top-color: #ddd; box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset, 0 5px 10px 5px rgba(0, 0, 0, 0.25); box-sizing: border-box; display: inline-block; position: relative; text-align: center; }
+.frame:before { border-radius: 2px; bottom: -2vmin; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25) inset; content: ""; left: -2vmin; position: absolute; right: -2vmin; top: -2vmin; }
+.frame:after { border-radius: 2px; bottom: -2.5vmin; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25); content: ""; left: -2.5vmin; position: absolute; right: -2.5vmin; top: -2.5vmin; }
 
 .project-page { width: 90%; margin: auto; margin-top: 12px; }
 .project-title { margin-top: 8px !important; }

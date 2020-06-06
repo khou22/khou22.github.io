@@ -332,14 +332,109 @@
         style="margin-top: 12px;"
       >
         <div class="nine wide column">
-          <span class="zoom" id="photo-zoom">
-            <img
-              src="/database/Statue of David, Florence, Italy.jpg"
-              class="photo-image"
-              alt="Statue of David, Florence, Italy"
-            />
-          </span>
+          <!-- Page Contents -->
+          <div class="photo-product-slider-container">
+            <div
+              id="photo-product-slider-1"
+              class="photo-product-slider photo-product-slider-selected"
+            >
+              <span class="zoom" id="photo-zoom">
+                <img
+                  src="/database/Statue of David, Florence, Italy.jpg"
+                  class="photo-image"
+                  alt="Statue of David, Florence, Italy"
+                />
+              </span>
+            </div>
+
+            <div id="photo-product-slider-2" class="photo-product-slider">
+              <div class="frame-container">
+                <div class="frame">
+                  <img
+                    class="frame-img"
+                    src="/database/Statue of David, Florence, Italy.jpg"
+                    alt="Mona Lisa"
+                  />
+                </div>
+              </div>
+
+              <img
+                id="furniture"
+                src="https://i.pinimg.com/originals/3e/06/3d/3e063dbea335dd01a2b9f08e8483e221.png"
+                class="photo-product-couch"
+                alt="couch"
+              />
+            </div>
+          </div>
+
+          <!-- Page control -->
+          <div class="photo-product-control">
+            <span
+              id="photo-product-control-1"
+              class="photo-product-control-selected"
+              onclick="viewProduct(1)"
+            ></span>
+            <span id="photo-product-control-2" onclick="viewProduct(2)"></span>
+          </div>
         </div>
+        <script>
+          // Set furniture source
+          const furnitureOptions = [
+            "https://pngimg.com/uploads/bed/bed_PNG17385.png",
+            "https://i.pinimg.com/originals/3e/06/3d/3e063dbea335dd01a2b9f08e8483e221.png",
+            "https://i1.wp.com/www.mtctutorials.com/wp-content/uploads/2019/05/News-Studio-Desk-with-chair-for-anchor-person-free-png-images-and-templates-by-mtc-tutorials.png?fit=1920%2C1080&ssl=1",
+            // "https://cdn.shortpixel.ai/client/q_lqip,ret_wait/https://basisfurniture.co.za/wp-content/uploads/2018/09/office.png",
+            // "https://pluspng.com/img-png/computer-desk-png-hd-office-desktop-hd-furniture-computer-free-png-and-psd-650.jpg",
+            // "https://i.dlpng.com/static/png/4655472-office-desk-png-97-images-in-collection-page-2-office-desk-png-650_497_preview.png",
+          ];
+          const img = document.getElementById("furniture");
+          const idx = Math.floor(Math.random() * furnitureOptions.length);
+          img.setAttribute("src", furnitureOptions[idx]);
+
+          /*
+           * The contents are simply toggled as being transparent and z-index 1 and
+           *  being opaque and z-index 2. This way the sizing will always remain the
+           *  first slide. The first slide is `relative` and the subsequent containers
+           *  are `absolute` bound to top
+           */
+
+          const possibleIndexes = [1, 2];
+          function viewProduct(i) {
+            // Styling on visible content
+            const contents = document.getElementById(
+              `photo-product-slider-${i}`
+            );
+            contents.classList.add("photo-product-slider-selected");
+
+            // Styling on visible page control
+            const activePageControl = document.getElementById(
+              `photo-product-control-${i}`
+            );
+            activePageControl.classList.add("photo-product-control-selected");
+
+            // Styling on hidden content
+            possibleIndexes
+              .filter((x) => x != i)
+              .forEach((x) => {
+                console.log("Inactive content", x);
+
+                // Hidden content
+                const hiddenContent = document.getElementById(
+                  `photo-product-slider-${x}`
+                );
+                hiddenContent.classList.remove("photo-product-slider-selected");
+
+                // Inactive page control
+                const inactivePageControl = document.getElementById(
+                  `photo-product-control-${x}`
+                );
+                inactivePageControl.classList.remove(
+                  "photo-product-control-selected"
+                );
+              });
+          }
+        </script>
+
         <div class="seven wide column">
           <h1 class="ui header">
             Statue of David, Florence, Italy
