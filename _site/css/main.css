@@ -397,7 +397,7 @@ article strong { color: black; }
 .contact-tile-icon { max-height: 130px; max-width: 120px; display: block; margin: auto; transition: all 0.2s ease-in-out; }
 .contact-tile-icon:hover { transform: scale(1.2); -webkit-transform: scale(1.2); }
 
-.photography-grid { margin: auto; width: 3400px !important; margin-bottom: 8px !important; padding: 2px; }
+.photography-grid { margin: auto; width: 3800px !important; margin-bottom: 8px !important; padding: 2px; }
 .photography-grid-container { width: 100%; overflow-x: scroll; overflow-y: hidden; }
 @media screen and (max-width: 600px) { .photography-grid-container { margin-left: 8px; } }
 .photography-modal-image { max-height: 70vh; max-width: 100% !important; }
