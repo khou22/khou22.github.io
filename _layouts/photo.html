@@ -142,7 +142,7 @@ layout: default
               <label>Sizes Available</label>
 
               <!-- Iterate to generate options -->
-              {% for printOption in site.photography_print_options %}
+              {% for printOption in page.print_options %}
               <div class="field">
                 <div class="ui radio checkbox size_{{ printOption[0] }}">
                   {% if forloop.first %}
@@ -213,7 +213,7 @@ layout: default
             }
           </script>
 
-          {% for printOption in site.photography_print_options %}
+          {% for printOption in page.print_options %}
           <script>
             $(".size_{{ printOption[0] }}.checkbox")
               .checkbox()

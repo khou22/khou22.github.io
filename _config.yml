@@ -17,14 +17,6 @@ url: "http://khou22.com" # the base hostname & protocol for your site
 
 # Store
 photography_store_order_form: "https://forms.gle/caxTwfACGLqLbnqV6"
-
-# Prices
-photography_print_options: [
-  ["8x10", 29],
-  ["11x14", 39],
-  ["16x20", 79],
-  ["24x30", 149],
-]
 photography_custom_order_form: "https://forms.gle/3QFXHbAe3VFYDTj77"
 
 # External links

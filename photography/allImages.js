@@ -897,6 +897,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Lake Tahoe Satellite Photo.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Kowloon ICC Skyline.jpg",
         horizontal: false
     },

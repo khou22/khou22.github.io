@@ -24,6 +24,9 @@ collectionList = glob.glob('%s/*.json' % JSON_DIRECTORY)
 allImageNames = set()
 allImages = []
 
+# Store original widths and heights (key: photo name, value: (w, h))
+original_dimensions = {}
+
 generateTimestamps = False
 
 ################   Read JSON   ################
@@ -83,6 +86,8 @@ for collectionSource in collectionList:
                     print("Saving %s" % photoName)
                     imagePath, placeholderPath, width, height = manager.create(photoName, photo['url'], MAX_WIDTH, PLACEHOLDER_WIDTH)
 
+                original_dimensions[photoName] = (photo['width'], photo['height'])
+
                 photoObject['name'] = os.path.splitext(photoName)[0]
                 photoObject['src'] = imagePath
                 photoObject['width'] = width
@@ -129,13 +134,16 @@ with open("allImages.js", 'w') as outputFile:
     outputFile.write("];\n")
 
 ################   Generate a Product Page for Each Photo   ################
-    # This is hard coded into the config.yml (MUST BE UPDATED IF CONFIG.YML UPDATED)
 photography_print_options = [
-  ["8x10", 29],
-  ["11x14", 39],
-  ["16x20", 79],
-  ["24x30", 149],
+  [(8, 10), 29],
+  [(11, 14), 39],
+  [(16, 20), 79],
+  [(24, 30), 149],
 ]
+ideal_dpi = 200
+default_short_edge = 3000 # Default if no dimension included in Lookbook JSON
+found_original_dimensions = 0
+missing_original_dimensions = 0
 
 if not os.path.exists('photos'):
     os.makedirs('photos')
@@ -147,6 +155,26 @@ for photoName in allPhotoNames:
         os.makedirs(photoProductPage)
 
     filePath, placeholderFileName, width, height = manager.getSrc(photoName)
+
+    # Get original width and height or use the default fallback.
+    if photoName in original_dimensions:
+        found_original_dimensions += 1
+        original_width, original_height = original_dimensions[photoName]
+    else:
+        original_width, original_height = (default_short_edge, default_short_edge)
+        missing_original_dimensions += 1
+
+    # Filter the size options taking into account DPI.
+    min_edge = min(original_width, original_height)
+    min_print_edge_inches = min_edge / ideal_dpi
+    filtered_print_options = [option for option in photography_print_options if option[0][0] <= min_print_edge_inches]
+
+    # Format into ["print size", price].
+    final_print_options = [["%dx%d" % option[0], option[1]] for option in filtered_print_options]
+
+    # Convert into a string to inject into the liquid template.
+    final_print_options_str = '[' + ', '.join(["[\"%s\", %d]" % (option[0], option[1]) for option in final_print_options]) + ']'
+
     with open("%s/index.html" % photoProductPage, 'w') as outputFile:
         outputFile.write("---\n")
         outputFile.write("layout: photo\n")
@@ -156,6 +184,7 @@ for photoName in allPhotoNames:
         outputFile.write("placeholder: \"/database/%s\"\n" % placeholderFileName)
         outputFile.write("width: \"%s\"\n" % width)
         outputFile.write("height: \"%s\"\n" % height)
+        outputFile.write("print_options: %s\n" % final_print_options_str)
         outputFile.write("---\n")
         outputFile.write("\n")
 
@@ -163,7 +192,7 @@ for photoName in allPhotoNames:
         if (generateTimestamps):
             outputFile.write("<!-- %s -->\n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     
-    # Product JSON for Snipcart
+    # Product JSON for Snipcart (allow any size to avoid unexpected bugs)
     for printOption in photography_print_options:
         size, price = printOption
         jsonUrl = "%s/%s.json" % (photoProductPage, size)
@@ -240,3 +269,6 @@ with open("master/index.html", 'w') as outputFile:
     outputFile.write("    ]\n")
     outputFile.write("  };\n")
     outputFile.write("</script>\n")
+
+print("\n")
+print("Found %d out of %d original dimensions" % (found_original_dimensions, missing_original_dimensions))
