@@ -410,6 +410,9 @@
 <loc>http://localhost:4000/blog/tag/html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/photography/master/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/photography/dominican-republic/</loc>
 </url>
 <url>
@@ -614,6 +617,9 @@
 <loc>http://localhost:4000/photography/photos/Rubicon%20Peak%20(Drone)%20(USA%20Road%20Trip)/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/photography/photos/Pigeon%20Point%20Lighthouse%20Milky%20Way%20with%20Meteor/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/photography/photos/Jiufen,%20Taiwan%20Drone%20-%20Vertical/</loc>
 </url>
 <url>
@@ -741,6 +747,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/photography/photos/1903%20Courtyard%20Sunset%20Down%20Stairs/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/photography/photos/Martin's%20Beach%20Milky%20Way/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/photography/photos/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Vertical%20Pink%20Bright%20Far/</loc>
@@ -995,6 +1004,9 @@
 <loc>http://localhost:4000/photography/photos/Grand%20Teton%20Bison%20Landscape/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/photography/photos/Bear%20Valley%20Astrophotography%20(Horizontal)/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/photography/photos/Hong%20Kong%20Motorbike%20Motion%20Blur%20(Horizontal)/</loc>
 </url>
 <url>
@@ -1059,6 +1071,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/photography/photos/Rubicon%20Peak%20Self%20Portrait/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/photography/photos/Steel%20Wool%20Basketball%20Hoop%20Milky%20Way/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/photography/photos/Singapore%20Blue%20Apartment/</loc>
@@ -1325,6 +1340,9 @@
 <loc>http://localhost:4000/photography/photos/New%20York%20Dear%20Irving%20on%20Hudson%20Rooftop%20Intersection/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/photography/photos/Pigeon%20Point%20Lighthouse%20Milky%20Way/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/photography/photos/Trevi%20Fountain%20in%20Rome,%20Italy/</loc>
 </url>
 <url>
@@ -1412,10 +1430,10 @@
 <loc>http://localhost:4000/photography/photos/1903%20Courtyard%20Milky%20Way%20Wide%20Angle/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/photography/photos/Seoul,%20Korea%20Alleyway/</loc>
+<loc>http://localhost:4000/wood/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/wood/</loc>
+<loc>http://localhost:4000/photography/photos/Museum%20Ceiling%20Artwork%20in%20Florence,%20Italy/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/photography/photos/New%20York%20Looking%20Down%20Street%20from%20High%20Line%20-%20Vertical/</loc>
@@ -1437,6 +1455,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/photography/photos/Mong%20Kok%20Station%20Entrance/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/photography/photos/Bear%20Valley%20Astrophotography%20(Portrait)/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/photography/photos/Golden%20Gate%20Bridge%20San%20Francisco%20Night%20Moon%20Vertical/</loc>
@@ -1583,7 +1604,7 @@
 <loc>http://localhost:4000/blog/tag/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/photography/photos/Museum%20Ceiling%20Artwork%20in%20Florence,%20Italy/</loc>
+<loc>http://localhost:4000/photography/photos/Seoul,%20Korea%20Alleyway/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/design/</loc>
@@ -1622,6 +1643,9 @@
 <loc>http://localhost:4000/photography/road/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/photography/astro-photography/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/photography/new-york/</loc>
 </url>
 <url>
@@ -1638,9 +1662,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/photography/cross-country-road-trip/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/photography/master/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/blog/</loc>

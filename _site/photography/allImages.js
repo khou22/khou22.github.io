@@ -137,6 +137,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Martin's Beach Milky Way.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/DSLR With Lensball Image on Screen.jpg",
         horizontal: false
     },
@@ -151,6 +155,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Loneliest Road Vertical Drone (Top Down).jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Bear Valley Astrophotography (Horizontal).jpg",
+        horizontal: true
     },
     {
         url: "/database/Sunset District Drone with Fog Rolling In.jpg",
@@ -343,6 +351,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Cottage and Ivy on Prospect Street.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Bear Valley Astrophotography (Portrait).jpg",
+        horizontal: false
     },
     {
         url: "/database/Sunset Sillhouette Vertical Las Terrenas, Dominican Republic.jpg",
@@ -749,6 +761,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Steel Wool Basketball Hoop Milky Way.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Tsim Sha Tsui Lensball Long Exposure.jpg",
         horizontal: false
     },
@@ -843,6 +859,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Shifen Waterfall Long Exposure Taiwan.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Pigeon Point Lighthouse Milky Way with Meteor.jpg",
+        horizontal: false
     },
     {
         url: "/database/Hong Kong Night Market Food Stand (Vertical).jpg",
@@ -1290,6 +1310,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Looking Down Fulton Street Vertical.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Pigeon Point Lighthouse Milky Way.jpg",
         horizontal: false
     },
     {
