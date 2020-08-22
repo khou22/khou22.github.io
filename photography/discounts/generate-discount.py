@@ -4,7 +4,7 @@ outputPath = 'princeton-grad/product-ids.txt'
 photography_print_options = [
   ["8x10", 29],
   ["11x14", 39],
-  ["16x20", 79],
+  ["16x20", 99],
   ["24x30", 149],
 ]
 

@@ -137,7 +137,7 @@ with open("allImages.js", 'w') as outputFile:
 photography_print_options = [
   [(8, 10), 29],
   [(11, 14), 39],
-  [(16, 20), 79],
+  [(16, 20), 99],
   [(24, 30), 149],
 ]
 ideal_dpi = 200
@@ -193,7 +193,7 @@ for photoName in allPhotoNames:
             outputFile.write("<!-- %s -->\n" % datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     
     # Product JSON for Snipcart (allow any size to avoid unexpected bugs)
-    for printOption in photography_print_options:
+    for printOption in final_print_options:
         size, price = printOption
         jsonUrl = "%s/%s.json" % (photoProductPage, size)
 
@@ -204,7 +204,7 @@ for photoName in allPhotoNames:
             outputFile.write("{\n")
             outputFile.write("\t\"id\": \"%s\",\n" % id)
             outputFile.write("\t\"price\": %.2f,\n" % price)
-            outputFile.write("\t\"url\": \"%s\",\n" % url)
+            outputFile.write("\t\"url\": \"%s\"\n" % url)
             outputFile.write("}\n")
 
 ################   Master Collection With All Photos   ################
