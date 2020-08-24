@@ -3,14 +3,14 @@
   "photos": [
     {
       "name": "San Francisco Golden Gate Park Satellite Shot",
-      "width": 3223,
-      "height": 4029,
+      "width": 8000,
+      "height": 9000,
       "url": "https://lookbook-photo.s3.amazonaws.com/PROD/2b795b77-854d-4163-b25e-ce4728545f92/photos/khou5_san_francisco_golden_gate_park_satellite_shot-e668b893-d892-4e1f-818b-3e0ba774f2d9.jpg"
     },
     {
       "name": "Presidio in San Francisco (Satellite)",
-      "width": 4526,
-      "height": 5657,
+      "width": 8000,
+      "height": 9000,
       "url": "https://lookbook-photo.s3.amazonaws.com/PROD/2b795b77-854d-4163-b25e-ce4728545f92/photos/khou5_presidio_in_san_francisco__satellite_-4116fbab-e8ea-48d5-8856-bd0273622a76.jpg"
     },
     {
@@ -33,8 +33,8 @@
     },
     {
       "name": "Lake Tahoe Satellite Photo",
-      "width": 1983,
-      "height": 2479,
+      "width": 8000,
+      "height": 9000,
       "url": "https://lookbook-photo.s3.amazonaws.com/PROD/2b795b77-854d-4163-b25e-ce4728545f92/photos/khou4_lake_tahoe_satellite_photo-c290974d-08c3-4a63-85c8-560c2b8d53fd.jpg"
     }
   ]

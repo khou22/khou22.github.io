@@ -512,6 +512,10 @@
             function goBack() {
               console.log("Going back");
               window.history.back(); // Back in history (keeps window position)
+              if (window.history.length == 1) {
+                window.location.href = "/photography";
+                console.log("Going to homepage");
+              }
             }
           </script>
 

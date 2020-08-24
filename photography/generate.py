@@ -164,6 +164,11 @@ for photoName in allPhotoNames:
         original_width, original_height = (default_short_edge, default_short_edge)
         missing_original_dimensions += 1
 
+    # If satellite shot, can blow up to max resolution
+    # TODO: Do this with Lookbook
+    if "satellite" in photoName.lower():
+        original_width, original_height = (10000, 10000)
+
     # Filter the size options taking into account DPI.
     min_edge = min(original_width, original_height)
     min_print_edge_inches = min_edge / ideal_dpi
