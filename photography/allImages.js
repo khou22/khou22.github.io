@@ -485,6 +485,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/01853.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Family Drone Christmas Card.jpg",
         horizontal: false
     },
@@ -921,6 +925,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Twin Peaks Biker Going Down U Bend.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Kowloon ICC Skyline.jpg",
         horizontal: false
     },
@@ -1119,6 +1127,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Korean Market Shoe Stand.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Lombard Street with Golden Gate in Background via Drone.jpg",
+        horizontal: false
     },
     {
         url: "/database/Taipei Park Bird Watching Dylan Fursty Dark Edit White Bird.jpg",
@@ -1375,6 +1387,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Surfers Riding Waves in Hong Kong.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Golden Gate Bridge Through Trees Portrait.jpg",
+        horizontal: false
     },
     {
         url: "/database/Palace of Fine Arts Street with Cars Drone.jpg",
