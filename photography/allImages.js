@@ -217,6 +217,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Claire Standing in Front of Lake Minnewaska.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Washington Monument in Front of Lincoln Memorial At Night.jpg",
         horizontal: false
     },
