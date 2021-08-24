@@ -117,9 +117,15 @@ $mobile-cuttoff: 800px; // Width to decide whether a browser is mobile or deskto
   text-align: center;
   left: 0;
 }
+
 .nav-ul .nav-li:hover ul.dropdown {
   display: block; /* Display the dropdown */
 }
+
+.nav-ul .nav-li ul.dropdown:hover {
+  display: block; /* Display the dropdown */
+}
+
 .nav-ul .nav-li ul.dropdown .nav-li {
   display: block;
 }
