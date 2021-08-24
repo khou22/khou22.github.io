@@ -45,6 +45,9 @@
                   <a href="{{ site.baseurl }}/design">Design</a>
                 </li>
                 <li class="nav-li">
+                  <a href="{{ site.baseurl }}/film">Film</a>
+                </li>
+                <li class="nav-li">
                   <a href="{{ site.baseurl }}/photography">Photography</a>
                 </li>
               </ul>
@@ -61,11 +64,11 @@
 
   <!-- Activate Tooltips -->
   <script type="text/javascript">
-    $(function() {
+    $(function () {
       $('[data-toggle="tooltip"]').tooltip();
     });
     // Header has two sizes — 80px and 40px — based on scrolling
-    $(document).scroll(function() {
+    $(document).scroll(function () {
       var screenWidth = $(document).width();
       var mobileCuttoff = 800; // Ambiguous
       if (screenWidth > mobileCuttoff) {
@@ -75,32 +78,32 @@
             className: ".site-header",
             styleElement: "height",
             min: 40,
-            max: 80
+            max: 80,
           },
           {
             className: ".site-title",
             styleElement: "font-size",
             min: 20,
-            max: 32
+            max: 32,
           },
           {
             className: ".site-title",
             styleElement: "line-height",
             min: 2,
-            max: 3
+            max: 3,
           },
           {
             className: ".header-logo",
             styleElement: "height",
             min: 24,
-            max: 64
+            max: 64,
           },
           {
             className: ".site-nav-bar",
             styleElement: "margin-top",
             min: 4,
-            max: 24
-          }
+            max: 24,
+          },
         ];
         if ($(this).scrollTop() < triggerDistance) {
           // Distance until changing header height

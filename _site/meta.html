@@ -158,6 +158,9 @@
                   <a href="/design">Design</a>
                 </li>
                 <li class="nav-li">
+                  <a href="/film">Film</a>
+                </li>
+                <li class="nav-li">
                   <a href="/photography">Photography</a>
                 </li>
               </ul>
@@ -174,11 +177,11 @@
 
   <!-- Activate Tooltips -->
   <script type="text/javascript">
-    $(function() {
+    $(function () {
       $('[data-toggle="tooltip"]').tooltip();
     });
     // Header has two sizes — 80px and 40px — based on scrolling
-    $(document).scroll(function() {
+    $(document).scroll(function () {
       var screenWidth = $(document).width();
       var mobileCuttoff = 800; // Ambiguous
       if (screenWidth > mobileCuttoff) {
@@ -188,32 +191,32 @@
             className: ".site-header",
             styleElement: "height",
             min: 40,
-            max: 80
+            max: 80,
           },
           {
             className: ".site-title",
             styleElement: "font-size",
             min: 20,
-            max: 32
+            max: 32,
           },
           {
             className: ".site-title",
             styleElement: "line-height",
             min: 2,
-            max: 3
+            max: 3,
           },
           {
             className: ".header-logo",
             styleElement: "height",
             min: 24,
-            max: 64
+            max: 64,
           },
           {
             className: ".site-nav-bar",
             styleElement: "margin-top",
             min: 4,
-            max: 24
-          }
+            max: 24,
+          },
         ];
         if ($(this).scrollTop() < triggerDistance) {
           // Distance until changing header height
@@ -294,7 +297,7 @@
 
   <article class="post-content">
     <h1>Last Build Date</h1>
-<p>Mon, 23 Aug 2021 19:21:10 -0700</p>
+<p>Mon, 23 Aug 2021 22:57:02 -0700</p>
 
   </article>
 </div>
