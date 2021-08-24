@@ -407,6 +407,9 @@
 <loc>http://localhost:4000/blog/tag/html</loc>
 </url>
 <url>
+<loc>http://localhost:4000/photography/cross-country-road-trip/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/photography/master/</loc>
 </url>
 <url>
@@ -1256,7 +1259,7 @@
 <loc>http://localhost:4000/photography/photos/Top%20Down%20Beach%20Houses%20Drone%20Las%20Terrenas%20Dominican%20Republic/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/photography/photos/Scateboarder%20Doing%20Jump%20in%20Philly/</loc>
+<loc>http://localhost:4000/wood/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/photography/photos/Shibuya%20Crossing%20Wide%20Angle/</loc>
@@ -1442,7 +1445,7 @@
 <loc>http://localhost:4000/photography/photos/1903%20Courtyard%20Milky%20Way%20Wide%20Angle/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/wood/</loc>
+<loc>http://localhost:4000/photography/photos/Seoul,%20Korea%20Alleyway/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/photography/photos/Museum%20Ceiling%20Artwork%20in%20Florence,%20Italy/</loc>
@@ -1616,13 +1619,16 @@
 <loc>http://localhost:4000/blog/tag/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/photography/photos/Seoul,%20Korea%20Alleyway/</loc>
+<loc>http://localhost:4000/photography/photos/Scateboarder%20Doing%20Jump%20in%20Philly/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/design/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/contact/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/film/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/photography/vsco/</loc>
@@ -1671,9 +1677,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/photography/drone/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/photography/cross-country-road-trip/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/blog/</loc>
