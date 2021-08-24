@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Restarting a CSS3 Animation with Javascript in React | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Restarting a CSS3 Animation with Javascript in React" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-07-31T14:07:45-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="Restarting a CSS3 Animation with Javascript in React" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Restarting a CSS3 Animation with Javascript in React","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2015-07-31T14:07:45-07:00","dateModified":"2015-07-31T14:07:45-07:00","description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/07/31/restarting-a-css3-animation-with-javascript-in-react.html"},"url":"http://localhost:4000/web/2015/07/31/restarting-a-css3-animation-with-javascript-in-react.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/web/2015/07/31/restarting-a-css3-animation-with-javascript-in-react.html","headline":"Restarting a CSS3 Animation with Javascript in React","dateModified":"2015-07-31T14:07:45-07:00","datePublished":"2015-07-31T14:07:45-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/07/31/restarting-a-css3-animation-with-javascript-in-react.html"},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -353,13 +356,13 @@
   <article class="post-content">
     <p>I’ve been working on animation in my project at Salesforce.com and I came across a challenge with animation. It’s very easy to trigger animation using react props and states, but reseting animations are a different beast. In non-React Javascript, the solution would be:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"tagID"</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">"animationClass"</span><span class="p">)</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"tagID"</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">"animationClass"</span><span class="p">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">tagID</span><span class="dl">"</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">"</span><span class="s2">animationClass</span><span class="dl">"</span><span class="p">)</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">tagID</span><span class="dl">"</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">animationClass</span><span class="dl">"</span><span class="p">)</span></code></pre></figure>
 
 <p>This would essentially just remove the class and then re-add it, effectively creating a “new” animation and reseting the cycle. However, React outsmarts this and doesn’t recognize the toggled class. To overcome this obstacle use a setTimeout to delay adding the class. After it has been removed for a few milliseconds, re-add it. Example:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"tagID"</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">"animationClass"</span><span class="p">)</span>
-<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"tagID"</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">"animationClass"</span><span class="p">);},</span> <span class="mi">50</span><span class="p">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">tagID</span><span class="dl">"</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">"</span><span class="s2">animationClass</span><span class="dl">"</span><span class="p">)</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">tagID</span><span class="dl">"</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">animationClass</span><span class="dl">"</span><span class="p">);},</span> <span class="mi">50</span><span class="p">);</span></code></pre></figure>
 
 <p>This will outsmart react into thinking the animation was indeed removed. It will reset the animation before you start it again. Hope this helps!</p>
 

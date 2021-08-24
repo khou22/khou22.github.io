@@ -93,8 +93,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>amCharts Export | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="amCharts Export" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area." />
@@ -103,12 +104,13 @@
 <meta property="og:url" content="http://localhost:4000/libraries/ammap/plugins/export/" />
 <meta property="og:site_name" content="Kevin Hou" />
 <meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="amCharts Export" />
 <meta name="twitter:site" content="@kevinhou22" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"amCharts Export","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","url":"http://localhost:4000/libraries/ammap/plugins/export/"}</script>
+{"url":"http://localhost:4000/libraries/ammap/plugins/export/","headline":"amCharts Export","@type":"WebPage","description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -317,34 +319,31 @@ file:///) or contain images loaded from different host than the web page itself.
 <h3 id="1-include-the-minified-version-of-file-of-this-plugin-as-well-as-the">1) Include the minified version of file of this plugin as well as the</h3>
 <p>bundled CSS file. I.e.:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;script src="amcharts/plugins/export/export.min.js"&gt;&lt;/script&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="amcharts/plugins/export/export.min.js"&gt;&lt;/script&gt;
 &lt;link  type="text/css" href="amcharts/plugins/export/export.css" rel="stylesheet"&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Or if you’d rather use amCharts CDN:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;script src="//cdn.amcharts.com/lib/3/plugins/export/export.min.js"&gt;&lt;/script&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="//cdn.amcharts.com/lib/3/plugins/export/export.min.js"&gt;&lt;/script&gt;
 &lt;link  type="text/css" href="//cdn.amcharts.com/lib/3/plugins/export/export.css" rel="stylesheet"&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>(this needs to go after all the other amCharts includes)</p>
 
-<h3 id="2-enable-export-with-default-options">2) Enable <code class="highlighter-rouge">export</code> with default options:</h3>
+<h3 id="2-enable-export-with-default-options">2) Enable <code class="language-plaintext highlighter-rouge">export</code> with default options:</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
   ...,
   "export": {
     "enabled": true
   }
 } );
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="-or-set-your-own-custom-options">… OR set your own custom options:</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
   ...,
   "export": {
     "enabled": true,
@@ -364,8 +363,7 @@ file:///) or contain images loaded from different host than the web page itself.
     } ]
   }
 } );
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="loading-external-libraries-needed-for-operation-of-this-plugin">Loading external libraries needed for operation of this plugin</h2>
 
@@ -381,7 +379,7 @@ annotations or generate download files.</p>
 <p>All libraries required for plugin operation are included withing plugins <em>/libs</em>
 subdirectory.</p>
 
-<p>The plugin will automatically try to look in chart’s <a href="http://docs.amcharts.com/3/javascriptcharts/AmSerialChart#path"><code class="highlighter-rouge">path</code></a>
+<p>The plugin will automatically try to look in chart’s <a href="http://docs.amcharts.com/3/javascriptcharts/AmSerialChart#path"><code class="language-plaintext highlighter-rouge">path</code></a>
 property. If your plugin files are located within plugins folder under amcharts
 (as is the case with the default distributions), you don’t need to do anything -
 the libraries will load on-demand.</p>
@@ -390,13 +388,13 @@ the libraries will load on-demand.</p>
 displaying your chart on, not the export.js library.</p>
 
 <p>In case you’ve moved the libs folder you need to tell the plugin where it is
-<code class="highlighter-rouge">"libs": { "path": "../libs/" }</code></p>
+<code class="language-plaintext highlighter-rouge">"libs": { "path": "../libs/" }</code></p>
 
 <h3 id="2-manual">2) Manual</h3>
 
-<p>You can also load all those JavaScript libraries by <code class="highlighter-rouge">&lt;script&gt;</code> tags. Since
+<p>You can also load all those JavaScript libraries by <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tags. Since
 loading of libraries is on by default you will need to turn it off by setting
-<code class="highlighter-rouge">"libs": { "autoLoad": false }</code></p>
+<code class="language-plaintext highlighter-rouge">"libs": { "autoLoad": false }</code></p>
 
 <p>Here is a full list of the files that need to be loaded for each operation:</p>
 
@@ -476,7 +474,7 @@ loading of libraries is on by default you will need to turn it off by setting
     <tr>
       <td>fallback</td>
       <td>{}</td>
-      <td>Holds the messages to guide the user to copy the generated output; <code class="highlighter-rouge">false</code> will disable the fallback feature</td>
+      <td>Holds the messages to guide the user to copy the generated output; <code class="language-plaintext highlighter-rouge">false</code> will disable the fallback feature</td>
     </tr>
     <tr>
       <td>fileName</td>
@@ -531,7 +529,7 @@ loading of libraries is on by default you will need to turn it off by setting
     <tr>
       <td>columnNames</td>
       <td>{}</td>
-      <td>An object of key/value pairs to use as column names when exporting to data formats. <code class="highlighter-rouge">exportTitles</code> needs to be set for this to work as well.</td>
+      <td>An object of key/value pairs to use as column names when exporting to data formats. <code class="language-plaintext highlighter-rouge">exportTitles</code> needs to be set for this to work as well.</td>
     </tr>
     <tr>
       <td>exportSelection</td>
@@ -588,7 +586,7 @@ You can set up menus, sub-menus, down to any level. You can even add custom
 items there that execute your arbitrary code on click. It’s so configurable
 it makes us sick with power ;)</p>
 
-<p>The top-level menu is configured via <code class="highlighter-rouge">menu</code> property under <code class="highlighter-rouge">export</code>. It should
+<p>The top-level menu is configured via <code class="language-plaintext highlighter-rouge">menu</code> property under <code class="language-plaintext highlighter-rouge">export</code>. It should
 always be an array, even if you have a single item in it.</p>
 
 <p>The array items could be either objects or format codes. Objects will allow you
@@ -601,15 +599,14 @@ on click.</p>
 
 <p>Here’s a sample of the simple menu setup that allows export to PNG, JPG and CSV:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "enabled": true,
   "menu": [ {
     "class": "export-main",
     "menu": [ "PNG", "JPG", "CSV" ]
   } ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The above will display a menu out of three options when you hover on export
 icon:</p>
@@ -638,9 +635,9 @@ right there on the chart.</p>
 <p>Let’s add more formats and organize image and data formats into separate
 submenus.</p>
 
-<p>To add a submenu to a menu item, simply add a <code class="highlighter-rouge">menu</code> array as its own property:</p>
+<p>To add a submenu to a menu item, simply add a <code class="language-plaintext highlighter-rouge">menu</code> array as its own property:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "enabled": true,
   "menu": [ {
     "class": "export-main",
@@ -653,8 +650,7 @@ submenus.</p>
     } ]
   } ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now we have a hierarchical menu with the following topology:</p>
 
@@ -676,7 +672,7 @@ submenus.</p>
 
 <p>We can mix “string” and “object” formats the way we see fit, i.e.:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "menu": [
     "PNG",
     { "label": "JPEG",
@@ -684,19 +680,18 @@ submenus.</p>
     "SVG"
   ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The magic does not end here, though.</p>
 
 <h3 id="adding-custom-click-events-to-menu-items">Adding custom click events to menu items</h3>
 
-<p>Just like we set <code class="highlighter-rouge">label</code> and <code class="highlighter-rouge">format</code> properties for menu item, we can set
-<code class="highlighter-rouge">click</code> as well.</p>
+<p>Just like we set <code class="language-plaintext highlighter-rouge">label</code> and <code class="language-plaintext highlighter-rouge">format</code> properties for menu item, we can set
+<code class="language-plaintext highlighter-rouge">click</code> as well.</p>
 
 <p>This needs to be a function reference. I.e.:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "menu": [
     "PNG",
     { "label": "JPEG",
@@ -706,70 +701,65 @@ submenus.</p>
     "SVG"
   ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="adding-external-legend">Adding external legend</h3>
 
 <p>In case you have an external legend you need to define the position where it should get placed in your export.
 By default it obtains the dimensions from the container but you can optionally overwrite those settings as shown below.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "legend": {
     "position": "top",  // or "right", "bottom" and "left" are possible
     "width": 200,       // optional
     "height": 200       // optional
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="changing-the-dataprovider-when-exporting">Changing the dataProvider when exporting</h3>
 
-<p>If you want to change the dataProvider when exporting to CSV, XLSX, or JSON, you can use the <code class="highlighter-rouge">processData</code> option:</p>
+<p>If you want to change the dataProvider when exporting to CSV, XLSX, or JSON, you can use the <code class="language-plaintext highlighter-rouge">processData</code> option:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "processData": function (data) {
     return data.slice(1, -1);
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="adding-overlaying-border">Adding overlaying border</h3>
 
 <p>In case you need a more visible separation of your chart for further processing you can add an overlaying border.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "border": {
     "stroke": "#000000",  // HEX-CODE to define the border color
     "strokeWidth": 1,     // number which represents the width in pixel
     "strokeOpacity": 1    // number which controls the opacity from 0 - 1
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="menu-item-reviver">Menu item reviver</h3>
 
-<p>By passing the <code class="highlighter-rouge">menuReviver</code> callback function you can modify the resulting menu
-item or relative container, before it gets appended to the list (<code class="highlighter-rouge">ul</code>). The
+<p>By passing the <code class="language-plaintext highlighter-rouge">menuReviver</code> callback function you can modify the resulting menu
+item or relative container, before it gets appended to the list (<code class="language-plaintext highlighter-rouge">ul</code>). The
 function takes two arguments and it needs to return a valid DOM element.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "menuReviver": function(item,li) {
     li.setAttribute("class","something special");
     return li;
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="format-specific-options-that-you-can-override-using-menu-item-reviver">Format specific options that you can override using Menu item reviver</h4>
 
-<p>Some formats, such as CSV, have specific parameters that are used when exporting to this format. For example, default column separator for CSV is a comma. But what if you would like to be that a tab? You could use <code class="highlighter-rouge">menuReviver</code> for that like this:</p>
+<p>Some formats, such as CSV, have specific parameters that are used when exporting to this format. For example, default column separator for CSV is a comma. But what if you would like to be that a tab? You could use <code class="language-plaintext highlighter-rouge">menuReviver</code> for that like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "enabled": true,
   "menuReviver": function(cfg,li) {
     if ( cfg.format == "CSV" ) {
@@ -778,8 +768,7 @@ function takes two arguments and it needs to return a valid DOM element.</p>
     return li;
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Below you will find a list of parameters that you can override for each format:</p>
 
@@ -960,34 +949,32 @@ function takes two arguments and it needs to return a valid DOM element.</p>
 <h3 id="menu-walker">Menu walker</h3>
 
 <p>In case you don’t like our structure, go ahead and write your own recursive
-function to create the menu by the given list configured through <code class="highlighter-rouge">menu</code>.</p>
+function to create the menu by the given list configured through <code class="language-plaintext highlighter-rouge">menu</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "menuWalker": function(list,container) {
     // some magic to generate the nested lists using the given list
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="printing-the-chart">Printing the chart</h3>
 
 <p>Adding menu item to print the chart or map is as easy as adding export ones. You
-just use “PRINT” as <code class="highlighter-rouge">format</code>. I.e.:</p>
+just use “PRINT” as <code class="language-plaintext highlighter-rouge">format</code>. I.e.:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "menu": [
     "PNG",
     "SVG",
     "PRINT"
   ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Or if you want to change the label:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "menu": [
     "PNG",
     "SVG",
@@ -997,17 +984,16 @@ just use “PRINT” as <code class="highlighter-rouge">format</code>. I.e.:</p>
     }
   ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="annotating-the-chart-before-export">Annotating the chart before export</h3>
 
 <p>OK, this one is so cool, you’ll need a class 700 insulation jacket.</p>
 
 <p>By default each menu item triggers some kind of export. You can trigger an
-“annotation” mode instead by including <code class="highlighter-rouge">"action": "draw"</code> instead.</p>
+“annotation” mode instead by including <code class="language-plaintext highlighter-rouge">"action": "draw"</code> instead.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "menu": [ {
     "class": "export-main",
     "menu": [ {
@@ -1019,8 +1005,7 @@ just use “PRINT” as <code class="highlighter-rouge">format</code>. I.e.:</p>
     } ]
   } ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now, when you click on the “Annotate” item in the menu, the chart will turn into
 an image editor which you can actual draw on and the menu gets replaced by the
@@ -1028,7 +1013,7 @@ default annotation menu.</p>
 
 <p>If you don’t like the detault annotation menu, you can define your own:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "menu": [ {
     "class": "export-main",
     "menu": [ {
@@ -1044,17 +1029,16 @@ default annotation menu.</p>
     } ]
   } ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now, when you turn on the annotation mode, your own submenu will display,
 allowing to export the image into either PNG, JPG, SVG or PDF.</p>
 
 <p>And that’s not even the end of it. You can add menu items to cancel, undo, redo
-and still be able to reuse the choices by using the actions <code class="highlighter-rouge">draw.modes</code>,
-<code class="highlighter-rouge">draw.widths</code>, <code class="highlighter-rouge">draw.colors</code> or <code class="highlighter-rouge">draw.shapes</code>.</p>
+and still be able to reuse the choices by using the actions <code class="language-plaintext highlighter-rouge">draw.modes</code>,
+<code class="language-plaintext highlighter-rouge">draw.widths</code>, <code class="language-plaintext highlighter-rouge">draw.colors</code> or <code class="language-plaintext highlighter-rouge">draw.shapes</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "menu": [ {
     "class": "export-main",
     "menu": [ {
@@ -1080,8 +1064,7 @@ and still be able to reuse the choices by using the actions <code class="highlig
     } ]
   } ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="annotation-settings">Annotation settings</h3>
 
@@ -1091,9 +1074,9 @@ modes, colors, widths or shapes, and set the defaults when entering the
 annotation mode.</p>
 
 <p>Following setup shows you all available settings. If you don’t have the
-<code class="highlighter-rouge">drawing</code> property at all, it will falls back to the defaults.</p>
+<code class="language-plaintext highlighter-rouge">drawing</code> property at all, it will falls back to the defaults.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "drawing": {
     "enabled": true, // Flag for `action: "draw"` menu items to toggle it's visibility
     "shapes": [ "test.svg" ], // Choice of shapes offered in the menu (shapes are being loaded from the shapes folder)
@@ -1116,15 +1099,14 @@ annotation mode.</p>
     "autoClose": true // Flag to automatically close the annotation mode after download
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>If you need to filter the drawn elements, you can pass the <code class="highlighter-rouge">reviver</code> method in
-your global configuration, or pass it to the <code class="highlighter-rouge">capture</code> method if you export
+<p>If you need to filter the drawn elements, you can pass the <code class="language-plaintext highlighter-rouge">reviver</code> method in
+your global configuration, or pass it to the <code class="language-plaintext highlighter-rouge">capture</code> method if you export
 manually. For example, to hide all free labels you can simply do something like
 the following:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "menu": ["PNG"],
   "reviver": function(obj) {
     if ( obj.className == "amcharts-label" ) {
@@ -1132,8 +1114,7 @@ the following:</p>
     }
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="delay-the-capturing-before-export">Delay the capturing before export</h3>
 
@@ -1141,7 +1122,7 @@ the following:</p>
 to highlight the current value. For this you can simply define the ‘delay’
 property in your menu item:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "delay": 3,
 
   // or specifically on individual menu items
@@ -1152,17 +1133,16 @@ property in your menu item:</p>
     "delay": 3
   }]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="events">Events</h3>
 
 <p>Since version 1.1.7 the plugin introduces some events you can use. For example
-the <code class="highlighter-rouge">afterCapture</code> event allows you to add some texts or images which can’t be
+the <code class="language-plaintext highlighter-rouge">afterCapture</code> event allows you to add some texts or images which can’t be
 seen on the regular chart but only the generated export. Use it to watermark
 your exported images.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   "afterCapture": function(menuConfig) {
       var text = new fabric.Text("This is shown on exported image only", {
         top: 50,
@@ -1189,8 +1169,7 @@ your exported images.</p>
     }
   }]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="a-list-of-the-events">A list of the events</h3>
 
@@ -1360,7 +1339,7 @@ your exported images.</p>
   </tbody>
 </table>
 
-<p>Available <code class="highlighter-rouge">format</code> values:</p>
+<p>Available <code class="language-plaintext highlighter-rouge">format</code> values:</p>
 
 <ul>
   <li>JPG</li>
@@ -1378,30 +1357,29 @@ your exported images.</p>
 <p>When exporting to PDF, you can set and modify the content of the resulting
 document. I.e. add additional text and/or modify image size, etc.</p>
 
-<p>To do that, you can use menu item’s <code class="highlighter-rouge">content</code> property.</p>
+<p>To do that, you can use menu item’s <code class="language-plaintext highlighter-rouge">content</code> property.</p>
 
-<p>Each item in <code class="highlighter-rouge">content</code> represents either a text line (string) or an exported
+<p>Each item in <code class="language-plaintext highlighter-rouge">content</code> represents either a text line (string) or an exported
 image.</p>
 
 <p>To add a text line, simply use a string. It can even be a JavaScript variable or
 a function that returns a string.</p>
 
-<p>To include exported image, use <code class="highlighter-rouge">image: "reference"</code>.</p>
+<p>To include exported image, use <code class="language-plaintext highlighter-rouge">image: "reference"</code>.</p>
 
-<p>Additionally, you can add <code class="highlighter-rouge">fit</code> property which is an array of pixel dimensions,
+<p>Additionally, you can add <code class="language-plaintext highlighter-rouge">fit</code> property which is an array of pixel dimensions,
 you want the image to be scaled to fit into.</p>
 
 <p>Here’s an example of such export menu item:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PDF"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"Saved from:"</span><span class="p">,</span><span class="w"> </span><span class="err">window.location.href</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reference"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fit"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">523.28</span><span class="p">,</span><span class="w"> </span><span class="mf">769.89</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">fit</span><span class="w"> </span><span class="err">image</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">A</span><span class="mi">4</span><span class="w">
-  </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "format": "PDF",
+  "content": [ "Saved from:", window.location.href, {
+    "image": "reference",
+    "fit": [ 523.28, 769.89 ] // fit image to A4
+  } ]
+}
+</code></pre></div></div>
 
 <table>
   <thead>
@@ -1643,7 +1621,7 @@ you want the image to be scaled to fit into.</p>
 
 <h2 id="styling-the-export-menu">Styling the export menu</h2>
 
-<p>The plugin comes with a default CSS file <code class="highlighter-rouge">export.css</code>. You just need to include
+<p>The plugin comes with a default CSS file <code class="language-plaintext highlighter-rouge">export.css</code>. You just need to include
 it on your page.</p>
 
 <p>Feel free to override any styles defined in it, create your own version and
@@ -1662,7 +1640,7 @@ functionality.</p>
 
 <p>Here’s an example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   menu: [ {
     label: "JPG",
     click: function() {
@@ -1674,11 +1652,10 @@ functionality.</p>
     }
   } ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>The above will use plugin’s internal <code class="highlighter-rouge">capture</code> method to capture it’s current
-state and <code class="highlighter-rouge">toJPG()</code> method to export the chart to JPEG format.</p>
+<p>The above will use plugin’s internal <code class="language-plaintext highlighter-rouge">capture</code> method to capture it’s current
+state and <code class="language-plaintext highlighter-rouge">toJPG()</code> method to export the chart to JPEG format.</p>
 
 <p>Yes, you’re right, it’s the exact equivalent of just including “JPG” string. The
 code is here for the explanatory purposes.</p>
@@ -1759,32 +1736,29 @@ download of locally-generated files. In this case the plugin will place the
 generated image along download instructions directly over the chart area.</p>
 
 <p>To avoid having a bigger payload by including senseless polyfills to your site,
-you may need to add following metatag in your <code class="highlighter-rouge">&lt;head&gt;</code> of your HTML document.</p>
+you may need to add following metatag in your <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> of your HTML document.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+</code></pre></div></div>
 
 <p>This feature will kick in by default. If you want to disable it simply pass
-<code class="highlighter-rouge">false</code> to the <code class="highlighter-rouge">fallback</code> parameter.</p>
+<code class="language-plaintext highlighter-rouge">false</code> to the <code class="language-plaintext highlighter-rouge">fallback</code> parameter.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   fallback: false
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>In case you want to change our default messages you can modify it like
 following.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"export": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"export": {
   fallback: {
     text: "CTRL + C to copy the data into the clipboard.",
     image: "Rightclick -&gt; Save picture as... to save the image."
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="requirements">Requirements</h2>
 
@@ -1855,7 +1829,7 @@ own versions or completely different products out of it.</p>
 
 <h3 id="1417">1.4.17</h3>
 <ul>
-  <li>Fixed: <code class="highlighter-rouge">clip-path</code> issue on XY serial charts which exposed the drawn line beyond the plotarea.</li>
+  <li>Fixed: <code class="language-plaintext highlighter-rouge">clip-path</code> issue on XY serial charts which exposed the drawn line beyond the plotarea.</li>
 </ul>
 
 <h3 id="1416">1.4.16</h3>
@@ -1865,7 +1839,7 @@ own versions or completely different products out of it.</p>
 
 <h3 id="1415">1.4.15</h3>
 <ul>
-  <li>Fixed: Menu items obtain the global <code class="highlighter-rouge">multiplier</code> setting to scale the output image.</li>
+  <li>Fixed: Menu items obtain the global <code class="language-plaintext highlighter-rouge">multiplier</code> setting to scale the output image.</li>
 </ul>
 
 <h3 id="1414">1.4.14</h3>
@@ -1928,12 +1902,12 @@ own versions or completely different products out of it.</p>
 
 <h3 id="143">1.4.3</h3>
 <ul>
-  <li>Added: <code class="highlighter-rouge">exportFields</code> option which is an array of fields to export in data formats (if you want to export just some fields as opposed to all fields)</li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">exportFields</code> option which is an array of fields to export in data formats (if you want to export just some fields as opposed to all fields)</li>
 </ul>
 
 <h3 id="142">1.4.2</h3>
 <ul>
-  <li>Added: <code class="highlighter-rouge">overflow</code> flag to overwrite the css attribute ‘overflow’ of the chart container</li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">overflow</code> flag to overwrite the css attribute ‘overflow’ of the chart container</li>
 </ul>
 
 <h3 id="141">1.4.1</h3>
@@ -1959,7 +1933,7 @@ own versions or completely different products out of it.</p>
 
 <h3 id="137">1.3.7</h3>
 <ul>
-  <li>Added: <code class="highlighter-rouge">columnNames</code> property, which allows overriding column names when expoerting chart data</li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">columnNames</code> property, which allows overriding column names when expoerting chart data</li>
 </ul>
 
 <h3 id="136">1.3.6</h3>
@@ -2003,7 +1977,7 @@ own versions or completely different products out of it.</p>
 
 <h3 id="129">1.2.9</h3>
 <ul>
-  <li>Fixed: Issue with missing <code class="highlighter-rouge">export.css</code> which showed the canvas</li>
+  <li>Fixed: Issue with missing <code class="language-plaintext highlighter-rouge">export.css</code> which showed the canvas</li>
   <li>Fixed: Issue with empty menu items; adds list only with childNodes &gt; 1</li>
   <li>Fixed: Issue with hidden bullets; caused by wrong clip-paths</li>
   <li>Added: Polish language file ( thanks to piernik )</li>
@@ -2011,7 +1985,7 @@ own versions or completely different products out of it.</p>
 
 <h3 id="128">1.2.8</h3>
 <ul>
-  <li>Fixed: Issue in <code class="highlighter-rouge">gatherClassName</code> checking element type</li>
+  <li>Fixed: Issue in <code class="language-plaintext highlighter-rouge">gatherClassName</code> checking element type</li>
 </ul>
 
 <h3 id="127">1.2.7</h3>
@@ -2023,22 +1997,22 @@ own versions or completely different products out of it.</p>
 <h3 id="126">1.2.6</h3>
 <ul>
   <li>Added: Native EXCEL date cell type for date fields, forced by default</li>
-  <li>Fixed: Issue in <code class="highlighter-rouge">getChartData</code> which ignored given data array ( affected API usage only )</li>
+  <li>Fixed: Issue in <code class="language-plaintext highlighter-rouge">getChartData</code> which ignored given data array ( affected API usage only )</li>
 </ul>
 
 <h3 id="125">1.2.5</h3>
 <ul>
-  <li>Added: Illustrator support; <code class="highlighter-rouge">reviver</code> method to <code class="highlighter-rouge">toSVG</code>; converts by default RGBA to HEX colors codes and places it’s dedicated opacity property</li>
+  <li>Added: Illustrator support; <code class="language-plaintext highlighter-rouge">reviver</code> method to <code class="language-plaintext highlighter-rouge">toSVG</code>; converts by default RGBA to HEX colors codes and places it’s dedicated opacity property</li>
   <li>Fixed: Multiline text positioning / line heights</li>
 </ul>
 
 <h3 id="124">1.2.4</h3>
 <ul>
-  <li>Added: <code class="highlighter-rouge">exportSelection</code> exports the current data selection</li>
-  <li>Added: <code class="highlighter-rouge">dataDateFormat</code> converts the date-strings to date objects with given format</li>
-  <li>Added: <code class="highlighter-rouge">dateFormat</code> converts the date in given format</li>
-  <li>Added: <code class="highlighter-rouge">processData</code> to format date fields and translate fields</li>
-  <li>Changed: <code class="highlighter-rouge">gatherChartData</code> collects data, fields and titles only and uses <code class="highlighter-rouge">processData</code> to format</li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">exportSelection</code> exports the current data selection</li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">dataDateFormat</code> converts the date-strings to date objects with given format</li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">dateFormat</code> converts the date in given format</li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">processData</code> to format date fields and translate fields</li>
+  <li>Changed: <code class="language-plaintext highlighter-rouge">gatherChartData</code> collects data, fields and titles only and uses <code class="language-plaintext highlighter-rouge">processData</code> to format</li>
 </ul>
 
 <h3 id="123">1.2.3</h3>
@@ -2057,11 +2031,11 @@ own versions or completely different products out of it.</p>
   <li>Added: Possibility to add text, lines, shapes (<a href="#annotation-settings">details</a>)</li>
   <li>Added: Possibility to change drawing mode, color, opacity and size</li>
   <li>Added: Possibility to select,move,scale drawn items</li>
-  <li>Added: Possibility to define dedicated drawing menu <code class="highlighter-rouge">drawing.menu</code> individual menu items get prioritised</li>
-  <li>Added: Dropbox feature which allows to drag images into the chart <code class="highlighter-rouge">fileListener: true</code></li>
-  <li>Added: Keylistener which allows to undo/redo/remove the drawn steps <code class="highlighter-rouge">keyListener: true</code></li>
+  <li>Added: Possibility to define dedicated drawing menu <code class="language-plaintext highlighter-rouge">drawing.menu</code> individual menu items get prioritised</li>
+  <li>Added: Dropbox feature which allows to drag images into the chart <code class="language-plaintext highlighter-rouge">fileListener: true</code></li>
+  <li>Added: Keylistener which allows to undo/redo/remove the drawn steps <code class="language-plaintext highlighter-rouge">keyListener: true</code></li>
   <li>Added: Isolated plugin to be able to initiate manually regardless of the chart setup</li>
-  <li>Fixed: Conflict with prototypeJS which caused tainted return value from <code class="highlighter-rouge">toArray</code></li>
+  <li>Fixed: Conflict with prototypeJS which caused tainted return value from <code class="language-plaintext highlighter-rouge">toArray</code></li>
 </ul>
 
 <h3 id="120">1.2.0</h3>
@@ -2074,7 +2048,7 @@ own versions or completely different products out of it.</p>
 
 <h3 id="119">1.1.9</h3>
 <ul>
-  <li>Added: <code class="highlighter-rouge">exportTitles</code> available in general or individual setup which exchanges the data field names with it’s dedicated title</li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">exportTitles</code> available in general or individual setup which exchanges the data field names with it’s dedicated title</li>
   <li>Fix: Interpolates missing data fields across data provider</li>
 </ul>
 
@@ -2134,11 +2108,11 @@ own versions or completely different products out of it.</p>
 <h3 id="110">1.1.0</h3>
 <ul>
   <li>Fix: Print issue on safari which captured the actual page instead of the export</li>
-  <li>Added: IE9 download fallback for <code class="highlighter-rouge">text/plain</code> and <code class="highlighter-rouge">image/*</code> mime types (CSS has been modified)</li>
-  <li>Added: <code class="highlighter-rouge">toImage</code> method; returns <code class="highlighter-rouge">img</code> element with embedded base64 imagery</li>
-  <li>Added: <code class="highlighter-rouge">getBase64</code> option in <code class="highlighter-rouge">toSVG</code></li>
-  <li>Added: <code class="highlighter-rouge">toImage</code> usage in <code class="highlighter-rouge">toPRINT</code> to be able to choose the image type + settings.</li>
-  <li>Added: <code class="highlighter-rouge">lossless</code> option in <code class="highlighter-rouge">toPRINT</code> (experimental)</li>
+  <li>Added: IE9 download fallback for <code class="language-plaintext highlighter-rouge">text/plain</code> and <code class="language-plaintext highlighter-rouge">image/*</code> mime types (CSS has been modified)</li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">toImage</code> method; returns <code class="language-plaintext highlighter-rouge">img</code> element with embedded base64 imagery</li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">getBase64</code> option in <code class="language-plaintext highlighter-rouge">toSVG</code></li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">toImage</code> usage in <code class="language-plaintext highlighter-rouge">toPRINT</code> to be able to choose the image type + settings.</li>
+  <li>Added: <code class="language-plaintext highlighter-rouge">lossless</code> option in <code class="language-plaintext highlighter-rouge">toPRINT</code> (experimental)</li>
 </ul>
 
 <h3 id="109">1.0.9</h3>

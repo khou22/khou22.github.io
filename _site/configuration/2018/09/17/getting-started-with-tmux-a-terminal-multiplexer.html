@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Getting Started With TMUX: A Terminal Multiplexer | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Getting Started With TMUX: A Terminal Multiplexer" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-17T03:26:07-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="Getting Started With TMUX: A Terminal Multiplexer" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Getting Started With TMUX: A Terminal Multiplexer","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2018-09-17T03:26:07-07:00","dateModified":"2018-09-17T03:26:07-07:00","description":"TMUX is a terminal multiplexer that allows you to have a GNU-like experience while staying entirely within your terminal client.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/configuration/2018/09/17/getting-started-with-tmux-a-terminal-multiplexer.html"},"url":"http://localhost:4000/configuration/2018/09/17/getting-started-with-tmux-a-terminal-multiplexer.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/configuration/2018/09/17/getting-started-with-tmux-a-terminal-multiplexer.html","headline":"Getting Started With TMUX: A Terminal Multiplexer","dateModified":"2018-09-17T03:26:07-07:00","datePublished":"2018-09-17T03:26:07-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/configuration/2018/09/17/getting-started-with-tmux-a-terminal-multiplexer.html"},"description":"TMUX is a terminal multiplexer that allows you to have a GNU-like experience while staying entirely within your terminal client.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -354,62 +357,61 @@
     <p>TMUX is a terminal multiplexer that allows you to have a GNU-like experience while staying entirely within your terminal client. It works hand in hand with VIM (or emacs) and gives you a lot of powerful tools that are typically only available to you if you use a GUI.</p>
 
 <h1 id="setup">Setup</h1>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brew install tmux
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>tmux
 
-<span class="gp">$ </span>tmux -V
+<span class="nv">$ </span>tmux <span class="nt">-V</span>
 <span class="c"># &gt; tmux 2.7 when I did this</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="getting-started">Getting Started</h1>
 <ol>
   <li>
-    <p>Entering TMUX session: <code class="highlighter-rouge">$ tmux new</code> (Note: you must type <code class="highlighter-rouge">$ source activate</code> to use some packages, your Conda environment, etc.)
+    <p>Entering TMUX session: <code class="language-plaintext highlighter-rouge">$ tmux new</code> (Note: you must type <code class="language-plaintext highlighter-rouge">$ source activate</code> to use some packages, your Conda environment, etc.)
 <img src="/media/blog/images/tmux/initialized.png" /></p>
   </li>
   <li>
-    <p>Exiting TMUX session: <code class="highlighter-rouge">$ tmux exit</code>. This is not the only way to return to your original terminal session. In fact, one of the strengths of TMUX is that you can run a TMUX session in the background.</p>
+    <p>Exiting TMUX session: <code class="language-plaintext highlighter-rouge">$ tmux exit</code>. This is not the only way to return to your original terminal session. In fact, one of the strengths of TMUX is that you can run a TMUX session in the background.</p>
   </li>
 </ol>
 
 <h2 id="using-tmux-commands">Using TMUX Commands</h2>
 <ol>
-  <li><code class="highlighter-rouge">Control + b</code> to enter a TMUX command. Nothing will visually change</li>
-  <li>After pressing <code class="highlighter-rouge">Control + b</code>, can type <code class="highlighter-rouge">:</code> to get the TMUX prompt</li>
+  <li><code class="language-plaintext highlighter-rouge">Control + b</code> to enter a TMUX command. Nothing will visually change</li>
+  <li>After pressing <code class="language-plaintext highlighter-rouge">Control + b</code>, can type <code class="language-plaintext highlighter-rouge">:</code> to get the TMUX prompt</li>
 </ol>
 
 <h1 id="managing-sessions">Managing Sessions</h1>
-<p>After you’ve created a session, you can temporarily exit or <code class="highlighter-rouge">detatch</code> this session. To do this, press <code class="highlighter-rouge">Control + b</code> then <code class="highlighter-rouge">d</code> to detatch.</p>
+<p>After you’ve created a session, you can temporarily exit or <code class="language-plaintext highlighter-rouge">detatch</code> this session. To do this, press <code class="language-plaintext highlighter-rouge">Control + b</code> then <code class="language-plaintext highlighter-rouge">d</code> to detatch.</p>
 
-<p>To see a list of suspended sessions, you can type <code class="highlighter-rouge">$ tmux ls</code>. To get back to a sesion, type <code class="highlighter-rouge">$ tmux attach-session -t &lt;id&gt;</code> (shortcut: <code class="highlighter-rouge">$ tmux a -t &lt;id&gt;</code>). You can also use <code class="highlighter-rouge">$tmux a #</code> to go to the most recent session.</p>
+<p>To see a list of suspended sessions, you can type <code class="language-plaintext highlighter-rouge">$ tmux ls</code>. To get back to a sesion, type <code class="language-plaintext highlighter-rouge">$ tmux attach-session -t &lt;id&gt;</code> (shortcut: <code class="language-plaintext highlighter-rouge">$ tmux a -t &lt;id&gt;</code>). You can also use <code class="language-plaintext highlighter-rouge">$tmux a #</code> to go to the most recent session.</p>
 
 <p><img src="/media/blog/images/tmux/session.png" /></p>
 
 <h2 id="switching-between-session">Switching Between Session</h2>
-<p>Once you’re in a TMUX session, you can press <code class="highlighter-rouge">Control + b</code> and <code class="highlighter-rouge">s</code> to get a dialogue of the open sessions with a preview of what they look like. You can also use <code class="highlighter-rouge">Control + b</code> and <code class="highlighter-rouge">(</code>/<code class="highlighter-rouge">)</code> to move left/right between existing session. To get a read-only list from your main shell, you can type <code class="highlighter-rouge">$ tmux ls</code>.</p>
+<p>Once you’re in a TMUX session, you can press <code class="language-plaintext highlighter-rouge">Control + b</code> and <code class="language-plaintext highlighter-rouge">s</code> to get a dialogue of the open sessions with a preview of what they look like. You can also use <code class="language-plaintext highlighter-rouge">Control + b</code> and <code class="language-plaintext highlighter-rouge">(</code>/<code class="language-plaintext highlighter-rouge">)</code> to move left/right between existing session. To get a read-only list from your main shell, you can type <code class="language-plaintext highlighter-rouge">$ tmux ls</code>.</p>
 
-<p>To kill the session you’re currently in, type: <code class="highlighter-rouge">Control + b</code> and <code class="highlighter-rouge">: kill-session</code>. You can also do this from your main shell: <code class="highlighter-rouge">$ tmux kill-session -t &lt;name or id&gt;</code>.</p>
+<p>To kill the session you’re currently in, type: <code class="language-plaintext highlighter-rouge">Control + b</code> and <code class="language-plaintext highlighter-rouge">: kill-session</code>. You can also do this from your main shell: <code class="language-plaintext highlighter-rouge">$ tmux kill-session -t &lt;name or id&gt;</code>.</p>
 
-<p>To kill all sessions, type: <code class="highlighter-rouge">$ tmux kill-server</code>.</p>
+<p>To kill all sessions, type: <code class="language-plaintext highlighter-rouge">$ tmux kill-server</code>.</p>
 
 <h2 id="naming">Naming</h2>
-<p>Instead of relying on ambiguous ID numbers, you can also attach names to session. To start a session using a name, type: <code class="highlighter-rouge">$ tmux new -s &lt;name of session&gt;</code>. To get back to that session, use the name of the session in place of the ID: <code class="highlighter-rouge">$tmux a -t &lt;name of session&gt;</code>.</p>
+<p>Instead of relying on ambiguous ID numbers, you can also attach names to session. To start a session using a name, type: <code class="language-plaintext highlighter-rouge">$ tmux new -s &lt;name of session&gt;</code>. To get back to that session, use the name of the session in place of the ID: <code class="language-plaintext highlighter-rouge">$tmux a -t &lt;name of session&gt;</code>.</p>
 
 <h1 id="panes">Panes</h1>
 <ul>
-  <li>Split horizontally: <code class="highlighter-rouge">Control + b</code> then <code class="highlighter-rouge">"</code></li>
-  <li>Split vertically: <code class="highlighter-rouge">Control + b</code> then <code class="highlighter-rouge">%</code></li>
-  <li>Move pane left/right: <code class="highlighter-rouge">Control + b</code> then <code class="highlighter-rouge"><span class="p">{</span></code>/<code class="highlighter-rouge">}</code></li>
-  <li>Move between panes using <code class="highlighter-rouge">Control + b</code> and any of the arrow keys</li>
-  <li>Show pane numbers <code class="highlighter-rouge">Control + b</code> then <code class="highlighter-rouge">q</code></li>
-  <li>Switch to pane <code class="highlighter-rouge">Control + b</code>, <code class="highlighter-rouge">q</code>, then <code class="highlighter-rouge">&lt;pane number&gt;</code></li>
-  <li>Close pane: <code class="highlighter-rouge">Control + b</code> then <code class="highlighter-rouge">x</code></li>
-  <li>Resizing: <code class="highlighter-rouge">Control + b</code> then <code class="highlighter-rouge">:resize-p &lt;direction&gt; &lt;num-cells&gt;</code>. The direction is <code class="highlighter-rouge">-U</code>, <code class="highlighter-rouge">-D</code>, <code class="highlighter-rouge">-L</code>, or <code class="highlighter-rouge">-R</code> for up, down, left, and right, respectively.</li>
-  <li>In my <code class="highlighter-rouge">.tmux.conf</code> file, I turned on mouse interaction so I can switch panes using my mouse clicks. You can also drag to resize panes.</li>
+  <li>Split horizontally: <code class="language-plaintext highlighter-rouge">Control + b</code> then <code class="language-plaintext highlighter-rouge">"</code></li>
+  <li>Split vertically: <code class="language-plaintext highlighter-rouge">Control + b</code> then <code class="language-plaintext highlighter-rouge">%</code></li>
+  <li>Move pane left/right: <code class="language-plaintext highlighter-rouge">Control + b</code> then <code class="language-plaintext highlighter-rouge">{</code>/<code class="language-plaintext highlighter-rouge">}</code></li>
+  <li>Move between panes using <code class="language-plaintext highlighter-rouge">Control + b</code> and any of the arrow keys</li>
+  <li>Show pane numbers <code class="language-plaintext highlighter-rouge">Control + b</code> then <code class="language-plaintext highlighter-rouge">q</code></li>
+  <li>Switch to pane <code class="language-plaintext highlighter-rouge">Control + b</code>, <code class="language-plaintext highlighter-rouge">q</code>, then <code class="language-plaintext highlighter-rouge">&lt;pane number&gt;</code></li>
+  <li>Close pane: <code class="language-plaintext highlighter-rouge">Control + b</code> then <code class="language-plaintext highlighter-rouge">x</code></li>
+  <li>Resizing: <code class="language-plaintext highlighter-rouge">Control + b</code> then <code class="language-plaintext highlighter-rouge">:resize-p &lt;direction&gt; &lt;num-cells&gt;</code>. The direction is <code class="language-plaintext highlighter-rouge">-U</code>, <code class="language-plaintext highlighter-rouge">-D</code>, <code class="language-plaintext highlighter-rouge">-L</code>, or <code class="language-plaintext highlighter-rouge">-R</code> for up, down, left, and right, respectively.</li>
+  <li>In my <code class="language-plaintext highlighter-rouge">.tmux.conf</code> file, I turned on mouse interaction so I can switch panes using my mouse clicks. You can also drag to resize panes.</li>
 </ul>
 
 <h1 id="copy-mode">Copy Mode</h1>
-<p>One of the other strengths is that you can enter “copy mode” to copy certain parts of the terminal. To enter this mode, press <code class="highlighter-rouge">Control + b</code> and <code class="highlighter-rouge">[</code>. You can now navigate using VI bindings press <code class="highlighter-rouge">Enter</code> to copy. There are a number of helpful commands that you can use that can be found here: <a href="https://tmuxcheatsheet.com">https://tmuxcheatsheet.com</a></p>
+<p>One of the other strengths is that you can enter “copy mode” to copy certain parts of the terminal. To enter this mode, press <code class="language-plaintext highlighter-rouge">Control + b</code> and <code class="language-plaintext highlighter-rouge">[</code>. You can now navigate using VI bindings press <code class="language-plaintext highlighter-rouge">Enter</code> to copy. There are a number of helpful commands that you can use that can be found here: <a href="https://tmuxcheatsheet.com">https://tmuxcheatsheet.com</a></p>
 
 <h1 id="references">References</h1>
 <ul>

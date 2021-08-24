@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Quick, Short If/Then Statement | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Quick, Short If/Then Statement" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-07-21T07:32:00-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="Quick, Short If/Then Statement" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Quick, Short If/Then Statement","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2015-07-21T07:32:00-07:00","dateModified":"2015-07-21T07:32:00-07:00","description":"A quicker and faster way of writing if/then statements in javascript.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/07/21/quick-short-ifthen-statement.html"},"url":"http://localhost:4000/web/2015/07/21/quick-short-ifthen-statement.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/web/2015/07/21/quick-short-ifthen-statement.html","headline":"Quick, Short If/Then Statement","dateModified":"2015-07-21T07:32:00-07:00","datePublished":"2015-07-21T07:32:00-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/07/21/quick-short-ifthen-statement.html"},"description":"A quicker and faster way of writing if/then statements in javascript.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -361,16 +364,16 @@
 
 <p>Or something along those lines. If you want to set a value for a variable, it can take at least 6 lines of code. In a long file, adding 6 lines of code every time you want to set a variable based on an if-statement can make your code very messy. For example, to set a simple yes/no off of a boolean takes this:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">str</span> <span class="o">=</span> <span class="s2">"yes"</span><span class="p">;</span>
+  <span class="nx">str</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">yes</span><span class="dl">"</span><span class="p">;</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-  <span class="nx">str</span> <span class="o">=</span> <span class="s2">"no"</span><span class="p">;</span>
+  <span class="nx">str</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">no</span><span class="dl">"</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
 <p>An <b>efficient, concise</b> alternative is to use this format condenses this code into one line:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">condition</span> <span class="o">==</span> <span class="kc">true</span> <span class="p">?</span> <span class="s2">"yes"</span> <span class="p">:</span> <span class="s2">"no"</span><span class="p">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">condition</span> <span class="o">==</span> <span class="kc">true</span> <span class="p">?</span> <span class="dl">"</span><span class="s2">yes</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">no</span><span class="dl">"</span><span class="p">;</span></code></pre></figure>
 
 <p>This is a very simple, easy trick to greatly increase the readabitlity of your code. Instead of having an incredibely long file with lots of short lines, you can work horizontally and make use of your horizontal realistate.</p>
 

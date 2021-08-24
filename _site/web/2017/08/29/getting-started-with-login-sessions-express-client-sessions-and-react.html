@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Getting Started with Login Sessions: Express, Client Sessions, and React | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Getting Started with Login Sessions: Express, Client Sessions, and React" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-08-29T14:33:04-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="Getting Started with Login Sessions: Express, Client Sessions, and React" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Getting Started with Login Sessions: Express, Client Sessions, and React","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2017-08-29T14:33:04-07:00","dateModified":"2017-08-29T14:33:04-07:00","description":"A tutorial on how to set up your own web app with login authentication, cookies, and sessions using Node and Express.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html"},"url":"http://localhost:4000/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html","headline":"Getting Started with Login Sessions: Express, Client Sessions, and React","dateModified":"2017-08-29T14:33:04-07:00","datePublished":"2017-08-29T14:33:04-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2017/08/29/getting-started-with-login-sessions-express-client-sessions-and-react.html"},"description":"A tutorial on how to set up your own web app with login authentication, cookies, and sessions using Node and Express.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -365,36 +368,35 @@
 <h2 id="server-side">Server-Side</h2>
 
 <h3 id="middleware-enabling-cookies">Middleware: Enabling Cookies</h3>
-<p>We must first setup the infrastructure for cookies using <code class="highlighter-rouge">client-sessions</code>. This involves using middleware to both configure and “enable” cookies. We use create a middleware with the specified configuration:</p>
+<p>We must first setup the infrastructure for cookies using <code class="language-plaintext highlighter-rouge">client-sessions</code>. This involves using middleware to both configure and “enable” cookies. We use create a middleware with the specified configuration:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">sessions</span><span class="p">({</span>
-	<span class="na">cookieName</span><span class="p">:</span> <span class="s1">'session'</span><span class="p">,</span> <span class="c1">// cookie name dictates the key name added to the request object</span>
-	<span class="na">secret</span><span class="p">:</span> <span class="s1">'somecrazykeythatyoushouldkeephidden'</span><span class="p">,</span> <span class="c1">// store in environment variables</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">sessions</span><span class="p">({</span>
+	<span class="na">cookieName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">session</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// cookie name dictates the key name added to the request object</span>
+	<span class="na">secret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">somecrazykeythatyoushouldkeephidden</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// store in environment variables</span>
 	<span class="na">duration</span><span class="p">:</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="c1">// how long the session will stay valid in ms</span>
 	<span class="na">activeDuration</span><span class="p">:</span> <span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">5</span><span class="p">,</span> <span class="c1">// if expiresIn &lt; activeDuration, the session will be extended by activeDuration milliseconds</span>
 <span class="p">}));</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>The <code class="highlighter-rouge">secret</code> key should be kept secret for security reasons. This serves as the encryption method for the cookie contents. Because a cookie is just a string attached to a header, it can be theoretically available to the public; however, you don’t want your user or curious browsers to see what you are setting as it could contain sensitive information. It often contains email addresses, authentication tokens, and if the developer really has no sense of security, passwords.</p>
+<p>The <code class="language-plaintext highlighter-rouge">secret</code> key should be kept secret for security reasons. This serves as the encryption method for the cookie contents. Because a cookie is just a string attached to a header, it can be theoretically available to the public; however, you don’t want your user or curious browsers to see what you are setting as it could contain sensitive information. It often contains email addresses, authentication tokens, and if the developer really has no sense of security, passwords.</p>
 
-<p>In order to keep all this information confidential, we use a long string as our key and perform an LFSR (Linear Feedback Shift Register) — an effective type of encryption. Because the key is stored on the server (keep it as an <code class="highlighter-rouge">process.env</code> variable if your code is open-source), the server can decrypt it as well. If you are curious about LFSR, feel free to check out a <a href="https://github.com/khou22/Coding-Techniques-and-Algorithms/blob/master/Linear%20Feedback%20Shift%20Register.py">version I wrote</a> in python.</p>
+<p>In order to keep all this information confidential, we use a long string as our key and perform an LFSR (Linear Feedback Shift Register) — an effective type of encryption. Because the key is stored on the server (keep it as an <code class="language-plaintext highlighter-rouge">process.env</code> variable if your code is open-source), the server can decrypt it as well. If you are curious about LFSR, feel free to check out a <a href="https://github.com/khou22/Coding-Techniques-and-Algorithms/blob/master/Linear%20Feedback%20Shift%20Register.py">version I wrote</a> in python.</p>
 
 <h3 id="restricting-access-based-on-cookies">Restricting access based on cookies</h3>
-<p>Once a cookie is set, you can easily use this cookie to restrict access to various parts of your app. <code class="highlighter-rouge">client-sessions</code> handles the decryption so the cooke simply becomes another variable that you can read in that is attached to the <code class="highlighter-rouge">request</code> variable in <code class="highlighter-rouge">Express</code>. Instead of adding logic to every individual route or controller, I added my authentication logic to my middleware like so:</p>
+<p>Once a cookie is set, you can easily use this cookie to restrict access to various parts of your app. <code class="language-plaintext highlighter-rouge">client-sessions</code> handles the decryption so the cooke simply becomes another variable that you can read in that is attached to the <code class="language-plaintext highlighter-rouge">request</code> variable in <code class="language-plaintext highlighter-rouge">Express</code>. Instead of adding logic to every individual route or controller, I added my authentication logic to my middleware like so:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="c1">// APIs that client must be logged in for</span>
     <span class="c1">// Best practice: APIs that are accessible via the client but require a login</span>
     <span class="c1">// APIs are already protected by a Basic Auth, this is just a safegaurd</span>
-    <span class="kr">const</span> <span class="nx">blacklisted</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="s1">'\/api\/users\/create'</span><span class="p">,</span>
+    <span class="kd">const</span> <span class="nx">blacklisted</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="dl">'</span><span class="se">\</span><span class="s1">/api</span><span class="se">\</span><span class="s1">/users</span><span class="se">\</span><span class="s1">/create</span><span class="dl">'</span><span class="p">,</span>
     <span class="p">]</span>
-    <span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">originalUrl</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">originalUrl</span><span class="p">;</span>
     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'No session'</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">blacklisted</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">'|'</span><span class="p">),</span> <span class="s1">'i'</span><span class="p">).</span><span class="nx">test</span><span class="p">(</span><span class="nx">path</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// If on the blacklist</span>
-            <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">401</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="s1">'Please log in'</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">No session</span><span class="dl">'</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">blacklisted</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">|</span><span class="dl">'</span><span class="p">),</span> <span class="dl">'</span><span class="s1">i</span><span class="dl">'</span><span class="p">).</span><span class="nx">test</span><span class="p">(</span><span class="nx">path</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// If on the blacklist</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">401</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">Please log in</span><span class="dl">'</span><span class="p">);</span>
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// Allowed</span>
             <span class="nx">next</span><span class="p">();</span>
         <span class="p">}</span>
@@ -402,22 +404,21 @@
         <span class="nx">next</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">});</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Because I already encrypt my server and client with <a href="https://en.wikipedia.org/wiki/Basic_access_authentication">Basic Authentication</a>, I did not need to have restricted access on every part of my app. I instead created a blacklist of url regexes that require authentication. If a request is made to that URL or set of URLs, the request will be cut short and a 401 unauthorized response will be returned telling the user/client ot log in.</p>
 
 <h2 id="client-side">Client-Side</h2>
 
 <h3 id="logging-in">Logging In</h3>
-<p>In order to set a cookie on the client-side, we need a <code class="highlighter-rouge">/api/login</code> endpoint that checks against a database of users and sets a cookie. I’m using <code class="highlighter-rouge">Sequelize</code> so the database management is fairly straightforward. My login route hits this function below:</p>
+<p>In order to set a cookie on the client-side, we need a <code class="language-plaintext highlighter-rouge">/api/login</code> endpoint that checks against a database of users and sets a cookie. I’m using <code class="language-plaintext highlighter-rouge">Sequelize</code> so the database management is fairly straightforward. My login route hits this function below:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">export</span> <span class="kr">const</span> <span class="nx">login</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="err">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="err">:</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span> <span class="c1">// Takes in values in the body</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">login</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="p">:</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span> <span class="c1">// Takes in values in the body</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">username</span> <span class="o">===</span> <span class="kc">undefined</span> <span class="o">||</span> <span class="nx">data</span><span class="p">.</span><span class="nx">password</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Empty authentication</span>
         <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">({</span>
             <span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="na">error</span><span class="p">:</span> <span class="s1">'Please submit a username and password'</span><span class="p">,</span>
+            <span class="na">error</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Please submit a username and password</span><span class="dl">'</span><span class="p">,</span>
         <span class="p">});</span>
         <span class="k">return</span><span class="p">;</span> <span class="c1">// Terminate</span>
     <span class="p">}</span>
@@ -432,13 +433,13 @@
             <span class="k">if</span> <span class="p">(</span><span class="nx">user</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// No user — Invalid credentials</span>
                 <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">({</span> <span class="c1">// Send response</span>
                     <span class="na">success</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-                    <span class="na">error</span><span class="p">:</span> <span class="s1">'Invalid username &amp; password'</span><span class="p">,</span>
+                    <span class="na">error</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Invalid username &amp; password</span><span class="dl">'</span><span class="p">,</span>
                 <span class="p">});</span>
                 <span class="k">return</span><span class="p">;</span>
             <span class="p">}</span>
 
             <span class="c1">// Valid credentials</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">Successfully</span> <span class="nx">logged</span> <span class="k">in</span> <span class="na">user</span><span class="p">:</span> <span class="nx">$</span><span class="p">{</span><span class="nx">user</span><span class="p">.</span><span class="nx">username</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Successfully logged in user: </span><span class="p">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">username</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
             <span class="k">delete</span> <span class="nx">user</span><span class="p">.</span><span class="nx">password</span><span class="p">;</span> <span class="c1">// Don't send back password for security reasons</span>
             <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span> <span class="o">=</span> <span class="nx">user</span><span class="p">;</span> <span class="c1">// Set the cookie</span>
 
@@ -457,34 +458,32 @@
             <span class="p">});</span>
         <span class="p">});</span> <span class="c1">// Error in request</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="set-a-browser-cookie-from-an-api-response">Set a browser cookie from an API response</h3>
-<p>Now that we know how to send a cookie back from the server, we must now inject that cookie into the browser so the session can actually be tied to a browser. The <code class="highlighter-rouge">client-session</code> package automatically sets the appropriate cookie on the response header as <code class="highlighter-rouge">Set-Cookie</code>. This indicates to the browser to store the response as a cookie. Any response with the property <code class="highlighter-rouge">Set-Cookie</code>, as seen below, will do just that.</p>
+<p>Now that we know how to send a cookie back from the server, we must now inject that cookie into the browser so the session can actually be tied to a browser. The <code class="language-plaintext highlighter-rouge">client-session</code> package automatically sets the appropriate cookie on the response header as <code class="language-plaintext highlighter-rouge">Set-Cookie</code>. This indicates to the browser to store the response as a cookie. Any response with the property <code class="language-plaintext highlighter-rouge">Set-Cookie</code>, as seen below, will do just that.</p>
 
 <p><img class="iPhone-screenshots-large" src="./../../../../media/blog/images/set-cookie-response.png" /></p>
 
-<p>In order for the client to allow setting a cookie, the <code class="highlighter-rouge">fetch</code> request must be <code class="highlighter-rouge">same-origin</code>. This is a security feature that ensures malicious cookies have a harder time. I’m using <code class="highlighter-rouge">whatwg-fetch</code> and in my fetch request, I set <code class="highlighter-rouge">credentials: 'same-origin'</code>:</p>
+<p>In order for the client to allow setting a cookie, the <code class="language-plaintext highlighter-rouge">fetch</code> request must be <code class="language-plaintext highlighter-rouge">same-origin</code>. This is a security feature that ensures malicious cookies have a harder time. I’m using <code class="language-plaintext highlighter-rouge">whatwg-fetch</code> and in my fetch request, I set <code class="language-plaintext highlighter-rouge">credentials: 'same-origin'</code>:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
-	<span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
+	<span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
    	<span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
-   		<span class="na">Accept</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">,</span>
-	   	<span class="s2">"Content-Type"</span><span class="p">:</span> <span class="s2">"application/json"</span>
+   		<span class="na">Accept</span><span class="p">:</span> <span class="dl">'</span><span class="s1">application/json</span><span class="dl">'</span><span class="p">,</span>
+	   	<span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span>
     <span class="p">},</span>
-    <span class="na">credentials</span><span class="p">:</span> <span class="s1">'same-origin'</span><span class="p">,</span> <span class="c1">// Will set cookie 'set-cookie' only if this is set to 'same-origin'</span>
+    <span class="na">credentials</span><span class="p">:</span> <span class="dl">'</span><span class="s1">same-origin</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Will set cookie 'set-cookie' only if this is set to 'same-origin'</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>In this situtation, there was a successful login from the login page that sent back a cookie. The browser set this cookie in the header so every request to my domain will include this cookie in the future — at least until it expires. The cookie was encrypted on the server side and can only be decrypted by the server. It also has an expiration date so a user’s session will expire.</p>
 
 <h3 id="logging-out">Logging Out</h3>
 <p>Logging out is much more straightforward. It simply involves removing the cookie from the headers — thus reseting the cookie on the client-side.</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">export</span> <span class="kr">const</span> <span class="nx">logout</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="err">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="err">:</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">previousUser</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span> <span class="c1">// Save the previous user</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">logout</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="p">:</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">previousUser</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">;</span> <span class="c1">// Save the previous user</span>
     <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span> <span class="c1">// Reset the cookies</span>
 
     <span class="c1">// Response to client</span>
@@ -493,29 +492,27 @@
         <span class="na">user</span><span class="p">:</span> <span class="nx">previousUser</span><span class="p">,</span>
     <span class="p">});</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="getting-user-information-after-load">Getting User Information after Load</h3>
 <p>Cookies only allow information to be sent back from the server, so we need a seperate method to get information <em>about</em> the user like their name, email, etc. We do this by creating a method that returns unencrypted data about the user based on the session cookie. It’s also a helpful API for determining if a user is currently signed in. Here’s an example:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">export</span> <span class="kr">const</span> <span class="nx">currentUser</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="err">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="err">:</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">currentUser</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">:</span> <span class="nx">Request</span><span class="p">,</span> <span class="nx">res</span><span class="p">:</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">delete</span> <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">password</span><span class="p">;</span> <span class="c1">// Remove password</span>
-        <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
             <span class="na">logged_in</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
             <span class="na">user</span><span class="p">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">,</span>
         <span class="p">};</span>
         <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
             <span class="na">logged_in</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="p">};</span>
         <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>In my React-Redux-Router app, I make this API request on entry so that my local redux state contains information about my user right on load. This allows me to populate sections of my app like a ‘Profile’ section as well as restricting certain routes.</p>
 

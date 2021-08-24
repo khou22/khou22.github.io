@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Algorithm Best Practices June 2018&amp;#58 Recrusive Tree Search Functions | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Algorithm Best Practices June 2018&amp;#58 Recrusive Tree Search Functions" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-06-15T04:22:18-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="Algorithm Best Practices June 2018&amp;#58 Recrusive Tree Search Functions" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Algorithm Best Practices June 2018&amp;#58 Recrusive Tree Search Functions","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2018-06-15T04:22:18-07:00","dateModified":"2018-06-15T04:22:18-07:00","description":"A tutorial on some best practices for designing recursive functions.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html"},"url":"http://localhost:4000/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html","headline":"Algorithm Best Practices June 2018&amp;#58 Recrusive Tree Search Functions","dateModified":"2018-06-15T04:22:18-07:00","datePublished":"2018-06-15T04:22:18-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2018/06/15/algorithm-best-practices-june-2018-recrusive-tree-search-functions.html"},"description":"A tutorial on some best practices for designing recursive functions.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -382,41 +385,40 @@
 
 <p>The code below was written in Python 3 and demonstrates a simple depth-first search using an accumulator object that is pass-by-reference. The coolest parts about this code in my opinion was the implementation of a visitor function and an accumulator. Using these methods, handling data and performing the main logic is clearly compartmentalized. This ensures the main recursive logic isn’t affected by your logic and prevents bugs (like stack overflows) from occuring.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Python 3</span>
-<span class="c"># Kevin Hou (khou22.com)</span>
-
-<span class="c"># The condition function that determines if a node has child nodes</span>
-<span class="c"># This ensures the code terminates eventually</span>
-<span class="k">def</span> <span class="nf">hasChildren</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Python 3
+# Kevin Hou (khou22.com)
+</span>
+<span class="c1"># The condition function that determines if a node has child nodes
+# This ensures the code terminates eventually
+</span><span class="k">def</span> <span class="nf">hasChildren</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">node</span><span class="p">[</span><span class="s">'children'</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span>
 
-<span class="c"># Visitor function</span>
-<span class="c"># This function is called on every node the search function visits</span>
-<span class="c"># This is where your main logic should go</span>
-<span class="k">def</span> <span class="nf">visitor</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">accumulator</span><span class="p">):</span>
+<span class="c1"># Visitor function
+# This function is called on every node the search function visits
+# This is where your main logic should go
+</span><span class="k">def</span> <span class="nf">visitor</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">accumulator</span><span class="p">):</span>
 
-    <span class="c"># In this situation, we're simply checking if it's a leaf and storing it in our accumulator if it is</span>
-    <span class="k">if</span> <span class="o">~</span><span class="n">hasChildren</span><span class="p">(</span><span class="n">element</span><span class="p">):</span> <span class="c"># Check if it's a leaf node</span>
-        <span class="n">accumulator</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="c"># Add to accumulator if leaf</span>
-
-<span class="c"># The recursive function that calls itself</span>
-<span class="c"># Searches a node, applies a visitor function, and searches each child node</span>
-<span class="k">def</span> <span class="nf">searchChildren</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">visitor</span><span class="p">):</span>
-    <span class="n">visitor</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="c"># Visitor function</span>
-
-    <span class="c"># Recursively search if possible</span>
-    <span class="k">if</span> <span class="n">hasChildren</span><span class="p">(</span><span class="n">element</span><span class="p">):</span>
-        <span class="n">children</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="s">'children'</span><span class="p">]</span> <span class="c"># Get child nodes</span>
-        <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">child</span><span class="p">:</span> <span class="n">searchChildren</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">visitor</span><span class="p">),</span> <span class="n">children</span><span class="p">))</span> <span class="c"># Search each child node</span>
-            
-<span class="c"># Get all SLDS components</span>
-<span class="k">def</span> <span class="nf">getLeaves</span><span class="p">(</span><span class="n">tree</span><span class="p">):</span>
-    <span class="n">accumulator</span> <span class="o">=</span> <span class="p">[]</span> <span class="c"># Pass-by-reference accumulator object</span>
-    
-    <span class="c"># Initial search call with visitor function</span>
-    <span class="n">searchChildren</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">element</span><span class="p">:</span> <span class="n">visitor</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">accumulator</span><span class="p">))</span>
-</code></pre>
-</div>
+    <span class="c1"># In this situation, we're simply checking if it's a leaf and storing it in our accumulator if it is
+</span>    <span class="k">if</span> <span class="o">~</span><span class="n">hasChildren</span><span class="p">(</span><span class="n">element</span><span class="p">):</span> <span class="c1"># Check if it's a leaf node
+</span>        <span class="n">accumulator</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="c1"># Add to accumulator if leaf
+</span>
+<span class="c1"># The recursive function that calls itself
+# Searches a node, applies a visitor function, and searches each child node
+</span><span class="k">def</span> <span class="nf">searchChildren</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">visitor</span><span class="p">):</span>
+    <span class="n">visitor</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="c1"># Visitor function
+</span>
+    <span class="c1"># Recursively search if possible
+</span>    <span class="k">if</span> <span class="n">hasChildren</span><span class="p">(</span><span class="n">element</span><span class="p">):</span>
+        <span class="n">children</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="s">'children'</span><span class="p">]</span> <span class="c1"># Get child nodes
+</span>        <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">child</span><span class="p">:</span> <span class="n">searchChildren</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">visitor</span><span class="p">),</span> <span class="n">children</span><span class="p">))</span> <span class="c1"># Search each child node
+</span>            
+<span class="c1"># Get all SLDS components
+</span><span class="k">def</span> <span class="nf">getLeaves</span><span class="p">(</span><span class="n">tree</span><span class="p">):</span>
+    <span class="n">accumulator</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Pass-by-reference accumulator object
+</span>    
+    <span class="c1"># Initial search call with visitor function
+</span>    <span class="n">searchChildren</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">element</span><span class="p">:</span> <span class="n">visitor</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">accumulator</span><span class="p">))</span>
+</code></pre></div></div>
 
 
     <div class="post-organization">

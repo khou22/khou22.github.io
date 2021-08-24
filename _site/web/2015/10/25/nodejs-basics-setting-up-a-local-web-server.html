@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>NodeJS Basics - Setting Up A Local Web Server | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="NodeJS Basics - Setting Up A Local Web Server" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-10-25T14:16:28-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="NodeJS Basics - Setting Up A Local Web Server" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"NodeJS Basics - Setting Up A Local Web Server","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2015-10-25T14:16:28-07:00","dateModified":"2015-10-25T14:16:28-07:00","description":"Quick start guide of the Javascript runtime environment, Node.js, and its basic functionalities.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/10/25/nodejs-basics-setting-up-a-local-web-server.html"},"url":"http://localhost:4000/web/2015/10/25/nodejs-basics-setting-up-a-local-web-server.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/web/2015/10/25/nodejs-basics-setting-up-a-local-web-server.html","headline":"NodeJS Basics - Setting Up A Local Web Server","dateModified":"2015-10-25T14:16:28-07:00","datePublished":"2015-10-25T14:16:28-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/10/25/nodejs-basics-setting-up-a-local-web-server.html"},"description":"Quick start guide of the Javascript runtime environment, Node.js, and its basic functionalities.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -369,7 +372,7 @@ Node.js also built NPM - Node Package Manager - which is the default package man
 
 <p><b>Terminal</b></p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$:</span> npm install <span class="o">[</span>packageName]</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$:</span> npm <span class="nb">install</span> <span class="o">[</span>packageName]</code></pre></figure>
 
 <p><b>Javascript</b></p>
 
@@ -385,24 +388,24 @@ Node.js also built NPM - Node Package Manager - which is the default package man
 
 <p>To log a dependency in the ‘package.json’:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$:</span> npm install <span class="o">[</span>packageName] -S</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$:</span> npm <span class="nb">install</span> <span class="o">[</span>packageName] <span class="nt">-S</span></code></pre></figure>
 
 <p>If you wish to install all the packages specified in the ‘package.json’ file, simply type:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$:</span> npm install</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$:</span> npm <span class="nb">install</span></code></pre></figure>
 
 <p>This will install all the required modules. This sytem makes sharing code incredibly elegant and easy!</p>
 
 <p><b>Including Other JS Files in Your Code</b>
 It’s very easy to include other Javascript files in your code. In fact, it’s almsot identical to including a package dependency. Simply include:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">m2</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"./module2"</span><span class="p">);</span> <span class="c1">//Assumes js file</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">m2</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">./module2</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//Assumes js file</span></code></pre></figure>
 
 <p>Must export your data in module2 otherwise it just reads an empty object:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//In module2.js</span>
 <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-<span class="nx">module</span><span class="p">.</span><span class="kr">export</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span> <span class="c1">//Will export an object</span>
+<span class="nx">module</span><span class="p">.</span><span class="k">export</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span> <span class="c1">//Will export an object</span>
 <span class="c1">//To access in other JS files, a will be stored as data.a</span></code></pre></figure>
 
 <p><b>Creating a Simple Local Web Server</b></p>
@@ -411,8 +414,8 @@ It’s very easy to include other Javascript files in your code. In fact, it’s
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">//Every time server hears something at port 3000, will respond with this:</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Got a request"</span><span class="p">);</span> <span class="c1">//Returns in the terminal</span>
-  <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"Hi"</span><span class="p">);</span> <span class="c1">//Sends the window content. The browser will display "Hi"</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Got a request</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//Returns in the terminal</span>
+  <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hi</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//Sends the window content. The browser will display "Hi"</span>
   <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
 <span class="p">});</span>
 

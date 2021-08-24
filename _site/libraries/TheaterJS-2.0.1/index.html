@@ -93,8 +93,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>TheaterJS | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="TheaterJS" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area." />
@@ -103,12 +104,13 @@
 <meta property="og:url" content="http://localhost:4000/libraries/TheaterJS-2.0.1/" />
 <meta property="og:site_name" content="Kevin Hou" />
 <meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TheaterJS" />
 <meta name="twitter:site" content="@kevinhou22" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"TheaterJS","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","url":"http://localhost:4000/libraries/TheaterJS-2.0.1/"}</script>
+{"url":"http://localhost:4000/libraries/TheaterJS-2.0.1/","headline":"TheaterJS","@type":"WebPage","description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -310,47 +312,46 @@
 <h2 id="installation">Installation</h2>
 
 <ul>
-  <li>via bower: <code class="highlighter-rouge">bower install theaterjs</code></li>
-  <li>via npm: <code class="highlighter-rouge">npm install theaterjs</code></li>
-  <li>via a cdn: <code class="highlighter-rouge">//cdn.jsdelivr.net/theaterjs/latest/theater.min.js</code></li>
+  <li>via bower: <code class="language-plaintext highlighter-rouge">bower install theaterjs</code></li>
+  <li>via npm: <code class="language-plaintext highlighter-rouge">npm install theaterjs</code></li>
+  <li>via a cdn: <code class="language-plaintext highlighter-rouge">//cdn.jsdelivr.net/theaterjs/latest/theater.min.js</code></li>
   <li><a href="https://github.com/Zhouzi/TheaterJS/releases">direct download</a></li>
 </ul>
 
-<p>Link the <code class="highlighter-rouge">theater.min.js</code> file and you’re done: <code class="highlighter-rouge">&lt;script src="path/to/theater.min.js"&gt;&lt;/script&gt;</code></p>
+<p>Link the <code class="language-plaintext highlighter-rouge">theater.min.js</code> file and you’re done: <code class="language-plaintext highlighter-rouge">&lt;script src="path/to/theater.min.js"&gt;&lt;/script&gt;</code></p>
 
 <h2 id="example">Example</h2>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"vader"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"vader"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"luke"</span><span class="nt">&gt;&lt;/div&gt;</span>
 
 <span class="nt">&lt;script&gt;</span>
   <span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
   
   <span class="nx">theater</span>
-    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'type:start, erase:start'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">type:start, erase:start</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
       <span class="c1">// add a class to actor's dom element when he starts typing/erasing</span>
       <span class="kd">let</span> <span class="nx">actor</span> <span class="o">=</span> <span class="nx">theater</span><span class="p">.</span><span class="nx">getCurrentActor</span><span class="p">()</span>
-      <span class="nx">actor</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">'is-typing'</span><span class="p">)</span>
+      <span class="nx">actor</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">is-typing</span><span class="dl">'</span><span class="p">)</span>
     <span class="p">})</span>
-    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'type:end, erase:end'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">type:end, erase:end</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
       <span class="c1">// and then remove it when he's done</span>
       <span class="kd">let</span> <span class="nx">actor</span> <span class="o">=</span> <span class="nx">theater</span><span class="p">.</span><span class="nx">getCurrentActor</span><span class="p">()</span>
-      <span class="nx">actor</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">'is-typing'</span><span class="p">)</span>
+      <span class="nx">actor</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">'</span><span class="s1">is-typing</span><span class="dl">'</span><span class="p">)</span>
     <span class="p">})</span>
   
   <span class="nx">theater</span>
-    <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'vader'</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'luke'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">luke</span><span class="dl">'</span><span class="p">)</span>
     
   <span class="nx">theater</span>
-    <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'vader:Luke...'</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'luke:What?'</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'vader:I am'</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">'.'</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">'.'</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">'. '</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'Your father!'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader:Luke...</span><span class="dl">'</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">luke:What?</span><span class="dl">'</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader:I am</span><span class="dl">'</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.</span><span class="dl">'</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.</span><span class="dl">'</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="dl">'</span><span class="s1">. </span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">Your father!</span><span class="dl">'</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="nx">theater</span><span class="p">.</span><span class="nx">replay</span><span class="p">)</span>
 <span class="nt">&lt;/script&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="documentation">Documentation</h2>
 
@@ -358,15 +359,13 @@
 
 <p><strong>Example</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">({</span> <span class="na">locale</span><span class="p">:</span> <span class="s1">'fr'</span> <span class="p">})</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">({</span> <span class="na">locale</span><span class="p">:</span> <span class="dl">'</span><span class="s1">fr</span><span class="dl">'</span> <span class="p">})</span>
+</code></pre></div></div>
 
 <p><strong>Usage</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">theaterJS</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">options</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">theaterJS</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">options</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div></div>
 
 <table>
   <thead>
@@ -379,7 +378,7 @@
   <tbody>
     <tr>
       <td>options</td>
-      <td><code class="highlighter-rouge"><span class="p">{</span><span class="err">autoplay,</span><span class="w"> </span><span class="err">locale,</span><span class="w"> </span><span class="err">minSpeed,</span><span class="w"> </span><span class="err">maxSpeed</span><span class="p">}</span></code></td>
+      <td><code class="language-plaintext highlighter-rouge">{autoplay, locale, minSpeed, maxSpeed}</code></td>
       <td>Options <em>(see below)</em>.</td>
     </tr>
   </tbody>
@@ -398,22 +397,22 @@
   <tbody>
     <tr>
       <td>autoplay</td>
-      <td><code class="highlighter-rouge">true</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code></td>
       <td>If true, automatically play the scenario as it’s constructed.</td>
     </tr>
     <tr>
       <td>locale</td>
-      <td><code class="highlighter-rouge">detect</code></td>
-      <td>Used to determine which keyboard to use when typing random characters (for mistakes). Note: <code class="highlighter-rouge">"detect"</code> is an option to detect the user’s locale and use if it’s supported.</td>
+      <td><code class="language-plaintext highlighter-rouge">detect</code></td>
+      <td>Used to determine which keyboard to use when typing random characters (for mistakes). Note: <code class="language-plaintext highlighter-rouge">"detect"</code> is an option to detect the user’s locale and use if it’s supported.</td>
     </tr>
     <tr>
       <td>minSpeed</td>
-      <td><code class="highlighter-rouge">80</code></td>
+      <td><code class="language-plaintext highlighter-rouge">80</code></td>
       <td>Minimum delay between each typed characters (the lower, the faster).</td>
     </tr>
     <tr>
       <td>maxSpeed</td>
-      <td><code class="highlighter-rouge">450</code></td>
+      <td><code class="language-plaintext highlighter-rouge">450</code></td>
       <td>The maximum delay between typed characters (the greater, the slower).</td>
     </tr>
   </tbody>
@@ -422,8 +421,8 @@
 <p>TheaterJS objects have two public (read only) properties:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">theater.options</code>: object’s options.</li>
-  <li><code class="highlighter-rouge">theater.status</code>: object’s status (“playing” or “ready”).</li>
+  <li><code class="language-plaintext highlighter-rouge">theater.options</code>: object’s options.</li>
+  <li><code class="language-plaintext highlighter-rouge">theater.status</code>: object’s status (“playing” or “ready”).</li>
 </ul>
 
 <h3 id="addactor">addActor</h3>
@@ -432,22 +431,20 @@
 
 <p><strong>Example</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
 
 <span class="nx">theater</span>
-  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'vader'</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'luke'</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s1">'.luke-selector'</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'yoda'</span><span class="p">,</span> <span class="p">{</span> <span class="na">accuracy</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="na">speed</span><span class="p">:</span> <span class="mf">0.6</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">displayValue</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'%s said yoda'</span><span class="p">,</span> <span class="nx">displayValue</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">luke</span><span class="dl">'</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.luke-selector</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">yoda</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">accuracy</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="na">speed</span><span class="p">:</span> <span class="mf">0.6</span> <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">displayValue</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">%s said yoda</span><span class="dl">'</span><span class="p">,</span> <span class="nx">displayValue</span><span class="p">)</span>
   <span class="p">})</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Usage</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">options</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">callback</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">name</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">options</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">callback</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div></div>
 
 <table>
   <thead>
@@ -479,8 +476,8 @@
 <p>Actors have two options:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">accuracy</code> (number between 0 and 1): used to determine how often an actor should make mistakes.</li>
-  <li><code class="highlighter-rouge">speed</code> (number between 0 and 1): used to determine how fast the actor types.</li>
+  <li><code class="language-plaintext highlighter-rouge">accuracy</code> (number between 0 and 1): used to determine how often an actor should make mistakes.</li>
+  <li><code class="language-plaintext highlighter-rouge">speed</code> (number between 0 and 1): used to determine how fast the actor types.</li>
 </ul>
 
 <p>Note: the delay between each typed character varies to “mimick human behavior”.</p>
@@ -490,12 +487,11 @@ It can also be a string, in such case TheaterJS will assume it’s a DOM selecto
 It’s then going to set the element’s innerHTML when the value changes.
 You can safely ignore this argument if you gave the target element an id with the name of the actor, i.e:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'vader'</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div></div>
 
-<p>In this situation, TheaterJS will look for an element that matches the selector <code class="highlighter-rouge">#vader</code>.
-Also note that the actor will have an additional <code class="highlighter-rouge">$element</code> property referring to the DOM element when using one of those approaches.</p>
+<p>In this situation, TheaterJS will look for an element that matches the selector <code class="language-plaintext highlighter-rouge">#vader</code>.
+Also note that the actor will have an additional <code class="language-plaintext highlighter-rouge">$element</code> property referring to the DOM element when using one of those approaches.</p>
 
 <h3 id="getcurrentactor">getCurrentActor</h3>
 
@@ -503,77 +499,71 @@ Also note that the actor will have an additional <code class="highlighter-rouge"
 
 <p><strong>Example</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
 
 <span class="nx">theater</span>
-  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'vader'</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'vader:Luke...'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader:Luke...</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nx">vader</span> <span class="o">=</span> <span class="nx">theater</span><span class="p">.</span><span class="nx">getCurrentActor</span><span class="p">()</span>
-    <span class="nx">vader</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">'dying'</span><span class="p">)</span>
+    <span class="nx">vader</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">dying</span><span class="dl">'</span><span class="p">)</span>
     <span class="nx">done</span><span class="p">()</span>
   <span class="p">})</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Usage</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">getCurrentActor</span><span class="p">()</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">getCurrentActor</span><span class="p">()</span>
+</code></pre></div></div>
 
 <h3 id="addscene">addScene</h3>
 
-<p>Add scenes to the scenario and play it if <code class="highlighter-rouge">options.autoplay</code> is true.</p>
+<p>Add scenes to the scenario and play it if <code class="language-plaintext highlighter-rouge">options.autoplay</code> is true.</p>
 
 <p><strong>Example</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
 
 <span class="nx">theater</span>
-  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'vader'</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'vader:Luke... '</span><span class="p">,</span> <span class="s1">'Listen to me!'</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader:Luke... </span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Listen to me!</span><span class="dl">'</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="nx">theater</span><span class="p">.</span><span class="nx">replay</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Usage</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">scene</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">scene</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p>A scene can be of 5 different types:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">theater</span>
-  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'vader:Luke... '</span><span class="p">)</span> <span class="c1">// 1</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">theater</span>
+  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader:Luke... </span><span class="dl">'</span><span class="p">)</span> <span class="c1">// 1</span>
   <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span> <span class="c1">// 2</span>
-  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'I am your father!'</span><span class="p">)</span> <span class="c1">// 3</span>
+  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">I am your father!</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// 3</span>
   <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span> <span class="c1">// 4</span>
-  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'mother!'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">mother!</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// do stuff</span>
     <span class="nx">done</span><span class="p">()</span>
   <span class="p">})</span> <span class="c1">// 5</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ol>
-  <li><code class="highlighter-rouge">.addScene('vader:Luke... ')</code> erase actor’s display value and set it with the new value.</li>
-  <li><code class="highlighter-rouge">.addScene(800)</code> make a break of <code class="highlighter-rouge">800</code> milliseconds before playing the next scene.</li>
-  <li><code class="highlighter-rouge">.addScene('I am your father!')</code> append value to the current actor’s display value.</li>
-  <li><code class="highlighter-rouge">.addScene(-7)</code> erase <code class="highlighter-rouge">7</code> characters.</li>
-  <li><code class="highlighter-rouge">.addScene(fn)</code> call fn which receives a done callback as first argument (calling <code class="highlighter-rouge">done()</code> plays the next scene in the scenario).</li>
+  <li><code class="language-plaintext highlighter-rouge">.addScene('vader:Luke... ')</code> erase actor’s display value and set it with the new value.</li>
+  <li><code class="language-plaintext highlighter-rouge">.addScene(800)</code> make a break of <code class="language-plaintext highlighter-rouge">800</code> milliseconds before playing the next scene.</li>
+  <li><code class="language-plaintext highlighter-rouge">.addScene('I am your father!')</code> append value to the current actor’s display value.</li>
+  <li><code class="language-plaintext highlighter-rouge">.addScene(-7)</code> erase <code class="language-plaintext highlighter-rouge">7</code> characters.</li>
+  <li><code class="language-plaintext highlighter-rouge">.addScene(fn)</code> call fn which receives a done callback as first argument (calling <code class="language-plaintext highlighter-rouge">done()</code> plays the next scene in the scenario).</li>
 </ol>
 
 <p>Note that addScene actually accepts an infinite number of arguments so you could just do:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">theater</span>
-  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'vader:Luke... '</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="s1">'I am your father!'</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="s1">'mother!'</span><span class="p">)</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">theater</span>
+  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader:Luke... </span><span class="dl">'</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="dl">'</span><span class="s1">I am your father!</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="dl">'</span><span class="s1">mother!</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="nx">fn</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="play">play</h3>
 
@@ -581,23 +571,21 @@ Also note that the actor will have an additional <code class="highlighter-rouge"
 
 <p><strong>Example</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">({</span> <span class="na">autoplay</span><span class="p">:</span> <span class="kc">false</span> <span class="p">})</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">({</span> <span class="na">autoplay</span><span class="p">:</span> <span class="kc">false</span> <span class="p">})</span>
 
 <span class="nx">theater</span>
-  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'vader'</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'vader:Luke...'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader:Luke...</span><span class="dl">'</span><span class="p">)</span>
   
-<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'button'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">button</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="nx">theater</span><span class="p">.</span><span class="nx">play</span><span class="p">()</span>
 <span class="p">},</span> <span class="kc">false</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Usage</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">play</span><span class="p">()</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">play</span><span class="p">()</span>
+</code></pre></div></div>
 
 <h3 id="replay">replay</h3>
 
@@ -605,20 +593,18 @@ Also note that the actor will have an additional <code class="highlighter-rouge"
 
 <p><strong>Example</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
 
 <span class="nx">theater</span>
-  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'vader'</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'vader:Luke...'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader:Luke...</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="nx">theater</span><span class="p">.</span><span class="nx">replay</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Usage</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">replay</span><span class="p">()</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">replay</span><span class="p">()</span>
+</code></pre></div></div>
 
 <h3 id="stop">stop</h3>
 
@@ -626,23 +612,21 @@ Also note that the actor will have an additional <code class="highlighter-rouge"
 
 <p><strong>Example</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
 
 <span class="nx">theater</span>
-  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'vader'</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'vader:Luke... '</span><span class="p">,</span> <span class="s1">'I am your father...'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader:Luke... </span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">I am your father...</span><span class="dl">'</span><span class="p">)</span>
 
-<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'button'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">button</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="nx">theater</span><span class="p">.</span><span class="nx">stop</span><span class="p">()</span>
 <span class="p">},</span> <span class="kc">false</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Usage</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">stop</span><span class="p">()</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">stop</span><span class="p">()</span>
+</code></pre></div></div>
 
 <h3 id="on">on</h3>
 
@@ -650,29 +634,27 @@ Also note that the actor will have an additional <code class="highlighter-rouge"
 
 <p><strong>Example</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">theater</span> <span class="o">=</span> <span class="nx">theaterJS</span><span class="p">()</span>
 
 <span class="nx">theater</span>
-  <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'type:start, erase:start'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">type:start, erase:start</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nx">actor</span> <span class="o">=</span> <span class="nx">theater</span><span class="p">.</span><span class="nx">getCurrentActor</span><span class="p">()</span>
-    <span class="nx">actor</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">'blinking-caret'</span><span class="p">)</span>
+    <span class="nx">actor</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">'</span><span class="s1">blinking-caret</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">})</span>
-  <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'type:start, erase:end'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">type:start, erase:end</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nx">actor</span> <span class="o">=</span> <span class="nx">theater</span><span class="p">.</span><span class="nx">getCurrentActor</span><span class="p">()</span>
-    <span class="nx">actor</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">'blinking-caret'</span><span class="p">)</span>
+    <span class="nx">actor</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="dl">'</span><span class="s1">blinking-caret</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">})</span>
 
 <span class="nx">theater</span>
-  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="s1">'vader'</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="s1">'vader:Luke...'</span><span class="p">)</span>
-</code></pre>
-</div>
+  <span class="p">.</span><span class="nx">addActor</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">addScene</span><span class="p">(</span><span class="dl">'</span><span class="s1">vader:Luke...</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p><strong>Usage</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">eventName</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">callback</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">theater</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">eventName</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="nx">callback</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div></div>
 
 <table>
   <thead>
@@ -698,7 +680,7 @@ Also note that the actor will have an additional <code class="highlighter-rouge"
 
 <p>The callback function receives the event’s name as first argument.</p>
 
-<p>Note: listen to all event by using the ‘*’ shortcut: <code class="highlighter-rouge">theater.on('*', callback)</code>.</p>
+<p>Note: listen to all event by using the ‘*’ shortcut: <code class="language-plaintext highlighter-rouge">theater.on('*', callback)</code>.</p>
 
 <h2 id="change-log">Change Log</h2>
 
@@ -706,7 +688,7 @@ Also note that the actor will have an additional <code class="highlighter-rouge"
 
 <ul>
   <li>publish to npm, fix for non-browser environment</li>
-  <li>add a <code class="highlighter-rouge">.npmignore</code> file</li>
+  <li>add a <code class="language-plaintext highlighter-rouge">.npmignore</code> file</li>
   <li>add source map</li>
 </ul>
 

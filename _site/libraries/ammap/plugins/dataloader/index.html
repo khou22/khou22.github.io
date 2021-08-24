@@ -93,8 +93,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>amCharts Data Loader | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="amCharts Data Loader" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area." />
@@ -103,12 +104,13 @@
 <meta property="og:url" content="http://localhost:4000/libraries/ammap/plugins/dataloader/" />
 <meta property="og:site_name" content="Kevin Hou" />
 <meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="amCharts Data Loader" />
 <meta name="twitter:site" content="@kevinhou22" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"amCharts Data Loader","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","url":"http://localhost:4000/libraries/ammap/plugins/dataloader/"}</script>
+{"url":"http://localhost:4000/libraries/ammap/plugins/dataloader/","headline":"amCharts Data Loader","@type":"WebPage","description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -320,7 +322,7 @@ server.</p>
 <p>The page needs to be loaded via web server (http://) in order to work properly.</p>
 
 <p>Loading data from another domain than the web page is loaded is possible but is 
-a subject for <code class="highlighter-rouge">Access-Control-Allow-Origin</code> policies defined by the web server 
+a subject for <code class="language-plaintext highlighter-rouge">Access-Control-Allow-Origin</code> policies defined by the web server 
 you are loading data from.</p>
 
 <p>For more about loading data across domains use the following thread:
@@ -330,9 +332,8 @@ http://stackoverflow.com/questions/1653308/access-control-allow-origin-multiple-
 
 <h3 id="1-include-the-minified-version-of-file-of-this-plugin-ie">1) Include the minified version of file of this plugin. I.e.:</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;script src="amcharts/plugins/dataloader/dataloader.min.js" type="text/javascript"&gt;&lt;/script&gt;
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="amcharts/plugins/dataloader/dataloader.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre></div></div>
 
 <p>(this needs to go after all the other amCharts includes)</p>
 
@@ -340,19 +341,18 @@ http://stackoverflow.com/questions/1653308/access-control-allow-origin-multiple-
 
 <p>Regular (Serial, Pie, etc.) charts:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
   ...,
   "dataLoader": {
     "url": "data.json",
     "format": "json"
   }
 } );
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Stock chart:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
   ...,
   "dataSets": [{
     ...,
@@ -365,8 +365,7 @@ http://stackoverflow.com/questions/1653308/access-control-allow-origin-multiple-
     }
   }]
 } );
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>That’s it. The plugin will make sure the files are loaded and dataProvider is 
 populated with their content <em>before</em> the chart is built.</p>
@@ -498,10 +497,10 @@ data, such as “separator”.</p>
 <h2 id="using-in-javascript-stock-chart">Using in JavaScript Stock Chart</h2>
 
 <p>In JavaScript Stock Chart it works exactly the same as in other chart types, 
-with the exception that <code class="highlighter-rouge">dataLoader</code> is set as a property to the data set 
+with the exception that <code class="language-plaintext highlighter-rouge">dataLoader</code> is set as a property to the data set 
 definition. I.e.:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var chart = AmCharts.makeChart("chartdiv", {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var chart = AmCharts.makeChart("chartdiv", {
   "type": "stock",
   ...
   "dataSets": [{
@@ -537,12 +536,11 @@ definition. I.e.:</p>
     }
   }]
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="can-i-also-load-event-data-the-same-way">Can I also load event data the same way?</h3>
 
-<p>Sure. You just add a <code class="highlighter-rouge">eventDataLoader</code> object to your data set. All the same 
+<p>Sure. You just add a <code class="language-plaintext highlighter-rouge">eventDataLoader</code> object to your data set. All the same 
 settings apply.</p>
 
 <h2 id="adding-custom-headers-to-http-requests">Adding custom headers to HTTP requests</h2>
@@ -550,7 +548,7 @@ settings apply.</p>
 <p>If you want to add additional headers to your data load HTTP requests, use
 “headers” array. Each header is an object with two keys: “key” and “value”:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"dataLoader": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"dataLoader": {
   "url": "data/serial.json",
   "format": "json",
   "headers": [{
@@ -558,13 +556,12 @@ settings apply.</p>
     "value": "123456789"
   }]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="manually-triggering-a-reload-of-all-data">Manually triggering a reload of all data</h2>
 
 <p>Once chart is initialized, you can trigger the reload of all data manually by
-calling <code class="highlighter-rouge">chart.dataLoader.loadData()</code> function. (replace “chart” with the actual
+calling <code class="language-plaintext highlighter-rouge">chart.dataLoader.loadData()</code> function. (replace “chart” with the actual
 variable that holds reference to your chart object)</p>
 
 <h2 id="using-callback-functions">Using callback functions</h2>
@@ -584,7 +581,7 @@ loading is complete, error occurs, etc.</p>
 
 <p>Example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
   ...,
   "dataSets": [{
     ...,
@@ -608,15 +605,14 @@ loading is complete, error occurs, etc.</p>
     }
   }]
 } );
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="translating-into-other-languages">Translating into other languages</h2>
 
 <p>Depending on configuration options the plugin will display a small number of 
 text prompts, like ‘Data loading…’.</p>
 
-<p>Plugin will try matching chart’s <code class="highlighter-rouge">language</code> property and display text prompts in 
+<p>Plugin will try matching chart’s <code class="language-plaintext highlighter-rouge">language</code> property and display text prompts in 
 a corresponding language. For that the plugin needs to have the translations.</p>
 
 <p>Some of the plugin translations are in <strong>lang</strong> subdirectory. Simply include the 
@@ -627,9 +623,8 @@ copy it and translate.</p>
 
 <p>The structure is simple:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>'The phrase in English': 'Translation'
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'The phrase in English': 'Translation'
+</code></pre></div></div>
 
 <p>The phrase in English must be left intact.</p>
 
@@ -689,7 +684,7 @@ own versions or completely different products out of it.</p>
 
 <h3 id="1015">1.0.15</h3>
 <ul>
-  <li>Added “emptyAs” config property. Empty CSV values will be set to this (default <code class="highlighter-rouge">undefined</code>)</li>
+  <li>Added “emptyAs” config property. Empty CSV values will be set to this (default <code class="language-plaintext highlighter-rouge">undefined</code>)</li>
 </ul>
 
 <h3 id="1014">1.0.14</h3>
@@ -722,12 +717,12 @@ own versions or completely different products out of it.</p>
 
 <h3 id="109">1.0.9</h3>
 <ul>
-  <li>Plugin will now ignore empty CSV lines by default (configurable with <code class="highlighter-rouge">skipEmpty</code> property)</li>
+  <li>Plugin will now ignore empty CSV lines by default (configurable with <code class="language-plaintext highlighter-rouge">skipEmpty</code> property)</li>
 </ul>
 
 <h3 id="108">1.0.8</h3>
 <ul>
-  <li>Added <code class="highlighter-rouge">headers</code> config variable which allows adding custom headers to HTTP requests</li>
+  <li>Added <code class="language-plaintext highlighter-rouge">headers</code> config variable which allows adding custom headers to HTTP requests</li>
 </ul>
 
 <h3 id="107">1.0.7</h3>
@@ -737,7 +732,7 @@ own versions or completely different products out of it.</p>
 
 <h3 id="106">1.0.6</h3>
 <ul>
-  <li>Added support for Gauge chart (loads <code class="highlighter-rouge">arrows</code> array)</li>
+  <li>Added support for Gauge chart (loads <code class="language-plaintext highlighter-rouge">arrows</code> array)</li>
 </ul>
 
 <h3 id="105">1.0.5</h3>
@@ -749,7 +744,7 @@ own versions or completely different products out of it.</p>
 
 <h3 id="104">1.0.4</h3>
 <ul>
-  <li>Added <code class="highlighter-rouge">chart.dataLoader.loadData()</code> function which can be used to manually trigger all data reload</li>
+  <li>Added <code class="language-plaintext highlighter-rouge">chart.dataLoader.loadData()</code> function which can be used to manually trigger all data reload</li>
 </ul>
 
 <h3 id="103">1.0.3</h3>
@@ -766,7 +761,7 @@ own versions or completely different products out of it.</p>
 
 <h3 id="101">1.0.1</h3>
 <ul>
-  <li>Added <code class="highlighter-rouge">complete</code>, <code class="highlighter-rouge">load</code> and <code class="highlighter-rouge">error</code> properties that can be set with function handlers to be invoked on load completion, successful file load or failed load respectively</li>
+  <li>Added <code class="language-plaintext highlighter-rouge">complete</code>, <code class="language-plaintext highlighter-rouge">load</code> and <code class="language-plaintext highlighter-rouge">error</code> properties that can be set with function handlers to be invoked on load completion, successful file load or failed load respectively</li>
   <li>Fixed language container initialization bug</li>
   <li>Fixed bug that was causing parse errors not be displayed</li>
 </ul>

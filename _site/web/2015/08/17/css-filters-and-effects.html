@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>CSS Filters and Effects | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="CSS Filters and Effects" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-08-17T08:03:23-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="CSS Filters and Effects" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"CSS Filters and Effects","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2015-08-17T08:03:23-07:00","dateModified":"2015-08-17T08:03:23-07:00","description":"How to use CSS3 animations to apply filters on images or divs.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/08/17/css-filters-and-effects.html"},"url":"http://localhost:4000/web/2015/08/17/css-filters-and-effects.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/web/2015/08/17/css-filters-and-effects.html","headline":"CSS Filters and Effects","dateModified":"2015-08-17T08:03:23-07:00","datePublished":"2015-08-17T08:03:23-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/08/17/css-filters-and-effects.html"},"description":"How to use CSS3 animations to apply filters on images or divs.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -363,7 +366,7 @@
 
 <p>This setup can easily be customized by changing the values of the background-color, border-color, etc. For example, my component background is not actually transparent white. My white text was a little too hard to see against the white background, so I changed it to have a tint of grey:</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">background-color</span><span class="o">:</span> <span class="nt">rgba</span><span class="o">(</span><span class="nt">100</span><span class="o">,</span> <span class="nt">100</span><span class="o">,</span> <span class="nt">100</span><span class="o">,</span> <span class="nc">.2</span><span class="o">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">background-color</span><span class="o">:</span> <span class="nt">rgba</span><span class="o">(</span><span class="err">100</span><span class="o">,</span> <span class="err">100</span><span class="o">,</span> <span class="err">100</span><span class="o">,</span> <span class="o">.</span><span class="err">2</span><span class="o">);</span></code></pre></figure>
 
 <hr />
 
@@ -371,12 +374,12 @@
 
 <p>Simply apply this to your CSS class:</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-filter</span><span class="o">:</span> <span class="nt">grayscale</span><span class="o">(</span><span class="nt">0</span><span class="nc">.5</span><span class="o">)</span> <span class="nt">blur</span><span class="o">(</span><span class="nt">10px</span><span class="o">);</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">-webkit-filter</span><span class="o">:</span> <span class="nt">grayscale</span><span class="o">(</span><span class="err">0</span><span class="o">.</span><span class="err">5</span><span class="o">)</span> <span class="nt">blur</span><span class="o">(</span><span class="err">10</span><span class="nt">px</span><span class="o">);</span></code></pre></figure>
 
 <p>or as an inline style using ReactJS:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">backgroundBlur</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">WebkitFilter</span><span class="p">:</span> <span class="s1">'grayscale(0.5) blur(7px)'</span>
+  <span class="na">WebkitFilter</span><span class="p">:</span> <span class="dl">'</span><span class="s1">grayscale(0.5) blur(7px)</span><span class="dl">'</span>
 <span class="p">}</span> <span class="c1">//As an inline style - syntax</span></code></pre></figure>
 
 <p>Hope this helps.</p>

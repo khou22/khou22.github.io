@@ -1,5 +1,6 @@
 # Usage:
 # Installation: `$ bundle`
+# Restore: gem pristine <gem_pkg>
 
 source 'https://rubygems.org'
 
@@ -13,5 +14,5 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap' # Automatic SEO sitemap generation
     gem 'jekyll-feed' # RSS feed
     gem 'jekyll-autoprefixer' # Prefix CSS properties for compatibility
-    gem 'nokogiri',' ~> 1.8.1' # Fixes security vulnerability
+    gem "webrick" # https://stackoverflow.com/questions/65989040/bundle-exec-jekyll-serve-cannot-load-such-file
 end

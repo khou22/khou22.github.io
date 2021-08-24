@@ -93,8 +93,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>amCharts Responsive | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="amCharts Responsive" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area." />
@@ -103,12 +104,13 @@
 <meta property="og:url" content="http://localhost:4000/libraries/ammap/plugins/responsive/" />
 <meta property="og:site_name" content="Kevin Hou" />
 <meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="amCharts Responsive" />
 <meta name="twitter:site" content="@kevinhou22" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"amCharts Responsive","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","url":"http://localhost:4000/libraries/ammap/plugins/responsive/"}</script>
+{"url":"http://localhost:4000/libraries/ammap/plugins/responsive/","headline":"amCharts Responsive","@type":"WebPage","description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -328,9 +330,8 @@ that. (see further down this file for instructions)</p>
   <li>Include the minified version of file of this plugin. I.e.:</li>
 </ol>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;script src="amcharts/plugins/responsive/responsive.min.js" type="text/javascript"&gt;&lt;/script&gt;
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="amcharts/plugins/responsive/responsive.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre></div></div>
 
 <p>(this needs to go after all the other amCharts includes)</p>
 
@@ -338,22 +339,20 @@ that. (see further down this file for instructions)</p>
   <li>Add the following setting to your chart configuration:</li>
 </ol>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AmCharts.makeChart( "chartdiv", {
   ...,
   "responsive": {
     "enabled": true
   }
 } );
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Or if you are using non-JSON setup:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>chart.responsive = {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chart.responsive = {
   "enabled": true
 };
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>That’s it.</p>
 
@@ -378,23 +377,22 @@ forward. Each rule has two things:</p>
 
 <p>A rule is an object, for example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"minWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"maxWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"maxHeight"</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"minHeight"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"overrides"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"precision"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"legend"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"valueAxes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"inside"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "minWidth": 200,
+  "maxWidth": 400,
+  "maxHeight": 400,
+  "minHeight": 200,
+  "overrides": {
+    "precision": 2,
+    "legend": {
+      "enabled": false
+    },
+    "valueAxes": {
+      "inside": true
+    }
+  }
+}
+</code></pre></div></div>
 
 <p>The above rule will be applicable to a chart that is between 200px and 400px in
 width and height.</p>
@@ -405,20 +403,19 @@ least one.</p>
 <p>So for example to make the rule apply to all charts with width 400px or lower,
 you would do something like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"maxWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"overrides"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"precision"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"legend"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"valueAxes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"inside"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "maxWidth": 400,
+  "overrides": {
+    "precision": 2,
+    "legend": {
+      "enabled": false
+    },
+    "valueAxes": {
+      "inside": true
+    }
+  }
+}
+</code></pre></div></div>
 
 <p>Please note that there are several other conditional properties besides the ones
 that deal with chart’s dimensions:</p>
@@ -444,11 +441,10 @@ types like object, or array.</p>
 <p>To override a property of a child object, such as “legend”, you would simply go
 with JSON representation of the properties you need to override. I.e.:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"legend": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"legend": {
   "enabled": false
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This will look for a “legend” property in chart object, then change it’s
 “enabled” property to false.</p>
@@ -462,12 +458,11 @@ with JSON representation of the properties you need to override. I.e.:</p>
 <p>To override properties for ALL objects in the array, you would provide an
 override instruction as an object. I.e.:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"graphs": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"graphs": {
   "bullet": "round",
   "lineThickness": 5
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The above will add a round bullet and set line thickness to all of the graphs on
 the chart.</p>
@@ -481,15 +476,14 @@ b) Apply using the same index.</p>
 <p>To individually apply property overrides, you will need to supply override
 instructions as an array:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"graphs": [
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"graphs": [
   {
     "id": "g1",
     "bullet": "round",
     "lineThickness": 5
   }
 ]
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The above will apply the same properties for the graph with an id of “g1” only.
 It will not touch the rest of the graphs.</p>
@@ -500,7 +494,7 @@ the “id” property set so this plugin can target it.</p>
 <p>Or you can omit the “id” and just apply overrides in the same order as you have
 them defined. I.e.:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"graphs": [
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"graphs": [
   {
     "bullet": "round"
   },
@@ -508,8 +502,7 @@ them defined. I.e.:</p>
     "bullet": "square"
   }
 ]
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The above will apply round bullets to the first defined graph, and square
 bullets to the second graph.</p>
@@ -524,7 +517,7 @@ are defined.</p>
 
 <p>Consider this rule set:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"responsive": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"responsive": {
   "enabled": true,
   "rules": [
     // at 400px wide, we hide legend
@@ -560,8 +553,7 @@ are defined.</p>
 
   ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>In case several rules modify the same property, the last one will always “win”.</p>
 
@@ -572,7 +564,7 @@ are defined.</p>
 <p>In case you want to go pure and set only your own responsive rules, you can set
 property “addDefaultRules” to false. I.e.:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>"responsive": {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"responsive": {
   "enabled": true,
   "addDefaultRules": false,
   "rules": [
@@ -586,8 +578,7 @@ property “addDefaultRules” to false. I.e.:</p>
     }
   ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>When your custom rules are combined with pre-defined ones, yours are appended at
 the end of the list. This means that your rules will always have the “last

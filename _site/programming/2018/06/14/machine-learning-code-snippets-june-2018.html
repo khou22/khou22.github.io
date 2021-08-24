@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Machine Learning Code Snippets&amp;#58 June 2018 | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Machine Learning Code Snippets&amp;#58 June 2018" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-06-14T09:05:23-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="Machine Learning Code Snippets&amp;#58 June 2018" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Machine Learning Code Snippets&amp;#58 June 2018","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2018-06-14T09:05:23-07:00","dateModified":"2018-06-14T09:05:23-07:00","description":"Useful code snippets, functions, and classes that will make you more efficient with Pandas, Numpy, and Jupyter Notebooks.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2018/06/14/machine-learning-code-snippets-june-2018.html"},"url":"http://localhost:4000/programming/2018/06/14/machine-learning-code-snippets-june-2018.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/programming/2018/06/14/machine-learning-code-snippets-june-2018.html","headline":"Machine Learning Code Snippets&amp;#58 June 2018","dateModified":"2018-06-14T09:05:23-07:00","datePublished":"2018-06-14T09:05:23-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2018/06/14/machine-learning-code-snippets-june-2018.html"},"description":"Useful code snippets, functions, and classes that will make you more efficient with Pandas, Numpy, and Jupyter Notebooks.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -358,63 +361,58 @@
 <h4 id="random-sample-of-rows">Random Sample of Rows</h4>
 <p>Choose a random sample of rows from a large dataframe. This is very useful when trying to reduce your training set for debugging purposes.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">smallerDF</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">indices</span><span class="p">,:]</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="selecting-and-removing-columns">Selecting and Removing Columns</h4>
 <p>It’s very easy to extract or remove columns from a pandas dataframe using their built in indexing actions.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Extract these keys into their own data frame</span>
-<span class="n">preserveKeys</span> <span class="o">=</span> <span class="p">[</span><span class="s">'x'</span><span class="p">,</span> <span class="s">'y'</span><span class="p">]</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Extract these keys into their own data frame
+</span><span class="n">preserveKeys</span> <span class="o">=</span> <span class="p">[</span><span class="s">'x'</span><span class="p">,</span> <span class="s">'y'</span><span class="p">]</span>
 <span class="n">smallDF</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">preserveKeys</span><span class="p">]</span>
 
-<span class="c"># Create a new dataframe without certain columns</span>
-<span class="n">newDF</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'z'</span><span class="p">])</span>
-</code></pre>
-</div>
+<span class="c1"># Create a new dataframe without certain columns
+</span><span class="n">newDF</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'z'</span><span class="p">])</span>
+</code></pre></div></div>
 
 <h4 id="converting-all-non-null-entries-to-1">Converting All Non-Null Entries to 1</h4>
 <p>This is helpful when converting a dataframe into a boolean dataframe in which a 1 indicates the prescence of a value and a null indicates there was no value. It can turn any dataframe into a sort of “checkbox” which is helpful for certain types of data processing like collaborative filtering where the actual value doesn’t matter.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">booleanDF</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="c"># Deep copy so don't modify other DF</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">booleanDF</span> <span class="o">=</span> <span class="n">copy</span><span class="p">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="c1"># Deep copy so don't modify other DF
+</span>
+<span class="c1"># Convert 'np.nan' to 0's and everything else to 1's
+</span><span class="n">booleanDF</span> <span class="o">=</span> <span class="n">booleanDF</span><span class="p">.</span><span class="n">notnull</span><span class="p">().</span><span class="n">astype</span><span class="p">(</span><span class="s">'int'</span><span class="p">)</span>
 
-<span class="c"># Convert 'np.nan' to 0's and everything else to 1's</span>
-<span class="n">booleanDF</span> <span class="o">=</span> <span class="n">booleanDF</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">'int'</span><span class="p">)</span>
-
-<span class="c"># Replace all 0's with 'np.nan'</span>
-<span class="n">booleanDF</span> <span class="o">=</span> <span class="n">booleanDF</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-</code></pre>
-</div>
+<span class="c1"># Replace all 0's with 'np.nan'
+</span><span class="n">booleanDF</span> <span class="o">=</span> <span class="n">booleanDF</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">nan</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h4 id="merging-dataframes">Merging DataFrames</h4>
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Merge 2 dataframes with the same rows (ie. add new columns)</span>
-<span class="n">finalDF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Merge 2 dataframes with the same rows (ie. add new columns)
+</span><span class="n">finalDF</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
-<span class="c"># Merge 2 dataframes with the same columns (ie. add more rows)</span>
-<span class="n">finalDF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Merge 2 dataframes with the same columns (ie. add more rows)
+</span><span class="n">finalDF</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="c"># Merge 2 dataframes by row and add new columns when appropriate</span>
-<span class="n">finalDF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</code></pre>
-</div>
+<span class="c1"># Merge 2 dataframes by row and add new columns when appropriate
+</span><span class="n">finalDF</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h2 id="getting-an-overview-of-a-dataframe-make-this-into-another">Getting an Overview of a DataFrame (Make this into another</h2>
 <p>It’s often difficult to deal with abstract, seemingly black-box machine learning algorithms. What can help alleviate some of this stress is knowing what your data really looks like. Here’s a few examples that will help you understand what’s going on in your dataset.</p>
 
 <h4 id="printing-basic-excerpts">Printing Basic Excerpts</h4>
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">.</span><span class="n">describe</span><span class="p">()</span>
 
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c"># First 5 rows</span>
-</code></pre>
-</div>
+<span class="n">df</span><span class="p">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># First 5 rows
+</span></code></pre></div></div>
 
-<p>Running <code class="highlighter-rouge">df.describe()</code> will print a table of all columns and their respective counts (how many non-null values in the column), mean, std (standard deviation), min, 25%, 50%, 75%, and max. Sometimes the row name doens’t get included. This can be fixed by passing in the argument “include=’all’” as follows: <code class="highlighter-rouge">df.describe(include='all')</code>.</p>
+<p>Running <code class="language-plaintext highlighter-rouge">df.describe()</code> will print a table of all columns and their respective counts (how many non-null values in the column), mean, std (standard deviation), min, 25%, 50%, 75%, and max. Sometimes the row name doens’t get included. This can be fixed by passing in the argument “include=’all’” as follows: <code class="language-plaintext highlighter-rouge">df.describe(include='all')</code>.</p>
 
 <p><br class="post-line-break" /></p>
 
-<p>Running <code class="highlighter-rouge">df.head(n)</code> will print the first n rows of your dataset and can give you a good understanding of the form of your data. While the <code class="highlighter-rouge">describe()</code> function is good at showing you basic distributions, the <code class="highlighter-rouge">head()</code> function will show you what your data actually looks like quickly and easily.</p>
+<p>Running <code class="language-plaintext highlighter-rouge">df.head(n)</code> will print the first n rows of your dataset and can give you a good understanding of the form of your data. While the <code class="language-plaintext highlighter-rouge">describe()</code> function is good at showing you basic distributions, the <code class="language-plaintext highlighter-rouge">head()</code> function will show you what your data actually looks like quickly and easily.</p>
 
 
     <div class="post-organization">

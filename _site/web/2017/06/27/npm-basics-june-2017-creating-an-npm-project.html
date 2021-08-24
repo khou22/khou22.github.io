@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>NPM Basics June 2017: Creating an NPM Project | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="NPM Basics June 2017: Creating an NPM Project" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-06-27T03:17:34-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="NPM Basics June 2017: Creating an NPM Project" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"NPM Basics June 2017: Creating an NPM Project","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2017-06-27T03:17:34-07:00","dateModified":"2017-06-27T03:17:34-07:00","description":"The basic principle of the Node Package Manager (NPM) and how to create your own packages.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html"},"url":"http://localhost:4000/web/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/web/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html","headline":"NPM Basics June 2017: Creating an NPM Project","dateModified":"2017-06-27T03:17:34-07:00","datePublished":"2017-06-27T03:17:34-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2017/06/27/npm-basics-june-2017-creating-an-npm-project.html"},"description":"The basic principle of the Node Package Manager (NPM) and how to create your own packages.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -360,13 +363,13 @@
 
 <h1 id="installing-dependencies">Installing Dependencies</h1>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install --save react-redux</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm <span class="nb">install</span> <span class="nt">--save</span> react-redux</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install --save-dev babel-core</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm <span class="nb">install</span> <span class="nt">--save-dev</span> babel-core</code></pre></figure>
 
 <p>Global installation</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install -g eslint</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm <span class="nb">install</span> <span class="nt">-g</span> eslint</code></pre></figure>
 
 <h1 id="useful-dev-tools">Useful Dev Tools</h1>
 <p>Linter: Check for coding errors — saves a trip to the browser (Airbnb’s linter is useful)
@@ -374,7 +377,7 @@ Webpack: For building and compiling JSX, ES6, etc. It will create static site wi
 
 <h1 id="use-github-repo-as-the-public-npm-package">Use GitHub Repo as the Public NPM Package</h1>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm i git://github.com/user/project.git#commit-ish --save</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm i git://github.com/user/project.git#commit-ish <span class="nt">--save</span></code></pre></figure>
 
 <p>File structure of GitHub repo if you want to use it as a public package:
 library-name/

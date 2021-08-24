@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-06-22T06:43:42-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2018-06-22T06:43:42-07:00","dateModified":"2018-06-22T06:43:42-07:00","description":"A collection of helpful command line tips and tricks that I’ve collected over the past couple of months.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html"},"url":"http://localhost:4000/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html","headline":"Terminal Tips and Tricks June 2018: JSON Data, Caffeinate, and More","dateModified":"2018-06-22T06:43:42-07:00","datePublished":"2018-06-22T06:43:42-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/configuration/2018/06/22/terminal-tips-and-tricks-june-2018-json-data-caffeinate-and-more.html"},"description":"A collection of helpful command line tips and tricks that I’ve collected over the past couple of months.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -352,16 +355,15 @@
 
   <article class="post-content">
     <h1 id="inspecting-json-data">Inspecting JSON Data</h1>
-<p>Instead of spending time writing code to view JSON or using a JSON viewer app, which can both be incredibely slow with large JSON files, you can use <code class="highlighter-rouge">NodeJS</code> to inspect JSON objects. Simply start the Node console:</p>
+<p>Instead of spending time writing code to view JSON or using a JSON viewer app, which can both be incredibely slow with large JSON files, you can use <code class="language-plaintext highlighter-rouge">NodeJS</code> to inspect JSON objects. Simply start the Node console:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>node
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>node
+</code></pre></div></div>
 
 <p>Next, you can import the JSON and navigate the tree object to your heart’s content.</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;</span> <span class="c1">// Import JSON</span>
-<span class="o">&gt;&gt;</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./path/to/json'</span><span class="p">)</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;</span> <span class="c1">// Import JSON</span>
+<span class="o">&gt;&gt;</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./path/to/json</span><span class="dl">'</span><span class="p">)</span>
 <span class="o">&gt;&gt;</span>
 <span class="o">&gt;&gt;</span> <span class="cm">/* `_` references the last output
 &gt;&gt;  *   In this case: _ = require(...)
@@ -370,96 +372,89 @@
 <span class="o">&gt;&gt;</span>
 <span class="o">&gt;&gt;</span> <span class="c1">// Traverse JSON tree</span>
 <span class="o">&gt;&gt;</span> <span class="nx">r</span><span class="p">.</span><span class="nx">data</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="prevent-mac-from-sleeping">Prevent Mac from Sleeping</h1>
-<p>Mac’s contain a built in terminal function called <code class="highlighter-rouge">Caffeinate</code>. While one could download the free <a href="http://lightheadsw.com/caffeine/">“Caffeine” app</a> from the Mac App Store, the command line provides an easy alternative. It offers more control and in my opinion is easier to interpret. To activate, simply type:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>caffeinate <span class="c"># Indefinite amount of time</span>
-</code></pre>
-</div>
+<p>Mac’s contain a built in terminal function called <code class="language-plaintext highlighter-rouge">Caffeinate</code>. While one could download the free <a href="http://lightheadsw.com/caffeine/">“Caffeine” app</a> from the Mac App Store, the command line provides an easy alternative. It offers more control and in my opinion is easier to interpret. To activate, simply type:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>caffeinate <span class="c"># Indefinite amount of time</span>
+</code></pre></div></div>
 
 <h4 id="options">Options:</h4>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>-d	<span class="c"># Prevent display from sleeping</span>
--i	<span class="c"># Prevent system from idle sleeping</span>
--s	<span class="c"># Prevent system from lseeping (only when plugged in)</span>
--u	<span class="c"># Resets the system timeout and/or will wake the computer</span>
--t &lt;seconds&gt; <span class="c"># Specifies timeout in seconds from the time the command is run</span>
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">-d</span>	<span class="c"># Prevent display from sleeping</span>
+<span class="nt">-i</span>	<span class="c"># Prevent system from idle sleeping</span>
+<span class="nt">-s</span>	<span class="c"># Prevent system from lseeping (only when plugged in)</span>
+<span class="nt">-u</span>	<span class="c"># Resets the system timeout and/or will wake the computer</span>
+<span class="nt">-t</span> &lt;seconds&gt; <span class="c"># Specifies timeout in seconds from the time the command is run</span>
+</code></pre></div></div>
 
 <h1 id="ssh-tricks">SSH Tricks</h1>
 
 <h3 id="ssh-shortcut">SSH Shortcut</h3>
-<p>Modify your <code class="highlighter-rouge">~/.ssh/config</code> file and add:</p>
+<p>Modify your <code class="language-plaintext highlighter-rouge">~/.ssh/config</code> file and add:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Host aliasName
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host aliasName
     Hostname some.example.com
     Port 2222
     User username
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p>Usage: <code class="highlighter-rouge">$ ssh aliasName</code></p>
+<p>Usage: <code class="language-plaintext highlighter-rouge">$ ssh aliasName</code></p>
 
 <h1 id="iterm-specific">iTerm Specific</h1>
-<p>Pressing <code class="highlighter-rouge">&lt;Command&gt;</code> and <code class="highlighter-rouge">;</code> at the same time will open an autocomplete dropdown selection in iTerm.</p>
+<p>Pressing <code class="language-plaintext highlighter-rouge">&lt;Command&gt;</code> and <code class="language-plaintext highlighter-rouge">;</code> at the same time will open an autocomplete dropdown selection in iTerm.</p>
 
 <h1 id="general-tricks">General Tricks</h1>
 <p>Searching for command history:<br />
-<code class="highlighter-rouge">$ history</code> to see all recent commands<br />
-<code class="highlighter-rouge">Control + r</code> to search through your recent history and use as your current command.</p>
+<code class="language-plaintext highlighter-rouge">$ history</code> to see all recent commands<br />
+<code class="language-plaintext highlighter-rouge">Control + r</code> to search through your recent history and use as your current command.</p>
 
 <p>Count how many files are in a given directory:<br />
-<code class="highlighter-rouge">$ find DIR_NAME -type f | wc -l</code></p>
+<code class="language-plaintext highlighter-rouge">$ find DIR_NAME -type f | wc -l</code></p>
 
 <p>Count how many lines of code in a given directory:<br />
-<code class="highlighter-rouge">$ find . -name "*.*" -exec wc -l {} \;</code></p>
+<code class="language-plaintext highlighter-rouge">$ find . -name "*.*" -exec wc -l {} \;</code></p>
 
 <p>Show your permission on a directory:<br />
-<code class="highlighter-rouge">$ ls -ld &lt;directory&gt;</code></p>
+<code class="language-plaintext highlighter-rouge">$ ls -ld &lt;directory&gt;</code></p>
 
 <p>Show the size of the files in a directory:<br />
-<code class="highlighter-rouge">$ ls -lh</code></p>
+<code class="language-plaintext highlighter-rouge">$ ls -lh</code></p>
 
 <p>Print certain files all in one column:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>ls -1. <span class="k">*</span>.jpg <span class="c"># 1 column, JPGs</span>
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-1</span><span class="nb">.</span> <span class="k">*</span>.jpg <span class="c"># 1 column, JPGs</span>
+</code></pre></div></div>
 
 <p>Mark file as not executable:<br />
-<code class="highlighter-rouge">$ chmod -x fileName</code></p>
+<code class="language-plaintext highlighter-rouge">$ chmod -x fileName</code></p>
 
 <p>Copy contents of file to the clipboard:<br />
-<code class="highlighter-rouge">$ cat file.txt | pbcopy</code> or <code class="highlighter-rouge">$ pbcopy &lt; file.txt</code></p>
+<code class="language-plaintext highlighter-rouge">$ cat file.txt | pbcopy</code> or <code class="language-plaintext highlighter-rouge">$ pbcopy &lt; file.txt</code></p>
 
 <p>Show a mini calendar view:<br />
-<code class="highlighter-rouge">$ cal</code></p>
+<code class="language-plaintext highlighter-rouge">$ cal</code></p>
 
 <p>Count number of columns in CSV file:<br />
 `$ head -1 data_set/background-one.csv | sed ‘s/[^,]//g’ | wc -c$</p>
 
 <p>Open URLs without copy pasting:<br />
-<code class="highlighter-rouge">Command + Click</code></p>
+<code class="language-plaintext highlighter-rouge">Command + Click</code></p>
 
 <p>Delete word:<br />
-<code class="highlighter-rouge">Control + w</code></p>
+<code class="language-plaintext highlighter-rouge">Control + w</code></p>
 
 <p>Grepping (Searches for string in directory):<br />
-<code class="highlighter-rouge">grep -r someString .</code>. Useful <a href="https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/">doc</a></p>
+<code class="language-plaintext highlighter-rouge">grep -r someString .</code>. Useful <a href="https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/">doc</a></p>
 
 <p>It’s also helpful to note that you can use regexes on most commands. For example:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>killall -9 prefix_<span class="k">*</span> <span class="c"># All processes that begin with "prefix_"</span>
-rm -f <span class="k">*</span>_vs_<span class="k">*</span> <span class="c"># Forcibly remove all files with names that have "_vs_" in them</span>
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>killall <span class="nt">-9</span> prefix_<span class="k">*</span> <span class="c"># All processes that begin with "prefix_"</span>
+<span class="nb">rm</span> <span class="nt">-f</span> <span class="k">*</span>_vs_<span class="k">*</span> <span class="c"># Forcibly remove all files with names that have "_vs_" in them</span>
+</code></pre></div></div>
 
 <p>Paste into a new file:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>pbpaste &gt; fileName
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pbpaste <span class="o">&gt;</span> fileName
+</code></pre></div></div>
 
     <div class="post-organization">
       <p id="post-meta">Posted in <a href="/blog/category/configuration/">Developer Tools</a> with <a href="/blog/tag/terminal">Terminal</a></p>

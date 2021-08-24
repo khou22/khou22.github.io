@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Design Tips and Tricks August 2016: Optimizing and Animating SVG Images | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Design Tips and Tricks August 2016: Optimizing and Animating SVG Images" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-08-28T11:46:35-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="Design Tips and Tricks August 2016: Optimizing and Animating SVG Images" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Design Tips and Tricks August 2016: Optimizing and Animating SVG Images","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2016-08-28T11:46:35-07:00","dateModified":"2016-08-28T11:46:35-07:00","description":"My notes from an online seminar I tuned into that describes how to create and animate SVG images.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/design/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html"},"url":"http://localhost:4000/design/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/design/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html","headline":"Design Tips and Tricks August 2016: Optimizing and Animating SVG Images","dateModified":"2016-08-28T11:46:35-07:00","datePublished":"2016-08-28T11:46:35-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/design/2016/08/28/design-tips-and-tricks-august-2016-optimizing-and-animating-svg-images.html"},"description":"My notes from an online seminar I tuned into that describes how to create and animate SVG images.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -408,7 +411,7 @@
   <br />
   <li>When rotating: transform: rotate(27deg), remember SVGs have their own coordinate system. Make sure you set transform-origin: center. Transform-origin is a very finicky system. It’s best to use:
     
-<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nt">transform-origin</span><span class="o">:</span> <span class="nt">50</span><span class="o">%</span> <span class="nt">50</span><span class="o">%</span> <span class="nt">instead</span> <span class="nt">of</span> <span class="nt">transform-origin</span><span class="o">:</span> <span class="nt">center</span>
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nt">transform-origin</span><span class="o">:</span> <span class="err">50</span><span class="o">%</span> <span class="err">50</span><span class="o">%</span> <span class="nt">instead</span> <span class="nt">of</span> <span class="nt">transform-origin</span><span class="o">:</span> <span class="nt">center</span>
     </code></pre></figure>
 
   </li>

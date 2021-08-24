@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>CSS3 Animation Basics and Callback Solutions | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="CSS3 Animation Basics and Callback Solutions" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-07-17T07:07:02-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="CSS3 Animation Basics and Callback Solutions" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"CSS3 Animation Basics and Callback Solutions","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2015-07-17T07:07:02-07:00","dateModified":"2015-07-17T07:07:02-07:00","description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/07/17/css3-animation-basics-and-callback-solutions.html"},"url":"http://localhost:4000/web/2015/07/17/css3-animation-basics-and-callback-solutions.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/web/2015/07/17/css3-animation-basics-and-callback-solutions.html","headline":"CSS3 Animation Basics and Callback Solutions","dateModified":"2015-07-17T07:07:02-07:00","datePublished":"2015-07-17T07:07:02-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/07/17/css3-animation-basics-and-callback-solutions.html"},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -368,13 +371,13 @@
     <span class="p">})</span>
   <span class="p">},</span>
   <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">className</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">animate</span> <span class="p">?</span> <span class="s2">"bump"</span> <span class="p">:</span> <span class="s2">""</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">className</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">animate</span> <span class="p">?</span> <span class="dl">"</span><span class="s2">bump</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">""</span><span class="p">;</span>
     <span class="k">return</span> <span class="p">(</span>
       <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">buttonClick</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span><span class="o">&gt;</span><span class="nx">Button</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
-</span>        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"animation"</span><span class="o">&gt;</span>
-          <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="s2">"truck "</span> <span class="o">+</span> <span class="nx">className</span><span class="p">}</span><span class="o">&gt;</span>
-            <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"http://gearscrm.com/wp-content/uploads/2015/04/Summer-release-logo.png"</span> <span class="o">/&gt;</span>
+</span>        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">animation</span><span class="dl">"</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="dl">"</span><span class="s2">truck </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">className</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">http://gearscrm.com/wp-content/uploads/2015/04/Summer-release-logo.png</span><span class="dl">"</span> <span class="o">/&gt;</span>
           <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
 </span>        <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
 </span>      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
@@ -385,13 +388,13 @@
 <p>Sass (SCSS):</p>
 
 <figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@-webkit-keyframes</span> <span class="n">bounce</span> <span class="p">{</span>
-  <span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
+  <span class="err">0</span><span class="o">%</span> <span class="p">{</span>
     <span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">0px</span><span class="p">);</span>
   <span class="p">}</span>
-  <span class="nt">30</span><span class="o">%</span> <span class="p">{</span>
+  <span class="err">30</span><span class="o">%</span> <span class="p">{</span>
     <span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">50px</span><span class="p">);</span>
   <span class="p">}</span>
-  <span class="nt">60</span><span class="o">%</span> <span class="p">{</span>
+  <span class="err">60</span><span class="o">%</span> <span class="p">{</span>
     <span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">-45px</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>

@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Reading a Text File Using HTML and Javascript | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Reading a Text File Using HTML and Javascript" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-10-17T13:55:04-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="Reading a Text File Using HTML and Javascript" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Reading a Text File Using HTML and Javascript","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2015-10-17T13:55:04-07:00","dateModified":"2015-10-17T13:55:04-07:00","description":"Uploading a text file and parsing it into a string in a web app","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/10/17/reading-a-text-file-using-html-and-javascript.html"},"url":"http://localhost:4000/web/2015/10/17/reading-a-text-file-using-html-and-javascript.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/web/2015/10/17/reading-a-text-file-using-html-and-javascript.html","headline":"Reading a Text File Using HTML and Javascript","dateModified":"2015-10-17T13:55:04-07:00","datePublished":"2015-10-17T13:55:04-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2015/10/17/reading-a-text-file-using-html-and-javascript.html"},"description":"Uploading a text file and parsing it into a string in a web app","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -370,9 +373,9 @@
 
 <p>Now here’s where the fun happens:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">loadFile</span><span class="err">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Loading file"</span><span class="p">);</span> <span class="c1">//Feedback</span>
-  <span class="kd">var</span> <span class="nx">selectedFile</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'selectedFile'</span><span class="p">).</span><span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">//Identifying the selected file using the id of the form tag</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">loadFile</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Loading file</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//Feedback</span>
+  <span class="kd">var</span> <span class="nx">selectedFile</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">selectedFile</span><span class="dl">'</span><span class="p">).</span><span class="nx">files</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">//Identifying the selected file using the id of the form tag</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">selectedFile</span><span class="p">);</span> <span class="c1">//Feedback to make sure the file is loaded correctly</span>
   <span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span> <span class="c1">//Create a document reader (built into HTML5)</span>
   <span class="nx">reader</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//Declare the asyncronous callback for when a file is loaded into the reader</span>

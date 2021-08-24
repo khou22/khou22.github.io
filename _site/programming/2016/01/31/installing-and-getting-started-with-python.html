@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Installing and Getting Started with Python | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Installing and Getting Started with Python" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-01-31T05:44:44-08:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="Installing and Getting Started with Python" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"Installing and Getting Started with Python","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2016-01-31T05:44:44-08:00","dateModified":"2016-01-31T05:44:44-08:00","description":"Setting up Python on my own computer.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2016/01/31/installing-and-getting-started-with-python.html"},"url":"http://localhost:4000/programming/2016/01/31/installing-and-getting-started-with-python.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/programming/2016/01/31/installing-and-getting-started-with-python.html","headline":"Installing and Getting Started with Python","dateModified":"2016-01-31T05:44:44-08:00","datePublished":"2016-01-31T05:44:44-08:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/programming/2016/01/31/installing-and-getting-started-with-python.html"},"description":"Setting up Python on my own computer.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -354,16 +357,16 @@
     <h1 id="downloading-and-installing-python">Downloading and Installing Python</h1>
 <p>First download Python from the <a href="https://www.python.org/downloads/">Python website</a>. After installing, you can install other helpful tools including <a href="https://bootstrap.pypa.io/get-pip.py">Pip</a>. Save the file as a Python file (extension: “.py”) and navigate to the file in your terminal. Run the Python script using your terminal to install:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>python get-pip.py</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python get-pip.py</code></pre></figure>
 
 <p>so
 In order to install globally you may to run a “sudo” install:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo python get-pip.py</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>python get-pip.py</code></pre></figure>
 
 <h1 id="installing-python-modules">Installing Python Modules</h1>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo pip install requests</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>pip <span class="nb">install </span>requests</code></pre></figure>
 
 <p>The entire Python setup was surprisingly easy. I had never programmed in Python before and only knew that it was good for backend scripts. I really wanted to expand my coding knowledge so I decided to take up Python. Here are some useful “projects” that got me going:</p>
 <ul>
@@ -380,9 +383,9 @@ In order to install globally you may to run a “sudo” install:</p>
 Reference: <a href="http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console">http://stackoverflow.com/questions/3173320/text-progress-bar-in-the-console</a></p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">"</span><span class="se">\r</span><span class="si">%</span><span class="s">d</span><span class="si">%%</span><span class="s">"</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></code></pre></figure>
+    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"</span><span class="se">\r</span><span class="s">%d%%"</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">.</span><span class="n">flush</span><span class="p">()</span></code></pre></figure>
 
 <h1 id="constructing-and-interpreting-json-data">Constructing and Interpreting JSON data</h1>
 <p>This was great way for me to learn how Python data structures worked. It helped me gain a good foundation in simple variable types as well as how to communicate between different programming languages. For example, Javascript often sends data in the form of a JSON object. By doing this project I was able to pass data from my Javascript into my Python script and vice versa. <a href="https://docs.python.org/2/library/json.html">Reference</a></p>

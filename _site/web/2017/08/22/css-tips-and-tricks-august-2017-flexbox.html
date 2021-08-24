@@ -92,8 +92,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>CSS Tips and Tricks August 2017: Flexbox | Kevin Hou</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="CSS Tips and Tricks August 2017: Flexbox" />
 <meta name="author" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
@@ -106,13 +107,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-08-22T11:47:59-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg" />
+<meta property="twitter:title" content="CSS Tips and Tricks August 2017: Flexbox" />
 <meta name="twitter:site" content="@kevinhou22" />
 <meta name="twitter:creator" content="@Kevin Hou" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"BlogPosting","headline":"CSS Tips and Tricks August 2017: Flexbox","author":{"@type":"Person","name":"Kevin Hou"},"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","datePublished":"2017-08-22T11:47:59-07:00","dateModified":"2017-08-22T11:47:59-07:00","description":"A brief introduction to the world of flexbox — a powerful layout and alignment tool.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html"},"url":"http://localhost:4000/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html"}</script>
+{"image":"http://localhost:4000/media/blog/images/Blog_Post_Placeholder_Image.jpg","url":"http://localhost:4000/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html","headline":"CSS Tips and Tricks August 2017: Flexbox","dateModified":"2017-08-22T11:47:59-07:00","datePublished":"2017-08-22T11:47:59-07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/web/2017/08/22/css-tips-and-tricks-august-2017-flexbox.html"},"description":"A brief introduction to the world of flexbox — a powerful layout and alignment tool.","author":{"@type":"Person","name":"Kevin Hou"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -364,64 +367,58 @@
 <h2 id="parent-properties">Parent Properties</h2>
 
 <h3 id="allowing-flexbox-properties">Allowing Flexbox Properties</h3>
-<p>You must first specify that the div should respond to flex CSS properties by setting <code class="highlighter-rouge">display: flex</code> in the parent.</p>
+<p>You must first specify that the div should respond to flex CSS properties by setting <code class="language-plaintext highlighter-rouge">display: flex</code> in the parent.</p>
 
 <h3 id="axis--cross-axis">Axis &amp; Cross-Axis:</h3>
 <p>http://www.flexboxdefense.com/images/flexbox-column-a0e8dc099b07e1cfd6eaa6da2525cf54.png</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
     <span class="nl">flex-direction</span><span class="p">:</span> <span class="n">row</span> <span class="err">|</span> <span class="n">row-reverse</span> <span class="err">|</span> <span class="n">column</span> <span class="err">|</span> <span class="n">column-reverse</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="justify-content-cross-axishorizontal-spacing">justify-content (cross-axis/horizontal spacing)</h3>
-<p>The <code class="highlighter-rouge">justify-content</code> property is a fancy way of saying horizontal alignment. You can align <code class="highlighter-rouge">flex-start</code> (left), <code class="highlighter-rouge">center</code> (center), <code class="highlighter-rouge">flex-end</code> (right), <code class="highlighter-rouge">space-between</code> (space items evenly using their widths), or <code class="highlighter-rouge">space-around</code> (space all items so that they have equal space between them).</p>
+<p>The <code class="language-plaintext highlighter-rouge">justify-content</code> property is a fancy way of saying horizontal alignment. You can align <code class="language-plaintext highlighter-rouge">flex-start</code> (left), <code class="language-plaintext highlighter-rouge">center</code> (center), <code class="language-plaintext highlighter-rouge">flex-end</code> (right), <code class="language-plaintext highlighter-rouge">space-between</code> (space items evenly using their widths), or <code class="language-plaintext highlighter-rouge">space-around</code> (space all items so that they have equal space between them).</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
     <span class="nl">justify-content</span><span class="p">:</span> <span class="n">flex-start</span> <span class="err">|</span> <span class="n">flex-end</span> <span class="err">|</span> <span class="nb">center</span> <span class="err">|</span> <span class="n">space-between</span> <span class="err">|</span> <span class="n">space-around</span> <span class="err">|</span> <span class="n">space-evenly</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="align-items-across-cross-axisvertical-spacing">align-items (across cross-axis/vertical spacing)</h3>
-<p>The <code class="highlighter-rouge">align-items</code> property allows you position a container’s items across its cross-axis — basically meaning vertically. There are three possible values: <code class="highlighter-rouge">flex-start</code> (top), <code class="highlighter-rouge">flex-end</code> (bottom), and <code class="highlighter-rouge">center</code> (vertically in the middle).</p>
+<p>The <code class="language-plaintext highlighter-rouge">align-items</code> property allows you position a container’s items across its cross-axis — basically meaning vertically. There are three possible values: <code class="language-plaintext highlighter-rouge">flex-start</code> (top), <code class="language-plaintext highlighter-rouge">flex-end</code> (bottom), and <code class="language-plaintext highlighter-rouge">center</code> (vertically in the middle).</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
     <span class="nl">align-items</span><span class="p">:</span> <span class="n">flex-start</span> <span class="err">|</span> <span class="n">flex-end</span> <span class="err">|</span> <span class="nb">center</span> <span class="err">|</span> <span class="nb">baseline</span> <span class="err">|</span> <span class="n">stretch</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="flex-wrap">flex-wrap</h3>
 <p>Can determine whetehr or not the children are capable of wrapping.</p>
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.container</span><span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span><span class="p">{</span>
     <span class="nl">flex-wrap</span><span class="p">:</span> <span class="nb">nowrap</span> <span class="err">|</span> <span class="n">wrap</span> <span class="err">|</span> <span class="n">wrap-reverse</span><span class="p">;</span> <span class="c">/* default nowrap */</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="child-properties">Child Properties</h2>
 
 <h3 id="order-order-of-items">order (order of items)</h3>
-<p>This can be set to display the children in an order different from when they appear. It accepts an interger value as its parameter and they are all relative — that is, they do not need to be sequential. Making the first component <code class="highlighter-rouge">-10</code> and the second component <code class="highlighter-rouge">0</code> has no difference from making the first component <code class="highlighter-rouge">1</code> and the second component <code class="highlighter-rouge">2</code>.</p>
+<p>This can be set to display the children in an order different from when they appear. It accepts an interger value as its parameter and they are all relative — that is, they do not need to be sequential. Making the first component <code class="language-plaintext highlighter-rouge">-10</code> and the second component <code class="language-plaintext highlighter-rouge">0</code> has no difference from making the first component <code class="language-plaintext highlighter-rouge">1</code> and the second component <code class="language-plaintext highlighter-rouge">2</code>.</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.item</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.item</span> <span class="p">{</span>
     <span class="nl">order</span><span class="p">:</span> <span class="err">$</span><span class="n">integer</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="flexflex-growflex-shrink-proportion-they-scale-to-fill-their-container">flex/flex-grow/flex-shrink (proportion they scale to fill their container)</h3>
-<p>This property describes the item’s ability to scale and fill the container. Like <code class="highlighter-rouge">order</code>, the numbers are all relative so having an item with <code class="highlighter-rouge">flex: 1</code> (or <code class="highlighter-rouge">flex-shrink</code>/<code class="highlighter-rouge">flex-grow</code> if you want to set them independelty) will scale half the size of an item of the same parent with <code class="highlighter-rouge">flex: 2</code>. Negative numbers are not allowed.</p>
+<p>This property describes the item’s ability to scale and fill the container. Like <code class="language-plaintext highlighter-rouge">order</code>, the numbers are all relative so having an item with <code class="language-plaintext highlighter-rouge">flex: 1</code> (or <code class="language-plaintext highlighter-rouge">flex-shrink</code>/<code class="language-plaintext highlighter-rouge">flex-grow</code> if you want to set them independelty) will scale half the size of an item of the same parent with <code class="language-plaintext highlighter-rouge">flex: 2</code>. Negative numbers are not allowed.</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.item</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.item</span> <span class="p">{</span>
     <span class="nl">flex</span><span class="p">:</span> <span class="err">$</span><span class="n">number</span><span class="p">;</span> <span class="c">/* default is 0 */</span>
     <span class="nl">flex-grow</span><span class="p">:</span> <span class="err">$</span><span class="n">number</span><span class="p">;</span>
     <span class="nl">flex-shrink</span><span class="p">:</span> <span class="err">$</span><span class="n">number</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
     <div class="post-organization">
       <p id="post-meta">Posted in <a href="/blog/category/web/">Web Development</a> with <a href="/blog/tag/css">CSS</a>, <a href="/blog/tag/tutorial">Tutorial</a></p>

@@ -93,8 +93,9 @@
     type="image/png"
     href="/media/site/favicon.png"
   />
-  <!-- Begin Jekyll SEO tag v2.2.3 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Kevin Hou | Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.</title>
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Kevin Hou" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area." />
@@ -103,12 +104,13 @@
 <meta property="og:url" content="http://localhost:4000/libraries/tile-layout-library/" />
 <meta property="og:site_name" content="Kevin Hou" />
 <meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Kevin Hou" />
 <meta name="twitter:site" content="@kevinhou22" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebPage","headline":"Kevin Hou","author":{"@type":"Person","name":null},"description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","url":"http://localhost:4000/libraries/tile-layout-library/"}</script>
+{"url":"http://localhost:4000/libraries/tile-layout-library/","headline":"Kevin Hou","@type":"WebPage","description":"Kevin Hou’s portfolio and blog about programming, wood, design, and photography. Princeton University Computer Science ‘20. Lick-Wilmerding High School ‘16. San Francisco Bay Area.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+</head>
 
 
   <body>
@@ -305,7 +307,7 @@
 
 <h2 id="include-head">Include head</h2>
 <p>This library relies on ReactJS and Jquery so you must first include these in your &lt;head&gt;:</p>
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
 <span class="c">&lt;!-- Jquery --&gt;</span>
@@ -313,52 +315,47 @@
 
 <span class="c">&lt;!-- Stylesheet --&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"tile-layout-library/style.css"</span><span class="nt">&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="add-grid-data">Add grid data</h2>
 <p>This library accepts a JS object of this format:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// Must be named 'gridData'</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Must be named 'gridData'</span>
 <span class="kd">var</span> <span class="nx">gridData</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">columns</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="c1">// Number of columns</span>
-  <span class="na">textColor</span><span class="p">:</span> <span class="s2">"white"</span><span class="p">,</span> <span class="c1">// Tile text color</span>
+  <span class="na">textColor</span><span class="p">:</span> <span class="dl">"</span><span class="s2">white</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// Tile text color</span>
   <span class="na">data</span><span class="p">:</span> <span class="p">[</span> <span class="c1">// All tile data</span>
     <span class="p">{</span>
-      <span class="na">title</span><span class="p">:</span> <span class="s2">"Title"</span><span class="p">,</span> <span class="c1">// Title</span>
-      <span class="na">subtitle</span><span class="p">:</span> <span class="s2">"Subtitle..."</span><span class="p">,</span> <span class="c1">// Subtitle</span>
-      <span class="na">description</span><span class="p">:</span> <span class="s2">"Lorem ipsum dolor sit amet..."</span><span class="p">,</span>
-      <span class="na">image</span><span class="p">:</span> <span class="s2">"image.png"</span><span class="p">,</span> <span class="c1">// Tile background image</span>
-      <span class="na">link</span><span class="p">:</span> <span class="s2">"#"</span><span class="p">,</span> <span class="c1">// Link when click</span>
-      <span class="na">size</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span> <span class="c1">// Number of horizontal blocks this tile will take up</span>
+      <span class="na">title</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Title</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// Title</span>
+      <span class="na">subtitle</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Subtitle...</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// Subtitle</span>
+      <span class="na">description</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Lorem ipsum dolor sit amet...</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">image</span><span class="p">:</span> <span class="dl">"</span><span class="s2">image.png</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// Tile background image</span>
+      <span class="na">link</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// Link when click</span>
+      <span class="na">size</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// Number of horizontal blocks this tile will take up</span>
       <span class="na">category</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">label</span><span class="p">:</span> <span class="s2">"Category"</span><span class="p">,</span>
-        <span class="na">color</span><span class="p">:</span> <span class="s2">"#FFFFFF"</span>
+        <span class="na">label</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Category</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">color</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#FFFFFF</span><span class="dl">"</span>
       <span class="p">}</span>
     <span class="p">},</span>
     <span class="p">...</span> <span class="c1">// Rest of tiles</span>
   <span class="p">]</span>
 <span class="p">};</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>You can either include a data.js file if you have a lot of data:</p>
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"data.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre>
-</div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"data.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
 <p>or you can embed them in the <script> tag:</script></p>
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
 
 <span class="nt">&lt;/script&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="include-grid">Include grid</h2>
 <p>It is important the gridData comes <em>before</em> you include the second script tag.</p>
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"data.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"data.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"grid"</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/jsx;harmoney-true"</span> <span class="na">src=</span><span class="s">"tile-layout-library/main.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
   </article>
 </div>
