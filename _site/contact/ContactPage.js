@@ -1,5 +1,5 @@
 var ContactPage = React.createClass({
-  componentDidMount: function() {
+  componentDidMount: function () {
     // TheaterJS typing effect
     var theater = theaterJS({ local: "fr" });
     theater.addActor("action-text", { speed: 1.0, accuracy: 0.8 });
@@ -10,7 +10,7 @@ var ContactPage = React.createClass({
     theater.addScene(theater.replay.bind(theater));
   },
 
-  render: function() {
+  render: function () {
     return (
       <div>
         <div className="contact-header">
@@ -28,10 +28,11 @@ var ContactPage = React.createClass({
           </h1>
         </div>
         <br />
-        <div className="contact-left-half">
+        {/* <div className="contact-left-half">
           <ContactForm />
-        </div>
-        <div className="contact-right-half">
+        </div> */}
+        {/* <div className="contact-right-half"> */}
+        <div className="contact-centered">
           <div className="contact-tile">
             <img
               className="contact-tile-icon"
@@ -64,23 +65,23 @@ var ContactPage = React.createClass({
               src="../media/site/icons/photography_icon.png"
             />
             <br />
-            Photography
+            Film & Photography
           </div>
         </div>
       </div>
     );
-  }
+  },
 });
 
 var ContactForm = React.createClass({
-  getInitialState: function() {
+  getInitialState: function () {
     return {
-      data: { email: "", subject: "", body: "" }
+      data: { email: "", subject: "", body: "" },
     };
   },
 
   // On input change
-  formChange: function(event) {
+  formChange: function (event) {
     const target = event.target.id;
     const data = this.state.data; // Get current data
     data[target] = event.target.value; // Update property
@@ -91,12 +92,13 @@ var ContactForm = React.createClass({
   emailValidity(email) {
     if (email === "") return true;
     // Email regex: https://stackoverflow.com/questions/46155/how-to-validate-email-address-in-javascript
-    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const emailRegex =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailRegex.test(email);
   },
 
   // On form submit
-  submitForm: function(event) {
+  submitForm: function (event) {
     event.preventDefault(); // Prevent reload
 
     let validEntry = true;
@@ -124,9 +126,9 @@ var ContactForm = React.createClass({
         {
           email: this.state.data.email,
           subject: this.state.data.subject,
-          body: this.state.data.body
+          body: this.state.data.body,
         },
-        function(data, status) {
+        function (data, status) {
           console.log("Data: " + data + "\nStatus: " + status);
           if (status == "success") {
             alert("Thank you for reaching out! I will be in touch shortly.");
@@ -140,7 +142,7 @@ var ContactForm = React.createClass({
     }
   },
 
-  render: function() {
+  render: function () {
     const emailValidityClass = !this.emailValidity(this.state.data.email)
       ? "contact-form-invalid"
       : "";
@@ -176,7 +178,7 @@ var ContactForm = React.createClass({
         />
       </form>
     );
-  }
+  },
 });
 
 React.render(

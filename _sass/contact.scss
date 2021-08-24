@@ -57,6 +57,12 @@ $brand-blue: #3286a8;
     float: left;
   }
 
+  &-centered {
+    width: 50%;
+    min-width: 300px;
+    margin: auto;
+  }
+
   &-form {
     // Sizing
     width: 90%;

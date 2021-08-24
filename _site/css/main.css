@@ -387,6 +387,7 @@ article strong { color: black; }
 .contact-header-title-fill-in { display: inline-block; width: 150px; height: 9rem; color: #d5491f; border-bottom: 1px solid #3286a8; }
 .contact-left-half { width: 49%; float: left; }
 .contact-right-half { width: 49%; float: left; }
+.contact-centered { width: 50%; min-width: 300px; margin: auto; }
 .contact-form { width: 90%; margin: 5%; padding: 12px; border-radius: 12px; border: 1px solid #9db7c1; }
 .contact-form input, .contact-form textarea { width: 100%; margin: 1% 0px 1% 0px !important; border: 1px solid #9db7c1; border-radius: 4px; color: #3286a8; padding: 7px; font-size: 16px; resize: none; }
 .contact-form input:focus, .contact-form textarea:focus, .contact-form-submit:hover { outline: none; border: 1px solid #3286a8; background: rgba(200, 200, 200, 0.2); }
