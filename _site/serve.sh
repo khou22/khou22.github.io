@@ -8,4 +8,5 @@
 # --future allows you to see blog posts dated in the future
 # --livereload turns on live reloading
 # --incremental turns on incremental builds for faster build times
-bundle exec jekyll serve --watch --future --livereload --incremental
+# bundle exec jekyll serve --watch --future --livereload --incremental
+bundle exec jekyll serve --watch --future --incremental

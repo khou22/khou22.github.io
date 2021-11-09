@@ -135,8 +135,8 @@ with open("allImages.js", 'w') as outputFile:
 
 ################   Generate a Product Page for Each Photo   ################
 photography_print_options = [
-  [(8, 10), 79],
-  [(11, 14), 99],
+  [(8, 10), 89],
+  [(11, 14), 149],
   [(16, 20), 299],
   [(24, 30), 399],
 ]
