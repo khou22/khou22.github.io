@@ -135,10 +135,10 @@ with open("allImages.js", 'w') as outputFile:
 
 ################   Generate a Product Page for Each Photo   ################
 photography_print_options = [
-  [(8, 10), 29],
-  [(11, 14), 39],
-  [(16, 20), 99],
-  [(24, 30), 149],
+  [(8, 10), 89],
+  [(11, 14), 149],
+  [(16, 20), 299],
+  [(24, 30), 399],
 ]
 ideal_dpi = 200
 default_short_edge = 3000 # Default if no dimension included in Lookbook JSON
