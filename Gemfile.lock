@@ -243,6 +243,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.12.3-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.12.3-x86_64-linux)
+      racc (~> 1.4)
     octokit (4.21.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
@@ -292,7 +294,7 @@ GEM
     tilt (2.0.10)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
-    tzinfo (1.2.9)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
@@ -304,6 +306,7 @@ GEM
 PLATFORMS
   universal-darwin-21
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   github-pages
