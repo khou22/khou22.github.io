@@ -81,6 +81,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Golden Gate Bridge Aerial Head On.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Marin High School Swimming Pool Drone Top Down.jpg",
         horizontal: true
     },
@@ -965,6 +969,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Aerial View of Half Moon Bay Beach.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Single Person Lying on Beach Top Down Drone Las Terrenas Dominican Republic.jpg",
         horizontal: false
     },
@@ -1357,6 +1365,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Aerial View of Half Moon Bay.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Temple Street Market Overview.jpg",
         horizontal: false
     },
@@ -1439,6 +1451,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Top Down Ocean Shore Texture Las Terrenas Dominican Republic.jpg",
         horizontal: true
+    },
+    {
+        url: "/database/Embarcadero Aerial View at Sunset.jpg",
+        horizontal: false
     },
     {
         url: "/database/Princeton Crest Fitz Randolph Gate.jpg",
