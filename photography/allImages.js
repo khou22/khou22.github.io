@@ -61,6 +61,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Yosemite Valley Sunrays Through Meadow.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Grand Teton Astro with Grass (USA Road Trip).jpg",
         horizontal: false
     },
@@ -91,6 +95,18 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Palace of Fine Arts Vertical Drone.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Yosemite Lichens.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Seattle Boat Houses.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Nakalele Blowhole.jpg",
+        horizontal: true
     },
     {
         url: "/database/Bride's Pool Long Exposure 1.jpg",
@@ -197,6 +213,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Yosemite Valley Red Veil Panorama.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Marina Bay Sands Drone (Vertical).jpg",
         horizontal: false
     },
@@ -297,6 +317,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Yosemite Valley Sunset.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/1903 Hall Drone Top Down.jpg",
         horizontal: true
     },
@@ -330,6 +354,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Napa Valley Drone Landscape Sunset House.jpg",
+        horizontal: true
+    },
+    {
+        url: "/database/Road to Hana Cliffside.jpg",
         horizontal: true
     },
     {
@@ -733,6 +761,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Fall Leaves in Yosemite valley.jpg",
+        horizontal: false
+    },
+    {
         url: "/database/Marin Headlands Sunset.jpg",
         horizontal: false
     },
@@ -795,6 +827,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Fruit Market Stand in Florence, Italy.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Bay Bridge with San Francisco Skyline.jpg",
+        horizontal: true
     },
     {
         url: "/database/Hong Kong Grid Apartment Drone Vertical.jpg",
@@ -1025,6 +1061,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Milky Way in Tahoe Forest.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Shibuya Crossing Bike Motion Blur.jpg",
         horizontal: false
     },
@@ -1173,6 +1213,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: false
     },
     {
+        url: "/database/Mount Rainier Glacier Lake.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Ladies Market Balcony Lens Ball Cyberpunk.jpg",
         horizontal: false
     },
@@ -1249,6 +1293,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Waihe'e Ridge Hike.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Bear Valley Mountains Drone Landscape.jpg",
         horizontal: true
     },
@@ -1261,6 +1309,10 @@ const ALL_DATABASE_PHOTOS = [
         horizontal: true
     },
     {
+        url: "/database/Ferry Building with Skyline At Night.jpg",
+        horizontal: true
+    },
+    {
         url: "/database/Loneliest Road Vertical Drone (USA Road Trip).jpg",
         horizontal: false
     },
@@ -1270,6 +1322,10 @@ const ALL_DATABASE_PHOTOS = [
     },
     {
         url: "/database/Flat Iron Building With Taxi Motion Blur.jpg",
+        horizontal: false
+    },
+    {
+        url: "/database/Turtles in Maui.jpg",
         horizontal: false
     },
     {
@@ -1303,6 +1359,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Loneliest Road Vertical Drone.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Half Dome from Yosemite Falls.jpg",
+        horizontal: true
     },
     {
         url: "/database/San Francisco Downtown from Airplane at Night (Landscape).jpg",
@@ -1487,6 +1547,10 @@ const ALL_DATABASE_PHOTOS = [
     {
         url: "/database/Fisherman at Baker Beach in San San Francisco.jpg",
         horizontal: false
+    },
+    {
+        url: "/database/Yosemite Valley Meadow.jpg",
+        horizontal: true
     },
     {
         url: "/database/Crashing Waves into Coastline Dominican Republic Drone Top Down.jpg",
