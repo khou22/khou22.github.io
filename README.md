@@ -1,6 +1,6 @@
 # Kevin Hou's Personal Website and Blog
 
-[![built with Codeium](https://codeium.com/badges/main)](https://codeium.com)
+[![built with Codeium](https://codeium.com/badges/main)](https://codeium.com?repo_name=khou22%2Fkhou22.github.io)
 
 Programmed in HTML, SCSS (transpiled to CSS), Javascript (ES5), Python, and Ruby. The blog is powered by Jekyll using Liquid Tags.  
 Framework: ReactJS  
