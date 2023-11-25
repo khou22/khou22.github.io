@@ -5,7 +5,7 @@ import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 export default function Home() {
   return (
     <main>
-      <ParallaxCover />
+      <ParallaxCover autoScroll />
 
       {/* Gradient transition to the page content. */}
       <div className="relative">

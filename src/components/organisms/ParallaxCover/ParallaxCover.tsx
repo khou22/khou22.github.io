@@ -2,9 +2,15 @@
 
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
-export const ParallaxCover = () => {
+type ParallaxCoverProps = {
+  autoScroll?: boolean;
+};
+
+export const ParallaxCover: React.FC<ParallaxCoverProps> = ({
+  autoScroll = false,
+}) => {
   const parallexContainer = useRef<HTMLDivElement>(null);
   const [scrollPageOffset, setScrollPageOffset] = useState(0);
 
@@ -17,6 +23,35 @@ export const ParallaxCover = () => {
       window.removeEventListener("scroll", scrollListener);
     };
   }, []);
+
+  // TODO (k): Make this an ease-in-out smooth scroll.
+  const smoothScrollTo = useCallback((targetY: number, duration: number) => {
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    const startTime = performance.now();
+
+    function scrollAnimation(currentTime: number) {
+      const elapsedTime = currentTime - startTime;
+      const scrollProgress = Math.min(elapsedTime / duration, 1);
+      const scrollPosition = startY + distance * scrollProgress;
+
+      window.scrollTo(0, scrollPosition);
+
+      if (scrollProgress < 1) {
+        window.requestAnimationFrame(scrollAnimation);
+      }
+    }
+
+    window.requestAnimationFrame(scrollAnimation);
+  }, []);
+
+  useEffect(() => {
+    if (autoScroll) {
+      setTimeout(() => {
+        smoothScrollTo(70, 500);
+      }, 1000);
+    }
+  }, [autoScroll, smoothScrollTo]);
 
   const getTransform = (i: number) => {
     const transform = "translateY(-" + (scrollPageOffset * i) / 4 + "px)";
@@ -63,7 +98,7 @@ export const ParallaxCover = () => {
           transform: getTransform(1),
         }}
       >
-        <span className="flex flex-col items-center sm:mt-[8%] mt-[25%]">
+        <span className="flex flex-col items-center sm:mt-[7%] md:mt-[9%] mt-[25%]">
           <img
             alt="Initials logo"
             className="w-24 h-24"
