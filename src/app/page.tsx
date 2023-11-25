@@ -1,3 +1,4 @@
+import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ParallaxCover } from "@/components/organisms/ParallaxCover/ParallaxCover";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 
@@ -43,11 +44,13 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-1">
-            <img
-              alt="homepage photography image tiles"
-              src={getCdnAsset("media/landing/image_tiles_png")}
-              className="sm:mt-[-15vh] w-[90%] mb-10 mt-0"
-            />
+            <FadeInView>
+              <img
+                alt="homepage photography image tiles"
+                src={getCdnAsset("media/landing/image_tiles_png")}
+                className="sm:mt-[-15vh] w-[90%] mb-10 mt-0"
+              />
+            </FadeInView>
           </div>
         </div>
       </div>

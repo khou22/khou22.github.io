@@ -40,6 +40,22 @@ export const ParallaxCover = () => {
         />
       </div>
 
+      {/* Clouds go behind the mountains and the logo */}
+      <div
+        aria-label="left animated clouds"
+        className="w-[500px] fixed top-0 left-[-400px] opacity-60"
+        style={{ transform: `translateX(${scrollPageOffset * 0.5}px)` }}
+      >
+        <img alt="left cloud" src={getCdnAsset("media/landing/cloud_0_png")} />
+      </div>
+      <div
+        aria-label="right animated clouds"
+        className="w-[900px] fixed top-0 right-[-800px] opacity-70"
+        style={{ transform: `translateX(-${scrollPageOffset * 1.15}px)` }}
+      >
+        <img alt="right cloud" src={getCdnAsset("media/landing/cloud_0_png")} />
+      </div>
+
       {/* Personal logo and name - second furthest back to give sense of depth */}
       <div
         className={sliceClassName}
@@ -56,6 +72,7 @@ export const ParallaxCover = () => {
           <p className="leading-loose mt-2">Kevin Hou</p>
         </span>
       </div>
+
       <div
         className={sliceClassName}
         style={{

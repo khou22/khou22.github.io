@@ -821,6 +821,7 @@ export const _generatedCdnAssets = {
 	"media/design/impossible_geometric_shapes/Impossible_Star_png": "/media/design/impossible-geometric-shapes/Impossible%20Star.png",
 	"media/design/impossible_geometric_shapes/Impossible_Connected_Triangle_png": "/media/design/impossible-geometric-shapes/Impossible%20Connected%20Triangle.png",
 	"media/design/impossible_geometric_shapes/Impossible_Triangle_png": "/media/design/impossible-geometric-shapes/Impossible%20Triangle.png",
+	"media/landing/cloud_0_png": "/media/landing/cloud_0.png",
 	"media/landing/hong_kong/large/2_png": "/media/landing/hong-kong/large/2.png",
 	"media/landing/hong_kong/large/1_png": "/media/landing/hong-kong/large/1.png",
 	"media/landing/hong_kong/large/0_png": "/media/landing/hong-kong/large/0.png",
