@@ -1,4 +1,4 @@
-import { ParallaxCover } from "@/components/ParallaxCover/ParallaxCover";
+import { ParallaxCover } from "@/components/organisms/ParallaxCover/ParallaxCover";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 
 export default function Home() {
@@ -20,8 +20,9 @@ export default function Home() {
         <div className="md:h-[250px] sm:h-[110px] h-[50px] w-full bg-black" />
       </div>
 
-      <div className="h-screen bg-white relative">
-        <div className="grid grid-cols-1 sm:grid-cols-2">
+      <div className="bg-white relative flex flex-col justify-center items-center">
+        {/* Intro section. */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 max-w-5xl">
           <div className="col-span-1">
             <div className="sm:p-20 p-4">
               <h1 className="text-3xl">Kevin Hou</h1>

@@ -1,5 +1,6 @@
 "use client";
 
+import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { useEffect, useRef, useState } from "react";
 
@@ -29,10 +30,13 @@ export const ParallaxCover = () => {
   return (
     <div className="h-screen block" ref={parallexContainer}>
       <div className={sliceClassName}>
-        <img
+        <ProgressiveImage
           alt="Hong Kong Skyline"
           className="w-full h-full object-cover"
-          src={getCdnAsset("media/landing/hong_kong/0_png")}
+          src={[
+            getCdnAsset("media/landing/hong_kong/0_png"),
+            getCdnAsset("media/landing/hong_kong/large/0_png"),
+          ]}
         />
       </div>
 
@@ -58,10 +62,13 @@ export const ParallaxCover = () => {
           transform: getTransform(2),
         }}
       >
-        <img
+        <ProgressiveImage
           alt="Hong Kong Skyline middle layer"
           className="w-full h-full object-cover"
-          src={getCdnAsset("media/landing/hong_kong/1_png")}
+          src={[
+            getCdnAsset("media/landing/hong_kong/1_png"),
+            getCdnAsset("media/landing/hong_kong/large/1_png"),
+          ]}
         />
       </div>
       <div
@@ -70,10 +77,13 @@ export const ParallaxCover = () => {
           transform: getTransform(3),
         }}
       >
-        <img
+        <ProgressiveImage
           alt="Hong Kong Skyline top layer"
           className="w-full h-full object-cover"
-          src={getCdnAsset("media/landing/hong_kong/2_png")}
+          src={[
+            getCdnAsset("media/landing/hong_kong/2_png"),
+            getCdnAsset("media/landing/hong_kong/large/2_png"),
+          ]}
         />
       </div>
     </div>
