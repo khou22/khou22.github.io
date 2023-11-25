@@ -16,7 +16,7 @@ export const PersonalLogo: React.FC<PersonalLogoProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_1_16)">
+      <g clipPath="url(#clip0_1_16)">
         <path
           d="M1135 0H125C55.9644 0 0 55.9644 0 125V1135C0 1204.04 55.9644 1260 125 1260H1135C1204.04 1260 1260 1204.04 1260 1135V125C1260 55.9644 1204.04 0 1135 0Z"
           fill="white"
@@ -27,8 +27,8 @@ export const PersonalLogo: React.FC<PersonalLogoProps> = ({
           strokeWidth="3"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M640 0V120H500V837L242 540H57L315 840L57 1140H242L500 839V1140H640V1260H125.003C55.9656 1260 0 1204.03 0 1135V125.003C0 55.9659 55.9604 0 125.003 0H640Z"
           fill="#3286A8"
         />
@@ -39,8 +39,8 @@ export const PersonalLogo: React.FC<PersonalLogoProps> = ({
           fill="white"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M780 506.724C782.54 505.57 785.106 504.446 787.696 503.353C827.095 486.725 872.146 477.292 920 477.292C1067.23 477.292 1187.92 566.58 1199.15 680L1200 1140H1060V720.292C1056.95 653.575 995.444 600.292 920 600.292C844.556 600.292 783.049 653.575 780.11 720.292L780 887.741V1140H640V120H780V506.724Z"
           fill="#D5491F"
         />

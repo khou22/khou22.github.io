@@ -1,57 +1,15 @@
 "use client";
 
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
+import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
-type ParallaxCoverProps = {
-  autoScroll?: boolean;
-};
+type ParallaxCoverProps = {};
 
-export const ParallaxCover: React.FC<ParallaxCoverProps> = ({
-  autoScroll = false,
-}) => {
+export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
   const parallexContainer = useRef<HTMLDivElement>(null);
-  const [scrollPageOffset, setScrollPageOffset] = useState(0);
-
-  useEffect(() => {
-    const scrollListener = () => {
-      setScrollPageOffset(window.scrollY);
-    };
-    window.addEventListener("scroll", scrollListener, false);
-    return () => {
-      window.removeEventListener("scroll", scrollListener);
-    };
-  }, []);
-
-  // TODO (k): Make this an ease-in-out smooth scroll.
-  const smoothScrollTo = useCallback((targetY: number, duration: number) => {
-    const startY = window.scrollY;
-    const distance = targetY - startY;
-    const startTime = performance.now();
-
-    function scrollAnimation(currentTime: number) {
-      const elapsedTime = currentTime - startTime;
-      const scrollProgress = Math.min(elapsedTime / duration, 1);
-      const scrollPosition = startY + distance * scrollProgress;
-
-      window.scrollTo(0, scrollPosition);
-
-      if (scrollProgress < 1) {
-        window.requestAnimationFrame(scrollAnimation);
-      }
-    }
-
-    window.requestAnimationFrame(scrollAnimation);
-  }, []);
-
-  useEffect(() => {
-    if (autoScroll) {
-      setTimeout(() => {
-        smoothScrollTo(70, 500);
-      }, 1000);
-    }
-  }, [autoScroll, smoothScrollTo]);
+  const { scrollY: scrollPageOffset } = useScrollPosition();
 
   const getTransform = (i: number) => {
     const transform = "translateY(-" + (scrollPageOffset * i) / 4 + "px)";
