@@ -1,3 +1,4 @@
+import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ParallaxCover } from "@/components/organisms/ParallaxCover/ParallaxCover";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
@@ -23,23 +24,34 @@ export default function Home() {
 
       <div className="bg-white relative flex flex-col justify-center items-center">
         {/* Intro section. */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 max-w-5xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 max-w-6xl">
           <div className="col-span-1">
             <div className="sm:p-20 p-4">
-              <h1 className="text-3xl">Kevin Hou</h1>
+              <h2 className="leading-loose">Kevin Hou</h2>
               <p className="italic leading-loose">
                 Student. Builder. Engineer.
               </p>
-              <p className="text-sm">
+              <p className="text-sm mb-2">
                 A full stack engineer by trade and a creator by heart. Enjoys
-                the process of creation whether it be in the physical —
-                woodshop, blacksmithing, circuity — or the digital — software
-                engineering, photography, and film.
+                the process of creation whether it be in the physical (woodshop,
+                blacksmithing, circuity) or the digital (software engineering,
+                photography, and film).
               </p>
               <p className="text-sm">
-                Currently studying computer science at Princeton University with
-                certificates in entrepreneurship and statistics and machine
-                learning.
+                Currently building AI-powered dev tools at{" "}
+                <CustomLink
+                  href="https://codeium.com?referrer=khou22.com"
+                  target="_blank"
+                >
+                  Codeium
+                </CustomLink>{" "}
+                (Exafunction). Previously a tech lead manager at{" "}
+                <CustomLink href="https://www.nuro.ai" target="_blank">
+                  Nuro
+                </CustomLink>{" "}
+                self-driving. Received a computer science engineering degree
+                from Princeton University with certificates in entrepreneurship
+                and statistics and machine learning.
               </p>
             </div>
           </div>
