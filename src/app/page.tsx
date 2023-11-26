@@ -27,11 +27,9 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 max-w-6xl">
           <div className="col-span-1">
             <div className="sm:p-20 p-4">
-              <h2 className="leading-loose">Kevin Hou</h2>
-              <p className="italic leading-loose">
-                Student. Builder. Engineer.
-              </p>
-              <p className="text-sm mb-2">
+              <h2 className="leading-relaxed">Kevin Hou</h2>
+              <p className="italic leading-relaxed">Always building</p>
+              <p className="text-sm my-2">
                 A full stack engineer by trade and a creator by heart. Enjoys
                 the process of creation whether it be in the physical (woodshop,
                 blacksmithing, circuity) or the digital (software engineering,

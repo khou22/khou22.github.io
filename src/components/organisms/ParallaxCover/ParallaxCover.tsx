@@ -18,7 +18,7 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
 
   // Class names for each slice of the parallax.
   const sliceClassName =
-    "fixed top-0 bg-center w-full justify-center flex h-full";
+    "fixed top-0 bg-center w-full justify-center flex h-full pointer-events-none";
 
   return (
     <div className="h-screen block" ref={parallexContainer}>
@@ -36,14 +36,14 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
       {/* Clouds go behind the mountains and the logo */}
       <div
         aria-label="left animated clouds"
-        className="w-[500px] fixed top-0 left-[-400px] opacity-60"
+        className="w-[500px] fixed top-0 left-[-400px] opacity-60 pointer-events-none"
         style={{ transform: `translateX(${scrollPageOffset * 0.5}px)` }}
       >
         <img alt="left cloud" src={getCdnAsset("media/landing/cloud_0_png")} />
       </div>
       <div
         aria-label="right animated clouds"
-        className="w-[900px] fixed top-0 right-[-800px] opacity-70"
+        className="w-[900px] fixed top-0 right-[-800px] opacity-70 pointer-events-none"
         style={{ transform: `translateX(-${scrollPageOffset * 1.15}px)` }}
       >
         <img alt="right cloud" src={getCdnAsset("media/landing/cloud_0_png")} />
