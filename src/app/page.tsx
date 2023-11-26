@@ -65,9 +65,9 @@ export default function Home() {
             </FadeInView>
           </div>
         </div>
-      </div>
 
-      <div className="h-screen w-full bg-black" />
+        <div className="h-screen w-full bg-black" />
+      </div>
     </main>
   );
 }
