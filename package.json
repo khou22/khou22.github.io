@@ -10,6 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check .",
     "start:cdn": "serve -s docs -p 4000",
     "generate:assets": "python scripts/generate_assets.py"
   },
@@ -26,6 +28,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "postcss": "^8",
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.7",
     "serve": "^14.2.1",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
