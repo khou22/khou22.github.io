@@ -1,7 +1,6 @@
 import { InstagramIcon } from "@/components/icons/InstagramIcon/InstagramIcon";
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon/LinkedInIcon";
 import { TwitterIcon } from "@/components/icons/TwitterIcon/TwitterIcon";
-import { YouTubeIcon } from "@/components/icons/YouTubeIcon/YouTubeIcon";
 import { siteMetadata } from "@/constants/siteMetadata";
 
 const navigation = [
@@ -19,11 +18,6 @@ const navigation = [
     name: "Twitter",
     href: siteMetadata.socials.twitter,
     icon: TwitterIcon,
-  },
-  {
-    name: "YouTube",
-    href: siteMetadata.socials.youtube,
-    icon: YouTubeIcon,
   },
 ];
 

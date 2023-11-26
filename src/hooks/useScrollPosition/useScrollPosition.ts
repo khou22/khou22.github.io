@@ -25,7 +25,14 @@ export const useScrollPosition = (): ScrollPosition => {
         scrollY: window.scrollY,
       });
     };
+
+    // Start listening for scroll events.
     window.addEventListener("scroll", scrollListener, false);
+
+    // Since this is run client side, immediately call the listener when the page loads in case the user instantiates to a scroll position.
+    scrollListener();
+
+    // Stop listening for scroll events when the component unmounts.
     return () => {
       window.removeEventListener("scroll", scrollListener);
     };
