@@ -21,11 +21,11 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
     "fixed top-0 bg-center w-full justify-center flex h-full pointer-events-none";
 
   return (
-    <div className="h-screen block" ref={parallexContainer}>
+    <div className="block h-screen" ref={parallexContainer}>
       <div className={sliceClassName}>
         <ProgressiveImage
           alt="Hong Kong Skyline"
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
           src={[
             getCdnAsset("media/landing/hong_kong/0_png"),
             getCdnAsset("media/landing/hong_kong/large/0_png"),
@@ -36,14 +36,14 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
       {/* Clouds go behind the mountains and the logo */}
       <div
         aria-label="left animated clouds"
-        className="w-[500px] fixed top-0 left-[-400px] opacity-60 pointer-events-none"
+        className="pointer-events-none fixed left-[-400px] top-0 w-[500px] opacity-60"
         style={{ transform: `translateX(${scrollPageOffset * 0.5}px)` }}
       >
         <img alt="left cloud" src={getCdnAsset("media/landing/cloud_0_png")} />
       </div>
       <div
         aria-label="right animated clouds"
-        className="w-[900px] fixed top-0 right-[-800px] opacity-70 pointer-events-none"
+        className="pointer-events-none fixed right-[-800px] top-0 w-[900px] opacity-70"
         style={{ transform: `translateX(-${scrollPageOffset * 1.15}px)` }}
       >
         <img alt="right cloud" src={getCdnAsset("media/landing/cloud_0_png")} />
@@ -56,13 +56,13 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
           transform: getTransform(1),
         }}
       >
-        <span className="flex flex-col items-center sm:mt-[7%] md:mt-[9%] mt-[25%]">
+        <span className="mt-[25%] flex flex-col items-center sm:mt-[7%] md:mt-[9%]">
           <img
             alt="Initials logo"
-            className="w-24 h-24"
+            className="h-24 w-24"
             src={getCdnAsset("media/site/logo/initials_logo_animated_svg")}
           />
-          <p className="leading-loose mt-2">Kevin Hou</p>
+          <p className="mt-2 leading-loose">Kevin Hou</p>
         </span>
       </div>
 
@@ -74,7 +74,7 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
       >
         <ProgressiveImage
           alt="Hong Kong Skyline middle layer"
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
           src={[
             getCdnAsset("media/landing/hong_kong/1_png"),
             getCdnAsset("media/landing/hong_kong/large/1_png"),
@@ -89,7 +89,7 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
       >
         <ProgressiveImage
           alt="Hong Kong Skyline top layer"
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
           src={[
             getCdnAsset("media/landing/hong_kong/2_png"),
             getCdnAsset("media/landing/hong_kong/large/2_png"),

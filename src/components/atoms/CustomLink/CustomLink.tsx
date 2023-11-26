@@ -14,7 +14,7 @@ export const CustomLink: React.FC<CustomLinkProps> = ({
 }) => {
   const className = classNames(
     "text-blue-500 hover:text-blue-600 underline",
-    props.className
+    props.className,
   );
 
   return (

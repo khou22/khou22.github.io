@@ -37,7 +37,7 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
       // Also call the onLoad prop if supplied.
       props.onLoad?.(e);
     },
-    [src, props]
+    [src, props],
   );
 
   useEffect(() => {

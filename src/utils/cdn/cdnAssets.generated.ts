@@ -1,1181 +1,2265 @@
 export const _generatedCdnAssets = {
-	"Design_Guide_txt": "/Design-Guide.txt",
-	"photography/San_Francisco_from_Twin_Peaks_placeholder_jpg": "/photography/San%20Francisco%20from%20Twin%20Peaks.placeholder.jpg",
-	"photography/Sitting_in_Window_Sill_in_Snow_jpg": "/photography/Sitting%20in%20Window%20Sill%20in%20Snow.jpg",
-	"photography/_USA_Road_Trip_6_placeholder_jpg": "/photography/%20%28USA%20Road%20Trip%29-6.placeholder.jpg",
-	"photography/Lombard_Street_Drone_jpg": "/photography/Lombard%20Street%20Drone.jpg",
-	"photography/1903_Courtyard_Landscape_jpg": "/photography/1903%20Courtyard%20Landscape.jpg",
-	"photography/Snappa_in_Tiger_Inn_Lawn_Action_Shot_Drone_placeholder_jpg": "/photography/Snappa%20in%20Tiger%20Inn%20Lawn%20Action%20Shot%20Drone.placeholder.jpg",
-	"photography/Seattle_Orange_Cityscape_Drone_Horizontal_jpg": "/photography/Seattle%20Orange%20Cityscape%20Drone%20Horizontal.jpg",
-	"photography/Singapore_Blue_Apartment_placeholder_jpg": "/photography/Singapore%20Blue%20Apartment.placeholder.jpg",
-	"photography/Mori_Point_Pacifica_Long_Exposure_Rocks_jpg": "/photography/Mori%20Point%20Pacifica%20Long%20Exposure%20Rocks.jpg",
-	"photography/Road_Winding_Through_Bear_Valley_Drone_Shot_jpg": "/photography/Road%20Winding%20Through%20Bear%20Valley%20Drone%20Shot.jpg",
-	"photography/Yosemite_Valley_Sunrays_Through_Meadow_placeholder_jpg": "/photography/Yosemite%20Valley%20Sunrays%20Through%20Meadow.placeholder.jpg",
-	"photography/Seoul_Korea_Temple_Drone_Top_Down_jpg": "/photography/Seoul%2C%20Korea%20Temple%20Drone%20Top%20Down.jpg",
-	"photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_jpg": "/photography/San%20Francisco%20Lombard%20Street%20Sunrise%20Drone%20Vertical.jpg",
-	"photography/Washington_DC_Capitol_Building_Zoom_Day_jpg": "/photography/Washington%20DC%20Capitol%20Building%20Zoom%20Day.jpg",
-	"photography/Sai_Wan_Hong_Kong_Drone_Vertical_placeholder_jpg": "/photography/Sai%20Wan%2C%20Hong%20Kong%20Drone%20-%20Vertical.placeholder.jpg",
-	"photography/High_Island_Reservoir_Panorama_jpg": "/photography/High%20Island%20Reservoir%20Panorama.jpg",
-	"photography/Capitol_Building_Lens_Ball_placeholder_jpg": "/photography/Capitol%20Building%20Lens%20Ball.placeholder.jpg",
-	"photography/San_Francisco_Downtown_Through_Car_Mirror_jpg": "/photography/San%20Francisco%20Downtown%20Through%20Car%20Mirror.jpg",
-	"photography/Bear_Valley_Astrophotography_Landscape_jpg": "/photography/Bear%20Valley%20Astrophotography%20Landscape.jpg",
-	"photography/Korean_Bar_Reflection_in_Rain_Puddle_jpg": "/photography/Korean%20Bar%20Reflection%20in%20Rain%20Puddle.jpg",
-	"photography/San_Francisco_Downtown_from_Airplane_at_Night_Portrait_placeholder_jpg": "/photography/San%20Francisco%20Downtown%20from%20Airplane%20at%20Night%20%28Portrait%29.placeholder.jpg",
-	"photography/_USA_Road_Trip_placeholder_jpg": "/photography/%20%28USA%20Road%20Trip%29.placeholder.jpg",
-	"photography/Hie_Shrine_Tokyo_Japan_jpg": "/photography/Hie%20Shrine%2C%20Tokyo%2C%20Japan.jpg",
-	"photography/Greenwich_Golf_Course_Summer_Drone_Vertical_jpg": "/photography/Greenwich%20Golf%20Course%20Summer%20Drone%20Vertical.jpg",
-	"photography/Florence_Portrait_View_of_City_Looking_Down_Road_placeholder_jpg": "/photography/Florence%20Portrait%20View%20of%20City%20Looking%20Down%20Road.placeholder.jpg",
-	"photography/Yosemite_Valley_Sunrays_Through_Meadow_jpg": "/photography/Yosemite%20Valley%20Sunrays%20Through%20Meadow.jpg",
-	"photography/Grand_Teton_Astro_with_Grass_USA_Road_Trip_jpg": "/photography/Grand%20Teton%20Astro%20with%20Grass%20%28USA%20Road%20Trip%29.jpg",
-	"photography/Group_of_People_Lying_on_a_Beach_Towel_Drone_Top_Down_placeholder_jpg": "/photography/Group%20of%20People%20Lying%20on%20a%20Beach%20Towel%20Drone%20Top%20Down.placeholder.jpg",
-	"photography/Golden_Gate_Bridge_Through_Fence_Long_Exposure_jpg": "/photography/Golden%20Gate%20Bridge%20Through%20Fence%20%28Long%20Exposure%29.jpg",
-	"photography/Marin_Headlands_Sunset_Hills_Landscape_placeholder_jpg": "/photography/Marin%20Headlands%20Sunset%20Hills%20Landscape.placeholder.jpg",
-	"photography/Family_Drone_Christmas_Card_placeholder_jpg": "/photography/Family%20Drone%20Christmas%20Card.placeholder.jpg",
-	"photography/Korea_Palace_Through_Trees_jpg": "/photography/Korea%20Palace%20Through%20Trees.jpg",
-	"photography/New_York_Dear_Irving_on_Hudson_Rooftop_Intersection_placeholder_jpg": "/photography/New%20York%20Dear%20Irving%20on%20Hudson%20Rooftop%20Intersection.placeholder.jpg",
-	"photography/Lake_Carnegie_Fall_Drone_Vertical_jpg": "/photography/Lake%20Carnegie%20Fall%20Drone%20Vertical.jpg",
-	"photography/Artechouse_DC_Silhouette_1_placeholder_jpg": "/photography/Artechouse%20DC%20Silhouette%201.placeholder.jpg",
-	"photography/Italy_House_in_Small_Courtyard_placeholder_jpg": "/photography/Italy%20House%20in%20Small%20Courtyard.placeholder.jpg",
-	"photography/Colonial_Looking_Through_the_Trees_Vertical_jpg": "/photography/Colonial%20Looking%20Through%20the%20Trees%20Vertical.jpg",
-	"photography/Steel_Wool_in_Front_of_Golden_Gate_Bridge_Landscape_placeholder_jpg": "/photography/Steel%20Wool%20in%20Front%20of%20Golden%20Gate%20Bridge%20%28Landscape%29.placeholder.jpg",
-	"photography/Golden_Gate_Bridge_Aerial_Head_On_jpg": "/photography/Golden%20Gate%20Bridge%20Aerial%20Head%20On.jpg",
-	"photography/Yosemite_Lichens_placeholder_jpg": "/photography/Yosemite%20Lichens.placeholder.jpg",
-	"photography/Marin_High_School_Swimming_Pool_Drone_Top_Down_jpg": "/photography/Marin%20High%20School%20Swimming%20Pool%20Drone%20Top%20Down.jpg",
-	"photography/Jiufen_Taiwan_Drone_Vertical_placeholder_jpg": "/photography/Jiufen%2C%20Taiwan%20Drone%20-%20Vertical.placeholder.jpg",
-	"photography/Palace_of_Fine_Arts_Vertical_Drone_jpg": "/photography/Palace%20of%20Fine%20Arts%20Vertical%20Drone.jpg",
-	"photography/Ferry_Building_with_Skyline_At_Night_placeholder_jpg": "/photography/Ferry%20Building%20with%20Skyline%20At%20Night.placeholder.jpg",
-	"photography/Yosemite_Lichens_jpg": "/photography/Yosemite%20Lichens.jpg",
-	"photography/Hong_Kong_Grid_Apartment_Drone_Vertical_placeholder_jpg": "/photography/Hong%20Kong%20Grid%20Apartment%20Drone%20Vertical.placeholder.jpg",
-	"photography/Seattle_Boat_Houses_jpg": "/photography/Seattle%20Boat%20Houses.jpg",
-	"photography/Nakalele_Blowhole_jpg": "/photography/Nakalele%20Blowhole.jpg",
-	"photography/Bride_s_Pool_Long_Exposure_1_jpg": "/photography/Bride%27s%20Pool%20Long%20Exposure%201.jpg",
-	"photography/Loneliest_Road_Vertical_Drone_Top_Down_placeholder_jpg": "/photography/Loneliest%20Road%20Vertical%20Drone%20%28Top%20Down%29.placeholder.jpg",
-	"photography/Backcountry_Greenwich_Drone_Landscape_jpg": "/photography/Backcountry%20Greenwich%20Drone%20Landscape.jpg",
-	"photography/Sunset_Sillhouette_Horizontal_Las_Terrenas_Dominican_Republic_jpg": "/photography/Sunset%20Sillhouette%20Horizontal%20Las%20Terrenas%2C%20Dominican%20Republic.jpg",
-	"photography/Students_Studying_in_Palmer_Square_jpg": "/photography/Students%20Studying%20in%20Palmer%20Square.jpg",
-	"photography/Nassau_Hall_Landscape_jpg": "/photography/Nassau%20Hall%20Landscape.jpg",
-	"photography/Main_Post_Presidio_San_Francisco_jpg": "/photography/Main%20Post%20Presidio%20San%20Francisco.jpg",
-	"photography/Bear_Valley_Drone_Landscape_of_Valley_jpg": "/photography/Bear%20Valley%20Drone%20Landscape%20of%20Valley.jpg",
-	"photography/Pigeon_Point_Lighthouse_Milky_Way_with_Meteor_placeholder_jpg": "/photography/Pigeon%20Point%20Lighthouse%20Milky%20Way%20with%20Meteor.placeholder.jpg",
-	"photography/Hong_Kong_Motorbike_Motion_Blur_Horizontal_placeholder_jpg": "/photography/Hong%20Kong%20Motorbike%20Motion%20Blur%20%28Horizontal%29.placeholder.jpg",
-	"photography/Lonely_Barn_at_the_Base_of_Grand_Tetons_jpg": "/photography/Lonely%20Barn%20at%20the%20Base%20of%20Grand%20Tetons.jpg",
-	"photography/Transamerica_Building_San_Francisco_Drone_Vertical_jpg": "/photography/Transamerica%20Building%20San%20Francisco%20Drone%20Vertical.jpg",
-	"photography/Monster_Mansion_Head_On_Vertical_placeholder_jpg": "/photography/Monster%20Mansion%20Head%20On%20Vertical.placeholder.jpg",
-	"photography/Friends_Hanging_Out_at_Off_the_Grid_placeholder_jpg": "/photography/Friends%20Hanging%20Out%20at%20Off%20the%20Grid.placeholder.jpg",
-	"photography/Hong_Kong_Downtown_Horizon_Drone_Pinewood_Battery_jpg": "/photography/Hong%20Kong%20Downtown%20Horizon%20Drone%20Pinewood%20Battery.jpg",
-	"photography/Cherry_Blossums_Seoul_Korea_placeholder_jpg": "/photography/Cherry%20Blossums%2C%20Seoul%2C%20Korea.placeholder.jpg",
-	"photography/1903_Hall_and_Cuyler_Hall_Drone_placeholder_jpg": "/photography/1903%20Hall%20and%20Cuyler%20Hall%20Drone.placeholder.jpg",
-	"photography/Supreme_Court_Landscape_Nine_Seats_placeholder_jpg": "/photography/Supreme%20Court%20Landscape%20Nine%20Seats.placeholder.jpg",
-	"photography/Minnesota_Drone_USA_Road_Trip_jpg": "/photography/Minnesota%20Drone%20%28USA%20Road%20Trip%29.jpg",
-	"photography/THS_Tennis_Court_Drone_Top_Down_placeholder_jpg": "/photography/THS%20Tennis%20Court%20Drone%20%28Top%20Down%29.placeholder.jpg",
-	"photography/Ximen_Taiwan_Long_Exposure_Cars_Neon_Cyberpunk_placeholder_jpg": "/photography/Ximen%2C%20Taiwan%20Long%20Exposure%20Cars%20Neon%20Cyberpunk.placeholder.jpg",
-	"photography/Portrait_in_Front_of_Vatican_on_Bridge_at_Sunset_placeholder_jpg": "/photography/Portrait%20in%20Front%20of%20Vatican%20on%20Bridge%20at%20Sunset.placeholder.jpg",
-	"photography/Vatican_Fountain_Landscape_jpg": "/photography/Vatican%20Fountain%20Landscape.jpg",
-	"photography/Bison_Grazing_In_Front_of_Mountain_Landscape_2x3_placeholder_jpg": "/photography/Bison%20Grazing%20In%20Front%20of%20Mountain%20Landscape%20%282x3%29.placeholder.jpg",
-	"photography/Martin_s_Beach_Milky_Way_jpg": "/photography/Martin%27s%20Beach%20Milky%20Way.jpg",
-	"photography/Embarcadero_Drone_Ferry_Building_Night_Vertical_placeholder_jpg": "/photography/Embarcadero%20Drone%20Ferry%20Building%20Night%20Vertical.placeholder.jpg",
-	"photography/Pigeon_Point_Lighthouse_Milky_Way_placeholder_jpg": "/photography/Pigeon%20Point%20Lighthouse%20Milky%20Way.placeholder.jpg",
-	"photography/Ferry_Building_at_Sunset_Long_Exposure_Vertical_placeholder_jpg": "/photography/Ferry%20Building%20at%20Sunset%20Long%20Exposure%20Vertical.placeholder.jpg",
-	"photography/New_York_Street_Artist_Front_placeholder_jpg": "/photography/New%20York%20Street%20Artist%20%28Front%29.placeholder.jpg",
-	"photography/DSLR_With_Lensball_Image_on_Screen_jpg": "/photography/DSLR%20With%20Lensball%20Image%20on%20Screen.jpg",
-	"photography/Tsim_Sha_Tsui_Lensball_Long_Exposure_placeholder_jpg": "/photography/Tsim%20Sha%20Tsui%20Lensball%20Long%20Exposure.placeholder.jpg",
-	"photography/Car_Burning_Cross_Country_Roadtrip_jpg": "/photography/Car%20Burning%20Cross%20Country%20Roadtrip.jpg",
-	"photography/Rome_Italy_Meat_and_Cheese_Restaurant_jpg": "/photography/Rome%2C%20Italy%20Meat%20and%20Cheese%20Restaurant.jpg",
-	"photography/Loneliest_Road_Vertical_Drone_Top_Down_jpg": "/photography/Loneliest%20Road%20Vertical%20Drone%20%28Top%20Down%29.jpg",
-	"photography/Lake_Carnegie_Landscape_Fall_Season_placeholder_jpg": "/photography/Lake%20Carnegie%20Landscape%20Fall%20Season.placeholder.jpg",
-	"photography/Whitman_Lower_Courtyard_in_Snow_placeholder_jpg": "/photography/Whitman%20Lower%20Courtyard%20in%20Snow.placeholder.jpg",
-	"photography/Bear_Valley_Astrophotography_Horizontal_jpg": "/photography/Bear%20Valley%20Astrophotography%20%28Horizontal%29.jpg",
-	"photography/Princeton_Football_Field_Down_placeholder_jpg": "/photography/Princeton%20Football%20Field%20%28Down%29.placeholder.jpg",
-	"photography/Lake_Carnegie_at_Sunset_Drone_placeholder_jpg": "/photography/Lake%20Carnegie%20at%20Sunset%20Drone.placeholder.jpg",
-	"photography/Sunset_District_Drone_with_Fog_Rolling_In_jpg": "/photography/Sunset%20District%20Drone%20with%20Fog%20Rolling%20In.jpg",
-	"photography/Mong_Kong_Lens_Ball_Neon_Signs_Vertical_placeholder_jpg": "/photography/Mong%20Kong%20Lens%20Ball%20Neon%20Signs%20%28Vertical%29.placeholder.jpg",
-	"photography/Street_Market_Vendor_Talking_to_Tourist_jpg": "/photography/Street%20Market%20Vendor%20Talking%20to%20Tourist.jpg",
-	"photography/Half_Dome_from_Yosemite_Falls_placeholder_jpg": "/photography/Half%20Dome%20from%20Yosemite%20Falls.placeholder.jpg",
-	"photography/Taipei_101_Binoculars_jpg": "/photography/Taipei%20101%20Binoculars.jpg",
-	"photography/Delta_Lake_Product_Shot_jpg": "/photography/Delta%20Lake%20Product%20Shot.jpg",
-	"photography/High_Island_Reservoir_East_Dam_Drone_Top_Down_placeholder_jpg": "/photography/High%20Island%20Reservoir%20East%20Dam%20Drone%20Top%20Down.placeholder.jpg",
-	"photography/Korean_Market_Shoe_Stand_placeholder_jpg": "/photography/Korean%20Market%20Shoe%20Stand.placeholder.jpg",
-	"photography/Seoul_Tower_Seoul_Tokyo_placeholder_jpg": "/photography/Seoul%20Tower%2C%20Seoul%2C%20Tokyo.placeholder.jpg",
-	"photography/Nassau_Hall_Landscape_Drone_placeholder_jpg": "/photography/Nassau%20Hall%20Landscape%20Drone.placeholder.jpg",
-	"photography/Tabernacle_Temple_Square_jpg": "/photography/Tabernacle%20Temple%20Square.jpg",
-	"photography/Full_Moon_Minimalist_Sky_jpg": "/photography/Full%20Moon%20Minimalist%20Sky.jpg",
-	"photography/Devil_s_Tower_Epic_Backlight_jpg": "/photography/Devil%27s%20Tower%20Epic%20Backlight.jpg",
-	"photography/Ping_Shek_Estate_Drone_Top_Down_Vertical_placeholder_jpg": "/photography/Ping%20Shek%20Estate%20Drone%20Top%20Down%20%28Vertical%29.placeholder.jpg",
-	"photography/Napa_House_Drone_Shot_Landscape_jpg": "/photography/Napa%20House%20Drone%20Shot%20Landscape.jpg",
-	"photography/Golden_Gate_Bridge_Peering_Through_Rocks_placeholder_jpg": "/photography/Golden%20Gate%20Bridge%20Peering%20Through%20Rocks.placeholder.jpg",
-	"photography/Lake_Carnegie_Fall_Drone_Vertical_placeholder_jpg": "/photography/Lake%20Carnegie%20Fall%20Drone%20Vertical.placeholder.jpg",
-	"photography/Palace_of_Fine_Arts_Horizontal_Drone_Shot_placeholder_jpg": "/photography/Palace%20of%20Fine%20Arts%20Horizontal%20Drone%20Shot.placeholder.jpg",
-	"photography/Bike_Wheel_on_Ground_Sunset_1903_Courtyard_placeholder_jpg": "/photography/Bike%20Wheel%20on%20Ground%20Sunset%201903%20Courtyard.placeholder.jpg",
-	"photography/Sai_Wan_Drone_2_Vertical_placeholder_jpg": "/photography/Sai%20Wan%20Drone%202%20%28Vertical%29.placeholder.jpg",
-	"photography/Yosemite_Valley_Red_Veil_Panorama_jpg": "/photography/Yosemite%20Valley%20Red%20Veil%20Panorama.jpg",
-	"photography/Marina_Bay_Sands_Drone_Vertical_jpg": "/photography/Marina%20Bay%20Sands%20Drone%20%28Vertical%29.jpg",
-	"photography/Capitol_Building_Walking_Towards_Building_on_Street_jpg": "/photography/Capitol%20Building%20Walking%20Towards%20Building%20on%20Street.jpg",
-	"photography/Vatican_Fountain_Landscape_placeholder_jpg": "/photography/Vatican%20Fountain%20Landscape.placeholder.jpg",
-	"photography/Roman_Forum_Ruins_jpg": "/photography/Roman%20Forum%20Ruins.jpg",
-	"photography/Trevor_Snowboard_at_Top_of_Mountain_jpg": "/photography/Trevor%20Snowboard%20at%20Top%20of%20Mountain.jpg",
-	"photography/Statistics_and_Machine_Learning_Building_placeholder_jpg": "/photography/Statistics%20and%20Machine%20Learning%20Building.placeholder.jpg",
-	"photography/Korea_Palace_Through_Trees_placeholder_jpg": "/photography/Korea%20Palace%20Through%20Trees.placeholder.jpg",
-	"photography/Trevor_Sitting_on_Rubicon_Peak_Looking_Out_jpg": "/photography/Trevor%20Sitting%20on%20Rubicon%20Peak%20Looking%20Out.jpg",
-	"photography/Lake_Carnegie_at_Sunset_Drone_jpg": "/photography/Lake%20Carnegie%20at%20Sunset%20Drone.jpg",
-	"photography/Washington_Monument_Sunset_Red_White_Blue_Sky_placeholder_jpg": "/photography/Washington%20Monument%20Sunset%20Red%20White%20Blue%20Sky.placeholder.jpg",
-	"photography/Ladies_Market_Balcony_Lens_Ball_placeholder_jpg": "/photography/Ladies%20Market%20Balcony%20Lens%20Ball.placeholder.jpg",
-	"photography/Claire_Standing_in_Front_of_Lake_Minnewaska_jpg": "/photography/Claire%20Standing%20in%20Front%20of%20Lake%20Minnewaska.jpg",
-	"photography/San_Francisco_California_and_Powell_Street_Trolly_placeholder_jpg": "/photography/San%20Francisco%20California%20and%20Powell%20Street%20Trolly.placeholder.jpg",
-	"photography/Main_Post_Presidio_San_Francisco_placeholder_jpg": "/photography/Main%20Post%20Presidio%20San%20Francisco.placeholder.jpg",
-	"photography/Empire_State_Building_Daytime_Telephoto_placeholder_jpg": "/photography/Empire%20State%20Building%20Daytime%20Telephoto.placeholder.jpg",
-	"photography/Washington_Monument_in_Front_of_Lincoln_Memorial_At_Night_jpg": "/photography/Washington%20Monument%20in%20Front%20of%20Lincoln%20Memorial%20At%20Night.jpg",
-	"photography/Brenizer_Method_Portrait_in_front_of_Golden_Gate_placeholder_jpg": "/photography/Brenizer%20Method%20Portrait%20in%20front%20of%20Golden%20Gate.placeholder.jpg",
-	"photography/Downtown_San_Francisco_From_South_East_Horizontal_placeholder_jpg": "/photography/Downtown%20San%20Francisco%20From%20South%20East%20-%20Horizontal.placeholder.jpg",
-	"photography/Marin_Headlands_Hills_Silhouette_placeholder_jpg": "/photography/Marin%20Headlands%20Hills%20Silhouette.placeholder.jpg",
-	"photography/Brenizer_Method_Portrait_in_front_of_Golden_Gate_jpg": "/photography/Brenizer%20Method%20Portrait%20in%20front%20of%20Golden%20Gate.jpg",
-	"photography/Walking_Dog_in_Philly_jpg": "/photography/Walking%20Dog%20in%20Philly.jpg",
-	"photography/Patton_Hall_Drone_placeholder_jpg": "/photography/Patton%20Hall%20Drone.placeholder.jpg",
-	"photography/House_at_the_Base_of_the_Tetons_in_Teton_Village_placeholder_jpg": "/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.placeholder.jpg",
-	"photography/Boats_Top_Down_Drone_jpg": "/photography/Boats%20Top%20Down%20Drone.jpg",
-	"photography/Times_Square_Santa_jpg": "/photography/Times%20Square%20Santa.jpg",
-	"photography/Bike_in_Pisa_Italy_placeholder_jpg": "/photography/Bike%20in%20Pisa%2C%20Italy.placeholder.jpg",
-	"photography/Grand_Teton_National_Park_Bison_placeholder_jpg": "/photography/Grand%20Teton%20National%20Park%20Bison.placeholder.jpg",
-	"photography/Capitol_Building_Night_Landscape_Zoom_placeholder_jpg": "/photography/Capitol%20Building%20Night%20Landscape%20Zoom.placeholder.jpg",
-	"photography/Ladies_Market_Balcony_Lens_Ball_jpg": "/photography/Ladies%20Market%20Balcony%20Lens%20Ball.jpg",
-	"photography/Portrait_in_front_of_Golden_Gate_on_Baker_Beach_placeholder_jpg": "/photography/Portrait%20in%20front%20of%20Golden%20Gate%20on%20Baker%20Beach.placeholder.jpg",
-	"photography/Tiger_Inn_Eating_Club_Front_Lawn_placeholder_jpg": "/photography/Tiger%20Inn%20Eating%20Club%20Front%20Lawn.placeholder.jpg",
-	"photography/Loneliest_Road_Horizontal_Looking_Down_Road_jpg": "/photography/Loneliest%20Road%20Horizontal%20Looking%20Down%20Road.jpg",
-	"photography/Shifen_Waterfall_Long_Exposure_Taiwan_placeholder_jpg": "/photography/Shifen%20Waterfall%20Long%20Exposure%20Taiwan.placeholder.jpg",
-	"photography/High_Island_Reservoir_Panorama_placeholder_jpg": "/photography/High%20Island%20Reservoir%20Panorama.placeholder.jpg",
-	"photography/Taipei_101_Architecture_jpg": "/photography/Taipei%20101%20Architecture.jpg",
-	"photography/Seattle_Boat_Houses_placeholder_jpg": "/photography/Seattle%20Boat%20Houses.placeholder.jpg",
-	"photography/Dominican_Republic_Las_Terrenas_Daytime_Beach_House_Panorama_placeholder_jpg": "/photography/Dominican%20Republic%20Las%20Terrenas%20Daytime%20Beach%20House%20Panorama.placeholder.jpg",
-	"photography/Greenwich_Golf_Course_Summer_Drone_Vertical_placeholder_jpg": "/photography/Greenwich%20Golf%20Course%20Summer%20Drone%20Vertical.placeholder.jpg",
-	"photography/Dog_at_Top_of_Teton_Mountain_in_Snow_jpg": "/photography/Dog%20at%20Top%20of%20Teton%20Mountain%20in%20Snow.jpg",
-	"photography/Mong_Kok_Hong_Kong_Neon_Signs_1_placeholder_jpg": "/photography/Mong%20Kok%2C%20Hong%20Kong%20Neon%20Signs%201.placeholder.jpg",
-	"photography/1903_Hall_Drone_Top_Down_placeholder_jpg": "/photography/1903%20Hall%20Drone%20Top%20Down.placeholder.jpg",
-	"photography/Hong_Kong_Night_Skyline_Long_Exposure_jpg": "/photography/Hong%20Kong%20Night%20Skyline%20Long%20Exposure.jpg",
-	"photography/Outside_Penn_Station_New_York_Wide_Angle_placeholder_jpg": "/photography/Outside%20Penn%20Station%20New%20York%20Wide%20Angle.placeholder.jpg",
-	"photography/Trevi_Fountain_in_Rome_Italy_placeholder_jpg": "/photography/Trevi%20Fountain%20in%20Rome%2C%20Italy.placeholder.jpg",
-	"photography/Clean_Trahs_Philly_placeholder_jpg": "/photography/Clean%20Trahs%20Philly.placeholder.jpg",
-	"photography/Teton_Village_Golf_Course_Lake_Drone_Vertical_placeholder_jpg": "/photography/Teton%20Village%20Golf%20Course%20Lake%20Drone%20Vertical.placeholder.jpg",
-	"photography/Cannon_Dial_Elm_Club_Vertical_jpg": "/photography/Cannon%20Dial%20Elm%20Club%20Vertical.jpg",
-	"photography/Top_Down_Beach_Peninsula_Las_Terrenas_Dominican_Republic_jpg": "/photography/Top%20Down%20Beach%20Peninsula%20Las%20Terrenas%20Dominican%20Republic.jpg",
-	"photography/Rubicon_Peak_Drone_placeholder_jpg": "/photography/Rubicon%20Peak%20%28Drone%29.placeholder.jpg",
-	"photography/San_Francisco_Downtown_from_Airplane_at_Night_Portrait_jpg": "/photography/San%20Francisco%20Downtown%20from%20Airplane%20at%20Night%20%28Portrait%29.jpg",
-	"photography/Times_Square_Lens_Ball_placeholder_jpg": "/photography/Times%20Square%20Lens%20Ball.placeholder.jpg",
-	"photography/Kennedy_Town_Drone_Panorama_jpg": "/photography/Kennedy%20Town%20Drone%20Panorama.jpg",
-	"photography/Road_Winding_Through_Bear_Valley_Drone_Shot_placeholder_jpg": "/photography/Road%20Winding%20Through%20Bear%20Valley%20Drone%20Shot.placeholder.jpg",
-	"photography/Choi_Hung_Estate_Tiny_Planet_placeholder_jpg": "/photography/Choi%20Hung%20Estate%20Tiny%20Planet.placeholder.jpg",
-	"photography/Times_Square_Taxi_Behind_jpg": "/photography/Times%20Square%20Taxi%20%28Behind%29.jpg",
-	"photography/Snappa_in_Tiger_Inn_Lawn_Action_Shot_Drone_jpg": "/photography/Snappa%20in%20Tiger%20Inn%20Lawn%20Action%20Shot%20Drone.jpg",
-	"photography/Times_Square_New_York_Street_Artist_Neon_Cyberpunk_jpg": "/photography/Times%20Square%20New%20York%20Street%20Artist%20Neon%20Cyberpunk.jpg",
-	"photography/Princeton_Central_Campus_Drone_jpg": "/photography/Princeton%20Central%20Campus%20Drone.jpg",
-	"photography/Yosemite_Valley_Sunset_jpg": "/photography/Yosemite%20Valley%20Sunset.jpg",
-	"photography/1903_Hall_Drone_Top_Down_jpg": "/photography/1903%20Hall%20Drone%20Top%20Down.jpg",
-	"photography/Cherry_Blossums_in_1903_Courtyard_in_rain_jpg": "/photography/Cherry%20Blossums%20in%201903%20Courtyard%20in%20rain.jpg",
-	"photography/Big_Wave_Beach_Hong_Kong_Top_Down_Drone_placeholder_jpg": "/photography/Big%20Wave%20Beach%2C%20Hong%20Kong%20Top%20Down%20Drone.placeholder.jpg",
-	"photography/Man_Walking_Bike_in_Front_of_Duomo_in_Florence_placeholder_jpg": "/photography/Man%20Walking%20Bike%20in%20Front%20of%20Duomo%20in%20Florence.placeholder.jpg",
-	"photography/Fruit_Market_Stand_in_Florence_Italy_placeholder_jpg": "/photography/Fruit%20Market%20Stand%20in%20Florence%2C%20Italy.placeholder.jpg",
-	"photography/Surfers_Riding_Waves_in_Hong_Kong_placeholder_jpg": "/photography/Surfers%20Riding%20Waves%20in%20Hong%20Kong.placeholder.jpg",
-	"photography/Sea_Ranch_Seals_Drone_Top_Down_placeholder_jpg": "/photography/Sea%20Ranch%20Seals%20Drone%20%28Top%20Down%29.placeholder.jpg",
-	"photography/Outside_Penn_Station_New_York_Wide_Angle_jpg": "/photography/Outside%20Penn%20Station%20New%20York%20Wide%20Angle.jpg",
-	"photography/Tiger_Inn_Eating_Club_Front_Lawn_jpg": "/photography/Tiger%20Inn%20Eating%20Club%20Front%20Lawn.jpg",
-	"photography/Times_Square_Taxi_Side_jpg": "/photography/Times%20Square%20Taxi%20%28Side%29.jpg",
-	"photography/Mount_Rainier_Glacier_Lake_placeholder_jpg": "/photography/Mount%20Rainier%20Glacier%20Lake.placeholder.jpg",
-	"photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_Black_Bird_jpg": "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20Black%20Bird.jpg",
-	"photography/Shibuya_Crossing_Wide_Angle_jpg": "/photography/Shibuya%20Crossing%20Wide%20Angle.jpg",
-	"photography/Delta_Lake_Grand_Teton_Portrait_jpg": "/photography/Delta%20Lake%20Grand%20Teton%20Portrait.jpg",
-	"photography/Napa_Valley_Drone_Landscape_Sunset_House_jpg": "/photography/Napa%20Valley%20Drone%20Landscape%20Sunset%20House.jpg",
-	"photography/Road_to_Hana_Cliffside_jpg": "/photography/Road%20to%20Hana%20Cliffside.jpg",
-	"photography/Seattle_Vertical_Drone_Space_Needle_Sunset_jpg": "/photography/Seattle%20Vertical%20Drone%20Space%20Needle%20Sunset.jpg",
-	"photography/Times_Square_New_York_Street_Artist_Neon_Cyberpunk_placeholder_jpg": "/photography/Times%20Square%20New%20York%20Street%20Artist%20Neon%20Cyberpunk.placeholder.jpg",
-	"photography/Dancers_in_Hong_Kong_3_placeholder_jpg": "/photography/Dancers%20in%20Hong%20Kong%20-%203.placeholder.jpg",
-	"photography/Single_Man_in_Badlands_placeholder_jpg": "/photography/Single%20Man%20in%20Badlands.placeholder.jpg",
-	"photography/Steel_Wool_in_Front_of_Golden_Gate_Bridge_Landscape_jpg": "/photography/Steel%20Wool%20in%20Front%20of%20Golden%20Gate%20Bridge%20%28Landscape%29.jpg",
-	"photography/Cherry_Blossums_in_1903_Courtyard_in_rain_placeholder_jpg": "/photography/Cherry%20Blossums%20in%201903%20Courtyard%20in%20rain.placeholder.jpg",
-	"photography/Sunset_District_Drone_with_Fog_Rolling_In_placeholder_jpg": "/photography/Sunset%20District%20Drone%20with%20Fog%20Rolling%20In.placeholder.jpg",
-	"photography/New_York_Times_Square_Taxi_Car_Neon_Cyberpunk_jpg": "/photography/New%20York%20Times%20Square%20Taxi%20Car%20Neon%20Cyberpunk.jpg",
-	"photography/Marin_Headlands_Sunset_Road_placeholder_jpg": "/photography/Marin%20Headlands%20Sunset%20Road.placeholder.jpg",
-	"photography/Airplane_Wing_Over_New_York_at_Night_jpg": "/photography/Airplane%20Wing%20Over%20New%20York%20at%20Night.jpg",
-	"photography/Capitol_Building_Panorama_Day_jpg": "/photography/Capitol%20Building%20Panorama%20Day.jpg",
-	"photography/Seoul_Korea_Drone_Panorama_placeholder_jpg": "/photography/Seoul%2C%20Korea%20Drone%20Panorama.placeholder.jpg",
-	"photography/Napa_House_Drone_Shot_Landscape_placeholder_jpg": "/photography/Napa%20House%20Drone%20Shot%20Landscape.placeholder.jpg",
-	"photography/Jiufen_Taiwan_Drone_Vertical_jpg": "/photography/Jiufen%2C%20Taiwan%20Drone%20-%20Vertical.jpg",
-	"photography/Cottage_and_Ivy_on_Prospect_Street_jpg": "/photography/Cottage%20and%20Ivy%20on%20Prospect%20Street.jpg",
-	"photography/Bear_Valley_Astrophotography_Portrait_jpg": "/photography/Bear%20Valley%20Astrophotography%20%28Portrait%29.jpg",
-	"photography/Sunset_Sillhouette_Vertical_Las_Terrenas_Dominican_Republic_jpg": "/photography/Sunset%20Sillhouette%20Vertical%20Las%20Terrenas%2C%20Dominican%20Republic.jpg",
-	"photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Vertical_Dark_jpg": "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Vertical%20Dark.jpg",
-	"photography/Taipei_Taiwan_Foggy_Skyline_jpg": "/photography/Taipei%2C%20Taiwan%20Foggy%20Skyline.jpg",
-	"photography/Ping_Shek_Estate_Desmond_Brenizer_placeholder_jpg": "/photography/Ping%20Shek%20Estate%20Desmond%20Brenizer.placeholder.jpg",
-	"photography/Ponte_di_Mezzo_Bridge_jpg": "/photography/Ponte%20di%20Mezzo%20Bridge.jpg",
-	"photography/Princeton_Crest_Fitz_Randolph_Gate_placeholder_jpg": "/photography/Princeton%20Crest%20Fitz%20Randolph%20Gate.placeholder.jpg",
-	"photography/Seoul_Korea_Drone_Vertical_Downtown_jpg": "/photography/Seoul%2C%20Korea%20Drone%20Vertical%20Downtown.jpg",
-	"photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg": "/photography/San%20Francisco%20Golden%20Gate%20Park%20Satellite%20Shot.jpg",
-	"photography/Kowloon_Bay_Drone_Vertical_jpg": "/photography/Kowloon%20Bay%20Drone%20%28Vertical%29.jpg",
-	"photography/Man_Lying_on_Beach_Top_Down_Drone_Las_Terrenas_Domincan_Republic_jpg": "/photography/Man%20Lying%20on%20Beach%20Top%20Down%20Drone%20Las%20Terrenas%2C%20Domincan%20Republic.jpg",
-	"photography/THS_Tennis_Court_Drone_Drone_Art_jpg": "/photography/THS%20Tennis%20Court%20Drone%20%28Drone%20Art%29.jpg",
-	"photography/At_T_Park_Mission_Bay_San_Francisco_jpg": "/photography/At%26T%20Park%20Mission%20Bay%20San%20Francisco.jpg",
-	"photography/Boats_Top_Down_Drone_placeholder_jpg": "/photography/Boats%20Top%20Down%20Drone.placeholder.jpg",
-	"photography/Hong_Kong_Red_Taxi_Motion_Blur_Horizontal_placeholder_jpg": "/photography/Hong%20Kong%20Red%20Taxi%20Motion%20Blur%20%28Horizontal%29.placeholder.jpg",
-	"photography/1903_Courtyard_Sunset_Down_Stairs_placeholder_jpg": "/photography/1903%20Courtyard%20Sunset%20Down%20Stairs.placeholder.jpg",
-	"photography/Marin_Headlands_Hills_Silhouette_jpg": "/photography/Marin%20Headlands%20Hills%20Silhouette.jpg",
-	"photography/Yosemite_Valley_Meadow_placeholder_jpg": "/photography/Yosemite%20Valley%20Meadow.placeholder.jpg",
-	"photography/Pilot_s_Row_Presidio_San_Francisco_jpg": "/photography/Pilot%27s%20Row%20Presidio%20San%20Francisco.jpg",
-	"photography/Larry_Bao_Two_Man_Crew_Rowing_Boat_Top_Down_jpg": "/photography/Larry%20Bao%20Two%20Man%20Crew%20Rowing%20Boat%20Top%20Down.jpg",
-	"photography/Full_Moon_Minimalist_Sky_placeholder_jpg": "/photography/Full%20Moon%20Minimalist%20Sky.placeholder.jpg",
-	"photography/Artechouse_DC_Silhouette_3_jpg": "/photography/Artechouse%20DC%20Silhouette%203.jpg",
-	"photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_Black_Bird_placeholder_jpg": "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20Black%20Bird.placeholder.jpg",
-	"photography/Tokyo_Cherry_Blossum_Arcade_jpg": "/photography/Tokyo%20Cherry%20Blossum%20Arcade.jpg",
-	"photography/Sunrise_over_the_Clouds_from_an_Airplane_placeholder_jpg": "/photography/Sunrise%20over%20the%20Clouds%20from%20an%20Airplane.placeholder.jpg",
-	"photography/Bride_s_Pool_Waterfall_Vertical_placeholder_jpg": "/photography/Bride%27s%20Pool%20Waterfall%20%28Vertical%29.placeholder.jpg",
-	"photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Orange_Panorama_jpg": "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Orange%20Panorama.jpg",
-	"photography/Cliff_House_Sutro_Baths_at_Night_jpg": "/photography/Cliff%20House%20Sutro%20Baths%20at%20Night.jpg",
-	"photography/Rubicon_Peak_Drone_USA_Road_Trip_jpg": "/photography/Rubicon%20Peak%20%28Drone%29%20%28USA%20Road%20Trip%29.jpg",
-	"photography/San_Francisco_Over_Marshall_Beach_placeholder_jpg": "/photography/San%20Francisco%20Over%20Marshall%20Beach.placeholder.jpg",
-	"photography/Bride_s_Pool_Long_Exposure_1_2_placeholder_jpg": "/photography/Bride%27s%20Pool%20Long%20Exposure%201-2.placeholder.jpg",
-	"photography/Clean_Trahs_Philly_jpg": "/photography/Clean%20Trahs%20Philly.jpg",
-	"photography/New_York_Taxi_in_Rain_on_Park_Ave_placeholder_jpg": "/photography/New%20York%20Taxi%20in%20Rain%20on%20Park%20Ave.placeholder.jpg",
-	"photography/Seoul_Korea_SIgns_in_Alleyway_placeholder_jpg": "/photography/Seoul%2C%20Korea%20SIgns%20in%20Alleyway.placeholder.jpg",
-	"photography/Tokyo_Subway_placeholder_jpg": "/photography/Tokyo%20Subway.placeholder.jpg",
-	"photography/Aerial_View_of_Half_Moon_Bay_Beach_placeholder_jpg": "/photography/Aerial%20View%20of%20Half%20Moon%20Bay%20Beach.placeholder.jpg",
-	"photography/Artechouse_DC_Silhouette_2_jpg": "/photography/Artechouse%20DC%20Silhouette%202.jpg",
-	"photography/San_Francisco_Downtown_Twilight_Sunset_Drone_Panorama_jpg": "/photography/San%20Francisco%20Downtown%20Twilight%20Sunset%20Drone%20Panorama.jpg",
-	"photography/Lands_End_San_Francisco_Large_Rock_at_Sea_jpg": "/photography/Lands%20End%20San%20Francisco%20Large%20Rock%20at%20Sea.jpg",
-	"photography/Capitol_Building_Panorama_Day_placeholder_jpg": "/photography/Capitol%20Building%20Panorama%20Day.placeholder.jpg",
-	"photography/Golden_Gate_Bridge_San_Francisco_Night_Moon_Vertical_jpg": "/photography/Golden%20Gate%20Bridge%20San%20Francisco%20Night%20Moon%20Vertical.jpg",
-	"photography/Fishing_Rod_Close_Up_jpg": "/photography/Fishing%20Rod%20Close%20Up.jpg",
-	"photography/Golden_Gate_Bridge_Through_Fence_jpg": "/photography/Golden%20Gate%20Bridge%20Through%20Fence.jpg",
-	"photography/Gardens_by_the_Bay_Vertical_Drone_placeholder_jpg": "/photography/Gardens%20by%20the%20Bay%20%28Vertical%20Drone%29.placeholder.jpg",
-	"photography/St_Angelo_Bridge_in_Rome_Italy_placeholder_jpg": "/photography/St.%20Angelo%20Bridge%20in%20Rome%2C%20Italy.placeholder.jpg",
-	"photography/Shinjuku_Tokyo_Japan_Horizontal_placeholder_jpg": "/photography/Shinjuku%2C%20Tokyo%2C%20Japan%20%28Horizontal%29.placeholder.jpg",
-	"photography/Times_Square_Taxi_Side_placeholder_jpg": "/photography/Times%20Square%20Taxi%20%28Side%29.placeholder.jpg",
-	"photography/Sunrise_Lombard_Street_Drone_Head_On_Vertical_jpg": "/photography/Sunrise%20Lombard%20Street%20Drone%20Head%20On%20Vertical.jpg",
-	"photography/Grand_Teton_Mountains_Panorama_placeholder_jpg": "/photography/Grand%20Teton%20Mountains%20Panorama.placeholder.jpg",
-	"photography/New_York_City_Park_Ave_Looking_Downtown_in_Rain_placeholder_jpg": "/photography/New%20York%20City%20Park%20Ave%20Looking%20Downtown%20in%20Rain.placeholder.jpg",
-	"photography/Downtown_San_Francisco_Drone_Vertical_Powell_Street_Intersection_placeholder_jpg": "/photography/Downtown%20San%20Francisco%20Drone%20Vertical%20Powell%20Street%20Intersection.placeholder.jpg",
-	"photography/_USA_Road_Trip_2_jpg": "/photography/%20%28USA%20Road%20Trip%29-2.jpg",
-	"photography/Woman_with_Red_Umbrella_in_Snow_jpg": "/photography/Woman%20with%20Red%20Umbrella%20in%20Snow.jpg",
-	"photography/1903_Courtyard_Landscape_placeholder_jpg": "/photography/1903%20Courtyard%20Landscape.placeholder.jpg",
-	"photography/Cliff_House_Sutro_Baths_at_Night_placeholder_jpg": "/photography/Cliff%20House%20Sutro%20Baths%20at%20Night.placeholder.jpg",
-	"photography/Devil_s_Tower_Epic_Backlight_placeholder_jpg": "/photography/Devil%27s%20Tower%20Epic%20Backlight.placeholder.jpg",
-	"photography/New_York_Street_Artist_Side_jpg": "/photography/New%20York%20Street%20Artist%20%28Side%29.jpg",
-	"photography/Students_Studying_in_Palmer_Square_placeholder_jpg": "/photography/Students%20Studying%20in%20Palmer%20Square.placeholder.jpg",
-	"photography/_2_placeholder_jpg": "/photography/-2.placeholder.jpg",
-	"photography/Looking_Down_Market_Street_Puddle_Sunset_jpg": "/photography/Looking%20Down%20Market%20Street%20Puddle%20Sunset.jpg",
-	"photography/Princeton_Sunset_Out_of_1903_Hall_Window_placeholder_jpg": "/photography/Princeton%20Sunset%20Out%20of%201903%20Hall%20Window.placeholder.jpg",
-	"photography/Lombard_Street_Drone_Vertical_Angled_placeholder_jpg": "/photography/Lombard%20Street%20Drone%20Vertical%20Angled.placeholder.jpg",
-	"photography/Bride_s_Pool_Long_Exposure_1_placeholder_jpg": "/photography/Bride%27s%20Pool%20Long%20Exposure%201.placeholder.jpg",
-	"photography/Nassau_Hall_Landscape_placeholder_jpg": "/photography/Nassau%20Hall%20Landscape.placeholder.jpg",
-	"photography/Chiang_Kai_Shek_Memorial_With_Moon_At_Night_placeholder_jpg": "/photography/Chiang%20Kai%20Shek%20Memorial%20With%20Moon%20At%20Night.placeholder.jpg",
-	"photography/Monster_Mansion_Head_On_Vertical_jpg": "/photography/Monster%20Mansion%20Head%20On%20Vertical.jpg",
-	"photography/Statue_of_David_Florence_Italy_jpg": "/photography/Statue%20of%20David%2C%20Florence%2C%20Italy.jpg",
-	"photography/Seoul_Korea_Temple_Drone_Top_Down_placeholder_jpg": "/photography/Seoul%2C%20Korea%20Temple%20Drone%20Top%20Down.placeholder.jpg",
-	"photography/01853_jpg": "/photography/01853.jpg",
-	"photography/Shibuya_Taxi_Motion_Blur_placeholder_jpg": "/photography/Shibuya%20Taxi%20Motion%20Blur.placeholder.jpg",
-	"photography/Family_Drone_Christmas_Card_jpg": "/photography/Family%20Drone%20Christmas%20Card.jpg",
-	"photography/Yosemite_Valley_Red_Veil_Panorama_placeholder_jpg": "/photography/Yosemite%20Valley%20Red%20Veil%20Panorama.placeholder.jpg",
-	"photography/Taiwan_Ximen_Long_Exposure_Crossing_Walk_Cyberpunk_Neon_placeholder_jpg": "/photography/Taiwan%20Ximen%20Long%20Exposure%20Crossing%20Walk%20Cyberpunk%20Neon.placeholder.jpg",
-	"photography/Sunrise_Lombard_Street_Drone_Head_On_Vertical_placeholder_jpg": "/photography/Sunrise%20Lombard%20Street%20Drone%20Head%20On%20Vertical.placeholder.jpg",
-	"photography/Sai_Wan_Drone_2_Vertical_jpg": "/photography/Sai%20Wan%20Drone%202%20%28Vertical%29.jpg",
-	"photography/Halong_Bay_Sunset_Panorama_jpg": "/photography/Halong%20Bay%20Sunset%20Panorama.jpg",
-	"photography/Shibuya_Shopping_Tokyo_Landscape_placeholder_jpg": "/photography/Shibuya%20Shopping%20Tokyo%20Landscape.placeholder.jpg",
-	"photography/Lombard_Street_Drone_Vertical_Angled_jpg": "/photography/Lombard%20Street%20Drone%20Vertical%20Angled.jpg",
-	"photography/Downtown_San_Francisco_Birds_Eye_View_Top_Down_Powell_Street_Intersection_Drone_jpg": "/photography/Downtown%20San%20Francisco%20Birds%20Eye%20View%20Top%20Down%20Powell%20Street%20Intersection%20Drone.jpg",
-	"photography/Cafe_Vivian_Empty_During_COVID_Move_Out_placeholder_jpg": "/photography/Cafe%20Vivian%20Empty%20During%20COVID%20Move%20Out.placeholder.jpg",
-	"photography/Golden_Gate_Bridge_Through_Trees_Portrait_placeholder_jpg": "/photography/Golden%20Gate%20Bridge%20Through%20Trees%20Portrait.placeholder.jpg",
-	"photography/San_Francisco_California_and_Powell_Street_Trolly_jpg": "/photography/San%20Francisco%20California%20and%20Powell%20Street%20Trolly.jpg",
-	"photography/Sunset_on_Cuyler_Courtyard_at_Princeton_University_jpg": "/photography/Sunset%20on%20Cuyler%20Courtyard%20at%20Princeton%20University.jpg",
-	"photography/Golden_Gate_Bridge_Aerial_Head_On_placeholder_jpg": "/photography/Golden%20Gate%20Bridge%20Aerial%20Head%20On.placeholder.jpg",
-	"photography/Rubicon_Peak_Side_Angle_Drone_jpg": "/photography/Rubicon%20Peak%20Side%20Angle%20Drone.jpg",
-	"photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_White_Bird_placeholder_jpg": "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20White%20Bird.placeholder.jpg",
-	"photography/Seoul_Tower_Seoul_Tokyo_jpg": "/photography/Seoul%20Tower%2C%20Seoul%2C%20Tokyo.jpg",
-	"photography/Phi_Phi_Island_Thailand_Panorama_jpg": "/photography/Phi%20Phi%20Island%2C%20Thailand%20Panorama.jpg",
-	"photography/Artechouse_DC_Silhouette_1_jpg": "/photography/Artechouse%20DC%20Silhouette%201.jpg",
-	"photography/Mong_Kok_Cross_Walk_Day_placeholder_jpg": "/photography/Mong%20Kok%20Cross%20Walk%20Day.placeholder.jpg",
-	"photography/Seoul_Korea_Drone_Panorama_jpg": "/photography/Seoul%2C%20Korea%20Drone%20Panorama.jpg",
-	"photography/Nassau_Hall_Landscape_Drone_jpg": "/photography/Nassau%20Hall%20Landscape%20Drone.jpg",
-	"photography/Sunset_on_Phi_Phi_Island_placeholder_jpg": "/photography/Sunset%20on%20Phi%20Phi%20Island.placeholder.jpg",
-	"photography/Teton_Drone_Horizontal_Landscape_placeholder_jpg": "/photography/Teton%20Drone%20Horizontal%20Landscape.placeholder.jpg",
-	"photography/Florence_View_from_Piazzale_Michelangelo_at_Sunset_placeholder_jpg": "/photography/Florence%20View%20from%20Piazzale%20Michelangelo%20at%20Sunset.placeholder.jpg",
-	"photography/Palm_Tree_Shadows_Top_Down_Drone_Las_Terrenas_Dominican_Republic_placeholder_jpg": "/photography/Palm%20Tree%20Shadows%20Top%20Down%20Drone%20Las%20Terrenas%2C%20Dominican%20Republic.placeholder.jpg",
-	"photography/Kennedy_Town_Drone_Panorama_placeholder_jpg": "/photography/Kennedy%20Town%20Drone%20Panorama.placeholder.jpg",
-	"photography/Single_Person_Lying_on_Beach_Top_Down_Drone_Las_Terrenas_Dominican_Republic_placeholder_jpg": "/photography/Single%20Person%20Lying%20on%20Beach%20Top%20Down%20Drone%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
-	"photography/Christmas_Tree_Bokeh_Outside_Duomo_in_Florence_placeholder_jpg": "/photography/Christmas%20Tree%20Bokeh%20Outside%20Duomo%20in%20Florence.placeholder.jpg",
-	"photography/Korea_Palace_Through_Doorway_jpg": "/photography/Korea%20Palace%20Through%20Doorway.jpg",
-	"photography/Friends_in_Front_of_San_Francisco_placeholder_jpg": "/photography/Friends%20in%20Front%20of%20San%20Francisco.placeholder.jpg",
-	"photography/Korean_Artist_in_Tent_placeholder_jpg": "/photography/Korean%20Artist%20in%20Tent.placeholder.jpg",
-	"photography/_USA_Road_Trip_3_jpg": "/photography/%20%28USA%20Road%20Trip%29-3.jpg",
-	"photography/Washington_Monument_in_Front_of_Lincoln_Memorial_At_Night_placeholder_jpg": "/photography/Washington%20Monument%20in%20Front%20of%20Lincoln%20Memorial%20At%20Night.placeholder.jpg",
-	"photography/Marin_High_School_Tennis_Courts_Drone_Top_Down_jpg": "/photography/Marin%20High%20School%20Tennis%20Courts%20Drone%20Top%20Down.jpg",
-	"photography/The_Flavors_of_a_Sunset_in_Florence_Italy_jpg": "/photography/The%20Flavors%20of%20a%20Sunset%20in%20Florence%2C%20Italy.jpg",
-	"photography/New_York_Times_Square_Smoke_Looks_Like_Fire_jpg": "/photography/New%20York%20Times%20Square%20Smoke%20Looks%20Like%20Fire.jpg",
-	"photography/_USA_Road_Trip_7_jpg": "/photography/%20%28USA%20Road%20Trip%29-7.jpg",
-	"photography/Route_89_Wyoming_Drone_Landscape_jpg": "/photography/Route%2089%20Wyoming%20Drone%20Landscape.jpg",
-	"photography/Princeton_Canal_Vertical_Reflection_Drone_placeholder_jpg": "/photography/Princeton%20Canal%20Vertical%20Reflection%20Drone.placeholder.jpg",
-	"photography/Landscape_Panorama_of_Las_Terrenas_Dominican_Republic_jpg": "/photography/Landscape%20Panorama%20of%20Las%20Terrenas%2C%20Dominican%20Republic.jpg",
-	"photography/Shek_Lek_Pui_Reservoir_Drone_Vertical_jpg": "/photography/Shek%20Lek%20Pui%20Reservoir%20Drone%20%28Vertical%29.jpg",
-	"photography/Chiang_Kai_Shek_Memorial_With_Moon_At_Night_jpg": "/photography/Chiang%20Kai%20Shek%20Memorial%20With%20Moon%20At%20Night.jpg",
-	"photography/Presidio_in_San_Francisco_Satellite_jpg": "/photography/Presidio%20in%20San%20Francisco%20%28Satellite%29.jpg",
-	"photography/Friends_on_Bear_Valley_Cliff_During_Sunset_jpg": "/photography/Friends%20on%20Bear%20Valley%20Cliff%20During%20Sunset.jpg",
-	"photography/Friends_Hanging_Out_at_Off_the_Grid_jpg": "/photography/Friends%20Hanging%20Out%20at%20Off%20the%20Grid.jpg",
-	"photography/Top_Down_Beach_Houses_Drone_Las_Terrenas_Dominican_Republic_placeholder_jpg": "/photography/Top%20Down%20Beach%20Houses%20Drone%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
-	"photography/Mong_Kok_Station_Entrance_placeholder_jpg": "/photography/Mong%20Kok%20Station%20Entrance.placeholder.jpg",
-	"photography/Bonneville_Salt_Flats_Stormy_Vertical_Drone_placeholder_jpg": "/photography/Bonneville%20Salt%20Flats%20Stormy%20Vertical%20Drone_.placeholder.jpg",
-	"photography/Sitting_in_Window_Sill_in_Snow_placeholder_jpg": "/photography/Sitting%20in%20Window%20Sill%20in%20Snow.placeholder.jpg",
-	"photography/Mong_Kok_Neon_Signs_Vertical_placeholder_jpg": "/photography/Mong%20Kok%20Neon%20Signs%20%28Vertical%29.placeholder.jpg",
-	"photography/San_Francisco_Trolley_at_Night_placeholder_jpg": "/photography/San%20Francisco%20Trolley%20at%20Night.placeholder.jpg",
-	"photography/Mori_Point_Pacifica_Long_Exposure_Rocks_placeholder_jpg": "/photography/Mori%20Point%20Pacifica%20Long%20Exposure%20Rocks.placeholder.jpg",
-	"photography/_USA_Road_Trip_7_placeholder_jpg": "/photography/%20%28USA%20Road%20Trip%29-7.placeholder.jpg",
-	"photography/Mori_Point_Pacifica_Sunset_placeholder_jpg": "/photography/Mori%20Point%20Pacifica%20Sunset.placeholder.jpg",
-	"photography/Taiwan_Ximen_Long_Exposure_Crossing_Walk_Cyberpunk_Neon_jpg": "/photography/Taiwan%20Ximen%20Long%20Exposure%20Crossing%20Walk%20Cyberpunk%20Neon.jpg",
-	"photography/Patton_Hall_Drone_jpg": "/photography/Patton%20Hall%20Drone.jpg",
-	"photography/San_Francisco_Downtown_Twilight_Sunset_Drone_Panorama_placeholder_jpg": "/photography/San%20Francisco%20Downtown%20Twilight%20Sunset%20Drone%20Panorama.placeholder.jpg",
-	"photography/Top_of_the_Rock_Sign_jpg": "/photography/Top%20of%20the%20Rock%20Sign.jpg",
-	"photography/Bear_Valley_Mountains_Drone_Landscape_placeholder_jpg": "/photography/Bear%20Valley%20Mountains%20Drone%20Landscape.placeholder.jpg",
-	"photography/Grand_Teton_Mountains_Panorama_jpg": "/photography/Grand%20Teton%20Mountains%20Panorama.jpg",
-	"photography/Time_Square_Taxi_jpg": "/photography/Time%20Square%20Taxi.jpg",
-	"photography/Lake_Tahoe_Satellite_Photo_placeholder_jpg": "/photography/Lake%20Tahoe%20Satellite%20Photo.placeholder.jpg",
-	"photography/Lensball_Mong_Kok_Neon_Cyberpunk_placeholder_jpg": "/photography/Lensball%20Mong%20Kok%20Neon%20Cyberpunk.placeholder.jpg",
-	"photography/Drone_Vertical_of_Las_Terrenas_Dominican_Republic_jpg": "/photography/Drone%20Vertical%20of%20Las%20Terrenas%20Dominican%20Republic.jpg",
-	"photography/Bonneville_Salt_Flats_Stormy_Mountains_Vertical_Drone_placeholder_jpg": "/photography/Bonneville%20Salt%20Flats%20Stormy%20Mountains%20Vertical%20Drone_.placeholder.jpg",
-	"photography/Seattle_Orange_Cityscape_Drone_Horizontal_placeholder_jpg": "/photography/Seattle%20Orange%20Cityscape%20Drone%20Horizontal.placeholder.jpg",
-	"photography/Rubicon_Peak_Self_Portrait_placeholder_jpg": "/photography/Rubicon%20Peak%20Self%20Portrait.placeholder.jpg",
-	"photography/Wave_and_Rock_in_Foreground_Golden_Gate_Bridge_in_Background_jpg": "/photography/Wave%20and%20Rock%20in%20Foreground%2C%20Golden%20Gate%20Bridge%20in%20Background.jpg",
-	"photography/Downtown_San_Francisco_Drone_Vertical_Powell_Street_Intersection_jpg": "/photography/Downtown%20San%20Francisco%20Drone%20Vertical%20Powell%20Street%20Intersection.jpg",
-	"photography/Ponte_Vittorio_Emanuele_II_Bridge_in_Italy_Across_from_St_Angelo_Bridge_placeholder_jpg": "/photography/Ponte%20Vittorio%20Emanuele%20II%20Bridge%20in%20Italy%20%28Across%20from%20St.%20Angelo%20Bridge%29.placeholder.jpg",
-	"photography/Ponte_Vittorio_Emanuele_II_Bridge_in_Italy_Across_from_St_Angelo_Bridge_jpg": "/photography/Ponte%20Vittorio%20Emanuele%20II%20Bridge%20in%20Italy%20%28Across%20from%20St.%20Angelo%20Bridge%29.jpg",
-	"photography/Bike_Wheel_on_Ground_Sunset_1903_Courtyard_jpg": "/photography/Bike%20Wheel%20on%20Ground%20Sunset%201903%20Courtyard.jpg",
-	"photography/Shek_Lek_Pui_Reservoir_Drone_Vertical_placeholder_jpg": "/photography/Shek%20Lek%20Pui%20Reservoir%20Drone%20%28Vertical%29.placeholder.jpg",
-	"photography/Ladies_Market_Balcony_Long_Exposure_jpg": "/photography/Ladies%20Market%20Balcony%20Long%20Exposure.jpg",
-	"photography/Ximen_Taiwan_Long_Exposure_Cars_Neon_Cyberpunk_jpg": "/photography/Ximen%2C%20Taiwan%20Long%20Exposure%20Cars%20Neon%20Cyberpunk.jpg",
-	"photography/Sunset_Sillhouette_Vertical_Las_Terrenas_Dominican_Republic_placeholder_jpg": "/photography/Sunset%20Sillhouette%20Vertical%20Las%20Terrenas%2C%20Dominican%20Republic.placeholder.jpg",
-	"photography/Man_Walking_Bike_in_Front_of_Duomo_in_Florence_jpg": "/photography/Man%20Walking%20Bike%20in%20Front%20of%20Duomo%20in%20Florence.jpg",
-	"photography/Grand_Teton_Bison_Landscape_placeholder_jpg": "/photography/Grand%20Teton%20Bison%20Landscape.placeholder.jpg",
-	"photography/Portrait_in_Front_of_Vatican_on_Bridge_at_Sunset_jpg": "/photography/Portrait%20in%20Front%20of%20Vatican%20on%20Bridge%20at%20Sunset.jpg",
-	"photography/Korean_Arcade_Portrait_placeholder_jpg": "/photography/Korean%20Arcade%20Portrait.placeholder.jpg",
-	"photography/Hong_Kong_Night_Skyline_Long_Exposure_placeholder_jpg": "/photography/Hong%20Kong%20Night%20Skyline%20Long%20Exposure.placeholder.jpg",
-	"photography/_USA_Road_Trip_6_jpg": "/photography/%20%28USA%20Road%20Trip%29-6.jpg",
-	"photography/Choi_Hung_Estate_Tiny_Planet_jpg": "/photography/Choi%20Hung%20Estate%20Tiny%20Planet.jpg",
-	"photography/_USA_Road_Trip_4_jpg": "/photography/%20%28USA%20Road%20Trip%29-4.jpg",
-	"photography/Florence_Portrait_View_of_City_Looking_Down_Road_jpg": "/photography/Florence%20Portrait%20View%20of%20City%20Looking%20Down%20Road.jpg",
-	"photography/Delta_Lake_Product_Shot_placeholder_jpg": "/photography/Delta%20Lake%20Product%20Shot.placeholder.jpg",
-	"photography/Fishing_Rod_Close_Up_placeholder_jpg": "/photography/Fishing%20Rod%20Close%20Up.placeholder.jpg",
-	"photography/Embarcadero_Drone_Ferry_Building_Daytime_Vertical_placeholder_jpg": "/photography/Embarcadero%20Drone%20Ferry%20Building%20Daytime%20Vertical.placeholder.jpg",
-	"photography/Korean_Market_Street_Food_Vendor_jpg": "/photography/Korean%20Market%20Street%20Food%20Vendor.jpg",
-	"photography/Cottage_and_Ivy_on_Prospect_Street_placeholder_jpg": "/photography/Cottage%20and%20Ivy%20on%20Prospect%20Street.placeholder.jpg",
-	"photography/Whitman_Lower_Courtyard_in_Snow_jpg": "/photography/Whitman%20Lower%20Courtyard%20in%20Snow.jpg",
-	"photography/Golden_Gate_Bridge_Through_Fence_Long_Exposure_placeholder_jpg": "/photography/Golden%20Gate%20Bridge%20Through%20Fence%20%28Long%20Exposure%29.placeholder.jpg",
-	"photography/Times_Square_Santa_placeholder_jpg": "/photography/Times%20Square%20Santa.placeholder.jpg",
-	"photography/Top_Down_Beach_Houses_Drone_Las_Terrenas_Dominican_Republic_jpg": "/photography/Top%20Down%20Beach%20Houses%20Drone%20Las%20Terrenas%20Dominican%20Republic.jpg",
-	"photography/Golden_Gate_Bridge_Looking_Down_From_Marin_Lookout_jpg": "/photography/Golden%20Gate%20Bridge%20Looking%20Down%20From%20Marin%20Lookout.jpg",
-	"photography/San_Francisco_Downtown_Through_Car_Mirror_placeholder_jpg": "/photography/San%20Francisco%20Downtown%20Through%20Car%20Mirror.placeholder.jpg",
-	"photography/Girl_with_Suitcase_During_Covid_19_Evacuation_of_Princeton_placeholder_jpg": "/photography/Girl%20with%20Suitcase%20During%20Covid-19%20Evacuation%20of%20Princeton.placeholder.jpg",
-	"photography/Seoul_Korea_Alleyway_placeholder_jpg": "/photography/Seoul%2C%20Korea%20Alleyway.placeholder.jpg",
-	"photography/THS_Tennis_Court_Drone_Top_Down_jpg": "/photography/THS%20Tennis%20Court%20Drone%20%28Top%20Down%29.jpg",
-	"photography/Korean_Bar_Through_Tree_Branches_jpg": "/photography/Korean%20Bar%20Through%20Tree%20Branches.jpg",
-	"photography/Gardens_by_the_Bay_Vertical_Drone_jpg": "/photography/Gardens%20by%20the%20Bay%20%28Vertical%20Drone%29.jpg",
-	"photography/Arch_of_Constantine_Rome_jpg": "/photography/Arch%20of%20Constantine%2C%20Rome.jpg",
-	"photography/Hong_Kong_Night_Skyline_Vertical_jpg": "/photography/Hong%20Kong%20Night%20Skyline%20%28Vertical%29.jpg",
-	"photography/Small_World_Coffee_on_Cloudy_Day_placeholder_jpg": "/photography/Small%20World%20Coffee%20on%20Cloudy%20Day.placeholder.jpg",
-	"photography/Moose_Reserve_Jackson_Hole_Wyoming_placeholder_jpg": "/photography/Moose%20Reserve%20Jackson%20Hole%2C%20Wyoming.placeholder.jpg",
-	"photography/St_Angelo_Bridge_with_Vatican_in_Background_jpg": "/photography/St.%20Angelo%20Bridge%20with%20Vatican%20in%20Background.jpg",
-	"photography/Singapore_Blue_Apartment_jpg": "/photography/Singapore%20Blue%20Apartment.jpg",
-	"photography/Mai_Chau_Rice_Fields_Panorama_Drone_jpg": "/photography/Mai%20Chau%20Rice%20Fields%20Panorama%20Drone.jpg",
-	"photography/Grand_Teton_National_Park_Bison_jpg": "/photography/Grand%20Teton%20National%20Park%20Bison.jpg",
-	"photography/Shibuya_Shopping_Tokyo_Landscape_jpg": "/photography/Shibuya%20Shopping%20Tokyo%20Landscape.jpg",
-	"photography/Monster_Mansion_Vertical_placeholder_jpg": "/photography/Monster%20Mansion%20Vertical.placeholder.jpg",
-	"photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_White_Bird_Flying_placeholder_jpg": "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20White%20Bird%20Flying.placeholder.jpg",
-	"photography/Hong_Kong_Downtown_Horizon_Drone_Pinewood_Battery_placeholder_jpg": "/photography/Hong%20Kong%20Downtown%20Horizon%20Drone%20Pinewood%20Battery.placeholder.jpg",
-	"photography/Whitman_Upper_Courtyard_in_Snow_placeholder_jpg": "/photography/Whitman%20Upper%20Courtyard%20in%20Snow.placeholder.jpg",
-	"photography/Princeton_University_Chapel_and_Surrounding_Campus_by_Drone_jpg": "/photography/Princeton%20University%20Chapel%20and%20Surrounding%20Campus%20by%20Drone.jpg",
-	"photography/Blair_Arch_Tigerlilies_Drone_8x10_placeholder_jpg": "/photography/Blair%20Arch%20Tigerlilies%20Drone%20%288x10%29.placeholder.jpg",
-	"photography/At_T_Park_Mission_Bay_San_Francisco_placeholder_jpg": "/photography/At%26T%20Park%20Mission%20Bay%20San%20Francisco.placeholder.jpg",
-	"photography/Restaurant_at_Night_in_Rome_Italy_placeholder_jpg": "/photography/Restaurant%20at%20Night%20in%20Rome%2C%20Italy.placeholder.jpg",
-	"photography/Fall_Leaves_in_Yosemite_valley_jpg": "/photography/Fall%20Leaves%20in%20Yosemite%20valley.jpg",
-	"photography/Badlands_Bright_Vertical_placeholder_jpg": "/photography/Badlands%20Bright%20Vertical.placeholder.jpg",
-	"photography/Marin_Headlands_Sunset_jpg": "/photography/Marin%20Headlands%20Sunset.jpg",
-	"photography/House_at_the_Base_of_the_Tetons_in_Teton_Village_jpg": "/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.jpg",
-	"photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_jpg": "/photography/Embarcadero%20Drone%20Ferry%20Building%20Night%20Horizontal.jpg",
-	"photography/Taipei_101_Binoculars_placeholder_jpg": "/photography/Taipei%20101%20Binoculars.placeholder.jpg",
-	"photography/Palace_of_Fine_Arts_Vertical_Drone_placeholder_jpg": "/photography/Palace%20of%20Fine%20Arts%20Vertical%20Drone.placeholder.jpg",
-	"photography/_USA_Road_Trip_5_jpg": "/photography/%20%28USA%20Road%20Trip%29-5.jpg",
-	"photography/Princeton_Lewis_Science_Library_and_Fine_Hall_Drone_placeholder_jpg": "/photography/Princeton%20Lewis%20Science%20Library%20and%20Fine%20Hall%20Drone.placeholder.jpg",
-	"photography/Loneliest_Road_Vertical_Drone_USA_Road_Trip_placeholder_jpg": "/photography/Loneliest%20Road%20Vertical%20Drone%20%28USA%20Road%20Trip%29.placeholder.jpg",
-	"photography/Badlands_Bright_Vertical_jpg": "/photography/Badlands%20Bright%20Vertical.jpg",
-	"photography/Mong_Kok_Hong_Kong_Neon_Signs_2_placeholder_jpg": "/photography/Mong%20Kok%2C%20Hong%20Kong%20Neon%20Signs%202.placeholder.jpg",
-	"photography/Hong_Kong_Night_Market_Food_Stand_Vertical_placeholder_jpg": "/photography/Hong%20Kong%20Night%20Market%20Food%20Stand%20%28Vertical%29.placeholder.jpg",
-	"photography/San_Francisco_Downtown_First_Drone_Flight_jpg": "/photography/San%20Francisco%20Downtown%20First%20Drone%20Flight.jpg",
-	"photography/San_Francisco_Ferry_Building_Through_Buildings_jpg": "/photography/San%20Francisco%20Ferry%20Building%20Through%20Buildings.jpg",
-	"photography/Friends_in_Front_of_San_Francisco_jpg": "/photography/Friends%20in%20Front%20of%20San%20Francisco.jpg",
-	"photography/Supreme_Court_Landscape_Nine_Seats_jpg": "/photography/Supreme%20Court%20Landscape%20Nine%20Seats.jpg",
-	"photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Blue_and_Pink_Panorama_jpg": "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Blue%20and%20Pink%20Panorama.jpg",
-	"photography/Temple_Street_Market_Overview_placeholder_jpg": "/photography/Temple%20Street%20Market%20Overview.placeholder.jpg",
-	"photography/Panorama_of_Arno_River_in_Pisa_Italy_placeholder_jpg": "/photography/Panorama%20of%20Arno%20River%20in%20Pisa%2C%20Italy.placeholder.jpg",
-	"photography/Steel_Wool_Basketball_Hoop_Milky_Way_jpg": "/photography/Steel%20Wool%20Basketball%20Hoop%20Milky%20Way.jpg",
-	"photography/Tsim_Sha_Tsui_Lensball_Long_Exposure_jpg": "/photography/Tsim%20Sha%20Tsui%20Lensball%20Long%20Exposure.jpg",
-	"photography/New_York_City_Park_Ave_Looking_Downtown_in_Rain_jpg": "/photography/New%20York%20City%20Park%20Ave%20Looking%20Downtown%20in%20Rain.jpg",
-	"photography/The_Flavors_of_a_Sunset_in_Florence_Italy_placeholder_jpg": "/photography/The%20Flavors%20of%20a%20Sunset%20in%20Florence%2C%20Italy.placeholder.jpg",
-	"photography/Princeton_Graduate_College_at_Night_Stars_jpg": "/photography/Princeton%20Graduate%20College%20at%20Night%20Stars.jpg",
-	"photography/New_York_Street_Artist_Side_placeholder_jpg": "/photography/New%20York%20Street%20Artist%20%28Side%29.placeholder.jpg",
-	"photography/Ximen_Taiwan_Long_Exposure_placeholder_jpg": "/photography/Ximen%2C%20Taiwan%20Long%20Exposure.placeholder.jpg",
-	"photography/Transamerica_Building_with_Halo_placeholder_jpg": "/photography/Transamerica%20Building%20with%20Halo.placeholder.jpg",
-	"photography/Backcountry_Greenwich_Drone_Landscape_placeholder_jpg": "/photography/Backcountry%20Greenwich%20Drone%20Landscape.placeholder.jpg",
-	"photography/DSLR_With_Lensball_Image_on_Screen_placeholder_jpg": "/photography/DSLR%20With%20Lensball%20Image%20on%20Screen.placeholder.jpg",
-	"photography/Magical_Grass_Astro_Shot_placeholder_jpg": "/photography/Magical%20Grass%20Astro%20Shot.placeholder.jpg",
-	"photography/Rain_Walking_Motion_Blur_in_Milan_placeholder_jpg": "/photography/Rain%20Walking%20Motion%20Blur%20in%20Milan.placeholder.jpg",
-	"photography/Washington_Monument_Night_Silohouette_Self_Portrait_With_Stars_jpg": "/photography/Washington%20Monument%20Night%20Silohouette%20Self%20Portrait%20With%20Stars.jpg",
-	"photography/Fruit_Market_Stand_in_Florence_Italy_jpg": "/photography/Fruit%20Market%20Stand%20in%20Florence%2C%20Italy.jpg",
-	"photography/Bay_Bridge_with_San_Francisco_Skyline_jpg": "/photography/Bay%20Bridge%20with%20San%20Francisco%20Skyline.jpg",
-	"photography/Hong_Kong_Grid_Apartment_Drone_Vertical_jpg": "/photography/Hong%20Kong%20Grid%20Apartment%20Drone%20Vertical.jpg",
-	"photography/Seoul_Korea_SIgns_in_Alleyway_jpg": "/photography/Seoul%2C%20Korea%20SIgns%20in%20Alleyway.jpg",
-	"photography/San_Francisco_Hills_Trolley_Downtown_Vertical_jpg": "/photography/San%20Francisco%20Hills%20Trolley%20Downtown%20Vertical.jpg",
-	"photography/Meat_Shop_in_Florence_Italy_placeholder_jpg": "/photography/Meat%20Shop%20in%20Florence%2C%20Italy.placeholder.jpg",
-	"photography/New_York_Hudson_Yards_Rooftop_Panorama_placeholder_jpg": "/photography/New%20York%20Hudson%20Yards%20Rooftop%20Panorama.placeholder.jpg",
-	"photography/Aerial_View_of_Half_Moon_Bay_placeholder_jpg": "/photography/Aerial%20View%20of%20Half%20Moon%20Bay.placeholder.jpg",
-	"photography/Statue_of_David_Florence_Italy_placeholder_jpg": "/photography/Statue%20of%20David%2C%20Florence%2C%20Italy.placeholder.jpg",
-	"photography/Phi_Phi_Island_Thailand_Panorama_placeholder_jpg": "/photography/Phi%20Phi%20Island%2C%20Thailand%20Panorama.placeholder.jpg",
-	"photography/Desmond_Standing_in_Front_of_Capitol_Building_placeholder_jpg": "/photography/Desmond%20Standing%20in%20Front%20of%20Capitol%20Building.placeholder.jpg",
-	"photography/Landscape_Panorama_of_Las_Terrenas_Dominican_Republic_placeholder_jpg": "/photography/Landscape%20Panorama%20of%20Las%20Terrenas%2C%20Dominican%20Republic.placeholder.jpg",
-	"photography/Bike_in_Pisa_Italy_jpg": "/photography/Bike%20in%20Pisa%2C%20Italy.jpg",
-	"photography/Marin_Headlands_Sunset_Road_jpg": "/photography/Marin%20Headlands%20Sunset%20Road.jpg",
-	"photography/Larry_Bao_Two_Man_Crew_Rowing_Boat_Top_Down_placeholder_jpg": "/photography/Larry%20Bao%20Two%20Man%20Crew%20Rowing%20Boat%20Top%20Down.placeholder.jpg",
-	"photography/Big_Wave_Beach_Hong_Kong_Top_Down_Drone_jpg": "/photography/Big%20Wave%20Beach%2C%20Hong%20Kong%20Top%20Down%20Drone.jpg",
-	"photography/New_York_Hudson_Yards_Rooftop_Panorama_jpg": "/photography/New%20York%20Hudson%20Yards%20Rooftop%20Panorama.jpg",
-	"photography/Shore_Stimulations_Dominican_Republic_Top_Down_Drone_Beach_placeholder_jpg": "/photography/Shore%20Stimulations%20%28Dominican%20Republic%20Top%20Down%20Drone%20Beach%29.placeholder.jpg",
-	"photography/Trevor_Snowboard_at_Top_of_Mountain_placeholder_jpg": "/photography/Trevor%20Snowboard%20at%20Top%20of%20Mountain.placeholder.jpg",
-	"photography/Ping_Shek_Estate_Basketball_Hoop_jpg": "/photography/Ping%20Shek%20Estate%20Basketball%20Hoop.jpg",
-	"photography/Shinjuku_Tokyo_Japan_Vertical_jpg": "/photography/Shinjuku%2C%20Tokyo%2C%20Japan%20%28Vertical%29.jpg",
-	"photography/Cherry_Blossums_Seoul_Korea_jpg": "/photography/Cherry%20Blossums%2C%20Seoul%2C%20Korea.jpg",
-	"photography/Sai_Wan_Drone_Vertical_placeholder_jpg": "/photography/Sai%20Wan%20Drone%20%28Vertical%29.placeholder.jpg",
-	"photography/Roman_Forum_Ruins_placeholder_jpg": "/photography/Roman%20Forum%20Ruins.placeholder.jpg",
-	"photography/Bear_Valley_Bear_Lake_Paddleboarding_Vertical_placeholder_jpg": "/photography/Bear%20Valley%20Bear%20Lake%20Paddleboarding%20Vertical.placeholder.jpg",
-	"photography/Looking_Down_Fulton_Street_Vertical_placeholder_jpg": "/photography/Looking%20Down%20Fulton%20Street%20Vertical.placeholder.jpg",
-	"photography/Bear_Valley_Bear_Lake_Paddleboarding_Vertical_jpg": "/photography/Bear%20Valley%20Bear%20Lake%20Paddleboarding%20Vertical.jpg",
-	"photography/Statistics_and_Machine_Learning_Building_jpg": "/photography/Statistics%20and%20Machine%20Learning%20Building.jpg",
-	"photography/Bear_Valley_Astrophotography_Portrait_placeholder_jpg": "/photography/Bear%20Valley%20Astrophotography%20%28Portrait%29.placeholder.jpg",
-	"photography/Hie_Shrine_Tokyo_Japan_placeholder_jpg": "/photography/Hie%20Shrine%2C%20Tokyo%2C%20Japan.placeholder.jpg",
-	"photography/Desmond_Standing_in_Front_of_Capitol_Building_jpg": "/photography/Desmond%20Standing%20in%20Front%20of%20Capitol%20Building.jpg",
-	"photography/Lake_Carnegie_Boat_in_Still_Water_Sunset_Vertical_placeholder_jpg": "/photography/Lake%20Carnegie%20Boat%20in%20Still%20Water%20Sunset%20Vertical.placeholder.jpg",
-	"photography/Princeton_Football_Field_Down_jpg": "/photography/Princeton%20Football%20Field%20%28Down%29.jpg",
-	"photography/Christmas_Tree_Bokeh_Outside_Duomo_in_Florence_jpg": "/photography/Christmas%20Tree%20Bokeh%20Outside%20Duomo%20in%20Florence.jpg",
-	"photography/1903_Courtyard_Milky_Way_Wide_Angle_placeholder_jpg": "/photography/1903%20Courtyard%20Milky%20Way%20Wide%20Angle.placeholder.jpg",
-	"photography/Princeton_Canal_Vertical_Reflection_Drone_jpg": "/photography/Princeton%20Canal%20Vertical%20Reflection%20Drone.jpg",
-	"photography/New_York_Street_Artist_Front_jpg": "/photography/New%20York%20Street%20Artist%20%28Front%29.jpg",
-	"photography/Italy_House_in_Small_Courtyard_jpg": "/photography/Italy%20House%20in%20Small%20Courtyard.jpg",
-	"photography/Shifen_Waterfall_Long_Exposure_Taiwan_jpg": "/photography/Shifen%20Waterfall%20Long%20Exposure%20Taiwan.jpg",
-	"photography/Pigeon_Point_Lighthouse_Milky_Way_with_Meteor_jpg": "/photography/Pigeon%20Point%20Lighthouse%20Milky%20Way%20with%20Meteor.jpg",
-	"photography/Tabernacle_Temple_Square_placeholder_jpg": "/photography/Tabernacle%20Temple%20Square.placeholder.jpg",
-	"photography/Hong_Kong_Night_Market_Food_Stand_Vertical_jpg": "/photography/Hong%20Kong%20Night%20Market%20Food%20Stand%20%28Vertical%29.jpg",
-	"photography/1903_Courtyard_Sunset_Down_Stairs_jpg": "/photography/1903%20Courtyard%20Sunset%20Down%20Stairs.jpg",
-	"photography/Colosseum_and_Ancient_Ruins_in_Rome_placeholder_jpg": "/photography/Colosseum%20and%20Ancient%20Ruins%20in%20Rome.placeholder.jpg",
-	"photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Vertical_Dark_placeholder_jpg": "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Vertical%20Dark.placeholder.jpg",
-	"photography/Tokyo_Shinjuku_Alley_Cyberpunk_Neon_jpg": "/photography/Tokyo%20Shinjuku%20Alley%20Cyberpunk%20Neon.jpg",
-	"photography/Mai_Chau_Rice_Paddies_Sunset_Panorama_2_jpg": "/photography/Mai%20Chau%20Rice%20Paddies%20Sunset%20Panorama%202.jpg",
-	"photography/Halong_Bay_Sunset_Panorama_placeholder_jpg": "/photography/Halong%20Bay%20Sunset%20Panorama.placeholder.jpg",
-	"photography/_USA_Road_Trip_2_placeholder_jpg": "/photography/%20%28USA%20Road%20Trip%29-2.placeholder.jpg",
-	"photography/New_York_Looking_Down_Street_from_High_Line_Vertical_jpg": "/photography/New%20York%20Looking%20Down%20Street%20from%20High%20Line%20-%20Vertical.jpg",
-	"photography/Shinjuku_Tokyo_Japan_Horizontal_jpg": "/photography/Shinjuku%2C%20Tokyo%2C%20Japan%20%28Horizontal%29.jpg",
-	"photography/Coffee_Shop_Counter_in_Florence_Italy_jpg": "/photography/Coffee%20Shop%20Counter%20in%20Florence%2C%20Italy.jpg",
-	"photography/Portrait_in_front_of_Golden_Gate_on_Baker_Beach_jpg": "/photography/Portrait%20in%20front%20of%20Golden%20Gate%20on%20Baker%20Beach.jpg",
-	"photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Vertical_Pink_Bright_Far_jpg": "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Vertical%20Pink%20Bright%20Far.jpg",
-	"photography/2_placeholder_jpg": "/photography/2.placeholder.jpg",
-	"photography/Road_to_Hana_Cliffside_placeholder_jpg": "/photography/Road%20to%20Hana%20Cliffside.placeholder.jpg",
-	"photography/Crashing_Waves_into_Coastline_Dominican_Republic_Drone_Top_Down_placeholder_jpg": "/photography/Crashing%20Waves%20into%20Coastline%20Dominican%20Republic%20Drone%20Top%20Down.placeholder.jpg",
-	"photography/Loneliest_Road_Vertical_Drone_placeholder_jpg": "/photography/Loneliest%20Road%20Vertical%20Drone.placeholder.jpg",
-	"photography/Jiufen_Taiwan_Drone_Horizontal_placeholder_jpg": "/photography/Jiufen%2C%20Taiwan%20Drone%20-%20Horizontal.placeholder.jpg",
-	"photography/Jewel_Cave_Colorful_Rocks_placeholder_jpg": "/photography/Jewel%20Cave%20Colorful%20Rocks.placeholder.jpg",
-	"photography/Seattle_Vertical_Drone_Space_Needle_Sunset_placeholder_jpg": "/photography/Seattle%20Vertical%20Drone%20Space%20Needle%20Sunset.placeholder.jpg",
-	"photography/Golden_Gate_Bridge_Peering_Through_Rocks_jpg": "/photography/Golden%20Gate%20Bridge%20Peering%20Through%20Rocks.jpg",
-	"photography/Trolley_in_Milan_Italy_in_Rain_jpg": "/photography/Trolley%20in%20Milan%2C%20Italy%20in%20Rain.jpg",
-	"photography/Palm_Tree_Shadows_Top_Down_Drone_Las_Terrenas_Dominican_Republic_jpg": "/photography/Palm%20Tree%20Shadows%20Top%20Down%20Drone%20Las%20Terrenas%2C%20Dominican%20Republic.jpg",
-	"photography/THS_Tennis_Court_Drone_Drone_Art_placeholder_jpg": "/photography/THS%20Tennis%20Court%20Drone%20%28Drone%20Art%29.placeholder.jpg",
-	"photography/New_York_Taxi_in_Rain_on_Park_Ave_jpg": "/photography/New%20York%20Taxi%20in%20Rain%20on%20Park%20Ave.jpg",
-	"photography/Lake_Tahoe_Satellite_Photo_jpg": "/photography/Lake%20Tahoe%20Satellite%20Photo.jpg",
-	"photography/Twin_Peaks_Biker_Going_Down_U_Bend_jpg": "/photography/Twin%20Peaks%20Biker%20Going%20Down%20U%20Bend.jpg",
-	"photography/Times_Square_Screens_placeholder_jpg": "/photography/Times%20Square%20Screens.placeholder.jpg",
-	"photography/Flat_Iron_Building_With_Taxi_Motion_Blur_placeholder_jpg": "/photography/Flat%20Iron%20Building%20With%20Taxi%20Motion%20Blur.placeholder.jpg",
-	"photography/Kowloon_ICC_Skyline_jpg": "/photography/Kowloon%20ICC%20Skyline.jpg",
-	"photography/New_York_Times_Square_Smoke_Looks_Like_Fire_placeholder_jpg": "/photography/New%20York%20Times%20Square%20Smoke%20Looks%20Like%20Fire.placeholder.jpg",
-	"photography/Trevor_Sitting_on_Rubicon_Peak_Looking_Out_placeholder_jpg": "/photography/Trevor%20Sitting%20on%20Rubicon%20Peak%20Looking%20Out.placeholder.jpg",
-	"photography/New_York_Times_Square_Taxi_Car_Neon_Cyberpunk_placeholder_jpg": "/photography/New%20York%20Times%20Square%20Taxi%20Car%20Neon%20Cyberpunk.placeholder.jpg",
-	"photography/1903_Courtyard_Milky_Way_Wide_Angle_jpg": "/photography/1903%20Courtyard%20Milky%20Way%20Wide%20Angle.jpg",
-	"photography/Colonial_Looking_Through_the_Trees_Vertical_placeholder_jpg": "/photography/Colonial%20Looking%20Through%20the%20Trees%20Vertical.placeholder.jpg",
-	"photography/Coffee_Shop_Counter_in_Florence_Italy_placeholder_jpg": "/photography/Coffee%20Shop%20Counter%20in%20Florence%2C%20Italy.placeholder.jpg",
-	"photography/Tokyo_Cherry_Blossums_jpg": "/photography/Tokyo%20Cherry%20Blossums.jpg",
-	"photography/Hong_Kong_Red_Taxi_Motion_Blur_Horizontal_jpg": "/photography/Hong%20Kong%20Red%20Taxi%20Motion%20Blur%20%28Horizontal%29.jpg",
-	"photography/Hong_Kong_Skyline_Panorama_placeholder_jpg": "/photography/Hong%20Kong%20Skyline%20Panorama.placeholder.jpg",
-	"photography/Route_89_Wyoming_Drone_Top_Down_jpg": "/photography/Route%2089%20Wyoming%20Drone%20Top%20Down.jpg",
-	"photography/Rubicon_Peak_Self_Portrait_jpg": "/photography/Rubicon%20Peak%20Self%20Portrait.jpg",
-	"photography/Embarcadero_Aerial_View_at_Sunset_placeholder_jpg": "/photography/Embarcadero%20Aerial%20View%20at%20Sunset.placeholder.jpg",
-	"photography/Dancers_in_Hong_Kong_3_jpg": "/photography/Dancers%20in%20Hong%20Kong%20-%203.jpg",
-	"photography/Jewel_Cave_Colorful_Rocks_jpg": "/photography/Jewel%20Cave%20Colorful%20Rocks.jpg",
-	"photography/Aerial_View_of_Half_Moon_Bay_Beach_jpg": "/photography/Aerial%20View%20of%20Half%20Moon%20Bay%20Beach.jpg",
-	"photography/Single_Person_Lying_on_Beach_Top_Down_Drone_Las_Terrenas_Dominican_Republic_jpg": "/photography/Single%20Person%20Lying%20on%20Beach%20Top%20Down%20Drone%20Las%20Terrenas%20Dominican%20Republic.jpg",
-	"photography/Lands_End_San_Francisco_Large_Rock_at_Sea_placeholder_jpg": "/photography/Lands%20End%20San%20Francisco%20Large%20Rock%20at%20Sea.placeholder.jpg",
-	"photography/Shibuya_Crossing_Taxi_Motion_Blur_placeholder_jpg": "/photography/Shibuya%20Crossing%20Taxi%20Motion%20Blur.placeholder.jpg",
-	"photography/Yosemite_Valley_Sunset_placeholder_jpg": "/photography/Yosemite%20Valley%20Sunset.placeholder.jpg",
-	"photography/Princeton_Lewis_Science_Library_and_Fine_Hall_Drone_jpg": "/photography/Princeton%20Lewis%20Science%20Library%20and%20Fine%20Hall%20Drone.jpg",
-	"photography/Friends_on_Bear_Valley_Cliff_During_Sunset_placeholder_jpg": "/photography/Friends%20on%20Bear%20Valley%20Cliff%20During%20Sunset.placeholder.jpg",
-	"photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_White_Bird_Flying_jpg": "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20White%20Bird%20Flying.jpg",
-	"photography/Single_Man_in_Badlands_jpg": "/photography/Single%20Man%20in%20Badlands.jpg",
-	"photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_placeholder_jpg": "/photography/Embarcadero%20Drone%20Ferry%20Building%20Night%20Horizontal.placeholder.jpg",
-	"photography/Looking_out_at_Bear_Valley_Drone_placeholder_jpg": "/photography/Looking%20out%20at%20Bear%20Valley%20Drone.placeholder.jpg",
-	"photography/Artechouse_DC_Silhouette_2_placeholder_jpg": "/photography/Artechouse%20DC%20Silhouette%202.placeholder.jpg",
-	"photography/Transamerica_Building_San_Francisco_Drone_Vertical_placeholder_jpg": "/photography/Transamerica%20Building%20San%20Francisco%20Drone%20Vertical.placeholder.jpg",
-	"photography/Blair_Arch_Drone_Landscape_jpg": "/photography/Blair%20Arch%20Drone%20Landscape.jpg",
-	"photography/San_Francisco_Downtown_First_Drone_Flight_placeholder_jpg": "/photography/San%20Francisco%20Downtown%20First%20Drone%20Flight.placeholder.jpg",
-	"photography/Martin_s_Beach_Milky_Way_placeholder_jpg": "/photography/Martin%27s%20Beach%20Milky%20Way.placeholder.jpg",
-	"photography/Ping_Shek_Estate_Drone_Top_Down_Vertical_jpg": "/photography/Ping%20Shek%20Estate%20Drone%20Top%20Down%20%28Vertical%29.jpg",
-	"photography/Washington_Monument_Sunset_Red_White_Blue_Sky_jpg": "/photography/Washington%20Monument%20Sunset%20Red%20White%20Blue%20Sky.jpg",
-	"photography/Campanile_di_Giotto_Across_from_the_Duomo_placeholder_jpg": "/photography/Campanile%20di%20Giotto%20Across%20from%20the%20Duomo.placeholder.jpg",
-	"photography/Mai_Chau_Rice_Paddies_Sunset_Panorama_2_placeholder_jpg": "/photography/Mai%20Chau%20Rice%20Paddies%20Sunset%20Panorama%202.placeholder.jpg",
-	"photography/Lake_Carnegie_Boat_in_Still_Water_Sunset_Vertical_jpg": "/photography/Lake%20Carnegie%20Boat%20in%20Still%20Water%20Sunset%20Vertical.jpg",
-	"photography/Tokyo_Soba_Noodles_NIght_Market_Chef_placeholder_jpg": "/photography/Tokyo%20Soba%20Noodles%20NIght%20Market%20Chef.placeholder.jpg",
-	"photography/Mount_Rushmore_Vertical_Shot_jpg": "/photography/Mount%20Rushmore%20Vertical%20Shot.jpg",
-	"photography/Downtown_San_Francisco_From_South_East_Horizontal_jpg": "/photography/Downtown%20San%20Francisco%20From%20South%20East%20-%20Horizontal.jpg",
-	"photography/Shibuya_Shopping_Tokyo_Vertical_placeholder_jpg": "/photography/Shibuya%20Shopping%20Tokyo%20Vertical.placeholder.jpg",
-	"photography/Colosseum_and_Ancient_Ruins_in_Rome_jpg": "/photography/Colosseum%20and%20Ancient%20Ruins%20in%20Rome.jpg",
-	"photography/Tokyo_Shrine_jpg": "/photography/Tokyo%20Shrine.jpg",
-	"photography/Turtles_in_Maui_placeholder_jpg": "/photography/Turtles%20in%20Maui.placeholder.jpg",
-	"photography/Car_Burning_Cross_Country_Roadtrip_placeholder_jpg": "/photography/Car%20Burning%20Cross%20Country%20Roadtrip.placeholder.jpg",
-	"photography/Broken_Beer_Can_During_Covid_19_Evacuation_of_Princeton_jpg": "/photography/Broken%20Beer%20Can%20During%20Covid-19%20Evacuation%20of%20Princeton.jpg",
-	"photography/Milky_Way_in_Tahoe_Forest_jpg": "/photography/Milky%20Way%20in%20Tahoe%20Forest.jpg",
-	"photography/San_Francisco_Downtown_from_Airplane_at_Night_Landscape_placeholder_jpg": "/photography/San%20Francisco%20Downtown%20from%20Airplane%20at%20Night%20%28Landscape%29.placeholder.jpg",
-	"photography/Shibuya_Crossing_Bike_Motion_Blur_jpg": "/photography/Shibuya%20Crossing%20Bike%20Motion%20Blur.jpg",
-	"photography/Bear_Valley_Bear_Lake_Drone_Vertical_jpg": "/photography/Bear%20Valley%20Bear%20Lake%20Drone%20Vertical.jpg",
-	"photography/Top_Down_Ocean_Shore_Texture_Las_Terrenas_Dominican_Republic_placeholder_jpg": "/photography/Top%20Down%20Ocean%20Shore%20Texture%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
-	"photography/Drone_Vertical_of_Las_Terrenas_Dominican_Republic_placeholder_jpg": "/photography/Drone%20Vertical%20of%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
-	"photography/Fall_Leaves_in_Yosemite_valley_placeholder_jpg": "/photography/Fall%20Leaves%20in%20Yosemite%20valley.placeholder.jpg",
-	"photography/Shibuya_Crossing_Bike_Motion_Blur_placeholder_jpg": "/photography/Shibuya%20Crossing%20Bike%20Motion%20Blur.placeholder.jpg",
-	"photography/Capitol_Building_Night_Landscape_Zoom_jpg": "/photography/Capitol%20Building%20Night%20Landscape%20Zoom.jpg",
-	"photography/Florence_Duomo_Architecture_jpg": "/photography/Florence%20Duomo%20Architecture.jpg",
-	"photography/Sai_Wan_Hong_Kong_Drone_Vertical_jpg": "/photography/Sai%20Wan%2C%20Hong%20Kong%20Drone%20-%20Vertical.jpg",
-	"photography/Fisherman_s_Wharf_San_Francisco_at_Blue_Hour_Horizontal_jpg": "/photography/Fisherman%27s%20Wharf%20San%20Francisco%20at%20Blue%20Hour%20-%20Horizontal.jpg",
-	"photography/Top_Down_Beach_Peninsula_Las_Terrenas_Dominican_Republic_placeholder_jpg": "/photography/Top%20Down%20Beach%20Peninsula%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
-	"photography/Airplane_Wing_Over_New_York_at_Night_placeholder_jpg": "/photography/Airplane%20Wing%20Over%20New%20York%20at%20Night.placeholder.jpg",
-	"photography/Chiang_Kai_Shek_at_Night_jpg": "/photography/Chiang%20Kai%20Shek%20at%20Night.jpg",
-	"photography/Wave_and_Rock_in_Foreground_Golden_Gate_Bridge_in_Background_placeholder_jpg": "/photography/Wave%20and%20Rock%20in%20Foreground%2C%20Golden%20Gate%20Bridge%20in%20Background.placeholder.jpg",
-	"photography/Kowloon_Bay_Drone_Vertical_placeholder_jpg": "/photography/Kowloon%20Bay%20Drone%20%28Vertical%29.placeholder.jpg",
-	"photography/Princeton_University_Chapel_and_Surrounding_Campus_by_Drone_placeholder_jpg": "/photography/Princeton%20University%20Chapel%20and%20Surrounding%20Campus%20by%20Drone.placeholder.jpg",
-	"photography/New_York_Dear_Irving_on_Hudson_Rooftop_Intersection_jpg": "/photography/New%20York%20Dear%20Irving%20on%20Hudson%20Rooftop%20Intersection.jpg",
-	"photography/Minnesota_Highway_Drone_Vertical_placeholder_jpg": "/photography/Minnesota%20Highway%20Drone%20Vertical.placeholder.jpg",
-	"photography/_USA_Road_Trip_5_placeholder_jpg": "/photography/%20%28USA%20Road%20Trip%29-5.placeholder.jpg",
-	"photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_placeholder_jpg": "/photography/San%20Francisco%20Lombard%20Street%20Sunrise%20Drone%20Vertical.placeholder.jpg",
-	"photography/1903_Courtyard_Drone_Landscape_placeholder_jpg": "/photography/1903%20Courtyard%20Drone%20Landscape.placeholder.jpg",
-	"photography/Times_Square_Lens_Ball_jpg": "/photography/Times%20Square%20Lens%20Ball.jpg",
-	"photography/Hong_Kong_Alleyway_Downtown_jpg": "/photography/Hong%20Kong%20Alleyway%20Downtown.jpg",
-	"photography/Bridge_with_Vatican_in_the_Background_placeholder_jpg": "/photography/Bridge%20with%20Vatican%20in%20the%20Background.placeholder.jpg",
-	"photography/Tree_Bark_Texture_jpg": "/photography/Tree%20Bark%20Texture.jpg",
-	"photography/Golden_Gate_Bridge_San_Francisco_Night_Moon_Vertical_placeholder_jpg": "/photography/Golden%20Gate%20Bridge%20San%20Francisco%20Night%20Moon%20Vertical.placeholder.jpg",
-	"photography/Bison_Grazing_In_Front_of_Mountain_Landscape_2x3_jpg": "/photography/Bison%20Grazing%20In%20Front%20of%20Mountain%20Landscape%20%282x3%29.jpg",
-	"photography/Lonely_Barn_at_the_Base_of_Grand_Tetons_placeholder_jpg": "/photography/Lonely%20Barn%20at%20the%20Base%20of%20Grand%20Tetons.placeholder.jpg",
-	"photography/Mong_Kok_Neon_Signs_Vertical_jpg": "/photography/Mong%20Kok%20Neon%20Signs%20%28Vertical%29.jpg",
-	"photography/Pantheon_Rome_Italy_jpg": "/photography/Pantheon%2C%20Rome%2C%20Italy.jpg",
-	"photography/Princeton_Central_Campus_Drone_placeholder_jpg": "/photography/Princeton%20Central%20Campus%20Drone.placeholder.jpg",
-	"photography/Sai_Wan_Drone_Vertical_jpg": "/photography/Sai%20Wan%20Drone%20%28Vertical%29.jpg",
-	"photography/Tree_Bark_Texture_placeholder_jpg": "/photography/Tree%20Bark%20Texture.placeholder.jpg",
-	"photography/Tokyo_Subway_jpg": "/photography/Tokyo%20Subway.jpg",
-	"photography/Claire_Standing_in_Front_of_Lake_Minnewaska_placeholder_jpg": "/photography/Claire%20Standing%20in%20Front%20of%20Lake%20Minnewaska.placeholder.jpg",
-	"photography/Capitol_Building_Lens_Ball_jpg": "/photography/Capitol%20Building%20Lens%20Ball.jpg",
-	"photography/Lake_Carnegie_Landscape_Fall_Season_jpg": "/photography/Lake%20Carnegie%20Landscape%20Fall%20Season.jpg",
-	"photography/San_Francisco_Over_Marshall_Beach_jpg": "/photography/San%20Francisco%20Over%20Marshall%20Beach.jpg",
-	"photography/Washington_Monument_Zoom_Abstract_Day_jpg": "/photography/Washington%20Monument%20Zoom%20Abstract%20Day.jpg",
-	"photography/Sunset_on_Phi_Phi_Island_jpg": "/photography/Sunset%20on%20Phi%20Phi%20Island.jpg",
-	"photography/Ping_Shek_Estate_Basketball_Hoop_placeholder_jpg": "/photography/Ping%20Shek%20Estate%20Basketball%20Hoop.placeholder.jpg",
-	"photography/Hong_Kong_Skyline_Day_Drone_Vertical_placeholder_jpg": "/photography/Hong%20Kong%20Skyline%20Day%20Drone%20-%20Vertical.placeholder.jpg",
-	"photography/Museum_Ceiling_Artwork_in_Florence_Italy_placeholder_jpg": "/photography/Museum%20Ceiling%20Artwork%20in%20Florence%2C%20Italy.placeholder.jpg",
-	"photography/Ferry_Building_at_Sunset_Long_Exposure_Vertical_jpg": "/photography/Ferry%20Building%20at%20Sunset%20Long%20Exposure%20Vertical.jpg",
-	"photography/Steel_Wool_Basketball_Hoop_Milky_Way_placeholder_jpg": "/photography/Steel%20Wool%20Basketball%20Hoop%20Milky%20Way.placeholder.jpg",
-	"photography/San_Francisco_from_Twin_Peaks_jpg": "/photography/San%20Francisco%20from%20Twin%20Peaks.jpg",
-	"photography/Bear_Valley_Bear_Lake_Drone_Vertical_placeholder_jpg": "/photography/Bear%20Valley%20Bear%20Lake%20Drone%20Vertical.placeholder.jpg",
-	"photography/Bridge_with_Vatican_in_the_Background_jpg": "/photography/Bridge%20with%20Vatican%20in%20the%20Background.jpg",
-	"photography/Korea_Cherry_Blossums_placeholder_jpg": "/photography/Korea%20Cherry%20Blossums.placeholder.jpg",
-	"photography/Shinjuku_Tokyo_Japan_Vertical_placeholder_jpg": "/photography/Shinjuku%2C%20Tokyo%2C%20Japan%20%28Vertical%29.placeholder.jpg",
-	"photography/Korea_Palace_Through_Doorway_placeholder_jpg": "/photography/Korea%20Palace%20Through%20Doorway.placeholder.jpg",
-	"photography/Singapore_Mall_Roof_Drone_Top_Down_placeholder_jpg": "/photography/Singapore%20Mall%20Roof%20Drone%20Top%20Down.placeholder.jpg",
-	"photography/Lensball_Mong_Kok_Neon_Cyberpunk_jpg": "/photography/Lensball%20Mong%20Kok%20Neon%20Cyberpunk.jpg",
-	"photography/High_Island_Reservoir_East_Dam_Drone_Top_Down_jpg": "/photography/High%20Island%20Reservoir%20East%20Dam%20Drone%20Top%20Down.jpg",
-	"photography/Looking_out_at_Bear_Valley_Drone_jpg": "/photography/Looking%20out%20at%20Bear%20Valley%20Drone.jpg",
-	"photography/Washington_DC_Subway_jpg": "/photography/Washington%20DC%20Subway.jpg",
-	"photography/Korean_Market_Shoe_Stand_jpg": "/photography/Korean%20Market%20Shoe%20Stand.jpg",
-	"photography/Lombard_Street_with_Golden_Gate_in_Background_via_Drone_jpg": "/photography/Lombard%20Street%20with%20Golden%20Gate%20in%20Background%20via%20Drone.jpg",
-	"photography/Ladies_Market_Balcony_Lens_Ball_Cyberpunk_placeholder_jpg": "/photography/Ladies%20Market%20Balcony%20Lens%20Ball%20Cyberpunk.placeholder.jpg",
-	"photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_White_Bird_jpg": "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20White%20Bird.jpg",
-	"photography/Transamerica_Building_with_Halo_jpg": "/photography/Transamerica%20Building%20with%20Halo.jpg",
-	"photography/Chiang_Kai_Shek_at_Night_placeholder_jpg": "/photography/Chiang%20Kai%20Shek%20at%20Night.placeholder.jpg",
-	"photography/Looking_Down_Fulton_Street_Vertical_Drone_placeholder_jpg": "/photography/Looking%20Down%20Fulton%20Street%20Vertical%20Drone.placeholder.jpg",
-	"photography/Magical_Grass_Astro_Shot_jpg": "/photography/Magical%20Grass%20Astro%20Shot.jpg",
-	"photography/Restaurant_at_Night_in_Rome_Italy_jpg": "/photography/Restaurant%20at%20Night%20in%20Rome%2C%20Italy.jpg",
-	"photography/Teton_Drone_Horizontal_Landscape_jpg": "/photography/Teton%20Drone%20Horizontal%20Landscape.jpg",
-	"photography/Washington_DC_Satellite_Overview_placeholder_jpg": "/photography/Washington%20DC%20Satellite%20Overview.placeholder.jpg",
-	"photography/Florence_View_from_Piazzale_Michelangelo_at_Sunset_jpg": "/photography/Florence%20View%20from%20Piazzale%20Michelangelo%20at%20Sunset.jpg",
-	"photography/New_York_Times_Square_Smokestack_placeholder_jpg": "/photography/New%20York%20Times%20Square%20Smokestack.placeholder.jpg",
-	"photography/Kowloon_ICC_Skyline_placeholder_jpg": "/photography/Kowloon%20ICC%20Skyline.placeholder.jpg",
-	"photography/San_Francisco_Trolley_at_Night_jpg": "/photography/San%20Francisco%20Trolley%20at%20Night.jpg",
-	"photography/Grand_Teton_Astro_with_Grass_USA_Road_Trip_placeholder_jpg": "/photography/Grand%20Teton%20Astro%20with%20Grass%20%28USA%20Road%20Trip%29.placeholder.jpg",
-	"photography/Mount_Rainier_Glacier_Lake_jpg": "/photography/Mount%20Rainier%20Glacier%20Lake.jpg",
-	"photography/Ladies_Market_Balcony_Lens_Ball_Cyberpunk_jpg": "/photography/Ladies%20Market%20Balcony%20Lens%20Ball%20Cyberpunk.jpg",
-	"photography/Rome_Italy_Meat_and_Cheese_Restaurant_placeholder_jpg": "/photography/Rome%2C%20Italy%20Meat%20and%20Cheese%20Restaurant.placeholder.jpg",
-	"photography/Hong_Kong_Alleyway_Downtown_placeholder_jpg": "/photography/Hong%20Kong%20Alleyway%20Downtown.placeholder.jpg",
-	"photography/Nakalele_Blowhole_placeholder_jpg": "/photography/Nakalele%20Blowhole.placeholder.jpg",
-	"photography/Hong_Kong_Night_Skyline_Vertical_placeholder_jpg": "/photography/Hong%20Kong%20Night%20Skyline%20%28Vertical%29.placeholder.jpg",
-	"photography/Times_Square_Taxi_Behind_placeholder_jpg": "/photography/Times%20Square%20Taxi%20%28Behind%29.placeholder.jpg",
-	"photography/Small_World_Coffee_on_Cloudy_Day_jpg": "/photography/Small%20World%20Coffee%20on%20Cloudy%20Day.jpg",
-	"photography/San_Francisco_Downtown_Alleyway_jpg": "/photography/San%20Francisco%20Downtown%20Alleyway.jpg",
-	"photography/St_Angelo_Bridge_in_Rome_Italy_jpg": "/photography/St.%20Angelo%20Bridge%20in%20Rome%2C%20Italy.jpg",
-	"photography/Sunset_in_New_Jersey_from_New_York_West_Side_jpg": "/photography/Sunset%20in%20New%20Jersey%20from%20New%20York%20West%20Side.jpg",
-	"photography/Korean_Bar_Through_Tree_Branches_placeholder_jpg": "/photography/Korean%20Bar%20Through%20Tree%20Branches.placeholder.jpg",
-	"photography/Mori_Point_Pacifica_Sunset_jpg": "/photography/Mori%20Point%20Pacifica%20Sunset.jpg",
-	"photography/Washington_DC_Satellite_Overview_jpg": "/photography/Washington%20DC%20Satellite%20Overview.jpg",
-	"photography/Hong_Kong_Skyline_Panorama_jpg": "/photography/Hong%20Kong%20Skyline%20Panorama.jpg",
-	"photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_placeholder_jpg": "/photography/San%20Francisco%20Golden%20Gate%20Park%20Satellite%20Shot.placeholder.jpg",
-	"photography/Arch_of_Constantine_Rome_placeholder_jpg": "/photography/Arch%20of%20Constantine%2C%20Rome.placeholder.jpg",
-	"photography/Panorama_of_Arno_River_in_Pisa_Italy_jpg": "/photography/Panorama%20of%20Arno%20River%20in%20Pisa%2C%20Italy.jpg",
-	"photography/Museum_Ceiling_Artwork_in_Florence_Italy_jpg": "/photography/Museum%20Ceiling%20Artwork%20in%20Florence%2C%20Italy.jpg",
-	"photography/Artechouse_DC_Silhouette_3_placeholder_jpg": "/photography/Artechouse%20DC%20Silhouette%203.placeholder.jpg",
-	"photography/Route_89_Wyoming_Drone_Top_Down_placeholder_jpg": "/photography/Route%2089%20Wyoming%20Drone%20Top%20Down.placeholder.jpg",
-	"photography/Mong_Kok_Cross_Walk_Day_jpg": "/photography/Mong%20Kok%20Cross%20Walk%20Day.jpg",
-	"photography/Blair_Arch_Drone_Landscape_placeholder_jpg": "/photography/Blair%20Arch%20Drone%20Landscape.placeholder.jpg",
-	"photography/Yin_Yang_Golden_Gate_Bridge_Light_Painting_jpg": "/photography/Yin%20Yang%20Golden%20Gate%20Bridge%20Light%20Painting.jpg",
-	"photography/Tokyo_Shrine_placeholder_jpg": "/photography/Tokyo%20Shrine.placeholder.jpg",
-	"photography/Cafe_Vivian_Empty_During_COVID_Move_Out_jpg": "/photography/Cafe%20Vivian%20Empty%20During%20COVID%20Move%20Out.jpg",
-	"photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Dark_jpg": "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Dark.jpg",
-	"photography/Minnesota_Drone_USA_Road_Trip_placeholder_jpg": "/photography/Minnesota%20Drone%20%28USA%20Road%20Trip%29.placeholder.jpg",
-	"photography/Shibuya_Crossing_Taxi_Motion_Blur_jpg": "/photography/Shibuya%20Crossing%20Taxi%20Motion%20Blur.jpg",
-	"photography/_USA_Road_Trip_4_placeholder_jpg": "/photography/%20%28USA%20Road%20Trip%29-4.placeholder.jpg",
-	"photography/Lombard_Street_with_Golden_Gate_in_Background_via_Drone_placeholder_jpg": "/photography/Lombard%20Street%20with%20Golden%20Gate%20in%20Background%20via%20Drone.placeholder.jpg",
-	"photography/Ping_Shek_Estate_Desmond_Brenizer_jpg": "/photography/Ping%20Shek%20Estate%20Desmond%20Brenizer.jpg",
-	"photography/Pizza_in_Rome_Italy_placeholder_jpg": "/photography/Pizza%20in%20Rome%2C%20Italy.placeholder.jpg",
-	"photography/Mount_Rushmore_Vertical_Shot_placeholder_jpg": "/photography/Mount%20Rushmore%20Vertical%20Shot.placeholder.jpg",
-	"photography/Singapore_Mall_Roof_Drone_Top_Down_jpg": "/photography/Singapore%20Mall%20Roof%20Drone%20Top%20Down.jpg",
-	"photography/Korean_Artist_in_Tent_jpg": "/photography/Korean%20Artist%20in%20Tent.jpg",
-	"photography/Long_Exposure_Wave_Top_Down_Drone_Las_Terrenas_Dominican_Republic_jpg": "/photography/Long%20Exposure%20Wave%20Top%20Down%20Drone%20Las%20Terrenas%20Dominican%20Republic.jpg",
-	"photography/Waihe_e_Ridge_Hike_jpg": "/photography/Waihe%27e%20Ridge%20Hike.jpg",
-	"photography/Bear_Valley_Mountains_Drone_Landscape_jpg": "/photography/Bear%20Valley%20Mountains%20Drone%20Landscape.jpg",
-	"photography/Shibuya_Shopping_Tokyo_Vertical_jpg": "/photography/Shibuya%20Shopping%20Tokyo%20Vertical.jpg",
-	"photography/1903_Hall_and_Cuyler_Hall_Drone_jpg": "/photography/1903%20Hall%20and%20Cuyler%20Hall%20Drone.jpg",
-	"photography/Ferry_Building_with_Skyline_At_Night_jpg": "/photography/Ferry%20Building%20with%20Skyline%20At%20Night.jpg",
-	"photography/Loneliest_Road_Vertical_Drone_USA_Road_Trip_jpg": "/photography/Loneliest%20Road%20Vertical%20Drone%20%28USA%20Road%20Trip%29.jpg",
-	"photography/Mong_Kok_Hong_Kong_Neon_Signs_2_jpg": "/photography/Mong%20Kok%2C%20Hong%20Kong%20Neon%20Signs%202.jpg",
-	"photography/Flat_Iron_Building_With_Taxi_Motion_Blur_jpg": "/photography/Flat%20Iron%20Building%20With%20Taxi%20Motion%20Blur.jpg",
-	"photography/01853_placeholder_jpg": "/photography/01853.placeholder.jpg",
-	"photography/Fisherman_s_Wharf_San_Francisco_at_Blue_Hour_Horizontal_placeholder_jpg": "/photography/Fisherman%27s%20Wharf%20San%20Francisco%20at%20Blue%20Hour%20-%20Horizontal.placeholder.jpg",
-	"photography/Turtles_in_Maui_jpg": "/photography/Turtles%20in%20Maui.jpg",
-	"photography/Washington_Monument_Night_Silohouette_Self_Portrait_With_Stars_placeholder_jpg": "/photography/Washington%20Monument%20Night%20Silohouette%20Self%20Portrait%20With%20Stars.placeholder.jpg",
-	"photography/Seoul_Korea_Drone_Vertical_Downtown_placeholder_jpg": "/photography/Seoul%2C%20Korea%20Drone%20Vertical%20Downtown.placeholder.jpg",
-	"photography/Bear_Valley_Astrophotography_Horizontal_placeholder_jpg": "/photography/Bear%20Valley%20Astrophotography%20%28Horizontal%29.placeholder.jpg",
-	"photography/Bear_Valley_Astrophotography_Landscape_placeholder_jpg": "/photography/Bear%20Valley%20Astrophotography%20Landscape.placeholder.jpg",
-	"photography/Wyoming_Centennial_Scenic_Byway_placeholder_jpg": "/photography/Wyoming%20Centennial%20Scenic%20Byway.placeholder.jpg",
-	"photography/San_Francisco_Ferry_Building_Through_Buildings_placeholder_jpg": "/photography/San%20Francisco%20Ferry%20Building%20Through%20Buildings.placeholder.jpg",
-	"photography/Fisherman_s_Wharf_at_Sunset_by_Drone_jpg": "/photography/Fisherman%27s%20Wharf%20at%20Sunset%20by%20Drone.jpg",
-	"photography/Delta_Lake_Grand_Teton_Portrait_placeholder_jpg": "/photography/Delta%20Lake%20Grand%20Teton%20Portrait.placeholder.jpg",
-	"photography/Tokyo_Cherry_Blossum_Arcade_placeholder_jpg": "/photography/Tokyo%20Cherry%20Blossum%20Arcade.placeholder.jpg",
-	"photography/Napa_Valley_Drone_Landscape_Sunset_House_placeholder_jpg": "/photography/Napa%20Valley%20Drone%20Landscape%20Sunset%20House.placeholder.jpg",
-	"photography/Washington_Monument_Sunset_Panorama_jpg": "/photography/Washington%20Monument%20Sunset%20Panorama.jpg",
-	"photography/Blair_Arch_Tigerlilies_Drone_8x10_jpg": "/photography/Blair%20Arch%20Tigerlilies%20Drone%20%288x10%29.jpg",
-	"photography/Scateboarder_Doing_Jump_in_Philly_placeholder_jpg": "/photography/Scateboarder%20Doing%20Jump%20in%20Philly.placeholder.jpg",
-	"photography/Tokyo_Soba_Noodles_NIght_Market_Chef_jpg": "/photography/Tokyo%20Soba%20Noodles%20NIght%20Market%20Chef.jpg",
-	"photography/Milky_Way_in_Tahoe_Forest_placeholder_jpg": "/photography/Milky%20Way%20in%20Tahoe%20Forest.placeholder.jpg",
-	"photography/Palace_of_Fine_Arts_Horizontal_Drone_Shot_jpg": "/photography/Palace%20of%20Fine%20Arts%20Horizontal%20Drone%20Shot.jpg",
-	"photography/Korean_Market_Street_Food_Vendor_placeholder_jpg": "/photography/Korean%20Market%20Street%20Food%20Vendor.placeholder.jpg",
-	"photography/Cannon_Dial_Elm_Club_Horizontal_jpg": "/photography/Cannon%20Dial%20Elm%20Club%20Horizontal.jpg",
-	"photography/Mong_Kok_Station_Entrance_jpg": "/photography/Mong%20Kok%20Station%20Entrance.jpg",
-	"photography/Loneliest_Road_Vertical_Drone_jpg": "/photography/Loneliest%20Road%20Vertical%20Drone.jpg",
-	"photography/Golden_Gate_Bridge_Looking_Down_From_Marin_Lookout_placeholder_jpg": "/photography/Golden%20Gate%20Bridge%20Looking%20Down%20From%20Marin%20Lookout.placeholder.jpg",
-	"photography/Ladies_Market_Balcony_Long_Exposure_placeholder_jpg": "/photography/Ladies%20Market%20Balcony%20Long%20Exposure.placeholder.jpg",
-	"photography/Half_Dome_from_Yosemite_Falls_jpg": "/photography/Half%20Dome%20from%20Yosemite%20Falls.jpg",
-	"photography/Marin_High_School_Tennis_Courts_Drone_Top_Down_placeholder_jpg": "/photography/Marin%20High%20School%20Tennis%20Courts%20Drone%20Top%20Down.placeholder.jpg",
-	"photography/San_Francisco_Downtown_from_Airplane_at_Night_Landscape_jpg": "/photography/San%20Francisco%20Downtown%20from%20Airplane%20at%20Night%20%28Landscape%29.jpg",
-	"photography/Pizza_in_Rome_Italy_jpg": "/photography/Pizza%20in%20Rome%2C%20Italy.jpg",
-	"photography/Korea_Cherry_Blossums_jpg": "/photography/Korea%20Cherry%20Blossums.jpg",
-	"photography/St_Angelo_Bridge_with_Vatican_in_Background_placeholder_jpg": "/photography/St.%20Angelo%20Bridge%20with%20Vatican%20in%20Background.placeholder.jpg",
-	"photography/Long_Exposure_Wave_Top_Down_Drone_Las_Terrenas_Dominican_Republic_placeholder_jpg": "/photography/Long%20Exposure%20Wave%20Top%20Down%20Drone%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
-	"photography/Taipei_101_Architecture_placeholder_jpg": "/photography/Taipei%20101%20Architecture.placeholder.jpg",
-	"photography/New_York_Times_Square_Smokestack_jpg": "/photography/New%20York%20Times%20Square%20Smokestack.jpg",
-	"photography/Teton_Village_Golf_Course_Lake_Drone_Vertical_jpg": "/photography/Teton%20Village%20Golf%20Course%20Lake%20Drone%20Vertical.jpg",
-	"photography/Looking_Down_Market_Street_Puddle_Sunset_placeholder_jpg": "/photography/Looking%20Down%20Market%20Street%20Puddle%20Sunset.placeholder.jpg",
-	"photography/Wyoming_Centennial_Scenic_Byway_jpg": "/photography/Wyoming%20Centennial%20Scenic%20Byway.jpg",
-	"photography/Mong_Kong_Lens_Ball_Neon_Signs_Vertical_jpg": "/photography/Mong%20Kong%20Lens%20Ball%20Neon%20Signs%20%28Vertical%29.jpg",
-	"photography/Looking_Down_Fulton_Street_Vertical_jpg": "/photography/Looking%20Down%20Fulton%20Street%20Vertical.jpg",
-	"photography/Florence_Duomo_Architecture_placeholder_jpg": "/photography/Florence%20Duomo%20Architecture.placeholder.jpg",
-	"photography/Pigeon_Point_Lighthouse_Milky_Way_jpg": "/photography/Pigeon%20Point%20Lighthouse%20Milky%20Way.jpg",
-	"photography/Times_Square_Long_Exposure_Cars_placeholder_jpg": "/photography/Times%20Square%20Long%20Exposure%20Cars.placeholder.jpg",
-	"photography/Dog_at_Top_of_Teton_Mountain_in_Snow_placeholder_jpg": "/photography/Dog%20at%20Top%20of%20Teton%20Mountain%20in%20Snow.placeholder.jpg",
-	"photography/Sunset_in_New_Jersey_from_New_York_West_Side_placeholder_jpg": "/photography/Sunset%20in%20New%20Jersey%20from%20New%20York%20West%20Side.placeholder.jpg",
-	"photography/Washington_DC_Subway_placeholder_jpg": "/photography/Washington%20DC%20Subway.placeholder.jpg",
-	"photography/_2_jpg": "/photography/-2.jpg",
-	"photography/Rain_Walking_Motion_Blur_in_Milan_jpg": "/photography/Rain%20Walking%20Motion%20Blur%20in%20Milan.jpg",
-	"photography/Mong_Kok_Hong_Kong_Neon_Signs_1_jpg": "/photography/Mong%20Kok%2C%20Hong%20Kong%20Neon%20Signs%201.jpg",
-	"photography/Pilot_s_Row_Presidio_San_Francisco_placeholder_jpg": "/photography/Pilot%27s%20Row%20Presidio%20San%20Francisco.placeholder.jpg",
-	"photography/Girl_with_Suitcase_During_Covid_19_Evacuation_of_Princeton_jpg": "/photography/Girl%20with%20Suitcase%20During%20Covid-19%20Evacuation%20of%20Princeton.jpg",
-	"photography/Embarcadero_Drone_Ferry_Building_Night_Vertical_jpg": "/photography/Embarcadero%20Drone%20Ferry%20Building%20Night%20Vertical.jpg",
-	"photography/Woman_with_Red_Umbrella_in_Snow_placeholder_jpg": "/photography/Woman%20with%20Red%20Umbrella%20in%20Snow.placeholder.jpg",
-	"photography/Korean_Bar_Reflection_in_Rain_Puddle_placeholder_jpg": "/photography/Korean%20Bar%20Reflection%20in%20Rain%20Puddle.placeholder.jpg",
-	"photography/2_jpg": "/photography/2.jpg",
-	"photography/Washington_DC_Capitol_Building_Zoom_Day_placeholder_jpg": "/photography/Washington%20DC%20Capitol%20Building%20Zoom%20Day.placeholder.jpg",
-	"photography/Aerial_View_of_Half_Moon_Bay_jpg": "/photography/Aerial%20View%20of%20Half%20Moon%20Bay.jpg",
-	"photography/Temple_Street_Market_Overview_jpg": "/photography/Temple%20Street%20Market%20Overview.jpg",
-	"photography/Washington_Monument_Sunset_Panorama_placeholder_jpg": "/photography/Washington%20Monument%20Sunset%20Panorama.placeholder.jpg",
-	"photography/Bride_s_Pool_Long_Exposure_1_2_jpg": "/photography/Bride%27s%20Pool%20Long%20Exposure%201-2.jpg",
-	"photography/Broken_Beer_Can_During_Covid_19_Evacuation_of_Princeton_placeholder_jpg": "/photography/Broken%20Beer%20Can%20During%20Covid-19%20Evacuation%20of%20Princeton.placeholder.jpg",
-	"photography/Rubicon_Peak_Side_Angle_Drone_placeholder_jpg": "/photography/Rubicon%20Peak%20Side%20Angle%20Drone.placeholder.jpg",
-	"photography/Lombard_Street_Drone_placeholder_jpg": "/photography/Lombard%20Street%20Drone.placeholder.jpg",
-	"photography/Embarcadero_Drone_Ferry_Building_Daytime_Vertical_jpg": "/photography/Embarcadero%20Drone%20Ferry%20Building%20Daytime%20Vertical.jpg",
-	"photography/Empire_State_Building_Daytime_Telephoto_jpg": "/photography/Empire%20State%20Building%20Daytime%20Telephoto.jpg",
-	"photography/Marin_Headlands_Sunset_placeholder_jpg": "/photography/Marin%20Headlands%20Sunset.placeholder.jpg",
-	"photography/Marina_Bay_Drone_Panorama_placeholder_jpg": "/photography/Marina%20Bay%20Drone%20Panorama.placeholder.jpg",
-	"photography/Ponte_di_Mezzo_Bridge_placeholder_jpg": "/photography/Ponte%20di%20Mezzo%20Bridge.placeholder.jpg",
-	"photography/Presidio_in_San_Francisco_Satellite_placeholder_jpg": "/photography/Presidio%20in%20San%20Francisco%20%28Satellite%29.placeholder.jpg",
-	"photography/Looking_Down_Fulton_Street_Vertical_Drone_jpg": "/photography/Looking%20Down%20Fulton%20Street%20Vertical%20Drone.jpg",
-	"photography/Rubicon_Peak_Drone_jpg": "/photography/Rubicon%20Peak%20%28Drone%29.jpg",
-	"photography/Dominican_Republic_Las_Terrenas_Daytime_Beach_House_Panorama_jpg": "/photography/Dominican%20Republic%20Las%20Terrenas%20Daytime%20Beach%20House%20Panorama.jpg",
-	"photography/Marin_High_School_Swimming_Pool_Drone_Top_Down_placeholder_jpg": "/photography/Marin%20High%20School%20Swimming%20Pool%20Drone%20Top%20Down.placeholder.jpg",
-	"photography/Cannon_Dial_Elm_Club_Horizontal_placeholder_jpg": "/photography/Cannon%20Dial%20Elm%20Club%20Horizontal.placeholder.jpg",
-	"photography/Pantheon_Rome_Italy_placeholder_jpg": "/photography/Pantheon%2C%20Rome%2C%20Italy.placeholder.jpg",
-	"photography/Shibuya_Crossing_Wide_Angle_placeholder_jpg": "/photography/Shibuya%20Crossing%20Wide%20Angle.placeholder.jpg",
-	"photography/Monster_Mansion_Vertical_jpg": "/photography/Monster%20Mansion%20Vertical.jpg",
-	"photography/Surfers_Riding_Waves_in_Hong_Kong_jpg": "/photography/Surfers%20Riding%20Waves%20in%20Hong%20Kong.jpg",
-	"photography/Golden_Gate_Bridge_Through_Trees_Portrait_jpg": "/photography/Golden%20Gate%20Bridge%20Through%20Trees%20Portrait.jpg",
-	"photography/Palace_of_Fine_Arts_Street_with_Cars_Drone_placeholder_jpg": "/photography/Palace%20of%20Fine%20Arts%20Street%20with%20Cars%20Drone.placeholder.jpg",
-	"photography/Route_89_Wyoming_Drone_Landscape_placeholder_jpg": "/photography/Route%2089%20Wyoming%20Drone%20Landscape.placeholder.jpg",
-	"photography/Street_Market_Vendor_Talking_to_Tourist_placeholder_jpg": "/photography/Street%20Market%20Vendor%20Talking%20to%20Tourist.placeholder.jpg",
-	"photography/Palace_of_Fine_Arts_Street_with_Cars_Drone_jpg": "/photography/Palace%20of%20Fine%20Arts%20Street%20with%20Cars%20Drone.jpg",
-	"photography/Walking_Dog_in_Philly_placeholder_jpg": "/photography/Walking%20Dog%20in%20Philly.placeholder.jpg",
-	"photography/Meat_Shop_in_Florence_Italy_jpg": "/photography/Meat%20Shop%20in%20Florence%2C%20Italy.jpg",
-	"photography/Trevi_Fountain_in_Rome_Italy_jpg": "/photography/Trevi%20Fountain%20in%20Rome%2C%20Italy.jpg",
-	"photography/Capitol_Building_Walking_Towards_Building_on_Street_placeholder_jpg": "/photography/Capitol%20Building%20Walking%20Towards%20Building%20on%20Street.placeholder.jpg",
-	"photography/Trolley_in_Milan_Italy_in_Rain_placeholder_jpg": "/photography/Trolley%20in%20Milan%2C%20Italy%20in%20Rain.placeholder.jpg",
-	"photography/San_Francisco_Hills_Trolley_Downtown_Vertical_placeholder_jpg": "/photography/San%20Francisco%20Hills%20Trolley%20Downtown%20Vertical.placeholder.jpg",
-	"photography/Loneliest_Road_Horizontal_Looking_Down_Road_placeholder_jpg": "/photography/Loneliest%20Road%20Horizontal%20Looking%20Down%20Road.placeholder.jpg",
-	"photography/Marina_Bay_Sands_Drone_Vertical_placeholder_jpg": "/photography/Marina%20Bay%20Sands%20Drone%20%28Vertical%29.placeholder.jpg",
-	"photography/Hong_Kong_Skyline_Day_Drone_Vertical_jpg": "/photography/Hong%20Kong%20Skyline%20Day%20Drone%20-%20Vertical.jpg",
-	"photography/Waihe_e_Ridge_Hike_placeholder_jpg": "/photography/Waihe%27e%20Ridge%20Hike.placeholder.jpg",
-	"photography/Time_Square_Taxi_placeholder_jpg": "/photography/Time%20Square%20Taxi.placeholder.jpg",
-	"photography/Group_of_People_Lying_on_a_Beach_Towel_Drone_Top_Down_jpg": "/photography/Group%20of%20People%20Lying%20on%20a%20Beach%20Towel%20Drone%20Top%20Down.jpg",
-	"photography/Bonneville_Salt_Flats_Stormy_Vertical_Drone_jpg": "/photography/Bonneville%20Salt%20Flats%20Stormy%20Vertical%20Drone_.jpg",
-	"photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Orange_Panorama_placeholder_jpg": "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Orange%20Panorama.placeholder.jpg",
-	"photography/Washington_Monument_Zoom_Abstract_Day_placeholder_jpg": "/photography/Washington%20Monument%20Zoom%20Abstract%20Day.placeholder.jpg",
-	"photography/Scateboarder_Doing_Jump_in_Philly_jpg": "/photography/Scateboarder%20Doing%20Jump%20in%20Philly.jpg",
-	"photography/Cannon_Dial_Elm_Club_Vertical_placeholder_jpg": "/photography/Cannon%20Dial%20Elm%20Club%20Vertical.placeholder.jpg",
-	"photography/Times_Square_Screens_jpg": "/photography/Times%20Square%20Screens.jpg",
-	"photography/Minnesota_Highway_Drone_Vertical_jpg": "/photography/Minnesota%20Highway%20Drone%20Vertical.jpg",
-	"photography/Sunset_on_Cuyler_Courtyard_at_Princeton_University_placeholder_jpg": "/photography/Sunset%20on%20Cuyler%20Courtyard%20at%20Princeton%20University.placeholder.jpg",
-	"photography/Whitman_Upper_Courtyard_in_Snow_jpg": "/photography/Whitman%20Upper%20Courtyard%20in%20Snow.jpg",
-	"photography/Downtown_San_Francisco_Birds_Eye_View_Top_Down_Powell_Street_Intersection_Drone_placeholder_jpg": "/photography/Downtown%20San%20Francisco%20Birds%20Eye%20View%20Top%20Down%20Powell%20Street%20Intersection%20Drone.placeholder.jpg",
-	"photography/Top_Down_Ocean_Shore_Texture_Las_Terrenas_Dominican_Republic_jpg": "/photography/Top%20Down%20Ocean%20Shore%20Texture%20Las%20Terrenas%20Dominican%20Republic.jpg",
-	"photography/Embarcadero_Aerial_View_at_Sunset_jpg": "/photography/Embarcadero%20Aerial%20View%20at%20Sunset.jpg",
-	"photography/Princeton_Crest_Fitz_Randolph_Gate_jpg": "/photography/Princeton%20Crest%20Fitz%20Randolph%20Gate.jpg",
-	"photography/Mount_Rushmore_Picture_of_iPhone_jpg": "/photography/Mount%20Rushmore%20%28Picture%20of%20iPhone%29.jpg",
-	"photography/Hong_Kong_Motorbike_Motion_Blur_Horizontal_jpg": "/photography/Hong%20Kong%20Motorbike%20Motion%20Blur%20%28Horizontal%29.jpg",
-	"photography/Sunset_Sillhouette_Horizontal_Las_Terrenas_Dominican_Republic_placeholder_jpg": "/photography/Sunset%20Sillhouette%20Horizontal%20Las%20Terrenas%2C%20Dominican%20Republic.placeholder.jpg",
-	"photography/Bay_Bridge_with_San_Francisco_Skyline_placeholder_jpg": "/photography/Bay%20Bridge%20with%20San%20Francisco%20Skyline.placeholder.jpg",
-	"photography/Fisherman_at_Baker_Beach_in_San_San_Francisco_placeholder_jpg": "/photography/Fisherman%20at%20Baker%20Beach%20in%20San%20San%20Francisco.placeholder.jpg",
-	"photography/Jiufen_Taiwan_Drone_Horizontal_jpg": "/photography/Jiufen%2C%20Taiwan%20Drone%20-%20Horizontal.jpg",
-	"photography/New_York_Looking_Down_Street_from_High_Line_Vertical_placeholder_jpg": "/photography/New%20York%20Looking%20Down%20Street%20from%20High%20Line%20-%20Vertical.placeholder.jpg",
-	"photography/Golden_Gate_Bridge_Through_Fence_placeholder_jpg": "/photography/Golden%20Gate%20Bridge%20Through%20Fence.placeholder.jpg",
-	"photography/Marin_Headlands_Sunset_Hills_Landscape_jpg": "/photography/Marin%20Headlands%20Sunset%20Hills%20Landscape.jpg",
-	"photography/Times_Square_Long_Exposure_Cars_jpg": "/photography/Times%20Square%20Long%20Exposure%20Cars.jpg",
-	"photography/_USA_Road_Trip_jpg": "/photography/%20%28USA%20Road%20Trip%29.jpg",
-	"photography/Fisherman_at_Baker_Beach_in_San_San_Francisco_jpg": "/photography/Fisherman%20at%20Baker%20Beach%20in%20San%20San%20Francisco.jpg",
-	"photography/_USA_Road_Trip_3_placeholder_jpg": "/photography/%20%28USA%20Road%20Trip%29-3.placeholder.jpg",
-	"photography/Yosemite_Valley_Meadow_jpg": "/photography/Yosemite%20Valley%20Meadow.jpg",
-	"photography/Crashing_Waves_into_Coastline_Dominican_Republic_Drone_Top_Down_jpg": "/photography/Crashing%20Waves%20into%20Coastline%20Dominican%20Republic%20Drone%20Top%20Down.jpg",
-	"photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Dark_placeholder_jpg": "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Dark.placeholder.jpg",
-	"photography/Top_of_the_Rock_Sign_placeholder_jpg": "/photography/Top%20of%20the%20Rock%20Sign.placeholder.jpg",
-	"photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Vertical_Pink_Bright_Far_placeholder_jpg": "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Vertical%20Pink%20Bright%20Far.placeholder.jpg",
-	"photography/Marina_Bay_Drone_Panorama_jpg": "/photography/Marina%20Bay%20Drone%20Panorama.jpg",
-	"photography/Shore_Stimulations_Dominican_Republic_Top_Down_Drone_Beach_jpg": "/photography/Shore%20Stimulations%20%28Dominican%20Republic%20Top%20Down%20Drone%20Beach%29.jpg",
-	"photography/Bear_Valley_Drone_Landscape_of_Valley_placeholder_jpg": "/photography/Bear%20Valley%20Drone%20Landscape%20of%20Valley.placeholder.jpg",
-	"photography/Tokyo_Shinjuku_Alley_Cyberpunk_Neon_placeholder_jpg": "/photography/Tokyo%20Shinjuku%20Alley%20Cyberpunk%20Neon.placeholder.jpg",
-	"photography/Princeton_Graduate_College_at_Night_Stars_placeholder_jpg": "/photography/Princeton%20Graduate%20College%20at%20Night%20Stars.placeholder.jpg",
-	"photography/Mai_Chau_Rice_Fields_Panorama_Drone_placeholder_jpg": "/photography/Mai%20Chau%20Rice%20Fields%20Panorama%20Drone.placeholder.jpg",
-	"photography/Grand_Teton_Bison_Landscape_jpg": "/photography/Grand%20Teton%20Bison%20Landscape.jpg",
-	"photography/Yin_Yang_Golden_Gate_Bridge_Light_Painting_placeholder_jpg": "/photography/Yin%20Yang%20Golden%20Gate%20Bridge%20Light%20Painting.placeholder.jpg",
-	"photography/Ximen_Taiwan_Long_Exposure_jpg": "/photography/Ximen%2C%20Taiwan%20Long%20Exposure.jpg",
-	"photography/Man_Lying_on_Beach_Top_Down_Drone_Las_Terrenas_Domincan_Republic_placeholder_jpg": "/photography/Man%20Lying%20on%20Beach%20Top%20Down%20Drone%20Las%20Terrenas%2C%20Domincan%20Republic.placeholder.jpg",
-	"photography/San_Francisco_Downtown_Alleyway_placeholder_jpg": "/photography/San%20Francisco%20Downtown%20Alleyway.placeholder.jpg",
-	"photography/Campanile_di_Giotto_Across_from_the_Duomo_jpg": "/photography/Campanile%20di%20Giotto%20Across%20from%20the%20Duomo.jpg",
-	"photography/1903_Courtyard_Drone_Landscape_jpg": "/photography/1903%20Courtyard%20Drone%20Landscape.jpg",
-	"photography/Sea_Ranch_Seals_Drone_Top_Down_jpg": "/photography/Sea%20Ranch%20Seals%20Drone%20%28Top%20Down%29.jpg",
-	"photography/Taipei_Taiwan_Foggy_Skyline_placeholder_jpg": "/photography/Taipei%2C%20Taiwan%20Foggy%20Skyline.placeholder.jpg",
-	"photography/Seoul_Korea_Alleyway_jpg": "/photography/Seoul%2C%20Korea%20Alleyway.jpg",
-	"photography/Bonneville_Salt_Flats_Stormy_Mountains_Vertical_Drone_jpg": "/photography/Bonneville%20Salt%20Flats%20Stormy%20Mountains%20Vertical%20Drone_.jpg",
-	"photography/Moose_Reserve_Jackson_Hole_Wyoming_jpg": "/photography/Moose%20Reserve%20Jackson%20Hole%2C%20Wyoming.jpg",
-	"photography/Korean_Arcade_Portrait_jpg": "/photography/Korean%20Arcade%20Portrait.jpg",
-	"photography/Twin_Peaks_Biker_Going_Down_U_Bend_placeholder_jpg": "/photography/Twin%20Peaks%20Biker%20Going%20Down%20U%20Bend.placeholder.jpg",
-	"photography/Bride_s_Pool_Waterfall_Vertical_jpg": "/photography/Bride%27s%20Pool%20Waterfall%20%28Vertical%29.jpg",
-	"photography/Princeton_Sunset_Out_of_1903_Hall_Window_jpg": "/photography/Princeton%20Sunset%20Out%20of%201903%20Hall%20Window.jpg",
-	"photography/Sunrise_over_the_Clouds_from_an_Airplane_jpg": "/photography/Sunrise%20over%20the%20Clouds%20from%20an%20Airplane.jpg",
-	"photography/Mount_Rushmore_Picture_of_iPhone_placeholder_jpg": "/photography/Mount%20Rushmore%20%28Picture%20of%20iPhone%29.placeholder.jpg",
-	"photography/Tokyo_Cherry_Blossums_placeholder_jpg": "/photography/Tokyo%20Cherry%20Blossums.placeholder.jpg",
-	"photography/Fisherman_s_Wharf_at_Sunset_by_Drone_placeholder_jpg": "/photography/Fisherman%27s%20Wharf%20at%20Sunset%20by%20Drone.placeholder.jpg",
-	"photography/Rubicon_Peak_Drone_USA_Road_Trip_placeholder_jpg": "/photography/Rubicon%20Peak%20%28Drone%29%20%28USA%20Road%20Trip%29.placeholder.jpg",
-	"photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Blue_and_Pink_Panorama_placeholder_jpg": "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Blue%20and%20Pink%20Panorama.placeholder.jpg",
-	"photography/Shibuya_Taxi_Motion_Blur_jpg": "/photography/Shibuya%20Taxi%20Motion%20Blur.jpg",
-	"media/design/snapchat_geofilters/whitman_geofilter_png": "/media/design/snapchat-geofilters/whitman-geofilter.png",
-	"media/design/playlist_artwork/Good_Music_Icon_png": "/media/design/playlist-artwork/Good%20Music%20Icon.png",
-	"media/design/wallpapers/iPhone_5s_Comet_Wallpaper_png": "/media/design/wallpapers/iPhone%205s%20Comet%20Wallpaper.png",
-	"media/design/wallpapers/Abstract_Night_Mountains_13_Macbook_Pro_png": "/media/design/wallpapers/Abstract%20Night%20Mountains%2013%22%20Macbook%20Pro.png",
-	"media/design/wallpapers/Square_Comet_Wallpaper_png": "/media/design/wallpapers/Square%20Comet%20Wallpaper.png",
-	"media/design/wallpapers/San_Francisco_Wallpaper_png": "/media/design/wallpapers/San%20Francisco%20Wallpaper.png",
-	"media/design/wallpapers/iPhone_5s_Square_Chain_Wallpaper_png": "/media/design/wallpapers/iPhone%205s%20Square%20Chain%20Wallpaper.png",
-	"media/design/wallpapers/Winding_Road_Wallpaper_png": "/media/design/wallpapers/Winding%20Road%20Wallpaper.png",
-	"media/design/wallpapers/iPhone_6s_Winding_Road_Wallpaper_png": "/media/design/wallpapers/iPhone%206s%20Winding%20Road%20Wallpaper.png",
-	"media/design/wallpapers/Skywalker_Ranch_Glass_Wallpaper_png": "/media/design/wallpapers/Skywalker%20Ranch%20Glass%20Wallpaper.png",
-	"media/design/impossible_geometric_shapes/Impossible_Star_png": "/media/design/impossible-geometric-shapes/Impossible%20Star.png",
-	"media/design/impossible_geometric_shapes/Impossible_Connected_Triangle_png": "/media/design/impossible-geometric-shapes/Impossible%20Connected%20Triangle.png",
-	"media/design/impossible_geometric_shapes/Impossible_Triangle_png": "/media/design/impossible-geometric-shapes/Impossible%20Triangle.png",
-	"media/landing/cloud_0_png": "/media/landing/cloud_0.png",
-	"media/landing/hong_kong/large/2_png": "/media/landing/hong-kong/large/2.png",
-	"media/landing/hong_kong/large/1_png": "/media/landing/hong-kong/large/1.png",
-	"media/landing/hong_kong/large/0_png": "/media/landing/hong-kong/large/0.png",
-	"media/landing/hong_kong/2_png": "/media/landing/hong-kong/2.png",
-	"media/landing/hong_kong/1_png": "/media/landing/hong-kong/1.png",
-	"media/landing/hong_kong/0_png": "/media/landing/hong-kong/0.png",
-	"media/landing/computer_png": "/media/landing/computer.png",
-	"media/landing/image_tiles_png": "/media/landing/image_tiles.png",
-	"media/loading/loader_gif": "/media/loading/loader.gif",
-	"media/bookmark_file/Kevin_Hou_s_Website_webloc": "/media/bookmark_file/Kevin%20Hou%27s%20Website.webloc",
-	"media/projects/soFlyScanner/splash_screen_png": "/media/projects/soFlyScanner/splash_screen.png",
-	"media/projects/soFlyScanner/generated_content_png": "/media/projects/soFlyScanner/generated_content.png",
-	"media/projects/soFlyScanner/loading_screen_png": "/media/projects/soFlyScanner/loading_screen.png",
-	"media/projects/soFlyScanner/camera_screen_png": "/media/projects/soFlyScanner/camera_screen.png",
-	"media/projects/slate/slate_scheduler_png": "/media/projects/slate/slate-scheduler.png",
-	"media/projects/lookbook/hero_png": "/media/projects/lookbook/hero.png",
-	"media/projects/uberScheduler/Screenshots/Home_Screen_png": "/media/projects/uberScheduler/Screenshots/Home%20Screen.png",
-	"media/projects/uberScheduler/Screenshots/General_Settings_png": "/media/projects/uberScheduler/Screenshots/General%20Settings.png",
-	"media/projects/uberScheduler/Screenshots/Fare_Estimate_png": "/media/projects/uberScheduler/Screenshots/Fare%20Estimate.png",
-	"media/projects/uberScheduler/Screenshots/Schedule_Configuration_png": "/media/projects/uberScheduler/Screenshots/Schedule%20Configuration.png",
-	"media/projects/uberScheduler/Design_Mockups/Home_Screen_UI_png": "/media/projects/uberScheduler/Design%20Mockups/Home%20Screen%20UI.png",
-	"media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_Time_Picker_V1_png": "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20Time%20Picker%20V1.png",
-	"media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_Location_Tab_png": "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20Location%20Tab.png",
-	"media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_Time_Picker_V2_png": "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20Time%20Picker%20V2.png",
-	"media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_General_Tab_V2_png": "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20General%20Tab%20V2.png",
-	"media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_General_Tab_V1_png": "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20General%20Tab%20V1.png",
-	"media/projects/executeOrder66/GitHub_Logo_png": "/media/projects/executeOrder66/GitHub%20Logo.png",
-	"media/projects/executeOrder66/Twitter_Post_Kevin_Hou_jpg": "/media/projects/executeOrder66/Twitter%20Post%20-%20Kevin%20Hou.jpg",
-	"media/projects/executeOrder66/Twitter_Post_GitHub_Education_jpg": "/media/projects/executeOrder66/Twitter%20Post%20-%20GitHub%20Education.jpg",
-	"media/projects/executeOrder66/Twitter_Post_Major_League_Hacking_jpg": "/media/projects/executeOrder66/Twitter%20Post%20-%20Major%20League%20Hacking.jpg",
-	"media/photography/featured_jpg": "/media/photography/featured.jpg",
-	"media/photography/seattle_jpg": "/media/photography/seattle.jpg",
-	"media/photography/satellite_jpg": "/media/photography/satellite.jpg",
-	"media/photography/cyberpunk_jpg": "/media/photography/cyberpunk.jpg",
-	"media/photography/taiwan_jpg": "/media/photography/taiwan.jpg",
-	"media/photography/city_jpg": "/media/photography/city.jpg",
-	"media/photography/road_jpg": "/media/photography/road.jpg",
-	"media/photography/sunsets_jpg": "/media/photography/sunsets.jpg",
-	"media/photography/dominican_republic_jpg": "/media/photography/dominican-republic.jpg",
-	"media/photography/san_francisco_jpg": "/media/photography/san-francisco.jpg",
-	"media/photography/washington_dc_jpg": "/media/photography/washington-dc.jpg",
-	"media/photography/korea_jpg": "/media/photography/korea.jpg",
-	"media/photography/hong_kong_jpg": "/media/photography/hong-kong.jpg",
-	"media/photography/mountains_jpg": "/media/photography/mountains.jpg",
-	"media/photography/water_jpg": "/media/photography/water.jpg",
-	"media/photography/bear_valley_jpg": "/media/photography/bear-valley.jpg",
-	"media/photography/nature_jpg": "/media/photography/nature.jpg",
-	"media/photography/drone_jpg": "/media/photography/drone.jpg",
-	"media/photography/new_york_jpg": "/media/photography/new-york.jpg",
-	"media/photography/italy_jpg": "/media/photography/italy.jpg",
-	"media/photography/singapore_jpg": "/media/photography/singapore.jpg",
-	"media/photography/yosemite_jpg": "/media/photography/yosemite.jpg",
-	"media/photography/night_jpg": "/media/photography/night.jpg",
-	"media/photography/cross_country_road_trip_jpg": "/media/photography/cross-country-road-trip.jpg",
-	"media/photography/astro_photography_jpg": "/media/photography/astro-photography.jpg",
-	"media/photography/princeton_jpg": "/media/photography/princeton.jpg",
-	"media/photography/japan_jpg": "/media/photography/japan.jpg",
-	"media/photography/cover/featured_jpg": "/media/photography/cover/featured.jpg",
-	"media/photography/cover/hong_kong_jpg": "/media/photography/cover/hong-kong.jpg",
-	"media/photography/cover/drone_jpg": "/media/photography/cover/drone.jpg",
-	"media/photography/cover/princeton_jpg": "/media/photography/cover/princeton.jpg",
-	"media/meta/thumbnail_preview_jpg": "/media/meta/thumbnail-preview.jpg",
-	"media/blog/images/ios_number_keypad_with_done_button_png": "/media/blog/images/ios-number-keypad-with-done-button.png",
-	"media/blog/images/OSX_10_11_Jekyll_png": "/media/blog/images/OSX%2010.11%20Jekyll.png",
-	"media/blog/images/YouTube_Channel_Artwork/Desktop_Size_png": "/media/blog/images/YouTube%20Channel%20Artwork/Desktop%20Size.png",
-	"media/blog/images/YouTube_Channel_Artwork/YouTube_Channel_Artwork_jpg": "/media/blog/images/YouTube%20Channel%20Artwork/YouTube%20Channel%20Artwork.jpg",
-	"media/blog/images/Tab_Bar_Navigation/Large_Center_Icon_png": "/media/blog/images/Tab-Bar-Navigation/Large_Center_Icon.png",
-	"media/blog/images/Tab_Bar_Navigation/Storyboard_Reference_2_png": "/media/blog/images/Tab-Bar-Navigation/Storyboard_Reference_2.png",
-	"media/blog/images/Tab_Bar_Navigation/Storyboard_Reference_1_png": "/media/blog/images/Tab-Bar-Navigation/Storyboard_Reference_1.png",
-	"media/blog/images/Tab_Bar_Navigation/Overview_of_Main_Storyboard_png": "/media/blog/images/Tab-Bar-Navigation/Overview_of_Main_Storyboard.png",
-	"media/blog/images/Tab_Bar_Navigation/Finished_Tab_Bar_Project_png": "/media/blog/images/Tab-Bar-Navigation/Finished_Tab_Bar_Project.png",
-	"media/blog/images/Tab_Bar_Navigation/Icon_Render_Setting_png": "/media/blog/images/Tab-Bar-Navigation/Icon_Render_Setting.png",
-	"media/blog/images/Tab_Bar_Navigation/Setting_Icon_png": "/media/blog/images/Tab-Bar-Navigation/Setting_Icon.png",
-	"media/blog/images/API_Testing/Chrome_Copy_cURL_png": "/media/blog/images/API-Testing/Chrome_Copy_cURL.png",
-	"media/blog/images/API_Testing/JSON_Viewer_Extension_png": "/media/blog/images/API-Testing/JSON_Viewer_Extension.png",
-	"media/blog/images/API_Testing/Raw_JSON_Bad_png": "/media/blog/images/API-Testing/Raw_JSON_Bad.png",
-	"media/blog/images/API_Testing/Postman_Import_cURL_png": "/media/blog/images/API-Testing/Postman_Import_cURL.png",
-	"media/blog/images/Faster_Mac_Dock_Reveal_png": "/media/blog/images/Faster%20Mac%20Dock%20Reveal.png",
-	"media/blog/images/Installing_Cocoapods_png": "/media/blog/images/Installing_Cocoapods.png",
-	"media/blog/images/set_cookie_response_png": "/media/blog/images/set-cookie-response.png",
-	"media/blog/images/Woodcraft081015_jpg": "/media/blog/images/Woodcraft081015.jpg",
-	"media/blog/images/installing_all_google_fonts_png": "/media/blog/images/installing-all-google-fonts.png",
-	"media/blog/images/Swift_Table_Views_png": "/media/blog/images/Swift_Table_Views.png",
-	"media/blog/images/Blog_Post_Placeholder_Image_jpg": "/media/blog/images/Blog_Post_Placeholder_Image.jpg",
-	"media/blog/images/tmux/session_png": "/media/blog/images/tmux/session.png",
-	"media/blog/images/tmux/initialized_png": "/media/blog/images/tmux/initialized.png",
-	"media/blog/images/Github_Spike_jpg": "/media/blog/images/Github%20Spike.jpg",
-	"media/blog/images/ES6_June_2017_Update_Object_png": "/media/blog/images/ES6_June_2017_Update_Object.png",
-	"media/blog/images/TypeScript_Intro/atom_code_completion_typescript_png": "/media/blog/images/TypeScript-Intro/atom_code_completion_typescript.png",
-	"media/blog/images/Slate_Scheduler/slate_location_search_gif": "/media/blog/images/Slate-Scheduler/slate-location-search.gif",
-	"media/blog/images/Slate_Scheduler/banner_png": "/media/blog/images/Slate-Scheduler/banner.png",
-	"media/blog/images/Slate_Scheduler/autocomplete_search_gif": "/media/blog/images/Slate-Scheduler/autocomplete-search.gif",
-	"media/blog/images/Slate_Scheduler/ios_calendar_app_location_search_gif": "/media/blog/images/Slate-Scheduler/ios-calendar-app-location-search.gif",
-	"media/blog/images/Desmos/Desmos_Staff_Picks_png": "/media/blog/images/Desmos/Desmos_Staff_Picks.png",
-	"media/blog/images/Desmos/Desmos_iPhone_Labeled_4_jpg": "/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%204.jpg",
-	"media/blog/images/Desmos/Desmos_iPhone_Labeled_3_jpg": "/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%203.jpg",
-	"media/blog/images/Desmos/Desmos_iPhone_Labeled_2_jpg": "/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%202.jpg",
-	"media/blog/images/Desmos/Desmos_iPhone_Labeled_1_jpg": "/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%201.jpg",
-	"media/blog/images/Desmos/Desmos_Piston_Animation_png": "/media/blog/images/Desmos/Desmos_Piston_Animation.png",
-	"media/blog/images/Desmos/Desmos_iPhone_Stats_png": "/media/blog/images/Desmos/Desmos%20iPhone%20Stats.png",
-	"media/blog/images/Desmos/Desmos_iPhone_png": "/media/blog/images/Desmos/Desmos%20iPhone.png",
-	"media/blog/source_files/making_a_simple_page_based_application_swift/ViewController_swift": "/media/blog/source-files/making-a-simple-page-based-application-swift/ViewController.swift",
-	"media/blog/source_files/making_a_simple_page_based_application_swift/PageTwo_swift": "/media/blog/source-files/making-a-simple-page-based-application-swift/PageTwo.swift",
-	"media/blog/source_files/making_a_simple_page_based_application_swift/PageOne_swift": "/media/blog/source-files/making-a-simple-page-based-application-swift/PageOne.swift",
-	"media/blog/source_files/making_a_simple_page_based_application_swift/OnboardingView_swift": "/media/blog/source-files/making-a-simple-page-based-application-swift/OnboardingView.swift",
-	"media/programming/thumbnails/htmlexa_png": "/media/programming/thumbnails/htmlexa.png",
-	"media/programming/thumbnails/kamsky_png": "/media/programming/thumbnails/kamsky.png",
-	"media/programming/thumbnails/film_festival_png": "/media/programming/thumbnails/film-festival.png",
-	"media/programming/thumbnails/browser_homepage_png": "/media/programming/thumbnails/browser-homepage.png",
-	"media/programming/thumbnails/online_sandwich_ordering_jpg": "/media/programming/thumbnails/online-sandwich-ordering.jpg",
-	"media/programming/thumbnails/paw_printers_png": "/media/programming/thumbnails/paw-printers.png",
-	"media/programming/thumbnails/so_fly_scanner_png": "/media/programming/thumbnails/so-fly-scanner.png",
-	"media/programming/thumbnails/ask_ava_jpeg": "/media/programming/thumbnails/ask-ava.jpeg",
-	"media/programming/thumbnails/tile_layout_thumbnail_png": "/media/programming/thumbnails/tile-layout-thumbnail.png",
-	"media/programming/thumbnails/honors_physics_optics_lab_png": "/media/programming/thumbnails/honors-physics-optics-lab.png",
-	"media/programming/thumbnails/musicviz_png": "/media/programming/thumbnails/musicviz.png",
-	"media/programming/thumbnails/city_strong_training_png": "/media/programming/thumbnails/city-strong-training.png",
-	"media/programming/thumbnails/random_number_jpg": "/media/programming/thumbnails/random-number.jpg",
-	"media/programming/thumbnails/khou22_apis_png": "/media/programming/thumbnails/khou22-apis.png",
-	"media/programming/thumbnails/photo_analysis_png": "/media/programming/thumbnails/photo-analysis.png",
-	"media/programming/thumbnails/handwriting_font_app_png": "/media/programming/thumbnails/handwriting-font-app.png",
-	"media/programming/thumbnails/stats_test_score_calculator_png": "/media/programming/thumbnails/stats-test-score-calculator.png",
-	"media/programming/thumbnails/hollywood_africa_stereotypes_png": "/media/programming/thumbnails/hollywood-africa-stereotypes.png",
-	"media/programming/thumbnails/discover_artist_betting_jpg": "/media/programming/thumbnails/discover-artist-betting.jpg",
-	"media/programming/thumbnails/princeton_tonight_thumbnail_png": "/media/programming/thumbnails/princeton-tonight-thumbnail.png",
-	"media/site/textures/white_wall_hash_png": "/media/site/textures/white_wall_hash.png",
-	"media/site/images/404_jpg": "/media/site/images/404.jpg",
-	"media/site/images/Blog_Landing_Content_svg": "/media/site/images/Blog_Landing_Content.svg",
-	"media/site/images/ProximaNova_Light_otf": "/media/site/images/ProximaNova-Light.otf",
-	"media/site/images/GlassTile_jpg": "/media/site/images/GlassTile.jpg",
-	"media/site/images/woodshop_background_png": "/media/site/images/woodshop_background.png",
-	"media/site/images/design_background_png": "/media/site/images/design_background.png",
-	"media/site/images/empty_png": "/media/site/images/empty.png",
-	"media/site/images/Blog_Landing_Content_png": "/media/site/images/Blog_Landing_Content.png",
-	"media/site/images/Pendulum_svg": "/media/site/images/Pendulum.svg",
-	"media/site/images/backgrounds/Turning_Chaote_Viga_jpg": "/media/site/images/backgrounds/Turning_Chaote_Viga.jpg",
-	"media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand_jpg": "/media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand.jpg",
-	"media/site/images/backgrounds/Olive_Wood_Pencil_Case_jpg": "/media/site/images/backgrounds/Olive_Wood_Pencil_Case.jpg",
-	"media/site/images/backgrounds/White_Mahogany_Plaque_jpg": "/media/site/images/backgrounds/White_Mahogany_Plaque.jpg",
-	"media/site/images/backgrounds/Turning_California_Bay_Laurel_Burl_Wood_Bowl_jpg": "/media/site/images/backgrounds/Turning_California_Bay_Laurel_Burl_Wood_Bowl.jpg",
-	"media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl_jpg": "/media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
-	"media/site/images/backgrounds/Maple_iPhone_Stand_jpg": "/media/site/images/backgrounds/Maple_iPhone_Stand.jpg",
-	"media/site/images/backgrounds/Bulbish_Sapele_Bowl_jpg": "/media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
-	"media/site/images/backgrounds/Walnut_and_Maple_Amplifier_jpg": "/media/site/images/backgrounds/Walnut_and_Maple_Amplifier.jpg",
-	"media/site/images/backgrounds/MusicViz_png": "/media/site/images/backgrounds/MusicViz.png",
-	"media/site/images/backgrounds/Japanese_Square_Plate_jpg": "/media/site/images/backgrounds/Japanese_Square_Plate.jpg",
-	"media/site/images/backgrounds/Gavel_jpg": "/media/site/images/backgrounds/Gavel.jpg",
-	"media/site/images/backgrounds/Basket_Weave_Cutting_Board_jpg": "/media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
-	"media/site/images/backgrounds/Wenge_Jara_Cable_Manager_jpg": "/media/site/images/backgrounds/Wenge_Jara_Cable_Manager.jpg",
-	"media/site/images/backgrounds/Wood_Pens_jpg": "/media/site/images/backgrounds/Wood_Pens.jpg",
-	"media/site/images/backgrounds/Walnut_and_Maple_Single_Speaker_jpg": "/media/site/images/backgrounds/Walnut_and_Maple_Single_Speaker.jpg",
-	"media/site/images/backgrounds/Maple_and_Walnut_Visualizer_jpg": "/media/site/images/backgrounds/Maple_and_Walnut_Visualizer.jpg",
-	"media/site/images/backgrounds/Online_Sandwich_Ordering_Machine_jpg": "/media/site/images/backgrounds/Online_Sandwich_Ordering_Machine.jpg",
-	"media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box_jpg": "/media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box.jpg",
-	"media/site/images/backgrounds/Tropical_Wood_Phone_Stand_jpg": "/media/site/images/backgrounds/Tropical_Wood_Phone_Stand.jpg",
-	"media/site/images/backgrounds/Maple_Baseball_Bat_jpg": "/media/site/images/backgrounds/Maple_Baseball_Bat.jpg",
-	"media/site/images/backgrounds/Fruit_Tart_jpg": "/media/site/images/backgrounds/Fruit_Tart.jpg",
-	"media/site/images/backgrounds/Walnut_and_East_Indian_Rosewood_Box_jpg": "/media/site/images/backgrounds/Walnut_and_East_Indian_Rosewood_Box.jpg",
-	"media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters_jpg": "/media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters.jpg",
-	"media/site/images/backgrounds/Wood_Pens_May_2016_jpg": "/media/site/images/backgrounds/Wood_Pens_May_2016.jpg",
-	"media/site/images/backgrounds/Kevin_Turning_Chaote_Viga_jpg": "/media/site/images/backgrounds/Kevin_Turning_Chaote_Viga.jpg",
-	"media/site/images/photography_background_png": "/media/site/images/photography_background.png",
-	"media/site/images/Blog_Image_jpg": "/media/site/images/Blog_Image.jpg",
-	"media/site/images/Profile_jpg": "/media/site/images/Profile.jpg",
-	"media/site/images/Design_Image_png": "/media/site/images/Design_Image.png",
-	"media/site/images/code_screenshot_png": "/media/site/images/code_screenshot.png",
-	"media/site/images/Animated_Submit_Button_svg": "/media/site/images/Animated%20Submit%20Button.svg",
-	"media/site/images/Profile2_jpg": "/media/site/images/Profile2.jpg",
-	"media/site/images/animated_logo_svg": "/media/site/images/animated-logo.svg",
-	"media/site/favicon_png": "/media/site/favicon.png",
-	"media/site/logo/initials_logo_svg": "/media/site/logo/initials_logo.svg",
-	"media/site/logo/initials_logo_png": "/media/site/logo/initials_logo.png",
-	"media/site/logo/initials_logo_circular_png": "/media/site/logo/initials_logo_circular.png",
-	"media/site/logo/initials_logo_animated_svg": "/media/site/logo/initials_logo_animated.svg",
-	"media/site/logo/initials_logo_shadow_png": "/media/site/logo/initials_logo_shadow.png",
-	"media/site/logo/handwritten_khou_png": "/media/site/logo/handwritten_khou.png",
-	"media/site/icons/highSchool_bw_png": "/media/site/icons/highSchool_bw.png",
-	"media/site/icons/search_icon_bw_png": "/media/site/icons/search_icon_bw.png",
-	"media/site/icons/code_png": "/media/site/icons/code.png",
-	"media/site/icons/photography_icon_png": "/media/site/icons/photography_icon.png",
-	"media/site/icons/iphone_icon_png": "/media/site/icons/iphone_icon.png",
-	"media/site/icons/table_saw_png": "/media/site/icons/table_saw.png",
-	"media/site/icons/email_bw_png": "/media/site/icons/email_bw.png",
-	"media/site/icons/web_icon_png": "/media/site/icons/web_icon.png",
-	"media/site/icons/photography_png": "/media/site/icons/photography.png",
-	"media/site/icons/logos/YouTube_bw_png": "/media/site/icons/logos/YouTube_bw.png",
-	"media/site/icons/logos/Github_bw_png": "/media/site/icons/logos/Github_bw.png",
-	"media/site/icons/logos/Facebook_bw_png": "/media/site/icons/logos/Facebook_bw.png",
-	"media/site/icons/logos/Flickr_bw_png": "/media/site/icons/logos/Flickr_bw.png",
-	"media/site/icons/logos/Instagram_bw_png": "/media/site/icons/logos/Instagram_bw.png",
-	"media/site/icons/logos/LinkedIn_bw_png": "/media/site/icons/logos/LinkedIn_bw.png",
-	"media/site/icons/logos/Twitter_bw_png": "/media/site/icons/logos/Twitter_bw.png",
-	"media/site/icons/blog_png": "/media/site/icons/blog.png",
-	"media/site/icons/home_bw_png": "/media/site/icons/home_bw.png",
-	"media/site/icons/design_icon_png": "/media/site/icons/design_icon.png",
-	"media/site/icons/gallery_bw_png": "/media/site/icons/gallery_bw.png",
-	"media/site/icons/chevron_down_bw_svg": "/media/site/icons/chevron_down_bw.svg",
-	"media/site/gradients/black_png": "/media/site/gradients/black.png",
-	"media/site/fonts/LingWaiSC/LingWaiSC_Medium_otf": "/media/site/fonts/LingWaiSC/LingWaiSC-Medium.otf",
-	"media/site/fonts/ShreeDev0714/ShreeDev0714_Bold_ttf": "/media/site/fonts/ShreeDev0714/ShreeDev0714-Bold.ttf",
-	"media/site/fonts/ShreeDev0714/ShreeDev0714_ttf": "/media/site/fonts/ShreeDev0714/ShreeDev0714.ttf",
-	"media/site/fonts/ShreeDev0714/ShreeDev0714_Bold_Italic_ttf": "/media/site/fonts/ShreeDev0714/ShreeDev0714-Bold-Italic.ttf",
-	"media/site/fonts/ShreeDev0714/ShreeDev0714_Italic_ttf": "/media/site/fonts/ShreeDev0714/ShreeDev0714-Italic.ttf",
-	"media/site/fonts/RagingRedLotus/RagingRedLotusBB_otf": "/media/site/fonts/RagingRedLotus/RagingRedLotusBB.otf",
-	"media/site/fonts/RagingRedLotus/RagingRedLotusBB_ttf": "/media/site/fonts/RagingRedLotus/RagingRedLotusBB.ttf",
-	"media/site/fonts/RagingRedLotus/fontinfo_txt": "/media/site/fonts/RagingRedLotus/fontinfo.txt",
-	"media/site/fonts/RagingRedLotus/RagingRedLotusBB_ital_ttf": "/media/site/fonts/RagingRedLotus/RagingRedLotusBB_ital.ttf",
-	"media/site/fonts/Papyrus/Papyrus_ttc": "/media/site/fonts/Papyrus/Papyrus.ttc",
-	"media/site/fonts/GangofThree/go3v2_ttf": "/media/site/fonts/GangofThree/go3v2.ttf",
-	"media/site/fonts/ProximaNova/ProximaNovaCond_Semibold_otf": "/media/site/fonts/ProximaNova/ProximaNovaCond-Semibold.otf",
-	"media/site/fonts/ProximaNova/ProximaNova_Light_otf": "/media/site/fonts/ProximaNova/ProximaNova-Light.otf",
-	"media/site/fonts/ProximaNova/ProximaNova_Semibold_otf": "/media/site/fonts/ProximaNova/ProximaNova-Semibold.otf",
-	"media/site/fonts/ProximaNova/ProximaNova_Bold_otf": "/media/site/fonts/ProximaNova/ProximaNova-Bold.otf",
-	"media/site/fonts/ProximaNova/ProximaNova_Extrabold_otf": "/media/site/fonts/ProximaNova/ProximaNova-Extrabold.otf",
-	"media/site/fonts/ProximaNova/ProximaNova_BoldIt_otf": "/media/site/fonts/ProximaNova/ProximaNova-BoldIt.otf",
-	"media/site/fonts/ProximaNova/ProximaNovaCond_LightIt_otf": "/media/site/fonts/ProximaNova/ProximaNovaCond-LightIt.otf",
-	"media/site/fonts/ProximaNova/ProximaNova_RegularItalic_otf": "/media/site/fonts/ProximaNova/ProximaNova-RegularItalic.otf",
-	"media/site/fonts/ProximaNova/ProximaNovaCond_SemiboldIt_otf": "/media/site/fonts/ProximaNova/ProximaNovaCond-SemiboldIt.otf",
-	"media/site/fonts/ProximaNova/ProximaNova_RegItalic_otf": "/media/site/fonts/ProximaNova/ProximaNova-RegItalic.otf",
-	"media/site/fonts/ProximaNova/ProximaNovaCond_Light_otf": "/media/site/fonts/ProximaNova/ProximaNovaCond-Light.otf",
-	"media/site/fonts/ProximaNova/ProximaNova_Black_otf": "/media/site/fonts/ProximaNova/ProximaNova-Black.otf",
-	"media/site/fonts/ProximaNova/ProximaNova_Regular_otf": "/media/site/fonts/ProximaNova/ProximaNova-Regular.otf",
-	"media/site/fonts/ProximaNova/ProximaNovaCond_RegularIt_otf": "/media/site/fonts/ProximaNova/ProximaNovaCond-RegularIt.otf",
-	"media/site/fonts/ProximaNova/ProximaNova_SemiboldItalic_otf": "/media/site/fonts/ProximaNova/ProximaNova-SemiboldItalic.otf",
-	"media/site/fonts/ProximaNova/ProximaNovaCond_Regular_otf": "/media/site/fonts/ProximaNova/ProximaNovaCond-Regular.otf",
-	"media/site/fonts/ProximaNova/ProximaNova_LightItalic_otf": "/media/site/fonts/ProximaNova/ProximaNova-LightItalic.otf",
-	"media/store/Times_Square_Rain_Street_jpg": "/media/store/Times%20Square%20Rain%20Street.jpg",
-	"media/store/Lombard_Street_Drone_jpg": "/media/store/Lombard%20Street%20Drone.jpg",
-	"media/store/Shot_Glass_Fairy_Lights_and_Rose_jpg": "/media/store/Shot%20Glass%20Fairy%20Lights%20and%20Rose.jpg",
-	"media/store/Caroline_Lying_Down_with_Moon_Fairy_Lights_Rose_jpg": "/media/store/Caroline%20Lying%20Down%20with%20Moon%2C%20Fairy%20Lights%2C%20Rose.jpg",
-	"media/store/Larry_Bao_Two_Man_Boat_Portrait_jpg": "/media/store/Larry%20Bao%20Two%20Man%20Boat%20Portrait.jpg",
-	"media/store/Mori_Point_Pacifica_Long_Exposure_Rocks_jpg": "/media/store/Mori%20Point%20Pacifica%20Long%20Exposure%20Rocks.jpg",
-	"media/store/Choi_Hung_Estate_Drone_Top_Down_Vertical_jpg": "/media/store/Choi%20Hung%20Estate%20Drone%20Top%20Down%20%28Vertical%29.jpg",
-	"media/store/Hong_Kong_Sunset_Drone_Pinewood_Battery_Panorama_jpg": "/media/store/Hong%20Kong%20Sunset%20Drone%20Pinewood%20Battery%20Panorama.jpg",
-	"media/store/Hie_Shrine_Tokyo_Japan_jpg": "/media/store/Hie%20Shrine%2C%20Tokyo%2C%20Japan.jpg",
-	"media/store/Mai_Chau_Morning_Fog_Panorama_jpg": "/media/store/Mai%20Chau%20Morning%20Fog%20Panorama.jpg",
-	"media/store/Fall_Tree_Lens_Ball_jpg": "/media/store/Fall%20Tree%20Lens%20Ball.jpg",
-	"media/store/Dragon_s_Back_Hike_Panorama_jpg": "/media/store/Dragon%27s%20Back%20Hike%20Panorama.jpg",
-	"media/store/Bride_s_Pool_Long_Exposure_1_jpg": "/media/store/Bride%27s%20Pool%20Long%20Exposure%201.jpg",
-	"media/store/Choi_Hung_Estate_Drone_Top_Down_Horizontal_jpg": "/media/store/Choi%20Hung%20Estate%20Drone%20Top%20Down%20%28Horizontal%29.jpg",
-	"media/store/Choi_Hung_Estate_Desmond_Brenizer_jpg": "/media/store/Choi%20Hung%20Estate%20Desmond%20Brenizer.jpg",
-	"media/store/Grand_Teton_Landscape_jpg": "/media/store/Grand%20Teton%20Landscape.jpg",
-	"media/store/Roxelana_Jewels_Lamps_jpg": "/media/store/Roxelana%20Jewels%20Lamps.jpg",
-	"media/store/Bear_Valley_Astrophotography_Horizontal_jpg": "/media/store/Bear%20Valley%20Astrophotography%20%28Horizontal%29.jpg",
-	"media/store/Minnesota_Drone_jpg": "/media/store/Minnesota%20Drone.jpg",
-	"media/store/Bear_Valley_Astro_Portrait_jpg": "/media/store/Bear%20Valley%20Astro%20Portrait.jpg",
-	"media/store/Marina_Bay_Sands_Drone_Vertical_jpg": "/media/store/Marina%20Bay%20Sands%20Drone%20%28Vertical%29.jpg",
-	"media/store/Princeton_Football_Field_At_Night_jpg": "/media/store/Princeton%20Football%20Field%20At%20Night.jpg",
-	"media/store/Santa_Cruz_Boardwalk_Drone_Top_Down_jpg": "/media/store/Santa%20Cruz%20Boardwalk%20Drone%20%28Top%20Down%29.jpg",
-	"media/store/Times_Square_Santa_jpg": "/media/store/Times%20Square%20Santa.jpg",
-	"media/store/Ladies_Market_Balcony_Lens_Ball_jpg": "/media/store/Ladies%20Market%20Balcony%20Lens%20Ball.jpg",
-	"media/store/Artisan_Dinner_Table_jpg": "/media/store/Artisan%20Dinner%20Table.jpg",
-	"media/store/Hong_Kong_Night_Skyline_Long_Exposure_jpg": "/media/store/Hong%20Kong%20Night%20Skyline%20Long%20Exposure.jpg",
-	"media/store/Times_Square_Taxi_Behind_jpg": "/media/store/Times%20Square%20Taxi%20%28Behind%29.jpg",
-	"media/store/Moon_Fairly_Lights_Book_Roses_Photo_jpg": "/media/store/Moon%20Fairly%20Lights%20Book%20Roses%20Photo.jpg",
-	"media/store/1903_Hall_Drone_Top_Down_jpg": "/media/store/1903%20Hall%20Drone%20Top%20Down.jpg",
-	"media/store/Choi_Hung_Estate_Drone_Top_Down_Horizontal_2_jpg": "/media/store/Choi%20Hung%20Estate%20Drone%20Top%20Down%20%28Horizontal%29-2.jpg",
-	"media/store/Times_Square_Taxi_Side_jpg": "/media/store/Times%20Square%20Taxi%20%28Side%29.jpg",
-	"media/store/Golden_Gate_Bridge_Night_Marin_Headlands_jpg": "/media/store/Golden%20Gate%20Bridge%20Night%20%28Marin%20Headlands%29.jpg",
-	"media/store/Bear_Valley_Astrophotography_Portrait_jpg": "/media/store/Bear%20Valley%20Astrophotography%20%28Portrait%29.jpg",
-	"media/store/Loneliest_Road_Mountain_jpg": "/media/store/Loneliest%20Road%20Mountain.jpg",
-	"media/store/Kowloon_Bay_Drone_Vertical_jpg": "/media/store/Kowloon%20Bay%20Drone%20%28Vertical%29.jpg",
-	"media/store/THS_Tennis_Court_Drone_Drone_Art_jpg": "/media/store/THS%20Tennis%20Court%20Drone%20%28Drone%20Art%29.jpg",
-	"media/store/Cliff_House_Sutro_Baths_at_Night_jpg": "/media/store/Cliff%20House%20Sutro%20Baths%20at%20Night.jpg",
-	"media/store/Loneliest_Road_Drone_jpg": "/media/store/Loneliest%20Road%20Drone.jpg",
-	"media/store/Clean_Trahs_Philly_jpg": "/media/store/Clean%20Trahs%20Philly.jpg",
-	"media/store/Loneliest_Road_Vanishing_Road_jpg": "/media/store/Loneliest%20Road%20%28Vanishing%20Road%29.jpg",
-	"media/store/Habeco_Beer_Cap_Macro_jpg": "/media/store/Habeco%20Beer%20Cap%20%28Macro%29.jpg",
-	"media/store/HanaHaus_Coffee_jpg": "/media/store/HanaHaus%20Coffee.jpg",
-	"media/store/Delta_Lake_jpg": "/media/store/Delta%20Lake.jpg",
-	"media/store/Choi_Hung_Estate_Basketball_Hoop_jpg": "/media/store/Choi%20Hung%20Estate%20Basketball%20Hoop.jpg",
-	"media/store/New_York_Street_Artist_Side_jpg": "/media/store/New%20York%20Street%20Artist%20%28Side%29.jpg",
-	"media/store/Monster_Mansion_Head_On_Vertical_jpg": "/media/store/Monster%20Mansion%20Head%20On%20Vertical.jpg",
-	"media/store/Sai_Wan_Drone_2_Vertical_jpg": "/media/store/Sai%20Wan%20Drone%202%20%28Vertical%29.jpg",
-	"media/store/Halong_Bay_Sunset_Panorama_jpg": "/media/store/Halong%20Bay%20Sunset%20Panorama.jpg",
-	"media/store/Jackson_Hole_Golf_Course_Drone_jpg": "/media/store/Jackson%20Hole%20Golf%20Course%20Drone.jpg",
-	"media/store/Seoul_Tower_Seoul_Tokyo_jpg": "/media/store/Seoul%20Tower%2C%20Seoul%2C%20Tokyo.jpg",
-	"media/store/Burning_Paper_jpg": "/media/store/Burning%20Paper.jpg",
-	"media/store/Shek_Lei_Pui_Reservoir_Vertical_Drone_2_8x10_jpg": "/media/store/Shek%20Lei%20Pui%20Reservoir%20Vertical%20Drone%202%20%288x10%29.jpg",
-	"media/store/Shek_Lek_Pui_Reservoir_Drone_Vertical_jpg": "/media/store/Shek%20Lek%20Pui%20Reservoir%20Drone%20%28Vertical%29.jpg",
-	"media/store/Jackson_Golf_Trevor_Fishing_jpg": "/media/store/Jackson%20Golf%20Trevor%20Fishing.jpg",
-	"media/store/Choi_Hung_Estate_Drone_Level_Building_jpg": "/media/store/Choi%20Hung%20Estate%20Drone%20Level%20Building.jpg",
-	"media/store/Patton_Hall_Drone_jpg": "/media/store/Patton%20Hall%20Drone.jpg",
-	"media/store/Top_of_the_Rock_Sign_jpg": "/media/store/Top%20of%20the%20Rock%20Sign.jpg",
-	"media/store/Time_Square_Taxi_jpg": "/media/store/Time%20Square%20Taxi.jpg",
-	"media/store/Grand_Teton_Astro_with_Grass_jpg": "/media/store/Grand%20Teton%20Astro%20with%20Grass.jpg",
-	"media/store/Ladies_Market_Balcony_Long_Exposure_jpg": "/media/store/Ladies%20Market%20Balcony%20Long%20Exposure.jpg",
-	"media/store/Shek_Lei_Pui_Reservoir_Drone_Straight_Down_jpg": "/media/store/Shek%20Lei%20Pui%20Reservoir%20Drone%20Straight%20Down.jpg",
-	"media/store/San_Francisco_from_Russian_Hill_Drone_jpg": "/media/store/San%20Francisco%20from%20Russian%20Hill%20Drone.jpg",
-	"media/store/Christmas_Ornament_jpg": "/media/store/Christmas%20Ornament.jpg",
-	"media/store/THS_Tennis_Court_Drone_Top_Down_jpg": "/media/store/THS%20Tennis%20Court%20Drone%20%28Top%20Down%29.jpg",
-	"media/store/Gardens_by_the_Bay_Vertical_Drone_jpg": "/media/store/Gardens%20by%20the%20Bay%20%28Vertical%20Drone%29.jpg",
-	"media/store/Hong_Kong_Night_Skyline_Vertical_jpg": "/media/store/Hong%20Kong%20Night%20Skyline%20%28Vertical%29.jpg",
-	"media/store/Mai_Chau_Rice_Fields_Panorama_Drone_jpg": "/media/store/Mai%20Chau%20Rice%20Fields%20Panorama%20Drone.jpg",
-	"media/store/Hong_Kong_Fifty_Cents_Macro_jpg": "/media/store/Hong%20Kong%20Fifty%20Cents%20%28Macro%29.jpg",
-	"media/store/Grand_Teton_Landscape_2x3_jpg": "/media/store/Grand%20Teton%20Landscape%20%282x3%29.jpg",
-	"media/store/Loneliest_Road_Drone_Top_Down_jpg": "/media/store/Loneliest%20Road%20Drone%20%28Top%20Down%29.jpg",
-	"media/store/Mai_Chau_Rice_Paddies_Sunset_Panorama_1_jpg": "/media/store/Mai%20Chau%20Rice%20Paddies%20Sunset%20Panorama%201.jpg",
-	"media/store/Tsim_Sha_Tsui_Lensball_Long_Exposure_jpg": "/media/store/Tsim%20Sha%20Tsui%20Lensball%20Long%20Exposure.jpg",
-	"media/store/Big_Wave_Beach_Hong_Kong_Top_Down_Drone_jpg": "/media/store/Big%20Wave%20Beach%2C%20Hong%20Kong%20Top%20Down%20Drone.jpg",
-	"media/store/Choi_Hung_Estate_Drone_Vertical_jpg": "/media/store/Choi%20Hung%20Estate%20Drone%20%28Vertical%29.jpg",
-	"media/store/Cherry_Blossums_Seoul_Korea_jpg": "/media/store/Cherry%20Blossums%2C%20Seoul%2C%20Korea.jpg",
-	"media/store/Fly_Fishing_Rod_jpg": "/media/store/Fly%20Fishing%20Rod.jpg",
-	"media/store/Princeton_Football_Field_Down_jpg": "/media/store/Princeton%20Football%20Field%20%28Down%29.jpg",
-	"media/store/New_York_Street_Artist_Front_jpg": "/media/store/New%20York%20Street%20Artist%20%28Front%29.jpg",
-	"media/store/Hong_Kong_Night_Market_Food_Stand_Vertical_jpg": "/media/store/Hong%20Kong%20Night%20Market%20Food%20Stand%20%28Vertical%29.jpg",
-	"media/store/Twin_Peaks_Light_Painting_jpg": "/media/store/Twin%20Peaks%20Light%20Painting.jpg",
-	"media/store/Mai_Chau_Rice_Paddies_Sunset_Panorama_2_jpg": "/media/store/Mai%20Chau%20Rice%20Paddies%20Sunset%20Panorama%202.jpg",
-	"media/store/San_Francisco_Downtown_From_Twin_Peaks_Night_Long_Exposure_jpg": "/media/store/San%20Francisco%20Downtown%20From%20Twin%20Peaks%20Night%20Long%20Exposure.jpg",
-	"media/store/Lombard_Street_11x14_jpg": "/media/store/Lombard%20Street%20%2811x14%29.jpg",
-	"media/store/Hong_Kong_Red_Taxi_Motion_Blur_Horizontal_jpg": "/media/store/Hong%20Kong%20Red%20Taxi%20Motion%20Blur%20%28Horizontal%29.jpg",
-	"media/store/Blair_Arch_Drone_Landscape_jpg": "/media/store/Blair%20Arch%20Drone%20Landscape.jpg",
-	"media/store/Gardens_by_the_Bay_Horizontal_Drone_jpg": "/media/store/Gardens%20by%20the%20Bay%20%28Horizontal%20Drone%29.jpg",
-	"media/store/Times_Square_Lens_Ball_jpg": "/media/store/Times%20Square%20Lens%20Ball.jpg",
-	"media/store/Dog_Sledding_Dog_jpg": "/media/store/Dog%20Sledding%20Dog.jpg",
-	"media/store/Mong_Kok_Neon_Signs_Vertical_jpg": "/media/store/Mong%20Kok%20Neon%20Signs%20%28Vertical%29.jpg",
-	"media/store/Piano_Black_and_White_jpg": "/media/store/Piano%20Black%20and%20White.jpg",
-	"media/store/Larry_Bao_Two_Man_Boat_Top_Down_jpg": "/media/store/Larry%20Bao%20Two%20Man%20Boat%20Top%20Down.jpg",
-	"media/store/Sai_Wan_Drone_Vertical_jpg": "/media/store/Sai%20Wan%20Drone%20%28Vertical%29.jpg",
-	"media/store/KHOU4_0004_PRINT_jpg": "/media/store/KHOU4-0004-PRINT.jpg",
-	"media/store/Lake_Carnegie_Landscape_Fall_Season_jpg": "/media/store/Lake%20Carnegie%20Landscape%20Fall%20Season.jpg",
-	"media/store/Delta_Lake_Glacier_Runnoff_jpg": "/media/store/Delta%20Lake%20Glacier%20Runnoff.jpg",
-	"media/store/Mori_Point_Pacifica_Sunset_jpg": "/media/store/Mori%20Point%20Pacifica%20Sunset.jpg",
-	"media/store/Hong_Kong_Skyline_Panorama_jpg": "/media/store/Hong%20Kong%20Skyline%20Panorama.jpg",
-	"media/store/Yin_Yang_Golden_Gate_Bridge_Light_Painting_jpg": "/media/store/Yin%20Yang%20Golden%20Gate%20Bridge%20Light%20Painting.jpg",
-	"media/store/Caroline_Floating_Moon_with_Fairy_Lights_jpg": "/media/store/Caroline%20Floating%20Moon%20with%20Fairy%20Lights.jpg",
-	"media/store/1903_Hall_and_Cuyler_Hall_Drone_jpg": "/media/store/1903%20Hall%20and%20Cuyler%20Hall%20Drone.jpg",
-	"media/store/KHOU3_0003_PRINT_jpg": "/media/store/KHOU3-0003-PRINT.jpg",
-	"media/store/Princeton_Boat_House_Fall_Season_jpg": "/media/store/Princeton%20Boat%20House%20Fall%20Season.jpg",
-	"media/store/Grand_Teton_Bison_jpg": "/media/store/Grand%20Teton%20Bison.jpg",
-	"media/store/Mong_Kong_Lens_Ball_Neon_Signs_Vertical_jpg": "/media/store/Mong%20Kong%20Lens%20Ball%20Neon%20Signs%20%28Vertical%29.jpg",
-	"media/store/Teddy_Niagara_Falls_jpg": "/media/store/Teddy%20Niagara%20Falls.jpg",
-	"media/store/Devil_s_Tower_jpg": "/media/store/Devil%27s%20Tower.jpg",
-	"media/store/Palace_of_Fine_Arts_Portrait_jpg": "/media/store/Palace%20of%20Fine%20Arts%20Portrait.jpg",
-	"media/store/KHou_Golden_Gate_Bridge_Light_Painting_jpg": "/media/store/KHou%20Golden%20Gate%20Bridge%20Light%20Painting.jpg",
-	"media/store/Badlands_1_jpg": "/media/store/Badlands%201.jpg",
-	"media/store/Temple_Street_Market_Overview_jpg": "/media/store/Temple%20Street%20Market%20Overview.jpg",
-	"media/store/Bride_s_Pool_Long_Exposure_1_2_jpg": "/media/store/Bride%27s%20Pool%20Long%20Exposure%201-2.jpg",
-	"media/store/Hong_Kong_Ten_Cents_Macro_jpg": "/media/store/Hong%20Kong%20Ten%20Cents%20%28Macro%29.jpg",
-	"media/store/Hong_Kong_Fifty_Cents_Macro_Vertical_jpg": "/media/store/Hong%20Kong%20Fifty%20Cents%20%28Macro%2C%20Vertical%29.jpg",
-	"media/store/Rubicon_Peak_Drone_jpg": "/media/store/Rubicon%20Peak%20%28Drone%29.jpg",
-	"media/store/Monster_Mansion_Vertical_jpg": "/media/store/Monster%20Mansion%20Vertical.jpg",
-	"media/store/Palace_of_Fine_Arts_Street_with_Cars_Drone_jpg": "/media/store/Palace%20of%20Fine%20Arts%20Street%20with%20Cars%20Drone.jpg",
-	"media/store/Times_Square_Screens_jpg": "/media/store/Times%20Square%20Screens.jpg",
-	"media/store/Mount_Rushmore_Picture_of_iPhone_jpg": "/media/store/Mount%20Rushmore%20%28Picture%20of%20iPhone%29.jpg",
-	"media/store/Badlands_2_jpg": "/media/store/Badlands%202.jpg",
-	"media/store/Hong_Kong_Motorbike_Motion_Blur_Horizontal_jpg": "/media/store/Hong%20Kong%20Motorbike%20Motion%20Blur%20%28Horizontal%29.jpg",
-	"media/store/Grand_Teton_Morman_Row_jpg": "/media/store/Grand%20Teton%20Morman%20Row.jpg",
-	"media/store/Times_Square_Long_Exposure_Cars_jpg": "/media/store/Times%20Square%20Long%20Exposure%20Cars.jpg",
-	"media/store/Marina_Bay_Drone_Panorama_jpg": "/media/store/Marina%20Bay%20Drone%20Panorama.jpg",
-	"media/store/Caroline_with_Moon_and_Fairy_Lights_Side_Profile_jpg": "/media/store/Caroline%20with%20Moon%20and%20Fairy%20Lights%20Side%20Profile.jpg",
-	"media/store/Hong_Kong_Minivan_Motion_Blur_Horizontal_jpg": "/media/store/Hong%20Kong%20Minivan%20Motion%20Blur%20%28Horizontal%29.jpg",
-	"media/store/1903_Hall_in_Snow_jpg": "/media/store/1903%20Hall%20in%20Snow.jpg",
-	"media/store/Sea_Ranch_Seals_Drone_Top_Down_jpg": "/media/store/Sea%20Ranch%20Seals%20Drone%20%28Top%20Down%29.jpg",
-	"media/store/Bride_s_Pool_Waterfall_Vertical_jpg": "/media/store/Bride%27s%20Pool%20Waterfall%20%28Vertical%29.jpg",
-	"media/store/Shibuya_Taxi_Motion_Blur_jpg": "/media/store/Shibuya%20Taxi%20Motion%20Blur.jpg"
-}
+  Design_Guide_txt: "/Design-Guide.txt",
+  "photography/San_Francisco_from_Twin_Peaks_placeholder_jpg":
+    "/photography/San%20Francisco%20from%20Twin%20Peaks.placeholder.jpg",
+  "photography/Sitting_in_Window_Sill_in_Snow_jpg":
+    "/photography/Sitting%20in%20Window%20Sill%20in%20Snow.jpg",
+  "photography/_USA_Road_Trip_6_placeholder_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-6.placeholder.jpg",
+  "photography/Lombard_Street_Drone_jpg":
+    "/photography/Lombard%20Street%20Drone.jpg",
+  "photography/1903_Courtyard_Landscape_jpg":
+    "/photography/1903%20Courtyard%20Landscape.jpg",
+  "photography/Snappa_in_Tiger_Inn_Lawn_Action_Shot_Drone_placeholder_jpg":
+    "/photography/Snappa%20in%20Tiger%20Inn%20Lawn%20Action%20Shot%20Drone.placeholder.jpg",
+  "photography/Seattle_Orange_Cityscape_Drone_Horizontal_jpg":
+    "/photography/Seattle%20Orange%20Cityscape%20Drone%20Horizontal.jpg",
+  "photography/Singapore_Blue_Apartment_placeholder_jpg":
+    "/photography/Singapore%20Blue%20Apartment.placeholder.jpg",
+  "photography/Mori_Point_Pacifica_Long_Exposure_Rocks_jpg":
+    "/photography/Mori%20Point%20Pacifica%20Long%20Exposure%20Rocks.jpg",
+  "photography/Road_Winding_Through_Bear_Valley_Drone_Shot_jpg":
+    "/photography/Road%20Winding%20Through%20Bear%20Valley%20Drone%20Shot.jpg",
+  "photography/Yosemite_Valley_Sunrays_Through_Meadow_placeholder_jpg":
+    "/photography/Yosemite%20Valley%20Sunrays%20Through%20Meadow.placeholder.jpg",
+  "photography/Seoul_Korea_Temple_Drone_Top_Down_jpg":
+    "/photography/Seoul%2C%20Korea%20Temple%20Drone%20Top%20Down.jpg",
+  "photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_jpg":
+    "/photography/San%20Francisco%20Lombard%20Street%20Sunrise%20Drone%20Vertical.jpg",
+  "photography/Washington_DC_Capitol_Building_Zoom_Day_jpg":
+    "/photography/Washington%20DC%20Capitol%20Building%20Zoom%20Day.jpg",
+  "photography/Sai_Wan_Hong_Kong_Drone_Vertical_placeholder_jpg":
+    "/photography/Sai%20Wan%2C%20Hong%20Kong%20Drone%20-%20Vertical.placeholder.jpg",
+  "photography/High_Island_Reservoir_Panorama_jpg":
+    "/photography/High%20Island%20Reservoir%20Panorama.jpg",
+  "photography/Capitol_Building_Lens_Ball_placeholder_jpg":
+    "/photography/Capitol%20Building%20Lens%20Ball.placeholder.jpg",
+  "photography/San_Francisco_Downtown_Through_Car_Mirror_jpg":
+    "/photography/San%20Francisco%20Downtown%20Through%20Car%20Mirror.jpg",
+  "photography/Bear_Valley_Astrophotography_Landscape_jpg":
+    "/photography/Bear%20Valley%20Astrophotography%20Landscape.jpg",
+  "photography/Korean_Bar_Reflection_in_Rain_Puddle_jpg":
+    "/photography/Korean%20Bar%20Reflection%20in%20Rain%20Puddle.jpg",
+  "photography/San_Francisco_Downtown_from_Airplane_at_Night_Portrait_placeholder_jpg":
+    "/photography/San%20Francisco%20Downtown%20from%20Airplane%20at%20Night%20%28Portrait%29.placeholder.jpg",
+  "photography/_USA_Road_Trip_placeholder_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29.placeholder.jpg",
+  "photography/Hie_Shrine_Tokyo_Japan_jpg":
+    "/photography/Hie%20Shrine%2C%20Tokyo%2C%20Japan.jpg",
+  "photography/Greenwich_Golf_Course_Summer_Drone_Vertical_jpg":
+    "/photography/Greenwich%20Golf%20Course%20Summer%20Drone%20Vertical.jpg",
+  "photography/Florence_Portrait_View_of_City_Looking_Down_Road_placeholder_jpg":
+    "/photography/Florence%20Portrait%20View%20of%20City%20Looking%20Down%20Road.placeholder.jpg",
+  "photography/Yosemite_Valley_Sunrays_Through_Meadow_jpg":
+    "/photography/Yosemite%20Valley%20Sunrays%20Through%20Meadow.jpg",
+  "photography/Grand_Teton_Astro_with_Grass_USA_Road_Trip_jpg":
+    "/photography/Grand%20Teton%20Astro%20with%20Grass%20%28USA%20Road%20Trip%29.jpg",
+  "photography/Group_of_People_Lying_on_a_Beach_Towel_Drone_Top_Down_placeholder_jpg":
+    "/photography/Group%20of%20People%20Lying%20on%20a%20Beach%20Towel%20Drone%20Top%20Down.placeholder.jpg",
+  "photography/Golden_Gate_Bridge_Through_Fence_Long_Exposure_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Through%20Fence%20%28Long%20Exposure%29.jpg",
+  "photography/Marin_Headlands_Sunset_Hills_Landscape_placeholder_jpg":
+    "/photography/Marin%20Headlands%20Sunset%20Hills%20Landscape.placeholder.jpg",
+  "photography/Family_Drone_Christmas_Card_placeholder_jpg":
+    "/photography/Family%20Drone%20Christmas%20Card.placeholder.jpg",
+  "photography/Korea_Palace_Through_Trees_jpg":
+    "/photography/Korea%20Palace%20Through%20Trees.jpg",
+  "photography/New_York_Dear_Irving_on_Hudson_Rooftop_Intersection_placeholder_jpg":
+    "/photography/New%20York%20Dear%20Irving%20on%20Hudson%20Rooftop%20Intersection.placeholder.jpg",
+  "photography/Lake_Carnegie_Fall_Drone_Vertical_jpg":
+    "/photography/Lake%20Carnegie%20Fall%20Drone%20Vertical.jpg",
+  "photography/Artechouse_DC_Silhouette_1_placeholder_jpg":
+    "/photography/Artechouse%20DC%20Silhouette%201.placeholder.jpg",
+  "photography/Italy_House_in_Small_Courtyard_placeholder_jpg":
+    "/photography/Italy%20House%20in%20Small%20Courtyard.placeholder.jpg",
+  "photography/Colonial_Looking_Through_the_Trees_Vertical_jpg":
+    "/photography/Colonial%20Looking%20Through%20the%20Trees%20Vertical.jpg",
+  "photography/Steel_Wool_in_Front_of_Golden_Gate_Bridge_Landscape_placeholder_jpg":
+    "/photography/Steel%20Wool%20in%20Front%20of%20Golden%20Gate%20Bridge%20%28Landscape%29.placeholder.jpg",
+  "photography/Golden_Gate_Bridge_Aerial_Head_On_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Aerial%20Head%20On.jpg",
+  "photography/Yosemite_Lichens_placeholder_jpg":
+    "/photography/Yosemite%20Lichens.placeholder.jpg",
+  "photography/Marin_High_School_Swimming_Pool_Drone_Top_Down_jpg":
+    "/photography/Marin%20High%20School%20Swimming%20Pool%20Drone%20Top%20Down.jpg",
+  "photography/Jiufen_Taiwan_Drone_Vertical_placeholder_jpg":
+    "/photography/Jiufen%2C%20Taiwan%20Drone%20-%20Vertical.placeholder.jpg",
+  "photography/Palace_of_Fine_Arts_Vertical_Drone_jpg":
+    "/photography/Palace%20of%20Fine%20Arts%20Vertical%20Drone.jpg",
+  "photography/Ferry_Building_with_Skyline_At_Night_placeholder_jpg":
+    "/photography/Ferry%20Building%20with%20Skyline%20At%20Night.placeholder.jpg",
+  "photography/Yosemite_Lichens_jpg": "/photography/Yosemite%20Lichens.jpg",
+  "photography/Hong_Kong_Grid_Apartment_Drone_Vertical_placeholder_jpg":
+    "/photography/Hong%20Kong%20Grid%20Apartment%20Drone%20Vertical.placeholder.jpg",
+  "photography/Seattle_Boat_Houses_jpg":
+    "/photography/Seattle%20Boat%20Houses.jpg",
+  "photography/Nakalele_Blowhole_jpg": "/photography/Nakalele%20Blowhole.jpg",
+  "photography/Bride_s_Pool_Long_Exposure_1_jpg":
+    "/photography/Bride%27s%20Pool%20Long%20Exposure%201.jpg",
+  "photography/Loneliest_Road_Vertical_Drone_Top_Down_placeholder_jpg":
+    "/photography/Loneliest%20Road%20Vertical%20Drone%20%28Top%20Down%29.placeholder.jpg",
+  "photography/Backcountry_Greenwich_Drone_Landscape_jpg":
+    "/photography/Backcountry%20Greenwich%20Drone%20Landscape.jpg",
+  "photography/Sunset_Sillhouette_Horizontal_Las_Terrenas_Dominican_Republic_jpg":
+    "/photography/Sunset%20Sillhouette%20Horizontal%20Las%20Terrenas%2C%20Dominican%20Republic.jpg",
+  "photography/Students_Studying_in_Palmer_Square_jpg":
+    "/photography/Students%20Studying%20in%20Palmer%20Square.jpg",
+  "photography/Nassau_Hall_Landscape_jpg":
+    "/photography/Nassau%20Hall%20Landscape.jpg",
+  "photography/Main_Post_Presidio_San_Francisco_jpg":
+    "/photography/Main%20Post%20Presidio%20San%20Francisco.jpg",
+  "photography/Bear_Valley_Drone_Landscape_of_Valley_jpg":
+    "/photography/Bear%20Valley%20Drone%20Landscape%20of%20Valley.jpg",
+  "photography/Pigeon_Point_Lighthouse_Milky_Way_with_Meteor_placeholder_jpg":
+    "/photography/Pigeon%20Point%20Lighthouse%20Milky%20Way%20with%20Meteor.placeholder.jpg",
+  "photography/Hong_Kong_Motorbike_Motion_Blur_Horizontal_placeholder_jpg":
+    "/photography/Hong%20Kong%20Motorbike%20Motion%20Blur%20%28Horizontal%29.placeholder.jpg",
+  "photography/Lonely_Barn_at_the_Base_of_Grand_Tetons_jpg":
+    "/photography/Lonely%20Barn%20at%20the%20Base%20of%20Grand%20Tetons.jpg",
+  "photography/Transamerica_Building_San_Francisco_Drone_Vertical_jpg":
+    "/photography/Transamerica%20Building%20San%20Francisco%20Drone%20Vertical.jpg",
+  "photography/Monster_Mansion_Head_On_Vertical_placeholder_jpg":
+    "/photography/Monster%20Mansion%20Head%20On%20Vertical.placeholder.jpg",
+  "photography/Friends_Hanging_Out_at_Off_the_Grid_placeholder_jpg":
+    "/photography/Friends%20Hanging%20Out%20at%20Off%20the%20Grid.placeholder.jpg",
+  "photography/Hong_Kong_Downtown_Horizon_Drone_Pinewood_Battery_jpg":
+    "/photography/Hong%20Kong%20Downtown%20Horizon%20Drone%20Pinewood%20Battery.jpg",
+  "photography/Cherry_Blossums_Seoul_Korea_placeholder_jpg":
+    "/photography/Cherry%20Blossums%2C%20Seoul%2C%20Korea.placeholder.jpg",
+  "photography/1903_Hall_and_Cuyler_Hall_Drone_placeholder_jpg":
+    "/photography/1903%20Hall%20and%20Cuyler%20Hall%20Drone.placeholder.jpg",
+  "photography/Supreme_Court_Landscape_Nine_Seats_placeholder_jpg":
+    "/photography/Supreme%20Court%20Landscape%20Nine%20Seats.placeholder.jpg",
+  "photography/Minnesota_Drone_USA_Road_Trip_jpg":
+    "/photography/Minnesota%20Drone%20%28USA%20Road%20Trip%29.jpg",
+  "photography/THS_Tennis_Court_Drone_Top_Down_placeholder_jpg":
+    "/photography/THS%20Tennis%20Court%20Drone%20%28Top%20Down%29.placeholder.jpg",
+  "photography/Ximen_Taiwan_Long_Exposure_Cars_Neon_Cyberpunk_placeholder_jpg":
+    "/photography/Ximen%2C%20Taiwan%20Long%20Exposure%20Cars%20Neon%20Cyberpunk.placeholder.jpg",
+  "photography/Portrait_in_Front_of_Vatican_on_Bridge_at_Sunset_placeholder_jpg":
+    "/photography/Portrait%20in%20Front%20of%20Vatican%20on%20Bridge%20at%20Sunset.placeholder.jpg",
+  "photography/Vatican_Fountain_Landscape_jpg":
+    "/photography/Vatican%20Fountain%20Landscape.jpg",
+  "photography/Bison_Grazing_In_Front_of_Mountain_Landscape_2x3_placeholder_jpg":
+    "/photography/Bison%20Grazing%20In%20Front%20of%20Mountain%20Landscape%20%282x3%29.placeholder.jpg",
+  "photography/Martin_s_Beach_Milky_Way_jpg":
+    "/photography/Martin%27s%20Beach%20Milky%20Way.jpg",
+  "photography/Embarcadero_Drone_Ferry_Building_Night_Vertical_placeholder_jpg":
+    "/photography/Embarcadero%20Drone%20Ferry%20Building%20Night%20Vertical.placeholder.jpg",
+  "photography/Pigeon_Point_Lighthouse_Milky_Way_placeholder_jpg":
+    "/photography/Pigeon%20Point%20Lighthouse%20Milky%20Way.placeholder.jpg",
+  "photography/Ferry_Building_at_Sunset_Long_Exposure_Vertical_placeholder_jpg":
+    "/photography/Ferry%20Building%20at%20Sunset%20Long%20Exposure%20Vertical.placeholder.jpg",
+  "photography/New_York_Street_Artist_Front_placeholder_jpg":
+    "/photography/New%20York%20Street%20Artist%20%28Front%29.placeholder.jpg",
+  "photography/DSLR_With_Lensball_Image_on_Screen_jpg":
+    "/photography/DSLR%20With%20Lensball%20Image%20on%20Screen.jpg",
+  "photography/Tsim_Sha_Tsui_Lensball_Long_Exposure_placeholder_jpg":
+    "/photography/Tsim%20Sha%20Tsui%20Lensball%20Long%20Exposure.placeholder.jpg",
+  "photography/Car_Burning_Cross_Country_Roadtrip_jpg":
+    "/photography/Car%20Burning%20Cross%20Country%20Roadtrip.jpg",
+  "photography/Rome_Italy_Meat_and_Cheese_Restaurant_jpg":
+    "/photography/Rome%2C%20Italy%20Meat%20and%20Cheese%20Restaurant.jpg",
+  "photography/Loneliest_Road_Vertical_Drone_Top_Down_jpg":
+    "/photography/Loneliest%20Road%20Vertical%20Drone%20%28Top%20Down%29.jpg",
+  "photography/Lake_Carnegie_Landscape_Fall_Season_placeholder_jpg":
+    "/photography/Lake%20Carnegie%20Landscape%20Fall%20Season.placeholder.jpg",
+  "photography/Whitman_Lower_Courtyard_in_Snow_placeholder_jpg":
+    "/photography/Whitman%20Lower%20Courtyard%20in%20Snow.placeholder.jpg",
+  "photography/Bear_Valley_Astrophotography_Horizontal_jpg":
+    "/photography/Bear%20Valley%20Astrophotography%20%28Horizontal%29.jpg",
+  "photography/Princeton_Football_Field_Down_placeholder_jpg":
+    "/photography/Princeton%20Football%20Field%20%28Down%29.placeholder.jpg",
+  "photography/Lake_Carnegie_at_Sunset_Drone_placeholder_jpg":
+    "/photography/Lake%20Carnegie%20at%20Sunset%20Drone.placeholder.jpg",
+  "photography/Sunset_District_Drone_with_Fog_Rolling_In_jpg":
+    "/photography/Sunset%20District%20Drone%20with%20Fog%20Rolling%20In.jpg",
+  "photography/Mong_Kong_Lens_Ball_Neon_Signs_Vertical_placeholder_jpg":
+    "/photography/Mong%20Kong%20Lens%20Ball%20Neon%20Signs%20%28Vertical%29.placeholder.jpg",
+  "photography/Street_Market_Vendor_Talking_to_Tourist_jpg":
+    "/photography/Street%20Market%20Vendor%20Talking%20to%20Tourist.jpg",
+  "photography/Half_Dome_from_Yosemite_Falls_placeholder_jpg":
+    "/photography/Half%20Dome%20from%20Yosemite%20Falls.placeholder.jpg",
+  "photography/Taipei_101_Binoculars_jpg":
+    "/photography/Taipei%20101%20Binoculars.jpg",
+  "photography/Delta_Lake_Product_Shot_jpg":
+    "/photography/Delta%20Lake%20Product%20Shot.jpg",
+  "photography/High_Island_Reservoir_East_Dam_Drone_Top_Down_placeholder_jpg":
+    "/photography/High%20Island%20Reservoir%20East%20Dam%20Drone%20Top%20Down.placeholder.jpg",
+  "photography/Korean_Market_Shoe_Stand_placeholder_jpg":
+    "/photography/Korean%20Market%20Shoe%20Stand.placeholder.jpg",
+  "photography/Seoul_Tower_Seoul_Tokyo_placeholder_jpg":
+    "/photography/Seoul%20Tower%2C%20Seoul%2C%20Tokyo.placeholder.jpg",
+  "photography/Nassau_Hall_Landscape_Drone_placeholder_jpg":
+    "/photography/Nassau%20Hall%20Landscape%20Drone.placeholder.jpg",
+  "photography/Tabernacle_Temple_Square_jpg":
+    "/photography/Tabernacle%20Temple%20Square.jpg",
+  "photography/Full_Moon_Minimalist_Sky_jpg":
+    "/photography/Full%20Moon%20Minimalist%20Sky.jpg",
+  "photography/Devil_s_Tower_Epic_Backlight_jpg":
+    "/photography/Devil%27s%20Tower%20Epic%20Backlight.jpg",
+  "photography/Ping_Shek_Estate_Drone_Top_Down_Vertical_placeholder_jpg":
+    "/photography/Ping%20Shek%20Estate%20Drone%20Top%20Down%20%28Vertical%29.placeholder.jpg",
+  "photography/Napa_House_Drone_Shot_Landscape_jpg":
+    "/photography/Napa%20House%20Drone%20Shot%20Landscape.jpg",
+  "photography/Golden_Gate_Bridge_Peering_Through_Rocks_placeholder_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Peering%20Through%20Rocks.placeholder.jpg",
+  "photography/Lake_Carnegie_Fall_Drone_Vertical_placeholder_jpg":
+    "/photography/Lake%20Carnegie%20Fall%20Drone%20Vertical.placeholder.jpg",
+  "photography/Palace_of_Fine_Arts_Horizontal_Drone_Shot_placeholder_jpg":
+    "/photography/Palace%20of%20Fine%20Arts%20Horizontal%20Drone%20Shot.placeholder.jpg",
+  "photography/Bike_Wheel_on_Ground_Sunset_1903_Courtyard_placeholder_jpg":
+    "/photography/Bike%20Wheel%20on%20Ground%20Sunset%201903%20Courtyard.placeholder.jpg",
+  "photography/Sai_Wan_Drone_2_Vertical_placeholder_jpg":
+    "/photography/Sai%20Wan%20Drone%202%20%28Vertical%29.placeholder.jpg",
+  "photography/Yosemite_Valley_Red_Veil_Panorama_jpg":
+    "/photography/Yosemite%20Valley%20Red%20Veil%20Panorama.jpg",
+  "photography/Marina_Bay_Sands_Drone_Vertical_jpg":
+    "/photography/Marina%20Bay%20Sands%20Drone%20%28Vertical%29.jpg",
+  "photography/Capitol_Building_Walking_Towards_Building_on_Street_jpg":
+    "/photography/Capitol%20Building%20Walking%20Towards%20Building%20on%20Street.jpg",
+  "photography/Vatican_Fountain_Landscape_placeholder_jpg":
+    "/photography/Vatican%20Fountain%20Landscape.placeholder.jpg",
+  "photography/Roman_Forum_Ruins_jpg": "/photography/Roman%20Forum%20Ruins.jpg",
+  "photography/Trevor_Snowboard_at_Top_of_Mountain_jpg":
+    "/photography/Trevor%20Snowboard%20at%20Top%20of%20Mountain.jpg",
+  "photography/Statistics_and_Machine_Learning_Building_placeholder_jpg":
+    "/photography/Statistics%20and%20Machine%20Learning%20Building.placeholder.jpg",
+  "photography/Korea_Palace_Through_Trees_placeholder_jpg":
+    "/photography/Korea%20Palace%20Through%20Trees.placeholder.jpg",
+  "photography/Trevor_Sitting_on_Rubicon_Peak_Looking_Out_jpg":
+    "/photography/Trevor%20Sitting%20on%20Rubicon%20Peak%20Looking%20Out.jpg",
+  "photography/Lake_Carnegie_at_Sunset_Drone_jpg":
+    "/photography/Lake%20Carnegie%20at%20Sunset%20Drone.jpg",
+  "photography/Washington_Monument_Sunset_Red_White_Blue_Sky_placeholder_jpg":
+    "/photography/Washington%20Monument%20Sunset%20Red%20White%20Blue%20Sky.placeholder.jpg",
+  "photography/Ladies_Market_Balcony_Lens_Ball_placeholder_jpg":
+    "/photography/Ladies%20Market%20Balcony%20Lens%20Ball.placeholder.jpg",
+  "photography/Claire_Standing_in_Front_of_Lake_Minnewaska_jpg":
+    "/photography/Claire%20Standing%20in%20Front%20of%20Lake%20Minnewaska.jpg",
+  "photography/San_Francisco_California_and_Powell_Street_Trolly_placeholder_jpg":
+    "/photography/San%20Francisco%20California%20and%20Powell%20Street%20Trolly.placeholder.jpg",
+  "photography/Main_Post_Presidio_San_Francisco_placeholder_jpg":
+    "/photography/Main%20Post%20Presidio%20San%20Francisco.placeholder.jpg",
+  "photography/Empire_State_Building_Daytime_Telephoto_placeholder_jpg":
+    "/photography/Empire%20State%20Building%20Daytime%20Telephoto.placeholder.jpg",
+  "photography/Washington_Monument_in_Front_of_Lincoln_Memorial_At_Night_jpg":
+    "/photography/Washington%20Monument%20in%20Front%20of%20Lincoln%20Memorial%20At%20Night.jpg",
+  "photography/Brenizer_Method_Portrait_in_front_of_Golden_Gate_placeholder_jpg":
+    "/photography/Brenizer%20Method%20Portrait%20in%20front%20of%20Golden%20Gate.placeholder.jpg",
+  "photography/Downtown_San_Francisco_From_South_East_Horizontal_placeholder_jpg":
+    "/photography/Downtown%20San%20Francisco%20From%20South%20East%20-%20Horizontal.placeholder.jpg",
+  "photography/Marin_Headlands_Hills_Silhouette_placeholder_jpg":
+    "/photography/Marin%20Headlands%20Hills%20Silhouette.placeholder.jpg",
+  "photography/Brenizer_Method_Portrait_in_front_of_Golden_Gate_jpg":
+    "/photography/Brenizer%20Method%20Portrait%20in%20front%20of%20Golden%20Gate.jpg",
+  "photography/Walking_Dog_in_Philly_jpg":
+    "/photography/Walking%20Dog%20in%20Philly.jpg",
+  "photography/Patton_Hall_Drone_placeholder_jpg":
+    "/photography/Patton%20Hall%20Drone.placeholder.jpg",
+  "photography/House_at_the_Base_of_the_Tetons_in_Teton_Village_placeholder_jpg":
+    "/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.placeholder.jpg",
+  "photography/Boats_Top_Down_Drone_jpg":
+    "/photography/Boats%20Top%20Down%20Drone.jpg",
+  "photography/Times_Square_Santa_jpg":
+    "/photography/Times%20Square%20Santa.jpg",
+  "photography/Bike_in_Pisa_Italy_placeholder_jpg":
+    "/photography/Bike%20in%20Pisa%2C%20Italy.placeholder.jpg",
+  "photography/Grand_Teton_National_Park_Bison_placeholder_jpg":
+    "/photography/Grand%20Teton%20National%20Park%20Bison.placeholder.jpg",
+  "photography/Capitol_Building_Night_Landscape_Zoom_placeholder_jpg":
+    "/photography/Capitol%20Building%20Night%20Landscape%20Zoom.placeholder.jpg",
+  "photography/Ladies_Market_Balcony_Lens_Ball_jpg":
+    "/photography/Ladies%20Market%20Balcony%20Lens%20Ball.jpg",
+  "photography/Portrait_in_front_of_Golden_Gate_on_Baker_Beach_placeholder_jpg":
+    "/photography/Portrait%20in%20front%20of%20Golden%20Gate%20on%20Baker%20Beach.placeholder.jpg",
+  "photography/Tiger_Inn_Eating_Club_Front_Lawn_placeholder_jpg":
+    "/photography/Tiger%20Inn%20Eating%20Club%20Front%20Lawn.placeholder.jpg",
+  "photography/Loneliest_Road_Horizontal_Looking_Down_Road_jpg":
+    "/photography/Loneliest%20Road%20Horizontal%20Looking%20Down%20Road.jpg",
+  "photography/Shifen_Waterfall_Long_Exposure_Taiwan_placeholder_jpg":
+    "/photography/Shifen%20Waterfall%20Long%20Exposure%20Taiwan.placeholder.jpg",
+  "photography/High_Island_Reservoir_Panorama_placeholder_jpg":
+    "/photography/High%20Island%20Reservoir%20Panorama.placeholder.jpg",
+  "photography/Taipei_101_Architecture_jpg":
+    "/photography/Taipei%20101%20Architecture.jpg",
+  "photography/Seattle_Boat_Houses_placeholder_jpg":
+    "/photography/Seattle%20Boat%20Houses.placeholder.jpg",
+  "photography/Dominican_Republic_Las_Terrenas_Daytime_Beach_House_Panorama_placeholder_jpg":
+    "/photography/Dominican%20Republic%20Las%20Terrenas%20Daytime%20Beach%20House%20Panorama.placeholder.jpg",
+  "photography/Greenwich_Golf_Course_Summer_Drone_Vertical_placeholder_jpg":
+    "/photography/Greenwich%20Golf%20Course%20Summer%20Drone%20Vertical.placeholder.jpg",
+  "photography/Dog_at_Top_of_Teton_Mountain_in_Snow_jpg":
+    "/photography/Dog%20at%20Top%20of%20Teton%20Mountain%20in%20Snow.jpg",
+  "photography/Mong_Kok_Hong_Kong_Neon_Signs_1_placeholder_jpg":
+    "/photography/Mong%20Kok%2C%20Hong%20Kong%20Neon%20Signs%201.placeholder.jpg",
+  "photography/1903_Hall_Drone_Top_Down_placeholder_jpg":
+    "/photography/1903%20Hall%20Drone%20Top%20Down.placeholder.jpg",
+  "photography/Hong_Kong_Night_Skyline_Long_Exposure_jpg":
+    "/photography/Hong%20Kong%20Night%20Skyline%20Long%20Exposure.jpg",
+  "photography/Outside_Penn_Station_New_York_Wide_Angle_placeholder_jpg":
+    "/photography/Outside%20Penn%20Station%20New%20York%20Wide%20Angle.placeholder.jpg",
+  "photography/Trevi_Fountain_in_Rome_Italy_placeholder_jpg":
+    "/photography/Trevi%20Fountain%20in%20Rome%2C%20Italy.placeholder.jpg",
+  "photography/Clean_Trahs_Philly_placeholder_jpg":
+    "/photography/Clean%20Trahs%20Philly.placeholder.jpg",
+  "photography/Teton_Village_Golf_Course_Lake_Drone_Vertical_placeholder_jpg":
+    "/photography/Teton%20Village%20Golf%20Course%20Lake%20Drone%20Vertical.placeholder.jpg",
+  "photography/Cannon_Dial_Elm_Club_Vertical_jpg":
+    "/photography/Cannon%20Dial%20Elm%20Club%20Vertical.jpg",
+  "photography/Top_Down_Beach_Peninsula_Las_Terrenas_Dominican_Republic_jpg":
+    "/photography/Top%20Down%20Beach%20Peninsula%20Las%20Terrenas%20Dominican%20Republic.jpg",
+  "photography/Rubicon_Peak_Drone_placeholder_jpg":
+    "/photography/Rubicon%20Peak%20%28Drone%29.placeholder.jpg",
+  "photography/San_Francisco_Downtown_from_Airplane_at_Night_Portrait_jpg":
+    "/photography/San%20Francisco%20Downtown%20from%20Airplane%20at%20Night%20%28Portrait%29.jpg",
+  "photography/Times_Square_Lens_Ball_placeholder_jpg":
+    "/photography/Times%20Square%20Lens%20Ball.placeholder.jpg",
+  "photography/Kennedy_Town_Drone_Panorama_jpg":
+    "/photography/Kennedy%20Town%20Drone%20Panorama.jpg",
+  "photography/Road_Winding_Through_Bear_Valley_Drone_Shot_placeholder_jpg":
+    "/photography/Road%20Winding%20Through%20Bear%20Valley%20Drone%20Shot.placeholder.jpg",
+  "photography/Choi_Hung_Estate_Tiny_Planet_placeholder_jpg":
+    "/photography/Choi%20Hung%20Estate%20Tiny%20Planet.placeholder.jpg",
+  "photography/Times_Square_Taxi_Behind_jpg":
+    "/photography/Times%20Square%20Taxi%20%28Behind%29.jpg",
+  "photography/Snappa_in_Tiger_Inn_Lawn_Action_Shot_Drone_jpg":
+    "/photography/Snappa%20in%20Tiger%20Inn%20Lawn%20Action%20Shot%20Drone.jpg",
+  "photography/Times_Square_New_York_Street_Artist_Neon_Cyberpunk_jpg":
+    "/photography/Times%20Square%20New%20York%20Street%20Artist%20Neon%20Cyberpunk.jpg",
+  "photography/Princeton_Central_Campus_Drone_jpg":
+    "/photography/Princeton%20Central%20Campus%20Drone.jpg",
+  "photography/Yosemite_Valley_Sunset_jpg":
+    "/photography/Yosemite%20Valley%20Sunset.jpg",
+  "photography/1903_Hall_Drone_Top_Down_jpg":
+    "/photography/1903%20Hall%20Drone%20Top%20Down.jpg",
+  "photography/Cherry_Blossums_in_1903_Courtyard_in_rain_jpg":
+    "/photography/Cherry%20Blossums%20in%201903%20Courtyard%20in%20rain.jpg",
+  "photography/Big_Wave_Beach_Hong_Kong_Top_Down_Drone_placeholder_jpg":
+    "/photography/Big%20Wave%20Beach%2C%20Hong%20Kong%20Top%20Down%20Drone.placeholder.jpg",
+  "photography/Man_Walking_Bike_in_Front_of_Duomo_in_Florence_placeholder_jpg":
+    "/photography/Man%20Walking%20Bike%20in%20Front%20of%20Duomo%20in%20Florence.placeholder.jpg",
+  "photography/Fruit_Market_Stand_in_Florence_Italy_placeholder_jpg":
+    "/photography/Fruit%20Market%20Stand%20in%20Florence%2C%20Italy.placeholder.jpg",
+  "photography/Surfers_Riding_Waves_in_Hong_Kong_placeholder_jpg":
+    "/photography/Surfers%20Riding%20Waves%20in%20Hong%20Kong.placeholder.jpg",
+  "photography/Sea_Ranch_Seals_Drone_Top_Down_placeholder_jpg":
+    "/photography/Sea%20Ranch%20Seals%20Drone%20%28Top%20Down%29.placeholder.jpg",
+  "photography/Outside_Penn_Station_New_York_Wide_Angle_jpg":
+    "/photography/Outside%20Penn%20Station%20New%20York%20Wide%20Angle.jpg",
+  "photography/Tiger_Inn_Eating_Club_Front_Lawn_jpg":
+    "/photography/Tiger%20Inn%20Eating%20Club%20Front%20Lawn.jpg",
+  "photography/Times_Square_Taxi_Side_jpg":
+    "/photography/Times%20Square%20Taxi%20%28Side%29.jpg",
+  "photography/Mount_Rainier_Glacier_Lake_placeholder_jpg":
+    "/photography/Mount%20Rainier%20Glacier%20Lake.placeholder.jpg",
+  "photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_Black_Bird_jpg":
+    "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20Black%20Bird.jpg",
+  "photography/Shibuya_Crossing_Wide_Angle_jpg":
+    "/photography/Shibuya%20Crossing%20Wide%20Angle.jpg",
+  "photography/Delta_Lake_Grand_Teton_Portrait_jpg":
+    "/photography/Delta%20Lake%20Grand%20Teton%20Portrait.jpg",
+  "photography/Napa_Valley_Drone_Landscape_Sunset_House_jpg":
+    "/photography/Napa%20Valley%20Drone%20Landscape%20Sunset%20House.jpg",
+  "photography/Road_to_Hana_Cliffside_jpg":
+    "/photography/Road%20to%20Hana%20Cliffside.jpg",
+  "photography/Seattle_Vertical_Drone_Space_Needle_Sunset_jpg":
+    "/photography/Seattle%20Vertical%20Drone%20Space%20Needle%20Sunset.jpg",
+  "photography/Times_Square_New_York_Street_Artist_Neon_Cyberpunk_placeholder_jpg":
+    "/photography/Times%20Square%20New%20York%20Street%20Artist%20Neon%20Cyberpunk.placeholder.jpg",
+  "photography/Dancers_in_Hong_Kong_3_placeholder_jpg":
+    "/photography/Dancers%20in%20Hong%20Kong%20-%203.placeholder.jpg",
+  "photography/Single_Man_in_Badlands_placeholder_jpg":
+    "/photography/Single%20Man%20in%20Badlands.placeholder.jpg",
+  "photography/Steel_Wool_in_Front_of_Golden_Gate_Bridge_Landscape_jpg":
+    "/photography/Steel%20Wool%20in%20Front%20of%20Golden%20Gate%20Bridge%20%28Landscape%29.jpg",
+  "photography/Cherry_Blossums_in_1903_Courtyard_in_rain_placeholder_jpg":
+    "/photography/Cherry%20Blossums%20in%201903%20Courtyard%20in%20rain.placeholder.jpg",
+  "photography/Sunset_District_Drone_with_Fog_Rolling_In_placeholder_jpg":
+    "/photography/Sunset%20District%20Drone%20with%20Fog%20Rolling%20In.placeholder.jpg",
+  "photography/New_York_Times_Square_Taxi_Car_Neon_Cyberpunk_jpg":
+    "/photography/New%20York%20Times%20Square%20Taxi%20Car%20Neon%20Cyberpunk.jpg",
+  "photography/Marin_Headlands_Sunset_Road_placeholder_jpg":
+    "/photography/Marin%20Headlands%20Sunset%20Road.placeholder.jpg",
+  "photography/Airplane_Wing_Over_New_York_at_Night_jpg":
+    "/photography/Airplane%20Wing%20Over%20New%20York%20at%20Night.jpg",
+  "photography/Capitol_Building_Panorama_Day_jpg":
+    "/photography/Capitol%20Building%20Panorama%20Day.jpg",
+  "photography/Seoul_Korea_Drone_Panorama_placeholder_jpg":
+    "/photography/Seoul%2C%20Korea%20Drone%20Panorama.placeholder.jpg",
+  "photography/Napa_House_Drone_Shot_Landscape_placeholder_jpg":
+    "/photography/Napa%20House%20Drone%20Shot%20Landscape.placeholder.jpg",
+  "photography/Jiufen_Taiwan_Drone_Vertical_jpg":
+    "/photography/Jiufen%2C%20Taiwan%20Drone%20-%20Vertical.jpg",
+  "photography/Cottage_and_Ivy_on_Prospect_Street_jpg":
+    "/photography/Cottage%20and%20Ivy%20on%20Prospect%20Street.jpg",
+  "photography/Bear_Valley_Astrophotography_Portrait_jpg":
+    "/photography/Bear%20Valley%20Astrophotography%20%28Portrait%29.jpg",
+  "photography/Sunset_Sillhouette_Vertical_Las_Terrenas_Dominican_Republic_jpg":
+    "/photography/Sunset%20Sillhouette%20Vertical%20Las%20Terrenas%2C%20Dominican%20Republic.jpg",
+  "photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Vertical_Dark_jpg":
+    "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Vertical%20Dark.jpg",
+  "photography/Taipei_Taiwan_Foggy_Skyline_jpg":
+    "/photography/Taipei%2C%20Taiwan%20Foggy%20Skyline.jpg",
+  "photography/Ping_Shek_Estate_Desmond_Brenizer_placeholder_jpg":
+    "/photography/Ping%20Shek%20Estate%20Desmond%20Brenizer.placeholder.jpg",
+  "photography/Ponte_di_Mezzo_Bridge_jpg":
+    "/photography/Ponte%20di%20Mezzo%20Bridge.jpg",
+  "photography/Princeton_Crest_Fitz_Randolph_Gate_placeholder_jpg":
+    "/photography/Princeton%20Crest%20Fitz%20Randolph%20Gate.placeholder.jpg",
+  "photography/Seoul_Korea_Drone_Vertical_Downtown_jpg":
+    "/photography/Seoul%2C%20Korea%20Drone%20Vertical%20Downtown.jpg",
+  "photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg":
+    "/photography/San%20Francisco%20Golden%20Gate%20Park%20Satellite%20Shot.jpg",
+  "photography/Kowloon_Bay_Drone_Vertical_jpg":
+    "/photography/Kowloon%20Bay%20Drone%20%28Vertical%29.jpg",
+  "photography/Man_Lying_on_Beach_Top_Down_Drone_Las_Terrenas_Domincan_Republic_jpg":
+    "/photography/Man%20Lying%20on%20Beach%20Top%20Down%20Drone%20Las%20Terrenas%2C%20Domincan%20Republic.jpg",
+  "photography/THS_Tennis_Court_Drone_Drone_Art_jpg":
+    "/photography/THS%20Tennis%20Court%20Drone%20%28Drone%20Art%29.jpg",
+  "photography/At_T_Park_Mission_Bay_San_Francisco_jpg":
+    "/photography/At%26T%20Park%20Mission%20Bay%20San%20Francisco.jpg",
+  "photography/Boats_Top_Down_Drone_placeholder_jpg":
+    "/photography/Boats%20Top%20Down%20Drone.placeholder.jpg",
+  "photography/Hong_Kong_Red_Taxi_Motion_Blur_Horizontal_placeholder_jpg":
+    "/photography/Hong%20Kong%20Red%20Taxi%20Motion%20Blur%20%28Horizontal%29.placeholder.jpg",
+  "photography/1903_Courtyard_Sunset_Down_Stairs_placeholder_jpg":
+    "/photography/1903%20Courtyard%20Sunset%20Down%20Stairs.placeholder.jpg",
+  "photography/Marin_Headlands_Hills_Silhouette_jpg":
+    "/photography/Marin%20Headlands%20Hills%20Silhouette.jpg",
+  "photography/Yosemite_Valley_Meadow_placeholder_jpg":
+    "/photography/Yosemite%20Valley%20Meadow.placeholder.jpg",
+  "photography/Pilot_s_Row_Presidio_San_Francisco_jpg":
+    "/photography/Pilot%27s%20Row%20Presidio%20San%20Francisco.jpg",
+  "photography/Larry_Bao_Two_Man_Crew_Rowing_Boat_Top_Down_jpg":
+    "/photography/Larry%20Bao%20Two%20Man%20Crew%20Rowing%20Boat%20Top%20Down.jpg",
+  "photography/Full_Moon_Minimalist_Sky_placeholder_jpg":
+    "/photography/Full%20Moon%20Minimalist%20Sky.placeholder.jpg",
+  "photography/Artechouse_DC_Silhouette_3_jpg":
+    "/photography/Artechouse%20DC%20Silhouette%203.jpg",
+  "photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_Black_Bird_placeholder_jpg":
+    "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20Black%20Bird.placeholder.jpg",
+  "photography/Tokyo_Cherry_Blossum_Arcade_jpg":
+    "/photography/Tokyo%20Cherry%20Blossum%20Arcade.jpg",
+  "photography/Sunrise_over_the_Clouds_from_an_Airplane_placeholder_jpg":
+    "/photography/Sunrise%20over%20the%20Clouds%20from%20an%20Airplane.placeholder.jpg",
+  "photography/Bride_s_Pool_Waterfall_Vertical_placeholder_jpg":
+    "/photography/Bride%27s%20Pool%20Waterfall%20%28Vertical%29.placeholder.jpg",
+  "photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Orange_Panorama_jpg":
+    "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Orange%20Panorama.jpg",
+  "photography/Cliff_House_Sutro_Baths_at_Night_jpg":
+    "/photography/Cliff%20House%20Sutro%20Baths%20at%20Night.jpg",
+  "photography/Rubicon_Peak_Drone_USA_Road_Trip_jpg":
+    "/photography/Rubicon%20Peak%20%28Drone%29%20%28USA%20Road%20Trip%29.jpg",
+  "photography/San_Francisco_Over_Marshall_Beach_placeholder_jpg":
+    "/photography/San%20Francisco%20Over%20Marshall%20Beach.placeholder.jpg",
+  "photography/Bride_s_Pool_Long_Exposure_1_2_placeholder_jpg":
+    "/photography/Bride%27s%20Pool%20Long%20Exposure%201-2.placeholder.jpg",
+  "photography/Clean_Trahs_Philly_jpg":
+    "/photography/Clean%20Trahs%20Philly.jpg",
+  "photography/New_York_Taxi_in_Rain_on_Park_Ave_placeholder_jpg":
+    "/photography/New%20York%20Taxi%20in%20Rain%20on%20Park%20Ave.placeholder.jpg",
+  "photography/Seoul_Korea_SIgns_in_Alleyway_placeholder_jpg":
+    "/photography/Seoul%2C%20Korea%20SIgns%20in%20Alleyway.placeholder.jpg",
+  "photography/Tokyo_Subway_placeholder_jpg":
+    "/photography/Tokyo%20Subway.placeholder.jpg",
+  "photography/Aerial_View_of_Half_Moon_Bay_Beach_placeholder_jpg":
+    "/photography/Aerial%20View%20of%20Half%20Moon%20Bay%20Beach.placeholder.jpg",
+  "photography/Artechouse_DC_Silhouette_2_jpg":
+    "/photography/Artechouse%20DC%20Silhouette%202.jpg",
+  "photography/San_Francisco_Downtown_Twilight_Sunset_Drone_Panorama_jpg":
+    "/photography/San%20Francisco%20Downtown%20Twilight%20Sunset%20Drone%20Panorama.jpg",
+  "photography/Lands_End_San_Francisco_Large_Rock_at_Sea_jpg":
+    "/photography/Lands%20End%20San%20Francisco%20Large%20Rock%20at%20Sea.jpg",
+  "photography/Capitol_Building_Panorama_Day_placeholder_jpg":
+    "/photography/Capitol%20Building%20Panorama%20Day.placeholder.jpg",
+  "photography/Golden_Gate_Bridge_San_Francisco_Night_Moon_Vertical_jpg":
+    "/photography/Golden%20Gate%20Bridge%20San%20Francisco%20Night%20Moon%20Vertical.jpg",
+  "photography/Fishing_Rod_Close_Up_jpg":
+    "/photography/Fishing%20Rod%20Close%20Up.jpg",
+  "photography/Golden_Gate_Bridge_Through_Fence_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Through%20Fence.jpg",
+  "photography/Gardens_by_the_Bay_Vertical_Drone_placeholder_jpg":
+    "/photography/Gardens%20by%20the%20Bay%20%28Vertical%20Drone%29.placeholder.jpg",
+  "photography/St_Angelo_Bridge_in_Rome_Italy_placeholder_jpg":
+    "/photography/St.%20Angelo%20Bridge%20in%20Rome%2C%20Italy.placeholder.jpg",
+  "photography/Shinjuku_Tokyo_Japan_Horizontal_placeholder_jpg":
+    "/photography/Shinjuku%2C%20Tokyo%2C%20Japan%20%28Horizontal%29.placeholder.jpg",
+  "photography/Times_Square_Taxi_Side_placeholder_jpg":
+    "/photography/Times%20Square%20Taxi%20%28Side%29.placeholder.jpg",
+  "photography/Sunrise_Lombard_Street_Drone_Head_On_Vertical_jpg":
+    "/photography/Sunrise%20Lombard%20Street%20Drone%20Head%20On%20Vertical.jpg",
+  "photography/Grand_Teton_Mountains_Panorama_placeholder_jpg":
+    "/photography/Grand%20Teton%20Mountains%20Panorama.placeholder.jpg",
+  "photography/New_York_City_Park_Ave_Looking_Downtown_in_Rain_placeholder_jpg":
+    "/photography/New%20York%20City%20Park%20Ave%20Looking%20Downtown%20in%20Rain.placeholder.jpg",
+  "photography/Downtown_San_Francisco_Drone_Vertical_Powell_Street_Intersection_placeholder_jpg":
+    "/photography/Downtown%20San%20Francisco%20Drone%20Vertical%20Powell%20Street%20Intersection.placeholder.jpg",
+  "photography/_USA_Road_Trip_2_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-2.jpg",
+  "photography/Woman_with_Red_Umbrella_in_Snow_jpg":
+    "/photography/Woman%20with%20Red%20Umbrella%20in%20Snow.jpg",
+  "photography/1903_Courtyard_Landscape_placeholder_jpg":
+    "/photography/1903%20Courtyard%20Landscape.placeholder.jpg",
+  "photography/Cliff_House_Sutro_Baths_at_Night_placeholder_jpg":
+    "/photography/Cliff%20House%20Sutro%20Baths%20at%20Night.placeholder.jpg",
+  "photography/Devil_s_Tower_Epic_Backlight_placeholder_jpg":
+    "/photography/Devil%27s%20Tower%20Epic%20Backlight.placeholder.jpg",
+  "photography/New_York_Street_Artist_Side_jpg":
+    "/photography/New%20York%20Street%20Artist%20%28Side%29.jpg",
+  "photography/Students_Studying_in_Palmer_Square_placeholder_jpg":
+    "/photography/Students%20Studying%20in%20Palmer%20Square.placeholder.jpg",
+  "photography/_2_placeholder_jpg": "/photography/-2.placeholder.jpg",
+  "photography/Looking_Down_Market_Street_Puddle_Sunset_jpg":
+    "/photography/Looking%20Down%20Market%20Street%20Puddle%20Sunset.jpg",
+  "photography/Princeton_Sunset_Out_of_1903_Hall_Window_placeholder_jpg":
+    "/photography/Princeton%20Sunset%20Out%20of%201903%20Hall%20Window.placeholder.jpg",
+  "photography/Lombard_Street_Drone_Vertical_Angled_placeholder_jpg":
+    "/photography/Lombard%20Street%20Drone%20Vertical%20Angled.placeholder.jpg",
+  "photography/Bride_s_Pool_Long_Exposure_1_placeholder_jpg":
+    "/photography/Bride%27s%20Pool%20Long%20Exposure%201.placeholder.jpg",
+  "photography/Nassau_Hall_Landscape_placeholder_jpg":
+    "/photography/Nassau%20Hall%20Landscape.placeholder.jpg",
+  "photography/Chiang_Kai_Shek_Memorial_With_Moon_At_Night_placeholder_jpg":
+    "/photography/Chiang%20Kai%20Shek%20Memorial%20With%20Moon%20At%20Night.placeholder.jpg",
+  "photography/Monster_Mansion_Head_On_Vertical_jpg":
+    "/photography/Monster%20Mansion%20Head%20On%20Vertical.jpg",
+  "photography/Statue_of_David_Florence_Italy_jpg":
+    "/photography/Statue%20of%20David%2C%20Florence%2C%20Italy.jpg",
+  "photography/Seoul_Korea_Temple_Drone_Top_Down_placeholder_jpg":
+    "/photography/Seoul%2C%20Korea%20Temple%20Drone%20Top%20Down.placeholder.jpg",
+  "photography/01853_jpg": "/photography/01853.jpg",
+  "photography/Shibuya_Taxi_Motion_Blur_placeholder_jpg":
+    "/photography/Shibuya%20Taxi%20Motion%20Blur.placeholder.jpg",
+  "photography/Family_Drone_Christmas_Card_jpg":
+    "/photography/Family%20Drone%20Christmas%20Card.jpg",
+  "photography/Yosemite_Valley_Red_Veil_Panorama_placeholder_jpg":
+    "/photography/Yosemite%20Valley%20Red%20Veil%20Panorama.placeholder.jpg",
+  "photography/Taiwan_Ximen_Long_Exposure_Crossing_Walk_Cyberpunk_Neon_placeholder_jpg":
+    "/photography/Taiwan%20Ximen%20Long%20Exposure%20Crossing%20Walk%20Cyberpunk%20Neon.placeholder.jpg",
+  "photography/Sunrise_Lombard_Street_Drone_Head_On_Vertical_placeholder_jpg":
+    "/photography/Sunrise%20Lombard%20Street%20Drone%20Head%20On%20Vertical.placeholder.jpg",
+  "photography/Sai_Wan_Drone_2_Vertical_jpg":
+    "/photography/Sai%20Wan%20Drone%202%20%28Vertical%29.jpg",
+  "photography/Halong_Bay_Sunset_Panorama_jpg":
+    "/photography/Halong%20Bay%20Sunset%20Panorama.jpg",
+  "photography/Shibuya_Shopping_Tokyo_Landscape_placeholder_jpg":
+    "/photography/Shibuya%20Shopping%20Tokyo%20Landscape.placeholder.jpg",
+  "photography/Lombard_Street_Drone_Vertical_Angled_jpg":
+    "/photography/Lombard%20Street%20Drone%20Vertical%20Angled.jpg",
+  "photography/Downtown_San_Francisco_Birds_Eye_View_Top_Down_Powell_Street_Intersection_Drone_jpg":
+    "/photography/Downtown%20San%20Francisco%20Birds%20Eye%20View%20Top%20Down%20Powell%20Street%20Intersection%20Drone.jpg",
+  "photography/Cafe_Vivian_Empty_During_COVID_Move_Out_placeholder_jpg":
+    "/photography/Cafe%20Vivian%20Empty%20During%20COVID%20Move%20Out.placeholder.jpg",
+  "photography/Golden_Gate_Bridge_Through_Trees_Portrait_placeholder_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Through%20Trees%20Portrait.placeholder.jpg",
+  "photography/San_Francisco_California_and_Powell_Street_Trolly_jpg":
+    "/photography/San%20Francisco%20California%20and%20Powell%20Street%20Trolly.jpg",
+  "photography/Sunset_on_Cuyler_Courtyard_at_Princeton_University_jpg":
+    "/photography/Sunset%20on%20Cuyler%20Courtyard%20at%20Princeton%20University.jpg",
+  "photography/Golden_Gate_Bridge_Aerial_Head_On_placeholder_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Aerial%20Head%20On.placeholder.jpg",
+  "photography/Rubicon_Peak_Side_Angle_Drone_jpg":
+    "/photography/Rubicon%20Peak%20Side%20Angle%20Drone.jpg",
+  "photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_White_Bird_placeholder_jpg":
+    "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20White%20Bird.placeholder.jpg",
+  "photography/Seoul_Tower_Seoul_Tokyo_jpg":
+    "/photography/Seoul%20Tower%2C%20Seoul%2C%20Tokyo.jpg",
+  "photography/Phi_Phi_Island_Thailand_Panorama_jpg":
+    "/photography/Phi%20Phi%20Island%2C%20Thailand%20Panorama.jpg",
+  "photography/Artechouse_DC_Silhouette_1_jpg":
+    "/photography/Artechouse%20DC%20Silhouette%201.jpg",
+  "photography/Mong_Kok_Cross_Walk_Day_placeholder_jpg":
+    "/photography/Mong%20Kok%20Cross%20Walk%20Day.placeholder.jpg",
+  "photography/Seoul_Korea_Drone_Panorama_jpg":
+    "/photography/Seoul%2C%20Korea%20Drone%20Panorama.jpg",
+  "photography/Nassau_Hall_Landscape_Drone_jpg":
+    "/photography/Nassau%20Hall%20Landscape%20Drone.jpg",
+  "photography/Sunset_on_Phi_Phi_Island_placeholder_jpg":
+    "/photography/Sunset%20on%20Phi%20Phi%20Island.placeholder.jpg",
+  "photography/Teton_Drone_Horizontal_Landscape_placeholder_jpg":
+    "/photography/Teton%20Drone%20Horizontal%20Landscape.placeholder.jpg",
+  "photography/Florence_View_from_Piazzale_Michelangelo_at_Sunset_placeholder_jpg":
+    "/photography/Florence%20View%20from%20Piazzale%20Michelangelo%20at%20Sunset.placeholder.jpg",
+  "photography/Palm_Tree_Shadows_Top_Down_Drone_Las_Terrenas_Dominican_Republic_placeholder_jpg":
+    "/photography/Palm%20Tree%20Shadows%20Top%20Down%20Drone%20Las%20Terrenas%2C%20Dominican%20Republic.placeholder.jpg",
+  "photography/Kennedy_Town_Drone_Panorama_placeholder_jpg":
+    "/photography/Kennedy%20Town%20Drone%20Panorama.placeholder.jpg",
+  "photography/Single_Person_Lying_on_Beach_Top_Down_Drone_Las_Terrenas_Dominican_Republic_placeholder_jpg":
+    "/photography/Single%20Person%20Lying%20on%20Beach%20Top%20Down%20Drone%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
+  "photography/Christmas_Tree_Bokeh_Outside_Duomo_in_Florence_placeholder_jpg":
+    "/photography/Christmas%20Tree%20Bokeh%20Outside%20Duomo%20in%20Florence.placeholder.jpg",
+  "photography/Korea_Palace_Through_Doorway_jpg":
+    "/photography/Korea%20Palace%20Through%20Doorway.jpg",
+  "photography/Friends_in_Front_of_San_Francisco_placeholder_jpg":
+    "/photography/Friends%20in%20Front%20of%20San%20Francisco.placeholder.jpg",
+  "photography/Korean_Artist_in_Tent_placeholder_jpg":
+    "/photography/Korean%20Artist%20in%20Tent.placeholder.jpg",
+  "photography/_USA_Road_Trip_3_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-3.jpg",
+  "photography/Washington_Monument_in_Front_of_Lincoln_Memorial_At_Night_placeholder_jpg":
+    "/photography/Washington%20Monument%20in%20Front%20of%20Lincoln%20Memorial%20At%20Night.placeholder.jpg",
+  "photography/Marin_High_School_Tennis_Courts_Drone_Top_Down_jpg":
+    "/photography/Marin%20High%20School%20Tennis%20Courts%20Drone%20Top%20Down.jpg",
+  "photography/The_Flavors_of_a_Sunset_in_Florence_Italy_jpg":
+    "/photography/The%20Flavors%20of%20a%20Sunset%20in%20Florence%2C%20Italy.jpg",
+  "photography/New_York_Times_Square_Smoke_Looks_Like_Fire_jpg":
+    "/photography/New%20York%20Times%20Square%20Smoke%20Looks%20Like%20Fire.jpg",
+  "photography/_USA_Road_Trip_7_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-7.jpg",
+  "photography/Route_89_Wyoming_Drone_Landscape_jpg":
+    "/photography/Route%2089%20Wyoming%20Drone%20Landscape.jpg",
+  "photography/Princeton_Canal_Vertical_Reflection_Drone_placeholder_jpg":
+    "/photography/Princeton%20Canal%20Vertical%20Reflection%20Drone.placeholder.jpg",
+  "photography/Landscape_Panorama_of_Las_Terrenas_Dominican_Republic_jpg":
+    "/photography/Landscape%20Panorama%20of%20Las%20Terrenas%2C%20Dominican%20Republic.jpg",
+  "photography/Shek_Lek_Pui_Reservoir_Drone_Vertical_jpg":
+    "/photography/Shek%20Lek%20Pui%20Reservoir%20Drone%20%28Vertical%29.jpg",
+  "photography/Chiang_Kai_Shek_Memorial_With_Moon_At_Night_jpg":
+    "/photography/Chiang%20Kai%20Shek%20Memorial%20With%20Moon%20At%20Night.jpg",
+  "photography/Presidio_in_San_Francisco_Satellite_jpg":
+    "/photography/Presidio%20in%20San%20Francisco%20%28Satellite%29.jpg",
+  "photography/Friends_on_Bear_Valley_Cliff_During_Sunset_jpg":
+    "/photography/Friends%20on%20Bear%20Valley%20Cliff%20During%20Sunset.jpg",
+  "photography/Friends_Hanging_Out_at_Off_the_Grid_jpg":
+    "/photography/Friends%20Hanging%20Out%20at%20Off%20the%20Grid.jpg",
+  "photography/Top_Down_Beach_Houses_Drone_Las_Terrenas_Dominican_Republic_placeholder_jpg":
+    "/photography/Top%20Down%20Beach%20Houses%20Drone%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
+  "photography/Mong_Kok_Station_Entrance_placeholder_jpg":
+    "/photography/Mong%20Kok%20Station%20Entrance.placeholder.jpg",
+  "photography/Bonneville_Salt_Flats_Stormy_Vertical_Drone_placeholder_jpg":
+    "/photography/Bonneville%20Salt%20Flats%20Stormy%20Vertical%20Drone_.placeholder.jpg",
+  "photography/Sitting_in_Window_Sill_in_Snow_placeholder_jpg":
+    "/photography/Sitting%20in%20Window%20Sill%20in%20Snow.placeholder.jpg",
+  "photography/Mong_Kok_Neon_Signs_Vertical_placeholder_jpg":
+    "/photography/Mong%20Kok%20Neon%20Signs%20%28Vertical%29.placeholder.jpg",
+  "photography/San_Francisco_Trolley_at_Night_placeholder_jpg":
+    "/photography/San%20Francisco%20Trolley%20at%20Night.placeholder.jpg",
+  "photography/Mori_Point_Pacifica_Long_Exposure_Rocks_placeholder_jpg":
+    "/photography/Mori%20Point%20Pacifica%20Long%20Exposure%20Rocks.placeholder.jpg",
+  "photography/_USA_Road_Trip_7_placeholder_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-7.placeholder.jpg",
+  "photography/Mori_Point_Pacifica_Sunset_placeholder_jpg":
+    "/photography/Mori%20Point%20Pacifica%20Sunset.placeholder.jpg",
+  "photography/Taiwan_Ximen_Long_Exposure_Crossing_Walk_Cyberpunk_Neon_jpg":
+    "/photography/Taiwan%20Ximen%20Long%20Exposure%20Crossing%20Walk%20Cyberpunk%20Neon.jpg",
+  "photography/Patton_Hall_Drone_jpg": "/photography/Patton%20Hall%20Drone.jpg",
+  "photography/San_Francisco_Downtown_Twilight_Sunset_Drone_Panorama_placeholder_jpg":
+    "/photography/San%20Francisco%20Downtown%20Twilight%20Sunset%20Drone%20Panorama.placeholder.jpg",
+  "photography/Top_of_the_Rock_Sign_jpg":
+    "/photography/Top%20of%20the%20Rock%20Sign.jpg",
+  "photography/Bear_Valley_Mountains_Drone_Landscape_placeholder_jpg":
+    "/photography/Bear%20Valley%20Mountains%20Drone%20Landscape.placeholder.jpg",
+  "photography/Grand_Teton_Mountains_Panorama_jpg":
+    "/photography/Grand%20Teton%20Mountains%20Panorama.jpg",
+  "photography/Time_Square_Taxi_jpg": "/photography/Time%20Square%20Taxi.jpg",
+  "photography/Lake_Tahoe_Satellite_Photo_placeholder_jpg":
+    "/photography/Lake%20Tahoe%20Satellite%20Photo.placeholder.jpg",
+  "photography/Lensball_Mong_Kok_Neon_Cyberpunk_placeholder_jpg":
+    "/photography/Lensball%20Mong%20Kok%20Neon%20Cyberpunk.placeholder.jpg",
+  "photography/Drone_Vertical_of_Las_Terrenas_Dominican_Republic_jpg":
+    "/photography/Drone%20Vertical%20of%20Las%20Terrenas%20Dominican%20Republic.jpg",
+  "photography/Bonneville_Salt_Flats_Stormy_Mountains_Vertical_Drone_placeholder_jpg":
+    "/photography/Bonneville%20Salt%20Flats%20Stormy%20Mountains%20Vertical%20Drone_.placeholder.jpg",
+  "photography/Seattle_Orange_Cityscape_Drone_Horizontal_placeholder_jpg":
+    "/photography/Seattle%20Orange%20Cityscape%20Drone%20Horizontal.placeholder.jpg",
+  "photography/Rubicon_Peak_Self_Portrait_placeholder_jpg":
+    "/photography/Rubicon%20Peak%20Self%20Portrait.placeholder.jpg",
+  "photography/Wave_and_Rock_in_Foreground_Golden_Gate_Bridge_in_Background_jpg":
+    "/photography/Wave%20and%20Rock%20in%20Foreground%2C%20Golden%20Gate%20Bridge%20in%20Background.jpg",
+  "photography/Downtown_San_Francisco_Drone_Vertical_Powell_Street_Intersection_jpg":
+    "/photography/Downtown%20San%20Francisco%20Drone%20Vertical%20Powell%20Street%20Intersection.jpg",
+  "photography/Ponte_Vittorio_Emanuele_II_Bridge_in_Italy_Across_from_St_Angelo_Bridge_placeholder_jpg":
+    "/photography/Ponte%20Vittorio%20Emanuele%20II%20Bridge%20in%20Italy%20%28Across%20from%20St.%20Angelo%20Bridge%29.placeholder.jpg",
+  "photography/Ponte_Vittorio_Emanuele_II_Bridge_in_Italy_Across_from_St_Angelo_Bridge_jpg":
+    "/photography/Ponte%20Vittorio%20Emanuele%20II%20Bridge%20in%20Italy%20%28Across%20from%20St.%20Angelo%20Bridge%29.jpg",
+  "photography/Bike_Wheel_on_Ground_Sunset_1903_Courtyard_jpg":
+    "/photography/Bike%20Wheel%20on%20Ground%20Sunset%201903%20Courtyard.jpg",
+  "photography/Shek_Lek_Pui_Reservoir_Drone_Vertical_placeholder_jpg":
+    "/photography/Shek%20Lek%20Pui%20Reservoir%20Drone%20%28Vertical%29.placeholder.jpg",
+  "photography/Ladies_Market_Balcony_Long_Exposure_jpg":
+    "/photography/Ladies%20Market%20Balcony%20Long%20Exposure.jpg",
+  "photography/Ximen_Taiwan_Long_Exposure_Cars_Neon_Cyberpunk_jpg":
+    "/photography/Ximen%2C%20Taiwan%20Long%20Exposure%20Cars%20Neon%20Cyberpunk.jpg",
+  "photography/Sunset_Sillhouette_Vertical_Las_Terrenas_Dominican_Republic_placeholder_jpg":
+    "/photography/Sunset%20Sillhouette%20Vertical%20Las%20Terrenas%2C%20Dominican%20Republic.placeholder.jpg",
+  "photography/Man_Walking_Bike_in_Front_of_Duomo_in_Florence_jpg":
+    "/photography/Man%20Walking%20Bike%20in%20Front%20of%20Duomo%20in%20Florence.jpg",
+  "photography/Grand_Teton_Bison_Landscape_placeholder_jpg":
+    "/photography/Grand%20Teton%20Bison%20Landscape.placeholder.jpg",
+  "photography/Portrait_in_Front_of_Vatican_on_Bridge_at_Sunset_jpg":
+    "/photography/Portrait%20in%20Front%20of%20Vatican%20on%20Bridge%20at%20Sunset.jpg",
+  "photography/Korean_Arcade_Portrait_placeholder_jpg":
+    "/photography/Korean%20Arcade%20Portrait.placeholder.jpg",
+  "photography/Hong_Kong_Night_Skyline_Long_Exposure_placeholder_jpg":
+    "/photography/Hong%20Kong%20Night%20Skyline%20Long%20Exposure.placeholder.jpg",
+  "photography/_USA_Road_Trip_6_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-6.jpg",
+  "photography/Choi_Hung_Estate_Tiny_Planet_jpg":
+    "/photography/Choi%20Hung%20Estate%20Tiny%20Planet.jpg",
+  "photography/_USA_Road_Trip_4_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-4.jpg",
+  "photography/Florence_Portrait_View_of_City_Looking_Down_Road_jpg":
+    "/photography/Florence%20Portrait%20View%20of%20City%20Looking%20Down%20Road.jpg",
+  "photography/Delta_Lake_Product_Shot_placeholder_jpg":
+    "/photography/Delta%20Lake%20Product%20Shot.placeholder.jpg",
+  "photography/Fishing_Rod_Close_Up_placeholder_jpg":
+    "/photography/Fishing%20Rod%20Close%20Up.placeholder.jpg",
+  "photography/Embarcadero_Drone_Ferry_Building_Daytime_Vertical_placeholder_jpg":
+    "/photography/Embarcadero%20Drone%20Ferry%20Building%20Daytime%20Vertical.placeholder.jpg",
+  "photography/Korean_Market_Street_Food_Vendor_jpg":
+    "/photography/Korean%20Market%20Street%20Food%20Vendor.jpg",
+  "photography/Cottage_and_Ivy_on_Prospect_Street_placeholder_jpg":
+    "/photography/Cottage%20and%20Ivy%20on%20Prospect%20Street.placeholder.jpg",
+  "photography/Whitman_Lower_Courtyard_in_Snow_jpg":
+    "/photography/Whitman%20Lower%20Courtyard%20in%20Snow.jpg",
+  "photography/Golden_Gate_Bridge_Through_Fence_Long_Exposure_placeholder_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Through%20Fence%20%28Long%20Exposure%29.placeholder.jpg",
+  "photography/Times_Square_Santa_placeholder_jpg":
+    "/photography/Times%20Square%20Santa.placeholder.jpg",
+  "photography/Top_Down_Beach_Houses_Drone_Las_Terrenas_Dominican_Republic_jpg":
+    "/photography/Top%20Down%20Beach%20Houses%20Drone%20Las%20Terrenas%20Dominican%20Republic.jpg",
+  "photography/Golden_Gate_Bridge_Looking_Down_From_Marin_Lookout_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Looking%20Down%20From%20Marin%20Lookout.jpg",
+  "photography/San_Francisco_Downtown_Through_Car_Mirror_placeholder_jpg":
+    "/photography/San%20Francisco%20Downtown%20Through%20Car%20Mirror.placeholder.jpg",
+  "photography/Girl_with_Suitcase_During_Covid_19_Evacuation_of_Princeton_placeholder_jpg":
+    "/photography/Girl%20with%20Suitcase%20During%20Covid-19%20Evacuation%20of%20Princeton.placeholder.jpg",
+  "photography/Seoul_Korea_Alleyway_placeholder_jpg":
+    "/photography/Seoul%2C%20Korea%20Alleyway.placeholder.jpg",
+  "photography/THS_Tennis_Court_Drone_Top_Down_jpg":
+    "/photography/THS%20Tennis%20Court%20Drone%20%28Top%20Down%29.jpg",
+  "photography/Korean_Bar_Through_Tree_Branches_jpg":
+    "/photography/Korean%20Bar%20Through%20Tree%20Branches.jpg",
+  "photography/Gardens_by_the_Bay_Vertical_Drone_jpg":
+    "/photography/Gardens%20by%20the%20Bay%20%28Vertical%20Drone%29.jpg",
+  "photography/Arch_of_Constantine_Rome_jpg":
+    "/photography/Arch%20of%20Constantine%2C%20Rome.jpg",
+  "photography/Hong_Kong_Night_Skyline_Vertical_jpg":
+    "/photography/Hong%20Kong%20Night%20Skyline%20%28Vertical%29.jpg",
+  "photography/Small_World_Coffee_on_Cloudy_Day_placeholder_jpg":
+    "/photography/Small%20World%20Coffee%20on%20Cloudy%20Day.placeholder.jpg",
+  "photography/Moose_Reserve_Jackson_Hole_Wyoming_placeholder_jpg":
+    "/photography/Moose%20Reserve%20Jackson%20Hole%2C%20Wyoming.placeholder.jpg",
+  "photography/St_Angelo_Bridge_with_Vatican_in_Background_jpg":
+    "/photography/St.%20Angelo%20Bridge%20with%20Vatican%20in%20Background.jpg",
+  "photography/Singapore_Blue_Apartment_jpg":
+    "/photography/Singapore%20Blue%20Apartment.jpg",
+  "photography/Mai_Chau_Rice_Fields_Panorama_Drone_jpg":
+    "/photography/Mai%20Chau%20Rice%20Fields%20Panorama%20Drone.jpg",
+  "photography/Grand_Teton_National_Park_Bison_jpg":
+    "/photography/Grand%20Teton%20National%20Park%20Bison.jpg",
+  "photography/Shibuya_Shopping_Tokyo_Landscape_jpg":
+    "/photography/Shibuya%20Shopping%20Tokyo%20Landscape.jpg",
+  "photography/Monster_Mansion_Vertical_placeholder_jpg":
+    "/photography/Monster%20Mansion%20Vertical.placeholder.jpg",
+  "photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_White_Bird_Flying_placeholder_jpg":
+    "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20White%20Bird%20Flying.placeholder.jpg",
+  "photography/Hong_Kong_Downtown_Horizon_Drone_Pinewood_Battery_placeholder_jpg":
+    "/photography/Hong%20Kong%20Downtown%20Horizon%20Drone%20Pinewood%20Battery.placeholder.jpg",
+  "photography/Whitman_Upper_Courtyard_in_Snow_placeholder_jpg":
+    "/photography/Whitman%20Upper%20Courtyard%20in%20Snow.placeholder.jpg",
+  "photography/Princeton_University_Chapel_and_Surrounding_Campus_by_Drone_jpg":
+    "/photography/Princeton%20University%20Chapel%20and%20Surrounding%20Campus%20by%20Drone.jpg",
+  "photography/Blair_Arch_Tigerlilies_Drone_8x10_placeholder_jpg":
+    "/photography/Blair%20Arch%20Tigerlilies%20Drone%20%288x10%29.placeholder.jpg",
+  "photography/At_T_Park_Mission_Bay_San_Francisco_placeholder_jpg":
+    "/photography/At%26T%20Park%20Mission%20Bay%20San%20Francisco.placeholder.jpg",
+  "photography/Restaurant_at_Night_in_Rome_Italy_placeholder_jpg":
+    "/photography/Restaurant%20at%20Night%20in%20Rome%2C%20Italy.placeholder.jpg",
+  "photography/Fall_Leaves_in_Yosemite_valley_jpg":
+    "/photography/Fall%20Leaves%20in%20Yosemite%20valley.jpg",
+  "photography/Badlands_Bright_Vertical_placeholder_jpg":
+    "/photography/Badlands%20Bright%20Vertical.placeholder.jpg",
+  "photography/Marin_Headlands_Sunset_jpg":
+    "/photography/Marin%20Headlands%20Sunset.jpg",
+  "photography/House_at_the_Base_of_the_Tetons_in_Teton_Village_jpg":
+    "/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.jpg",
+  "photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_jpg":
+    "/photography/Embarcadero%20Drone%20Ferry%20Building%20Night%20Horizontal.jpg",
+  "photography/Taipei_101_Binoculars_placeholder_jpg":
+    "/photography/Taipei%20101%20Binoculars.placeholder.jpg",
+  "photography/Palace_of_Fine_Arts_Vertical_Drone_placeholder_jpg":
+    "/photography/Palace%20of%20Fine%20Arts%20Vertical%20Drone.placeholder.jpg",
+  "photography/_USA_Road_Trip_5_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-5.jpg",
+  "photography/Princeton_Lewis_Science_Library_and_Fine_Hall_Drone_placeholder_jpg":
+    "/photography/Princeton%20Lewis%20Science%20Library%20and%20Fine%20Hall%20Drone.placeholder.jpg",
+  "photography/Loneliest_Road_Vertical_Drone_USA_Road_Trip_placeholder_jpg":
+    "/photography/Loneliest%20Road%20Vertical%20Drone%20%28USA%20Road%20Trip%29.placeholder.jpg",
+  "photography/Badlands_Bright_Vertical_jpg":
+    "/photography/Badlands%20Bright%20Vertical.jpg",
+  "photography/Mong_Kok_Hong_Kong_Neon_Signs_2_placeholder_jpg":
+    "/photography/Mong%20Kok%2C%20Hong%20Kong%20Neon%20Signs%202.placeholder.jpg",
+  "photography/Hong_Kong_Night_Market_Food_Stand_Vertical_placeholder_jpg":
+    "/photography/Hong%20Kong%20Night%20Market%20Food%20Stand%20%28Vertical%29.placeholder.jpg",
+  "photography/San_Francisco_Downtown_First_Drone_Flight_jpg":
+    "/photography/San%20Francisco%20Downtown%20First%20Drone%20Flight.jpg",
+  "photography/San_Francisco_Ferry_Building_Through_Buildings_jpg":
+    "/photography/San%20Francisco%20Ferry%20Building%20Through%20Buildings.jpg",
+  "photography/Friends_in_Front_of_San_Francisco_jpg":
+    "/photography/Friends%20in%20Front%20of%20San%20Francisco.jpg",
+  "photography/Supreme_Court_Landscape_Nine_Seats_jpg":
+    "/photography/Supreme%20Court%20Landscape%20Nine%20Seats.jpg",
+  "photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Blue_and_Pink_Panorama_jpg":
+    "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Blue%20and%20Pink%20Panorama.jpg",
+  "photography/Temple_Street_Market_Overview_placeholder_jpg":
+    "/photography/Temple%20Street%20Market%20Overview.placeholder.jpg",
+  "photography/Panorama_of_Arno_River_in_Pisa_Italy_placeholder_jpg":
+    "/photography/Panorama%20of%20Arno%20River%20in%20Pisa%2C%20Italy.placeholder.jpg",
+  "photography/Steel_Wool_Basketball_Hoop_Milky_Way_jpg":
+    "/photography/Steel%20Wool%20Basketball%20Hoop%20Milky%20Way.jpg",
+  "photography/Tsim_Sha_Tsui_Lensball_Long_Exposure_jpg":
+    "/photography/Tsim%20Sha%20Tsui%20Lensball%20Long%20Exposure.jpg",
+  "photography/New_York_City_Park_Ave_Looking_Downtown_in_Rain_jpg":
+    "/photography/New%20York%20City%20Park%20Ave%20Looking%20Downtown%20in%20Rain.jpg",
+  "photography/The_Flavors_of_a_Sunset_in_Florence_Italy_placeholder_jpg":
+    "/photography/The%20Flavors%20of%20a%20Sunset%20in%20Florence%2C%20Italy.placeholder.jpg",
+  "photography/Princeton_Graduate_College_at_Night_Stars_jpg":
+    "/photography/Princeton%20Graduate%20College%20at%20Night%20Stars.jpg",
+  "photography/New_York_Street_Artist_Side_placeholder_jpg":
+    "/photography/New%20York%20Street%20Artist%20%28Side%29.placeholder.jpg",
+  "photography/Ximen_Taiwan_Long_Exposure_placeholder_jpg":
+    "/photography/Ximen%2C%20Taiwan%20Long%20Exposure.placeholder.jpg",
+  "photography/Transamerica_Building_with_Halo_placeholder_jpg":
+    "/photography/Transamerica%20Building%20with%20Halo.placeholder.jpg",
+  "photography/Backcountry_Greenwich_Drone_Landscape_placeholder_jpg":
+    "/photography/Backcountry%20Greenwich%20Drone%20Landscape.placeholder.jpg",
+  "photography/DSLR_With_Lensball_Image_on_Screen_placeholder_jpg":
+    "/photography/DSLR%20With%20Lensball%20Image%20on%20Screen.placeholder.jpg",
+  "photography/Magical_Grass_Astro_Shot_placeholder_jpg":
+    "/photography/Magical%20Grass%20Astro%20Shot.placeholder.jpg",
+  "photography/Rain_Walking_Motion_Blur_in_Milan_placeholder_jpg":
+    "/photography/Rain%20Walking%20Motion%20Blur%20in%20Milan.placeholder.jpg",
+  "photography/Washington_Monument_Night_Silohouette_Self_Portrait_With_Stars_jpg":
+    "/photography/Washington%20Monument%20Night%20Silohouette%20Self%20Portrait%20With%20Stars.jpg",
+  "photography/Fruit_Market_Stand_in_Florence_Italy_jpg":
+    "/photography/Fruit%20Market%20Stand%20in%20Florence%2C%20Italy.jpg",
+  "photography/Bay_Bridge_with_San_Francisco_Skyline_jpg":
+    "/photography/Bay%20Bridge%20with%20San%20Francisco%20Skyline.jpg",
+  "photography/Hong_Kong_Grid_Apartment_Drone_Vertical_jpg":
+    "/photography/Hong%20Kong%20Grid%20Apartment%20Drone%20Vertical.jpg",
+  "photography/Seoul_Korea_SIgns_in_Alleyway_jpg":
+    "/photography/Seoul%2C%20Korea%20SIgns%20in%20Alleyway.jpg",
+  "photography/San_Francisco_Hills_Trolley_Downtown_Vertical_jpg":
+    "/photography/San%20Francisco%20Hills%20Trolley%20Downtown%20Vertical.jpg",
+  "photography/Meat_Shop_in_Florence_Italy_placeholder_jpg":
+    "/photography/Meat%20Shop%20in%20Florence%2C%20Italy.placeholder.jpg",
+  "photography/New_York_Hudson_Yards_Rooftop_Panorama_placeholder_jpg":
+    "/photography/New%20York%20Hudson%20Yards%20Rooftop%20Panorama.placeholder.jpg",
+  "photography/Aerial_View_of_Half_Moon_Bay_placeholder_jpg":
+    "/photography/Aerial%20View%20of%20Half%20Moon%20Bay.placeholder.jpg",
+  "photography/Statue_of_David_Florence_Italy_placeholder_jpg":
+    "/photography/Statue%20of%20David%2C%20Florence%2C%20Italy.placeholder.jpg",
+  "photography/Phi_Phi_Island_Thailand_Panorama_placeholder_jpg":
+    "/photography/Phi%20Phi%20Island%2C%20Thailand%20Panorama.placeholder.jpg",
+  "photography/Desmond_Standing_in_Front_of_Capitol_Building_placeholder_jpg":
+    "/photography/Desmond%20Standing%20in%20Front%20of%20Capitol%20Building.placeholder.jpg",
+  "photography/Landscape_Panorama_of_Las_Terrenas_Dominican_Republic_placeholder_jpg":
+    "/photography/Landscape%20Panorama%20of%20Las%20Terrenas%2C%20Dominican%20Republic.placeholder.jpg",
+  "photography/Bike_in_Pisa_Italy_jpg":
+    "/photography/Bike%20in%20Pisa%2C%20Italy.jpg",
+  "photography/Marin_Headlands_Sunset_Road_jpg":
+    "/photography/Marin%20Headlands%20Sunset%20Road.jpg",
+  "photography/Larry_Bao_Two_Man_Crew_Rowing_Boat_Top_Down_placeholder_jpg":
+    "/photography/Larry%20Bao%20Two%20Man%20Crew%20Rowing%20Boat%20Top%20Down.placeholder.jpg",
+  "photography/Big_Wave_Beach_Hong_Kong_Top_Down_Drone_jpg":
+    "/photography/Big%20Wave%20Beach%2C%20Hong%20Kong%20Top%20Down%20Drone.jpg",
+  "photography/New_York_Hudson_Yards_Rooftop_Panorama_jpg":
+    "/photography/New%20York%20Hudson%20Yards%20Rooftop%20Panorama.jpg",
+  "photography/Shore_Stimulations_Dominican_Republic_Top_Down_Drone_Beach_placeholder_jpg":
+    "/photography/Shore%20Stimulations%20%28Dominican%20Republic%20Top%20Down%20Drone%20Beach%29.placeholder.jpg",
+  "photography/Trevor_Snowboard_at_Top_of_Mountain_placeholder_jpg":
+    "/photography/Trevor%20Snowboard%20at%20Top%20of%20Mountain.placeholder.jpg",
+  "photography/Ping_Shek_Estate_Basketball_Hoop_jpg":
+    "/photography/Ping%20Shek%20Estate%20Basketball%20Hoop.jpg",
+  "photography/Shinjuku_Tokyo_Japan_Vertical_jpg":
+    "/photography/Shinjuku%2C%20Tokyo%2C%20Japan%20%28Vertical%29.jpg",
+  "photography/Cherry_Blossums_Seoul_Korea_jpg":
+    "/photography/Cherry%20Blossums%2C%20Seoul%2C%20Korea.jpg",
+  "photography/Sai_Wan_Drone_Vertical_placeholder_jpg":
+    "/photography/Sai%20Wan%20Drone%20%28Vertical%29.placeholder.jpg",
+  "photography/Roman_Forum_Ruins_placeholder_jpg":
+    "/photography/Roman%20Forum%20Ruins.placeholder.jpg",
+  "photography/Bear_Valley_Bear_Lake_Paddleboarding_Vertical_placeholder_jpg":
+    "/photography/Bear%20Valley%20Bear%20Lake%20Paddleboarding%20Vertical.placeholder.jpg",
+  "photography/Looking_Down_Fulton_Street_Vertical_placeholder_jpg":
+    "/photography/Looking%20Down%20Fulton%20Street%20Vertical.placeholder.jpg",
+  "photography/Bear_Valley_Bear_Lake_Paddleboarding_Vertical_jpg":
+    "/photography/Bear%20Valley%20Bear%20Lake%20Paddleboarding%20Vertical.jpg",
+  "photography/Statistics_and_Machine_Learning_Building_jpg":
+    "/photography/Statistics%20and%20Machine%20Learning%20Building.jpg",
+  "photography/Bear_Valley_Astrophotography_Portrait_placeholder_jpg":
+    "/photography/Bear%20Valley%20Astrophotography%20%28Portrait%29.placeholder.jpg",
+  "photography/Hie_Shrine_Tokyo_Japan_placeholder_jpg":
+    "/photography/Hie%20Shrine%2C%20Tokyo%2C%20Japan.placeholder.jpg",
+  "photography/Desmond_Standing_in_Front_of_Capitol_Building_jpg":
+    "/photography/Desmond%20Standing%20in%20Front%20of%20Capitol%20Building.jpg",
+  "photography/Lake_Carnegie_Boat_in_Still_Water_Sunset_Vertical_placeholder_jpg":
+    "/photography/Lake%20Carnegie%20Boat%20in%20Still%20Water%20Sunset%20Vertical.placeholder.jpg",
+  "photography/Princeton_Football_Field_Down_jpg":
+    "/photography/Princeton%20Football%20Field%20%28Down%29.jpg",
+  "photography/Christmas_Tree_Bokeh_Outside_Duomo_in_Florence_jpg":
+    "/photography/Christmas%20Tree%20Bokeh%20Outside%20Duomo%20in%20Florence.jpg",
+  "photography/1903_Courtyard_Milky_Way_Wide_Angle_placeholder_jpg":
+    "/photography/1903%20Courtyard%20Milky%20Way%20Wide%20Angle.placeholder.jpg",
+  "photography/Princeton_Canal_Vertical_Reflection_Drone_jpg":
+    "/photography/Princeton%20Canal%20Vertical%20Reflection%20Drone.jpg",
+  "photography/New_York_Street_Artist_Front_jpg":
+    "/photography/New%20York%20Street%20Artist%20%28Front%29.jpg",
+  "photography/Italy_House_in_Small_Courtyard_jpg":
+    "/photography/Italy%20House%20in%20Small%20Courtyard.jpg",
+  "photography/Shifen_Waterfall_Long_Exposure_Taiwan_jpg":
+    "/photography/Shifen%20Waterfall%20Long%20Exposure%20Taiwan.jpg",
+  "photography/Pigeon_Point_Lighthouse_Milky_Way_with_Meteor_jpg":
+    "/photography/Pigeon%20Point%20Lighthouse%20Milky%20Way%20with%20Meteor.jpg",
+  "photography/Tabernacle_Temple_Square_placeholder_jpg":
+    "/photography/Tabernacle%20Temple%20Square.placeholder.jpg",
+  "photography/Hong_Kong_Night_Market_Food_Stand_Vertical_jpg":
+    "/photography/Hong%20Kong%20Night%20Market%20Food%20Stand%20%28Vertical%29.jpg",
+  "photography/1903_Courtyard_Sunset_Down_Stairs_jpg":
+    "/photography/1903%20Courtyard%20Sunset%20Down%20Stairs.jpg",
+  "photography/Colosseum_and_Ancient_Ruins_in_Rome_placeholder_jpg":
+    "/photography/Colosseum%20and%20Ancient%20Ruins%20in%20Rome.placeholder.jpg",
+  "photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Vertical_Dark_placeholder_jpg":
+    "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Vertical%20Dark.placeholder.jpg",
+  "photography/Tokyo_Shinjuku_Alley_Cyberpunk_Neon_jpg":
+    "/photography/Tokyo%20Shinjuku%20Alley%20Cyberpunk%20Neon.jpg",
+  "photography/Mai_Chau_Rice_Paddies_Sunset_Panorama_2_jpg":
+    "/photography/Mai%20Chau%20Rice%20Paddies%20Sunset%20Panorama%202.jpg",
+  "photography/Halong_Bay_Sunset_Panorama_placeholder_jpg":
+    "/photography/Halong%20Bay%20Sunset%20Panorama.placeholder.jpg",
+  "photography/_USA_Road_Trip_2_placeholder_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-2.placeholder.jpg",
+  "photography/New_York_Looking_Down_Street_from_High_Line_Vertical_jpg":
+    "/photography/New%20York%20Looking%20Down%20Street%20from%20High%20Line%20-%20Vertical.jpg",
+  "photography/Shinjuku_Tokyo_Japan_Horizontal_jpg":
+    "/photography/Shinjuku%2C%20Tokyo%2C%20Japan%20%28Horizontal%29.jpg",
+  "photography/Coffee_Shop_Counter_in_Florence_Italy_jpg":
+    "/photography/Coffee%20Shop%20Counter%20in%20Florence%2C%20Italy.jpg",
+  "photography/Portrait_in_front_of_Golden_Gate_on_Baker_Beach_jpg":
+    "/photography/Portrait%20in%20front%20of%20Golden%20Gate%20on%20Baker%20Beach.jpg",
+  "photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Vertical_Pink_Bright_Far_jpg":
+    "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Vertical%20Pink%20Bright%20Far.jpg",
+  "photography/2_placeholder_jpg": "/photography/2.placeholder.jpg",
+  "photography/Road_to_Hana_Cliffside_placeholder_jpg":
+    "/photography/Road%20to%20Hana%20Cliffside.placeholder.jpg",
+  "photography/Crashing_Waves_into_Coastline_Dominican_Republic_Drone_Top_Down_placeholder_jpg":
+    "/photography/Crashing%20Waves%20into%20Coastline%20Dominican%20Republic%20Drone%20Top%20Down.placeholder.jpg",
+  "photography/Loneliest_Road_Vertical_Drone_placeholder_jpg":
+    "/photography/Loneliest%20Road%20Vertical%20Drone.placeholder.jpg",
+  "photography/Jiufen_Taiwan_Drone_Horizontal_placeholder_jpg":
+    "/photography/Jiufen%2C%20Taiwan%20Drone%20-%20Horizontal.placeholder.jpg",
+  "photography/Jewel_Cave_Colorful_Rocks_placeholder_jpg":
+    "/photography/Jewel%20Cave%20Colorful%20Rocks.placeholder.jpg",
+  "photography/Seattle_Vertical_Drone_Space_Needle_Sunset_placeholder_jpg":
+    "/photography/Seattle%20Vertical%20Drone%20Space%20Needle%20Sunset.placeholder.jpg",
+  "photography/Golden_Gate_Bridge_Peering_Through_Rocks_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Peering%20Through%20Rocks.jpg",
+  "photography/Trolley_in_Milan_Italy_in_Rain_jpg":
+    "/photography/Trolley%20in%20Milan%2C%20Italy%20in%20Rain.jpg",
+  "photography/Palm_Tree_Shadows_Top_Down_Drone_Las_Terrenas_Dominican_Republic_jpg":
+    "/photography/Palm%20Tree%20Shadows%20Top%20Down%20Drone%20Las%20Terrenas%2C%20Dominican%20Republic.jpg",
+  "photography/THS_Tennis_Court_Drone_Drone_Art_placeholder_jpg":
+    "/photography/THS%20Tennis%20Court%20Drone%20%28Drone%20Art%29.placeholder.jpg",
+  "photography/New_York_Taxi_in_Rain_on_Park_Ave_jpg":
+    "/photography/New%20York%20Taxi%20in%20Rain%20on%20Park%20Ave.jpg",
+  "photography/Lake_Tahoe_Satellite_Photo_jpg":
+    "/photography/Lake%20Tahoe%20Satellite%20Photo.jpg",
+  "photography/Twin_Peaks_Biker_Going_Down_U_Bend_jpg":
+    "/photography/Twin%20Peaks%20Biker%20Going%20Down%20U%20Bend.jpg",
+  "photography/Times_Square_Screens_placeholder_jpg":
+    "/photography/Times%20Square%20Screens.placeholder.jpg",
+  "photography/Flat_Iron_Building_With_Taxi_Motion_Blur_placeholder_jpg":
+    "/photography/Flat%20Iron%20Building%20With%20Taxi%20Motion%20Blur.placeholder.jpg",
+  "photography/Kowloon_ICC_Skyline_jpg":
+    "/photography/Kowloon%20ICC%20Skyline.jpg",
+  "photography/New_York_Times_Square_Smoke_Looks_Like_Fire_placeholder_jpg":
+    "/photography/New%20York%20Times%20Square%20Smoke%20Looks%20Like%20Fire.placeholder.jpg",
+  "photography/Trevor_Sitting_on_Rubicon_Peak_Looking_Out_placeholder_jpg":
+    "/photography/Trevor%20Sitting%20on%20Rubicon%20Peak%20Looking%20Out.placeholder.jpg",
+  "photography/New_York_Times_Square_Taxi_Car_Neon_Cyberpunk_placeholder_jpg":
+    "/photography/New%20York%20Times%20Square%20Taxi%20Car%20Neon%20Cyberpunk.placeholder.jpg",
+  "photography/1903_Courtyard_Milky_Way_Wide_Angle_jpg":
+    "/photography/1903%20Courtyard%20Milky%20Way%20Wide%20Angle.jpg",
+  "photography/Colonial_Looking_Through_the_Trees_Vertical_placeholder_jpg":
+    "/photography/Colonial%20Looking%20Through%20the%20Trees%20Vertical.placeholder.jpg",
+  "photography/Coffee_Shop_Counter_in_Florence_Italy_placeholder_jpg":
+    "/photography/Coffee%20Shop%20Counter%20in%20Florence%2C%20Italy.placeholder.jpg",
+  "photography/Tokyo_Cherry_Blossums_jpg":
+    "/photography/Tokyo%20Cherry%20Blossums.jpg",
+  "photography/Hong_Kong_Red_Taxi_Motion_Blur_Horizontal_jpg":
+    "/photography/Hong%20Kong%20Red%20Taxi%20Motion%20Blur%20%28Horizontal%29.jpg",
+  "photography/Hong_Kong_Skyline_Panorama_placeholder_jpg":
+    "/photography/Hong%20Kong%20Skyline%20Panorama.placeholder.jpg",
+  "photography/Route_89_Wyoming_Drone_Top_Down_jpg":
+    "/photography/Route%2089%20Wyoming%20Drone%20Top%20Down.jpg",
+  "photography/Rubicon_Peak_Self_Portrait_jpg":
+    "/photography/Rubicon%20Peak%20Self%20Portrait.jpg",
+  "photography/Embarcadero_Aerial_View_at_Sunset_placeholder_jpg":
+    "/photography/Embarcadero%20Aerial%20View%20at%20Sunset.placeholder.jpg",
+  "photography/Dancers_in_Hong_Kong_3_jpg":
+    "/photography/Dancers%20in%20Hong%20Kong%20-%203.jpg",
+  "photography/Jewel_Cave_Colorful_Rocks_jpg":
+    "/photography/Jewel%20Cave%20Colorful%20Rocks.jpg",
+  "photography/Aerial_View_of_Half_Moon_Bay_Beach_jpg":
+    "/photography/Aerial%20View%20of%20Half%20Moon%20Bay%20Beach.jpg",
+  "photography/Single_Person_Lying_on_Beach_Top_Down_Drone_Las_Terrenas_Dominican_Republic_jpg":
+    "/photography/Single%20Person%20Lying%20on%20Beach%20Top%20Down%20Drone%20Las%20Terrenas%20Dominican%20Republic.jpg",
+  "photography/Lands_End_San_Francisco_Large_Rock_at_Sea_placeholder_jpg":
+    "/photography/Lands%20End%20San%20Francisco%20Large%20Rock%20at%20Sea.placeholder.jpg",
+  "photography/Shibuya_Crossing_Taxi_Motion_Blur_placeholder_jpg":
+    "/photography/Shibuya%20Crossing%20Taxi%20Motion%20Blur.placeholder.jpg",
+  "photography/Yosemite_Valley_Sunset_placeholder_jpg":
+    "/photography/Yosemite%20Valley%20Sunset.placeholder.jpg",
+  "photography/Princeton_Lewis_Science_Library_and_Fine_Hall_Drone_jpg":
+    "/photography/Princeton%20Lewis%20Science%20Library%20and%20Fine%20Hall%20Drone.jpg",
+  "photography/Friends_on_Bear_Valley_Cliff_During_Sunset_placeholder_jpg":
+    "/photography/Friends%20on%20Bear%20Valley%20Cliff%20During%20Sunset.placeholder.jpg",
+  "photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_White_Bird_Flying_jpg":
+    "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20White%20Bird%20Flying.jpg",
+  "photography/Single_Man_in_Badlands_jpg":
+    "/photography/Single%20Man%20in%20Badlands.jpg",
+  "photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_placeholder_jpg":
+    "/photography/Embarcadero%20Drone%20Ferry%20Building%20Night%20Horizontal.placeholder.jpg",
+  "photography/Looking_out_at_Bear_Valley_Drone_placeholder_jpg":
+    "/photography/Looking%20out%20at%20Bear%20Valley%20Drone.placeholder.jpg",
+  "photography/Artechouse_DC_Silhouette_2_placeholder_jpg":
+    "/photography/Artechouse%20DC%20Silhouette%202.placeholder.jpg",
+  "photography/Transamerica_Building_San_Francisco_Drone_Vertical_placeholder_jpg":
+    "/photography/Transamerica%20Building%20San%20Francisco%20Drone%20Vertical.placeholder.jpg",
+  "photography/Blair_Arch_Drone_Landscape_jpg":
+    "/photography/Blair%20Arch%20Drone%20Landscape.jpg",
+  "photography/San_Francisco_Downtown_First_Drone_Flight_placeholder_jpg":
+    "/photography/San%20Francisco%20Downtown%20First%20Drone%20Flight.placeholder.jpg",
+  "photography/Martin_s_Beach_Milky_Way_placeholder_jpg":
+    "/photography/Martin%27s%20Beach%20Milky%20Way.placeholder.jpg",
+  "photography/Ping_Shek_Estate_Drone_Top_Down_Vertical_jpg":
+    "/photography/Ping%20Shek%20Estate%20Drone%20Top%20Down%20%28Vertical%29.jpg",
+  "photography/Washington_Monument_Sunset_Red_White_Blue_Sky_jpg":
+    "/photography/Washington%20Monument%20Sunset%20Red%20White%20Blue%20Sky.jpg",
+  "photography/Campanile_di_Giotto_Across_from_the_Duomo_placeholder_jpg":
+    "/photography/Campanile%20di%20Giotto%20Across%20from%20the%20Duomo.placeholder.jpg",
+  "photography/Mai_Chau_Rice_Paddies_Sunset_Panorama_2_placeholder_jpg":
+    "/photography/Mai%20Chau%20Rice%20Paddies%20Sunset%20Panorama%202.placeholder.jpg",
+  "photography/Lake_Carnegie_Boat_in_Still_Water_Sunset_Vertical_jpg":
+    "/photography/Lake%20Carnegie%20Boat%20in%20Still%20Water%20Sunset%20Vertical.jpg",
+  "photography/Tokyo_Soba_Noodles_NIght_Market_Chef_placeholder_jpg":
+    "/photography/Tokyo%20Soba%20Noodles%20NIght%20Market%20Chef.placeholder.jpg",
+  "photography/Mount_Rushmore_Vertical_Shot_jpg":
+    "/photography/Mount%20Rushmore%20Vertical%20Shot.jpg",
+  "photography/Downtown_San_Francisco_From_South_East_Horizontal_jpg":
+    "/photography/Downtown%20San%20Francisco%20From%20South%20East%20-%20Horizontal.jpg",
+  "photography/Shibuya_Shopping_Tokyo_Vertical_placeholder_jpg":
+    "/photography/Shibuya%20Shopping%20Tokyo%20Vertical.placeholder.jpg",
+  "photography/Colosseum_and_Ancient_Ruins_in_Rome_jpg":
+    "/photography/Colosseum%20and%20Ancient%20Ruins%20in%20Rome.jpg",
+  "photography/Tokyo_Shrine_jpg": "/photography/Tokyo%20Shrine.jpg",
+  "photography/Turtles_in_Maui_placeholder_jpg":
+    "/photography/Turtles%20in%20Maui.placeholder.jpg",
+  "photography/Car_Burning_Cross_Country_Roadtrip_placeholder_jpg":
+    "/photography/Car%20Burning%20Cross%20Country%20Roadtrip.placeholder.jpg",
+  "photography/Broken_Beer_Can_During_Covid_19_Evacuation_of_Princeton_jpg":
+    "/photography/Broken%20Beer%20Can%20During%20Covid-19%20Evacuation%20of%20Princeton.jpg",
+  "photography/Milky_Way_in_Tahoe_Forest_jpg":
+    "/photography/Milky%20Way%20in%20Tahoe%20Forest.jpg",
+  "photography/San_Francisco_Downtown_from_Airplane_at_Night_Landscape_placeholder_jpg":
+    "/photography/San%20Francisco%20Downtown%20from%20Airplane%20at%20Night%20%28Landscape%29.placeholder.jpg",
+  "photography/Shibuya_Crossing_Bike_Motion_Blur_jpg":
+    "/photography/Shibuya%20Crossing%20Bike%20Motion%20Blur.jpg",
+  "photography/Bear_Valley_Bear_Lake_Drone_Vertical_jpg":
+    "/photography/Bear%20Valley%20Bear%20Lake%20Drone%20Vertical.jpg",
+  "photography/Top_Down_Ocean_Shore_Texture_Las_Terrenas_Dominican_Republic_placeholder_jpg":
+    "/photography/Top%20Down%20Ocean%20Shore%20Texture%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
+  "photography/Drone_Vertical_of_Las_Terrenas_Dominican_Republic_placeholder_jpg":
+    "/photography/Drone%20Vertical%20of%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
+  "photography/Fall_Leaves_in_Yosemite_valley_placeholder_jpg":
+    "/photography/Fall%20Leaves%20in%20Yosemite%20valley.placeholder.jpg",
+  "photography/Shibuya_Crossing_Bike_Motion_Blur_placeholder_jpg":
+    "/photography/Shibuya%20Crossing%20Bike%20Motion%20Blur.placeholder.jpg",
+  "photography/Capitol_Building_Night_Landscape_Zoom_jpg":
+    "/photography/Capitol%20Building%20Night%20Landscape%20Zoom.jpg",
+  "photography/Florence_Duomo_Architecture_jpg":
+    "/photography/Florence%20Duomo%20Architecture.jpg",
+  "photography/Sai_Wan_Hong_Kong_Drone_Vertical_jpg":
+    "/photography/Sai%20Wan%2C%20Hong%20Kong%20Drone%20-%20Vertical.jpg",
+  "photography/Fisherman_s_Wharf_San_Francisco_at_Blue_Hour_Horizontal_jpg":
+    "/photography/Fisherman%27s%20Wharf%20San%20Francisco%20at%20Blue%20Hour%20-%20Horizontal.jpg",
+  "photography/Top_Down_Beach_Peninsula_Las_Terrenas_Dominican_Republic_placeholder_jpg":
+    "/photography/Top%20Down%20Beach%20Peninsula%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
+  "photography/Airplane_Wing_Over_New_York_at_Night_placeholder_jpg":
+    "/photography/Airplane%20Wing%20Over%20New%20York%20at%20Night.placeholder.jpg",
+  "photography/Chiang_Kai_Shek_at_Night_jpg":
+    "/photography/Chiang%20Kai%20Shek%20at%20Night.jpg",
+  "photography/Wave_and_Rock_in_Foreground_Golden_Gate_Bridge_in_Background_placeholder_jpg":
+    "/photography/Wave%20and%20Rock%20in%20Foreground%2C%20Golden%20Gate%20Bridge%20in%20Background.placeholder.jpg",
+  "photography/Kowloon_Bay_Drone_Vertical_placeholder_jpg":
+    "/photography/Kowloon%20Bay%20Drone%20%28Vertical%29.placeholder.jpg",
+  "photography/Princeton_University_Chapel_and_Surrounding_Campus_by_Drone_placeholder_jpg":
+    "/photography/Princeton%20University%20Chapel%20and%20Surrounding%20Campus%20by%20Drone.placeholder.jpg",
+  "photography/New_York_Dear_Irving_on_Hudson_Rooftop_Intersection_jpg":
+    "/photography/New%20York%20Dear%20Irving%20on%20Hudson%20Rooftop%20Intersection.jpg",
+  "photography/Minnesota_Highway_Drone_Vertical_placeholder_jpg":
+    "/photography/Minnesota%20Highway%20Drone%20Vertical.placeholder.jpg",
+  "photography/_USA_Road_Trip_5_placeholder_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-5.placeholder.jpg",
+  "photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_placeholder_jpg":
+    "/photography/San%20Francisco%20Lombard%20Street%20Sunrise%20Drone%20Vertical.placeholder.jpg",
+  "photography/1903_Courtyard_Drone_Landscape_placeholder_jpg":
+    "/photography/1903%20Courtyard%20Drone%20Landscape.placeholder.jpg",
+  "photography/Times_Square_Lens_Ball_jpg":
+    "/photography/Times%20Square%20Lens%20Ball.jpg",
+  "photography/Hong_Kong_Alleyway_Downtown_jpg":
+    "/photography/Hong%20Kong%20Alleyway%20Downtown.jpg",
+  "photography/Bridge_with_Vatican_in_the_Background_placeholder_jpg":
+    "/photography/Bridge%20with%20Vatican%20in%20the%20Background.placeholder.jpg",
+  "photography/Tree_Bark_Texture_jpg": "/photography/Tree%20Bark%20Texture.jpg",
+  "photography/Golden_Gate_Bridge_San_Francisco_Night_Moon_Vertical_placeholder_jpg":
+    "/photography/Golden%20Gate%20Bridge%20San%20Francisco%20Night%20Moon%20Vertical.placeholder.jpg",
+  "photography/Bison_Grazing_In_Front_of_Mountain_Landscape_2x3_jpg":
+    "/photography/Bison%20Grazing%20In%20Front%20of%20Mountain%20Landscape%20%282x3%29.jpg",
+  "photography/Lonely_Barn_at_the_Base_of_Grand_Tetons_placeholder_jpg":
+    "/photography/Lonely%20Barn%20at%20the%20Base%20of%20Grand%20Tetons.placeholder.jpg",
+  "photography/Mong_Kok_Neon_Signs_Vertical_jpg":
+    "/photography/Mong%20Kok%20Neon%20Signs%20%28Vertical%29.jpg",
+  "photography/Pantheon_Rome_Italy_jpg":
+    "/photography/Pantheon%2C%20Rome%2C%20Italy.jpg",
+  "photography/Princeton_Central_Campus_Drone_placeholder_jpg":
+    "/photography/Princeton%20Central%20Campus%20Drone.placeholder.jpg",
+  "photography/Sai_Wan_Drone_Vertical_jpg":
+    "/photography/Sai%20Wan%20Drone%20%28Vertical%29.jpg",
+  "photography/Tree_Bark_Texture_placeholder_jpg":
+    "/photography/Tree%20Bark%20Texture.placeholder.jpg",
+  "photography/Tokyo_Subway_jpg": "/photography/Tokyo%20Subway.jpg",
+  "photography/Claire_Standing_in_Front_of_Lake_Minnewaska_placeholder_jpg":
+    "/photography/Claire%20Standing%20in%20Front%20of%20Lake%20Minnewaska.placeholder.jpg",
+  "photography/Capitol_Building_Lens_Ball_jpg":
+    "/photography/Capitol%20Building%20Lens%20Ball.jpg",
+  "photography/Lake_Carnegie_Landscape_Fall_Season_jpg":
+    "/photography/Lake%20Carnegie%20Landscape%20Fall%20Season.jpg",
+  "photography/San_Francisco_Over_Marshall_Beach_jpg":
+    "/photography/San%20Francisco%20Over%20Marshall%20Beach.jpg",
+  "photography/Washington_Monument_Zoom_Abstract_Day_jpg":
+    "/photography/Washington%20Monument%20Zoom%20Abstract%20Day.jpg",
+  "photography/Sunset_on_Phi_Phi_Island_jpg":
+    "/photography/Sunset%20on%20Phi%20Phi%20Island.jpg",
+  "photography/Ping_Shek_Estate_Basketball_Hoop_placeholder_jpg":
+    "/photography/Ping%20Shek%20Estate%20Basketball%20Hoop.placeholder.jpg",
+  "photography/Hong_Kong_Skyline_Day_Drone_Vertical_placeholder_jpg":
+    "/photography/Hong%20Kong%20Skyline%20Day%20Drone%20-%20Vertical.placeholder.jpg",
+  "photography/Museum_Ceiling_Artwork_in_Florence_Italy_placeholder_jpg":
+    "/photography/Museum%20Ceiling%20Artwork%20in%20Florence%2C%20Italy.placeholder.jpg",
+  "photography/Ferry_Building_at_Sunset_Long_Exposure_Vertical_jpg":
+    "/photography/Ferry%20Building%20at%20Sunset%20Long%20Exposure%20Vertical.jpg",
+  "photography/Steel_Wool_Basketball_Hoop_Milky_Way_placeholder_jpg":
+    "/photography/Steel%20Wool%20Basketball%20Hoop%20Milky%20Way.placeholder.jpg",
+  "photography/San_Francisco_from_Twin_Peaks_jpg":
+    "/photography/San%20Francisco%20from%20Twin%20Peaks.jpg",
+  "photography/Bear_Valley_Bear_Lake_Drone_Vertical_placeholder_jpg":
+    "/photography/Bear%20Valley%20Bear%20Lake%20Drone%20Vertical.placeholder.jpg",
+  "photography/Bridge_with_Vatican_in_the_Background_jpg":
+    "/photography/Bridge%20with%20Vatican%20in%20the%20Background.jpg",
+  "photography/Korea_Cherry_Blossums_placeholder_jpg":
+    "/photography/Korea%20Cherry%20Blossums.placeholder.jpg",
+  "photography/Shinjuku_Tokyo_Japan_Vertical_placeholder_jpg":
+    "/photography/Shinjuku%2C%20Tokyo%2C%20Japan%20%28Vertical%29.placeholder.jpg",
+  "photography/Korea_Palace_Through_Doorway_placeholder_jpg":
+    "/photography/Korea%20Palace%20Through%20Doorway.placeholder.jpg",
+  "photography/Singapore_Mall_Roof_Drone_Top_Down_placeholder_jpg":
+    "/photography/Singapore%20Mall%20Roof%20Drone%20Top%20Down.placeholder.jpg",
+  "photography/Lensball_Mong_Kok_Neon_Cyberpunk_jpg":
+    "/photography/Lensball%20Mong%20Kok%20Neon%20Cyberpunk.jpg",
+  "photography/High_Island_Reservoir_East_Dam_Drone_Top_Down_jpg":
+    "/photography/High%20Island%20Reservoir%20East%20Dam%20Drone%20Top%20Down.jpg",
+  "photography/Looking_out_at_Bear_Valley_Drone_jpg":
+    "/photography/Looking%20out%20at%20Bear%20Valley%20Drone.jpg",
+  "photography/Washington_DC_Subway_jpg":
+    "/photography/Washington%20DC%20Subway.jpg",
+  "photography/Korean_Market_Shoe_Stand_jpg":
+    "/photography/Korean%20Market%20Shoe%20Stand.jpg",
+  "photography/Lombard_Street_with_Golden_Gate_in_Background_via_Drone_jpg":
+    "/photography/Lombard%20Street%20with%20Golden%20Gate%20in%20Background%20via%20Drone.jpg",
+  "photography/Ladies_Market_Balcony_Lens_Ball_Cyberpunk_placeholder_jpg":
+    "/photography/Ladies%20Market%20Balcony%20Lens%20Ball%20Cyberpunk.placeholder.jpg",
+  "photography/Taipei_Park_Bird_Watching_Dylan_Fursty_Dark_Edit_White_Bird_jpg":
+    "/photography/Taipei%20Park%20Bird%20Watching%20Dylan%20Fursty%20Dark%20Edit%20White%20Bird.jpg",
+  "photography/Transamerica_Building_with_Halo_jpg":
+    "/photography/Transamerica%20Building%20with%20Halo.jpg",
+  "photography/Chiang_Kai_Shek_at_Night_placeholder_jpg":
+    "/photography/Chiang%20Kai%20Shek%20at%20Night.placeholder.jpg",
+  "photography/Looking_Down_Fulton_Street_Vertical_Drone_placeholder_jpg":
+    "/photography/Looking%20Down%20Fulton%20Street%20Vertical%20Drone.placeholder.jpg",
+  "photography/Magical_Grass_Astro_Shot_jpg":
+    "/photography/Magical%20Grass%20Astro%20Shot.jpg",
+  "photography/Restaurant_at_Night_in_Rome_Italy_jpg":
+    "/photography/Restaurant%20at%20Night%20in%20Rome%2C%20Italy.jpg",
+  "photography/Teton_Drone_Horizontal_Landscape_jpg":
+    "/photography/Teton%20Drone%20Horizontal%20Landscape.jpg",
+  "photography/Washington_DC_Satellite_Overview_placeholder_jpg":
+    "/photography/Washington%20DC%20Satellite%20Overview.placeholder.jpg",
+  "photography/Florence_View_from_Piazzale_Michelangelo_at_Sunset_jpg":
+    "/photography/Florence%20View%20from%20Piazzale%20Michelangelo%20at%20Sunset.jpg",
+  "photography/New_York_Times_Square_Smokestack_placeholder_jpg":
+    "/photography/New%20York%20Times%20Square%20Smokestack.placeholder.jpg",
+  "photography/Kowloon_ICC_Skyline_placeholder_jpg":
+    "/photography/Kowloon%20ICC%20Skyline.placeholder.jpg",
+  "photography/San_Francisco_Trolley_at_Night_jpg":
+    "/photography/San%20Francisco%20Trolley%20at%20Night.jpg",
+  "photography/Grand_Teton_Astro_with_Grass_USA_Road_Trip_placeholder_jpg":
+    "/photography/Grand%20Teton%20Astro%20with%20Grass%20%28USA%20Road%20Trip%29.placeholder.jpg",
+  "photography/Mount_Rainier_Glacier_Lake_jpg":
+    "/photography/Mount%20Rainier%20Glacier%20Lake.jpg",
+  "photography/Ladies_Market_Balcony_Lens_Ball_Cyberpunk_jpg":
+    "/photography/Ladies%20Market%20Balcony%20Lens%20Ball%20Cyberpunk.jpg",
+  "photography/Rome_Italy_Meat_and_Cheese_Restaurant_placeholder_jpg":
+    "/photography/Rome%2C%20Italy%20Meat%20and%20Cheese%20Restaurant.placeholder.jpg",
+  "photography/Hong_Kong_Alleyway_Downtown_placeholder_jpg":
+    "/photography/Hong%20Kong%20Alleyway%20Downtown.placeholder.jpg",
+  "photography/Nakalele_Blowhole_placeholder_jpg":
+    "/photography/Nakalele%20Blowhole.placeholder.jpg",
+  "photography/Hong_Kong_Night_Skyline_Vertical_placeholder_jpg":
+    "/photography/Hong%20Kong%20Night%20Skyline%20%28Vertical%29.placeholder.jpg",
+  "photography/Times_Square_Taxi_Behind_placeholder_jpg":
+    "/photography/Times%20Square%20Taxi%20%28Behind%29.placeholder.jpg",
+  "photography/Small_World_Coffee_on_Cloudy_Day_jpg":
+    "/photography/Small%20World%20Coffee%20on%20Cloudy%20Day.jpg",
+  "photography/San_Francisco_Downtown_Alleyway_jpg":
+    "/photography/San%20Francisco%20Downtown%20Alleyway.jpg",
+  "photography/St_Angelo_Bridge_in_Rome_Italy_jpg":
+    "/photography/St.%20Angelo%20Bridge%20in%20Rome%2C%20Italy.jpg",
+  "photography/Sunset_in_New_Jersey_from_New_York_West_Side_jpg":
+    "/photography/Sunset%20in%20New%20Jersey%20from%20New%20York%20West%20Side.jpg",
+  "photography/Korean_Bar_Through_Tree_Branches_placeholder_jpg":
+    "/photography/Korean%20Bar%20Through%20Tree%20Branches.placeholder.jpg",
+  "photography/Mori_Point_Pacifica_Sunset_jpg":
+    "/photography/Mori%20Point%20Pacifica%20Sunset.jpg",
+  "photography/Washington_DC_Satellite_Overview_jpg":
+    "/photography/Washington%20DC%20Satellite%20Overview.jpg",
+  "photography/Hong_Kong_Skyline_Panorama_jpg":
+    "/photography/Hong%20Kong%20Skyline%20Panorama.jpg",
+  "photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_placeholder_jpg":
+    "/photography/San%20Francisco%20Golden%20Gate%20Park%20Satellite%20Shot.placeholder.jpg",
+  "photography/Arch_of_Constantine_Rome_placeholder_jpg":
+    "/photography/Arch%20of%20Constantine%2C%20Rome.placeholder.jpg",
+  "photography/Panorama_of_Arno_River_in_Pisa_Italy_jpg":
+    "/photography/Panorama%20of%20Arno%20River%20in%20Pisa%2C%20Italy.jpg",
+  "photography/Museum_Ceiling_Artwork_in_Florence_Italy_jpg":
+    "/photography/Museum%20Ceiling%20Artwork%20in%20Florence%2C%20Italy.jpg",
+  "photography/Artechouse_DC_Silhouette_3_placeholder_jpg":
+    "/photography/Artechouse%20DC%20Silhouette%203.placeholder.jpg",
+  "photography/Route_89_Wyoming_Drone_Top_Down_placeholder_jpg":
+    "/photography/Route%2089%20Wyoming%20Drone%20Top%20Down.placeholder.jpg",
+  "photography/Mong_Kok_Cross_Walk_Day_jpg":
+    "/photography/Mong%20Kok%20Cross%20Walk%20Day.jpg",
+  "photography/Blair_Arch_Drone_Landscape_placeholder_jpg":
+    "/photography/Blair%20Arch%20Drone%20Landscape.placeholder.jpg",
+  "photography/Yin_Yang_Golden_Gate_Bridge_Light_Painting_jpg":
+    "/photography/Yin%20Yang%20Golden%20Gate%20Bridge%20Light%20Painting.jpg",
+  "photography/Tokyo_Shrine_placeholder_jpg":
+    "/photography/Tokyo%20Shrine.placeholder.jpg",
+  "photography/Cafe_Vivian_Empty_During_COVID_Move_Out_jpg":
+    "/photography/Cafe%20Vivian%20Empty%20During%20COVID%20Move%20Out.jpg",
+  "photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Dark_jpg":
+    "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Dark.jpg",
+  "photography/Minnesota_Drone_USA_Road_Trip_placeholder_jpg":
+    "/photography/Minnesota%20Drone%20%28USA%20Road%20Trip%29.placeholder.jpg",
+  "photography/Shibuya_Crossing_Taxi_Motion_Blur_jpg":
+    "/photography/Shibuya%20Crossing%20Taxi%20Motion%20Blur.jpg",
+  "photography/_USA_Road_Trip_4_placeholder_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-4.placeholder.jpg",
+  "photography/Lombard_Street_with_Golden_Gate_in_Background_via_Drone_placeholder_jpg":
+    "/photography/Lombard%20Street%20with%20Golden%20Gate%20in%20Background%20via%20Drone.placeholder.jpg",
+  "photography/Ping_Shek_Estate_Desmond_Brenizer_jpg":
+    "/photography/Ping%20Shek%20Estate%20Desmond%20Brenizer.jpg",
+  "photography/Pizza_in_Rome_Italy_placeholder_jpg":
+    "/photography/Pizza%20in%20Rome%2C%20Italy.placeholder.jpg",
+  "photography/Mount_Rushmore_Vertical_Shot_placeholder_jpg":
+    "/photography/Mount%20Rushmore%20Vertical%20Shot.placeholder.jpg",
+  "photography/Singapore_Mall_Roof_Drone_Top_Down_jpg":
+    "/photography/Singapore%20Mall%20Roof%20Drone%20Top%20Down.jpg",
+  "photography/Korean_Artist_in_Tent_jpg":
+    "/photography/Korean%20Artist%20in%20Tent.jpg",
+  "photography/Long_Exposure_Wave_Top_Down_Drone_Las_Terrenas_Dominican_Republic_jpg":
+    "/photography/Long%20Exposure%20Wave%20Top%20Down%20Drone%20Las%20Terrenas%20Dominican%20Republic.jpg",
+  "photography/Waihe_e_Ridge_Hike_jpg":
+    "/photography/Waihe%27e%20Ridge%20Hike.jpg",
+  "photography/Bear_Valley_Mountains_Drone_Landscape_jpg":
+    "/photography/Bear%20Valley%20Mountains%20Drone%20Landscape.jpg",
+  "photography/Shibuya_Shopping_Tokyo_Vertical_jpg":
+    "/photography/Shibuya%20Shopping%20Tokyo%20Vertical.jpg",
+  "photography/1903_Hall_and_Cuyler_Hall_Drone_jpg":
+    "/photography/1903%20Hall%20and%20Cuyler%20Hall%20Drone.jpg",
+  "photography/Ferry_Building_with_Skyline_At_Night_jpg":
+    "/photography/Ferry%20Building%20with%20Skyline%20At%20Night.jpg",
+  "photography/Loneliest_Road_Vertical_Drone_USA_Road_Trip_jpg":
+    "/photography/Loneliest%20Road%20Vertical%20Drone%20%28USA%20Road%20Trip%29.jpg",
+  "photography/Mong_Kok_Hong_Kong_Neon_Signs_2_jpg":
+    "/photography/Mong%20Kok%2C%20Hong%20Kong%20Neon%20Signs%202.jpg",
+  "photography/Flat_Iron_Building_With_Taxi_Motion_Blur_jpg":
+    "/photography/Flat%20Iron%20Building%20With%20Taxi%20Motion%20Blur.jpg",
+  "photography/01853_placeholder_jpg": "/photography/01853.placeholder.jpg",
+  "photography/Fisherman_s_Wharf_San_Francisco_at_Blue_Hour_Horizontal_placeholder_jpg":
+    "/photography/Fisherman%27s%20Wharf%20San%20Francisco%20at%20Blue%20Hour%20-%20Horizontal.placeholder.jpg",
+  "photography/Turtles_in_Maui_jpg": "/photography/Turtles%20in%20Maui.jpg",
+  "photography/Washington_Monument_Night_Silohouette_Self_Portrait_With_Stars_placeholder_jpg":
+    "/photography/Washington%20Monument%20Night%20Silohouette%20Self%20Portrait%20With%20Stars.placeholder.jpg",
+  "photography/Seoul_Korea_Drone_Vertical_Downtown_placeholder_jpg":
+    "/photography/Seoul%2C%20Korea%20Drone%20Vertical%20Downtown.placeholder.jpg",
+  "photography/Bear_Valley_Astrophotography_Horizontal_placeholder_jpg":
+    "/photography/Bear%20Valley%20Astrophotography%20%28Horizontal%29.placeholder.jpg",
+  "photography/Bear_Valley_Astrophotography_Landscape_placeholder_jpg":
+    "/photography/Bear%20Valley%20Astrophotography%20Landscape.placeholder.jpg",
+  "photography/Wyoming_Centennial_Scenic_Byway_placeholder_jpg":
+    "/photography/Wyoming%20Centennial%20Scenic%20Byway.placeholder.jpg",
+  "photography/San_Francisco_Ferry_Building_Through_Buildings_placeholder_jpg":
+    "/photography/San%20Francisco%20Ferry%20Building%20Through%20Buildings.placeholder.jpg",
+  "photography/Fisherman_s_Wharf_at_Sunset_by_Drone_jpg":
+    "/photography/Fisherman%27s%20Wharf%20at%20Sunset%20by%20Drone.jpg",
+  "photography/Delta_Lake_Grand_Teton_Portrait_placeholder_jpg":
+    "/photography/Delta%20Lake%20Grand%20Teton%20Portrait.placeholder.jpg",
+  "photography/Tokyo_Cherry_Blossum_Arcade_placeholder_jpg":
+    "/photography/Tokyo%20Cherry%20Blossum%20Arcade.placeholder.jpg",
+  "photography/Napa_Valley_Drone_Landscape_Sunset_House_placeholder_jpg":
+    "/photography/Napa%20Valley%20Drone%20Landscape%20Sunset%20House.placeholder.jpg",
+  "photography/Washington_Monument_Sunset_Panorama_jpg":
+    "/photography/Washington%20Monument%20Sunset%20Panorama.jpg",
+  "photography/Blair_Arch_Tigerlilies_Drone_8x10_jpg":
+    "/photography/Blair%20Arch%20Tigerlilies%20Drone%20%288x10%29.jpg",
+  "photography/Scateboarder_Doing_Jump_in_Philly_placeholder_jpg":
+    "/photography/Scateboarder%20Doing%20Jump%20in%20Philly.placeholder.jpg",
+  "photography/Tokyo_Soba_Noodles_NIght_Market_Chef_jpg":
+    "/photography/Tokyo%20Soba%20Noodles%20NIght%20Market%20Chef.jpg",
+  "photography/Milky_Way_in_Tahoe_Forest_placeholder_jpg":
+    "/photography/Milky%20Way%20in%20Tahoe%20Forest.placeholder.jpg",
+  "photography/Palace_of_Fine_Arts_Horizontal_Drone_Shot_jpg":
+    "/photography/Palace%20of%20Fine%20Arts%20Horizontal%20Drone%20Shot.jpg",
+  "photography/Korean_Market_Street_Food_Vendor_placeholder_jpg":
+    "/photography/Korean%20Market%20Street%20Food%20Vendor.placeholder.jpg",
+  "photography/Cannon_Dial_Elm_Club_Horizontal_jpg":
+    "/photography/Cannon%20Dial%20Elm%20Club%20Horizontal.jpg",
+  "photography/Mong_Kok_Station_Entrance_jpg":
+    "/photography/Mong%20Kok%20Station%20Entrance.jpg",
+  "photography/Loneliest_Road_Vertical_Drone_jpg":
+    "/photography/Loneliest%20Road%20Vertical%20Drone.jpg",
+  "photography/Golden_Gate_Bridge_Looking_Down_From_Marin_Lookout_placeholder_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Looking%20Down%20From%20Marin%20Lookout.placeholder.jpg",
+  "photography/Ladies_Market_Balcony_Long_Exposure_placeholder_jpg":
+    "/photography/Ladies%20Market%20Balcony%20Long%20Exposure.placeholder.jpg",
+  "photography/Half_Dome_from_Yosemite_Falls_jpg":
+    "/photography/Half%20Dome%20from%20Yosemite%20Falls.jpg",
+  "photography/Marin_High_School_Tennis_Courts_Drone_Top_Down_placeholder_jpg":
+    "/photography/Marin%20High%20School%20Tennis%20Courts%20Drone%20Top%20Down.placeholder.jpg",
+  "photography/San_Francisco_Downtown_from_Airplane_at_Night_Landscape_jpg":
+    "/photography/San%20Francisco%20Downtown%20from%20Airplane%20at%20Night%20%28Landscape%29.jpg",
+  "photography/Pizza_in_Rome_Italy_jpg":
+    "/photography/Pizza%20in%20Rome%2C%20Italy.jpg",
+  "photography/Korea_Cherry_Blossums_jpg":
+    "/photography/Korea%20Cherry%20Blossums.jpg",
+  "photography/St_Angelo_Bridge_with_Vatican_in_Background_placeholder_jpg":
+    "/photography/St.%20Angelo%20Bridge%20with%20Vatican%20in%20Background.placeholder.jpg",
+  "photography/Long_Exposure_Wave_Top_Down_Drone_Las_Terrenas_Dominican_Republic_placeholder_jpg":
+    "/photography/Long%20Exposure%20Wave%20Top%20Down%20Drone%20Las%20Terrenas%20Dominican%20Republic.placeholder.jpg",
+  "photography/Taipei_101_Architecture_placeholder_jpg":
+    "/photography/Taipei%20101%20Architecture.placeholder.jpg",
+  "photography/New_York_Times_Square_Smokestack_jpg":
+    "/photography/New%20York%20Times%20Square%20Smokestack.jpg",
+  "photography/Teton_Village_Golf_Course_Lake_Drone_Vertical_jpg":
+    "/photography/Teton%20Village%20Golf%20Course%20Lake%20Drone%20Vertical.jpg",
+  "photography/Looking_Down_Market_Street_Puddle_Sunset_placeholder_jpg":
+    "/photography/Looking%20Down%20Market%20Street%20Puddle%20Sunset.placeholder.jpg",
+  "photography/Wyoming_Centennial_Scenic_Byway_jpg":
+    "/photography/Wyoming%20Centennial%20Scenic%20Byway.jpg",
+  "photography/Mong_Kong_Lens_Ball_Neon_Signs_Vertical_jpg":
+    "/photography/Mong%20Kong%20Lens%20Ball%20Neon%20Signs%20%28Vertical%29.jpg",
+  "photography/Looking_Down_Fulton_Street_Vertical_jpg":
+    "/photography/Looking%20Down%20Fulton%20Street%20Vertical.jpg",
+  "photography/Florence_Duomo_Architecture_placeholder_jpg":
+    "/photography/Florence%20Duomo%20Architecture.placeholder.jpg",
+  "photography/Pigeon_Point_Lighthouse_Milky_Way_jpg":
+    "/photography/Pigeon%20Point%20Lighthouse%20Milky%20Way.jpg",
+  "photography/Times_Square_Long_Exposure_Cars_placeholder_jpg":
+    "/photography/Times%20Square%20Long%20Exposure%20Cars.placeholder.jpg",
+  "photography/Dog_at_Top_of_Teton_Mountain_in_Snow_placeholder_jpg":
+    "/photography/Dog%20at%20Top%20of%20Teton%20Mountain%20in%20Snow.placeholder.jpg",
+  "photography/Sunset_in_New_Jersey_from_New_York_West_Side_placeholder_jpg":
+    "/photography/Sunset%20in%20New%20Jersey%20from%20New%20York%20West%20Side.placeholder.jpg",
+  "photography/Washington_DC_Subway_placeholder_jpg":
+    "/photography/Washington%20DC%20Subway.placeholder.jpg",
+  "photography/_2_jpg": "/photography/-2.jpg",
+  "photography/Rain_Walking_Motion_Blur_in_Milan_jpg":
+    "/photography/Rain%20Walking%20Motion%20Blur%20in%20Milan.jpg",
+  "photography/Mong_Kok_Hong_Kong_Neon_Signs_1_jpg":
+    "/photography/Mong%20Kok%2C%20Hong%20Kong%20Neon%20Signs%201.jpg",
+  "photography/Pilot_s_Row_Presidio_San_Francisco_placeholder_jpg":
+    "/photography/Pilot%27s%20Row%20Presidio%20San%20Francisco.placeholder.jpg",
+  "photography/Girl_with_Suitcase_During_Covid_19_Evacuation_of_Princeton_jpg":
+    "/photography/Girl%20with%20Suitcase%20During%20Covid-19%20Evacuation%20of%20Princeton.jpg",
+  "photography/Embarcadero_Drone_Ferry_Building_Night_Vertical_jpg":
+    "/photography/Embarcadero%20Drone%20Ferry%20Building%20Night%20Vertical.jpg",
+  "photography/Woman_with_Red_Umbrella_in_Snow_placeholder_jpg":
+    "/photography/Woman%20with%20Red%20Umbrella%20in%20Snow.placeholder.jpg",
+  "photography/Korean_Bar_Reflection_in_Rain_Puddle_placeholder_jpg":
+    "/photography/Korean%20Bar%20Reflection%20in%20Rain%20Puddle.placeholder.jpg",
+  "photography/2_jpg": "/photography/2.jpg",
+  "photography/Washington_DC_Capitol_Building_Zoom_Day_placeholder_jpg":
+    "/photography/Washington%20DC%20Capitol%20Building%20Zoom%20Day.placeholder.jpg",
+  "photography/Aerial_View_of_Half_Moon_Bay_jpg":
+    "/photography/Aerial%20View%20of%20Half%20Moon%20Bay.jpg",
+  "photography/Temple_Street_Market_Overview_jpg":
+    "/photography/Temple%20Street%20Market%20Overview.jpg",
+  "photography/Washington_Monument_Sunset_Panorama_placeholder_jpg":
+    "/photography/Washington%20Monument%20Sunset%20Panorama.placeholder.jpg",
+  "photography/Bride_s_Pool_Long_Exposure_1_2_jpg":
+    "/photography/Bride%27s%20Pool%20Long%20Exposure%201-2.jpg",
+  "photography/Broken_Beer_Can_During_Covid_19_Evacuation_of_Princeton_placeholder_jpg":
+    "/photography/Broken%20Beer%20Can%20During%20Covid-19%20Evacuation%20of%20Princeton.placeholder.jpg",
+  "photography/Rubicon_Peak_Side_Angle_Drone_placeholder_jpg":
+    "/photography/Rubicon%20Peak%20Side%20Angle%20Drone.placeholder.jpg",
+  "photography/Lombard_Street_Drone_placeholder_jpg":
+    "/photography/Lombard%20Street%20Drone.placeholder.jpg",
+  "photography/Embarcadero_Drone_Ferry_Building_Daytime_Vertical_jpg":
+    "/photography/Embarcadero%20Drone%20Ferry%20Building%20Daytime%20Vertical.jpg",
+  "photography/Empire_State_Building_Daytime_Telephoto_jpg":
+    "/photography/Empire%20State%20Building%20Daytime%20Telephoto.jpg",
+  "photography/Marin_Headlands_Sunset_placeholder_jpg":
+    "/photography/Marin%20Headlands%20Sunset.placeholder.jpg",
+  "photography/Marina_Bay_Drone_Panorama_placeholder_jpg":
+    "/photography/Marina%20Bay%20Drone%20Panorama.placeholder.jpg",
+  "photography/Ponte_di_Mezzo_Bridge_placeholder_jpg":
+    "/photography/Ponte%20di%20Mezzo%20Bridge.placeholder.jpg",
+  "photography/Presidio_in_San_Francisco_Satellite_placeholder_jpg":
+    "/photography/Presidio%20in%20San%20Francisco%20%28Satellite%29.placeholder.jpg",
+  "photography/Looking_Down_Fulton_Street_Vertical_Drone_jpg":
+    "/photography/Looking%20Down%20Fulton%20Street%20Vertical%20Drone.jpg",
+  "photography/Rubicon_Peak_Drone_jpg":
+    "/photography/Rubicon%20Peak%20%28Drone%29.jpg",
+  "photography/Dominican_Republic_Las_Terrenas_Daytime_Beach_House_Panorama_jpg":
+    "/photography/Dominican%20Republic%20Las%20Terrenas%20Daytime%20Beach%20House%20Panorama.jpg",
+  "photography/Marin_High_School_Swimming_Pool_Drone_Top_Down_placeholder_jpg":
+    "/photography/Marin%20High%20School%20Swimming%20Pool%20Drone%20Top%20Down.placeholder.jpg",
+  "photography/Cannon_Dial_Elm_Club_Horizontal_placeholder_jpg":
+    "/photography/Cannon%20Dial%20Elm%20Club%20Horizontal.placeholder.jpg",
+  "photography/Pantheon_Rome_Italy_placeholder_jpg":
+    "/photography/Pantheon%2C%20Rome%2C%20Italy.placeholder.jpg",
+  "photography/Shibuya_Crossing_Wide_Angle_placeholder_jpg":
+    "/photography/Shibuya%20Crossing%20Wide%20Angle.placeholder.jpg",
+  "photography/Monster_Mansion_Vertical_jpg":
+    "/photography/Monster%20Mansion%20Vertical.jpg",
+  "photography/Surfers_Riding_Waves_in_Hong_Kong_jpg":
+    "/photography/Surfers%20Riding%20Waves%20in%20Hong%20Kong.jpg",
+  "photography/Golden_Gate_Bridge_Through_Trees_Portrait_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Through%20Trees%20Portrait.jpg",
+  "photography/Palace_of_Fine_Arts_Street_with_Cars_Drone_placeholder_jpg":
+    "/photography/Palace%20of%20Fine%20Arts%20Street%20with%20Cars%20Drone.placeholder.jpg",
+  "photography/Route_89_Wyoming_Drone_Landscape_placeholder_jpg":
+    "/photography/Route%2089%20Wyoming%20Drone%20Landscape.placeholder.jpg",
+  "photography/Street_Market_Vendor_Talking_to_Tourist_placeholder_jpg":
+    "/photography/Street%20Market%20Vendor%20Talking%20to%20Tourist.placeholder.jpg",
+  "photography/Palace_of_Fine_Arts_Street_with_Cars_Drone_jpg":
+    "/photography/Palace%20of%20Fine%20Arts%20Street%20with%20Cars%20Drone.jpg",
+  "photography/Walking_Dog_in_Philly_placeholder_jpg":
+    "/photography/Walking%20Dog%20in%20Philly.placeholder.jpg",
+  "photography/Meat_Shop_in_Florence_Italy_jpg":
+    "/photography/Meat%20Shop%20in%20Florence%2C%20Italy.jpg",
+  "photography/Trevi_Fountain_in_Rome_Italy_jpg":
+    "/photography/Trevi%20Fountain%20in%20Rome%2C%20Italy.jpg",
+  "photography/Capitol_Building_Walking_Towards_Building_on_Street_placeholder_jpg":
+    "/photography/Capitol%20Building%20Walking%20Towards%20Building%20on%20Street.placeholder.jpg",
+  "photography/Trolley_in_Milan_Italy_in_Rain_placeholder_jpg":
+    "/photography/Trolley%20in%20Milan%2C%20Italy%20in%20Rain.placeholder.jpg",
+  "photography/San_Francisco_Hills_Trolley_Downtown_Vertical_placeholder_jpg":
+    "/photography/San%20Francisco%20Hills%20Trolley%20Downtown%20Vertical.placeholder.jpg",
+  "photography/Loneliest_Road_Horizontal_Looking_Down_Road_placeholder_jpg":
+    "/photography/Loneliest%20Road%20Horizontal%20Looking%20Down%20Road.placeholder.jpg",
+  "photography/Marina_Bay_Sands_Drone_Vertical_placeholder_jpg":
+    "/photography/Marina%20Bay%20Sands%20Drone%20%28Vertical%29.placeholder.jpg",
+  "photography/Hong_Kong_Skyline_Day_Drone_Vertical_jpg":
+    "/photography/Hong%20Kong%20Skyline%20Day%20Drone%20-%20Vertical.jpg",
+  "photography/Waihe_e_Ridge_Hike_placeholder_jpg":
+    "/photography/Waihe%27e%20Ridge%20Hike.placeholder.jpg",
+  "photography/Time_Square_Taxi_placeholder_jpg":
+    "/photography/Time%20Square%20Taxi.placeholder.jpg",
+  "photography/Group_of_People_Lying_on_a_Beach_Towel_Drone_Top_Down_jpg":
+    "/photography/Group%20of%20People%20Lying%20on%20a%20Beach%20Towel%20Drone%20Top%20Down.jpg",
+  "photography/Bonneville_Salt_Flats_Stormy_Vertical_Drone_jpg":
+    "/photography/Bonneville%20Salt%20Flats%20Stormy%20Vertical%20Drone_.jpg",
+  "photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Orange_Panorama_placeholder_jpg":
+    "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Orange%20Panorama.placeholder.jpg",
+  "photography/Washington_Monument_Zoom_Abstract_Day_placeholder_jpg":
+    "/photography/Washington%20Monument%20Zoom%20Abstract%20Day.placeholder.jpg",
+  "photography/Scateboarder_Doing_Jump_in_Philly_jpg":
+    "/photography/Scateboarder%20Doing%20Jump%20in%20Philly.jpg",
+  "photography/Cannon_Dial_Elm_Club_Vertical_placeholder_jpg":
+    "/photography/Cannon%20Dial%20Elm%20Club%20Vertical.placeholder.jpg",
+  "photography/Times_Square_Screens_jpg":
+    "/photography/Times%20Square%20Screens.jpg",
+  "photography/Minnesota_Highway_Drone_Vertical_jpg":
+    "/photography/Minnesota%20Highway%20Drone%20Vertical.jpg",
+  "photography/Sunset_on_Cuyler_Courtyard_at_Princeton_University_placeholder_jpg":
+    "/photography/Sunset%20on%20Cuyler%20Courtyard%20at%20Princeton%20University.placeholder.jpg",
+  "photography/Whitman_Upper_Courtyard_in_Snow_jpg":
+    "/photography/Whitman%20Upper%20Courtyard%20in%20Snow.jpg",
+  "photography/Downtown_San_Francisco_Birds_Eye_View_Top_Down_Powell_Street_Intersection_Drone_placeholder_jpg":
+    "/photography/Downtown%20San%20Francisco%20Birds%20Eye%20View%20Top%20Down%20Powell%20Street%20Intersection%20Drone.placeholder.jpg",
+  "photography/Top_Down_Ocean_Shore_Texture_Las_Terrenas_Dominican_Republic_jpg":
+    "/photography/Top%20Down%20Ocean%20Shore%20Texture%20Las%20Terrenas%20Dominican%20Republic.jpg",
+  "photography/Embarcadero_Aerial_View_at_Sunset_jpg":
+    "/photography/Embarcadero%20Aerial%20View%20at%20Sunset.jpg",
+  "photography/Princeton_Crest_Fitz_Randolph_Gate_jpg":
+    "/photography/Princeton%20Crest%20Fitz%20Randolph%20Gate.jpg",
+  "photography/Mount_Rushmore_Picture_of_iPhone_jpg":
+    "/photography/Mount%20Rushmore%20%28Picture%20of%20iPhone%29.jpg",
+  "photography/Hong_Kong_Motorbike_Motion_Blur_Horizontal_jpg":
+    "/photography/Hong%20Kong%20Motorbike%20Motion%20Blur%20%28Horizontal%29.jpg",
+  "photography/Sunset_Sillhouette_Horizontal_Las_Terrenas_Dominican_Republic_placeholder_jpg":
+    "/photography/Sunset%20Sillhouette%20Horizontal%20Las%20Terrenas%2C%20Dominican%20Republic.placeholder.jpg",
+  "photography/Bay_Bridge_with_San_Francisco_Skyline_placeholder_jpg":
+    "/photography/Bay%20Bridge%20with%20San%20Francisco%20Skyline.placeholder.jpg",
+  "photography/Fisherman_at_Baker_Beach_in_San_San_Francisco_placeholder_jpg":
+    "/photography/Fisherman%20at%20Baker%20Beach%20in%20San%20San%20Francisco.placeholder.jpg",
+  "photography/Jiufen_Taiwan_Drone_Horizontal_jpg":
+    "/photography/Jiufen%2C%20Taiwan%20Drone%20-%20Horizontal.jpg",
+  "photography/New_York_Looking_Down_Street_from_High_Line_Vertical_placeholder_jpg":
+    "/photography/New%20York%20Looking%20Down%20Street%20from%20High%20Line%20-%20Vertical.placeholder.jpg",
+  "photography/Golden_Gate_Bridge_Through_Fence_placeholder_jpg":
+    "/photography/Golden%20Gate%20Bridge%20Through%20Fence.placeholder.jpg",
+  "photography/Marin_Headlands_Sunset_Hills_Landscape_jpg":
+    "/photography/Marin%20Headlands%20Sunset%20Hills%20Landscape.jpg",
+  "photography/Times_Square_Long_Exposure_Cars_jpg":
+    "/photography/Times%20Square%20Long%20Exposure%20Cars.jpg",
+  "photography/_USA_Road_Trip_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29.jpg",
+  "photography/Fisherman_at_Baker_Beach_in_San_San_Francisco_jpg":
+    "/photography/Fisherman%20at%20Baker%20Beach%20in%20San%20San%20Francisco.jpg",
+  "photography/_USA_Road_Trip_3_placeholder_jpg":
+    "/photography/%20%28USA%20Road%20Trip%29-3.placeholder.jpg",
+  "photography/Yosemite_Valley_Meadow_jpg":
+    "/photography/Yosemite%20Valley%20Meadow.jpg",
+  "photography/Crashing_Waves_into_Coastline_Dominican_Republic_Drone_Top_Down_jpg":
+    "/photography/Crashing%20Waves%20into%20Coastline%20Dominican%20Republic%20Drone%20Top%20Down.jpg",
+  "photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Dark_placeholder_jpg":
+    "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Dark.placeholder.jpg",
+  "photography/Top_of_the_Rock_Sign_placeholder_jpg":
+    "/photography/Top%20of%20the%20Rock%20Sign.placeholder.jpg",
+  "photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Vertical_Pink_Bright_Far_placeholder_jpg":
+    "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Vertical%20Pink%20Bright%20Far.placeholder.jpg",
+  "photography/Marina_Bay_Drone_Panorama_jpg":
+    "/photography/Marina%20Bay%20Drone%20Panorama.jpg",
+  "photography/Shore_Stimulations_Dominican_Republic_Top_Down_Drone_Beach_jpg":
+    "/photography/Shore%20Stimulations%20%28Dominican%20Republic%20Top%20Down%20Drone%20Beach%29.jpg",
+  "photography/Bear_Valley_Drone_Landscape_of_Valley_placeholder_jpg":
+    "/photography/Bear%20Valley%20Drone%20Landscape%20of%20Valley.placeholder.jpg",
+  "photography/Tokyo_Shinjuku_Alley_Cyberpunk_Neon_placeholder_jpg":
+    "/photography/Tokyo%20Shinjuku%20Alley%20Cyberpunk%20Neon.placeholder.jpg",
+  "photography/Princeton_Graduate_College_at_Night_Stars_placeholder_jpg":
+    "/photography/Princeton%20Graduate%20College%20at%20Night%20Stars.placeholder.jpg",
+  "photography/Mai_Chau_Rice_Fields_Panorama_Drone_placeholder_jpg":
+    "/photography/Mai%20Chau%20Rice%20Fields%20Panorama%20Drone.placeholder.jpg",
+  "photography/Grand_Teton_Bison_Landscape_jpg":
+    "/photography/Grand%20Teton%20Bison%20Landscape.jpg",
+  "photography/Yin_Yang_Golden_Gate_Bridge_Light_Painting_placeholder_jpg":
+    "/photography/Yin%20Yang%20Golden%20Gate%20Bridge%20Light%20Painting.placeholder.jpg",
+  "photography/Ximen_Taiwan_Long_Exposure_jpg":
+    "/photography/Ximen%2C%20Taiwan%20Long%20Exposure.jpg",
+  "photography/Man_Lying_on_Beach_Top_Down_Drone_Las_Terrenas_Domincan_Republic_placeholder_jpg":
+    "/photography/Man%20Lying%20on%20Beach%20Top%20Down%20Drone%20Las%20Terrenas%2C%20Domincan%20Republic.placeholder.jpg",
+  "photography/San_Francisco_Downtown_Alleyway_placeholder_jpg":
+    "/photography/San%20Francisco%20Downtown%20Alleyway.placeholder.jpg",
+  "photography/Campanile_di_Giotto_Across_from_the_Duomo_jpg":
+    "/photography/Campanile%20di%20Giotto%20Across%20from%20the%20Duomo.jpg",
+  "photography/1903_Courtyard_Drone_Landscape_jpg":
+    "/photography/1903%20Courtyard%20Drone%20Landscape.jpg",
+  "photography/Sea_Ranch_Seals_Drone_Top_Down_jpg":
+    "/photography/Sea%20Ranch%20Seals%20Drone%20%28Top%20Down%29.jpg",
+  "photography/Taipei_Taiwan_Foggy_Skyline_placeholder_jpg":
+    "/photography/Taipei%2C%20Taiwan%20Foggy%20Skyline.placeholder.jpg",
+  "photography/Seoul_Korea_Alleyway_jpg":
+    "/photography/Seoul%2C%20Korea%20Alleyway.jpg",
+  "photography/Bonneville_Salt_Flats_Stormy_Mountains_Vertical_Drone_jpg":
+    "/photography/Bonneville%20Salt%20Flats%20Stormy%20Mountains%20Vertical%20Drone_.jpg",
+  "photography/Moose_Reserve_Jackson_Hole_Wyoming_jpg":
+    "/photography/Moose%20Reserve%20Jackson%20Hole%2C%20Wyoming.jpg",
+  "photography/Korean_Arcade_Portrait_jpg":
+    "/photography/Korean%20Arcade%20Portrait.jpg",
+  "photography/Twin_Peaks_Biker_Going_Down_U_Bend_placeholder_jpg":
+    "/photography/Twin%20Peaks%20Biker%20Going%20Down%20U%20Bend.placeholder.jpg",
+  "photography/Bride_s_Pool_Waterfall_Vertical_jpg":
+    "/photography/Bride%27s%20Pool%20Waterfall%20%28Vertical%29.jpg",
+  "photography/Princeton_Sunset_Out_of_1903_Hall_Window_jpg":
+    "/photography/Princeton%20Sunset%20Out%20of%201903%20Hall%20Window.jpg",
+  "photography/Sunrise_over_the_Clouds_from_an_Airplane_jpg":
+    "/photography/Sunrise%20over%20the%20Clouds%20from%20an%20Airplane.jpg",
+  "photography/Mount_Rushmore_Picture_of_iPhone_placeholder_jpg":
+    "/photography/Mount%20Rushmore%20%28Picture%20of%20iPhone%29.placeholder.jpg",
+  "photography/Tokyo_Cherry_Blossums_placeholder_jpg":
+    "/photography/Tokyo%20Cherry%20Blossums.placeholder.jpg",
+  "photography/Fisherman_s_Wharf_at_Sunset_by_Drone_placeholder_jpg":
+    "/photography/Fisherman%27s%20Wharf%20at%20Sunset%20by%20Drone.placeholder.jpg",
+  "photography/Rubicon_Peak_Drone_USA_Road_Trip_placeholder_jpg":
+    "/photography/Rubicon%20Peak%20%28Drone%29%20%28USA%20Road%20Trip%29.placeholder.jpg",
+  "photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Blue_and_Pink_Panorama_placeholder_jpg":
+    "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Blue%20and%20Pink%20Panorama.placeholder.jpg",
+  "photography/Shibuya_Taxi_Motion_Blur_jpg":
+    "/photography/Shibuya%20Taxi%20Motion%20Blur.jpg",
+  "media/design/snapchat_geofilters/whitman_geofilter_png":
+    "/media/design/snapchat-geofilters/whitman-geofilter.png",
+  "media/design/playlist_artwork/Good_Music_Icon_png":
+    "/media/design/playlist-artwork/Good%20Music%20Icon.png",
+  "media/design/wallpapers/iPhone_5s_Comet_Wallpaper_png":
+    "/media/design/wallpapers/iPhone%205s%20Comet%20Wallpaper.png",
+  "media/design/wallpapers/Abstract_Night_Mountains_13_Macbook_Pro_png":
+    "/media/design/wallpapers/Abstract%20Night%20Mountains%2013%22%20Macbook%20Pro.png",
+  "media/design/wallpapers/Square_Comet_Wallpaper_png":
+    "/media/design/wallpapers/Square%20Comet%20Wallpaper.png",
+  "media/design/wallpapers/San_Francisco_Wallpaper_png":
+    "/media/design/wallpapers/San%20Francisco%20Wallpaper.png",
+  "media/design/wallpapers/iPhone_5s_Square_Chain_Wallpaper_png":
+    "/media/design/wallpapers/iPhone%205s%20Square%20Chain%20Wallpaper.png",
+  "media/design/wallpapers/Winding_Road_Wallpaper_png":
+    "/media/design/wallpapers/Winding%20Road%20Wallpaper.png",
+  "media/design/wallpapers/iPhone_6s_Winding_Road_Wallpaper_png":
+    "/media/design/wallpapers/iPhone%206s%20Winding%20Road%20Wallpaper.png",
+  "media/design/wallpapers/Skywalker_Ranch_Glass_Wallpaper_png":
+    "/media/design/wallpapers/Skywalker%20Ranch%20Glass%20Wallpaper.png",
+  "media/design/impossible_geometric_shapes/Impossible_Star_png":
+    "/media/design/impossible-geometric-shapes/Impossible%20Star.png",
+  "media/design/impossible_geometric_shapes/Impossible_Connected_Triangle_png":
+    "/media/design/impossible-geometric-shapes/Impossible%20Connected%20Triangle.png",
+  "media/design/impossible_geometric_shapes/Impossible_Triangle_png":
+    "/media/design/impossible-geometric-shapes/Impossible%20Triangle.png",
+  "media/landing/cloud_0_png": "/media/landing/cloud_0.png",
+  "media/landing/hong_kong/large/2_png": "/media/landing/hong-kong/large/2.png",
+  "media/landing/hong_kong/large/1_png": "/media/landing/hong-kong/large/1.png",
+  "media/landing/hong_kong/large/0_png": "/media/landing/hong-kong/large/0.png",
+  "media/landing/hong_kong/2_png": "/media/landing/hong-kong/2.png",
+  "media/landing/hong_kong/1_png": "/media/landing/hong-kong/1.png",
+  "media/landing/hong_kong/0_png": "/media/landing/hong-kong/0.png",
+  "media/landing/computer_png": "/media/landing/computer.png",
+  "media/landing/image_tiles_png": "/media/landing/image_tiles.png",
+  "media/loading/loader_gif": "/media/loading/loader.gif",
+  "media/bookmark_file/Kevin_Hou_s_Website_webloc":
+    "/media/bookmark_file/Kevin%20Hou%27s%20Website.webloc",
+  "media/projects/soFlyScanner/splash_screen_png":
+    "/media/projects/soFlyScanner/splash_screen.png",
+  "media/projects/soFlyScanner/generated_content_png":
+    "/media/projects/soFlyScanner/generated_content.png",
+  "media/projects/soFlyScanner/loading_screen_png":
+    "/media/projects/soFlyScanner/loading_screen.png",
+  "media/projects/soFlyScanner/camera_screen_png":
+    "/media/projects/soFlyScanner/camera_screen.png",
+  "media/projects/slate/slate_scheduler_png":
+    "/media/projects/slate/slate-scheduler.png",
+  "media/projects/lookbook/hero_png": "/media/projects/lookbook/hero.png",
+  "media/projects/uberScheduler/Screenshots/Home_Screen_png":
+    "/media/projects/uberScheduler/Screenshots/Home%20Screen.png",
+  "media/projects/uberScheduler/Screenshots/General_Settings_png":
+    "/media/projects/uberScheduler/Screenshots/General%20Settings.png",
+  "media/projects/uberScheduler/Screenshots/Fare_Estimate_png":
+    "/media/projects/uberScheduler/Screenshots/Fare%20Estimate.png",
+  "media/projects/uberScheduler/Screenshots/Schedule_Configuration_png":
+    "/media/projects/uberScheduler/Screenshots/Schedule%20Configuration.png",
+  "media/projects/uberScheduler/Design_Mockups/Home_Screen_UI_png":
+    "/media/projects/uberScheduler/Design%20Mockups/Home%20Screen%20UI.png",
+  "media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_Time_Picker_V1_png":
+    "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20Time%20Picker%20V1.png",
+  "media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_Location_Tab_png":
+    "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20Location%20Tab.png",
+  "media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_Time_Picker_V2_png":
+    "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20Time%20Picker%20V2.png",
+  "media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_General_Tab_V2_png":
+    "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20General%20Tab%20V2.png",
+  "media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_General_Tab_V1_png":
+    "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20General%20Tab%20V1.png",
+  "media/projects/executeOrder66/GitHub_Logo_png":
+    "/media/projects/executeOrder66/GitHub%20Logo.png",
+  "media/projects/executeOrder66/Twitter_Post_Kevin_Hou_jpg":
+    "/media/projects/executeOrder66/Twitter%20Post%20-%20Kevin%20Hou.jpg",
+  "media/projects/executeOrder66/Twitter_Post_GitHub_Education_jpg":
+    "/media/projects/executeOrder66/Twitter%20Post%20-%20GitHub%20Education.jpg",
+  "media/projects/executeOrder66/Twitter_Post_Major_League_Hacking_jpg":
+    "/media/projects/executeOrder66/Twitter%20Post%20-%20Major%20League%20Hacking.jpg",
+  "media/photography/featured_jpg": "/media/photography/featured.jpg",
+  "media/photography/seattle_jpg": "/media/photography/seattle.jpg",
+  "media/photography/satellite_jpg": "/media/photography/satellite.jpg",
+  "media/photography/cyberpunk_jpg": "/media/photography/cyberpunk.jpg",
+  "media/photography/taiwan_jpg": "/media/photography/taiwan.jpg",
+  "media/photography/city_jpg": "/media/photography/city.jpg",
+  "media/photography/road_jpg": "/media/photography/road.jpg",
+  "media/photography/sunsets_jpg": "/media/photography/sunsets.jpg",
+  "media/photography/dominican_republic_jpg":
+    "/media/photography/dominican-republic.jpg",
+  "media/photography/san_francisco_jpg": "/media/photography/san-francisco.jpg",
+  "media/photography/washington_dc_jpg": "/media/photography/washington-dc.jpg",
+  "media/photography/korea_jpg": "/media/photography/korea.jpg",
+  "media/photography/hong_kong_jpg": "/media/photography/hong-kong.jpg",
+  "media/photography/mountains_jpg": "/media/photography/mountains.jpg",
+  "media/photography/water_jpg": "/media/photography/water.jpg",
+  "media/photography/bear_valley_jpg": "/media/photography/bear-valley.jpg",
+  "media/photography/nature_jpg": "/media/photography/nature.jpg",
+  "media/photography/drone_jpg": "/media/photography/drone.jpg",
+  "media/photography/new_york_jpg": "/media/photography/new-york.jpg",
+  "media/photography/italy_jpg": "/media/photography/italy.jpg",
+  "media/photography/singapore_jpg": "/media/photography/singapore.jpg",
+  "media/photography/yosemite_jpg": "/media/photography/yosemite.jpg",
+  "media/photography/night_jpg": "/media/photography/night.jpg",
+  "media/photography/cross_country_road_trip_jpg":
+    "/media/photography/cross-country-road-trip.jpg",
+  "media/photography/astro_photography_jpg":
+    "/media/photography/astro-photography.jpg",
+  "media/photography/princeton_jpg": "/media/photography/princeton.jpg",
+  "media/photography/japan_jpg": "/media/photography/japan.jpg",
+  "media/photography/cover/featured_jpg":
+    "/media/photography/cover/featured.jpg",
+  "media/photography/cover/hong_kong_jpg":
+    "/media/photography/cover/hong-kong.jpg",
+  "media/photography/cover/drone_jpg": "/media/photography/cover/drone.jpg",
+  "media/photography/cover/princeton_jpg":
+    "/media/photography/cover/princeton.jpg",
+  "media/meta/thumbnail_preview_jpg": "/media/meta/thumbnail-preview.jpg",
+  "media/blog/images/ios_number_keypad_with_done_button_png":
+    "/media/blog/images/ios-number-keypad-with-done-button.png",
+  "media/blog/images/OSX_10_11_Jekyll_png":
+    "/media/blog/images/OSX%2010.11%20Jekyll.png",
+  "media/blog/images/YouTube_Channel_Artwork/Desktop_Size_png":
+    "/media/blog/images/YouTube%20Channel%20Artwork/Desktop%20Size.png",
+  "media/blog/images/YouTube_Channel_Artwork/YouTube_Channel_Artwork_jpg":
+    "/media/blog/images/YouTube%20Channel%20Artwork/YouTube%20Channel%20Artwork.jpg",
+  "media/blog/images/Tab_Bar_Navigation/Large_Center_Icon_png":
+    "/media/blog/images/Tab-Bar-Navigation/Large_Center_Icon.png",
+  "media/blog/images/Tab_Bar_Navigation/Storyboard_Reference_2_png":
+    "/media/blog/images/Tab-Bar-Navigation/Storyboard_Reference_2.png",
+  "media/blog/images/Tab_Bar_Navigation/Storyboard_Reference_1_png":
+    "/media/blog/images/Tab-Bar-Navigation/Storyboard_Reference_1.png",
+  "media/blog/images/Tab_Bar_Navigation/Overview_of_Main_Storyboard_png":
+    "/media/blog/images/Tab-Bar-Navigation/Overview_of_Main_Storyboard.png",
+  "media/blog/images/Tab_Bar_Navigation/Finished_Tab_Bar_Project_png":
+    "/media/blog/images/Tab-Bar-Navigation/Finished_Tab_Bar_Project.png",
+  "media/blog/images/Tab_Bar_Navigation/Icon_Render_Setting_png":
+    "/media/blog/images/Tab-Bar-Navigation/Icon_Render_Setting.png",
+  "media/blog/images/Tab_Bar_Navigation/Setting_Icon_png":
+    "/media/blog/images/Tab-Bar-Navigation/Setting_Icon.png",
+  "media/blog/images/API_Testing/Chrome_Copy_cURL_png":
+    "/media/blog/images/API-Testing/Chrome_Copy_cURL.png",
+  "media/blog/images/API_Testing/JSON_Viewer_Extension_png":
+    "/media/blog/images/API-Testing/JSON_Viewer_Extension.png",
+  "media/blog/images/API_Testing/Raw_JSON_Bad_png":
+    "/media/blog/images/API-Testing/Raw_JSON_Bad.png",
+  "media/blog/images/API_Testing/Postman_Import_cURL_png":
+    "/media/blog/images/API-Testing/Postman_Import_cURL.png",
+  "media/blog/images/Faster_Mac_Dock_Reveal_png":
+    "/media/blog/images/Faster%20Mac%20Dock%20Reveal.png",
+  "media/blog/images/Installing_Cocoapods_png":
+    "/media/blog/images/Installing_Cocoapods.png",
+  "media/blog/images/set_cookie_response_png":
+    "/media/blog/images/set-cookie-response.png",
+  "media/blog/images/Woodcraft081015_jpg":
+    "/media/blog/images/Woodcraft081015.jpg",
+  "media/blog/images/installing_all_google_fonts_png":
+    "/media/blog/images/installing-all-google-fonts.png",
+  "media/blog/images/Swift_Table_Views_png":
+    "/media/blog/images/Swift_Table_Views.png",
+  "media/blog/images/Blog_Post_Placeholder_Image_jpg":
+    "/media/blog/images/Blog_Post_Placeholder_Image.jpg",
+  "media/blog/images/tmux/session_png": "/media/blog/images/tmux/session.png",
+  "media/blog/images/tmux/initialized_png":
+    "/media/blog/images/tmux/initialized.png",
+  "media/blog/images/Github_Spike_jpg": "/media/blog/images/Github%20Spike.jpg",
+  "media/blog/images/ES6_June_2017_Update_Object_png":
+    "/media/blog/images/ES6_June_2017_Update_Object.png",
+  "media/blog/images/TypeScript_Intro/atom_code_completion_typescript_png":
+    "/media/blog/images/TypeScript-Intro/atom_code_completion_typescript.png",
+  "media/blog/images/Slate_Scheduler/slate_location_search_gif":
+    "/media/blog/images/Slate-Scheduler/slate-location-search.gif",
+  "media/blog/images/Slate_Scheduler/banner_png":
+    "/media/blog/images/Slate-Scheduler/banner.png",
+  "media/blog/images/Slate_Scheduler/autocomplete_search_gif":
+    "/media/blog/images/Slate-Scheduler/autocomplete-search.gif",
+  "media/blog/images/Slate_Scheduler/ios_calendar_app_location_search_gif":
+    "/media/blog/images/Slate-Scheduler/ios-calendar-app-location-search.gif",
+  "media/blog/images/Desmos/Desmos_Staff_Picks_png":
+    "/media/blog/images/Desmos/Desmos_Staff_Picks.png",
+  "media/blog/images/Desmos/Desmos_iPhone_Labeled_4_jpg":
+    "/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%204.jpg",
+  "media/blog/images/Desmos/Desmos_iPhone_Labeled_3_jpg":
+    "/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%203.jpg",
+  "media/blog/images/Desmos/Desmos_iPhone_Labeled_2_jpg":
+    "/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%202.jpg",
+  "media/blog/images/Desmos/Desmos_iPhone_Labeled_1_jpg":
+    "/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%201.jpg",
+  "media/blog/images/Desmos/Desmos_Piston_Animation_png":
+    "/media/blog/images/Desmos/Desmos_Piston_Animation.png",
+  "media/blog/images/Desmos/Desmos_iPhone_Stats_png":
+    "/media/blog/images/Desmos/Desmos%20iPhone%20Stats.png",
+  "media/blog/images/Desmos/Desmos_iPhone_png":
+    "/media/blog/images/Desmos/Desmos%20iPhone.png",
+  "media/blog/source_files/making_a_simple_page_based_application_swift/ViewController_swift":
+    "/media/blog/source-files/making-a-simple-page-based-application-swift/ViewController.swift",
+  "media/blog/source_files/making_a_simple_page_based_application_swift/PageTwo_swift":
+    "/media/blog/source-files/making-a-simple-page-based-application-swift/PageTwo.swift",
+  "media/blog/source_files/making_a_simple_page_based_application_swift/PageOne_swift":
+    "/media/blog/source-files/making-a-simple-page-based-application-swift/PageOne.swift",
+  "media/blog/source_files/making_a_simple_page_based_application_swift/OnboardingView_swift":
+    "/media/blog/source-files/making-a-simple-page-based-application-swift/OnboardingView.swift",
+  "media/programming/thumbnails/htmlexa_png":
+    "/media/programming/thumbnails/htmlexa.png",
+  "media/programming/thumbnails/kamsky_png":
+    "/media/programming/thumbnails/kamsky.png",
+  "media/programming/thumbnails/film_festival_png":
+    "/media/programming/thumbnails/film-festival.png",
+  "media/programming/thumbnails/browser_homepage_png":
+    "/media/programming/thumbnails/browser-homepage.png",
+  "media/programming/thumbnails/online_sandwich_ordering_jpg":
+    "/media/programming/thumbnails/online-sandwich-ordering.jpg",
+  "media/programming/thumbnails/paw_printers_png":
+    "/media/programming/thumbnails/paw-printers.png",
+  "media/programming/thumbnails/so_fly_scanner_png":
+    "/media/programming/thumbnails/so-fly-scanner.png",
+  "media/programming/thumbnails/ask_ava_jpeg":
+    "/media/programming/thumbnails/ask-ava.jpeg",
+  "media/programming/thumbnails/tile_layout_thumbnail_png":
+    "/media/programming/thumbnails/tile-layout-thumbnail.png",
+  "media/programming/thumbnails/honors_physics_optics_lab_png":
+    "/media/programming/thumbnails/honors-physics-optics-lab.png",
+  "media/programming/thumbnails/musicviz_png":
+    "/media/programming/thumbnails/musicviz.png",
+  "media/programming/thumbnails/city_strong_training_png":
+    "/media/programming/thumbnails/city-strong-training.png",
+  "media/programming/thumbnails/random_number_jpg":
+    "/media/programming/thumbnails/random-number.jpg",
+  "media/programming/thumbnails/khou22_apis_png":
+    "/media/programming/thumbnails/khou22-apis.png",
+  "media/programming/thumbnails/photo_analysis_png":
+    "/media/programming/thumbnails/photo-analysis.png",
+  "media/programming/thumbnails/handwriting_font_app_png":
+    "/media/programming/thumbnails/handwriting-font-app.png",
+  "media/programming/thumbnails/stats_test_score_calculator_png":
+    "/media/programming/thumbnails/stats-test-score-calculator.png",
+  "media/programming/thumbnails/hollywood_africa_stereotypes_png":
+    "/media/programming/thumbnails/hollywood-africa-stereotypes.png",
+  "media/programming/thumbnails/discover_artist_betting_jpg":
+    "/media/programming/thumbnails/discover-artist-betting.jpg",
+  "media/programming/thumbnails/princeton_tonight_thumbnail_png":
+    "/media/programming/thumbnails/princeton-tonight-thumbnail.png",
+  "media/site/textures/white_wall_hash_png":
+    "/media/site/textures/white_wall_hash.png",
+  "media/site/images/404_jpg": "/media/site/images/404.jpg",
+  "media/site/images/Blog_Landing_Content_svg":
+    "/media/site/images/Blog_Landing_Content.svg",
+  "media/site/images/ProximaNova_Light_otf":
+    "/media/site/images/ProximaNova-Light.otf",
+  "media/site/images/GlassTile_jpg": "/media/site/images/GlassTile.jpg",
+  "media/site/images/woodshop_background_png":
+    "/media/site/images/woodshop_background.png",
+  "media/site/images/design_background_png":
+    "/media/site/images/design_background.png",
+  "media/site/images/empty_png": "/media/site/images/empty.png",
+  "media/site/images/Blog_Landing_Content_png":
+    "/media/site/images/Blog_Landing_Content.png",
+  "media/site/images/Pendulum_svg": "/media/site/images/Pendulum.svg",
+  "media/site/images/backgrounds/Turning_Chaote_Viga_jpg":
+    "/media/site/images/backgrounds/Turning_Chaote_Viga.jpg",
+  "media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand_jpg":
+    "/media/site/images/backgrounds/Walnut_and_Aluminum_Headphone_Stand.jpg",
+  "media/site/images/backgrounds/Olive_Wood_Pencil_Case_jpg":
+    "/media/site/images/backgrounds/Olive_Wood_Pencil_Case.jpg",
+  "media/site/images/backgrounds/White_Mahogany_Plaque_jpg":
+    "/media/site/images/backgrounds/White_Mahogany_Plaque.jpg",
+  "media/site/images/backgrounds/Turning_California_Bay_Laurel_Burl_Wood_Bowl_jpg":
+    "/media/site/images/backgrounds/Turning_California_Bay_Laurel_Burl_Wood_Bowl.jpg",
+  "media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl_jpg":
+    "/media/site/images/backgrounds/Walnut_Poplar_Salad_Bowl.jpg",
+  "media/site/images/backgrounds/Maple_iPhone_Stand_jpg":
+    "/media/site/images/backgrounds/Maple_iPhone_Stand.jpg",
+  "media/site/images/backgrounds/Bulbish_Sapele_Bowl_jpg":
+    "/media/site/images/backgrounds/Bulbish_Sapele_Bowl.jpg",
+  "media/site/images/backgrounds/Walnut_and_Maple_Amplifier_jpg":
+    "/media/site/images/backgrounds/Walnut_and_Maple_Amplifier.jpg",
+  "media/site/images/backgrounds/MusicViz_png":
+    "/media/site/images/backgrounds/MusicViz.png",
+  "media/site/images/backgrounds/Japanese_Square_Plate_jpg":
+    "/media/site/images/backgrounds/Japanese_Square_Plate.jpg",
+  "media/site/images/backgrounds/Gavel_jpg":
+    "/media/site/images/backgrounds/Gavel.jpg",
+  "media/site/images/backgrounds/Basket_Weave_Cutting_Board_jpg":
+    "/media/site/images/backgrounds/Basket_Weave_Cutting_Board.jpg",
+  "media/site/images/backgrounds/Wenge_Jara_Cable_Manager_jpg":
+    "/media/site/images/backgrounds/Wenge_Jara_Cable_Manager.jpg",
+  "media/site/images/backgrounds/Wood_Pens_jpg":
+    "/media/site/images/backgrounds/Wood_Pens.jpg",
+  "media/site/images/backgrounds/Walnut_and_Maple_Single_Speaker_jpg":
+    "/media/site/images/backgrounds/Walnut_and_Maple_Single_Speaker.jpg",
+  "media/site/images/backgrounds/Maple_and_Walnut_Visualizer_jpg":
+    "/media/site/images/backgrounds/Maple_and_Walnut_Visualizer.jpg",
+  "media/site/images/backgrounds/Online_Sandwich_Ordering_Machine_jpg":
+    "/media/site/images/backgrounds/Online_Sandwich_Ordering_Machine.jpg",
+  "media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box_jpg":
+    "/media/site/images/backgrounds/Walnut_and_Aged_Redwood_Biometric_Lock_Box.jpg",
+  "media/site/images/backgrounds/Tropical_Wood_Phone_Stand_jpg":
+    "/media/site/images/backgrounds/Tropical_Wood_Phone_Stand.jpg",
+  "media/site/images/backgrounds/Maple_Baseball_Bat_jpg":
+    "/media/site/images/backgrounds/Maple_Baseball_Bat.jpg",
+  "media/site/images/backgrounds/Fruit_Tart_jpg":
+    "/media/site/images/backgrounds/Fruit_Tart.jpg",
+  "media/site/images/backgrounds/Walnut_and_East_Indian_Rosewood_Box_jpg":
+    "/media/site/images/backgrounds/Walnut_and_East_Indian_Rosewood_Box.jpg",
+  "media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters_jpg":
+    "/media/site/images/backgrounds/Wood_Turned_Segmented_Bowl_with_Inlaid_Letters.jpg",
+  "media/site/images/backgrounds/Wood_Pens_May_2016_jpg":
+    "/media/site/images/backgrounds/Wood_Pens_May_2016.jpg",
+  "media/site/images/backgrounds/Kevin_Turning_Chaote_Viga_jpg":
+    "/media/site/images/backgrounds/Kevin_Turning_Chaote_Viga.jpg",
+  "media/site/images/photography_background_png":
+    "/media/site/images/photography_background.png",
+  "media/site/images/Blog_Image_jpg": "/media/site/images/Blog_Image.jpg",
+  "media/site/images/Profile_jpg": "/media/site/images/Profile.jpg",
+  "media/site/images/Design_Image_png": "/media/site/images/Design_Image.png",
+  "media/site/images/code_screenshot_png":
+    "/media/site/images/code_screenshot.png",
+  "media/site/images/Animated_Submit_Button_svg":
+    "/media/site/images/Animated%20Submit%20Button.svg",
+  "media/site/images/Profile2_jpg": "/media/site/images/Profile2.jpg",
+  "media/site/images/animated_logo_svg": "/media/site/images/animated-logo.svg",
+  "media/site/favicon_png": "/media/site/favicon.png",
+  "media/site/logo/initials_logo_svg": "/media/site/logo/initials_logo.svg",
+  "media/site/logo/initials_logo_png": "/media/site/logo/initials_logo.png",
+  "media/site/logo/initials_logo_circular_png":
+    "/media/site/logo/initials_logo_circular.png",
+  "media/site/logo/initials_logo_animated_svg":
+    "/media/site/logo/initials_logo_animated.svg",
+  "media/site/logo/initials_logo_shadow_png":
+    "/media/site/logo/initials_logo_shadow.png",
+  "media/site/logo/handwritten_khou_png":
+    "/media/site/logo/handwritten_khou.png",
+  "media/site/icons/highSchool_bw_png": "/media/site/icons/highSchool_bw.png",
+  "media/site/icons/search_icon_bw_png": "/media/site/icons/search_icon_bw.png",
+  "media/site/icons/code_png": "/media/site/icons/code.png",
+  "media/site/icons/photography_icon_png":
+    "/media/site/icons/photography_icon.png",
+  "media/site/icons/iphone_icon_png": "/media/site/icons/iphone_icon.png",
+  "media/site/icons/table_saw_png": "/media/site/icons/table_saw.png",
+  "media/site/icons/email_bw_png": "/media/site/icons/email_bw.png",
+  "media/site/icons/web_icon_png": "/media/site/icons/web_icon.png",
+  "media/site/icons/photography_png": "/media/site/icons/photography.png",
+  "media/site/icons/logos/YouTube_bw_png":
+    "/media/site/icons/logos/YouTube_bw.png",
+  "media/site/icons/logos/Github_bw_png":
+    "/media/site/icons/logos/Github_bw.png",
+  "media/site/icons/logos/Facebook_bw_png":
+    "/media/site/icons/logos/Facebook_bw.png",
+  "media/site/icons/logos/Flickr_bw_png":
+    "/media/site/icons/logos/Flickr_bw.png",
+  "media/site/icons/logos/Instagram_bw_png":
+    "/media/site/icons/logos/Instagram_bw.png",
+  "media/site/icons/logos/LinkedIn_bw_png":
+    "/media/site/icons/logos/LinkedIn_bw.png",
+  "media/site/icons/logos/Twitter_bw_png":
+    "/media/site/icons/logos/Twitter_bw.png",
+  "media/site/icons/blog_png": "/media/site/icons/blog.png",
+  "media/site/icons/home_bw_png": "/media/site/icons/home_bw.png",
+  "media/site/icons/design_icon_png": "/media/site/icons/design_icon.png",
+  "media/site/icons/gallery_bw_png": "/media/site/icons/gallery_bw.png",
+  "media/site/icons/chevron_down_bw_svg":
+    "/media/site/icons/chevron_down_bw.svg",
+  "media/site/gradients/black_png": "/media/site/gradients/black.png",
+  "media/site/fonts/LingWaiSC/LingWaiSC_Medium_otf":
+    "/media/site/fonts/LingWaiSC/LingWaiSC-Medium.otf",
+  "media/site/fonts/ShreeDev0714/ShreeDev0714_Bold_ttf":
+    "/media/site/fonts/ShreeDev0714/ShreeDev0714-Bold.ttf",
+  "media/site/fonts/ShreeDev0714/ShreeDev0714_ttf":
+    "/media/site/fonts/ShreeDev0714/ShreeDev0714.ttf",
+  "media/site/fonts/ShreeDev0714/ShreeDev0714_Bold_Italic_ttf":
+    "/media/site/fonts/ShreeDev0714/ShreeDev0714-Bold-Italic.ttf",
+  "media/site/fonts/ShreeDev0714/ShreeDev0714_Italic_ttf":
+    "/media/site/fonts/ShreeDev0714/ShreeDev0714-Italic.ttf",
+  "media/site/fonts/RagingRedLotus/RagingRedLotusBB_otf":
+    "/media/site/fonts/RagingRedLotus/RagingRedLotusBB.otf",
+  "media/site/fonts/RagingRedLotus/RagingRedLotusBB_ttf":
+    "/media/site/fonts/RagingRedLotus/RagingRedLotusBB.ttf",
+  "media/site/fonts/RagingRedLotus/fontinfo_txt":
+    "/media/site/fonts/RagingRedLotus/fontinfo.txt",
+  "media/site/fonts/RagingRedLotus/RagingRedLotusBB_ital_ttf":
+    "/media/site/fonts/RagingRedLotus/RagingRedLotusBB_ital.ttf",
+  "media/site/fonts/Papyrus/Papyrus_ttc":
+    "/media/site/fonts/Papyrus/Papyrus.ttc",
+  "media/site/fonts/GangofThree/go3v2_ttf":
+    "/media/site/fonts/GangofThree/go3v2.ttf",
+  "media/site/fonts/ProximaNova/ProximaNovaCond_Semibold_otf":
+    "/media/site/fonts/ProximaNova/ProximaNovaCond-Semibold.otf",
+  "media/site/fonts/ProximaNova/ProximaNova_Light_otf":
+    "/media/site/fonts/ProximaNova/ProximaNova-Light.otf",
+  "media/site/fonts/ProximaNova/ProximaNova_Semibold_otf":
+    "/media/site/fonts/ProximaNova/ProximaNova-Semibold.otf",
+  "media/site/fonts/ProximaNova/ProximaNova_Bold_otf":
+    "/media/site/fonts/ProximaNova/ProximaNova-Bold.otf",
+  "media/site/fonts/ProximaNova/ProximaNova_Extrabold_otf":
+    "/media/site/fonts/ProximaNova/ProximaNova-Extrabold.otf",
+  "media/site/fonts/ProximaNova/ProximaNova_BoldIt_otf":
+    "/media/site/fonts/ProximaNova/ProximaNova-BoldIt.otf",
+  "media/site/fonts/ProximaNova/ProximaNovaCond_LightIt_otf":
+    "/media/site/fonts/ProximaNova/ProximaNovaCond-LightIt.otf",
+  "media/site/fonts/ProximaNova/ProximaNova_RegularItalic_otf":
+    "/media/site/fonts/ProximaNova/ProximaNova-RegularItalic.otf",
+  "media/site/fonts/ProximaNova/ProximaNovaCond_SemiboldIt_otf":
+    "/media/site/fonts/ProximaNova/ProximaNovaCond-SemiboldIt.otf",
+  "media/site/fonts/ProximaNova/ProximaNova_RegItalic_otf":
+    "/media/site/fonts/ProximaNova/ProximaNova-RegItalic.otf",
+  "media/site/fonts/ProximaNova/ProximaNovaCond_Light_otf":
+    "/media/site/fonts/ProximaNova/ProximaNovaCond-Light.otf",
+  "media/site/fonts/ProximaNova/ProximaNova_Black_otf":
+    "/media/site/fonts/ProximaNova/ProximaNova-Black.otf",
+  "media/site/fonts/ProximaNova/ProximaNova_Regular_otf":
+    "/media/site/fonts/ProximaNova/ProximaNova-Regular.otf",
+  "media/site/fonts/ProximaNova/ProximaNovaCond_RegularIt_otf":
+    "/media/site/fonts/ProximaNova/ProximaNovaCond-RegularIt.otf",
+  "media/site/fonts/ProximaNova/ProximaNova_SemiboldItalic_otf":
+    "/media/site/fonts/ProximaNova/ProximaNova-SemiboldItalic.otf",
+  "media/site/fonts/ProximaNova/ProximaNovaCond_Regular_otf":
+    "/media/site/fonts/ProximaNova/ProximaNovaCond-Regular.otf",
+  "media/site/fonts/ProximaNova/ProximaNova_LightItalic_otf":
+    "/media/site/fonts/ProximaNova/ProximaNova-LightItalic.otf",
+  "media/store/Times_Square_Rain_Street_jpg":
+    "/media/store/Times%20Square%20Rain%20Street.jpg",
+  "media/store/Lombard_Street_Drone_jpg":
+    "/media/store/Lombard%20Street%20Drone.jpg",
+  "media/store/Shot_Glass_Fairy_Lights_and_Rose_jpg":
+    "/media/store/Shot%20Glass%20Fairy%20Lights%20and%20Rose.jpg",
+  "media/store/Caroline_Lying_Down_with_Moon_Fairy_Lights_Rose_jpg":
+    "/media/store/Caroline%20Lying%20Down%20with%20Moon%2C%20Fairy%20Lights%2C%20Rose.jpg",
+  "media/store/Larry_Bao_Two_Man_Boat_Portrait_jpg":
+    "/media/store/Larry%20Bao%20Two%20Man%20Boat%20Portrait.jpg",
+  "media/store/Mori_Point_Pacifica_Long_Exposure_Rocks_jpg":
+    "/media/store/Mori%20Point%20Pacifica%20Long%20Exposure%20Rocks.jpg",
+  "media/store/Choi_Hung_Estate_Drone_Top_Down_Vertical_jpg":
+    "/media/store/Choi%20Hung%20Estate%20Drone%20Top%20Down%20%28Vertical%29.jpg",
+  "media/store/Hong_Kong_Sunset_Drone_Pinewood_Battery_Panorama_jpg":
+    "/media/store/Hong%20Kong%20Sunset%20Drone%20Pinewood%20Battery%20Panorama.jpg",
+  "media/store/Hie_Shrine_Tokyo_Japan_jpg":
+    "/media/store/Hie%20Shrine%2C%20Tokyo%2C%20Japan.jpg",
+  "media/store/Mai_Chau_Morning_Fog_Panorama_jpg":
+    "/media/store/Mai%20Chau%20Morning%20Fog%20Panorama.jpg",
+  "media/store/Fall_Tree_Lens_Ball_jpg":
+    "/media/store/Fall%20Tree%20Lens%20Ball.jpg",
+  "media/store/Dragon_s_Back_Hike_Panorama_jpg":
+    "/media/store/Dragon%27s%20Back%20Hike%20Panorama.jpg",
+  "media/store/Bride_s_Pool_Long_Exposure_1_jpg":
+    "/media/store/Bride%27s%20Pool%20Long%20Exposure%201.jpg",
+  "media/store/Choi_Hung_Estate_Drone_Top_Down_Horizontal_jpg":
+    "/media/store/Choi%20Hung%20Estate%20Drone%20Top%20Down%20%28Horizontal%29.jpg",
+  "media/store/Choi_Hung_Estate_Desmond_Brenizer_jpg":
+    "/media/store/Choi%20Hung%20Estate%20Desmond%20Brenizer.jpg",
+  "media/store/Grand_Teton_Landscape_jpg":
+    "/media/store/Grand%20Teton%20Landscape.jpg",
+  "media/store/Roxelana_Jewels_Lamps_jpg":
+    "/media/store/Roxelana%20Jewels%20Lamps.jpg",
+  "media/store/Bear_Valley_Astrophotography_Horizontal_jpg":
+    "/media/store/Bear%20Valley%20Astrophotography%20%28Horizontal%29.jpg",
+  "media/store/Minnesota_Drone_jpg": "/media/store/Minnesota%20Drone.jpg",
+  "media/store/Bear_Valley_Astro_Portrait_jpg":
+    "/media/store/Bear%20Valley%20Astro%20Portrait.jpg",
+  "media/store/Marina_Bay_Sands_Drone_Vertical_jpg":
+    "/media/store/Marina%20Bay%20Sands%20Drone%20%28Vertical%29.jpg",
+  "media/store/Princeton_Football_Field_At_Night_jpg":
+    "/media/store/Princeton%20Football%20Field%20At%20Night.jpg",
+  "media/store/Santa_Cruz_Boardwalk_Drone_Top_Down_jpg":
+    "/media/store/Santa%20Cruz%20Boardwalk%20Drone%20%28Top%20Down%29.jpg",
+  "media/store/Times_Square_Santa_jpg":
+    "/media/store/Times%20Square%20Santa.jpg",
+  "media/store/Ladies_Market_Balcony_Lens_Ball_jpg":
+    "/media/store/Ladies%20Market%20Balcony%20Lens%20Ball.jpg",
+  "media/store/Artisan_Dinner_Table_jpg":
+    "/media/store/Artisan%20Dinner%20Table.jpg",
+  "media/store/Hong_Kong_Night_Skyline_Long_Exposure_jpg":
+    "/media/store/Hong%20Kong%20Night%20Skyline%20Long%20Exposure.jpg",
+  "media/store/Times_Square_Taxi_Behind_jpg":
+    "/media/store/Times%20Square%20Taxi%20%28Behind%29.jpg",
+  "media/store/Moon_Fairly_Lights_Book_Roses_Photo_jpg":
+    "/media/store/Moon%20Fairly%20Lights%20Book%20Roses%20Photo.jpg",
+  "media/store/1903_Hall_Drone_Top_Down_jpg":
+    "/media/store/1903%20Hall%20Drone%20Top%20Down.jpg",
+  "media/store/Choi_Hung_Estate_Drone_Top_Down_Horizontal_2_jpg":
+    "/media/store/Choi%20Hung%20Estate%20Drone%20Top%20Down%20%28Horizontal%29-2.jpg",
+  "media/store/Times_Square_Taxi_Side_jpg":
+    "/media/store/Times%20Square%20Taxi%20%28Side%29.jpg",
+  "media/store/Golden_Gate_Bridge_Night_Marin_Headlands_jpg":
+    "/media/store/Golden%20Gate%20Bridge%20Night%20%28Marin%20Headlands%29.jpg",
+  "media/store/Bear_Valley_Astrophotography_Portrait_jpg":
+    "/media/store/Bear%20Valley%20Astrophotography%20%28Portrait%29.jpg",
+  "media/store/Loneliest_Road_Mountain_jpg":
+    "/media/store/Loneliest%20Road%20Mountain.jpg",
+  "media/store/Kowloon_Bay_Drone_Vertical_jpg":
+    "/media/store/Kowloon%20Bay%20Drone%20%28Vertical%29.jpg",
+  "media/store/THS_Tennis_Court_Drone_Drone_Art_jpg":
+    "/media/store/THS%20Tennis%20Court%20Drone%20%28Drone%20Art%29.jpg",
+  "media/store/Cliff_House_Sutro_Baths_at_Night_jpg":
+    "/media/store/Cliff%20House%20Sutro%20Baths%20at%20Night.jpg",
+  "media/store/Loneliest_Road_Drone_jpg":
+    "/media/store/Loneliest%20Road%20Drone.jpg",
+  "media/store/Clean_Trahs_Philly_jpg":
+    "/media/store/Clean%20Trahs%20Philly.jpg",
+  "media/store/Loneliest_Road_Vanishing_Road_jpg":
+    "/media/store/Loneliest%20Road%20%28Vanishing%20Road%29.jpg",
+  "media/store/Habeco_Beer_Cap_Macro_jpg":
+    "/media/store/Habeco%20Beer%20Cap%20%28Macro%29.jpg",
+  "media/store/HanaHaus_Coffee_jpg": "/media/store/HanaHaus%20Coffee.jpg",
+  "media/store/Delta_Lake_jpg": "/media/store/Delta%20Lake.jpg",
+  "media/store/Choi_Hung_Estate_Basketball_Hoop_jpg":
+    "/media/store/Choi%20Hung%20Estate%20Basketball%20Hoop.jpg",
+  "media/store/New_York_Street_Artist_Side_jpg":
+    "/media/store/New%20York%20Street%20Artist%20%28Side%29.jpg",
+  "media/store/Monster_Mansion_Head_On_Vertical_jpg":
+    "/media/store/Monster%20Mansion%20Head%20On%20Vertical.jpg",
+  "media/store/Sai_Wan_Drone_2_Vertical_jpg":
+    "/media/store/Sai%20Wan%20Drone%202%20%28Vertical%29.jpg",
+  "media/store/Halong_Bay_Sunset_Panorama_jpg":
+    "/media/store/Halong%20Bay%20Sunset%20Panorama.jpg",
+  "media/store/Jackson_Hole_Golf_Course_Drone_jpg":
+    "/media/store/Jackson%20Hole%20Golf%20Course%20Drone.jpg",
+  "media/store/Seoul_Tower_Seoul_Tokyo_jpg":
+    "/media/store/Seoul%20Tower%2C%20Seoul%2C%20Tokyo.jpg",
+  "media/store/Burning_Paper_jpg": "/media/store/Burning%20Paper.jpg",
+  "media/store/Shek_Lei_Pui_Reservoir_Vertical_Drone_2_8x10_jpg":
+    "/media/store/Shek%20Lei%20Pui%20Reservoir%20Vertical%20Drone%202%20%288x10%29.jpg",
+  "media/store/Shek_Lek_Pui_Reservoir_Drone_Vertical_jpg":
+    "/media/store/Shek%20Lek%20Pui%20Reservoir%20Drone%20%28Vertical%29.jpg",
+  "media/store/Jackson_Golf_Trevor_Fishing_jpg":
+    "/media/store/Jackson%20Golf%20Trevor%20Fishing.jpg",
+  "media/store/Choi_Hung_Estate_Drone_Level_Building_jpg":
+    "/media/store/Choi%20Hung%20Estate%20Drone%20Level%20Building.jpg",
+  "media/store/Patton_Hall_Drone_jpg": "/media/store/Patton%20Hall%20Drone.jpg",
+  "media/store/Top_of_the_Rock_Sign_jpg":
+    "/media/store/Top%20of%20the%20Rock%20Sign.jpg",
+  "media/store/Time_Square_Taxi_jpg": "/media/store/Time%20Square%20Taxi.jpg",
+  "media/store/Grand_Teton_Astro_with_Grass_jpg":
+    "/media/store/Grand%20Teton%20Astro%20with%20Grass.jpg",
+  "media/store/Ladies_Market_Balcony_Long_Exposure_jpg":
+    "/media/store/Ladies%20Market%20Balcony%20Long%20Exposure.jpg",
+  "media/store/Shek_Lei_Pui_Reservoir_Drone_Straight_Down_jpg":
+    "/media/store/Shek%20Lei%20Pui%20Reservoir%20Drone%20Straight%20Down.jpg",
+  "media/store/San_Francisco_from_Russian_Hill_Drone_jpg":
+    "/media/store/San%20Francisco%20from%20Russian%20Hill%20Drone.jpg",
+  "media/store/Christmas_Ornament_jpg": "/media/store/Christmas%20Ornament.jpg",
+  "media/store/THS_Tennis_Court_Drone_Top_Down_jpg":
+    "/media/store/THS%20Tennis%20Court%20Drone%20%28Top%20Down%29.jpg",
+  "media/store/Gardens_by_the_Bay_Vertical_Drone_jpg":
+    "/media/store/Gardens%20by%20the%20Bay%20%28Vertical%20Drone%29.jpg",
+  "media/store/Hong_Kong_Night_Skyline_Vertical_jpg":
+    "/media/store/Hong%20Kong%20Night%20Skyline%20%28Vertical%29.jpg",
+  "media/store/Mai_Chau_Rice_Fields_Panorama_Drone_jpg":
+    "/media/store/Mai%20Chau%20Rice%20Fields%20Panorama%20Drone.jpg",
+  "media/store/Hong_Kong_Fifty_Cents_Macro_jpg":
+    "/media/store/Hong%20Kong%20Fifty%20Cents%20%28Macro%29.jpg",
+  "media/store/Grand_Teton_Landscape_2x3_jpg":
+    "/media/store/Grand%20Teton%20Landscape%20%282x3%29.jpg",
+  "media/store/Loneliest_Road_Drone_Top_Down_jpg":
+    "/media/store/Loneliest%20Road%20Drone%20%28Top%20Down%29.jpg",
+  "media/store/Mai_Chau_Rice_Paddies_Sunset_Panorama_1_jpg":
+    "/media/store/Mai%20Chau%20Rice%20Paddies%20Sunset%20Panorama%201.jpg",
+  "media/store/Tsim_Sha_Tsui_Lensball_Long_Exposure_jpg":
+    "/media/store/Tsim%20Sha%20Tsui%20Lensball%20Long%20Exposure.jpg",
+  "media/store/Big_Wave_Beach_Hong_Kong_Top_Down_Drone_jpg":
+    "/media/store/Big%20Wave%20Beach%2C%20Hong%20Kong%20Top%20Down%20Drone.jpg",
+  "media/store/Choi_Hung_Estate_Drone_Vertical_jpg":
+    "/media/store/Choi%20Hung%20Estate%20Drone%20%28Vertical%29.jpg",
+  "media/store/Cherry_Blossums_Seoul_Korea_jpg":
+    "/media/store/Cherry%20Blossums%2C%20Seoul%2C%20Korea.jpg",
+  "media/store/Fly_Fishing_Rod_jpg": "/media/store/Fly%20Fishing%20Rod.jpg",
+  "media/store/Princeton_Football_Field_Down_jpg":
+    "/media/store/Princeton%20Football%20Field%20%28Down%29.jpg",
+  "media/store/New_York_Street_Artist_Front_jpg":
+    "/media/store/New%20York%20Street%20Artist%20%28Front%29.jpg",
+  "media/store/Hong_Kong_Night_Market_Food_Stand_Vertical_jpg":
+    "/media/store/Hong%20Kong%20Night%20Market%20Food%20Stand%20%28Vertical%29.jpg",
+  "media/store/Twin_Peaks_Light_Painting_jpg":
+    "/media/store/Twin%20Peaks%20Light%20Painting.jpg",
+  "media/store/Mai_Chau_Rice_Paddies_Sunset_Panorama_2_jpg":
+    "/media/store/Mai%20Chau%20Rice%20Paddies%20Sunset%20Panorama%202.jpg",
+  "media/store/San_Francisco_Downtown_From_Twin_Peaks_Night_Long_Exposure_jpg":
+    "/media/store/San%20Francisco%20Downtown%20From%20Twin%20Peaks%20Night%20Long%20Exposure.jpg",
+  "media/store/Lombard_Street_11x14_jpg":
+    "/media/store/Lombard%20Street%20%2811x14%29.jpg",
+  "media/store/Hong_Kong_Red_Taxi_Motion_Blur_Horizontal_jpg":
+    "/media/store/Hong%20Kong%20Red%20Taxi%20Motion%20Blur%20%28Horizontal%29.jpg",
+  "media/store/Blair_Arch_Drone_Landscape_jpg":
+    "/media/store/Blair%20Arch%20Drone%20Landscape.jpg",
+  "media/store/Gardens_by_the_Bay_Horizontal_Drone_jpg":
+    "/media/store/Gardens%20by%20the%20Bay%20%28Horizontal%20Drone%29.jpg",
+  "media/store/Times_Square_Lens_Ball_jpg":
+    "/media/store/Times%20Square%20Lens%20Ball.jpg",
+  "media/store/Dog_Sledding_Dog_jpg": "/media/store/Dog%20Sledding%20Dog.jpg",
+  "media/store/Mong_Kok_Neon_Signs_Vertical_jpg":
+    "/media/store/Mong%20Kok%20Neon%20Signs%20%28Vertical%29.jpg",
+  "media/store/Piano_Black_and_White_jpg":
+    "/media/store/Piano%20Black%20and%20White.jpg",
+  "media/store/Larry_Bao_Two_Man_Boat_Top_Down_jpg":
+    "/media/store/Larry%20Bao%20Two%20Man%20Boat%20Top%20Down.jpg",
+  "media/store/Sai_Wan_Drone_Vertical_jpg":
+    "/media/store/Sai%20Wan%20Drone%20%28Vertical%29.jpg",
+  "media/store/KHOU4_0004_PRINT_jpg": "/media/store/KHOU4-0004-PRINT.jpg",
+  "media/store/Lake_Carnegie_Landscape_Fall_Season_jpg":
+    "/media/store/Lake%20Carnegie%20Landscape%20Fall%20Season.jpg",
+  "media/store/Delta_Lake_Glacier_Runnoff_jpg":
+    "/media/store/Delta%20Lake%20Glacier%20Runnoff.jpg",
+  "media/store/Mori_Point_Pacifica_Sunset_jpg":
+    "/media/store/Mori%20Point%20Pacifica%20Sunset.jpg",
+  "media/store/Hong_Kong_Skyline_Panorama_jpg":
+    "/media/store/Hong%20Kong%20Skyline%20Panorama.jpg",
+  "media/store/Yin_Yang_Golden_Gate_Bridge_Light_Painting_jpg":
+    "/media/store/Yin%20Yang%20Golden%20Gate%20Bridge%20Light%20Painting.jpg",
+  "media/store/Caroline_Floating_Moon_with_Fairy_Lights_jpg":
+    "/media/store/Caroline%20Floating%20Moon%20with%20Fairy%20Lights.jpg",
+  "media/store/1903_Hall_and_Cuyler_Hall_Drone_jpg":
+    "/media/store/1903%20Hall%20and%20Cuyler%20Hall%20Drone.jpg",
+  "media/store/KHOU3_0003_PRINT_jpg": "/media/store/KHOU3-0003-PRINT.jpg",
+  "media/store/Princeton_Boat_House_Fall_Season_jpg":
+    "/media/store/Princeton%20Boat%20House%20Fall%20Season.jpg",
+  "media/store/Grand_Teton_Bison_jpg": "/media/store/Grand%20Teton%20Bison.jpg",
+  "media/store/Mong_Kong_Lens_Ball_Neon_Signs_Vertical_jpg":
+    "/media/store/Mong%20Kong%20Lens%20Ball%20Neon%20Signs%20%28Vertical%29.jpg",
+  "media/store/Teddy_Niagara_Falls_jpg":
+    "/media/store/Teddy%20Niagara%20Falls.jpg",
+  "media/store/Devil_s_Tower_jpg": "/media/store/Devil%27s%20Tower.jpg",
+  "media/store/Palace_of_Fine_Arts_Portrait_jpg":
+    "/media/store/Palace%20of%20Fine%20Arts%20Portrait.jpg",
+  "media/store/KHou_Golden_Gate_Bridge_Light_Painting_jpg":
+    "/media/store/KHou%20Golden%20Gate%20Bridge%20Light%20Painting.jpg",
+  "media/store/Badlands_1_jpg": "/media/store/Badlands%201.jpg",
+  "media/store/Temple_Street_Market_Overview_jpg":
+    "/media/store/Temple%20Street%20Market%20Overview.jpg",
+  "media/store/Bride_s_Pool_Long_Exposure_1_2_jpg":
+    "/media/store/Bride%27s%20Pool%20Long%20Exposure%201-2.jpg",
+  "media/store/Hong_Kong_Ten_Cents_Macro_jpg":
+    "/media/store/Hong%20Kong%20Ten%20Cents%20%28Macro%29.jpg",
+  "media/store/Hong_Kong_Fifty_Cents_Macro_Vertical_jpg":
+    "/media/store/Hong%20Kong%20Fifty%20Cents%20%28Macro%2C%20Vertical%29.jpg",
+  "media/store/Rubicon_Peak_Drone_jpg":
+    "/media/store/Rubicon%20Peak%20%28Drone%29.jpg",
+  "media/store/Monster_Mansion_Vertical_jpg":
+    "/media/store/Monster%20Mansion%20Vertical.jpg",
+  "media/store/Palace_of_Fine_Arts_Street_with_Cars_Drone_jpg":
+    "/media/store/Palace%20of%20Fine%20Arts%20Street%20with%20Cars%20Drone.jpg",
+  "media/store/Times_Square_Screens_jpg":
+    "/media/store/Times%20Square%20Screens.jpg",
+  "media/store/Mount_Rushmore_Picture_of_iPhone_jpg":
+    "/media/store/Mount%20Rushmore%20%28Picture%20of%20iPhone%29.jpg",
+  "media/store/Badlands_2_jpg": "/media/store/Badlands%202.jpg",
+  "media/store/Hong_Kong_Motorbike_Motion_Blur_Horizontal_jpg":
+    "/media/store/Hong%20Kong%20Motorbike%20Motion%20Blur%20%28Horizontal%29.jpg",
+  "media/store/Grand_Teton_Morman_Row_jpg":
+    "/media/store/Grand%20Teton%20Morman%20Row.jpg",
+  "media/store/Times_Square_Long_Exposure_Cars_jpg":
+    "/media/store/Times%20Square%20Long%20Exposure%20Cars.jpg",
+  "media/store/Marina_Bay_Drone_Panorama_jpg":
+    "/media/store/Marina%20Bay%20Drone%20Panorama.jpg",
+  "media/store/Caroline_with_Moon_and_Fairy_Lights_Side_Profile_jpg":
+    "/media/store/Caroline%20with%20Moon%20and%20Fairy%20Lights%20Side%20Profile.jpg",
+  "media/store/Hong_Kong_Minivan_Motion_Blur_Horizontal_jpg":
+    "/media/store/Hong%20Kong%20Minivan%20Motion%20Blur%20%28Horizontal%29.jpg",
+  "media/store/1903_Hall_in_Snow_jpg":
+    "/media/store/1903%20Hall%20in%20Snow.jpg",
+  "media/store/Sea_Ranch_Seals_Drone_Top_Down_jpg":
+    "/media/store/Sea%20Ranch%20Seals%20Drone%20%28Top%20Down%29.jpg",
+  "media/store/Bride_s_Pool_Waterfall_Vertical_jpg":
+    "/media/store/Bride%27s%20Pool%20Waterfall%20%28Vertical%29.jpg",
+  "media/store/Shibuya_Taxi_Motion_Blur_jpg":
+    "/media/store/Shibuya%20Taxi%20Motion%20Blur.jpg",
+};

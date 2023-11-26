@@ -34,7 +34,7 @@ export const FadeInView: React.FC<FadeInViewProps> = ({
           }
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (ref.current) {
@@ -53,7 +53,7 @@ export const FadeInView: React.FC<FadeInViewProps> = ({
       ref={ref}
       className={classNames(
         "transition-opacity",
-        isVisible ? "opacity-100" : "opacity-0"
+        isVisible ? "opacity-100" : "opacity-0",
       )}
       style={{
         transitionDuration: `${durationMS}ms`,

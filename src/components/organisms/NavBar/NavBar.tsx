@@ -24,7 +24,7 @@ export const NavBar = () => {
 
   return (
     <nav
-      className="border-gray-200 fixed z-20 w-screen"
+      className="fixed z-20 w-screen border-gray-200"
       onMouseLeave={() => setIsHovering(false)}
     >
       <div
@@ -37,13 +37,13 @@ export const NavBar = () => {
         {/* Background of the main content for hovering background */}
         <div
           className={classNames(
-            "absolute -z-10 h-full w-full duration-500 transition-colors ease-in-out",
-            isHovering ? "bg-white/100" : "bg-white/0"
+            "absolute -z-10 h-full w-full transition-colors duration-500 ease-in-out",
+            isHovering ? "bg-white/100" : "bg-white/0",
           )}
         />
 
         <div
-          className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4"
+          className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-4"
           style={{
             paddingTop: paddingY,
             paddingBottom: paddingY,
@@ -54,7 +54,7 @@ export const NavBar = () => {
             href={siteMetadata.siteUrl}
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <div className="flex flex-row gap-x-2 justify-start items-center">
+            <div className="flex flex-row items-center justify-start gap-x-2">
               <PersonalLogo
                 className="aspect-square"
                 width={logoSize}
@@ -77,8 +77,8 @@ export const NavBar = () => {
                 <p
                   aria-label="kevin hou (controlled by hover)"
                   className={classNames(
-                    "absolute top-0 left-0 transition-opacity ease-in-out duration-500",
-                    isHovering ? "opacity-100" : "opacity-0"
+                    "absolute left-0 top-0 transition-opacity duration-500 ease-in-out",
+                    isHovering ? "opacity-100" : "opacity-0",
                   )}
                   style={{
                     fontSize: headerFontSize,
@@ -92,7 +92,7 @@ export const NavBar = () => {
           <button
             data-collapse-toggle="mega-menu-full"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
             aria-controls="mega-menu-full"
             aria-expanded="false"
           >
@@ -101,13 +101,13 @@ export const NavBar = () => {
           </button>
           <div
             id="mega-menu-full"
-            className="items-center justify-between font-medium hidden w-full md:flex md:w-auto md:order-1"
+            className="hidden w-full items-center justify-between font-medium md:order-1 md:flex md:w-auto"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <ul className="mt-4 flex flex-col rounded-lg border p-4 rtl:space-x-reverse md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0">
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
                   style={{ fontSize: linkFontSize }}
                   aria-current="page"
                 >
@@ -118,16 +118,16 @@ export const NavBar = () => {
                 <button
                   id="mega-menu-full-dropdown-button"
                   data-collapse-toggle="mega-menu-full-dropdown"
-                  className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0"
+                  className="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-600"
                   style={{ fontSize: linkFontSize }}
                 >
-                  Portfolio <CarrotDownIcon className="w-2.5 h-2.5 ms-2.5" />
+                  Portfolio <CarrotDownIcon className="ms-2.5 h-2.5 w-2.5" />
                 </button>
               </li>
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
                   style={{ fontSize: linkFontSize }}
                 >
                   Blog
@@ -136,7 +136,7 @@ export const NavBar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
                   style={{ fontSize: linkFontSize }}
                 >
                   Photo Store
@@ -145,7 +145,7 @@ export const NavBar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
                   style={{ fontSize: linkFontSize }}
                 >
                   Contact
@@ -159,15 +159,15 @@ export const NavBar = () => {
         aria-label="nav bar dropdown"
         id="mega-menu-full-dropdown"
         className={classNames(
-          "border-gray-200 shadow-sm bg-white border-y",
+          "border-y border-gray-200 bg-white shadow-sm",
 
           // Opacity and mouse events are determined by hover.
           isHovering
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none",
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0",
 
           // Change the height (via max-height) so that it does not interfere with content on the screen.
-          isHovering ? "max-h-screen" : "max-h-0"
+          isHovering ? "max-h-screen" : "max-h-0",
         )}
         style={{
           // Animation setup.
@@ -177,10 +177,10 @@ export const NavBar = () => {
           }, opacity 0.5s ease-in-out`,
         }}
       >
-        <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:px-6">
+        <div className="mx-auto grid max-w-screen-xl px-4 py-5 text-gray-900 sm:grid-cols-2 md:px-6">
           <ul>
             <li>
-              <a href="#" className="block p-3 rounded-lg hover:bg-gray-100">
+              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
                 <div className="font-semibold">Online Stores</div>
                 <span className="text-sm">
                   Connect with third-party tools that you are already using.
@@ -188,7 +188,7 @@ export const NavBar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="block p-3 rounded-lg hover:bg-gray-100">
+              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
                 <div className="font-semibold">Segmentation</div>
                 <span className="text-sm text-gray-500">
                   Connect with third-party tools that you are already using.
@@ -196,7 +196,7 @@ export const NavBar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="block p-3 rounded-lg hover:bg-gray-100">
+              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
                 <div className="font-semibold">Marketing CRM</div>
                 <span className="text-sm text-gray-500">
                   Connect with third-party tools that you are already using.
@@ -206,7 +206,7 @@ export const NavBar = () => {
           </ul>
           <ul>
             <li>
-              <a href="#" className="block p-3 rounded-lg hover:bg-gray-100">
+              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
                 <div className="font-semibold">Online Stores</div>
                 <span className="text-sm text-gray-500">
                   Connect with third-party tools that you are already using.
@@ -214,7 +214,7 @@ export const NavBar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="block p-3 rounded-lg hover:bg-gray-100">
+              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
                 <div className="font-semibold">Segmentation</div>
                 <span className="text-sm text-gray-500">
                   Connect with third-party tools that you are already using.
@@ -222,7 +222,7 @@ export const NavBar = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="block p-3 rounded-lg hover:bg-gray-100">
+              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
                 <div className="font-semibold">Marketing CRM</div>
                 <span className="text-sm text-gray-500">
                   Connect with third-party tools that you are already using.

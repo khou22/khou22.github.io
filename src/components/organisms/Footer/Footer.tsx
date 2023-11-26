@@ -33,7 +33,7 @@ export const Footer = () => {
               key={item.name}
               href={item.href}
               target="_blank"
-              className="text-gray-400 hover:text-gray-600 duration-300 transition-colors ease-in-out cursor-pointer"
+              className="cursor-pointer text-gray-400 transition-colors duration-300 ease-in-out hover:text-gray-600"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
