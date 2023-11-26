@@ -5,7 +5,9 @@ import React, { useRef, useEffect, useState } from "react";
 
 interface FadeInViewProps {
   once?: boolean;
+  delayMS?: number;
   durationMS?: number;
+  threshold?: number;
   children: React.ReactNode;
 }
 
@@ -14,7 +16,9 @@ interface FadeInViewProps {
  */
 export const FadeInView: React.FC<FadeInViewProps> = ({
   once = false,
+  delayMS = 0,
   durationMS = 500,
+  threshold = 0.1,
   children,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +38,7 @@ export const FadeInView: React.FC<FadeInViewProps> = ({
           }
         }
       },
-      { threshold: 0.1 },
+      { threshold: threshold },
     );
 
     if (ref.current) {
@@ -46,7 +50,7 @@ export const FadeInView: React.FC<FadeInViewProps> = ({
         observer.unobserve(ref.current);
       }
     };
-  }, [once]);
+  }, [once, threshold]);
 
   return (
     <div
@@ -57,6 +61,7 @@ export const FadeInView: React.FC<FadeInViewProps> = ({
       )}
       style={{
         transitionDuration: `${durationMS}ms`,
+        transitionDelay: `${delayMS}ms`,
       }}
     >
       {children}

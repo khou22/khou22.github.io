@@ -29,32 +29,36 @@ export default function Home() {
             <div className="p-4 sm:p-20">
               <h2 className="leading-relaxed">Kevin Hou</h2>
               <p className="italic leading-relaxed">Always building</p>
-              <p className="my-2 text-sm">
-                A full stack engineer by trade and a creator by heart. Enjoys
-                the process of creation whether it be in the physical (woodshop,
-                blacksmithing, circuity) or the digital (software engineering,
-                photography, and film).
-              </p>
-              <p className="text-sm">
-                Currently building AI-powered dev tools at{" "}
-                <CustomLink
-                  href="https://codeium.com?referrer=khou22.com"
-                  target="_blank"
-                >
-                  Codeium
-                </CustomLink>{" "}
-                (Exafunction). Previously a tech lead manager at{" "}
-                <CustomLink href="https://www.nuro.ai" target="_blank">
-                  Nuro
-                </CustomLink>{" "}
-                self-driving. Received a computer science engineering degree
-                from Princeton University with certificates in entrepreneurship
-                and statistics and machine learning.
-              </p>
+              <FadeInView once threshold={0.4} durationMS={1000} delayMS={100}>
+                <p className="my-2 text-sm">
+                  A full stack engineer by trade and a creator by heart. Enjoys
+                  the process of creation whether it be in the physical
+                  (woodshop, blacksmithing, circuity) or the digital (software
+                  engineering, photography, and film).
+                </p>
+              </FadeInView>
+              <FadeInView once threshold={0.4} durationMS={1000} delayMS={250}>
+                <p className="text-sm">
+                  Currently building AI-powered dev tools at{" "}
+                  <CustomLink
+                    href="https://codeium.com?referrer=khou22.com"
+                    target="_blank"
+                  >
+                    Codeium
+                  </CustomLink>{" "}
+                  (Exafunction). Previously a tech lead manager at{" "}
+                  <CustomLink href="https://www.nuro.ai" target="_blank">
+                    Nuro
+                  </CustomLink>{" "}
+                  self-driving. Received a computer science engineering degree
+                  from Princeton University with certificates in
+                  entrepreneurship and statistics and machine learning.
+                </p>
+              </FadeInView>
             </div>
           </div>
           <div className="col-span-1">
-            <FadeInView>
+            <FadeInView threshold={0.35} durationMS={1000}>
               <img
                 alt="homepage photography image tiles"
                 src={getCdnAsset("media/landing/image_tiles_png")}

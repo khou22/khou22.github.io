@@ -1,5 +1,6 @@
 "use client";
 
+import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
@@ -62,7 +63,9 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
             className="h-24 w-24"
             src={getCdnAsset("media/site/logo/initials_logo_animated_svg")}
           />
-          <p className="mt-2 leading-loose">Kevin Hou</p>
+          <FadeInView once durationMS={2000} delayMS={500}>
+            <p className="mt-2 leading-loose">Kevin Hou</p>
+          </FadeInView>
         </span>
       </div>
 
