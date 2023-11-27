@@ -7,9 +7,11 @@ import { siteMetadata } from "@/constants/siteMetadata";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { clamp, interpolate } from "@/utils/math";
+import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
 import Link from "next/link";
 import { useState } from "react";
+import { PortfolioDropdown } from "./PortfolioDropdown";
 
 export const NavBar = () => {
   const { scrollY } = useScrollPosition();
@@ -38,7 +40,7 @@ export const NavBar = () => {
         <div
           className={classNames(
             "absolute -z-10 h-full w-full transition-colors duration-500 ease-in-out",
-            isHovering ? "bg-white/100" : "bg-white/0",
+            isHovering ? "bg-white/80 backdrop-blur" : "bg-white/0",
           )}
         />
 
@@ -103,16 +105,16 @@ export const NavBar = () => {
             id="mega-menu-full"
             className="hidden w-full items-center justify-between font-medium md:order-1 md:flex md:w-auto"
           >
-            <ul className="mt-4 flex flex-col rounded-lg border p-4 rtl:space-x-reverse md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0">
+            <ul className="mt-4 flex flex-col rounded-lg border p-4 rtl:space-x-reverse md:mt-0 md:flex-row md:space-x-10 md:border-0 md:p-0">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href={PAGES.HOME}
                   className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
                   style={{ fontSize: linkFontSize }}
                   aria-current="page"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <button
@@ -125,13 +127,13 @@ export const NavBar = () => {
                 </button>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href={PAGES.BLOG}
                   className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
                   style={{ fontSize: linkFontSize }}
                 >
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -139,7 +141,7 @@ export const NavBar = () => {
                   className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
                   style={{ fontSize: linkFontSize }}
                 >
-                  Photo Store
+                  Print Shop
                 </a>
               </li>
               <li>
@@ -159,7 +161,7 @@ export const NavBar = () => {
         aria-label="nav bar dropdown"
         id="mega-menu-full-dropdown"
         className={classNames(
-          "border-y border-gray-200 bg-white shadow-sm",
+          "border-y border-gray-200 bg-white/20 shadow-sm",
 
           // Opacity and mouse events are determined by hover.
           isHovering
@@ -177,60 +179,7 @@ export const NavBar = () => {
           }, opacity 0.5s ease-in-out`,
         }}
       >
-        <div className="mx-auto grid max-w-screen-xl px-4 py-5 text-gray-900 sm:grid-cols-2 md:px-6">
-          <ul>
-            <li>
-              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <div className="font-semibold">Online Stores</div>
-                <span className="text-sm">
-                  Connect with third-party tools that you are already using.
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <div className="font-semibold">Segmentation</div>
-                <span className="text-sm text-gray-500">
-                  Connect with third-party tools that you are already using.
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <div className="font-semibold">Marketing CRM</div>
-                <span className="text-sm text-gray-500">
-                  Connect with third-party tools that you are already using.
-                </span>
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <div className="font-semibold">Online Stores</div>
-                <span className="text-sm text-gray-500">
-                  Connect with third-party tools that you are already using.
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <div className="font-semibold">Segmentation</div>
-                <span className="text-sm text-gray-500">
-                  Connect with third-party tools that you are already using.
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block rounded-lg p-3 hover:bg-gray-100">
-                <div className="font-semibold">Marketing CRM</div>
-                <span className="text-sm text-gray-500">
-                  Connect with third-party tools that you are already using.
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <PortfolioDropdown />
       </div>
     </nav>
   );
