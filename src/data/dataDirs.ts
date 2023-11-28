@@ -7,6 +7,9 @@ const dataDirs = {
   blog: "data/blog",
 };
 
-export const getDataDirectory = (key: keyof typeof dataDirs) => {
-  return path.join(process.cwd(), dataDirs[key]);
+/**
+ * Get the directory that contains the data for a particular type.
+ */
+export const getDataDirectory = (dataType: keyof typeof dataDirs) => {
+  return path.join(process.cwd(), dataDirs[dataType]);
 };
