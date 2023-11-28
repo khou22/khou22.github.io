@@ -12,11 +12,14 @@ import { classNames } from "@/utils/style";
 import Link from "next/link";
 import { useState } from "react";
 import { PortfolioDropdown } from "./PortfolioDropdown";
+import { NavBarDropdownType } from "./types";
+import { PhotographyDropdown } from "./PhotographyDropdown";
 
 export const NavBar = () => {
   const { scrollY } = useScrollPosition();
   const screenSize = useScreenSize();
-  const [isHovering, setIsHovering] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<NavBarDropdownType>();
+  const isHovering = Boolean(isDropdownOpen);
 
   const transitionProgress = (scrollY / (screenSize.height || 1)) * 1.5 - 0.75;
   const paddingY = clamp(8, 12, 4 * transitionProgress + 8);
@@ -27,7 +30,7 @@ export const NavBar = () => {
   return (
     <nav
       className="fixed z-20 w-screen border-gray-200"
-      onMouseLeave={() => setIsHovering(false)}
+      onMouseLeave={() => setIsDropdownOpen(undefined)}
     >
       <div
         aria-label="nav bar main"
@@ -40,7 +43,7 @@ export const NavBar = () => {
         <div
           className={classNames(
             "absolute -z-10 h-full w-full transition-colors duration-500 ease-in-out",
-            isHovering ? "bg-white/80 backdrop-blur" : "bg-white/0",
+            isHovering ? "bg-white/75 backdrop-blur-sm" : "bg-white/0",
           )}
         />
 
@@ -50,10 +53,9 @@ export const NavBar = () => {
             paddingTop: paddingY,
             paddingBottom: paddingY,
           }}
-          onMouseEnter={() => setIsHovering(true)}
         >
           <Link
-            href={siteMetadata.siteUrl}
+            href={PAGES.HOME}
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <div className="flex flex-row items-center justify-start gap-x-2">
@@ -111,17 +113,21 @@ export const NavBar = () => {
                   href={PAGES.HOME}
                   className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
                   style={{ fontSize: linkFontSize }}
-                  aria-current="page"
+                  onMouseEnter={() => setIsDropdownOpen(undefined)}
                 >
                   Home
                 </Link>
               </li>
               <li>
                 <button
-                  id="mega-menu-full-dropdown-button"
-                  data-collapse-toggle="mega-menu-full-dropdown"
-                  className="flex w-full items-center justify-between rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-600"
+                  className={classNames(
+                    "flex w-full items-center justify-between rounded px-3 py-2 hover:bg-gray-100 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-600",
+                    isDropdownOpen === "portfolio"
+                      ? "text-blue-500"
+                      : "text-gray-900",
+                  )}
                   style={{ fontSize: linkFontSize }}
+                  onMouseEnter={() => setIsDropdownOpen("portfolio")}
                 >
                   Portfolio <CarrotDownIcon className="ms-2.5 h-2.5 w-2.5" />
                 </button>
@@ -131,24 +137,31 @@ export const NavBar = () => {
                   href={PAGES.BLOG}
                   className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
                   style={{ fontSize: linkFontSize }}
+                  onMouseEnter={() => setIsDropdownOpen(undefined)}
                 >
                   Blog
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+                <button
+                  className={classNames(
+                    "flex w-full items-center justify-between rounded px-3 py-2 hover:bg-gray-100 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-600",
+                    isDropdownOpen === "photography"
+                      ? "text-blue-500"
+                      : "text-gray-900",
+                  )}
                   style={{ fontSize: linkFontSize }}
+                  onMouseEnter={() => setIsDropdownOpen("photography")}
                 >
-                  Print Shop
-                </a>
+                  Print Shop <CarrotDownIcon className="ms-2.5 h-2.5 w-2.5" />
+                </button>
               </li>
               <li>
                 <a
                   href="#"
                   className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
                   style={{ fontSize: linkFontSize }}
+                  onMouseEnter={() => setIsDropdownOpen(undefined)}
                 >
                   Contact
                 </a>
@@ -179,7 +192,8 @@ export const NavBar = () => {
           }, opacity 0.5s ease-in-out`,
         }}
       >
-        <PortfolioDropdown />
+        {isDropdownOpen === "portfolio" && <PortfolioDropdown />}
+        {isDropdownOpen === "photography" && <PhotographyDropdown />}
       </div>
     </nav>
   );
