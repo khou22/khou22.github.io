@@ -38,7 +38,7 @@
     @apply text-lg;
   }
   .caption {
-    @apply text-sm text-gray-200;
+    @apply text-sm text-gray-600;
   }
   p {
     @apply text-base;

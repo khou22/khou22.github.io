@@ -5,6 +5,7 @@ import { getPosts } from "@/utils/blog/posts";
 import { PAGES } from "@/utils/pages";
 import moment from "moment";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
+import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 
 export const metadata: Metadata = {
   title: siteMetadata.title,
@@ -20,16 +21,18 @@ const BlogPage = () => {
 
   return (
     <PageWrapper>
-      <h2>Blog</h2>
-      <ul>
+      <h2 className="leading-relaxed">Blog</h2>
+      <ul className="my-4 flex flex-col gap-y-4">
         {allPostsData.map(({ frontMatter }) => (
-          <li key={frontMatter.slug}>
-            <div className="mb-1 mt-5 font-medium">
-              <Link href={PAGES.BLOG_POST(frontMatter)}>
-                {frontMatter.title}
-              </Link>
-            </div>
-            <small className="font-medium text-gray-500">
+          <li
+            key={frontMatter.slug}
+            className="flex flex-col items-start justify-start gap-y-1"
+          >
+            <CustomLink href={PAGES.BLOG_POST(frontMatter)}>
+              <h6>{frontMatter.title}</h6>
+            </CustomLink>
+            <p className="caption">{frontMatter.description}</p>
+            <small className="caption mt-1 italic">
               <time dateTime={frontMatter.date.toISOString()}>
                 {moment(frontMatter.date).format("MMMM DD, YYYY")}
               </time>

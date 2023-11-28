@@ -43,11 +43,16 @@ export default function Home() {
                   <CustomLink
                     href="https://codeium.com?referrer=khou22.com"
                     target="_blank"
+                    underline
                   >
                     Codeium
                   </CustomLink>{" "}
                   (Exafunction). Previously a tech lead manager at{" "}
-                  <CustomLink href="https://www.nuro.ai" target="_blank">
+                  <CustomLink
+                    href="https://www.nuro.ai"
+                    target="_blank"
+                    underline
+                  >
                     Nuro
                   </CustomLink>{" "}
                   self-driving. Received a computer science engineering degree
