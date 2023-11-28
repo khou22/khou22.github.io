@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { getPosts } from "@/utils/blog/posts";
 import { PAGES } from "@/utils/pages";
 import moment from "moment";
+import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 
 export const metadata: Metadata = {
   title: siteMetadata.title,
@@ -18,7 +19,7 @@ const BlogPage = () => {
   const allPostsData = getPosts();
 
   return (
-    <>
+    <PageWrapper>
       <h2>Blog</h2>
       <ul>
         {allPostsData.map(({ frontMatter }) => (
@@ -36,7 +37,7 @@ const BlogPage = () => {
           </li>
         ))}
       </ul>
-    </>
+    </PageWrapper>
   );
 };
 
