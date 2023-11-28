@@ -3,7 +3,6 @@
 import { PersonalLogo } from "@/components/atoms/PersonalLogo/PersonalLogo";
 import { CarrotDownIcon } from "@/components/icons/CarrotDownIcon/CarrotDownIcon";
 import { MenuIcon } from "@/components/icons/MenuIcon/MenuIcon";
-import { siteMetadata } from "@/constants/siteMetadata";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { clamp, interpolate } from "@/utils/math";
@@ -14,14 +13,25 @@ import { useState } from "react";
 import { PortfolioDropdown } from "./PortfolioDropdown";
 import { NavBarDropdownType } from "./types";
 import { PhotographyDropdown } from "./PhotographyDropdown";
+import { usePathname } from "next/navigation";
 
-export const NavBar = () => {
+/**
+ * Standard nav bar for the site. Floats on certain pages, otherwise is relative. Dropdowns for
+ * items with additional content.
+ */
+export const NavBar: React.FC = () => {
   const { scrollY } = useScrollPosition();
   const screenSize = useScreenSize();
   const [isDropdownOpen, setIsDropdownOpen] = useState<NavBarDropdownType>();
   const isHovering = Boolean(isDropdownOpen);
+  const pathname = usePathname();
+  const isFloating = pathname === PAGES.HOME;
 
-  const transitionProgress = (scrollY / (screenSize.height || 1)) * 1.5 - 0.75;
+  // If floating, never have a scroll transition.
+  const transitionProgress = isFloating
+    ? (scrollY / (screenSize.height || 1)) * 1.5 - 0.75
+    : 1;
+
   const paddingY = clamp(8, 12, 4 * transitionProgress + 8);
   const logoSize = clamp(36, 50, interpolate(50, 36, transitionProgress));
   const linkFontSize = clamp(13, 16, interpolate(16, 13, transitionProgress));
@@ -29,7 +39,10 @@ export const NavBar = () => {
 
   return (
     <nav
-      className="fixed z-20 w-screen border-gray-200"
+      className={classNames(
+        "w-screen",
+        isFloating ? "fixed z-20" : "relative z-20",
+      )}
       onMouseLeave={() => setIsDropdownOpen(undefined)}
     >
       <div
@@ -174,15 +187,13 @@ export const NavBar = () => {
         aria-label="nav bar dropdown"
         id="mega-menu-full-dropdown"
         className={classNames(
-          "border-y border-gray-200 bg-white/20 shadow-sm",
+          "border-y border-gray-200 bg-white/75 shadow-sm backdrop-blur-sm",
+          "absolute left-0 top-full z-10 w-full",
 
           // Opacity and mouse events are determined by hover.
           isHovering
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0",
-
-          // Change the height (via max-height) so that it does not interfere with content on the screen.
-          isHovering ? "max-h-screen" : "max-h-0",
         )}
         style={{
           // Animation setup.

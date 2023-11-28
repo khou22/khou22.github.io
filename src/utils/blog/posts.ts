@@ -6,7 +6,7 @@ import { HydratedBlogPost } from "@/data/types";
 import moment from "moment";
 
 /**
- * Retrieves a list of hydrated blog posts.
+ * Retrieves a list of hydrated blog posts sorted in descending order of date.
  *
  * @return {HydratedBlogPost[]} An array of hydrated blog post objects.
  */

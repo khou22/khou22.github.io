@@ -4,7 +4,7 @@ import path from "path";
  * Data directories.
  */
 const dataDirs = {
-  blog: "data/blog",
+  blog: "src/data/blog",
 };
 
 /**
