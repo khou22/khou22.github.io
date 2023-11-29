@@ -5,7 +5,7 @@ import moment from "moment";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { HydratedBlogPost } from "@/data/types";
 import { notFound } from "next/navigation";
-import ReactMarkdown from "react-markdown";
+import { CustomMarkdown } from "@/components/molecules/CustomMarkdown/CustomMarkdown";
 
 type PageParams = {
   params: {
@@ -81,9 +81,9 @@ const BlogPostPage: NextPage<PageParams> = async ({ params: { slug } }) => {
       </div>
 
       <div className="my-4 w-full border-b border-gray-200" />
-      <ReactMarkdown className="prose m-auto max-w-full lg:prose-xl">
+      <CustomMarkdown className="m-auto max-w-full">
         {post.content}
-      </ReactMarkdown>
+      </CustomMarkdown>
     </PageWrapper>
   );
 };

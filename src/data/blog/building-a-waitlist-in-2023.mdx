@@ -24,10 +24,11 @@ I initialized a new table `gpt_4_waitlist` and within seconds I had a Postgres U
 
 Using @ codeiumdev I asked it to create a waitlist table for my newly created Neon DB:
 
-> Create a new postgres 16 table called **`gpt_4_waitlist`** that has the following columns:
-> • waitlist_id: string primary key auto generated
-> • email: string required unique
-> • …
+> Create a new postgres 16 table called **`gpt_4_waitlist`** that has the following columns:
+>
+> - waitlist_id: string primary key auto generated
+> - email: string required unique
+> - ...
 
 A few seconds later I had a query that executed perfectly. I used Neon's console GUI to check my schema and everything looks good. Database provisioned!
 
@@ -58,7 +59,7 @@ export async function POST(req: NextRequest) {
 
 The last thing to do is to make a form that can send a payload to our endpoint. I've used `yup` in the past for schema validation but `zod` seems like the new kid on the block and I really like how simple their setup is.
 
-It also plays really nicely with `react-hook-form` , a headless form hook that manages your validation, error states, controlled inputs, etc. It let's you bring your own UI components so you can have maximum flexibility while keeping the setup cost for state management low.
+It also plays really nicely with `react-hook-form`, a headless form hook that manages your validation, error states, controlled inputs, etc. It let's you bring your own UI components so you can have maximum flexibility while keeping the setup cost for state management low.
 
 ```tsx
 const generateFormSchema = z.object({
