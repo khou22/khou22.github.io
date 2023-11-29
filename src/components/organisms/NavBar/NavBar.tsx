@@ -41,7 +41,10 @@ export const NavBar: React.FC = () => {
     <nav
       className={classNames(
         "w-screen",
-        isFloating ? "fixed z-20" : "relative z-20",
+        isFloating
+          ? "fixed left-0 top-0 z-20"
+          : // If we want to make this relative, simply change "sticky" to "relative"
+            "sticky left-0 top-0 z-20 border-b border-gray-100",
       )}
       onMouseLeave={() => setIsDropdownOpen(undefined)}
     >
@@ -84,6 +87,7 @@ export const NavBar: React.FC = () => {
               <div className="relative">
                 <p
                   aria-label="kevin hou (controlled by scroll)"
+                  className="font-light"
                   style={{
                     fontSize: headerFontSize,
                     opacity: clamp(0, 1, transitionProgress),
@@ -95,6 +99,7 @@ export const NavBar: React.FC = () => {
                   aria-label="kevin hou (controlled by hover)"
                   className={classNames(
                     "absolute left-0 top-0 transition-opacity duration-500 ease-in-out",
+                    "font-light",
                     isHovering ? "opacity-100" : "opacity-0",
                   )}
                   style={{
