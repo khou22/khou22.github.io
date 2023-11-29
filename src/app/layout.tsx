@@ -21,21 +21,21 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
   twitter: {
     site: siteMetadata.siteUrl,
-    siteId: 'khou22.com',
+    siteId: "khou22.com",
     creator: siteMetadata.author,
-    creatorId: '@kevinhou22',
+    creatorId: "@kevinhou22",
     description: siteMetadata.description,
     title: siteMetadata.title,
     card: "summary_large_image",
     images: [
       {
-     url: siteMetadata.previewCard.url, 
-     alt: siteMetadata.title,
-     type: "image/jpeg",
-     width: siteMetadata.previewCard.width,
-     height: siteMetadata.previewCard.height
-      }
-    ]
+        url: siteMetadata.previewCard.url,
+        alt: siteMetadata.title,
+        type: "image/jpeg",
+        width: siteMetadata.previewCard.width,
+        height: siteMetadata.previewCard.height,
+      },
+    ],
   },
   openGraph: {
     images: [
@@ -44,10 +44,10 @@ export const metadata: Metadata = {
         alt: siteMetadata.title,
         type: "image/jpeg",
         width: siteMetadata.previewCard.width,
-        height: siteMetadata.previewCard.height
-      }
-    ]
-  }
+        height: siteMetadata.previewCard.height,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

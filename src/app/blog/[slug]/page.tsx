@@ -10,17 +10,19 @@ import ReactMarkdown from "react-markdown";
 type PageParams = {
   params: {
     slug: string;
-  }
+  };
 };
 
-export async function generateMetadata({ params: { slug } }: PageParams): Promise<Metadata> {
+export async function generateMetadata({
+  params: { slug },
+}: PageParams): Promise<Metadata> {
   let post: HydratedBlogPost;
   try {
     post = await getPost(slug);
   } catch (e) {
     return {
       title: "Kevin Hou's Blog",
-    }
+    };
   }
 
   return {
@@ -37,9 +39,9 @@ export async function generateMetadata({ params: { slug } }: PageParams): Promis
           alt: post.frontMatter.title,
           width: siteMetadata.previewCard.width,
           height: siteMetadata.previewCard.height,
-        }
-      ]
-    }
+        },
+      ],
+    },
   };
 }
 
@@ -60,13 +62,22 @@ const BlogPostPage: NextPage<PageParams> = async ({ params: { slug } }) => {
 
   return (
     <PageWrapper>
-      <h2 className="leading-relaxed">{post.frontMatter.title}</h2>
-      <small className="caption mt-1 italic">
-        <time dateTime={post.frontMatter.date.toISOString()}>
-          {moment(post.frontMatter.date).format("MMMM DD, YYYY")}
-        </time>
-      </small>
-      <ReactMarkdown className="prose">{post.content}</ReactMarkdown>
+      <h1 className="w-full text-center leading-relaxed">
+        {post.frontMatter.title}
+      </h1>
+      <div className="mb-6 flex w-full flex-row items-center justify-evenly gap-x-6">
+        <p className="w-full text-right">
+          Written by {post.frontMatter.author}
+        </p>
+        <p className="w-full text-left">
+          <time dateTime={post.frontMatter.date.toISOString()}>
+            {moment(post.frontMatter.date).format("MMMM DD, YYYY")}
+          </time>
+        </p>
+      </div>
+      <ReactMarkdown className="prose lg:prose-xl">
+        {post.content}
+      </ReactMarkdown>
     </PageWrapper>
   );
 };

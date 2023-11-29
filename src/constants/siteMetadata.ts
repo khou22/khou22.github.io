@@ -10,9 +10,9 @@ export const siteMetadata = {
    * Default preview card image
    */
   previewCard: {
-    url: 'https://khou22.github.io/preview-card.png',
+    url: "https://khou22.github.io/preview-card.png",
     width: 1200,
-    height: 630
+    height: 630,
   },
 
   socials: {
