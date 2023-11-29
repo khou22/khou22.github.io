@@ -13,6 +13,12 @@ export type BlogPostFrontMatter = {
   featured: boolean;
 
   /**
+   * Estimated number of milliseconds to read the blog post.
+   */
+  estimatedReadingTimeMS: number;
+  wordCount: number;
+
+  /**
    * URL safe string generated based on the file name.
    */
   slug: string;

@@ -62,20 +62,26 @@ const BlogPostPage: NextPage<PageParams> = async ({ params: { slug } }) => {
 
   return (
     <PageWrapper>
+      <p className="w-full text-center">
+        <time dateTime={post.frontMatter.date.toISOString()}>
+          {moment(post.frontMatter.date).format("MMMM DD, YYYY")}
+        </time>
+      </p>
       <h1 className="w-full text-center leading-relaxed">
         {post.frontMatter.title}
       </h1>
-      <div className="mb-6 flex w-full flex-row items-center justify-evenly gap-x-6">
-        <p className="w-full text-right">
-          Written by {post.frontMatter.author}
-        </p>
-        <p className="w-full text-left">
-          <time dateTime={post.frontMatter.date.toISOString()}>
-            {moment(post.frontMatter.date).format("MMMM DD, YYYY")}
-          </time>
+      <div className="mt-4 flex w-full flex-row items-center justify-between gap-x-6">
+        <p>By {post.frontMatter.author}</p>
+        <p>
+          {Math.ceil(
+            post.frontMatter.estimatedReadingTimeMS / 1000 / 60,
+          ).toFixed(0)}{" "}
+          minute read
         </p>
       </div>
-      <ReactMarkdown className="prose lg:prose-xl">
+
+      <div className="my-4 w-full border-b border-gray-200" />
+      <ReactMarkdown className="prose m-auto max-w-full lg:prose-xl">
         {post.content}
       </ReactMarkdown>
     </PageWrapper>

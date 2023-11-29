@@ -5,6 +5,7 @@ import { getDataDirectory } from "@/data/dataDirs";
 import { HydratedBlogPost } from "@/data/types";
 import moment from "moment";
 import _ from "lodash";
+import readingTime from "reading-time";
 
 /**
  * Retrieves a list of hydrated blog posts sorted in descending order of date.
@@ -37,6 +38,9 @@ export function getPosts(): HydratedBlogPost[] {
       throw new Error(`Invalid date in ${filename}`);
     }
 
+    // Estimate reading time.
+    const readingStats = readingTime(fileContents);
+
     // Combine the data with the id
     return {
       frontMatter: {
@@ -47,6 +51,8 @@ export function getPosts(): HydratedBlogPost[] {
         image: matterResult.data.image || null,
         tags: matterResult.data.tags || [],
         featured: matterResult.data.featured || false,
+        estimatedReadingTimeMS: readingStats.time,
+        wordCount: readingStats.words,
         slug,
       },
       content: matterResult.content,
