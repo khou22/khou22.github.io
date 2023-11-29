@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { getDataDirectory } from "@/data/dataDirs";
 import { HydratedBlogPost } from "@/data/types";
 import moment from "moment";
+import _ from "lodash";
 
 /**
  * Retrieves a list of hydrated blog posts sorted in descending order of date.
@@ -61,3 +62,22 @@ export function getPosts(): HydratedBlogPost[] {
     }
   });
 }
+
+export class PostNotFoundError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "PostNotFoundError";
+  }
+}
+
+export const getPost = async (slug: string): Promise<HydratedBlogPost> => {
+  const posts = await getPosts();
+
+  // Find the post using its unique slug.
+  const post = _.find(posts, (p) => p.frontMatter.slug === slug);
+  if (!post) {
+    throw new PostNotFoundError(`could not find post with slug: ${slug}`);
+  }
+
+  return post;
+};

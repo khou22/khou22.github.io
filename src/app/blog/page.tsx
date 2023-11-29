@@ -8,12 +8,7 @@ import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 
 export const metadata: Metadata = {
-  title: siteMetadata.title,
-  description: siteMetadata.description,
-  authors: {
-    name: siteMetadata.author,
-    url: siteMetadata.siteUrl,
-  },
+  title: "Kevin Hou's Blog",
 };
 
 const BlogPage = () => {
