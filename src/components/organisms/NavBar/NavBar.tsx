@@ -137,7 +137,8 @@ export const NavBar: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <button
+                <Link
+                  href={PAGES.PORTFOLIO}
                   className={classNames(
                     "flex w-full items-center justify-between rounded px-3 py-2 hover:bg-gray-100 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-600",
                     isDropdownOpen === "portfolio"
@@ -148,7 +149,7 @@ export const NavBar: React.FC = () => {
                   onMouseEnter={() => setIsDropdownOpen("portfolio")}
                 >
                   Portfolio <CarrotDownIcon className="ms-2.5 h-2.5 w-2.5" />
-                </button>
+                </Link>
               </li>
               <li>
                 <Link
@@ -161,7 +162,8 @@ export const NavBar: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <button
+                <Link
+                  href={PAGES.PHOTOGRAPHY}
                   className={classNames(
                     "flex w-full items-center justify-between rounded px-3 py-2 hover:bg-gray-100 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-600",
                     isDropdownOpen === "photography"
@@ -172,7 +174,7 @@ export const NavBar: React.FC = () => {
                   onMouseEnter={() => setIsDropdownOpen("photography")}
                 >
                   Print Shop <CarrotDownIcon className="ms-2.5 h-2.5 w-2.5" />
-                </button>
+                </Link>
               </li>
               <li>
                 <a

@@ -4,6 +4,7 @@ export const PAGES = {
   HOME: "/",
   BLOG: "/blog",
   BLOG_POST: (post: BlogPostFrontMatter) => `/blog/${post.slug}`,
+  PORTFOLIO: "/portfolio",
   WOOD: "/wood",
   PHOTOGRAPHY: "/photography",
   PROGRAMMING: "/programming",

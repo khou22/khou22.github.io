@@ -21,19 +21,45 @@ export const PhotographyDropdown: React.FC = () => {
           </Link>
         </li>
       </ul>
-      <ul className="space-y-3">
-        <h6 className="font-bold text-blue-600">By Location</h6>
-        <li className="border-b border-gray-200 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY}>San Francisco</LinkWithArrow>
+      <ul className="space-y-4">
+        <h6 className="font-bold text-blue-600">Featured</h6>
+        <li className="border-b border-gray-400/50 pb-2">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+            Fan Favorites
+          </LinkWithArrow>
         </li>
-        <li className="border-b border-gray-200 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY}>New York</LinkWithArrow>
+        <li className="border-b border-gray-400/50 pb-2">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+            Aerial & Drone
+          </LinkWithArrow>
         </li>
-        <li className="border-b border-gray-200 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY}>Hong Kong</LinkWithArrow>
+        <li className="border-b border-gray-400/50 pb-2">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+            Landscapes
+          </LinkWithArrow>
+        </li>
+      </ul>
+      <ul className="space-y-4">
+        <h6 className="font-bold text-blue-600">Top Locations</h6>
+        <li className="border-b border-gray-400/50 pb-2">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+            San Francisco
+          </LinkWithArrow>
+        </li>
+        <li className="border-b border-gray-400/50 pb-2">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+            New York
+          </LinkWithArrow>
+        </li>
+        <li className="border-b border-gray-400/50 pb-2">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+            Hong Kong
+          </LinkWithArrow>
         </li>
         <li className="pb-1">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY}>All Locations</LinkWithArrow>
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+            All Locations
+          </LinkWithArrow>
         </li>
       </ul>
     </div>

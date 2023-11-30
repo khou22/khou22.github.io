@@ -1,22 +1,28 @@
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
+import { classNames } from "@/utils/style";
 import Link from "next/link";
 
 type LinkWithArrowProps = {
   href: string;
   children?: React.ReactNode | string;
+  className?: string;
 };
 
 export const LinkWithArrow: React.FC<LinkWithArrowProps> = ({
   children,
   href,
+  className = "",
 }) => {
   return (
     <Link
       href={href}
-      className="group flex flex-row items-center justify-between"
+      className={classNames(
+        "group flex flex-row items-center justify-between",
+        className,
+      )}
     >
       {typeof children === "string" ? (
-        <p className="group-hover:text-blue-500">{children}</p>
+        <span className="group-hover:text-blue-500">{children}</span>
       ) : (
         children
       )}
