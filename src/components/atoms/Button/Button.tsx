@@ -7,7 +7,7 @@ export type ButtonProps = {
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 /**
- * Renders a button component.
+ * Renders a custom styled button component.
  */
 const Button: React.FC<ButtonProps> = ({
   children,
