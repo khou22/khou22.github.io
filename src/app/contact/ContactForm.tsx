@@ -3,6 +3,9 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { FormLabel } from "@/components/atoms/FormLabel/FormLabel";
+import { TextArea } from "@/components/atoms/TextArea/TextArea";
+import { TextInput } from "@/components/atoms/TextInput/TextInput";
 
 const generateFormSchema = z.object({
   email: z.string().min(1),
@@ -27,22 +30,14 @@ export const ContactForm = () => {
   const onSubmit: SubmitHandler<GenerateFormValues> = async (data) => {};
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="email" className="mb-1 block leading-5">
-        Email
-      </label>
-      <input
-        id="email"
-        type="email"
-        {...register("email", { required: true })}
-      />
+    <form onSubmit={handleSubmit(onSubmit)} className="w-full">
+      <FormLabel htmlFor="email">Email</FormLabel>
+      <TextInput type="email" {...register("email", { required: true })} />
       {errors.email && (
         <p className="text-red text-sm">{errors.email.message}</p>
       )}
-      <label htmlFor="message" className="mb-1 block leading-5">
-        Message
-      </label>
-      <textarea {...register("message", { required: true })} />
+      <FormLabel htmlFor="message">Message</FormLabel>
+      <TextArea rows={4} {...register("message", { required: true })} />
       {errors.message && (
         <p className="text-red text-sm">{errors.message.message}</p>
       )}
