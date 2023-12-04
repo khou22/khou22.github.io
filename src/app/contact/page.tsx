@@ -5,26 +5,55 @@ import { PaperTexture } from "@/components/atoms/PaperTexture/PaperTexture";
 import { photographyCustomers } from "@/constants/photographyCustomers";
 import { AlbumsSection } from "./AlbumsSection";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
+import { ImageStory } from "@/components/organisms/ImageStory/ImageStory";
+import { PAGES } from "@/utils/pages";
 
 const ContactPage = () => {
   return (
     <>
       <PageWrapper disableMaxWidth className="max-w-5xl xl:max-w-6xl">
-        <div className="relative">
-          <div aria-label="contact background">
-            <div className="float-left aspect-[4/5] w-1/2">
-              <img
+        <div className="relative w-full">
+          <div aria-label="contact background" className="w-full">
+            <div className="float-left aspect-[4/5] w-1/2 bg-red-500">
+              <ImageStory
+                stories={[
+                  {
+                    title: "Landscape",
+                    link: PAGES.PHOTOGRAPHY,
+                    imageSrc: getCdnAsset("media/photography/mountains_jpg"),
+                  },
+                  {
+                    title: "Engagements",
+                    link: PAGES.PHOTOGRAPHY,
+                    imageSrc: getCdnAsset(
+                      "media/photography/cover/featured_jpg",
+                    ),
+                  },
+                  {
+                    title: "Events",
+                    link: PAGES.PHOTOGRAPHY,
+                    imageSrc: getCdnAsset("media/photography/korea_jpg"),
+                  },
+                  {
+                    title: "Concert",
+                    link: PAGES.PHOTOGRAPHY,
+                    imageSrc: getCdnAsset("media/photography/japan_jpg"),
+                  },
+                ]}
+                className="h-full w-full"
+              />
+              {/* <img
                 src={getCdnAsset("media/photography/city_jpg")}
                 alt="contact background"
                 className="h-full w-full object-fill"
-              />
+              /> */}
             </div>
           </div>
           <div
             aria-label="foreground"
-            className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-end justify-center px-8"
+            className="pointer-events-none absolute left-0 top-0 z-10 flex h-full w-full flex-col items-end justify-center px-8"
           >
-            <div className="relative float-right w-2/3 overflow-hidden rounded p-6 shadow">
+            <div className="pointer-events-auto relative float-right w-2/3 overflow-hidden rounded p-6 shadow">
               <div className="absolute left-0 top-0 -z-10 h-full w-full bg-white">
                 <PaperTexture className="h-full w-full" />
               </div>
