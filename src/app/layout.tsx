@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { NavBar } from "@/components/organisms/NavBar/NavBar";
 import { Footer } from "@/components/organisms/Footer/Footer";
+import { classNames } from "@/utils/style";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -60,7 +61,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={classNames(montserrat.className, "bg-gray-50")}>
         <NavBar />
         {children}
         <Footer />
