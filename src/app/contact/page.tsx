@@ -3,6 +3,8 @@ import { ContactForm } from "./ContactForm";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PaperTexture } from "@/components/atoms/PaperTexture/PaperTexture";
 import { photographyCustomers } from "@/constants/photographyCustomers";
+import { AlbumsSection } from "./AlbumsSection";
+import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 
 const ContactPage = () => {
   return (
@@ -45,33 +47,45 @@ const ContactPage = () => {
       </PageWrapper>
       <PageWrapper>
         <div className="my-16 md:my-24 lg:my-36">
-          <h5 className="mb-4 text-center leading-loose md:mb-6">
-            I have worked and collaborated with some incredible brands
-          </h5>
-          <div className="my-4 grid grid-cols-3 gap-12 sm:grid-cols-4 md:grid-cols-5">
-            {photographyCustomers.map(({ name, logo, url }) => (
-              <a
-                key={name}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex h-full w-full flex-col items-center justify-between"
-              >
-                <img
-                  src={logo}
-                  alt={name}
-                  className="aspect-[3/2] w-full object-contain opacity-80 saturate-0 transition duration-200 group-hover:opacity-100 group-hover:saturate-100"
-                />
-                <p className="caption text-center opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100">
-                  {name}
-                </p>
-              </a>
-            ))}
-          </div>
-          <p className="caption text-center">
-            and many more across many industries
-          </p>
+          <FadeInView once>
+            <h5 className="mb-4 text-center leading-loose md:mb-6">
+              I have worked and collaborated with some incredible brands
+            </h5>
+          </FadeInView>
+          <FadeInView once>
+            <div className="my-4 grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 md:gap-8 lg:gap-12">
+              {photographyCustomers.map(({ name, logo, url }) => (
+                <a
+                  key={name}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex h-full w-full flex-col items-center justify-between"
+                >
+                  <img
+                    src={logo}
+                    alt={name}
+                    className="aspect-[3/2] w-full object-contain opacity-80 saturate-0 transition duration-200 group-hover:opacity-100 group-hover:saturate-100"
+                  />
+                  <p className="caption text-center opacity-0 transition-opacity duration-200 ease-in-out group-hover:opacity-100">
+                    {name}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </FadeInView>
+          <FadeInView once>
+            <p className="caption text-center">
+              and many more across many industries
+            </p>
+          </FadeInView>
         </div>
+      </PageWrapper>
+      <PageWrapper disableMaxWidth>
+        <h5 className="mb-4 w-full text-center leading-loose md:mb-8 lg:mb-12">
+          Check out my samples of work
+        </h5>
+        <AlbumsSection />
       </PageWrapper>
     </>
   );

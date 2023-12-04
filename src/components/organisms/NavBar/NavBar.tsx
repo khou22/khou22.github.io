@@ -177,14 +177,14 @@ export const NavBar: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href={PAGES.CONTACT}
                   className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
                   style={{ fontSize: linkFontSize }}
                   onMouseEnter={() => setIsDropdownOpen(undefined)}
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
