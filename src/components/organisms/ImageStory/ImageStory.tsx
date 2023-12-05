@@ -27,6 +27,10 @@ type ImageStoryProps = {
 
 const animationFrequency = 1000;
 
+/**
+ * Instagram story-like image carousel that automatically transitions between
+ * images.
+ */
 export const ImageStory: React.FC<ImageStoryProps> = ({
   stories,
   autoForward = false,
@@ -53,72 +57,34 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
     },
   });
 
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+    return () => {
+      setMounted(false);
+    };
+  }, []);
+
+  // The animation should be trailing so that we are at 100% at the end.
+  const currentPercentageComplete =
+    (storyDuration - countdown + animationFrequency) / storyDuration;
+
   const currentStory = stories[storyIdx];
   const nextStory =
     storyIdx + 1 < stories.length ? stories[storyIdx + 1] : undefined;
 
-  // // Increment by the animation duration.
-  // const incrementStoryAnimation = useCallback(() => {
-  //   console.log("incrementStoryAnimation");
-  //   setMsRemaining((ms) => {
-  //     const remaining = ms - animationFrequency;
-
-  //     // If the slide is over, go to the next slide and restart the animation timer.
-  //     console.log(remaining);
-  //     if (remaining <= 0) {
-  //       setStoryIdx((idx) => {
-  //         if (idx + 1 >= stories.length) {
-  //           return 0;
-  //         }
-  //         return idx + 1;
-  //       });
-  //     }
-
-  //     // If the slide is still going, return the remaining time.
-  //     if (remaining > 0) {
-  //       return remaining;
-  //     }
-
-  //     // If auto advancing, reset the counter.
-  //     return autoForward ? storyDuration : 0;
-  //   });
-
-  //   // Kick off the next animation.
-  //   console.log("Kick off the next animation", autoForward);
-  //   if (autoForward) {
-  //     clearTimeout(timer.current);
-  //     timer.current = setTimeout(incrementStoryAnimation, animationFrequency);
-  //   }
-  // }, [autoForward, stories.length, storyDuration]);
-
-  // useEffect(() => {
-  //   console.log("Mounting the autoforward");
-  //   if (autoForward) {
-  //     console.log("Timer, autoForward", timer.current);
-  //     if (!timer.current) {
-  //       console.log("Beginning the automated animation");
-  //       timer.current = setTimeout(incrementStoryAnimation, animationFrequency);
-  //     }
-  //   }
-  //   return () => {
-  //     console.log("Unmounting the autoforward");
-  //     clearTimeout(timer.current);
-  //     timer.current = undefined;
-  //   };
-  // }, [autoForward, incrementStoryAnimation, storyDuration]);
-
   // Manually go to a slide.
   const goToSlide = useCallback(
-    (idx: React.SetStateAction<number>, animate: boolean = false) => {
+    (idx: React.SetStateAction<number>) => {
       setStoryIdx(idx);
 
-      if (animate) {
+      if (autoForward) {
         resetCountdown();
       } else {
         pauseCountdown();
       }
     },
-    [pauseCountdown, resetCountdown, storyDuration],
+    [autoForward, pauseCountdown, resetCountdown],
   );
 
   return (
@@ -129,15 +95,22 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
           <ProgressBar
             key={story.title}
             progress={
-              idx === storyIdx
-                ? isPaused
-                  ? 1
-                  : (storyDuration - countdown) / storyDuration
-                : 0
+              // If we're not mounted, start at 0 so that we can animate from 0.
+              !mounted
+                ? 0
+                : idx === storyIdx
+                  ? isPaused
+                    ? 1 // When paused, show 100%.
+                    : currentPercentageComplete // When playing, show the current percentage.
+                  : 0
             }
             className="h-full w-full cursor-pointer bg-gray-100/60 hover:bg-gray-100/70"
-            fillClassName="bg-white/80 linear"
-            fillStyle={{ transitionDuration: `${animationFrequency}ms` }}
+            fillClassName="bg-white/80 ease-linear"
+            fillStyle={{
+              // Only animate the current slide's progress bar.
+              transitionDuration:
+                idx === storyIdx ? `${animationFrequency}ms` : "0ms",
+            }}
             onClick={() => goToSlide(idx)}
           />
         ))}

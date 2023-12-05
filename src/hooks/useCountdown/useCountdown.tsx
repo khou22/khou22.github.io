@@ -5,16 +5,29 @@ interface UseCountdownProps {
   decrementFrequency: number;
   repeat: boolean;
   onFinish: () => void;
+  autoStart?: boolean;
 }
 
+/**
+ * Custom hook that implements a countdown timer.
+ *
+ * @param {UseCountdownProps} props - The countdown timer configuration.
+ * @param {number} props.time - The initial time for the countdown.
+ * @param {number} props.decrementFrequency - The frequency at which the countdown should decrement.
+ * @param {boolean} props.repeat - Whether the countdown should repeat after reaching zero.
+ * @param {function} props.onFinish - The callback function to be called when the countdown finishes.
+ * @param {boolean} props.autoStart - Whether the countdown should start automatically.
+ * @return {object} - An object containing the current countdown value, and functions to control the countdown.
+ */
 export const useCountdown = ({
   time,
   decrementFrequency,
   repeat,
   onFinish,
+  autoStart = true,
 }: UseCountdownProps) => {
   const [currentValue, setCurrentValue] = useState(time);
-  const [isPaused, setIsPaused] = useState(true);
+  const [isPaused, setIsPaused] = useState(!autoStart);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const clearTimer = useCallback(() => {
@@ -61,11 +74,11 @@ export const useCountdown = ({
   }, [currentValue, clearTimer, onFinish, play, repeat, time]);
 
   useEffect(() => {
-    play();
+    if (autoStart) play();
     return () => {
       clearTimer();
     };
-  }, [clearTimer]);
+  }, [autoStart, clearTimer, play]);
 
   return { currentValue, play, pause, reset, isPaused };
 };
