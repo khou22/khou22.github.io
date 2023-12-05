@@ -2,6 +2,8 @@
 
 import { ProgressBar } from "@/components/atoms/ProgressBar/ProgressBar";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
+import { PauseIcon } from "@/components/icons/PauseIcon/PauseIcon";
+import { PlayIcon } from "@/components/icons/PlayIcon/PlayIcon";
 import { useCountdown } from "@/hooks/useCountdown/useCountdown";
 import { classNames } from "@/utils/style";
 import Image from "next/image";
@@ -25,7 +27,7 @@ type ImageStoryProps = {
   className?: string;
 };
 
-const animationFrequency = 1000;
+const animationFrequency = 100;
 
 /**
  * Instagram story-like image carousel that automatically transitions between
@@ -41,11 +43,12 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
   const {
     currentValue: countdown,
     isPaused,
-    play: resetCountdown,
+    reset: resetCountdown,
+    play: playCountdown,
     pause: pauseCountdown,
   } = useCountdown({
-    time: 3000,
-    decrementFrequency: 1000,
+    time: storyDuration,
+    decrementFrequency: animationFrequency,
     repeat: true,
     onFinish: () => {
       setStoryIdx((idx) => {
@@ -109,7 +112,9 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
             fillStyle={{
               // Only animate the current slide's progress bar.
               transitionDuration:
-                idx === storyIdx ? `${animationFrequency}ms` : "0ms",
+                idx === storyIdx && !isPaused
+                  ? `${animationFrequency}ms`
+                  : "0ms",
             }}
             onClick={() => goToSlide(idx)}
           />
@@ -119,11 +124,35 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
       {/* Button to view more. */}
       <div className="absolute left-2 top-2 z-10">
         <Link href={currentStory?.link}>
-          <p className="leading-tight">{currentStory?.title}</p>
-          <p className="caption leading-tight">
-            See More <ArrowRightIcon className="inline h-3 w-3" />
-          </p>
+          <div className="flex flex-col rounded-lg bg-white/90 px-2 py-1 shadow-lg hover:bg-white/100">
+            <p className="gradient-accent-roy gradient-text font-bold leading-none">
+              {currentStory?.title.toUpperCase()}
+            </p>
+            <p className="caption leading-tight">
+              See More <ArrowRightIcon className="inline h-3 w-3" />
+            </p>
+          </div>
         </Link>
+      </div>
+
+      {/* Play / pause controls */}
+      <div className="absolute right-2 top-2 z-10">
+        <button
+          className="cursor-pointer text-white"
+          onClick={() => {
+            if (isPaused) {
+              playCountdown();
+            } else {
+              pauseCountdown();
+            }
+          }}
+        >
+          {isPaused ? (
+            <PlayIcon className="h-5 w-5" />
+          ) : (
+            <PauseIcon className="h-5 w-5" />
+          )}
+        </button>
       </div>
 
       {currentStory && (
@@ -132,6 +161,8 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
           src={currentStory.imageSrc}
           alt={currentStory.title}
           className="object-cover"
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
           onClick={(e) => {
             // If click on the left, move backwards.
             if (e.clientX < e.currentTarget.clientWidth / 2) {
@@ -142,6 +173,7 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
                 return idx - 1;
               });
             } else {
+              // If click on the right, move forward.
               goToSlide((idx) => (idx + 1) % stories.length);
             }
           }}

@@ -17,6 +17,7 @@ const ContactPage = () => {
             <div className="float-left aspect-[4/5] w-1/2 bg-red-500">
               <ImageStory
                 autoForward
+                storyDuration={3500}
                 stories={[
                   {
                     title: "Landscape",

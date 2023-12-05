@@ -51,3 +51,31 @@
     @apply font-mono text-base;
   }
 }
+
+@layer components {
+  .gradient-accent-gbv {
+    background: linear-gradient(
+      90.18deg,
+      #80a454 0%,
+      #3286a8 50.85%,
+      #5037ce 100%
+    );
+  }
+
+  .gradient-accent-roy {
+    background: linear-gradient(
+      90.18deg,
+      #d5491f 0%,
+      #da8d0f 50.85%,
+      #dec11a 100%
+    );
+  }
+
+  /* Enable text gradients. */
+  .gradient-text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
