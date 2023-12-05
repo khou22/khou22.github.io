@@ -16,6 +16,7 @@ const ContactPage = () => {
           <div aria-label="contact background" className="w-full">
             <div className="float-left aspect-[4/5] w-1/2 bg-red-500">
               <ImageStory
+                autoForward
                 stories={[
                   {
                     title: "Landscape",

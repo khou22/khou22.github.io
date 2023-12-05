@@ -1,6 +1,8 @@
 "use client";
 
+import { ProgressBar } from "@/components/atoms/ProgressBar/ProgressBar";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
+import { useCountdown } from "@/hooks/useCountdown/useCountdown";
 import { classNames } from "@/utils/style";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,6 +25,8 @@ type ImageStoryProps = {
   className?: string;
 };
 
+const animationFrequency = 1000;
+
 export const ImageStory: React.FC<ImageStoryProps> = ({
   stories,
   autoForward = false,
@@ -30,43 +34,111 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
   className,
 }) => {
   const [storyIdx, setStoryIdx] = useState(0);
-  const timer = useRef<NodeJS.Timeout>();
+  const {
+    currentValue: countdown,
+    isPaused,
+    play: resetCountdown,
+    pause: pauseCountdown,
+  } = useCountdown({
+    time: 3000,
+    decrementFrequency: 1000,
+    repeat: true,
+    onFinish: () => {
+      setStoryIdx((idx) => {
+        if (idx + 1 >= stories.length) {
+          return 0;
+        }
+        return idx + 1;
+      });
+    },
+  });
 
   const currentStory = stories[storyIdx];
   const nextStory =
     storyIdx + 1 < stories.length ? stories[storyIdx + 1] : undefined;
 
-  const incrementStory = useCallback(() => {
-    setStoryIdx((idx) => idx + (1 % stories.length));
-    if (autoForward) {
-      clearTimeout(timer.current);
-      timer.current = setTimeout(incrementStory, storyDuration);
-    }
-  }, [autoForward, stories.length, storyDuration]);
+  // // Increment by the animation duration.
+  // const incrementStoryAnimation = useCallback(() => {
+  //   console.log("incrementStoryAnimation");
+  //   setMsRemaining((ms) => {
+  //     const remaining = ms - animationFrequency;
 
-  useEffect(() => {
-    if (autoForward) {
-      timer.current = setTimeout(incrementStory, storyDuration);
-    }
-    return () => {
-      clearTimeout(timer.current);
-    };
-  }, [autoForward, incrementStory, storyDuration]);
+  //     // If the slide is over, go to the next slide and restart the animation timer.
+  //     console.log(remaining);
+  //     if (remaining <= 0) {
+  //       setStoryIdx((idx) => {
+  //         if (idx + 1 >= stories.length) {
+  //           return 0;
+  //         }
+  //         return idx + 1;
+  //       });
+  //     }
+
+  //     // If the slide is still going, return the remaining time.
+  //     if (remaining > 0) {
+  //       return remaining;
+  //     }
+
+  //     // If auto advancing, reset the counter.
+  //     return autoForward ? storyDuration : 0;
+  //   });
+
+  //   // Kick off the next animation.
+  //   console.log("Kick off the next animation", autoForward);
+  //   if (autoForward) {
+  //     clearTimeout(timer.current);
+  //     timer.current = setTimeout(incrementStoryAnimation, animationFrequency);
+  //   }
+  // }, [autoForward, stories.length, storyDuration]);
+
+  // useEffect(() => {
+  //   console.log("Mounting the autoforward");
+  //   if (autoForward) {
+  //     console.log("Timer, autoForward", timer.current);
+  //     if (!timer.current) {
+  //       console.log("Beginning the automated animation");
+  //       timer.current = setTimeout(incrementStoryAnimation, animationFrequency);
+  //     }
+  //   }
+  //   return () => {
+  //     console.log("Unmounting the autoforward");
+  //     clearTimeout(timer.current);
+  //     timer.current = undefined;
+  //   };
+  // }, [autoForward, incrementStoryAnimation, storyDuration]);
+
+  // Manually go to a slide.
+  const goToSlide = useCallback(
+    (idx: React.SetStateAction<number>, animate: boolean = false) => {
+      setStoryIdx(idx);
+
+      if (animate) {
+        resetCountdown();
+      } else {
+        pauseCountdown();
+      }
+    },
+    [pauseCountdown, resetCountdown, storyDuration],
+  );
 
   return (
     <div className={classNames("relative", className)}>
       {/* Progress bar at the bottom of the overlay */}
       <div className="absolute bottom-0 left-0 z-10 flex h-1.5 w-full flex-row items-center justify-evenly space-x-0.5">
         {stories.map((story, idx) => (
-          <div
+          <ProgressBar
             key={story.title}
-            className={classNames(
-              "h-full w-full cursor-pointer",
-              storyIdx === idx
-                ? "bg-white/80"
-                : "bg-gray-100/60 hover:bg-gray-100/70",
-            )}
-            onClick={() => setStoryIdx(idx)}
+            progress={
+              idx === storyIdx
+                ? isPaused
+                  ? 1
+                  : (storyDuration - countdown) / storyDuration
+                : 0
+            }
+            className="h-full w-full cursor-pointer bg-gray-100/60 hover:bg-gray-100/70"
+            fillClassName="bg-white/80 linear"
+            fillStyle={{ transitionDuration: `${animationFrequency}ms` }}
+            onClick={() => goToSlide(idx)}
           />
         ))}
       </div>
@@ -90,14 +162,14 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
           onClick={(e) => {
             // If click on the left, move backwards.
             if (e.clientX < e.currentTarget.clientWidth / 2) {
-              setStoryIdx((idx) => {
+              goToSlide((idx) => {
                 if (idx === 0) {
                   return stories.length - 1;
                 }
                 return idx - 1;
               });
             } else {
-              setStoryIdx((idx) => (idx + 1) % stories.length);
+              goToSlide((idx) => (idx + 1) % stories.length);
             }
           }}
         />

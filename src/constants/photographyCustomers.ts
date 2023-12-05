@@ -42,7 +42,7 @@ export const photographyCustomers = [
     url: "https://orenshummus.com",
   },
   {
-    name: "Business Today=",
+    name: "Business Today",
     logo: getCdnAsset("media/photography/customers/business_today_png"),
     url: "https://www.businesstoday.org",
   },
