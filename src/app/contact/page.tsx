@@ -14,7 +14,7 @@ const ContactPage = () => {
       <PageWrapper disableMaxWidth className="max-w-5xl xl:max-w-6xl">
         <div className="relative w-full">
           <div aria-label="contact background" className="w-full">
-            <div className="float-left aspect-square w-full bg-red-500 sm:aspect-[3/2] md:aspect-[4/5] md:w-1/2">
+            <div className="float-left aspect-square w-full sm:aspect-[3/2] md:aspect-[4/5] md:w-1/2">
               <ImageStory
                 autoForward
                 storyDuration={3500}
