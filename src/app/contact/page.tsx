@@ -14,7 +14,7 @@ const ContactPage = () => {
       <PageWrapper disableMaxWidth className="max-w-5xl xl:max-w-6xl">
         <div className="relative w-full">
           <div aria-label="contact background" className="w-full">
-            <div className="float-left aspect-[4/5] w-1/2 bg-red-500">
+            <div className="float-left aspect-square w-full bg-red-500 sm:aspect-[3/2] md:aspect-[4/5] md:w-1/2">
               <ImageStory
                 autoForward
                 storyDuration={3500}
@@ -44,24 +44,19 @@ const ContactPage = () => {
                 ]}
                 className="h-full w-full"
               />
-              {/* <img
-                src={getCdnAsset("media/photography/city_jpg")}
-                alt="contact background"
-                className="h-full w-full object-fill"
-              /> */}
             </div>
           </div>
           <div
             aria-label="foreground"
-            className="pointer-events-none absolute left-0 top-0 z-10 flex h-full w-full flex-col items-end justify-center px-8"
+            className="pointer-events-none relative flex w-full flex-col items-end justify-center py-4 md:absolute md:left-0 md:top-0 md:z-10 md:h-full md:px-4 md:py-0"
           >
-            <div className="pointer-events-auto relative float-right w-2/3 overflow-hidden rounded p-6 shadow">
+            <div className="pointer-events-auto relative float-right w-full overflow-hidden rounded p-6 shadow md:w-2/3">
               <div className="absolute left-0 top-0 -z-10 h-full w-full bg-white">
                 <PaperTexture className="h-full w-full" />
               </div>
               <div className="flex flex-col items-center justify-center p-4">
                 <p className="caption text-center">GET IN TOUCH</p>
-                <h3 className="text-center leading-loose">
+                <h3 className="mb-3 mt-2 text-center">
                   Let&apos;s create together.
                 </h3>
                 <p className="caption mb-2 max-w-lg text-center">

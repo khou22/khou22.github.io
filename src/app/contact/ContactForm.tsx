@@ -3,7 +3,6 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FormLabel } from "@/components/atoms/FormLabel/FormLabel";
 import { TextArea } from "@/components/atoms/TextArea/TextArea";
 import { TextInput } from "@/components/atoms/TextInput/TextInput";
 import Button from "@/components/atoms/Button/Button";
@@ -35,19 +34,18 @@ export const ContactForm = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="mt-4 grid w-full grid-cols-1 gap-3 sm:grid-cols-2"
-    >
-      <div>
+    <form onSubmit={handleSubmit(onSubmit)} className="mt-4 grid w-full gap-3">
+      <div className="col-span-1">
         <TextInput
+          className="w-full"
           type="text"
           placeholder="Full Name"
           {...register("fullName", { required: true })}
         />
       </div>
-      <div>
+      <div className="col-span-1">
         <TextInput
+          className="w-full"
           type="email"
           placeholder="Email"
           {...register("email", { required: true })}
