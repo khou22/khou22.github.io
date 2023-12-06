@@ -11,7 +11,7 @@ import { PAGES } from "@/utils/pages";
 const ContactPage = () => {
   return (
     <>
-      <PageWrapper disableMaxWidth className="max-w-5xl xl:max-w-6xl">
+      <PageWrapper maxWidth="none" className="max-w-5xl xl:max-w-6xl">
         <div className="relative w-full">
           <div aria-label="contact background" className="w-full">
             <div className="float-left aspect-square w-full sm:aspect-[3/2] md:aspect-[4/5] md:w-1/2">
@@ -107,7 +107,7 @@ const ContactPage = () => {
           </FadeInView>
         </div>
       </PageWrapper>
-      <PageWrapper disableMaxWidth>
+      <PageWrapper maxWidth="none">
         <h5 className="mb-4 w-full text-center leading-loose md:mb-8 lg:mb-12">
           Check out my samples of work
         </h5>

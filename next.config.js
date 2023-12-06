@@ -8,6 +8,12 @@ const nextConfig = {
         port: "4000",
         pathname: "/media/**",
       },
+      {
+        protocol: "https",
+        hostname: "c1.staticflickr.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
