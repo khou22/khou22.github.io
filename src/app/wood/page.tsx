@@ -12,7 +12,7 @@ const WoodPortfolioPage = () => {
           of my favorite projects.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-x-2 gap-y-6">
+      <div className="grid w-full grid-cols-3 gap-x-2 gap-y-6">
         {woodProjects.map(({ title, link, image }) => (
           <div key={title} className="col-span-1">
             <a href={link} target="_blank" rel="noopener noreferrer">
