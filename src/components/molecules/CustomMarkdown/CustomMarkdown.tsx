@@ -44,7 +44,9 @@ export const CustomMarkdown: React.FC<CustomMarkdownProps> = ({
       ): React.HTMLAttributes<HTMLElement> => {
         return {
           // @ts-expect-error do not use classname, instead use class (https://github.com/react-syntax-highlighter/react-syntax-highlighter/issues/391).
-          class: highlightLines.includes(lineNumber) ? "bg-blue-500/50" : "",
+          class: highlightLines.includes(lineNumber)
+            ? "bg-blue-500/50"
+            : "bg-none",
         };
       };
 

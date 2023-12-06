@@ -1,4 +1,4 @@
-import Button from "@/components/atoms/Button/Button";
+import { Button } from "@/components/ui/button";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import Image from "next/image";
@@ -16,7 +16,7 @@ const NotFoundPage: React.FC = () => {
       />
       <div className="fixed left-1/2 top-3/4 z-10 -translate-x-1/2 -translate-y-1/2">
         <Link href={PAGES.HOME}>
-          <Button kind="default" color="primary" className="min-w-[200px]">
+          <Button variant="outline" className="min-w-[200px] text-white">
             Go Home
           </Button>
         </Link>

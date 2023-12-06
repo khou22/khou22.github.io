@@ -3,9 +3,11 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { TextArea } from "@/components/atoms/TextArea/TextArea";
-import { TextInput } from "@/components/atoms/TextInput/TextInput";
-import Button from "@/components/atoms/Button/Button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
+import { Button } from "@/components/ui/button";
 
 const generateFormSchema = z.object({
   fullName: z.string().min(1),
@@ -36,7 +38,7 @@ export const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mt-4 grid w-full gap-3">
       <div className="col-span-1">
-        <TextInput
+        <Input
           className="w-full"
           type="text"
           placeholder="Full Name"
@@ -44,7 +46,7 @@ export const ContactForm = () => {
         />
       </div>
       <div className="col-span-1">
-        <TextInput
+        <Input
           className="w-full"
           type="email"
           placeholder="Email"
@@ -52,20 +54,26 @@ export const ContactForm = () => {
         />
       </div>
       <div className="col-span-2">
-        <TextArea
+        <Textarea
           placeholder="Your message"
           rows={4}
+          className="resize-none"
           {...register("message", { required: true })}
         />
-        {errors.message && (
-          <p className="text-red text-sm">{errors.message.message}</p>
-        )}
       </div>
-      <div className="col-span-2 mb-2 mt-4 flex flex-row items-center justify-center">
-        <Button type="submit" className="min-w-[200px]">
+      <div className="col-span-2 mb-2 mt-2 flex flex-row items-center justify-center">
+        <Button type="submit" variant="default" className="min-w-[200px]">
           Send Message
         </Button>
       </div>
+
+      {errors.root && (
+        <Alert variant="destructive" className="col-span-2 my-2 w-full">
+          <ExclamationTriangleIcon className="h-4 w-4" />
+          <AlertTitle>Error Submitting Contact</AlertTitle>
+          <AlertDescription>{errors.root.message}</AlertDescription>
+        </Alert>
+      )}
     </form>
   );
 };

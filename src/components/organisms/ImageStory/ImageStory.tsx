@@ -8,7 +8,7 @@ import { useCountdown } from "@/hooks/useCountdown/useCountdown";
 import { classNames } from "@/utils/style";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 export type ImageStoryType = {
   title: string;
@@ -83,11 +83,12 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
 
       if (autoForward) {
         resetCountdown();
+        playCountdown();
       } else {
         pauseCountdown();
       }
     },
-    [autoForward, pauseCountdown, resetCountdown],
+    [autoForward, pauseCountdown, playCountdown, resetCountdown],
   );
 
   return (

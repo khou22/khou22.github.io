@@ -38,7 +38,7 @@ The great news with NextJS is that we don't need to setup a new project, manage 
 
 This took me about 5 minutes to setup. A very different story if I were to have made a new Flask/FastAPI Python server and deployed a new Kubernetes service.
 
-```tsx
+```tsx {7-13}
 import { neon } from "@neondatabase/serverless";
 
 const sql = neon(process.env.WAITLIST_DATABASE_URL);
