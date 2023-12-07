@@ -8,6 +8,7 @@ interface FadeInViewProps {
   delayMS?: number;
   durationMS?: number;
   threshold?: number;
+  className?: string;
   children: React.ReactNode;
 }
 
@@ -19,6 +20,7 @@ export const FadeInView: React.FC<FadeInViewProps> = ({
   delayMS = 0,
   durationMS = 500,
   threshold = 0.1,
+  className = "",
   children,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -57,6 +59,7 @@ export const FadeInView: React.FC<FadeInViewProps> = ({
       ref={ref}
       className={classNames(
         "transition-opacity",
+        className,
         isVisible ? "opacity-100" : "opacity-0",
       )}
       style={{

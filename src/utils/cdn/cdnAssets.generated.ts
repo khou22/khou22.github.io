@@ -1198,5 +1198,14 @@ export const _generatedCdnAssets = {
 	"media/store/1903_Hall_in_Snow_jpg": "/media/store/1903%20Hall%20in%20Snow.jpg",
 	"media/store/Sea_Ranch_Seals_Drone_Top_Down_jpg": "/media/store/Sea%20Ranch%20Seals%20Drone%20%28Top%20Down%29.jpg",
 	"media/store/Bride_s_Pool_Waterfall_Vertical_jpg": "/media/store/Bride%27s%20Pool%20Waterfall%20%28Vertical%29.jpg",
-	"media/store/Shibuya_Taxi_Motion_Blur_jpg": "/media/store/Shibuya%20Taxi%20Motion%20Blur.jpg"
+	"media/store/Shibuya_Taxi_Motion_Blur_jpg": "/media/store/Shibuya%20Taxi%20Motion%20Blur.jpg",
+	"media/occupations/breathometer_white_background_png": "/media/occupations/breathometer_white_background.png",
+	"media/occupations/codeium_png": "/media/occupations/codeium.png",
+	"media/occupations/salesforce_png": "/media/occupations/salesforce.png",
+	"media/occupations/breathometer_png": "/media/occupations/breathometer.png",
+	"media/occupations/_DS_Store": "/media/occupations/.DS_Store",
+	"media/occupations/airbnb_png": "/media/occupations/airbnb.png",
+	"media/occupations/nuro_padding_png": "/media/occupations/nuro_padding.png",
+	"media/occupations/moat_png": "/media/occupations/moat.png",
+	"media/occupations/nuro_png": "/media/occupations/nuro.png"
 }

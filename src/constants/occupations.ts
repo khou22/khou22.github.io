@@ -1,3 +1,5 @@
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+
 export type OccupationType = {
   years: [number, number][];
   company: {
@@ -11,21 +13,21 @@ export const occupations: OccupationType[] = [
     years: [[2020, 2023]],
     company: {
       name: "Nuro",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Microsoft_logo_%282019%29.svg",
+      logo: getCdnAsset("media/occupations/nuro_padding_png"),
     },
   },
   {
     years: [[2023, 2024]],
     company: {
       name: "Codeium",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Microsoft_logo_%282019%29.svg",
+      logo: getCdnAsset("media/occupations/codeium_png"),
     },
   },
   {
     years: [[2019, 2019]],
     company: {
       name: "Airbnb",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Microsoft_logo_%282019%29.svg",
+      logo: getCdnAsset("media/occupations/airbnb_png"),
     },
   },
   {
@@ -35,21 +37,21 @@ export const occupations: OccupationType[] = [
     ],
     company: {
       name: "Salesforce",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Microsoft_logo_%282019%29.svg",
+      logo: getCdnAsset("media/occupations/salesforce_png"),
     },
   },
   {
     years: [[2017, 2017]],
     company: {
       name: "Moat (Oracle)",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Microsoft_logo_%282019%29.svg",
+      logo: getCdnAsset("media/occupations/moat_png"),
     },
   },
   {
     years: [[2016, 2016]],
     company: {
       name: "Breathometer",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Microsoft_logo_%282019%29.svg",
+      logo: getCdnAsset("media/occupations/breathometer_png"),
     },
   },
 ];

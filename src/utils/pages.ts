@@ -6,6 +6,7 @@ export const PAGES = {
   BLOG_POST: (post: BlogPostFrontMatter) => `/blog/${post.slug}`,
   CONTACT: "/contact",
   WOOD: "/wood",
+  DESIGN: "/design",
   PHOTOGRAPHY: "/photography",
   PROGRAMMING: "/programming",
 };
