@@ -44,6 +44,7 @@ const ProgrammingPortfolioPage = () => {
                   fill
                   className="object-contain"
                 />
+                <span className="sr-only">{occupation.company.name}</span>
               </div>
             ))}
           </div>
@@ -73,6 +74,7 @@ const ProgrammingPortfolioPage = () => {
                 </div>
               </a>
               <p className="caption my-3 w-full text-center">{project.name}</p>
+              <span className="sr-only">{project.description}</span>
             </div>
           ))}
         </div>
