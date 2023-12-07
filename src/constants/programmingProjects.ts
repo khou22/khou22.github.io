@@ -1,12 +1,5 @@
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 
-// Color scheme
-const blue = "#3286A8";
-const red = "#D5491F";
-const orange = "#DA8D0F";
-const green = "#80A454";
-const gray = "#9DB7C1";
-
 export enum ProjectCategory {
   iOSApp = "iOS App",
   Website = "Website",
