@@ -22,7 +22,7 @@ export const PhotographyDropdown: React.FC = () => {
         </li>
       </ul>
       <ul className="space-y-4">
-        <h6 className="font-bold text-blue-600">Featured</h6>
+        <h6 className="font-bold text-blue-500">Featured</h6>
         <li className="border-b border-gray-400/50 pb-2">
           <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
             Fan Favorites
@@ -40,7 +40,7 @@ export const PhotographyDropdown: React.FC = () => {
         </li>
       </ul>
       <ul className="space-y-4">
-        <h6 className="font-bold text-blue-600">Top Locations</h6>
+        <h6 className="font-bold text-blue-500">Top Locations</h6>
         <li className="border-b border-gray-400/50 pb-2">
           <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
             San Francisco

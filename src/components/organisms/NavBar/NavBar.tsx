@@ -129,7 +129,7 @@ export const NavBar: React.FC = () => {
               <li>
                 <Link
                   href={PAGES.HOME}
-                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-600"
                   style={{ fontSize: linkFontSize }}
                   onMouseEnter={() => setIsDropdownOpen(undefined)}
                 >
@@ -153,7 +153,7 @@ export const NavBar: React.FC = () => {
               <li>
                 <Link
                   href={PAGES.BLOG}
-                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-600"
                   style={{ fontSize: linkFontSize }}
                   onMouseEnter={() => setIsDropdownOpen(undefined)}
                 >
@@ -178,7 +178,7 @@ export const NavBar: React.FC = () => {
               <li>
                 <Link
                   href={PAGES.CONTACT}
-                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-600"
                   style={{ fontSize: linkFontSize }}
                   onMouseEnter={() => setIsDropdownOpen(undefined)}
                 >
