@@ -23,7 +23,7 @@ export const PortfolioDropdown: React.FC = () => {
           title="Photography"
           description="Optical craftsmanship"
           imageSrc={getCdnAsset(
-            "media/site/images/backgrounds/Turning_California_Bay_Laurel_Burl_Wood_Bowl_jpg",
+            "photography/Halong_Bay_Sunset_Panorama_placeholder_jpg",
           )}
           containerClassName="w-full h-full min-h-[100px] rounded-lg"
           contentClassName="p-4"

@@ -17,11 +17,11 @@ const ProgrammingPortfolioPage = () => {
 
       <PageWrapper
         maxWidth="wide"
-        className="m-auto mb-12 mt-12 grid max-w-5xl grid-cols-1 gap-x-8 sm:mb-8 sm:grid-cols-12 md:gap-x-16"
+        className="m-auto mb-12 mt-12 grid max-w-5xl grid-cols-1 gap-x-8 md:mb-8 md:grid-cols-12 md:gap-x-16"
       >
-        <div className="col-span-1 sm:col-span-5">
-          <h2 className="mb-4 text-center sm:text-left">Full Stack Engineer</h2>
-          <p className="caption text-center sm:text-left">
+        <div className="col-span-1 md:col-span-5">
+          <h2 className="mb-4 text-center md:text-left">Full Stack Engineer</h2>
+          <p className="caption text-center md:text-left">
             While I work across a variety of roles, I&apos;m first and foremost
             a software engineer. I specialize in the intersection of AI and
             product, most recently working on generative AI dev tools and
@@ -31,18 +31,19 @@ const ProgrammingPortfolioPage = () => {
             implementation and production.
           </p>
         </div>
-        <div className="col-span-1 mt-6 flex h-full w-full items-center justify-center sm:col-span-7 sm:mt-0">
+        <div className="col-span-1 mt-6 flex h-full w-full items-center justify-center md:col-span-7 md:mt-0">
           <div className="grid w-full grid-cols-3 gap-8">
             {occupations.map((occupation) => (
               <div
                 key={occupation.company.name}
-                className="relative aspect-[7/2] w-full"
+                className="relative aspect-[7/2] w-full scale-100 transition-transform duration-200 ease-in-out hover:scale-110"
               >
                 <Image
                   src={occupation.company.logo}
                   alt={occupation.company.name}
                   fill
                   className="object-contain"
+                  priority
                 />
                 <span className="sr-only">{occupation.company.name}</span>
               </div>
@@ -60,7 +61,7 @@ const ProgrammingPortfolioPage = () => {
             have worked on over the years.
           </p>
         </FadeInView>
-        <div className="grid w-full grid-cols-3 gap-x-2 gap-y-6">
+        <div className="grid w-full grid-cols-2 gap-x-2 gap-y-6 sm:grid-cols-3">
           {programmingProjects.map((project) => (
             <div key={project.name} className="col-span-1">
               <a href={project.slug} target="_blank" rel="noopener noreferrer">

@@ -26,12 +26,18 @@ export const ImageCard: React.FC<ImageCardProps> = ({
       {/* Card text */}
       <div
         className={classNames(
-          "absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center",
+          "absolute left-0 top-0 z-10 flex min-h-full w-full flex-col items-center justify-center transition-all duration-300 group-hover:min-h-0 group-hover:py-1",
           contentClassName,
         )}
       >
-        <h5 className="font-medium leading-relaxed text-white">{title}</h5>
-        {description && <p className="text-sm text-gray-200">{description}</p>}
+        <h5 className="font-medium leading-relaxed text-white transition-all duration-300 group-hover:text-base">
+          {title}
+        </h5>
+        {description && (
+          <p className="text-sm text-gray-200 opacity-100 transition-opacity duration-100 group-hover:opacity-0">
+            {description}
+          </p>
+        )}
       </div>
 
       {/* Image background */}
