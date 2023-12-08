@@ -1,31 +1,40 @@
 import { NextRequest } from "next/server";
 import { PhotoTagUpdateRequest } from "./types";
-import { connectToPhotoDb } from "@/data/photos/photoDb";
+import { connectToPhotoDb } from "@/data/photos/photoDbManager";
 
 export async function POST(req: NextRequest) {
   const reqBody = (await req.json()) as PhotoTagUpdateRequest;
   const db = await connectToPhotoDb();
 
   try {
-    // Add the correct number of placeholders.
-    let placeholders = reqBody.addTags
-      .map(() => `(${reqBody.photoID}, ?)`)
-      .join(",");
+    if (reqBody.addTags.length > 0) {
+      // Add the correct number of placeholders.
+      let placeholders = reqBody.addTags.map(() => `(?, ?)`).join(",");
+      const values = reqBody.addTags.reduce<string[]>(
+        (acc, tag) => [...acc, reqBody.photoID, tag],
+        [],
+      );
 
-    // Insert the new tags.
-    await db.run(
-      `INSERT OR IGNORE INTO photo_tags (photo_id, tag_name) 
+      // Insert the new tags.
+      await db.run(
+        `INSERT OR IGNORE INTO photo_tags (photo_id, tag_name) 
 VALUES ${placeholders}`,
-      reqBody.addTags,
-    );
+        values,
+      );
+    }
 
     // Remove tags.
-    await db.run(
-      `DELETE FROM photo_tags WHERE photo_id = ? AND tag_name IN (${reqBody.removeTags
-        .map(() => "?")
-        .join(",")})`,
-      [reqBody.photoID, ...reqBody.removeTags],
-    );
+    if (reqBody.removeTags.length > 0) {
+      await Promise.all(
+        reqBody.removeTags.map(async (tag) => {
+          console.log("Removing tag", tag);
+          await db.run(
+            `DELETE FROM photo_tags WHERE photo_id = ? AND tag_name = ?`,
+            [reqBody.photoID, tag],
+          );
+        }),
+      );
+    }
 
     // Get all tags for this photo.
     const tags = await db.all(
@@ -36,7 +45,8 @@ VALUES ${placeholders}`,
     // Return a list of all tags.
     return new Response(JSON.stringify(tags), { status: 200 });
   } catch (error) {
-    return new Response("Unknown error", { status: 500 });
+    console.error(error);
+    return new Response(JSON.stringify(error), { status: 500 });
   } finally {
     db.close();
   }

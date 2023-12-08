@@ -4014,6 +4014,11 @@ sqlite3@^5.1.6:
   optionalDependencies:
     node-gyp "8.x"
 
+sqlite@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/sqlite/-/sqlite-5.1.1.tgz#26a6a200fdac490643880af2b6cb3940ada59274"
+  integrity sha512-oBkezXa2hnkfuJwUo44Hl9hS3er+YFtueifoajrgidvqsJRQFpc5fKoAkAor1O5ZnLoa28GBScfHXs8j0K358Q==
+
 ssri@^8.0.0, ssri@^8.0.1:
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/ssri/-/ssri-8.0.1.tgz#638e4e439e2ffbd2cd289776d5ca457c4f51a2af"
