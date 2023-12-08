@@ -42,7 +42,7 @@ export const PortfolioDropdown: React.FC = () => {
         <ImageCard
           title="Design"
           description="Creative craftsmanship"
-          imageSrc={getCdnAsset("media/site/images/design_image_png")}
+          imageSrc={getCdnAsset("media/site/images/design_image_jpg")}
           containerClassName="w-full h-full min-h-[100px] rounded-lg"
           contentClassName="p-4"
         />
