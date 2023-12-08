@@ -1,7 +1,6 @@
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { getPhotoIDs } from "@/utils/photos/getPhotoIDs";
 import { PhotoManagementCard } from "./PhotoManagementCard";
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 
 const PhotoAdminPage = () => {
   const photoIDs = getPhotoIDs();
@@ -9,9 +8,9 @@ const PhotoAdminPage = () => {
     <PageWrapper maxWidth="wide">
       <h1>All Photos</h1>
       <p>Number of Photos: {photoIDs.length}</p>
-      <div className="grid grid-cols-5">
+      <div className="grid grid-cols-1 gap-4">
         {photoIDs.map((cdnID) => (
-          <PhotoManagementCard key={cdnID} imagePath={getCdnAsset(cdnID)} />
+          <PhotoManagementCard key={cdnID} imageKey={cdnID} />
         ))}
       </div>
     </PageWrapper>

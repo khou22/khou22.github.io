@@ -1,3 +1,4 @@
+import { PhotoIdType } from "../cdn/cdnAssets";
 import { _generatedCdnAssets } from "../cdn/cdnAssets.generated";
 
 const photoRegex = /.*\.(jpg|jpeg|png)$/;
@@ -5,7 +6,7 @@ const photoRegex = /.*\.(jpg|jpeg|png)$/;
 /**
  * Get a list of all CDN asset keys for photos.
  */
-export const getPhotoIDs = (): (keyof typeof _generatedCdnAssets)[] => {
+export const getPhotoIDs = (): PhotoIdType[] => {
   const allPhotos = Object.entries(_generatedCdnAssets)
     .filter(([id, filePath]) => {
       const extension = filePath.split(".").pop();
