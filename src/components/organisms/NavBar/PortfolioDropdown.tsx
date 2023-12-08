@@ -33,20 +33,16 @@ export const PortfolioDropdown: React.FC = () => {
         <ImageCard
           title="Programming"
           description="Digitial craftsmanship"
-          imageSrc={getCdnAsset(
-            "media/site/images/backgrounds/Turning_California_Bay_Laurel_Burl_Wood_Bowl_jpg",
-          )}
+          imageSrc={getCdnAsset("media/site/images/programming_image_jpg")}
           containerClassName="w-full h-full min-h-[100px] rounded-lg"
           contentClassName="p-4"
         />
       </Link>
       <Link href={PAGES.WOOD}>
         <ImageCard
-          title="Woodworking"
-          description="Physical craftsmanship"
-          imageSrc={getCdnAsset(
-            "media/site/images/backgrounds/Turning_California_Bay_Laurel_Burl_Wood_Bowl_jpg",
-          )}
+          title="Design"
+          description="Creative craftsmanship"
+          imageSrc={getCdnAsset("media/site/images/design_image_png")}
           containerClassName="w-full h-full min-h-[100px] rounded-lg"
           contentClassName="p-4"
         />
