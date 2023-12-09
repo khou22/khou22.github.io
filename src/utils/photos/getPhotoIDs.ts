@@ -8,7 +8,11 @@ const photoRegex = /.*\.(jpg|jpeg|png)$/;
  */
 export const getPhotoIDs = (): PhotoIdType[] => {
   const allPhotos = Object.entries(_generatedCdnAssets)
+    .sort((a, b) => a[0].localeCompare(b[0]))
     .filter(([id, filePath]) => {
+      if (!filePath.startsWith("/photography/")) {
+        return false;
+      }
       const extension = filePath.split(".").pop();
       if (!extension) {
         return false;

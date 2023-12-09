@@ -7,6 +7,7 @@ export enum PhotoTags {
   Portraits = "category_portraits",
   City = "category_city",
   Astrophotography = "category_astrophotography",
+  Product = "category_product",
 
   // Location specific tags.
   SanFrancisco = "location_san_francisco",
@@ -21,10 +22,14 @@ export enum PhotoTags {
   Tahoe = "location_tahoe",
   Yosemite = "location_preague",
   Hawaii = "location_hawaii",
+  Italy = "location_italy",
+  Taiwan = "location_taiwan",
+  Singapore = "location_singapore",
 
   // Camera specific.
   Drone = "camera_drone",
   Panerama = "camera_panerama",
+  Satellite = "camera_satellite",
 
   // Other.
   CrossCountryRoadtrip = "other_cross_country_roadtrip",
