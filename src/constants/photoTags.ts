@@ -20,6 +20,7 @@ export enum PhotoTags {
   WashingtonDC = "location_washington_dc",
   Tahoe = "location_tahoe",
   Yosemite = "location_preague",
+  Hawaii = "location_hawaii",
 
   // Camera specific.
   Drone = "camera_drone",
