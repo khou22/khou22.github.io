@@ -9,4 +9,7 @@ export const PAGES = {
   DESIGN: "/design",
   PHOTOGRAPHY: "/photography",
   PROGRAMMING: "/programming",
+  ADMIN: {
+    PHOTO: (page: number) => `/admin/photos/${page}`,
+  },
 };

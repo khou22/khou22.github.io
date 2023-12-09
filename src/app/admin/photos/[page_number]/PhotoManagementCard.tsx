@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
-import { PhotoTagUpdateRequest } from "./tags/types";
+import { PhotoTagUpdateRequest } from "../tags/types";
 import { PhotoTags } from "@/constants/photoTags";
 import { enumToString } from "@/utils/enum";
 
@@ -36,29 +36,33 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
   };
 
   const CategoryCheckbox = ({ tag }: { tag: PhotoTags }) => {
+    const id = `${imageKey}-${tag}`;
     return (
       <div className="flex items-center space-x-2">
         <Checkbox
-          id={tag}
+          id={id}
           checked={tagIDs.includes(tag)}
           onCheckedChange={async (value) => {
             void updateTag(tag, Boolean(value));
           }}
         />
-        <Label htmlFor={tag}>{enumToString(tag, PhotoTags)}</Label>
+        <Label htmlFor={id}>{enumToString(tag, PhotoTags)}</Label>
       </div>
     );
   };
 
   return (
-    <Card className="grid grid-cols-3 gap-4 p-2">
-      <img className="h-48" src={getCdnAsset(imageKey)} />
+    <Card className="grid grid-cols-4 gap-4 p-2">
+      <div>
+        <img className="h-48 object-contain" src={getCdnAsset(imageKey)} />
+        <p className="caption w-full break-all">{imageKey}</p>
+      </div>
       <div className="flex flex-col items-start justify-start space-y-2">
         <p>Category:</p>
         {Object.values(PhotoTags)
           .filter((tag) => tag.includes("category"))
           .map((tag: PhotoTags) => (
-            <CategoryCheckbox key={tag} tag={tag} />
+            <CategoryCheckbox key={tag} photoID={imageKey} tag={tag} />
           ))}
       </div>
       <div className="flex flex-col items-start justify-start space-y-2">
@@ -66,7 +70,17 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
         {Object.values(PhotoTags)
           .filter((tag) => tag.includes("location"))
           .map((tag: PhotoTags) => (
-            <CategoryCheckbox key={tag} tag={tag} />
+            <CategoryCheckbox key={tag} photoID={imageKey} tag={tag} />
+          ))}
+      </div>
+      <div className="flex flex-col items-start justify-start space-y-2">
+        <p>Other</p>
+        {Object.values(PhotoTags)
+          .filter(
+            (tag) => !tag.includes("location") && !tag.includes("category"),
+          )
+          .map((tag: PhotoTags) => (
+            <CategoryCheckbox key={tag} photoID={imageKey} tag={tag} />
           ))}
       </div>
     </Card>

@@ -6,6 +6,7 @@ export enum PhotoTags {
   Concert = "category_concert",
   Portraits = "category_portraits",
   City = "category_city",
+  Astrophotography = "category_astrophotography",
 
   // Location specific tags.
   SanFrancisco = "location_san_francisco",
@@ -13,7 +14,18 @@ export enum PhotoTags {
   NewYork = "location_new_york",
   DominicanRepublic = "location_dominican_republic",
   Princeton = "location_princeton",
+  Seattle = "location_seattle",
+  Korea = "location_korea",
+  Japan = "location_japan",
+  WashingtonDC = "location_washington_dc",
+  Tahoe = "location_tahoe",
+  Yosemite = "location_preague",
 
   // Camera specific.
   Drone = "camera_drone",
+  Panerama = "camera_panerama",
+
+  // Other.
+  CrossCountryRoadtrip = "other_cross_country_roadtrip",
+  Featured = "other_featured",
 }
