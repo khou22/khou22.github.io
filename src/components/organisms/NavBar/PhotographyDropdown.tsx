@@ -10,7 +10,7 @@ export const PhotographyDropdown: React.FC = () => {
     <div className="mx-auto grid max-w-screen-xl gap-x-8 gap-y-4 px-4 py-5 text-gray-900 sm:grid-cols-3 md:px-6">
       <ul>
         <li className="row-span-3 h-full">
-          <Link href={PAGES.PHOTOGRAPHY}>
+          <Link href={PAGES.PHOTOGRAPHY.HOME}>
             <ImageCard
               title="Buy Prints"
               description="Elegant home decor"
@@ -24,17 +24,17 @@ export const PhotographyDropdown: React.FC = () => {
       <ul className="space-y-4">
         <h6 className="font-bold text-blue-500">Featured</h6>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY.FEATURED} className="text-sm">
             Fan Favorites
           </LinkWithArrow>
         </li>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY.AERIAL} className="text-sm">
             Aerial & Drone
           </LinkWithArrow>
         </li>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY.HOME} className="text-sm">
             Landscapes
           </LinkWithArrow>
         </li>
@@ -42,22 +42,22 @@ export const PhotographyDropdown: React.FC = () => {
       <ul className="space-y-4">
         <h6 className="font-bold text-blue-500">Top Locations</h6>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY.HOME} className="text-sm">
             San Francisco
           </LinkWithArrow>
         </li>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY.HOME} className="text-sm">
             New York
           </LinkWithArrow>
         </li>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY.HOME} className="text-sm">
             Hong Kong
           </LinkWithArrow>
         </li>
         <li className="pb-1">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY} className="text-sm">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY.HOME} className="text-sm">
             All Locations
           </LinkWithArrow>
         </li>

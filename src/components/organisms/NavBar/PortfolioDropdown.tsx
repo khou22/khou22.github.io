@@ -18,7 +18,7 @@ export const PortfolioDropdown: React.FC = () => {
           contentClassName="p-4"
         />
       </Link>
-      <Link href={PAGES.PHOTOGRAPHY}>
+      <Link href={PAGES.PHOTOGRAPHY.HOME}>
         <ImageCard
           title="Photography"
           description="Optical craftsmanship"

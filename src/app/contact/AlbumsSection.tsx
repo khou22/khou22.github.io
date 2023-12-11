@@ -17,32 +17,32 @@ export const AlbumsSection = () => {
     {
       name: "Landscape",
       image: getCdnAsset("media/store/Grand_Teton_Bison_jpg"),
-      url: PAGES.PHOTOGRAPHY,
+      url: PAGES.PHOTOGRAPHY.HOME,
     },
     {
       name: "Engagements",
       image: getCdnAsset("media/store/Grand_Teton_Bison_jpg"),
-      url: PAGES.PHOTOGRAPHY,
+      url: PAGES.PHOTOGRAPHY.HOME,
     },
     {
       name: "Events",
       image: getCdnAsset("media/store/Grand_Teton_Bison_jpg"),
-      url: PAGES.PHOTOGRAPHY,
+      url: PAGES.PHOTOGRAPHY.HOME,
     },
     {
       name: "Concert",
       image: getCdnAsset("media/store/Grand_Teton_Bison_jpg"),
-      url: PAGES.PHOTOGRAPHY,
+      url: PAGES.PHOTOGRAPHY.HOME,
     },
     {
       name: "Headshots",
       image: getCdnAsset("media/store/Grand_Teton_Bison_jpg"),
-      url: PAGES.PHOTOGRAPHY,
+      url: PAGES.PHOTOGRAPHY.HOME,
     },
     {
       name: "Drone",
       image: getCdnAsset("media/store/Grand_Teton_Bison_jpg"),
-      url: PAGES.PHOTOGRAPHY,
+      url: PAGES.PHOTOGRAPHY.HOME,
     },
   ];
 

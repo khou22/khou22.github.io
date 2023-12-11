@@ -21,24 +21,24 @@ const ContactPage = () => {
                 stories={[
                   {
                     title: "Landscape",
-                    link: PAGES.PHOTOGRAPHY,
+                    link: PAGES.PHOTOGRAPHY.HOME,
                     imageSrc: getCdnAsset("media/photography/mountains_jpg"),
                   },
                   {
                     title: "Engagements",
-                    link: PAGES.PHOTOGRAPHY,
+                    link: PAGES.PHOTOGRAPHY.HOME,
                     imageSrc: getCdnAsset(
                       "media/photography/cover/featured_jpg",
                     ),
                   },
                   {
                     title: "Events",
-                    link: PAGES.PHOTOGRAPHY,
+                    link: PAGES.PHOTOGRAPHY.HOME,
                     imageSrc: getCdnAsset("media/photography/korea_jpg"),
                   },
                   {
                     title: "Concert",
-                    link: PAGES.PHOTOGRAPHY,
+                    link: PAGES.PHOTOGRAPHY.HOME,
                     imageSrc: getCdnAsset("media/photography/japan_jpg"),
                   },
                 ]}

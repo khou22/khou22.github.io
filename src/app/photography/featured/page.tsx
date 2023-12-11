@@ -1,11 +1,10 @@
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
-import path from "path";
 import PhotoAlbum from "react-photo-album";
 import { PhotoTags } from "@/constants/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
-import { imageSize } from "image-size";
 import { _generatedCdnAssets } from "@/utils/cdn/cdnAssets.generated";
+import { getPhotoSize } from "@/utils/photos/getPhotoSize";
 
 const PhotographyFeaturedPage = async () => {
   const photoIDs = await getPhotosWithTag(PhotoTags.Featured);
@@ -14,13 +13,7 @@ const PhotographyFeaturedPage = async () => {
   const photos = await Promise.all(
     photoIDs.map(async (photoID) => {
       const url = getCdnAsset(photoID);
-
-      const filePath = path.join(
-        process.cwd(),
-        "docs",
-        decodeURIComponent(_generatedCdnAssets[photoID]),
-      );
-      const size = await imageSize(filePath);
+      const size = await getPhotoSize(photoID);
       return {
         src: url,
         width: size.width ?? 1,

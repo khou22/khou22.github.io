@@ -7,7 +7,11 @@ export const PAGES = {
   CONTACT: "/contact",
   WOOD: "/wood",
   DESIGN: "/design",
-  PHOTOGRAPHY: "/photography",
+  PHOTOGRAPHY: {
+    HOME: "/photography",
+    FEATURED: "/photography/featured",
+    AERIAL: "/photography/aerial",
+  },
   PROGRAMMING: "/programming",
   ADMIN: {
     PHOTO: (page: number) => `/admin/photos/${page}`,
