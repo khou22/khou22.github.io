@@ -2,6 +2,7 @@ import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import path from "path";
 import sqlite3 from "sqlite3";
 import { open } from "sqlite";
+import { PhotoTags } from "@/constants/photoTags";
 
 // Open a SQLite database, stored in the file db.sqlite
 export const connectToPhotoDb = async () => {
@@ -22,17 +23,17 @@ export const connectToPhotoDb = async () => {
 type PhotoTagRowType = { photo_id: string; tag_name: string };
 
 export const getTagsByPhotoID = async (): Promise<
-  Partial<Record<PhotoIdType, string[]>>
+  Partial<Record<PhotoIdType, PhotoTags[]>>
 > => {
   const db = await connectToPhotoDb();
   const rows = await db.all<PhotoTagRowType[]>(
     `SELECT photo_id, tag_name FROM photo_tags`,
   );
 
-  const tagsByPhotoID: Partial<Record<PhotoIdType, string[]>> = {};
+  const tagsByPhotoID: Partial<Record<PhotoIdType, PhotoTags[]>> = {};
   rows.forEach((row) => {
     const photoID = row.photo_id as PhotoIdType;
-    const tag = row.tag_name;
+    const tag = row.tag_name as PhotoTags;
 
     if (tagsByPhotoID[photoID]) {
       tagsByPhotoID[photoID]?.push(tag);
@@ -42,4 +43,16 @@ export const getTagsByPhotoID = async (): Promise<
   });
 
   return tagsByPhotoID;
+};
+
+export const getPhotosWithTag = async (
+  tag: PhotoTags,
+): Promise<PhotoIdType[]> => {
+  const db = await connectToPhotoDb();
+  const rows = await db.all<PhotoTagRowType[]>(
+    `SELECT photo_id, tag_name FROM photo_tags WHERE tag_name = ?`,
+    [tag],
+  );
+  const photoIDs = rows.map((row) => row.photo_id as PhotoIdType);
+  return photoIDs;
 };
