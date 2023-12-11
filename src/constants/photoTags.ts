@@ -25,6 +25,8 @@ export enum PhotoTags {
   Italy = "location_italy",
   Taiwan = "location_taiwan",
   Singapore = "location_singapore",
+  Vietnam = "location_vietnam",
+  Thailand = "location_thailand",
 
   // Camera specific.
   Drone = "camera_drone",

@@ -7,6 +7,7 @@ import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PhotoTagUpdateRequest } from "../tags/types";
 import { PhotoTags } from "@/constants/photoTags";
 import { enumToString } from "@/utils/enum";
+import { classNames } from "@/utils/style";
 
 type PhotoManagementCardProps = {
   imageKey: PhotoIdType;
@@ -52,9 +53,17 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
   };
 
   return (
-    <Card className="grid grid-cols-4 gap-4 p-2">
-      <div>
-        <img className="h-48 object-contain" src={getCdnAsset(imageKey)} />
+    <Card
+      className={classNames(
+        "grid grid-cols-4 gap-4 p-2",
+        tagIDs?.length > 0 ? "bg-green-100/30" : "",
+      )}
+    >
+      <div className="flex flex-col items-center justify-center space-y-2 px-2">
+        <img
+          className="h-52 rounded object-contain"
+          src={getCdnAsset(imageKey)}
+        />
         <p className="caption w-full break-all">{imageKey}</p>
       </div>
       <div className="flex flex-col items-start justify-start space-y-2">
@@ -62,7 +71,7 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
         {Object.values(PhotoTags)
           .filter((tag) => tag.includes("category"))
           .map((tag: PhotoTags) => (
-            <CategoryCheckbox key={tag} photoID={imageKey} tag={tag} />
+            <CategoryCheckbox key={tag} tag={tag} />
           ))}
       </div>
       <div className="flex flex-col items-start justify-start space-y-2">
@@ -70,7 +79,7 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
         {Object.values(PhotoTags)
           .filter((tag) => tag.includes("location"))
           .map((tag: PhotoTags) => (
-            <CategoryCheckbox key={tag} photoID={imageKey} tag={tag} />
+            <CategoryCheckbox key={tag} tag={tag} />
           ))}
       </div>
       <div className="flex flex-col items-start justify-start space-y-2">
@@ -80,7 +89,7 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
             (tag) => !tag.includes("location") && !tag.includes("category"),
           )
           .map((tag: PhotoTags) => (
-            <CategoryCheckbox key={tag} photoID={imageKey} tag={tag} />
+            <CategoryCheckbox key={tag} tag={tag} />
           ))}
       </div>
     </Card>
