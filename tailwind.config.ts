@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
   darkMode: ["class"],
@@ -12,6 +13,11 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        default: ["var(--font-default)", ...defaultTheme.fontFamily.sans],
+        heading: ["var(--font-header)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0px" },

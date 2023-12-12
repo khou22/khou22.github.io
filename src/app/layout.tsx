@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Mulish } from "next/font/google";
 import "./globals.css";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { NavBar } from "@/components/organisms/NavBar/NavBar";
 import { Footer } from "@/components/organisms/Footer/Footer";
 import { classNames } from "@/utils/style";
 
-const montserrat = Montserrat({
+const headerFont = Mulish({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-header",
+});
+
+const bodyFont = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "600"],
+  variable: "--font-default",
 });
 
 /**
@@ -61,7 +68,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={classNames(montserrat.className, "bg-gray-50")}>
+      <body
+        className={classNames(
+          bodyFont.variable,
+          headerFont.variable,
+          "bg-gray-50",
+        )}
+      >
         <NavBar />
         {children}
         <Footer />

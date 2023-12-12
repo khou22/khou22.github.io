@@ -3,16 +3,17 @@ import { PhotoTags } from "@/constants/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 
-const PhotographyFeaturedPage = async () => {
-  const photoIDs = await getPhotosWithTag(PhotoTags.Featured);
+// TODO (k): Make this a dynamic page so we can re-use the same layout.
+const PhotographyAerial = async () => {
+  const photoIDs = await getPhotosWithTag(PhotoTags.Drone);
 
   return (
     <PageWrapper maxWidth="wide">
-      <h1>Featured</h1>
+      <h1>Aerial</h1>
 
       <PhotoGallery photoIDs={photoIDs} />
     </PageWrapper>
   );
 };
 
-export default PhotographyFeaturedPage;
+export default PhotographyAerial;

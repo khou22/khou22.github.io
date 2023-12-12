@@ -20,31 +20,31 @@
 /*********************************************/
 @layer base {
   h1 {
-    @apply text-5xl;
+    @apply font-heading text-5xl;
   }
   h2 {
-    @apply text-4xl;
+    @apply font-heading text-4xl;
   }
   h3 {
-    @apply text-3xl;
+    @apply font-heading text-3xl;
   }
   h4 {
-    @apply text-2xl;
+    @apply font-heading text-2xl;
   }
   h5 {
-    @apply text-xl;
+    @apply font-heading text-xl;
   }
   h6 {
-    @apply text-lg;
+    @apply font-heading text-lg;
   }
   .caption {
-    @apply text-sm text-gray-600;
+    @apply font-default text-sm text-gray-600;
   }
   p {
-    @apply text-base;
+    @apply font-default text-base;
   }
   li {
-    @apply text-base;
+    @apply font-default text-base;
   }
   pre,
   code {
