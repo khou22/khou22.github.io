@@ -20,7 +20,7 @@ export const getPhotoSize = async (
   const filePath = path.join(
     process.cwd(),
     "docs",
-    decodeURIComponent(_generatedCdnAssets[photoID]),
+    decodeURIComponent(_generatedCdnAssets[photoID].path),
   );
   const size = await imageSize(filePath);
   return {

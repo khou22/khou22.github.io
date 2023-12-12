@@ -3,7 +3,6 @@ import PhotoAlbum from "react-photo-album";
 import { PhotoTags } from "@/constants/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
-import { _generatedCdnAssets } from "@/utils/cdn/cdnAssets.generated";
 import { getPhotoSize } from "@/utils/photos/getPhotoSize";
 
 const PhotographyFeaturedPage = async () => {

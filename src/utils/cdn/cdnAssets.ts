@@ -11,5 +11,5 @@ export type PhotoIdType = keyof typeof _generatedCdnAssets;
  * Get the URL of an asset from the CDN.
  */
 export const getCdnAsset = (assetName: PhotoIdType) => {
-  return `${baseUrl}${_generatedCdnAssets[assetName]}`;
+  return `${baseUrl}${_generatedCdnAssets[assetName].path}`;
 };

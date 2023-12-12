@@ -1,6 +1,11 @@
 import os
 import re
+from typing import Dict, NamedTuple
 import urllib.parse
+
+class AssetMeta(NamedTuple):
+    name: str
+    path: str
 
 def sanitize_file_key(file_path):
     # Replace all non-alphanumeric characters (excluding slashes) with underscores
@@ -9,7 +14,7 @@ def sanitize_file_key(file_path):
 
 def get_asset_map():
     docs_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../docs"))
-    cdn_map = {}
+    cdn_map: Dict[str, AssetMeta] = {}
 
     def traverse_directory(current_dir, current_path=""):
         files = os.listdir(current_dir)
@@ -18,7 +23,7 @@ def get_asset_map():
             file_path = os.path.join(current_dir, file)
 
             key = sanitize_file_key(f"{current_path}{file}")
-            value = urllib.parse.quote(f"{current_path}{file}")
+            value = AssetMeta(name=file, path=urllib.parse.quote(f"{current_path}{file}"))
 
             if os.path.isdir(file_path):
                 traverse_directory(file_path, f"{current_path}{file}/")
@@ -28,8 +33,8 @@ def get_asset_map():
     traverse_directory(docs_path)
     return cdn_map
 
-def get_python_dict(map):
-    entries = [f'\t"{key}": "/{value}"' for key, value in map.items()]
+def get_python_dict(map: Dict[str, AssetMeta]):
+    entries = [f'\t"{key}": {{\n\t\t"path": "/{value.path}",\n\t\t"name": `{value.name}`,\n\t}}' for key, value in map.items()]
     return "export const _generatedCdnAssets = {\n" + ",\n".join(entries) + "\n}"
 
 assets = get_asset_map()
