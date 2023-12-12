@@ -13,3 +13,10 @@ export type PhotoIdType = keyof typeof _generatedCdnAssets;
 export const getCdnAsset = (assetName: PhotoIdType) => {
   return `${baseUrl}${_generatedCdnAssets[assetName].path}`;
 };
+
+/**
+ * Get the name of a photo (ie. file name without the extension).
+ */
+export const getPhotoName = (photoID: PhotoIdType) => {
+  return _generatedCdnAssets[photoID].name;
+};

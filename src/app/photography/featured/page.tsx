@@ -2,7 +2,7 @@ import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import PhotoAlbum from "react-photo-album";
 import { PhotoTags } from "@/constants/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
 import { getPhotoSize } from "@/utils/photos/getPhotoSize";
 
 const PhotographyFeaturedPage = async () => {
@@ -17,6 +17,8 @@ const PhotographyFeaturedPage = async () => {
         src: url,
         width: size.width ?? 1,
         height: size.height ?? 1,
+        alt: getPhotoName(photoID),
+        title: getPhotoName(photoID),
       };
     }),
   );

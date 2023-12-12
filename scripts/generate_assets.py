@@ -23,7 +23,11 @@ def get_asset_map():
             file_path = os.path.join(current_dir, file)
 
             key = sanitize_file_key(f"{current_path}{file}")
-            value = AssetMeta(name=file, path=urllib.parse.quote(f"{current_path}{file}"))
+
+            # Remove the extension from the file name
+            file_name = os.path.splitext(file)[0]
+
+            value = AssetMeta(name=file_name, path=urllib.parse.quote(f"{current_path}{file}"))
 
             if os.path.isdir(file_path):
                 traverse_directory(file_path, f"{current_path}{file}/")
