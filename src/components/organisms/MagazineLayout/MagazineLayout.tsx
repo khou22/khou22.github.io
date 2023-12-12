@@ -4,7 +4,7 @@ type MagazineLayoutProps = {
 
 export const MagazineLayout: React.FC<MagazineLayoutProps> = ({ children }) => {
   return (
-    <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-3 xl:grid-cols-4">
+    <div className="grid w-full grid-flow-row-dense grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-4 lg:gap-6 xl:grid-cols-4">
       {children}
     </div>
   );

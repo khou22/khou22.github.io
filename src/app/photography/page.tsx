@@ -4,8 +4,6 @@ import { MagazineLayout } from "@/components/organisms/MagazineLayout/MagazineLa
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
-import Image from "next/image";
-import Link from "next/link";
 
 const PhotographyHomepage = async () => {
   return (
