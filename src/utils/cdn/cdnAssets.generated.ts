@@ -507,6 +507,10 @@ export const _generatedCdnAssets = {
 		"path": "/photography/Brenizer%20Method%20Portrait%20in%20front%20of%20Golden%20Gate.placeholder.jpg",
 		"name": `Brenizer Method Portrait in front of Golden Gate.placeholder`,
 	},
+	"photography/_DS_Store": {
+		"path": "/photography/.DS_Store",
+		"name": `.DS_Store`,
+	},
 	"photography/Downtown_San_Francisco_From_South_East_Horizontal_placeholder_jpg": {
 		"path": "/photography/Downtown%20San%20Francisco%20From%20South%20East%20-%20Horizontal.placeholder.jpg",
 		"name": `Downtown San Francisco From South East - Horizontal.placeholder`,
@@ -2458,6 +2462,10 @@ export const _generatedCdnAssets = {
 	"photography/Hong_Kong_Alleyway_Downtown_placeholder_jpg": {
 		"path": "/photography/Hong%20Kong%20Alleyway%20Downtown.placeholder.jpg",
 		"name": `Hong Kong Alleyway Downtown.placeholder`,
+	},
+	"photography/Meteora_Monastery_Perched_at_Sunset_jpg": {
+		"path": "/photography/Meteora%20Monastery%20Perched%20at%20Sunset.jpg",
+		"name": `Meteora Monastery Perched at Sunset`,
 	},
 	"photography/Nakalele_Blowhole_placeholder_jpg": {
 		"path": "/photography/Nakalele%20Blowhole.placeholder.jpg",

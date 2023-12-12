@@ -1,3 +1,6 @@
+import { FullCoverArticle } from "@/components/organisms/MagazineLayout/FullCoverArticle";
+import { HalfTextArticle } from "@/components/organisms/MagazineLayout/HalfTextArticle";
+import { MagazineLayout } from "@/components/organisms/MagazineLayout/MagazineLayout";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
@@ -7,67 +10,92 @@ import Link from "next/link";
 const PhotographyHomepage = async () => {
   return (
     <PageWrapper maxWidth="none">
-      <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-3 xl:grid-cols-4">
-        <Link
+      <MagazineLayout>
+        <FullCoverArticle
           href={PAGES.PHOTOGRAPHY.AERIAL}
-          className="group col-span-1 sm:col-span-2"
-        >
-          <div className="relative h-full min-h-[300px] w-full overflow-hidden rounded shadow">
-            <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center space-y-4 text-white">
-              <h3>San Francisco by Air</h3>
-              <span className="w-12 border-b-2 border-white" />
-              <p>An aerial photo series of San Francisco.</p>
-            </div>
-            <Image
-              src={getCdnAsset(
-                "photography/Embarcadero_Aerial_View_at_Sunset_jpg",
-              )}
-              alt="Embarcadero Aerial View at Sunset"
-              className="object-cover brightness-100 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:brightness-75"
-              fill
-            />
-          </div>
-        </Link>
-        <Link href={PAGES.PHOTOGRAPHY.FEATURED} className="group col-span-1">
-          <div className="flex h-full flex-col justify-evenly overflow-clip rounded bg-blue-800 shadow">
-            <div className="relative aspect-square w-full">
-              <Image
-                src={getCdnAsset(
-                  "photography/Pigeon_Point_Lighthouse_Milky_Way_jpg",
-                )}
-                alt="Embarcadero Aerial View at Sunset"
-                className="object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
-                fill
-              />
-            </div>
-            <div className="flex h-1/2 w-full flex-col items-center justify-center space-y-4 px-2 py-4 text-white sm:py-8">
-              <p className="text-sm text-gray-400">Collection</p>
-              <h5>Astrophotography</h5>
-              <span className="w-6 border-b border-white" />
-              <p className="text-center text-sm">
-                Undoubtably one of my favorite and most technically complex
-                forms of photography.
-              </p>
-            </div>
-          </div>
-        </Link>
-        <Link href={PAGES.PHOTOGRAPHY.FEATURED} className="group col-span-1">
-          <div className="relative flex h-full flex-col justify-evenly overflow-clip rounded bg-blue-800 shadow">
-            <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center space-y-4 text-white">
-              <p>Travel</p>
-              <h3>Tokyo, Japan</h3>
-              <span className="w-6 border-b border-white" />
-              <p>Capturing the beauties of Japan.</p>
-            </div>
-            <Image
-              src={getCdnAsset("photography/Hie_Shrine_Tokyo_Japan_jpg")}
-              alt="Embarcadero Aerial View at Sunset"
-              className="object-cover brightness-100 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:brightness-75"
-              fill
-            />
-          </div>
-        </Link>
-      </div>
+          title="San Francisco by Air"
+          category="Collection"
+          description="An aerial photo series of San Francisco."
+          width={2}
+          imageSrc={getCdnAsset(
+            "photography/Embarcadero_Aerial_View_at_Sunset_jpg",
+          )}
+        />
+        <HalfTextArticle
+          href={PAGES.PHOTOGRAPHY.FEATURED}
+          title="Astrophotography"
+          category="Collection"
+          description="Undoutedly one of my favorite and most technically complex forms of photography"
+          imageSrc={getCdnAsset(
+            "photography/Pigeon_Point_Lighthouse_Milky_Way_jpg",
+          )}
+        />
+        <FullCoverArticle
+          href={PAGES.PHOTOGRAPHY.AERIAL}
+          title="Tokyo, Japan"
+          category="Travel"
+          description="Capturing the beauties of Japan."
+          width={1}
+          imageSrc={getCdnAsset("media/store/Hie_Shrine_Tokyo_Japan_jpg")}
+        />
+
+        <FullCoverArticle
+          href={PAGES.PHOTOGRAPHY.AERIAL}
+          title="Satellite Photos"
+          category="Collection"
+          description="Partnered with satellite providers to capture the beauty of the world from space."
+          width={1}
+          imageSrc={getCdnAsset(
+            "photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg",
+          )}
+        />
+        <FullCoverArticle
+          href={PAGES.PHOTOGRAPHY.FEATURED}
+          title="Featured Works"
+          category="Prints"
+          description="A mixture of fan favorites and personal favorites."
+          width={2}
+          imageSrc={getCdnAsset("photography/Yosemite_Valley_Sunset_jpg")}
+        />
+        <FullCoverArticle
+          href={PAGES.PHOTOGRAPHY.AERIAL}
+          title="Bird's Eye View"
+          category="Collection"
+          description="See the world from the top down."
+          width={1}
+          imageSrc={getCdnAsset(
+            "photography/Ping_Shek_Estate_Drone_Top_Down_Vertical_jpg",
+          )}
+        />
+
+        <FullCoverArticle
+          href={PAGES.PHOTOGRAPHY.FEATURED}
+          title="Landscapes"
+          category="Prints"
+          description="Images from all around the world."
+          width={2}
+          imageSrc={getCdnAsset("photography/Grand_Teton_Bison_Landscape_jpg")}
+        />
+        <HalfTextArticle
+          href={PAGES.PHOTOGRAPHY.AERIAL}
+          title="Street Photography"
+          category="Collection"
+          description="Urban and city photography. Capturing everyday life."
+          imageSrc={getCdnAsset(
+            "photography/Tokyo_Soba_Noodles_NIght_Market_Chef_jpg",
+          )}
+        />
+        <FullCoverArticle
+          href={PAGES.PHOTOGRAPHY.AERIAL}
+          title="Greece"
+          category="Travel"
+          description="Solo travel adventures."
+          width={1}
+          imageSrc={getCdnAsset(
+            "photography/Meteora_Monastery_Perched_at_Sunset_jpg",
+          )}
+        />
+      </MagazineLayout>
     </PageWrapper>
   );
 };
