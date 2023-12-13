@@ -1,17 +1,14 @@
+import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
-import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
-import { PhotoTags, tagMetadata } from "@/constants/photoTags";
-import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import {
-  castPhotoID,
   getCdnAsset,
   getPhotoIDFromURLComponent,
   getPhotoName,
 } from "@/utils/cdn/cdnAssets";
 import _ from "lodash";
 import { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
+import { ProductDetails } from "./ProductDetails";
 
 export type PageProps = {
   params: {
@@ -44,15 +41,12 @@ const PhotoByIDPage = async ({
   }
 
   return (
-    <PageWrapper maxWidth="wide">
-      <h1 className="w-full text-center">{getPhotoName(photoID)}</h1>
-      <Image
-        src={getCdnAsset(photoID)}
-        alt={getPhotoName(photoID)}
-        width={600}
-        height={600}
-        className="object-contain"
+    <PageWrapper className="grid grid-cols-2 gap-6">
+      <ProgressiveImage
+        src={[getCdnAsset(photoID)]}
+        className="max-h-[75vh] w-full object-contain"
       />
+      <ProductDetails photoID={photoID} />
     </PageWrapper>
   );
 };
