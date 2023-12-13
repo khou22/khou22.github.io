@@ -46,22 +46,31 @@ export const PhotographyDropdown: React.FC = () => {
       <ul className="space-y-4">
         <h6 className="font-bold text-blue-500">Top Locations</h6>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY.HOME} className="text-sm">
+          <LinkWithArrow
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.SanFrancisco)}
+            className="text-sm"
+          >
             San Francisco
           </LinkWithArrow>
         </li>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY.HOME} className="text-sm">
+          <LinkWithArrow
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.NewYork)}
+            className="text-sm"
+          >
             New York
           </LinkWithArrow>
         </li>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY.HOME} className="text-sm">
+          <LinkWithArrow
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.HongKong)}
+            className="text-sm"
+          >
             Hong Kong
           </LinkWithArrow>
         </li>
         <li className="pb-1">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY.HOME} className="text-sm">
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY.LOCATIONS} className="text-sm">
             All Locations
           </LinkWithArrow>
         </li>

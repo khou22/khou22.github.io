@@ -1,3 +1,4 @@
+import { Autoscroll } from "@/components/atoms/Autoscroll/Autoscroll";
 import { ImageCard } from "@/components/molecules/ImageCard/ImageCard";
 import { FullCoverArticle } from "@/components/organisms/MagazineLayout/FullCoverArticle";
 import { HalfTextArticle } from "@/components/organisms/MagazineLayout/HalfTextArticle";
@@ -33,6 +34,7 @@ const PhotographyHomepage = async () => {
 
   return (
     <>
+      <Autoscroll />
       <PageWrapper maxWidth="none">
         <MagazineLayout>
           <FullCoverArticle
@@ -123,7 +125,8 @@ const PhotographyHomepage = async () => {
           />
         </MagazineLayout>
       </PageWrapper>
-      <PageWrapper maxWidth="wide">
+      <span className="h-0 w-full" id="locations" />
+      <PageWrapper maxWidth="wide" className="my-6">
         <h2 className="w-full text-center leading-loose">By Location 📍</h2>
         <div className="my-6 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
           {categoryNodes}

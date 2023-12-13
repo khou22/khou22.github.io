@@ -131,10 +131,13 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Seattle]: {
     name: "Seattle",
     slug: "seattle",
+    thumbnailPhotoId:
+      "photography/Seattle_Vertical_Drone_Space_Needle_Sunset_jpg",
   },
   [PhotoTags.Korea]: {
     name: "Korea",
     slug: "korea",
+    thumbnailPhotoId: "photography/Korea_Palace_Through_Doorway_jpg",
   },
   [PhotoTags.Japan]: {
     name: "Japan",
@@ -175,6 +178,7 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Singapore]: {
     name: "Singapore",
     slug: "singapore",
+    thumbnailPhotoId: "media/store/Marina_Bay_Sands_Drone_Vertical_jpg",
   },
   [PhotoTags.Vietnam]: {
     name: "Vietnam",
