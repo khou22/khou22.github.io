@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 /**
  * Simple component that automatically scrolls to the element with the ID that is in the URL.
