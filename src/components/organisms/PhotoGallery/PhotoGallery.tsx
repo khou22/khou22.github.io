@@ -1,6 +1,6 @@
 import { PhotoIdType, getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
 import { getPhotoSize } from "@/utils/photos/getPhotoSize";
-import PhotoAlbum from "react-photo-album";
+import { PhotoGalleryClient } from "./PhotoGalleryClient";
 
 type PhotoGalleryProps = {
   photoIDs: PhotoIdType[];
@@ -21,33 +21,14 @@ export const PhotoGallery = async ({ photoIDs }: PhotoGalleryProps) => {
         height: size.height ?? 1,
         alt: getPhotoName(photoID),
         title: getPhotoName(photoID),
+        photoID,
       };
     }),
   );
 
   return (
     <div className="my-12 w-full">
-      {/* Mobile */}
-      <div className="block w-full md:hidden">
-        <PhotoAlbum
-          layout="masonry"
-          columns={2}
-          // Default container width is needed for SSR.
-          defaultContainerWidth={450}
-          photos={photos}
-        />
-      </div>
-
-      {/* Desktop */}
-      <div className="hidden w-full md:block">
-        <PhotoAlbum
-          layout="masonry"
-          columns={4}
-          // Default container width is needed for SSR.
-          defaultContainerWidth={800}
-          photos={photos}
-        />
-      </div>
+      <PhotoGalleryClient photos={photos} />
     </div>
   );
 };

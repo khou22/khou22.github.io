@@ -20,3 +20,14 @@ export const getCdnAsset = (assetName: PhotoIdType) => {
 export const getPhotoName = (photoID: PhotoIdType) => {
   return _generatedCdnAssets[photoID].name;
 };
+
+/**
+ * Cast a string to a photo ID if it is a valid photo ID.
+ */
+export const castPhotoID = (photoIdStr: string): PhotoIdType | null => {
+  if (!photoIdStr || !Object.keys(_generatedCdnAssets).includes(photoIdStr)) {
+    console.warn(`Invalid photo ID: ${photoIdStr}`);
+    return null;
+  }
+  return photoIdStr as PhotoIdType;
+};
