@@ -38,7 +38,7 @@ const PhotographyHomepage = async () => {
       <PageWrapper maxWidth="none">
         <MagazineLayout>
           <FullCoverArticle
-            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.SanFrancisco)}
+            href={PAGES.PHOTOGRAPHY.AERIAL_SF}
             title="San Francisco by Air"
             category="Collection"
             description="An aerial photo series of San Francisco."

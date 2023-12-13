@@ -25,7 +25,10 @@ export const NavBar: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState<NavBarDropdownType>();
   const isHovering = Boolean(isDropdownOpen);
   const pathname = usePathname();
-  const isFloating = pathname === PAGES.HOME || pathname === PAGES.BLOG;
+  const isFloating =
+    pathname === PAGES.HOME ||
+    pathname === PAGES.BLOG ||
+    pathname === PAGES.PHOTOGRAPHY.AERIAL_SF;
 
   // If floating, never have a scroll transition.
   const transitionProgress = isFloating
