@@ -23,6 +23,8 @@ const PhotographyHomepage = async () => {
           <ImageCard
             title={tagMetadata[tag].name}
             imageSrc={getCdnAsset(thumbnail)}
+            containerClassName="w-full h-full min-h-[200px] rounded-lg"
+            contentClassName="p-4"
           />
         </Link>
       );
@@ -121,9 +123,11 @@ const PhotographyHomepage = async () => {
           />
         </MagazineLayout>
       </PageWrapper>
-      <PageWrapper>
-        <h2 className="text-center">By Location 📍</h2>
-        <div className="grid grid-cols-6">{categoryNodes}</div>
+      <PageWrapper maxWidth="wide">
+        <h2 className="w-full text-center leading-loose">By Location 📍</h2>
+        <div className="my-6 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
+          {categoryNodes}
+        </div>
       </PageWrapper>
     </>
   );

@@ -102,22 +102,31 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.SanFrancisco]: {
     name: "San Francisco",
     slug: "san-francisco",
+    thumbnailPhotoId:
+      "photography/Sunrise_Lombard_Street_Drone_Head_On_Vertical_jpg",
   },
   [PhotoTags.HongKong]: {
     name: "Hong Kong",
     slug: "hong-kong",
+    thumbnailPhotoId:
+      "media/store/Hong_Kong_Red_Taxi_Motion_Blur_Horizontal_jpg",
   },
   [PhotoTags.NewYork]: {
     name: "New York",
     slug: "new-york",
+    thumbnailPhotoId:
+      "photography/New_York_Looking_Down_Street_from_High_Line_Vertical_jpg",
   },
   [PhotoTags.DominicanRepublic]: {
     name: "Dominican Republic",
     slug: "dominican-republic",
+    thumbnailPhotoId:
+      "photography/Shore_Stimulations_Dominican_Republic_Top_Down_Drone_Beach_jpg",
   },
   [PhotoTags.Princeton]: {
     name: "Princeton",
     slug: "princeton",
+    thumbnailPhotoId: "photography/Nassau_Hall_Landscape_Drone_jpg",
   },
   [PhotoTags.Seattle]: {
     name: "Seattle",
@@ -130,30 +139,38 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Japan]: {
     name: "Japan",
     slug: "japan",
+    thumbnailPhotoId: "media/store/Hie_Shrine_Tokyo_Japan_jpg",
   },
   [PhotoTags.WashingtonDC]: {
     name: "Washington DC",
     slug: "washington-dc",
+    thumbnailPhotoId:
+      "photography/Capitol_Building_Walking_Towards_Building_on_Street_jpg",
   },
   [PhotoTags.Tahoe]: {
     name: "Tahoe",
     slug: "tahoe",
+    thumbnailPhotoId: "photography/Milky_Way_in_Tahoe_Forest_jpg",
   },
   [PhotoTags.Yosemite]: {
     name: "Yosemite",
     slug: "yosemite",
+    thumbnailPhotoId: "photography/Yosemite_Valley_Sunset_jpg",
   },
   [PhotoTags.Hawaii]: {
     name: "Hawaii",
     slug: "hawaii",
+    thumbnailPhotoId: "photography/Nakalele_Blowhole_jpg",
   },
   [PhotoTags.Italy]: {
     name: "Italy",
     slug: "italy",
+    thumbnailPhotoId: "photography/Bridge_with_Vatican_in_the_Background_jpg",
   },
   [PhotoTags.Taiwan]: {
     name: "Taiwan",
     slug: "taiwan",
+    thumbnailPhotoId: "photography/Jiufen_Taiwan_Drone_Vertical_jpg",
   },
   [PhotoTags.Singapore]: {
     name: "Singapore",
@@ -162,6 +179,7 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Vietnam]: {
     name: "Vietnam",
     slug: "vietnam",
+    thumbnailPhotoId: "media/store/Halong_Bay_Sunset_Panorama_jpg",
   },
   [PhotoTags.Thailand]: {
     name: "Thailand",
