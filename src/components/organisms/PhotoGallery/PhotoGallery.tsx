@@ -26,9 +26,9 @@ export const PhotoGallery = async ({ photoIDs }: PhotoGalleryProps) => {
   );
 
   return (
-    <div className="my-12">
+    <div className="my-12 w-full">
       {/* Mobile */}
-      <div className="block md:hidden">
+      <div className="block w-full md:hidden">
         <PhotoAlbum
           layout="masonry"
           columns={2}
@@ -39,7 +39,7 @@ export const PhotoGallery = async ({ photoIDs }: PhotoGalleryProps) => {
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:block">
+      <div className="hidden w-full md:block">
         <PhotoAlbum
           layout="masonry"
           columns={4}
