@@ -3,10 +3,6 @@ export const _generatedCdnAssets = {
     path: "/Design-Guide.txt",
     name: `Design-Guide`,
   },
-  _DS_Store: {
-    path: "/.DS_Store",
-    name: `.DS_Store`,
-  },
   "photography/San_Francisco_from_Twin_Peaks_placeholder_jpg": {
     path: "/photography/San%20Francisco%20from%20Twin%20Peaks.placeholder.jpg",
     name: `San Francisco from Twin Peaks.placeholder`,
@@ -520,10 +516,6 @@ export const _generatedCdnAssets = {
       path: "/photography/Brenizer%20Method%20Portrait%20in%20front%20of%20Golden%20Gate.placeholder.jpg",
       name: `Brenizer Method Portrait in front of Golden Gate.placeholder`,
     },
-  "photography/_DS_Store": {
-    path: "/photography/.DS_Store",
-    name: `.DS_Store`,
-  },
   "photography/Downtown_San_Francisco_From_South_East_Horizontal_placeholder_jpg":
     {
       path: "/photography/Downtown%20San%20Francisco%20From%20South%20East%20-%20Horizontal.placeholder.jpg",
@@ -3433,10 +3425,6 @@ export const _generatedCdnAssets = {
     path: "/media/landing/image_tiles.png",
     name: `image_tiles`,
   },
-  "media/_DS_Store": {
-    path: "/media/.DS_Store",
-    name: `.DS_Store`,
-  },
   "media/loading/loader_gif": {
     path: "/media/loading/loader.gif",
     name: `loader`,
@@ -3533,10 +3521,6 @@ export const _generatedCdnAssets = {
     path: "/media/photography/customers/breitling.png",
     name: `breitling`,
   },
-  "media/photography/customers/_DS_Store": {
-    path: "/media/photography/customers/.DS_Store",
-    name: `.DS_Store`,
-  },
   "media/photography/customers/contrary_capital_png": {
     path: "/media/photography/customers/contrary_capital.png",
     name: `contrary_capital`,
@@ -3588,10 +3572,6 @@ export const _generatedCdnAssets = {
   "media/photography/satellite_jpg": {
     path: "/media/photography/satellite.jpg",
     name: `satellite`,
-  },
-  "media/photography/_DS_Store": {
-    path: "/media/photography/.DS_Store",
-    name: `.DS_Store`,
   },
   "media/photography/laptop_sunrise_jpg": {
     path: "/media/photography/laptop_sunrise.jpg",
@@ -3997,10 +3977,6 @@ export const _generatedCdnAssets = {
     path: "/media/site/textures/white_wall_hash.png",
     name: `white_wall_hash`,
   },
-  "media/site/_DS_Store": {
-    path: "/media/site/.DS_Store",
-    name: `.DS_Store`,
-  },
   "media/site/images/404_jpg": {
     path: "/media/site/images/404.jpg",
     name: `404`,
@@ -4012,10 +3988,6 @@ export const _generatedCdnAssets = {
   "media/site/images/ProximaNova_Light_otf": {
     path: "/media/site/images/ProximaNova-Light.otf",
     name: `ProximaNova-Light`,
-  },
-  "media/site/images/_DS_Store": {
-    path: "/media/site/images/.DS_Store",
-    name: `.DS_Store`,
   },
   "media/site/images/GlassTile_jpg": {
     path: "/media/site/images/GlassTile.jpg",
@@ -4952,10 +4924,6 @@ export const _generatedCdnAssets = {
   "media/occupations/breathometer_png": {
     path: "/media/occupations/breathometer.png",
     name: `breathometer`,
-  },
-  "media/occupations/_DS_Store": {
-    path: "/media/occupations/.DS_Store",
-    name: `.DS_Store`,
   },
   "media/occupations/airbnb_png": {
     path: "/media/occupations/airbnb.png",
