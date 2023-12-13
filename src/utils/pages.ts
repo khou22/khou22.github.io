@@ -1,3 +1,4 @@
+import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { BlogPostFrontMatter } from "@/data/types";
 
 export const PAGES = {
@@ -10,7 +11,7 @@ export const PAGES = {
   PHOTOGRAPHY: {
     HOME: "/photography",
     FEATURED: "/photography/featured",
-    AERIAL: "/photography/aerial",
+    TAG: (tag: PhotoTags) => `/photography/${tagMetadata[tag].slug}`,
   },
   PROGRAMMING: "/programming",
   ADMIN: {

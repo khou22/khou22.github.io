@@ -1,5 +1,6 @@
 import { ImageCard } from "@/components/molecules/ImageCard/ImageCard";
 import { LinkWithArrow } from "@/components/molecules/LinkWithArrow/LinkWithArrow";
+import { PhotoTags } from "@/constants/photoTags";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import Link from "next/link";
@@ -29,7 +30,10 @@ export const PhotographyDropdown: React.FC = () => {
           </LinkWithArrow>
         </li>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY.AERIAL} className="text-sm">
+          <LinkWithArrow
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Drone)}
+            className="text-sm"
+          >
             Aerial & Drone
           </LinkWithArrow>
         </li>
