@@ -41,10 +41,10 @@ const PhotoByIDPage = async ({
   }
 
   return (
-    <PageWrapper className="grid grid-cols-2 gap-6">
+    <PageWrapper className="grid h-full min-h-[75vh] grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
       <ProgressiveImage
         src={[getCdnAsset(photoID)]}
-        className="max-h-[75vh] w-full object-contain"
+        className="max-h-[85vh] w-full object-contain"
       />
       <ProductDetails photoID={photoID} />
     </PageWrapper>
