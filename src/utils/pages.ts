@@ -1,6 +1,6 @@
 import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { BlogPostFrontMatter } from "@/data/types";
-import { PhotoIdType } from "./cdn/cdnAssets";
+import { PhotoIdType, getPhotoURLComponent } from "./cdn/cdnAssets";
 
 export const PAGES = {
   HOME: "/",
@@ -14,7 +14,7 @@ export const PAGES = {
     FEATURED: "/photography/featured",
     LOCATIONS: "/photography#locations",
     TAG: (tag: PhotoTags) => `/photography/${tagMetadata[tag].slug}`,
-    PHOTO: (photoID: PhotoIdType) => `/photo/${photoID}`,
+    PHOTO: (photoID: PhotoIdType) => `/photo/${getPhotoURLComponent(photoID)}`,
   },
   PROGRAMMING: "/programming",
   ADMIN: {

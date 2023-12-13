@@ -31,3 +31,22 @@ export const castPhotoID = (photoIdStr: string): PhotoIdType | null => {
   }
   return photoIdStr as PhotoIdType;
 };
+
+/**
+ * Get the URL component of a photo ID.
+ */
+export const getPhotoURLComponent = (photoID: PhotoIdType) => {
+  if (photoID.startsWith("photography/")) {
+    return photoID.substring("photography/".length);
+  }
+
+  console.warn(`Photo ID '${photoID}' does not start with "photography/"`);
+  return photoID;
+};
+
+/**
+ * Get the photo ID from a URL component.
+ */
+export const getPhotoIDFromURLComponent = (urlComponent: string) => {
+  return castPhotoID(`photography/${urlComponent}`);
+};

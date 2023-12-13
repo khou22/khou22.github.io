@@ -2,7 +2,12 @@ import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
-import { castPhotoID, getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
+import {
+  castPhotoID,
+  getCdnAsset,
+  getPhotoIDFromURLComponent,
+  getPhotoName,
+} from "@/utils/cdn/cdnAssets";
 import _ from "lodash";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -10,12 +15,17 @@ import { notFound } from "next/navigation";
 
 export type PageProps = {
   params: {
+    /**
+     * The URL component for the photo ID (ie. removed the leading `photography/)
+     */
     photo_id: string;
   };
 };
 
-export const generateMetadata = ({ params }: PageProps): Metadata => {
-  const photoID = castPhotoID(params.photo_id);
+export const generateMetadata = ({
+  params: { photo_id: photoIdURLComponent },
+}: PageProps): Metadata => {
+  const photoID = getPhotoIDFromURLComponent(photoIdURLComponent);
   if (!photoID) {
     notFound();
   }
@@ -25,8 +35,10 @@ export const generateMetadata = ({ params }: PageProps): Metadata => {
   };
 };
 
-const PhotoByIDPage = async ({ params }: PageProps) => {
-  const photoID = castPhotoID(params.photo_id);
+const PhotoByIDPage = async ({
+  params: { photo_id: photoIdURLComponent },
+}: PageProps) => {
+  const photoID = getPhotoIDFromURLComponent(photoIdURLComponent);
   if (!photoID) {
     notFound();
   }
