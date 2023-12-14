@@ -64,7 +64,7 @@ const AerialSfPage = () => {
                 <p className="caption">2017 - Present</p>
 
                 <Label>Location</Label>
-                <p className="caption font-mono">-27.129042, +58.219024</p>
+                <p className="caption font-mono">37.7749° N, 122.4194° W</p>
               </div>
             </div>
           </div>
@@ -123,6 +123,7 @@ const AerialSfPage = () => {
             />
           </div>
           <p className="caption mt-2">Lombard Street, San Francisco</p>
+          <p className="caption font-mono">37.8022° N, 122.4178° W</p>
         </div>
         <div className="col-span-3" />
         <div className="col-span-4">
@@ -141,6 +142,7 @@ const AerialSfPage = () => {
         </div>
         <div className="col-span-1 flex h-full flex-col items-center justify-center">
           <p className="caption">Market Street</p>
+          <p className="caption font-mono">37.7877° N, 122.4033° W</p>
         </div>
 
         {/* Second Row */}
@@ -158,6 +160,7 @@ const AerialSfPage = () => {
         </div>
         <div className="col-span-3 flex aspect-[2/3] w-full flex-col items-start justify-end">
           <p className="caption">Main Post, Presidio</p>
+          <p className="caption font-mono">37.8008° N, 122.4568° W</p>
         </div>
       </PageWrapper>
     </>
