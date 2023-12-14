@@ -7,6 +7,7 @@ type HalfTextArticleProps = {
   title: string;
   category: string;
   description: string;
+  priority?: boolean;
 };
 
 export const HalfTextArticle: React.FC<HalfTextArticleProps> = ({
@@ -15,6 +16,7 @@ export const HalfTextArticle: React.FC<HalfTextArticleProps> = ({
   title,
   category,
   description,
+  priority,
 }) => {
   return (
     <Link href={href} className="group col-span-1">
@@ -25,6 +27,7 @@ export const HalfTextArticle: React.FC<HalfTextArticleProps> = ({
             alt={title}
             className="object-cover transition-all duration-300 ease-in-out group-hover:scale-105"
             fill
+            priority={priority}
           />
         </div>
         <div className="flex h-1/2 w-full flex-col items-center justify-center space-y-4 px-2 py-4 text-white sm:py-8">

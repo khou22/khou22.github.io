@@ -46,6 +46,7 @@ const PhotographyHomepage = async () => {
             imageSrc={getCdnAsset(
               "photography/Embarcadero_Aerial_View_at_Sunset_jpg",
             )}
+            priority
           />
           <HalfTextArticle
             href={PAGES.PHOTOGRAPHY.FEATURED}
@@ -55,6 +56,7 @@ const PhotographyHomepage = async () => {
             imageSrc={getCdnAsset(
               "photography/Pigeon_Point_Lighthouse_Milky_Way_jpg",
             )}
+            priority
           />
           <FullCoverArticle
             href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Japan)}
@@ -62,7 +64,8 @@ const PhotographyHomepage = async () => {
             category="Travel"
             description="Capturing the beauties of Japan."
             width={1}
-            imageSrc={getCdnAsset("media/store/Hie_Shrine_Tokyo_Japan_jpg")}
+            imageSrc={getCdnAsset("photography/Hie_Shrine_Tokyo_Japan_jpg")}
+            priority
           />
 
           <FullCoverArticle
@@ -110,7 +113,7 @@ const PhotographyHomepage = async () => {
             category="Collection"
             description="Urban and city photography. Capturing everyday life."
             imageSrc={getCdnAsset(
-              "photography/Tokyo_Soba_Noodles_NIght_Market_Chef_jpg",
+              "photography/Tokyo_Soba_Noodles_NIght_Market_Chef_placeholder_jpg",
             )}
           />
           <FullCoverArticle
@@ -120,7 +123,7 @@ const PhotographyHomepage = async () => {
             description="Solo travel adventures."
             width={1}
             imageSrc={getCdnAsset(
-              "photography/Meteora_Monastery_Perched_at_Sunset_jpg",
+              "photography/Meteora_Monastery_Perched_at_Sunset_placeholder_jpg",
             )}
           />
         </MagazineLayout>

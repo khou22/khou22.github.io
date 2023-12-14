@@ -9,6 +9,7 @@ type FullCoverArticleProps = {
   title: string;
   category: string;
   description: string;
+  priority?: boolean;
 };
 
 export const FullCoverArticle: React.FC<FullCoverArticleProps> = ({
@@ -18,6 +19,7 @@ export const FullCoverArticle: React.FC<FullCoverArticleProps> = ({
   category,
   description,
   width = 1,
+  priority,
 }) => {
   const sizeClassName = width === 2 ? "col-span-1 sm:col-span-2" : "col-span-1";
   return (
@@ -39,6 +41,7 @@ export const FullCoverArticle: React.FC<FullCoverArticleProps> = ({
           alt={title}
           className="object-cover brightness-100 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:brightness-75"
           fill
+          priority={priority}
         />
       </div>
     </Link>
