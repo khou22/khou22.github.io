@@ -843,6 +843,10 @@ export const _generatedCdnAssets = {
     path: "/photography/Kowloon%20Bay%20Drone%20%28Vertical%29.jpg",
     name: `Kowloon Bay Drone (Vertical)`,
   },
+	"photography/David_and_Wenyi_Engagement_Sutro_Baths_placeholder_jpg": {
+    path: "/photography/David%20and%20Wenyi%20Engagement%20Sutro%20Baths.placeholder.jpg",
+    name: `David and Wenyi Engagement Sutro Baths.placeholder`,
+  },
 	"photography/Man_Lying_on_Beach_Top_Down_Drone_Las_Terrenas_Domincan_Republic_jpg": {
     path: "/photography/Man%20Lying%20on%20Beach%20Top%20Down%20Drone%20Las%20Terrenas%2C%20Domincan%20Republic.jpg",
     name: `Man Lying on Beach Top Down Drone Las Terrenas, Domincan Republic`,
@@ -1167,6 +1171,10 @@ export const _generatedCdnAssets = {
     path: "/photography/Seoul%2C%20Korea%20Drone%20Panorama.jpg",
     name: `Seoul, Korea Drone Panorama`,
   },
+	"photography/Mariposa_Sounds_Asher_Gevisser_placeholder_jpg": {
+    path: "/photography/Mariposa%20Sounds%20Asher%20Gevisser.placeholder.jpg",
+    name: `Mariposa Sounds Asher Gevisser.placeholder`,
+  },
 	"photography/Nassau_Hall_Landscape_Drone_jpg": {
     path: "/photography/Nassau%20Hall%20Landscape%20Drone.jpg",
     name: `Nassau Hall Landscape Drone`,
@@ -1298,6 +1306,10 @@ export const _generatedCdnAssets = {
 	"photography/_USA_Road_Trip_7_placeholder_jpg": {
     path: "/photography/%20%28USA%20Road%20Trip%29-7.placeholder.jpg",
     name: ` (USA Road Trip)-7.placeholder`,
+  },
+	"photography/Forbes_30_Under_30_jpg": {
+    path: "/photography/Forbes%2030%20Under%2030.jpg",
+    name: `Forbes 30 Under 30`,
   },
 	"photography/Mori_Point_Pacifica_Sunset_placeholder_jpg": {
     path: "/photography/Mori%20Point%20Pacifica%20Sunset.placeholder.jpg",
@@ -1655,6 +1667,10 @@ export const _generatedCdnAssets = {
     path: "/photography/New%20York%20City%20Park%20Ave%20Looking%20Downtown%20in%20Rain.jpg",
     name: `New York City Park Ave Looking Downtown in Rain`,
   },
+	"photography/David_and_Wenyi_Engagement_Sutro_Baths_jpg": {
+    path: "/photography/David%20and%20Wenyi%20Engagement%20Sutro%20Baths.jpg",
+    name: `David and Wenyi Engagement Sutro Baths`,
+  },
 	"photography/The_Flavors_of_a_Sunset_in_Florence_Italy_placeholder_jpg": {
     path: "/photography/The%20Flavors%20of%20a%20Sunset%20in%20Florence%2C%20Italy.placeholder.jpg",
     name: `The Flavors of a Sunset in Florence, Italy.placeholder`,
@@ -1842,6 +1858,10 @@ export const _generatedCdnAssets = {
 	"photography/New_York_Street_Artist_Front_jpg": {
     path: "/photography/New%20York%20Street%20Artist%20%28Front%29.jpg",
     name: `New York Street Artist (Front)`,
+  },
+	"photography/Forbes_30_Under_30_placeholder_jpg": {
+    path: "/photography/Forbes%2030%20Under%2030.placeholder.jpg",
+    name: `Forbes 30 Under 30.placeholder`,
   },
 	"photography/Italy_House_in_Small_Courtyard_jpg": {
     path: "/photography/Italy%20House%20in%20Small%20Courtyard.jpg",
@@ -2111,6 +2131,10 @@ export const _generatedCdnAssets = {
     path: "/photography/Campanile%20di%20Giotto%20Across%20from%20the%20Duomo.placeholder.jpg",
     name: `Campanile di Giotto Across from the Duomo.placeholder`,
   },
+	"photography/Mariposa_Sounds_Asher_Gevisser_jpg": {
+    path: "/photography/Mariposa%20Sounds%20Asher%20Gevisser.jpg",
+    name: `Mariposa Sounds Asher Gevisser`,
+  },
 	"photography/Mai_Chau_Rice_Paddies_Sunset_Panorama_2_placeholder_jpg": {
     path: "/photography/Mai%20Chau%20Rice%20Paddies%20Sunset%20Panorama%202.placeholder.jpg",
     name: `Mai Chau Rice Paddies Sunset Panorama 2.placeholder`,
@@ -2154,6 +2178,10 @@ export const _generatedCdnAssets = {
 	"photography/Broken_Beer_Can_During_Covid_19_Evacuation_of_Princeton_jpg": {
     path: "/photography/Broken%20Beer%20Can%20During%20Covid-19%20Evacuation%20of%20Princeton.jpg",
     name: `Broken Beer Can During Covid-19 Evacuation of Princeton`,
+  },
+	"photography/Black_Sheep_Foods_Single_Burger_placeholder_jpg": {
+    path: "/photography/Black%20Sheep%20Foods%20Single%20Burger.placeholder.jpg",
+    name: `Black Sheep Foods Single Burger.placeholder`,
   },
 	"photography/Milky_Way_in_Tahoe_Forest_jpg": {
     path: "/photography/Milky%20Way%20in%20Tahoe%20Forest.jpg",
@@ -2250,6 +2278,10 @@ export const _generatedCdnAssets = {
 	"photography/Times_Square_Lens_Ball_jpg": {
     path: "/photography/Times%20Square%20Lens%20Ball.jpg",
     name: `Times Square Lens Ball`,
+  },
+	"photography/Black_Sheep_Foods_Table_of_Food_jpg": {
+    path: "/photography/Black%20Sheep%20Foods%20Table%20of%20Food.jpg",
+    name: `Black Sheep Foods Table of Food`,
   },
 	"photography/Hong_Kong_Alleyway_Downtown_jpg": {
     path: "/photography/Hong%20Kong%20Alleyway%20Downtown.jpg",
@@ -2550,6 +2582,10 @@ export const _generatedCdnAssets = {
 	"photography/Blair_Arch_Drone_Landscape_placeholder_jpg": {
     path: "/photography/Blair%20Arch%20Drone%20Landscape.placeholder.jpg",
     name: `Blair Arch Drone Landscape.placeholder`,
+  },
+	"photography/Black_Sheep_Foods_Single_Burger_jpg": {
+    path: "/photography/Black%20Sheep%20Foods%20Single%20Burger.jpg",
+    name: `Black Sheep Foods Single Burger`,
   },
 	"photography/Yin_Yang_Golden_Gate_Bridge_Light_Painting_jpg": {
     path: "/photography/Yin%20Yang%20Golden%20Gate%20Bridge%20Light%20Painting.jpg",
@@ -2882,6 +2918,10 @@ export const _generatedCdnAssets = {
 	"photography/Rubicon_Peak_Side_Angle_Drone_placeholder_jpg": {
     path: "/photography/Rubicon%20Peak%20Side%20Angle%20Drone.placeholder.jpg",
     name: `Rubicon Peak Side Angle Drone.placeholder`,
+  },
+	"photography/Black_Sheep_Foods_Table_of_Food_placeholder_jpg": {
+    path: "/photography/Black%20Sheep%20Foods%20Table%20of%20Food.placeholder.jpg",
+    name: `Black Sheep Foods Table of Food.placeholder`,
   },
 	"photography/San_Francisco_Sunset_Skyline_Landscape_from_Plane_placeholder_jpg": {
     path: "/photography/San%20Francisco%20Sunset%20Skyline%20Landscape%20from%20Plane.placeholder.jpg",

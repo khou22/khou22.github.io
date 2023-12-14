@@ -20,6 +20,20 @@ const ContactPage = () => {
                 storyDuration={3500}
                 stories={[
                   {
+                    title: "Food",
+                    link: PAGES.PHOTOGRAPHY.HOME,
+                    imageSrc: getCdnAsset(
+                      "photography/Black_Sheep_Foods_Single_Burger_jpg",
+                    ),
+                  },
+                  {
+                    title: "Concert",
+                    link: PAGES.PHOTOGRAPHY.HOME,
+                    imageSrc: getCdnAsset(
+                      "photography/Mariposa_Sounds_Asher_Gevisser_jpg",
+                    ),
+                  },
+                  {
                     title: "Landscape",
                     link: PAGES.PHOTOGRAPHY.HOME,
                     imageSrc: getCdnAsset("media/photography/mountains_jpg"),
@@ -28,7 +42,7 @@ const ContactPage = () => {
                     title: "Engagements",
                     link: PAGES.PHOTOGRAPHY.HOME,
                     imageSrc: getCdnAsset(
-                      "media/photography/cover/featured_jpg",
+                      "photography/David_and_Wenyi_Engagement_Sutro_Baths_jpg",
                     ),
                   },
                   {
@@ -37,9 +51,11 @@ const ContactPage = () => {
                     imageSrc: getCdnAsset("media/photography/korea_jpg"),
                   },
                   {
-                    title: "Concert",
+                    title: "Food",
                     link: PAGES.PHOTOGRAPHY.HOME,
-                    imageSrc: getCdnAsset("media/photography/japan_jpg"),
+                    imageSrc: getCdnAsset(
+                      "photography/Black_Sheep_Foods_Table_of_Food_jpg",
+                    ),
                   },
                 ]}
                 className="h-full w-full"
