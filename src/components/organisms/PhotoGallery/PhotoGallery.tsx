@@ -1,4 +1,9 @@
-import { PhotoIdType, getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
+import {
+  PhotoIdType,
+  getCdnAsset,
+  getPhotoName,
+  getPhotoThumbnail,
+} from "@/utils/cdn/cdnAssets";
 import { getPhotoSize } from "@/utils/photos/getPhotoSize";
 import { PhotoGalleryClient } from "./PhotoGalleryClient";
 
@@ -13,15 +18,36 @@ type PhotoGalleryProps = {
 export const PhotoGallery = async ({ photoIDs }: PhotoGalleryProps) => {
   const photos = await Promise.all(
     photoIDs.map(async (photoID) => {
-      const url = getCdnAsset(photoID);
-      const size = await getPhotoSize(photoID);
+      const thumbnailID = getPhotoThumbnail(photoID);
+      const fullSize = await getPhotoSize(photoID);
+      const fullURL = getCdnAsset(photoID);
+      const srcSet = [
+        {
+          src: fullURL,
+          width: fullSize.width ?? 1,
+          height: fullSize.height ?? 1,
+        },
+      ];
+
+      let thumbnailURL: string | undefined;
+      if (thumbnailID) {
+        const thumbnailSize = await getPhotoSize(thumbnailID);
+        thumbnailURL = getCdnAsset(thumbnailID);
+        srcSet.push({
+          src: thumbnailURL,
+          width: thumbnailSize.width ?? 1,
+          height: thumbnailSize.height ?? 1,
+        });
+      }
+
       return {
-        src: url,
-        width: size.width ?? 1,
-        height: size.height ?? 1,
+        src: thumbnailURL ?? fullURL,
+        width: fullSize.width ?? 1,
+        height: fullSize.height ?? 1,
         alt: getPhotoName(photoID),
         title: getPhotoName(photoID),
         photoID,
+        srcSet,
       };
     }),
   );

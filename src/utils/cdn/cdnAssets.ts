@@ -50,3 +50,25 @@ export const getPhotoURLComponent = (photoID: PhotoIdType) => {
 export const getPhotoIDFromURLComponent = (urlComponent: string) => {
   return castPhotoID(`photography/${urlComponent}`);
 };
+
+/**
+ * Get the thumbnail version of a photo ID.
+ */
+export const getPhotoThumbnail = (photoID: PhotoIdType): PhotoIdType | null => {
+  // If it's already a thumbnail, return it.
+  if (photoID.endsWith("_placeholder_jpg")) return photoID;
+
+  // Throw an error if it's not a jpeg.
+  if (!photoID.endsWith("_jpg")) {
+    throw new Error(`Photo ID '${photoID}' is not a JPEG`);
+  }
+
+  // If it's not a /photography/photoID_jpg, throw an error.
+  if (!photoID.startsWith("photography/")) {
+    throw new Error(`Photo ID '${photoID}' does not start with "photography/"`);
+  }
+
+  // Replace the ending `_jpg` with `_placeholder_jpg`
+  const thumbnailID = photoID.replace("_jpg", "_placeholder_jpg");
+  return castPhotoID(thumbnailID);
+};
