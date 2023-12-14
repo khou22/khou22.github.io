@@ -4,7 +4,13 @@ import argparse
 
 parser = argparse.ArgumentParser(description="Generate thumbnails for images")
 parser.add_argument("--max_kb", type=int, default=300, help="max KB for thumbnail")
-parser.add_argument("--dry_run", type=bool, default=True, help="dry run")
+parser.add_argument(
+    "--dry_run",
+    type=bool,
+    default=True,
+    action=argparse.BooleanOptionalAction,
+    help="dry run",
+)
 
 
 def retrieve_photos(path: str) -> list[str]:
@@ -42,10 +48,9 @@ def main():
             # If the thumbnail is over the specified limit, regenerate it.
             if size > args.max_kb * 1024:
                 num_oversized_thumbnails += 1
+            else:
+                num_existing_thumbnails += 1
                 continue
-
-            num_existing_thumbnails += 1
-            continue
 
         num_photos += 1
 
@@ -59,7 +64,8 @@ def main():
         num_thumbnails_generated += 1
 
     print(
-        f"""Thumbnail generation complete.
+        f"""
+Thumbnail Generation Complete:
     ✅ Completed: {num_thumbnails_generated} generations
     🛠️ Oversized: {num_oversized_thumbnails} over {args.max_kb}KB
     ⏭️ Skipped: {num_existing_thumbnails} existing
