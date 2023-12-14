@@ -5,10 +5,10 @@ import argparse
 parser = argparse.ArgumentParser(description="Generate thumbnails for images")
 parser.add_argument("--max_kb", type=int, default=300, help="max KB for thumbnail")
 parser.add_argument(
-    "--dry_run",
+    "--dry-run",
     type=bool,
     default=True,
-    action=argparse.BooleanOptionalAction,
+    action=argparse.BooleanOptionalAction,  # To set to false use --no-dry-run
     help="dry run",
 )
 
