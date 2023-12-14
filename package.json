@@ -14,7 +14,7 @@
     "prettier:check": "prettier --check .",
     "start:cdn": "serve -s docs -p 4000",
     "generate:assets": "python scripts/generate_assets.py",
-    "generate:thumbnails": "python scripts/generate_thumbnails.py --max_kb 300"
+    "generate:thumbnails": "python scripts/generate_thumbnails.py --max_kb 250"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
