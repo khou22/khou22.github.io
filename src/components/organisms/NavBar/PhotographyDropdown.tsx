@@ -13,8 +13,8 @@ export const PhotographyDropdown: React.FC = () => {
         <li className="row-span-3 h-full">
           <Link href={PAGES.PHOTOGRAPHY.HOME}>
             <ImageCard
-              title="Buy Prints"
-              description="Elegant home decor"
+              title="My Work"
+              description="Print store and portfolio"
               imageSrc={getCdnAsset("media/photography/cover/featured_jpg")}
               containerClassName="w-full h-full rounded-xl"
               contentClassName="p-4"
@@ -30,11 +30,8 @@ export const PhotographyDropdown: React.FC = () => {
           </LinkWithArrow>
         </li>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow
-            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Drone)}
-            className="text-sm"
-          >
-            Aerial & Drone
+          <LinkWithArrow href={PAGES.PHOTOGRAPHY.AERIAL_SF} className="text-sm">
+            San Francisco by Air
           </LinkWithArrow>
         </li>
         <li className="border-b border-gray-400/50 pb-2">

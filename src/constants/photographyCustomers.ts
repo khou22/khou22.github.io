@@ -41,10 +41,15 @@ export const photographyCustomers = [
     logo: getCdnAsset("media/photography/customers/orens_hummus_png"),
     url: "https://orenshummus.com",
   },
+  // {
+  //   name: "Business Today",
+  //   logo: getCdnAsset("media/photography/customers/business_today_png"),
+  //   url: "https://www.businesstoday.org",
+  // },
   {
-    name: "Business Today",
-    logo: getCdnAsset("media/photography/customers/business_today_png"),
-    url: "https://www.businesstoday.org",
+    name: "APCO Worldwide",
+    logo: getCdnAsset("media/photography/customers/apco_worldwide_png"),
+    url: "https://apcoworldwide.com",
   },
   {
     name: "Contrary Capital",

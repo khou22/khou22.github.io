@@ -175,7 +175,7 @@ export const NavBar: React.FC = () => {
                   style={{ fontSize: linkFontSize }}
                   onMouseEnter={() => setIsDropdownOpen("photography")}
                 >
-                  Print Shop <CarrotDownIcon className="ms-2.5 h-2.5 w-2.5" />
+                  Photography <CarrotDownIcon className="ms-2.5 h-2.5 w-2.5" />
                 </Link>
               </li>
               <li>

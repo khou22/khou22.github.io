@@ -3459,6 +3459,10 @@ export const _generatedCdnAssets = {
     path: "/media/photography/customers/nuro_logo_dark.png",
     name: `nuro_logo_dark`,
   },
+	"media/photography/customers/apco_worldwide_png": {
+    path: "/media/photography/customers/apco_worldwide.png",
+    name: `apco_worldwide`,
+  },
 	"media/photography/customers/pyscho_bunny_png": {
     path: "/media/photography/customers/pyscho_bunny.png",
     name: `pyscho_bunny`,
