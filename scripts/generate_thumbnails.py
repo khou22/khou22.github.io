@@ -59,8 +59,8 @@ def main():
             continue
 
         image = Image.open(file)
-        image.thumbnail((600, 600))
-        image.save(thumbnail_path, "JPEG")
+        image.thumbnail((800, 800))
+        image.save(thumbnail_path, "JPEG", optimize=True)
         num_thumbnails_generated += 1
 
     print(
