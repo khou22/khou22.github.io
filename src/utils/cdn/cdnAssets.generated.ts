@@ -335,6 +335,10 @@ export const _generatedCdnAssets = {
     path: "/photography/Loneliest%20Road%20Vertical%20Drone%20%28Top%20Down%29.jpg",
     name: `Loneliest Road Vertical Drone (Top Down)`,
   },
+	"photography/Bay_Bridge_at_Sunset_from_Plane_placeholder_jpg": {
+    path: "/photography/Bay%20Bridge%20at%20Sunset%20from%20Plane.placeholder.jpg",
+    name: `Bay Bridge at Sunset from Plane.placeholder`,
+  },
 	"photography/Lake_Carnegie_Landscape_Fall_Season_placeholder_jpg": {
     path: "/photography/Lake%20Carnegie%20Landscape%20Fall%20Season.placeholder.jpg",
     name: `Lake Carnegie Landscape Fall Season.placeholder`,
@@ -1395,6 +1399,10 @@ export const _generatedCdnAssets = {
     path: "/photography/Grand%20Teton%20Bison%20Landscape.placeholder.jpg",
     name: `Grand Teton Bison Landscape.placeholder`,
   },
+	"photography/San_Francisco_Sunset_Skyline_Landscape_from_Plane_jpg": {
+    path: "/photography/San%20Francisco%20Sunset%20Skyline%20Landscape%20from%20Plane.jpg",
+    name: `San Francisco Sunset Skyline Landscape from Plane`,
+  },
 	"photography/Portrait_in_Front_of_Vatican_on_Bridge_at_Sunset_jpg": {
     path: "/photography/Portrait%20in%20Front%20of%20Vatican%20on%20Bridge%20at%20Sunset.jpg",
     name: `Portrait in Front of Vatican on Bridge at Sunset`,
@@ -2375,6 +2383,10 @@ export const _generatedCdnAssets = {
     path: "/photography/Looking%20out%20at%20Bear%20Valley%20Drone.jpg",
     name: `Looking out at Bear Valley Drone`,
   },
+	"photography/Bay_Bridge_at_Sunset_from_Plane_jpg": {
+    path: "/photography/Bay%20Bridge%20at%20Sunset%20from%20Plane.jpg",
+    name: `Bay Bridge at Sunset from Plane`,
+  },
 	"photography/Washington_DC_Subway_jpg": {
     path: "/photography/Washington%20DC%20Subway.jpg",
     name: `Washington DC Subway`,
@@ -2870,6 +2882,10 @@ export const _generatedCdnAssets = {
 	"photography/Rubicon_Peak_Side_Angle_Drone_placeholder_jpg": {
     path: "/photography/Rubicon%20Peak%20Side%20Angle%20Drone.placeholder.jpg",
     name: `Rubicon Peak Side Angle Drone.placeholder`,
+  },
+	"photography/San_Francisco_Sunset_Skyline_Landscape_from_Plane_placeholder_jpg": {
+    path: "/photography/San%20Francisco%20Sunset%20Skyline%20Landscape%20from%20Plane.placeholder.jpg",
+    name: `San Francisco Sunset Skyline Landscape from Plane.placeholder`,
   },
 	"photography/Lombard_Street_Drone_placeholder_jpg": {
     path: "/photography/Lombard%20Street%20Drone.placeholder.jpg",

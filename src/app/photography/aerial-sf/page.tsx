@@ -162,6 +162,27 @@ const AerialSfPage = () => {
           <p className="caption">Main Post, Presidio</p>
           <p className="caption font-mono">37.8008° N, 122.4568° W</p>
         </div>
+
+        {/* Third Row */}
+        <div className="col-span-5 flex h-full flex-col items-end justify-center">
+          <p className="caption">Main Post, Presidio</p>
+          <p className="caption font-mono">37.8008° N, 122.4568° W</p>
+        </div>
+        <div className="col-span-3">
+          <div className="relative mt-16 aspect-[5/4]">
+            <Image
+              src={getCdnAsset(
+                "photography/Main_Post_Presidio_San_Francisco_jpg",
+              )}
+              alt={getPhotoName(
+                "photography/Main_Post_Presidio_San_Francisco_jpg",
+              )}
+              className="object-cover"
+              fill
+            />
+          </div>
+        </div>
+        <div className="col-span-3 aspect-square" />
       </PageWrapper>
     </>
   );
