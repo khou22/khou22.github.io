@@ -1,3 +1,4 @@
+import { CoordinatesLabel } from "@/components/atoms/CoordinatesLabel/CoordinatesLabel";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { Label } from "@/components/ui/label";
 import { getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
@@ -64,7 +65,10 @@ const AerialSfPage = () => {
                 <p className="caption">2017 - Present</p>
 
                 <Label>Location</Label>
-                <p className="caption font-mono">37.7749° N, 122.4194° W</p>
+                <CoordinatesLabel
+                  latitude={37.7790262}
+                  longitude={-122.419906}
+                />
               </div>
             </div>
           </div>
@@ -113,17 +117,20 @@ const AerialSfPage = () => {
           <div className="relative aspect-[4/5] w-full">
             <Image
               alt={getPhotoName(
-                "photography/Lombard_Street_with_Golden_Gate_in_Background_via_Drone_jpg",
+                "photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_jpg",
               )}
               src={getCdnAsset(
-                "photography/Lombard_Street_with_Golden_Gate_in_Background_via_Drone_jpg",
+                "photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_jpg",
               )}
               className="object-cover"
               fill
             />
           </div>
-          <p className="caption mt-2">Lombard Street, San Francisco</p>
-          <p className="caption font-mono">37.8022° N, 122.4178° W</p>
+          <p className="caption mt-2">Lombard Street at 6am, San Francisco</p>
+          <CoordinatesLabel
+            latitude={37.80181121826172}
+            longitude={-122.42108917236328}
+          />
         </div>
         <div className="col-span-3" />
         <div className="col-span-4">
@@ -142,7 +149,10 @@ const AerialSfPage = () => {
         </div>
         <div className="col-span-1 flex h-full flex-col items-center justify-center">
           <p className="caption">Market Street</p>
-          <p className="caption font-mono">37.7877° N, 122.4033° W</p>
+          <CoordinatesLabel
+            latitude={37.78683207010421}
+            longitude={-122.40317722776919}
+          />
         </div>
 
         {/* Second Row */}
@@ -160,29 +170,74 @@ const AerialSfPage = () => {
         </div>
         <div className="col-span-3 flex aspect-[2/3] w-full flex-col items-start justify-end">
           <p className="caption">Main Post, Presidio</p>
-          <p className="caption font-mono">37.8008° N, 122.4568° W</p>
+          <CoordinatesLabel
+            latitude={37.80358670437733}
+            longitude={-122.46400436380893}
+          />
         </div>
 
         {/* Third Row */}
-        <div className="col-span-5 flex h-full flex-col items-end justify-center">
-          <p className="caption">Main Post, Presidio</p>
-          <p className="caption font-mono">37.8008° N, 122.4568° W</p>
+        <div className="col-span-5 flex h-full flex-col items-end justify-end">
+          <p className="caption">Ferry Building</p>
+          <CoordinatesLabel
+            latitude={37.795829812869364}
+            longitude={-122.39370902994662}
+          />
         </div>
         <div className="col-span-3">
           <div className="relative mt-16 aspect-[5/4]">
             <Image
               src={getCdnAsset(
-                "photography/Main_Post_Presidio_San_Francisco_jpg",
+                "photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_jpg",
               )}
               alt={getPhotoName(
-                "photography/Main_Post_Presidio_San_Francisco_jpg",
+                "photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_jpg",
               )}
               className="object-cover"
               fill
             />
           </div>
         </div>
-        <div className="col-span-3 aspect-square" />
+        <div className="col-span-4" />
+
+        {/* Fourth Row */}
+        <div className="col-span-7 pl-16">
+          <div className="relative mt-48 aspect-square">
+            <Image
+              src={getCdnAsset(
+                "photography/Bay_Bridge_at_Sunset_from_Plane_jpg",
+              )}
+              alt={getPhotoName(
+                "photography/Bay_Bridge_at_Sunset_from_Plane_jpg",
+              )}
+              className="object-cover"
+              fill
+            />
+          </div>
+        </div>
+        <div className="col-span-2 flex h-full flex-col items-start justify-end">
+          <p className="caption">Bay Bridge</p>
+          <CoordinatesLabel
+            latitude={37.8367032779192}
+            longitude={-122.40002831438571}
+          />
+        </div>
+        <div className="col-span-3">
+          <div className="relative aspect-[2/3]">
+            <Image
+              src={getCdnAsset("photography/Lombard_Street_Drone_jpg")}
+              alt={getPhotoName("photography/Lombard_Street_Drone_jpg")}
+              className="object-cover"
+              fill
+            />
+          </div>
+          <p className="caption text-center">Lombard Street</p>
+          <CoordinatesLabel
+            className="text-center"
+            latitude={37.80181121826172}
+            longitude={-122.42108917236328}
+          />
+        </div>
       </PageWrapper>
     </>
   );
