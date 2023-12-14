@@ -13,7 +13,8 @@
     "prettier": "prettier --write .",
     "prettier:check": "prettier --check .",
     "start:cdn": "serve -s docs -p 4000",
-    "generate:assets": "python scripts/generate_assets.py"
+    "generate:assets": "python scripts/generate_assets.py",
+    "generate:thumbnails": "python scripts/generate_thumbnails.py"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
