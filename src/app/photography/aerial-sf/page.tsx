@@ -1,6 +1,9 @@
 import { CoordinatesLabel } from "@/components/atoms/CoordinatesLabel/CoordinatesLabel";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
+import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 import { Label } from "@/components/ui/label";
+import { PhotoTags } from "@/constants/photoTags";
+import { getPhotosWithTags } from "@/data/photos/photoDbManager";
 import { getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -11,7 +14,12 @@ export const metadata: Metadata = {
     "Kevin Hou Photography exhibiting San Francisco's beautiful views by air: drone, plane, satellite, and more.",
 };
 
-const AerialSfPage = () => {
+const AerialSfPage = async () => {
+  const allPhotosIDs = await getPhotosWithTags([
+    PhotoTags.Drone,
+    PhotoTags.SanFrancisco,
+  ]);
+
   return (
     <>
       <PageWrapper
@@ -238,6 +246,10 @@ const AerialSfPage = () => {
             longitude={-122.42108917236328}
           />
         </div>
+      </PageWrapper>
+
+      <PageWrapper>
+        <PhotoGallery photoIDs={allPhotosIDs} />
       </PageWrapper>
     </>
   );

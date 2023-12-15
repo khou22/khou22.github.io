@@ -45,14 +45,47 @@ export const getTagsByPhotoID = async (): Promise<
   return tagsByPhotoID;
 };
 
+/**
+ * Get photo IDs that have the given tag.
+ */
 export const getPhotosWithTag = async (
   tag: PhotoTags,
 ): Promise<PhotoIdType[]> => {
   const db = await connectToPhotoDb();
   const rows = await db.all<PhotoTagRowType[]>(
-    `SELECT photo_id, tag_name FROM photo_tags WHERE tag_name = ?`,
+    `SELECT photo_id, tag_name FROM photo_tags WHERE tag_name = ? ORDER BY photo_id ASC`,
     [tag],
   );
+  const photoIDs = rows.map((row) => row.photo_id as PhotoIdType);
+  return photoIDs;
+};
+
+/**
+ * Get photo IDs that have _all_ the given tags.
+ */
+export const getPhotosWithTags = async (
+  tags: PhotoTags[],
+): Promise<PhotoIdType[]> => {
+  const db = await connectToPhotoDb();
+
+  // Get photo IDs that have all the tags.
+  const rows = await db.all<{ photo_id: string; tag_count: number }[]>(
+    `SELECT
+  photo_id,
+  COUNT(DISTINCT tag_name) as tag_count
+FROM photo_tags
+WHERE
+  tag_name IN (${tags.map(() => "?").join(", ")})
+GROUP BY
+  photo_id
+HAVING
+  COUNT(DISTINCT tag_name) = ?
+ORDER BY
+  photo_id ASC`,
+    ...tags,
+    tags.length,
+  );
+
   const photoIDs = rows.map((row) => row.photo_id as PhotoIdType);
   return photoIDs;
 };
