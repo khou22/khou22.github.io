@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { classNames } from "@/utils/style";
 
 type HalfTextArticleProps = {
   href: string;
@@ -8,6 +9,8 @@ type HalfTextArticleProps = {
   category: string;
   description: string;
   priority?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
 };
 
 export const HalfTextArticle: React.FC<HalfTextArticleProps> = ({
@@ -17,9 +20,15 @@ export const HalfTextArticle: React.FC<HalfTextArticleProps> = ({
   category,
   description,
   priority,
+  className = "",
+  style,
 }) => {
   return (
-    <Link href={href} className="group col-span-1">
+    <Link
+      href={href}
+      style={style}
+      className={classNames("group col-span-1", className)}
+    >
       <div className="flex h-full flex-col justify-evenly overflow-clip rounded bg-blue-800 shadow">
         <div className="relative aspect-square w-full">
           <Image

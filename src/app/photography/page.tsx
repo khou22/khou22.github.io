@@ -10,6 +10,8 @@ import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import Link from "next/link";
 
+const fadeAnimationDeltaMS = 170;
+
 const PhotographyHomepage = async () => {
   const categoryNodes = await Promise.all(
     allLocationTags.map(async (tag) => {
@@ -47,6 +49,8 @@ const PhotographyHomepage = async () => {
               "photography/Embarcadero_Aerial_View_at_Sunset_jpg",
             )}
             priority
+            className="fade-appear"
+            style={{ animationDelay: `${1 * fadeAnimationDeltaMS}ms` }}
           />
           <HalfTextArticle
             href={PAGES.PHOTOGRAPHY.FEATURED}
@@ -57,6 +61,8 @@ const PhotographyHomepage = async () => {
               "photography/Pigeon_Point_Lighthouse_Milky_Way_jpg",
             )}
             priority
+            className="fade-appear"
+            style={{ animationDelay: `${2 * fadeAnimationDeltaMS}ms` }}
           />
           <FullCoverArticle
             href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Japan)}
@@ -66,6 +72,8 @@ const PhotographyHomepage = async () => {
             width={1}
             imageSrc={getCdnAsset("photography/Hie_Shrine_Tokyo_Japan_jpg")}
             priority
+            className="fade-appear"
+            style={{ animationDelay: `${3 * fadeAnimationDeltaMS}ms` }}
           />
 
           <FullCoverArticle
@@ -77,6 +85,8 @@ const PhotographyHomepage = async () => {
             imageSrc={getCdnAsset(
               "photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg",
             )}
+            className="fade-appear"
+            style={{ animationDelay: `${4 * fadeAnimationDeltaMS}ms` }}
           />
           <FullCoverArticle
             href={PAGES.PHOTOGRAPHY.FEATURED}
@@ -85,6 +95,8 @@ const PhotographyHomepage = async () => {
             description="A mixture of fan favorites and personal favorites."
             width={2}
             imageSrc={getCdnAsset("photography/Yosemite_Valley_Sunset_jpg")}
+            className="fade-appear"
+            style={{ animationDelay: `${5 * fadeAnimationDeltaMS}ms` }}
           />
           <FullCoverArticle
             href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Drone)}
@@ -95,6 +107,8 @@ const PhotographyHomepage = async () => {
             imageSrc={getCdnAsset(
               "photography/Ping_Shek_Estate_Drone_Top_Down_Vertical_jpg",
             )}
+            className="fade-appear"
+            style={{ animationDelay: `${6 * fadeAnimationDeltaMS}ms` }}
           />
 
           <FullCoverArticle
@@ -106,6 +120,8 @@ const PhotographyHomepage = async () => {
             imageSrc={getCdnAsset(
               "photography/Grand_Teton_Bison_Landscape_jpg",
             )}
+            className="fade-appear"
+            style={{ animationDelay: `${7 * fadeAnimationDeltaMS}ms` }}
           />
           <HalfTextArticle
             href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.City)}
@@ -113,8 +129,10 @@ const PhotographyHomepage = async () => {
             category="Collection"
             description="Urban and city photography. Capturing everyday life."
             imageSrc={getCdnAsset(
-              "photography/Tokyo_Soba_Noodles_NIght_Market_Chef_placeholder_jpg",
+              "photography/Tokyo_Soba_Noodles_NIght_Market_Chef_jpg",
             )}
+            className="fade-appear"
+            style={{ animationDelay: `${8 * fadeAnimationDeltaMS}ms` }}
           />
           <FullCoverArticle
             href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Italy)}
@@ -123,8 +141,10 @@ const PhotographyHomepage = async () => {
             description="Solo travel adventures."
             width={1}
             imageSrc={getCdnAsset(
-              "photography/Meteora_Monastery_Perched_at_Sunset_placeholder_jpg",
+              "photography/Meteora_Monastery_Perched_at_Sunset_jpg",
             )}
+            className="fade-appear"
+            style={{ animationDelay: `${9 * fadeAnimationDeltaMS}ms` }}
           />
         </MagazineLayout>
       </PageWrapper>

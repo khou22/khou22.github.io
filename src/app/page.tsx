@@ -73,7 +73,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="h-screen w-full bg-black" />
+        <div className="h-screen w-full bg-white" />
       </div>
     </main>
   );

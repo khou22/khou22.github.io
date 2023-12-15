@@ -87,4 +87,24 @@
     background-size: cover;
     background-position: center;
   }
+
+  /* Fade in on page load. */
+  .fade-appear {
+    /* animation: fadeInAnimation ease 3s; */
+    animation-name: fadeInAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }

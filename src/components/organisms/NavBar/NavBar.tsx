@@ -14,12 +14,15 @@ import { PortfolioDropdown } from "./PortfolioDropdown";
 import { NavBarDropdownType } from "./types";
 import { PhotographyDropdown } from "./PhotographyDropdown";
 import { usePathname } from "next/navigation";
+import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 
 /**
  * Standard nav bar for the site. Floats on certain pages, otherwise is relative. Dropdowns for
  * items with additional content.
  */
 export const NavBar: React.FC = () => {
+  const isClient = useIsClient();
+
   const { scrollY } = useScrollPosition();
   const screenSize = useScreenSize();
   const [isDropdownOpen, setIsDropdownOpen] = useState<NavBarDropdownType>();
@@ -46,8 +49,11 @@ export const NavBar: React.FC = () => {
         "w-screen",
         isFloating
           ? "fixed left-0 top-0 z-20"
-          : // If we want to make this relative, simply change "sticky" to "relative"
-            "sticky left-0 top-0 z-20 border-b border-gray-100",
+          : `${
+              // Make sure there is no layout shift when the component gets executed on the client.
+              // If we want to make this relative, simply change "sticky" to "relative"
+              isClient ? "relative" : "sticky"
+            } left-0 top-0 z-20 border-b border-gray-100`,
       )}
       onMouseLeave={() => setIsDropdownOpen(undefined)}
     >

@@ -10,6 +10,8 @@ type FullCoverArticleProps = {
   category: string;
   description: string;
   priority?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
 };
 
 export const FullCoverArticle: React.FC<FullCoverArticleProps> = ({
@@ -20,10 +22,16 @@ export const FullCoverArticle: React.FC<FullCoverArticleProps> = ({
   description,
   width = 1,
   priority,
+  className = "",
+  style,
 }) => {
   const sizeClassName = width === 2 ? "col-span-1 sm:col-span-2" : "col-span-1";
   return (
-    <Link href={href} className={classNames("group", sizeClassName)}>
+    <Link
+      href={href}
+      style={style}
+      className={classNames("group", sizeClassName, className)}
+    >
       <div className="relative h-full min-h-[300px] w-full overflow-hidden rounded shadow md:min-h-[400px] xl:min-h-[500px]">
         <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center space-y-4 text-white">
           <p className="text-sm text-gray-200">{category.toUpperCase()}</p>

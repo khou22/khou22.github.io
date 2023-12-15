@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { PhotoRecord } from "./types";
 import { GalleryImage } from "./GalleryImage";
+import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 
 type PhotoGalleryClientProps = {
   photos: PhotoRecord[];
@@ -19,12 +20,9 @@ export const PhotoGalleryClient: React.FC<PhotoGalleryClientProps> = ({
   const { width } = useScreenSize();
   const isMobile = width < 768;
 
-  // Only run on the client (https://nextjs.org/docs/messages/react-hydration-error#solution-1-using-useeffect-to-run-on-the-client-only)
-  const [isClient, setIsClient] = useState(false);
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const isClient = useIsClient();
 
+  // TODO (k): Replace with a placeholder.
   if (!isClient) return <></>;
 
   return (
