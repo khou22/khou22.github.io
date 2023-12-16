@@ -2167,6 +2167,126 @@ export const _generatedCdnAssets = {
     path: "/photography/%20%28USA%20Road%20Trip%29-2.placeholder.jpg",
     name: ` (USA Road Trip)-2.placeholder`,
   },
+	"photography/portraits/Miriam_Chinatown_Portrait_placeholder_jpg": {
+    path: "/photography/portraits/Miriam%20Chinatown%20Portrait.placeholder.jpg",
+    name: `Miriam Chinatown Portrait.placeholder`,
+  },
+	"photography/portraits/Chinatown_Walking_Silhouette_placeholder_jpg": {
+    path: "/photography/portraits/Chinatown%20Walking%20Silhouette.placeholder.jpg",
+    name: `Chinatown Walking Silhouette.placeholder`,
+  },
+	"photography/portraits/Conrad_Bike_Portrait_Skyline_jpg": {
+    path: "/photography/portraits/Conrad%20Bike%20Portrait%20Skyline.jpg",
+    name: `Conrad Bike Portrait Skyline`,
+  },
+	"photography/portraits/WEMKE_Christmas_Card_2022_Top_Down_Drone_Skiing_jpg": {
+    path: "/photography/portraits/WEMKE%20Christmas%20Card%202022%20Top%20Down%20Drone%20Skiing.jpg",
+    name: `WEMKE Christmas Card 2022 Top Down Drone Skiing`,
+  },
+	"photography/portraits/Joelle_North_Beach_Portrait_jpg": {
+    path: "/photography/portraits/Joelle%20North%20Beach%20Portrait.jpg",
+    name: `Joelle North Beach Portrait`,
+  },
+	"photography/portraits/Conrad_Bike_Portrait_Trick_placeholder_jpg": {
+    path: "/photography/portraits/Conrad%20Bike%20Portrait%20Trick.placeholder.jpg",
+    name: `Conrad Bike Portrait Trick.placeholder`,
+  },
+	"photography/portraits/Lightsaber_Portrait_of_Ben_in_Alleyway_jpg": {
+    path: "/photography/portraits/Lightsaber%20Portrait%20of%20Ben%20in%20Alleyway.jpg",
+    name: `Lightsaber Portrait of Ben in Alleyway`,
+  },
+	"photography/portraits/Conrad_Bike_Portrait_Vertical_jpg": {
+    path: "/photography/portraits/Conrad%20Bike%20Portrait%20%28Vertical%29.jpg",
+    name: `Conrad Bike Portrait (Vertical)`,
+  },
+	"photography/portraits/Courtney_Fall_Leaves_Portrait_jpg": {
+    path: "/photography/portraits/Courtney%20Fall%20Leaves%20Portrait.jpg",
+    name: `Courtney Fall Leaves Portrait`,
+  },
+	"photography/portraits/WEMKE_Christmas_Card_2022_Family_Portrait_placeholder_jpg": {
+    path: "/photography/portraits/WEMKE%20Christmas%20Card%202022%20Family%20Portrait.placeholder.jpg",
+    name: `WEMKE Christmas Card 2022 Family Portrait.placeholder`,
+  },
+	"photography/portraits/Black_Sheep_Foods_Team_Photo_placeholder_jpg": {
+    path: "/photography/portraits/Black%20Sheep%20Foods%20Team%20Photo.placeholder.jpg",
+    name: `Black Sheep Foods Team Photo.placeholder`,
+  },
+	"photography/portraits/Lightsaber_Portrait_of_Ben_in_Alleyway_placeholder_jpg": {
+    path: "/photography/portraits/Lightsaber%20Portrait%20of%20Ben%20in%20Alleyway.placeholder.jpg",
+    name: `Lightsaber Portrait of Ben in Alleyway.placeholder`,
+  },
+	"photography/portraits/Chinatown_Nightime_Portrait_placeholder_jpg": {
+    path: "/photography/portraits/Chinatown%20Nightime%20Portrait.placeholder.jpg",
+    name: `Chinatown Nightime Portrait.placeholder`,
+  },
+	"photography/portraits/Chinatown_Walking_Silhouette_jpg": {
+    path: "/photography/portraits/Chinatown%20Walking%20Silhouette.jpg",
+    name: `Chinatown Walking Silhouette`,
+  },
+	"photography/portraits/Courtney_Fall_Leaves_Portrait_placeholder_jpg": {
+    path: "/photography/portraits/Courtney%20Fall%20Leaves%20Portrait.placeholder.jpg",
+    name: `Courtney Fall Leaves Portrait.placeholder`,
+  },
+	"photography/portraits/Conrad_Bike_Portrait_Trick_jpg": {
+    path: "/photography/portraits/Conrad%20Bike%20Portrait%20Trick.jpg",
+    name: `Conrad Bike Portrait Trick`,
+  },
+	"photography/portraits/Fast_Forward_Team_Photo_placeholder_jpg": {
+    path: "/photography/portraits/Fast%20Forward%20Team%20Photo.placeholder.jpg",
+    name: `Fast Forward Team Photo.placeholder`,
+  },
+	"photography/portraits/Food_Scientist_Portrait_placeholder_jpg": {
+    path: "/photography/portraits/Food%20Scientist%20Portrait.placeholder.jpg",
+    name: `Food Scientist Portrait.placeholder`,
+  },
+	"photography/portraits/Black_Sheep_Foods_Cofounders_placeholder_jpg": {
+    path: "/photography/portraits/Black%20Sheep%20Foods%20Cofounders.placeholder.jpg",
+    name: `Black Sheep Foods Cofounders.placeholder`,
+  },
+	"photography/portraits/WEMKE_Christmas_Card_2022_Top_Down_Drone_Skiing_placeholder_jpg": {
+    path: "/photography/portraits/WEMKE%20Christmas%20Card%202022%20Top%20Down%20Drone%20Skiing.placeholder.jpg",
+    name: `WEMKE Christmas Card 2022 Top Down Drone Skiing.placeholder`,
+  },
+	"photography/portraits/Joelle_North_Beach_Portrait_placeholder_jpg": {
+    path: "/photography/portraits/Joelle%20North%20Beach%20Portrait.placeholder.jpg",
+    name: `Joelle North Beach Portrait.placeholder`,
+  },
+	"photography/portraits/WEMKE_Christmas_Card_2022_Family_Portrait_jpg": {
+    path: "/photography/portraits/WEMKE%20Christmas%20Card%202022%20Family%20Portrait.jpg",
+    name: `WEMKE Christmas Card 2022 Family Portrait`,
+  },
+	"photography/portraits/Conrad_Bike_Portrait_Vertical_placeholder_jpg": {
+    path: "/photography/portraits/Conrad%20Bike%20Portrait%20%28Vertical%29.placeholder.jpg",
+    name: `Conrad Bike Portrait (Vertical).placeholder`,
+  },
+	"photography/portraits/Conrad_Bike_Portrait_Skyline_placeholder_jpg": {
+    path: "/photography/portraits/Conrad%20Bike%20Portrait%20Skyline.placeholder.jpg",
+    name: `Conrad Bike Portrait Skyline.placeholder`,
+  },
+	"photography/portraits/Black_Sheep_Foods_Cofounders_jpg": {
+    path: "/photography/portraits/Black%20Sheep%20Foods%20Cofounders.jpg",
+    name: `Black Sheep Foods Cofounders`,
+  },
+	"photography/portraits/Miriam_Chinatown_Portrait_jpg": {
+    path: "/photography/portraits/Miriam%20Chinatown%20Portrait.jpg",
+    name: `Miriam Chinatown Portrait`,
+  },
+	"photography/portraits/Fast_Forward_Team_Photo_jpg": {
+    path: "/photography/portraits/Fast%20Forward%20Team%20Photo.jpg",
+    name: `Fast Forward Team Photo`,
+  },
+	"photography/portraits/Food_Scientist_Portrait_jpg": {
+    path: "/photography/portraits/Food%20Scientist%20Portrait.jpg",
+    name: `Food Scientist Portrait`,
+  },
+	"photography/portraits/Black_Sheep_Foods_Team_Photo_jpg": {
+    path: "/photography/portraits/Black%20Sheep%20Foods%20Team%20Photo.jpg",
+    name: `Black Sheep Foods Team Photo`,
+  },
+	"photography/portraits/Chinatown_Nightime_Portrait_jpg": {
+    path: "/photography/portraits/Chinatown%20Nightime%20Portrait.jpg",
+    name: `Chinatown Nightime Portrait`,
+  },
 	"photography/New_York_Looking_Down_Street_from_High_Line_Vertical_jpg": {
     path: "/photography/New%20York%20Looking%20Down%20Street%20from%20High%20Line%20-%20Vertical.jpg",
     name: `New York Looking Down Street from High Line - Vertical`,
