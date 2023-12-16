@@ -1,3 +1,4 @@
+import _ from "lodash";
 import { _generatedCdnAssets } from "./cdnAssets.generated";
 
 const baseUrl =
@@ -33,22 +34,33 @@ export const castPhotoID = (photoIdStr: string): PhotoIdType | null => {
 };
 
 /**
- * Get the URL component of a photo ID.
+ * Get the URL component of a photo ID (ie. the file name from the full path)
  */
 export const getPhotoURLComponent = (photoID: PhotoIdType) => {
-  if (photoID.startsWith("photography/")) {
-    return photoID.substring("photography/".length);
-  }
+  const fileName = photoID.split("/").pop();
 
-  console.warn(`Photo ID '${photoID}' does not start with "photography/"`);
-  return photoID;
+  if (!fileName) {
+    console.warn(`Photo ID '${photoID}' does not start with "photography/"`);
+    return photoID;
+  }
+  return fileName;
 };
 
 /**
  * Get the photo ID from a URL component.
  */
 export const getPhotoIDFromURLComponent = (urlComponent: string) => {
-  return castPhotoID(`photography/${urlComponent}`);
+  // Get the photo ID that ends with the url component.
+  const photoID = _.find(
+    Object.keys(_generatedCdnAssets) as PhotoIdType[],
+    (fullID) => fullID.endsWith(urlComponent),
+  );
+
+  if (!photoID) {
+    throw new Error(`Could not parse photo ID from ${urlComponent}`);
+  }
+
+  return castPhotoID(photoID);
 };
 
 /**
