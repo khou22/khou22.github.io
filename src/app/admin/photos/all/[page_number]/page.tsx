@@ -1,8 +1,8 @@
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { getPhotoIDs } from "@/utils/photos/getPhotoIDs";
-import { PhotoManagementCard } from "./PhotoManagementCard";
 import { getTagsByPhotoID } from "@/data/photos/photoDbManager";
 import { PageControls } from "./PageControls";
+import { PhotoManagementCard } from "@/components/molecules/PhotoManagementCard/PhotoManagementCard";
 
 const photosPerPage = 40;
 

@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
-import { PhotoTagUpdateRequest } from "../tags/types";
+import { PhotoTagUpdateRequest } from "../../../app/admin/photos/tags/types";
 import { PhotoTags } from "@/constants/photoTags";
 import { enumToString } from "@/utils/enum";
 import { classNames } from "@/utils/style";
