@@ -2971,6 +2971,102 @@ export const _generatedCdnAssets = {
     path: "/photography/-2.jpg",
     name: `-2`,
   },
+	"photography/greece/Greek_Temple_Near_Acropolis_jpg": {
+    path: "/photography/greece/Greek%20Temple%20Near%20Acropolis.jpg",
+    name: `Greek Temple Near Acropolis`,
+  },
+	"photography/greece/Acropolis_at_Sunset_from_Filopappou_Hill_placeholder_jpg": {
+    path: "/photography/greece/Acropolis%20at%20Sunset%20from%20Filopappou%20Hill.placeholder.jpg",
+    name: `Acropolis at Sunset from Filopappou Hill.placeholder`,
+  },
+	"photography/greece/Temple_of_Apollo_in_Delphi_placeholder_jpg": {
+    path: "/photography/greece/Temple%20of%20Apollo%20in%20Delphi.placeholder.jpg",
+    name: `Temple of Apollo in Delphi.placeholder`,
+  },
+	"photography/greece/Milos_Rosemary_Olive_Oil_Athens_Greece_jpg": {
+    path: "/photography/greece/Milos%20Rosemary%20Olive%20Oil%20%28Athens%2C%20Greece%29.jpg",
+    name: `Milos Rosemary Olive Oil (Athens, Greece)`,
+  },
+	"photography/greece/Milos_Rosemary_Olive_Oil_Athens_Greece_placeholder_jpg": {
+    path: "/photography/greece/Milos%20Rosemary%20Olive%20Oil%20%28Athens%2C%20Greece%29.placeholder.jpg",
+    name: `Milos Rosemary Olive Oil (Athens, Greece).placeholder`,
+  },
+	"photography/greece/Milos_Beets_Athens_Greece_placeholder_jpg": {
+    path: "/photography/greece/Milos%20Beets%20%28Athens%2C%20Greece%29.placeholder.jpg",
+    name: `Milos Beets (Athens, Greece).placeholder`,
+  },
+	"photography/greece/Meteora_Valley_at_Sunset_placeholder_jpg": {
+    path: "/photography/greece/Meteora%20Valley%20at%20Sunset.placeholder.jpg",
+    name: `Meteora Valley at Sunset.placeholder`,
+  },
+	"photography/greece/Meteora_Monastery_Perched_Atop_Cliff_Landscape_jpg": {
+    path: "/photography/greece/Meteora%20Monastery%20Perched%20Atop%20Cliff%20%28Landscape%29.jpg",
+    name: `Meteora Monastery Perched Atop Cliff (Landscape)`,
+  },
+	"photography/greece/Acropolis_at_Sunset_from_Filopappou_Hill_Panorama_placeholder_jpg": {
+    path: "/photography/greece/Acropolis%20at%20Sunset%20from%20Filopappou%20Hill%20Panorama.placeholder.jpg",
+    name: `Acropolis at Sunset from Filopappou Hill Panorama.placeholder`,
+  },
+	"photography/greece/Athens_at_Sunset_jpg": {
+    path: "/photography/greece/Athens%20at%20Sunset.jpg",
+    name: `Athens at Sunset`,
+  },
+	"photography/greece/Milos_Octopus_Dish_Athens_Greece_placeholder_jpg": {
+    path: "/photography/greece/Milos%20Octopus%20Dish%20%28Athens%2C%20Greece%29.placeholder.jpg",
+    name: `Milos Octopus Dish (Athens, Greece).placeholder`,
+  },
+	"photography/greece/Acropolis_at_Sunset_from_Filopappou_Hill_Panorama_jpg": {
+    path: "/photography/greece/Acropolis%20at%20Sunset%20from%20Filopappou%20Hill%20Panorama.jpg",
+    name: `Acropolis at Sunset from Filopappou Hill Panorama`,
+  },
+	"photography/greece/Meteora_Monastery_Perched_Atop_Cliff_Landscape_placeholder_jpg": {
+    path: "/photography/greece/Meteora%20Monastery%20Perched%20Atop%20Cliff%20%28Landscape%29.placeholder.jpg",
+    name: `Meteora Monastery Perched Atop Cliff (Landscape).placeholder`,
+  },
+	"photography/greece/Sun_Splitting_Clouds_at_Temple_of_Poseidon_jpg": {
+    path: "/photography/greece/Sun%20Splitting%20Clouds%20at%20Temple%20of%20Poseidon.jpg",
+    name: `Sun Splitting Clouds at Temple of Poseidon`,
+  },
+	"photography/greece/Milos_Beets_Athens_Greece_jpg": {
+    path: "/photography/greece/Milos%20Beets%20%28Athens%2C%20Greece%29.jpg",
+    name: `Milos Beets (Athens, Greece)`,
+  },
+	"photography/greece/Milos_Octopus_Dish_Athens_Greece_jpg": {
+    path: "/photography/greece/Milos%20Octopus%20Dish%20%28Athens%2C%20Greece%29.jpg",
+    name: `Milos Octopus Dish (Athens, Greece)`,
+  },
+	"photography/greece/Meteora_Monastery_Perched_Atop_Cliff_Portrait_jpg": {
+    path: "/photography/greece/Meteora%20Monastery%20Perched%20Atop%20Cliff%20%28Portrait%29.jpg",
+    name: `Meteora Monastery Perched Atop Cliff (Portrait)`,
+  },
+	"photography/greece/Temple_of_Apollo_in_Delphi_jpg": {
+    path: "/photography/greece/Temple%20of%20Apollo%20in%20Delphi.jpg",
+    name: `Temple of Apollo in Delphi`,
+  },
+	"photography/greece/Meteora_Valley_at_Sunset_jpg": {
+    path: "/photography/greece/Meteora%20Valley%20at%20Sunset.jpg",
+    name: `Meteora Valley at Sunset`,
+  },
+	"photography/greece/Sun_Splitting_Clouds_at_Temple_of_Poseidon_placeholder_jpg": {
+    path: "/photography/greece/Sun%20Splitting%20Clouds%20at%20Temple%20of%20Poseidon.placeholder.jpg",
+    name: `Sun Splitting Clouds at Temple of Poseidon.placeholder`,
+  },
+	"photography/greece/Acropolis_at_Sunset_from_Filopappou_Hill_jpg": {
+    path: "/photography/greece/Acropolis%20at%20Sunset%20from%20Filopappou%20Hill.jpg",
+    name: `Acropolis at Sunset from Filopappou Hill`,
+  },
+	"photography/greece/Greek_Temple_Near_Acropolis_placeholder_jpg": {
+    path: "/photography/greece/Greek%20Temple%20Near%20Acropolis.placeholder.jpg",
+    name: `Greek Temple Near Acropolis.placeholder`,
+  },
+	"photography/greece/Meteora_Monastery_Perched_Atop_Cliff_Portrait_placeholder_jpg": {
+    path: "/photography/greece/Meteora%20Monastery%20Perched%20Atop%20Cliff%20%28Portrait%29.placeholder.jpg",
+    name: `Meteora Monastery Perched Atop Cliff (Portrait).placeholder`,
+  },
+	"photography/greece/Athens_at_Sunset_placeholder_jpg": {
+    path: "/photography/greece/Athens%20at%20Sunset.placeholder.jpg",
+    name: `Athens at Sunset.placeholder`,
+  },
 	"photography/Rain_Walking_Motion_Blur_in_Milan_jpg": {
     path: "/photography/Rain%20Walking%20Motion%20Blur%20in%20Milan.jpg",
     name: `Rain Walking Motion Blur in Milan`,

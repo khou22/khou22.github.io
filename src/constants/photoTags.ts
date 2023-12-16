@@ -31,6 +31,7 @@ export enum PhotoTags {
   Vietnam = "location_vietnam",
   Thailand = "location_thailand",
   Germany = "location_germany",
+  Greece = "location_greece",
 
   // Camera specific.
   Drone = "camera_drone",
@@ -60,6 +61,8 @@ export const allLocationTags = [
   PhotoTags.Singapore,
   PhotoTags.Vietnam,
   PhotoTags.Thailand,
+  PhotoTags.Germany,
+  PhotoTags.Greece,
 ];
 
 export type TagMetadataType = {
@@ -164,17 +167,18 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Yosemite]: {
     name: "Yosemite",
     slug: "yosemite",
-    thumbnailPhotoId: "photography/Yosemite_Valley_Sunset_jpg",
+    thumbnailPhotoId: "photography/Yosemite_Valley_Sunset_placeholder_jpg",
   },
   [PhotoTags.Hawaii]: {
     name: "Hawaii",
     slug: "hawaii",
-    thumbnailPhotoId: "photography/Nakalele_Blowhole_jpg",
+    thumbnailPhotoId: "photography/Nakalele_Blowhole_placeholder_jpg",
   },
   [PhotoTags.Italy]: {
     name: "Italy",
     slug: "italy",
-    thumbnailPhotoId: "photography/Bridge_with_Vatican_in_the_Background_jpg",
+    thumbnailPhotoId:
+      "photography/Bridge_with_Vatican_in_the_Background_placeholder_jpg",
   },
   [PhotoTags.Taiwan]: {
     name: "Taiwan",
@@ -189,7 +193,7 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Vietnam]: {
     name: "Vietnam",
     slug: "vietnam",
-    thumbnailPhotoId: "media/store/Halong_Bay_Sunset_Panorama_jpg",
+    thumbnailPhotoId: "photography/Halong_Bay_Sunset_Panorama_placeholder_jpg",
   },
   [PhotoTags.Thailand]: {
     name: "Thailand",
@@ -198,6 +202,14 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Germany]: {
     name: "Germany",
     slug: "germany",
+    thumbnailPhotoId:
+      "photography/germany/Munich_Colorful_Houses_in_Winter_placeholder_jpg",
+  },
+  [PhotoTags.Greece]: {
+    name: "Greece",
+    slug: "greece",
+    thumbnailPhotoId:
+      "photography/greece/Acropolis_at_Sunset_from_Filopappou_Hill_placeholder_jpg",
   },
   [PhotoTags.Drone]: {
     name: "Aerial",
