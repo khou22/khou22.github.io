@@ -19,15 +19,6 @@ export type ProgrammingProjectType = {
 
 export const programmingProjects: ProgrammingProjectType[] = [
   {
-    name: "Slate Scheduler",
-    subtitle: "Painlessly schedule calendar events.",
-    slug: "http://slate.khou22.com",
-    image: getCdnAsset("media/projects/slate/slate_scheduler_png"),
-    category: ProjectCategory.iOSApp,
-    description:
-      "Publically available on the Apple app store! A fun UX and iOS engineering project to make scheduling calendar events a smoother and more enjoyable experience. It uses basic machine learning to build a model of your calendar and predict your event so you don't need to type anything in. It also does away with a lot of poor UI elements like date pickers.",
-  },
-  {
     name: "Lookbook",
     subtitle: "Photo curration",
     slug: "https://www.getlookbook.com",
@@ -35,6 +26,33 @@ export const programmingProjects: ProgrammingProjectType[] = [
     category: ProjectCategory.WebApp,
     description:
       "Helping marketers and photographers currate massive collections of images using computer vision.",
+  },
+  {
+    name: "Async Post Message",
+    subtitle: "Open Source Library",
+    slug: "https://async-post-message.vercel.app/",
+    image: getCdnAsset("media/projects/lookbook/hero_png"),
+    category: ProjectCategory.WebApp,
+    description:
+      "Library to enable `window.postMessage` calls to be asynchronous.",
+  },
+  {
+    name: "Overview Satellite Camera",
+    subtitle: "Overview & Airbus Partnership",
+    slug: "https://over-view.com",
+    image: getCdnAsset("media/projects/lookbook/hero_png"),
+    category: ProjectCategory.WebApp,
+    description:
+      "Equip consumers with a tool to capture and print their own satellite images",
+  },
+  {
+    name: "Slate Scheduler",
+    subtitle: "Painlessly schedule calendar events.",
+    slug: "http://slate.khou22.com",
+    image: getCdnAsset("media/projects/slate/slate_scheduler_png"),
+    category: ProjectCategory.iOSApp,
+    description:
+      "Publically available on the Apple app store! A fun UX and iOS engineering project to make scheduling calendar events a smoother and more enjoyable experience. It uses basic machine learning to build a model of your calendar and predict your event so you don't need to type anything in. It also does away with a lot of poor UI elements like date pickers.",
   },
   {
     name: "HTMLexa",
