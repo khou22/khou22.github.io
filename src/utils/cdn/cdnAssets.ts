@@ -23,10 +23,17 @@ export const getPhotoName = (photoID: PhotoIdType) => {
 };
 
 /**
+ * Returns whether the photoID is valid.
+ */
+export const isPhotoID = (photoIdStr: string): boolean => {
+  return Object.keys(_generatedCdnAssets).includes(photoIdStr);
+};
+
+/**
  * Cast a string to a photo ID if it is a valid photo ID.
  */
 export const castPhotoID = (photoIdStr: string): PhotoIdType | null => {
-  if (!photoIdStr || !Object.keys(_generatedCdnAssets).includes(photoIdStr)) {
+  if (!photoIdStr || !isPhotoID(photoIdStr)) {
     console.warn(`Invalid photo ID: ${photoIdStr}`);
     return null;
   }

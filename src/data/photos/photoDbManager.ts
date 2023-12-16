@@ -89,3 +89,24 @@ ORDER BY
   const photoIDs = rows.map((row) => row.photo_id as PhotoIdType);
   return photoIDs;
 };
+
+/**
+ * Execute a rename for a photo ID. Updates the `photo_tags` table.
+ */
+export const renamePhotoID = async (
+  original: PhotoIdType,
+  destination: string,
+): Promise<number> => {
+  const db = await connectToPhotoDb();
+  const tx = await db.run(
+    `UPDATE photo_tags
+SET photo_id = ?
+WHERE destination = ?`,
+    destination,
+    original,
+  );
+  if (tx.changes === undefined) {
+    throw new Error("transaction changes are undefined");
+  }
+  return tx.changes;
+};

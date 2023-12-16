@@ -2283,9 +2283,25 @@ export const _generatedCdnAssets = {
     path: "/photography/Black%20Sheep%20Foods%20Table%20of%20Food.jpg",
     name: `Black Sheep Foods Table of Food`,
   },
+	"photography/food/Black_Sheep_Orens_Hummus_Food_Photography_2_placeholder_jpg": {
+    path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%202.placeholder.jpg",
+    name: `Black Sheep Orens Hummus Food Photography 2.placeholder`,
+  },
 	"photography/food/Black_Sheep_Logo_with_Food_Spread_jpg": {
     path: "/photography/food/Black%20Sheep%20Logo%20with%20Food%20Spread.jpg",
     name: `Black Sheep Logo with Food Spread`,
+  },
+	"photography/food/Black_Sheep_Orens_Hummus_Food_Photography_Top_Down_placeholder_jpg": {
+    path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%20Top%20Down.placeholder.jpg",
+    name: `Black Sheep Orens Hummus Food Photography Top Down.placeholder`,
+  },
+	"photography/food/Fancy_Scraps_Food_Photography_placeholder_jpg": {
+    path: "/photography/food/Fancy%20Scraps%20Food%20Photography.placeholder.jpg",
+    name: `Fancy Scraps Food Photography.placeholder`,
+  },
+	"photography/food/Black_Sheep_Logo_with_Food_Spread_placeholder_jpg": {
+    path: "/photography/food/Black%20Sheep%20Logo%20with%20Food%20Spread.placeholder.jpg",
+    name: `Black Sheep Logo with Food Spread.placeholder`,
   },
 	"photography/food/Black_Sheep_Foods_Three_Burger_Cover_Photo_jpg": {
     path: "/photography/food/Black%20Sheep%20Foods%20Three%20Burger%20Cover%20Photo.jpg",
@@ -2303,6 +2319,10 @@ export const _generatedCdnAssets = {
     path: "/photography/food/Black%20Sheep%20Hand%20Holding%20Burger.jpg",
     name: `Black Sheep Hand Holding Burger`,
   },
+	"photography/food/Black_Sheep_Hand_Holding_Burger_placeholder_jpg": {
+    path: "/photography/food/Black%20Sheep%20Hand%20Holding%20Burger.placeholder.jpg",
+    name: `Black Sheep Hand Holding Burger.placeholder`,
+  },
 	"photography/food/Black_Sheep_Orens_Hummus_Food_Photography_1_jpg": {
     path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%201.jpg",
     name: `Black Sheep Orens Hummus Food Photography 1`,
@@ -2315,9 +2335,25 @@ export const _generatedCdnAssets = {
     path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%202.jpg",
     name: `Black Sheep Orens Hummus Food Photography 2`,
   },
+	"photography/food/Black_Sheep_Orens_Hummus_Food_Photography_1_placeholder_jpg": {
+    path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%201.placeholder.jpg",
+    name: `Black Sheep Orens Hummus Food Photography 1.placeholder`,
+  },
+	"photography/food/Espresso_Martini_Food_Photography_placeholder_jpg": {
+    path: "/photography/food/Espresso%20Martini%20Food%20Photography.placeholder.jpg",
+    name: `Espresso Martini Food Photography.placeholder`,
+  },
 	"photography/food/Executive_Order_Bar_Food_jpg": {
     path: "/photography/food/Executive%20Order%20Bar%20Food.jpg",
     name: `Executive Order Bar Food`,
+  },
+	"photography/food/Black_Sheep_Foods_Three_Burger_Cover_Photo_placeholder_jpg": {
+    path: "/photography/food/Black%20Sheep%20Foods%20Three%20Burger%20Cover%20Photo.placeholder.jpg",
+    name: `Black Sheep Foods Three Burger Cover Photo.placeholder`,
+  },
+	"photography/food/Executive_Order_Bar_Food_placeholder_jpg": {
+    path: "/photography/food/Executive%20Order%20Bar%20Food.placeholder.jpg",
+    name: `Executive Order Bar Food.placeholder`,
   },
 	"photography/Hong_Kong_Alleyway_Downtown_jpg": {
     path: "/photography/Hong%20Kong%20Alleyway%20Downtown.jpg",
