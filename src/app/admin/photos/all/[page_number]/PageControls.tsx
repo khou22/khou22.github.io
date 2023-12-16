@@ -20,7 +20,7 @@ export const PageControls: React.FC<PageControlsProps> = ({
   ).map((page) => (
     <Link
       key={page}
-      href={PAGES.ADMIN.PHOTO(page)}
+      href={PAGES.ADMIN.ALL_PHOTOS(page)}
       aria-current="page"
       className={classNames(
         "relative z-10 inline-flex items-center px-4 py-2 text-sm font-semibold focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
@@ -52,7 +52,7 @@ export const PageControls: React.FC<PageControlsProps> = ({
           aria-label="Pagination"
         >
           <Link
-            href={PAGES.ADMIN.PHOTO(currentPage - 1)}
+            href={PAGES.ADMIN.ALL_PHOTOS(currentPage - 1)}
             className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
           >
             <span className="sr-only">Previous</span>
@@ -62,7 +62,7 @@ export const PageControls: React.FC<PageControlsProps> = ({
           {pageSelectNodes}
 
           <Link
-            href={PAGES.ADMIN.PHOTO(currentPage + 1)}
+            href={PAGES.ADMIN.ALL_PHOTOS(currentPage + 1)}
             className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
           >
             <span className="sr-only">Next</span>
