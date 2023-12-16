@@ -595,6 +595,38 @@ export const _generatedCdnAssets = {
     path: "/photography/Greenwich%20Golf%20Course%20Summer%20Drone%20Vertical.placeholder.jpg",
     name: `Greenwich Golf Course Summer Drone Vertical.placeholder`,
   },
+	"photography/engagements/Aravind_and_Laya_Engagement_Proposal_placeholder_jpg": {
+    path: "/photography/engagements/Aravind%20and%20Laya%20Engagement%20Proposal.placeholder.jpg",
+    name: `Aravind and Laya Engagement Proposal.placeholder`,
+  },
+	"photography/engagements/Aravind_and_Laya_Engagement_Proposal_jpg": {
+    path: "/photography/engagements/Aravind%20and%20Laya%20Engagement%20Proposal.jpg",
+    name: `Aravind and Laya Engagement Proposal`,
+  },
+	"photography/engagements/Engagement_Ring_on_Rock_placeholder_jpg": {
+    path: "/photography/engagements/Engagement%20Ring%20on%20Rock.placeholder.jpg",
+    name: `Engagement Ring on Rock.placeholder`,
+  },
+	"photography/engagements/Engagement_Ring_on_Rock_jpg": {
+    path: "/photography/engagements/Engagement%20Ring%20on%20Rock.jpg",
+    name: `Engagement Ring on Rock`,
+  },
+	"photography/engagements/Aravind_and_Laya_Engagement_jpg": {
+    path: "/photography/engagements/Aravind%20and%20Laya%20Engagement.jpg",
+    name: `Aravind and Laya Engagement`,
+  },
+	"photography/engagements/David_and_Wenyi_Engagement_Proposal_placeholder_jpg": {
+    path: "/photography/engagements/David%20and%20Wenyi%20Engagement%20Proposal.placeholder.jpg",
+    name: `David and Wenyi Engagement Proposal.placeholder`,
+  },
+	"photography/engagements/David_and_Wenyi_Engagement_Proposal_jpg": {
+    path: "/photography/engagements/David%20and%20Wenyi%20Engagement%20Proposal.jpg",
+    name: `David and Wenyi Engagement Proposal`,
+  },
+	"photography/engagements/Aravind_and_Laya_Engagement_placeholder_jpg": {
+    path: "/photography/engagements/Aravind%20and%20Laya%20Engagement.placeholder.jpg",
+    name: `Aravind and Laya Engagement.placeholder`,
+  },
 	"photography/Dog_at_Top_of_Teton_Mountain_in_Snow_jpg": {
     path: "/photography/Dog%20at%20Top%20of%20Teton%20Mountain%20in%20Snow.jpg",
     name: `Dog at Top of Teton Mountain in Snow`,

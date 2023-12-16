@@ -10,7 +10,7 @@ import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import Link from "next/link";
 
-const fadeAnimationDeltaMS = 170;
+const fadeAnimationDeltaMS = 130;
 
 const PhotographyHomepage = async () => {
   const categoryNodes = await Promise.all(
@@ -145,6 +145,52 @@ const PhotographyHomepage = async () => {
             )}
             className="fade-appear"
             style={{ animationDelay: `${9 * fadeAnimationDeltaMS}ms` }}
+          />
+          <HalfTextArticle
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Product)}
+            title="Product Photography"
+            category="Collection"
+            description="Sample work from clients over the years."
+            imageSrc={getCdnAsset(
+              "photography/product/IWC_Watch_Aviator_Display_placeholder_jpg",
+            )}
+            className="fade-appear"
+            style={{ animationDelay: `${10 * fadeAnimationDeltaMS}ms` }}
+          />
+          <FullCoverArticle
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Engagements)}
+            title="Engagements"
+            category="Collection"
+            description="Engagement and proposal photography"
+            width={1}
+            imageSrc={getCdnAsset(
+              "photography/engagements/Engagement_Ring_on_Rock_placeholder_jpg",
+            )}
+            className="fade-appear"
+            style={{ animationDelay: `${10 * fadeAnimationDeltaMS}ms` }}
+          />
+          <FullCoverArticle
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.CrossCountryRoadtrip)}
+            title="X-Country Roadtrip 🇺🇸"
+            category="Travel"
+            description="Multi week road trip across the United States from San Francisco to Princeton."
+            width={1}
+            imageSrc={getCdnAsset(
+              "photography/_USA_Road_Trip_5_placeholder_jpg",
+            )}
+            className="fade-appear"
+            style={{ animationDelay: `${10 * fadeAnimationDeltaMS}ms` }}
+          />
+          <HalfTextArticle
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Food)}
+            title="Food"
+            category="Collection"
+            description="Camera eats first. Mostly photos I've taken for clients."
+            imageSrc={getCdnAsset(
+              "photography/food/Black_Sheep_Logo_with_Food_Spread_jpg",
+            )}
+            className="fade-appear"
+            style={{ animationDelay: `${10 * fadeAnimationDeltaMS}ms` }}
           />
         </MagazineLayout>
       </PageWrapper>

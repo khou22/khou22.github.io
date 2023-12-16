@@ -35,7 +35,7 @@ export const FullCoverArticle: React.FC<FullCoverArticleProps> = ({
       <div className="relative h-full min-h-[300px] w-full overflow-hidden rounded shadow md:min-h-[400px] xl:min-h-[500px]">
         <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center space-y-4 text-white">
           <p className="text-sm text-gray-200">{category.toUpperCase()}</p>
-          <h3>{title}</h3>
+          <h3 className="text-center">{title}</h3>
           <span
             className={classNames(
               "border-b-2 border-white",
