@@ -8,6 +8,7 @@ import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ImageStory } from "@/components/organisms/ImageStory/ImageStory";
 import { PAGES } from "@/utils/pages";
 import { PhotoTags } from "@/constants/photoTags";
+import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 
 const ContactPage = () => {
   return (
@@ -76,6 +77,7 @@ const ContactPage = () => {
                 <h3 className="mb-3 mt-2 text-center">
                   Let&apos;s create together.
                 </h3>
+                <SocialLinks className="mb-3 space-x-4" />
                 <p className="caption mb-2 max-w-lg text-center">
                   I am ready and available for hire in San Francisco and the
                   larger Bay Area. I have worked with clients & brands across
