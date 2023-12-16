@@ -7,6 +7,7 @@ import { AlbumsSection } from "./AlbumsSection";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ImageStory } from "@/components/organisms/ImageStory/ImageStory";
 import { PAGES } from "@/utils/pages";
+import { PhotoTags } from "@/constants/photoTags";
 
 const ContactPage = () => {
   return (
@@ -21,38 +22,38 @@ const ContactPage = () => {
                 stories={[
                   {
                     title: "Food",
-                    link: PAGES.PHOTOGRAPHY.HOME,
+                    link: PAGES.PHOTOGRAPHY.TAG(PhotoTags.Food),
                     imageSrc: getCdnAsset(
                       "photography/Black_Sheep_Foods_Single_Burger_jpg",
                     ),
                   },
                   {
                     title: "Concert",
-                    link: PAGES.PHOTOGRAPHY.HOME,
+                    link: PAGES.PHOTOGRAPHY.TAG(PhotoTags.Concert),
                     imageSrc: getCdnAsset(
                       "photography/Mariposa_Sounds_Asher_Gevisser_jpg",
                     ),
                   },
                   {
                     title: "Landscape",
-                    link: PAGES.PHOTOGRAPHY.HOME,
+                    link: PAGES.PHOTOGRAPHY.TAG(PhotoTags.Landscape),
                     imageSrc: getCdnAsset("media/photography/mountains_jpg"),
                   },
                   {
                     title: "Engagements",
-                    link: PAGES.PHOTOGRAPHY.HOME,
+                    link: PAGES.PHOTOGRAPHY.TAG(PhotoTags.Engagements),
                     imageSrc: getCdnAsset(
                       "photography/David_and_Wenyi_Engagement_Sutro_Baths_jpg",
                     ),
                   },
                   {
                     title: "Events",
-                    link: PAGES.PHOTOGRAPHY.HOME,
+                    link: PAGES.PHOTOGRAPHY.TAG(PhotoTags.Events),
                     imageSrc: getCdnAsset("media/photography/korea_jpg"),
                   },
                   {
                     title: "Food",
-                    link: PAGES.PHOTOGRAPHY.HOME,
+                    link: PAGES.PHOTOGRAPHY.TAG(PhotoTags.Food),
                     imageSrc: getCdnAsset(
                       "photography/Black_Sheep_Foods_Table_of_Food_jpg",
                     ),

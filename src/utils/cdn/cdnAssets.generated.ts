@@ -1259,6 +1259,46 @@ export const _generatedCdnAssets = {
     path: "/photography/Shek%20Lek%20Pui%20Reservoir%20Drone%20%28Vertical%29.jpg",
     name: `Shek Lek Pui Reservoir Drone (Vertical)`,
   },
+	"photography/germany/Munich_Colorful_Houses_in_Winter_placeholder_jpg": {
+    path: "/photography/germany/Munich%20Colorful%20Houses%20in%20Winter.placeholder.jpg",
+    name: `Munich Colorful Houses in Winter.placeholder`,
+  },
+	"photography/germany/Munich_Beer_jpg": {
+    path: "/photography/germany/Munich%20Beer.jpg",
+    name: `Munich Beer`,
+  },
+	"photography/germany/BMW_Museum_Motorcycle_placeholder_jpg": {
+    path: "/photography/germany/BMW%20Museum%20Motorcycle.placeholder.jpg",
+    name: `BMW Museum Motorcycle.placeholder`,
+  },
+	"photography/germany/Munich_Colorful_Houses_in_Winter_jpg": {
+    path: "/photography/germany/Munich%20Colorful%20Houses%20in%20Winter.jpg",
+    name: `Munich Colorful Houses in Winter`,
+  },
+	"photography/germany/Neuschwanstein_Castle_in_Winter_jpg": {
+    path: "/photography/germany/Neuschwanstein%20Castle%20in%20Winter.jpg",
+    name: `Neuschwanstein Castle in Winter`,
+  },
+	"photography/germany/Munich_Beer_placeholder_jpg": {
+    path: "/photography/germany/Munich%20Beer.placeholder.jpg",
+    name: `Munich Beer.placeholder`,
+  },
+	"photography/germany/Munich_Olympic_Park_Panorama_Sunset_placeholder_jpg": {
+    path: "/photography/germany/Munich%20Olympic%20Park%20Panorama%20Sunset.placeholder.jpg",
+    name: `Munich Olympic Park Panorama Sunset.placeholder`,
+  },
+	"photography/germany/Munich_Olympic_Park_Panorama_Sunset_jpg": {
+    path: "/photography/germany/Munich%20Olympic%20Park%20Panorama%20Sunset.jpg",
+    name: `Munich Olympic Park Panorama Sunset`,
+  },
+	"photography/germany/BMW_Museum_Motorcycle_jpg": {
+    path: "/photography/germany/BMW%20Museum%20Motorcycle.jpg",
+    name: `BMW Museum Motorcycle`,
+  },
+	"photography/germany/Neuschwanstein_Castle_in_Winter_placeholder_jpg": {
+    path: "/photography/germany/Neuschwanstein%20Castle%20in%20Winter.placeholder.jpg",
+    name: `Neuschwanstein Castle in Winter.placeholder`,
+  },
 	"photography/Chiang_Kai_Shek_Memorial_With_Moon_At_Night_jpg": {
     path: "/photography/Chiang%20Kai%20Shek%20Memorial%20With%20Moon%20At%20Night.jpg",
     name: `Chiang Kai Shek Memorial With Moon At Night`,

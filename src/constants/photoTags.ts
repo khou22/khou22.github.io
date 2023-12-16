@@ -30,6 +30,7 @@ export enum PhotoTags {
   Singapore = "location_singapore",
   Vietnam = "location_vietnam",
   Thailand = "location_thailand",
+  Germany = "location_germany",
 
   // Camera specific.
   Drone = "camera_drone",
@@ -193,6 +194,10 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Thailand]: {
     name: "Thailand",
     slug: "thailand",
+  },
+  [PhotoTags.Germany]: {
+    name: "Germany",
+    slug: "germany",
   },
   [PhotoTags.Drone]: {
     name: "Aerial",
