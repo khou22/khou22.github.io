@@ -1551,6 +1551,190 @@ export const _generatedCdnAssets = {
     path: "/photography/Arch%20of%20Constantine%2C%20Rome.jpg",
     name: `Arch of Constantine, Rome`,
   },
+	"photography/product/Nagi_Restraunt_Shot_jpg": {
+    path: "/photography/product/Nagi%20Restraunt%20Shot.jpg",
+    name: `Nagi Restraunt Shot`,
+  },
+	"photography/product/IWC_Watch_Shot_Landscape_placeholder_jpg": {
+    path: "/photography/product/IWC%20Watch%20Shot%20Landscape.placeholder.jpg",
+    name: `IWC Watch Shot Landscape.placeholder`,
+  },
+	"photography/product/Nagi_Restraunt_Shot_placeholder_jpg": {
+    path: "/photography/product/Nagi%20Restraunt%20Shot.placeholder.jpg",
+    name: `Nagi Restraunt Shot.placeholder`,
+  },
+	"photography/product/Westfield_San_FranciscoEntrance_jpg": {
+    path: "/photography/product/Westfield%20San%20FranciscoEntrance.jpg",
+    name: `Westfield San FranciscoEntrance`,
+  },
+	"photography/product/Din_Tai_Fung_Storefront_placeholder_jpg": {
+    path: "/photography/product/Din%20Tai%20Fung%20Storefront.placeholder.jpg",
+    name: `Din Tai Fung Storefront.placeholder`,
+  },
+	"photography/product/Aesop_Store_Front_placeholder_jpg": {
+    path: "/photography/product/Aesop%20Store%20Front.placeholder.jpg",
+    name: `Aesop Store Front.placeholder`,
+  },
+	"photography/product/Din_Tai_Fung_Cocktails_jpg": {
+    path: "/photography/product/Din%20Tai%20Fung%20Cocktails.jpg",
+    name: `Din Tai Fung Cocktails`,
+  },
+	"photography/product/Jamba_Juice_In_Air_placeholder_jpg": {
+    path: "/photography/product/Jamba%20Juice%20In%20Air.placeholder.jpg",
+    name: `Jamba Juice In Air.placeholder`,
+  },
+	"photography/product/Aesop_Store_Front_jpg": {
+    path: "/photography/product/Aesop%20Store%20Front.jpg",
+    name: `Aesop Store Front`,
+  },
+	"photography/product/Peloton_Product_Shot_placeholder_jpg": {
+    path: "/photography/product/Peloton%20Product%20Shot.placeholder.jpg",
+    name: `Peloton Product Shot.placeholder`,
+  },
+	"photography/product/Burberry_Shoe_Shot_jpg": {
+    path: "/photography/product/Burberry%20Shoe%20Shot.jpg",
+    name: `Burberry Shoe Shot`,
+  },
+	"photography/product/IWC_Watch_Aviator_Display_jpg": {
+    path: "/photography/product/IWC%20Watch%20Aviator%20Display.jpg",
+    name: `IWC Watch Aviator Display`,
+  },
+	"photography/product/Jamba_Juice_Product_Photos_placeholder_jpg": {
+    path: "/photography/product/Jamba%20Juice%20Product%20Photos.placeholder.jpg",
+    name: `Jamba Juice Product Photos.placeholder`,
+  },
+	"photography/product/Psycho_Bunny_Indoor_Display_2_placeholder_jpg": {
+    path: "/photography/product/Psycho%20Bunny%20Indoor%20Display%202.placeholder.jpg",
+    name: `Psycho Bunny Indoor Display 2.placeholder`,
+  },
+	"photography/product/Burberry_Shoe_Shot_placeholder_jpg": {
+    path: "/photography/product/Burberry%20Shoe%20Shot.placeholder.jpg",
+    name: `Burberry Shoe Shot.placeholder`,
+  },
+	"photography/product/Vans_Colorful_Shoe_jpg": {
+    path: "/photography/product/Vans%20Colorful%20Shoe.jpg",
+    name: `Vans Colorful Shoe`,
+  },
+	"photography/product/Ray_Ban_Glasses_on_Shelf_placeholder_jpg": {
+    path: "/photography/product/Ray%20Ban%20Glasses%20on%20Shelf.placeholder.jpg",
+    name: `Ray Ban Glasses on Shelf.placeholder`,
+  },
+	"photography/product/Psycho_Bunny_Storefront_placeholder_jpg": {
+    path: "/photography/product/Psycho%20Bunny%20Storefront.placeholder.jpg",
+    name: `Psycho Bunny Storefront.placeholder`,
+  },
+	"photography/product/Peloton_Product_Shot_jpg": {
+    path: "/photography/product/Peloton%20Product%20Shot.jpg",
+    name: `Peloton Product Shot`,
+  },
+	"photography/product/Vans_Colorful_Shoe_placeholder_jpg": {
+    path: "/photography/product/Vans%20Colorful%20Shoe.placeholder.jpg",
+    name: `Vans Colorful Shoe.placeholder`,
+  },
+	"photography/product/IWC_Watch_Shot_Landscape_jpg": {
+    path: "/photography/product/IWC%20Watch%20Shot%20Landscape.jpg",
+    name: `IWC Watch Shot Landscape`,
+  },
+	"photography/product/Westfield_San_FranciscoEntrance_placeholder_jpg": {
+    path: "/photography/product/Westfield%20San%20FranciscoEntrance.placeholder.jpg",
+    name: `Westfield San FranciscoEntrance.placeholder`,
+  },
+	"photography/product/Reeset_Logic_Vitamins_Product_Shot_jpg": {
+    path: "/photography/product/Reeset%20Logic%20Vitamins%20Product%20Shot.jpg",
+    name: `Reeset Logic Vitamins Product Shot`,
+  },
+	"photography/product/Gentle_Monster_Display_Photography_placeholder_jpg": {
+    path: "/photography/product/Gentle%20Monster%20Display%20Photography.placeholder.jpg",
+    name: `Gentle Monster Display Photography.placeholder`,
+  },
+	"photography/product/Problems_Spritz_jpg": {
+    path: "/photography/product/Problems%20Spritz.jpg",
+    name: `Problems Spritz`,
+  },
+	"photography/product/Jamba_Juice_In_Air_jpg": {
+    path: "/photography/product/Jamba%20Juice%20In%20Air.jpg",
+    name: `Jamba Juice In Air`,
+  },
+	"photography/product/Breitling_Watch_on_Pool_Table_jpg": {
+    path: "/photography/product/Breitling%20Watch%20on%20Pool%20Table.jpg",
+    name: `Breitling Watch on Pool Table`,
+  },
+	"photography/product/Westfield_Valley_Fair_Storefront_placeholder_jpg": {
+    path: "/photography/product/Westfield%20Valley%20Fair%20Storefront.placeholder.jpg",
+    name: `Westfield Valley Fair Storefront.placeholder`,
+  },
+	"photography/product/Jamba_Juice_Product_Photos_jpg": {
+    path: "/photography/product/Jamba%20Juice%20Product%20Photos.jpg",
+    name: `Jamba Juice Product Photos`,
+  },
+	"photography/product/Breitling_Watch_on_Pool_Table_placeholder_jpg": {
+    path: "/photography/product/Breitling%20Watch%20on%20Pool%20Table.placeholder.jpg",
+    name: `Breitling Watch on Pool Table.placeholder`,
+  },
+	"photography/product/Problems_Spritz_placeholder_jpg": {
+    path: "/photography/product/Problems%20Spritz.placeholder.jpg",
+    name: `Problems Spritz.placeholder`,
+  },
+	"photography/product/Reeset_Logic_Vitamins_Product_Shot_placeholder_jpg": {
+    path: "/photography/product/Reeset%20Logic%20Vitamins%20Product%20Shot.placeholder.jpg",
+    name: `Reeset Logic Vitamins Product Shot.placeholder`,
+  },
+	"photography/product/Din_Tai_Fung_Storefront_jpg": {
+    path: "/photography/product/Din%20Tai%20Fung%20Storefront.jpg",
+    name: `Din Tai Fung Storefront`,
+  },
+	"photography/product/IWC_Watch_Aviator_Display_placeholder_jpg": {
+    path: "/photography/product/IWC%20Watch%20Aviator%20Display.placeholder.jpg",
+    name: `IWC Watch Aviator Display.placeholder`,
+  },
+	"photography/product/Psycho_Bunny_Indoor_Display_2_jpg": {
+    path: "/photography/product/Psycho%20Bunny%20Indoor%20Display%202.jpg",
+    name: `Psycho Bunny Indoor Display 2`,
+  },
+	"photography/product/Psycho_Bunny_Storefront_jpg": {
+    path: "/photography/product/Psycho%20Bunny%20Storefront.jpg",
+    name: `Psycho Bunny Storefront`,
+  },
+	"photography/product/Ray_Ban_Glasses_on_Shelf_jpg": {
+    path: "/photography/product/Ray%20Ban%20Glasses%20on%20Shelf.jpg",
+    name: `Ray Ban Glasses on Shelf`,
+  },
+	"photography/product/Aritzia_Storefront_placeholder_jpg": {
+    path: "/photography/product/Aritzia%20Storefront.placeholder.jpg",
+    name: `Aritzia Storefront.placeholder`,
+  },
+	"photography/product/Westfield_Valley_Fair_Storefront_jpg": {
+    path: "/photography/product/Westfield%20Valley%20Fair%20Storefront.jpg",
+    name: `Westfield Valley Fair Storefront`,
+  },
+	"photography/product/Gentle_Monster_Display_Photography_jpg": {
+    path: "/photography/product/Gentle%20Monster%20Display%20Photography.jpg",
+    name: `Gentle Monster Display Photography`,
+  },
+	"photography/product/Din_Tai_Fung_Cocktails_placeholder_jpg": {
+    path: "/photography/product/Din%20Tai%20Fung%20Cocktails.placeholder.jpg",
+    name: `Din Tai Fung Cocktails.placeholder`,
+  },
+	"photography/product/Club_Monaco_Table_Display_jpg": {
+    path: "/photography/product/Club%20Monaco%20Table%20Display.jpg",
+    name: `Club Monaco Table Display`,
+  },
+	"photography/product/Club_Monaco_Table_Display_placeholder_jpg": {
+    path: "/photography/product/Club%20Monaco%20Table%20Display.placeholder.jpg",
+    name: `Club Monaco Table Display.placeholder`,
+  },
+	"photography/product/Psycho_Bunny_Indoor_Display_jpg": {
+    path: "/photography/product/Psycho%20Bunny%20Indoor%20Display.jpg",
+    name: `Psycho Bunny Indoor Display`,
+  },
+	"photography/product/Aritzia_Storefront_jpg": {
+    path: "/photography/product/Aritzia%20Storefront.jpg",
+    name: `Aritzia Storefront`,
+  },
+	"photography/product/Psycho_Bunny_Indoor_Display_placeholder_jpg": {
+    path: "/photography/product/Psycho%20Bunny%20Indoor%20Display.placeholder.jpg",
+    name: `Psycho Bunny Indoor Display.placeholder`,
+  },
 	"photography/Hong_Kong_Night_Skyline_Vertical_jpg": {
     path: "/photography/Hong%20Kong%20Night%20Skyline%20%28Vertical%29.jpg",
     name: `Hong Kong Night Skyline (Vertical)`,
