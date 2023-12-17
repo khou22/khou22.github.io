@@ -8,6 +8,7 @@ import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 import { NextPage } from "next";
 import { notFound } from "next/navigation";
 import { PhotoSearchForm } from "../../PhotoSearchForm";
+import { getPhotoPath } from "@/utils/cdn/cdnAssets";
 
 type PageProps = {
   params: {
@@ -47,6 +48,7 @@ const PhotoSearchPage: NextPage<PageProps> = async ({ params }) => {
           {photoIDs.map((photoID) => (
             <PhotoManagementCard
               key={photoID}
+              path={getPhotoPath(photoID)}
               imageKey={photoID}
               tagIDs={tagsByPhotoID[photoID] ?? []}
             />

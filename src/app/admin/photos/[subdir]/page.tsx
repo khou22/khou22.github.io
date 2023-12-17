@@ -3,6 +3,7 @@ import { getPhotoIDs } from "@/utils/photos/getPhotoIDs";
 import { getTagsByPhotoID } from "@/data/photos/photoDbManager";
 import { notFound } from "next/navigation";
 import { PhotoManagementCard } from "@/components/molecules/PhotoManagementCard/PhotoManagementCard";
+import { getPhotoPath } from "@/utils/cdn/cdnAssets";
 
 type PageProps = {
   params: {
@@ -29,6 +30,7 @@ const PhotoAdminSubdirectoryPage: React.FC<PageProps> = async ({ params }) => {
           <PhotoManagementCard
             key={photoID}
             imageKey={photoID}
+            path={getPhotoPath(photoID)}
             tagIDs={tagsByPhotoID[photoID] ?? []}
           />
         ))}

@@ -22,6 +22,10 @@ export const getPhotoName = (photoID: PhotoIdType) => {
   return _generatedCdnAssets[photoID].name;
 };
 
+export const getPhotoPath = (photoID: PhotoIdType) => {
+  return _generatedCdnAssets[photoID].path;
+};
+
 /**
  * Returns whether the photoID is valid.
  */

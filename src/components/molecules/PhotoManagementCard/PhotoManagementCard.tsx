@@ -5,37 +5,32 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PhotoTagUpdateRequest } from "../../../app/admin/photos/api/tags/types";
-import { PhotoTags } from "@/constants/photoTags";
+import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { enumToString } from "@/utils/enum";
 import { classNames } from "@/utils/style";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { TagsClient } from "@/api/TagsClient";
+import { XIcon } from "@/components/icons/XIcon/XIcon";
 
 type PhotoManagementCardProps = {
   imageKey: PhotoIdType;
-  tagIDs: string[];
+  path: string;
+  tagIDs: PhotoTags[];
 };
 
 export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
   imageKey,
+  path,
   tagIDs,
 }) => {
-  const updateTag = async (tagID: string, value: boolean) => {
-    const request: PhotoTagUpdateRequest = {
-      photoID: imageKey,
-      addTags: value ? [tagID] : [],
-      removeTags: value ? [] : [tagID],
-    };
-    const response = await fetch(`/admin/photos/api/tags`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(request),
-    });
-    if (!response.ok) {
-      console.error(response);
-    }
-  };
-
   const CategoryCheckbox = ({ tag }: { tag: PhotoTags }) => {
     const id = `${imageKey}-${tag}`;
     return (
@@ -44,12 +39,28 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
           id={id}
           checked={tagIDs.includes(tag)}
           onCheckedChange={async (value) => {
-            void updateTag(tag, Boolean(value));
+            void new TagsClient().updateTags(imageKey, [
+              { tagID: tag, value: Boolean(value) },
+            ]);
           }}
         />
         <Label htmlFor={id}>{enumToString(tag, PhotoTags)}</Label>
       </div>
     );
+  };
+
+  const currentLocation = tagIDs.find((tag) => tag.startsWith("location_"));
+  const onLocationChange = async (newLocation: PhotoTags) => {
+    if (newLocation === currentLocation) {
+      return;
+    }
+
+    const updates = [{ tagID: newLocation, value: true }];
+    if (currentLocation) {
+      updates.push({ tagID: currentLocation, value: false });
+    }
+
+    await new TagsClient().updateTags(imageKey, updates);
   };
 
   return (
@@ -64,7 +75,7 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
           className="h-52 rounded object-contain"
           src={getCdnAsset(imageKey)}
         />
-        <p className="caption w-full break-all">{imageKey}</p>
+        <p className="caption w-full break-all">{decodeURIComponent(path)}</p>
       </div>
       <div className="flex flex-col items-start justify-start space-y-2">
         <p>Category:</p>
@@ -76,11 +87,37 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
       </div>
       <div className="flex flex-col items-start justify-start space-y-2">
         <p>Location</p>
-        {Object.values(PhotoTags)
-          .filter((tag) => tag.includes("location"))
-          .map((tag: PhotoTags) => (
-            <CategoryCheckbox key={tag} tag={tag} />
-          ))}
+        <Select value={currentLocation} onValueChange={onLocationChange}>
+          <SelectTrigger className="w-[180px] text-left">
+            <SelectValue placeholder="Location" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>Locations</SelectLabel>
+              {Object.values(PhotoTags)
+                .filter((tag) => tag.includes("location"))
+                .map((tag: PhotoTags) => (
+                  <SelectItem key={tag} value={tag}>
+                    {tagMetadata[tag].name}
+                  </SelectItem>
+                ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+
+        <button
+          className="flex flex-row items-center justify-start space-x-1 text-sm text-red-500 hover:text-red-400"
+          onClick={() => {
+            if (currentLocation) {
+              void new TagsClient().updateTags(imageKey, [
+                { tagID: currentLocation, value: false },
+              ]);
+            }
+          }}
+        >
+          <XIcon className="h-4 w-4" />
+          <span>Clear Location</span>
+        </button>
       </div>
       <div className="flex flex-col items-start justify-start space-y-2">
         <p>Other</p>
