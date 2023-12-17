@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
-import { PhotoTagUpdateRequest } from "../../../app/admin/photos/tags/types";
+import { PhotoTagUpdateRequest } from "../../../app/admin/photos/api/tags/types";
 import { PhotoTags } from "@/constants/photoTags";
 import { enumToString } from "@/utils/enum";
 import { classNames } from "@/utils/style";
@@ -24,7 +24,7 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
       addTags: value ? [tagID] : [],
       removeTags: value ? [] : [tagID],
     };
-    const response = await fetch(`/admin/photos/tags`, {
+    const response = await fetch(`/admin/photos/api/tags`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

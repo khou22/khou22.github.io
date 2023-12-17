@@ -17,7 +17,7 @@
     "start:cdn": "serve -s docs -p 4000",
     "generate:assets": "python scripts/generate_assets.py",
     "generate:thumbnails": "python scripts/generate_thumbnails.py --max_kb 250",
-    "cdn:move_photo": "tsc scripts/move_photo.ts"
+    "cdn:move_photo": "ts-node scripts/move_photo.ts"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -64,6 +64,7 @@
     "prettier-plugin-tailwindcss": "^0.5.7",
     "serve": "^14.2.1",
     "tailwindcss": "^3.3.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }

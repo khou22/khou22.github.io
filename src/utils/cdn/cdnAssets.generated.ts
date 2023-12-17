@@ -2307,6 +2307,18 @@ export const _generatedCdnAssets = {
     path: "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Vertical%20Pink%20Bright%20Far.jpg",
     name: `Bear Valley Bloods Ridge Sunset Drone Vertical Pink Bright Far`,
   },
+	"photography/san_francisco/Hawk_Hill_Night_Shot_placeholder_jpg": {
+    path: "/photography/san_francisco/Hawk%20Hill%20Night%20Shot.placeholder.jpg",
+    name: `Hawk Hill Night Shot.placeholder`,
+  },
+	"photography/san_francisco/Rodeo_Beach_Gravel_Hill_Sunset_Ride_placeholder_jpg": {
+    path: "/photography/san_francisco/Rodeo%20Beach%20Gravel%20Hill%20Sunset%20Ride.placeholder.jpg",
+    name: `Rodeo Beach Gravel Hill Sunset Ride.placeholder`,
+  },
+	"photography/san_francisco/San_Francisco_Muni_Bus_in_the_Rain_placeholder_jpg": {
+    path: "/photography/san_francisco/San%20Francisco%20Muni%20Bus%20in%20the%20Rain.placeholder.jpg",
+    name: `San Francisco Muni Bus in the Rain.placeholder`,
+  },
 	"photography/san_francisco/Golden_Gate_Bridge_Aerial_Head_On_jpg": {
     path: "/photography/san_francisco/Golden%20Gate%20Bridge%20Aerial%20Head%20On.jpg",
     name: `Golden Gate Bridge Aerial Head On`,
@@ -2319,6 +2331,10 @@ export const _generatedCdnAssets = {
     path: "/photography/san_francisco/San%20Francisco%20Muni%20Bus%20in%20the%20Rain.jpg",
     name: `San Francisco Muni Bus in the Rain`,
   },
+	"photography/san_francisco/Warriors_Championship_Parade_2022_placeholder_jpg": {
+    path: "/photography/san_francisco/Warriors%20Championship%20Parade%202022.placeholder.jpg",
+    name: `Warriors Championship Parade 2022.placeholder`,
+  },
 	"photography/san_francisco/Rodeo_Beach_Landscape_jpg": {
     path: "/photography/san_francisco/Rodeo%20Beach%20Landscape.jpg",
     name: `Rodeo Beach Landscape`,
@@ -2327,13 +2343,33 @@ export const _generatedCdnAssets = {
     path: "/photography/san_francisco/Coit%20Tower%20with%20San%20Francisco%20Skyline%20from%20Plane.jpg",
     name: `Coit Tower with San Francisco Skyline from Plane`,
   },
+	"photography/san_francisco/San_Francisco_Bay_Bridge_at_Sunset_from_Plane_placeholder_jpg": {
+    path: "/photography/san_francisco/San%20Francisco%20Bay%20Bridge%20at%20Sunset%20from%20Plane.placeholder.jpg",
+    name: `San Francisco Bay Bridge at Sunset from Plane.placeholder`,
+  },
 	"photography/san_francisco/San_Francisco_Bay_Bridge_at_Sunset_from_Plane_jpg": {
     path: "/photography/san_francisco/San%20Francisco%20Bay%20Bridge%20at%20Sunset%20from%20Plane.jpg",
     name: `San Francisco Bay Bridge at Sunset from Plane`,
   },
+	"photography/san_francisco/Golden_Gate_Bridge_Marin_Headlands_at_Sunset_placeholder_jpg": {
+    path: "/photography/san_francisco/Golden%20Gate%20Bridge%20Marin%20Headlands%20at%20Sunset.placeholder.jpg",
+    name: `Golden Gate Bridge Marin Headlands at Sunset.placeholder`,
+  },
+	"photography/san_francisco/Aerial_View_of_Half_Moon_Bay_Beach_placeholder_jpg": {
+    path: "/photography/san_francisco/Aerial%20View%20of%20Half%20Moon%20Bay%20Beach.placeholder.jpg",
+    name: `Aerial View of Half Moon Bay Beach.placeholder`,
+  },
 	"photography/san_francisco/Pier_7_Gravel_Bike_Shadowstand_Profile_jpg": {
     path: "/photography/san_francisco/Pier%207%20Gravel%20Bike%20Shadowstand%20Profile.jpg",
     name: `Pier 7 Gravel Bike Shadowstand Profile`,
+  },
+	"photography/san_francisco/Downtown_San_Francisco_from_Plane_8x10_placeholder_jpg": {
+    path: "/photography/san_francisco/Downtown%20San%20Francisco%20from%20Plane%20%288x10%29.placeholder.jpg",
+    name: `Downtown San Francisco from Plane (8x10).placeholder`,
+  },
+	"photography/san_francisco/Golden_Gate_Bridge_Aerial_Head_On_placeholder_jpg": {
+    path: "/photography/san_francisco/Golden%20Gate%20Bridge%20Aerial%20Head%20On.placeholder.jpg",
+    name: `Golden Gate Bridge Aerial Head On.placeholder`,
   },
 	"photography/san_francisco/Gravel_Bike_at_Golden_Gate_Bridge_at_Sunset_jpg": {
     path: "/photography/san_francisco/Gravel%20Bike%20at%20Golden%20Gate%20Bridge%20at%20Sunset.jpg",
@@ -2347,13 +2383,41 @@ export const _generatedCdnAssets = {
     path: "/photography/san_francisco/Hawk%20Hill%20Night%20Shot.jpg",
     name: `Hawk Hill Night Shot`,
   },
+	"photography/san_francisco/Coit_Tower_with_San_Francisco_Skyline_from_Plane_placeholder_jpg": {
+    path: "/photography/san_francisco/Coit%20Tower%20with%20San%20Francisco%20Skyline%20from%20Plane.placeholder.jpg",
+    name: `Coit Tower with San Francisco Skyline from Plane.placeholder`,
+  },
+	"photography/san_francisco/Rodeo_Beach_Gravel_Hill_Sunset_Silhouette_placeholder_jpg": {
+    path: "/photography/san_francisco/Rodeo%20Beach%20Gravel%20Hill%20Sunset%20Silhouette.placeholder.jpg",
+    name: `Rodeo Beach Gravel Hill Sunset Silhouette.placeholder`,
+  },
+	"photography/san_francisco/San_Francisco_Bay_Windows_at_Sunset_placeholder_jpg": {
+    path: "/photography/san_francisco/San%20Francisco%20Bay%20Windows%20at%20Sunset.placeholder.jpg",
+    name: `San Francisco Bay Windows at Sunset.placeholder`,
+  },
 	"photography/san_francisco/Rodeo_Beach_Gravel_Hill_Sunset_Silhouette_jpg": {
     path: "/photography/san_francisco/Rodeo%20Beach%20Gravel%20Hill%20Sunset%20Silhouette.jpg",
     name: `Rodeo Beach Gravel Hill Sunset Silhouette`,
   },
+	"photography/san_francisco/Gravel_Bike_at_Golden_Gate_Bridge_at_Sunset_placeholder_jpg": {
+    path: "/photography/san_francisco/Gravel%20Bike%20at%20Golden%20Gate%20Bridge%20at%20Sunset.placeholder.jpg",
+    name: `Gravel Bike at Golden Gate Bridge at Sunset.placeholder`,
+  },
 	"photography/san_francisco/Golden_Gate_Bridge_from_Plane_with_Richmond_District_jpg": {
     path: "/photography/san_francisco/Golden%20Gate%20Bridge%20from%20Plane%20with%20Richmond%20District.jpg",
     name: `Golden Gate Bridge from Plane with Richmond District`,
+  },
+	"photography/san_francisco/Aerial_View_of_Half_Moon_Bay_placeholder_jpg": {
+    path: "/photography/san_francisco/Aerial%20View%20of%20Half%20Moon%20Bay.placeholder.jpg",
+    name: `Aerial View of Half Moon Bay.placeholder`,
+  },
+	"photography/san_francisco/Columbus_Street_from_Plane_at_Sunset_placeholder_jpg": {
+    path: "/photography/san_francisco/Columbus%20Street%20from%20Plane%20at%20Sunset.placeholder.jpg",
+    name: `Columbus Street from Plane at Sunset.placeholder`,
+  },
+	"photography/san_francisco/Gravel_Bike_Side_Profile_in_Front_of_Golden_Gate_Bridge_placeholder_jpg": {
+    path: "/photography/san_francisco/Gravel%20Bike%20Side%20Profile%20in%20Front%20of%20Golden%20Gate%20Bridge.placeholder.jpg",
+    name: `Gravel Bike Side Profile in Front of Golden Gate Bridge.placeholder`,
   },
 	"photography/san_francisco/Embarcadero_Aerial_View_at_Sunset_8x10_jpg": {
     path: "/photography/san_francisco/Embarcadero%20Aerial%20View%20at%20Sunset%20%288x10%29.jpg",
@@ -2362,6 +2426,10 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Golden_Gate_Bridge_Marin_Headlands_at_Sunset_jpg": {
     path: "/photography/san_francisco/Golden%20Gate%20Bridge%20Marin%20Headlands%20at%20Sunset.jpg",
     name: `Golden Gate Bridge Marin Headlands at Sunset`,
+  },
+	"photography/san_francisco/Embarcadero_Aerial_View_at_Sunset_8x10_placeholder_jpg": {
+    path: "/photography/san_francisco/Embarcadero%20Aerial%20View%20at%20Sunset%20%288x10%29.placeholder.jpg",
+    name: `Embarcadero Aerial View at Sunset (8x10).placeholder`,
   },
 	"photography/san_francisco/Aerial_View_of_Half_Moon_Bay_Beach_jpg": {
     path: "/photography/san_francisco/Aerial%20View%20of%20Half%20Moon%20Bay%20Beach.jpg",
@@ -2375,17 +2443,37 @@ export const _generatedCdnAssets = {
     path: "/photography/san_francisco/Ocean%20Beach%20Sunset%20from%20Plane.jpg",
     name: `Ocean Beach Sunset from Plane`,
   },
+	"photography/san_francisco/Pier_7_Gravel_Bike_Shadowstand_Profile_placeholder_jpg": {
+    path: "/photography/san_francisco/Pier%207%20Gravel%20Bike%20Shadowstand%20Profile.placeholder.jpg",
+    name: `Pier 7 Gravel Bike Shadowstand Profile.placeholder`,
+  },
 	"photography/san_francisco/Gravel_Bike_Side_Profile_in_Front_of_Golden_Gate_Bridge_jpg": {
     path: "/photography/san_francisco/Gravel%20Bike%20Side%20Profile%20in%20Front%20of%20Golden%20Gate%20Bridge.jpg",
     name: `Gravel Bike Side Profile in Front of Golden Gate Bridge`,
+  },
+	"photography/san_francisco/Gravel_Bike_Front_Wheel_Downtown_San_Francisco_placeholder_jpg": {
+    path: "/photography/san_francisco/Gravel%20Bike%20Front%20Wheel%20Downtown%20San%20Francisco.placeholder.jpg",
+    name: `Gravel Bike Front Wheel Downtown San Francisco.placeholder`,
+  },
+	"photography/san_francisco/Golden_Gate_Bridge_from_Plane_with_Richmond_District_placeholder_jpg": {
+    path: "/photography/san_francisco/Golden%20Gate%20Bridge%20from%20Plane%20with%20Richmond%20District.placeholder.jpg",
+    name: `Golden Gate Bridge from Plane with Richmond District.placeholder`,
   },
 	"photography/san_francisco/Warriors_Championship_Parade_2022_jpg": {
     path: "/photography/san_francisco/Warriors%20Championship%20Parade%202022.jpg",
     name: `Warriors Championship Parade 2022`,
   },
+	"photography/san_francisco/Ocean_Beach_Sunset_from_Plane_placeholder_jpg": {
+    path: "/photography/san_francisco/Ocean%20Beach%20Sunset%20from%20Plane.placeholder.jpg",
+    name: `Ocean Beach Sunset from Plane.placeholder`,
+  },
 	"photography/san_francisco/Aerial_View_of_Half_Moon_Bay_jpg": {
     path: "/photography/san_francisco/Aerial%20View%20of%20Half%20Moon%20Bay.jpg",
     name: `Aerial View of Half Moon Bay`,
+  },
+	"photography/san_francisco/Rodeo_Beach_Landscape_placeholder_jpg": {
+    path: "/photography/san_francisco/Rodeo%20Beach%20Landscape.placeholder.jpg",
+    name: `Rodeo Beach Landscape.placeholder`,
   },
 	"photography/san_francisco/Downtown_San_Francisco_from_Plane_8x10_jpg": {
     path: "/photography/san_francisco/Downtown%20San%20Francisco%20from%20Plane%20%288x10%29.jpg",

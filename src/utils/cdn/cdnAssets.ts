@@ -91,3 +91,10 @@ export const getPhotoThumbnail = (photoID: PhotoIdType): PhotoIdType | null => {
   const thumbnailID = photoID.replace("_jpg", "_placeholder_jpg");
   return castPhotoID(thumbnailID);
 };
+
+/**
+ * Convert a path to a photo ID. This is the same key generation used by the Python generation script.
+ */
+export const pathToPhotoID = (photoPath: string): string => {
+  return photoPath.replace(/[^a-zA-Z0-9/]+/, "_");
+};
