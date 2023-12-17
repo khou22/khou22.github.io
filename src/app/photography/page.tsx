@@ -118,7 +118,7 @@ const PhotographyHomepage = async () => {
             description="Images from all around the world."
             width={2}
             imageSrc={getCdnAsset(
-              "photography/Grand_Teton_Bison_Landscape_jpg",
+              "photography/Lonely_Barn_at_the_Base_of_Grand_Tetons_jpg",
             )}
             className="fade-appear"
             style={{ animationDelay: `${7 * fadeAnimationDeltaMS}ms` }}

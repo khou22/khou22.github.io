@@ -11,6 +11,7 @@ export enum PhotoTags {
   Astrophotography = "category_astrophotography",
   Product = "category_product",
   Food = "category_food",
+  Cycling = "category_cycling",
 
   // Location specific tags.
   SanFrancisco = "location_san_francisco",
@@ -107,6 +108,10 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Food]: {
     name: "Food",
     slug: "food",
+  },
+  [PhotoTags.Cycling]: {
+    name: "Cycling",
+    slug: "cycling",
   },
   [PhotoTags.SanFrancisco]: {
     name: "San Francisco",
