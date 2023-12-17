@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { PhotoIdType, getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
 import { PhotoTagUpdateRequest } from "../../../app/admin/photos/api/tags/types";
 import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { enumToString } from "@/utils/enum";
@@ -19,6 +19,9 @@ import {
 } from "@/components/ui/select";
 import { TagsClient } from "@/api/TagsClient";
 import { XIcon } from "@/components/icons/XIcon/XIcon";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 type PhotoManagementCardProps = {
   imageKey: PhotoIdType;
@@ -31,6 +34,8 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
   path,
   tagIDs,
 }) => {
+  const [filePath, setFilePath] = useState(decodeURIComponent(path));
+
   const CategoryCheckbox = ({ tag }: { tag: PhotoTags }) => {
     const id = `${imageKey}-${tag}`;
     return (
@@ -70,12 +75,17 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
         tagIDs?.length > 0 ? "bg-green-100/30" : "",
       )}
     >
-      <div className="flex flex-col items-center justify-center space-y-2 px-2">
+      <div className="col-span-full">
+        <h5 className="leading-relaxed">{getPhotoName(imageKey)}</h5>
+        <p className="caption w-full break-all font-mono">
+          {decodeURIComponent(path)}
+        </p>
+      </div>
+      <div className="flex flex-col items-center justify-center space-y-2">
         <img
-          className="h-52 rounded object-contain"
+          className="max-h-64 rounded object-contain"
           src={getCdnAsset(imageKey)}
         />
-        <p className="caption w-full break-all">{decodeURIComponent(path)}</p>
       </div>
       <div className="flex flex-col items-start justify-start space-y-2">
         <p>Category:</p>
@@ -105,19 +115,21 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
           </SelectContent>
         </Select>
 
-        <button
-          className="flex flex-row items-center justify-start space-x-1 text-sm text-red-500 hover:text-red-400"
-          onClick={() => {
-            if (currentLocation) {
-              void new TagsClient().updateTags(imageKey, [
-                { tagID: currentLocation, value: false },
-              ]);
-            }
-          }}
-        >
-          <XIcon className="h-4 w-4" />
-          <span>Clear Location</span>
-        </button>
+        {currentLocation && (
+          <button
+            className="flex flex-row items-center justify-start space-x-1 text-sm text-red-500 hover:text-red-400"
+            onClick={() => {
+              if (currentLocation) {
+                void new TagsClient().updateTags(imageKey, [
+                  { tagID: currentLocation, value: false },
+                ]);
+              }
+            }}
+          >
+            <XIcon className="h-4 w-4" />
+            <span>Clear Location</span>
+          </button>
+        )}
       </div>
       <div className="flex flex-col items-start justify-start space-y-2">
         <p>Other</p>
@@ -128,6 +140,23 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
           .map((tag: PhotoTags) => (
             <CategoryCheckbox key={tag} tag={tag} />
           ))}
+      </div>
+      <div className="col-span-full">
+        <Label>File Path</Label>
+        <div className="flex w-full items-center space-x-2">
+          <Input
+            type="File Path"
+            placeholder="File Path"
+            value={filePath}
+            onChange={(e) => setFilePath(e.target.value)}
+          />
+          <Button
+            type="submit"
+            disabled={decodeURIComponent(path) === filePath}
+          >
+            Move File
+          </Button>
+        </div>
       </div>
     </Card>
   );
