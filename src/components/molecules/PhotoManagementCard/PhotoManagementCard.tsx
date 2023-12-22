@@ -4,7 +4,6 @@ import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { PhotoIdType, getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
-import { PhotoTagUpdateRequest } from "../../../app/admin/photos/api/tags/types";
 import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { enumToString } from "@/utils/enum";
 import { classNames } from "@/utils/style";
@@ -22,6 +21,7 @@ import { XIcon } from "@/components/icons/XIcon/XIcon";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { FileLocationClient } from "@/api/FileLocationClient";
 
 type PhotoManagementCardProps = {
   imageKey: PhotoIdType;
@@ -66,6 +66,10 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
     }
 
     await new TagsClient().updateTags(imageKey, updates);
+  };
+
+  const onPathChange = async (newPath: string) => {
+    await new FileLocationClient().movePhotoPath(imageKey, newPath);
   };
 
   return (
@@ -153,6 +157,7 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
           <Button
             type="submit"
             disabled={decodeURIComponent(path) === filePath}
+            onClick={() => onPathChange(filePath)}
           >
             Move File
           </Button>
