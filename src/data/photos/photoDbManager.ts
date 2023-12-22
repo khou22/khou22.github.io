@@ -101,7 +101,7 @@ export const renamePhotoID = async (
   const tx = await db.run(
     `UPDATE photo_tags
 SET photo_id = ?
-WHERE destination = ?`,
+WHERE photo_id = ?`,
     destination,
     original,
   );

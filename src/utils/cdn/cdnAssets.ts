@@ -23,7 +23,7 @@ export const getPhotoName = (photoID: PhotoIdType) => {
 };
 
 export const getPhotoPath = (photoID: PhotoIdType) => {
-  return _generatedCdnAssets[photoID].path;
+  return decodeURIComponent(_generatedCdnAssets[photoID].path);
 };
 
 /**

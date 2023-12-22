@@ -1551,10 +1551,6 @@ export const _generatedCdnAssets = {
     path: "/photography/Top%20Down%20Beach%20Houses%20Drone%20Las%20Terrenas%20Dominican%20Republic.jpg",
     name: `Top Down Beach Houses Drone Las Terrenas Dominican Republic`,
   },
-	"photography/Golden_Gate_Bridge_Looking_Down_From_Marin_Lookout_jpg": {
-    path: "/photography/Golden%20Gate%20Bridge%20Looking%20Down%20From%20Marin%20Lookout.jpg",
-    name: `Golden Gate Bridge Looking Down From Marin Lookout`,
-  },
 	"photography/San_Francisco_Downtown_Through_Car_Mirror_placeholder_jpg": {
     path: "/photography/San%20Francisco%20Downtown%20Through%20Car%20Mirror.placeholder.jpg",
     name: `San Francisco Downtown Through Car Mirror.placeholder`,
@@ -2394,6 +2390,10 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/San_Francisco_Bay_Windows_at_Sunset_placeholder_jpg": {
     path: "/photography/san_francisco/San%20Francisco%20Bay%20Windows%20at%20Sunset.placeholder.jpg",
     name: `San Francisco Bay Windows at Sunset.placeholder`,
+  },
+	"photography/san_francisco/Golden_Gate_Bridge_Looking_Down_From_Marin_Lookout_jpg": {
+    path: "/photography/san_francisco/Golden%20Gate%20Bridge%20Looking%20Down%20From%20Marin%20Lookout.jpg",
+    name: `Golden Gate Bridge Looking Down From Marin Lookout`,
   },
 	"photography/san_francisco/Rodeo_Beach_Gravel_Hill_Sunset_Silhouette_jpg": {
     path: "/photography/san_francisco/Rodeo%20Beach%20Gravel%20Hill%20Sunset%20Silhouette.jpg",
