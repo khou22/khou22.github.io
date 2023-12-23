@@ -100,5 +100,20 @@ export const getPhotoThumbnail = (photoID: PhotoIdType): PhotoIdType | null => {
  * Convert a path to a photo ID. This is the same key generation used by the Python generation script.
  */
 export const pathToPhotoID = (photoPath: string): string => {
-  return photoPath.replace(/[^a-zA-Z0-9/]+/, "_");
+  let sanitizedPath = photoPath.replace(/[^a-zA-Z0-9/]+/g, "_");
+
+  // If the path starts with "/photography/", replace with "photography/"
+  if (sanitizedPath.startsWith("/photography/")) {
+    sanitizedPath = sanitizedPath.replace("/photography/", "photography/");
+  }
+
+  if (sanitizedPath.includes(" ") || sanitizedPath.includes(".")) {
+    throw new Error("new photo ID cannot contain slashes or dots");
+  }
+
+  if (!sanitizedPath.startsWith("photography/")) {
+    throw new Error("new photo ID must start with photography/");
+  }
+
+  return sanitizedPath;
 };

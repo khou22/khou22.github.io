@@ -84,8 +84,12 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
     >
       <div className="col-span-full">
         <h5 className="leading-relaxed">{getPhotoName(imageKey)}</h5>
-        <p className="caption w-full break-all font-mono">
-          {decodeURIComponent(path)}
+        <p className="caption w-full break-all">{imageKey}</p>
+        <p className="caption w-full">
+          Path:{" "}
+          <span className="break-all font-mono">
+            {decodeURIComponent(path)}
+          </span>
         </p>
       </div>
       <div className="flex flex-col items-center justify-center space-y-2">

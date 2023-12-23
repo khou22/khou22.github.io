@@ -1,4 +1,4 @@
-import { PhotoIdType, pathToPhotoID } from "@/utils/cdn/cdnAssets";
+import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import path from "path";
 import sqlite3 from "sqlite3";
 import { open } from "sqlite";
