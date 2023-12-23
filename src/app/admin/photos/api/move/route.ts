@@ -5,6 +5,7 @@ import { PhotoMoveRequest } from "./types";
 import {
   castPhotoID,
   getPhotoPath,
+  getPhotoThumbnail,
   isPhotoID,
   pathToPhotoID,
 } from "@/utils/cdn/cdnAssets";
@@ -22,6 +23,8 @@ export async function POST(req: NextRequest) {
       throw new Error("original photo is not an ID");
     }
 
+    const origThumbnailID = getPhotoThumbnail(origPhotoID);
+
     // Get the new photo ID.
     const destPhotoID = pathToPhotoID(destPath);
     const srcPath = path.join(process.cwd(), "docs", getPhotoPath(origPhotoID));
@@ -35,13 +38,29 @@ export async function POST(req: NextRequest) {
   The new photo ID will be:
   ${destPhotoID}`);
 
+    // Ensure destination folder directories exist.
+    await fs.promises.mkdir(path.dirname(destPath), { recursive: true });
+
+    // Move the file.
+    await fs.promises.rename(srcPath, destPath);
+
+    // Remove the original thumbnail image if it exists.
+    if (origThumbnailID && origThumbnailID !== origPhotoID) {
+      const srcThumbnailPath = path.join(
+        process.cwd(),
+        "docs",
+        getPhotoPath(origThumbnailID),
+      );
+      if (fs.existsSync(srcThumbnailPath)) {
+        console.log("Removing original thumbnail", srcThumbnailPath);
+        await fs.promises.unlink(srcThumbnailPath);
+      }
+    }
+
     // Rename all entries in the SQLite DB.
     await renamePhotoID(origPhotoID, destPhotoID);
 
-    // Move the file.
-    await fs.renameSync(srcPath, destPath);
-
-    // TODO (kevin): Move the thumbnail as well and regenerate the asset map.
+    // TODO (kevin): Regenerate the thumbnails and the asset map.
 
     // Return a list of all tags.
     return new Response(

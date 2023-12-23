@@ -719,10 +719,6 @@ export const _generatedCdnAssets = {
     path: "/photography/Cherry%20Blossums%20in%201903%20Courtyard%20in%20rain.jpg",
     name: `Cherry Blossums in 1903 Courtyard in rain`,
   },
-	"photography/Big_Wave_Beach_Hong_Kong_Top_Down_Drone_placeholder_jpg": {
-    path: "/photography/Big%20Wave%20Beach%2C%20Hong%20Kong%20Top%20Down%20Drone.placeholder.jpg",
-    name: `Big Wave Beach, Hong Kong Top Down Drone.placeholder`,
-  },
 	"photography/Man_Walking_Bike_in_Front_of_Duomo_in_Florence_placeholder_jpg": {
     path: "/photography/Man%20Walking%20Bike%20in%20Front%20of%20Duomo%20in%20Florence.placeholder.jpg",
     name: `Man Walking Bike in Front of Duomo in Florence.placeholder`,
@@ -2023,10 +2019,6 @@ export const _generatedCdnAssets = {
     path: "/photography/Larry%20Bao%20Two%20Man%20Crew%20Rowing%20Boat%20Top%20Down.placeholder.jpg",
     name: `Larry Bao Two Man Crew Rowing Boat Top Down.placeholder`,
   },
-	"photography/Big_Wave_Beach_Hong_Kong_Top_Down_Drone_jpg": {
-    path: "/photography/Big%20Wave%20Beach%2C%20Hong%20Kong%20Top%20Down%20Drone.jpg",
-    name: `Big Wave Beach, Hong Kong Top Down Drone`,
-  },
 	"photography/New_York_Hudson_Yards_Rooftop_Panorama_jpg": {
     path: "/photography/New%20York%20Hudson%20Yards%20Rooftop%20Panorama.jpg",
     name: `New York Hudson Yards Rooftop Panorama`,
@@ -2466,6 +2458,10 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Ocean_Beach_Sunset_from_Plane_placeholder_jpg": {
     path: "/photography/san_francisco/Ocean%20Beach%20Sunset%20from%20Plane.placeholder.jpg",
     name: `Ocean Beach Sunset from Plane.placeholder`,
+  },
+	"photography/san_francisco/Golden_Gate_Bridge_Looking_Down_From_Marin_Lookout_placeholder_jpg": {
+    path: "/photography/san_francisco/Golden%20Gate%20Bridge%20Looking%20Down%20From%20Marin%20Lookout.placeholder.jpg",
+    name: `Golden Gate Bridge Looking Down From Marin Lookout.placeholder`,
   },
 	"photography/san_francisco/Aerial_View_of_Half_Moon_Bay_jpg": {
     path: "/photography/san_francisco/Aerial%20View%20of%20Half%20Moon%20Bay.jpg",
@@ -3051,6 +3047,14 @@ export const _generatedCdnAssets = {
     path: "/photography/Korean%20Market%20Shoe%20Stand.jpg",
     name: `Korean Market Shoe Stand`,
   },
+	"photography/hong_kong/Big_Wave_Beach_Hong_Kong_Top_Down_Drone_placeholder_jpg": {
+    path: "/photography/hong-kong/Big%20Wave%20Beach%2C%20Hong%20Kong%20Top%20Down%20Drone.placeholder.jpg",
+    name: `Big Wave Beach, Hong Kong Top Down Drone.placeholder`,
+  },
+	"photography/hong_kong/Big_Wave_Beach_Hong_Kong_Top_Down_Drone_jpg": {
+    path: "/photography/hong-kong/Big%20Wave%20Beach%2C%20Hong%20Kong%20Top%20Down%20Drone.jpg",
+    name: `Big Wave Beach, Hong Kong Top Down Drone`,
+  },
 	"photography/Lombard_Street_with_Golden_Gate_in_Background_via_Drone_jpg": {
     path: "/photography/Lombard%20Street%20with%20Golden%20Gate%20in%20Background%20via%20Drone.jpg",
     name: `Lombard Street with Golden Gate in Background via Drone`,
@@ -3390,10 +3394,6 @@ export const _generatedCdnAssets = {
 	"photography/Loneliest_Road_Vertical_Drone_jpg": {
     path: "/photography/Loneliest%20Road%20Vertical%20Drone.jpg",
     name: `Loneliest Road Vertical Drone`,
-  },
-	"photography/Golden_Gate_Bridge_Looking_Down_From_Marin_Lookout_placeholder_jpg": {
-    path: "/photography/Golden%20Gate%20Bridge%20Looking%20Down%20From%20Marin%20Lookout.placeholder.jpg",
-    name: `Golden Gate Bridge Looking Down From Marin Lookout.placeholder`,
   },
 	"photography/Ladies_Market_Balcony_Long_Exposure_placeholder_jpg": {
     path: "/photography/Ladies%20Market%20Balcony%20Long%20Exposure.placeholder.jpg",
