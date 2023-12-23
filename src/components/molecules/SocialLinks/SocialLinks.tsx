@@ -11,19 +11,19 @@ const socials = [
     name: "Instagram",
     href: siteMetadata.socials.instagram,
     icon: InstagramIcon,
-    className: "hover:text-purple-400",
+    className: "hover:text-[#C13584]",
   },
   {
     name: "LinkedIn",
     href: siteMetadata.socials.linkedin,
     icon: LinkedInIcon,
-    className: "hover:text-blue-500",
+    className: "hover:text-[#0072b1]",
   },
   {
     name: "Twitter",
     href: siteMetadata.socials.twitter,
     icon: TwitterIcon,
-    className: "hover:text-blue-400",
+    className: "hover:text-[#1DA1F2]",
   },
 ];
 

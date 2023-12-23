@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
 import { Cutive_Mono, Montserrat, Mulish } from "next/font/google";
 import "./globals.css";
 import { siteMetadata } from "@/constants/siteMetadata";
@@ -82,9 +83,11 @@ export default function RootLayout({
           "bg-gray-50",
         )}
       >
-        <NavBar />
-        {children}
-        <Footer />
+        <HydrationOverlay>
+          <NavBar />
+          {children}
+          <Footer />
+        </HydrationOverlay>
       </body>
     </html>
   );

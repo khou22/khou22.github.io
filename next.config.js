@@ -1,3 +1,7 @@
+const {
+  withHydrationOverlay,
+} = require("@builder.io/react-hydration-overlay/next");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -18,4 +22,7 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+// TODO (k): Remove withHydrationOverlay on production.
+module.exports = withHydrationOverlay({
+  appRootSelector: "body",
+})(nextConfig);

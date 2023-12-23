@@ -20,6 +20,7 @@
     "cdn:move_photo": "ts-node scripts/move_photo.ts"
   },
   "dependencies": {
+    "@builder.io/react-hydration-overlay": "^0.0.6",
     "@headlessui/react": "^1.7.17",
     "@hookform/resolvers": "^3.3.2",
     "@radix-ui/react-checkbox": "^1.0.4",

@@ -11,11 +11,21 @@ import { notFound } from "next/navigation";
 import { ProductDetails } from "./ProductDetails";
 import { getTagsForPhotoID } from "@/data/photos/photoDbManager";
 import { PhotoTags } from "@/constants/photoTags";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PAGES } from "@/utils/pages";
 import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
+import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export type PageProps = {
   params: {
@@ -52,15 +62,67 @@ const PhotoByIDPage = async ({
   // If a photo isn't for sale, show a different page.
   if (tags.includes(PhotoTags.NotForSale)) {
     return (
-      <PageWrapper className="flex-col space-y-2">
+      <PageWrapper>
         <ProgressiveImage
           src={[getCdnAsset(photoID)]}
-          className="max-h-[85vh] w-full object-contain"
+          className="max-h-[85vh] w-full rounded object-contain"
         />
-        <p className="caption w-full text-center">
+        <p className="caption my-2 w-full text-center">
           This photo is not for sale.
         </p>
-        <InputWithCopy className="w-full" text={photoURL} />
+
+        <div className="mb-10 w-full">
+          <Label>Share</Label>
+          <InputWithCopy className="w-full" text={photoURL} />
+        </div>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="font-default text-base">
+              Need a photographer?
+            </CardTitle>
+            <CardDescription>
+              Kevin Hou is a photographer based in San Francisco with an
+              extensive photography portfolio across all industries.
+            </CardDescription>
+          </CardHeader>
+
+          {/* TODO: Change to icons and labels. */}
+          <CardContent>
+            <ul className="my-1 list-inside list-disc [&>li]:text-sm">
+              <li>
+                <CustomLink href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Events)}>
+                  Event photography
+                </CustomLink>
+              </li>
+              <li>
+                <CustomLink href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Portraits)}>
+                  Portraits
+                </CustomLink>
+              </li>
+              <li>
+                <CustomLink href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Food)}>
+                  Food photography
+                </CustomLink>
+              </li>
+              <li>
+                <CustomLink href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Product)}>
+                  Product photography
+                </CustomLink>
+              </li>
+              <li>
+                <CustomLink href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Engagements)}>
+                  Engagements
+                </CustomLink>
+              </li>
+            </ul>
+          </CardContent>
+          <CardFooter>
+            <Link href={PAGES.CONTACT}>
+              <Button>Reach Out</Button>
+            </Link>
+          </CardFooter>
+        </Card>
       </PageWrapper>
     );
   }
