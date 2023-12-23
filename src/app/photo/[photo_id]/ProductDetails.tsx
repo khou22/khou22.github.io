@@ -1,9 +1,11 @@
 "use client";
 
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { photoPricing } from "@/constants/photoPricing";
+import { siteMetadata } from "@/constants/siteMetadata";
 import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
@@ -86,6 +88,12 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ photoID }) => {
           (panorama, three panels, etc.){" "}
           <CustomLink href={PAGES.CONTACT}>by request</CustomLink>.
         </p>
+
+        <Label>Share</Label>
+        <InputWithCopy
+          className="mb-4 mt-0.5"
+          text={`${siteMetadata.siteUrl}${PAGES.PHOTOGRAPHY.PHOTO(photoID)}`}
+        />
 
         <Label>Materials</Label>
         <p className="caption">Test</p>
