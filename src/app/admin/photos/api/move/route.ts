@@ -38,6 +38,14 @@ export async function POST(req: NextRequest) {
   The new photo ID will be:
   ${destPhotoID}`);
 
+    if (
+      destPhotoID.includes(" ") ||
+      destPhotoID.includes("/") ||
+      destPhotoID.includes(".")
+    ) {
+      throw new Error("new photo ID cannot contain spaces, slashes, or dots");
+    }
+
     // Ensure destination folder directories exist.
     await fs.promises.mkdir(path.dirname(destPath), { recursive: true });
 

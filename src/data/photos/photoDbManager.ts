@@ -116,7 +116,7 @@ export const renamePhotoID = async (
     `UPDATE photo_tags
 SET photo_id = ?
 WHERE photo_id = ?`,
-    pathToPhotoID(destination),
+    destination,
     original,
   );
   if (tx.changes === undefined) {
