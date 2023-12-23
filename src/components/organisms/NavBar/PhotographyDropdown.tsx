@@ -35,7 +35,10 @@ export const PhotographyDropdown: React.FC = () => {
           </LinkWithArrow>
         </li>
         <li className="border-b border-gray-400/50 pb-2">
-          <LinkWithArrow href={PAGES.PHOTOGRAPHY.HOME} className="text-sm">
+          <LinkWithArrow
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Landscape)}
+            className="text-sm"
+          >
             Landscapes
           </LinkWithArrow>
         </li>
