@@ -1,4 +1,4 @@
-import { PhotoIdType } from "@/utils/cdn/cdnAssets";
+import { PhotoIdType, pathToPhotoID } from "@/utils/cdn/cdnAssets";
 import path from "path";
 import sqlite3 from "sqlite3";
 import { open } from "sqlite";
@@ -116,7 +116,7 @@ export const renamePhotoID = async (
     `UPDATE photo_tags
 SET photo_id = ?
 WHERE photo_id = ?`,
-    destination,
+    pathToPhotoID(destination),
     original,
   );
   if (tx.changes === undefined) {

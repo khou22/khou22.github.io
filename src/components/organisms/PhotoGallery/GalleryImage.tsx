@@ -14,6 +14,9 @@ export const GalleryImage = ({
       href={PAGES.PHOTOGRAPHY.PHOTO(photo.photoID)}
       style={{ ...wrapperStyle, position: "relative" }}
     >
+      <div className="pointer-events-none absolute z-10 flex h-full w-full items-center justify-center">
+        <p className="w-full text-center text-white/0">{title}</p>
+      </div>
       <Image
         fill
         src={photo}

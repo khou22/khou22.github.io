@@ -8,7 +8,7 @@ import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 import { NextPage } from "next";
 import { notFound } from "next/navigation";
 import { PhotoSearchForm } from "../../PhotoSearchForm";
-import { getPhotoPath } from "@/utils/cdn/cdnAssets";
+import { getPhotoName, getPhotoPath } from "@/utils/cdn/cdnAssets";
 
 type PageProps = {
   params: {
@@ -17,13 +17,16 @@ type PageProps = {
 };
 
 const PhotoSearchPage: NextPage<PageProps> = async ({ params }) => {
-  const query = params.query.join("/");
+  const query = decodeURIComponent(params.query.join("/"));
   if (!query) {
     notFound();
   }
 
   const photoIDs = getPhotoIDs().filter((id) => {
-    return id.toLowerCase().includes(query.toLowerCase());
+    return (
+      id.toLowerCase().includes(query.toLowerCase()) ||
+      getPhotoName(id).toLowerCase().includes(query.toLowerCase())
+    );
   });
   const tagsByPhotoID = photoIDs.length > 0 ? await getTagsByPhotoID() : {};
 
