@@ -9,6 +9,13 @@ import _ from "lodash";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductDetails } from "./ProductDetails";
+import { getTagsForPhotoID } from "@/data/photos/photoDbManager";
+import { PhotoTags } from "@/constants/photoTags";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { siteMetadata } from "@/constants/siteMetadata";
+import { PAGES } from "@/utils/pages";
+import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
 
 export type PageProps = {
   params: {
@@ -38,6 +45,24 @@ const PhotoByIDPage = async ({
   const photoID = getPhotoIDFromURLComponent(photoIdURLComponent);
   if (!photoID) {
     notFound();
+  }
+  const tags = await getTagsForPhotoID(photoID);
+  const photoURL = `${siteMetadata.siteUrl}${PAGES.PHOTOGRAPHY.PHOTO(photoID)}`;
+
+  // If a photo isn't for sale, show a different page.
+  if (tags.includes(PhotoTags.NotForSale)) {
+    return (
+      <PageWrapper className="flex-col space-y-2">
+        <ProgressiveImage
+          src={[getCdnAsset(photoID)]}
+          className="max-h-[85vh] w-full object-contain"
+        />
+        <p className="caption w-full text-center">
+          This photo is not for sale.
+        </p>
+        <InputWithCopy className="w-full" text={photoURL} />
+      </PageWrapper>
+    );
   }
 
   return (

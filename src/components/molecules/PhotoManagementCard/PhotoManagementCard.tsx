@@ -22,6 +22,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { FileLocationClient } from "@/api/FileLocationClient";
+import { Switch } from "@/components/ui/switch";
+import Link from "next/link";
+import { PAGES } from "@/utils/pages";
 
 type PhotoManagementCardProps = {
   imageKey: PhotoIdType;
@@ -90,6 +93,9 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
           className="max-h-64 rounded object-contain"
           src={getCdnAsset(imageKey)}
         />
+        <Link href={PAGES.PHOTOGRAPHY.PHOTO(imageKey)} target="_blank">
+          <Button variant="outline">Go to Photo</Button>
+        </Link>
       </div>
       <div className="flex flex-col items-start justify-start space-y-2">
         <p>Category:</p>
@@ -99,47 +105,63 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
             <CategoryCheckbox key={tag} tag={tag} />
           ))}
       </div>
-      <div className="flex flex-col items-start justify-start space-y-2">
-        <p>Location</p>
-        <Select value={currentLocation} onValueChange={onLocationChange}>
-          <SelectTrigger className="w-[180px] text-left">
-            <SelectValue placeholder="Location" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectLabel>Locations</SelectLabel>
-              {Object.values(PhotoTags)
-                .filter((tag) => tag.includes("location"))
-                .map((tag: PhotoTags) => (
-                  <SelectItem key={tag} value={tag}>
-                    {tagMetadata[tag].name}
-                  </SelectItem>
-                ))}
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+      <div className="flex flex-col items-start justify-start space-y-4">
+        <div className="flex flex-col items-start justify-start space-y-2">
+          <p>Location</p>
+          <Select value={currentLocation} onValueChange={onLocationChange}>
+            <SelectTrigger className="w-[180px] text-left">
+              <SelectValue placeholder="Location" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectLabel>Locations</SelectLabel>
+                {Object.values(PhotoTags)
+                  .filter((tag) => tag.includes("location"))
+                  .map((tag: PhotoTags) => (
+                    <SelectItem key={tag} value={tag}>
+                      {tagMetadata[tag].name}
+                    </SelectItem>
+                  ))}
+              </SelectGroup>
+            </SelectContent>
+          </Select>
 
-        {currentLocation && (
-          <button
-            className="flex flex-row items-center justify-start space-x-1 text-sm text-red-500 hover:text-red-400"
-            onClick={() => {
-              if (currentLocation) {
-                void new TagsClient().updateTags(imageKey, [
-                  { tagID: currentLocation, value: false },
-                ]);
-              }
+          {currentLocation && (
+            <button
+              className="flex flex-row items-center justify-start space-x-1 text-sm text-red-500 hover:text-red-400"
+              onClick={() => {
+                if (currentLocation) {
+                  void new TagsClient().updateTags(imageKey, [
+                    { tagID: currentLocation, value: false },
+                  ]);
+                }
+              }}
+            >
+              <XIcon className="h-4 w-4" />
+              <span>Clear Location</span>
+            </button>
+          )}
+        </div>
+        <div>
+          <p>For Sale</p>
+          <Switch
+            checked={!tagIDs.includes(PhotoTags.NotForSale)}
+            onCheckedChange={(v) => {
+              new TagsClient().updateTags(imageKey, [
+                { tagID: PhotoTags.NotForSale, value: !v },
+              ]);
             }}
-          >
-            <XIcon className="h-4 w-4" />
-            <span>Clear Location</span>
-          </button>
-        )}
+          />
+        </div>
       </div>
       <div className="flex flex-col items-start justify-start space-y-2">
         <p>Other</p>
         {Object.values(PhotoTags)
           .filter(
-            (tag) => !tag.includes("location") && !tag.includes("category"),
+            (tag) =>
+              !tag.includes("location") &&
+              !tag.includes("category") &&
+              !tag.includes("store"),
           )
           .map((tag: PhotoTags) => (
             <CategoryCheckbox key={tag} tag={tag} />

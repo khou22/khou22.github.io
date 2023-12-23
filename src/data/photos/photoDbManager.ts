@@ -46,6 +46,20 @@ export const getTagsByPhotoID = async (): Promise<
 };
 
 /**
+ * Get the tags for the given photo ID.
+ */
+export const getTagsForPhotoID = async (
+  photoID: PhotoIdType,
+): Promise<PhotoTags[]> => {
+  const db = await connectToPhotoDb();
+  const rows = await db.all<PhotoTagRowType[]>(
+    `SELECT tag_name FROM photo_tags WHERE photo_id = ?`,
+    [photoID],
+  );
+  return rows.map((row) => row.tag_name as PhotoTags);
+};
+
+/**
  * Get photo IDs that have the given tag.
  */
 export const getPhotosWithTag = async (

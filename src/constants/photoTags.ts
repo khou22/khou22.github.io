@@ -42,6 +42,9 @@ export enum PhotoTags {
   // Other.
   CrossCountryRoadtrip = "other_cross_country_roadtrip",
   Featured = "other_featured",
+
+  // Store tags.
+  NotForSale = "store_not_for_sale",
 }
 
 export const allLocationTags = [
@@ -70,6 +73,7 @@ export type TagMetadataType = {
   name: string;
   slug: string;
   thumbnailPhotoId?: PhotoIdType;
+  hidden?: boolean;
 };
 
 export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
@@ -235,5 +239,10 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Featured]: {
     name: "Featured",
     slug: "featured",
+  },
+  [PhotoTags.NotForSale]: {
+    name: "Not for sale",
+    slug: "not-for-sale",
+    hidden: true,
   },
 };
