@@ -13,14 +13,14 @@ export type ProgrammingProjectType = {
   subtitle: string;
   slug: string;
   image: string;
-  category: string;
+  category: ProjectCategory;
   description: string;
 };
 
 export const programmingProjects: ProgrammingProjectType[] = [
   {
     name: "Lookbook",
-    subtitle: "Photo curration",
+    subtitle: "Photo curation",
     slug: "https://www.getlookbook.com",
     image: getCdnAsset("media/projects/lookbook/hero_png"),
     category: ProjectCategory.WebApp,
@@ -304,7 +304,7 @@ export const programmingProjects: ProgrammingProjectType[] = [
     subtitle: "Block profanity in GitHub",
     slug: "https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone?hl=en-US",
     image: getCdnAsset("media/projects/executeOrder66/GitHub_Logo_png"),
-    category: "Chrome Extension",
+    category: ProjectCategory.WebApp,
     description:
       "A Google Chrome Extension that cleanses the profanity out of your GitHub repos.",
   },
