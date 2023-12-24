@@ -1,3 +1,4 @@
+import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
 import { Badge, BadgeProps } from "@/components/ui/badge";
 import { PhotoTags, allLocationTags, tagMetadata } from "@/constants/photoTags";
 import { PAGES } from "@/utils/pages";
@@ -36,7 +37,10 @@ export const PhotoTagBadge: React.FC<PhotoTagBadgeProps> = ({ photoTag }) => {
 
   return (
     <Link href={PAGES.PHOTOGRAPHY.TAG(photoTag)}>
-      <Badge variant={variant}>{tagMetadata[photoTag].name}</Badge>
+      <Badge variant={variant}>
+        <TagIcon className="mr-1 h-4 w-4" />
+        {tagMetadata[photoTag].name}
+      </Badge>
     </Link>
   );
 };
