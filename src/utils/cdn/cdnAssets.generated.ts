@@ -3391,6 +3391,14 @@ export const _generatedCdnAssets = {
     path: "/photography/Mong%20Kok%20Station%20Entrance.jpg",
     name: `Mong Kok Station Entrance`,
   },
+	"photography/events/apco_salon_dinner_discussion_placeholder_jpg": {
+    path: "/photography/events/apco_salon_dinner_discussion.placeholder.jpg",
+    name: `apco_salon_dinner_discussion.placeholder`,
+  },
+	"photography/events/apco_salon_dinner_discussion_jpg": {
+    path: "/photography/events/apco_salon_dinner_discussion.jpg",
+    name: `apco_salon_dinner_discussion`,
+  },
 	"photography/Loneliest_Road_Vertical_Drone_jpg": {
     path: "/photography/Loneliest%20Road%20Vertical%20Drone.jpg",
     name: `Loneliest Road Vertical Drone`,

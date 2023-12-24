@@ -97,14 +97,17 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Landscape]: {
     name: "Landscape",
     slug: "landscape",
+    thumbnailPhotoId: "photography/Moose_Reserve_Jackson_Hole_Wyoming_jpg",
   },
   [PhotoTags.Engagements]: {
     name: "Engagements",
     slug: "engagements",
+    thumbnailPhotoId: "photography/engagements/Engagement_Ring_on_Rock_jpg",
   },
   [PhotoTags.Events]: {
     name: "Events",
     slug: "events",
+    thumbnailPhotoId: "photography/events/apco_salon_dinner_discussion_jpg",
   },
   [PhotoTags.Concert]: {
     name: "Concert",
