@@ -33,12 +33,10 @@ export const ImageDisplay: React.FC<ImageDisplayProps> = ({ photoID }) => {
           isOpen={lightboxOpen}
           onClose={() => setLightboxOpen(false)}
         >
-          <div className="h-[95vh] w-[95vw] p-3">
-            <ProgressiveImage
-              src={photoURLs}
-              className="h-full w-full object-contain"
-            />
-          </div>
+          <ProgressiveImage
+            src={photoURLs}
+            className="max-h-[95vh] max-w-[95vw]"
+          />
         </ModalPrimitive>
       </div>
     </div>

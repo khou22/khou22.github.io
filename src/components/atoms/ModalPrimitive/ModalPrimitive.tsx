@@ -25,9 +25,7 @@ export const ModalPrimitive: React.FC<ModalPrimitiveProps> = ({
 }) => (
   <Dialog.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
     <Dialog.Portal>
-      <Dialog.Overlay className="data-[state=open]:animate-overlay-show fixed inset-0 z-40 bg-black/50" />
-      <Dialog.Content className="data-[state=open]:animate-content-show fixed left-[50%] top-[50%] z-50 translate-x-[-50%] translate-y-[-50%]">
-        {children}
+      <Dialog.Overlay className="data-[state=open]:animate-overlay-show fixed inset-0 z-40 bg-black/50">
         {closeButton && (
           <Dialog.Close asChild>
             <button
@@ -40,6 +38,9 @@ export const ModalPrimitive: React.FC<ModalPrimitiveProps> = ({
             </button>
           </Dialog.Close>
         )}
+      </Dialog.Overlay>
+      <Dialog.Content className="data-[state=open]:animate-content-show fixed left-[50%] top-[50%] z-50 translate-x-[-50%] translate-y-[-50%]">
+        {children}
       </Dialog.Content>
     </Dialog.Portal>
   </Dialog.Root>
