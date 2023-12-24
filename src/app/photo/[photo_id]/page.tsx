@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ImageDisplay } from "./ImageDisplay";
 
 export type PageProps = {
   params: {
@@ -129,10 +130,7 @@ const PhotoByIDPage = async ({
 
   return (
     <PageWrapper className="grid h-full min-h-[75vh] grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
-      <ProgressiveImage
-        src={[getCdnAsset(photoID)]}
-        className="max-h-[85vh] w-full object-contain"
-      />
+      <ImageDisplay photoID={photoID} />
       <ProductDetails photoID={photoID} tags={tags} />
     </PageWrapper>
   );

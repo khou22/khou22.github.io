@@ -38,14 +38,14 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
           ${selectedSize.price}
         </h4>
 
-        <div className="mt-2 flex flex-row flex-wrap space-x-1">
+        <div className="mt-2 flex flex-row flex-wrap items-center justify-start gap-1">
           {tags.map((tag) => (
             <PhotoTagBadge key={tag} photoTag={tag} />
           ))}
         </div>
       </div>
 
-      <div>
+      <div className="w-full">
         <Label>Choose a print size</Label>
         <RadioGroup
           value={selectedSizeID}
@@ -55,7 +55,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
           <RadioGroup.Label className="sr-only">
             Choose a print size
           </RadioGroup.Label>
-          <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
+          <div className="grid w-full grid-cols-4 gap-3 sm:grid-cols-5">
             {photoPricing.map((pricing) => (
               <RadioGroup.Option
                 key={pricing.id}
