@@ -22,6 +22,7 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
   const imgRef = React.useRef<HTMLImageElement>(null);
   const [currentImageIdx, setCurrentImageIdx] = useState(0);
 
+  // TODO (kevin): Handle error loading states.
   const handleImageLoad = useCallback(
     (e: React.SyntheticEvent<HTMLImageElement>) => {
       setCurrentImageIdx((idx) => {
