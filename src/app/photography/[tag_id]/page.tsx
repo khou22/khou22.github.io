@@ -2,6 +2,7 @@ import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import _ from "lodash";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -32,6 +33,7 @@ const TagPage = async ({ params }: PageProps) => {
     tagMetadata,
     ({ slug }) => slug === params.tag_id,
   ) as PhotoTags;
+  const metadata = tagMetadata[photoTag];
 
   if (!photoTag) {
     notFound();
@@ -41,9 +43,44 @@ const TagPage = async ({ params }: PageProps) => {
 
   return (
     <PageWrapper maxWidth="wide">
-      <h1 className="w-full text-center">{tagMetadata[photoTag].name}</h1>
+      <div className="flex w-full flex-col items-center justify-center space-y-2">
+        <img
+          alt={`${metadata.name} hero image`}
+          src={getCdnAsset(
+            metadata.thumbnailPhotoId ?? "media/site/images/Profile2_jpg",
+          )}
+          className="animate-overlay-show h-40 w-40 rounded-full border-4 border-blue object-cover opacity-0"
+          style={{
+            animationDuration: "2500ms",
+            animationFillMode: "forwards",
+            animationDelay: "100ms",
+          }}
+        />
+        <div>
+          <h3
+            className="animate-overlay-show text-center leading-relaxed opacity-0"
+            style={{
+              animationDuration: "2500ms",
+              animationFillMode: "forwards",
+              animationDelay: "200ms",
+            }}
+          >
+            {metadata.name} Photos
+          </h3>
+          <p
+            className="caption animate-overlay-show text-center opacity-0"
+            style={{
+              animationDuration: "3s",
+              animationFillMode: "forwards",
+              animationDelay: "800ms",
+            }}
+          >
+            Shot & Edited by Kevin Hou
+          </p>
+        </div>
+      </div>
 
-      <PhotoGallery photoIDs={photoIDs} />
+      <PhotoGallery photoIDs={photoIDs} fadeIn />
     </PageWrapper>
   );
 };

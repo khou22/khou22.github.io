@@ -13,7 +13,7 @@ type PhotoTagBadgeProps = {
 
 export const PhotoTagBadge: React.FC<PhotoTagBadgeProps> = ({ photoTag }) => {
   let Icon: React.FC<IconProps> = TagIcon;
-  let variant: BadgeProps["variant"] = "default";
+  let variant: BadgeProps["variant"] = "gray";
   switch (photoTag) {
     case PhotoTags.Featured:
       variant = "orange";

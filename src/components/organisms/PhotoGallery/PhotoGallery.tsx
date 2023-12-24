@@ -5,17 +5,23 @@ import {
   getPhotoThumbnail,
 } from "@/utils/cdn/cdnAssets";
 import { getPhotoSize } from "@/utils/photos/getPhotoSize";
-import { PhotoGalleryClient } from "./PhotoGalleryClient";
+import {
+  PhotoGalleryClient,
+  PhotoGalleryClientProps,
+} from "./PhotoGalleryClient";
 
 type PhotoGalleryProps = {
   photoIDs: PhotoIdType[];
-};
+} & Omit<PhotoGalleryClientProps, "photos">;
 
 /**
  * Photo gallery component for displaying photos in a masonry layout. **Must be rendered in a
  * server-side component** as it needs access to the photo sizes on the disk.
  */
-export const PhotoGallery = async ({ photoIDs }: PhotoGalleryProps) => {
+export const PhotoGallery = async ({
+  photoIDs,
+  ...galleryProps
+}: PhotoGalleryProps) => {
   const photos = await Promise.all(
     photoIDs.map(async (photoID) => {
       const thumbnailID = getPhotoThumbnail(photoID);
@@ -54,7 +60,7 @@ export const PhotoGallery = async ({ photoIDs }: PhotoGalleryProps) => {
 
   return (
     <div className="my-12 w-full">
-      <PhotoGalleryClient photos={photos} />
+      <PhotoGalleryClient photos={photos} {...galleryProps} />
     </div>
   );
 };

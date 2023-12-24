@@ -26,7 +26,7 @@ const badgeVariants = cva(
         purple:
           "border-purple-500/50 text-purple-500 dark:border-purple-500/50 dark:text-purple-500 hover:bg-purple-500/10",
         pink: "border-pink-500/50 text-pink-500 dark:border-pink-500/50 dark:text-pink-500 hover:bg-pink-500/10",
-        gray: "border-slate-200 text-slate-900 dark:border-slate-800 dark:text-slate-50 hover:bg-slate-200/10",
+        gray: "border-slate-600 text-slate-900 dark:border-slate-200 dark:text-slate-50 hover:bg-slate-600/10",
       },
     },
     defaultVariants: {
