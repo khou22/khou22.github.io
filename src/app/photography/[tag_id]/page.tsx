@@ -1,10 +1,12 @@
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
+import { TagImageCard } from "@/components/organisms/TagImageCard/TagImageCard";
 import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
+import { getSuggestedPhotoTags } from "@/utils/photos/getSuggestedPhotoTags";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import _ from "lodash";
 import { Metadata } from "next";
@@ -43,6 +45,12 @@ const TagPage = async ({ params }: PageProps) => {
   }
 
   const photoIDs = await getPhotosWithTag(photoTag);
+  const suggestedTags = getSuggestedPhotoTags(photoTag, 4);
+  const suggestedTagNodes = await Promise.all(
+    suggestedTags.map(async (tag) => (
+      <TagImageCard key={tag} photoTag={tag} size="md" />
+    )),
+  );
 
   return (
     <PageWrapper maxWidth="wide">
@@ -93,6 +101,13 @@ const TagPage = async ({ params }: PageProps) => {
       </div>
 
       <PhotoGallery photoIDs={photoIDs} fadeIn />
+
+      <div className="mt-16 w-full">
+        <h3 className="w-full text-center">Explore More</h3>
+        <div className="my-6 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
+          {suggestedTagNodes}
+        </div>
+      </div>
     </PageWrapper>
   );
 };

@@ -3,11 +3,13 @@ import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { getCdnAsset, getPhotoThumbnail } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
+import { classNames } from "@/utils/style";
 import Link from "next/link";
 import React from "react";
 
 type TagImageCardProps = {
   photoTag: PhotoTags;
+  size?: "sm" | "md" | "lg";
 };
 
 const defaultBackground = "media/site/images/photography_background_png";
@@ -17,6 +19,7 @@ const defaultBackground = "media/site/images/photography_background_png";
  */
 export const TagImageCard: React.FC<TagImageCardProps> = async ({
   photoTag,
+  size = "sm",
 }) => {
   const metadata = tagMetadata[photoTag];
 
@@ -38,12 +41,28 @@ export const TagImageCard: React.FC<TagImageCardProps> = async ({
     }
   }
 
+  let heightClassName;
+  switch (size) {
+    case "lg":
+      heightClassName = "aspect-[4/5]";
+      break;
+    case "md":
+      heightClassName = "aspect-square";
+      break;
+    case "sm":
+    default:
+      heightClassName = "aspect-[9/5]";
+  }
+
   return (
     <Link href={PAGES.PHOTOGRAPHY.TAG(photoTag)} className="col-span-1">
       <ImageCard
         title={metadata.name}
         imageSrc={url}
-        containerClassName="w-full h-full min-h-[200px] rounded-lg"
+        containerClassName={classNames(
+          "w-full h-full rounded-lg",
+          heightClassName,
+        )}
         contentClassName="p-4"
       />
     </Link>
