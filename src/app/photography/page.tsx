@@ -186,10 +186,11 @@ const PhotographyHomepage = async () => {
           />
         </MagazineLayout>
       </PageWrapper>
-      <span className="h-0 w-full" id="locations" />
+      <span className="h-0 w-full" id="browse" />
       <PageWrapper maxWidth="wide" className="my-6">
         <h1 className="w-full text-center">Browse</h1>
 
+        <span className="h-0 w-full" id="locations" />
         <h3 className="mt-6 w-full text-center leading-loose">
           By Location 📍
         </h3>
@@ -197,6 +198,7 @@ const PhotographyHomepage = async () => {
           {locationNodes}
         </div>
 
+        <span className="h-0 w-full" id="categories" />
         <h3 className="mt-6 w-full text-center leading-loose">
           By Category 🗂️
         </h3>

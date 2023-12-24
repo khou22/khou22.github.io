@@ -12,6 +12,7 @@ export const PAGES = {
   PHOTOGRAPHY: {
     HOME: "/photography",
     FEATURED: "/photography/featured",
+    BROWSE: "/photography#browse",
     LOCATIONS: "/photography#locations",
     TAG: (tag: PhotoTags) => `/photography/${tagMetadata[tag].slug}`,
     PHOTO: (photoID: PhotoIdType) => `/photo/${getPhotoURLComponent(photoID)}`,

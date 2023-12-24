@@ -1,8 +1,11 @@
+import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { PAGES } from "@/utils/pages";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import _ from "lodash";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -43,6 +46,15 @@ const TagPage = async ({ params }: PageProps) => {
 
   return (
     <PageWrapper maxWidth="wide">
+      <div>
+        <CustomLink
+          href={PAGES.PHOTOGRAPHY.BROWSE}
+          className="flex flex-row items-center justify-start space-x-1"
+        >
+          <ArrowLeftIcon className="inline h-4 w-4" />
+          <span>Back to Browse</span>
+        </CustomLink>
+      </div>
       <div className="flex w-full flex-col items-center justify-center space-y-2">
         <img
           alt={`${metadata.name} hero image`}
