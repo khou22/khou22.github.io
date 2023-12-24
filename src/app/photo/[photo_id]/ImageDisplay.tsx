@@ -3,14 +3,9 @@
 import { ModalPrimitive } from "@/components/atoms/ModalPrimitive/ModalPrimitive";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { FullScreenIcon } from "@/components/icons/FullScreenIcon/FullScreenIcon";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { notEmpty } from "@/utils/arrays";
-import {
-  PhotoIdType,
-  getCdnAsset,
-  getPhotoThumbnail,
-} from "@/utils/cdn/cdnAssets";
-import React, { useEffect, useState } from "react";
+import { PhotoIdType } from "@/utils/cdn/cdnAssets";
+import { getPhotoProgressiveImages } from "@/utils/photos/getPhotoProgressiveImages";
+import React, { useState } from "react";
 
 type ImageDisplayProps = {
   photoID: PhotoIdType;
@@ -18,9 +13,7 @@ type ImageDisplayProps = {
 
 export const ImageDisplay: React.FC<ImageDisplayProps> = ({ photoID }) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const photoURLs = [getPhotoThumbnail(photoID), getCdnAsset(photoID)].filter(
-    notEmpty,
-  );
+  const photoURLs = getPhotoProgressiveImages(photoID);
 
   return (
     <div className="group relative bg-gray-100/40">

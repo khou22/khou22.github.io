@@ -11,6 +11,7 @@ import {
 } from "../ProgressiveImage/ProgressiveImage";
 import Link from "next/link";
 import { PAGES } from "@/utils/pages";
+import { getPhotoProgressiveImages } from "@/utils/photos/getPhotoProgressiveImages";
 
 type PhotoImageProps = {
   photoID: PhotoIdType;
@@ -31,15 +32,13 @@ export const PhotoImage: React.FC<PhotoImageProps> = ({
 
   const alt = props.alt ?? getPhotoName(photoID);
 
-  // First image in the array is the lowest resolution.
-  const images: string[] = [];
-  const thumbnailID = getPhotoThumbnail(photoID);
-  if (thumbnailID && thumbnailID !== photoID) {
-    images.push(getCdnAsset(thumbnailID));
-  }
-  images.push(getCdnAsset(photoID));
-
-  const imgNode = <ProgressiveImage {...props} alt={alt} src={images} />;
+  const imgNode = (
+    <ProgressiveImage
+      {...props}
+      alt={alt}
+      src={getPhotoProgressiveImages(photoID)}
+    />
+  );
 
   if (isLink) {
     return (

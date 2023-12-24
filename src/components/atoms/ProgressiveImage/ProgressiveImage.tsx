@@ -1,5 +1,6 @@
 "use client";
 
+import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 import React, { useCallback, useEffect, useState } from "react";
 
 export type ProgressiveImageProps = {
@@ -17,14 +18,15 @@ export type ProgressiveImageProps = {
  */
 export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
   src,
+  onLoad,
   ...props
 }) => {
   const imgRef = React.useRef<HTMLImageElement>(null);
   const [currentImageIdx, setCurrentImageIdx] = useState(0);
+  const isClientReady = useIsClient();
 
-  // TODO (kevin): Handle error loading states.
-  const handleImageLoad = useCallback(
-    (e: React.SyntheticEvent<HTMLImageElement>) => {
+  const incrementResolution = useCallback(
+    () =>
       setCurrentImageIdx((idx) => {
         // If we've reached the last image, stay on the highest resolution image (ie. the last in the array).
         if (idx >= src.length - 1) {
@@ -33,12 +35,34 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
 
         // Increment to the next image
         return idx + 1;
-      });
+      }),
+    [src.length],
+  );
 
+  const handleImageLoad = useCallback(
+    (e: React.SyntheticEvent<HTMLImageElement>) => {
+      // If not client side mounted yet, don't advance to next image.
+      if (!isClientReady) return;
+
+      // If the image isn't done loading (success or error), don't try to go to the next one.
+      if (!imgRef.current?.complete) return;
+
+      // TODO (kevin): Properly handle error states (ie. image 404) using `onError`.
+      const didError =
+        imgRef.current.naturalWidth === 0 && imgRef.current.naturalHeight === 0;
+      if (didError) {
+        console.warn(
+          `[] ${currentImageIdx + 1} of ${src.length} errored: ${
+            src[currentImageIdx]
+          }`,
+        );
+      }
+
+      incrementResolution();
       // Also call the onLoad prop if supplied.
-      props.onLoad?.(e);
+      onLoad?.(e);
     },
-    [src, props],
+    [isClientReady, incrementResolution, onLoad, currentImageIdx, src],
   );
 
   useEffect(() => {
@@ -55,8 +79,10 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
       alt={props.alt}
       {...props}
       src={src[currentImageIdx]}
-      onLoadStart={console.log}
       onLoad={handleImageLoad}
+      onLoadedMetadata={console.log}
+      onErrorCapture={console.log}
+      onError={console.log}
     />
   );
 };
