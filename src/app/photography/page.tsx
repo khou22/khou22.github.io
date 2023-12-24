@@ -127,7 +127,7 @@ const PhotographyHomepage = async () => {
             style={{ animationDelay: `${8 * fadeAnimationDeltaMS}ms` }}
           />
           <FullCoverArticle
-            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Italy)}
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Greece)}
             title="Greece"
             category="Travel"
             description="Solo travel adventures."

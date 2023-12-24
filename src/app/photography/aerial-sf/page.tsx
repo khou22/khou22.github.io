@@ -41,6 +41,7 @@ const AerialSfPage = async () => {
               photoID="photography/Golden_Gate_Bridge_Aerial_Head_On_jpg"
               className="h-full w-full object-contain"
               isLink
+              hoverAnimation="scale"
             />
           </div>
         </div>
@@ -52,6 +53,7 @@ const AerialSfPage = async () => {
                 photoID="photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg"
                 className="h-full w-full object-contain"
                 isLink
+                hoverAnimation="scale"
               />
             </div>
             <div className="col-span-2 flex items-center justify-center p-4">
@@ -82,6 +84,7 @@ const AerialSfPage = async () => {
               photoID="photography/Downtown_San_Francisco_Birds_Eye_View_Top_Down_Powell_Street_Intersection_Drone_jpg"
               className="h-full w-full object-contain"
               isLink
+              hoverAnimation="scale"
             />
           </div>
         </div>
@@ -112,6 +115,7 @@ const AerialSfPage = async () => {
               photoID="photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_jpg"
               className="h-full w-full object-cover"
               isLink
+              hoverAnimation="scale"
             />
           </div>
           <p className="caption mt-2">Lombard Street at 6am, San Francisco</p>
@@ -127,6 +131,7 @@ const AerialSfPage = async () => {
               photoID="photography/Downtown_San_Francisco_Drone_Vertical_Powell_Street_Intersection_jpg"
               className="h-full w-full object-cover"
               isLink
+              hoverAnimation="scale"
             />
           </div>
         </div>
@@ -144,6 +149,7 @@ const AerialSfPage = async () => {
             photoID="photography/Main_Post_Presidio_San_Francisco_jpg"
             className="h-full w-full object-cover"
             isLink
+            hoverAnimation="scale"
           />
         </div>
         <div className="col-span-3 flex aspect-[2/3] w-full flex-col items-start justify-end">
@@ -168,6 +174,7 @@ const AerialSfPage = async () => {
               photoID="photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_jpg"
               className="h-full w-full object-cover"
               isLink
+              hoverAnimation="scale"
             />
           </div>
         </div>
@@ -180,6 +187,7 @@ const AerialSfPage = async () => {
               photoID="photography/Bay_Bridge_at_Sunset_from_Plane_jpg"
               className="h-full w-full object-cover"
               isLink
+              hoverAnimation="scale"
             />
           </div>
         </div>
@@ -196,6 +204,7 @@ const AerialSfPage = async () => {
               photoID="photography/Lombard_Street_Drone_jpg"
               className="h-full w-full object-cover"
               isLink
+              hoverAnimation="scale"
             />
           </div>
           <p className="caption text-center">Lombard Street</p>

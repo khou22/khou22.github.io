@@ -1,10 +1,4 @@
-import {
-  PhotoIdType,
-  getCdnAsset,
-  getPhotoName,
-  getPhotoThumbnail,
-  isPhotoID,
-} from "@/utils/cdn/cdnAssets";
+import { PhotoIdType, getPhotoName, isPhotoID } from "@/utils/cdn/cdnAssets";
 import {
   ProgressiveImage,
   ProgressiveImageProps,
@@ -12,10 +6,14 @@ import {
 import Link from "next/link";
 import { PAGES } from "@/utils/pages";
 import { getPhotoProgressiveImages } from "@/utils/photos/getPhotoProgressiveImages";
+import { classNames } from "@/utils/style";
+
+type HoverAnimationType = "scale" | "off";
 
 type PhotoImageProps = {
   photoID: PhotoIdType;
   isLink?: boolean;
+  hoverAnimation?: HoverAnimationType;
 } & Omit<ProgressiveImageProps, "src">;
 
 /**
@@ -24,6 +22,8 @@ type PhotoImageProps = {
 export const PhotoImage: React.FC<PhotoImageProps> = ({
   photoID,
   isLink = false,
+  hoverAnimation = "off",
+  className,
   ...props
 }) => {
   if (!isPhotoID(photoID)) {
@@ -37,6 +37,11 @@ export const PhotoImage: React.FC<PhotoImageProps> = ({
       {...props}
       alt={alt}
       src={getPhotoProgressiveImages(photoID)}
+      className={classNames(
+        className,
+        hoverAnimation === "scale" &&
+          "origin-center transition-transform duration-300 ease-in-out hover:scale-105",
+      )}
     />
   );
 
