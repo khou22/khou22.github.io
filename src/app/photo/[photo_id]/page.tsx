@@ -27,6 +27,10 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ImageDisplay } from "./ImageDisplay";
+import { getSuggestedPhotos } from "@/utils/photos/getSuggestedPhotos";
+import { ImageCard } from "@/components/molecules/ImageCard/ImageCard";
+import { getPhotoProgressiveImages } from "@/utils/photos/getPhotoProgressiveImages";
+import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 
 export type PageProps = {
   params: {
@@ -128,13 +132,42 @@ const PhotoByIDPage = async ({
     );
   }
 
-  return (
-    <PageWrapper className="grid h-full min-h-[75vh] grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
-      <ImageDisplay photoID={photoID} />
-      <ProductDetails photoID={photoID} tags={tags} />
+  const suggestedPhotoIDs = getSuggestedPhotos(photoID, 10);
+  const suggestedPhotoNodes = suggestedPhotoIDs.map((photoID) => {
+    return (
+      <PhotoImage
+        key={photoID}
+        photoID={photoID}
+        className="aspect-square h-full w-full object-contain"
+        isLink
+      />
+    );
+  });
 
-      {/* TODO (kevin): Suggested photos to allow users to keep browsing */}
-    </PageWrapper>
+  return (
+    <>
+      <PageWrapper className="grid h-full min-h-[75vh] grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
+        <ImageDisplay photoID={photoID} />
+        <ProductDetails photoID={photoID} tags={tags} />
+      </PageWrapper>
+      <PageWrapper
+        className="mt-16 w-full items-center space-y-4 md:space-y-8"
+        maxWidth="wide"
+      >
+        <h3>Suggested Photos 🎞️</h3>
+        <div className="grid w-full grid-cols-3 gap-1 md:grid-cols-4 md:gap-2 lg:grid-cols-5 lg:gap-3">
+          {suggestedPhotoNodes}
+        </div>
+        <Link href={PAGES.PHOTOGRAPHY.BROWSE}>
+          <Button
+            variant="outline"
+            className="w-full min-w-[320px] max-w-full sm:w-auto"
+          >
+            Browse All Photos
+          </Button>
+        </Link>
+      </PageWrapper>
+    </>
   );
 };
 

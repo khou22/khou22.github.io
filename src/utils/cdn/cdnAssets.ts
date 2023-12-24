@@ -16,6 +16,16 @@ export const getCdnAsset = (assetName: PhotoIdType) => {
 };
 
 /**
+ * Get all photography photo IDs.
+ */
+export const getAllPhotographyPhotoIDs = (): PhotoIdType[] => {
+  const photoKeys = Object.keys(_generatedCdnAssets).filter((key) =>
+    key.startsWith("photography/"),
+  );
+  return photoKeys as PhotoIdType[];
+};
+
+/**
  * Get the name of a photo (ie. file name without the extension).
  */
 export const getPhotoName = (photoID: PhotoIdType) => {

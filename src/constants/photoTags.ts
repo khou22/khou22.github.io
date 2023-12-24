@@ -265,6 +265,7 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.CrossCountryRoadtrip]: {
     name: "Cross-Country Roadtrip",
     slug: "cross-country-roadtrip",
+    thumbnailPhotoId: "photography/Mount_Rushmore_Picture_of_iPhone_jpg",
   },
   [PhotoTags.Featured]: {
     name: "Featured",
