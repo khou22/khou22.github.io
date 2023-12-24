@@ -1,4 +1,6 @@
+import { MapPinIcon } from "@/components/icons/MapPinIcon/MapPinIcon";
 import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
+import { IconProps } from "@/components/icons/types";
 import { Badge, BadgeProps } from "@/components/ui/badge";
 import { PhotoTags, allLocationTags, tagMetadata } from "@/constants/photoTags";
 import { PAGES } from "@/utils/pages";
@@ -10,6 +12,7 @@ type PhotoTagBadgeProps = {
 };
 
 export const PhotoTagBadge: React.FC<PhotoTagBadgeProps> = ({ photoTag }) => {
+  let Icon: React.FC<IconProps> = TagIcon;
   let variant: BadgeProps["variant"] = "default";
   switch (photoTag) {
     case PhotoTags.Featured:
@@ -29,6 +32,7 @@ export const PhotoTagBadge: React.FC<PhotoTagBadgeProps> = ({ photoTag }) => {
 
   if (allLocationTags.includes(photoTag)) {
     variant = "purple";
+    Icon = MapPinIcon;
   }
 
   if (tagMetadata[photoTag].hidden) {
@@ -38,7 +42,7 @@ export const PhotoTagBadge: React.FC<PhotoTagBadgeProps> = ({ photoTag }) => {
   return (
     <Link href={PAGES.PHOTOGRAPHY.TAG(photoTag)}>
       <Badge variant={variant}>
-        <TagIcon className="mr-1 h-4 w-4" />
+        <Icon className="mr-1 inline h-4 w-4" />
         {tagMetadata[photoTag].name}
       </Badge>
     </Link>

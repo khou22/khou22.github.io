@@ -15,18 +15,18 @@ const badgeVariants = cva(
         destructive:
           "border-transparent bg-red-500 text-slate-50 shadow hover:bg-red-500/80 dark:bg-red-900 dark:text-slate-50 dark:hover:bg-red-900/80",
         outline: "text-slate-950 dark:text-slate-50",
-        red: "border-red-500/50 text-red-500 dark:border-red-500/50 dark:text-red-500",
+        red: "border-red-500/50 text-red-500 dark:border-red-500/50 dark:text-red-500 hover:bg-red-500/10",
         orange:
-          "border-orange-500/50 text-orange-500 dark:border-orange-500/50 dark:text-orange-500",
+          "border-orange-500/50 text-orange-500 dark:border-orange-500/50 dark:text-orange-500 hover:bg-orange-500/10",
         yellow:
-          "border-yellow-500/50 text-yellow-500 dark:border-yellow-500/50 dark:text-yellow-500",
+          "border-yellow-500/50 text-yellow-500 dark:border-yellow-500/50 dark:text-yellow-500 hover:bg-yellow-500/10",
         green:
-          "border-green-500/50 text-green-500 dark:border-green-500/50 dark:text-green-500",
-        blue: "border-blue-500/50 text-blue-500 dark:border-blue-500/50 dark:text-blue-500",
+          "border-green-500/50 text-green-500 dark:border-green-500/50 dark:text-green-500 hover:bg-green-500/10",
+        blue: "border-blue-500/50 text-blue-500 dark:border-blue-500/50 dark:text-blue-500 hover:bg-blue-500/10",
         purple:
-          "border-purple-500/50 text-purple-500 dark:border-purple-500/50 dark:text-purple-500",
-        pink: "border-pink-500/50 text-pink-500 dark:border-pink-500/50 dark:text-pink-500",
-        gray: "border-slate-200 text-slate-900 dark:border-slate-800 dark:text-slate-50",
+          "border-purple-500/50 text-purple-500 dark:border-purple-500/50 dark:text-purple-500 hover:bg-purple-500/10",
+        pink: "border-pink-500/50 text-pink-500 dark:border-pink-500/50 dark:text-pink-500 hover:bg-pink-500/10",
+        gray: "border-slate-200 text-slate-900 dark:border-slate-800 dark:text-slate-50 hover:bg-slate-200/10",
       },
     },
     defaultVariants: {
