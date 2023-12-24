@@ -133,7 +133,7 @@ const PhotoByIDPage = async ({
         src={[getCdnAsset(photoID)]}
         className="max-h-[85vh] w-full object-contain"
       />
-      <ProductDetails photoID={photoID} />
+      <ProductDetails photoID={photoID} tags={tags} />
     </PageWrapper>
   );
 };

@@ -1,10 +1,12 @@
 "use client";
 
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
 import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { photoPricing } from "@/constants/photoPricing";
+import { PhotoTags } from "@/constants/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
@@ -14,11 +16,15 @@ import { useState } from "react";
 
 type ProductDetailsProps = {
   photoID: PhotoIdType;
+  tags: PhotoTags[];
 };
 
 const defaultPhotoSize = photoPricing[1];
 
-export const ProductDetails: React.FC<ProductDetailsProps> = ({ photoID }) => {
+export const ProductDetails: React.FC<ProductDetailsProps> = ({
+  photoID,
+  tags,
+}) => {
   const [selectedSizeID, setSelectedSizeID] = useState(defaultPhotoSize.id);
   const selectedSize =
     photoPricing.find((pricing) => pricing.id === selectedSizeID) ??
@@ -31,6 +37,12 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ photoID }) => {
         <h4 className="mt-2 font-medium text-gray-800">
           ${selectedSize.price}
         </h4>
+
+        <div className="mt-2 flex flex-row flex-wrap space-x-1">
+          {tags.map((tag) => (
+            <PhotoTagBadge key={tag} photoTag={tag} />
+          ))}
+        </div>
       </div>
 
       <div>
