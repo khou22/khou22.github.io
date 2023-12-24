@@ -1,12 +1,12 @@
 import { CoordinatesLabel } from "@/components/atoms/CoordinatesLabel/CoordinatesLabel";
+import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 import { Label } from "@/components/ui/label";
 import { PhotoTags } from "@/constants/photoTags";
 import { getPhotosWithTags } from "@/data/photos/photoDbManager";
-import { getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "San Francisco by Air | Kevin Hou Photography",
@@ -37,15 +37,10 @@ const AerialSfPage = async () => {
             </h3>
           </div>
           <div className="relative w-full grow">
-            <Image
-              alt={getPhotoName(
-                "photography/Golden_Gate_Bridge_Aerial_Head_On_jpg",
-              )}
-              src={getCdnAsset(
-                "photography/Golden_Gate_Bridge_Aerial_Head_On_jpg",
-              )}
-              className="object-contain"
-              fill
+            <PhotoImage
+              photoID="photography/Golden_Gate_Bridge_Aerial_Head_On_jpg"
+              className="h-full w-full object-contain"
+              isLink
             />
           </div>
         </div>
@@ -53,15 +48,10 @@ const AerialSfPage = async () => {
         <div className="col-span-2 flex h-full flex-col items-center space-y-4">
           <div className="grid h-2/3 w-full grid-cols-5">
             <div className="relative col-span-3 h-full">
-              <Image
-                alt={getPhotoName(
-                  "photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg",
-                )}
-                src={getCdnAsset(
-                  "photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg",
-                )}
-                className="object-contain"
-                fill
+              <PhotoImage
+                photoID="photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg"
+                className="h-full w-full object-contain"
+                isLink
               />
             </div>
             <div className="col-span-2 flex items-center justify-center p-4">
@@ -88,15 +78,10 @@ const AerialSfPage = async () => {
 
         <div className="col-span-2 flex h-full flex-col items-center justify-center pt-12">
           <div className="relative h-full w-full">
-            <Image
-              alt={getPhotoName(
-                "photography/Downtown_San_Francisco_Birds_Eye_View_Top_Down_Powell_Street_Intersection_Drone_jpg",
-              )}
-              src={getCdnAsset(
-                "photography/Downtown_San_Francisco_Birds_Eye_View_Top_Down_Powell_Street_Intersection_Drone_jpg",
-              )}
-              className="object-contain"
-              fill
+            <PhotoImage
+              photoID="photography/Downtown_San_Francisco_Birds_Eye_View_Top_Down_Powell_Street_Intersection_Drone_jpg"
+              className="h-full w-full object-contain"
+              isLink
             />
           </div>
         </div>
@@ -123,15 +108,10 @@ const AerialSfPage = async () => {
         <div className="col-span-1" />
         <div className="col-span-3 flex h-full flex-col items-center justify-start">
           <div className="relative aspect-[4/5] w-full">
-            <Image
-              alt={getPhotoName(
-                "photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_jpg",
-              )}
-              src={getCdnAsset(
-                "photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_jpg",
-              )}
-              className="object-cover"
-              fill
+            <PhotoImage
+              photoID="photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_jpg"
+              className="h-full w-full object-cover"
+              isLink
             />
           </div>
           <p className="caption mt-2">Lombard Street at 6am, San Francisco</p>
@@ -143,15 +123,10 @@ const AerialSfPage = async () => {
         <div className="col-span-3" />
         <div className="col-span-4">
           <div className="relative mt-36 aspect-square w-full">
-            <Image
-              alt={getPhotoName(
-                "photography/Downtown_San_Francisco_Drone_Vertical_Powell_Street_Intersection_jpg",
-              )}
-              src={getCdnAsset(
-                "photography/Downtown_San_Francisco_Drone_Vertical_Powell_Street_Intersection_jpg",
-              )}
-              className="object-cover"
-              fill
+            <PhotoImage
+              photoID="photography/Downtown_San_Francisco_Drone_Vertical_Powell_Street_Intersection_jpg"
+              className="h-full w-full object-cover"
+              isLink
             />
           </div>
         </div>
@@ -165,15 +140,10 @@ const AerialSfPage = async () => {
 
         {/* Second Row */}
         <div className="relative col-span-9 h-full">
-          <Image
-            src={getCdnAsset(
-              "photography/Main_Post_Presidio_San_Francisco_jpg",
-            )}
-            alt={getPhotoName(
-              "photography/Main_Post_Presidio_San_Francisco_jpg",
-            )}
-            className="object-cover"
-            fill
+          <PhotoImage
+            photoID="photography/Main_Post_Presidio_San_Francisco_jpg"
+            className="h-full w-full object-cover"
+            isLink
           />
         </div>
         <div className="col-span-3 flex aspect-[2/3] w-full flex-col items-start justify-end">
@@ -194,15 +164,10 @@ const AerialSfPage = async () => {
         </div>
         <div className="col-span-3">
           <div className="relative mt-16 aspect-[5/4]">
-            <Image
-              src={getCdnAsset(
-                "photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_jpg",
-              )}
-              alt={getPhotoName(
-                "photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_jpg",
-              )}
-              className="object-cover"
-              fill
+            <PhotoImage
+              photoID="photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_jpg"
+              className="h-full w-full object-cover"
+              isLink
             />
           </div>
         </div>
@@ -211,15 +176,10 @@ const AerialSfPage = async () => {
         {/* Fourth Row */}
         <div className="col-span-7 pl-16">
           <div className="relative mt-48 aspect-square">
-            <Image
-              src={getCdnAsset(
-                "photography/Bay_Bridge_at_Sunset_from_Plane_jpg",
-              )}
-              alt={getPhotoName(
-                "photography/Bay_Bridge_at_Sunset_from_Plane_jpg",
-              )}
-              className="object-cover"
-              fill
+            <PhotoImage
+              photoID="photography/Bay_Bridge_at_Sunset_from_Plane_jpg"
+              className="h-full w-full object-cover"
+              isLink
             />
           </div>
         </div>
@@ -232,11 +192,10 @@ const AerialSfPage = async () => {
         </div>
         <div className="col-span-3">
           <div className="relative aspect-[2/3]">
-            <Image
-              src={getCdnAsset("photography/Lombard_Street_Drone_jpg")}
-              alt={getPhotoName("photography/Lombard_Street_Drone_jpg")}
-              className="object-cover"
-              fill
+            <PhotoImage
+              photoID="photography/Lombard_Street_Drone_jpg"
+              className="h-full w-full object-cover"
+              isLink
             />
           </div>
           <p className="caption text-center">Lombard Street</p>
