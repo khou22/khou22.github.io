@@ -1,4 +1,5 @@
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
+import _ from "lodash";
 
 export enum PhotoTags {
   // Standard tag themes for category portfolios.
@@ -69,6 +70,22 @@ export const allLocationTags = [
   PhotoTags.Greece,
 ];
 
+export const allCategoryTags = [
+  PhotoTags.Landscape,
+  PhotoTags.City,
+  PhotoTags.Events,
+  PhotoTags.Portraits,
+  PhotoTags.Product,
+  PhotoTags.Food,
+  PhotoTags.Engagements,
+  PhotoTags.Panerama,
+  PhotoTags.Satellite,
+  // PhotoTags.Concert,
+  PhotoTags.Astrophotography,
+  PhotoTags.Drone,
+  PhotoTags.Cycling,
+];
+
 export type TagMetadataType = {
   name: string;
   slug: string;
@@ -96,26 +113,33 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Portraits]: {
     name: "Portraits",
     slug: "portraits",
+    thumbnailPhotoId: "photography/portraits/Courtney_Fall_Leaves_Portrait_jpg",
   },
   [PhotoTags.City]: {
     name: "City",
     slug: "city",
+    thumbnailPhotoId: "photography/portraits/Chinatown_Walking_Silhouette_jpg",
   },
   [PhotoTags.Astrophotography]: {
     name: "Astrophotography",
     slug: "astrophotography",
+    thumbnailPhotoId: "photography/Pigeon_Point_Lighthouse_Milky_Way_jpg",
   },
   [PhotoTags.Product]: {
     name: "Product",
     slug: "product",
+    thumbnailPhotoId: "photography/product/IWC_Watch_Shot_Landscape_jpg",
   },
   [PhotoTags.Food]: {
     name: "Food",
     slug: "food",
+    thumbnailPhotoId: "photography/Black_Sheep_Foods_Single_Burger_jpg",
   },
   [PhotoTags.Cycling]: {
     name: "Cycling",
     slug: "cycling",
+    thumbnailPhotoId:
+      "photography/san_francisco/Rodeo_Beach_Gravel_Hill_Sunset_Ride_jpg",
   },
   [PhotoTags.SanFrancisco]: {
     name: "San Francisco",
@@ -127,7 +151,7 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
     name: "Hong Kong",
     slug: "hong-kong",
     thumbnailPhotoId:
-      "media/store/Hong_Kong_Red_Taxi_Motion_Blur_Horizontal_jpg",
+      "photography/Hong_Kong_Red_Taxi_Motion_Blur_Horizontal_jpg",
   },
   [PhotoTags.NewYork]: {
     name: "New York",
@@ -160,7 +184,7 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Japan]: {
     name: "Japan",
     slug: "japan",
-    thumbnailPhotoId: "media/store/Hie_Shrine_Tokyo_Japan_jpg",
+    thumbnailPhotoId: "photography/Hie_Shrine_Tokyo_Japan_jpg",
   },
   [PhotoTags.WashingtonDC]: {
     name: "Washington DC",
@@ -197,7 +221,7 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Singapore]: {
     name: "Singapore",
     slug: "singapore",
-    thumbnailPhotoId: "media/store/Marina_Bay_Sands_Drone_Vertical_jpg",
+    thumbnailPhotoId: "photography/Marina_Bay_Sands_Drone_Vertical_jpg",
   },
   [PhotoTags.Vietnam]: {
     name: "Vietnam",
@@ -223,10 +247,13 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Drone]: {
     name: "Aerial",
     slug: "aerial",
+    thumbnailPhotoId:
+      "photography/Single_Person_Lying_on_Beach_Top_Down_Drone_Las_Terrenas_Dominican_Republic_jpg",
   },
   [PhotoTags.Panerama]: {
     name: "Panerama",
     slug: "panerama",
+    thumbnailPhotoId: "photography/Panorama_of_Arno_River_in_Pisa_Italy_jpg",
   },
   [PhotoTags.Satellite]: {
     name: "Satellite",

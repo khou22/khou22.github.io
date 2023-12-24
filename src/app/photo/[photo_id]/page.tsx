@@ -132,6 +132,8 @@ const PhotoByIDPage = async ({
     <PageWrapper className="grid h-full min-h-[75vh] grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
       <ImageDisplay photoID={photoID} />
       <ProductDetails photoID={photoID} tags={tags} />
+
+      {/* TODO (kevin): Suggested photos to allow users to keep browsing */}
     </PageWrapper>
   );
 };

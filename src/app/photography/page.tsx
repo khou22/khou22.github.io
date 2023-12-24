@@ -1,39 +1,31 @@
 import { Autoscroll } from "@/components/atoms/Autoscroll/Autoscroll";
-import { ImageCard } from "@/components/molecules/ImageCard/ImageCard";
 import { FullCoverArticle } from "@/components/organisms/MagazineLayout/FullCoverArticle";
 import { HalfTextArticle } from "@/components/organisms/MagazineLayout/HalfTextArticle";
 import { MagazineLayout } from "@/components/organisms/MagazineLayout/MagazineLayout";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
-import { PhotoTags, allLocationTags, tagMetadata } from "@/constants/photoTags";
-import { getPhotosWithTag } from "@/data/photos/photoDbManager";
+import { TagImageCard } from "@/components/organisms/TagImageCard/TagImageCard";
+import {
+  PhotoTags,
+  allCategoryTags,
+  allLocationTags,
+} from "@/constants/photoTags";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
-import Link from "next/link";
 
 const fadeAnimationDeltaMS = 130;
 
 const PhotographyHomepage = async () => {
-  const categoryNodes = await Promise.all(
-    allLocationTags.map(async (tag) => {
-      const photoIDs = await getPhotosWithTag(tag);
-      const thumbnail = tagMetadata[tag].thumbnailPhotoId || photoIDs[0];
-      return (
-        <Link
-          key={tag}
-          href={PAGES.PHOTOGRAPHY.TAG(tag)}
-          className="col-span-1"
-        >
-          <ImageCard
-            title={tagMetadata[tag].name}
-            imageSrc={getCdnAsset(thumbnail)}
-            containerClassName="w-full h-full min-h-[200px] rounded-lg"
-            contentClassName="p-4"
-          />
-        </Link>
-      );
-    }),
+  const locationNodes = await Promise.all(
+    allLocationTags.map(async (tag) => (
+      <TagImageCard key={tag} photoTag={tag} />
+    )),
   );
 
+  const categoryNodes = await Promise.all(
+    allCategoryTags.map(async (tag) => (
+      <TagImageCard key={tag} photoTag={tag} />
+    )),
+  );
   return (
     <>
       <Autoscroll />
@@ -196,7 +188,18 @@ const PhotographyHomepage = async () => {
       </PageWrapper>
       <span className="h-0 w-full" id="locations" />
       <PageWrapper maxWidth="wide" className="my-6">
-        <h2 className="w-full text-center leading-loose">By Location 📍</h2>
+        <h1 className="w-full text-center">Browse</h1>
+
+        <h3 className="mt-6 w-full text-center leading-loose">
+          By Location 📍
+        </h3>
+        <div className="my-6 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
+          {locationNodes}
+        </div>
+
+        <h3 className="mt-6 w-full text-center leading-loose">
+          By Category 🗂️
+        </h3>
         <div className="my-6 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
           {categoryNodes}
         </div>
