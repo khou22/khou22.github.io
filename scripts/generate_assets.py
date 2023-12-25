@@ -1,12 +1,15 @@
 import os
 import re
-from typing import Dict, NamedTuple
+from typing import Dict, NamedTuple, Optional
+from PIL import Image
 import urllib.parse
 
 
 class AssetMeta(NamedTuple):
     name: str
     path: str
+    width: Optional[int] = None
+    height: Optional[int] = None
 
 
 def sanitize_file_key(file_path):
@@ -34,8 +37,17 @@ def get_asset_map():
             # Remove the extension from the file name
             file_name = os.path.splitext(file)[0]
 
+            # Get the width and height of the image.
+            width, height = None, None
+            if file.endswith(".jpg") or file.endswith(".jpeg") or file.endswith(".png"):
+                image = Image.open(file_path)
+                width, height = image.size
+
             value = AssetMeta(
-                name=file_name, path=urllib.parse.quote(f"{current_path}{file}")
+                name=file_name,
+                path=urllib.parse.quote(f"{current_path}{file}"),
+                width=width,
+                height=height,
             )
 
             if os.path.isdir(file_path):
@@ -49,7 +61,7 @@ def get_asset_map():
 
 def get_python_dict(map: Dict[str, AssetMeta]):
     entries = [
-        f'\t"{key}": {{\n    path: "/{value.path}",\n    name: `{value.name}`,\n  }}'
+        f'\t"{key}": {{\n    path: "/{value.path}",\n    name: `{value.name}`,\n    dimensions: [{value.width if value.width else "null"}, {value.height if value.height else "null"}],\n  }}'
         for key, value in map.items()
     ]
     return "export const _generatedCdnAssets = {\n" + ",\n".join(entries) + "\n}"
