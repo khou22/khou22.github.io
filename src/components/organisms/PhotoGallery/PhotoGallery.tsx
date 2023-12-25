@@ -15,8 +15,8 @@ type PhotoGalleryProps = {
 } & Omit<PhotoGalleryClientProps, "photos">;
 
 /**
- * Photo gallery component for displaying photos in a masonry layout. **Must be rendered in a
- * server-side component** as it needs access to the photo sizes on the disk.
+ * Photo gallery component for displaying photos in a masonry layout. **Recommended to be rendered
+ * in a server-side component** as it needs access to the photo sizes in the large CDN asset map.
  */
 export const PhotoGallery = async ({
   photoIDs,

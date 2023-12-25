@@ -1,7 +1,5 @@
-import imageSize from "image-size";
 import { PhotoIdType } from "../cdn/cdnAssets";
 import { _generatedCdnAssets } from "../cdn/cdnAssets.generated";
-import path from "path";
 
 type PhotoSize = {
   width: number | undefined;
@@ -17,14 +15,9 @@ type PhotoSize = {
 export const getPhotoSize = async (
   photoID: PhotoIdType,
 ): Promise<PhotoSize> => {
-  const filePath = path.join(
-    process.cwd(),
-    "docs",
-    decodeURIComponent(_generatedCdnAssets[photoID].path),
-  );
-  const size = await imageSize(filePath);
+  const [width, height] = _generatedCdnAssets[photoID].dimensions;
   return {
-    width: size.width,
-    height: size.height,
+    width: width ?? undefined,
+    height: height ?? undefined,
   };
 };
