@@ -33,7 +33,7 @@ type SocialLinksProps = {
 
 export const SocialLinks: React.FC<SocialLinksProps> = ({ className = "" }) => {
   return (
-    <div className={classNames("flex justify-center", className)}>
+    <div className={classNames("flex flex-row items-center", className)}>
       {socials.map((item) => (
         <a
           key={item.name}
