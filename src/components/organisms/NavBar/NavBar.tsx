@@ -15,6 +15,7 @@ import { NavBarDropdownType } from "./types";
 import { PhotographyDropdown } from "./PhotographyDropdown";
 import { usePathname } from "next/navigation";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
+import { MobileNav } from "./MobileNav";
 
 /**
  * Standard nav bar for the site. Floats on certain pages, otherwise is relative. Dropdowns for
@@ -120,16 +121,7 @@ export const NavBar: React.FC = () => {
               </div>
             </div>
           </Link>
-          <button
-            data-collapse-toggle="mega-menu-full"
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
-            aria-controls="mega-menu-full"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <MenuIcon />
-          </button>
+          <MobileNav />
           <div
             id="mega-menu-full"
             className="hidden w-full items-center justify-between font-medium md:order-1 md:flex md:w-auto"

@@ -13,6 +13,9 @@ const config: Config = {
       },
     },
     extend: {
+      screens: {
+        xs: "475px",
+      },
       fontFamily: {
         default: ["var(--font-default)", ...defaultTheme.fontFamily.sans],
         heading: ["var(--font-header)", ...defaultTheme.fontFamily.sans],

@@ -18,16 +18,15 @@ const BlogPage = () => {
 
   return (
     <>
-      <div className="h-screen w-screen">
+      <div className="relative h-screen w-screen">
         <div className="absolute left-0 top-1/3 z-10 flex w-full flex-col items-center justify-center">
           <h1 className="text-white">Kevin Hou&apos;s Blog</h1>
         </div>
         <Image
-          aria-label="blog cover"
           fill
-          objectFit="cover"
           src={getCdnAsset("media/site/images/Blog_Image_jpg")}
-          alt="cover"
+          className="object-cover"
+          alt="Kevin Hou blog cover photo of basket weaving cutting boards"
         />
       </div>
       <PageWrapper className="min-h-screen">
