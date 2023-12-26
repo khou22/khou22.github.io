@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     const body: ContactFormRequest = await request.json();
 
     if (!process.env.SENDGRID_API_KEY) {
-      throw new Error("No Sendgrid API key");
+      throw new Error("No Sendgrid API key found");
     }
 
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);

@@ -8,35 +8,73 @@ import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
+import { sendContactEmail } from "@/api-clients/ContactFormClient";
+import { useState } from "react";
+import { classNames } from "@/utils/style";
 
 const generateFormSchema = z.object({
-  fullName: z.string().min(1),
-  email: z.string().min(1),
-  message: z.string().min(10),
+  fullName: z.string().min(1, "Please enter your full name").max(100),
+  email: z
+    .string()
+    .min(1, "Please enter your email")
+    .email("Please enter a valid email"),
+  subject: z.string().min(2, "Please include a subject").max(50),
+  message: z.string().min(20, "Please provide a detailed message").max(1000),
 });
 type GenerateFormValues = z.infer<typeof generateFormSchema>;
 
 export const ContactForm = () => {
+  const [submitAttempted, setSubmitAttempted] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
   const {
     handleSubmit,
     register,
-    formState: { errors },
+    formState: { errors, isSubmitted, isSubmitting, isSubmitSuccessful },
+    setError,
+    clearErrors,
   } = useForm<GenerateFormValues>({
     resolver: zodResolver(generateFormSchema),
     mode: "onChange",
     defaultValues: {
       fullName: "",
       email: "",
+      subject: "",
       message: "",
     },
   });
 
   const onSubmit: SubmitHandler<GenerateFormValues> = async (data) => {
-    console.log(data);
+    try {
+      setSubmitAttempted(true);
+      await sendContactEmail(
+        data.fullName,
+        data.email,
+        data.subject,
+        data.message,
+      );
+      clearErrors();
+      setSubmitSuccess(true);
+    } catch (error) {
+      if (error instanceof Error) {
+        setError("root", { message: error.message });
+      } else {
+        setError("root", { message: `Unknown error: ${error}` });
+      }
+    }
   };
 
+  const formError =
+    errors.fullName ||
+    errors.email ||
+    errors.subject ||
+    errors.message ||
+    errors.root;
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="mt-4 grid w-full gap-3">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="mt-4 grid w-full grid-cols-1 gap-3 sm:grid-cols-2"
+    >
       <div className="col-span-1">
         <Input
           className="w-full"
@@ -53,7 +91,15 @@ export const ContactForm = () => {
           {...register("email", { required: true })}
         />
       </div>
-      <div className="col-span-2">
+      <div className="col-span-full">
+        <Input
+          className="w-full"
+          type="subject"
+          placeholder="Subject"
+          {...register("subject", { required: true })}
+        />
+      </div>
+      <div className="col-span-full">
         <Textarea
           placeholder="Your message"
           rows={4}
@@ -61,17 +107,34 @@ export const ContactForm = () => {
           {...register("message", { required: true })}
         />
       </div>
-      <div className="col-span-2 mb-2 mt-2 flex flex-row items-center justify-center">
-        <Button type="submit" variant="default" className="min-w-[200px]">
+      <div className="col-span-full flex flex-row items-center justify-center">
+        <Button
+          type="submit"
+          variant="default"
+          className="min-w-[200px]"
+          disabled={isSubmitting}
+          loading={isSubmitting}
+        >
           Send Message
         </Button>
       </div>
+      <div className="col-span-full">
+        <p
+          className={classNames(
+            "w-full text-center text-sm text-red",
+            isSubmitted && !!formError ? "opacity-100" : "opacity-0",
+          )}
+        >
+          {formError?.message ?? "No Error"}
+        </p>
+      </div>
 
-      {errors.root && (
-        <Alert variant="destructive" className="col-span-2 my-2 w-full">
-          <ExclamationTriangleIcon className="h-4 w-4" />
-          <AlertTitle>Error Submitting Contact</AlertTitle>
-          <AlertDescription>{errors.root.message}</AlertDescription>
+      {isSubmitSuccessful && (
+        <Alert variant="default" className="col-span-full my-2 w-full">
+          <AlertTitle>Success</AlertTitle>
+          <AlertDescription>
+            Your message was successfully submitted
+          </AlertDescription>
         </Alert>
       )}
     </form>

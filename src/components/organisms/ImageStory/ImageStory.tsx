@@ -97,7 +97,7 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
       <div className="absolute bottom-0 left-0 z-10 flex h-1.5 w-full flex-row items-center justify-evenly space-x-0.5">
         {stories.map((story, idx) => (
           <ProgressBar
-            key={story.title}
+            key={`${story.title} ${story.imageSrc} ${story.link}`}
             progress={
               // If we're not mounted, start at 0 so that we can animate from 0.
               !mounted
