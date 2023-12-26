@@ -2294,6 +2294,16 @@ export const _generatedCdnAssets = {
     name: `Marin Headlands Sunset`,
     dimensions: [1600, 2000],
   },
+	"photography/sports/Emmie_Santa_Cuz_Warriors_Stadium_Dribbling_placeholder_jpg": {
+    path: "/photography/sports/Emmie%20Santa%20Cuz%20Warriors%20Stadium%20Dribbling.placeholder.jpg",
+    name: `Emmie Santa Cuz Warriors Stadium Dribbling.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/sports/Emmie_Santa_Cuz_Warriors_Stadium_Dribbling_jpg": {
+    path: "/photography/sports/Emmie%20Santa%20Cuz%20Warriors%20Stadium%20Dribbling.jpg",
+    name: `Emmie Santa Cuz Warriors Stadium Dribbling`,
+    dimensions: [7952, 5304],
+  },
 	"photography/House_at_the_Base_of_the_Tetons_in_Teton_Village_jpg": {
     path: "/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.jpg",
     name: `House at the Base of the Tetons in Teton Village`,
@@ -2809,6 +2819,11 @@ export const _generatedCdnAssets = {
     name: `Conrad Bike Portrait (Vertical).placeholder`,
     dimensions: [640, 800],
   },
+	"photography/portraits/Grace_Studio_Portrait_placeholder_jpg": {
+    path: "/photography/portraits/Grace%20Studio%20Portrait.placeholder.jpg",
+    name: `Grace Studio Portrait.placeholder`,
+    dimensions: [534, 800],
+  },
 	"photography/portraits/Conrad_Bike_Portrait_Skyline_placeholder_jpg": {
     path: "/photography/portraits/Conrad%20Bike%20Portrait%20Skyline.placeholder.jpg",
     name: `Conrad Bike Portrait Skyline.placeholder`,
@@ -2843,6 +2858,11 @@ export const _generatedCdnAssets = {
     path: "/photography/portraits/Chinatown%20Nightime%20Portrait.jpg",
     name: `Chinatown Nightime Portrait`,
     dimensions: [5222, 6527],
+  },
+	"photography/portraits/Grace_Studio_Portrait_jpg": {
+    path: "/photography/portraits/Grace%20Studio%20Portrait.jpg",
+    name: `Grace Studio Portrait`,
+    dimensions: [4000, 5997],
   },
 	"photography/New_York_Looking_Down_Street_from_High_Line_Vertical_jpg": {
     path: "/photography/New%20York%20Looking%20Down%20Street%20from%20High%20Line%20-%20Vertical.jpg",
@@ -4239,6 +4259,36 @@ export const _generatedCdnAssets = {
     name: `Mong Kok Station Entrance`,
     dimensions: [2400, 1600],
   },
+	"photography/events/Fancy_Scraps_Dinner_Event_Table_jpg": {
+    path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Table.jpg",
+    name: `Fancy Scraps Dinner Event Table`,
+    dimensions: [5143, 7711],
+  },
+	"photography/events/Fancy_Scraps_Dinner_Event_Menu_placeholder_jpg": {
+    path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Menu.placeholder.jpg",
+    name: `Fancy Scraps Dinner Event Menu.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/events/Fancy_Scraps_Dinner_Event_Menu_jpg": {
+    path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Menu.jpg",
+    name: `Fancy Scraps Dinner Event Menu`,
+    dimensions: [7952, 5304],
+  },
+	"photography/events/Diwali_Party_Portrait_2022_placeholder_jpg": {
+    path: "/photography/events/Diwali%20Party%20Portrait%202022.placeholder.jpg",
+    name: `Diwali Party Portrait 2022.placeholder`,
+    dimensions: [534, 800],
+  },
+	"photography/events/Fancy_Scraps_Dinner_Event_Table_placeholder_jpg": {
+    path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Table.placeholder.jpg",
+    name: `Fancy Scraps Dinner Event Table.placeholder`,
+    dimensions: [534, 800],
+  },
+	"photography/events/Diwali_Party_Portrait_2022_jpg": {
+    path: "/photography/events/Diwali%20Party%20Portrait%202022.jpg",
+    name: `Diwali Party Portrait 2022`,
+    dimensions: [5304, 7952],
+  },
 	"photography/events/apco_salon_dinner_discussion_placeholder_jpg": {
     path: "/photography/events/apco_salon_dinner_discussion.placeholder.jpg",
     name: `apco_salon_dinner_discussion.placeholder`,
@@ -4723,6 +4773,36 @@ export const _generatedCdnAssets = {
     path: "/photography/Waihe%27e%20Ridge%20Hike.placeholder.jpg",
     name: `Waihe'e Ridge Hike.placeholder`,
     dimensions: [749, 500],
+  },
+	"photography/israel/Israel_Falafel_Lunch_Food_jpg": {
+    path: "/photography/israel/Israel%20Falafel%20Lunch%20Food.jpg",
+    name: `Israel Falafel Lunch Food`,
+    dimensions: [4000, 5000],
+  },
+	"photography/israel/Israel_Falafel_Lunch_Food_placeholder_jpg": {
+    path: "/photography/israel/Israel%20Falafel%20Lunch%20Food.placeholder.jpg",
+    name: `Israel Falafel Lunch Food.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/cycling/Cycling_Through_Marin_Valley_Gravel_placeholder_jpg": {
+    path: "/photography/cycling/Cycling%20Through%20Marin%20Valley%20Gravel.placeholder.jpg",
+    name: `Cycling Through Marin Valley Gravel.placeholder`,
+    dimensions: [800, 533],
+  },
+	"photography/cycling/Rohan_Cycling_Shot_San_Francisco_Skyline_jpg": {
+    path: "/photography/cycling/Rohan%20Cycling%20Shot%20San%20Francisco%20Skyline.jpg",
+    name: `Rohan Cycling Shot San Francisco Skyline`,
+    dimensions: [6000, 4000],
+  },
+	"photography/cycling/Cycling_Through_Marin_Valley_Gravel_jpg": {
+    path: "/photography/cycling/Cycling%20Through%20Marin%20Valley%20Gravel.jpg",
+    name: `Cycling Through Marin Valley Gravel`,
+    dimensions: [4688, 3125],
+  },
+	"photography/cycling/Rohan_Cycling_Shot_San_Francisco_Skyline_placeholder_jpg": {
+    path: "/photography/cycling/Rohan%20Cycling%20Shot%20San%20Francisco%20Skyline.placeholder.jpg",
+    name: `Rohan Cycling Shot San Francisco Skyline.placeholder`,
+    dimensions: [800, 533],
   },
 	"photography/Time_Square_Taxi_placeholder_jpg": {
     path: "/photography/Time%20Square%20Taxi.placeholder.jpg",

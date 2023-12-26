@@ -224,7 +224,7 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Singapore]: {
     name: "Singapore",
     slug: "singapore",
-    thumbnailPhotoId: "photography/Marina_Bay_Sands_Drone_Vertical_jpg",
+    thumbnailPhotoId: "photography/Marina_Bay_Drone_Panorama_jpg",
   },
   [PhotoTags.Vietnam]: {
     name: "Vietnam",
