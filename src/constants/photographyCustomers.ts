@@ -1,4 +1,5 @@
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { PAGES } from "@/utils/pages";
 
 export const photographyCustomers = [
   {
@@ -19,7 +20,7 @@ export const photographyCustomers = [
   {
     name: "The San Franciscan",
     logo: getCdnAsset("media/photography/customers/san_franciscan_png"),
-    url: "https://thesanfranciscanmagazine.com",
+    url: PAGES.PHOTOGRAPHY.SAN_FRANCISCAN,
   },
   {
     name: "Nuro AI",

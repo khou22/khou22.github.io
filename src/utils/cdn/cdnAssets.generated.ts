@@ -5464,6 +5464,21 @@ export const _generatedCdnAssets = {
     name: `hong-kong`,
     dimensions: [600, 749],
   },
+	"media/photography/san_franciscan/article_page_jpg": {
+    path: "/media/photography/san-franciscan/article-page.jpg",
+    name: `article-page`,
+    dimensions: [3024, 4032],
+  },
+	"media/photography/san_franciscan/magazine_cover_jpg": {
+    path: "/media/photography/san-franciscan/magazine-cover.jpg",
+    name: `magazine-cover`,
+    dimensions: [3024, 4032],
+  },
+	"media/photography/san_franciscan/author_bio_jpg": {
+    path: "/media/photography/san-franciscan/author-bio.jpg",
+    name: `author-bio`,
+    dimensions: [3024, 4032],
+  },
 	"media/photography/mountains_jpg": {
     path: "/media/photography/mountains.jpg",
     name: `mountains`,

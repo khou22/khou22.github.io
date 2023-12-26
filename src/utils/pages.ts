@@ -17,6 +17,7 @@ export const PAGES = {
     TAG: (tag: PhotoTags) => `/photography/${tagMetadata[tag].slug}`,
     PHOTO: (photoID: PhotoIdType) => `/photo/${getPhotoURLComponent(photoID)}`,
     AERIAL_SF: "/photography/aerial-sf",
+    SAN_FRANCISCAN: "/photography/san-franciscan",
   },
   PROGRAMMING: "/programming",
   ADMIN: {
