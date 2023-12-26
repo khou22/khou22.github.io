@@ -16,12 +16,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { TagsClient } from "@/api/TagsClient";
+import { TagsClient } from "@/api-clients/TagsClient";
 import { XIcon } from "@/components/icons/XIcon/XIcon";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { FileLocationClient } from "@/api/FileLocationClient";
+import { FileLocationClient } from "@/api-clients/FileLocationClient";
 import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
 import { PAGES } from "@/utils/pages";
