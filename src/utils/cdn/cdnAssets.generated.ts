@@ -7104,6 +7104,11 @@ export const _generatedCdnAssets = {
     name: `breathometer`,
     dimensions: [594, 272],
   },
+	"media/occupations/nuro_padding_light_png": {
+    path: "/media/occupations/nuro_padding_light.png",
+    name: `nuro_padding_light`,
+    dimensions: [1286, 289],
+  },
 	"media/occupations/airbnb_png": {
     path: "/media/occupations/airbnb.png",
     name: `airbnb`,
@@ -7118,6 +7123,11 @@ export const _generatedCdnAssets = {
     path: "/media/occupations/moat.png",
     name: `moat`,
     dimensions: [2204, 823],
+  },
+	"media/occupations/nuro_light_png": {
+    path: "/media/occupations/nuro_light.png",
+    name: `nuro_light`,
+    dimensions: [2477, 708],
   },
 	"media/occupations/nuro_png": {
     path: "/media/occupations/nuro.png",

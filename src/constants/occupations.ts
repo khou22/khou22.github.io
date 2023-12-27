@@ -2,22 +2,30 @@ import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 
 export type OccupationType = {
   years: [number, number][];
+  featured?: boolean;
+  fullTime?: boolean;
   company: {
     name: string;
     logo: string;
+    logoLight?: string;
   };
 };
 
 export const occupations: OccupationType[] = [
   {
     years: [[2020, 2023]],
+    featured: true,
+    fullTime: true,
     company: {
       name: "Nuro",
       logo: getCdnAsset("media/occupations/nuro_padding_png"),
+      logoLight: getCdnAsset("media/occupations/nuro_padding_light_png"),
     },
   },
   {
     years: [[2023, 2024]],
+    featured: true,
+    fullTime: true,
     company: {
       name: "Codeium",
       logo: getCdnAsset("media/occupations/codeium_png"),
@@ -25,6 +33,7 @@ export const occupations: OccupationType[] = [
   },
   {
     years: [[2019, 2019]],
+    featured: true,
     company: {
       name: "Airbnb",
       logo: getCdnAsset("media/occupations/airbnb_png"),
@@ -35,6 +44,7 @@ export const occupations: OccupationType[] = [
       [2015, 2015],
       [2018, 2019],
     ],
+    featured: true,
     company: {
       name: "Salesforce",
       logo: getCdnAsset("media/occupations/salesforce_png"),

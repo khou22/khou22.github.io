@@ -1,7 +1,12 @@
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import Image from "next/image";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
+import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { ParallaxCover } from "@/components/organisms/ParallaxCover/ParallaxCover";
+import { occupations } from "@/constants/occupations";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { PAGES } from "@/utils/pages";
+import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
 
 export default function Home() {
   return (
@@ -73,7 +78,55 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="h-screen w-full bg-white" />
+        <div className="w-full bg-gray-800 py-8 text-white md:py-16 lg:py-24">
+          <PageWrapper>
+            <div className="mb-6 w-full text-center">
+              <h2 className="mb-2 leading-relaxed">Engineer</h2>
+              <p className="caption text-gray-200">
+                Software engineering and tech lead management experience in
+                Silicon Valley and New York from seed, growth, Fortune 500.
+              </p>
+            </div>
+            <div className="my-8 flex w-full flex-row items-center justify-evenly gap-8">
+              {occupations
+                .filter((occupation) => occupation.featured)
+                .map((occupation) => (
+                  <div
+                    key={occupation.company.name}
+                    className="relative aspect-[7/2] w-full scale-100 transition-transform duration-200 ease-in-out hover:scale-110"
+                  >
+                    <Image
+                      src={
+                        occupation.company.logoLight ?? occupation.company.logo
+                      }
+                      alt={occupation.company.name}
+                      fill
+                      className="object-contain"
+                      priority
+                    />
+                    <span className="sr-only">{occupation.company.name}</span>
+                  </div>
+                ))}
+            </div>
+
+            <div className="mt-4 w-full text-center">
+              <CustomLink href={PAGES.PROGRAMMING}>
+                See all <ArrowRightIcon className="inline h-4 w-4" />
+              </CustomLink>
+            </div>
+          </PageWrapper>
+        </div>
+
+        <div className="w-full bg-gray-50 py-8 md:py-16 lg:py-24">
+          <h2>Photographer</h2>
+        </div>
+
+        {/* Quick links */}
+        <PageWrapper>
+          <h2>Check out my work</h2>
+        </PageWrapper>
+
+        <div className="h-screen w-full bg-gray-50" />
       </div>
     </main>
   );
