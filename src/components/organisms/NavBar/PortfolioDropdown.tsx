@@ -38,7 +38,7 @@ export const PortfolioDropdown: React.FC = () => {
           contentClassName="p-4"
         />
       </Link>
-      <Link href={PAGES.WOOD}>
+      <Link href={PAGES.DESIGN}>
         <ImageCard
           title="Design"
           description="Creative craftsmanship"
