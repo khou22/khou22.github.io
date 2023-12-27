@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { sendContactEmail } from "@/api-clients/ContactFormClient";
 import { useState } from "react";
 import { classNames } from "@/utils/style";
+import { CheckCircleIcon } from "@/components/icons/CheckCircleIcon/CheckCircleIcon";
 
 const generateFormSchema = z.object({
   fullName: z.string().min(1, "Please enter your full name").max(100),
@@ -23,8 +24,6 @@ const generateFormSchema = z.object({
 type GenerateFormValues = z.infer<typeof generateFormSchema>;
 
 export const ContactForm = () => {
-  const [submitAttempted, setSubmitAttempted] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
   const {
     handleSubmit,
     register,
@@ -44,7 +43,6 @@ export const ContactForm = () => {
 
   const onSubmit: SubmitHandler<GenerateFormValues> = async (data) => {
     try {
-      setSubmitAttempted(true);
       await sendContactEmail(
         data.fullName,
         data.email,
@@ -52,7 +50,6 @@ export const ContactForm = () => {
         data.message,
       );
       clearErrors();
-      setSubmitSuccess(true);
     } catch (error) {
       if (error instanceof Error) {
         setError("root", { message: error.message });
@@ -111,7 +108,7 @@ export const ContactForm = () => {
           type="submit"
           variant="default"
           className="min-w-[200px]"
-          disabled={isSubmitting}
+          disabled={isSubmitting || isSubmitSuccessful}
           loading={isSubmitting}
         >
           Send Message
@@ -130,7 +127,10 @@ export const ContactForm = () => {
 
       {isSubmitSuccessful && (
         <Alert variant="default" className="col-span-full my-2 w-full">
-          <AlertTitle>Success</AlertTitle>
+          <AlertTitle className="flex flex-row items-center justify-start space-x-1">
+            <CheckCircleIcon className="h-6 w-6 text-green" />
+            <span>Success</span>
+          </AlertTitle>
           <AlertDescription>
             Your message was successfully submitted
           </AlertDescription>
