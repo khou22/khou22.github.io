@@ -69,7 +69,7 @@ const BlogPostPage: NextPage<PageParams> = async ({ params: { slug } }) => {
       <CustomLink href={PAGES.BLOG_POSTS}>&larr; Back to Blog</CustomLink>
       <p className="w-full text-center">
         <time dateTime={post.frontMatter.date.toISOString()}>
-          {moment(post.frontMatter.date).format("MMMM DD, YYYY")}
+          {moment(post.frontMatter.date).format("MMMM D, YYYY")}
         </time>
       </p>
       <h1 className="w-full text-center leading-relaxed">

@@ -42,7 +42,7 @@ const BlogPage = () => {
               <p className="caption">{frontMatter.description}</p>
               <small className="caption mt-1 italic">
                 <time dateTime={frontMatter.date.toISOString()}>
-                  {moment(frontMatter.date).format("MMMM DD, YYYY")}
+                  {moment(frontMatter.date).format("MMMM D, YYYY")}
                 </time>
               </small>
             </li>
