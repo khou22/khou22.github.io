@@ -10,7 +10,7 @@ featured: false
 
 View the [original article](https://www.dailyprincetonian.com/article/2020/06/tigers-for-nassau-local-businesses-covid).
 
-Some exerps:
+Some exerpts:
 
 >Shivraj (Sunny) Sandhu ’20, Neel Ajjarapu ’20, and Kevin C. Hou ’20 have been friends throughout their Princeton careers. Before they evacuated campus, the trio gathered to discuss how they could effect positive change while stuck at home. They brought together Sandhu’s consulting background, Hou’s experience in web development, and Ajjarapu’s familiarity with fundraising and alumni relations to create “Tigers for Nassau,” a student-driven initiative to help local restaurants weather the pandemic.
 

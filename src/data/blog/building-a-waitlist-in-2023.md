@@ -46,12 +46,12 @@ const sql = neon(process.env.WAITLIST_DATABASE_URL);
 export async function POST(req: NextRequest) {
   const reqBody = await req.json();
   await sql`INSERT INTO
-	    gpt_4_waitlist (email, additional_details, occupation, years_of_experience, ...)
-	VALUES (
-	    ${reqBody.email},
-			${reqBody.additional_details},
-			...
-	) RETURNING *`;
+     gpt_4_waitlist (email, additional_details, occupation, years_of_experience, ...)
+ VALUES (
+     ${reqBody.email},
+   ${reqBody.additional_details},
+   ...
+ ) RETURNING *`;
 }
 ```
 
