@@ -88,3 +88,10 @@ export const getPost = async (slug: string): Promise<HydratedBlogPost> => {
 
   return post;
 };
+
+export const getPostsByTag = async (
+  tagID: string,
+): Promise<HydratedBlogPost[]> => {
+  const posts = await getPosts();
+  return posts.filter((p) => p.frontMatter.tags.includes(tagID));
+};

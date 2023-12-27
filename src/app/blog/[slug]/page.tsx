@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PAGES } from "@/utils/pages";
+import Link from "next/link";
 
 type PageParams = {
   params: {
@@ -77,13 +78,12 @@ const BlogPostPage: NextPage<PageParams> = async ({ params: { slug } }) => {
       </h1>
       <div className="flex w-full flex-row items-center justify-center space-x-3">
         {post.frontMatter.tags.map((tag) => (
-          <Badge
-            key={tag}
-            className="flex flex-row items-center justify-center space-x-1.5"
-          >
-            <TagIcon className="h-4 w-4" />
-            <span>{tag}</span>
-          </Badge>
+          <Link key={tag} href={PAGES.BLOG_TAG(tag)}>
+            <Badge className="flex flex-row items-center justify-center space-x-1.5">
+              <TagIcon className="h-4 w-4" />
+              <span>{tag}</span>
+            </Badge>
+          </Link>
         ))}
       </div>
       <div className="mt-4 flex w-full flex-row items-center justify-between gap-x-6">

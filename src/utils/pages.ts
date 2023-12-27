@@ -7,6 +7,7 @@ export const PAGES = {
   BLOG: "/blog",
   BLOG_POSTS: "/blog#posts",
   BLOG_POST: (post: BlogPostFrontMatter) => post.link || `/blog/${post.slug}`,
+  BLOG_TAG: (tag: string) => `/blog/tag/${tag}`,
   CONTACT: "/contact",
   WOOD: "/wood",
   DESIGN: "/design",
