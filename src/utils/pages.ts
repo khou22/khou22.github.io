@@ -5,7 +5,8 @@ import { PhotoIdType, getPhotoURLComponent } from "./cdn/cdnAssets";
 export const PAGES = {
   HOME: "/",
   BLOG: "/blog",
-  BLOG_POST: (post: BlogPostFrontMatter) => `/blog/${post.slug}`,
+  BLOG_POSTS: "/blog#posts",
+  BLOG_POST: (post: BlogPostFrontMatter) => post.link || `/blog/${post.slug}`,
   CONTACT: "/contact",
   WOOD: "/wood",
   DESIGN: "/design",

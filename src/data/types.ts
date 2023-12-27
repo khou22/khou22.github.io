@@ -5,6 +5,12 @@ export type BlogPostFrontMatter = {
   description: string;
 
   /**
+   * Instead of rendering the contents of the blog post, link to a hard coded page URL. Can be
+   * a site URL or an external URL.
+   */
+  link: string | null;
+
+  /**
    * If the image is null, a default post card will be used.
    */
   image: string | null;

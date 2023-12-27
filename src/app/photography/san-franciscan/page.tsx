@@ -15,7 +15,11 @@ const SanFranciscanFeaturePage = () => {
           className="object-cover"
         />
       </Link>
-      <p>Work featured in Winter 2022 Edition</p>
+      <p>
+        My work was featured in the Winter 2022 Edition of the local San
+        Franciscan magezine. My satellite photo was used with permission and it
+        was a great time workign with their team.
+      </p>
       <div className="my-8 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="relative col-span-full aspect-[4/5] w-full">
           <Image

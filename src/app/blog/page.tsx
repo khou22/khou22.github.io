@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { siteMetadata } from "@/constants/siteMetadata";
 import { Metadata } from "next";
 import { getPosts } from "@/utils/blog/posts";
 import { PAGES } from "@/utils/pages";
@@ -29,6 +27,7 @@ const BlogPage = () => {
           alt="Kevin Hou blog cover photo of basket weaving cutting boards"
         />
       </div>
+      <span className="h-0 w-full" id="posts" />
       <PageWrapper className="min-h-screen">
         <h2 className="leading-relaxed">Blog</h2>
         <ul className="my-4 flex flex-col gap-y-4">

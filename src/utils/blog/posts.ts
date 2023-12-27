@@ -48,6 +48,7 @@ export function getPosts(): HydratedBlogPost[] {
         author,
         date: date.toDate(),
         description,
+        link: matterResult.data.link || null,
         image: matterResult.data.image || null,
         tags: matterResult.data.tags || [],
         featured: matterResult.data.featured || false,

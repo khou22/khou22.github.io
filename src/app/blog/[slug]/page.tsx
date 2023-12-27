@@ -6,6 +6,10 @@ import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { HydratedBlogPost } from "@/data/types";
 import { notFound } from "next/navigation";
 import { CustomMarkdown } from "@/components/molecules/CustomMarkdown/CustomMarkdown";
+import { Badge } from "@/components/ui/badge";
+import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
+import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import { PAGES } from "@/utils/pages";
 
 type PageParams = {
   params: {
@@ -62,6 +66,7 @@ const BlogPostPage: NextPage<PageParams> = async ({ params: { slug } }) => {
 
   return (
     <PageWrapper>
+      <CustomLink href={PAGES.BLOG_POSTS}>&larr; Back to Blog</CustomLink>
       <p className="w-full text-center">
         <time dateTime={post.frontMatter.date.toISOString()}>
           {moment(post.frontMatter.date).format("MMMM DD, YYYY")}
@@ -70,6 +75,17 @@ const BlogPostPage: NextPage<PageParams> = async ({ params: { slug } }) => {
       <h1 className="w-full text-center leading-relaxed">
         {post.frontMatter.title}
       </h1>
+      <div className="flex w-full flex-row items-center justify-center space-x-3">
+        {post.frontMatter.tags.map((tag) => (
+          <Badge
+            key={tag}
+            className="flex flex-row items-center justify-center space-x-1.5"
+          >
+            <TagIcon className="h-4 w-4" />
+            <span>{tag}</span>
+          </Badge>
+        ))}
+      </div>
       <div className="mt-4 flex w-full flex-row items-center justify-between gap-x-6">
         <p>By {post.frontMatter.author}</p>
         <p>
