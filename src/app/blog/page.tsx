@@ -6,6 +6,7 @@ import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import Image from "next/image";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { LinkExternalIcon } from "@/components/icons/LinkExternalIcon/LinkExternalIcon";
 
 export const metadata: Metadata = {
   title: "Kevin Hou's Blog",
@@ -31,22 +32,34 @@ const BlogPage = () => {
       <PageWrapper className="min-h-screen">
         <h2 className="leading-relaxed">Blog</h2>
         <ul className="my-4 flex flex-col gap-y-4">
-          {allPostsData.map(({ frontMatter }) => (
-            <li
-              key={frontMatter.slug}
-              className="flex flex-col items-start justify-start gap-y-1"
-            >
-              <CustomLink href={PAGES.BLOG_POST(frontMatter)}>
-                <h6>{frontMatter.title}</h6>
-              </CustomLink>
-              <p className="caption">{frontMatter.description}</p>
-              <small className="caption mt-1 italic">
-                <time dateTime={frontMatter.date.toISOString()}>
-                  {moment(frontMatter.date).format("MMMM D, YYYY")}
-                </time>
-              </small>
-            </li>
-          ))}
+          {allPostsData.map(({ frontMatter }) => {
+            const link = PAGES.BLOG_POST(frontMatter);
+            const isExternal = link.startsWith("http");
+            return (
+              <li
+                key={frontMatter.slug}
+                className="flex flex-col items-start justify-start gap-y-1"
+              >
+                <CustomLink
+                  href={link}
+                  target={isExternal ? "_blank" : undefined}
+                >
+                  <h6>
+                    {frontMatter.title}
+                    {isExternal && (
+                      <LinkExternalIcon className="mb-1 ml-1 inline-block h-4 w-4" />
+                    )}
+                  </h6>
+                </CustomLink>
+                <p className="caption">{frontMatter.description}</p>
+                <small className="caption mt-1 italic">
+                  <time dateTime={frontMatter.date.toISOString()}>
+                    {moment(frontMatter.date).format("MMMM D, YYYY")}
+                  </time>
+                </small>
+              </li>
+            );
+          })}
         </ul>
       </PageWrapper>
     </>
