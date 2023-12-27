@@ -1,4 +1,5 @@
 import { ContactFormRequest } from "@/app/api/contact/route";
+import { getCurrentTimeZone } from "@/utils/timezone";
 
 /**
  * Sends a contact email.
@@ -21,6 +22,10 @@ export const sendContactEmail = async (
     subject,
     message,
   };
+
+  try {
+    payload.timezone = getCurrentTimeZone();
+  } catch {}
 
   const response = await fetch("/api/contact", {
     method: "POST",
