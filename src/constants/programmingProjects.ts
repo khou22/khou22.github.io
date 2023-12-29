@@ -31,7 +31,9 @@ export const programmingProjects: ProgrammingProjectType[] = [
     name: "Async Post Message",
     subtitle: "Open Source Library",
     slug: "https://async-post-message.vercel.app/",
-    image: getCdnAsset("media/projects/lookbook/hero_png"),
+    image: getCdnAsset(
+      "media/projects/async_post_message/async_post_message_homepage_png",
+    ),
     category: ProjectCategory.WebApp,
     description:
       "Library to enable `window.postMessage` calls to be asynchronous.",
@@ -40,7 +42,7 @@ export const programmingProjects: ProgrammingProjectType[] = [
     name: "Overview Satellite Camera",
     subtitle: "Overview & Airbus Partnership",
     slug: "https://over-view.com",
-    image: getCdnAsset("media/projects/lookbook/hero_png"),
+    image: getCdnAsset("media/projects/overview/overview_homepage_png"),
     category: ProjectCategory.WebApp,
     description:
       "Equip consumers with a tool to capture and print their own satellite images",

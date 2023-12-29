@@ -16,18 +16,19 @@ export const designProjects: DesignProjectType[] = [
     title: "Personal Website & Blog",
     subtitle: "Always Iterating",
     slug: siteMetadata.siteUrl,
-    image: getCdnAsset("media/projects/lookbook/hero_png"),
+    image: getCdnAsset("media/programming/thumbnails/personal_website_png"),
     category: ProjectCategory.Website,
     description:
-      "Redesigned and rebuilt from scratch 3 (ish) times over the last 10 years",
+      "Redesigned and rebuilt from scratch 3 (ish) times over the last 10 years to showcase my photography, personal projects, and more.",
   },
   {
-    title: "Codeium",
+    title: "Codeium Website",
     subtitle: "AI Developer Tools: Autocomplete & Chat",
     slug: "https://codeium.com",
-    image: getCdnAsset("media/projects/lookbook/hero_png"),
+    image: getCdnAsset("media/programming/thumbnails/codeium_website_png"),
     category: ProjectCategory.Website,
-    description: "Designed and built from scratch.",
+    description:
+      "Designed and built from scratch. I am now a full time engineer but I built a lot of the site as a freelancer in 2021. Currently has 2m hits / month.",
   },
   {
     title: "Lookbook",
@@ -42,7 +43,7 @@ export const designProjects: DesignProjectType[] = [
     title: "Overview Satellite Camera",
     subtitle: "Overview & Airbus Partnership",
     slug: "https://over-view.com",
-    image: getCdnAsset("media/projects/lookbook/hero_png"),
+    image: getCdnAsset("media/projects/overview/overview_homepage_png"),
     category: ProjectCategory.WebApp,
     description:
       "Equip consumers with a tool to capture and print their own satellite images",

@@ -4,11 +4,27 @@ import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { ParallaxCover } from "@/components/organisms/ParallaxCover/ParallaxCover";
 import { occupations } from "@/constants/occupations";
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import {
+  getCdnAsset,
+  getPhotoName,
+  getPhotoThumbnail,
+} from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
+import { getPhotosWithTag } from "@/data/photos/photoDbManager";
+import { PhotoTags } from "@/constants/photoTags";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ImageIcon, PlusIcon } from "@radix-ui/react-icons";
 
-export default function Home() {
+const numFeaturedPhotos = 12 * 9; // 12 photos per row.
+
+const HomePage = async () => {
+  // Get all the featured photos.
+  const featuredPhotos = (await getPhotosWithTag(PhotoTags.Featured))
+    .concat(await getPhotosWithTag(PhotoTags.SanFrancisco))
+    .slice(0, numFeaturedPhotos);
+
   return (
     <main>
       <ParallaxCover />
@@ -118,7 +134,40 @@ export default function Home() {
         </div>
 
         <div className="w-full bg-gray-50 py-8 md:py-16 lg:py-24">
-          <h2>Photographer</h2>
+          <h2 className="w-full text-center leading-relaxed">Photographer</h2>
+          <div className="relative w-full">
+            {/* Gradient overlay */}
+            <div className="absolute bottom-0 left-0 z-10 flex h-1/2 w-full items-end justify-center bg-gradient-to-b from-black/0 to-black/60 px-6 pb-[10%]">
+              <div className="flex flex-row items-center justify-center space-x-2">
+                <Link href={PAGES.PHOTOGRAPHY.FEATURED}>
+                  <Button variant="primary" size="lg">
+                    <ImageIcon className="mr-1.5 h-4 w-4" />
+                    Featured Photos
+                  </Button>
+                </Link>
+                <Link href={PAGES.PHOTOGRAPHY.HOME}>
+                  <Button variant="outline" className="text-white" size="lg">
+                    <PlusIcon className="mr-1.5 h-4 w-4" />
+                    View Gallery
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="my-8 grid w-full grid-cols-12 gap-1">
+              {/* TODO: Convert into a single image export so there's a smaller asset size. */}
+              {featuredPhotos.map((photo) => (
+                <div key={photo} className="relative col-span-1 aspect-square">
+                  <Image
+                    src={getCdnAsset(getPhotoThumbnail(photo) ?? photo)}
+                    alt={getPhotoName(photo)}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Quick links */}
@@ -130,4 +179,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default HomePage;

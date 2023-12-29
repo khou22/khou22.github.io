@@ -1,6 +1,5 @@
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { designProjects } from "@/constants/designProjects";
-import { woodProjects } from "@/constants/woodProjects";
 import Image from "next/image";
 
 const DeisgnPortfolioPage = () => {
@@ -15,8 +14,8 @@ const DeisgnPortfolioPage = () => {
           implemented.
         </p>
       </div>
-      <div className="grid w-full grid-cols-3 gap-x-2 gap-y-6">
-        {designProjects.map(({ title, slug, image }, idx) => {
+      <div className="grid w-full grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 md:grid-cols-3 md:gap-y-12">
+        {designProjects.map(({ title, slug, image, description }, idx) => {
           const isExternal = slug?.startsWith("http");
           return (
             <div key={title} className="col-span-1">
@@ -31,7 +30,8 @@ const DeisgnPortfolioPage = () => {
                   />
                 </div>
               </a>
-              <p className="caption my-3 w-full text-center">{title}</p>
+              <p className="my-3 w-full text-center font-bold">{title}</p>
+              <p className="caption w-full text-center">{description}</p>
             </div>
           );
         })}

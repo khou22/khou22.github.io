@@ -5259,6 +5259,16 @@ export const _generatedCdnAssets = {
     name: `slate-scheduler`,
     dimensions: [800, 442],
   },
+	"media/projects/overview/overview_custom_print_png": {
+    path: "/media/projects/overview/overview-custom-print.png",
+    name: `overview-custom-print`,
+    dimensions: [1800, 1651],
+  },
+	"media/projects/overview/overview_homepage_png": {
+    path: "/media/projects/overview/overview-homepage.png",
+    name: `overview-homepage`,
+    dimensions: [1800, 1216],
+  },
 	"media/projects/lookbook/hero_png": {
     path: "/media/projects/lookbook/hero.png",
     name: `hero`,
@@ -5313,6 +5323,11 @@ export const _generatedCdnAssets = {
     path: "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20General%20Tab%20V1.png",
     name: `Edit Ride UI - General Tab V1`,
     dimensions: [750, 1334],
+  },
+	"media/projects/async_post_message/async_post_message_homepage_png": {
+    path: "/media/projects/async-post-message/async-post-message-homepage.png",
+    name: `async-post-message-homepage`,
+    dimensions: [1800, 1263],
   },
 	"media/projects/executeOrder66/GitHub_Logo_png": {
     path: "/media/projects/executeOrder66/GitHub%20Logo.png",
@@ -5829,6 +5844,11 @@ export const _generatedCdnAssets = {
     name: `online-sandwich-ordering`,
     dimensions: [640, 205],
   },
+	"media/programming/thumbnails/codeium_website_png": {
+    path: "/media/programming/thumbnails/codeium-website.png",
+    name: `codeium-website`,
+    dimensions: [1600, 1081],
+  },
 	"media/programming/thumbnails/paw_printers_png": {
     path: "/media/programming/thumbnails/paw-printers.png",
     name: `paw-printers`,
@@ -5898,6 +5918,11 @@ export const _generatedCdnAssets = {
     path: "/media/programming/thumbnails/stats-test-score-calculator.png",
     name: `stats-test-score-calculator`,
     dimensions: [600, 500],
+  },
+	"media/programming/thumbnails/personal_website_png": {
+    path: "/media/programming/thumbnails/personal-website.png",
+    name: `personal-website`,
+    dimensions: [1600, 1081],
   },
 	"media/programming/thumbnails/hollywood_africa_stereotypes_png": {
     path: "/media/programming/thumbnails/hollywood-africa-stereotypes.png",
