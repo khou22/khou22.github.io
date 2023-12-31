@@ -24,9 +24,9 @@ const AerialSfPage = async () => {
     <>
       <PageWrapper
         maxWidth="none"
-        className="mt-10 grid h-[88vh] max-h-[800px] grid-cols-5 gap-10"
+        className="mt-10 grid h-auto grid-flow-row-dense grid-cols-2 gap-10 md:h-[88vh] md:max-h-[800px] md:grid-cols-5 xl:h-auto xl:max-h-none"
       >
-        <div className="col-span-1 flex h-full flex-col items-start justify-between space-y-12">
+        <div className="col-span-1 row-start-2 flex flex-col items-start justify-between space-y-12 md:row-start-auto md:h-full">
           <div className="flex min-h-[30%] flex-col items-center justify-center">
             <h3 className="italic">
               Birds
@@ -46,8 +46,8 @@ const AerialSfPage = async () => {
           </div>
         </div>
 
-        <div className="col-span-2 flex h-full flex-col items-center space-y-4">
-          <div className="grid h-2/3 w-full grid-cols-5">
+        <div className="col-span-2 col-start-1 flex h-full flex-col items-center space-y-4 md:col-start-auto">
+          <div className="grid w-full grid-cols-5 md:h-2/3">
             <div className="relative col-span-3 h-full">
               <PhotoImage
                 photoID="photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg"
@@ -72,13 +72,13 @@ const AerialSfPage = async () => {
               </div>
             </div>
           </div>
-          <div className="flex h-1/3 flex-col items-start justify-center">
+          <div className="flex h-1/3 flex-col items-start justify-center pb-10 pt-6 md:pb-0 md:pt-0">
             <h6 className="mb-6 text-gray-700">High above the streets of</h6>
             <h1 className="font-black">San Francisco</h1>
           </div>
         </div>
 
-        <div className="col-span-2 flex h-full flex-col items-center justify-center pt-12">
+        <div className="col-span-1 flex h-full flex-col items-center justify-center pt-12 md:col-span-2">
           <div className="relative h-full w-full">
             <PhotoImage
               photoID="photography/Downtown_San_Francisco_Birds_Eye_View_Top_Down_Powell_Street_Intersection_Drone_jpg"
@@ -105,11 +105,11 @@ const AerialSfPage = async () => {
       </PageWrapper>
       <PageWrapper
         maxWidth="wide"
-        className="my-12 grid grid-cols-12 gap-2 md:my-24"
+        className="my-12 grid grid-cols-6 gap-2 md:my-24 md:grid-cols-12"
       >
         {/* First Row */}
         <div className="col-span-1" />
-        <div className="col-span-3 flex h-full flex-col items-center justify-start">
+        <div className="col-span-5 flex h-full flex-row items-center justify-start space-x-2 md:col-span-3 md:flex-col">
           <div className="relative aspect-[4/5] w-full">
             <PhotoImage
               photoID="photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_jpg"
@@ -118,13 +118,15 @@ const AerialSfPage = async () => {
               hoverAnimation="scale"
             />
           </div>
-          <p className="caption mt-2">Lombard Street at 6am, San Francisco</p>
-          <CoordinatesLabel
-            latitude={37.80181121826172}
-            longitude={-122.42108917236328}
-          />
+          <div>
+            <p className="caption mt-2">Lombard Street at 6am, San Francisco</p>
+            <CoordinatesLabel
+              latitude={37.80181121826172}
+              longitude={-122.42108917236328}
+            />
+          </div>
         </div>
-        <div className="col-span-3" />
+        <div className="hidden md:col-span-3 md:block" />
         <div className="col-span-4">
           <div className="relative mt-36 aspect-square w-full">
             <PhotoImage
@@ -144,7 +146,7 @@ const AerialSfPage = async () => {
         </div>
 
         {/* Second Row */}
-        <div className="relative col-span-9 h-full">
+        <div className="relative col-span-5 h-full md:col-span-9">
           <PhotoImage
             photoID="photography/Main_Post_Presidio_San_Francisco_jpg"
             className="h-full w-full object-cover"
@@ -152,7 +154,7 @@ const AerialSfPage = async () => {
             hoverAnimation="scale"
           />
         </div>
-        <div className="col-span-3 flex aspect-[2/3] w-full flex-col items-start justify-end">
+        <div className="col-span-1 flex aspect-[2/3] w-full flex-col items-start justify-end md:col-span-3">
           <p className="caption">Main Post, Presidio</p>
           <CoordinatesLabel
             latitude={37.80358670437733}
@@ -161,7 +163,7 @@ const AerialSfPage = async () => {
         </div>
 
         {/* Third Row */}
-        <div className="col-span-5 flex h-full flex-col items-end justify-end">
+        <div className="col-span-5 flex h-full flex-col items-start justify-end pt-16 md:items-end md:pt-0">
           <p className="caption">Ferry Building</p>
           <CoordinatesLabel
             latitude={37.795829812869364}
@@ -169,7 +171,7 @@ const AerialSfPage = async () => {
           />
         </div>
         <div className="col-span-3">
-          <div className="relative mt-16 aspect-[5/4]">
+          <div className="relative aspect-[5/4] md:mt-16">
             <PhotoImage
               photoID="photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_jpg"
               className="h-full w-full object-cover"
@@ -181,7 +183,7 @@ const AerialSfPage = async () => {
         <div className="col-span-4" />
 
         {/* Fourth Row */}
-        <div className="col-span-7 pl-16">
+        <div className="col-span-4 pl-16 md:col-span-7">
           <div className="relative mt-48 aspect-square">
             <PhotoImage
               photoID="photography/Bay_Bridge_at_Sunset_from_Plane_jpg"
