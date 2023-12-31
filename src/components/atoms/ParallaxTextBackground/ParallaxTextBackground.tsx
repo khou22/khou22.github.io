@@ -1,11 +1,12 @@
 "use client";
 
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
+import { useIsVisible } from "@/hooks/useIsVisible/useIsVisible";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { clamp, interpolate } from "@/utils/math";
 import { classNames } from "@/utils/style";
-import React, { useRef } from "react";
+import React, { useMemo, useRef } from "react";
 
 export type ParallaxTextBackgroundProps =
   React.ComponentPropsWithoutRef<"h1"> & {
@@ -23,26 +24,30 @@ export const ParallaxTextBackground: React.FC<ParallaxTextBackgroundProps> = ({
   ...props
 }) => {
   const isClient = useIsClient();
-
   const ref = useRef<HTMLHeadingElement>(null);
+  const isVisible = useIsVisible(ref);
+
   const { scrollY } = useScrollPosition();
   const screenSize = useScreenSize();
 
-  const top = ref.current?.getBoundingClientRect().top ?? 0;
-  const y1 = top + scrollY;
-  const height = ref.current?.getBoundingClientRect().height ?? 0;
-  const y2 = y1 + height;
-
-  // The scroll region where the parallax is actively animating.
-  const startBound = parallaxWindow === "screen" ? y1 - screenSize.height : y1;
-  const endBound = y2;
-
   // 0% when the element is at the bottom of the screen. 100% when it passes out of the screen at the top.
-  const progress = clamp(
-    0,
-    1,
-    (scrollY - startBound) / (endBound - startBound),
-  );
+  const progress = useMemo(() => {
+    // Only calculate the scroll when the parallax is visible to save on performance.
+    if (!isVisible || !isClient) return 0;
+
+    const clientRect = ref.current?.getBoundingClientRect();
+    const top = clientRect?.top ?? 0;
+    const y1 = top + scrollY;
+    const height = clientRect?.height ?? 0;
+    const y2 = y1 + height;
+
+    // The scroll region where the parallax is actively animating.
+    const startBound =
+      parallaxWindow === "screen" ? y1 - screenSize.height : y1;
+    const endBound = y2;
+
+    return clamp(0, 1, (scrollY - startBound) / (endBound - startBound));
+  }, [isVisible, isClient, scrollY, parallaxWindow, screenSize.height]);
 
   const positionY = interpolate(0, 30, progress, "easeOut");
   const zoom = interpolate(4, 1, progress, "easeOut");

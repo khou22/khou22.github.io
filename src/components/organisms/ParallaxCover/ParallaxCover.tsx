@@ -2,15 +2,25 @@
 
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
+import { useIsVisible } from "@/hooks/useIsVisible/useIsVisible";
+import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { clamp } from "@/utils/math";
 import { useRef } from "react";
 
 type ParallaxCoverProps = {};
 
 export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
   const parallexContainer = useRef<HTMLDivElement>(null);
-  const { scrollY: scrollPageOffset } = useScrollPosition();
+  const isVisible = useIsVisible(parallexContainer);
+  const { scrollY } = useScrollPosition();
+  const { height: screenHeight } = useScreenSize();
+
+  // Only calculate the scroll when the parallax is visible to save on performance.
+  const scrollPageOffset = isVisible
+    ? clamp(0, screenHeight * 1.5, scrollY)
+    : 0;
 
   const getTransform = (i: number) => {
     const transform = "translateY(-" + (scrollPageOffset * i) / 4 + "px)";
