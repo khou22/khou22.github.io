@@ -21,7 +21,7 @@ const PhotographyFeaturedPage = async () => {
           location: "Earth",
         }}
         blockSection={{
-          text: "Favorites",
+          text: "The Fan Favorites",
           background: "photography/Yosemite_Valley_Red_Veil_Panorama_jpg",
         }}
         cover={{

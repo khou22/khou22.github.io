@@ -1,4 +1,5 @@
 import { CoordinatesLabel } from "@/components/atoms/CoordinatesLabel/CoordinatesLabel";
+import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackground/ParallaxTextBackground";
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { Label } from "@/components/ui/label";
@@ -118,18 +119,13 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
         maxWidth="none"
         className="my-12 items-center md:my-16 lg:my-20 xl:my-24"
       >
-        <h1
-          className="text-mask max-w-full break-all text-center text-[4.25rem] font-black xs:text-[5.5rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[14rem] 2xl:text-[15rem]"
-          style={{
-            // TODO: Consider making this a GIF of this drone flyover.
-            backgroundImage: `url(${getCdnAsset(blockSection.background)})`,
-
-            // TODO: Animate the position of the background image based on scroll.
-            backgroundPositionY: 0,
-          }}
+        <ParallaxTextBackground
+          parallaxWindow="screen"
+          backgroundURL={`url(${getCdnAsset(blockSection.background)})`}
+          className="max-w-full break-words text-center text-[4.25rem] font-black xs:text-[5.5rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[14rem] 2xl:text-[15rem]"
         >
           {blockSection.text}
-        </h1>
+        </ParallaxTextBackground>
       </PageWrapper>
       <PageWrapper
         maxWidth="wide"

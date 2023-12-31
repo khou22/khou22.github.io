@@ -16,6 +16,7 @@ import { PhotoTags } from "@/constants/photoTags";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ImageIcon, PlusIcon } from "@radix-ui/react-icons";
+import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackground/ParallaxTextBackground";
 
 const numFeaturedPhotos = 12 * 9; // 12 photos per row.
 
@@ -93,6 +94,18 @@ const HomePage = async () => {
             </FadeInView>
           </div>
         </div>
+
+        <PageWrapper maxWidth="none">
+          <ParallaxTextBackground
+            parallaxWindow="screen"
+            backgroundURL={`url(${getCdnAsset(
+              "photography/San_Francisco_Sunset_Skyline_Landscape_from_Plane_jpg",
+            )})`}
+            className="max-w-full break-words text-center text-[4.25rem] font-black xs:text-[5rem] sm:text-[6.5rem] md:text-[8rem] lg:text-[10rem]"
+          >
+            Engineer, Photographer, Woodworker
+          </ParallaxTextBackground>
+        </PageWrapper>
 
         <div className="w-full bg-gray-800 py-8 text-white md:py-16 lg:py-24">
           <PageWrapper>
