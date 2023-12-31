@@ -114,12 +114,18 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
         </div>
       </PageWrapper>
 
-      <PageWrapper maxWidth="wide" className="my-12 md:my-24">
+      <PageWrapper
+        maxWidth="none"
+        className="my-12 items-center md:my-16 lg:my-20 xl:my-24"
+      >
         <h1
-          className="text-mask w-full break-all text-center text-[4.25rem] font-black xs:text-[5.5rem] sm:text-[8rem] md:text-[12rem] xl:text-[16rem]"
+          className="text-mask max-w-full break-all text-center text-[4.25rem] font-black xs:text-[5.5rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] xl:text-[14rem] 2xl:text-[15rem]"
           style={{
             // TODO: Consider making this a GIF of this drone flyover.
             backgroundImage: `url(${getCdnAsset(blockSection.background)})`,
+
+            // TODO: Animate the position of the background image based on scroll.
+            backgroundPositionY: 0,
           }}
         >
           {blockSection.text}
