@@ -17,6 +17,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ImageIcon, PlusIcon } from "@radix-ui/react-icons";
 import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackground/ParallaxTextBackground";
+import { photographyCustomers } from "@/constants/photographyCustomers";
+import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
 
 const numFeaturedPhotos = 12 * 9; // 12 photos per row.
 
@@ -95,7 +97,7 @@ const HomePage = async () => {
           </div>
         </div>
 
-        <PageWrapper maxWidth="none">
+        <PageWrapper maxWidth="none" className="mb-12 mt-4 md:mb-16 lg:mb-20">
           <ParallaxTextBackground
             parallaxWindow="screen"
             backgroundURL={`url(${getCdnAsset(
@@ -110,7 +112,9 @@ const HomePage = async () => {
         <div className="w-full bg-gray-800 py-8 text-white md:py-16 lg:py-24">
           <PageWrapper>
             <div className="mb-6 w-full text-center">
-              <h2 className="mb-2 leading-relaxed">Engineer</h2>
+              <h2 className="mb-2 leading-relaxed">
+                Building, Designing, and Shipping Software
+              </h2>
               <p className="caption text-gray-200">
                 Software engineering and tech lead management experience in
                 Silicon Valley and New York from seed, growth, Fortune 500.
@@ -146,8 +150,28 @@ const HomePage = async () => {
           </PageWrapper>
         </div>
 
+        <PageWrapper>
+          <div className="my-16 md:my-24 lg:my-36">
+            <FadeInView once>
+              <h5 className="mb-4 text-center leading-loose md:mb-6">
+                I have worked and collaborated with some incredible brands
+              </h5>
+            </FadeInView>
+            <FadeInView once>
+              <PhotographyCustomersGrid className="my-4" />
+            </FadeInView>
+            <FadeInView once>
+              <p className="caption text-center">
+                and many more across many industries
+              </p>
+            </FadeInView>
+          </div>
+        </PageWrapper>
+
         <div className="w-full bg-gray-50 py-8 md:py-16 lg:py-24">
-          <h2 className="w-full text-center leading-relaxed">Photographer</h2>
+          <h2 className="w-full text-center leading-relaxed">
+            Prints Available
+          </h2>
           <div className="relative w-full">
             {/* Gradient overlay */}
             <div className="absolute bottom-0 left-0 z-10 flex h-1/2 w-full items-end justify-center bg-gradient-to-b from-black/0 to-black/60 px-6 pb-[10%]">
