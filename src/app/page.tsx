@@ -170,7 +170,7 @@ const HomePage = async () => {
           <div className="mb-16 md:mb-24 lg:mb-36">
             <FadeInView once>
               <h5 className="mb-4 text-center leading-loose md:mb-6">
-                Prior experience with incredible brands
+                Prior experience with brands including
               </h5>
             </FadeInView>
             <FadeInView once>
