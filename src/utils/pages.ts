@@ -16,6 +16,7 @@ export const PAGES = {
     FEATURED: "/photography/featured",
     BROWSE: "/photography#browse",
     LOCATIONS: "/photography#locations",
+    CATEGORIES: "/photography#categories",
     TAG: (tag: PhotoTags) => `/photography/${tagMetadata[tag].slug}`,
     PHOTO: (photoID: PhotoIdType) => `/photo/${getPhotoURLComponent(photoID)}`,
     AERIAL_SF: "/photography/aerial-sf",
