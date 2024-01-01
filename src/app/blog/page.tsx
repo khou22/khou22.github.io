@@ -4,6 +4,7 @@ import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import Image from "next/image";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PostList } from "@/components/organisms/PostList/PostList";
+import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 
 export const metadata: Metadata = {
   title: "Kevin Hou's Blog",
@@ -15,8 +16,14 @@ const BlogPage = () => {
   return (
     <>
       <div className="relative h-screen w-screen">
-        <div className="absolute left-0 top-1/3 z-10 flex w-full flex-col items-center justify-center">
-          <h1 className="text-white">Kevin Hou&apos;s Blog</h1>
+        <div className="absolute left-0 top-[22%] z-10 flex w-full flex-col items-center justify-center">
+          <FadeInView once>
+            <img
+              alt="Kevin Hou blog cover image"
+              src={getCdnAsset("media/site/images/Blog_Landing_Content_png")}
+              className="max-w-[500px] sm:max-w-[700px] md:max-w-[900px] 2xl:max-w-[1000px]"
+            />
+          </FadeInView>
         </div>
         <Image
           fill
