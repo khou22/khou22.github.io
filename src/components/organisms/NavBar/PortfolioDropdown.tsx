@@ -32,7 +32,7 @@ export const PortfolioDropdown: React.FC = () => {
       <Link href={PAGES.PROGRAMMING}>
         <ImageCard
           title="Programming"
-          description="Digitial craftsmanship"
+          description="Digital craftsmanship"
           imageSrc={getCdnAsset("media/site/images/programming_image_jpg")}
           containerClassName="w-full h-full min-h-[100px] rounded-lg"
           contentClassName="p-4"

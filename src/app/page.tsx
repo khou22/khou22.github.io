@@ -100,6 +100,8 @@ const HomePage = async () => {
 
         <PageWrapper maxWidth="none" className="mb-12 mt-4 md:mb-16 lg:mb-20">
           <ParallaxTextBackground
+            transformYBounds={[18, 38]}
+            zoomBounds={[1, 3.5]}
             parallaxWindow="screen"
             backgroundURL={`url(${getCdnAsset(
               "photography/San_Francisco_Sunset_Skyline_Landscape_from_Plane_jpg",
@@ -151,8 +153,22 @@ const HomePage = async () => {
           </PageWrapper>
         </div>
 
+        <PageWrapper maxWidth="none" className="my-12 md:my-16 lg:my-20">
+          <ParallaxTextBackground
+            transformYBounds={[80, 40]}
+            zoomBounds={[1.4, 1]}
+            parallaxWindow="screen"
+            backgroundURL={`url(${getCdnAsset(
+              "photography/product/IWC_Watch_Shot_Landscape_jpg",
+            )})`}
+            className="max-w-full break-words text-center text-[4.25rem] font-black leading-normal xs:text-[5rem] sm:text-[6.5rem] md:text-[8rem] lg:text-[10rem]"
+          >
+            Freelance Photographer
+          </ParallaxTextBackground>
+        </PageWrapper>
+
         <PageWrapper>
-          <div className="my-16 md:my-24 lg:my-36">
+          <div className="mb-16 md:mb-24 lg:mb-36">
             <FadeInView once>
               <h5 className="mb-4 text-center leading-loose md:mb-6">
                 I have worked and collaborated with some incredible brands

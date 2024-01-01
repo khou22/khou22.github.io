@@ -15,11 +15,15 @@ export type ParallaxTextBackgroundProps =
      */
     parallaxWindow: "screen" | "element";
     backgroundURL: string;
+    transformYBounds?: [number, number];
+    zoomBounds?: [number, number];
   };
 
 export const ParallaxTextBackground: React.FC<ParallaxTextBackgroundProps> = ({
   backgroundURL,
   parallaxWindow = "screen",
+  transformYBounds = [0, 30],
+  zoomBounds = [1, 4],
   children,
   ...props
 }) => {
@@ -49,8 +53,13 @@ export const ParallaxTextBackground: React.FC<ParallaxTextBackgroundProps> = ({
     return clamp(0, 1, (scrollY - startBound) / (endBound - startBound));
   }, [isVisible, isClient, scrollY, parallaxWindow, screenSize.height]);
 
-  const positionY = interpolate(0, 30, progress, "easeOut");
-  const zoom = interpolate(4, 1, progress, "easeOut");
+  const positionY = interpolate(
+    transformYBounds[0],
+    transformYBounds[1],
+    progress,
+    "easeOut",
+  );
+  const zoom = interpolate(zoomBounds[0], zoomBounds[1], progress, "easeOut");
 
   return (
     <h1
