@@ -2,20 +2,23 @@
 
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
+import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 import { useIsVisible } from "@/hooks/useIsVisible/useIsVisible";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { clamp } from "@/utils/math";
+import { classNames } from "@/utils/style";
 import { useRef } from "react";
 
 type ParallaxCoverProps = {};
 
 export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
   const parallexContainer = useRef<HTMLDivElement>(null);
-  const isVisible = useIsVisible(parallexContainer);
   const { scrollY } = useScrollPosition();
   const { height: screenHeight } = useScreenSize();
+  const isClient = useIsClient();
+  const isVisible = !isClient || scrollY <= screenHeight * 2;
 
   // Only calculate the scroll when the parallax is visible to save on performance.
   const scrollPageOffset = isVisible
@@ -32,7 +35,13 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
     "fixed top-0 bg-center w-full justify-center flex h-full pointer-events-none";
 
   return (
-    <div className="block h-screen" ref={parallexContainer}>
+    <div
+      className={classNames(
+        "block h-screen",
+        isVisible ? "opacity-100" : "opacity-0",
+      )}
+      ref={parallexContainer}
+    >
       <div className={sliceClassName}>
         <ProgressiveImage
           alt="Hong Kong Skyline"

@@ -138,7 +138,6 @@ const HomePage = async () => {
                       alt={occupation.company.name}
                       fill
                       className="object-contain"
-                      priority
                     />
                     <span className="sr-only">{occupation.company.name}</span>
                   </div>
@@ -185,54 +184,68 @@ const HomePage = async () => {
           </div>
         </PageWrapper>
 
-        <div className="w-full bg-gray-50 py-8 md:py-16 lg:py-24">
-          <h2 className="w-full text-center leading-relaxed">
-            Prints Available
-          </h2>
-          <div className="relative w-full">
-            {/* Gradient overlay */}
-            <div className="absolute bottom-0 left-0 z-10 flex h-1/2 w-full items-end justify-center bg-gradient-to-b from-black/0 to-black/60 px-6 pb-[10%]">
-              <div className="flex flex-row items-center justify-center space-x-2">
-                <Link href={PAGES.PHOTOGRAPHY.FEATURED}>
-                  <Button variant="primary" size="lg">
-                    <ImageIcon className="mr-1.5 h-4 w-4" />
-                    Featured Photos
-                  </Button>
-                </Link>
-                <Link href={PAGES.PHOTOGRAPHY.HOME}>
-                  <Button variant="outline" className="text-white" size="lg">
-                    <PlusIcon className="mr-1.5 h-4 w-4" />
-                    View Gallery
-                  </Button>
-                </Link>
-              </div>
+        {/* Quick links */}
+        <PageWrapper maxWidth="wide" className="my-12">
+          <h2 className="mb-8 w-full text-center md:mb-12">Prints Available</h2>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
+            <div>
+              <Link
+                href={PAGES.PHOTOGRAPHY.PHOTO(
+                  "photography/San_Francisco_California_and_Powell_Street_Trolly_jpg",
+                )}
+              >
+                <ParallaxHoverCard>
+                  <PhotoImage photoID="photography/San_Francisco_California_and_Powell_Street_Trolly_jpg" />
+                </ParallaxHoverCard>
+              </Link>
             </div>
-
-            <div className="my-8 grid w-full grid-cols-12 gap-1">
-              {/* TODO: Convert into a single image export so there's a smaller asset size. */}
-              {featuredPhotos.map((photo) => (
-                <div key={photo} className="relative col-span-1 aspect-square">
-                  <Image
-                    src={getCdnAsset(getPhotoThumbnail(photo) ?? photo)}
-                    alt={getPhotoName(photo)}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
+            <div>
+              <Link
+                href={PAGES.PHOTOGRAPHY.PHOTO(
+                  "photography/Shore_Stimulations_Dominican_Republic_Top_Down_Drone_Beach_jpg",
+                )}
+              >
+                <ParallaxHoverCard>
+                  <PhotoImage photoID="photography/Shore_Stimulations_Dominican_Republic_Top_Down_Drone_Beach_jpg" />
+                </ParallaxHoverCard>
+              </Link>
+            </div>
+            <div>
+              <Link
+                href={PAGES.PHOTOGRAPHY.PHOTO(
+                  "media/store/Hie_Shrine_Tokyo_Japan_jpg",
+                )}
+              >
+                <ParallaxHoverCard>
+                  <PhotoImage photoID="photography/Hie_Shrine_Tokyo_Japan_jpg" />
+                </ParallaxHoverCard>
+              </Link>
+            </div>
+            <div className="block md:hidden">
+              <Link
+                href={PAGES.PHOTOGRAPHY.PHOTO(
+                  "photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg",
+                )}
+              >
+                <ParallaxHoverCard>
+                  <PhotoImage photoID="photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg" />
+                </ParallaxHoverCard>
+              </Link>
             </div>
           </div>
-        </div>
-
-        {/* Quick links */}
-        <PageWrapper>
-          <h2>Check out my work</h2>
-          <ParallaxHoverCard>
-            <PhotoImage photoID="photography/Sunset_on_Cuyler_Courtyard_at_Princeton_University_jpg" />
-          </ParallaxHoverCard>
+          <div className="my-6 flex w-full flex-row items-center justify-center space-x-2 md:my-10">
+            <Link href={PAGES.PHOTOGRAPHY.HOME}>
+              <Button variant="primary" size="lg">
+                See All
+              </Button>
+            </Link>
+            <Link href={PAGES.PHOTOGRAPHY.FEATURED}>
+              <Button variant="secondary" size="lg">
+                Featured
+              </Button>
+            </Link>
+          </div>
         </PageWrapper>
-
-        <div className="h-screen w-full bg-gray-50" />
       </div>
     </main>
   );
