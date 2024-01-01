@@ -188,7 +188,7 @@ const HomePage = async () => {
         <PageWrapper maxWidth="wide" className="my-12">
           <h2 className="mb-8 w-full text-center md:mb-12">Prints Available</h2>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
-            <div>
+            <FadeInView>
               <Link
                 href={PAGES.PHOTOGRAPHY.PHOTO(
                   "photography/San_Francisco_California_and_Powell_Street_Trolly_jpg",
@@ -198,8 +198,8 @@ const HomePage = async () => {
                   <PhotoImage photoID="photography/San_Francisco_California_and_Powell_Street_Trolly_jpg" />
                 </ParallaxHoverCard>
               </Link>
-            </div>
-            <div>
+            </FadeInView>
+            <FadeInView delayMS={200}>
               <Link
                 href={PAGES.PHOTOGRAPHY.PHOTO(
                   "photography/Shore_Stimulations_Dominican_Republic_Top_Down_Drone_Beach_jpg",
@@ -209,8 +209,8 @@ const HomePage = async () => {
                   <PhotoImage photoID="photography/Shore_Stimulations_Dominican_Republic_Top_Down_Drone_Beach_jpg" />
                 </ParallaxHoverCard>
               </Link>
-            </div>
-            <div>
+            </FadeInView>
+            <FadeInView delayMS={400}>
               <Link
                 href={PAGES.PHOTOGRAPHY.PHOTO(
                   "media/store/Hie_Shrine_Tokyo_Japan_jpg",
@@ -220,8 +220,8 @@ const HomePage = async () => {
                   <PhotoImage photoID="photography/Hie_Shrine_Tokyo_Japan_jpg" />
                 </ParallaxHoverCard>
               </Link>
-            </div>
-            <div className="block md:hidden">
+            </FadeInView>
+            <FadeInView className="block md:hidden" delayMS={600}>
               <Link
                 href={PAGES.PHOTOGRAPHY.PHOTO(
                   "photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg",
@@ -231,7 +231,7 @@ const HomePage = async () => {
                   <PhotoImage photoID="photography/San_Francisco_Golden_Gate_Park_Satellite_Shot_jpg" />
                 </ParallaxHoverCard>
               </Link>
-            </div>
+            </FadeInView>
           </div>
           <div className="my-6 flex w-full flex-row items-center justify-center space-x-2 md:my-10">
             <Link href={PAGES.PHOTOGRAPHY.HOME}>
