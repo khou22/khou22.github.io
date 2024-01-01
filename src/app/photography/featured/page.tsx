@@ -22,7 +22,7 @@ const PhotographyFeaturedPage = async () => {
         }}
         blockSection={{
           text: "The Fan Favorites",
-          background: "photography/Yosemite_Valley_Red_Veil_Panorama_jpg",
+          background: "photography/New_York_Hudson_Yards_Rooftop_Panorama_jpg",
         }}
         cover={{
           hero: "photography/Shore_Stimulations_Dominican_Republic_Top_Down_Drone_Beach_jpg",
