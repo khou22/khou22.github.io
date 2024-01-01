@@ -17,8 +17,9 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ImageIcon, PlusIcon } from "@radix-ui/react-icons";
 import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackground/ParallaxTextBackground";
-import { photographyCustomers } from "@/constants/photographyCustomers";
 import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
+import { ParallaxHoverCard } from "@/components/atoms/ParallaxHoverCard/ParallaxHoverCard";
+import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 
 const numFeaturedPhotos = 12 * 9; // 12 photos per row.
 
@@ -210,6 +211,9 @@ const HomePage = async () => {
         {/* Quick links */}
         <PageWrapper>
           <h2>Check out my work</h2>
+          <ParallaxHoverCard>
+            <PhotoImage photoID="photography/Sunset_on_Cuyler_Courtyard_at_Princeton_University_jpg" />
+          </ParallaxHoverCard>
         </PageWrapper>
 
         <div className="h-screen w-full bg-gray-50" />
