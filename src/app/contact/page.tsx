@@ -2,8 +2,6 @@ import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { ContactForm } from "./ContactForm";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PaperTexture } from "@/components/atoms/PaperTexture/PaperTexture";
-import { photographyCustomers } from "@/constants/photographyCustomers";
-import { AlbumsSection } from "./AlbumsSection";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ImageStory } from "@/components/organisms/ImageStory/ImageStory";
 import { PAGES } from "@/utils/pages";
@@ -12,9 +10,7 @@ import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ImageIcon } from "@radix-ui/react-icons";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
-import { ParallaxHoverCard } from "@/components/atoms/ParallaxHoverCard/ParallaxHoverCard";
 
 const ContactPage = () => {
   return (
@@ -114,12 +110,12 @@ const ContactPage = () => {
         </div>
       </PageWrapper>
 
-      <PageWrapper maxWidth="wide">
-        <div className="relative z-10 mb-24 bg-gray-900 pb-20 sm:pb-24 lg:mb-36 xl:mb-52 xl:pb-0">
+      <div className="relative z-10 mb-24 w-full bg-gray-800 pb-20 sm:pb-24 lg:mb-36 xl:mb-52 xl:pb-0">
+        <PageWrapper maxWidth="wide">
           <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
             <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
               <div
-                className="aspect-[1097/1023] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-25"
+                className="aspect-[1097/1023] w-[68.5625rem] bg-gradient-to-r from-[#ff8d46] to-[#6fc5ff] opacity-25"
                 style={{
                   clipPath:
                     "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -129,12 +125,12 @@ const ContactPage = () => {
           </div>
           <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
             <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
-              <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
+              <div className="relative aspect-[5/3] h-full sm:aspect-[4/3] md:-mx-8 xl:mx-0 xl:aspect-auto">
                 <FadeInView once>
                   <img
                     className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
                     src={getCdnAsset(
-                      "media/profile_pictures/Studio_Photography_Portrait_jpg",
+                      "media/profile_pictures/Side_Outdoors_Portrait_jpg",
                     )}
                     alt=""
                   />
@@ -188,8 +184,8 @@ const ContactPage = () => {
               </figure>
             </div>
           </div>
-        </div>
-      </PageWrapper>
+        </PageWrapper>
+      </div>
     </>
   );
 };

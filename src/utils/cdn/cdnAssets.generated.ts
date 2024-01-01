@@ -5584,6 +5584,11 @@ export const _generatedCdnAssets = {
     name: `princeton`,
     dimensions: [763, 600],
   },
+	"media/profile_pictures/Side_Outdoors_Portrait_jpg": {
+    path: "/media/profile_pictures/Side%20Outdoors%20Portrait.jpg",
+    name: `Side Outdoors Portrait`,
+    dimensions: [2400, 3598],
+  },
 	"media/profile_pictures/Nuro_Photo_Shoot_Headshot_Square_jpg": {
     path: "/media/profile_pictures/Nuro%20Photo%20Shoot%20Headshot%20-%20Square.jpg",
     name: `Nuro Photo Shoot Headshot - Square`,
