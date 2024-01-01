@@ -95,7 +95,7 @@ const ContactPage = () => {
         <div className="my-16 md:my-24 lg:my-36">
           <FadeInView once>
             <h5 className="mb-4 text-center leading-loose md:mb-6">
-              I have worked and collaborated with some incredible brands
+              Prior experience with incredible brands
             </h5>
           </FadeInView>
           <FadeInView once>
