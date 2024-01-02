@@ -2,6 +2,7 @@ import { FeaturedGallerySpreadProps } from "@/components/templates/FeaturedGalle
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import _ from "lodash";
 import { featuredTagGalleryLayout } from "./gallery-layouts/featured";
+import { tokyoGalleryLayout } from "./gallery-layouts/tokyo";
 
 export enum PhotoTags {
   // Standard tag themes for category portfolios.
@@ -191,6 +192,7 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
     name: "Japan",
     slug: "japan",
     thumbnailPhotoId: "photography/Hie_Shrine_Tokyo_Japan_jpg",
+    galleryLayout: tokyoGalleryLayout,
   },
   [PhotoTags.WashingtonDC]: {
     name: "Washington DC",
