@@ -2,9 +2,10 @@ import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 import { TagImageCard } from "@/components/organisms/TagImageCard/TagImageCard";
+import { FeaturedGallerySpread } from "@/components/templates/FeaturedGallerySpread/FeaturedGallerySpread";
 import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { getSuggestedPhotoTags } from "@/utils/photos/getSuggestedPhotoTags";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
@@ -52,6 +53,38 @@ const TagPage = async ({ params }: PageProps) => {
     )),
   );
 
+  const suggestedSection = (
+    <div className="mt-16 w-full">
+      <h3 className="w-full text-center">Explore More</h3>
+      <div className="my-6 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
+        {suggestedTagNodes}
+      </div>
+    </div>
+  );
+
+  if (metadata.galleryLayout) {
+    const featuredPhotoIDs = new Set<PhotoIdType>([
+      metadata.galleryLayout.cover.hero,
+      metadata.galleryLayout.cover.left,
+      metadata.galleryLayout.cover.right,
+    ]);
+    metadata.galleryLayout.features.forEach(({ photoID }) => {
+      featuredPhotoIDs.add(photoID);
+    });
+
+    return (
+      <PageWrapper maxWidth="wide">
+        <FeaturedGallerySpread {...metadata.galleryLayout} />
+
+        <PhotoGallery
+          photoIDs={photoIDs.filter((id) => !featuredPhotoIDs.has(id))}
+        />
+
+        {suggestedSection}
+      </PageWrapper>
+    );
+  }
+
   return (
     <PageWrapper maxWidth="wide">
       <div>
@@ -69,7 +102,7 @@ const TagPage = async ({ params }: PageProps) => {
           src={getCdnAsset(
             metadata.thumbnailPhotoId ?? "media/site/images/Profile2_jpg",
           )}
-          className="animate-overlay-show h-40 w-40 rounded-full border-4 border-blue object-cover opacity-0"
+          className="h-40 w-40 animate-overlay-show rounded-full border-4 border-blue object-cover opacity-0"
           style={{
             animationDuration: "2500ms",
             animationFillMode: "forwards",
@@ -102,12 +135,7 @@ const TagPage = async ({ params }: PageProps) => {
 
       <PhotoGallery photoIDs={photoIDs} fadeIn />
 
-      <div className="mt-16 w-full">
-        <h3 className="w-full text-center">Explore More</h3>
-        <div className="my-6 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
-          {suggestedTagNodes}
-        </div>
-      </div>
+      {suggestedSection}
     </PageWrapper>
   );
 };

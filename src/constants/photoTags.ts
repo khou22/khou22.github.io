@@ -1,5 +1,7 @@
+import { FeaturedGallerySpreadProps } from "@/components/templates/FeaturedGallerySpread/FeaturedGallerySpread";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import _ from "lodash";
+import { featuredTagGalleryLayout } from "./gallery-layouts/featured";
 
 export enum PhotoTags {
   // Standard tag themes for category portfolios.
@@ -91,6 +93,7 @@ export type TagMetadataType = {
   slug: string;
   thumbnailPhotoId?: PhotoIdType;
   hidden?: boolean;
+  galleryLayout?: FeaturedGallerySpreadProps;
 };
 
 export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
@@ -270,6 +273,8 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Featured]: {
     name: "Featured",
     slug: "featured",
+    thumbnailPhotoId: "photography/Magical_Grass_Astro_Shot_jpg",
+    galleryLayout: featuredTagGalleryLayout,
   },
   [PhotoTags.NotForSale]: {
     name: "Not for sale",

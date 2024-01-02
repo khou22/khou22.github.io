@@ -8,9 +8,9 @@ import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
 type ContentNode = string | JSX.Element;
 
 type PhotoFeature = {
-  photoID: string;
+  photoID: PhotoIdType;
   label: string;
-  description: string;
+  description: ContentNode;
 };
 
 export type FeaturedGallerySpreadProps = {
@@ -38,6 +38,37 @@ export type FeaturedGallerySpreadProps = {
     /** Vertical image. Largest cover photo on desktop. */
     right: PhotoIdType;
   };
+  features: [
+    /**
+     * Vertical 4:5
+     */
+    PhotoFeature,
+
+    /**
+     * Square
+     */
+    PhotoFeature,
+
+    /**
+     * Panorama, 5:2
+     */
+    PhotoFeature,
+
+    /**
+     * Horizontal (small)
+     */
+    PhotoFeature,
+
+    /**
+     * Vertical
+     */
+    PhotoFeature,
+
+    /**
+     * Square (large)
+     */
+    PhotoFeature,
+  ];
 };
 
 export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
@@ -46,7 +77,15 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
   project,
   blockSection,
   cover,
+  features,
 }) => {
+  const renderContentNode = (node: ContentNode) => {
+    if (typeof node === "string") {
+      return <p className="text-sm">{node}</p>;
+    }
+    return node;
+  };
+
   return (
     <>
       <PageWrapper
@@ -93,7 +132,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
                 <p className="caption">{project.duration}</p>
 
                 <Label>Location</Label>
-                {project.location}
+                {renderContentNode(project.location)}
               </div>
             </div>
           </div>
@@ -138,25 +177,22 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
         <div className="col-span-5 flex h-full flex-row items-center justify-start space-x-2 md:col-span-3 md:flex-col">
           <div className="relative aspect-[4/5] w-full">
             <PhotoImage
-              photoID="photography/San_Francisco_Lombard_Street_Sunrise_Drone_Vertical_jpg"
+              photoID={features[0].photoID}
               className="h-full w-full object-cover"
               isLink
               hoverAnimation="scale"
             />
           </div>
           <div>
-            <p className="caption mt-2">Lombard Street at 6am, San Francisco</p>
-            <CoordinatesLabel
-              latitude={37.80181121826172}
-              longitude={-122.42108917236328}
-            />
+            <p className="mt-2 text-sm">{features[0].label}</p>
+            {renderContentNode(features[0].description)}
           </div>
         </div>
         <div className="hidden md:col-span-3 md:block" />
         <div className="col-span-4">
           <div className="relative mt-36 aspect-square w-full">
             <PhotoImage
-              photoID="photography/Downtown_San_Francisco_Drone_Vertical_Powell_Street_Intersection_jpg"
+              photoID={features[1].photoID}
               className="h-full w-full object-cover"
               isLink
               hoverAnimation="scale"
@@ -164,42 +200,33 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
           </div>
         </div>
         <div className="col-span-1 flex h-full flex-col items-center justify-center">
-          <p className="caption">Market Street</p>
-          <CoordinatesLabel
-            latitude={37.78683207010421}
-            longitude={-122.40317722776919}
-          />
+          <p className="text-sm">{features[1].label}</p>
+          {renderContentNode(features[1].description)}
         </div>
 
         {/* Second Row */}
         <div className="relative col-span-5 h-full md:col-span-9">
           <PhotoImage
-            photoID="photography/Main_Post_Presidio_San_Francisco_jpg"
+            photoID={features[2].photoID}
             className="h-full w-full object-cover"
             isLink
             hoverAnimation="scale"
           />
         </div>
         <div className="col-span-1 flex aspect-[2/3] w-full flex-col items-start justify-end md:col-span-3">
-          <p className="caption">Main Post, Presidio</p>
-          <CoordinatesLabel
-            latitude={37.80358670437733}
-            longitude={-122.46400436380893}
-          />
+          <p className="text-sm">{features[2].label}</p>
+          {renderContentNode(features[2].description)}
         </div>
 
         {/* Third Row */}
         <div className="col-span-5 flex h-full flex-col items-start justify-end pt-16 md:items-end md:pt-0">
-          <p className="caption">Ferry Building</p>
-          <CoordinatesLabel
-            latitude={37.795829812869364}
-            longitude={-122.39370902994662}
-          />
+          <p className="text-sm">{features[3].label}</p>
+          {renderContentNode(features[3].description)}
         </div>
         <div className="col-span-3">
           <div className="relative aspect-[5/4] md:mt-16">
             <PhotoImage
-              photoID="photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_jpg"
+              photoID={features[3].photoID}
               className="h-full w-full object-cover"
               isLink
               hoverAnimation="scale"
@@ -212,7 +239,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
         <div className="col-span-4 pl-16 md:col-span-7">
           <div className="relative mt-48 aspect-square">
             <PhotoImage
-              photoID="photography/Bay_Bridge_at_Sunset_from_Plane_jpg"
+              photoID={features[4].photoID}
               className="h-full w-full object-cover"
               isLink
               hoverAnimation="scale"
@@ -220,27 +247,22 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
           </div>
         </div>
         <div className="col-span-2 flex h-full flex-col items-start justify-end">
-          <p className="caption">Bay Bridge</p>
-          <CoordinatesLabel
-            latitude={37.8367032779192}
-            longitude={-122.40002831438571}
-          />
+          <p className="text-sm">{features[4].label}</p>
+          {renderContentNode(features[4].description)}
         </div>
         <div className="col-span-3">
           <div className="relative aspect-[2/3]">
             <PhotoImage
-              photoID="photography/Lombard_Street_Drone_jpg"
+              photoID={features[5].photoID}
               className="h-full w-full object-cover"
               isLink
               hoverAnimation="scale"
             />
           </div>
-          <p className="caption text-center">Lombard Street</p>
-          <CoordinatesLabel
-            className="text-center"
-            latitude={37.80181121826172}
-            longitude={-122.42108917236328}
-          />
+          <div className="text-center">
+            <p className="text-sm">{features[5].label}</p>
+            {renderContentNode(features[5].description)}
+          </div>
         </div>
       </PageWrapper>
     </>
