@@ -4,31 +4,17 @@ import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { ParallaxCover } from "@/components/organisms/ParallaxCover/ParallaxCover";
 import { occupations } from "@/constants/occupations";
-import {
-  getCdnAsset,
-  getPhotoName,
-  getPhotoThumbnail,
-} from "@/utils/cdn/cdnAssets";
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
-import { getPhotosWithTag } from "@/data/photos/photoDbManager";
-import { PhotoTags } from "@/constants/photoTags";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ImageIcon, PlusIcon } from "@radix-ui/react-icons";
 import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackground/ParallaxTextBackground";
 import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
 import { ParallaxHoverCard } from "@/components/atoms/ParallaxHoverCard/ParallaxHoverCard";
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 
-const numFeaturedPhotos = 12 * 9; // 12 photos per row.
-
 const HomePage = async () => {
-  // Get all the featured photos.
-  const featuredPhotos = (await getPhotosWithTag(PhotoTags.Featured))
-    .concat(await getPhotosWithTag(PhotoTags.SanFrancisco))
-    .slice(0, numFeaturedPhotos);
-
   return (
     <main>
       <ParallaxCover />
@@ -106,7 +92,7 @@ const HomePage = async () => {
             backgroundURL={`url(${getCdnAsset(
               "photography/San_Francisco_Sunset_Skyline_Landscape_from_Plane_jpg",
             )})`}
-            className="max-w-full break-words text-center text-[4.25rem] font-black xs:text-[5rem] sm:text-[6.5rem] md:text-[8rem] lg:text-[10rem]"
+            className="3xl:text-[12rem] max-w-full break-words text-center text-[4.25rem] font-black xs:text-[5rem] sm:text-[6.5rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] 2xl:text-[11rem]"
           >
             Engineer, Photographer, Woodworker
           </ParallaxTextBackground>

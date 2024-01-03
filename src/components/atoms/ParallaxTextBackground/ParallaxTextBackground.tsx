@@ -70,8 +70,7 @@ export const ParallaxTextBackground: React.FC<ParallaxTextBackgroundProps> = ({
       style={
         isClient
           ? {
-              transition:
-                "background-position-y 200ms ease-out, background-size 0.6s ease-out",
+              transition: "background-size 750ms ease-out",
               backgroundColor: "gray", // Just in case the image does not load.
               backgroundImage: backgroundURL,
               backgroundRepeat: "no-repeat",

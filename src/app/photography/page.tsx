@@ -45,7 +45,7 @@ const PhotographyHomepage = async () => {
             style={{ animationDelay: `${1 * fadeAnimationDeltaMS}ms` }}
           />
           <HalfTextArticle
-            href={PAGES.PHOTOGRAPHY.FEATURED}
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Astrophotography)}
             title="Astrophotography"
             category="Collection"
             description="Undoutedly one of my favorite and most technically complex forms of photography"

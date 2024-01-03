@@ -83,7 +83,7 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
             src={getCdnAsset("media/site/logo/initials_logo_animated_svg")}
           />
           <FadeInView once durationMS={2000} delayMS={500}>
-            <p className="mt-2 leading-loose">Kevin Hou</p>
+            <p className="pointer-events-auto mt-2 leading-loose">Kevin Hou</p>
           </FadeInView>
         </span>
       </div>
