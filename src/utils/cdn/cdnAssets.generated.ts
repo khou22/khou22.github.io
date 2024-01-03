@@ -134,11 +134,6 @@ export const _generatedCdnAssets = {
     name: `Yosemite Valley Sunrays Through Meadow`,
     dimensions: [2398, 1600],
   },
-	"photography/Grand_Teton_Astro_with_Grass_USA_Road_Trip_jpg": {
-    path: "/photography/Grand%20Teton%20Astro%20with%20Grass%20%28USA%20Road%20Trip%29.jpg",
-    name: `Grand Teton Astro with Grass (USA Road Trip)`,
-    dimensions: [1600, 2036],
-  },
 	"photography/Group_of_People_Lying_on_a_Beach_Towel_Drone_Top_Down_placeholder_jpg": {
     path: "/photography/Group%20of%20People%20Lying%20on%20a%20Beach%20Towel%20Drone%20Top%20Down.placeholder.jpg",
     name: `Group of People Lying on a Beach Towel Drone Top Down.placeholder`,
@@ -2444,11 +2439,6 @@ export const _generatedCdnAssets = {
     name: `DSLR With Lensball Image on Screen.placeholder`,
     dimensions: [640, 800],
   },
-	"photography/Magical_Grass_Astro_Shot_placeholder_jpg": {
-    path: "/photography/Magical%20Grass%20Astro%20Shot.placeholder.jpg",
-    name: `Magical Grass Astro Shot.placeholder`,
-    dimensions: [500, 750],
-  },
 	"photography/Rain_Walking_Motion_Blur_in_Milan_placeholder_jpg": {
     path: "/photography/Rain%20Walking%20Motion%20Blur%20in%20Milan.placeholder.jpg",
     name: `Rain Walking Motion Blur in Milan.placeholder`,
@@ -3869,11 +3859,6 @@ export const _generatedCdnAssets = {
     name: `Looking Down Fulton Street Vertical Drone.placeholder`,
     dimensions: [500, 625],
   },
-	"photography/Magical_Grass_Astro_Shot_jpg": {
-    path: "/photography/Magical%20Grass%20Astro%20Shot.jpg",
-    name: `Magical Grass Astro Shot`,
-    dimensions: [1600, 2400],
-  },
 	"photography/Restaurant_at_Night_in_Rome_Italy_jpg": {
     path: "/photography/Restaurant%20at%20Night%20in%20Rome%2C%20Italy.jpg",
     name: `Restaurant at Night in Rome, Italy`,
@@ -3908,11 +3893,6 @@ export const _generatedCdnAssets = {
     path: "/photography/San%20Francisco%20Trolley%20at%20Night.jpg",
     name: `San Francisco Trolley at Night`,
     dimensions: [1600, 2399],
-  },
-	"photography/Grand_Teton_Astro_with_Grass_USA_Road_Trip_placeholder_jpg": {
-    path: "/photography/Grand%20Teton%20Astro%20with%20Grass%20%28USA%20Road%20Trip%29.placeholder.jpg",
-    name: `Grand Teton Astro with Grass (USA Road Trip).placeholder`,
-    dimensions: [629, 800],
   },
 	"photography/Mount_Rainier_Glacier_Lake_jpg": {
     path: "/photography/Mount%20Rainier%20Glacier%20Lake.jpg",
@@ -4233,6 +4213,16 @@ export const _generatedCdnAssets = {
     path: "/photography/Tokyo%20Soba%20Noodles%20NIght%20Market%20Chef.jpg",
     name: `Tokyo Soba Noodles NIght Market Chef`,
     dimensions: [1600, 1999],
+  },
+	"photography/usa_road_trip/Grand_Teton_Astro_with_Grass_USA_Road_Trip_jpg": {
+    path: "/photography/usa-road-trip/Grand%20Teton%20Astro%20with%20Grass%20%28USA%20Road%20Trip%29.jpg",
+    name: `Grand Teton Astro with Grass (USA Road Trip)`,
+    dimensions: [1600, 2036],
+  },
+	"photography/usa_road_trip/Grand_Teton_Astro_with_Grass_USA_Road_Trip_placeholder_jpg": {
+    path: "/photography/usa-road-trip/Grand%20Teton%20Astro%20with%20Grass%20%28USA%20Road%20Trip%29.placeholder.jpg",
+    name: `Grand Teton Astro with Grass (USA Road Trip).placeholder`,
+    dimensions: [629, 800],
   },
 	"photography/Milky_Way_in_Tahoe_Forest_placeholder_jpg": {
     path: "/photography/Milky%20Way%20in%20Tahoe%20Forest.placeholder.jpg",
