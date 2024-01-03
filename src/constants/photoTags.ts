@@ -275,7 +275,8 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
   [PhotoTags.Featured]: {
     name: "Featured",
     slug: "featured",
-    thumbnailPhotoId: "photography/Magical_Grass_Astro_Shot_jpg",
+    thumbnailPhotoId:
+      "photography/usa_road_trip/Grand_Teton_Astro_with_Grass_USA_Road_Trip_jpg",
     galleryLayout: featuredTagGalleryLayout,
   },
   [PhotoTags.NotForSale]: {

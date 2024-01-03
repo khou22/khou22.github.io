@@ -17,28 +17,54 @@ export const connectToPhotoDb = async () => {
     PRIMARY KEY (photo_id, tag_name)
 );`);
 
+  await db.exec(`CREATE TABLE IF NOT EXISTS photo_metadata (
+    photo_id TEXT NOT NULL,
+    rating INTEGER NOT NULL,
+    PRIMARY KEY (photo_id)
+  )`);
+
   return db;
 };
 
 type PhotoTagRowType = { photo_id: string; tag_name: string };
+type PhotoMetadataRowType = { photo_id: string; rating: number | null };
 
-export const getTagsByPhotoID = async (): Promise<
-  Partial<Record<PhotoIdType, PhotoTags[]>>
+export const getMetadataByPhotoID = async (): Promise<
+  Partial<Record<PhotoIdType, { tags: PhotoTags[]; rating: number | null }>>
 > => {
   const db = await connectToPhotoDb();
-  const rows = await db.all<PhotoTagRowType[]>(
+  const tagRows = await db.all<PhotoTagRowType[]>(
     `SELECT photo_id, tag_name FROM photo_tags`,
   );
 
-  const tagsByPhotoID: Partial<Record<PhotoIdType, PhotoTags[]>> = {};
-  rows.forEach((row) => {
+  const tagsByPhotoID: Partial<
+    Record<PhotoIdType, { tags: PhotoTags[]; rating: number | null }>
+  > = {};
+  tagRows.forEach((row) => {
     const photoID = row.photo_id as PhotoIdType;
     const tag = row.tag_name as PhotoTags;
 
     if (tagsByPhotoID[photoID]) {
-      tagsByPhotoID[photoID]?.push(tag);
+      tagsByPhotoID[photoID]?.tags.push(tag);
     } else {
-      tagsByPhotoID[photoID] = [tag];
+      tagsByPhotoID[photoID] = {
+        tags: [tag],
+        rating: null,
+      };
+    }
+  });
+
+  const metadata = await db.all<PhotoMetadataRowType[]>(
+    `SELECT photo_id, rating FROM photo_metadata`,
+  );
+  metadata.forEach((row) => {
+    const photoID = row.photo_id as PhotoIdType;
+    const rating = row.rating;
+    if (tagsByPhotoID[photoID]) {
+      tagsByPhotoID[photoID] = {
+        tags: tagsByPhotoID[photoID]?.tags ?? [],
+        rating: rating,
+      };
     }
   });
 
@@ -105,6 +131,20 @@ ORDER BY
 };
 
 /**
+ * Set the rating for the given photo ID.
+ */
+export const setPhotoRating = async (
+  photoID: PhotoIdType,
+  rating: number | null,
+): Promise<void> => {
+  const db = await connectToPhotoDb();
+  await db.run(
+    `INSERT OR REPLACE INTO photo_metadata (photo_id, rating) VALUES (?, ?)`,
+    [photoID, rating],
+  );
+};
+
+/**
  * Execute a rename for a photo ID. Updates the `photo_tags` table.
  */
 export const renamePhotoID = async (
@@ -112,6 +152,8 @@ export const renamePhotoID = async (
   destination: string,
 ): Promise<number> => {
   const db = await connectToPhotoDb();
+
+  // Update the photo_tags table.
   const tx = await db.run(
     `UPDATE photo_tags
 SET photo_id = ?
@@ -122,10 +164,24 @@ WHERE photo_id = ?`,
   if (tx.changes === undefined) {
     throw new Error("transaction changes are undefined");
   }
+
+  // Update the photo_metadata table.
+  const tx2 = await db.run(
+    `UPDATE photo_metadata
+SET photo_id = ?
+WHERE photo_id = ?`,
+    destination,
+    original,
+  );
+  if (tx2.changes === undefined) {
+    throw new Error("transaction changes are undefined");
+  }
+
   return tx.changes;
 };
 
 export const deletePhoto = async (photoID: PhotoIdType): Promise<void> => {
   const db = await connectToPhotoDb();
   await db.run(`DELETE FROM photo_tags WHERE photo_id = ?`, [photoID]);
+  await db.run(`DELETE FROM photo_metadata WHERE photo_id = ?`, [photoID]);
 };

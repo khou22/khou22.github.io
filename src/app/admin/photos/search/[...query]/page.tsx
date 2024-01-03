@@ -2,7 +2,7 @@ import { PhotoManagementCard } from "@/components/molecules/PhotoManagementCard/
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Label } from "@/components/ui/label";
-import { getTagsByPhotoID } from "@/data/photos/photoDbManager";
+import { getMetadataByPhotoID } from "@/data/photos/photoDbManager";
 import { getPhotoIDs } from "@/utils/photos/getPhotoIDs";
 import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 import { NextPage } from "next";
@@ -28,7 +28,7 @@ const PhotoSearchPage: NextPage<PageProps> = async ({ params }) => {
       getPhotoName(id).toLowerCase().includes(query.toLowerCase())
     );
   });
-  const tagsByPhotoID = photoIDs.length > 0 ? await getTagsByPhotoID() : {};
+  const tagsByPhotoID = photoIDs.length > 0 ? await getMetadataByPhotoID() : {};
 
   return (
     <PageWrapper maxWidth="wide">
@@ -53,7 +53,7 @@ const PhotoSearchPage: NextPage<PageProps> = async ({ params }) => {
               key={photoID}
               path={getPhotoPath(photoID)}
               imageKey={photoID}
-              tagIDs={tagsByPhotoID[photoID] ?? []}
+              tagIDs={tagsByPhotoID[photoID]?.tags ?? []}
             />
           ))}
         </div>

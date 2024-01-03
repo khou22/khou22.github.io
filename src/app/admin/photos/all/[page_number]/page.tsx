@@ -1,6 +1,6 @@
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { getPhotoIDs } from "@/utils/photos/getPhotoIDs";
-import { getTagsByPhotoID } from "@/data/photos/photoDbManager";
+import { getMetadataByPhotoID } from "@/data/photos/photoDbManager";
 import { PageControls } from "./PageControls";
 import { PhotoManagementCard } from "@/components/molecules/PhotoManagementCard/PhotoManagementCard";
 import { getPhotoPath } from "@/utils/cdn/cdnAssets";
@@ -15,7 +15,7 @@ type PageProps = {
 
 const PhotoAdminPage: React.FC<PageProps> = async ({ params }) => {
   const photoIDs = getPhotoIDs();
-  const tagsByPhotoID = await getTagsByPhotoID();
+  const tagsByPhotoID = await getMetadataByPhotoID();
 
   const page = Number(params.page_number);
   const startIndex = (page - 1) * photosPerPage;
@@ -31,7 +31,7 @@ const PhotoAdminPage: React.FC<PageProps> = async ({ params }) => {
             key={photoID}
             path={getPhotoPath(photoID)}
             imageKey={photoID}
-            tagIDs={tagsByPhotoID[photoID] ?? []}
+            tagIDs={tagsByPhotoID[photoID]?.tags ?? []}
           />
         ))}
       </div>

@@ -1,6 +1,6 @@
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { getPhotoIDs } from "@/utils/photos/getPhotoIDs";
-import { getTagsByPhotoID } from "@/data/photos/photoDbManager";
+import { getMetadataByPhotoID } from "@/data/photos/photoDbManager";
 import { notFound } from "next/navigation";
 import { PhotoManagementCard } from "@/components/molecules/PhotoManagementCard/PhotoManagementCard";
 import { getPhotoPath } from "@/utils/cdn/cdnAssets";
@@ -19,7 +19,7 @@ const PhotoAdminSubdirectoryPage: React.FC<PageProps> = async ({ params }) => {
     notFound();
   }
 
-  const tagsByPhotoID = await getTagsByPhotoID();
+  const tagsByPhotoID = await getMetadataByPhotoID();
 
   return (
     <PageWrapper maxWidth="wide">
@@ -31,7 +31,7 @@ const PhotoAdminSubdirectoryPage: React.FC<PageProps> = async ({ params }) => {
             key={photoID}
             imageKey={photoID}
             path={getPhotoPath(photoID)}
-            tagIDs={tagsByPhotoID[photoID] ?? []}
+            tagIDs={tagsByPhotoID[photoID]?.tags ?? []}
           />
         ))}
       </div>
