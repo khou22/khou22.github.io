@@ -75,6 +75,10 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
     await new FileLocationClient().movePhotoPath(imageKey, newPath);
   };
 
+  const onDelete = async () => {
+    await new FileLocationClient().deletePhoto(imageKey);
+  };
+
   return (
     <Card
       className={classNames(
@@ -186,6 +190,14 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
             onClick={() => onPathChange(filePath)}
           >
             Move File
+          </Button>
+        </div>
+      </div>
+      <div className="col-span-full">
+        <Label>Other Actions</Label>
+        <div className="my-1">
+          <Button variant="destructive" onClick={onDelete}>
+            Delete Photo
           </Button>
         </div>
       </div>

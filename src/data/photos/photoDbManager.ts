@@ -124,3 +124,8 @@ WHERE photo_id = ?`,
   }
   return tx.changes;
 };
+
+export const deletePhoto = async (photoID: PhotoIdType): Promise<void> => {
+  const db = await connectToPhotoDb();
+  await db.run(`DELETE FROM photo_tags WHERE photo_id = ?`, [photoID]);
+};

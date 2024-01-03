@@ -27,4 +27,20 @@ export class FileLocationClient {
       console.error(response);
     }
   };
+
+  /**
+   * Delete a photo from the CDN and the database.
+   */
+  deletePhoto = async (photoID: PhotoIdType) => {
+    const response = await fetch(`/admin/photos/api/delete`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ photo_id: photoID }),
+    });
+    if (!response.ok) {
+      console.error(response);
+    }
+  };
 }
