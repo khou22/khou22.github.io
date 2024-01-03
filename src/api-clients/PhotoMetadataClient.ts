@@ -2,7 +2,7 @@ import { PhotoTagUpdateRequest } from "@/app/admin/photos/api/tags/types";
 import { PhotoTags } from "@/constants/photoTags";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 
-export class TagsClient {
+export class PhotoMetadataClient {
   /**
    * Update the tags for a photo.
    */
@@ -32,6 +32,25 @@ export class TagsClient {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(request),
+    });
+    if (!response.ok) {
+      console.error(response);
+    }
+  };
+
+  /**
+   * Update the rating for a photo via a REST API.
+   */
+  updateRating = async (photoID: PhotoIdType, rating: number) => {
+    const response = await fetch(`/admin/photos/api/rating`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        photo_id: photoID,
+        rating,
+      }),
     });
     if (!response.ok) {
       console.error(response);

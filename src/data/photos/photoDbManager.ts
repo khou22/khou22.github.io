@@ -27,7 +27,7 @@ export const connectToPhotoDb = async () => {
 };
 
 type PhotoTagRowType = { photo_id: string; tag_name: string };
-type PhotoMetadataRowType = { photo_id: string; rating: number | null };
+type PhotoMetadataRowType = { photo_id: string; rating: number };
 
 export const getMetadataByPhotoID = async (): Promise<
   Partial<Record<PhotoIdType, { tags: PhotoTags[]; rating: number | null }>>

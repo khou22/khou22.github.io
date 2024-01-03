@@ -32,6 +32,7 @@ const PhotoAdminPage: React.FC<PageProps> = async ({ params }) => {
             path={getPhotoPath(photoID)}
             imageKey={photoID}
             tagIDs={tagsByPhotoID[photoID]?.tags ?? []}
+            rating={tagsByPhotoID[photoID]?.rating ?? 0}
           />
         ))}
       </div>

@@ -16,7 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { TagsClient } from "@/api-clients/TagsClient";
+import { PhotoMetadataClient } from "@/api-clients/PhotoMetadataClient";
 import { XIcon } from "@/components/icons/XIcon/XIcon";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -26,17 +26,20 @@ import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
 import { PAGES } from "@/utils/pages";
 import { toast } from "sonner";
+import { RatingInput } from "@/components/atoms/RatingInput/RatingInput";
 
 type PhotoManagementCardProps = {
   imageKey: PhotoIdType;
   path: string;
   tagIDs: PhotoTags[];
+  rating: number;
 };
 
 export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
   imageKey,
   path,
   tagIDs,
+  rating,
 }) => {
   const [filePath, setFilePath] = useState(decodeURIComponent(path));
 
@@ -48,7 +51,7 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
           id={id}
           checked={tagIDs.includes(tag)}
           onCheckedChange={async (value) => {
-            void new TagsClient().updateTags(imageKey, [
+            void new PhotoMetadataClient().updateTags(imageKey, [
               { tagID: tag, value: Boolean(value) },
             ]);
           }}
@@ -69,7 +72,7 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
       updates.push({ tagID: currentLocation, value: false });
     }
 
-    await new TagsClient().updateTags(imageKey, updates);
+    await new PhotoMetadataClient().updateTags(imageKey, updates);
   };
 
   const onPathChange = async (newPath: string) => {
@@ -162,7 +165,7 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
               className="flex flex-row items-center justify-start space-x-1 text-sm text-red-500 hover:text-red-400"
               onClick={() => {
                 if (currentLocation) {
-                  void new TagsClient().updateTags(imageKey, [
+                  void new PhotoMetadataClient().updateTags(imageKey, [
                     { tagID: currentLocation, value: false },
                   ]);
                 }
@@ -178,9 +181,18 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
           <Switch
             checked={!tagIDs.includes(PhotoTags.NotForSale)}
             onCheckedChange={(v) => {
-              new TagsClient().updateTags(imageKey, [
+              new PhotoMetadataClient().updateTags(imageKey, [
                 { tagID: PhotoTags.NotForSale, value: !v },
               ]);
+            }}
+          />
+        </div>
+        <div>
+          <p>Rating</p>
+          <RatingInput
+            value={rating ?? 0}
+            onChange={(v) => {
+              new PhotoMetadataClient().updateRating(imageKey, v);
             }}
           />
         </div>
