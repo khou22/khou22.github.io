@@ -824,11 +824,6 @@ export const _generatedCdnAssets = {
     name: `Top Down Beach Peninsula Las Terrenas Dominican Republic`,
     dimensions: [2399, 1600],
   },
-	"photography/Rubicon_Peak_Drone_placeholder_jpg": {
-    path: "/photography/Rubicon%20Peak%20%28Drone%29.placeholder.jpg",
-    name: `Rubicon Peak (Drone).placeholder`,
-    dimensions: [667, 500],
-  },
 	"photography/San_Francisco_Downtown_from_Airplane_at_Night_Portrait_jpg": {
     path: "/photography/San%20Francisco%20Downtown%20from%20Airplane%20at%20Night%20%28Portrait%29.jpg",
     name: `San Francisco Downtown from Airplane at Night (Portrait)`,
@@ -1173,11 +1168,6 @@ export const _generatedCdnAssets = {
     path: "/photography/Cliff%20House%20Sutro%20Baths%20at%20Night.jpg",
     name: `Cliff House Sutro Baths at Night`,
     dimensions: [1999, 1600],
-  },
-	"photography/Rubicon_Peak_Drone_USA_Road_Trip_jpg": {
-    path: "/photography/Rubicon%20Peak%20%28Drone%29%20%28USA%20Road%20Trip%29.jpg",
-    name: `Rubicon Peak (Drone) (USA Road Trip)`,
-    dimensions: [2134, 1600],
   },
 	"photography/San_Francisco_Over_Marshall_Beach_placeholder_jpg": {
     path: "/photography/San%20Francisco%20Over%20Marshall%20Beach.placeholder.jpg",
@@ -2319,11 +2309,6 @@ export const _generatedCdnAssets = {
     name: `Princeton Lewis Science Library and Fine Hall Drone.placeholder`,
     dimensions: [500, 625],
   },
-	"photography/Loneliest_Road_Vertical_Drone_USA_Road_Trip_placeholder_jpg": {
-    path: "/photography/Loneliest%20Road%20Vertical%20Drone%20%28USA%20Road%20Trip%29.placeholder.jpg",
-    name: `Loneliest Road Vertical Drone (USA Road Trip).placeholder`,
-    dimensions: [450, 600],
-  },
 	"photography/Badlands_Bright_Vertical_jpg": {
     path: "/photography/Badlands%20Bright%20Vertical.jpg",
     name: `Badlands Bright Vertical`,
@@ -3113,11 +3098,6 @@ export const _generatedCdnAssets = {
     path: "/photography/Crashing%20Waves%20into%20Coastline%20Dominican%20Republic%20Drone%20Top%20Down.placeholder.jpg",
     name: `Crashing Waves into Coastline Dominican Republic Drone Top Down.placeholder`,
     dimensions: [500, 624],
-  },
-	"photography/Loneliest_Road_Vertical_Drone_placeholder_jpg": {
-    path: "/photography/Loneliest%20Road%20Vertical%20Drone.placeholder.jpg",
-    name: `Loneliest Road Vertical Drone.placeholder`,
-    dimensions: [500, 666],
   },
 	"photography/Jiufen_Taiwan_Drone_Horizontal_placeholder_jpg": {
     path: "/photography/Jiufen%2C%20Taiwan%20Drone%20-%20Horizontal.placeholder.jpg",
@@ -4104,11 +4084,6 @@ export const _generatedCdnAssets = {
     name: `Ferry Building with Skyline At Night`,
     dimensions: [2844, 1600],
   },
-	"photography/Loneliest_Road_Vertical_Drone_USA_Road_Trip_jpg": {
-    path: "/photography/Loneliest%20Road%20Vertical%20Drone%20%28USA%20Road%20Trip%29.jpg",
-    name: `Loneliest Road Vertical Drone (USA Road Trip)`,
-    dimensions: [1600, 2133],
-  },
 	"photography/Mong_Kok_Hong_Kong_Neon_Signs_2_jpg": {
     path: "/photography/Mong%20Kok%2C%20Hong%20Kong%20Neon%20Signs%202.jpg",
     name: `Mong Kok, Hong Kong Neon Signs 2`,
@@ -4209,10 +4184,30 @@ export const _generatedCdnAssets = {
     name: `Grand Teton Astro with Grass (USA Road Trip)`,
     dimensions: [1600, 2036],
   },
+	"photography/usa_road_trip/Rubicon_Peak_Drone_USA_Road_Trip_jpg": {
+    path: "/photography/usa-road-trip/Rubicon%20Peak%20%28Drone%29%20%28USA%20Road%20Trip%29.jpg",
+    name: `Rubicon Peak (Drone) (USA Road Trip)`,
+    dimensions: [2134, 1600],
+  },
+	"photography/usa_road_trip/Loneliest_Road_Vertical_Drone_USA_Road_Trip_placeholder_jpg": {
+    path: "/photography/usa-road-trip/Loneliest%20Road%20Vertical%20Drone%20%28USA%20Road%20Trip%29.placeholder.jpg",
+    name: `Loneliest Road Vertical Drone (USA Road Trip).placeholder`,
+    dimensions: [600, 800],
+  },
 	"photography/usa_road_trip/Grand_Teton_Astro_with_Grass_USA_Road_Trip_placeholder_jpg": {
     path: "/photography/usa-road-trip/Grand%20Teton%20Astro%20with%20Grass%20%28USA%20Road%20Trip%29.placeholder.jpg",
     name: `Grand Teton Astro with Grass (USA Road Trip).placeholder`,
     dimensions: [629, 800],
+  },
+	"photography/usa_road_trip/Loneliest_Road_Vertical_Drone_USA_Road_Trip_jpg": {
+    path: "/photography/usa-road-trip/Loneliest%20Road%20Vertical%20Drone%20%28USA%20Road%20Trip%29.jpg",
+    name: `Loneliest Road Vertical Drone (USA Road Trip)`,
+    dimensions: [1600, 2133],
+  },
+	"photography/usa_road_trip/Rubicon_Peak_Drone_USA_Road_Trip_placeholder_jpg": {
+    path: "/photography/usa-road-trip/Rubicon%20Peak%20%28Drone%29%20%28USA%20Road%20Trip%29.placeholder.jpg",
+    name: `Rubicon Peak (Drone) (USA Road Trip).placeholder`,
+    dimensions: [800, 600],
   },
 	"photography/Milky_Way_in_Tahoe_Forest_placeholder_jpg": {
     path: "/photography/Milky%20Way%20in%20Tahoe%20Forest.placeholder.jpg",
@@ -4278,11 +4273,6 @@ export const _generatedCdnAssets = {
     path: "/photography/events/apco_salon_dinner_discussion.jpg",
     name: `apco_salon_dinner_discussion`,
     dimensions: [7952, 5304],
-  },
-	"photography/Loneliest_Road_Vertical_Drone_jpg": {
-    path: "/photography/Loneliest%20Road%20Vertical%20Drone.jpg",
-    name: `Loneliest Road Vertical Drone`,
-    dimensions: [1600, 2133],
   },
 	"photography/Ladies_Market_Balcony_Long_Exposure_placeholder_jpg": {
     path: "/photography/Ladies%20Market%20Balcony%20Long%20Exposure.placeholder.jpg",
@@ -4638,11 +4628,6 @@ export const _generatedCdnAssets = {
     path: "/photography/Looking%20Down%20Fulton%20Street%20Vertical%20Drone.jpg",
     name: `Looking Down Fulton Street Vertical Drone`,
     dimensions: [1600, 2000],
-  },
-	"photography/Rubicon_Peak_Drone_jpg": {
-    path: "/photography/Rubicon%20Peak%20%28Drone%29.jpg",
-    name: `Rubicon Peak (Drone)`,
-    dimensions: [2134, 1600],
   },
 	"photography/Dominican_Republic_Las_Terrenas_Daytime_Beach_House_Panorama_jpg": {
     path: "/photography/Dominican%20Republic%20Las%20Terrenas%20Daytime%20Beach%20House%20Panorama.jpg",
@@ -5078,11 +5063,6 @@ export const _generatedCdnAssets = {
     path: "/photography/Fisherman%27s%20Wharf%20at%20Sunset%20by%20Drone.placeholder.jpg",
     name: `Fisherman's Wharf at Sunset by Drone.placeholder`,
     dimensions: [750, 500],
-  },
-	"photography/Rubicon_Peak_Drone_USA_Road_Trip_placeholder_jpg": {
-    path: "/photography/Rubicon%20Peak%20%28Drone%29%20%28USA%20Road%20Trip%29.placeholder.jpg",
-    name: `Rubicon Peak (Drone) (USA Road Trip).placeholder`,
-    dimensions: [800, 600],
   },
 	"photography/Bear_Valley_Bloods_Ridge_Sunset_Drone_Landscape_Blue_and_Pink_Panorama_placeholder_jpg": {
     path: "/photography/Bear%20Valley%20Bloods%20Ridge%20Sunset%20Drone%20Landscape%20Blue%20and%20Pink%20Panorama.placeholder.jpg",

@@ -4,11 +4,13 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Label } from "@/components/ui/label";
 import { getMetadataByPhotoID } from "@/data/photos/photoDbManager";
 import { getPhotoIDs } from "@/utils/photos/getPhotoIDs";
-import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
+import { ArrowLeftIcon, ExclamationTriangleIcon } from "@radix-ui/react-icons";
 import { NextPage } from "next";
 import { notFound } from "next/navigation";
 import { PhotoSearchForm } from "../../PhotoSearchForm";
 import { getPhotoName, getPhotoPath } from "@/utils/cdn/cdnAssets";
+import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import { PAGES } from "@/utils/pages";
 
 type PageProps = {
   params: {
@@ -32,6 +34,15 @@ const PhotoSearchPage: NextPage<PageProps> = async ({ params }) => {
 
   return (
     <PageWrapper maxWidth="wide">
+      <div>
+        <CustomLink
+          href={PAGES.ADMIN.PHOTOGRAPHY}
+          className="flex flex-row items-center justify-start space-x-1"
+        >
+          <ArrowLeftIcon className="inline h-4 w-4" />
+          <span>Back to Admin</span>
+        </CustomLink>
+      </div>
       <h1 className="leading-relaxed">Search Results</h1>
       <div className="my-4 w-full">
         <Label>Search for Photo</Label>

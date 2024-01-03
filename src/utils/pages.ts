@@ -24,6 +24,7 @@ export const PAGES = {
   },
   PROGRAMMING: "/programming",
   ADMIN: {
+    PHOTOGRAPHY: "/admin/photos",
     ALL_PHOTOS: (page: number) => `/admin/photos/all/${page}`,
     SUBDIRECTORY: (dirName: string) => `/admin/photos/${dirName}`,
     SEARCH: (query: string) => `/admin/photos/search/${query}`,

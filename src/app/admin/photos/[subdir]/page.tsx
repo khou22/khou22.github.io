@@ -4,6 +4,9 @@ import { getMetadataByPhotoID } from "@/data/photos/photoDbManager";
 import { notFound } from "next/navigation";
 import { PhotoManagementCard } from "@/components/molecules/PhotoManagementCard/PhotoManagementCard";
 import { getPhotoPath } from "@/utils/cdn/cdnAssets";
+import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import { PAGES } from "@/utils/pages";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
 
 type PageProps = {
   params: {
@@ -23,6 +26,15 @@ const PhotoAdminSubdirectoryPage: React.FC<PageProps> = async ({ params }) => {
 
   return (
     <PageWrapper maxWidth="wide">
+      <div>
+        <CustomLink
+          href={PAGES.ADMIN.PHOTOGRAPHY}
+          className="flex flex-row items-center justify-start space-x-1"
+        >
+          <ArrowLeftIcon className="inline h-4 w-4" />
+          <span>Back to Admin</span>
+        </CustomLink>
+      </div>
       <h1>Photos in {params.subdir}/</h1>
       <p>Number of Photos: {photoIDs.length}</p>
       <div className="grid grid-cols-1 gap-4">

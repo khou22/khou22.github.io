@@ -191,8 +191,20 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
           <p>Rating</p>
           <RatingInput
             value={rating ?? 0}
-            onChange={(v) => {
-              new PhotoMetadataClient().updateRating(imageKey, v);
+            onChange={async (v) => {
+              try {
+                const client = new PhotoMetadataClient();
+                await client.updateRating(imageKey, v);
+                toast("Rating Updated", {
+                  description: imageKey,
+                });
+              } catch (e) {
+                if (e instanceof Error) {
+                  toast("Error Rating", {
+                    description: e.message,
+                  });
+                }
+              }
             }}
           />
         </div>
