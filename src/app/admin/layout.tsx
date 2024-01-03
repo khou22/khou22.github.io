@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import { notFound } from "next/navigation";
 
 /**
@@ -12,5 +13,10 @@ export default function AdminLayout({
     notFound();
   }
 
-  return children;
+  return (
+    <>
+      {children}
+      <Toaster />
+    </>
+  );
 }

@@ -14,11 +14,6 @@ export const _generatedCdnAssets = {
     name: `Sitting in Window Sill in Snow`,
     dimensions: [2400, 1600],
   },
-	"photography/_USA_Road_Trip_6_placeholder_jpg": {
-    path: "/photography/%20%28USA%20Road%20Trip%29-6.placeholder.jpg",
-    name: ` (USA Road Trip)-6.placeholder`,
-    dimensions: [533, 800],
-  },
 	"photography/Lombard_Street_Drone_jpg": {
     path: "/photography/Lombard%20Street%20Drone.jpg",
     name: `Lombard Street Drone`,
@@ -1863,11 +1858,6 @@ export const _generatedCdnAssets = {
     path: "/photography/Hong%20Kong%20Night%20Skyline%20Long%20Exposure.placeholder.jpg",
     name: `Hong Kong Night Skyline Long Exposure.placeholder`,
     dimensions: [2217, 500],
-  },
-	"photography/_USA_Road_Trip_6_jpg": {
-    path: "/photography/%20%28USA%20Road%20Trip%29-6.jpg",
-    name: ` (USA Road Trip)-6`,
-    dimensions: [1600, 2400],
   },
 	"photography/Choi_Hung_Estate_Tiny_Planet_jpg": {
     path: "/photography/Choi%20Hung%20Estate%20Tiny%20Planet.jpg",

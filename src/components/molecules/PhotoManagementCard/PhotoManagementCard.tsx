@@ -25,6 +25,7 @@ import { FileLocationClient } from "@/api-clients/FileLocationClient";
 import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
 import { PAGES } from "@/utils/pages";
+import { toast } from "sonner";
 
 type PhotoManagementCardProps = {
   imageKey: PhotoIdType;
@@ -72,11 +73,33 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
   };
 
   const onPathChange = async (newPath: string) => {
-    await new FileLocationClient().movePhotoPath(imageKey, newPath);
+    try {
+      await new FileLocationClient().movePhotoPath(imageKey, newPath);
+      toast("Photo Moved", {
+        description: imageKey,
+      });
+    } catch (e) {
+      if (e instanceof Error) {
+        toast("Error Moving", {
+          description: e.message,
+        });
+      }
+    }
   };
 
   const onDelete = async () => {
-    await new FileLocationClient().deletePhoto(imageKey);
+    try {
+      await new FileLocationClient().deletePhoto(imageKey);
+      toast("Photo Deleted", {
+        description: imageKey,
+      });
+    } catch (e) {
+      if (e instanceof Error) {
+        toast("Error Deleting", {
+          description: e.message,
+        });
+      }
+    }
   };
 
   return (
