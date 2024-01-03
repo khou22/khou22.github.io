@@ -86,14 +86,23 @@ export const getTagsForPhotoID = async (
 };
 
 /**
- * Get photo IDs that have the given tag.
+ * Get photo IDs that have the given tag. Sorted in descending order by
+ * rating.
  */
 export const getPhotosWithTag = async (
   tag: PhotoTags,
 ): Promise<PhotoIdType[]> => {
   const db = await connectToPhotoDb();
-  const rows = await db.all<PhotoTagRowType[]>(
-    `SELECT photo_id, tag_name FROM photo_tags WHERE tag_name = ? ORDER BY photo_id ASC`,
+  const rows = await db.all<{ photo_id: string }[]>(
+    `SELECT
+  DISTINCT photo_tags.photo_id as photo_id
+FROM photo_tags
+LEFT OUTER JOIN photo_metadata ON photo_tags.photo_id = photo_metadata.photo_id
+WHERE
+  photo_tags.tag_name = ?
+ORDER BY
+  photo_metadata.rating DESC,
+  photo_tags.photo_id ASC`,
     [tag],
   );
   const photoIDs = rows.map((row) => row.photo_id as PhotoIdType);
