@@ -194,3 +194,22 @@ export const deletePhoto = async (photoID: PhotoIdType): Promise<void> => {
   await db.run(`DELETE FROM photo_tags WHERE photo_id = ?`, [photoID]);
   await db.run(`DELETE FROM photo_metadata WHERE photo_id = ?`, [photoID]);
 };
+
+/**
+ * Get all the photo IDs in the database.
+ */
+export const getAllPhotoIdsInDb = async (): Promise<Set<PhotoIdType>> => {
+  const db = await connectToPhotoDb();
+  const photoIDs = new Set<PhotoIdType>();
+  const tagRows = await db.all<{ photo_id: string }[]>(
+    `SELECT DISTINCT photo_id FROM photo_tags ORDER BY photo_id ASC`,
+  );
+  tagRows.forEach((row) => photoIDs.add(row.photo_id as PhotoIdType));
+
+  const metadataRows = await db.all<{ photo_id: string }[]>(
+    `SELECT DISTINCT photo_id FROM photo_metadata ORDER BY photo_id ASC`,
+  );
+  metadataRows.forEach((row) => photoIDs.add(row.photo_id as PhotoIdType));
+
+  return photoIDs;
+};

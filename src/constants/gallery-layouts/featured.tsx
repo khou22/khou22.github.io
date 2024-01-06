@@ -63,7 +63,8 @@ export const featuredTagGalleryLayout: FeaturedGallerySpreadProps = {
       ),
     },
     {
-      photoID: "photography/Magical_Grass_Astro_Shot_jpg",
+      photoID:
+        "photography/usa_road_trip/Grand_Teton_Astro_with_Grass_USA_Road_Trip_jpg",
       label: "Nighttime in Wyoming",
       description: (
         <CoordinatesLabel
