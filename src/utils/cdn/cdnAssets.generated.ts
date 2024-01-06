@@ -2859,6 +2859,11 @@ export const _generatedCdnAssets = {
     name: `Hawk Hill Night Shot.placeholder`,
     dimensions: [640, 800],
   },
+	"photography/san_francisco/Blue_Angels_Fly_Over_jpg": {
+    path: "/photography/san_francisco/Blue%20Angels%20Fly%20Over.jpg",
+    name: `Blue Angels Fly Over`,
+    dimensions: [2000, 1429],
+  },
 	"photography/san_francisco/Rodeo_Beach_Gravel_Hill_Sunset_Ride_placeholder_jpg": {
     path: "/photography/san_francisco/Rodeo%20Beach%20Gravel%20Hill%20Sunset%20Ride.placeholder.jpg",
     name: `Rodeo Beach Gravel Hill Sunset Ride.placeholder`,
@@ -2994,15 +2999,30 @@ export const _generatedCdnAssets = {
     name: `Columbus Street from Plane at Sunset.placeholder`,
     dimensions: [640, 800],
   },
+	"photography/san_francisco/San_Francisco_Skyline_from_Potrero_Hill_jpg": {
+    path: "/photography/san_francisco/San%20Francisco%20Skyline%20from%20Potrero%20Hill.jpg",
+    name: `San Francisco Skyline from Potrero Hill`,
+    dimensions: [2000, 1334],
+  },
 	"photography/san_francisco/Gravel_Bike_Side_Profile_in_Front_of_Golden_Gate_Bridge_placeholder_jpg": {
     path: "/photography/san_francisco/Gravel%20Bike%20Side%20Profile%20in%20Front%20of%20Golden%20Gate%20Bridge.placeholder.jpg",
     name: `Gravel Bike Side Profile in Front of Golden Gate Bridge.placeholder`,
     dimensions: [640, 800],
   },
+	"photography/san_francisco/San_Francisco_Skyline_from_Potrero_Hill_placeholder_jpg": {
+    path: "/photography/san_francisco/San%20Francisco%20Skyline%20from%20Potrero%20Hill.placeholder.jpg",
+    name: `San Francisco Skyline from Potrero Hill.placeholder`,
+    dimensions: [800, 534],
+  },
 	"photography/san_francisco/Embarcadero_Aerial_View_at_Sunset_8x10_jpg": {
     path: "/photography/san_francisco/Embarcadero%20Aerial%20View%20at%20Sunset%20%288x10%29.jpg",
     name: `Embarcadero Aerial View at Sunset (8x10)`,
     dimensions: [4766, 5958],
+  },
+	"photography/san_francisco/Blue_Angels_Fly_Over_placeholder_jpg": {
+    path: "/photography/san_francisco/Blue%20Angels%20Fly%20Over.placeholder.jpg",
+    name: `Blue Angels Fly Over.placeholder`,
+    dimensions: [800, 571],
   },
 	"photography/san_francisco/Golden_Gate_Bridge_Marin_Headlands_at_Sunset_jpg": {
     path: "/photography/san_francisco/Golden%20Gate%20Bridge%20Marin%20Headlands%20at%20Sunset.jpg",
@@ -3893,6 +3913,71 @@ export const _generatedCdnAssets = {
     path: "/photography/Nakalele%20Blowhole.placeholder.jpg",
     name: `Nakalele Blowhole.placeholder`,
     dimensions: [749, 500],
+  },
+	"photography/hawaii/Haleakala_National_Park_Aerial_JPG": {
+    path: "/photography/hawaii/Haleakala%CC%84%20National%20Park%20Aerial.JPG",
+    name: `Haleakalā National Park Aerial`,
+    dimensions: [null, null],
+  },
+	"photography/hawaii/Road_to_Hana_Waterfall_Aerial_JPG": {
+    path: "/photography/hawaii/Road%20to%20Hana%20Waterfall%20Aerial.JPG",
+    name: `Road to Hana Waterfall Aerial`,
+    dimensions: [null, null],
+  },
+	"photography/hawaii/Waianapanapa_Black_Sands_Beach_jpg": {
+    path: "/photography/hawaii/Waianapanapa%20Black%20Sands%20Beach.jpg",
+    name: `Waianapanapa Black Sands Beach`,
+    dimensions: [2000, 2500],
+  },
+	"photography/hawaii/Pipiwai_Bamboo_Forest_Texture_JPG": {
+    path: "/photography/hawaii/Pipiwai%20Bamboo%20Forest%20Texture.JPG",
+    name: `Pipiwai Bamboo Forest Texture`,
+    dimensions: [null, null],
+  },
+	"photography/hawaii/Pipiwai_Bamboo_Forest_jpg": {
+    path: "/photography/hawaii/Pipiwai%20Bamboo%20Forest.jpg",
+    name: `Pipiwai Bamboo Forest`,
+    dimensions: [2000, 2500],
+  },
+	"photography/hawaii/Waihee_Ridge_Trail_Valley_placeholder_jpg": {
+    path: "/photography/hawaii/Waihee%20Ridge%20Trail%20Valley.placeholder.jpg",
+    name: `Waihee Ridge Trail Valley.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/hawaii/River_of_Trees_on_Haleakala_jpg": {
+    path: "/photography/hawaii/River%20of%20Trees%20on%20Haleakala%CC%84.jpg",
+    name: `River of Trees on Haleakalā`,
+    dimensions: [2000, 2500],
+  },
+	"photography/hawaii/Waianapanapa_Black_Sands_Beach_placeholder_jpg": {
+    path: "/photography/hawaii/Waianapanapa%20Black%20Sands%20Beach.placeholder.jpg",
+    name: `Waianapanapa Black Sands Beach.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/hawaii/Ho_okipa_Beach_Park_Turtles_placeholder_jpg": {
+    path: "/photography/hawaii/Ho%27okipa%20Beach%20Park%20Turtles.placeholder.jpg",
+    name: `Ho'okipa Beach Park Turtles.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/hawaii/Waihee_Ridge_Trail_Valley_jpg": {
+    path: "/photography/hawaii/Waihee%20Ridge%20Trail%20Valley.jpg",
+    name: `Waihee Ridge Trail Valley`,
+    dimensions: [2000, 1334],
+  },
+	"photography/hawaii/Pipiwai_Bamboo_Forest_placeholder_jpg": {
+    path: "/photography/hawaii/Pipiwai%20Bamboo%20Forest.placeholder.jpg",
+    name: `Pipiwai Bamboo Forest.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/hawaii/River_of_Trees_on_Haleakala_placeholder_jpg": {
+    path: "/photography/hawaii/River%20of%20Trees%20on%20Haleakala%CC%84.placeholder.jpg",
+    name: `River of Trees on Haleakalā.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/hawaii/Ho_okipa_Beach_Park_Turtles_jpg": {
+    path: "/photography/hawaii/Ho%27okipa%20Beach%20Park%20Turtles.jpg",
+    name: `Ho'okipa Beach Park Turtles`,
+    dimensions: [2000, 2500],
   },
 	"photography/Hong_Kong_Night_Skyline_Vertical_placeholder_jpg": {
     path: "/photography/Hong%20Kong%20Night%20Skyline%20%28Vertical%29.placeholder.jpg",
