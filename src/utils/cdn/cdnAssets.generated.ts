@@ -1119,6 +1119,66 @@ export const _generatedCdnAssets = {
     name: `Yosemite Valley Meadow.placeholder`,
     dimensions: [749, 500],
   },
+	"photography/seattle/Mount_Rainier_Textures_placeholder_jpg": {
+    path: "/photography/seattle/Mount%20Rainier%20Textures.placeholder.jpg",
+    name: `Mount Rainier Textures.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/seattle/Lake_Sunset_Over_Mount_Rainier_placeholder_jpg": {
+    path: "/photography/seattle/Lake%20Sunset%20Over%20Mount%20Rainier.placeholder.jpg",
+    name: `Lake Sunset Over Mount Rainier.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/seattle/Mount_Rainier_Hike_placeholder_jpg": {
+    path: "/photography/seattle/Mount%20Rainier%20Hike.placeholder.jpg",
+    name: `Mount Rainier Hike.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/seattle/Mount_Rainier_Textures_jpg": {
+    path: "/photography/seattle/Mount%20Rainier%20Textures.jpg",
+    name: `Mount Rainier Textures`,
+    dimensions: [2000, 2500],
+  },
+	"photography/seattle/Portage_Bay_House_Boat_Drone_jpg": {
+    path: "/photography/seattle/Portage%20Bay%20House%20Boat%20Drone.jpg",
+    name: `Portage Bay House Boat Drone`,
+    dimensions: [2000, 1600],
+  },
+	"photography/seattle/Mount_Rainier_River_jpg": {
+    path: "/photography/seattle/Mount%20Rainier%20River.jpg",
+    name: `Mount Rainier River`,
+    dimensions: [2000, 2998],
+  },
+	"photography/seattle/Mount_Rainier_Clouds_Over_Valley_jpg": {
+    path: "/photography/seattle/Mount%20Rainier%20Clouds%20Over%20Valley.jpg",
+    name: `Mount Rainier Clouds Over Valley`,
+    dimensions: [2000, 2500],
+  },
+	"photography/seattle/Mount_Rainier_Clouds_Over_Valley_placeholder_jpg": {
+    path: "/photography/seattle/Mount%20Rainier%20Clouds%20Over%20Valley.placeholder.jpg",
+    name: `Mount Rainier Clouds Over Valley.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/seattle/Mount_Rainier_Hike_jpg": {
+    path: "/photography/seattle/Mount%20Rainier%20Hike.jpg",
+    name: `Mount Rainier Hike`,
+    dimensions: [2000, 2500],
+  },
+	"photography/seattle/Portage_Bay_House_Boat_Drone_placeholder_jpg": {
+    path: "/photography/seattle/Portage%20Bay%20House%20Boat%20Drone.placeholder.jpg",
+    name: `Portage Bay House Boat Drone.placeholder`,
+    dimensions: [800, 640],
+  },
+	"photography/seattle/Lake_Sunset_Over_Mount_Rainier_jpg": {
+    path: "/photography/seattle/Lake%20Sunset%20Over%20Mount%20Rainier.jpg",
+    name: `Lake Sunset Over Mount Rainier`,
+    dimensions: [2000, 2501],
+  },
+	"photography/seattle/Mount_Rainier_River_placeholder_jpg": {
+    path: "/photography/seattle/Mount%20Rainier%20River.placeholder.jpg",
+    name: `Mount Rainier River.placeholder`,
+    dimensions: [534, 800],
+  },
 	"photography/Pilot_s_Row_Presidio_San_Francisco_jpg": {
     path: "/photography/Pilot%27s%20Row%20Presidio%20San%20Francisco.jpg",
     name: `Pilot's Row Presidio San Francisco`,
