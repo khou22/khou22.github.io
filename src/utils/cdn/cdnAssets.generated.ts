@@ -4924,25 +4924,85 @@ export const _generatedCdnAssets = {
     name: `Israel Falafel Lunch Food.placeholder`,
     dimensions: [640, 800],
   },
+	"photography/cycling/Cycling_Motion_Blur_FPV_jpg": {
+    path: "/photography/cycling/Cycling%20Motion%20Blur%20FPV.jpg",
+    name: `Cycling Motion Blur FPV`,
+    dimensions: [2000, 2500],
+  },
+	"photography/cycling/Cycling_Backpacking_Trip_Portrait_1_placeholder_jpg": {
+    path: "/photography/cycling/Cycling%20Backpacking%20Trip%20Portrait%201.placeholder.jpg",
+    name: `Cycling Backpacking Trip Portrait 1.placeholder`,
+    dimensions: [800, 640],
+  },
 	"photography/cycling/Cycling_Through_Marin_Valley_Gravel_placeholder_jpg": {
     path: "/photography/cycling/Cycling%20Through%20Marin%20Valley%20Gravel.placeholder.jpg",
     name: `Cycling Through Marin Valley Gravel.placeholder`,
     dimensions: [800, 533],
   },
+	"photography/cycling/Cycling_Backpacking_Trip_Portrait_1_jpg": {
+    path: "/photography/cycling/Cycling%20Backpacking%20Trip%20Portrait%201.jpg",
+    name: `Cycling Backpacking Trip Portrait 1`,
+    dimensions: [2000, 1600],
+  },
+	"photography/cycling/Cycling_Backpacking_Trip_Portrait_2_jpg": {
+    path: "/photography/cycling/Cycling%20Backpacking%20Trip%20Portrait%202.jpg",
+    name: `Cycling Backpacking Trip Portrait 2`,
+    dimensions: [2000, 1333],
+  },
+	"photography/cycling/Bike_Through_Tent_jpg": {
+    path: "/photography/cycling/Bike%20Through%20Tent.jpg",
+    name: `Bike Through Tent`,
+    dimensions: [2000, 2500],
+  },
+	"photography/cycling/Cycling_Motion_Blur_Landscape_placeholder_jpg": {
+    path: "/photography/cycling/Cycling%20Motion%20Blur%20Landscape.placeholder.jpg",
+    name: `Cycling Motion Blur Landscape.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/cycling/Cycling_Motion_Blur_FPV_placeholder_jpg": {
+    path: "/photography/cycling/Cycling%20Motion%20Blur%20FPV.placeholder.jpg",
+    name: `Cycling Motion Blur FPV.placeholder`,
+    dimensions: [640, 800],
+  },
 	"photography/cycling/Rohan_Cycling_Shot_San_Francisco_Skyline_jpg": {
     path: "/photography/cycling/Rohan%20Cycling%20Shot%20San%20Francisco%20Skyline.jpg",
     name: `Rohan Cycling Shot San Francisco Skyline`,
-    dimensions: [6000, 4000],
+    dimensions: [2000, 1333],
+  },
+	"photography/cycling/Cycling_Backpacking_Trip_Portrait_2_placeholder_jpg": {
+    path: "/photography/cycling/Cycling%20Backpacking%20Trip%20Portrait%202.placeholder.jpg",
+    name: `Cycling Backpacking Trip Portrait 2.placeholder`,
+    dimensions: [800, 533],
   },
 	"photography/cycling/Cycling_Through_Marin_Valley_Gravel_jpg": {
     path: "/photography/cycling/Cycling%20Through%20Marin%20Valley%20Gravel.jpg",
     name: `Cycling Through Marin Valley Gravel`,
-    dimensions: [4688, 3125],
+    dimensions: [2000, 1333],
+  },
+	"photography/cycling/Bike_Through_Tent_placeholder_jpg": {
+    path: "/photography/cycling/Bike%20Through%20Tent.placeholder.jpg",
+    name: `Bike Through Tent.placeholder`,
+    dimensions: [640, 800],
   },
 	"photography/cycling/Rohan_Cycling_Shot_San_Francisco_Skyline_placeholder_jpg": {
     path: "/photography/cycling/Rohan%20Cycling%20Shot%20San%20Francisco%20Skyline.placeholder.jpg",
     name: `Rohan Cycling Shot San Francisco Skyline.placeholder`,
     dimensions: [800, 533],
+  },
+	"photography/cycling/Cycling_Motion_Blur_Landscape_jpg": {
+    path: "/photography/cycling/Cycling%20Motion%20Blur%20Landscape.jpg",
+    name: `Cycling Motion Blur Landscape`,
+    dimensions: [2500, 1668],
+  },
+	"photography/cycling/Alpine_Dam_Cycling_Shot_placeholder_jpg": {
+    path: "/photography/cycling/Alpine%20Dam%20Cycling%20Shot.placeholder.jpg",
+    name: `Alpine Dam Cycling Shot.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/cycling/Alpine_Dam_Cycling_Shot_jpg": {
+    path: "/photography/cycling/Alpine%20Dam%20Cycling%20Shot.jpg",
+    name: `Alpine Dam Cycling Shot`,
+    dimensions: [2000, 1334],
   },
 	"photography/Time_Square_Taxi_placeholder_jpg": {
     path: "/photography/Time%20Square%20Taxi.placeholder.jpg",
