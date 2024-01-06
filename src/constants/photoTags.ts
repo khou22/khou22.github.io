@@ -3,6 +3,7 @@ import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import _ from "lodash";
 import { featuredTagGalleryLayout } from "./gallery-layouts/featured";
 import { tokyoGalleryLayout } from "./gallery-layouts/tokyo";
+import { sanFranciscoTagGalleryLayout } from "./gallery-layouts/san-francisco";
 
 export enum PhotoTags {
   // Standard tag themes for category portfolios.
@@ -153,6 +154,7 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
     slug: "san-francisco",
     thumbnailPhotoId:
       "photography/Sunrise_Lombard_Street_Drone_Head_On_Vertical_jpg",
+    galleryLayout: sanFranciscoTagGalleryLayout,
   },
   [PhotoTags.HongKong]: {
     name: "Hong Kong",

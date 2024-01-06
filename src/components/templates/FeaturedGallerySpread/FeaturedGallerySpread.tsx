@@ -81,7 +81,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
 }) => {
   const renderContentNode = (node: ContentNode) => {
     if (typeof node === "string") {
-      return <p className="text-sm">{node}</p>;
+      return <p className="text-[12px] leading-4 text-gray-600">{node}</p>;
     }
     return node;
   };
