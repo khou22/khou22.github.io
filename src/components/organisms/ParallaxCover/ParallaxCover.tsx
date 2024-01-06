@@ -2,6 +2,7 @@
 
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
+import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 import { useIsVisible } from "@/hooks/useIsVisible/useIsVisible";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
@@ -37,7 +38,7 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
   return (
     <div
       className={classNames(
-        "block h-screen",
+        "relative block h-screen",
         isVisible ? "opacity-100" : "opacity-0",
       )}
       ref={parallexContainer}
@@ -117,6 +118,15 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
             getCdnAsset("media/landing/hong_kong/large/2_png"),
           ]}
         />
+      </div>
+
+      <div
+        className="fixed bottom-4 left-4 z-10"
+        style={{
+          transform: getTransform(4.2),
+        }}
+      >
+        <SocialLinks className="space-x-4" />
       </div>
     </div>
   );
