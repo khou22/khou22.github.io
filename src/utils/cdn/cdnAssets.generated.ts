@@ -4109,6 +4109,36 @@ export const _generatedCdnAssets = {
     name: `Turtles in Maui`,
     dimensions: [1600, 2133],
   },
+	"photography/yosemite/Yosemite_Mountain_Hike_Vertical_jpg": {
+    path: "/photography/yosemite/Yosemite%20Mountain%20Hike%20Vertical.jpg",
+    name: `Yosemite Mountain Hike Vertical`,
+    dimensions: [2000, 2500],
+  },
+	"photography/yosemite/Looking_Out_Over_Yosemite_Valley_placeholder_jpg": {
+    path: "/photography/yosemite/Looking%20Out%20Over%20Yosemite%20Valley.placeholder.jpg",
+    name: `Looking Out Over Yosemite Valley.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/yosemite/Looking_Out_Over_Yosemite_Valley_jpg": {
+    path: "/photography/yosemite/Looking%20Out%20Over%20Yosemite%20Valley.jpg",
+    name: `Looking Out Over Yosemite Valley`,
+    dimensions: [2000, 1334],
+  },
+	"photography/yosemite/Upper_Yosemite_Falls_Hike_placeholder_jpg": {
+    path: "/photography/yosemite/Upper%20Yosemite%20Falls%20Hike.placeholder.jpg",
+    name: `Upper Yosemite Falls Hike.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/yosemite/Upper_Yosemite_Falls_Hike_jpg": {
+    path: "/photography/yosemite/Upper%20Yosemite%20Falls%20Hike.jpg",
+    name: `Upper Yosemite Falls Hike`,
+    dimensions: [2000, 2500],
+  },
+	"photography/yosemite/Yosemite_Mountain_Hike_Vertical_placeholder_jpg": {
+    path: "/photography/yosemite/Yosemite%20Mountain%20Hike%20Vertical.placeholder.jpg",
+    name: `Yosemite Mountain Hike Vertical.placeholder`,
+    dimensions: [640, 800],
+  },
 	"photography/Washington_Monument_Night_Silohouette_Self_Portrait_With_Stars_placeholder_jpg": {
     path: "/photography/Washington%20Monument%20Night%20Silohouette%20Self%20Portrait%20With%20Stars.placeholder.jpg",
     name: `Washington Monument Night Silohouette Self Portrait With Stars.placeholder`,
