@@ -2914,6 +2914,11 @@ export const _generatedCdnAssets = {
     name: `Bear Valley Bloods Ridge Sunset Drone Vertical Pink Bright Far`,
     dimensions: [1600, 1999],
   },
+	"photography/san_francisco/San_Francisco_Victorian_Houses_at_Sunset_placeholder_jpg": {
+    path: "/photography/san_francisco/San%20Francisco%20Victorian%20Houses%20at%20Sunset.placeholder.jpg",
+    name: `San Francisco Victorian Houses at Sunset.placeholder`,
+    dimensions: [640, 800],
+  },
 	"photography/san_francisco/Hawk_Hill_Night_Shot_placeholder_jpg": {
     path: "/photography/san_francisco/Hawk%20Hill%20Night%20Shot.placeholder.jpg",
     name: `Hawk Hill Night Shot.placeholder`,
@@ -3054,6 +3059,11 @@ export const _generatedCdnAssets = {
     name: `Aerial View of Half Moon Bay.placeholder`,
     dimensions: [640, 800],
   },
+	"photography/san_francisco/San_Francisco_Victorian_Houses_at_Sunset_jpg": {
+    path: "/photography/san_francisco/San%20Francisco%20Victorian%20Houses%20at%20Sunset.jpg",
+    name: `San Francisco Victorian Houses at Sunset`,
+    dimensions: [2000, 2500],
+  },
 	"photography/san_francisco/Columbus_Street_from_Plane_at_Sunset_placeholder_jpg": {
     path: "/photography/san_francisco/Columbus%20Street%20from%20Plane%20at%20Sunset.placeholder.jpg",
     name: `Columbus Street from Plane at Sunset.placeholder`,
@@ -3119,6 +3129,11 @@ export const _generatedCdnAssets = {
     name: `Gravel Bike Side Profile in Front of Golden Gate Bridge`,
     dimensions: [3744, 4680],
   },
+	"photography/san_francisco/Ocean_Beach_at_Sunset_placeholder_jpg": {
+    path: "/photography/san_francisco/Ocean%20Beach%20at%20Sunset.placeholder.jpg",
+    name: `Ocean Beach at Sunset.placeholder`,
+    dimensions: [640, 800],
+  },
 	"photography/san_francisco/Gravel_Bike_Front_Wheel_Downtown_San_Francisco_placeholder_jpg": {
     path: "/photography/san_francisco/Gravel%20Bike%20Front%20Wheel%20Downtown%20San%20Francisco.placeholder.jpg",
     name: `Gravel Bike Front Wheel Downtown San Francisco.placeholder`,
@@ -3138,6 +3153,11 @@ export const _generatedCdnAssets = {
     path: "/photography/san_francisco/Ocean%20Beach%20Sunset%20from%20Plane.placeholder.jpg",
     name: `Ocean Beach Sunset from Plane.placeholder`,
     dimensions: [800, 534],
+  },
+	"photography/san_francisco/Ocean_Beach_at_Sunset_jpg": {
+    path: "/photography/san_francisco/Ocean%20Beach%20at%20Sunset.jpg",
+    name: `Ocean Beach at Sunset`,
+    dimensions: [2000, 2500],
   },
 	"photography/san_francisco/Golden_Gate_Bridge_Looking_Down_From_Marin_Lookout_placeholder_jpg": {
     path: "/photography/san_francisco/Golden%20Gate%20Bridge%20Looking%20Down%20From%20Marin%20Lookout.placeholder.jpg",
@@ -4004,15 +4024,35 @@ export const _generatedCdnAssets = {
     name: `Waihee Ridge Trail Valley.placeholder`,
     dimensions: [800, 534],
   },
+	"photography/hawaii/Mauna_Kea_Sunset_Jeep_placeholder_jpg": {
+    path: "/photography/hawaii/Mauna%20Kea%20Sunset%20Jeep.placeholder.jpg",
+    name: `Mauna Kea Sunset Jeep.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/hawaii/Big_Island_Sunset_Meadows_Panorama_placeholder_jpg": {
+    path: "/photography/hawaii/Big%20Island%20Sunset%20Meadows%20Panorama.placeholder.jpg",
+    name: `Big Island Sunset Meadows Panorama.placeholder`,
+    dimensions: [800, 480],
+  },
 	"photography/hawaii/River_of_Trees_on_Haleakala_jpg": {
     path: "/photography/hawaii/River%20of%20Trees%20on%20Haleakala%CC%84.jpg",
     name: `River of Trees on Haleakalā`,
     dimensions: [2000, 2500],
   },
+	"photography/hawaii/Big_Island_Sunset_Meadows_Panorama_jpg": {
+    path: "/photography/hawaii/Big%20Island%20Sunset%20Meadows%20Panorama.jpg",
+    name: `Big Island Sunset Meadows Panorama`,
+    dimensions: [2000, 1200],
+  },
 	"photography/hawaii/Waianapanapa_Black_Sands_Beach_placeholder_jpg": {
     path: "/photography/hawaii/Waianapanapa%20Black%20Sands%20Beach.placeholder.jpg",
     name: `Waianapanapa Black Sands Beach.placeholder`,
     dimensions: [640, 800],
+  },
+	"photography/hawaii/Waipi_o_Valley_Top_Down_Drone_jpg": {
+    path: "/photography/hawaii/Waipi%CA%BBo%20Valley%20Top%20Down%20Drone.jpg",
+    name: `Waipiʻo Valley Top Down Drone`,
+    dimensions: [2500, 3125],
   },
 	"photography/hawaii/Ho_okipa_Beach_Park_Turtles_placeholder_jpg": {
     path: "/photography/hawaii/Ho%27okipa%20Beach%20Park%20Turtles.placeholder.jpg",
@@ -4034,10 +4074,40 @@ export const _generatedCdnAssets = {
     name: `River of Trees on Haleakalā.placeholder`,
     dimensions: [640, 800],
   },
+	"photography/hawaii/Waipi_o_Valley_Top_Down_Drone_placeholder_jpg": {
+    path: "/photography/hawaii/Waipi%CA%BBo%20Valley%20Top%20Down%20Drone.placeholder.jpg",
+    name: `Waipiʻo Valley Top Down Drone.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/hawaii/Waipi_o_Valley_Drone_Vertical_placeholder_jpg": {
+    path: "/photography/hawaii/Waipi%CA%BBo%20Valley%20Drone%20Vertical.placeholder.jpg",
+    name: `Waipiʻo Valley Drone Vertical.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/hawaii/Mauna_Kea_Sunset_Jeep_jpg": {
+    path: "/photography/hawaii/Mauna%20Kea%20Sunset%20Jeep.jpg",
+    name: `Mauna Kea Sunset Jeep`,
+    dimensions: [2500, 3125],
+  },
+	"photography/hawaii/Pololu_Valley_Portrait_jpg": {
+    path: "/photography/hawaii/Pololu%CC%84%20Valley%20Portrait.jpg",
+    name: `Pololū Valley Portrait`,
+    dimensions: [2500, 1668],
+  },
+	"photography/hawaii/Waipi_o_Valley_Drone_Vertical_jpg": {
+    path: "/photography/hawaii/Waipi%CA%BBo%20Valley%20Drone%20Vertical.jpg",
+    name: `Waipiʻo Valley Drone Vertical`,
+    dimensions: [2500, 3125],
+  },
 	"photography/hawaii/Ho_okipa_Beach_Park_Turtles_jpg": {
     path: "/photography/hawaii/Ho%27okipa%20Beach%20Park%20Turtles.jpg",
     name: `Ho'okipa Beach Park Turtles`,
     dimensions: [2000, 2500],
+  },
+	"photography/hawaii/Pololu_Valley_Portrait_placeholder_jpg": {
+    path: "/photography/hawaii/Pololu%CC%84%20Valley%20Portrait.placeholder.jpg",
+    name: `Pololū Valley Portrait.placeholder`,
+    dimensions: [800, 534],
   },
 	"photography/Hong_Kong_Night_Skyline_Vertical_placeholder_jpg": {
     path: "/photography/Hong%20Kong%20Night%20Skyline%20%28Vertical%29.placeholder.jpg",
