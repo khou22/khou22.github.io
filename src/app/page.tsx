@@ -13,6 +13,7 @@ import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackgroun
 import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
 import { ParallaxHoverCard } from "@/components/atoms/ParallaxHoverCard/ParallaxHoverCard";
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
+import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 
 const HomePage = async () => {
   return (
@@ -41,7 +42,7 @@ const HomePage = async () => {
               <h2 className="leading-relaxed">Kevin Hou</h2>
               <p className="italic leading-relaxed">Always building</p>
               <FadeInView once threshold={0.4} durationMS={1000} delayMS={100}>
-                <p className="my-2 text-sm">
+                <p className="my-3 text-sm">
                   A full stack engineer by trade and a creator by heart. Enjoys
                   the process of creation whether it be in the physical
                   (woodshop, blacksmithing, circuity) or the digital (software
@@ -70,6 +71,15 @@ const HomePage = async () => {
                   from Princeton University with certificates in
                   entrepreneurship and statistics and machine learning.
                 </p>
+              </FadeInView>
+              <FadeInView
+                once
+                threshold={0.4}
+                durationMS={1000}
+                delayMS={500}
+                className="mb-2 mt-5"
+              >
+                <SocialLinks className="space-x-4" />
               </FadeInView>
             </div>
           </div>
