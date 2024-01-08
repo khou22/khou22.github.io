@@ -1,6 +1,5 @@
 import { ImageCard } from "@/components/molecules/ImageCard/ImageCard";
 import { LinkWithArrow } from "@/components/molecules/LinkWithArrow/LinkWithArrow";
-import { Badge } from "@/components/ui/badge";
 import { PhotoTags } from "@/constants/photoTags";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";

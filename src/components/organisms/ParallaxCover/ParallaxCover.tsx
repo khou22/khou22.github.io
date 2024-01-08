@@ -6,7 +6,7 @@ import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { initialsLogoAssetURL, cloudsAssetURL, panoramaSlices } from "./assets";
 import { clamp } from "@/utils/math";
 import { classNames } from "@/utils/style";
 import { useRef } from "react";
@@ -46,10 +46,7 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
         <ProgressiveImage
           alt="Hong Kong Skyline"
           className="h-full w-full object-cover"
-          src={[
-            getCdnAsset("media/landing/hong_kong/0_png"),
-            getCdnAsset("media/landing/hong_kong/large/0_png"),
-          ]}
+          src={[panoramaSlices[0].small, panoramaSlices[0].full]}
         />
       </div>
 
@@ -59,14 +56,14 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
         className="pointer-events-none fixed left-[-400px] top-0 w-[500px] opacity-60"
         style={{ transform: `translateX(${scrollPageOffset * 0.5}px)` }}
       >
-        <img alt="left cloud" src={getCdnAsset("media/landing/cloud_0_png")} />
+        <img alt="left cloud" src={cloudsAssetURL} />
       </div>
       <div
         aria-label="right animated clouds"
         className="pointer-events-none fixed right-[-800px] top-0 w-[900px] opacity-70"
         style={{ transform: `translateX(-${scrollPageOffset * 1.15}px)` }}
       >
-        <img alt="right cloud" src={getCdnAsset("media/landing/cloud_0_png")} />
+        <img alt="right cloud" src={cloudsAssetURL} />
       </div>
 
       {/* Personal logo and name - second furthest back to give sense of depth */}
@@ -80,7 +77,7 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
           <img
             alt="Initials logo"
             className="h-24 w-24"
-            src={getCdnAsset("media/site/logo/initials_logo_animated_svg")}
+            src={initialsLogoAssetURL}
           />
           <FadeInView once durationMS={2000} delayMS={500}>
             <p className="pointer-events-auto mt-2 leading-loose">Kevin Hou</p>
@@ -97,10 +94,7 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
         <ProgressiveImage
           alt="Hong Kong Skyline middle layer"
           className="h-full w-full object-cover"
-          src={[
-            getCdnAsset("media/landing/hong_kong/1_png"),
-            getCdnAsset("media/landing/hong_kong/large/1_png"),
-          ]}
+          src={[panoramaSlices[1].small, panoramaSlices[1].full]}
         />
       </div>
       <div
@@ -112,10 +106,7 @@ export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
         <ProgressiveImage
           alt="Hong Kong Skyline top layer"
           className="h-full w-full object-cover"
-          src={[
-            getCdnAsset("media/landing/hong_kong/2_png"),
-            getCdnAsset("media/landing/hong_kong/large/2_png"),
-          ]}
+          src={[panoramaSlices[2].small, panoramaSlices[2].full]}
         />
       </div>
 
