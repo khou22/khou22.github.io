@@ -1,5 +1,5 @@
 import { PhotoTags, tagMetadata } from "@/constants/photoTags";
-import _ from "lodash";
+import findIndex from "lodash/findIndex";
 
 /**
  * Get `n` suggested photo tags based on the supplied photo tag. The suggestions are chosen
@@ -7,7 +7,7 @@ import _ from "lodash";
  */
 export const getSuggestedPhotoTags = (photoTag: PhotoTags, n: number) => {
   const allTags = Object.values(PhotoTags) as PhotoTags[];
-  const tagIdx = _.findIndex(allTags, (tag) => tag === photoTag);
+  const tagIdx = findIndex(allTags, (tag) => tag === photoTag);
 
   const suggestions: PhotoTags[] = [];
   let idx = tagIdx;

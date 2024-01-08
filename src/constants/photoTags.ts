@@ -1,6 +1,5 @@
 import { FeaturedGallerySpreadProps } from "@/components/templates/FeaturedGallerySpread/FeaturedGallerySpread";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
-import _ from "lodash";
 import { featuredTagGalleryLayout } from "./gallery-layouts/featured";
 import { tokyoGalleryLayout } from "./gallery-layouts/tokyo";
 import { sanFranciscoTagGalleryLayout } from "./gallery-layouts/san-francisco";

@@ -1,4 +1,4 @@
-import _ from "lodash";
+import findIndex from "lodash/findIndex";
 import { PhotoIdType, getAllPhotographyPhotoIDs } from "../cdn/cdnAssets";
 
 /**
@@ -10,7 +10,7 @@ import { PhotoIdType, getAllPhotographyPhotoIDs } from "../cdn/cdnAssets";
  */
 export const getSuggestedPhotos = (photoID: PhotoIdType, n: number) => {
   const allPhotos = getAllPhotographyPhotoIDs();
-  const photoIdx = _.findIndex(allPhotos, (id) => id === photoID);
+  const photoIdx = findIndex(allPhotos, (id) => id === photoID);
 
   const suggestions: PhotoIdType[] = [];
   let idx = photoIdx;

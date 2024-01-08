@@ -9,7 +9,7 @@ import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { getSuggestedPhotoTags } from "@/utils/photos/getSuggestedPhotoTags";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
-import _ from "lodash";
+import findKey from "lodash/findKey";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -20,7 +20,7 @@ type PageProps = {
 };
 
 export const generateMetadata = ({ params }: PageProps): Metadata => {
-  const photoTag = _.findKey(
+  const photoTag = findKey(
     tagMetadata,
     ({ slug }) => slug === params.tag_id,
   ) as PhotoTags;
@@ -35,7 +35,7 @@ export const generateMetadata = ({ params }: PageProps): Metadata => {
 };
 
 const TagPage = async ({ params }: PageProps) => {
-  const photoTag = _.findKey(
+  const photoTag = findKey(
     tagMetadata,
     ({ slug }) => slug === params.tag_id,
   ) as PhotoTags;

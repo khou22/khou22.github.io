@@ -5,7 +5,6 @@ import {
   getPhotoIDFromURLComponent,
   getPhotoName,
 } from "@/utils/cdn/cdnAssets";
-import _ from "lodash";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductDetails } from "./ProductDetails";
@@ -28,8 +27,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ImageDisplay } from "./ImageDisplay";
 import { getSuggestedPhotos } from "@/utils/photos/getSuggestedPhotos";
-import { ImageCard } from "@/components/molecules/ImageCard/ImageCard";
-import { getPhotoProgressiveImages } from "@/utils/photos/getPhotoProgressiveImages";
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 
 export type PageProps = {

@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { getDataDirectory } from "@/data/dataDirs";
 import { HydratedBlogPost } from "@/data/types";
 import moment from "moment";
-import _ from "lodash";
+import find from "lodash/find";
 import readingTime from "reading-time";
 
 /**
@@ -81,7 +81,7 @@ export const getPost = async (slug: string): Promise<HydratedBlogPost> => {
   const posts = await getPosts();
 
   // Find the post using its unique slug.
-  const post = _.find(posts, (p) => p.frontMatter.slug === slug);
+  const post = find(posts, (p) => p.frontMatter.slug === slug);
   if (!post) {
     throw new PostNotFoundError(`could not find post with slug: ${slug}`);
   }

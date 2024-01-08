@@ -1,5 +1,5 @@
-import _ from "lodash";
 import { _generatedCdnAssets } from "./cdnAssets.generated";
+import find from "lodash/find";
 
 const baseUrl =
   process.env.NODE_ENV === "production"
@@ -72,7 +72,7 @@ export const getPhotoURLComponent = (photoID: PhotoIdType) => {
  */
 export const getPhotoIDFromURLComponent = (urlComponent: string) => {
   // Get the photo ID that ends with the url component.
-  const photoID = _.find(
+  const photoID = find(
     Object.keys(_generatedCdnAssets) as PhotoIdType[],
     (fullID) => fullID.endsWith(urlComponent),
   );
