@@ -1,4 +1,3 @@
-import { CoordinatesLabel } from "@/components/atoms/CoordinatesLabel/CoordinatesLabel";
 import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackground/ParallaxTextBackground";
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";

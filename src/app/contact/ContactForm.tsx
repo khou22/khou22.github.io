@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { sendContactEmail } from "@/api-clients/ContactFormClient";
-import { useState } from "react";
 import { classNames } from "@/utils/style";
 import { CheckCircleIcon } from "@/components/icons/CheckCircleIcon/CheckCircleIcon";
 

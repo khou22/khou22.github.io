@@ -2,7 +2,6 @@
 
 import { PersonalLogo } from "@/components/atoms/PersonalLogo/PersonalLogo";
 import { CarrotDownIcon } from "@/components/icons/CarrotDownIcon/CarrotDownIcon";
-import { MenuIcon } from "@/components/icons/MenuIcon/MenuIcon";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { clamp, interpolate } from "@/utils/math";
