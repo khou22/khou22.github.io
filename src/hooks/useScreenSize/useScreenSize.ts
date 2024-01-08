@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * Returns the width and height of the screen.
  *

@@ -11,9 +11,7 @@ import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { clamp } from "@/utils/math";
 import { classNames } from "@/utils/style";
 
-type ParallaxCoverProps = {};
-
-export const ParallaxCover: React.FC<ParallaxCoverProps> = ({}) => {
+export const ParallaxCover: React.FC = () => {
   const parallexContainer = useRef<HTMLDivElement>(null);
   const { scrollY } = useScrollPosition();
   const { height: screenHeight } = useScreenSize();
