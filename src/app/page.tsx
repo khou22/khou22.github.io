@@ -14,6 +14,7 @@ import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCust
 import { ParallaxHoverCard } from "@/components/atoms/ParallaxHoverCard/ParallaxHoverCard";
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
+import { BioSection } from "@/components/organisms/BioSection/BioSection";
 
 const HomePage = async () => {
   return (
@@ -179,6 +180,8 @@ const HomePage = async () => {
             </FadeInView>
           </div>
         </PageWrapper>
+
+        <BioSection className="mb-12 lg:mb-24 xl:mb-36" />
 
         {/* Quick links */}
         <PageWrapper maxWidth="wide" className="my-12">
