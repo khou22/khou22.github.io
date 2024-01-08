@@ -23,6 +23,8 @@ const buttonVariants = cva(
         link: "text-slate-900 underline-offset-4 hover:underline dark:text-slate-50",
         primary:
           "bg-blue-500 text-slate-50 shadow-sm hover:bg-blue-500/90 dark:bg-blue-900 dark:text-slate-50 dark:hover:bg-blue-900/90",
+        success:
+          "bg-green-500 text-slate-50 shadow-sm hover:bg-green-500/90 dark:bg-green-900 dark:text-slate-50 dark:hover:bg-green-900/90",
       },
       size: {
         default: "h-9 px-4 py-2",
