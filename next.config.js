@@ -2,6 +2,10 @@ const {
   withHydrationOverlay,
 } = require("@builder.io/react-hydration-overlay/next");
 
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -22,10 +26,11 @@ const nextConfig = {
   },
 };
 
-let exportedConfig = nextConfig;
+const bundledConfig = withBundleAnalyzer(nextConfig);
+let exportedConfig = bundledConfig;
 if (process.env.NODE_ENV !== "production") {
   exportedConfig = withHydrationOverlay({
     appRootSelector: "body",
-  })(nextConfig);
+  })(bundledConfig);
 }
 module.exports = exportedConfig;

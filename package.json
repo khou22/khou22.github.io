@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "analyze": "ANALYZE=true next build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -58,6 +59,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.4",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
     "@types/jest": "^29.5.11",

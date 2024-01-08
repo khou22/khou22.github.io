@@ -4,7 +4,6 @@ import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
-import { useIsVisible } from "@/hooks/useIsVisible/useIsVisible";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
