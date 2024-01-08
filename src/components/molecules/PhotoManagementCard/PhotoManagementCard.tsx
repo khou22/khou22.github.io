@@ -124,6 +124,7 @@ export const PhotoManagementCard: React.FC<PhotoManagementCardProps> = ({
       </div>
       <div className="flex flex-col items-center justify-center space-y-2">
         <img
+          alt={getPhotoName(imageKey)}
           className="max-h-64 rounded object-contain"
           src={getCdnAsset(imageKey)}
         />

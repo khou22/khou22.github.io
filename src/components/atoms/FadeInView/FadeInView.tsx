@@ -27,12 +27,13 @@ export const FadeInView: React.FC<FadeInViewProps> = ({
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const currentRef = ref.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          if (once && ref.current) {
-            observer.unobserve(ref.current);
+          if (once && currentRef) {
+            observer.unobserve(currentRef);
           }
         } else {
           if (!once) {
@@ -43,13 +44,13 @@ export const FadeInView: React.FC<FadeInViewProps> = ({
       { threshold: threshold },
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [once, threshold]);
