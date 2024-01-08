@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
 import { classNames } from "@/utils/style";
-import Link from "next/link";
 
 type LinkWithArrowProps = {
   href: string;

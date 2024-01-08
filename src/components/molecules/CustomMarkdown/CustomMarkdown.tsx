@@ -1,4 +1,3 @@
-import { classNames } from "@/utils/style";
 import ReactMarkdown, {
   Components as CustomMarkdownComponents,
 } from "react-markdown";
@@ -6,6 +5,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import rangeParser from "parse-numeric-range";
 import { a11yDark as dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import React from "react";
+import { classNames } from "@/utils/style";
 
 type CustomMarkdownProps = {
   children: string;

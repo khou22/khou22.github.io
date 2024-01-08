@@ -1,5 +1,6 @@
-import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import Image from "next/image";
+import Link from "next/link";
+import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { ParallaxCover } from "@/components/organisms/ParallaxCover/ParallaxCover";
@@ -8,7 +9,6 @@ import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackground/ParallaxTextBackground";
 import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
 import { ParallaxHoverCard } from "@/components/atoms/ParallaxHoverCard/ParallaxHoverCard";

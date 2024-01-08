@@ -1,14 +1,14 @@
 "use client";
 
+import Image from "next/image";
+import { useRef } from "react";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
-import Image from "next/image";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { clamp } from "@/utils/math";
 import { classNames } from "@/utils/style";
-import { useRef } from "react";
 
 export const BlogCover: React.FC = () => {
   const parallexContainer = useRef<HTMLDivElement>(null);

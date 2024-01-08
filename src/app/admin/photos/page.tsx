@@ -1,8 +1,8 @@
+import Link from "next/link";
+import { PhotoSearchForm } from "./PhotoSearchForm";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { Button } from "@/components/ui/button";
 import { PAGES } from "@/utils/pages";
-import Link from "next/link";
-import { PhotoSearchForm } from "./PhotoSearchForm";
 import { Label } from "@/components/ui/label";
 import { getPhotoIDs } from "@/utils/photos/getPhotoIDs";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";

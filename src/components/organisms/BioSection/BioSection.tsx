@@ -1,10 +1,10 @@
+import Link from "next/link";
+import { PageWrapper } from "../PageWrapper/PageWrapper";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { Button } from "@/components/ui/button";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
-import Link from "next/link";
-import { PageWrapper } from "../PageWrapper/PageWrapper";
 import { classNames } from "@/utils/style";
 
 type PortfolioType = "programming" | "photography" | "woodworking";

@@ -1,10 +1,10 @@
+import { NextPage } from "next";
+import { notFound } from "next/navigation";
 import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PostList } from "@/components/organisms/PostList/PostList";
 import { Badge } from "@/components/ui/badge";
 import { getPostsByTag } from "@/utils/blog/posts";
-import { NextPage } from "next";
-import { notFound } from "next/navigation";
 
 type PageParams = {
   params: {

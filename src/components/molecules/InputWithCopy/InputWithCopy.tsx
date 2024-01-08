@@ -1,10 +1,10 @@
 "use client";
 
+import React from "react";
+import { ActionButton } from "../ActionButton/ActionButton";
 import { Input } from "@/components/ui/input";
 import { copyToClipboard } from "@/utils/clipboard";
 import { classNames } from "@/utils/style";
-import React from "react";
-import { ActionButton } from "../ActionButton/ActionButton";
 
 type InputWithCopyProps = {
   text: string;

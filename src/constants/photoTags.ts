@@ -1,8 +1,8 @@
-import { FeaturedGallerySpreadProps } from "@/components/templates/FeaturedGallerySpread/FeaturedGallerySpread";
-import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { featuredTagGalleryLayout } from "./gallery-layouts/featured";
 import { tokyoGalleryLayout } from "./gallery-layouts/tokyo";
 import { sanFranciscoTagGalleryLayout } from "./gallery-layouts/san-francisco";
+import { PhotoIdType } from "@/utils/cdn/cdnAssets";
+import { FeaturedGallerySpreadProps } from "@/components/templates/FeaturedGallerySpread/FeaturedGallerySpread";
 
 export enum PhotoTags {
   // Standard tag themes for category portfolios.

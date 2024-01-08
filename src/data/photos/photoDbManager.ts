@@ -1,7 +1,7 @@
-import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import path from "path";
 import sqlite3 from "sqlite3";
 import { open } from "sqlite";
+import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { PhotoTags } from "@/constants/photoTags";
 
 // Open a SQLite database, stored in the file db.sqlite

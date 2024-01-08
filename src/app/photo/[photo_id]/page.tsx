@@ -1,3 +1,8 @@
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { ProductDetails } from "./ProductDetails";
+import { ImageDisplay } from "./ImageDisplay";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import {
@@ -5,9 +10,6 @@ import {
   getPhotoIDFromURLComponent,
   getPhotoName,
 } from "@/utils/cdn/cdnAssets";
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { ProductDetails } from "./ProductDetails";
 import { getTagsForPhotoID } from "@/data/photos/photoDbManager";
 import { PhotoTags } from "@/constants/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
@@ -23,9 +25,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ImageDisplay } from "./ImageDisplay";
 import { getSuggestedPhotos } from "@/utils/photos/getSuggestedPhotos";
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 

@@ -1,5 +1,7 @@
 "use client";
 
+import { RadioGroup } from "@headlessui/react";
+import { useState } from "react";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
 import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
@@ -11,8 +13,6 @@ import { siteMetadata } from "@/constants/siteMetadata";
 import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
-import { RadioGroup } from "@headlessui/react";
-import { useState } from "react";
 
 type ProductDetailsProps = {
   photoID: PhotoIdType;

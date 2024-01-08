@@ -1,5 +1,5 @@
-import { Toaster } from "@/components/ui/sonner";
 import { notFound } from "next/navigation";
+import { Toaster } from "@/components/ui/sonner";
 
 /**
  * Nested layout for all /admin routes. Protected by env `development` check.

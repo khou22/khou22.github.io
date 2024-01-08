@@ -1,10 +1,10 @@
+import Image from "next/image";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { occupations } from "@/constants/occupations";
 import { programmingProjects } from "@/constants/programmingProjects";
 import { PAGES } from "@/utils/pages";
-import Image from "next/image";
 
 const ProgrammingPortfolioPage = () => {
   return (

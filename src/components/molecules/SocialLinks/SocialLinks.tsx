@@ -1,9 +1,9 @@
+import React from "react";
 import { InstagramIcon } from "@/components/icons/InstagramIcon/InstagramIcon";
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon/LinkedInIcon";
 import { TwitterIcon } from "@/components/icons/TwitterIcon/TwitterIcon";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { classNames } from "@/utils/style";
-import React from "react";
 
 // TODO: Replace with proper brand colors
 const socials = [

@@ -1,5 +1,5 @@
-import { _generatedCdnAssets } from "./cdnAssets.generated";
 import find from "lodash/find";
+import { _generatedCdnAssets } from "./cdnAssets.generated";
 
 const baseUrl =
   process.env.NODE_ENV === "production"

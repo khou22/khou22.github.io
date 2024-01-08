@@ -1,5 +1,8 @@
 "use client";
 
+import { useState } from "react";
+import Link from "next/link";
+import { toast } from "sonner";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
@@ -20,12 +23,9 @@ import { PhotoMetadataClient } from "@/api-clients/PhotoMetadataClient";
 import { XIcon } from "@/components/icons/XIcon/XIcon";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 import { FileLocationClient } from "@/api-clients/FileLocationClient";
 import { Switch } from "@/components/ui/switch";
-import Link from "next/link";
 import { PAGES } from "@/utils/pages";
-import { toast } from "sonner";
 import { RatingInput } from "@/components/atoms/RatingInput/RatingInput";
 
 type PhotoManagementCardProps = {

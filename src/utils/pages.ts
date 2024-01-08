@@ -1,6 +1,6 @@
+import { PhotoIdType, getPhotoURLComponent } from "./cdn/cdnAssets";
 import { PhotoTags, tagMetadata } from "@/constants/photoTags";
 import { BlogPostFrontMatter } from "@/data/types";
-import { PhotoIdType, getPhotoURLComponent } from "./cdn/cdnAssets";
 
 export const PAGES = {
   HOME: "/",

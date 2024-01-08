@@ -1,7 +1,7 @@
 "use client";
 
-import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 import React, { useCallback, useEffect, useState } from "react";
+import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 
 export type ProgressiveImageProps = {
   /**

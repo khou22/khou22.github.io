@@ -1,10 +1,10 @@
+import { Metadata } from "next";
 import { CoordinatesLabel } from "@/components/atoms/CoordinatesLabel/CoordinatesLabel";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 import { FeaturedGallerySpread } from "@/components/templates/FeaturedGallerySpread/FeaturedGallerySpread";
 import { PhotoTags } from "@/constants/photoTags";
 import { getPhotosWithTags } from "@/data/photos/photoDbManager";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "San Francisco by Air | Kevin Hou Photography",

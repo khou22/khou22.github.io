@@ -1,3 +1,7 @@
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
+import findKey from "lodash/findKey";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
@@ -8,10 +12,6 @@ import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { getSuggestedPhotoTags } from "@/utils/photos/getSuggestedPhotoTags";
-import { ArrowLeftIcon } from "@radix-ui/react-icons";
-import findKey from "lodash/findKey";
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
 
 type PageProps = {
   params: {

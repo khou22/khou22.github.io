@@ -1,6 +1,6 @@
-import { classNames } from "@/utils/style";
 import Image from "next/image";
 import Link from "next/link";
+import { classNames } from "@/utils/style";
 
 type FullCoverArticleProps = {
   href: string;

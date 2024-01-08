@@ -1,5 +1,5 @@
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import Image from "next/image";
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";

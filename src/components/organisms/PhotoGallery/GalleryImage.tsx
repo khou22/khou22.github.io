@@ -1,7 +1,7 @@
 import { RenderPhotoProps } from "react-photo-album";
 import Image from "next/image";
-import { PhotoRecord } from "./types";
 import Link from "next/link";
+import { PhotoRecord } from "./types";
 import { PAGES } from "@/utils/pages";
 
 export const GalleryImage = ({

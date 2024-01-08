@@ -1,7 +1,7 @@
-import { PAGES } from "@/utils/pages";
-import { classNames } from "@/utils/style";
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { PAGES } from "@/utils/pages";
+import { classNames } from "@/utils/style";
 
 type PageControlsProps = {
   page: number;

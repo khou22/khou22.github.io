@@ -1,7 +1,8 @@
-import { NextRequest } from "next/server";
 import fs from "fs";
-import { connectToPhotoDb, renamePhotoID } from "@/data/photos/photoDbManager";
+import path from "path";
+import { NextRequest } from "next/server";
 import { PhotoMoveRequest } from "./types";
+import { connectToPhotoDb, renamePhotoID } from "@/data/photos/photoDbManager";
 import {
   castPhotoID,
   getPhotoPath,
@@ -9,7 +10,6 @@ import {
   isPhotoID,
   pathToPhotoID,
 } from "@/utils/cdn/cdnAssets";
-import path from "path";
 
 export async function POST(req: NextRequest) {
   const reqBody = (await req.json()) as PhotoMoveRequest;

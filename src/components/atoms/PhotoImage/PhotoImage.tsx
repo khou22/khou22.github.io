@@ -1,9 +1,9 @@
-import { PhotoIdType, getPhotoName, isPhotoID } from "@/utils/cdn/cdnAssets";
+import Link from "next/link";
 import {
   ProgressiveImage,
   ProgressiveImageProps,
 } from "../ProgressiveImage/ProgressiveImage";
-import Link from "next/link";
+import { PhotoIdType, getPhotoName, isPhotoID } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { getPhotoProgressiveImages } from "@/utils/photos/getPhotoProgressiveImages";
 import { classNames } from "@/utils/style";

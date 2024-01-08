@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
-import { PAGES } from "@/utils/pages";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "@/components/ui/button";
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { PAGES } from "@/utils/pages";
 
 const NotFoundPage: React.FC = () => {
   return (

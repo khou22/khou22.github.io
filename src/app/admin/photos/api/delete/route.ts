@@ -1,14 +1,14 @@
-import { NextRequest } from "next/server";
 import fs from "fs";
-import { connectToPhotoDb, deletePhoto } from "@/data/photos/photoDbManager";
+import path from "path";
+import { NextRequest } from "next/server";
 import { DeletePhotoRequest } from "./types";
+import { connectToPhotoDb, deletePhoto } from "@/data/photos/photoDbManager";
 import {
   castPhotoID,
   getPhotoPath,
   getPhotoThumbnail,
   isPhotoID,
 } from "@/utils/cdn/cdnAssets";
-import path from "path";
 
 export async function POST(req: NextRequest) {
   const reqBody = (await req.json()) as DeletePhotoRequest;

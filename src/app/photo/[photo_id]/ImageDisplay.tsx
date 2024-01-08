@@ -1,12 +1,12 @@
 "use client";
 
+import React, { useState } from "react";
 import { ModalPrimitive } from "@/components/atoms/ModalPrimitive/ModalPrimitive";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { FullScreenIcon } from "@/components/icons/FullScreenIcon/FullScreenIcon";
 import { Button } from "@/components/ui/button";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { getPhotoProgressiveImages } from "@/utils/photos/getPhotoProgressiveImages";
-import React, { useState } from "react";
 
 type ImageDisplayProps = {
   photoID: PhotoIdType;

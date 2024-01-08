@@ -1,15 +1,15 @@
 "use client";
 
+import { useRef } from "react";
+import { cloudsAssetURL, initialsLogoAssetURL, panoramaSlices } from "./assets";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
-import { initialsLogoAssetURL, cloudsAssetURL, panoramaSlices } from "./assets";
 import { clamp } from "@/utils/math";
 import { classNames } from "@/utils/style";
-import { useRef } from "react";
 
 type ParallaxCoverProps = {};
 

@@ -3,14 +3,14 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
+import { useRouter } from "next/navigation";
+import React from "react";
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
-import React from "react";
 
 const generateFormSchema = z.object({
   query: z.string().min(1),

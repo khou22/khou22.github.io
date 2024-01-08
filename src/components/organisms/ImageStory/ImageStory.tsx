@@ -1,14 +1,14 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
+import React, { useCallback, useEffect, useState } from "react";
 import { ProgressBar } from "@/components/atoms/ProgressBar/ProgressBar";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
 import { PauseIcon } from "@/components/icons/PauseIcon/PauseIcon";
 import { PlayIcon } from "@/components/icons/PlayIcon/PlayIcon";
 import { useCountdown } from "@/hooks/useCountdown/useCountdown";
 import { classNames } from "@/utils/style";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useCallback, useEffect, useState } from "react";
 
 export type ImageStoryType = {
   title: string;

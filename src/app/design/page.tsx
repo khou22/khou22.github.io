@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { designProjects } from "@/constants/designProjects";
-import Image from "next/image";
 
 const DeisgnPortfolioPage = () => {
   return (

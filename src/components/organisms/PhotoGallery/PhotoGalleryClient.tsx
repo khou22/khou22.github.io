@@ -2,9 +2,9 @@
 
 import PhotoAlbum from "react-photo-album";
 import React from "react";
-import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { PhotoRecord } from "./types";
 import { GalleryImage } from "./GalleryImage";
+import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 import { classNames } from "@/utils/style";
 

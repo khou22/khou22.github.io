@@ -1,5 +1,5 @@
-import { classNames } from "@/utils/style";
 import React from "react";
+import { classNames } from "@/utils/style";
 
 type CoordinatesLabelProps = {
   latitude: number;

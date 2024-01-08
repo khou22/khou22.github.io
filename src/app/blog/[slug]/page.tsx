@@ -1,16 +1,16 @@
-import { siteMetadata } from "@/constants/siteMetadata";
 import { Metadata, NextPage } from "next";
-import { PostNotFoundError, getPost } from "@/utils/blog/posts";
 import moment from "moment";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { siteMetadata } from "@/constants/siteMetadata";
+import { PostNotFoundError, getPost } from "@/utils/blog/posts";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { HydratedBlogPost } from "@/data/types";
-import { notFound } from "next/navigation";
 import { CustomMarkdown } from "@/components/molecules/CustomMarkdown/CustomMarkdown";
 import { Badge } from "@/components/ui/badge";
 import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PAGES } from "@/utils/pages";
-import Link from "next/link";
 
 type PageParams = {
   params: {

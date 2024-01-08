@@ -1,5 +1,12 @@
 "use client";
 
+import Link from "next/link";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { PortfolioDropdown } from "./PortfolioDropdown";
+import { NavBarDropdownType } from "./types";
+import { PhotographyDropdown } from "./PhotographyDropdown";
+import { MobileNav } from "./MobileNav";
 import { PersonalLogo } from "@/components/atoms/PersonalLogo/PersonalLogo";
 import { CarrotDownIcon } from "@/components/icons/CarrotDownIcon/CarrotDownIcon";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
@@ -7,14 +14,7 @@ import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { clamp, interpolate } from "@/utils/math";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
-import Link from "next/link";
-import { useState } from "react";
-import { PortfolioDropdown } from "./PortfolioDropdown";
-import { NavBarDropdownType } from "./types";
-import { PhotographyDropdown } from "./PhotographyDropdown";
-import { usePathname } from "next/navigation";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
-import { MobileNav } from "./MobileNav";
 
 /**
  * Standard nav bar for the site. Floats on certain pages, otherwise is relative. Dropdowns for

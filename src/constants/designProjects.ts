@@ -1,6 +1,6 @@
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { ProjectCategory } from "./programmingProjects";
 import { siteMetadata } from "./siteMetadata";
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 
 export type DesignProjectType = {
   title: string;

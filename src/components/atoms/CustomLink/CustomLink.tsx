@@ -1,6 +1,6 @@
-import { classNames } from "@/utils/style";
 import Link, { LinkProps } from "next/link";
 import React, { AnchorHTMLAttributes } from "react";
+import { classNames } from "@/utils/style";
 
 type CustomLinkProps = {
   children: React.ReactNode;

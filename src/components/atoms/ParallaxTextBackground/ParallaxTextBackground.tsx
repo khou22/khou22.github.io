@@ -1,12 +1,12 @@
 "use client";
 
+import React, { useMemo, useRef } from "react";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 import { useIsVisible } from "@/hooks/useIsVisible/useIsVisible";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { clamp, interpolate } from "@/utils/math";
 import { classNames } from "@/utils/style";
-import React, { useMemo, useRef } from "react";
 
 export type ParallaxTextBackgroundProps =
   React.ComponentPropsWithoutRef<"h1"> & {

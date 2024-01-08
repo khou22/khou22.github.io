@@ -1,14 +1,14 @@
 import {
+  PhotoGalleryClient,
+  PhotoGalleryClientProps,
+} from "./PhotoGalleryClient";
+import {
   PhotoIdType,
   getCdnAsset,
   getPhotoName,
   getPhotoThumbnail,
 } from "@/utils/cdn/cdnAssets";
 import { getPhotoSize } from "@/utils/photos/getPhotoSize";
-import {
-  PhotoGalleryClient,
-  PhotoGalleryClientProps,
-} from "./PhotoGalleryClient";
 
 type PhotoGalleryProps = {
   photoIDs: PhotoIdType[];
