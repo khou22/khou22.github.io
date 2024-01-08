@@ -22,7 +22,10 @@ const nextConfig = {
   },
 };
 
-// TODO (k): Remove withHydrationOverlay on production.
-module.exports = withHydrationOverlay({
-  appRootSelector: "body",
-})(nextConfig);
+let exportedConfig = nextConfig;
+if (process.env.NODE_ENV !== "production") {
+  exportedConfig = withHydrationOverlay({
+    appRootSelector: "body",
+  })(nextConfig);
+}
+module.exports = exportedConfig;
