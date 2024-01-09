@@ -69,7 +69,7 @@ export const MobileNav = () => {
           ))}
         </div>
         <SheetFooter>
-          <SocialLinks className="space-x-2" />
+          <SocialLinks className="my-3 space-x-2" />
         </SheetFooter>
       </SheetContent>
     </Sheet>

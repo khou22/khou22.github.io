@@ -12,26 +12,35 @@ const socials = [
     href: siteMetadata.socials.instagram,
     icon: InstagramIcon,
     className: "hover:text-[#C13584]",
+    showColorsClassName: "text-[#C13584]",
   },
   {
     name: "LinkedIn",
     href: siteMetadata.socials.linkedin,
     icon: LinkedInIcon,
     className: "hover:text-[#0072b1]",
+    showColorsClassName: "text-[#0072b1]",
   },
   {
     name: "Twitter",
     href: siteMetadata.socials.twitter,
     icon: TwitterIcon,
     className: "hover:text-[#1DA1F2]",
+    showColorsClassName: "text-[#1DA1F2]",
   },
 ];
 
 type SocialLinksProps = {
   className?: string;
+  showColors?: boolean;
+  size?: "md" | "lg";
 };
 
-export const SocialLinks: React.FC<SocialLinksProps> = ({ className = "" }) => {
+export const SocialLinks: React.FC<SocialLinksProps> = ({
+  className = "",
+  showColors = false,
+  size = "md",
+}) => {
   return (
     <div className={classNames("flex flex-row items-center", className)}>
       {socials.map((item) => (
@@ -41,11 +50,14 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ className = "" }) => {
           target="_blank"
           className={classNames(
             "cursor-pointer text-gray-400 transition-colors duration-300 ease-in-out",
-            item.className,
+            showColors ? item.showColorsClassName : item.className,
           )}
         >
           <span className="sr-only">{item.name}</span>
-          <item.icon className="h-6 w-6" aria-hidden="true" />
+          <item.icon
+            className={size === "lg" ? "h-8 w-8" : "h-6 w-6"}
+            aria-hidden="true"
+          />
         </a>
       ))}
     </div>

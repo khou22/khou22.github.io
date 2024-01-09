@@ -109,12 +109,14 @@ export const ParallaxCover: React.FC = () => {
       </div>
 
       <div
-        className="fixed bottom-4 left-4 z-10"
+        className="fixed bottom-[20%] left-0 z-10 flex w-full flex-row items-center justify-center px-8 xs:bottom-[12%] sm:bottom-8 sm:justify-start"
         style={{
           transform: getTransform(4.2),
         }}
       >
-        <SocialLinks className="space-x-4" />
+        <FadeInView once durationMS={1000} delayMS={900}>
+          <SocialLinks className="space-x-4" showColors />
+        </FadeInView>
       </div>
     </div>
   );

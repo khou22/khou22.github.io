@@ -23,11 +23,11 @@ const HomePage = async () => {
 
       {/* Gradient transition to the page content. */}
       <div className="relative">
-        <div className="absolute top-[-10vh] h-[10vh] w-full bg-gradient-to-b from-black/0 to-black/100 sm:top-[-20vh] sm:h-[20vh]">
+        <div className="pointer-events-none absolute top-[-20vh] flex h-[20vh] w-full flex-row items-end justify-center bg-gradient-to-b from-black/0 to-black/100 pb-2">
           <img
             alt="scroll down arrow"
             id="scroll-down-arrow"
-            className="absolute left-1/2 top-[140%] z-10 w-5 translate-x-[-50%] animate-bounce"
+            className="w-4 animate-bounce opacity-80 md:w-5"
             src={getCdnAsset("media/site/icons/chevron_down_bw_svg")}
           />
         </div>
@@ -41,7 +41,9 @@ const HomePage = async () => {
           <div className="col-span-1">
             <div className="p-4 sm:p-20">
               <h2 className="leading-relaxed">Kevin Hou</h2>
-              <p className="italic leading-relaxed">Always building</p>
+              <p className="italic leading-relaxed">
+                Always building & learning
+              </p>
               <FadeInView once threshold={0.4} durationMS={1000} delayMS={100}>
                 <p className="my-3 text-sm">
                   A full stack engineer by trade and a creator by heart. Enjoys
