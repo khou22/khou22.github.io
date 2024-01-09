@@ -1,3 +1,5 @@
+import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
+
 /**
  * Photo pricing variant.
  */
@@ -47,3 +49,25 @@ export const photoPricing: PhotoPriceVariant[] = [
     inStock: true,
   },
 ];
+
+/**
+ * Get unique product ID for e-commerce for a given photo + size/price.
+ */
+export const getProductID = (
+  photoID: PhotoIdType,
+  variant: PhotoPriceVariant,
+) => {
+  return `${photoID}_${variant.id}`;
+};
+
+/**
+ * Standardized description generator for a given photo + size/price.
+ */
+export const getProductDescription = (
+  photoID: PhotoIdType,
+  variant: PhotoPriceVariant,
+) => {
+  return `High quality ${variant.name} photo print of ${getPhotoName(
+    photoID,
+  )}.`;
+};
