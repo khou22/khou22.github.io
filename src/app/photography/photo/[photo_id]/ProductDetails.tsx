@@ -7,7 +7,7 @@ import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
 import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { photoPricing } from "@/constants/photoPricing";
+import { getSnipcartProduct, photoPricing } from "@/constants/photoPricing";
 import { PhotoTags } from "@/constants/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
@@ -30,6 +30,8 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
     photoPricing.find((pricing) => pricing.id === selectedSizeID) ??
     defaultPhotoSize;
 
+  const snipcartProduct = getSnipcartProduct(photoID, selectedSize);
+
   return (
     <div className="flex flex-col items-start justify-start space-y-6">
       <div>
@@ -37,6 +39,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
         <h4 className="mt-2 font-medium text-gray-800">
           ${selectedSize.price}
         </h4>
+        <p className="sr-only">{snipcartProduct.description}</p>
 
         <div className="mt-2 flex flex-row flex-wrap items-center justify-start gap-1">
           {tags.map((tag) => (
@@ -80,7 +83,15 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
           </div>
         </RadioGroup>
       </div>
-      <Button variant="primary" className="w-full">
+      <Button
+        variant="primary"
+        className="w-full"
+        data-item-id={snipcartProduct.id}
+        data-item-name={snipcartProduct.name}
+        data-item-price={snipcartProduct.price}
+        data-item-url={snipcartProduct.url}
+        data-item-image={snipcartProduct.image}
+      >
         Add to cart
       </Button>
       <div className="[&>p]:mb-4">

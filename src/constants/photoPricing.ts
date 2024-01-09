@@ -1,4 +1,12 @@
-import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
+import { siteMetadata } from "./siteMetadata";
+import { ISnipcartProduct } from "@/models/snipcart";
+import {
+  PhotoIdType,
+  getCdnAsset,
+  getPhotoName,
+  getPhotoThumbnail,
+} from "@/utils/cdn/cdnAssets";
+import { PAGES } from "@/utils/pages";
 
 /**
  * Photo pricing variant.
@@ -51,23 +59,26 @@ export const photoPricing: PhotoPriceVariant[] = [
 ];
 
 /**
- * Get unique product ID for e-commerce for a given photo + size/price.
+ * Get unique product metadata for e-commerce for a given photo + size/price.
  */
-export const getProductID = (
+export const getSnipcartProduct = (
   photoID: PhotoIdType,
-  variant: PhotoPriceVariant,
-) => {
-  return `${photoID}_${variant.id}`;
-};
+  price: PhotoPriceVariant,
+): ISnipcartProduct => {
+  let img = getCdnAsset(photoID);
+  const thumbnail = getPhotoThumbnail(photoID);
+  if (thumbnail) {
+    img = getCdnAsset(thumbnail);
+  }
 
-/**
- * Standardized description generator for a given photo + size/price.
- */
-export const getProductDescription = (
-  photoID: PhotoIdType,
-  variant: PhotoPriceVariant,
-) => {
-  return `High quality ${variant.name} photo print of ${getPhotoName(
-    photoID,
-  )}.`;
+  return {
+    id: `${photoID}_${price.id}`,
+    price: price.price,
+    name: `${getPhotoName(photoID)} (${price.name})`,
+    url: `${siteMetadata.siteUrl}${PAGES.PHOTOGRAPHY.PHOTO(photoID)}`,
+    description: `High quality ${price.name} photo print of ${getPhotoName(
+      photoID,
+    )}.`,
+    image: img,
+  };
 };
