@@ -7,12 +7,13 @@ import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
 import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { getSnipcartProduct, photoPricing } from "@/constants/photoPricing";
+import { photoPricing } from "@/constants/photoPricing";
 import { PhotoTags } from "@/constants/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
+import { getSnipcartProduct } from "@/utils/snipcart";
 
 type ProductDetailsProps = {
   photoID: PhotoIdType;
@@ -85,7 +86,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
       </div>
       <Button
         variant="primary"
-        className="w-full"
+        className="snipcart-add-item w-full"
         data-item-id={snipcartProduct.id}
         data-item-name={snipcartProduct.name}
         data-item-price={snipcartProduct.price}

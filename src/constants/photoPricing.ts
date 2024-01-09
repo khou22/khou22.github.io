@@ -1,13 +1,3 @@
-import { siteMetadata } from "./siteMetadata";
-import { ISnipcartProduct } from "@/models/snipcart";
-import {
-  PhotoIdType,
-  getCdnAsset,
-  getPhotoName,
-  getPhotoThumbnail,
-} from "@/utils/cdn/cdnAssets";
-import { PAGES } from "@/utils/pages";
-
 /**
  * Photo pricing variant.
  */
@@ -57,28 +47,3 @@ export const photoPricing: PhotoPriceVariant[] = [
     inStock: true,
   },
 ];
-
-/**
- * Get unique product metadata for e-commerce for a given photo + size/price.
- */
-export const getSnipcartProduct = (
-  photoID: PhotoIdType,
-  price: PhotoPriceVariant,
-): ISnipcartProduct => {
-  let img = getCdnAsset(photoID);
-  const thumbnail = getPhotoThumbnail(photoID);
-  if (thumbnail) {
-    img = getCdnAsset(thumbnail);
-  }
-
-  return {
-    id: `${photoID}_${price.id}`,
-    price: price.price,
-    name: `${getPhotoName(photoID)} (${price.name})`,
-    url: `${siteMetadata.siteUrl}${PAGES.PHOTOGRAPHY.PHOTO(photoID)}`,
-    description: `High quality ${price.name} photo print of ${getPhotoName(
-      photoID,
-    )}.`,
-    image: img,
-  };
-};
