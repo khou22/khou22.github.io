@@ -5,28 +5,27 @@ import { TwitterIcon } from "@/components/icons/TwitterIcon/TwitterIcon";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { classNames } from "@/utils/style";
 
-// TODO: Replace with proper brand colors
 const socials = [
   {
     name: "Instagram",
     href: siteMetadata.socials.instagram,
     icon: InstagramIcon,
     className: "hover:text-[#C13584]",
-    showColorsClassName: "text-[#C13584]",
+    showColorsClassName: "text-[#C13584] hover:opacity-90",
   },
   {
     name: "LinkedIn",
     href: siteMetadata.socials.linkedin,
     icon: LinkedInIcon,
     className: "hover:text-[#0072b1]",
-    showColorsClassName: "text-[#0072b1]",
+    showColorsClassName: "text-[#0072b1] hover:opacity-90",
   },
   {
     name: "Twitter",
     href: siteMetadata.socials.twitter,
     icon: TwitterIcon,
     className: "hover:text-[#1DA1F2]",
-    showColorsClassName: "text-[#1DA1F2]",
+    showColorsClassName: "text-[#1DA1F2] hover:opacity-90",
   },
 ];
 
@@ -49,8 +48,10 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
           href={item.href}
           target="_blank"
           className={classNames(
-            "cursor-pointer text-gray-400 transition-colors duration-300 ease-in-out",
-            showColors ? item.showColorsClassName : item.className,
+            "cursor-pointer transition-colors duration-300 ease-in-out",
+            showColors
+              ? item.showColorsClassName
+              : `${item.className} text-gray-400`,
           )}
         >
           <span className="sr-only">{item.name}</span>
