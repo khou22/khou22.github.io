@@ -4259,6 +4259,76 @@ export const _generatedCdnAssets = {
     name: `Mount Rushmore Vertical Shot.placeholder`,
     dimensions: [500, 750],
   },
+	"photography/thailand/Pai_Thailand_Farm_Bridge_placeholder_jpg": {
+    path: "/photography/thailand/Pai%2C%20Thailand%20Farm%20Bridge.placeholder.jpg",
+    name: `Pai, Thailand Farm Bridge.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/thailand/Thailand_Fire_Performance_Tight_Rope_placeholder_jpg": {
+    path: "/photography/thailand/Thailand%20Fire%20Performance%20Tight%20Rope.placeholder.jpg",
+    name: `Thailand Fire Performance Tight Rope.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/thailand/Thailand_Fire_Performance_Firecrackers_placeholder_jpg": {
+    path: "/photography/thailand/Thailand%20Fire%20Performance%20Firecrackers.placeholder.jpg",
+    name: `Thailand Fire Performance Firecrackers.placeholder`,
+    dimensions: [800, 640],
+  },
+	"photography/thailand/Thailand_Phi_Phi_Island_Boat_Cruise_jpg": {
+    path: "/photography/thailand/Thailand%20Phi%20Phi%20Island%20Boat%20Cruise.jpg",
+    name: `Thailand Phi Phi Island Boat Cruise`,
+    dimensions: [2000, 2500],
+  },
+	"photography/thailand/Thailand_Fire_Performance_Long_Exposure_jpg": {
+    path: "/photography/thailand/Thailand%20Fire%20Performance%20Long%20Exposure.jpg",
+    name: `Thailand Fire Performance Long Exposure`,
+    dimensions: [2000, 1333],
+  },
+	"photography/thailand/Pai_Thailand_Farm_Bridge_jpg": {
+    path: "/photography/thailand/Pai%2C%20Thailand%20Farm%20Bridge.jpg",
+    name: `Pai, Thailand Farm Bridge`,
+    dimensions: [2000, 2500],
+  },
+	"photography/thailand/Pai_Thailand_Rice_Paddies_Drone_jpg": {
+    path: "/photography/thailand/Pai%2C%20Thailand%20Rice%20Paddies%20Drone.jpg",
+    name: `Pai, Thailand Rice Paddies Drone`,
+    dimensions: [2000, 1124],
+  },
+	"photography/thailand/Thailand_Fire_Performance_Long_Exposure_placeholder_jpg": {
+    path: "/photography/thailand/Thailand%20Fire%20Performance%20Long%20Exposure.placeholder.jpg",
+    name: `Thailand Fire Performance Long Exposure.placeholder`,
+    dimensions: [800, 533],
+  },
+	"photography/thailand/Thailand_Fire_Performance_Tight_Rope_jpg": {
+    path: "/photography/thailand/Thailand%20Fire%20Performance%20Tight%20Rope.jpg",
+    name: `Thailand Fire Performance Tight Rope`,
+    dimensions: [1600, 2000],
+  },
+	"photography/thailand/Phi_Phi_Island_Drone_Port_jpg": {
+    path: "/photography/thailand/Phi%20Phi%20Island%20Drone%20Port.jpg",
+    name: `Phi Phi Island Drone Port`,
+    dimensions: [2000, 1600],
+  },
+	"photography/thailand/Phi_Phi_Island_Drone_Port_placeholder_jpg": {
+    path: "/photography/thailand/Phi%20Phi%20Island%20Drone%20Port.placeholder.jpg",
+    name: `Phi Phi Island Drone Port.placeholder`,
+    dimensions: [800, 640],
+  },
+	"photography/thailand/Thailand_Fire_Performance_Firecrackers_jpg": {
+    path: "/photography/thailand/Thailand%20Fire%20Performance%20Firecrackers.jpg",
+    name: `Thailand Fire Performance Firecrackers`,
+    dimensions: [2000, 1601],
+  },
+	"photography/thailand/Pai_Thailand_Rice_Paddies_Drone_placeholder_jpg": {
+    path: "/photography/thailand/Pai%2C%20Thailand%20Rice%20Paddies%20Drone.placeholder.jpg",
+    name: `Pai, Thailand Rice Paddies Drone.placeholder`,
+    dimensions: [800, 450],
+  },
+	"photography/thailand/Thailand_Phi_Phi_Island_Boat_Cruise_placeholder_jpg": {
+    path: "/photography/thailand/Thailand%20Phi%20Phi%20Island%20Boat%20Cruise.placeholder.jpg",
+    name: `Thailand Phi Phi Island Boat Cruise.placeholder`,
+    dimensions: [640, 800],
+  },
 	"photography/Singapore_Mall_Roof_Drone_Top_Down_jpg": {
     path: "/photography/Singapore%20Mall%20Roof%20Drone%20Top%20Down.jpg",
     name: `Singapore Mall Roof Drone Top Down`,
