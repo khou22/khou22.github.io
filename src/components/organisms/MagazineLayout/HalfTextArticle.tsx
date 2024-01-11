@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { classNames } from "@/utils/style";
 
 type HalfTextArticleProps = {
@@ -31,12 +30,11 @@ export const HalfTextArticle: React.FC<HalfTextArticleProps> = ({
     >
       <div className="flex h-full flex-col justify-evenly overflow-clip rounded bg-blue-800 shadow">
         <div className="relative aspect-square w-full">
-          <Image
+          <img
             src={imageSrc}
             alt={title}
-            className="object-cover transition-all duration-300 ease-in-out group-hover:scale-105"
-            fill
-            priority={priority}
+            className="h-full w-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105"
+            fetchPriority={priority ? "high" : "auto"}
           />
         </div>
         <div className="flex h-1/2 w-full flex-col items-center justify-center space-y-4 px-2 py-4 text-white sm:py-8">

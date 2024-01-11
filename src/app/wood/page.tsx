@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { woodProjects } from "@/constants/woodProjects";
 
@@ -17,12 +16,11 @@ const WoodPortfolioPage = () => {
           <div key={title} className="col-span-1">
             <a href={link} target="_blank" rel="noopener noreferrer">
               <div className="relative aspect-[3/2] w-full">
-                <Image
+                <img
                   src={image}
                   alt={title}
-                  fill
-                  className="object-cover"
-                  priority={idx < 6}
+                  className="h-full w-full object-cover"
+                  fetchPriority={idx < 6 ? "high" : "low"}
                 />
               </div>
             </a>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { classNames } from "@/utils/style";
 
@@ -44,12 +43,11 @@ export const FullCoverArticle: React.FC<FullCoverArticleProps> = ({
           />
           <p className="text-center">{description}</p>
         </div>
-        <Image
+        <img
           src={imageSrc}
           alt={title}
-          className="object-cover brightness-100 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:brightness-75"
-          fill
-          priority={priority}
+          className="h-full w-full object-cover brightness-100 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:brightness-75"
+          fetchPriority={priority ? "high" : "auto"}
         />
       </div>
     </Link>

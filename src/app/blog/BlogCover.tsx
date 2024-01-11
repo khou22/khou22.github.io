@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useRef } from "react";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
@@ -30,10 +29,9 @@ export const BlogCover: React.FC = () => {
       )}
       ref={parallexContainer}
     >
-      <Image
-        fill
+      <img
         src={getCdnAsset("media/site/images/Blog_Image_jpg")}
-        className="object-cover"
+        className="h-full w-full object-cover"
         alt="Kevin Hou blog cover photo of basket weaving cutting boards"
       />
 

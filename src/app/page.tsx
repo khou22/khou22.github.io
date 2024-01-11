@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
@@ -130,13 +129,12 @@ const HomePage = async () => {
                     key={occupation.company.name}
                     className="relative aspect-[7/2] w-full scale-100 transition-transform duration-200 ease-in-out hover:scale-110"
                   >
-                    <Image
+                    <img
                       src={
                         occupation.company.logoLight ?? occupation.company.logo
                       }
                       alt={occupation.company.name}
-                      fill
-                      className="object-contain"
+                      className="h-full w-full object-contain"
                     />
                     <span className="sr-only">{occupation.company.name}</span>
                   </div>

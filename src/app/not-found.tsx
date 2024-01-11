@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -8,11 +7,10 @@ import { PAGES } from "@/utils/pages";
 const NotFoundPage: React.FC = () => {
   return (
     <>
-      <Image
-        fill
-        objectFit="cover"
+      <img
         src={getCdnAsset("media/site/images/404_jpg")}
         alt="404 Not Found"
+        className="h-full w-full object-cover"
       />
       <div className="fixed left-1/2 top-3/4 z-10 -translate-x-1/2 -translate-y-1/2">
         <Link href={PAGES.HOME}>

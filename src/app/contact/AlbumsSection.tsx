@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
@@ -57,10 +56,9 @@ export const AlbumsSection = () => {
               rotations[imageIndex % rotations.length],
             )}
           >
-            <Image
+            <img
               src={image}
               alt={name}
-              fill
               className="absolute inset-0 h-full w-full object-contain"
             />
           </div>

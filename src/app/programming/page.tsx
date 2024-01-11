@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
@@ -38,12 +37,10 @@ const ProgrammingPortfolioPage = () => {
                 key={occupation.company.name}
                 className="relative aspect-[7/2] w-full scale-100 transition-transform duration-200 ease-in-out hover:scale-110"
               >
-                <Image
+                <img
                   src={occupation.company.logo}
                   alt={occupation.company.name}
-                  fill
-                  className="object-contain"
-                  priority
+                  className="h-full w-full object-cover"
                 />
                 <span className="sr-only">{occupation.company.name}</span>
               </div>
@@ -66,11 +63,10 @@ const ProgrammingPortfolioPage = () => {
             <div key={project.name} className="col-span-1">
               <a href={project.slug} target="_blank" rel="noopener noreferrer">
                 <div className="relative aspect-[3/2] w-full">
-                  <Image
+                  <img
                     src={project.image}
                     alt={project.name}
-                    fill
-                    className="object-cover"
+                    className="h-full w-full object-cover"
                   />
                 </div>
               </a>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { designProjects } from "@/constants/designProjects";
 
@@ -21,12 +20,11 @@ const DeisgnPortfolioPage = () => {
             <div key={title} className="col-span-1">
               <a href={slug} target={isExternal ? "_blank" : undefined}>
                 <div className="relative aspect-[3/2] w-full">
-                  <Image
+                  <img
                     src={image}
                     alt={title}
-                    fill
-                    className="object-cover"
-                    priority={idx < 6}
+                    className="h-full w-full object-cover"
+                    fetchPriority={idx < 6 ? "high" : "low"}
                   />
                 </div>
               </a>

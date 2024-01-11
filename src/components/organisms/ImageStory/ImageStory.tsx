@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import React, { useCallback, useEffect, useState } from "react";
 import { ProgressBar } from "@/components/atoms/ProgressBar/ProgressBar";
@@ -157,12 +156,10 @@ export const ImageStory: React.FC<ImageStoryProps> = ({
       </div>
 
       {currentStory && (
-        <Image
-          fill
+        <img
           src={currentStory.imageSrc}
           alt={currentStory.title}
-          className="object-cover"
-          priority
+          className="h-full w-full object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
           onClick={(e) => {
             // If click on the left, move backwards.
