@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  } */
+}
+
+/* Base styling for text. */
+/*********************************************/
+@layer base {
+  h1 {
+    @apply font-heading text-5xl;
+  }
+  h2 {
+    @apply font-heading text-4xl;
+  }
+  h3 {
+    @apply font-heading text-3xl;
+  }
+  h4 {
+    @apply font-heading text-2xl;
+  }
+  h5 {
+    @apply font-heading text-xl;
+  }
+  h6 {
+    @apply font-heading text-lg;
+  }
+  .caption {
+    @apply font-default text-sm text-gray-600;
+  }
+  p {
+    @apply font-default text-base;
+  }
+  li {
+    @apply font-default text-base;
+  }
+  pre,
+  code {
+    @apply font-mono text-base;
+  }
+}
+
+@layer components {
+  .gradient-accent-gbv {
+    background: linear-gradient(
+      90.18deg,
+      #80a454 0%,
+      #3286a8 50.85%,
+      #5037ce 100%
+    );
+  }
+
+  .gradient-accent-roy {
+    background: linear-gradient(
+      90.18deg,
+      #d5491f 0%,
+      #da8d0f 50.85%,
+      #dec11a 100%
+    );
+  }
+
+  /* Enable text gradients. */
+  .gradient-text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  /* Enable text image masks. User should set background image. */
+  .text-mask {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Fade in on page load. */
+  .fade-appear {
+    /* animation: fadeInAnimation ease 3s; */
+    animation-name: fadeInAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@layer components {
+  .parallax {
+    display: block;
+    height: auto;
+    position: relative;
+    width: auto;
+  }
+  .parallax .parallax-content {
+    box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.45);
+    height: auto;
+    -webkit-transform: perspective(50rem);
+    transform: perspective(50rem);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 0.4s ease;
+    width: 100%;
+  }
+  .parallax .parallax-content::before {
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .parallax .parallax-top-left {
+    height: 50%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    z-index: 99;
+  }
+  .parallax .parallax-top-left:hover ~ .parallax-content {
+    -webkit-transform: perspective(50rem) rotateX(3deg) rotateY(-3deg);
+    transform: perspective(50rem) rotateX(3deg) rotateY(-3deg);
+  }
+  .parallax .parallax-top-left:hover ~ .parallax-content::before {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 50%
+    );
+  }
+  .parallax .parallax-top-right {
+    height: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    z-index: 99;
+  }
+  .parallax .parallax-top-right:hover ~ .parallax-content {
+    -webkit-transform: perspective(50rem) rotateX(3deg) rotateY(3deg);
+    transform: perspective(50rem) rotateX(3deg) rotateY(3deg);
+  }
+  .parallax .parallax-top-right:hover ~ .parallax-content::before {
+    background: linear-gradient(
+      -135deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 50%
+    );
+  }
+  .parallax .parallax-bottom-left {
+    bottom: 0;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    width: 50%;
+    z-index: 99;
+  }
+  .parallax .parallax-bottom-left:hover ~ .parallax-content {
+    -webkit-transform: perspective(50rem) rotateX(-3deg) rotateY(-3deg);
+    transform: perspective(50rem) rotateX(-3deg) rotateY(-3deg);
+  }
+  .parallax .parallax-bottom-left:hover ~ .parallax-content::before {
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 50%
+    );
+  }
+  .parallax .parallax-bottom-right {
+    bottom: 0;
+    height: 50%;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    z-index: 99;
+  }
+  .parallax .parallax-bottom-right:hover ~ .parallax-content {
+    -webkit-transform: perspective(50rem) rotateX(-3deg) rotateY(3deg);
+    transform: perspective(50rem) rotateX(-3deg) rotateY(3deg);
+  }
+  .parallax .parallax-bottom-right:hover ~ .parallax-content::before {
+    background: linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 50%
+    );
+  }
+}

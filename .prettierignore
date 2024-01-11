@@ -1,0 +1,7 @@
+.next/
+deprecated/
+node_modules/
+docs/
+dist/
+out/
+*.generated.*
