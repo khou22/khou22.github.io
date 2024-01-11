@@ -40,7 +40,7 @@ const ProgrammingPortfolioPage = () => {
                 <img
                   src={occupation.company.logo}
                   alt={occupation.company.name}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain"
                 />
                 <span className="sr-only">{occupation.company.name}</span>
               </div>
