@@ -46,7 +46,7 @@ export const FullCoverArticle: React.FC<FullCoverArticleProps> = ({
         <img
           src={imageSrc}
           alt={title}
-          className="h-full w-full object-cover brightness-100 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:brightness-75"
+          className="h-[50vh] min-h-full w-full object-cover brightness-100 transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:brightness-75"
           fetchPriority={priority ? "high" : "auto"}
         />
       </div>

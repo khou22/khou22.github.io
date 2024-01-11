@@ -194,7 +194,7 @@ export const NavBar: React.FC = () => {
         id="mega-menu-full-dropdown"
         className={classNames(
           "border-y border-gray-200 bg-white/75 shadow-sm backdrop-blur-sm",
-          "absolute left-0 top-full z-10 w-full",
+          "absolute left-0 top-full z-20 w-full",
 
           // Opacity and mouse events are determined by hover.
           isHovering

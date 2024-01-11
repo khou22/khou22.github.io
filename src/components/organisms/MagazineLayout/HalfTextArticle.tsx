@@ -29,14 +29,12 @@ export const HalfTextArticle: React.FC<HalfTextArticleProps> = ({
       className={classNames("group col-span-1", className)}
     >
       <div className="flex h-full flex-col justify-evenly overflow-clip rounded bg-blue-800 shadow">
-        <div className="relative aspect-square w-full">
-          <img
-            src={imageSrc}
-            alt={title}
-            className="h-full w-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105"
-            fetchPriority={priority ? "high" : "auto"}
-          />
-        </div>
+        <img
+          src={imageSrc}
+          alt={title}
+          className="aspect-square h-full w-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105"
+          fetchPriority={priority ? "high" : "auto"}
+        />
         <div className="flex h-1/2 w-full flex-col items-center justify-center space-y-4 px-2 py-4 text-white sm:py-8">
           <p className="text-sm text-gray-400">{category.toUpperCase()}</p>
           <h5>{title}</h5>
