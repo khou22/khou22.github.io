@@ -5,7 +5,6 @@ export const siteMetadata = {
   author: "Kevin Hou",
   siteUrl: "https://khou22.com",
 
-  // TODO (k): Fix this preview card.
   /**
    * Default preview card image
    */
