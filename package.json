@@ -19,6 +19,7 @@
     "test": "jest",
     "generate:assets": "python scripts/generate_assets.py",
     "generate:thumbnails": "python scripts/generate_thumbnails.py --max_kb 250",
+    "clean-images": "python scripts/clean_assets.py",
     "clean-db": "tsx scripts/clean_db.ts"
   },
   "dependencies": {
