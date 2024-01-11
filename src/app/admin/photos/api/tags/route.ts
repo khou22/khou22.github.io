@@ -3,6 +3,10 @@ import { PhotoTagUpdateRequest } from "./types";
 import { connectToPhotoDb } from "@/data/photos/photoDbManager";
 
 export async function POST(req: NextRequest) {
+  if (process.env.NODE_ENV !== "development") {
+    return new Response("Not allowed", { status: 403 });
+  }
+
   const reqBody = (await req.json()) as PhotoTagUpdateRequest;
   const db = await connectToPhotoDb();
 

@@ -4,6 +4,10 @@ import { connectToPhotoDb } from "@/data/photos/photoDbManager";
 import { isPhotoID } from "@/utils/cdn/cdnAssets";
 
 export async function POST(req: NextRequest) {
+  if (process.env.NODE_ENV !== "development") {
+    return new Response("Not allowed", { status: 403 });
+  }
+
   const reqBody = (await req.json()) as PhotoRatingUpdateRequest;
   const db = await connectToPhotoDb();
 
