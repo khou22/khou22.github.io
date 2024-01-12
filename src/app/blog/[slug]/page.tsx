@@ -1,9 +1,8 @@
 import { Metadata, NextPage } from "next";
 import moment from "moment";
-import { notFound } from "next/navigation";
 import Link from "next/link";
 import { siteMetadata } from "@/constants/siteMetadata";
-import { PostNotFoundError, getPost } from "@/utils/blog/posts";
+import { PostNotFoundError, getPost, getPosts } from "@/utils/blog/posts";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { HydratedBlogPost } from "@/data/types";
 import { CustomMarkdown } from "@/components/molecules/CustomMarkdown/CustomMarkdown";
@@ -17,6 +16,16 @@ type PageParams = {
     slug: string;
   };
 };
+
+/**
+ * Get all blog posts and generate static params. Allows for automatic memoization of these pages.
+ */
+export async function generateStaticParams() {
+  const posts = await getPosts();
+  return posts.map((post) => ({
+    slug: post.frontMatter.slug,
+  }));
+}
 
 export async function generateMetadata({
   params: { slug },
@@ -50,19 +59,27 @@ export async function generateMetadata({
   };
 }
 
+const PostNotFound = ({ slug }: { slug: string }) => (
+  <PageWrapper>
+    <CustomLink href={PAGES.BLOG_POSTS}>&larr; Back to Blog</CustomLink>
+    <h1>Post Not Found</h1>
+    <p>{slug}</p>
+  </PageWrapper>
+);
+
 const BlogPostPage: NextPage<PageParams> = async ({ params: { slug } }) => {
   let post: HydratedBlogPost | undefined;
   try {
     post = await getPost(slug);
   } catch (e) {
     if (e instanceof PostNotFoundError) {
-      return notFound();
+      return <PostNotFound slug={slug} />;
     }
     console.error(e);
   }
 
   if (!post) {
-    return notFound();
+    return <PostNotFound slug={slug} />;
   }
 
   return (
