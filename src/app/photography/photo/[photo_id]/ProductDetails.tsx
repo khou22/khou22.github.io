@@ -95,19 +95,18 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
       >
         Add to cart
       </Button>
-      <div className="[&>p]:mb-4">
+      <div>
         <Label>Description</Label>
-        <p className="caption">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+        <p className="caption mb-4">
+          Introducing my premium collection of high-quality photo prints,
+          meticulously captured and curated to perfection. Each print is a true
+          work of art, showcasing stunning landscapes, captivating portraits,
+          and mesmerizing moments frozen in time. Elevate your space and immerse
+          yourself in the beauty of these curated masterpieces.
         </p>
 
         <Label>Custom Sizes</Label>
-        <p className="caption">
+        <p className="caption mb-4">
           Don&apos;t see a size you&apos;re looking for? I do custom orders
           (panorama, three panels, etc.){" "}
           <CustomLink href={PAGES.CONTACT}>by request</CustomLink>.
@@ -120,7 +119,15 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
         />
 
         <Label>Materials</Label>
-        <p className="caption">Test</p>
+        <p className="caption mb-2">
+          Prints are produced by my printing partner to the highest standards,
+          ensuring vibrant colors and exquisite details:
+        </p>
+        <ul className="[&>li]:caption list-inside list-disc">
+          <li>Fujicolor Crystal Archive Type II</li>
+          <li>Fujicolor Crystal Archive resin-based paper</li>
+          <li>Fade-resistant, high dynamic range</li>
+        </ul>
       </div>
     </div>
   );
