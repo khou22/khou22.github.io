@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
 import { Cutive_Mono, Montserrat, Mulish } from "next/font/google";
 import "./globals.css";
+import { Snipcart } from "../components/organisms/Snipcart/Snipcart";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { NavBar } from "@/components/organisms/NavBar/NavBar";
 import { Footer } from "@/components/organisms/Footer/Footer";
@@ -83,6 +84,7 @@ export default function RootLayout({
           "bg-gray-50",
         )}
       >
+        <Snipcart />
         <HydrationOverlay>
           <NavBar />
           {children}

@@ -1,8 +1,5 @@
-import { Snipcart } from "./Snipcart";
+import { CartButton } from "@/components/organisms/Snipcart/CartButton";
 
-/**
- * Nested layout for all /photography routes.
- */
 export default function PhotographyLayout({
   children,
 }: {
@@ -10,7 +7,7 @@ export default function PhotographyLayout({
 }) {
   return (
     <>
-      <Snipcart />
+      <CartButton />
       {children}
     </>
   );
