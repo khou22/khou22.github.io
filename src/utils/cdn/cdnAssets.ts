@@ -19,8 +19,11 @@ export const getCdnAsset = (assetName: PhotoIdType) => {
  * Get all photography photo IDs.
  */
 export const getAllPhotographyPhotoIDs = (): PhotoIdType[] => {
-  const photoKeys = Object.keys(_generatedCdnAssets).filter((key) =>
-    key.startsWith("photography/"),
+  const photoKeys = Object.keys(_generatedCdnAssets).filter(
+    (key) =>
+      key.startsWith("photography/") &&
+      key.endsWith("_jpg") &&
+      !key.endsWith("placeholder_jpg"),
   );
   return photoKeys as PhotoIdType[];
 };
@@ -104,6 +107,26 @@ export const getPhotoThumbnail = (photoID: PhotoIdType): PhotoIdType | null => {
   // Replace the ending `_jpg` with `_placeholder_jpg`
   const thumbnailID = photoID.replace("_jpg", "_placeholder_jpg");
   return castPhotoID(thumbnailID);
+};
+
+/**
+ * Check if a photo ID is a thumbnail.
+ */
+export const isThumbnail = (photoID: PhotoIdType): boolean => {
+  return photoID.endsWith("_placeholder_jpg");
+};
+
+/**
+ * Get the original version of a thumbnail.
+ */
+export const getPhotoForThumbnail = (
+  thumbnailID: PhotoIdType,
+): PhotoIdType | null => {
+  const photoID = thumbnailID.replace("_placeholder_jpg", "_jpg");
+  if (!photoID || !isPhotoID(photoID)) {
+    throw new Error(`Could not parse photo ID from ${thumbnailID}`);
+  }
+  return castPhotoID(photoID);
 };
 
 /**

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { ProductDetails } from "./ProductDetails";
 import { ImageDisplay } from "./ImageDisplay";
@@ -7,8 +7,10 @@ import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/Progressiv
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import {
   getCdnAsset,
+  getPhotoForThumbnail,
   getPhotoIDFromURLComponent,
   getPhotoName,
+  isThumbnail,
 } from "@/utils/cdn/cdnAssets";
 import { getTagsForPhotoID } from "@/data/photos/photoDbManager";
 import { PhotoTags } from "@/constants/photoTags";
@@ -46,6 +48,15 @@ export const generateMetadata = ({
     notFound();
   }
 
+  // Don't allow accessing thumbnails.
+  if (isThumbnail(photoID)) {
+    const originalPhotoID = getPhotoForThumbnail(photoID);
+    if (!originalPhotoID) {
+      notFound();
+    }
+    redirect(PAGES.PHOTOGRAPHY.PHOTO(originalPhotoID));
+  }
+
   return {
     title: `${getPhotoName(photoID)} | Kevin Hou Photography`,
   };
@@ -58,8 +69,30 @@ const PhotoByIDPage = async ({
   if (!photoID) {
     notFound();
   }
+
+  // Don't allow accessing thumbnails.
+  if (isThumbnail(photoID)) {
+    const originalPhotoID = getPhotoForThumbnail(photoID);
+    if (!originalPhotoID) {
+      notFound();
+    }
+    redirect(PAGES.PHOTOGRAPHY.PHOTO(originalPhotoID));
+  }
+
   const tags = await getTagsForPhotoID(photoID);
   const photoURL = `${siteMetadata.siteUrl}${PAGES.PHOTOGRAPHY.PHOTO(photoID)}`;
+
+  const suggestedPhotoIDs = getSuggestedPhotos(photoID, 10);
+  const suggestedPhotoNodes = suggestedPhotoIDs.map((photoID) => {
+    return (
+      <PhotoImage
+        key={photoID}
+        photoID={photoID}
+        className="aspect-square h-full w-full object-contain"
+        isLink
+      />
+    );
+  });
 
   // If a photo isn't for sale, show a different page.
   if (tags.includes(PhotoTags.NotForSale)) {
@@ -125,21 +158,24 @@ const PhotoByIDPage = async ({
             </Link>
           </CardFooter>
         </Card>
+
+        <div className="mt-16 flex w-full flex-col items-center justify-center space-y-4 md:space-y-8">
+          <h3>Suggested Photos 🎞️</h3>
+          <div className="grid w-full grid-cols-3 gap-1 md:grid-cols-4 md:gap-2 lg:grid-cols-5 lg:gap-3">
+            {suggestedPhotoNodes}
+          </div>
+          <Link href={PAGES.PHOTOGRAPHY.BROWSE}>
+            <Button
+              variant="outline"
+              className="w-full min-w-[320px] max-w-full sm:w-auto"
+            >
+              Browse All Photos
+            </Button>
+          </Link>
+        </div>
       </PageWrapper>
     );
   }
-
-  const suggestedPhotoIDs = getSuggestedPhotos(photoID, 10);
-  const suggestedPhotoNodes = suggestedPhotoIDs.map((photoID) => {
-    return (
-      <PhotoImage
-        key={photoID}
-        photoID={photoID}
-        className="aspect-square h-full w-full object-contain"
-        isLink
-      />
-    );
-  });
 
   return (
     <>
