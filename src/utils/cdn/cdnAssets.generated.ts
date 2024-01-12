@@ -4,6 +4,11 @@ export const _generatedCdnAssets = {
     name: `Design-Guide`,
     dimensions: [null, null],
   },
+	"index_html": {
+    path: "/index.html",
+    name: `index`,
+    dimensions: [null, null],
+  },
 	"photography/San_Francisco_from_Twin_Peaks_placeholder_jpg": {
     path: "/photography/San%20Francisco%20from%20Twin%20Peaks.placeholder.jpg",
     name: `San Francisco from Twin Peaks.placeholder`,
@@ -742,7 +747,7 @@ export const _generatedCdnAssets = {
 	"photography/engagements/Aravind_and_Laya_Engagement_Proposal_jpg": {
     path: "/photography/engagements/Aravind%20and%20Laya%20Engagement%20Proposal.jpg",
     name: `Aravind and Laya Engagement Proposal`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/engagements/Engagement_Ring_on_Rock_placeholder_jpg": {
     path: "/photography/engagements/Engagement%20Ring%20on%20Rock.placeholder.jpg",
@@ -752,12 +757,12 @@ export const _generatedCdnAssets = {
 	"photography/engagements/Engagement_Ring_on_Rock_jpg": {
     path: "/photography/engagements/Engagement%20Ring%20on%20Rock.jpg",
     name: `Engagement Ring on Rock`,
-    dimensions: [5304, 6630],
+    dimensions: [2400, 3000],
   },
 	"photography/engagements/Aravind_and_Laya_Engagement_jpg": {
     path: "/photography/engagements/Aravind%20and%20Laya%20Engagement.jpg",
     name: `Aravind and Laya Engagement`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/engagements/David_and_Wenyi_Engagement_Proposal_placeholder_jpg": {
     path: "/photography/engagements/David%20and%20Wenyi%20Engagement%20Proposal.placeholder.jpg",
@@ -767,7 +772,7 @@ export const _generatedCdnAssets = {
 	"photography/engagements/David_and_Wenyi_Engagement_Proposal_jpg": {
     path: "/photography/engagements/David%20and%20Wenyi%20Engagement%20Proposal.jpg",
     name: `David and Wenyi Engagement Proposal`,
-    dimensions: [5169, 7750],
+    dimensions: [2001, 3000],
   },
 	"photography/engagements/Aravind_and_Laya_Engagement_placeholder_jpg": {
     path: "/photography/engagements/Aravind%20and%20Laya%20Engagement.placeholder.jpg",
@@ -1657,7 +1662,7 @@ export const _generatedCdnAssets = {
 	"photography/germany/Munich_Beer_jpg": {
     path: "/photography/germany/Munich%20Beer.jpg",
     name: `Munich Beer`,
-    dimensions: [5266, 6583],
+    dimensions: [2400, 3000],
   },
 	"photography/germany/BMW_Museum_Motorcycle_placeholder_jpg": {
     path: "/photography/germany/BMW%20Museum%20Motorcycle.placeholder.jpg",
@@ -1667,12 +1672,12 @@ export const _generatedCdnAssets = {
 	"photography/germany/Munich_Colorful_Houses_in_Winter_jpg": {
     path: "/photography/germany/Munich%20Colorful%20Houses%20in%20Winter.jpg",
     name: `Munich Colorful Houses in Winter`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/germany/Neuschwanstein_Castle_in_Winter_jpg": {
     path: "/photography/germany/Neuschwanstein%20Castle%20in%20Winter.jpg",
     name: `Neuschwanstein Castle in Winter`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/germany/Munich_Beer_placeholder_jpg": {
     path: "/photography/germany/Munich%20Beer.placeholder.jpg",
@@ -1687,12 +1692,12 @@ export const _generatedCdnAssets = {
 	"photography/germany/Munich_Olympic_Park_Panorama_Sunset_jpg": {
     path: "/photography/germany/Munich%20Olympic%20Park%20Panorama%20Sunset.jpg",
     name: `Munich Olympic Park Panorama Sunset`,
-    dimensions: [13121, 4531],
+    dimensions: [8687, 3000],
   },
 	"photography/germany/BMW_Museum_Motorcycle_jpg": {
     path: "/photography/germany/BMW%20Museum%20Motorcycle.jpg",
     name: `BMW Museum Motorcycle`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/germany/Neuschwanstein_Castle_in_Winter_placeholder_jpg": {
     path: "/photography/germany/Neuschwanstein%20Castle%20in%20Winter.placeholder.jpg",
@@ -1762,7 +1767,47 @@ export const _generatedCdnAssets = {
 	"photography/Forbes_30_Under_30_jpg": {
     path: "/photography/Forbes%2030%20Under%2030.jpg",
     name: `Forbes 30 Under 30`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
+  },
+	"photography/new_york/Westside_Highway_New_York_jpg": {
+    path: "/photography/new-york/Westside%20Highway%2C%20New%20York.jpg",
+    name: `Westside Highway, New York`,
+    dimensions: [2400, 3000],
+  },
+	"photography/new_york/Mountain_House_Manhattan_Squid_Dish_jpg": {
+    path: "/photography/new-york/Mountain%20House%20Manhattan%20Squid%20Dish.jpg",
+    name: `Mountain House Manhattan Squid Dish`,
+    dimensions: [2001, 3000],
+  },
+	"photography/new_york/Mountain_House_Manhattan_Squid_Dish_placeholder_jpg": {
+    path: "/photography/new-york/Mountain%20House%20Manhattan%20Squid%20Dish.placeholder.jpg",
+    name: `Mountain House Manhattan Squid Dish.placeholder`,
+    dimensions: [534, 800],
+  },
+	"photography/new_york/Woman_Walking_Through_Financial_District_jpg": {
+    path: "/photography/new-york/Woman%20Walking%20Through%20Financial%20District.jpg",
+    name: `Woman Walking Through Financial District`,
+    dimensions: [2400, 3000],
+  },
+	"photography/new_york/Upper_East_Side_View_from_Central_Park_jpg": {
+    path: "/photography/new-york/Upper%20East%20Side%20View%20from%20Central%20Park.jpg",
+    name: `Upper East Side View from Central Park`,
+    dimensions: [2250, 3000],
+  },
+	"photography/new_york/Westside_Highway_New_York_placeholder_jpg": {
+    path: "/photography/new-york/Westside%20Highway%2C%20New%20York.placeholder.jpg",
+    name: `Westside Highway, New York.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/new_york/Upper_East_Side_View_from_Central_Park_placeholder_jpg": {
+    path: "/photography/new-york/Upper%20East%20Side%20View%20from%20Central%20Park.placeholder.jpg",
+    name: `Upper East Side View from Central Park.placeholder`,
+    dimensions: [600, 800],
+  },
+	"photography/new_york/Woman_Walking_Through_Financial_District_placeholder_jpg": {
+    path: "/photography/new-york/Woman%20Walking%20Through%20Financial%20District.placeholder.jpg",
+    name: `Woman Walking Through Financial District.placeholder`,
+    dimensions: [640, 800],
   },
 	"photography/Mori_Point_Pacifica_Sunset_placeholder_jpg": {
     path: "/photography/Mori%20Point%20Pacifica%20Sunset.placeholder.jpg",
@@ -1892,7 +1937,7 @@ export const _generatedCdnAssets = {
 	"photography/San_Francisco_Sunset_Skyline_Landscape_from_Plane_jpg": {
     path: "/photography/San%20Francisco%20Sunset%20Skyline%20Landscape%20from%20Plane.jpg",
     name: `San Francisco Sunset Skyline Landscape from Plane`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/Portrait_in_Front_of_Vatican_on_Bridge_at_Sunset_jpg": {
     path: "/photography/Portrait%20in%20Front%20of%20Vatican%20on%20Bridge%20at%20Sunset.jpg",
@@ -2007,7 +2052,7 @@ export const _generatedCdnAssets = {
 	"photography/product/Nagi_Restraunt_Shot_jpg": {
     path: "/photography/product/Nagi%20Restraunt%20Shot.jpg",
     name: `Nagi Restraunt Shot`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/IWC_Watch_Shot_Landscape_placeholder_jpg": {
     path: "/photography/product/IWC%20Watch%20Shot%20Landscape.placeholder.jpg",
@@ -2022,7 +2067,7 @@ export const _generatedCdnAssets = {
 	"photography/product/Westfield_San_FranciscoEntrance_jpg": {
     path: "/photography/product/Westfield%20San%20FranciscoEntrance.jpg",
     name: `Westfield San FranciscoEntrance`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/Din_Tai_Fung_Storefront_placeholder_jpg": {
     path: "/photography/product/Din%20Tai%20Fung%20Storefront.placeholder.jpg",
@@ -2037,7 +2082,7 @@ export const _generatedCdnAssets = {
 	"photography/product/Din_Tai_Fung_Cocktails_jpg": {
     path: "/photography/product/Din%20Tai%20Fung%20Cocktails.jpg",
     name: `Din Tai Fung Cocktails`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/Jamba_Juice_In_Air_placeholder_jpg": {
     path: "/photography/product/Jamba%20Juice%20In%20Air.placeholder.jpg",
@@ -2047,7 +2092,7 @@ export const _generatedCdnAssets = {
 	"photography/product/Aesop_Store_Front_jpg": {
     path: "/photography/product/Aesop%20Store%20Front.jpg",
     name: `Aesop Store Front`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/product/Peloton_Product_Shot_placeholder_jpg": {
     path: "/photography/product/Peloton%20Product%20Shot.placeholder.jpg",
@@ -2057,12 +2102,12 @@ export const _generatedCdnAssets = {
 	"photography/product/Burberry_Shoe_Shot_jpg": {
     path: "/photography/product/Burberry%20Shoe%20Shot.jpg",
     name: `Burberry Shoe Shot`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/IWC_Watch_Aviator_Display_jpg": {
     path: "/photography/product/IWC%20Watch%20Aviator%20Display.jpg",
     name: `IWC Watch Aviator Display`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/Jamba_Juice_Product_Photos_placeholder_jpg": {
     path: "/photography/product/Jamba%20Juice%20Product%20Photos.placeholder.jpg",
@@ -2082,7 +2127,7 @@ export const _generatedCdnAssets = {
 	"photography/product/Vans_Colorful_Shoe_jpg": {
     path: "/photography/product/Vans%20Colorful%20Shoe.jpg",
     name: `Vans Colorful Shoe`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/Ray_Ban_Glasses_on_Shelf_placeholder_jpg": {
     path: "/photography/product/Ray%20Ban%20Glasses%20on%20Shelf.placeholder.jpg",
@@ -2097,7 +2142,7 @@ export const _generatedCdnAssets = {
 	"photography/product/Peloton_Product_Shot_jpg": {
     path: "/photography/product/Peloton%20Product%20Shot.jpg",
     name: `Peloton Product Shot`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/product/Vans_Colorful_Shoe_placeholder_jpg": {
     path: "/photography/product/Vans%20Colorful%20Shoe.placeholder.jpg",
@@ -2107,7 +2152,7 @@ export const _generatedCdnAssets = {
 	"photography/product/IWC_Watch_Shot_Landscape_jpg": {
     path: "/photography/product/IWC%20Watch%20Shot%20Landscape.jpg",
     name: `IWC Watch Shot Landscape`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/product/Westfield_San_FranciscoEntrance_placeholder_jpg": {
     path: "/photography/product/Westfield%20San%20FranciscoEntrance.placeholder.jpg",
@@ -2117,7 +2162,7 @@ export const _generatedCdnAssets = {
 	"photography/product/Reeset_Logic_Vitamins_Product_Shot_jpg": {
     path: "/photography/product/Reeset%20Logic%20Vitamins%20Product%20Shot.jpg",
     name: `Reeset Logic Vitamins Product Shot`,
-    dimensions: [4722, 5902],
+    dimensions: [2400, 3000],
   },
 	"photography/product/Gentle_Monster_Display_Photography_placeholder_jpg": {
     path: "/photography/product/Gentle%20Monster%20Display%20Photography.placeholder.jpg",
@@ -2127,17 +2172,17 @@ export const _generatedCdnAssets = {
 	"photography/product/Problems_Spritz_jpg": {
     path: "/photography/product/Problems%20Spritz.jpg",
     name: `Problems Spritz`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/product/Jamba_Juice_In_Air_jpg": {
     path: "/photography/product/Jamba%20Juice%20In%20Air.jpg",
     name: `Jamba Juice In Air`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/Breitling_Watch_on_Pool_Table_jpg": {
     path: "/photography/product/Breitling%20Watch%20on%20Pool%20Table.jpg",
     name: `Breitling Watch on Pool Table`,
-    dimensions: [4983, 7471],
+    dimensions: [2001, 3000],
   },
 	"photography/product/Westfield_Valley_Fair_Storefront_placeholder_jpg": {
     path: "/photography/product/Westfield%20Valley%20Fair%20Storefront.placeholder.jpg",
@@ -2147,7 +2192,7 @@ export const _generatedCdnAssets = {
 	"photography/product/Jamba_Juice_Product_Photos_jpg": {
     path: "/photography/product/Jamba%20Juice%20Product%20Photos.jpg",
     name: `Jamba Juice Product Photos`,
-    dimensions: [4831, 7246],
+    dimensions: [2000, 3000],
   },
 	"photography/product/Breitling_Watch_on_Pool_Table_placeholder_jpg": {
     path: "/photography/product/Breitling%20Watch%20on%20Pool%20Table.placeholder.jpg",
@@ -2167,7 +2212,7 @@ export const _generatedCdnAssets = {
 	"photography/product/Din_Tai_Fung_Storefront_jpg": {
     path: "/photography/product/Din%20Tai%20Fung%20Storefront.jpg",
     name: `Din Tai Fung Storefront`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/IWC_Watch_Aviator_Display_placeholder_jpg": {
     path: "/photography/product/IWC%20Watch%20Aviator%20Display.placeholder.jpg",
@@ -2177,17 +2222,17 @@ export const _generatedCdnAssets = {
 	"photography/product/Psycho_Bunny_Indoor_Display_2_jpg": {
     path: "/photography/product/Psycho%20Bunny%20Indoor%20Display%202.jpg",
     name: `Psycho Bunny Indoor Display 2`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/Psycho_Bunny_Storefront_jpg": {
     path: "/photography/product/Psycho%20Bunny%20Storefront.jpg",
     name: `Psycho Bunny Storefront`,
-    dimensions: [5090, 6363],
+    dimensions: [2400, 3000],
   },
 	"photography/product/Ray_Ban_Glasses_on_Shelf_jpg": {
     path: "/photography/product/Ray%20Ban%20Glasses%20on%20Shelf.jpg",
     name: `Ray Ban Glasses on Shelf`,
-    dimensions: [5149, 7719],
+    dimensions: [2001, 3000],
   },
 	"photography/product/Aritzia_Storefront_placeholder_jpg": {
     path: "/photography/product/Aritzia%20Storefront.placeholder.jpg",
@@ -2197,12 +2242,12 @@ export const _generatedCdnAssets = {
 	"photography/product/Westfield_Valley_Fair_Storefront_jpg": {
     path: "/photography/product/Westfield%20Valley%20Fair%20Storefront.jpg",
     name: `Westfield Valley Fair Storefront`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/Gentle_Monster_Display_Photography_jpg": {
     path: "/photography/product/Gentle%20Monster%20Display%20Photography.jpg",
     name: `Gentle Monster Display Photography`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/Din_Tai_Fung_Cocktails_placeholder_jpg": {
     path: "/photography/product/Din%20Tai%20Fung%20Cocktails.placeholder.jpg",
@@ -2212,7 +2257,7 @@ export const _generatedCdnAssets = {
 	"photography/product/Club_Monaco_Table_Display_jpg": {
     path: "/photography/product/Club%20Monaco%20Table%20Display.jpg",
     name: `Club Monaco Table Display`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/product/Club_Monaco_Table_Display_placeholder_jpg": {
     path: "/photography/product/Club%20Monaco%20Table%20Display.placeholder.jpg",
@@ -2222,12 +2267,12 @@ export const _generatedCdnAssets = {
 	"photography/product/Psycho_Bunny_Indoor_Display_jpg": {
     path: "/photography/product/Psycho%20Bunny%20Indoor%20Display.jpg",
     name: `Psycho Bunny Indoor Display`,
-    dimensions: [5211, 6514],
+    dimensions: [2400, 3000],
   },
 	"photography/product/Aritzia_Storefront_jpg": {
     path: "/photography/product/Aritzia%20Storefront.jpg",
     name: `Aritzia Storefront`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/product/Psycho_Bunny_Indoor_Display_placeholder_jpg": {
     path: "/photography/product/Psycho%20Bunny%20Indoor%20Display.placeholder.jpg",
@@ -2337,7 +2382,7 @@ export const _generatedCdnAssets = {
 	"photography/sports/Emmie_Santa_Cuz_Warriors_Stadium_Dribbling_jpg": {
     path: "/photography/sports/Emmie%20Santa%20Cuz%20Warriors%20Stadium%20Dribbling.jpg",
     name: `Emmie Santa Cuz Warriors Stadium Dribbling`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/House_at_the_Base_of_the_Tetons_in_Teton_Village_jpg": {
     path: "/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.jpg",
@@ -2437,7 +2482,7 @@ export const _generatedCdnAssets = {
 	"photography/David_and_Wenyi_Engagement_Sutro_Baths_jpg": {
     path: "/photography/David%20and%20Wenyi%20Engagement%20Sutro%20Baths.jpg",
     name: `David and Wenyi Engagement Sutro Baths`,
-    dimensions: [4379, 5474],
+    dimensions: [2400, 3000],
   },
 	"photography/The_Flavors_of_a_Sunset_in_Florence_Italy_placeholder_jpg": {
     path: "/photography/The%20Flavors%20of%20a%20Sunset%20in%20Florence%2C%20Italy.placeholder.jpg",
@@ -2742,17 +2787,17 @@ export const _generatedCdnAssets = {
 	"photography/portraits/Conrad_Bike_Portrait_Skyline_jpg": {
     path: "/photography/portraits/Conrad%20Bike%20Portrait%20Skyline.jpg",
     name: `Conrad Bike Portrait Skyline`,
-    dimensions: [4885, 3257],
+    dimensions: [4500, 3000],
   },
 	"photography/portraits/WEMKE_Christmas_Card_2022_Top_Down_Drone_Skiing_jpg": {
     path: "/photography/portraits/WEMKE%20Christmas%20Card%202022%20Top%20Down%20Drone%20Skiing.jpg",
     name: `WEMKE Christmas Card 2022 Top Down Drone Skiing`,
-    dimensions: [5440, 3624],
+    dimensions: [4503, 3000],
   },
 	"photography/portraits/Joelle_North_Beach_Portrait_jpg": {
     path: "/photography/portraits/Joelle%20North%20Beach%20Portrait.jpg",
     name: `Joelle North Beach Portrait`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/portraits/Conrad_Bike_Portrait_Trick_placeholder_jpg": {
     path: "/photography/portraits/Conrad%20Bike%20Portrait%20Trick.placeholder.jpg",
@@ -2762,17 +2807,17 @@ export const _generatedCdnAssets = {
 	"photography/portraits/Lightsaber_Portrait_of_Ben_in_Alleyway_jpg": {
     path: "/photography/portraits/Lightsaber%20Portrait%20of%20Ben%20in%20Alleyway.jpg",
     name: `Lightsaber Portrait of Ben in Alleyway`,
-    dimensions: [4243, 5304],
+    dimensions: [2400, 3000],
   },
 	"photography/portraits/Conrad_Bike_Portrait_Vertical_jpg": {
     path: "/photography/portraits/Conrad%20Bike%20Portrait%20%28Vertical%29.jpg",
     name: `Conrad Bike Portrait (Vertical)`,
-    dimensions: [3662, 4578],
+    dimensions: [2400, 3000],
   },
 	"photography/portraits/Courtney_Fall_Leaves_Portrait_jpg": {
     path: "/photography/portraits/Courtney%20Fall%20Leaves%20Portrait.jpg",
     name: `Courtney Fall Leaves Portrait`,
-    dimensions: [5030, 7545],
+    dimensions: [2000, 3000],
   },
 	"photography/portraits/WEMKE_Christmas_Card_2022_Family_Portrait_placeholder_jpg": {
     path: "/photography/portraits/WEMKE%20Christmas%20Card%202022%20Family%20Portrait.placeholder.jpg",
@@ -2797,7 +2842,7 @@ export const _generatedCdnAssets = {
 	"photography/portraits/Chinatown_Walking_Silhouette_jpg": {
     path: "/photography/portraits/Chinatown%20Walking%20Silhouette.jpg",
     name: `Chinatown Walking Silhouette`,
-    dimensions: [5304, 6630],
+    dimensions: [2400, 3000],
   },
 	"photography/portraits/Courtney_Fall_Leaves_Portrait_placeholder_jpg": {
     path: "/photography/portraits/Courtney%20Fall%20Leaves%20Portrait.placeholder.jpg",
@@ -2807,7 +2852,7 @@ export const _generatedCdnAssets = {
 	"photography/portraits/Conrad_Bike_Portrait_Trick_jpg": {
     path: "/photography/portraits/Conrad%20Bike%20Portrait%20Trick.jpg",
     name: `Conrad Bike Portrait Trick`,
-    dimensions: [2774, 3468],
+    dimensions: [2400, 3000],
   },
 	"photography/portraits/Fast_Forward_Team_Photo_placeholder_jpg": {
     path: "/photography/portraits/Fast%20Forward%20Team%20Photo.placeholder.jpg",
@@ -2837,7 +2882,7 @@ export const _generatedCdnAssets = {
 	"photography/portraits/WEMKE_Christmas_Card_2022_Family_Portrait_jpg": {
     path: "/photography/portraits/WEMKE%20Christmas%20Card%202022%20Family%20Portrait.jpg",
     name: `WEMKE Christmas Card 2022 Family Portrait`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/portraits/Conrad_Bike_Portrait_Vertical_placeholder_jpg": {
     path: "/photography/portraits/Conrad%20Bike%20Portrait%20%28Vertical%29.placeholder.jpg",
@@ -2857,37 +2902,37 @@ export const _generatedCdnAssets = {
 	"photography/portraits/Black_Sheep_Foods_Cofounders_jpg": {
     path: "/photography/portraits/Black%20Sheep%20Foods%20Cofounders.jpg",
     name: `Black Sheep Foods Cofounders`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/portraits/Miriam_Chinatown_Portrait_jpg": {
     path: "/photography/portraits/Miriam%20Chinatown%20Portrait.jpg",
     name: `Miriam Chinatown Portrait`,
-    dimensions: [4726, 7085],
+    dimensions: [2001, 3000],
   },
 	"photography/portraits/Fast_Forward_Team_Photo_jpg": {
     path: "/photography/portraits/Fast%20Forward%20Team%20Photo.jpg",
     name: `Fast Forward Team Photo`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/portraits/Food_Scientist_Portrait_jpg": {
     path: "/photography/portraits/Food%20Scientist%20Portrait.jpg",
     name: `Food Scientist Portrait`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/portraits/Black_Sheep_Foods_Team_Photo_jpg": {
     path: "/photography/portraits/Black%20Sheep%20Foods%20Team%20Photo.jpg",
     name: `Black Sheep Foods Team Photo`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/portraits/Chinatown_Nightime_Portrait_jpg": {
     path: "/photography/portraits/Chinatown%20Nightime%20Portrait.jpg",
     name: `Chinatown Nightime Portrait`,
-    dimensions: [5222, 6527],
+    dimensions: [2400, 3000],
   },
 	"photography/portraits/Grace_Studio_Portrait_jpg": {
     path: "/photography/portraits/Grace%20Studio%20Portrait.jpg",
     name: `Grace Studio Portrait`,
-    dimensions: [4000, 5997],
+    dimensions: [2001, 3000],
   },
 	"photography/New_York_Looking_Down_Street_from_High_Line_Vertical_jpg": {
     path: "/photography/New%20York%20Looking%20Down%20Street%20from%20High%20Line%20-%20Vertical.jpg",
@@ -2942,17 +2987,17 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Golden_Gate_Bridge_Aerial_Head_On_jpg": {
     path: "/photography/san_francisco/Golden%20Gate%20Bridge%20Aerial%20Head%20On.jpg",
     name: `Golden Gate Bridge Aerial Head On`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/san_francisco/San_Francisco_Bay_Windows_at_Sunset_jpg": {
     path: "/photography/san_francisco/San%20Francisco%20Bay%20Windows%20at%20Sunset.jpg",
     name: `San Francisco Bay Windows at Sunset`,
-    dimensions: [5304, 6630],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/San_Francisco_Muni_Bus_in_the_Rain_jpg": {
     path: "/photography/san_francisco/San%20Francisco%20Muni%20Bus%20in%20the%20Rain.jpg",
     name: `San Francisco Muni Bus in the Rain`,
-    dimensions: [3524, 4405],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/Warriors_Championship_Parade_2022_placeholder_jpg": {
     path: "/photography/san_francisco/Warriors%20Championship%20Parade%202022.placeholder.jpg",
@@ -2962,12 +3007,12 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Rodeo_Beach_Landscape_jpg": {
     path: "/photography/san_francisco/Rodeo%20Beach%20Landscape.jpg",
     name: `Rodeo Beach Landscape`,
-    dimensions: [6000, 4000],
+    dimensions: [4500, 3000],
   },
 	"photography/san_francisco/Coit_Tower_with_San_Francisco_Skyline_from_Plane_jpg": {
     path: "/photography/san_francisco/Coit%20Tower%20with%20San%20Francisco%20Skyline%20from%20Plane.jpg",
     name: `Coit Tower with San Francisco Skyline from Plane`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/san_francisco/San_Francisco_Bay_Bridge_at_Sunset_from_Plane_placeholder_jpg": {
     path: "/photography/san_francisco/San%20Francisco%20Bay%20Bridge%20at%20Sunset%20from%20Plane.placeholder.jpg",
@@ -2977,7 +3022,7 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/San_Francisco_Bay_Bridge_at_Sunset_from_Plane_jpg": {
     path: "/photography/san_francisco/San%20Francisco%20Bay%20Bridge%20at%20Sunset%20from%20Plane.jpg",
     name: `San Francisco Bay Bridge at Sunset from Plane`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/san_francisco/Golden_Gate_Bridge_Marin_Headlands_at_Sunset_placeholder_jpg": {
     path: "/photography/san_francisco/Golden%20Gate%20Bridge%20Marin%20Headlands%20at%20Sunset.placeholder.jpg",
@@ -2992,7 +3037,7 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Pier_7_Gravel_Bike_Shadowstand_Profile_jpg": {
     path: "/photography/san_francisco/Pier%207%20Gravel%20Bike%20Shadowstand%20Profile.jpg",
     name: `Pier 7 Gravel Bike Shadowstand Profile`,
-    dimensions: [5050, 6313],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/Downtown_San_Francisco_from_Plane_8x10_placeholder_jpg": {
     path: "/photography/san_francisco/Downtown%20San%20Francisco%20from%20Plane%20%288x10%29.placeholder.jpg",
@@ -3007,17 +3052,17 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Gravel_Bike_at_Golden_Gate_Bridge_at_Sunset_jpg": {
     path: "/photography/san_francisco/Gravel%20Bike%20at%20Golden%20Gate%20Bridge%20at%20Sunset.jpg",
     name: `Gravel Bike at Golden Gate Bridge at Sunset`,
-    dimensions: [6000, 4000],
+    dimensions: [4500, 3000],
   },
 	"photography/san_francisco/Gravel_Bike_Front_Wheel_Downtown_San_Francisco_jpg": {
     path: "/photography/san_francisco/Gravel%20Bike%20Front%20Wheel%20Downtown%20San%20Francisco.jpg",
     name: `Gravel Bike Front Wheel Downtown San Francisco`,
-    dimensions: [5304, 6630],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/Hawk_Hill_Night_Shot_jpg": {
     path: "/photography/san_francisco/Hawk%20Hill%20Night%20Shot.jpg",
     name: `Hawk Hill Night Shot`,
-    dimensions: [5304, 6630],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/Coit_Tower_with_San_Francisco_Skyline_from_Plane_placeholder_jpg": {
     path: "/photography/san_francisco/Coit%20Tower%20with%20San%20Francisco%20Skyline%20from%20Plane.placeholder.jpg",
@@ -3042,7 +3087,7 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Rodeo_Beach_Gravel_Hill_Sunset_Silhouette_jpg": {
     path: "/photography/san_francisco/Rodeo%20Beach%20Gravel%20Hill%20Sunset%20Silhouette.jpg",
     name: `Rodeo Beach Gravel Hill Sunset Silhouette`,
-    dimensions: [3707, 4634],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/Gravel_Bike_at_Golden_Gate_Bridge_at_Sunset_placeholder_jpg": {
     path: "/photography/san_francisco/Gravel%20Bike%20at%20Golden%20Gate%20Bridge%20at%20Sunset.placeholder.jpg",
@@ -3052,7 +3097,7 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Golden_Gate_Bridge_from_Plane_with_Richmond_District_jpg": {
     path: "/photography/san_francisco/Golden%20Gate%20Bridge%20from%20Plane%20with%20Richmond%20District.jpg",
     name: `Golden Gate Bridge from Plane with Richmond District`,
-    dimensions: [5246, 6558],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/Aerial_View_of_Half_Moon_Bay_placeholder_jpg": {
     path: "/photography/san_francisco/Aerial%20View%20of%20Half%20Moon%20Bay.placeholder.jpg",
@@ -3087,7 +3132,7 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Embarcadero_Aerial_View_at_Sunset_8x10_jpg": {
     path: "/photography/san_francisco/Embarcadero%20Aerial%20View%20at%20Sunset%20%288x10%29.jpg",
     name: `Embarcadero Aerial View at Sunset (8x10)`,
-    dimensions: [4766, 5958],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/Blue_Angels_Fly_Over_placeholder_jpg": {
     path: "/photography/san_francisco/Blue%20Angels%20Fly%20Over.placeholder.jpg",
@@ -3097,7 +3142,7 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Golden_Gate_Bridge_Marin_Headlands_at_Sunset_jpg": {
     path: "/photography/san_francisco/Golden%20Gate%20Bridge%20Marin%20Headlands%20at%20Sunset.jpg",
     name: `Golden Gate Bridge Marin Headlands at Sunset`,
-    dimensions: [6000, 4000],
+    dimensions: [4500, 3000],
   },
 	"photography/san_francisco/Embarcadero_Aerial_View_at_Sunset_8x10_placeholder_jpg": {
     path: "/photography/san_francisco/Embarcadero%20Aerial%20View%20at%20Sunset%20%288x10%29.placeholder.jpg",
@@ -3107,17 +3152,17 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Aerial_View_of_Half_Moon_Bay_Beach_jpg": {
     path: "/photography/san_francisco/Aerial%20View%20of%20Half%20Moon%20Bay%20Beach.jpg",
     name: `Aerial View of Half Moon Bay Beach`,
-    dimensions: [5304, 6751],
+    dimensions: [2357, 3000],
   },
 	"photography/san_francisco/Columbus_Street_from_Plane_at_Sunset_jpg": {
     path: "/photography/san_francisco/Columbus%20Street%20from%20Plane%20at%20Sunset.jpg",
     name: `Columbus Street from Plane at Sunset`,
-    dimensions: [5042, 6302],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/Ocean_Beach_Sunset_from_Plane_jpg": {
     path: "/photography/san_francisco/Ocean%20Beach%20Sunset%20from%20Plane.jpg",
     name: `Ocean Beach Sunset from Plane`,
-    dimensions: [6906, 4606],
+    dimensions: [4498, 3000],
   },
 	"photography/san_francisco/Pier_7_Gravel_Bike_Shadowstand_Profile_placeholder_jpg": {
     path: "/photography/san_francisco/Pier%207%20Gravel%20Bike%20Shadowstand%20Profile.placeholder.jpg",
@@ -3127,7 +3172,7 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Gravel_Bike_Side_Profile_in_Front_of_Golden_Gate_Bridge_jpg": {
     path: "/photography/san_francisco/Gravel%20Bike%20Side%20Profile%20in%20Front%20of%20Golden%20Gate%20Bridge.jpg",
     name: `Gravel Bike Side Profile in Front of Golden Gate Bridge`,
-    dimensions: [3744, 4680],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/Ocean_Beach_at_Sunset_placeholder_jpg": {
     path: "/photography/san_francisco/Ocean%20Beach%20at%20Sunset.placeholder.jpg",
@@ -3147,7 +3192,7 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Warriors_Championship_Parade_2022_jpg": {
     path: "/photography/san_francisco/Warriors%20Championship%20Parade%202022.jpg",
     name: `Warriors Championship Parade 2022`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/san_francisco/Ocean_Beach_Sunset_from_Plane_placeholder_jpg": {
     path: "/photography/san_francisco/Ocean%20Beach%20Sunset%20from%20Plane.placeholder.jpg",
@@ -3167,7 +3212,7 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Aerial_View_of_Half_Moon_Bay_jpg": {
     path: "/photography/san_francisco/Aerial%20View%20of%20Half%20Moon%20Bay.jpg",
     name: `Aerial View of Half Moon Bay`,
-    dimensions: [5204, 6505],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/Rodeo_Beach_Landscape_placeholder_jpg": {
     path: "/photography/san_francisco/Rodeo%20Beach%20Landscape.placeholder.jpg",
@@ -3177,12 +3222,12 @@ export const _generatedCdnAssets = {
 	"photography/san_francisco/Downtown_San_Francisco_from_Plane_8x10_jpg": {
     path: "/photography/san_francisco/Downtown%20San%20Francisco%20from%20Plane%20%288x10%29.jpg",
     name: `Downtown San Francisco from Plane (8x10)`,
-    dimensions: [5250, 6563],
+    dimensions: [2400, 3000],
   },
 	"photography/san_francisco/Rodeo_Beach_Gravel_Hill_Sunset_Ride_jpg": {
     path: "/photography/san_francisco/Rodeo%20Beach%20Gravel%20Hill%20Sunset%20Ride.jpg",
     name: `Rodeo Beach Gravel Hill Sunset Ride`,
-    dimensions: [4000, 5000],
+    dimensions: [2400, 3000],
   },
 	"photography/2_placeholder_jpg": {
     path: "/photography/2.placeholder.jpg",
@@ -3432,7 +3477,7 @@ export const _generatedCdnAssets = {
 	"photography/Mariposa_Sounds_Asher_Gevisser_jpg": {
     path: "/photography/Mariposa%20Sounds%20Asher%20Gevisser.jpg",
     name: `Mariposa Sounds Asher Gevisser`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/Mai_Chau_Rice_Paddies_Sunset_Panorama_2_placeholder_jpg": {
     path: "/photography/Mai%20Chau%20Rice%20Paddies%20Sunset%20Panorama%202.placeholder.jpg",
@@ -3617,7 +3662,7 @@ export const _generatedCdnAssets = {
 	"photography/Black_Sheep_Foods_Table_of_Food_jpg": {
     path: "/photography/Black%20Sheep%20Foods%20Table%20of%20Food.jpg",
     name: `Black Sheep Foods Table of Food`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/food/Black_Sheep_Orens_Hummus_Food_Photography_2_placeholder_jpg": {
     path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%202.placeholder.jpg",
@@ -3627,7 +3672,7 @@ export const _generatedCdnAssets = {
 	"photography/food/Black_Sheep_Logo_with_Food_Spread_jpg": {
     path: "/photography/food/Black%20Sheep%20Logo%20with%20Food%20Spread.jpg",
     name: `Black Sheep Logo with Food Spread`,
-    dimensions: [5118, 7165],
+    dimensions: [2143, 3000],
   },
 	"photography/food/Black_Sheep_Orens_Hummus_Food_Photography_Top_Down_placeholder_jpg": {
     path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%20Top%20Down.placeholder.jpg",
@@ -3647,22 +3692,22 @@ export const _generatedCdnAssets = {
 	"photography/food/Black_Sheep_Foods_Three_Burger_Cover_Photo_jpg": {
     path: "/photography/food/Black%20Sheep%20Foods%20Three%20Burger%20Cover%20Photo.jpg",
     name: `Black Sheep Foods Three Burger Cover Photo`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/food/Fancy_Scraps_Food_Photography_jpg": {
     path: "/photography/food/Fancy%20Scraps%20Food%20Photography.jpg",
     name: `Fancy Scraps Food Photography`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/food/Espresso_Martini_Food_Photography_jpg": {
     path: "/photography/food/Espresso%20Martini%20Food%20Photography.jpg",
     name: `Espresso Martini Food Photography`,
-    dimensions: [5304, 6630],
+    dimensions: [2400, 3000],
   },
 	"photography/food/Black_Sheep_Hand_Holding_Burger_jpg": {
     path: "/photography/food/Black%20Sheep%20Hand%20Holding%20Burger.jpg",
     name: `Black Sheep Hand Holding Burger`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/food/Black_Sheep_Hand_Holding_Burger_placeholder_jpg": {
     path: "/photography/food/Black%20Sheep%20Hand%20Holding%20Burger.placeholder.jpg",
@@ -3672,17 +3717,17 @@ export const _generatedCdnAssets = {
 	"photography/food/Black_Sheep_Orens_Hummus_Food_Photography_1_jpg": {
     path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%201.jpg",
     name: `Black Sheep Orens Hummus Food Photography 1`,
-    dimensions: [7541, 5030],
+    dimensions: [4498, 3000],
   },
 	"photography/food/Black_Sheep_Orens_Hummus_Food_Photography_Top_Down_jpg": {
     path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%20Top%20Down.jpg",
     name: `Black Sheep Orens Hummus Food Photography Top Down`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/food/Black_Sheep_Orens_Hummus_Food_Photography_2_jpg": {
     path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%202.jpg",
     name: `Black Sheep Orens Hummus Food Photography 2`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/food/Black_Sheep_Orens_Hummus_Food_Photography_1_placeholder_jpg": {
     path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%201.placeholder.jpg",
@@ -3697,7 +3742,7 @@ export const _generatedCdnAssets = {
 	"photography/food/Executive_Order_Bar_Food_jpg": {
     path: "/photography/food/Executive%20Order%20Bar%20Food.jpg",
     name: `Executive Order Bar Food`,
-    dimensions: [5304, 6630],
+    dimensions: [2400, 3000],
   },
 	"photography/food/Black_Sheep_Foods_Three_Burger_Cover_Photo_placeholder_jpg": {
     path: "/photography/food/Black%20Sheep%20Foods%20Three%20Burger%20Cover%20Photo.placeholder.jpg",
@@ -3877,7 +3922,7 @@ export const _generatedCdnAssets = {
 	"photography/Bay_Bridge_at_Sunset_from_Plane_jpg": {
     path: "/photography/Bay%20Bridge%20at%20Sunset%20from%20Plane.jpg",
     name: `Bay Bridge at Sunset from Plane`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/Washington_DC_Subway_jpg": {
     path: "/photography/Washington%20DC%20Subway.jpg",
@@ -3987,16 +4032,16 @@ export const _generatedCdnAssets = {
 	"photography/Meteora_Monastery_Perched_at_Sunset_jpg": {
     path: "/photography/Meteora%20Monastery%20Perched%20at%20Sunset.jpg",
     name: `Meteora Monastery Perched at Sunset`,
-    dimensions: [4243, 5304],
+    dimensions: [2400, 3000],
   },
 	"photography/Nakalele_Blowhole_placeholder_jpg": {
     path: "/photography/Nakalele%20Blowhole.placeholder.jpg",
     name: `Nakalele Blowhole.placeholder`,
     dimensions: [749, 500],
   },
-	"photography/hawaii/Haleakala_National_Park_Aerial_JPG": {
-    path: "/photography/hawaii/Haleakala%CC%84%20National%20Park%20Aerial.JPG",
-    name: `Haleakalā National Park Aerial`,
+	"photography/hawaii/Haleakal_National_Park_Aerial_JPG": {
+    path: "/photography/hawaii/Haleakal%C4%81%20National%20Park%20Aerial.JPG",
+    name: `Haleakalā National Park Aerial`,
     dimensions: [null, null],
   },
 	"photography/hawaii/Road_to_Hana_Waterfall_Aerial_JPG": {
@@ -4034,9 +4079,9 @@ export const _generatedCdnAssets = {
     name: `Big Island Sunset Meadows Panorama.placeholder`,
     dimensions: [800, 480],
   },
-	"photography/hawaii/River_of_Trees_on_Haleakala_jpg": {
-    path: "/photography/hawaii/River%20of%20Trees%20on%20Haleakala%CC%84.jpg",
-    name: `River of Trees on Haleakalā`,
+	"photography/hawaii/River_of_Trees_on_Haleakal_jpg": {
+    path: "/photography/hawaii/River%20of%20Trees%20on%20Haleakal%C4%81.jpg",
+    name: `River of Trees on Haleakalā`,
     dimensions: [2000, 2500],
   },
 	"photography/hawaii/Big_Island_Sunset_Meadows_Panorama_jpg": {
@@ -4052,7 +4097,7 @@ export const _generatedCdnAssets = {
 	"photography/hawaii/Waipi_o_Valley_Top_Down_Drone_jpg": {
     path: "/photography/hawaii/Waipi%CA%BBo%20Valley%20Top%20Down%20Drone.jpg",
     name: `Waipiʻo Valley Top Down Drone`,
-    dimensions: [2500, 3125],
+    dimensions: [2400, 3000],
   },
 	"photography/hawaii/Ho_okipa_Beach_Park_Turtles_placeholder_jpg": {
     path: "/photography/hawaii/Ho%27okipa%20Beach%20Park%20Turtles.placeholder.jpg",
@@ -4069,9 +4114,9 @@ export const _generatedCdnAssets = {
     name: `Pipiwai Bamboo Forest.placeholder`,
     dimensions: [640, 800],
   },
-	"photography/hawaii/River_of_Trees_on_Haleakala_placeholder_jpg": {
-    path: "/photography/hawaii/River%20of%20Trees%20on%20Haleakala%CC%84.placeholder.jpg",
-    name: `River of Trees on Haleakalā.placeholder`,
+	"photography/hawaii/River_of_Trees_on_Haleakal_placeholder_jpg": {
+    path: "/photography/hawaii/River%20of%20Trees%20on%20Haleakal%C4%81.placeholder.jpg",
+    name: `River of Trees on Haleakalā.placeholder`,
     dimensions: [640, 800],
   },
 	"photography/hawaii/Waipi_o_Valley_Top_Down_Drone_placeholder_jpg": {
@@ -4089,24 +4134,24 @@ export const _generatedCdnAssets = {
     name: `Mauna Kea Sunset Jeep`,
     dimensions: [2500, 3125],
   },
-	"photography/hawaii/Pololu_Valley_Portrait_jpg": {
-    path: "/photography/hawaii/Pololu%CC%84%20Valley%20Portrait.jpg",
-    name: `Pololū Valley Portrait`,
+	"photography/hawaii/Polol_Valley_Portrait_jpg": {
+    path: "/photography/hawaii/Polol%C5%AB%20Valley%20Portrait.jpg",
+    name: `Pololū Valley Portrait`,
     dimensions: [2500, 1668],
   },
 	"photography/hawaii/Waipi_o_Valley_Drone_Vertical_jpg": {
     path: "/photography/hawaii/Waipi%CA%BBo%20Valley%20Drone%20Vertical.jpg",
     name: `Waipiʻo Valley Drone Vertical`,
-    dimensions: [2500, 3125],
+    dimensions: [2400, 3000],
   },
 	"photography/hawaii/Ho_okipa_Beach_Park_Turtles_jpg": {
     path: "/photography/hawaii/Ho%27okipa%20Beach%20Park%20Turtles.jpg",
     name: `Ho'okipa Beach Park Turtles`,
     dimensions: [2000, 2500],
   },
-	"photography/hawaii/Pololu_Valley_Portrait_placeholder_jpg": {
-    path: "/photography/hawaii/Pololu%CC%84%20Valley%20Portrait.placeholder.jpg",
-    name: `Pololū Valley Portrait.placeholder`,
+	"photography/hawaii/Polol_Valley_Portrait_placeholder_jpg": {
+    path: "/photography/hawaii/Polol%C5%AB%20Valley%20Portrait.placeholder.jpg",
+    name: `Pololū Valley Portrait.placeholder`,
     dimensions: [800, 534],
   },
 	"photography/Hong_Kong_Night_Skyline_Vertical_placeholder_jpg": {
@@ -4202,7 +4247,7 @@ export const _generatedCdnAssets = {
 	"photography/Black_Sheep_Foods_Single_Burger_jpg": {
     path: "/photography/Black%20Sheep%20Foods%20Single%20Burger.jpg",
     name: `Black Sheep Foods Single Burger`,
-    dimensions: [5211, 6514],
+    dimensions: [2400, 3000],
   },
 	"photography/Yin_Yang_Golden_Gate_Bridge_Light_Painting_jpg": {
     path: "/photography/Yin%20Yang%20Golden%20Gate%20Bridge%20Light%20Painting.jpg",
@@ -4552,7 +4597,7 @@ export const _generatedCdnAssets = {
 	"photography/events/Fancy_Scraps_Dinner_Event_Table_jpg": {
     path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Table.jpg",
     name: `Fancy Scraps Dinner Event Table`,
-    dimensions: [5143, 7711],
+    dimensions: [2001, 3000],
   },
 	"photography/events/Fancy_Scraps_Dinner_Event_Menu_placeholder_jpg": {
     path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Menu.placeholder.jpg",
@@ -4562,7 +4607,7 @@ export const _generatedCdnAssets = {
 	"photography/events/Fancy_Scraps_Dinner_Event_Menu_jpg": {
     path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Menu.jpg",
     name: `Fancy Scraps Dinner Event Menu`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/events/Diwali_Party_Portrait_2022_placeholder_jpg": {
     path: "/photography/events/Diwali%20Party%20Portrait%202022.placeholder.jpg",
@@ -4577,7 +4622,7 @@ export const _generatedCdnAssets = {
 	"photography/events/Diwali_Party_Portrait_2022_jpg": {
     path: "/photography/events/Diwali%20Party%20Portrait%202022.jpg",
     name: `Diwali Party Portrait 2022`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/events/apco_salon_dinner_discussion_placeholder_jpg": {
     path: "/photography/events/apco_salon_dinner_discussion.placeholder.jpg",
@@ -4587,7 +4632,7 @@ export const _generatedCdnAssets = {
 	"photography/events/apco_salon_dinner_discussion_jpg": {
     path: "/photography/events/apco_salon_dinner_discussion.jpg",
     name: `apco_salon_dinner_discussion`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/Ladies_Market_Balcony_Long_Exposure_placeholder_jpg": {
     path: "/photography/Ladies%20Market%20Balcony%20Long%20Exposure.placeholder.jpg",
@@ -4702,7 +4747,7 @@ export const _generatedCdnAssets = {
 	"photography/greece/Greek_Temple_Near_Acropolis_jpg": {
     path: "/photography/greece/Greek%20Temple%20Near%20Acropolis.jpg",
     name: `Greek Temple Near Acropolis`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/greece/Acropolis_at_Sunset_from_Filopappou_Hill_placeholder_jpg": {
     path: "/photography/greece/Acropolis%20at%20Sunset%20from%20Filopappou%20Hill.placeholder.jpg",
@@ -4717,7 +4762,7 @@ export const _generatedCdnAssets = {
 	"photography/greece/Milos_Rosemary_Olive_Oil_Athens_Greece_jpg": {
     path: "/photography/greece/Milos%20Rosemary%20Olive%20Oil%20%28Athens%2C%20Greece%29.jpg",
     name: `Milos Rosemary Olive Oil (Athens, Greece)`,
-    dimensions: [5304, 6630],
+    dimensions: [2400, 3000],
   },
 	"photography/greece/Milos_Rosemary_Olive_Oil_Athens_Greece_placeholder_jpg": {
     path: "/photography/greece/Milos%20Rosemary%20Olive%20Oil%20%28Athens%2C%20Greece%29.placeholder.jpg",
@@ -4737,7 +4782,7 @@ export const _generatedCdnAssets = {
 	"photography/greece/Meteora_Monastery_Perched_Atop_Cliff_Landscape_jpg": {
     path: "/photography/greece/Meteora%20Monastery%20Perched%20Atop%20Cliff%20%28Landscape%29.jpg",
     name: `Meteora Monastery Perched Atop Cliff (Landscape)`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/greece/Acropolis_at_Sunset_from_Filopappou_Hill_Panorama_placeholder_jpg": {
     path: "/photography/greece/Acropolis%20at%20Sunset%20from%20Filopappou%20Hill%20Panorama.placeholder.jpg",
@@ -4747,7 +4792,7 @@ export const _generatedCdnAssets = {
 	"photography/greece/Athens_at_Sunset_jpg": {
     path: "/photography/greece/Athens%20at%20Sunset.jpg",
     name: `Athens at Sunset`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"photography/greece/Milos_Octopus_Dish_Athens_Greece_placeholder_jpg": {
     path: "/photography/greece/Milos%20Octopus%20Dish%20%28Athens%2C%20Greece%29.placeholder.jpg",
@@ -4757,7 +4802,7 @@ export const _generatedCdnAssets = {
 	"photography/greece/Acropolis_at_Sunset_from_Filopappou_Hill_Panorama_jpg": {
     path: "/photography/greece/Acropolis%20at%20Sunset%20from%20Filopappou%20Hill%20Panorama.jpg",
     name: `Acropolis at Sunset from Filopappou Hill Panorama`,
-    dimensions: [18544, 5300],
+    dimensions: [10497, 3000],
   },
 	"photography/greece/Meteora_Monastery_Perched_Atop_Cliff_Landscape_placeholder_jpg": {
     path: "/photography/greece/Meteora%20Monastery%20Perched%20Atop%20Cliff%20%28Landscape%29.placeholder.jpg",
@@ -4767,32 +4812,32 @@ export const _generatedCdnAssets = {
 	"photography/greece/Sun_Splitting_Clouds_at_Temple_of_Poseidon_jpg": {
     path: "/photography/greece/Sun%20Splitting%20Clouds%20at%20Temple%20of%20Poseidon.jpg",
     name: `Sun Splitting Clouds at Temple of Poseidon`,
-    dimensions: [7499, 5002],
+    dimensions: [4498, 3000],
   },
 	"photography/greece/Milos_Beets_Athens_Greece_jpg": {
     path: "/photography/greece/Milos%20Beets%20%28Athens%2C%20Greece%29.jpg",
     name: `Milos Beets (Athens, Greece)`,
-    dimensions: [5014, 7517],
+    dimensions: [2001, 3000],
   },
 	"photography/greece/Milos_Octopus_Dish_Athens_Greece_jpg": {
     path: "/photography/greece/Milos%20Octopus%20Dish%20%28Athens%2C%20Greece%29.jpg",
     name: `Milos Octopus Dish (Athens, Greece)`,
-    dimensions: [5020, 7527],
+    dimensions: [2001, 3000],
   },
 	"photography/greece/Meteora_Monastery_Perched_Atop_Cliff_Portrait_jpg": {
     path: "/photography/greece/Meteora%20Monastery%20Perched%20Atop%20Cliff%20%28Portrait%29.jpg",
     name: `Meteora Monastery Perched Atop Cliff (Portrait)`,
-    dimensions: [4947, 7420],
+    dimensions: [2000, 3000],
   },
 	"photography/greece/Temple_of_Apollo_in_Delphi_jpg": {
     path: "/photography/greece/Temple%20of%20Apollo%20in%20Delphi.jpg",
     name: `Temple of Apollo in Delphi`,
-    dimensions: [7952, 5304],
+    dimensions: [4498, 3000],
   },
 	"photography/greece/Meteora_Valley_at_Sunset_jpg": {
     path: "/photography/greece/Meteora%20Valley%20at%20Sunset.jpg",
     name: `Meteora Valley at Sunset`,
-    dimensions: [7866, 5247],
+    dimensions: [4497, 3000],
   },
 	"photography/greece/Sun_Splitting_Clouds_at_Temple_of_Poseidon_placeholder_jpg": {
     path: "/photography/greece/Sun%20Splitting%20Clouds%20at%20Temple%20of%20Poseidon.placeholder.jpg",
@@ -4802,7 +4847,7 @@ export const _generatedCdnAssets = {
 	"photography/greece/Acropolis_at_Sunset_from_Filopappou_Hill_jpg": {
     path: "/photography/greece/Acropolis%20at%20Sunset%20from%20Filopappou%20Hill.jpg",
     name: `Acropolis at Sunset from Filopappou Hill`,
-    dimensions: [5234, 6543],
+    dimensions: [2400, 3000],
   },
 	"photography/greece/Greek_Temple_Near_Acropolis_placeholder_jpg": {
     path: "/photography/greece/Greek%20Temple%20Near%20Acropolis.placeholder.jpg",
@@ -5057,7 +5102,7 @@ export const _generatedCdnAssets = {
 	"photography/israel/Israel_Falafel_Lunch_Food_jpg": {
     path: "/photography/israel/Israel%20Falafel%20Lunch%20Food.jpg",
     name: `Israel Falafel Lunch Food`,
-    dimensions: [4000, 5000],
+    dimensions: [2400, 3000],
   },
 	"photography/israel/Israel_Falafel_Lunch_Food_placeholder_jpg": {
     path: "/photography/israel/Israel%20Falafel%20Lunch%20Food.placeholder.jpg",
@@ -5449,6 +5494,11 @@ export const _generatedCdnAssets = {
     name: `Shibuya Taxi Motion Blur`,
     dimensions: [1600, 2000],
   },
+	"preview_card_png": {
+    path: "/preview-card.png",
+    name: `preview-card`,
+    dimensions: [1200, 630],
+  },
 	"media/design/snapchat_geofilters/whitman_geofilter_png": {
     path: "/media/design/snapchat-geofilters/whitman-geofilter.png",
     name: `whitman-geofilter`,
@@ -5762,7 +5812,7 @@ export const _generatedCdnAssets = {
 	"media/photography/laptop_sunrise_jpg": {
     path: "/media/photography/laptop_sunrise.jpg",
     name: `laptop_sunrise`,
-    dimensions: [5304, 7952],
+    dimensions: [2001, 3000],
   },
 	"media/photography/cyberpunk_jpg": {
     path: "/media/photography/cyberpunk.jpg",
@@ -5932,7 +5982,7 @@ export const _generatedCdnAssets = {
 	"media/profile_pictures/Studio_Photography_Portrait_jpg": {
     path: "/media/profile_pictures/Studio%20Photography%20Portrait.jpg",
     name: `Studio Photography Portrait`,
-    dimensions: [3024, 4032],
+    dimensions: [2250, 3000],
   },
 	"media/meta/thumbnail_preview_jpg": {
     path: "/media/meta/thumbnail-preview.jpg",
@@ -6322,7 +6372,7 @@ export const _generatedCdnAssets = {
 	"media/site/images/programming_image_jpg": {
     path: "/media/site/images/programming_image.jpg",
     name: `programming_image`,
-    dimensions: [5304, 4043],
+    dimensions: [3936, 3000],
   },
 	"media/site/images/woodshop_background_png": {
     path: "/media/site/images/woodshop_background.png",
@@ -6497,7 +6547,7 @@ export const _generatedCdnAssets = {
 	"media/site/images/Profile_jpg": {
     path: "/media/site/images/Profile.jpg",
     name: `Profile`,
-    dimensions: [3001, 3001],
+    dimensions: [3000, 3000],
   },
 	"media/site/images/design_image_jpg": {
     path: "/media/site/images/design_image.jpg",
