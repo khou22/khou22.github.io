@@ -11,7 +11,7 @@ const args = parseArgs({
   options: {
     "dry-run": {
       type: "boolean",
-      default: false,
+      default: true,
     },
   },
 });
