@@ -5,7 +5,7 @@ import { PaperTexture } from "@/components/atoms/PaperTexture/PaperTexture";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ImageStory } from "@/components/organisms/ImageStory/ImageStory";
 import { PAGES } from "@/utils/pages";
-import { PhotoTags } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
 import { BioSection } from "@/components/organisms/BioSection/BioSection";

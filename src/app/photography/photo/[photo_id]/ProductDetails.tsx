@@ -8,7 +8,7 @@ import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCop
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { photoPricing } from "@/constants/photoPricing";
-import { PhotoTags } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";

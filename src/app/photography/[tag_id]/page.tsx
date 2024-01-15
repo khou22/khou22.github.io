@@ -7,17 +7,26 @@ import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 import { TagImageCard } from "@/components/organisms/TagImageCard/TagImageCard";
 import { FeaturedGallerySpread } from "@/components/templates/FeaturedGallerySpread/FeaturedGallerySpread";
-import { PhotoTags, tagMetadata } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { getSuggestedPhotoTags } from "@/utils/photos/getSuggestedPhotoTags";
+import { tagMetadata } from "@/constants/photoTags/tagMetadata";
 
 type PageProps = {
   params: {
     tag_id: string;
   };
 };
+
+export async function generateStaticParams(): Promise<PageProps["params"][]> {
+  return Object.values(PhotoTags).map((value) => {
+    return {
+      tag_id: value,
+    };
+  });
+}
 
 export const generateMetadata = ({ params }: PageProps): Metadata => {
   const photoTag = findKey(

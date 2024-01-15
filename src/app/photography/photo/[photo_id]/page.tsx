@@ -6,14 +6,16 @@ import { ImageDisplay } from "./ImageDisplay";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import {
+  getAllPhotographyPhotoIDs,
   getCdnAsset,
   getPhotoForThumbnail,
   getPhotoIDFromURLComponent,
   getPhotoName,
+  getPhotoURLComponent,
   isThumbnail,
 } from "@/utils/cdn/cdnAssets";
 import { getTagsForPhotoID } from "@/data/photos/photoDbManager";
-import { PhotoTags } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PAGES } from "@/utils/pages";
 import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
@@ -39,6 +41,17 @@ export type PageProps = {
     photo_id: string;
   };
 };
+
+export async function generateStaticParams(): Promise<PageProps["params"][]> {
+  const allPhotos = await getAllPhotographyPhotoIDs();
+  return allPhotos
+    .filter((photoID) => !isThumbnail(photoID))
+    .map((photoID) => {
+      return {
+        photo_id: getPhotoURLComponent(photoID),
+      };
+    });
+}
 
 export const generateMetadata = ({
   params: { photo_id: photoIdURLComponent },

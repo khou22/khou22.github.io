@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { PhotoIdType, getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
-import { PhotoTags, tagMetadata } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { enumToString } from "@/utils/enum";
 import { classNames } from "@/utils/style";
 import {
@@ -27,6 +27,7 @@ import { FileLocationClient } from "@/api-clients/FileLocationClient";
 import { Switch } from "@/components/ui/switch";
 import { PAGES } from "@/utils/pages";
 import { RatingInput } from "@/components/atoms/RatingInput/RatingInput";
+import { tagMetadata } from "@/constants/photoTags/tagMetadata";
 
 type PhotoManagementCardProps = {
   imageKey: PhotoIdType;

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import { ImageCard } from "@/components/molecules/ImageCard/ImageCard";
-import { PhotoTags, tagMetadata } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { getCdnAsset, getPhotoThumbnail } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
+import { tagMetadata } from "@/constants/photoTags/tagMetadata";
 
 type TagImageCardProps = {
   photoTag: PhotoTags;

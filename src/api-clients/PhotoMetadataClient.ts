@@ -1,5 +1,5 @@
 import { PhotoTagUpdateRequest } from "@/app/admin/photos/api/tags/types";
-import { PhotoTags } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 
 export class PhotoMetadataClient {
