@@ -13,7 +13,7 @@ import {
   isThumbnail,
 } from "@/utils/cdn/cdnAssets";
 import { getTagsForPhotoID } from "@/data/photos/photoDbManager";
-import { PhotoTags } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PAGES } from "@/utils/pages";
 import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";

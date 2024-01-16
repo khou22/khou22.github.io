@@ -1,5 +1,6 @@
 import findIndex from "lodash/findIndex";
-import { PhotoTags, tagMetadata } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
+import { tagMetadata } from "@/constants/photoTags/tagMetadata";
 
 /**
  * Get `n` suggested photo tags based on the supplied photo tag. The suggestions are chosen

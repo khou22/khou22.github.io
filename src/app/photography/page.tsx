@@ -8,7 +8,7 @@ import {
   PhotoTags,
   allCategoryTags,
   allLocationTags,
-} from "@/constants/photoTags";
+} from "@/constants/photoTags/photoTags";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { ImageCard } from "@/components/molecules/ImageCard/ImageCard";
 import { LinkWithArrow } from "@/components/molecules/LinkWithArrow/LinkWithArrow";
-import { PhotoTags } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 

@@ -1,5 +1,5 @@
 import { CoordinatesLabel } from "@/components/atoms/CoordinatesLabel/CoordinatesLabel";
-import { FeaturedGallerySpreadProps } from "@/components/templates/FeaturedGallerySpread/FeaturedGallerySpread";
+import { FeaturedGallerySpreadProps } from "@/components/templates/FeaturedGallerySpread/types";
 
 export const sanFranciscoTagGalleryLayout: FeaturedGallerySpreadProps = {
   title: {

@@ -1,74 +1,9 @@
+import { ContentNode, FeaturedGallerySpreadProps } from "./types";
 import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackground/ParallaxTextBackground";
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { Label } from "@/components/ui/label";
-import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
-
-type ContentNode = string | JSX.Element;
-
-type PhotoFeature = {
-  photoID: PhotoIdType;
-  label: string;
-  description: ContentNode;
-};
-
-export type FeaturedGallerySpreadProps = {
-  title: {
-    pretext: string;
-    text: string;
-  };
-  subtitle: string;
-  project: {
-    author: ContentNode;
-    duration: ContentNode;
-    location: ContentNode;
-  };
-  blockSection: {
-    text: string;
-    background: PhotoIdType;
-  };
-  cover: {
-    /** Vertical image. Largest cover photo on mobile. */
-    hero: PhotoIdType;
-
-    /** Vertical image. Smallest cover photo. */
-    left: PhotoIdType;
-
-    /** Vertical image. Largest cover photo on desktop. */
-    right: PhotoIdType;
-  };
-  features: [
-    /**
-     * Vertical 4:5
-     */
-    PhotoFeature,
-
-    /**
-     * Square
-     */
-    PhotoFeature,
-
-    /**
-     * Panorama, 5:2
-     */
-    PhotoFeature,
-
-    /**
-     * Horizontal (small)
-     */
-    PhotoFeature,
-
-    /**
-     * Vertical
-     */
-    PhotoFeature,
-
-    /**
-     * Square (large)
-     */
-    PhotoFeature,
-  ];
-};
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 
 export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
   title,

@@ -3,7 +3,7 @@ import { CoordinatesLabel } from "@/components/atoms/CoordinatesLabel/Coordinate
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 import { FeaturedGallerySpread } from "@/components/templates/FeaturedGallerySpread/FeaturedGallerySpread";
-import { PhotoTags } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { getPhotosWithTags } from "@/data/photos/photoDbManager";
 
 export const metadata: Metadata = {

@@ -148,6 +148,11 @@
     transform: perspective(50rem) rotateX(3deg) rotateY(-3deg);
   }
   .parallax .parallax-top-left:hover ~ .parallax-content::before {
+    background: -webkit-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 50%
+    );
     background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.25) 0%,
@@ -167,6 +172,11 @@
     transform: perspective(50rem) rotateX(3deg) rotateY(3deg);
   }
   .parallax .parallax-top-right:hover ~ .parallax-content::before {
+    background: -webkit-linear-gradient(
+      -135deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 50%
+    );
     background: linear-gradient(
       -135deg,
       rgba(255, 255, 255, 0.25) 0%,
@@ -186,6 +196,11 @@
     transform: perspective(50rem) rotateX(-3deg) rotateY(-3deg);
   }
   .parallax .parallax-bottom-left:hover ~ .parallax-content::before {
+    background: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 50%
+    );
     background: linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.25) 0%,
@@ -205,6 +220,11 @@
     transform: perspective(50rem) rotateX(-3deg) rotateY(3deg);
   }
   .parallax .parallax-bottom-right:hover ~ .parallax-content::before {
+    background: -webkit-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 50%
+    );
     background: linear-gradient(
       -45deg,
       rgba(255, 255, 255, 0.25) 0%,

@@ -4,8 +4,9 @@ import { MapPinIcon } from "@/components/icons/MapPinIcon/MapPinIcon";
 import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
 import { IconProps } from "@/components/icons/types";
 import { Badge, BadgeProps } from "@/components/ui/badge";
-import { PhotoTags, allLocationTags, tagMetadata } from "@/constants/photoTags";
+import { PhotoTags, allLocationTags } from "@/constants/photoTags/photoTags";
 import { PAGES } from "@/utils/pages";
+import { tagMetadata } from "@/constants/photoTags/tagMetadata";
 
 type PhotoTagBadgeProps = {
   photoTag: PhotoTags;
@@ -35,7 +36,12 @@ export const PhotoTagBadge: React.FC<PhotoTagBadgeProps> = ({ photoTag }) => {
     Icon = MapPinIcon;
   }
 
-  if (tagMetadata[photoTag].hidden) {
+  const metadata = tagMetadata[photoTag];
+  if (!metadata) {
+    throw new Error(`No metadata for: ${photoTag}`);
+  }
+
+  if (metadata.hidden) {
     return null;
   }
 
@@ -43,7 +49,7 @@ export const PhotoTagBadge: React.FC<PhotoTagBadgeProps> = ({ photoTag }) => {
     <Link href={PAGES.PHOTOGRAPHY.TAG(photoTag)}>
       <Badge variant={variant}>
         <Icon className="mr-1 inline h-4 w-4" />
-        {tagMetadata[photoTag].name}
+        {metadata.name}
       </Badge>
     </Link>
   );

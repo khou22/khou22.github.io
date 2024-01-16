@@ -2,7 +2,7 @@ import path from "path";
 import sqlite3 from "sqlite3";
 import { open } from "sqlite";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
-import { PhotoTags } from "@/constants/photoTags";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 
 // Open a SQLite database, stored in the file db.sqlite
 export const connectToPhotoDb = async () => {
@@ -212,4 +212,15 @@ export const getAllPhotoIdsInDb = async (): Promise<Set<PhotoIdType>> => {
   metadataRows.forEach((row) => photoIDs.add(row.photo_id as PhotoIdType));
 
   return photoIDs;
+};
+
+/**
+ * Get all the tags in the database.
+ */
+export const getAllPhotoTagsInDb = async (): Promise<Set<string>> => {
+  const db = await connectToPhotoDb();
+  const rows = await db.all<{ tag_name: string }[]>(
+    `SELECT DISTINCT tag_name FROM photo_tags ORDER BY tag_name ASC`,
+  );
+  return new Set(rows.map((row) => row.tag_name));
 };
