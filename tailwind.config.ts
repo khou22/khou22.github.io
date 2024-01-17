@@ -127,6 +127,9 @@ const config: Config = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
   ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 };
 
 export default config;

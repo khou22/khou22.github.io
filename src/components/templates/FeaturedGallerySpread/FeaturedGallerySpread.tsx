@@ -42,7 +42,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
               photoID={cover.left}
               className="h-full w-full object-contain"
               isLink
-              hoverAnimation="scale"
+              hoverAnimation="scale-contain"
             />
           </div>
         </div>
@@ -54,7 +54,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
                 photoID={cover.hero}
                 className="h-full w-full object-contain"
                 isLink
-                hoverAnimation="scale"
+                hoverAnimation="scale-contain"
               />
             </div>
             <div className="col-span-2 flex items-center justify-center p-4">
@@ -82,7 +82,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
               photoID={cover.right}
               className="h-full w-full object-contain"
               isLink
-              hoverAnimation="scale"
+              hoverAnimation="scale-contain"
             />
           </div>
         </div>
@@ -114,7 +114,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
               photoID={features[0].photoID}
               className="h-full w-full object-cover"
               isLink
-              hoverAnimation="scale"
+              hoverAnimation="scale-contain"
             />
           </div>
           <div>
@@ -129,7 +129,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
               photoID={features[1].photoID}
               className="h-full w-full object-cover"
               isLink
-              hoverAnimation="scale"
+              hoverAnimation="scale-contain"
             />
           </div>
         </div>
@@ -144,7 +144,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
             photoID={features[2].photoID}
             className="h-full w-full object-cover"
             isLink
-            hoverAnimation="scale"
+            hoverAnimation="scale-contain"
           />
         </div>
         <div className="col-span-1 flex aspect-[2/3] w-full flex-col items-start justify-end md:col-span-3">
@@ -163,7 +163,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
               photoID={features[3].photoID}
               className="h-full w-full object-cover"
               isLink
-              hoverAnimation="scale"
+              hoverAnimation="scale-contain"
             />
           </div>
         </div>
@@ -176,7 +176,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
               photoID={features[4].photoID}
               className="h-full w-full object-cover"
               isLink
-              hoverAnimation="scale"
+              hoverAnimation="scale-contain"
             />
           </div>
         </div>
@@ -190,7 +190,7 @@ export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
               photoID={features[5].photoID}
               className="h-full w-full object-cover"
               isLink
-              hoverAnimation="scale"
+              hoverAnimation="scale-contain"
             />
           </div>
           <div className="text-center">

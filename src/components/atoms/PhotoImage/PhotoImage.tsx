@@ -8,7 +8,7 @@ import { PAGES } from "@/utils/pages";
 import { getPhotoProgressiveImages } from "@/utils/photos/getPhotoProgressiveImages";
 import { classNames } from "@/utils/style";
 
-type HoverAnimationType = "scale" | "off";
+type HoverAnimationType = "scale" | "off" | "scale-contain";
 
 type PhotoImageProps = {
   photoID: PhotoIdType;
@@ -32,17 +32,29 @@ export const PhotoImage: React.FC<PhotoImageProps> = ({
 
   const alt = props.alt ?? getPhotoName(photoID);
 
+  let hoverAnimationClass = "";
+  switch (hoverAnimation) {
+    case "scale":
+    case "scale-contain":
+      hoverAnimationClass =
+        "origin-center transition-transform duration-300 ease-in-out hover:scale-105";
+      break;
+  }
+
   const imgNode = (
-    <ProgressiveImage
-      {...props}
-      alt={alt}
-      src={getPhotoProgressiveImages(photoID)}
+    <div
       className={classNames(
-        className,
-        hoverAnimation === "scale" &&
-          "origin-center transition-transform duration-300 ease-in-out hover:scale-105",
+        "relative",
+        hoverAnimation === "scale-contain" ? "overflow-hidden" : "",
       )}
-    />
+    >
+      <ProgressiveImage
+        {...props}
+        alt={alt}
+        src={getPhotoProgressiveImages(photoID)}
+        className={classNames(className, hoverAnimationClass)}
+      />
+    </div>
   );
 
   if (isLink) {
