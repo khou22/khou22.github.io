@@ -59,8 +59,8 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
     thumbnailPhotoId: "photography/Black_Sheep_Foods_Single_Burger_jpg",
   },
   [PhotoTags.Cycling]: {
-    name: "Cycling",
-    slug: "cycling",
+    name: "Sports",
+    slug: "sports",
     thumbnailPhotoId:
       "photography/san_francisco/Rodeo_Beach_Gravel_Hill_Sunset_Ride_jpg",
   },

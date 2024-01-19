@@ -2374,15 +2374,105 @@ export const _generatedCdnAssets = {
     name: `Marin Headlands Sunset`,
     dimensions: [1600, 2000],
   },
+	"photography/sports/Flames_Softball_2_jpg": {
+    path: "/photography/sports/Flames%20Softball%20-%202.jpg",
+    name: `Flames Softball - 2`,
+    dimensions: [4498, 3000],
+  },
+	"photography/sports/Flames_Softball_3_jpg": {
+    path: "/photography/sports/Flames%20Softball%20-%203.jpg",
+    name: `Flames Softball - 3`,
+    dimensions: [4498, 3000],
+  },
+	"photography/sports/Flames_Softball_1_jpg": {
+    path: "/photography/sports/Flames%20Softball%20-%201.jpg",
+    name: `Flames Softball - 1`,
+    dimensions: [2001, 3000],
+  },
 	"photography/sports/Emmie_Santa_Cuz_Warriors_Stadium_Dribbling_placeholder_jpg": {
     path: "/photography/sports/Emmie%20Santa%20Cuz%20Warriors%20Stadium%20Dribbling.placeholder.jpg",
     name: `Emmie Santa Cuz Warriors Stadium Dribbling.placeholder`,
     dimensions: [800, 534],
   },
+	"photography/sports/Bass_Lake_Wakeboarding_1_placeholder_jpg": {
+    path: "/photography/sports/Bass%20Lake%20Wakeboarding%201.placeholder.jpg",
+    name: `Bass Lake Wakeboarding 1.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/sports/Flames_Softball_3_placeholder_jpg": {
+    path: "/photography/sports/Flames%20Softball%20-%203.placeholder.jpg",
+    name: `Flames Softball - 3.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/sports/LWHS_Kezar_Driving_to_Basket_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Kezar%20-%20Driving%20to%20Basket.placeholder.jpg",
+    name: `LWHS Kezar - Driving to Basket.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/sports/Bass_Lake_Wakeboarding_1_jpg": {
+    path: "/photography/sports/Bass%20Lake%20Wakeboarding%201.jpg",
+    name: `Bass Lake Wakeboarding 1`,
+    dimensions: [4498, 3000],
+  },
 	"photography/sports/Emmie_Santa_Cuz_Warriors_Stadium_Dribbling_jpg": {
     path: "/photography/sports/Emmie%20Santa%20Cuz%20Warriors%20Stadium%20Dribbling.jpg",
     name: `Emmie Santa Cuz Warriors Stadium Dribbling`,
     dimensions: [4498, 3000],
+  },
+	"photography/sports/LWHS_Kezar_Floater_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Kezar%20-%20Floater.placeholder.jpg",
+    name: `LWHS Kezar - Floater.placeholder`,
+    dimensions: [534, 800],
+  },
+	"photography/sports/Bass_Lake_Wakeboarding_2_jpg": {
+    path: "/photography/sports/Bass%20Lake%20Wakeboarding%202.jpg",
+    name: `Bass Lake Wakeboarding 2`,
+    dimensions: [4498, 3000],
+  },
+	"photography/sports/LWHS_Santa_Cruze_Warriors_Stadium_Team_Huddle_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Santa%20Cruze%20Warriors%20Stadium%20Team%20Huddle.placeholder.jpg",
+    name: `LWHS Santa Cruze Warriors Stadium Team Huddle.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/sports/LWHS_Kezar_Floater_jpg": {
+    path: "/photography/sports/LWHS%20Kezar%20-%20Floater.jpg",
+    name: `LWHS Kezar - Floater`,
+    dimensions: [2001, 3000],
+  },
+	"photography/sports/LWHS_Kezar_Driving_to_Basket_jpg": {
+    path: "/photography/sports/LWHS%20Kezar%20-%20Driving%20to%20Basket.jpg",
+    name: `LWHS Kezar - Driving to Basket`,
+    dimensions: [2400, 3000],
+  },
+	"photography/sports/LWHS_Santa_Cruze_Warriors_Stadium_Team_Huddle_jpg": {
+    path: "/photography/sports/LWHS%20Santa%20Cruze%20Warriors%20Stadium%20Team%20Huddle.jpg",
+    name: `LWHS Santa Cruze Warriors Stadium Team Huddle`,
+    dimensions: [4498, 3000],
+  },
+	"photography/sports/Flames_Softball_2_placeholder_jpg": {
+    path: "/photography/sports/Flames%20Softball%20-%202.placeholder.jpg",
+    name: `Flames Softball - 2.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/sports/Catcher_Emmie_Flames_Softball_Portrait_placeholder_jpg": {
+    path: "/photography/sports/Catcher%20Emmie%20Flames%20Softball%20Portrait.placeholder.jpg",
+    name: `Catcher Emmie Flames Softball Portrait.placeholder`,
+    dimensions: [534, 800],
+  },
+	"photography/sports/Bass_Lake_Wakeboarding_2_placeholder_jpg": {
+    path: "/photography/sports/Bass%20Lake%20Wakeboarding%202.placeholder.jpg",
+    name: `Bass Lake Wakeboarding 2.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/sports/Catcher_Emmie_Flames_Softball_Portrait_jpg": {
+    path: "/photography/sports/Catcher%20Emmie%20Flames%20Softball%20Portrait.jpg",
+    name: `Catcher Emmie Flames Softball Portrait`,
+    dimensions: [2001, 3000],
+  },
+	"photography/sports/Flames_Softball_1_placeholder_jpg": {
+    path: "/photography/sports/Flames%20Softball%20-%201.placeholder.jpg",
+    name: `Flames Softball - 1.placeholder`,
+    dimensions: [534, 800],
   },
 	"photography/House_at_the_Base_of_the_Tetons_in_Teton_Village_jpg": {
     path: "/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.jpg",
@@ -2804,10 +2894,20 @@ export const _generatedCdnAssets = {
     name: `Conrad Bike Portrait Trick.placeholder`,
     dimensions: [640, 800],
   },
+	"photography/portraits/Greece_Acropolis_Couples_Portrait_jpg": {
+    path: "/photography/portraits/Greece%20Acropolis%20Couples%20Portrait.jpg",
+    name: `Greece Acropolis Couples Portrait`,
+    dimensions: [2001, 3000],
+  },
 	"photography/portraits/Lightsaber_Portrait_of_Ben_in_Alleyway_jpg": {
     path: "/photography/portraits/Lightsaber%20Portrait%20of%20Ben%20in%20Alleyway.jpg",
     name: `Lightsaber Portrait of Ben in Alleyway`,
     dimensions: [2400, 3000],
+  },
+	"photography/portraits/Greece_Acropolis_Couples_Portrait_placeholder_jpg": {
+    path: "/photography/portraits/Greece%20Acropolis%20Couples%20Portrait.placeholder.jpg",
+    name: `Greece Acropolis Couples Portrait.placeholder`,
+    dimensions: [534, 800],
   },
 	"photography/portraits/Conrad_Bike_Portrait_Vertical_jpg": {
     path: "/photography/portraits/Conrad%20Bike%20Portrait%20%28Vertical%29.jpg",
@@ -4599,15 +4699,40 @@ export const _generatedCdnAssets = {
     name: `Fancy Scraps Dinner Event Table`,
     dimensions: [2001, 3000],
   },
+	"photography/events/Fast_Forward_Keynote_placeholder_jpg": {
+    path: "/photography/events/Fast%20Forward%20Keynote.placeholder.jpg",
+    name: `Fast Forward Keynote.placeholder`,
+    dimensions: [800, 534],
+  },
 	"photography/events/Fancy_Scraps_Dinner_Event_Menu_placeholder_jpg": {
     path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Menu.placeholder.jpg",
     name: `Fancy Scraps Dinner Event Menu.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/events/Contrary_NYC_People_in_Conversation_jpg": {
+    path: "/photography/events/Contrary%20NYC%20People%20in%20Conversation.jpg",
+    name: `Contrary NYC People in Conversation`,
+    dimensions: [4498, 3000],
+  },
+	"photography/events/Contrary_NYC_Whiteboarding_placeholder_jpg": {
+    path: "/photography/events/Contrary%20NYC%20Whiteboarding.placeholder.jpg",
+    name: `Contrary NYC Whiteboarding.placeholder`,
     dimensions: [800, 534],
   },
 	"photography/events/Fancy_Scraps_Dinner_Event_Menu_jpg": {
     path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Menu.jpg",
     name: `Fancy Scraps Dinner Event Menu`,
     dimensions: [4498, 3000],
+  },
+	"photography/events/Contrary_NYC_Whiteboarding_jpg": {
+    path: "/photography/events/Contrary%20NYC%20Whiteboarding.jpg",
+    name: `Contrary NYC Whiteboarding`,
+    dimensions: [4498, 3000],
+  },
+	"photography/events/Contrary_NYC_People_in_Conversation_placeholder_jpg": {
+    path: "/photography/events/Contrary%20NYC%20People%20in%20Conversation.placeholder.jpg",
+    name: `Contrary NYC People in Conversation.placeholder`,
+    dimensions: [800, 534],
   },
 	"photography/events/Diwali_Party_Portrait_2022_placeholder_jpg": {
     path: "/photography/events/Diwali%20Party%20Portrait%202022.placeholder.jpg",
@@ -4623,6 +4748,11 @@ export const _generatedCdnAssets = {
     path: "/photography/events/Diwali%20Party%20Portrait%202022.jpg",
     name: `Diwali Party Portrait 2022`,
     dimensions: [2001, 3000],
+  },
+	"photography/events/Fast_Forward_Keynote_jpg": {
+    path: "/photography/events/Fast%20Forward%20Keynote.jpg",
+    name: `Fast Forward Keynote`,
+    dimensions: [4498, 3000],
   },
 	"photography/events/apco_salon_dinner_discussion_placeholder_jpg": {
     path: "/photography/events/apco_salon_dinner_discussion.placeholder.jpg",
@@ -5134,10 +5264,20 @@ export const _generatedCdnAssets = {
     name: `Cycling Backpacking Trip Portrait 2`,
     dimensions: [2000, 1333],
   },
+	"photography/cycling/Twin_Peaks_Cycling_Portrait_placeholder_jpg": {
+    path: "/photography/cycling/Twin%20Peaks%20Cycling%20Portrait.placeholder.jpg",
+    name: `Twin Peaks Cycling Portrait.placeholder`,
+    dimensions: [800, 533],
+  },
 	"photography/cycling/Bike_Through_Tent_jpg": {
     path: "/photography/cycling/Bike%20Through%20Tent.jpg",
     name: `Bike Through Tent`,
     dimensions: [2000, 2500],
+  },
+	"photography/cycling/Hawk_Hill_Downhill_Cycling_FPV_placeholder_jpg": {
+    path: "/photography/cycling/Hawk%20Hill%20Downhill%20Cycling%20FPV.placeholder.jpg",
+    name: `Hawk Hill Downhill Cycling FPV.placeholder`,
+    dimensions: [800, 598],
   },
 	"photography/cycling/Cycling_Motion_Blur_Landscape_placeholder_jpg": {
     path: "/photography/cycling/Cycling%20Motion%20Blur%20Landscape.placeholder.jpg",
@@ -5153,6 +5293,16 @@ export const _generatedCdnAssets = {
     path: "/photography/cycling/Rohan%20Cycling%20Shot%20San%20Francisco%20Skyline.jpg",
     name: `Rohan Cycling Shot San Francisco Skyline`,
     dimensions: [2000, 1333],
+  },
+	"photography/cycling/Twin_Peaks_Cycling_Portrait_jpg": {
+    path: "/photography/cycling/Twin%20Peaks%20Cycling%20Portrait.jpg",
+    name: `Twin Peaks Cycling Portrait`,
+    dimensions: [3588, 2392],
+  },
+	"photography/cycling/Hawk_Hill_Downhill_Cycling_FPV_jpg": {
+    path: "/photography/cycling/Hawk%20Hill%20Downhill%20Cycling%20FPV.jpg",
+    name: `Hawk Hill Downhill Cycling FPV`,
+    dimensions: [1564, 1170],
   },
 	"photography/cycling/Cycling_Backpacking_Trip_Portrait_2_placeholder_jpg": {
     path: "/photography/cycling/Cycling%20Backpacking%20Trip%20Portrait%202.placeholder.jpg",

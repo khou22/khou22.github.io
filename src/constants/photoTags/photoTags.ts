@@ -9,6 +9,8 @@ export enum PhotoTags {
   Astrophotography = "category_astrophotography",
   Product = "category_product",
   Food = "category_food",
+
+  // TODO (k): Rename to sports.
   Cycling = "category_cycling",
 
   // Location specific tags.
