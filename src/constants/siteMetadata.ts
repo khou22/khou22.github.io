@@ -2,6 +2,8 @@ export const siteMetadata = {
   title: "Kevin Hou | Personal Website & Photography Store",
   description:
     "Kevin Hou is an engineer, designer, photographer, and woodworker. Building delightful AI-powered products that bring joy. Princeton University Computer Science & Lick-Wilmerding High School. Ex Nuro self-driving and currently working on Codeium at Exafunction.",
+  photographyDescription:
+    "Kevin Hou is a freelance photographer in San Francisco and the surrounding Bay Area specializing in drone, landscape, product, portrait, and event photography. He is a published photographer and has worked with a variety of clients across many different industries.",
   author: "Kevin Hou",
   siteUrl: "https://khou22.com",
 

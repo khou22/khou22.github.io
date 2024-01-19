@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import { Autoscroll } from "@/components/atoms/Autoscroll/Autoscroll";
 import { FullCoverArticle } from "@/components/organisms/MagazineLayout/FullCoverArticle";
 import { HalfTextArticle } from "@/components/organisms/MagazineLayout/HalfTextArticle";
@@ -14,12 +13,6 @@ import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 
 const fadeAnimationDeltaMS = 130;
-
-export const metadata: Metadata = {
-  title: "Kevin Hou Photography",
-  description:
-    "Kevin Hou is a freelance photographer in San Francisco and the surrounding Bay Area specializing in drone, landscape, product, portrait, and event photography.",
-};
 
 const PhotographyHomepage = async () => {
   const locationNodes = await Promise.all(
