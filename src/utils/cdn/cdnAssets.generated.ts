@@ -519,6 +519,16 @@ export const _generatedCdnAssets = {
     name: `Napa House Drone Shot Landscape`,
     dimensions: [1999, 1600],
   },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_placeholder_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018.placeholder.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018.placeholder`,
+    dimensions: [533, 800],
+  },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018`,
+    dimensions: [3265, 4898],
+  },
 	"photography/Golden_Gate_Bridge_Peering_Through_Rocks_placeholder_jpg": {
     path: "/photography/Golden%20Gate%20Bridge%20Peering%20Through%20Rocks.placeholder.jpg",
     name: `Golden Gate Bridge Peering Through Rocks.placeholder`,
@@ -3819,6 +3829,11 @@ export const _generatedCdnAssets = {
     name: `Black Sheep Orens Hummus Food Photography 1`,
     dimensions: [4498, 3000],
   },
+	"photography/food/Chinese_Tofu_Dish_jpg": {
+    path: "/photography/food/Chinese%20Tofu%20Dish.jpg",
+    name: `Chinese Tofu Dish`,
+    dimensions: [2001, 3000],
+  },
 	"photography/food/Black_Sheep_Orens_Hummus_Food_Photography_Top_Down_jpg": {
     path: "/photography/food/Black%20Sheep%20Orens%20Hummus%20Food%20Photography%20Top%20Down.jpg",
     name: `Black Sheep Orens Hummus Food Photography Top Down`,
@@ -3838,6 +3853,11 @@ export const _generatedCdnAssets = {
     path: "/photography/food/Espresso%20Martini%20Food%20Photography.placeholder.jpg",
     name: `Espresso Martini Food Photography.placeholder`,
     dimensions: [640, 800],
+  },
+	"photography/food/Chinese_Tofu_Dish_placeholder_jpg": {
+    path: "/photography/food/Chinese%20Tofu%20Dish.placeholder.jpg",
+    name: `Chinese Tofu Dish.placeholder`,
+    dimensions: [534, 800],
   },
 	"photography/food/Executive_Order_Bar_Food_jpg": {
     path: "/photography/food/Executive%20Order%20Bar%20Food.jpg",
@@ -5319,6 +5339,11 @@ export const _generatedCdnAssets = {
     name: `Bike Through Tent.placeholder`,
     dimensions: [640, 800],
   },
+	"photography/cycling/Peugeot_Road_Bike_at_Sunset_jpg": {
+    path: "/photography/cycling/Peugeot%20Road%20Bike%20at%20Sunset.jpg",
+    name: `Peugeot Road Bike at Sunset`,
+    dimensions: [2400, 3000],
+  },
 	"photography/cycling/Rohan_Cycling_Shot_San_Francisco_Skyline_placeholder_jpg": {
     path: "/photography/cycling/Rohan%20Cycling%20Shot%20San%20Francisco%20Skyline.placeholder.jpg",
     name: `Rohan Cycling Shot San Francisco Skyline.placeholder`,
@@ -5333,6 +5358,11 @@ export const _generatedCdnAssets = {
     path: "/photography/cycling/Alpine%20Dam%20Cycling%20Shot.placeholder.jpg",
     name: `Alpine Dam Cycling Shot.placeholder`,
     dimensions: [800, 534],
+  },
+	"photography/cycling/Peugeot_Road_Bike_at_Sunset_placeholder_jpg": {
+    path: "/photography/cycling/Peugeot%20Road%20Bike%20at%20Sunset.placeholder.jpg",
+    name: `Peugeot Road Bike at Sunset.placeholder`,
+    dimensions: [640, 800],
   },
 	"photography/cycling/Alpine_Dam_Cycling_Shot_jpg": {
     path: "/photography/cycling/Alpine%20Dam%20Cycling%20Shot.jpg",
