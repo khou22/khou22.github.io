@@ -519,15 +519,65 @@ export const _generatedCdnAssets = {
     name: `Napa House Drone Shot Landscape`,
     dimensions: [1999, 1600],
   },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_3_placeholder_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018%203.placeholder.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018 3.placeholder`,
+    dimensions: [533, 800],
+  },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_4_placeholder_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018%204.placeholder.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018 4.placeholder`,
+    dimensions: [533, 800],
+  },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_5_placeholder_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018%205.placeholder.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018 5.placeholder`,
+    dimensions: [800, 533],
+  },
 	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_placeholder_jpg": {
     path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018.placeholder.jpg",
     name: `Disiac Princeton Dance Concert Winter 2018.placeholder`,
     dimensions: [533, 800],
   },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_2_placeholder_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018%202.placeholder.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018 2.placeholder`,
+    dimensions: [533, 800],
+  },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_4_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018%204.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018 4`,
+    dimensions: [2000, 3000],
+  },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_5_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018%205.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018 5`,
+    dimensions: [4500, 3000],
+  },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_6_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018%206.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018 6`,
+    dimensions: [4898, 3265],
+  },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_2_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018%202.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018 2`,
+    dimensions: [3266, 4898],
+  },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_3_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018%203.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018 3`,
+    dimensions: [2000, 3000],
+  },
 	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_jpg": {
     path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018.jpg",
     name: `Disiac Princeton Dance Concert Winter 2018`,
     dimensions: [3265, 4898],
+  },
+	"photography/concerts/Disiac_Princeton_Dance_Concert_Winter_2018_6_placeholder_jpg": {
+    path: "/photography/concerts/Disiac%20Princeton%20Dance%20Concert%20Winter%202018%206.placeholder.jpg",
+    name: `Disiac Princeton Dance Concert Winter 2018 6.placeholder`,
+    dimensions: [800, 533],
   },
 	"photography/Golden_Gate_Bridge_Peering_Through_Rocks_placeholder_jpg": {
     path: "/photography/Golden%20Gate%20Bridge%20Peering%20Through%20Rocks.placeholder.jpg",
@@ -2479,10 +2529,20 @@ export const _generatedCdnAssets = {
     name: `Catcher Emmie Flames Softball Portrait`,
     dimensions: [2001, 3000],
   },
+	"photography/sports/LWHS_vs_University_Softball_2021_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20vs%20University%20Softball%202021.placeholder.jpg",
+    name: `LWHS vs University Softball 2021.placeholder`,
+    dimensions: [800, 535],
+  },
 	"photography/sports/Flames_Softball_1_placeholder_jpg": {
     path: "/photography/sports/Flames%20Softball%20-%201.placeholder.jpg",
     name: `Flames Softball - 1.placeholder`,
     dimensions: [534, 800],
+  },
+	"photography/sports/LWHS_vs_University_Softball_2021_jpg": {
+    path: "/photography/sports/LWHS%20vs%20University%20Softball%202021.jpg",
+    name: `LWHS vs University Softball 2021`,
+    dimensions: [5184, 3464],
   },
 	"photography/House_at_the_Base_of_the_Tetons_in_Teton_Village_jpg": {
     path: "/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.jpg",
@@ -4714,14 +4774,79 @@ export const _generatedCdnAssets = {
     name: `Mong Kok Station Entrance`,
     dimensions: [2400, 1600],
   },
+	"photography/events/San_Francisco_Napa_Valley_Wine_Country_Awards_jpg": {
+    path: "/photography/events/San%20Francisco%20Napa%20Valley%20Wine%20Country%20Awards.jpg",
+    name: `San Francisco Napa Valley Wine Country Awards`,
+    dimensions: [4498, 3000],
+  },
+	"photography/events/Ivy_Formals_Fall_2019_5_placeholder_jpg": {
+    path: "/photography/events/Ivy%20Formals%20Fall%202019%205.placeholder.jpg",
+    name: `Ivy Formals Fall 2019 5.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/events/Westfield_Event_1_placeholder_jpg": {
+    path: "/photography/events/Westfield%20Event%201.placeholder.jpg",
+    name: `Westfield Event 1.placeholder`,
+    dimensions: [534, 800],
+  },
+	"photography/events/Silicon_Valley_TigerTrek_Fall_2019_1_jpg": {
+    path: "/photography/events/Silicon%20Valley%20TigerTrek%20Fall%202019%201.jpg",
+    name: `Silicon Valley TigerTrek Fall 2019 1`,
+    dimensions: [4897, 3266],
+  },
+	"photography/events/Labrinthe_Coworking_Space_3_placeholder_jpg": {
+    path: "/photography/events/Labrinthe%20Coworking%20Space%203.placeholder.jpg",
+    name: `Labrinthe Coworking Space 3.placeholder`,
+    dimensions: [800, 533],
+  },
+	"photography/events/Ivy_Formals_Fall_2019_2_placeholder_jpg": {
+    path: "/photography/events/Ivy%20Formals%20Fall%202019%202.placeholder.jpg",
+    name: `Ivy Formals Fall 2019 2.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/events/Silicon_Valley_TigerTrek_Fall_2019_2_jpg": {
+    path: "/photography/events/Silicon%20Valley%20TigerTrek%20Fall%202019%202.jpg",
+    name: `Silicon Valley TigerTrek Fall 2019 2`,
+    dimensions: [4498, 3000],
+  },
 	"photography/events/Fancy_Scraps_Dinner_Event_Table_jpg": {
     path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Table.jpg",
     name: `Fancy Scraps Dinner Event Table`,
     dimensions: [2001, 3000],
   },
+	"photography/events/Westfield_Event_3_jpg": {
+    path: "/photography/events/Westfield%20Event%203.jpg",
+    name: `Westfield Event 3`,
+    dimensions: [2400, 3000],
+  },
 	"photography/events/Fast_Forward_Keynote_placeholder_jpg": {
     path: "/photography/events/Fast%20Forward%20Keynote.placeholder.jpg",
     name: `Fast Forward Keynote.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/events/Labrinthe_Coworking_Space_2_placeholder_jpg": {
+    path: "/photography/events/Labrinthe%20Coworking%20Space%202.placeholder.jpg",
+    name: `Labrinthe Coworking Space 2.placeholder`,
+    dimensions: [800, 533],
+  },
+	"photography/events/Joel_Flory_Speaking_placeholder_jpg": {
+    path: "/photography/events/Joel%20Flory%20Speaking.placeholder.jpg",
+    name: `Joel Flory Speaking.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/events/Westfield_Event_2_jpg": {
+    path: "/photography/events/Westfield%20Event%202.jpg",
+    name: `Westfield Event 2`,
+    dimensions: [2400, 3000],
+  },
+	"photography/events/San_Francisco_Napa_Valley_Wine_Country_Awards_placeholder_jpg": {
+    path: "/photography/events/San%20Francisco%20Napa%20Valley%20Wine%20Country%20Awards.placeholder.jpg",
+    name: `San Francisco Napa Valley Wine Country Awards.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/events/Ivy_Formals_Fall_2019_3_placeholder_jpg": {
+    path: "/photography/events/Ivy%20Formals%20Fall%202019%203.placeholder.jpg",
+    name: `Ivy Formals Fall 2019 3.placeholder`,
     dimensions: [800, 534],
   },
 	"photography/events/Fancy_Scraps_Dinner_Event_Menu_placeholder_jpg": {
@@ -4739,14 +4864,94 @@ export const _generatedCdnAssets = {
     name: `Contrary NYC Whiteboarding.placeholder`,
     dimensions: [800, 534],
   },
+	"photography/events/Westfield_Event_1_jpg": {
+    path: "/photography/events/Westfield%20Event%201.jpg",
+    name: `Westfield Event 1`,
+    dimensions: [3266, 4897],
+  },
+	"photography/events/Silicon_Valley_TigerTrek_Fall_2019_2_placeholder_jpg": {
+    path: "/photography/events/Silicon%20Valley%20TigerTrek%20Fall%202019%202.placeholder.jpg",
+    name: `Silicon Valley TigerTrek Fall 2019 2.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/events/Labrinthe_Coworking_Space_1_jpg": {
+    path: "/photography/events/Labrinthe%20Coworking%20Space%201.jpg",
+    name: `Labrinthe Coworking Space 1`,
+    dimensions: [4898, 3265],
+  },
+	"photography/events/Live_Concert_Performance_at_Event_placeholder_jpg": {
+    path: "/photography/events/Live%20Concert%20Performance%20at%20Event.placeholder.jpg",
+    name: `Live Concert Performance at Event.placeholder`,
+    dimensions: [534, 800],
+  },
+	"photography/events/Ivy_Formals_Fall_2019_4_placeholder_jpg": {
+    path: "/photography/events/Ivy%20Formals%20Fall%202019%204.placeholder.jpg",
+    name: `Ivy Formals Fall 2019 4.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/events/Westfield_Event_4_jpg": {
+    path: "/photography/events/Westfield%20Event%204.jpg",
+    name: `Westfield Event 4`,
+    dimensions: [4897, 3266],
+  },
+	"photography/events/Labrinthe_Coworking_Space_2_jpg": {
+    path: "/photography/events/Labrinthe%20Coworking%20Space%202.jpg",
+    name: `Labrinthe Coworking Space 2`,
+    dimensions: [4898, 3265],
+  },
 	"photography/events/Fancy_Scraps_Dinner_Event_Menu_jpg": {
     path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Menu.jpg",
     name: `Fancy Scraps Dinner Event Menu`,
     dimensions: [4498, 3000],
   },
+	"photography/events/Labrinthe_Coworking_Space_3_jpg": {
+    path: "/photography/events/Labrinthe%20Coworking%20Space%203.jpg",
+    name: `Labrinthe Coworking Space 3`,
+    dimensions: [4898, 3265],
+  },
+	"photography/events/Tiger_Inn_Formals_Spring_2019_placeholder_jpg": {
+    path: "/photography/events/Tiger%20Inn%20Formals%20Spring%202019.placeholder.jpg",
+    name: `Tiger Inn Formals Spring 2019.placeholder`,
+    dimensions: [800, 533],
+  },
+	"photography/events/Ivy_Formals_Fall_2019_4_jpg": {
+    path: "/photography/events/Ivy%20Formals%20Fall%202019%204.jpg",
+    name: `Ivy Formals Fall 2019 4`,
+    dimensions: [4498, 3000],
+  },
+	"photography/events/Ivy_Formals_Fall_2019_5_jpg": {
+    path: "/photography/events/Ivy%20Formals%20Fall%202019%205.jpg",
+    name: `Ivy Formals Fall 2019 5`,
+    dimensions: [4498, 3000],
+  },
+	"photography/events/Airbnb_Event_Drone_Photography_placeholder_jpg": {
+    path: "/photography/events/Airbnb%20Event%20Drone%20Photography.placeholder.jpg",
+    name: `Airbnb Event Drone Photography.placeholder`,
+    dimensions: [640, 800],
+  },
 	"photography/events/Contrary_NYC_Whiteboarding_jpg": {
     path: "/photography/events/Contrary%20NYC%20Whiteboarding.jpg",
     name: `Contrary NYC Whiteboarding`,
+    dimensions: [4498, 3000],
+  },
+	"photography/events/Ivy_Formals_Fall_2019_1_placeholder_jpg": {
+    path: "/photography/events/Ivy%20Formals%20Fall%202019%201.placeholder.jpg",
+    name: `Ivy Formals Fall 2019 1.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/events/Ivy_Formals_Fall_2019_2_jpg": {
+    path: "/photography/events/Ivy%20Formals%20Fall%202019%202.jpg",
+    name: `Ivy Formals Fall 2019 2`,
+    dimensions: [4498, 3000],
+  },
+	"photography/events/Airbnb_Event_Drone_Photography_jpg": {
+    path: "/photography/events/Airbnb%20Event%20Drone%20Photography.jpg",
+    name: `Airbnb Event Drone Photography`,
+    dimensions: [2570, 3212],
+  },
+	"photography/events/Ivy_Formals_Fall_2019_3_jpg": {
+    path: "/photography/events/Ivy%20Formals%20Fall%202019%203.jpg",
+    name: `Ivy Formals Fall 2019 3`,
     dimensions: [4498, 3000],
   },
 	"photography/events/Contrary_NYC_People_in_Conversation_placeholder_jpg": {
@@ -4754,20 +4959,60 @@ export const _generatedCdnAssets = {
     name: `Contrary NYC People in Conversation.placeholder`,
     dimensions: [800, 534],
   },
+	"photography/events/Ivy_Formals_Fall_2019_1_jpg": {
+    path: "/photography/events/Ivy%20Formals%20Fall%202019%201.jpg",
+    name: `Ivy Formals Fall 2019 1`,
+    dimensions: [4498, 3000],
+  },
+	"photography/events/Live_Concert_Performance_at_Event_jpg": {
+    path: "/photography/events/Live%20Concert%20Performance%20at%20Event.jpg",
+    name: `Live Concert Performance at Event`,
+    dimensions: [2001, 3000],
+  },
+	"photography/events/Joel_Flory_Speaking_jpg": {
+    path: "/photography/events/Joel%20Flory%20Speaking.jpg",
+    name: `Joel Flory Speaking`,
+    dimensions: [1638, 2048],
+  },
+	"photography/events/Westfield_Event_2_placeholder_jpg": {
+    path: "/photography/events/Westfield%20Event%202.placeholder.jpg",
+    name: `Westfield Event 2.placeholder`,
+    dimensions: [640, 800],
+  },
 	"photography/events/Diwali_Party_Portrait_2022_placeholder_jpg": {
     path: "/photography/events/Diwali%20Party%20Portrait%202022.placeholder.jpg",
     name: `Diwali Party Portrait 2022.placeholder`,
     dimensions: [534, 800],
+  },
+	"photography/events/Silicon_Valley_TigerTrek_Fall_2019_1_placeholder_jpg": {
+    path: "/photography/events/Silicon%20Valley%20TigerTrek%20Fall%202019%201.placeholder.jpg",
+    name: `Silicon Valley TigerTrek Fall 2019 1.placeholder`,
+    dimensions: [800, 534],
   },
 	"photography/events/Fancy_Scraps_Dinner_Event_Table_placeholder_jpg": {
     path: "/photography/events/Fancy%20Scraps%20Dinner%20Event%20Table.placeholder.jpg",
     name: `Fancy Scraps Dinner Event Table.placeholder`,
     dimensions: [534, 800],
   },
+	"photography/events/Westfield_Event_3_placeholder_jpg": {
+    path: "/photography/events/Westfield%20Event%203.placeholder.jpg",
+    name: `Westfield Event 3.placeholder`,
+    dimensions: [640, 800],
+  },
 	"photography/events/Diwali_Party_Portrait_2022_jpg": {
     path: "/photography/events/Diwali%20Party%20Portrait%202022.jpg",
     name: `Diwali Party Portrait 2022`,
     dimensions: [2001, 3000],
+  },
+	"photography/events/Westfield_Event_4_placeholder_jpg": {
+    path: "/photography/events/Westfield%20Event%204.placeholder.jpg",
+    name: `Westfield Event 4.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/events/Labrinthe_Coworking_Space_1_placeholder_jpg": {
+    path: "/photography/events/Labrinthe%20Coworking%20Space%201.placeholder.jpg",
+    name: `Labrinthe Coworking Space 1.placeholder`,
+    dimensions: [800, 533],
   },
 	"photography/events/Fast_Forward_Keynote_jpg": {
     path: "/photography/events/Fast%20Forward%20Keynote.jpg",
@@ -4783,6 +5028,11 @@ export const _generatedCdnAssets = {
     path: "/photography/events/apco_salon_dinner_discussion.jpg",
     name: `apco_salon_dinner_discussion`,
     dimensions: [4498, 3000],
+  },
+	"photography/events/Tiger_Inn_Formals_Spring_2019_jpg": {
+    path: "/photography/events/Tiger%20Inn%20Formals%20Spring%202019.jpg",
+    name: `Tiger Inn Formals Spring 2019`,
+    dimensions: [4898, 3265],
   },
 	"photography/Ladies_Market_Balcony_Long_Exposure_placeholder_jpg": {
     path: "/photography/Ladies%20Market%20Balcony%20Long%20Exposure.placeholder.jpg",

@@ -79,7 +79,7 @@ export const allCategoryTags = [
   PhotoTags.Engagements,
   PhotoTags.Panerama,
   PhotoTags.Satellite,
-  // PhotoTags.Concert,
+  PhotoTags.Concert,
   PhotoTags.Astrophotography,
   PhotoTags.Drone,
   PhotoTags.Cycling,
