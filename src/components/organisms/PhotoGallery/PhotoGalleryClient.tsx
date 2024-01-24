@@ -20,6 +20,11 @@ export type PhotoGalleryClientProps = {
    * Classes to apply to the container.
    */
   className?: string;
+
+  /**
+   * The number of columns to render. When set, this will not be responsive to screen size.
+   */
+  numColumns?: number;
 };
 
 /**
@@ -29,6 +34,7 @@ export const PhotoGalleryClient: React.FC<PhotoGalleryClientProps> = ({
   photos,
   fadeIn = false,
   className = "",
+  numColumns,
 }) => {
   const { width } = useScreenSize();
   const isMobile = width < 768;
@@ -38,6 +44,7 @@ export const PhotoGalleryClient: React.FC<PhotoGalleryClientProps> = ({
   // TODO (k): Replace with a placeholder.
   if (!isClient) return <div className="min-h-[500px] w-full" />;
 
+  const columns = numColumns !== undefined ? numColumns : isMobile ? 2 : 4;
   return (
     <div
       className={classNames(
@@ -56,7 +63,7 @@ export const PhotoGalleryClient: React.FC<PhotoGalleryClientProps> = ({
     >
       <PhotoAlbum<PhotoRecord>
         layout="masonry"
-        columns={isMobile ? 2 : 4}
+        columns={columns}
         // Default container width is needed for SSR.
         defaultContainerWidth={isMobile ? 450 : 800}
         photos={photos}

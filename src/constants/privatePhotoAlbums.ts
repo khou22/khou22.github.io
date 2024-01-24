@@ -5,6 +5,11 @@ export type PrivatePhotoAlbumType = {
   name: string;
   cover: PhotoIdType;
   photos: PhotoIdType[];
+
+  /**
+   * Link to a full distrubution of the album.
+   */
+  link?: string;
 };
 
 export const privatePhotoAlbums: PrivatePhotoAlbumType[] = [
@@ -12,6 +17,7 @@ export const privatePhotoAlbums: PrivatePhotoAlbumType[] = [
     id: "lwhs-chase-center-2024",
     name: "Lick-Wilmerding High School vs. University High School at Chase Center 2024",
     cover: "photography/sports/LWHS_at_Chase_Center_2024_1_jpg",
+    link: "https://photos.app.goo.gl/5LWPj1eM3BY4g2ACA",
     photos: [
       "photography/sports/LWHS_at_Chase_Center_2024_1_jpg",
       "photography/sports/LWHS_at_Chase_Center_2024_2_jpg",
