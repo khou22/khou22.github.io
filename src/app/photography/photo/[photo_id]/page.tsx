@@ -30,6 +30,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { getSuggestedPhotos } from "@/utils/photos/getSuggestedPhotos";
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
+import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
 
 export type PageProps = {
   params: {
@@ -105,13 +106,20 @@ const PhotoByIDPage = async ({
         <p className="caption my-2 w-full text-center">
           This photo is not for sale.
         </p>
+        <p className="sr-only">{getPhotoName(photoID)}</p>
+
+        <div className="my-2 flex w-full flex-row flex-wrap items-center justify-center gap-1">
+          {tags.map((tag) => (
+            <PhotoTagBadge key={tag} photoTag={tag} />
+          ))}
+        </div>
 
         <div className="mb-10 w-full">
           <Label>Share</Label>
           <InputWithCopy className="w-full" text={photoURL} />
         </div>
 
-        <Card>
+        <Card className="m-auto">
           <CardHeader>
             <CardTitle className="font-default text-base">
               Need a photographer?

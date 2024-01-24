@@ -2439,6 +2439,11 @@ export const _generatedCdnAssets = {
     name: `Flames Softball - 2`,
     dimensions: [4498, 3000],
   },
+	"photography/sports/LWHS_at_Chase_Center_2024_8_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%208.placeholder.jpg",
+    name: `LWHS at Chase Center 2024 8.placeholder`,
+    dimensions: [800, 534],
+  },
 	"photography/sports/Flames_Softball_3_jpg": {
     path: "/photography/sports/Flames%20Softball%20-%203.jpg",
     name: `Flames Softball - 3`,
@@ -2457,6 +2462,11 @@ export const _generatedCdnAssets = {
 	"photography/sports/Bass_Lake_Wakeboarding_1_placeholder_jpg": {
     path: "/photography/sports/Bass%20Lake%20Wakeboarding%201.placeholder.jpg",
     name: `Bass Lake Wakeboarding 1.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_7_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%207.placeholder.jpg",
+    name: `LWHS at Chase Center 2024 7.placeholder`,
     dimensions: [800, 534],
   },
 	"photography/sports/Flames_Softball_3_placeholder_jpg": {
@@ -2489,10 +2499,20 @@ export const _generatedCdnAssets = {
     name: `Bass Lake Wakeboarding 2`,
     dimensions: [4498, 3000],
   },
+	"photography/sports/LWHS_at_Chase_Center_2024_1_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%201.placeholder.jpg",
+    name: `LWHS at Chase Center 2024 1.placeholder`,
+    dimensions: [800, 534],
+  },
 	"photography/sports/LWHS_Santa_Cruze_Warriors_Stadium_Team_Huddle_placeholder_jpg": {
     path: "/photography/sports/LWHS%20Santa%20Cruze%20Warriors%20Stadium%20Team%20Huddle.placeholder.jpg",
     name: `LWHS Santa Cruze Warriors Stadium Team Huddle.placeholder`,
     dimensions: [800, 534],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_8_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%208.jpg",
+    name: `LWHS at Chase Center 2024 8`,
+    dimensions: [4897, 3266],
   },
 	"photography/sports/LWHS_Kezar_Floater_jpg": {
     path: "/photography/sports/LWHS%20Kezar%20-%20Floater.jpg",
@@ -2514,10 +2534,60 @@ export const _generatedCdnAssets = {
     name: `Flames Softball - 2.placeholder`,
     dimensions: [800, 534],
   },
+	"photography/sports/LWHS_at_Chase_Center_2024_6_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%206.placeholder.jpg",
+    name: `LWHS at Chase Center 2024 6.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_2_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%202.jpg",
+    name: `LWHS at Chase Center 2024 2`,
+    dimensions: [4498, 3000],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_3_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%203.placeholder.jpg",
+    name: `LWHS at Chase Center 2024 3.placeholder`,
+    dimensions: [534, 800],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_3_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%203.jpg",
+    name: `LWHS at Chase Center 2024 3`,
+    dimensions: [3266, 4897],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_1_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%201.jpg",
+    name: `LWHS at Chase Center 2024 1`,
+    dimensions: [4897, 3266],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_4_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%204.jpg",
+    name: `LWHS at Chase Center 2024 4`,
+    dimensions: [4897, 3266],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_5_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%205.jpg",
+    name: `LWHS at Chase Center 2024 5`,
+    dimensions: [4498, 3000],
+  },
 	"photography/sports/Catcher_Emmie_Flames_Softball_Portrait_placeholder_jpg": {
     path: "/photography/sports/Catcher%20Emmie%20Flames%20Softball%20Portrait.placeholder.jpg",
     name: `Catcher Emmie Flames Softball Portrait.placeholder`,
     dimensions: [534, 800],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_7_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%207.jpg",
+    name: `LWHS at Chase Center 2024 7`,
+    dimensions: [4897, 3266],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_4_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%204.placeholder.jpg",
+    name: `LWHS at Chase Center 2024 4.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_6_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%206.jpg",
+    name: `LWHS at Chase Center 2024 6`,
+    dimensions: [4897, 3266],
   },
 	"photography/sports/Bass_Lake_Wakeboarding_2_placeholder_jpg": {
     path: "/photography/sports/Bass%20Lake%20Wakeboarding%202.placeholder.jpg",
@@ -2529,6 +2599,11 @@ export const _generatedCdnAssets = {
     name: `Catcher Emmie Flames Softball Portrait`,
     dimensions: [2001, 3000],
   },
+	"photography/sports/LWHS_at_Chase_Center_2024_5_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%205.placeholder.jpg",
+    name: `LWHS at Chase Center 2024 5.placeholder`,
+    dimensions: [800, 534],
+  },
 	"photography/sports/LWHS_vs_University_Softball_2021_placeholder_jpg": {
     path: "/photography/sports/LWHS%20vs%20University%20Softball%202021.placeholder.jpg",
     name: `LWHS vs University Softball 2021.placeholder`,
@@ -2538,6 +2613,11 @@ export const _generatedCdnAssets = {
     path: "/photography/sports/Flames%20Softball%20-%201.placeholder.jpg",
     name: `Flames Softball - 1.placeholder`,
     dimensions: [534, 800],
+  },
+	"photography/sports/LWHS_at_Chase_Center_2024_2_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%202.placeholder.jpg",
+    name: `LWHS at Chase Center 2024 2.placeholder`,
+    dimensions: [800, 534],
   },
 	"photography/sports/LWHS_vs_University_Softball_2021_jpg": {
     path: "/photography/sports/LWHS%20vs%20University%20Softball%202021.jpg",
