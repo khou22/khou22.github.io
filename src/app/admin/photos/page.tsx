@@ -6,6 +6,7 @@ import { PAGES } from "@/utils/pages";
 import { Label } from "@/components/ui/label";
 import { getPhotoIDs } from "@/utils/photos/getPhotoIDs";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import { privatePhotoAlbums } from "@/constants/privatePhotoAlbums";
 
 const PhotoPageHome = () => {
   // Parse all subdirectory folders from our list of photo IDs.
@@ -46,6 +47,21 @@ const PhotoPageHome = () => {
                 <span className="hidden group-hover:inline-block">📂</span>{" "}
                 {subDir}/
               </li>
+            </CustomLink>
+          ))}
+        </ul>
+      </div>
+
+      <div className="my-4 w-full">
+        <Label>Shareable Albums 🔗</Label>
+        <ul>
+          {privatePhotoAlbums.map((album) => (
+            <CustomLink
+              key={album.id}
+              href={PAGES.SHARE.ALBUM(album.id)}
+              className="group"
+            >
+              <li>{album.name}</li>
             </CustomLink>
           ))}
         </ul>

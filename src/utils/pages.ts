@@ -27,6 +27,9 @@ export const PAGES = {
     AERIAL_SF: "/photography/aerial-sf",
     SAN_FRANCISCAN: "/photography/san-franciscan",
   },
+  SHARE: {
+    ALBUM: (albumID: string) => `/share/${albumID}`,
+  },
   PROGRAMMING: "/programming",
   ADMIN: {
     PHOTOGRAPHY: "/admin/photos",

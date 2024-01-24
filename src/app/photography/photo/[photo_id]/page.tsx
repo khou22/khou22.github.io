@@ -31,6 +31,7 @@ import { Button } from "@/components/ui/button";
 import { getSuggestedPhotos } from "@/utils/photos/getSuggestedPhotos";
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
+import { getPhotoSize } from "@/utils/photos/getPhotoSize";
 
 export type PageProps = {
   params: {
@@ -41,9 +42,9 @@ export type PageProps = {
   };
 };
 
-export const generateMetadata = ({
+export const generateMetadata = async ({
   params: { photo_id: photoIdURLComponent },
-}: PageProps): Metadata => {
+}: PageProps): Promise<Metadata> => {
   const photoID = getPhotoIDFromURLComponent(photoIdURLComponent);
   if (!photoID) {
     notFound();
@@ -58,8 +59,46 @@ export const generateMetadata = ({
     redirect(PAGES.PHOTOGRAPHY.PHOTO(originalPhotoID));
   }
 
+  const title = `${getPhotoName(photoID)} | Kevin Hou Photography`;
+  const coverImage = getCdnAsset(photoID);
+  const size = await getPhotoSize(photoID);
   return {
-    title: `${getPhotoName(photoID)} | Kevin Hou Photography`,
+    title,
+    description: siteMetadata.description,
+    authors: {
+      name: siteMetadata.author,
+      url: siteMetadata.siteUrl,
+    },
+    metadataBase: new URL(siteMetadata.siteUrl),
+    twitter: {
+      site: siteMetadata.siteUrl,
+      siteId: "khou22.com",
+      creator: siteMetadata.author,
+      creatorId: "@kevinhou22",
+      description: siteMetadata.description,
+      title: title,
+      card: "summary_large_image",
+      images: [
+        {
+          url: coverImage,
+          alt: title,
+          type: "image/jpeg",
+          width: size.width,
+          height: size.height,
+        },
+      ],
+    },
+    openGraph: {
+      images: [
+        {
+          url: coverImage,
+          alt: title,
+          type: "image/jpeg",
+          width: size.width,
+          height: size.height,
+        },
+      ],
+    },
   };
 };
 
