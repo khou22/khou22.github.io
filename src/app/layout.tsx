@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
 import { Cutive_Mono, Montserrat, Mulish } from "next/font/google";
 import "./globals.css";
@@ -74,6 +75,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gaID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
   return (
     <html lang="en">
       <body
@@ -90,6 +92,9 @@ export default function RootLayout({
           {children}
           <Footer />
         </HydrationOverlay>
+        {gaID && process.env.NODE_ENV === "production" && (
+          <GoogleAnalytics gaId={gaID} />
+        )}
       </body>
     </html>
   );
