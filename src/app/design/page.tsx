@@ -1,5 +1,10 @@
+import { Metadata } from "next";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { designProjects } from "@/constants/designProjects";
+
+export const metadata: Metadata = {
+  title: "Design Portfolio | Kevin Hou",
+};
 
 const DeisgnPortfolioPage = () => {
   return (

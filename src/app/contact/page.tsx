@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { ContactForm } from "./ContactForm";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
@@ -9,6 +10,10 @@ import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
 import { BioSection } from "@/components/organisms/BioSection/BioSection";
+
+export const metadata: Metadata = {
+  title: "Contact | Kevin Hou",
+};
 
 const ContactPage = () => {
   return (

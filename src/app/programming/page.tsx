@@ -1,9 +1,14 @@
+import { Metadata } from "next";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { occupations } from "@/constants/occupations";
 import { programmingProjects } from "@/constants/programmingProjects";
 import { PAGES } from "@/utils/pages";
+
+export const metadata: Metadata = {
+  title: "Programming Portfolio | Kevin Hou",
+};
 
 const ProgrammingPortfolioPage = () => {
   return (
