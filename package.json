@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@builder.io/react-hydration-overlay": "^0.0.6",
-    "@codeium/react-code-editor": "^0.0.13",
+    "@codeium/react-code-editor": "^1.0.1",
     "@headlessui/react": "^1.7.17",
     "@hookform/resolvers": "^3.3.2",
     "@next/third-parties": "^14.1.0",
