@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.0.6
     version: 0.0.6(react-dom@18.2.0)(react@18.2.0)(webpack@5.89.0)
   '@codeium/react-code-editor':
-    specifier: ^1.0.1
-    version: 1.0.1(monaco-editor@0.45.0)
+    specifier: ^1.0.3
+    version: 1.0.3(monaco-editor@0.45.0)
   '@headlessui/react':
     specifier: ^1.7.17
     version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
@@ -605,8 +605,8 @@ packages:
       webpack: 5.89.0
     dev: false
 
-  /@codeium/react-code-editor@1.0.1(monaco-editor@0.45.0):
-    resolution: {integrity: sha512-Z6umBF7JzJe70QvWENA+TWKo5lz8Aaa+hbTYWL2KT556COK7pFA1RZ7ntWCrfp9owk8bexQ9Hki2838K8/S+6g==}
+  /@codeium/react-code-editor@1.0.3(monaco-editor@0.45.0):
+    resolution: {integrity: sha512-WIcmyi3WCIAKVhWATpMCeuH80vXQF6mDREAkbReRTwZqrmtKL5beVCXhCYolpsoCxh5EMNr/xh8WazkPoBTMeQ==}
     engines: {node: '>=20'}
     peerDependencies:
       monaco-editor: ^0.45.0
