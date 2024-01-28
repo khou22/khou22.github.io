@@ -11,6 +11,7 @@
     "analyze": "ANALYZE=true next build",
     "dev": "next dev",
     "build": "next build",
+    "clean": "rm -rf .next node_modules",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
