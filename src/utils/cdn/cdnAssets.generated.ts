@@ -6604,6 +6604,11 @@ export const _generatedCdnAssets = {
     name: `Setting_Icon`,
     dimensions: [549, 412],
   },
+	"media/blog/images/codeium_series_b_thumbnail_png": {
+    path: "/media/blog/images/codeium-series-b-thumbnail.png",
+    name: `codeium-series-b-thumbnail`,
+    dimensions: [2048, 1120],
+  },
 	"media/blog/images/API_Testing/Chrome_Copy_cURL_png": {
     path: "/media/blog/images/API-Testing/Chrome_Copy_cURL.png",
     name: `Chrome_Copy_cURL`,
