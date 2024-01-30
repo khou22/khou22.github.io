@@ -2464,6 +2464,11 @@ export const _generatedCdnAssets = {
     name: `Bass Lake Wakeboarding 1.placeholder`,
     dimensions: [800, 534],
   },
+	"photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_5_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Varsity%20Senior%20Night%202024%205.placeholder.jpg",
+    name: `LWHS Girls Varsity Senior Night 2024 5.placeholder`,
+    dimensions: [800, 534],
+  },
 	"photography/sports/LWHS_at_Chase_Center_2024_7_placeholder_jpg": {
     path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%207.placeholder.jpg",
     name: `LWHS at Chase Center 2024 7.placeholder`,
@@ -2478,6 +2483,11 @@ export const _generatedCdnAssets = {
     path: "/photography/sports/LWHS%20Kezar%20-%20Driving%20to%20Basket.placeholder.jpg",
     name: `LWHS Kezar - Driving to Basket.placeholder`,
     dimensions: [640, 800],
+  },
+	"photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_2_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Varsity%20Senior%20Night%202024%202.placeholder.jpg",
+    name: `LWHS Girls Varsity Senior Night 2024 2.placeholder`,
+    dimensions: [800, 534],
   },
 	"photography/sports/Bass_Lake_Wakeboarding_1_jpg": {
     path: "/photography/sports/Bass%20Lake%20Wakeboarding%201.jpg",
@@ -2502,6 +2512,11 @@ export const _generatedCdnAssets = {
 	"photography/sports/LWHS_at_Chase_Center_2024_1_placeholder_jpg": {
     path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%201.placeholder.jpg",
     name: `LWHS at Chase Center 2024 1.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_3_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Varsity%20Senior%20Night%202024%203.placeholder.jpg",
+    name: `LWHS Girls Varsity Senior Night 2024 3.placeholder`,
     dimensions: [800, 534],
   },
 	"photography/sports/LWHS_Santa_Cruze_Warriors_Stadium_Team_Huddle_placeholder_jpg": {
@@ -2529,6 +2544,11 @@ export const _generatedCdnAssets = {
     name: `LWHS Santa Cruze Warriors Stadium Team Huddle`,
     dimensions: [4498, 3000],
   },
+	"photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_4_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Varsity%20Senior%20Night%202024%204.placeholder.jpg",
+    name: `LWHS Girls Varsity Senior Night 2024 4.placeholder`,
+    dimensions: [800, 534],
+  },
 	"photography/sports/Flames_Softball_2_placeholder_jpg": {
     path: "/photography/sports/Flames%20Softball%20-%202.placeholder.jpg",
     name: `Flames Softball - 2.placeholder`,
@@ -2539,9 +2559,19 @@ export const _generatedCdnAssets = {
     name: `LWHS at Chase Center 2024 6.placeholder`,
     dimensions: [800, 534],
   },
+	"photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_1_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Varsity%20Senior%20Night%202024%201.placeholder.jpg",
+    name: `LWHS Girls Varsity Senior Night 2024 1.placeholder`,
+    dimensions: [800, 534],
+  },
 	"photography/sports/LWHS_at_Chase_Center_2024_2_jpg": {
     path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%202.jpg",
     name: `LWHS at Chase Center 2024 2`,
+    dimensions: [4498, 3000],
+  },
+	"photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_1_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Varsity%20Senior%20Night%202024%201.jpg",
+    name: `LWHS Girls Varsity Senior Night 2024 1`,
     dimensions: [4498, 3000],
   },
 	"photography/sports/LWHS_at_Chase_Center_2024_3_placeholder_jpg": {
@@ -2558,6 +2588,16 @@ export const _generatedCdnAssets = {
     path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%201.jpg",
     name: `LWHS at Chase Center 2024 1`,
     dimensions: [4897, 3266],
+  },
+	"photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_2_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Varsity%20Senior%20Night%202024%202.jpg",
+    name: `LWHS Girls Varsity Senior Night 2024 2`,
+    dimensions: [4498, 3000],
+  },
+	"photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_3_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Varsity%20Senior%20Night%202024%203.jpg",
+    name: `LWHS Girls Varsity Senior Night 2024 3`,
+    dimensions: [4498, 3000],
   },
 	"photography/sports/LWHS_at_Chase_Center_2024_4_jpg": {
     path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%204.jpg",
@@ -2579,10 +2619,20 @@ export const _generatedCdnAssets = {
     name: `LWHS at Chase Center 2024 7`,
     dimensions: [4897, 3266],
   },
+	"photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_4_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Varsity%20Senior%20Night%202024%204.jpg",
+    name: `LWHS Girls Varsity Senior Night 2024 4`,
+    dimensions: [4498, 3000],
+  },
 	"photography/sports/LWHS_at_Chase_Center_2024_4_placeholder_jpg": {
     path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%204.placeholder.jpg",
     name: `LWHS at Chase Center 2024 4.placeholder`,
     dimensions: [800, 534],
+  },
+	"photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_5_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Varsity%20Senior%20Night%202024%205.jpg",
+    name: `LWHS Girls Varsity Senior Night 2024 5`,
+    dimensions: [4498, 3000],
   },
 	"photography/sports/LWHS_at_Chase_Center_2024_6_jpg": {
     path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%206.jpg",

@@ -29,4 +29,17 @@ export const privatePhotoAlbums: PrivatePhotoAlbumType[] = [
       "photography/sports/LWHS_at_Chase_Center_2024_8_jpg",
     ],
   },
+  {
+    id: "lwhs-senior-night-2024",
+    name: "Lick-Wilmerding High School Girls Varsity Basketball Senior Night 2024",
+    cover: "photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_5_jpg",
+    link: "https://photos.app.goo.gl/RsBbNkD3eonGXTcr6",
+    photos: [
+      "photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_1_jpg",
+      "photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_2_jpg",
+      "photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_3_jpg",
+      "photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_4_jpg",
+      "photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_5_jpg",
+    ],
+  },
 ];
