@@ -51,14 +51,14 @@ const getBlogSiteMap = async (): Promise<MetadataRoute.Sitemap> => {
       blogTags.add(tag);
     });
 
-    const url = PAGES.BLOG_POST(post.frontMatter);
-    const isExternal = !url.startsWith("/");
+    const href = PAGES.BLOG_POST(post.frontMatter);
+    const isExternal = !href.startsWith("/");
 
     // Skip external blog post references.
     if (isExternal) return;
 
     postEntries.push({
-      url,
+      url: `${siteMetadata.siteUrl}${href}`,
       lastModified: post.frontMatter.date,
       changeFrequency: "daily",
       priority: SiteMapPriority.MEDIUM,
