@@ -4,7 +4,7 @@ author: "Kevin Hou"
 date: 2024-01-30 10:15:00
 description: "Codeium has raised $65M to continue building the most intelligent AI code assistant on the market"
 image: "https://khou22.github.io/media/blog/images/codeium-series-b-thumbnail.png"
-tags: [coding, tutorial]
+tags: [coding, entrepreneurship]
 featured: false
 ---
 
