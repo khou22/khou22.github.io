@@ -1,46 +1,49 @@
 ---
-layout: post
 title: "Swift Camera Basics: Image Pickers and Action Sheets"
 author: "Kevin Hou"
 date: 2017-02-23 20:53:36
 description: "An over on implementing camera selection and action sheets in Swift."
-image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: ios
-tags: [swift, tutorial]
-featured: "no"
+tags: [mobile, tutorial]
 ---
 I am designing and implementing a profile screen into Breathometer’s new app and one of the key components of many profile screens is a profile picture. I’m continuing to add to my toolbox of Swift skills so I set about learning how to get pictures from either the camera app or phone’s photo library.
-<br class="post-line-break"><br>
+
 We need to build some basic frontend components so that we can have control over our code:
 ImageView: A view that our image from the camera/photo library will populate
 Button: To control when we want to upload the image
-<br class="post-line-break">
-<h3 class="post-subheader">Setup View Controller Class</h3>
-In order to use photos from the device, you must use the UIImagePickerControllerDelegate and the UINavigationControllerDelegate. These will give you the necessary functions to be able to retrieve your first image. The UIImagePickerControllerDelegate is responsible for initiating an image picker controller which then piggybacks with the UINavigationControllerDelegate that allows you to present the image picker using presentViewController() and dismissViewControllerAnimated(). Your view controller class should look like this:<br>
-{% highlight swift %}
-class ProfileScreen: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {    
+
+## Setup View Controller Class
+
+In order to use photos from the device, you must use the `UIImagePickerControllerDelegate` and the `UINavigationControllerDelegate`. These will give you the necessary functions to be able to retrieve your first image. The `UIImagePickerControllerDelegate` is responsible for initiating an image picker controller which then piggybacks with the `UINavigationControllerDelegate` that allows you to present the image picker using `presentViewController()` and `dismissViewControllerAnimated()`. Your view controller class should look like this:
+
+```swift
+class ProfileScreen: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
-{% endhighlight %}
+```
 
-<h3 class="post-subheader">Connect Storyboard to Code</h3>
+## Connect Storyboard to Code
+
 Create an outlet for the imageView and an action outlet for the button:
-{% highlight swift %}
+
+```swift
 @IBOutlet weak var profilePictureImageView: UIImageView! // Image view we want to display the image in
 @IBAction func selectProfilePicture(sender: AnyObject) {
 }
-{% endhighlight %}
+```
 
-<h3 class="post-subheader">Setup Image Picker</h3>
+## Setup Image Picker
+
 Initialize the UIImagePickerController under the UIImageView outlet we created earlier:
-{% highlight swift %}
+
+```swift
 let imagePicker = UIImagePickerController() // Initialize an image picker view controller type
-{% endhighlight %}
+```
 
 Now we can create a function that will serve up the image picker. It accepts a sourceType as an input so that the image picker knows whether to show the actual camera interface or the photo library interface. There are three main parts in displaying an image picker: editing, source type, and presenting. Source type can be from the camera, the camera roll, or the photo library. The presentation component is what actually presents the imagePicker controller.
-{% highlight swift %}
+
+```swift
 func pickImage(sourceType: UIImagePickerControllerSourceType) {
   imagePicker.allowsEditing = false // Prevent editing
 
@@ -52,14 +55,17 @@ func pickImage(sourceType: UIImagePickerControllerSourceType) {
       print("Opening image picker view controller")
   })
 }
-{% endhighlight %}
+```
 
-<h3 class="post-subheader">Create Action Sheet</h3>
-We want the user to be able to specify if they want to use their camera or the photo library to select an image. We give them this option by creating an action sheet. An action sheet looks like this:<br>
-<img class="iPhone-screenshots-medium" src="https://developer.apple.com/ios/human-interface-guidelines/images/action_sheets_2x.png" />
+## Create Action Sheet
+
+We want the user to be able to specify if they want to use their camera or the photo library to select an image. We give them this option by creating an action sheet. An action sheet looks like this:
+
+![swift action sheet](https://developer.apple.com/ios/human-interface-guidelines/images/action_sheets_2x.png)
 
 Because we want this action sheet to appear when the button is pressed, we place this bit of code in the action outlet. The code is straightforward and intuitive:
-{% highlight swift %}
+
+```swift
 let imageSourcePicker = UIAlertController(title: "Select Profile Picture", message: "Please select an image picker method", preferredStyle: .ActionSheet) // Initialize action sheet type
 
 let cameraAction = UIAlertAction(title: "Take a picture", style: .Default, handler: { action in
@@ -75,21 +81,25 @@ imageSourcePicker.addAction(cameraAction)
 imageSourcePicker.addAction(cameraRoll)
 
 presentViewController(imageSourcePicker, animated: true, completion: nil)
-{% endhighlight %}
+```
 
-<h3 class="post-subheader">Setup the UIImagePickerControllerDelegate Methods</h3>
+## Setup the UIImagePickerControllerDelegate Methods
+
 We must set the imagePicker delegate to self in viewDidLoad():
-{% highlight swift %}
+
+```swift
 imagePicker.delegate = self // States that this view controller will also handle the events
-{% endhighlight %}
+```
 
 Now we can write the methods. There are two image picker functions are essential:
-{% highlight swift %}
+
+```swift
 imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
-{% endhighlight %}
+```
+
 This function is triggered when you return a valid image. The selected image is passed in as part of the info object.
 
-{% highlight swift %}
+```swift
 func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
   if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
     // If returned a valid image
@@ -103,20 +113,22 @@ func imagePickerController(picker: UIImagePickerController, didFinishPickingMedi
   })
 }
 
-
 imagePickerControllerDidCancel(picker: UIImagePickerController)
 This is triggered when the image selection flow is cancelled
 func imagePickerControllerDidCancel(picker: UIImagePickerController) {
   // Dismiss the image picker controller
   dismissViewControllerAnimated(true, completion: {
     print("Cancelled image picker flow")
+
   })
 }
-{% endhighlight %}
+```
 
-<h3 class="post-subheader">Final Code:</h3>
+## Final Code
+
 The complete source code looks like this:
-{% highlight swift %}
+
+```swift
 //  Created by Kevin
 //  Copyright © 2016 KevinHou. All rights reserved.
 //
@@ -194,14 +206,17 @@ class ProfileScreen: UIViewController, UIImagePickerControllerDelegate, UINaviga
         })
     }
 
+
 }
-{% endhighlight %}
+```
 
-Hope you found this helpful! You can find the source code on <a href="https://github.com/khou22/Swift-App-Templates/blob/master/SampleTabProject/SampleTabProject/ProfileScreen.swift" target="_blank">GitHub</a>.
+Hope you found this helpful! You can find the [source code on GitHub](https://github.com/khou22/Swift-App-Templates/blob/master/SampleTabProject/SampleTabProject/ProfileScreen.swift).
 
-<h3 class="post-subheader">Another Example of an Action Sheet</h3>
+## Another Example of an Action Sheet
+
 Here's another example of two different types of action sheets in case the first example was difficult to grasp.
-{% highlight swift %}
+
+```swift
 Text Input Dialogue:
 // Create text modal for adding an event name prediction
 let newCategoryAlert = UIAlertController(title: "Enter Location", message: "Manually add a location suggestion", preferredStyle: .alert)
@@ -251,6 +266,6 @@ actionSheet.addAction(cancelAction)
 
 self.present(actionSheet, animated: true, completion: nil) // Present action sheet to user
 
-{% endhighlight %}
+```
 
 Hope you found this helpful!

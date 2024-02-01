@@ -1,48 +1,47 @@
 ---
-layout: post
 title: "Introduction to HealthKit: Reading Steps, Weight, Height, and More"
 author: "Kevin Hou"
 date: 2016-07-22 09:48:15
 description: "An overview of the fundamental basics in the HealthKit API and some more complex examples to get you started."
-image: "./../../../../media/blog/images/Blog_Post_Placeholder_Image.jpg"
-category: ios
-tags: [swift, xcode, tutorial, sourceCode]
-featured: "no"
+tags: [coding, mobile, tutorial]
 ---
-<h3 class="post-subheader">Project Objectives</h3>
-I was instructed to integrate HealthKit information — specifically pulling steps data — into Breathometer's upcoming app. I'm realitively new to Swift having only started a month ago, so this project was a way for me to get more familiar with the language and IDE. My task was to pull the data from HealhtKit then populate a table within a page of the app. This data could then be used for visualizations, analysis, etc. Here are my main learning goals for this project:
-<ol>
-  <li>Learn how to integrate with HealthKit and pull data from a “3rd party” source (not really a 3rd party but it's an API all the same)</li>
-  <li>Learn the fundamentals of table views, populating views, etc. so that I can develop a better understanding of Swift frontend (<a href="http://khou22.github.io/programming/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html" target="_blank">see next post</a>)</li>
-</ol>
+## Project Objectives
 
-<br class="post-line-break">
-<h3 class="post-subheader">Authorizing and Integrating with HealthKit</h3>
+I was instructed to integrate HealthKit information — specifically pulling steps data — into Breathometer's upcoming app. I'm realitively new to Swift having only started a month ago, so this project was a way for me to get more familiar with the language and IDE. My task was to pull the data from HealhtKit then populate a table within a page of the app. This data could then be used for visualizations, analysis, etc. Here are my main learning goals for this project:
+
+- Learn how to integrate with HealthKit and pull data from a “3rd party” source (not really a 3rd party but it's an API all the same)
+- Learn the fundamentals of table views, populating views, etc. so that I can develop a better understanding of Swift frontend [see next post](http://khou22.github.io/programming/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html)
+
+## Authorizing and Integrating with HealthKit
+
 Nested within the authorizeHealthKit function:
-{% highlight swift %}
+
+```swift
 func authorizeHealthKit(completion: ((success:Bool, error:NSError!) -> Void)!) {
 }
-{% endhighlight %}
-<br class="post-line-break">
-<b>Get Healthkit information to read</b>
-{% highlight swift %}
+```
+
+### Get Healthkit information to read
+
+```swift
 let healthKitTypesToRead = NSSet(objects:
   HKObjectType.characteristicTypeForIdentifier(HKCharacteristicTypeIdentifierDateOfBirth)!, HKObjectType.characteristicTypeForIdentifier(HKCharacteristicTypeIdentifierBiologicalSex)!,
   HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)!,
   HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
 )
-{% endhighlight %}
-<br class="post-line-break">
-<b>Healthkit information to write</b>
-{% highlight swift %}
+```
+
+### Healthkit information to write
+
+```swift
 let healthKitTypesToWrite = NSSet(objects:
             HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
         )
-{% endhighlight %}
-<br class="post-line-break">
+```
+
 To actually get data from healthkit, create a function within the class. This one, for example, gets your birthdate from health kit:
-<br>
-{% highlight swift %}
+
+```swift
 func getBirthdateFromHealthKit() -> AnyObject {
         var birthdate: AnyObject!
         do {
@@ -54,13 +53,15 @@ func getBirthdateFromHealthKit() -> AnyObject {
 
         return birthdate
     }
-{% endhighlight %}
-<br class="post-line-break">
-<h3 class="post-subheader">More complex example</h3>
+```
+
+## More complex example
+
 Pulls steps from Healthkit (x number of days) and show it in a table view by creating a new function within the HealthKitManager class.
-<br class="post-line-break">
+
 Returning steps by per day for x number of days:
-{% highlight swift %}
+
+```swift
 func readStepsByDay(sinceDaysAgo: Int, completion: (([HKQuantitySample]!, NSError!) -> Void)!) {
         let type: HKQuantityType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)!
         let currentDate = NSDate().dateWithoutTime() // Get current date
@@ -102,13 +103,14 @@ func readStepsByDay(sinceDaysAgo: Int, completion: (([HKQuantitySample]!, NSErro
             self.healthKitStore.executeQuery(sampleQuery) // Fire the call
         }
     }
-{% endhighlight %}
-<br class="post-line-break">
-<b>Extensions Used</b>
-{% highlight swift %}
+```
+
+### Extensions Used
+
+```swift
 extension NSDate {
     func daysAgo(daysAgo: Int) -> NSDate {
-        let result = -24 * 60 * 60 * Double(daysAgo)
+        let result = -24 *60* 60 * Double(daysAgo)
         return self.dateByAddingTimeInterval(result)
     }
 
@@ -120,10 +122,11 @@ extension NSDate {
         return dateNoTime!
     }
 }
-{% endhighlight %}
-<br class="post-line-break">
-<b>Usage:</b>
-{% highlight swift %}
+```
+
+### Usage
+
+```swift
 HealthKitManager().readStepsByDay(100, completion: { (mostRecentSteps, error) in
 
             // Catch error
@@ -136,4 +139,4 @@ HealthKitManager().readStepsByDay(100, completion: { (mostRecentSteps, error) in
                 print(dayCount.quantity.doubleValueForUnit(HKUnit.countUnit()))
             }
         })
-{% endhighlight %}
+```
