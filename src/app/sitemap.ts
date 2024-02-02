@@ -171,6 +171,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "daily",
       priority: SiteMapPriority.MEDIUM,
     },
+    {
+      url: `${siteMetadata.siteUrl}${PAGES.BROWSER_HOMEPAGE}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: SiteMapPriority.LOW,
+    },
   ];
 
   return mainPagesSitemap.concat(blogSitemap).concat(photoSitemap);

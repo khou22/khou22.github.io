@@ -31,7 +31,8 @@ export const NavBar: React.FC = () => {
   const isFloating =
     pathname === PAGES.HOME ||
     pathname === PAGES.BLOG ||
-    pathname === PAGES.PHOTOGRAPHY.AERIAL_SF;
+    pathname === PAGES.PHOTOGRAPHY.AERIAL_SF ||
+    pathname === PAGES.BROWSER_HOMEPAGE;
 
   // If floating, never have a scroll transition.
   const transitionProgress = isFloating

@@ -31,6 +31,7 @@ export const PAGES = {
     ALBUM: (albumID: string) => `/share/${albumID}`,
   },
   PROGRAMMING: "/programming",
+  BROWSER_HOMEPAGE: "/programming/browser-home-page",
   ADMIN: {
     PHOTOGRAPHY: "/admin/photos",
     ALL_PHOTOS: (page: number) => `/admin/photos/all/${page}`,
