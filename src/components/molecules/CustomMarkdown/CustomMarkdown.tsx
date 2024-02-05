@@ -7,6 +7,7 @@ import { a11yDark as dark } from "react-syntax-highlighter/dist/esm/styles/hljs"
 import React from "react";
 import rehypeRaw from "rehype-raw";
 import { classNames } from "@/utils/style";
+import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 
 type CustomMarkdownProps = {
   children: string;
@@ -73,6 +74,20 @@ export const CustomMarkdown: React.FC<CustomMarkdownProps> = ({
         >
           {props.children as string | string[]}
         </SyntaxHighlighter>
+      );
+    },
+    a: ({ children, href, ...props }) => {
+      const isExternal = href?.startsWith("http");
+
+      return (
+        <CustomLink
+          target={isExternal ? "_blank" : "_self"}
+          {...props}
+          href={href as string}
+          underline={true}
+        >
+          {children}
+        </CustomLink>
       );
     },
   };
