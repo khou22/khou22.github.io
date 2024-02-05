@@ -5,16 +5,19 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import rangeParser from "parse-numeric-range";
 import { a11yDark as dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import React from "react";
+import rehypeRaw from "rehype-raw";
 import { classNames } from "@/utils/style";
 
 type CustomMarkdownProps = {
   children: string;
   className?: string;
+  skipHtml?: boolean;
 };
 
 export const CustomMarkdown: React.FC<CustomMarkdownProps> = ({
   children,
   className = "",
+  skipHtml = false,
 }) => {
   const MarkdownComponents: Partial<CustomMarkdownComponents> = {
     code({ node, className, ...props }) {
@@ -81,6 +84,8 @@ export const CustomMarkdown: React.FC<CustomMarkdownProps> = ({
         "prose lg:prose-xl prose-pre:px-3 prose-pre:py-2",
         className,
       )}
+      rehypePlugins={[rehypeRaw]}
+      skipHtml={skipHtml}
     >
       {children}
     </ReactMarkdown>
