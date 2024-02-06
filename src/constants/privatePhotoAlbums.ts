@@ -17,7 +17,7 @@ export const privatePhotoAlbums: PrivatePhotoAlbumType[] = [
     id: "lwhs-chase-center-2024",
     name: "Lick-Wilmerding High School vs. University High School at Chase Center 2024",
     cover: "photography/sports/LWHS_at_Chase_Center_2024_1_jpg",
-    link: "https://photos.app.goo.gl/5LWPj1eM3BY4g2ACA",
+    link: "https://photos.app.goo.gl/4sHBGQ9FCpqJpTiX9",
     photos: [
       "photography/sports/LWHS_at_Chase_Center_2024_1_jpg",
       "photography/sports/LWHS_at_Chase_Center_2024_2_jpg",
