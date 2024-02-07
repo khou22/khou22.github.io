@@ -104,7 +104,7 @@ const HomePage = async () => {
             backgroundURL={`url(${getCdnAsset(
               "photography/San_Francisco_Sunset_Skyline_Landscape_from_Plane_jpg",
             )})`}
-            className="3xl:text-[12rem] max-w-full break-words text-center text-[4.25rem] font-black xs:text-[5rem] sm:text-[6.5rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] 2xl:text-[11rem]"
+            className="3xl:text-[12rem] max-w-full break-words text-center text-[3rem] font-black xs:text-[4.5rem] sm:text-[6rem] md:text-[7rem] lg:text-[8.5rem] xl:text-[10rem] 2xl:text-[11rem]"
           >
             Engineer, Photographer, Woodworker
           </ParallaxTextBackground>
@@ -157,7 +157,7 @@ const HomePage = async () => {
             backgroundURL={`url(${getCdnAsset(
               "photography/product/IWC_Watch_Shot_Landscape_jpg",
             )})`}
-            className="max-w-full break-words text-center text-[4.25rem] font-black leading-normal xs:text-[5rem] sm:text-[6.5rem] md:text-[7.2rem] lg:text-[9rem] xl:text-[12rem] 2xl:text-[13rem]"
+            className="max-w-full break-words text-center text-[3.6rem] font-black leading-normal xs:text-[4.5rem] sm:text-[6rem] md:text-[7.1rem] lg:text-[8.8rem] xl:text-[11rem] 2xl:text-[13rem]"
           >
             Freelance Photographer
           </ParallaxTextBackground>
