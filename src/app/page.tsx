@@ -17,7 +17,7 @@ import { BioSection } from "@/components/organisms/BioSection/BioSection";
 
 const HomePage = async () => {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <ParallaxCover />
 
       {/* Gradient transition to the page content. */}
@@ -157,7 +157,7 @@ const HomePage = async () => {
             backgroundURL={`url(${getCdnAsset(
               "photography/product/IWC_Watch_Shot_Landscape_jpg",
             )})`}
-            className="max-w-full break-words text-center text-[3.6rem] font-black leading-normal xs:text-[4.5rem] sm:text-[6rem] md:text-[7.1rem] lg:text-[8.8rem] xl:text-[11rem] 2xl:text-[13rem]"
+            className="max-w-full break-words text-center text-[3.2rem] font-black leading-normal xs:text-[4.5rem] sm:text-[6rem] md:text-[7.1rem] lg:text-[8.8rem] xl:text-[11rem] 2xl:text-[13rem]"
           >
             Freelance Photographer
           </ParallaxTextBackground>

@@ -21,7 +21,7 @@ export const BioSection: React.FC<BioSectionProps> = ({
   return (
     <div
       className={classNames(
-        "relative z-10 w-full bg-gray-800 pb-20 sm:pb-24 xl:pb-0",
+        "relative w-full bg-gray-800 pb-20 sm:pb-24 xl:pb-0",
         className,
       )}
     >
@@ -37,7 +37,7 @@ export const BioSection: React.FC<BioSectionProps> = ({
             />
           </div>
         </div>
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
+        <div className="mx-auto flex max-w-full flex-col items-center gap-x-8 gap-y-10 px-6 sm:max-w-7xl sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
           <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
             <div className="relative aspect-[5/3] h-full sm:aspect-[4/3] md:-mx-8 xl:mx-0 xl:aspect-auto">
               <FadeInView once>
