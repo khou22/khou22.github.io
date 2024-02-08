@@ -1,4 +1,5 @@
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { PAGES } from "@/utils/pages";
 
 export enum ProjectCategory {
   iOSApp = "iOS App",
@@ -91,6 +92,15 @@ export const programmingProjects: ProgrammingProjectType[] = [
     category: ProjectCategory.Website,
     description:
       "Started freelance venture to design and develop client websites.",
+  },
+  {
+    name: "Codeium React Edititor NPM Package",
+    subtitle: "Free, unlimited autocomplete for React",
+    slug: PAGES.CODEIUM_DEMO,
+    image: getCdnAsset("media/programming/thumbnails/codeium_website_png"),
+    category: ProjectCategory.WebApp,
+    description:
+      "Free, unlimited autocomplete for React. Simply install using npm and start typing. Powered by Codeium.",
   },
   {
     name: "Photo Analysis Content Management System",

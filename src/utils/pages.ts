@@ -31,6 +31,7 @@ export const PAGES = {
     ALBUM: (albumID: string) => `/share/${albumID}`,
   },
   PROGRAMMING: "/programming",
+  CODEIUM_DEMO: "/programming/codeium",
   BROWSER_HOMEPAGE: "/programming/browser-home-page",
   ADMIN: {
     PHOTOGRAPHY: "/admin/photos",

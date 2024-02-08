@@ -11,13 +11,28 @@ const CodeiumDemoPage = () => {
         <p className="w-full text-center">Your modern coding superpower.</p>
       </div>
 
-      <Link href="https://codeium.com" target="_blank">
-        <Button variant="primary">Visit Codeium</Button>
-      </Link>
+      <div className="flex flex-row items-center justify-center space-x-2">
+        <Link href="https://codeium.com" target="_blank">
+          <Button variant="primary">Visit Codeium</Button>
+        </Link>
+
+        <Link
+          href="https://github.com/Exafunction/codeium-react-code-editor"
+          target="_blank"
+        >
+          <Button variant="outline">GitHub Repo</Button>
+        </Link>
+      </div>
 
       <p>Try it out using the Python editor below.</p>
 
-      <CodeiumEditor language="python" theme="vs-dark" />
+      <img
+        src="https://badge.fury.io/js/@codeium%2Freact-code-editor.svg"
+        alt="Codeium badge"
+        className="h-5"
+      />
+
+      <CodeiumEditor language="python" theme="vs-dark" height={500} />
     </PageWrapper>
   );
 };
