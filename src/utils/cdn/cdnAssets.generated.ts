@@ -6659,6 +6659,11 @@ export const _generatedCdnAssets = {
     name: `Swift_Table_Views`,
     dimensions: [1920, 1080],
   },
+	"media/blog/images/syntax_podcast_cover_photo_jpg": {
+    path: "/media/blog/images/syntax-podcast-cover-photo.jpg",
+    name: `syntax-podcast-cover-photo`,
+    dimensions: [1280, 720],
+  },
 	"media/blog/images/Blog_Post_Placeholder_Image_jpg": {
     path: "/media/blog/images/Blog_Post_Placeholder_Image.jpg",
     name: `Blog_Post_Placeholder_Image`,
