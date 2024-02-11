@@ -26,11 +26,16 @@ const CodeiumDemoPage = () => {
 
       <p>Try it out using the Python editor below.</p>
 
-      <img
-        src="https://badge.fury.io/js/@codeium%2Freact-code-editor.svg"
-        alt="Codeium badge"
-        className="h-5"
-      />
+      <Link
+        href="https://github.com/Exafunction/codeium-react-code-editor"
+        target="_blank"
+      >
+        <img
+          src="https://badge.fury.io/js/@codeium%2Freact-code-editor.svg"
+          alt="Codeium badge"
+          className="h-5"
+        />
+      </Link>
 
       <CodeiumEditor language="python" theme="vs-dark" height={500} />
     </PageWrapper>
