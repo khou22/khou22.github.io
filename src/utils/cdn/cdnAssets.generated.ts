@@ -6219,54 +6219,54 @@ export const _generatedCdnAssets = {
     name: `hero`,
     dimensions: [900, 700],
   },
-	"media/projects/uberScheduler/Screenshots/Home_Screen_png": {
-    path: "/media/projects/uberScheduler/Screenshots/Home%20Screen.png",
-    name: `Home Screen`,
+	"media/projects/uberScheduler/screenshots/general_settings_png": {
+    path: "/media/projects/uberScheduler/screenshots/general-settings.png",
+    name: `general-settings`,
     dimensions: [931, 1656],
   },
-	"media/projects/uberScheduler/Screenshots/General_Settings_png": {
-    path: "/media/projects/uberScheduler/Screenshots/General%20Settings.png",
-    name: `General Settings`,
+	"media/projects/uberScheduler/screenshots/fare_estimate_png": {
+    path: "/media/projects/uberScheduler/screenshots/fare-estimate.png",
+    name: `fare-estimate`,
     dimensions: [931, 1656],
   },
-	"media/projects/uberScheduler/Screenshots/Fare_Estimate_png": {
-    path: "/media/projects/uberScheduler/Screenshots/Fare%20Estimate.png",
-    name: `Fare Estimate`,
+	"media/projects/uberScheduler/screenshots/schedule_configuration_png": {
+    path: "/media/projects/uberScheduler/screenshots/schedule-configuration.png",
+    name: `schedule-configuration`,
     dimensions: [931, 1656],
   },
-	"media/projects/uberScheduler/Screenshots/Schedule_Configuration_png": {
-    path: "/media/projects/uberScheduler/Screenshots/Schedule%20Configuration.png",
-    name: `Schedule Configuration`,
+	"media/projects/uberScheduler/screenshots/home_screen_png": {
+    path: "/media/projects/uberScheduler/screenshots/home-screen.png",
+    name: `home-screen`,
     dimensions: [931, 1656],
   },
-	"media/projects/uberScheduler/Design_Mockups/Home_Screen_UI_png": {
-    path: "/media/projects/uberScheduler/Design%20Mockups/Home%20Screen%20UI.png",
-    name: `Home Screen UI`,
+	"media/projects/uberScheduler/design_mockups/location_tab_png": {
+    path: "/media/projects/uberScheduler/design-mockups/location-tab.png",
+    name: `location-tab`,
     dimensions: [750, 1334],
   },
-	"media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_Time_Picker_V1_png": {
-    path: "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20Time%20Picker%20V1.png",
-    name: `Edit Ride UI - Time Picker V1`,
+	"media/projects/uberScheduler/design_mockups/time_picker_v2_png": {
+    path: "/media/projects/uberScheduler/design-mockups/time-picker-v2.png",
+    name: `time-picker-v2`,
     dimensions: [750, 1334],
   },
-	"media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_Location_Tab_png": {
-    path: "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20Location%20Tab.png",
-    name: `Edit Ride UI - Location Tab`,
+	"media/projects/uberScheduler/design_mockups/time_picker_v1_png": {
+    path: "/media/projects/uberScheduler/design-mockups/time-picker-v1.png",
+    name: `time-picker-v1`,
     dimensions: [750, 1334],
   },
-	"media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_Time_Picker_V2_png": {
-    path: "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20Time%20Picker%20V2.png",
-    name: `Edit Ride UI - Time Picker V2`,
+	"media/projects/uberScheduler/design_mockups/home_screen_png": {
+    path: "/media/projects/uberScheduler/design-mockups/home-screen.png",
+    name: `home-screen`,
     dimensions: [750, 1334],
   },
-	"media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_General_Tab_V2_png": {
-    path: "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20General%20Tab%20V2.png",
-    name: `Edit Ride UI - General Tab V2`,
+	"media/projects/uberScheduler/design_mockups/general_tab_v1_png": {
+    path: "/media/projects/uberScheduler/design-mockups/general-tab-v1.png",
+    name: `general-tab-v1`,
     dimensions: [750, 1334],
   },
-	"media/projects/uberScheduler/Design_Mockups/Edit_Ride_UI_General_Tab_V1_png": {
-    path: "/media/projects/uberScheduler/Design%20Mockups/Edit%20Ride%20UI%20-%20General%20Tab%20V1.png",
-    name: `Edit Ride UI - General Tab V1`,
+	"media/projects/uberScheduler/design_mockups/general_tab_v2_png": {
+    path: "/media/projects/uberScheduler/design-mockups/general-tab-v2.png",
+    name: `general-tab-v2`,
     dimensions: [750, 1334],
   },
 	"media/projects/async_post_message/async_post_message_homepage_png": {
