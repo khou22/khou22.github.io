@@ -98,7 +98,7 @@ export const designProjects: DesignProjectType[] = [
     title: "Uber Scheduler",
     subtitle: "MenloHacks 2016 Winner",
     image: getCdnAsset(
-      "media/projects/uberScheduler/Screenshots/Home_Screen_png",
+      "media/projects/uberScheduler/screenshots/home_screen_png",
     ),
     category: ProjectCategory.iOSApp,
     description:

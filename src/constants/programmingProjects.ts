@@ -136,7 +136,7 @@ export const programmingProjects: ProgrammingProjectType[] = [
     subtitle: "MenloHacks 2016 Winner",
     slug: "Uber-Scheduler",
     image: getCdnAsset(
-      "media/projects/uberScheduler/Screenshots/Home_Screen_png",
+      "media/projects/uberScheduler/screenshots/home_screen_png",
     ),
     category: ProjectCategory.iOSApp,
     description:
