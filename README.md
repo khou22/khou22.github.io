@@ -1,5 +1,7 @@
 # Kevin Hou's Personal Website and Blog
 
+This change should not be checked in!
+
 [![built with Codeium](https://codeium.com/badges/main)](https://codeium.com?repo_name=khou22%2Fkhou22.github.io) [![streak](https://codeium.com/badges/v2/user/kevin/streak)](https://codeium.com/profile/kevin)
 
 Site is live on: [khou22.com](https://khou22.com?referrer=github&referrer_id=khou22.github.io)
