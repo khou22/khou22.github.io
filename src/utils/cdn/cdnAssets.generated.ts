@@ -3064,6 +3064,11 @@ export const _generatedCdnAssets = {
     name: ` (USA Road Trip)-2.placeholder`,
     dimensions: [600, 400],
   },
+	"photography/portraits/Codeium_Headshots_3_placeholder_jpg": {
+    path: "/photography/portraits/Codeium%20Headshots%20-%203.placeholder.jpg",
+    name: `Codeium Headshots - 3.placeholder`,
+    dimensions: [800, 534],
+  },
 	"photography/portraits/Miriam_Chinatown_Portrait_placeholder_jpg": {
     path: "/photography/portraits/Miriam%20Chinatown%20Portrait.placeholder.jpg",
     name: `Miriam Chinatown Portrait.placeholder`,
@@ -3098,6 +3103,11 @@ export const _generatedCdnAssets = {
     path: "/photography/portraits/Greece%20Acropolis%20Couples%20Portrait.jpg",
     name: `Greece Acropolis Couples Portrait`,
     dimensions: [2001, 3000],
+  },
+	"photography/portraits/Codeium_Headshots_4_placeholder_jpg": {
+    path: "/photography/portraits/Codeium%20Headshots%20-%204.placeholder.jpg",
+    name: `Codeium Headshots - 4.placeholder`,
+    dimensions: [800, 534],
   },
 	"photography/portraits/Lightsaber_Portrait_of_Ben_in_Alleyway_jpg": {
     path: "/photography/portraits/Lightsaber%20Portrait%20of%20Ben%20in%20Alleyway.jpg",
@@ -3138,6 +3148,11 @@ export const _generatedCdnAssets = {
     path: "/photography/portraits/Chinatown%20Nightime%20Portrait.placeholder.jpg",
     name: `Chinatown Nightime Portrait.placeholder`,
     dimensions: [640, 800],
+  },
+	"photography/portraits/Codeium_Headshots_2_placeholder_jpg": {
+    path: "/photography/portraits/Codeium%20Headshots%20-%202.placeholder.jpg",
+    name: `Codeium Headshots - 2.placeholder`,
+    dimensions: [800, 534],
   },
 	"photography/portraits/Chinatown_Walking_Silhouette_jpg": {
     path: "/photography/portraits/Chinatown%20Walking%20Silhouette.jpg",
@@ -3184,6 +3199,16 @@ export const _generatedCdnAssets = {
     name: `WEMKE Christmas Card 2022 Family Portrait`,
     dimensions: [4498, 3000],
   },
+	"photography/portraits/Codeium_Headshots_1_jpg": {
+    path: "/photography/portraits/Codeium%20Headshots%20-%201.jpg",
+    name: `Codeium Headshots - 1`,
+    dimensions: [4498, 3000],
+  },
+	"photography/portraits/Codeium_Headshots_1_placeholder_jpg": {
+    path: "/photography/portraits/Codeium%20Headshots%20-%201.placeholder.jpg",
+    name: `Codeium Headshots - 1.placeholder`,
+    dimensions: [800, 534],
+  },
 	"photography/portraits/Conrad_Bike_Portrait_Vertical_placeholder_jpg": {
     path: "/photography/portraits/Conrad%20Bike%20Portrait%20%28Vertical%29.placeholder.jpg",
     name: `Conrad Bike Portrait (Vertical).placeholder`,
@@ -3193,6 +3218,11 @@ export const _generatedCdnAssets = {
     path: "/photography/portraits/Grace%20Studio%20Portrait.placeholder.jpg",
     name: `Grace Studio Portrait.placeholder`,
     dimensions: [534, 800],
+  },
+	"photography/portraits/Codeium_Headshots_2_jpg": {
+    path: "/photography/portraits/Codeium%20Headshots%20-%202.jpg",
+    name: `Codeium Headshots - 2`,
+    dimensions: [4498, 3000],
   },
 	"photography/portraits/Conrad_Bike_Portrait_Skyline_placeholder_jpg": {
     path: "/photography/portraits/Conrad%20Bike%20Portrait%20Skyline.placeholder.jpg",
@@ -3209,6 +3239,11 @@ export const _generatedCdnAssets = {
     name: `Miriam Chinatown Portrait`,
     dimensions: [2001, 3000],
   },
+	"photography/portraits/Codeium_Headshots_3_jpg": {
+    path: "/photography/portraits/Codeium%20Headshots%20-%203.jpg",
+    name: `Codeium Headshots - 3`,
+    dimensions: [4498, 3000],
+  },
 	"photography/portraits/Fast_Forward_Team_Photo_jpg": {
     path: "/photography/portraits/Fast%20Forward%20Team%20Photo.jpg",
     name: `Fast Forward Team Photo`,
@@ -3223,6 +3258,11 @@ export const _generatedCdnAssets = {
     path: "/photography/portraits/Black%20Sheep%20Foods%20Team%20Photo.jpg",
     name: `Black Sheep Foods Team Photo`,
     dimensions: [2001, 3000],
+  },
+	"photography/portraits/Codeium_Headshots_4_jpg": {
+    path: "/photography/portraits/Codeium%20Headshots%20-%204.jpg",
+    name: `Codeium Headshots - 4`,
+    dimensions: [4498, 3000],
   },
 	"photography/portraits/Chinatown_Nightime_Portrait_jpg": {
     path: "/photography/portraits/Chinatown%20Nightime%20Portrait.jpg",

@@ -42,4 +42,16 @@ export const privatePhotoAlbums: PrivatePhotoAlbumType[] = [
       "photography/sports/LWHS_Girls_Varsity_Senior_Night_2024_5_jpg",
     ],
   },
+  {
+    id: "codeium-employee-headshots",
+    name: "Codeium Headshots",
+    link: "https://photos.app.goo.gl/xeZRnQycZX4BR5bv7",
+    cover: "photography/portraits/Codeium_Headshots_4_jpg",
+    photos: [
+      "photography/portraits/Codeium_Headshots_1_jpg",
+      "photography/portraits/Codeium_Headshots_2_jpg",
+      "photography/portraits/Codeium_Headshots_3_jpg",
+      "photography/portraits/Codeium_Headshots_4_jpg",
+    ],
+  },
 ];
