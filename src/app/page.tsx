@@ -171,7 +171,7 @@ const HomePage = async () => {
               </h5>
             </FadeInView>
             <FadeInView once>
-              <PhotographyCustomersGrid className="my-4" />
+              <PhotographyCustomersGrid className="my-4 px-4 sm:px-0" />
             </FadeInView>
             <FadeInView once>
               <p className="caption text-center">
