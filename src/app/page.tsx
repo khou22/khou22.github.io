@@ -85,7 +85,7 @@ const HomePage = async () => {
               </FadeInView>
             </div>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1 p-4 sm:p-0">
             <FadeInView threshold={0.35} durationMS={1000}>
               <img
                 alt="homepage photography image tiles"
