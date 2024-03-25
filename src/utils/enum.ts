@@ -10,6 +10,7 @@ export function enumToString<E>(
   enumType: Record<string, unknown>,
 ): string | undefined {
   const keys = Object.keys(enumType);
+  console.log(`keys: ${keys}`);
   const key = keys.find(
     (k) => enumType[k as keyof typeof enumType] === enumValue,
   );
