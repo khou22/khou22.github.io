@@ -2,6 +2,12 @@ import Image from "next/image";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { DownloadLink } from "@/components/molecules/DownloadLink/DownloadLink";
+import { siteMetadata } from "@/constants/siteMetadata";
+
+export const metadata = {
+  title: "Media Kit | Kevin Hou",
+  description: `Kevin Hou's media resources. ${siteMetadata.description}`,
+};
 
 const MediaPage = () => {
   return (
