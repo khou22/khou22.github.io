@@ -54,4 +54,9 @@ export const privatePhotoAlbums: PrivatePhotoAlbumType[] = [
       "photography/portraits/Codeium_Headshots_4_jpg",
     ],
   },
+  {
+    id: "lwhs-senior-night-lacrosse-2024",
+    name: "Lick-Wilmerding High School Girls Varsity Lacrosse Senior Night 2024",
+    link: "https://photos.app.goo.gl/H1cRyWa8rHoZpQcr6",
+  },
 ];

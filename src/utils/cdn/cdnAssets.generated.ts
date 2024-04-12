@@ -2444,6 +2444,11 @@ export const _generatedCdnAssets = {
     name: `LWHS at Chase Center 2024 8.placeholder`,
     dimensions: [800, 534],
   },
+	"photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_1_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Lacrosse%20Senior%20Night%202024%20-%201.jpg",
+    name: `LWHS Girls Lacrosse Senior Night 2024 - 1`,
+    dimensions: [4498, 3000],
+  },
 	"photography/sports/Flames_Softball_3_jpg": {
     path: "/photography/sports/Flames%20Softball%20-%203.jpg",
     name: `Flames Softball - 3`,
@@ -2453,6 +2458,11 @@ export const _generatedCdnAssets = {
     path: "/photography/sports/Flames%20Softball%20-%201.jpg",
     name: `Flames Softball - 1`,
     dimensions: [2001, 3000],
+  },
+	"photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_3_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Lacrosse%20Senior%20Night%202024%20-%203.jpg",
+    name: `LWHS Girls Lacrosse Senior Night 2024 - 3`,
+    dimensions: [4498, 3000],
   },
 	"photography/sports/Emmie_Santa_Cuz_Warriors_Stadium_Dribbling_placeholder_jpg": {
     path: "/photography/sports/Emmie%20Santa%20Cuz%20Warriors%20Stadium%20Dribbling.placeholder.jpg",
@@ -2473,6 +2483,11 @@ export const _generatedCdnAssets = {
     path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%207.placeholder.jpg",
     name: `LWHS at Chase Center 2024 7.placeholder`,
     dimensions: [800, 534],
+  },
+	"photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_2_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Lacrosse%20Senior%20Night%202024%20-%202.jpg",
+    name: `LWHS Girls Lacrosse Senior Night 2024 - 2`,
+    dimensions: [4498, 3000],
   },
 	"photography/sports/Flames_Softball_3_placeholder_jpg": {
     path: "/photography/sports/Flames%20Softball%20-%203.placeholder.jpg",
@@ -2509,6 +2524,11 @@ export const _generatedCdnAssets = {
     name: `Bass Lake Wakeboarding 2`,
     dimensions: [4498, 3000],
   },
+	"photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_4_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Lacrosse%20Senior%20Night%202024%20-%204.jpg",
+    name: `LWHS Girls Lacrosse Senior Night 2024 - 4`,
+    dimensions: [4498, 3000],
+  },
 	"photography/sports/LWHS_at_Chase_Center_2024_1_placeholder_jpg": {
     path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%201.placeholder.jpg",
     name: `LWHS at Chase Center 2024 1.placeholder`,
@@ -2528,6 +2548,11 @@ export const _generatedCdnAssets = {
     path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%208.jpg",
     name: `LWHS at Chase Center 2024 8`,
     dimensions: [4897, 3266],
+  },
+	"photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_1_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Lacrosse%20Senior%20Night%202024%20-%201.placeholder.jpg",
+    name: `LWHS Girls Lacrosse Senior Night 2024 - 1.placeholder`,
+    dimensions: [800, 534],
   },
 	"photography/sports/LWHS_Kezar_Floater_jpg": {
     path: "/photography/sports/LWHS%20Kezar%20-%20Floater.jpg",
@@ -2598,6 +2623,16 @@ export const _generatedCdnAssets = {
     path: "/photography/sports/LWHS%20Girls%20Varsity%20Senior%20Night%202024%203.jpg",
     name: `LWHS Girls Varsity Senior Night 2024 3`,
     dimensions: [4498, 3000],
+  },
+	"photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_3_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Lacrosse%20Senior%20Night%202024%20-%203.placeholder.jpg",
+    name: `LWHS Girls Lacrosse Senior Night 2024 - 3.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_4_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Lacrosse%20Senior%20Night%202024%20-%204.placeholder.jpg",
+    name: `LWHS Girls Lacrosse Senior Night 2024 - 4.placeholder`,
+    dimensions: [800, 534],
   },
 	"photography/sports/LWHS_at_Chase_Center_2024_4_jpg": {
     path: "/photography/sports/LWHS%20at%20Chase%20Center%202024%204.jpg",
@@ -2673,6 +2708,11 @@ export const _generatedCdnAssets = {
     path: "/photography/sports/LWHS%20vs%20University%20Softball%202021.jpg",
     name: `LWHS vs University Softball 2021`,
     dimensions: [5184, 3464],
+  },
+	"photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_2_placeholder_jpg": {
+    path: "/photography/sports/LWHS%20Girls%20Lacrosse%20Senior%20Night%202024%20-%202.placeholder.jpg",
+    name: `LWHS Girls Lacrosse Senior Night 2024 - 2.placeholder`,
+    dimensions: [800, 534],
   },
 	"photography/House_at_the_Base_of_the_Tetons_in_Teton_Village_jpg": {
     path: "/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.jpg",

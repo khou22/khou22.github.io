@@ -25,10 +25,30 @@ pnpm dev
 
 Color palette:
 
-```
+```txt
 blue: #3286A8
 red: #D5491F
 orange: #DA8D0F
 green: #80A454
 gray: #9DB7C1
 ```
+
+### Image Cleaning
+
+I created helper scrips to compress images and create thumbnails. I use these when uploading new photos:
+
+```sh
+# Compress images.
+pnpm clean-images --max_kb 2100 --no-dry-run
+
+# Update Typescript objects.
+pnpm generate:assets
+
+# Generate thumbnails.
+pnpm generate:thumbnails --no-dry-run
+
+# Regenerate Typescript objects with thumbnails.
+pnpm generate:assets
+```
+
+Then you can go to the [admin page](http://localhost:3000/admin/photos) and set the tags appropriately.
