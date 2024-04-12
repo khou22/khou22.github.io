@@ -19,7 +19,7 @@ The inspiration for this project was that, as a busy college student, I was sche
 
 Think about having dinner with someone. I'd have dinner with Person A, let's call him/her Alex. Alex and I get a meal once a week when we can, generally between 5 PM and 8 PM, and typically at one of three dining halls on campus. As you can see, there is a consistency in options, but because Google Calendar or iOS Calendar only allow you to copy events exactly, there was no way for me to pick and choose which parts of past events I wanted to include in the calendar event for my dinner with Alex next week. This meant that I'd have to create my calendar event for dinner with Alex every single time, going through the monotonous process of typing in the name, searching a location, and using a hurrendous date picker for the time of dinner.
 
-Frustrated, I took a macroscopic and critical look at the "mainstream" calendar apps, narrowing my painpoints to two main problems:  
+Frustrated, I took a macroscopic and critical look at the "mainstream" calendar apps, narrowing my painpoints to two main problems:
 
 1. Existing apps, like the iOS and Google calendar clients, were designed for completeness — migrating all features from the desktop to mobile — resulting in a bloated product that didn't keep simplicity in mind.
 2. The interface for scheduling events largely remained the same across all clients: date pickers, checkboxes, scrolling — a slow but accepted and standardized user experience.
@@ -44,13 +44,13 @@ The challenge was to attack this basic task of adding a calendar event from your
 
 I approached my "solution" by looking through the eyes of a perspective user. What exactly do users want? What feels intuitive? Because I naturally have my own bias and style of scheduling events, what changes to the user experience can be generalized to any person wishing to schedule evets?
 
-I first identified my core target audience. This app was to be a scheduler — used for frequent, but inconsistent events. The busy student, parent, or professional using this to schedule meetings, meals, and other random events, would generally have no desire to change their notification time, add guests, select a color for the event, add a note, etc. These are all features that *could* be useful on the desktop, but ultimately, wouldn't be touched except for in specific edge cases. After asking friends, family, and coworkers, I found that this was consistent across the *majority* of people who I would be targeting.
+I first identified my core target audience. This app was to be a scheduler — used for frequent, but inconsistent events. The busy student, parent, or professional using this to schedule meetings, meals, and other random events, would generally have no desire to change their notification time, add guests, select a color for the event, add a note, etc. These are all features that _could_ be useful on the desktop, but ultimately, wouldn't be touched except for in specific edge cases. After asking friends, family, and coworkers, I found that this was consistent across the _majority_ of people who I would be targeting.
 
-With this in mind, I could then trim down fields that my user wouldn't need: guests, custom notification times (a default for all events will do), event color, notes, URL & file attachments, free/busy selection, visibility, travel time (automatically taken care of automatically by iOS/Mac), and event privacy. This left the bare neccessities:  
+With this in mind, I could then trim down fields that my user wouldn't need: guests, custom notification times (a default for all events will do), event color, notes, URL & file attachments, free/busy selection, visibility, travel time (automatically taken care of automatically by iOS/Mac), and event privacy. This left the bare neccessities:
 
-1. Name of the event  
-2. Start and end time  
-3. Location  
+1. Name of the event
+2. Start and end time
+3. Location
 
 These three elements can be broken into two groups: text fields and dates. Text fields were an easier component to tackle, but it took some thought to generate a good date picking user experience.
 

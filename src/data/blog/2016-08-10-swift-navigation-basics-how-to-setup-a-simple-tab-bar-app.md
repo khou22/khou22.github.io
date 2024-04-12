@@ -5,6 +5,7 @@ date: 2016-08-10 13:52:18
 description: "A tutorial on how to build a simple app that uses the iOS native navigation bar. It includes extensions and best practices in addition to all the bare bones requirements."
 tags: [coding, mobile, tutorial]
 ---
+
 ## The Basics
 
 ### Setting up the Project
@@ -31,16 +32,15 @@ Even if you decide to diffract your storyboards into multiple files, you must al
 ### Connect the Tabs to the Storyboard
 
 - Navigate back to your second storyboard file and ctrl-click drag from the Tab bar controller view to the reference and choose: Relationship Segue: view controllers. This will connect the storyboard reference to the toolbar in the tab bar controller.
-    ![swift navigation tab bar storyboard reference 1](https://khou22.github.io/media/blog/images/Tab-Bar-Navigation/Storyboard_Reference_1.png)
-    ![swift navigation tab bar storyboard reference 2](https://khou22.github.io/media/blog/images/Tab-Bar-Navigation/Storyboard_Reference_2.png)
-  
+  ![swift navigation tab bar storyboard reference 1](https://khou22.github.io/media/blog/images/Tab-Bar-Navigation/Storyboard_Reference_1.png)
+  ![swift navigation tab bar storyboard reference 2](https://khou22.github.io/media/blog/images/Tab-Bar-Navigation/Storyboard_Reference_2.png)
 - You will see a new item appear on the tab bar controller nav bar at the bottom of the view. The nav bar items here are somewhat irrelevant. Because we are using multiple view controllers, we must set the tab bar items using the navigation controller we created in the referenced storyboard file.
 - To set the image icon, label, etc., go to the storyboard file for that specific section of the app. If you used a navigation controller follow these nested steps. If you used a simple view controller, skip to the next step.
 - Find the root view controller that we connected to the navigation controller and select the tab bar item element that’s found just below “View.”
 - Drag this element into the “Navigation Controller Scene” under the group “Navigation Controller” so that it’s nested next to “Navigation Bar.” Now the icon will appear on all screens in this storyboard file.
 - Select the “Tab Bar Item” that you dragged into the view controller.
 - Use the options toolbar on the right to set the badge number, title, image, tag, and label position. You can also choose from default, iOS items like “Favorites,” “Contacts,” and “History.”
-    ![swift navigation tab bar app settings](https://khou22.github.io/media/blog/images/Tab-Bar-Navigation/Setting_Icon.png)
+  ![swift navigation tab bar app settings](https://khou22.github.io/media/blog/images/Tab-Bar-Navigation/Setting_Icon.png)
 - Your final main.storyboard should look like this:
   ![swift navigation tab bar app nav](https://khou22.github.io/media/blog/images/Tab-Bar-Navigation/Overview_of_Main_Storyboard.png)
 
@@ -60,7 +60,7 @@ Even if you decide to diffract your storyboards into multiple files, you must al
       }
   }
   ```
-  
+
 - Use the options sidebar on the right to connect the UIViewController to a custom class. Select the name that you chose when creating the UIViewController class in your Swift file.
 - Now, you should be set. You should have a set number of sections within your app. Each section has a “.storyboard” file, a single view controller within that storyboard marked as the initial view controller, a Swift UIViewController file connected to the storyboard view controller, and an icon in the toolbar. This is a bare bones example of an app with tab bar style navigation and defracted view controllers. My final product looked like this:
   ![swift navigation tab bar finished project](https://khou22.github.io/media/blog/images/Tab-Bar-Navigation/Finished_Tab_Bar_Project.png)
@@ -127,4 +127,4 @@ class CustomTabBarController: UITabBarController {
 
 ## Conclusion
 
-  A more decorated example of all of this can be found at: [https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject](https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject). A bare bones tab navigation app template can be found at [https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate](https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate).
+A more decorated example of all of this can be found at: [https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject](https://github.com/khou22/Swift-App-Templates/tree/master/SampleTabProject). A bare bones tab navigation app template can be found at [https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate](https://github.com/khou22/Swift-App-Templates/tree/master/TabBarTemplate).

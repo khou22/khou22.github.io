@@ -6,6 +6,7 @@ date: 2016-12-18 14:57:26
 description: "An overview of dictionaries/symbol tables and how they are useful."
 tags: [coding]
 ---
+
 Recently in class, I’ve been learning a lot about different data structures to use in programs. Many of the common, most applicable, include linked lists, stacks, queues, double linked lists, and symbol tables. In this post I will give a brief overview of symbol tables, also known as dictionaries or hash maps, and provide some instances where symbol tables can greatly improve the quality of your code. When implemented correctly, this simple data type can improve efficiency, code readability, and run time.
 
 ### What are dictionaries and symbol tables?
@@ -20,17 +21,18 @@ In both cases described above, both the key and the value can take on any data t
 
 **Javascript:**
 
-``` javascript
+```javascript
 var dictionary = []; // Create an empty array
-dictionary.push({ // Add an value to the dictionary
-    key:    "keyName",
-    value:  "the value"
+dictionary.push({
+  // Add an value to the dictionary
+  key: "keyName",
+  value: "the value",
 });
 ```
 
 **Swift:**
 
-``` swift
+```swift
 let dictionary = [ // New dictionary
   "keyName"       : "the value",
   "keyName"       : "the value"
@@ -42,7 +44,7 @@ dictionary.append("keyName" : "the value") // Add new item to dictionary
 
 Source: arshajii at [stackoverflow.com](http://stackoverflow.com/questions/13543457/how-do-you-create-a-dictionary-in-java)
 
-``` java
+```java
 // Using hashmap
 Map<String, String> map = new HashMap<String, String>();
 map.put("dog", "type of animal");
@@ -51,7 +53,7 @@ System.out.println(map.get("dog"));
 
 **Python:**
 
-``` python
+```python
 dict = {
   'Name'    : ‘Kevin’,
   ‘School’. : ‘Princeton University’,

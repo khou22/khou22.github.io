@@ -58,5 +58,12 @@ export const privatePhotoAlbums: PrivatePhotoAlbumType[] = [
     id: "lwhs-senior-night-lacrosse-2024",
     name: "Lick-Wilmerding High School Girls Varsity Lacrosse Senior Night 2024",
     link: "https://photos.app.goo.gl/H1cRyWa8rHoZpQcr6",
+    cover: "photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_1_jpg",
+    photos: [
+      "photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_1_jpg",
+      "photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_2_jpg",
+      "photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_3_jpg",
+      "photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_4_jpg",
+    ],
   },
 ];

@@ -1,7 +1,7 @@
 ---
 title: "React: Passing Information from Child to Parent while Mapping JSON Data"
 author: "Kevin Hou"
-date:   2015-07-20 15:43:23
+date: 2015-07-20 15:43:23
 description: "I recently learned how to pass information from a child component to a parent component for a project I was building at work. I wanted to publish some quick snippets in case it could help someone else out there."
 tags: [coding, web]
 ---
@@ -52,16 +52,21 @@ Example:
 module.exports = React.createClass({
   getInitialState() {
     return {
-      str: this.props.data.map(function (data) {return ( data.type )}),
-    }
+      str: this.props.data.map(function (data) {
+        return data.type;
+      }),
+    };
   },
   handleClick() {
-    console.log("Click")
+    console.log("Click");
   },
   render() {
     return (
-        <GameAnswerChoices handleClick={this.handleClick} string={this.state.str}/>
+      <GameAnswerChoices
+        handleClick={this.handleClick}
+        string={this.state.str}
+      />
     );
-  }
+  },
 });
 ```

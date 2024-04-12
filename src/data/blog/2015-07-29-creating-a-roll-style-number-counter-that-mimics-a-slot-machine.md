@@ -12,7 +12,7 @@ Usage:
 
 ```html
 <!-- The total time will be 300ms with one frame every 20ms. -->
-<AnimatedNumber number={this.state.number} time={300} frameRate={20}/>
+<AnimatedNumber number="{this.state.number}" time="{300}" frameRate="{20}" />
 ```
 
 Component source:
@@ -21,21 +21,25 @@ Component source:
 const AnimatedNumber = React.createClass({
   getInitialState() {
     return {
-      number: this.props.number
-    }
+      number: this.props.number,
+    };
   },
   componentWillReceiveProps(props) {
-    if (this.state.number !== props.number) { // If different number
-      if (this._interval) { //If theres an interval
-        clearInterval(this._interval) // Clear the existing interval
+    if (this.state.number !== props.number) {
+      // If different number
+      if (this._interval) {
+        //If theres an interval
+        clearInterval(this._interval); // Clear the existing interval
       }
-      let framesLeft = this.props.time/this.props.frameRate; //Determine frame rate
-      let increment = (props.number - this.state.number)/(framesLeft + 1); //Determine increment per frame
+      let framesLeft = this.props.time / this.props.frameRate; //Determine frame rate
+      let increment = (props.number - this.state.number) / (framesLeft + 1); //Determine increment per frame
       this._interval = setInterval(() => {
-        if (framesLeft > 0) { //If there are frames
+        if (framesLeft > 0) {
+          //If there are frames
           this.setState({ number: this.state.number + increment }); //Set new number
           framesLeft--; //Subtract a frame
-        } else { //If done
+        } else {
+          //If done
           clearInterval(this._interval); //Clear the interval
           this._interval = null; //Set to null
           this.setState({ number: props.number }); //Set the final value to the exact value just in case
@@ -48,7 +52,7 @@ const AnimatedNumber = React.createClass({
       <span>
         {Math.round(this.state.number)} //Round if you don't want a decimal
       </span>
-    )
-  }
+    );
+  },
 });
 ```

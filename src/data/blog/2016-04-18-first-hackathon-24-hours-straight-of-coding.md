@@ -5,6 +5,7 @@ date: 2016-04-18 18:26:51
 description: "A recap of my weekend at my first hackathon!"
 tags: [hackathon]
 ---
+
 ### The Experience
 
 On the weekend of April 16 and 17, I attended my first ever hackathon: MenloHacks. Located at the Menlo School in Menlo, California. It was a high school hackathon sponsored by Major League Hacking (MLH) - the official sponsor for high school hackathons. I was a little bit nervous largely because I didn’t know what to expect. Part of my anxiety stemmed from the fact that I had no real baseline as to how good of a coder I really was. I had an incredibly successful summer at Salesforce where I was coding alongside other college students, but I wasn’t sure how I’d fare with the added time pressure, constraints, etc. at a hackathon.

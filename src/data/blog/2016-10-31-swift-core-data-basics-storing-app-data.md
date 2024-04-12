@@ -5,6 +5,7 @@ date: 2016-10-31 21:07:17
 description: "A basic overview of Core Data in Swift and Xcode featuring a short example to help you get started."
 tags: [coding, mobile, tutorial]
 ---
+
 Core Data is an important component of many complex apps. An app’s lifecycle is a complicated topic, but data management can be articulated as such: When you kill an app (or shut down your phone), any data that isn’t designed to persist between sessions will be deleted. The solution is to either use persist data with NSUserDefaults or by using Apple’s Core Data. Again, Core Data is another incredibly complex topic, but this blog post should give you the necessary tools to start using it.
 
 ## Setting Up Core Data

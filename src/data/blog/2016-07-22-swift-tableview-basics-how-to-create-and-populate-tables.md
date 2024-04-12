@@ -6,6 +6,7 @@ date: 2016-07-22 10:46:44
 description: "A quick, bare-bones introduction to Table Views in Swift."
 tags: [coding, mobile, tutorial]
 ---
+
 ## Project Objectives
 
 I was instructed to integrate HealthKit information — specifically pulling steps data — into Breathometer's upcoming app. I'm realitively new to Swift having only started a month ago, so this project was a way for me to get more familiar with the language and IDE. My task was to pull the data from HealhtKit then populate a table within a page of the app. This data could then be used for visualizations, analysis, etc. Here are my main learning goals for this project:

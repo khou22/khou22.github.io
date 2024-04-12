@@ -5,6 +5,7 @@ date: 2016-08-24 22:02:18
 description: "A overview of my 2016 summer at Breathometer including my projects, what I learned, and what I hope to do going forward."
 tags: [work]
 ---
+
 This past summer (2016) I worked at a startup called Breathometer as an iOS frontend developer. Going into the summer, I was looking to work on a smaller team and get some real world experience building with Swift.
 
 ## What I Did
