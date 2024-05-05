@@ -13,6 +13,7 @@ import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { getSuggestedPhotoTags } from "@/utils/photos/getSuggestedPhotoTags";
 import { tagMetadata } from "@/constants/photoTags/tagMetadata";
+import { PhotoAlbumCover } from "@/components/organisms/PhotoAlbumCover/PhotoAlbumCover";
 
 type PageProps = {
   params: {
@@ -141,6 +142,11 @@ const TagPage = async ({ params }: PageProps) => {
           </p>
         </div>
       </div>
+
+      <PhotoAlbumCover
+        name={metadata.name}
+        photos={[photoIDs[0], photoIDs[1], photoIDs[2]]}
+      />
 
       <PhotoGallery photoIDs={photoIDs} fadeIn />
 
