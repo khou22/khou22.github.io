@@ -1,5 +1,5 @@
 import findKey from "lodash/findKey";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { NextRequest, NextResponse } from "next/server";
 import { ImageResponse } from "next/og";
 import { tagMetadata } from "@/constants/photoTags/tagMetadata";
@@ -8,6 +8,7 @@ import { ogImageSize } from "@/constants/ogImage";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { PhotoAlbumCover } from "@/components/organisms/PhotoAlbumCover/PhotoAlbumCover";
+import { siteMetadata } from "@/constants/siteMetadata";
 
 export const alt = "Open Graph";
 export const contentType = "image/png";
@@ -32,22 +33,28 @@ export async function GET(_: NextRequest, context: RouteParams) {
   try {
     const photos = await getPhotosWithTag(photoTag);
 
+    // If there are less than 4 photos, redirect to the standard preview card.
+    if (photos.length < 4) redirect(siteMetadata.previewCard.url);
+
     const heroPhoto = metadata.thumbnailPhotoId ?? photos[0];
 
     const featuredPhotos: PhotoIdType[] = [];
 
-    const featuredPhotos: [PhotoIdType, PhotoIdType, PhotoIdType] = [
-      photos[1],
-      photos[2],
-      photos[3],
-    ];
+    // Get the first 3 photos that aren't already used. Break when we have 3.
+    let i = 0;
+    while (featuredPhotos.length < 3 && i < photos.length) {
+      if (!featuredPhotos.includes(photos[i]) && photos[i] !== heroPhoto) {
+        featuredPhotos.push(photos[i]);
+      }
+      i++;
+    }
 
     return new ImageResponse(
       (
         <PhotoAlbumCover
           name={metadata.name}
           heroPhoto={heroPhoto}
-          photos={featuredPhotos}
+          photos={featuredPhotos as [PhotoIdType, PhotoIdType, PhotoIdType]}
         />
       ),
       {

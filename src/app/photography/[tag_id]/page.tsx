@@ -13,6 +13,8 @@ import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { getSuggestedPhotoTags } from "@/utils/photos/getSuggestedPhotoTags";
 import { tagMetadata } from "@/constants/photoTags/tagMetadata";
+import { siteMetadata } from "@/constants/siteMetadata";
+import { ogImageSize } from "@/constants/ogImage";
 
 type PageProps = {
   params: {
@@ -38,8 +40,46 @@ export const generateMetadata = ({ params }: PageProps): Metadata => {
     notFound();
   }
 
+  const title = `${tagMetadata[photoTag].name} | Kevin Hou Photography`;
+  const coverImage = PAGES.PHOTOGRAPHY.ALBUM_COVER(photoTag);
+
   return {
     title: `${tagMetadata[photoTag].name} | Kevin Hou Photography`,
+    description: siteMetadata.description,
+    authors: {
+      name: siteMetadata.author,
+      url: siteMetadata.siteUrl,
+    },
+    metadataBase: new URL(siteMetadata.siteUrl),
+    twitter: {
+      site: siteMetadata.siteUrl,
+      siteId: "khou22.com",
+      creator: siteMetadata.author,
+      creatorId: "@kevinhou22",
+      description: siteMetadata.description,
+      title: title,
+      card: "summary_large_image",
+      images: [
+        {
+          url: coverImage,
+          alt: title,
+          type: "image/jpeg",
+          width: ogImageSize.width,
+          height: ogImageSize.height,
+        },
+      ],
+    },
+    openGraph: {
+      images: [
+        {
+          url: coverImage,
+          alt: title,
+          type: "image/jpeg",
+          width: ogImageSize.width,
+          height: ogImageSize.height,
+        },
+      ],
+    },
   };
 };
 
