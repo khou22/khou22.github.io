@@ -31,18 +31,28 @@ export async function GET(_: NextRequest, context: RouteParams) {
 
   try {
     const photos = await getPhotosWithTag(photoTag);
+
+    const heroPhoto = metadata.thumbnailPhotoId ?? photos[0];
+
+    const featuredPhotos: PhotoIdType[] = [];
+
     const featuredPhotos: [PhotoIdType, PhotoIdType, PhotoIdType] = [
-      photos[0],
-      photos[0],
-      photos[0],
+      photos[1],
+      photos[2],
+      photos[3],
     ];
 
     return new ImageResponse(
-      <PhotoAlbumCover name={metadata.name} photos={featuredPhotos} />,
+      (
+        <PhotoAlbumCover
+          name={metadata.name}
+          heroPhoto={heroPhoto}
+          photos={featuredPhotos}
+        />
+      ),
       {
         width: ogImageSize.width,
         height: ogImageSize.height,
-        debug: true,
       },
     );
   } catch (e) {

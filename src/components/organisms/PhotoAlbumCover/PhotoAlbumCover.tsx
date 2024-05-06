@@ -1,8 +1,11 @@
+import { DiamondPhotoMask } from "./DiamondPhotoMask";
+import { PersonalLogo } from "@/components/atoms/PersonalLogo/PersonalLogo";
 import { ogImageSize } from "@/constants/ogImage";
-import { getCdnAsset, getPhotoName, PhotoIdType } from "@/utils/cdn/cdnAssets";
+import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 
 type PhotoAlbumCoverProps = {
   name: string;
+  heroPhoto: PhotoIdType;
   photos: [PhotoIdType, PhotoIdType, PhotoIdType];
 };
 
@@ -11,52 +14,120 @@ type PhotoAlbumCoverProps = {
  */
 export const PhotoAlbumCover: React.FC<PhotoAlbumCoverProps> = ({
   name,
+  heroPhoto,
   photos,
 }) => {
-  const [leftPhoto, heroPhoto, rightPhoto] = photos;
+  const largeDiamondsSize = 590;
+  const smallDiamondsSize = 230;
+  const smallDiamondsLeft = 490;
+  const smallDiamondsCenterOffset = 76;
 
   return (
     <div
       style={{
         width: ogImageSize.width,
         height: ogImageSize.height,
-        backgroundColor: "teal",
+        position: "relative",
+        backgroundColor: "white",
         display: "flex",
         flexDirection: "column",
+        overflowX: "hidden",
       }}
     >
+      <PersonalLogo
+        style={{
+          position: "absolute",
+          left: 35,
+          top: 35,
+          width: 100,
+          height: 100,
+        }}
+      />
+
+      {/* Background border */}
       <div
         style={{
-          width: "100%",
-          height: "20%",
+          position: "absolute",
+          left: 193,
+          top: 75,
+          height: 500,
+          width: 814,
+          border: "3px solid #DFDFDF",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
         }}
-      >
-        <p>{name}</p>
-      </div>
+      />
+
       <div
+        id="cover-content"
         style={{
-          width: "100%",
-          height: "80%",
+          position: "absolute",
+          left: 35,
+          top: 160,
+          width: 490,
+          height: 280,
+          paddingTop: 20,
+          paddingBottom: 20,
           display: "flex",
-          alignItems: "center",
+          flexDirection: "column",
+          alignItems: "flex-start",
           justifyContent: "center",
-          padding: 24,
+          backgroundColor: "white",
         }}
       >
-        <img
-          src={getCdnAsset(heroPhoto)}
-          alt={getPhotoName(heroPhoto)}
-          width={800}
-          height={450}
-          style={{
-            objectFit: "cover",
-            boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
-          }}
-        />
+        <h1 style={{ fontSize: 64, marginBottom: 24, fontWeight: "bold" }}>
+          {name}
+        </h1>
+        <h3 style={{ fontSize: 36, marginBottom: 12 }}>
+          Kevin Hou Photography
+        </h3>
+        <p style={{ fontSize: 20 }}>Prints available for purchase.</p>
       </div>
+
+      {/* Main photo */}
+      <DiamondPhotoMask
+        photoID={heroPhoto}
+        left={560}
+        top={ogImageSize.height / 2 - largeDiamondsSize / 2}
+        width={largeDiamondsSize}
+        height={largeDiamondsSize}
+        borderColor="white"
+        borderWidth={20}
+      />
+
+      {/* Left, top photo */}
+      <DiamondPhotoMask
+        photoID={photos[0]}
+        left={smallDiamondsLeft}
+        top={
+          ogImageSize.height / 2 - smallDiamondsSize - smallDiamondsCenterOffset
+        }
+        width={smallDiamondsSize}
+        height={smallDiamondsSize}
+        borderColor="white"
+        borderWidth={12}
+      />
+
+      {/* Left, bottom photo */}
+      <DiamondPhotoMask
+        photoID={photos[1]}
+        left={smallDiamondsLeft}
+        top={ogImageSize.height / 2 + smallDiamondsCenterOffset}
+        width={smallDiamondsSize}
+        height={smallDiamondsSize}
+        borderColor="white"
+        borderWidth={12}
+      />
+
+      {/* Right, bottom photo */}
+      <DiamondPhotoMask
+        photoID={photos[2]}
+        left={1020}
+        top={350}
+        width={smallDiamondsSize}
+        height={smallDiamondsSize}
+        borderColor="white"
+        borderWidth={12}
+      />
     </div>
   );
 };
