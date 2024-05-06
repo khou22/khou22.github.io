@@ -10,9 +10,6 @@ import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { PhotoAlbumCover } from "@/components/organisms/PhotoAlbumCover/PhotoAlbumCover";
 import { siteMetadata } from "@/constants/siteMetadata";
 
-export const alt = "Open Graph";
-export const contentType = "image/png";
-
 type RouteParams = {
   params: {
     tag_id: string;
