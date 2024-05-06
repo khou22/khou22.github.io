@@ -26,7 +26,8 @@ export const PAGES = {
       `/photography/photo/${getPhotoURLComponent(photoID)}`,
     AERIAL_SF: "/photography/aerial-sf",
     SAN_FRANCISCAN: "/photography/san-franciscan",
-    ALBUM_COVER: (tag: PhotoTags) => `/photography/${tag}/cover.png`,
+    ALBUM_COVER: (tag: PhotoTags) =>
+      `/photography/${tagMetadata[tag].slug}/cover.png`,
   },
   SHARE: {
     ALBUM: (albumID: string) => `/share/${albumID}`,
