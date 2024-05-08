@@ -31,6 +31,7 @@ export const PAGES = {
   },
   SHARE: {
     ALBUM: (albumID: string) => `/share/${albumID}`,
+    ALBUM_COVER: (albumID: string) => `/share/${albumID}/cover.png`,
   },
   PROGRAMMING: "/programming",
   CODEIUM_DEMO: "/programming/codeium",

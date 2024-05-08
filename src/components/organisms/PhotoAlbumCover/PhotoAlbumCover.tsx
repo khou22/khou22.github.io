@@ -7,6 +7,17 @@ type PhotoAlbumCoverProps = {
   name: string;
   heroPhoto: PhotoIdType;
   photos: [PhotoIdType, PhotoIdType, PhotoIdType];
+  caption?: string;
+
+  /**
+   * Defaults to 64px.
+   */
+  titleFontSize?: number;
+
+  /**
+   * Defaults to 32px.
+   */
+  subtitleFontSize?: number;
 };
 
 /**
@@ -16,6 +27,9 @@ export const PhotoAlbumCover: React.FC<PhotoAlbumCoverProps> = ({
   name,
   heroPhoto,
   photos,
+  caption,
+  titleFontSize = 64,
+  subtitleFontSize = 32,
 }) => {
   const largeDiamondsSize = 590;
   const smallDiamondsSize = 230;
@@ -74,13 +88,20 @@ export const PhotoAlbumCover: React.FC<PhotoAlbumCoverProps> = ({
           backgroundColor: "white",
         }}
       >
-        <h1 style={{ fontSize: 64, marginBottom: 24, fontWeight: "bold" }}>
+        <h1
+          style={{
+            fontSize: titleFontSize,
+            lineHeight: 1.1,
+            marginBottom: 24,
+            fontWeight: "bold",
+          }}
+        >
           {name}
         </h1>
-        <h3 style={{ fontSize: 36, marginBottom: 12 }}>
+        <h3 style={{ fontSize: subtitleFontSize, marginBottom: 12 }}>
           Kevin Hou Photography
         </h3>
-        <p style={{ fontSize: 20 }}>Prints available for purchase.</p>
+        {caption && <p style={{ fontSize: 20 }}>{caption}</p>}
       </div>
 
       {/* Main photo */}
