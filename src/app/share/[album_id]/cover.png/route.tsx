@@ -44,12 +44,24 @@ export async function GET(_: NextRequest, context: RouteParams) {
       i++;
     }
 
+    // TODO (kevin): Make this dynamic title font size available to all usages of <PhotoAlbumCover />
+    let titleFontSize = 38;
+    if (album.name.length < 20) {
+      titleFontSize = 64;
+    } else if (album.name.length < 30) {
+      titleFontSize = 48;
+    } else if (album.name.length < 40) {
+      titleFontSize = 42;
+    }
+
     return new ImageResponse(
       (
         <PhotoAlbumCover
           name={album.name}
           heroPhoto={heroPhoto}
           photos={featuredPhotos as [PhotoIdType, PhotoIdType, PhotoIdType]}
+          titleFontSize={titleFontSize}
+          subtitleFontSize={28}
         />
       ),
       {

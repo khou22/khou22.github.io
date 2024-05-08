@@ -52,6 +52,7 @@ export async function GET(_: NextRequest, context: RouteParams) {
           name={metadata.name}
           heroPhoto={heroPhoto}
           photos={featuredPhotos as [PhotoIdType, PhotoIdType, PhotoIdType]}
+          caption="Prints available for purchase."
         />
       ),
       {
