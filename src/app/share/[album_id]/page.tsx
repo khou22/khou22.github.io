@@ -37,8 +37,19 @@ export const generateMetadata = async ({
   }
 
   const title = `${album.name} | Kevin Hou Photography`;
-  const coverImage = getCdnAsset(album.cover);
-  const size = await getPhotoSize(album.cover);
+
+  let coverImage = PAGES.SHARE.ALBUM_COVER(params.album_id);
+  let size: { width?: number; height?: number } = {
+    width: siteMetadata.previewCard.width,
+    height: siteMetadata.previewCard.height,
+  };
+
+  // If there are less than 4 photos, redirect to the default cover image for that album.
+  if (album.photos.length < 4) {
+    coverImage = album.cover;
+    size = await getPhotoSize(album.cover);
+  }
+
   return {
     title,
     description: siteMetadata.description,
