@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+
 import { Toaster } from "@/components/ui/sonner";
 
 /**

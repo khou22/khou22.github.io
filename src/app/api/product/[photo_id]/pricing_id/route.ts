@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
-import { getPhotoIDFromURLComponent } from "@/utils/cdn/cdnAssets";
+
 import { photoPricing } from "@/constants/photoPricing";
+import { getPhotoIDFromURLComponent } from "@/utils/cdn/cdnAssets";
 import { getSnipcartProduct } from "@/utils/snipcart";
 
 interface RouteParams {

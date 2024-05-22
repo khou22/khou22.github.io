@@ -1,7 +1,8 @@
-import { PhotoIdType, getPhotoURLComponent } from "./cdn/cdnAssets";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { tagMetadata } from "@/constants/photoTags/tagMetadata";
 import { BlogPostFrontMatter } from "@/data/types";
+
+import { PhotoIdType, getPhotoURLComponent } from "./cdn/cdnAssets";
 
 /**
  * Pages used to navigate the site.

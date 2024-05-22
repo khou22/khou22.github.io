@@ -1,9 +1,12 @@
+import { FeaturedGallerySpreadProps } from "@/components/templates/FeaturedGallerySpread/types";
+import { PhotoIdType } from "@/utils/cdn/cdnAssets";
+
+
 import { featuredTagGalleryLayout } from "../gallery-layouts/featured";
 import { sanFranciscoTagGalleryLayout } from "../gallery-layouts/san-francisco";
 import { tokyoGalleryLayout } from "../gallery-layouts/tokyo";
+
 import { PhotoTags } from "./photoTags";
-import { PhotoIdType } from "@/utils/cdn/cdnAssets";
-import { FeaturedGallerySpreadProps } from "@/components/templates/FeaturedGallerySpread/types";
 
 export type TagMetadataType = {
   name: string;

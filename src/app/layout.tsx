@@ -1,13 +1,16 @@
-import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import type { Metadata } from "next";
 import { Cutive_Mono, Montserrat, Mulish } from "next/font/google";
+
 import "./globals.css";
-import { Snipcart } from "../components/organisms/Snipcart/Snipcart";
-import { siteMetadata } from "@/constants/siteMetadata";
-import { NavBar } from "@/components/organisms/NavBar/NavBar";
+
 import { Footer } from "@/components/organisms/Footer/Footer";
+import { NavBar } from "@/components/organisms/NavBar/NavBar";
+import { siteMetadata } from "@/constants/siteMetadata";
 import { classNames } from "@/utils/style";
+
+import { Snipcart } from "../components/organisms/Snipcart/Snipcart";
 
 const headerFont = Mulish({
   subsets: ["latin"],

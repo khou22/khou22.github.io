@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+
 import { classNames } from "@/utils/style";
 
 interface FadeInViewProps {

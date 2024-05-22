@@ -1,3 +1,6 @@
+import { PhotoPriceVariant } from "@/constants/photoPricing";
+import { siteMetadata } from "@/constants/siteMetadata";
+
 import {
   PhotoIdType,
   getCdnAsset,
@@ -5,8 +8,6 @@ import {
   getPhotoName,
 } from "./cdn/cdnAssets";
 import { PAGES } from "./pages";
-import { PhotoPriceVariant } from "@/constants/photoPricing";
-import { siteMetadata } from "@/constants/siteMetadata";
 
 /**
  * Data required for Snipcart validation.

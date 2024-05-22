@@ -1,13 +1,15 @@
+import React from "react";
+
+import rangeParser from "parse-numeric-range";
 import ReactMarkdown, {
   Components as CustomMarkdownComponents,
 } from "react-markdown";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import rangeParser from "parse-numeric-range";
 import { a11yDark as dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import React from "react";
 import rehypeRaw from "rehype-raw";
-import { classNames } from "@/utils/style";
+
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import { classNames } from "@/utils/style";
 
 type CustomMarkdownProps = {
   children: string;

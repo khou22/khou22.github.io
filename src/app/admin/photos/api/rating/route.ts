@@ -1,7 +1,9 @@
 import { NextRequest } from "next/server";
-import { PhotoRatingUpdateRequest } from "./types";
+
 import { connectToPhotoDb } from "@/data/photos/photoDbManager";
 import { isPhotoID } from "@/utils/cdn/cdnAssets";
+
+import { PhotoRatingUpdateRequest } from "./types";
 
 export async function POST(req: NextRequest) {
   if (process.env.NODE_ENV !== "development") {

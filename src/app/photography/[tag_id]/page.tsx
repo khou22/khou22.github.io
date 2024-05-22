@@ -2,19 +2,20 @@ import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import findKey from "lodash/findKey";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 import { TagImageCard } from "@/components/organisms/TagImageCard/TagImageCard";
 import { FeaturedGallerySpread } from "@/components/templates/FeaturedGallerySpread/FeaturedGallerySpread";
+import { ogImageSize } from "@/constants/ogImage";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
+import { tagMetadata } from "@/constants/photoTags/tagMetadata";
+import { siteMetadata } from "@/constants/siteMetadata";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { PhotoIdType, getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { getSuggestedPhotoTags } from "@/utils/photos/getSuggestedPhotoTags";
-import { tagMetadata } from "@/constants/photoTags/tagMetadata";
-import { siteMetadata } from "@/constants/siteMetadata";
-import { ogImageSize } from "@/constants/ogImage";
 
 type PageProps = {
   params: {

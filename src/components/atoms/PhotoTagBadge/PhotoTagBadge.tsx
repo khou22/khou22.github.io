@@ -1,12 +1,14 @@
-import Link from "next/link";
 import React from "react";
+
+import Link from "next/link";
+
 import { MapPinIcon } from "@/components/icons/MapPinIcon/MapPinIcon";
 import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
 import { IconProps } from "@/components/icons/types";
 import { Badge, BadgeProps } from "@/components/ui/badge";
 import { PhotoTags, allLocationTags } from "@/constants/photoTags/photoTags";
-import { PAGES } from "@/utils/pages";
 import { tagMetadata } from "@/constants/photoTags/tagMetadata";
+import { PAGES } from "@/utils/pages";
 
 type PhotoTagBadgeProps = {
   photoTag: PhotoTags;

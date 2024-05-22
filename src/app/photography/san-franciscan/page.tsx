@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 

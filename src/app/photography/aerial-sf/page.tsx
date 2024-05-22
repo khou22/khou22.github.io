@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+
 import { CoordinatesLabel } from "@/components/atoms/CoordinatesLabel/CoordinatesLabel";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";

@@ -1,17 +1,18 @@
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import { LinkExternalIcon } from "@/components/icons/LinkExternalIcon/LinkExternalIcon";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
-import { PAGES } from "@/utils/pages";
+import { Button } from "@/components/ui/button";
 import { privatePhotoAlbums } from "@/constants/privatePhotoAlbums";
 import { siteMetadata } from "@/constants/siteMetadata";
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { PAGES } from "@/utils/pages";
 import { getPhotoSize } from "@/utils/photos/getPhotoSize";
-import { Button } from "@/components/ui/button";
-import { LinkExternalIcon } from "@/components/icons/LinkExternalIcon/LinkExternalIcon";
 
 type PageProps = {
   params: {

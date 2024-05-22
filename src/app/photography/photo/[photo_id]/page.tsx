@@ -1,24 +1,14 @@
 import { Metadata } from "next";
-import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
-import { ProductDetails } from "./ProductDetails";
-import { ImageDisplay } from "./ImageDisplay";
-import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
-import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
-import {
-  getCdnAsset,
-  getPhotoForThumbnail,
-  getPhotoIDFromURLComponent,
-  getPhotoName,
-  isThumbnail,
-} from "@/utils/cdn/cdnAssets";
-import { getTagsForPhotoID } from "@/data/photos/photoDbManager";
-import { PhotoTags } from "@/constants/photoTags/photoTags";
-import { siteMetadata } from "@/constants/siteMetadata";
-import { PAGES } from "@/utils/pages";
-import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
+import { notFound, redirect } from "next/navigation";
+
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
-import { Label } from "@/components/ui/label";
+import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
+import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
+import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
+import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
+import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -27,11 +17,23 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { getSuggestedPhotos } from "@/utils/photos/getSuggestedPhotos";
-import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
-import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
+import { Label } from "@/components/ui/label";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
+import { siteMetadata } from "@/constants/siteMetadata";
+import { getTagsForPhotoID } from "@/data/photos/photoDbManager";
+import {
+  getCdnAsset,
+  getPhotoForThumbnail,
+  getPhotoIDFromURLComponent,
+  getPhotoName,
+  isThumbnail,
+} from "@/utils/cdn/cdnAssets";
+import { PAGES } from "@/utils/pages";
 import { getPhotoSize } from "@/utils/photos/getPhotoSize";
+import { getSuggestedPhotos } from "@/utils/photos/getSuggestedPhotos";
+
+import { ImageDisplay } from "./ImageDisplay";
+import { ProductDetails } from "./ProductDetails";
 
 export type PageProps = {
   params: {

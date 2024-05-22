@@ -1,5 +1,5 @@
-import { classNames } from "@/utils/style";
 import { DownloadIcon } from "@/components/icons/DownloadIcon/DownloadIcon";
+import { classNames } from "@/utils/style";
 
 type DownloadLinkProps = {
   url: string;

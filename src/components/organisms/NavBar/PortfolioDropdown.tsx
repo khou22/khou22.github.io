@@ -1,5 +1,7 @@
-import Link from "next/link";
 import React from "react";
+
+import Link from "next/link";
+
 import { ImageCard } from "@/components/molecules/ImageCard/ImageCard";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";

@@ -1,4 +1,5 @@
 import find from "lodash/find";
+
 import { _generatedCdnAssets } from "./cdnAssets.generated";
 
 const baseUrl =

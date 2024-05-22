@@ -1,7 +1,8 @@
 "use client";
 
-import { CodeiumEditor, Document, Language } from "@codeium/react-code-editor";
 import { useState } from "react";
+
+import { CodeiumEditor, Document, Language } from "@codeium/react-code-editor";
 
 const HTML_SNIPPET = `<html>
   <head>

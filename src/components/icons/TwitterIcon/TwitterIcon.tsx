@@ -1,4 +1,5 @@
 import React from "react";
+
 import { IconProps } from "../types";
 
 export const TwitterIcon: React.FC<IconProps> = (props) => (

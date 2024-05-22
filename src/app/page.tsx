@@ -1,19 +1,20 @@
 import Link from "next/link";
+
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
+import { ParallaxHoverCard } from "@/components/atoms/ParallaxHoverCard/ParallaxHoverCard";
+import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackground/ParallaxTextBackground";
+import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
+import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
+import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
+import { BioSection } from "@/components/organisms/BioSection/BioSection";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { ParallaxCover } from "@/components/organisms/ParallaxCover/ParallaxCover";
+import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
+import { Button } from "@/components/ui/button";
 import { occupations } from "@/constants/occupations";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
-import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
-import { Button } from "@/components/ui/button";
-import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackground/ParallaxTextBackground";
-import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
-import { ParallaxHoverCard } from "@/components/atoms/ParallaxHoverCard/ParallaxHoverCard";
-import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
-import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
-import { BioSection } from "@/components/organisms/BioSection/BioSection";
 
 const HomePage = async () => {
   return (

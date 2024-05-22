@@ -1,5 +1,7 @@
-import Link from "next/link";
 import React from "react";
+
+import Link from "next/link";
+
 import { ImageCard } from "@/components/molecules/ImageCard/ImageCard";
 import { LinkWithArrow } from "@/components/molecules/LinkWithArrow/LinkWithArrow";
 import { PhotoTags } from "@/constants/photoTags/photoTags";

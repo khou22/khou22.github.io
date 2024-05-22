@@ -1,8 +1,10 @@
 import { Metadata } from "next";
-import { BlogCover } from "./BlogCover";
-import { getPosts } from "@/utils/blog/posts";
+
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PostList } from "@/components/organisms/PostList/PostList";
+import { getPosts } from "@/utils/blog/posts";
+
+import { BlogCover } from "./BlogCover";
 
 export const metadata: Metadata = {
   title: "Kevin Hou's Blog",

@@ -1,5 +1,7 @@
-import Link, { LinkProps } from "next/link";
 import React, { AnchorHTMLAttributes } from "react";
+
+import Link, { LinkProps } from "next/link";
+
 import { classNames } from "@/utils/style";
 
 type CustomLinkProps = {

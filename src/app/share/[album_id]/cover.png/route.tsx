@@ -1,10 +1,11 @@
 import { notFound, redirect } from "next/navigation";
-import { NextRequest, NextResponse } from "next/server";
 import { ImageResponse } from "next/og";
-import { ogImageSize } from "@/constants/ogImage";
-import { getCdnAsset, PhotoIdType } from "@/utils/cdn/cdnAssets";
+import { NextRequest, NextResponse } from "next/server";
+
 import { PhotoAlbumCover } from "@/components/organisms/PhotoAlbumCover/PhotoAlbumCover";
+import { ogImageSize } from "@/constants/ogImage";
 import { privatePhotoAlbums } from "@/constants/privatePhotoAlbums";
+import { getCdnAsset, PhotoIdType } from "@/utils/cdn/cdnAssets";
 
 type RouteParams = {
   params: {

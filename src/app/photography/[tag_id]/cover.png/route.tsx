@@ -1,14 +1,15 @@
 import findKey from "lodash/findKey";
 import { notFound, redirect } from "next/navigation";
-import { NextRequest, NextResponse } from "next/server";
 import { ImageResponse } from "next/og";
-import { tagMetadata } from "@/constants/photoTags/tagMetadata";
-import { PhotoTags } from "@/constants/photoTags/photoTags";
+import { NextRequest, NextResponse } from "next/server";
+
+import { PhotoAlbumCover } from "@/components/organisms/PhotoAlbumCover/PhotoAlbumCover";
 import { ogImageSize } from "@/constants/ogImage";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
+import { tagMetadata } from "@/constants/photoTags/tagMetadata";
+import { siteMetadata } from "@/constants/siteMetadata";
 import { getPhotosWithTag } from "@/data/photos/photoDbManager";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
-import { PhotoAlbumCover } from "@/components/organisms/PhotoAlbumCover/PhotoAlbumCover";
-import { siteMetadata } from "@/constants/siteMetadata";
 
 type RouteParams = {
   params: {

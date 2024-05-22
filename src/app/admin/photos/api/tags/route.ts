@@ -1,6 +1,8 @@
 import { NextRequest } from "next/server";
-import { PhotoTagUpdateRequest } from "./types";
+
 import { connectToPhotoDb } from "@/data/photos/photoDbManager";
+
+import { PhotoTagUpdateRequest } from "./types";
 
 export async function POST(req: NextRequest) {
   if (process.env.NODE_ENV !== "development") {
