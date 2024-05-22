@@ -4,6 +4,31 @@
   "rules": {
     "@next/next/no-img-element": "off",
     "unused-imports/no-unused-imports": "error",
-    "import/order": "error"
+    "import/order": [
+      "error",
+      {
+        "groups": ["external", "builtin", "internal", "parent", "sibling"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "~/**",
+            "group": "internal",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error"
   }
 }
