@@ -1,16 +1,17 @@
 "use client";
 
-import { SubmitHandler, useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { sendGTMEvent } from "@next/third-parties/google";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { z } from "zod";
+
+import { sendContactEmail } from "@/api-clients/ContactFormClient";
+import { CheckCircleIcon } from "@/components/icons/CheckCircleIcon/CheckCircleIcon";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
-import { sendContactEmail } from "@/api-clients/ContactFormClient";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { classNames } from "@/utils/style";
-import { CheckCircleIcon } from "@/components/icons/CheckCircleIcon/CheckCircleIcon";
 
 const generateFormSchema = z.object({
   fullName: z.string().min(1, "Please enter your full name").max(100),

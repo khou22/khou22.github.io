@@ -1,4 +1,5 @@
 import React from "react";
+
 import { InstagramIcon } from "@/components/icons/InstagramIcon/InstagramIcon";
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon/LinkedInIcon";
 import { TwitterIcon } from "@/components/icons/TwitterIcon/TwitterIcon";

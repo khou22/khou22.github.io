@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { cloudsAssetURL, initialsLogoAssetURL, panoramaSlices } from "./assets";
+
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
@@ -10,6 +10,8 @@ import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { clamp } from "@/utils/math";
 import { classNames } from "@/utils/style";
+
+import { cloudsAssetURL, initialsLogoAssetURL, panoramaSlices } from "./assets";
 
 export const ParallaxCover: React.FC = () => {
   const parallexContainer = useRef<HTMLDivElement>(null);

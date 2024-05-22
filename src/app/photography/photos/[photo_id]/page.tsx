@@ -1,4 +1,5 @@
 import { notFound, redirect } from "next/navigation";
+
 import { getPhotoIDFromURLComponent } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 

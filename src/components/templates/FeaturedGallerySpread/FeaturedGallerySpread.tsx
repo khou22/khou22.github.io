@@ -1,9 +1,10 @@
-import { ContentNode, FeaturedGallerySpreadProps } from "./types";
 import { ParallaxTextBackground } from "@/components/atoms/ParallaxTextBackground/ParallaxTextBackground";
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { Label } from "@/components/ui/label";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+
+import { ContentNode, FeaturedGallerySpreadProps } from "./types";
 
 export const FeaturedGallerySpread: React.FC<FeaturedGallerySpreadProps> = ({
   title,

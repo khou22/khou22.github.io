@@ -1,15 +1,17 @@
 import { Metadata } from "next";
-import { ContactForm } from "./ContactForm";
-import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
-import { PaperTexture } from "@/components/atoms/PaperTexture/PaperTexture";
+
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
-import { ImageStory } from "@/components/organisms/ImageStory/ImageStory";
-import { PAGES } from "@/utils/pages";
-import { PhotoTags } from "@/constants/photoTags/photoTags";
+import { PaperTexture } from "@/components/atoms/PaperTexture/PaperTexture";
 import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
-import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
 import { BioSection } from "@/components/organisms/BioSection/BioSection";
+import { ImageStory } from "@/components/organisms/ImageStory/ImageStory";
+import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
+import { PhotographyCustomersGrid } from "@/components/organisms/PhotographyCustomersGrid/PhotographyCustomersGrid";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+import { PAGES } from "@/utils/pages";
+
+import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | Kevin Hou",

@@ -1,9 +1,12 @@
-import { RenderPhotoProps } from "react-photo-album";
 import Link from "next/link";
-import { PhotoRecord } from "./types";
+import { RenderPhotoProps } from "react-photo-album";
+
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+
+import { PhotoRecord } from "./types";
+
 
 export const GalleryImage = ({
   photo,

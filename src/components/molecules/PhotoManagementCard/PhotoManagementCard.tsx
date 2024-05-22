@@ -1,15 +1,19 @@
 "use client";
 
 import { useState } from "react";
+
 import Link from "next/link";
 import { toast } from "sonner";
+
+import { FileLocationClient } from "@/api-clients/FileLocationClient";
+import { PhotoMetadataClient } from "@/api-clients/PhotoMetadataClient";
+import { RatingInput } from "@/components/atoms/RatingInput/RatingInput";
+import { XIcon } from "@/components/icons/XIcon/XIcon";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { PhotoIdType, getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
-import { PhotoTags } from "@/constants/photoTags/photoTags";
-import { enumToString } from "@/utils/enum";
-import { classNames } from "@/utils/style";
 import {
   Select,
   SelectContent,
@@ -19,15 +23,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { PhotoMetadataClient } from "@/api-clients/PhotoMetadataClient";
-import { XIcon } from "@/components/icons/XIcon/XIcon";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { FileLocationClient } from "@/api-clients/FileLocationClient";
 import { Switch } from "@/components/ui/switch";
-import { PAGES } from "@/utils/pages";
-import { RatingInput } from "@/components/atoms/RatingInput/RatingInput";
+import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { tagMetadata } from "@/constants/photoTags/tagMetadata";
+import { PhotoIdType, getCdnAsset, getPhotoName } from "@/utils/cdn/cdnAssets";
+import { enumToString } from "@/utils/enum";
+import { PAGES } from "@/utils/pages";
+import { classNames } from "@/utils/style";
 
 type PhotoManagementCardProps = {
   imageKey: PhotoIdType;

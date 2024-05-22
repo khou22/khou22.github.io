@@ -1,5 +1,7 @@
 import React from "react";
+
 import moment from "moment";
+
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { LinkExternalIcon } from "@/components/icons/LinkExternalIcon/LinkExternalIcon";
 import { HydratedBlogPost } from "@/data/types";

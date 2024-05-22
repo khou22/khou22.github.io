@@ -1,8 +1,11 @@
-import Link from "next/link";
 import { CodeiumEditor } from "@codeium/react-code-editor";
-import { ContextAwareDemo } from "./ContextAwareDemo";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
+import { Button } from "@/components/ui/button";
+
+import { ContextAwareDemo } from "./ContextAwareDemo";
+
 
 const CodeiumDemoPage = () => {
   return (

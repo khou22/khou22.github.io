@@ -1,7 +1,8 @@
+import { NextRequest } from "next/server";
+
 import fs from "fs";
 import path from "path";
-import { NextRequest } from "next/server";
-import { PhotoMoveRequest } from "./types";
+
 import { connectToPhotoDb, renamePhotoID } from "@/data/photos/photoDbManager";
 import {
   castPhotoID,
@@ -10,6 +11,9 @@ import {
   isPhotoID,
   pathToPhotoID,
 } from "@/utils/cdn/cdnAssets";
+
+
+import { PhotoMoveRequest } from "./types";
 
 export async function POST(req: NextRequest) {
   if (process.env.NODE_ENV !== "development") {

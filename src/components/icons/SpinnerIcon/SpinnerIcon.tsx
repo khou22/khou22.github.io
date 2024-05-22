@@ -1,6 +1,8 @@
 import React from "react";
-import { IconProps } from "../types";
+
 import { classNames } from "@/utils/style";
+
+import { IconProps } from "../types";
 
 type SpinnerIconProps = {
   animate?: boolean;

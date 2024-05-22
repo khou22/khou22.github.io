@@ -1,8 +1,10 @@
-import path from "path";
-import sqlite3 from "sqlite3";
 import { open } from "sqlite";
-import { PhotoIdType } from "@/utils/cdn/cdnAssets";
+import sqlite3 from "sqlite3";
+
+import path from "path";
+
 import { PhotoTags } from "@/constants/photoTags/photoTags";
+import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 
 // Open a SQLite database, stored in the file db.sqlite
 export const connectToPhotoDb = async () => {

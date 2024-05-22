@@ -1,5 +1,6 @@
-import { getSuggestedPhotoTags } from "./getSuggestedPhotoTags";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
+
+import { getSuggestedPhotoTags } from "./getSuggestedPhotoTags";
 
 test("get suggested photo tags for a given photo tag", () => {
   const suggestions = getSuggestedPhotoTags(PhotoTags.City, 3);

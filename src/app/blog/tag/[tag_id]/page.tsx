@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import { notFound } from "next/navigation";
+
 import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { PostList } from "@/components/organisms/PostList/PostList";

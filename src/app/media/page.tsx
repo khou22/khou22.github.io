@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
-import { getCdnAsset } from "@/utils/cdn/cdnAssets";
+
 import { DownloadLink } from "@/components/molecules/DownloadLink/DownloadLink";
+import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { siteMetadata } from "@/constants/siteMetadata";
+import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 
 export const metadata = {
   title: "Media Kit | Kevin Hou",

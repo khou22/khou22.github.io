@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";

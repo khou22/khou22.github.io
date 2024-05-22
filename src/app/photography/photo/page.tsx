@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+
 import { PAGES } from "@/utils/pages";
 
 const PhotoHome = () => {

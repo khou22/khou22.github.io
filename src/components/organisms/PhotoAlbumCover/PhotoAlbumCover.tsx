@@ -1,7 +1,8 @@
-import { DiamondPhotoMask } from "./DiamondPhotoMask";
 import { PersonalLogo } from "@/components/atoms/PersonalLogo/PersonalLogo";
 import { ogImageSize } from "@/constants/ogImage";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
+
+import { DiamondPhotoMask } from "./DiamondPhotoMask";
 
 type PhotoAlbumCoverProps = {
   name: string;

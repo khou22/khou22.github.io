@@ -1,7 +1,8 @@
+import { NextRequest } from "next/server";
+
 import fs from "fs";
 import path from "path";
-import { NextRequest } from "next/server";
-import { DeletePhotoRequest } from "./types";
+
 import { connectToPhotoDb, deletePhoto } from "@/data/photos/photoDbManager";
 import {
   castPhotoID,
@@ -9,6 +10,9 @@ import {
   getPhotoThumbnail,
   isPhotoID,
 } from "@/utils/cdn/cdnAssets";
+
+
+import { DeletePhotoRequest } from "./types";
 
 export async function POST(req: NextRequest) {
   if (process.env.NODE_ENV !== "development") {

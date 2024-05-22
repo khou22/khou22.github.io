@@ -1,7 +1,9 @@
 "use client";
 
 import React, { ButtonHTMLAttributes } from "react";
+
 import * as Dialog from "@radix-ui/react-dialog";
+
 import { XIcon } from "@/components/icons/XIcon/XIcon";
 
 type ModalPrimitiveProps = {

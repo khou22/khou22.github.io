@@ -1,7 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import React, { useCallback, useEffect, useState } from "react";
+
+import Link from "next/link";
+
 import { ProgressBar } from "@/components/atoms/ProgressBar/ProgressBar";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
 import { PauseIcon } from "@/components/icons/PauseIcon/PauseIcon";

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+
 import { ModalPrimitive } from "@/components/atoms/ModalPrimitive/ModalPrimitive";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
 import { FullScreenIcon } from "@/components/icons/FullScreenIcon/FullScreenIcon";

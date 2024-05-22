@@ -1,4 +1,5 @@
 import findIndex from "lodash/findIndex";
+
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { tagMetadata } from "@/constants/photoTags/tagMetadata";
 

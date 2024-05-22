@@ -1,12 +1,15 @@
 "use client";
 
-import PhotoAlbum from "react-photo-album";
 import React from "react";
-import { PhotoRecord } from "./types";
-import { GalleryImage } from "./GalleryImage";
-import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
+
+import PhotoAlbum from "react-photo-album";
+
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
+import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { classNames } from "@/utils/style";
+
+import { GalleryImage } from "./GalleryImage";
+import { PhotoRecord } from "./types";
 
 export type PhotoGalleryClientProps = {
   photos: PhotoRecord[];

@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next";
-import { siteMetadata } from "@/constants/siteMetadata";
-import { getPosts } from "@/utils/blog/posts";
-import { PAGES } from "@/utils/pages";
-import { getAllPhotographyPhotoIDs } from "@/utils/cdn/cdnAssets";
+
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { tagMetadata } from "@/constants/photoTags/tagMetadata";
+import { siteMetadata } from "@/constants/siteMetadata";
+import { getPosts } from "@/utils/blog/posts";
+import { getAllPhotographyPhotoIDs } from "@/utils/cdn/cdnAssets";
+import { PAGES } from "@/utils/pages";
 
 enum SiteMapPriority {
   /**

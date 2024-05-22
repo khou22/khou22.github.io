@@ -1,7 +1,7 @@
+import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
-import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 
 export const AlbumsSection = () => {
   let rotations = [
