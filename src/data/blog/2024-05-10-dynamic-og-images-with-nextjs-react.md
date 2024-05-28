@@ -28,6 +28,10 @@ You can get really crafty with it by adding a URL param to allow a user to selec
 
 If your application has personalization for each user, a great way to help customers feel engaged is to give them someone personal that they can save or share. Images are a great way to create this experience, whether it be for a "Membership Card", "Badge", etc.
 
+Here's an example that I built with Codeium:
+
+**Insert example card**
+
 ## How To
 
 ## Tips
