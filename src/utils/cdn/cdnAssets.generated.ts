@@ -3604,6 +3604,11 @@ export const _generatedCdnAssets = {
     name: `Downtown San Francisco from Plane (8x10)`,
     dimensions: [2400, 3000],
   },
+	"photography/san_francisco/San_Francisco_Powell_Street_Cable_Car_Trolly_jpg": {
+    path: "/photography/san_francisco/San%20Francisco%20Powell%20Street%20Cable%20Car%20Trolly.jpg",
+    name: `San Francisco Powell Street Cable Car Trolly`,
+    dimensions: [2381, 2976],
+  },
 	"photography/san_francisco/Rodeo_Beach_Gravel_Hill_Sunset_Ride_jpg": {
     path: "/photography/san_francisco/Rodeo%20Beach%20Gravel%20Hill%20Sunset%20Ride.jpg",
     name: `Rodeo Beach Gravel Hill Sunset Ride`,
@@ -6728,6 +6733,31 @@ export const _generatedCdnAssets = {
     path: "/media/blog/images/Woodcraft081015.jpg",
     name: `Woodcraft081015`,
     dimensions: [2448, 1836],
+  },
+	"media/blog/images/dynamic_og_images/arc_og_image_demo_gif": {
+    path: "/media/blog/images/dynamic-og-images/arc-og-image-demo.gif",
+    name: `arc-og-image-demo`,
+    dimensions: [null, null],
+  },
+	"media/blog/images/dynamic_og_images/slack_og_image_png": {
+    path: "/media/blog/images/dynamic-og-images/slack-og-image.png",
+    name: `slack-og-image`,
+    dimensions: [1210, 1050],
+  },
+	"media/blog/images/dynamic_og_images/codeium_membership_card_png": {
+    path: "/media/blog/images/dynamic-og-images/codeium-membership-card.png",
+    name: `codeium-membership-card`,
+    dimensions: [1200, 630],
+  },
+	"media/blog/images/dynamic_og_images/twitter_post_with_image_png": {
+    path: "/media/blog/images/dynamic-og-images/twitter-post-with-image.png",
+    name: `twitter-post-with-image`,
+    dimensions: [1244, 1398],
+  },
+	"media/blog/images/dynamic_og_images/imessage_og_image_png": {
+    path: "/media/blog/images/dynamic-og-images/imessage-og-image.png",
+    name: `imessage-og-image`,
+    dimensions: [1170, 847],
   },
 	"media/blog/images/installing_all_google_fonts_png": {
     path: "/media/blog/images/installing-all-google-fonts.png",
