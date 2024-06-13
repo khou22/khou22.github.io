@@ -3,7 +3,6 @@ title: "Generate Dynamic Images with Next.js and React"
 author: "Kevin Hou"
 date: 2024-05-10 9:00:00
 description: "Using Next.js's ImageResponse to generate dynamic images on the fly with React for use as normal PNG files or website open-graph (OG) preview images."
-image: "https://khou22.github.io/media/blog/images/syntax-podcast-cover-photo.jpg"
 tags: [coding]
 featured: false
 ---
