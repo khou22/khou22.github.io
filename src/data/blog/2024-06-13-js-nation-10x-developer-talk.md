@@ -8,9 +8,9 @@ tags: [coding]
 featured: false
 ---
 
-The full talk can be found on the JS Nation portal for free: [Can AI Turns Us Into 10x Developers?](https://portal.gitnation.org/contents/can-ai-turn-us-into-10x-developers).
+The full talk can be found on the JS Nation portal for free: [Can AI Turns Us Into 10x Developers?](https://www.youtube.com/watch?v=mDKFNanphfE).
 
-[![JS Nation 2024 Kevin Hou lightning talk AI developer tools](https://khou22.github.io/media/profile_pictures/js-nation-presentation-headshot.jpg)](https://portal.gitnation.org/contents/can-ai-turn-us-into-10x-developers)
+[![JS Nation 2024 Kevin Hou lightning talk AI developer tools](https://khou22.github.io/media/profile_pictures/js-nation-presentation-headshot.jpg)](https://www.youtube.com/watch?v=mDKFNanphfE)
 
 ### Abstract
 
