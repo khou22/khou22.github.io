@@ -4,6 +4,7 @@ import { LinkedInIcon } from "@/components/icons/LinkedInIcon/LinkedInIcon";
 import { TwitterIcon } from "@/components/icons/TwitterIcon/TwitterIcon";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { classNames } from "@/utils/style";
+import { GitHubIcon } from "@/components/icons/GitHubIcon/GitHubIcon";
 
 const socials = [
   {
@@ -26,6 +27,13 @@ const socials = [
     icon: TwitterIcon,
     className: "hover:text-[#1DA1F2]",
     showColorsClassName: "text-[#1DA1F2] hover:opacity-90",
+  },
+  {
+    name: "GitHub",
+    href: siteMetadata.socials.github,
+    icon: GitHubIcon,
+    className: "hover:text-black",
+    showColorsClassName: "text-black hover:opacity-90",
   },
 ];
 

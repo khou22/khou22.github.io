@@ -70,7 +70,14 @@ export const BioSection: React.FC<BioSectionProps> = ({
                 </span>
               </blockquote>
               <figcaption className="mt-8 text-base">
-                <div className="font-semibold text-white">Kevin Hou</div>
+                <div className="flex flex-row space-x-1 justify-start items-center">
+                  <img
+                    src={getCdnAsset("media/site/logo/initials_logo_png")}
+                    alt="Kevin Hou personal logo"
+                    className="h-6 w-6"
+                  />
+                  <div className="font-semibold text-white">Kevin Hou</div>
+                </div>
                 <div className="mt-1 text-gray-400">
                   {order
                     .map((item) => {
