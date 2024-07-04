@@ -6,7 +6,10 @@ export type OccupationType = {
   fullTime?: boolean;
   company: {
     name: string;
-    url?: string;
+    /**
+     * URL of the company. This must begin with http(s) so that the router know it is an external link.
+     */
+    url: string;
     logo: string;
     logoLight?: string;
   };
@@ -19,7 +22,7 @@ export const occupations: OccupationType[] = [
     fullTime: true,
     company: {
       name: "Nuro",
-      url: "nuro.ai",
+      url: "https://nuro.ai",
       logo: getCdnAsset("media/occupations/nuro_padding_png"),
       logoLight: getCdnAsset("media/occupations/nuro_padding_light_png"),
     },
@@ -30,7 +33,7 @@ export const occupations: OccupationType[] = [
     fullTime: true,
     company: {
       name: "Codeium",
-      url: "codeium.com",
+      url: "https://codeium.com",
       logo: getCdnAsset("media/occupations/codeium_png"),
     },
   },
@@ -39,7 +42,7 @@ export const occupations: OccupationType[] = [
     featured: true,
     company: {
       name: "Airbnb",
-      url: "airbnb.com",
+      url: "https://airbnb.com",
       logo: getCdnAsset("media/occupations/airbnb_png"),
     },
   },
@@ -51,7 +54,7 @@ export const occupations: OccupationType[] = [
     featured: true,
     company: {
       name: "Salesforce",
-      url: "salesforce.com",
+      url: "https://salesforce.com",
       logo: getCdnAsset("media/occupations/salesforce_png"),
     },
   },
@@ -59,6 +62,8 @@ export const occupations: OccupationType[] = [
     years: [[2017, 2017]],
     company: {
       name: "Moat (Oracle)",
+      // TODO (kevin): Find a news article about the aquisition.
+      url: "https://oracle.com",
       logo: getCdnAsset("media/occupations/moat_png"),
     },
   },
@@ -66,6 +71,8 @@ export const occupations: OccupationType[] = [
     years: [[2016, 2016]],
     company: {
       name: "Breathometer",
+      // TODO (kevin): Populate with a business insider link or something of that sort.
+      url: "#",
       logo: getCdnAsset("media/occupations/breathometer_png"),
     },
   },
