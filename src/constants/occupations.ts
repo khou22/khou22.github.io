@@ -6,6 +6,7 @@ export type OccupationType = {
   fullTime?: boolean;
   company: {
     name: string;
+    url?: string;
     logo: string;
     logoLight?: string;
   };
@@ -18,6 +19,7 @@ export const occupations: OccupationType[] = [
     fullTime: true,
     company: {
       name: "Nuro",
+      url: "nuro.ai",
       logo: getCdnAsset("media/occupations/nuro_padding_png"),
       logoLight: getCdnAsset("media/occupations/nuro_padding_light_png"),
     },
@@ -28,6 +30,7 @@ export const occupations: OccupationType[] = [
     fullTime: true,
     company: {
       name: "Codeium",
+      url: "codeium.com",
       logo: getCdnAsset("media/occupations/codeium_png"),
     },
   },
@@ -36,6 +39,7 @@ export const occupations: OccupationType[] = [
     featured: true,
     company: {
       name: "Airbnb",
+      url: "airbnb.com",
       logo: getCdnAsset("media/occupations/airbnb_png"),
     },
   },
@@ -47,6 +51,7 @@ export const occupations: OccupationType[] = [
     featured: true,
     company: {
       name: "Salesforce",
+      url: "salesforce.com",
       logo: getCdnAsset("media/occupations/salesforce_png"),
     },
   },
