@@ -46,7 +46,7 @@ export const getSnipcartProduct = (
     url: `${siteMetadata.siteUrl}${PAGES.PHOTOGRAPHY.PHOTO(photoID)}`,
     description: `High quality ${price.name} photo print of ${getPhotoName(
       photoID,
-    )}.`,
+    )} on ${price.material}.`,
     image: img,
   };
 };

@@ -1,7 +1,7 @@
 import { PhotoIdType } from "../cdn/cdnAssets";
 import { _generatedCdnAssets } from "../cdn/cdnAssets.generated";
 
-type PhotoSize = {
+export type PhotoSize = {
   width: number | undefined;
   height: number | undefined;
 };

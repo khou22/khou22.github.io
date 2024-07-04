@@ -119,6 +119,7 @@ const PhotoByIDPage = async ({
     redirect(PAGES.PHOTOGRAPHY.PHOTO(originalPhotoID));
   }
 
+  const size = await getPhotoSize(photoID);
   const tags = await getTagsForPhotoID(photoID);
   const photoURL = `${siteMetadata.siteUrl}${PAGES.PHOTOGRAPHY.PHOTO(photoID)}`;
 
@@ -228,7 +229,7 @@ const PhotoByIDPage = async ({
     <>
       <PageWrapper className="grid h-full min-h-[75vh] grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
         <ImageDisplay photoID={photoID} />
-        <ProductDetails photoID={photoID} tags={tags} />
+        <ProductDetails photoID={photoID} tags={tags} photoSize={size} />
       </PageWrapper>
       <PageWrapper
         className="mt-16 w-full items-center space-y-4 md:space-y-8"
