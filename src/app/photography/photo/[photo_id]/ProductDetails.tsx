@@ -122,11 +122,19 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
           Prints are produced by my printing partner to the highest standards,
           ensuring vibrant colors and exquisite details:
         </p>
-        <ul className="[&>li]:caption list-inside list-disc">
-          <li>Fujicolor Crystal Archive Type II</li>
-          <li>Fujicolor Crystal Archive resin-based paper</li>
-          <li>Fade-resistant, high dynamic range</li>
-        </ul>
+        {selectedSize.material === PhotoPrintMaterial.GlossyMetal ? (
+          <ul className="[&>li]:caption list-inside list-disc">
+            <li>Modern metal with durable print</li>
+            <li>Glossy with white base (extra shine)</li>
+            <li>Float mount for optional, elevated hanging</li>
+          </ul>
+        ) : (
+          <ul className="[&>li]:caption list-inside list-disc">
+            <li>Fujicolor Crystal Archive Type II</li>
+            <li>Fujicolor Crystal Archive resin-based paper</li>
+            <li>Fade-resistant, high dynamic range</li>
+          </ul>
+        )}
       </div>
     </div>
   );
