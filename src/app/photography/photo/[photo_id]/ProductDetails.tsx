@@ -2,22 +2,29 @@
 
 import { RadioGroup } from "@headlessui/react";
 import { useState } from "react";
+import { groupBy } from "lodash";
+import { VariantCategory } from "./VariantCategory";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
 import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { photoPricing } from "@/constants/photoPricing";
+import {
+  PhotoPriceVariant,
+  photoPricing,
+  PhotoPrintMaterial,
+} from "@/constants/photoPricing";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
-import { classNames } from "@/utils/style";
 import { getSnipcartProduct } from "@/utils/snipcart";
+import { PhotoSize } from "@/utils/photos/getPhotoSize";
 
 type ProductDetailsProps = {
   photoID: PhotoIdType;
   tags: PhotoTags[];
+  photoSize: PhotoSize;
 };
 
 const defaultPhotoSize = photoPricing[1];
@@ -25,14 +32,23 @@ const defaultPhotoSize = photoPricing[1];
 export const ProductDetails: React.FC<ProductDetailsProps> = ({
   photoID,
   tags,
+  photoSize,
 }) => {
   const [selectedSizeID, setSelectedSizeID] = useState(defaultPhotoSize.id);
   const selectedSize =
     photoPricing.find((pricing) => pricing.id === selectedSizeID) ??
     defaultPhotoSize;
 
-  const snipcartProduct = getSnipcartProduct(photoID, selectedSize);
+  const pricingByMaterial = groupBy(
+    photoPricing,
+    (pricing) => pricing.material,
+  ) as Record<PhotoPrintMaterial, PhotoPriceVariant[]>;
+  const orientation =
+    (photoSize.width ?? 0) > (photoSize.height ?? 0)
+      ? "horizontal"
+      : "vertical";
 
+  const snipcartProduct = getSnipcartProduct(photoID, selectedSize);
   return (
     <div className="flex flex-col items-start justify-start space-y-6">
       <div>
@@ -50,38 +66,21 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
       </div>
 
       <div className="w-full">
-        <Label>Choose a print size</Label>
         <RadioGroup
           value={selectedSizeID}
           onChange={setSelectedSizeID}
           className="mt-2"
         >
-          <RadioGroup.Label className="sr-only">
-            Choose a print size
-          </RadioGroup.Label>
-          <div className="grid w-full grid-cols-4 gap-3 sm:grid-cols-5">
-            {photoPricing.map((pricing) => (
-              <RadioGroup.Option
-                key={pricing.id}
-                value={pricing.id}
-                className={({ active, checked }) =>
-                  classNames(
-                    pricing.inStock
-                      ? "cursor-pointer focus:outline-none"
-                      : "cursor-not-allowed opacity-25",
-                    active ? "ring-2 ring-blue-500 ring-offset-2" : "",
-                    checked
-                      ? "border-transparent bg-blue-500 text-white hover:bg-blue-600"
-                      : "border-gray-200 bg-white text-gray-900 hover:bg-gray-50",
-                    "flex items-center justify-center rounded-md border px-3 py-3 text-sm font-medium sm:flex-1",
-                  )
-                }
-                disabled={!pricing.inStock}
-              >
-                <RadioGroup.Label as="span">{pricing.name}</RadioGroup.Label>
-              </RadioGroup.Option>
-            ))}
-          </div>
+          <VariantCategory
+            categoryName="Photo Print"
+            priceVariants={pricingByMaterial[PhotoPrintMaterial.PhotoPaper]}
+            orientation={orientation}
+          />
+          <VariantCategory
+            categoryName="Glossy Metal"
+            priceVariants={pricingByMaterial[PhotoPrintMaterial.GlossyMetal]}
+            orientation={orientation}
+          />
         </RadioGroup>
       </div>
       <Button
@@ -123,11 +122,19 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
           Prints are produced by my printing partner to the highest standards,
           ensuring vibrant colors and exquisite details:
         </p>
-        <ul className="[&>li]:caption list-inside list-disc">
-          <li>Fujicolor Crystal Archive Type II</li>
-          <li>Fujicolor Crystal Archive resin-based paper</li>
-          <li>Fade-resistant, high dynamic range</li>
-        </ul>
+        {selectedSize.material === PhotoPrintMaterial.GlossyMetal ? (
+          <ul className="[&>li]:caption list-inside list-disc">
+            <li>Modern metal with durable print</li>
+            <li>Glossy with white base (extra shine)</li>
+            <li>Float mount for optional, elevated hanging</li>
+          </ul>
+        ) : (
+          <ul className="[&>li]:caption list-inside list-disc">
+            <li>Fujicolor Crystal Archive Type II</li>
+            <li>Fujicolor Crystal Archive resin-based paper</li>
+            <li>Fade-resistant, high dynamic range</li>
+          </ul>
+        )}
       </div>
     </div>
   );
