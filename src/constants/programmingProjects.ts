@@ -58,6 +58,15 @@ export const programmingProjects: ProgrammingProjectType[] = [
       "Publically available on the Apple app store! A fun UX and iOS engineering project to make scheduling calendar events a smoother and more enjoyable experience. It uses basic machine learning to build a model of your calendar and predict your event so you don't need to type anything in. It also does away with a lot of poor UI elements like date pickers.",
   },
   {
+    name: "Codeium Playground Demo",
+    subtitle: "NPM Install Codeium",
+    slug: PAGES.CODEIUM_DEMO,
+    image: getCdnAsset("media/programming/thumbnails/codeium_website_png"),
+    category: ProjectCategory.WebApp,
+    description:
+      "Weekend hack to make the Codeium service an open-source, NPM package so other projects can leverage Codeium's unlimited AI autocomplete.",
+  },
+  {
     name: "HTMLexa",
     subtitle: "HackPrinceton Fall 2017 Finalist",
     slug: "https://devpost.com/software/htmlexa",
