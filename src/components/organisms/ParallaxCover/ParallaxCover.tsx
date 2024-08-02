@@ -10,6 +10,7 @@ import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { clamp } from "@/utils/math";
 import { classNames } from "@/utils/style";
+import { GlowingButton } from "@/components/atoms/GlowingButton/GlowingButton";
 
 export const ParallaxCover: React.FC = () => {
   const parallexContainer = useRef<HTMLDivElement>(null);
@@ -71,7 +72,8 @@ export const ParallaxCover: React.FC = () => {
           transform: getTransform(1),
         }}
       >
-        <span className="mt-[25%] flex flex-col items-center sm:mt-[7%] md:mt-[9%]">
+        <span className="pointer-events-auto mt-[25%] flex flex-col items-center sm:mt-[7%] md:mt-[9%]">
+          <GlowingButton>New Photo Print Store</GlowingButton>
           <img
             alt="Initials logo"
             className="h-24 w-24"
