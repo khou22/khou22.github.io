@@ -65,7 +65,7 @@ export const photoPricing: PhotoPriceVariant[] = [
   {
     id: "16x20-metal",
     name: "16x20 Metal",
-    price: 189,
+    price: 299,
     material: PhotoPrintMaterial.GlossyMetal,
     widthInches: 16,
     heightInches: 20,
@@ -74,7 +74,7 @@ export const photoPricing: PhotoPriceVariant[] = [
   {
     id: "11x14-metal",
     name: "11x14 Metal",
-    price: 95,
+    price: 149,
     material: PhotoPrintMaterial.GlossyMetal,
     widthInches: 11,
     heightInches: 14,
