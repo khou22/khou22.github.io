@@ -27,7 +27,7 @@ type ProductDetailsProps = {
   photoSize: PhotoSize;
 };
 
-const defaultPhotoSize = photoPricing[1];
+const defaultPhotoSize = photoPricing[2];
 
 export const ProductDetails: React.FC<ProductDetailsProps> = ({
   photoID,

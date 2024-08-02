@@ -47,7 +47,7 @@ export const photoPricing: PhotoPriceVariant[] = [
   {
     id: "11x14-photo-paper",
     name: "11x14",
-    price: 39,
+    price: 49,
     material: PhotoPrintMaterial.PhotoPaper,
     widthInches: 11,
     heightInches: 14,
@@ -56,19 +56,10 @@ export const photoPricing: PhotoPriceVariant[] = [
   {
     id: "12x18-photo-paper",
     name: "16x20",
-    price: 69,
+    price: 79,
     material: PhotoPrintMaterial.PhotoPaper,
     widthInches: 12,
     heightInches: 18,
-    inStock: true,
-  },
-  {
-    id: "16x20-metal",
-    name: "16x20 Metal",
-    price: 299,
-    material: PhotoPrintMaterial.GlossyMetal,
-    widthInches: 16,
-    heightInches: 20,
     inStock: true,
   },
   {
@@ -78,6 +69,15 @@ export const photoPricing: PhotoPriceVariant[] = [
     material: PhotoPrintMaterial.GlossyMetal,
     widthInches: 11,
     heightInches: 14,
+    inStock: true,
+  },
+  {
+    id: "16x20-metal",
+    name: "16x20 Metal",
+    price: 299,
+    material: PhotoPrintMaterial.GlossyMetal,
+    widthInches: 16,
+    heightInches: 20,
     inStock: true,
   },
 ];
