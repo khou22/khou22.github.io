@@ -24,6 +24,8 @@ export const PAGES = {
     TAG: (tag: PhotoTags) => `/photography/${tagMetadata[tag].slug}`,
     PHOTO: (photoID: PhotoIdType) =>
       `/photography/photo/${getPhotoURLComponent(photoID)}`,
+    PRODUCT_VALIDATION: (photoID: PhotoIdType, priceID: string) =>
+      `/api/product/${getPhotoURLComponent(photoID)}/${priceID}.json`,
     AERIAL_SF: "/photography/aerial-sf",
     SAN_FRANCISCAN: "/photography/san-franciscan",
     ALBUM_COVER: (tag: PhotoTags) =>
