@@ -25,14 +25,21 @@ export interface ISnipcartValidationResponse {
   url: string;
 }
 
-
 interface RouteParams {
   params: { photo_id: string; pricing_id: string };
 }
 
+// 'force-dynamic' cache.
+export const dynamic = "force-dynamic";
+
 export async function GET(
   _request: NextRequest,
-  { params: { photo_id: photoIdURLComponent, pricing_id: pricingIdURLComponent } }: RouteParams,
+  {
+    params: {
+      photo_id: photoIdURLComponent,
+      pricing_id: pricingIdURLComponent,
+    },
+  }: RouteParams,
 ) {
   const photoID = getPhotoIDFromURLComponent(photoIdURLComponent);
   if (!photoID) {
