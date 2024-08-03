@@ -70,7 +70,7 @@ export const BioSection: React.FC<BioSectionProps> = ({
                 </span>
               </blockquote>
               <figcaption className="mt-8 text-base">
-                <div className="flex flex-row space-x-1 justify-start items-center">
+                <div className="flex flex-row items-center justify-start space-x-1">
                   <img
                     src={getCdnAsset("media/site/logo/initials_logo_png")}
                     alt="Kevin Hou personal logo"

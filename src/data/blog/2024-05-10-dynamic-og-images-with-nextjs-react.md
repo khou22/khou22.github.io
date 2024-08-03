@@ -7,7 +7,6 @@ tags: [coding]
 featured: false
 ---
 
-
 As a photographer and designer, I've always believed images are a multiplier on a website's engagement. While you can often accomplish what you want to render using normal JS + React + CSS, there a few cases where images are simpler and make more sense.
 
 ### Use Case 1: Open-Graph Images
