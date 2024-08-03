@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import { cloudsAssetURL, initialsLogoAssetURL, panoramaSlices } from "./assets";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { ProgressiveImage } from "@/components/atoms/ProgressiveImage/ProgressiveImage";
@@ -12,7 +13,6 @@ import { clamp } from "@/utils/math";
 import { classNames } from "@/utils/style";
 import { GlowingButton } from "@/components/atoms/GlowingButton/GlowingButton";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
-import Link from "next/link";
 import { PAGES } from "@/utils/pages";
 
 export const ParallaxCover: React.FC = () => {
@@ -20,7 +20,7 @@ export const ParallaxCover: React.FC = () => {
   const { scrollY } = useScrollPosition();
   const { height: screenHeight, width: screenWidth } = useScreenSize();
   const isClient = useIsClient();
-  const isMobile = isClient && (screenWidth < 768);
+  const isMobile = isClient && screenWidth < 768;
   const isVisible = !isClient || scrollY <= screenHeight * 2;
 
   // Only calculate the scroll when the parallax is visible to save on performance.
@@ -81,11 +81,9 @@ export const ParallaxCover: React.FC = () => {
             <Link href={PAGES.PHOTOGRAPHY.HOME}>
               <GlowingButton
                 containerClassName="mb-6 md:mb-8"
-                className="px-3 py-1 flex flex-row space-x-2"
+                className="flex flex-row space-x-2 px-3 py-1"
               >
-                <span>
-                  New Photo Prints
-                </span>
+                <span>New Photo Prints</span>
                 <ArrowRightIcon className="h-4 w-4" />
               </GlowingButton>
             </Link>
