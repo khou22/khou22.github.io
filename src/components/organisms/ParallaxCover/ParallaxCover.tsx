@@ -11,12 +11,16 @@ import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { clamp } from "@/utils/math";
 import { classNames } from "@/utils/style";
 import { GlowingButton } from "@/components/atoms/GlowingButton/GlowingButton";
+import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
+import Link from "next/link";
+import { PAGES } from "@/utils/pages";
 
 export const ParallaxCover: React.FC = () => {
   const parallexContainer = useRef<HTMLDivElement>(null);
   const { scrollY } = useScrollPosition();
-  const { height: screenHeight } = useScreenSize();
+  const { height: screenHeight, width: screenWidth } = useScreenSize();
   const isClient = useIsClient();
+  const isMobile = isClient && (screenWidth < 768);
   const isVisible = !isClient || scrollY <= screenHeight * 2;
 
   // Only calculate the scroll when the parallax is visible to save on performance.
@@ -73,7 +77,19 @@ export const ParallaxCover: React.FC = () => {
         }}
       >
         <span className="pointer-events-auto mt-[25%] flex flex-col items-center sm:mt-[7%] md:mt-[9%]">
-          <GlowingButton>New Photo Print Store</GlowingButton>
+          <FadeInView once durationMS={1000} delayMS={isMobile ? 500 : 3000}>
+            <Link href={PAGES.PHOTOGRAPHY.HOME}>
+              <GlowingButton
+                containerClassName="mb-6 md:mb-8"
+                className="px-3 py-1 flex flex-row space-x-2"
+              >
+                <span>
+                  New Photo Prints
+                </span>
+                <ArrowRightIcon className="h-4 w-4" />
+              </GlowingButton>
+            </Link>
+          </FadeInView>
           <img
             alt="Initials logo"
             className="h-24 w-24"
