@@ -43,7 +43,7 @@ export const getSnipcartProduct = (
     id: `${photoID}_${price.id}`,
     price: price.price,
     name: `${getPhotoName(photoID)} (${price.name})`,
-    url: `${siteMetadata.siteUrl}${PAGES.PHOTOGRAPHY.PRODUCT_VALIDATION(photoID, price.id)}`,
+    url: `${siteMetadata.siteUrl}${PAGES.PHOTOGRAPHY.PRODUCT_VALIDATION(photoID)}`,
     description: `High quality ${price.name} photo print of ${getPhotoName(
       photoID,
     )} on ${price.material}.`,

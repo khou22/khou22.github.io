@@ -26,18 +26,14 @@ export interface ISnipcartValidationResponse {
 }
 
 interface RouteParams {
-  params: { photo_id: string; pricing_id: string };
+  params: { photo_id: string; };
 }
-
-// 'force-dynamic' cache.
-export const dynamic = "force-dynamic";
 
 export async function GET(
   _request: NextRequest,
   {
     params: {
       photo_id: photoIdURLComponent,
-      pricing_id: pricingIdURLComponent,
     },
   }: RouteParams,
 ) {
@@ -56,30 +52,19 @@ export async function GET(
     );
   }
 
-  // Remove '.json' from pricingIdURLComponent
-  const pricingId = pricingIdURLComponent.replace(/\.json$/, "");
+  const productVariants = photoPricing.map((p) => {
+    const product = getSnipcartProduct(photoID, p);
 
-  const variant = photoPricing.find((p) => p.id === pricingId);
-  if (!variant) {
-    console.log(`Product variant "${variant}" not found`);
-    return new Response(
-      JSON.stringify(
-        { error: `Product variant "${variant}" not found` },
-        null,
-        2,
-      ),
-      { status: 500 },
-    );
-  }
+    const productVariant: ISnipcartValidationResponse = {
+      id: product.id,
+      price: product.price,
+      customFields: [],
+      url: product.url,
+    };
 
-  const product = getSnipcartProduct(photoID, variant);
+    return productVariant
+  })
 
-  const response: ISnipcartValidationResponse = {
-    id: product.id,
-    price: product.price,
-    customFields: [],
-    url: product.url,
-  };
-
-  return new Response(JSON.stringify(response, null, 2), { status: 200 });
+  // Return JSON array of product variants
+  return new Response(JSON.stringify(productVariants, null, 2), { status: 200 });
 }

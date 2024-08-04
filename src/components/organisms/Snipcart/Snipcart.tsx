@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-css-tags */
 import Script from "next/script";
 
+import "./snipcart.css";
+
 /**
  * Contains logic neccessary for instantiating Snipcart cart management. Does not render anything
  * visible (see `CartButton` for that). There was an issue with mounting and unmounting this
