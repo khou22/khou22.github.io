@@ -66,5 +66,5 @@ export async function GET(
   })
 
   // Return JSON array of product variants
-  return new Response(JSON.stringify(productVariants, null, 2), { status: 200 });
+  return Response.json(productVariants)
 }
