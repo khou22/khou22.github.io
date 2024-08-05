@@ -1,3 +1,4 @@
+import { SearchInput } from "./SearchInput";
 import { Autoscroll } from "@/components/atoms/Autoscroll/Autoscroll";
 import { FullCoverArticle } from "@/components/organisms/MagazineLayout/FullCoverArticle";
 import { HalfTextArticle } from "@/components/organisms/MagazineLayout/HalfTextArticle";
@@ -29,6 +30,7 @@ const PhotographyHomepage = async () => {
   return (
     <>
       <Autoscroll />
+      <SearchInput />
       <PageWrapper maxWidth="none">
         <MagazineLayout>
           <FullCoverArticle
