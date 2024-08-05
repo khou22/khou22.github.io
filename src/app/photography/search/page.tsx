@@ -1,3 +1,4 @@
+import { Metadata } from "next/types";
 import { SearchInput } from "../SearchInput";
 import { getPhotoIDs } from "@/utils/photos/getPhotoIDs";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
@@ -6,13 +7,59 @@ import { PhotoGallery } from "@/components/organisms/PhotoGallery/PhotoGallery";
 import { TagImageCard } from "@/components/organisms/TagImageCard/TagImageCard";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { tagMetadata } from "@/constants/photoTags/tagMetadata";
+import { PAGES } from "@/utils/pages";
+import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import { siteMetadata } from "@/constants/siteMetadata";
+import { ogImageSize } from "@/constants/ogImage";
 
-const SearchPage = async ({
+type PageProps = { params: {}; searchParams: { query: string } };
+
+export const generateMetadata = ({
   searchParams: { query },
-}: {
-  params: {};
-  searchParams: { query: string };
-}) => {
+}: PageProps): Metadata => {
+  const title = `Searching for ${query} photos | Kevin Hou Photography`;
+
+  return {
+    title,
+    description: siteMetadata.description,
+    authors: {
+      name: siteMetadata.author,
+      url: siteMetadata.siteUrl,
+    },
+    metadataBase: new URL(siteMetadata.siteUrl),
+    twitter: {
+      site: siteMetadata.siteUrl,
+      siteId: "khou22.com",
+      creator: siteMetadata.author,
+      creatorId: "@kevinhou22",
+      description: siteMetadata.description,
+      title: title,
+      card: "summary_large_image",
+      images: [
+        {
+          url: siteMetadata.previewCard.url,
+          alt: title,
+          type: "image/jpeg",
+          width: ogImageSize.width,
+          height: ogImageSize.height,
+        },
+      ],
+    },
+    openGraph: {
+      images: [
+        {
+          url: siteMetadata.previewCard.url,
+          alt: title,
+          type: "image/jpeg",
+          width: ogImageSize.width,
+          height: ogImageSize.height,
+        },
+      ],
+    },
+  };
+};
+
+const SearchPage = async ({ searchParams: { query } }: PageProps) => {
   const matchingTags: PhotoTags[] = Object.values(PhotoTags).filter((tag) => {
     return (
       tag.toLowerCase().includes(query.toLowerCase()) ||
@@ -32,6 +79,10 @@ const SearchPage = async ({
 
   return (
     <PageWrapper maxWidth="wide">
+      <CustomLink href={PAGES.PHOTOGRAPHY.HOME}>
+        &larr; Back to Browse
+      </CustomLink>
+
       <SearchInput initialQuery={query} />
 
       {tagNodes.length > 0 && (
