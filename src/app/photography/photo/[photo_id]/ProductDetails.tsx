@@ -3,6 +3,7 @@
 import { RadioGroup } from "@headlessui/react";
 import { useState } from "react";
 import { groupBy } from "lodash";
+import { usePostHog } from "posthog-js/react";
 import { VariantCategory } from "./VariantCategory";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
@@ -34,6 +35,8 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
   tags,
   photoSize,
 }) => {
+  const posthog = usePostHog();
+
   const [selectedSizeID, setSelectedSizeID] = useState(defaultPhotoSize.id);
   const selectedSize =
     photoPricing.find((pricing) => pricing.id === selectedSizeID) ??
@@ -91,6 +94,14 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
         data-item-price={snipcartProduct.price}
         data-item-url={snipcartProduct.url}
         data-item-image={snipcartProduct.image}
+        onClick={() => {
+          posthog.capture("add_to_cart", {
+            product_name: snipcartProduct.name,
+            product_id: snipcartProduct.id,
+            product_price: snipcartProduct.price,
+            product_url: snipcartProduct.url,
+          });
+        }}
       >
         Add to cart
       </Button>
