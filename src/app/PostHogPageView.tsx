@@ -4,13 +4,14 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { usePostHog } from "posthog-js/react";
 
+/**
+ * Manually capture pageviews since Next.js behaves like a single page app.
+ */
 export default function PostHogPageView(): null {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const posthog = usePostHog();
   useEffect(() => {
-    console.log(`[PostHog] Capturing pageview: ${pathname}`);
-    // Track pageviews
     if (pathname && posthog) {
       let url = window.origin + pathname;
       if (searchParams.toString()) {
