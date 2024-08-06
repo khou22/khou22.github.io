@@ -3,11 +3,17 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
 import { Cutive_Mono, Montserrat, Mulish } from "next/font/google";
 import "./globals.css";
+import dynamic from "next/dynamic";
 import { Snipcart } from "../components/organisms/Snipcart/Snipcart";
+import { PHProvider } from "./providers";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { NavBar } from "@/components/organisms/NavBar/NavBar";
 import { Footer } from "@/components/organisms/Footer/Footer";
 import { classNames } from "@/utils/style";
+
+const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
+  ssr: false,
+});
 
 const headerFont = Mulish({
   subsets: ["latin"],
@@ -78,24 +84,27 @@ export default function RootLayout({
   const gaID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
   return (
     <html lang="en">
-      <body
-        className={classNames(
-          bodyFont.variable,
-          headerFont.variable,
-          monoFont.variable,
-          "bg-gray-50",
-        )}
-      >
-        <Snipcart />
-        <HydrationOverlay>
-          <NavBar />
-          {children}
-          <Footer />
-        </HydrationOverlay>
-        {gaID && process.env.NODE_ENV === "production" && (
-          <GoogleAnalytics gaId={gaID} />
-        )}
-      </body>
+      <PHProvider>
+        <body
+          className={classNames(
+            bodyFont.variable,
+            headerFont.variable,
+            monoFont.variable,
+            "bg-gray-50",
+          )}
+        >
+          <PostHogPageView />
+          <Snipcart />
+          <HydrationOverlay>
+            <NavBar />
+            {children}
+            <Footer />
+          </HydrationOverlay>
+          {gaID && process.env.NODE_ENV === "production" && (
+            <GoogleAnalytics gaId={gaID} />
+          )}
+        </body>
+      </PHProvider>
     </html>
   );
 }

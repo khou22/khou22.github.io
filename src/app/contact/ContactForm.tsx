@@ -4,6 +4,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { usePostHog } from "posthog-js/react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -24,6 +25,7 @@ const generateFormSchema = z.object({
 type GenerateFormValues = z.infer<typeof generateFormSchema>;
 
 export const ContactForm = () => {
+  const posthog = usePostHog();
   const {
     handleSubmit,
     register,
@@ -56,6 +58,12 @@ export const ContactForm = () => {
         subject: data.subject,
         message: data.message,
       });
+      posthog.capture("contact_form_submitted", {
+        full_name: data.fullName,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
+      });
       clearErrors();
     } catch (error) {
       if (error instanceof Error) {
@@ -65,6 +73,14 @@ export const ContactForm = () => {
       }
       sendGTMEvent({
         event: "contact_form_failed",
+        error:
+          error instanceof Error ? error.message : `Unknown error: ${error}`,
+        full_name: data.fullName,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
+      });
+      posthog.capture("contact_form_failed", {
         error:
           error instanceof Error ? error.message : `Unknown error: ${error}`,
         full_name: data.fullName,
