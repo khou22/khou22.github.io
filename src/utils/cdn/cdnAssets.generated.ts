@@ -3409,6 +3409,11 @@ export const _generatedCdnAssets = {
     name: `Golden Gate Bridge Marin Headlands at Sunset.placeholder`,
     dimensions: [800, 533],
   },
+	"photography/san_francisco/San_Francisco_Powell_Street_Cable_Car_Trolly_placeholder_jpg": {
+    path: "/photography/san_francisco/San%20Francisco%20Powell%20Street%20Cable%20Car%20Trolly.placeholder.jpg",
+    name: `San Francisco Powell Street Cable Car Trolly.placeholder`,
+    dimensions: [640, 800],
+  },
 	"photography/san_francisco/Aerial_View_of_Half_Moon_Bay_Beach_placeholder_jpg": {
     path: "/photography/san_francisco/Aerial%20View%20of%20Half%20Moon%20Bay%20Beach.placeholder.jpg",
     name: `Aerial View of Half Moon Bay Beach.placeholder`,
@@ -6544,6 +6549,46 @@ export const _generatedCdnAssets = {
     name: `nature`,
     dimensions: [1200, 1496],
   },
+	"media/photography/farleys/interior_jpg": {
+    path: "/media/photography/farleys/interior.jpg",
+    name: `interior`,
+    dimensions: [3000, 2001],
+  },
+	"media/photography/farleys/portrait_jpg": {
+    path: "/media/photography/farleys/portrait.jpg",
+    name: `portrait`,
+    dimensions: [4000, 5996],
+  },
+	"media/photography/farleys/bio_close_up_jpg": {
+    path: "/media/photography/farleys/bio_close_up.jpg",
+    name: `bio_close_up`,
+    dimensions: [1800, 2250],
+  },
+	"media/photography/farleys/farleys_logo_png": {
+    path: "/media/photography/farleys/farleys_logo.png",
+    name: `farleys_logo`,
+    dimensions: [400, 500],
+  },
+	"media/photography/farleys/exterior_jpg": {
+    path: "/media/photography/farleys/exterior.jpg",
+    name: `exterior`,
+    dimensions: [1800, 2699],
+  },
+	"media/photography/farleys/reading_window_jpg": {
+    path: "/media/photography/farleys/reading_window.jpg",
+    name: `reading_window`,
+    dimensions: [3000, 3750],
+  },
+	"media/photography/farleys/golden_gate_satellite_jpg": {
+    path: "/media/photography/farleys/golden_gate_satellite.jpg",
+    name: `golden_gate_satellite`,
+    dimensions: [1800, 2699],
+  },
+	"media/photography/farleys/ocean_beach_jpg": {
+    path: "/media/photography/farleys/ocean_beach.jpg",
+    name: `ocean_beach`,
+    dimensions: [1800, 2250],
+  },
 	"media/photography/drone_jpg": {
     path: "/media/photography/drone.jpg",
     name: `drone`,
@@ -6613,6 +6658,11 @@ export const _generatedCdnAssets = {
     path: "/media/photography/cover/princeton.jpg",
     name: `princeton`,
     dimensions: [763, 600],
+  },
+	"media/profile_pictures/js_nation_presentation_headshot_jpg": {
+    path: "/media/profile_pictures/js-nation-presentation-headshot.jpg",
+    name: `js-nation-presentation-headshot`,
+    dimensions: [2500, 1667],
   },
 	"media/profile_pictures/Side_Outdoors_Portrait_jpg": {
     path: "/media/profile_pictures/Side%20Outdoors%20Portrait.jpg",
@@ -6759,6 +6809,11 @@ export const _generatedCdnAssets = {
     name: `imessage-og-image`,
     dimensions: [1170, 847],
   },
+	"media/blog/images/ai_engineer_worlds_fair_talk_stage_shot_jpg": {
+    path: "/media/blog/images/ai-engineer-worlds-fair-talk-stage-shot.jpg",
+    name: `ai-engineer-worlds-fair-talk-stage-shot`,
+    dimensions: [6103, 4069],
+  },
 	"media/blog/images/installing_all_google_fonts_png": {
     path: "/media/blog/images/installing-all-google-fonts.png",
     name: `installing-all-google-fonts`,
@@ -6803,6 +6858,16 @@ export const _generatedCdnAssets = {
     path: "/media/blog/images/TypeScript-Intro/atom_code_completion_typescript.png",
     name: `atom_code_completion_typescript`,
     dimensions: [464, 180],
+  },
+	"media/blog/images/js_nation_talk/js_nation_live_stream_png": {
+    path: "/media/blog/images/js-nation-talk/js-nation-live-stream.png",
+    name: `js-nation-live-stream`,
+    dimensions: [1948, 1084],
+  },
+	"media/blog/images/js_nation_talk/js_nation_presentation_stage_jpg": {
+    path: "/media/blog/images/js-nation-talk/js-nation-presentation-stage.jpg",
+    name: `js-nation-presentation-stage`,
+    dimensions: [2500, 1667],
   },
 	"media/blog/images/Slate_Scheduler/slate_location_search_gif": {
     path: "/media/blog/images/Slate-Scheduler/slate-location-search.gif",
