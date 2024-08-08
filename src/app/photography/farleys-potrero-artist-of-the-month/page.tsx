@@ -10,7 +10,7 @@ import { ogImageSize } from "@/constants/ogImage";
 
 const title = "Farley's Potrero Artist of the Month | Kevin Hou";
 const coverImage =
-  "https://khou22.com/media/photography/farleys/farleys_preview_card.png";
+  "https://khou22.github.io/media/photography/farleys/farleys_preview_card.png";
 export const metadata: Metadata = {
   title,
   description:
