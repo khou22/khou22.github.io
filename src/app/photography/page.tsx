@@ -47,13 +47,11 @@ const PhotographyHomepage = async () => {
             style={{ animationDelay: `${1 * fadeAnimationDeltaMS}ms` }}
           />
           <HalfTextArticle
-            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Astrophotography)}
-            title="Astrophotography"
-            category="Collection"
-            description="Undoutedly one of my favorite and most technically complex forms of photography"
-            imageSrc={getCdnAsset(
-              "photography/Pigeon_Point_Lighthouse_Milky_Way_jpg",
-            )}
+            href={PAGES.PHOTOGRAPHY.FARLEYS_POTRERO}
+            title="Farley's Potrero"
+            category="Coffee Shop Gallery"
+            description="Showcasing my work as the artist of the month."
+            imageSrc={getCdnAsset("media/photography/farleys/portrait_jpg")}
             priority
             className="fade-appear"
             style={{ animationDelay: `${2 * fadeAnimationDeltaMS}ms` }}
@@ -104,7 +102,18 @@ const PhotographyHomepage = async () => {
             className="fade-appear"
             style={{ animationDelay: `${6 * fadeAnimationDeltaMS}ms` }}
           />
-
+          <HalfTextArticle
+            href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Astrophotography)}
+            title="Astrophotography"
+            category="Collection"
+            description="Undoutedly one of my favorite and most technically complex forms of photography"
+            imageSrc={getCdnAsset(
+              "photography/Pigeon_Point_Lighthouse_Milky_Way_jpg",
+            )}
+            priority
+            className="fade-appear"
+            style={{ animationDelay: `${7 * fadeAnimationDeltaMS}ms` }}
+          />
           <FullCoverArticle
             href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Landscape)}
             title="Landscapes"
@@ -115,7 +124,7 @@ const PhotographyHomepage = async () => {
               "photography/Lonely_Barn_at_the_Base_of_Grand_Tetons_jpg",
             )}
             className="fade-appear"
-            style={{ animationDelay: `${7 * fadeAnimationDeltaMS}ms` }}
+            style={{ animationDelay: `${8 * fadeAnimationDeltaMS}ms` }}
           />
           <HalfTextArticle
             href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.City)}
@@ -126,7 +135,7 @@ const PhotographyHomepage = async () => {
               "photography/Tokyo_Soba_Noodles_NIght_Market_Chef_jpg",
             )}
             className="fade-appear"
-            style={{ animationDelay: `${8 * fadeAnimationDeltaMS}ms` }}
+            style={{ animationDelay: `${9 * fadeAnimationDeltaMS}ms` }}
           />
           <FullCoverArticle
             href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Greece)}
@@ -138,7 +147,7 @@ const PhotographyHomepage = async () => {
               "photography/Meteora_Monastery_Perched_at_Sunset_jpg",
             )}
             className="fade-appear"
-            style={{ animationDelay: `${9 * fadeAnimationDeltaMS}ms` }}
+            style={{ animationDelay: `${10 * fadeAnimationDeltaMS}ms` }}
           />
           <HalfTextArticle
             href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Product)}
