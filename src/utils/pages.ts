@@ -45,4 +45,7 @@ export const PAGES = {
     SUBDIRECTORY: (dirName: string) => `/admin/photos/${dirName}`,
     SEARCH: (query: string) => `/admin/photos/search/${query}`,
   },
+  REDIRECTS: {
+    FARLEYS: "/r/farleys",
+  },
 };
