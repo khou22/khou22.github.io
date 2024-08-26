@@ -66,4 +66,17 @@ export const privatePhotoAlbums: PrivatePhotoAlbumType[] = [
       "photography/sports/LWHS_Girls_Lacrosse_Senior_Night_2024_4_jpg",
     ],
   },
+  {
+    id: "farleys-august-2024",
+    name: "Farley's Artist of the Month August 2024",
+    link: "https://photos.app.goo.gl/g59E1N3io3BoE6aX9",
+    cover: "photography/events/farleys_hangout_3_jpg",
+    photos: [
+      "photography/events/farleys_hangout_1_jpg",
+      "photography/events/farleys_hangout_2_jpg",
+      "photography/events/farleys_hangout_3_jpg",
+      "photography/events/farleys_hangout_4_jpg",
+      "photography/events/farleys_hangout_5_jpg",
+    ],
+  },
 ];

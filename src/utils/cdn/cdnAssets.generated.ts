@@ -4999,6 +4999,16 @@ export const _generatedCdnAssets = {
     name: `San Francisco Napa Valley Wine Country Awards`,
     dimensions: [4498, 3000],
   },
+	"photography/events/farleys_hangout_5_jpg": {
+    path: "/photography/events/farleys_hangout_5.jpg",
+    name: `farleys_hangout_5`,
+    dimensions: [4000, 6000],
+  },
+	"photography/events/farleys_hangout_4_jpg": {
+    path: "/photography/events/farleys_hangout_4.jpg",
+    name: `farleys_hangout_4`,
+    dimensions: [4000, 6000],
+  },
 	"photography/events/Ivy_Formals_Fall_2019_5_placeholder_jpg": {
     path: "/photography/events/Ivy%20Formals%20Fall%202019%205.placeholder.jpg",
     name: `Ivy Formals Fall 2019 5.placeholder`,
@@ -5008,6 +5018,16 @@ export const _generatedCdnAssets = {
     path: "/photography/events/Westfield%20Event%201.placeholder.jpg",
     name: `Westfield Event 1.placeholder`,
     dimensions: [534, 800],
+  },
+	"photography/events/farleys_hangout_3_jpg": {
+    path: "/photography/events/farleys_hangout_3.jpg",
+    name: `farleys_hangout_3`,
+    dimensions: [4000, 6000],
+  },
+	"photography/events/farleys_hangout_2_jpg": {
+    path: "/photography/events/farleys_hangout_2.jpg",
+    name: `farleys_hangout_2`,
+    dimensions: [4000, 6000],
   },
 	"photography/events/Silicon_Valley_TigerTrek_Fall_2019_1_jpg": {
     path: "/photography/events/Silicon%20Valley%20TigerTrek%20Fall%202019%201.jpg",
@@ -5023,6 +5043,11 @@ export const _generatedCdnAssets = {
     path: "/photography/events/Ivy%20Formals%20Fall%202019%202.placeholder.jpg",
     name: `Ivy Formals Fall 2019 2.placeholder`,
     dimensions: [800, 534],
+  },
+	"photography/events/farleys_hangout_1_jpg": {
+    path: "/photography/events/farleys_hangout_1.jpg",
+    name: `farleys_hangout_1`,
+    dimensions: [6000, 4000],
   },
 	"photography/events/Silicon_Valley_TigerTrek_Fall_2019_2_jpg": {
     path: "/photography/events/Silicon%20Valley%20TigerTrek%20Fall%202019%202.jpg",
@@ -6573,6 +6598,11 @@ export const _generatedCdnAssets = {
     path: "/media/photography/farleys/exterior.jpg",
     name: `exterior`,
     dimensions: [1800, 2699],
+  },
+	"media/photography/farleys/farleys_preview_card_png": {
+    path: "/media/photography/farleys/farleys_preview_card.png",
+    name: `farleys_preview_card`,
+    dimensions: [1200, 630],
   },
 	"media/photography/farleys/reading_window_jpg": {
     path: "/media/photography/farleys/reading_window.jpg",
