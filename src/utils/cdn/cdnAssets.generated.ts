@@ -5034,6 +5034,11 @@ export const _generatedCdnAssets = {
     name: `Silicon Valley TigerTrek Fall 2019 1`,
     dimensions: [4897, 3266],
   },
+	"photography/events/farleys_hangout_1_placeholder_jpg": {
+    path: "/photography/events/farleys_hangout_1.placeholder.jpg",
+    name: `farleys_hangout_1.placeholder`,
+    dimensions: [800, 533],
+  },
 	"photography/events/Labrinthe_Coworking_Space_3_placeholder_jpg": {
     path: "/photography/events/Labrinthe%20Coworking%20Space%203.placeholder.jpg",
     name: `Labrinthe Coworking Space 3.placeholder`,
@@ -5159,6 +5164,11 @@ export const _generatedCdnAssets = {
     name: `Tiger Inn Formals Spring 2019.placeholder`,
     dimensions: [800, 533],
   },
+	"photography/events/farleys_hangout_2_placeholder_jpg": {
+    path: "/photography/events/farleys_hangout_2.placeholder.jpg",
+    name: `farleys_hangout_2.placeholder`,
+    dimensions: [533, 800],
+  },
 	"photography/events/Ivy_Formals_Fall_2019_4_jpg": {
     path: "/photography/events/Ivy%20Formals%20Fall%202019%204.jpg",
     name: `Ivy Formals Fall 2019 4`,
@@ -5224,6 +5234,11 @@ export const _generatedCdnAssets = {
     name: `Westfield Event 2.placeholder`,
     dimensions: [640, 800],
   },
+	"photography/events/farleys_hangout_5_placeholder_jpg": {
+    path: "/photography/events/farleys_hangout_5.placeholder.jpg",
+    name: `farleys_hangout_5.placeholder`,
+    dimensions: [533, 800],
+  },
 	"photography/events/Diwali_Party_Portrait_2022_placeholder_jpg": {
     path: "/photography/events/Diwali%20Party%20Portrait%202022.placeholder.jpg",
     name: `Diwali Party Portrait 2022.placeholder`,
@@ -5244,10 +5259,20 @@ export const _generatedCdnAssets = {
     name: `Westfield Event 3.placeholder`,
     dimensions: [640, 800],
   },
+	"photography/events/farleys_hangout_4_placeholder_jpg": {
+    path: "/photography/events/farleys_hangout_4.placeholder.jpg",
+    name: `farleys_hangout_4.placeholder`,
+    dimensions: [533, 800],
+  },
 	"photography/events/Diwali_Party_Portrait_2022_jpg": {
     path: "/photography/events/Diwali%20Party%20Portrait%202022.jpg",
     name: `Diwali Party Portrait 2022`,
     dimensions: [2001, 3000],
+  },
+	"photography/events/farleys_hangout_3_placeholder_jpg": {
+    path: "/photography/events/farleys_hangout_3.placeholder.jpg",
+    name: `farleys_hangout_3.placeholder`,
+    dimensions: [533, 800],
   },
 	"photography/events/Westfield_Event_4_placeholder_jpg": {
     path: "/photography/events/Westfield%20Event%204.placeholder.jpg",
