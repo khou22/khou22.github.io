@@ -5002,12 +5002,12 @@ export const _generatedCdnAssets = {
 	"photography/events/farleys_hangout_5_jpg": {
     path: "/photography/events/farleys_hangout_5.jpg",
     name: `farleys_hangout_5`,
-    dimensions: [4000, 6000],
+    dimensions: [2000, 3000],
   },
 	"photography/events/farleys_hangout_4_jpg": {
     path: "/photography/events/farleys_hangout_4.jpg",
     name: `farleys_hangout_4`,
-    dimensions: [4000, 6000],
+    dimensions: [2000, 3000],
   },
 	"photography/events/Ivy_Formals_Fall_2019_5_placeholder_jpg": {
     path: "/photography/events/Ivy%20Formals%20Fall%202019%205.placeholder.jpg",
@@ -5022,12 +5022,12 @@ export const _generatedCdnAssets = {
 	"photography/events/farleys_hangout_3_jpg": {
     path: "/photography/events/farleys_hangout_3.jpg",
     name: `farleys_hangout_3`,
-    dimensions: [4000, 6000],
+    dimensions: [2000, 3000],
   },
 	"photography/events/farleys_hangout_2_jpg": {
     path: "/photography/events/farleys_hangout_2.jpg",
     name: `farleys_hangout_2`,
-    dimensions: [4000, 6000],
+    dimensions: [2000, 3000],
   },
 	"photography/events/Silicon_Valley_TigerTrek_Fall_2019_1_jpg": {
     path: "/photography/events/Silicon%20Valley%20TigerTrek%20Fall%202019%201.jpg",
@@ -5052,7 +5052,7 @@ export const _generatedCdnAssets = {
 	"photography/events/farleys_hangout_1_jpg": {
     path: "/photography/events/farleys_hangout_1.jpg",
     name: `farleys_hangout_1`,
-    dimensions: [6000, 4000],
+    dimensions: [4500, 3000],
   },
 	"photography/events/Silicon_Valley_TigerTrek_Fall_2019_2_jpg": {
     path: "/photography/events/Silicon%20Valley%20TigerTrek%20Fall%202019%202.jpg",
@@ -6607,7 +6607,7 @@ export const _generatedCdnAssets = {
 	"media/photography/farleys/portrait_jpg": {
     path: "/media/photography/farleys/portrait.jpg",
     name: `portrait`,
-    dimensions: [4000, 5996],
+    dimensions: [2001, 3000],
   },
 	"media/photography/farleys/bio_close_up_jpg": {
     path: "/media/photography/farleys/bio_close_up.jpg",
@@ -6632,7 +6632,7 @@ export const _generatedCdnAssets = {
 	"media/photography/farleys/reading_window_jpg": {
     path: "/media/photography/farleys/reading_window.jpg",
     name: `reading_window`,
-    dimensions: [3000, 3750],
+    dimensions: [2400, 3000],
   },
 	"media/photography/farleys/golden_gate_satellite_jpg": {
     path: "/media/photography/farleys/golden_gate_satellite.jpg",
@@ -6867,7 +6867,7 @@ export const _generatedCdnAssets = {
 	"media/blog/images/ai_engineer_worlds_fair_talk_stage_shot_jpg": {
     path: "/media/blog/images/ai-engineer-worlds-fair-talk-stage-shot.jpg",
     name: `ai-engineer-worlds-fair-talk-stage-shot`,
-    dimensions: [6103, 4069],
+    dimensions: [4500, 3000],
   },
 	"media/blog/images/installing_all_google_fonts_png": {
     path: "/media/blog/images/installing-all-google-fonts.png",
@@ -6883,6 +6883,11 @@ export const _generatedCdnAssets = {
     path: "/media/blog/images/syntax-podcast-cover-photo.jpg",
     name: `syntax-podcast-cover-photo`,
     dimensions: [1280, 720],
+  },
+	"media/blog/images/codeium_series_c_thumbnail_png": {
+    path: "/media/blog/images/codeium-series-c-thumbnail.png",
+    name: `codeium-series-c-thumbnail`,
+    dimensions: [1600, 903],
   },
 	"media/blog/images/Blog_Post_Placeholder_Image_jpg": {
     path: "/media/blog/images/Blog_Post_Placeholder_Image.jpg",
