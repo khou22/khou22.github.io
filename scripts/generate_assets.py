@@ -3,6 +3,7 @@ import re
 from typing import Dict, NamedTuple, Optional
 from PIL import Image
 import urllib.parse
+from datetime import datetime
 
 
 class AssetMeta(NamedTuple):
@@ -67,6 +68,28 @@ def get_python_dict(map: Dict[str, AssetMeta]):
     return "export const _generatedCdnAssets = {\n" + ",\n".join(entries) + "\n}"
 
 
+def generate_markdown_catalog(asset_map: Dict[str, AssetMeta]) -> str:
+    markdown_lines = ["---\n"]
+    markdown_lines.append(f"last_updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+    markdown_lines.append("---\n\n")
+    markdown_lines.append("# Asset Catalog\n")
+    markdown_lines.append("This catalog includes only JPEG and PNG files, excluding placeholders.\n\n")
+    base_url = "https://khou22.github.io/"
+    
+    for key, asset in asset_map.items():
+        if not (asset.path.endswith(".jpg") or asset.path.endswith(".jpeg") or asset.path.endswith(".png")):
+            continue
+        
+        # Filter out placeholder images
+        if asset.path.endswith(".placeholder.jpg") or asset.path.endswith(".placeholder.jpeg"):
+            continue
+
+        public_url = base_url + asset.path
+        markdown_lines.append(f"- **{asset.name}**: [{public_url}]({public_url})")
+    
+    return "\n".join(markdown_lines)
+
+
 assets = get_asset_map()
 object_str = get_python_dict(assets)
 
@@ -81,3 +104,15 @@ if not os.path.exists(os.path.dirname(file_path)):
 
 with open(file_path, "w") as f:
     f.write(object_str)
+
+
+# Generate the Markdown catalog.
+markdown_content = generate_markdown_catalog(assets)
+
+# Write to Markdown file.
+markdown_file_path = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "../asset-catalog.md")
+)
+
+with open(markdown_file_path, "w") as md_file:
+    md_file.write(markdown_content)
