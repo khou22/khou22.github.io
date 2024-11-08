@@ -5609,6 +5609,21 @@ export const _generatedCdnAssets = {
     name: `Rubicon Peak Side Angle Drone.placeholder`,
     dimensions: [667, 500],
   },
+	"photography/weddings/gary_hong_wedding_2_jpg": {
+    path: "/photography/weddings/gary-hong-wedding-2.jpg",
+    name: `gary-hong-wedding-2`,
+    dimensions: [4498, 3000],
+  },
+	"photography/weddings/gary_hong_wedding_3_jpg": {
+    path: "/photography/weddings/gary-hong-wedding-3.jpg",
+    name: `gary-hong-wedding-3`,
+    dimensions: [2001, 3000],
+  },
+	"photography/weddings/gary_hong_wedding_1_jpg": {
+    path: "/photography/weddings/gary-hong-wedding-1.jpg",
+    name: `gary-hong-wedding-1`,
+    dimensions: [4498, 3000],
+  },
 	"photography/Black_Sheep_Foods_Table_of_Food_placeholder_jpg": {
     path: "/photography/Black%20Sheep%20Foods%20Table%20of%20Food.placeholder.jpg",
     name: `Black Sheep Foods Table of Food.placeholder`,
