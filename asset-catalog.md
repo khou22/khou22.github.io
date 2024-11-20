@@ -1,6 +1,6 @@
 ---
 
-last_updated: 2024-11-07 21:04:44
+last_updated: 2024-10-26 22:04:57
 
 ---
 
@@ -571,9 +571,6 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **Aerial View of Half Moon Bay**: [https://khou22.github.io/photography/Aerial%20View%20of%20Half%20Moon%20Bay.jpg](https://khou22.github.io/photography/Aerial%20View%20of%20Half%20Moon%20Bay.jpg)
 - **Temple Street Market Overview**: [https://khou22.github.io/photography/Temple%20Street%20Market%20Overview.jpg](https://khou22.github.io/photography/Temple%20Street%20Market%20Overview.jpg)
 - **Bride's Pool Long Exposure 1-2**: [https://khou22.github.io/photography/Bride%27s%20Pool%20Long%20Exposure%201-2.jpg](https://khou22.github.io/photography/Bride%27s%20Pool%20Long%20Exposure%201-2.jpg)
-- **gary-hong-wedding-2**: [https://khou22.github.io/photography/weddings/gary-hong-wedding-2.jpg](https://khou22.github.io/photography/weddings/gary-hong-wedding-2.jpg)
-- **gary-hong-wedding-3**: [https://khou22.github.io/photography/weddings/gary-hong-wedding-3.jpg](https://khou22.github.io/photography/weddings/gary-hong-wedding-3.jpg)
-- **gary-hong-wedding-1**: [https://khou22.github.io/photography/weddings/gary-hong-wedding-1.jpg](https://khou22.github.io/photography/weddings/gary-hong-wedding-1.jpg)
 - **Embarcadero Drone Ferry Building Daytime Vertical**: [https://khou22.github.io/photography/Embarcadero%20Drone%20Ferry%20Building%20Daytime%20Vertical.jpg](https://khou22.github.io/photography/Embarcadero%20Drone%20Ferry%20Building%20Daytime%20Vertical.jpg)
 - **Empire State Building Daytime Telephoto**: [https://khou22.github.io/photography/Empire%20State%20Building%20Daytime%20Telephoto.jpg](https://khou22.github.io/photography/Empire%20State%20Building%20Daytime%20Telephoto.jpg)
 - **Looking Down Fulton Street Vertical Drone**: [https://khou22.github.io/photography/Looking%20Down%20Fulton%20Street%20Vertical%20Drone.jpg](https://khou22.github.io/photography/Looking%20Down%20Fulton%20Street%20Vertical%20Drone.jpg)
