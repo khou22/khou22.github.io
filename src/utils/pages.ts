@@ -1,4 +1,8 @@
-import { PhotoIdType, getPhotoURLComponent } from "./cdn/cdnAssets";
+import {
+  PhotoIdType,
+  getCdnAsset,
+  getPhotoURLComponent,
+} from "./cdn/cdnAssets";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { tagMetadata } from "@/constants/photoTags/tagMetadata";
 import { BlogPostFrontMatter } from "@/data/types";
@@ -47,5 +51,15 @@ export const PAGES = {
   },
   REDIRECTS: {
     FARLEYS: "/r/farleys",
+  },
+};
+
+export const CDN_DOCUMENTS = {
+  DOCUMENTS: {
+    PATENTS: {
+      "10761818": getCdnAsset("documents/patents/kevin_hou_us_10761818_pdf"),
+      "10928982": getCdnAsset("documents/patents/kevin_hou_us_10928982_pdf"),
+      "10949174": getCdnAsset("documents/patents/kevin_hou_us_10949174_pdf"),
+    },
   },
 };
