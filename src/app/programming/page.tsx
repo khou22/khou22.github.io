@@ -59,7 +59,7 @@ const ProgrammingPortfolioPage = () => {
           I have also authored a number of patents. Some of which have been
           officially granted, including:
         </p>
-        <ul className="[&>li]:caption m-auto max-w-sm list-decimal pl-4 md:max-w-none">
+        <ul className="[&>li]:caption mx-auto max-w-sm list-decimal pl-4 md:mx-0 md:max-w-none">
           <li>
             Automatic Identification of Types of User Interface Components{" "}
             <CustomLink
