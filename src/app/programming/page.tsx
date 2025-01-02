@@ -4,7 +4,7 @@ import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { occupations } from "@/constants/occupations";
 import { programmingProjects } from "@/constants/programmingProjects";
-import { PAGES } from "@/utils/pages";
+import { CDN_DOCUMENTS, PAGES } from "@/utils/pages";
 
 export const metadata: Metadata = {
   title: "Programming Portfolio | Kevin Hou",
@@ -52,6 +52,42 @@ const ProgrammingPortfolioPage = () => {
             ))}
           </div>
         </div>
+      </PageWrapper>
+      <PageWrapper maxWidth="wide" className="mb-8 w-full md:mb-12">
+        <h4 className="mb-2 mt-4 text-center md:text-left">Patents</h4>
+        <p className="caption mb-2 text-center md:text-left">
+          I have also authored a number of patents. Some of which have been
+          officially granted, including:
+        </p>
+        <ul className="[&>li]:caption m-auto max-w-sm list-decimal pl-4 md:max-w-none">
+          <li>
+            Automatic Identification of Types of User Interface Components{" "}
+            <CustomLink
+              href={CDN_DOCUMENTS.DOCUMENTS.PATENTS[10761818]}
+              target="_blank"
+            >
+              [10761818]
+            </CustomLink>
+          </li>
+          <li>
+            Automatic Grouping of User Interface Elements into Components{" "}
+            <CustomLink
+              href={CDN_DOCUMENTS.DOCUMENTS.PATENTS[10928982]}
+              target="_blank"
+            >
+              [10928982]
+            </CustomLink>
+          </li>
+          <li>
+            Automatic Classification of User Interface Elements{" "}
+            <CustomLink
+              href={CDN_DOCUMENTS.DOCUMENTS.PATENTS[10949174]}
+              target="_blank"
+            >
+              [10949174]
+            </CustomLink>
+          </li>
+        </ul>
       </PageWrapper>
       <PageWrapper maxWidth="wide" className="mb-8 w-full md:mb-12">
         <h2 className="m-auto text-center leading-loose">

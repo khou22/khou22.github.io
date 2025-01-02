@@ -6199,6 +6199,21 @@ export const _generatedCdnAssets = {
     name: `preview-card`,
     dimensions: [1200, 630],
   },
+	"documents/patents/kevin_hou_us_10949174_pdf": {
+    path: "/documents/patents/kevin_hou-us_10949174.pdf",
+    name: `kevin_hou-us_10949174`,
+    dimensions: [null, null],
+  },
+	"documents/patents/kevin_hou_us_10928982_pdf": {
+    path: "/documents/patents/kevin_hou-us_10928982.pdf",
+    name: `kevin_hou-us_10928982`,
+    dimensions: [null, null],
+  },
+	"documents/patents/kevin_hou_us_10761818_pdf": {
+    path: "/documents/patents/kevin_hou-us_10761818.pdf",
+    name: `kevin_hou-us_10761818`,
+    dimensions: [null, null],
+  },
 	"media/design/snapchat_geofilters/whitman_geofilter_png": {
     path: "/media/design/snapchat-geofilters/whitman-geofilter.png",
     name: `whitman-geofilter`,
@@ -6824,6 +6839,36 @@ export const _generatedCdnAssets = {
     name: `Faster Mac Dock Reveal`,
     dimensions: [577, 446],
   },
+	"media/blog/images/mintlify_feature/mintlify_thumbnail_jpg": {
+    path: "/media/blog/images/mintlify-feature/mintlify-thumbnail.jpg",
+    name: `mintlify-thumbnail`,
+    dimensions: [1024, 680],
+  },
+	"media/blog/images/mintlify_feature/mintlify_tweet_post_png": {
+    path: "/media/blog/images/mintlify-feature/mintlify-tweet-post.png",
+    name: `mintlify-tweet-post`,
+    dimensions: [1180, 1180],
+  },
+	"media/blog/images/mintlify_feature/mintlify_linkedin_post_png": {
+    path: "/media/blog/images/mintlify-feature/mintlify-linkedin-post.png",
+    name: `mintlify-linkedin-post`,
+    dimensions: [1126, 1246],
+  },
+	"media/blog/images/mintlify_feature/mintlify_founder_mode_blog_post_jpeg": {
+    path: "/media/blog/images/mintlify-feature/mintlify-founder-mode-blog-post.jpeg",
+    name: `mintlify-founder-mode-blog-post`,
+    dimensions: [3024, 12736],
+  },
+	"media/blog/images/windsurf_posts/windsurf_image_upload_tweet_post_png": {
+    path: "/media/blog/images/windsurf-posts/windsurf-image-upload-tweet-post.png",
+    name: `windsurf-image-upload-tweet-post`,
+    dimensions: [1230, 1064],
+  },
+	"media/blog/images/windsurf_posts/windsurf_terminal_commands_tweet_post_png": {
+    path: "/media/blog/images/windsurf-posts/windsurf-terminal-commands-tweet-post.png",
+    name: `windsurf-terminal-commands-tweet-post`,
+    dimensions: [1232, 1064],
+  },
 	"media/blog/images/Installing_Cocoapods_png": {
     path: "/media/blog/images/Installing_Cocoapods.png",
     name: `Installing_Cocoapods`,
@@ -6879,6 +6924,11 @@ export const _generatedCdnAssets = {
     name: `Swift_Table_Views`,
     dimensions: [1920, 1080],
   },
+	"media/blog/images/windsurf_video_thumbnail_png": {
+    path: "/media/blog/images/windsurf-video-thumbnail.png",
+    name: `windsurf-video-thumbnail`,
+    dimensions: [1280, 720],
+  },
 	"media/blog/images/syntax_podcast_cover_photo_jpg": {
     path: "/media/blog/images/syntax-podcast-cover-photo.jpg",
     name: `syntax-podcast-cover-photo`,
@@ -6903,6 +6953,11 @@ export const _generatedCdnAssets = {
     path: "/media/blog/images/tmux/initialized.png",
     name: `initialized`,
     dimensions: [1364, 978],
+  },
+	"media/blog/images/2025_productivity_conf/speaker_list_png": {
+    path: "/media/blog/images/2025-productivity-conf/speaker-list.png",
+    name: `speaker-list`,
+    dimensions: [3190, 1942],
   },
 	"media/blog/images/Github_Spike_jpg": {
     path: "/media/blog/images/Github%20Spike.jpg",

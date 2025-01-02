@@ -1,6 +1,6 @@
 ---
 
-last_updated: 2024-10-26 22:04:57
+last_updated: 2025-01-02 13:59:57
 
 ---
 
@@ -750,6 +750,12 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **Raw_JSON_Bad**: [https://khou22.github.io/media/blog/images/API-Testing/Raw_JSON_Bad.png](https://khou22.github.io/media/blog/images/API-Testing/Raw_JSON_Bad.png)
 - **Postman_Import_cURL**: [https://khou22.github.io/media/blog/images/API-Testing/Postman_Import_cURL.png](https://khou22.github.io/media/blog/images/API-Testing/Postman_Import_cURL.png)
 - **Faster Mac Dock Reveal**: [https://khou22.github.io/media/blog/images/Faster%20Mac%20Dock%20Reveal.png](https://khou22.github.io/media/blog/images/Faster%20Mac%20Dock%20Reveal.png)
+- **mintlify-thumbnail**: [https://khou22.github.io/media/blog/images/mintlify-feature/mintlify-thumbnail.jpg](https://khou22.github.io/media/blog/images/mintlify-feature/mintlify-thumbnail.jpg)
+- **mintlify-tweet-post**: [https://khou22.github.io/media/blog/images/mintlify-feature/mintlify-tweet-post.png](https://khou22.github.io/media/blog/images/mintlify-feature/mintlify-tweet-post.png)
+- **mintlify-linkedin-post**: [https://khou22.github.io/media/blog/images/mintlify-feature/mintlify-linkedin-post.png](https://khou22.github.io/media/blog/images/mintlify-feature/mintlify-linkedin-post.png)
+- **mintlify-founder-mode-blog-post**: [https://khou22.github.io/media/blog/images/mintlify-feature/mintlify-founder-mode-blog-post.jpeg](https://khou22.github.io/media/blog/images/mintlify-feature/mintlify-founder-mode-blog-post.jpeg)
+- **windsurf-image-upload-tweet-post**: [https://khou22.github.io/media/blog/images/windsurf-posts/windsurf-image-upload-tweet-post.png](https://khou22.github.io/media/blog/images/windsurf-posts/windsurf-image-upload-tweet-post.png)
+- **windsurf-terminal-commands-tweet-post**: [https://khou22.github.io/media/blog/images/windsurf-posts/windsurf-terminal-commands-tweet-post.png](https://khou22.github.io/media/blog/images/windsurf-posts/windsurf-terminal-commands-tweet-post.png)
 - **Installing_Cocoapods**: [https://khou22.github.io/media/blog/images/Installing_Cocoapods.png](https://khou22.github.io/media/blog/images/Installing_Cocoapods.png)
 - **set-cookie-response**: [https://khou22.github.io/media/blog/images/set-cookie-response.png](https://khou22.github.io/media/blog/images/set-cookie-response.png)
 - **Woodcraft081015**: [https://khou22.github.io/media/blog/images/Woodcraft081015.jpg](https://khou22.github.io/media/blog/images/Woodcraft081015.jpg)
@@ -760,11 +766,13 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **ai-engineer-worlds-fair-talk-stage-shot**: [https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-talk-stage-shot.jpg](https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-talk-stage-shot.jpg)
 - **installing-all-google-fonts**: [https://khou22.github.io/media/blog/images/installing-all-google-fonts.png](https://khou22.github.io/media/blog/images/installing-all-google-fonts.png)
 - **Swift_Table_Views**: [https://khou22.github.io/media/blog/images/Swift_Table_Views.png](https://khou22.github.io/media/blog/images/Swift_Table_Views.png)
+- **windsurf-video-thumbnail**: [https://khou22.github.io/media/blog/images/windsurf-video-thumbnail.png](https://khou22.github.io/media/blog/images/windsurf-video-thumbnail.png)
 - **syntax-podcast-cover-photo**: [https://khou22.github.io/media/blog/images/syntax-podcast-cover-photo.jpg](https://khou22.github.io/media/blog/images/syntax-podcast-cover-photo.jpg)
 - **codeium-series-c-thumbnail**: [https://khou22.github.io/media/blog/images/codeium-series-c-thumbnail.png](https://khou22.github.io/media/blog/images/codeium-series-c-thumbnail.png)
 - **Blog_Post_Placeholder_Image**: [https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg](https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg)
 - **session**: [https://khou22.github.io/media/blog/images/tmux/session.png](https://khou22.github.io/media/blog/images/tmux/session.png)
 - **initialized**: [https://khou22.github.io/media/blog/images/tmux/initialized.png](https://khou22.github.io/media/blog/images/tmux/initialized.png)
+- **speaker-list**: [https://khou22.github.io/media/blog/images/2025-productivity-conf/speaker-list.png](https://khou22.github.io/media/blog/images/2025-productivity-conf/speaker-list.png)
 - **Github Spike**: [https://khou22.github.io/media/blog/images/Github%20Spike.jpg](https://khou22.github.io/media/blog/images/Github%20Spike.jpg)
 - **ES6_June_2017_Update_Object**: [https://khou22.github.io/media/blog/images/ES6_June_2017_Update_Object.png](https://khou22.github.io/media/blog/images/ES6_June_2017_Update_Object.png)
 - **atom_code_completion_typescript**: [https://khou22.github.io/media/blog/images/TypeScript-Intro/atom_code_completion_typescript.png](https://khou22.github.io/media/blog/images/TypeScript-Intro/atom_code_completion_typescript.png)
