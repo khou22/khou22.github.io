@@ -1134,6 +1134,46 @@ export const _generatedCdnAssets = {
     name: `San Francisco Golden Gate Park Satellite Shot`,
     dimensions: [1600, 2000],
   },
+	"photography/turkey/Cappadocia_Landscape_jpg": {
+    path: "/photography/turkey/Cappadocia%20Landscape.jpg",
+    name: `Cappadocia Landscape`,
+    dimensions: [2400, 3000],
+  },
+	"photography/turkey/Turkey_Baklava_jpg": {
+    path: "/photography/turkey/Turkey%20Baklava.jpg",
+    name: `Turkey Baklava`,
+    dimensions: [4498, 3000],
+  },
+	"photography/turkey/Hagia_Sophia_jpg": {
+    path: "/photography/turkey/Hagia%20Sophia.jpg",
+    name: `Hagia Sophia`,
+    dimensions: [2143, 3000],
+  },
+	"photography/turkey/Turkey_Kababs_jpg": {
+    path: "/photography/turkey/Turkey%20Kababs.jpg",
+    name: `Turkey Kababs`,
+    dimensions: [2400, 3000],
+  },
+	"photography/turkey/Ephesus_Turkey_Panorama_jpg": {
+    path: "/photography/turkey/Ephesus%2C%20Turkey%20Panorama.jpg",
+    name: `Ephesus, Turkey Panorama`,
+    dimensions: [9001, 3000],
+  },
+	"photography/turkey/Turkey_Portrait_1_jpg": {
+    path: "/photography/turkey/Turkey%20Portrait%201.jpg",
+    name: `Turkey Portrait 1`,
+    dimensions: [2400, 3000],
+  },
+	"photography/turkey/Turkey_Portrait_2_jpg": {
+    path: "/photography/turkey/Turkey%20Portrait%202.jpg",
+    name: `Turkey Portrait 2`,
+    dimensions: [2400, 3000],
+  },
+	"photography/turkey/Turkish_Horses_jpg": {
+    path: "/photography/turkey/Turkish%20Horses.jpg",
+    name: `Turkish Horses`,
+    dimensions: [2001, 3000],
+  },
 	"photography/Kowloon_Bay_Drone_Vertical_jpg": {
     path: "/photography/Kowloon%20Bay%20Drone%20%28Vertical%29.jpg",
     name: `Kowloon Bay Drone (Vertical)`,
@@ -6857,7 +6897,7 @@ export const _generatedCdnAssets = {
 	"media/blog/images/mintlify_feature/mintlify_founder_mode_blog_post_jpeg": {
     path: "/media/blog/images/mintlify-feature/mintlify-founder-mode-blog-post.jpeg",
     name: `mintlify-founder-mode-blog-post`,
-    dimensions: [3024, 12736],
+    dimensions: [712, 3000],
   },
 	"media/blog/images/windsurf_posts/windsurf_image_upload_tweet_post_png": {
     path: "/media/blog/images/windsurf-posts/windsurf-image-upload-tweet-post.png",

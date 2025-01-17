@@ -1,6 +1,6 @@
 ---
 
-last_updated: 2025-01-02 13:59:57
+last_updated: 2025-01-17 12:38:12
 
 ---
 
@@ -123,6 +123,14 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **Ponte di Mezzo Bridge**: [https://khou22.github.io/photography/Ponte%20di%20Mezzo%20Bridge.jpg](https://khou22.github.io/photography/Ponte%20di%20Mezzo%20Bridge.jpg)
 - **Seoul, Korea Drone Vertical Downtown**: [https://khou22.github.io/photography/Seoul%2C%20Korea%20Drone%20Vertical%20Downtown.jpg](https://khou22.github.io/photography/Seoul%2C%20Korea%20Drone%20Vertical%20Downtown.jpg)
 - **San Francisco Golden Gate Park Satellite Shot**: [https://khou22.github.io/photography/San%20Francisco%20Golden%20Gate%20Park%20Satellite%20Shot.jpg](https://khou22.github.io/photography/San%20Francisco%20Golden%20Gate%20Park%20Satellite%20Shot.jpg)
+- **Cappadocia Landscape**: [https://khou22.github.io/photography/turkey/Cappadocia%20Landscape.jpg](https://khou22.github.io/photography/turkey/Cappadocia%20Landscape.jpg)
+- **Turkey Baklava**: [https://khou22.github.io/photography/turkey/Turkey%20Baklava.jpg](https://khou22.github.io/photography/turkey/Turkey%20Baklava.jpg)
+- **Hagia Sophia**: [https://khou22.github.io/photography/turkey/Hagia%20Sophia.jpg](https://khou22.github.io/photography/turkey/Hagia%20Sophia.jpg)
+- **Turkey Kababs**: [https://khou22.github.io/photography/turkey/Turkey%20Kababs.jpg](https://khou22.github.io/photography/turkey/Turkey%20Kababs.jpg)
+- **Ephesus, Turkey Panorama**: [https://khou22.github.io/photography/turkey/Ephesus%2C%20Turkey%20Panorama.jpg](https://khou22.github.io/photography/turkey/Ephesus%2C%20Turkey%20Panorama.jpg)
+- **Turkey Portrait 1**: [https://khou22.github.io/photography/turkey/Turkey%20Portrait%201.jpg](https://khou22.github.io/photography/turkey/Turkey%20Portrait%201.jpg)
+- **Turkey Portrait 2**: [https://khou22.github.io/photography/turkey/Turkey%20Portrait%202.jpg](https://khou22.github.io/photography/turkey/Turkey%20Portrait%202.jpg)
+- **Turkish Horses**: [https://khou22.github.io/photography/turkey/Turkish%20Horses.jpg](https://khou22.github.io/photography/turkey/Turkish%20Horses.jpg)
 - **Kowloon Bay Drone (Vertical)**: [https://khou22.github.io/photography/Kowloon%20Bay%20Drone%20%28Vertical%29.jpg](https://khou22.github.io/photography/Kowloon%20Bay%20Drone%20%28Vertical%29.jpg)
 - **Man Lying on Beach Top Down Drone Las Terrenas, Domincan Republic**: [https://khou22.github.io/photography/Man%20Lying%20on%20Beach%20Top%20Down%20Drone%20Las%20Terrenas%2C%20Domincan%20Republic.jpg](https://khou22.github.io/photography/Man%20Lying%20on%20Beach%20Top%20Down%20Drone%20Las%20Terrenas%2C%20Domincan%20Republic.jpg)
 - **THS Tennis Court Drone (Drone Art)**: [https://khou22.github.io/photography/THS%20Tennis%20Court%20Drone%20%28Drone%20Art%29.jpg](https://khou22.github.io/photography/THS%20Tennis%20Court%20Drone%20%28Drone%20Art%29.jpg)
