@@ -52,3 +52,8 @@ pnpm generate:assets
 ```
 
 Then you can go to the [admin page](http://localhost:3000/admin/photos) and set the tags appropriately.
+
+### To Do
+
+- [ ] Add a whitelist of blog images that don't need to be compressed. (ie. `docs/media/blog/images/mintlify-feature/mintlify-founder-mode-blog-post.jpeg`)
+- [ ] Add a buffer to the clean image script so that we don't repeatedly compress the same images that are borderline.
