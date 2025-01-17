@@ -1154,6 +1154,11 @@ export const _generatedCdnAssets = {
     name: `Turkey Kababs`,
     dimensions: [2400, 3000],
   },
+	"photography/turkey/Ephesus_Turkey_Panorama_jpg": {
+    path: "/photography/turkey/Ephesus%2C%20Turkey%20Panorama.jpg",
+    name: `Ephesus, Turkey Panorama`,
+    dimensions: [9001, 3000],
+  },
 	"photography/turkey/Turkey_Portrait_1_jpg": {
     path: "/photography/turkey/Turkey%20Portrait%201.jpg",
     name: `Turkey Portrait 1`,

@@ -169,6 +169,11 @@ export const tagMetadata: Record<PhotoTags, TagMetadataType> = {
     thumbnailPhotoId:
       "photography/greece/Acropolis_at_Sunset_from_Filopappou_Hill_placeholder_jpg",
   },
+  [PhotoTags.Turkey]: {
+    name: "Türkiye",
+    slug: "turkey",
+    thumbnailPhotoId: "photography/turkey/Hagia_Sophia_jpg",
+  },
   [PhotoTags.Drone]: {
     name: "Aerial",
     slug: "aerial",

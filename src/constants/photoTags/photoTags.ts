@@ -33,6 +33,7 @@ export enum PhotoTags {
   Thailand = "location_thailand",
   Germany = "location_germany",
   Greece = "location_greece",
+  Turkey = "location_turkey",
 
   // Camera specific.
   Drone = "camera_drone",
@@ -67,6 +68,7 @@ export const allLocationTags = [
   PhotoTags.Thailand,
   PhotoTags.Germany,
   PhotoTags.Greece,
+  PhotoTags.Turkey,
 ];
 
 export const allCategoryTags = [

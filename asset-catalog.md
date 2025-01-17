@@ -1,6 +1,6 @@
 ---
 
-last_updated: 2025-01-17 12:33:10
+last_updated: 2025-01-17 12:38:12
 
 ---
 
@@ -127,6 +127,7 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **Turkey Baklava**: [https://khou22.github.io/photography/turkey/Turkey%20Baklava.jpg](https://khou22.github.io/photography/turkey/Turkey%20Baklava.jpg)
 - **Hagia Sophia**: [https://khou22.github.io/photography/turkey/Hagia%20Sophia.jpg](https://khou22.github.io/photography/turkey/Hagia%20Sophia.jpg)
 - **Turkey Kababs**: [https://khou22.github.io/photography/turkey/Turkey%20Kababs.jpg](https://khou22.github.io/photography/turkey/Turkey%20Kababs.jpg)
+- **Ephesus, Turkey Panorama**: [https://khou22.github.io/photography/turkey/Ephesus%2C%20Turkey%20Panorama.jpg](https://khou22.github.io/photography/turkey/Ephesus%2C%20Turkey%20Panorama.jpg)
 - **Turkey Portrait 1**: [https://khou22.github.io/photography/turkey/Turkey%20Portrait%201.jpg](https://khou22.github.io/photography/turkey/Turkey%20Portrait%201.jpg)
 - **Turkey Portrait 2**: [https://khou22.github.io/photography/turkey/Turkey%20Portrait%202.jpg](https://khou22.github.io/photography/turkey/Turkey%20Portrait%202.jpg)
 - **Turkish Horses**: [https://khou22.github.io/photography/turkey/Turkish%20Horses.jpg](https://khou22.github.io/photography/turkey/Turkish%20Horses.jpg)
