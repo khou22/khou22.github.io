@@ -1,0 +1,89 @@
+---
+title: "Building Windsurf's Web Search Feature: Technical Deep Dive & Best Practices"
+author: "Kevin Hou"
+date: 2025-01-17 6:00:00
+description: "As one of the engineers who built the Windsurf Editor and the new web search feature, I wanted to share a deep dive on how it works and how to unlock its full potential."
+image: "https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/cover.png"
+tags: [coding]
+featured: false
+---
+
+[Windsurf](https://wind.surf/) is the world's first AI agent-powered code editor. We launched Web Tools today (web search and URL reading) to the general public and we've been seeing some very interesting use cases already! Because it's a bit of a different architecture than normal, I wanted to give a deep dive into how it works and how you can unlock its full potential.
+
+If you prefer the video version of this blog post with a live demo, feel free to watch the video I've recorded below:
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/moIySJ4d0UY?si=KbvkLnuFzHn974kB"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+## Getting Started
+
+The fastest way to get started is to activate web search in your Windsurf Settings in the bottom right corner of the editor. You can activate it a couple of different ways:
+
+1. Ask a question that probably needs the Internet (ie. "What's new in the latest version of NextJS?").
+2. Use `@web` to force a docs search (ie. "`@web` react breaking changes").
+3. Use `@docs` to query over a list of docs that we are confident we can read with high quality. (ie. "`@docs:anthropic-api-docs` how do I stream Haiku in Go?").
+4. Paste a URL into your message (ie. "https://github.com/vercel/next.js/blob/canary/packages/next/README.md who invented this library?").
+
+## Technology
+
+The Cascade agent is already one of the most popular and top performing agents on the market. It's used by hundreds of thousands of developers around the world to build new projects, refactor existing codebases, write unit tests, and so much more. It's incredibely versitile and that largely due to its ability to know _when_ and _how_ to use its tools.
+
+Cascade has a number of tools available at its disposal, including but not limited to:
+
+- Searching through your local codebases
+- Viewing & navigating files
+- Writing & editing documents on your machine
+- Executing terminal commands on your behalf
+- **New**: Retrieving content from the web
+
+We designed and built Cascade to operate very much as a human would. This is the reason why it's flexible, capable, and performant. Regardless of the size or complexity of the codebase, Cascade will be able to groq through it and provide you with file changes, explanations, and more.
+
+I believe that the future of AI is agents and that agents should mimic the behavior of humans when solving problems. Thinks about how a human would go about researching a question. For the sake of argument, let's say you want to learn how to create a dynamically generated open-graph image (ie. preview thumbnail image) for a page on your NextJS website.
+
+### Architecture
+
+Cascade is the AI agent that powers in Windsurf. Web search is a mechanism for external content retrieval and therefore can be considered a "tool" in the agentic executation system. It's structured into three different tools:
+
+1. **Web Search**: Find a list of relevant articles online that pertain to your query or intent. It does not read the contents of the page.
+2. **URL Read**: Get the contents of the page and if neccessary, create multiple "chunks".
+3. **View a Chunk**: If the page gets chunked, read the relevant sections of the page.
+
+Here is an example of an end-to-end NextJS change that required looking up the most recent documentation and reading a specific section of the page in order to generate the correct code:
+
+![windsurf cascade nextjs docs demo](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/next-js-docs-lookup.png)
+
+#### Web Search
+
+Web search is fairly straight forward. We use an LLM to synthesize our conversation and intent into a query and use that query to pull a list of articles that could be helpful. This can include anything from StackOverflow links and GitHub issues to documentation sites and blog posts. This is very similar to a human searching on Google, no need to overthink it!
+
+TODO: screenshot
+
+#### URL Reading
+
+This step's logic depends a bit on the page in question. It performs a web scrape locally (ie. within your network and on your machine) and gets as much text that it can. This includes headers, body text, links, and more. Notably, if a site has a heavy amount of content rendered client-side, it could get missed. Thankfully, the trend of SSR (Server Side Rendering) is helping on this front.
+
+**Short Site:** If a site is short, we can ingest its content immediately and use it as context for future steps. The output will simply be text.
+
+**Long Site:** If a site is long, we don't want to waste time or tokens reading the _entire_ site so we end up creating "chunks". A "chunk" is defined as a section of the page. We have a heuristic to best chunk a page and this is often at the start of a new header. After chunking, we'll construct an outline with a summary of all the chunks on the page (ie. a table of contents). The output of this step will then be an outline. Sometimes this is enough to help with your query, but often the planner will decide it needs to know more and will reach for our third tool: "View Chunk".
+
+Here is an example of the NextJS page broken up into it's "chunks":
+
+![windsurf cascade page chunking](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/chunk-visualization.png)
+
+TODO: screenshot
+
+#### View Chunk
+
+- We will merge chunks
+
+## Best Practices
+
+### Credit Usage
