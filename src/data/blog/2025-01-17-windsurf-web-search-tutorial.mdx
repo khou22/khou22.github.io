@@ -5,7 +5,7 @@ date: 2025-01-17 6:00:00
 description: "As one of the engineers who built the Windsurf Editor and the new web search feature, I wanted to share a deep dive on how it works and how to unlock its full potential."
 image: "https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/cover.png"
 tags: [coding]
-featured: false
+featured: true
 ---
 
 [Windsurf](https://wind.surf/) is the world's first AI agent-powered code editor. We launched Web Tools today (web search and URL reading) to the general public and we've been seeing some very interesting use cases already! Because it's a bit of a different architecture than normal, I wanted to give a deep dive into how it works and how you can unlock its full potential.
@@ -78,12 +78,38 @@ Here is an example of the NextJS page broken up into it's "chunks":
 
 ![windsurf cascade page chunking](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/chunk-visualization.png)
 
-TODO: screenshot
+The outline for [this page](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image) would look something like this:
+
+```markdown
+Title: Metadata Files: opengraph-image and twitter-image | Next.js
+
+Contents:
+
+- opengraph-image and twitter-image
+- Image files (.jpg, .png, .gif)
+- Generate images using code (.js, .ts, .tsx)
+- Examples
+- ...
+```
+
+We don't include every header in the outline because a lot of headers are too small or non-descriptive to be useful.
 
 #### View Chunk
 
-- We will merge chunks
+This tool is only applicable if the page has been chunked. Cascade will decide which parts of the page are relevant to your query and read them.
+
+We perform a few optimizations behind the scenes to make reading the page faster, more targeted, and more accurate. This includes things like coalescing adjacent chunks, merging chunks, and more. You will be informed if multiple chunks could fit inside of a single read.
+
+![windsurf cascade chunk merging](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/merging-chunks.png)
 
 ## Best Practices
 
-### Credit Usage
+In my experience, it's best to provide Cascade with more specific prompts rather than general, incomplete statements. You don't want to let Cascade wander into researching an area that isn't relevant to your work so you should be clear about what you're looking for. You can also prompt Cascade to look at specific websites or domains (ie. `use the official NextJS docs`).
+
+You do not need to use `@web` and in some cases, I've found searching the web can sometimes be overkill. For example, if you're looking to generate a function and there's no real-time need, Cascade can likely do this entirely based on its training data. Forcing it to use the web can waste Flow Action credits and slow down the end to end experience.
+
+One of the biggest challenges I had worked on was site compatability. Websites are built very differently and it's difficult to build a web scraping system that works on every site. I considerd outsourcing to a third party but that would both hinder our security posture as well as prevent you from reading documents within your network. I'm working on adding more site compatability but if you find that the page read is not as useful as you'd expect (by clicking on the URL to view the markdown it read), consider prompting it to look at URLs that can be reliably scraped such as blog posts, document sites, StackOverflow, GitHub file links / issues, and more. Cases that are known to be problematic are things like paywalls, login pages, online editors (ie. CodeSandbox), and JS-heavy sites (ie. animated sites).
+
+## Conclusion
+
+I hope this tutorial has been helpful in getting you started with Cascade web tools. If you have any feedback or questions, feel free to reach out at [@kevinhou22](https://x.com/kevinhou22)!
