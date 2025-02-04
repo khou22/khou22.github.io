@@ -6,6 +6,9 @@ import { notFound } from "next/navigation";
 import moment from "moment";
 import { siteMetadata } from "@/constants/siteMetadata";
 
+/**
+ * Endpoint to return a clean markdown file for the blog post.
+ */
 export async function GET(_req: NextRequest, context: BlogPageParams) {
   const {
     params: { slug },
@@ -38,7 +41,7 @@ export async function GET(_req: NextRequest, context: BlogPageParams) {
       `Published At: ${moment(post.frontMatter.date).format("llll")}`,
     );
     markdownStrings.push(`Tags: ${post.frontMatter.tags.join(", ") || "None"}`);
-    markdownStrings.push("---");
+    markdownStrings.push("--");
   }
 
   // Main blog post markdown content.
