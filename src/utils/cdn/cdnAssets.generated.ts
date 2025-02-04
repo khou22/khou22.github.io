@@ -6794,6 +6794,36 @@ export const _generatedCdnAssets = {
     name: `thumbnail-preview`,
     dimensions: [1200, 600],
   },
+	"media/blog/images/windsurf_web_search_tutorial/docs_mentions_png": {
+    path: "/media/blog/images/windsurf-web-search-tutorial/docs-mentions.png",
+    name: `docs-mentions`,
+    dimensions: [1078, 638],
+  },
+	"media/blog/images/windsurf_web_search_tutorial/chunk_visualization_png": {
+    path: "/media/blog/images/windsurf-web-search-tutorial/chunk-visualization.png",
+    name: `chunk-visualization`,
+    dimensions: [2423, 4229],
+  },
+	"media/blog/images/windsurf_web_search_tutorial/next_js_docs_lookup_png": {
+    path: "/media/blog/images/windsurf-web-search-tutorial/next-js-docs-lookup.png",
+    name: `next-js-docs-lookup`,
+    dimensions: [1474, 1188],
+  },
+	"media/blog/images/windsurf_web_search_tutorial/merging_chunks_png": {
+    path: "/media/blog/images/windsurf-web-search-tutorial/merging-chunks.png",
+    name: `merging-chunks`,
+    dimensions: [1154, 642],
+  },
+	"media/blog/images/windsurf_web_search_tutorial/web_search_png": {
+    path: "/media/blog/images/windsurf-web-search-tutorial/web-search.png",
+    name: `web-search`,
+    dimensions: [1390, 888],
+  },
+	"media/blog/images/windsurf_web_search_tutorial/cover_png": {
+    path: "/media/blog/images/windsurf-web-search-tutorial/cover.png",
+    name: `cover`,
+    dimensions: [1200, 630],
+  },
 	"media/blog/images/ios_number_keypad_with_done_button_png": {
     path: "/media/blog/images/ios-number-keypad-with-done-button.png",
     name: `ios-number-keypad-with-done-button`,
@@ -6897,7 +6927,7 @@ export const _generatedCdnAssets = {
 	"media/blog/images/mintlify_feature/mintlify_founder_mode_blog_post_jpeg": {
     path: "/media/blog/images/mintlify-feature/mintlify-founder-mode-blog-post.jpeg",
     name: `mintlify-founder-mode-blog-post`,
-    dimensions: [712, 3000],
+    dimensions: [3024, 12736],
   },
 	"media/blog/images/windsurf_posts/windsurf_image_upload_tweet_post_png": {
     path: "/media/blog/images/windsurf-posts/windsurf-image-upload-tweet-post.png",
@@ -6953,6 +6983,11 @@ export const _generatedCdnAssets = {
     path: "/media/blog/images/ai-engineer-worlds-fair-talk-stage-shot.jpg",
     name: `ai-engineer-worlds-fair-talk-stage-shot`,
     dimensions: [4500, 3000],
+  },
+	"media/blog/images/syntax_podcast_windsurf_editor_cover_jpg": {
+    path: "/media/blog/images/syntax-podcast-windsurf-editor-cover.jpg",
+    name: `syntax-podcast-windsurf-editor-cover`,
+    dimensions: [640, 356],
   },
 	"media/blog/images/installing_all_google_fonts_png": {
     path: "/media/blog/images/installing-all-google-fonts.png",

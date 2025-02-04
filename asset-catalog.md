@@ -1,6 +1,6 @@
 ---
 
-last_updated: 2025-01-17 12:38:12
+last_updated: 2025-02-04 11:05:26
 
 ---
 
@@ -741,6 +741,12 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **Nuro Photo Shoot Headshot - Square**: [https://khou22.github.io/media/profile_pictures/Nuro%20Photo%20Shoot%20Headshot%20-%20Square.jpg](https://khou22.github.io/media/profile_pictures/Nuro%20Photo%20Shoot%20Headshot%20-%20Square.jpg)
 - **Studio Photography Portrait**: [https://khou22.github.io/media/profile_pictures/Studio%20Photography%20Portrait.jpg](https://khou22.github.io/media/profile_pictures/Studio%20Photography%20Portrait.jpg)
 - **thumbnail-preview**: [https://khou22.github.io/media/meta/thumbnail-preview.jpg](https://khou22.github.io/media/meta/thumbnail-preview.jpg)
+- **docs-mentions**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/docs-mentions.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/docs-mentions.png)
+- **chunk-visualization**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/chunk-visualization.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/chunk-visualization.png)
+- **next-js-docs-lookup**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/next-js-docs-lookup.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/next-js-docs-lookup.png)
+- **merging-chunks**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/merging-chunks.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/merging-chunks.png)
+- **web-search**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/web-search.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/web-search.png)
+- **cover**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/cover.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/cover.png)
 - **ios-number-keypad-with-done-button**: [https://khou22.github.io/media/blog/images/ios-number-keypad-with-done-button.png](https://khou22.github.io/media/blog/images/ios-number-keypad-with-done-button.png)
 - **OSX 10.11 Jekyll**: [https://khou22.github.io/media/blog/images/OSX%2010.11%20Jekyll.png](https://khou22.github.io/media/blog/images/OSX%2010.11%20Jekyll.png)
 - **Desktop Size**: [https://khou22.github.io/media/blog/images/YouTube%20Channel%20Artwork/Desktop%20Size.png](https://khou22.github.io/media/blog/images/YouTube%20Channel%20Artwork/Desktop%20Size.png)
@@ -772,6 +778,7 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **twitter-post-with-image**: [https://khou22.github.io/media/blog/images/dynamic-og-images/twitter-post-with-image.png](https://khou22.github.io/media/blog/images/dynamic-og-images/twitter-post-with-image.png)
 - **imessage-og-image**: [https://khou22.github.io/media/blog/images/dynamic-og-images/imessage-og-image.png](https://khou22.github.io/media/blog/images/dynamic-og-images/imessage-og-image.png)
 - **ai-engineer-worlds-fair-talk-stage-shot**: [https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-talk-stage-shot.jpg](https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-talk-stage-shot.jpg)
+- **syntax-podcast-windsurf-editor-cover**: [https://khou22.github.io/media/blog/images/syntax-podcast-windsurf-editor-cover.jpg](https://khou22.github.io/media/blog/images/syntax-podcast-windsurf-editor-cover.jpg)
 - **installing-all-google-fonts**: [https://khou22.github.io/media/blog/images/installing-all-google-fonts.png](https://khou22.github.io/media/blog/images/installing-all-google-fonts.png)
 - **Swift_Table_Views**: [https://khou22.github.io/media/blog/images/Swift_Table_Views.png](https://khou22.github.io/media/blog/images/Swift_Table_Views.png)
 - **windsurf-video-thumbnail**: [https://khou22.github.io/media/blog/images/windsurf-video-thumbnail.png](https://khou22.github.io/media/blog/images/windsurf-video-thumbnail.png)

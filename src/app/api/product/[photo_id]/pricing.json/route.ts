@@ -26,16 +26,12 @@ export interface ISnipcartValidationResponse {
 }
 
 interface RouteParams {
-  params: { photo_id: string; };
+  params: { photo_id: string };
 }
 
 export async function GET(
   _request: NextRequest,
-  {
-    params: {
-      photo_id: photoIdURLComponent,
-    },
-  }: RouteParams,
+  { params: { photo_id: photoIdURLComponent } }: RouteParams,
 ) {
   const photoID = getPhotoIDFromURLComponent(photoIdURLComponent);
   if (!photoID) {
@@ -62,9 +58,9 @@ export async function GET(
       url: product.url,
     };
 
-    return productVariant
-  })
+    return productVariant;
+  });
 
   // Return JSON array of product variants
-  return Response.json(productVariants)
+  return Response.json(productVariants);
 }
