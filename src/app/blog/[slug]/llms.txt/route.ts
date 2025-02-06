@@ -1,9 +1,9 @@
 import { NextRequest } from "next/server";
+import { notFound } from "next/navigation";
+import moment from "moment";
 import { BlogPageParams } from "../types";
 import { HydratedBlogPost } from "@/data/types";
 import { getPost, PostNotFoundError } from "@/utils/blog/posts";
-import { notFound } from "next/navigation";
-import moment from "moment";
 import { siteMetadata } from "@/constants/siteMetadata";
 
 /**

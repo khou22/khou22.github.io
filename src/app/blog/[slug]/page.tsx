@@ -1,6 +1,7 @@
 import { Metadata, NextPage } from "next";
 import moment from "moment";
 import Link from "next/link";
+import { BlogPageParams } from "./types";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PostNotFoundError, getPost, getPosts } from "@/utils/blog/posts";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
@@ -10,7 +11,6 @@ import { Badge } from "@/components/ui/badge";
 import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PAGES } from "@/utils/pages";
-import { BlogPageParams } from "./types";
 
 /**
  * Get all blog posts and generate static params. Allows for automatic memoization of these pages.

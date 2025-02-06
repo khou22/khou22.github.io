@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
-import { getPosts } from "@/utils/blog/posts";
 import moment from "moment";
+import { getPosts } from "@/utils/blog/posts";
 import { siteMetadata } from "@/constants/siteMetadata";
 
 /**
