@@ -1,6 +1,7 @@
 import { Metadata, NextPage } from "next";
 import moment from "moment";
 import Link from "next/link";
+import { BlogPageParams } from "./types";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PostNotFoundError, getPost, getPosts } from "@/utils/blog/posts";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
@@ -10,12 +11,6 @@ import { Badge } from "@/components/ui/badge";
 import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PAGES } from "@/utils/pages";
-
-type PageParams = {
-  params: {
-    slug: string;
-  };
-};
 
 /**
  * Get all blog posts and generate static params. Allows for automatic memoization of these pages.
@@ -29,7 +24,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params: { slug },
-}: PageParams): Promise<Metadata> {
+}: BlogPageParams): Promise<Metadata> {
   let post: HydratedBlogPost;
   try {
     post = await getPost(slug);
@@ -67,7 +62,7 @@ const PostNotFound = ({ slug }: { slug: string }) => (
   </PageWrapper>
 );
 
-const BlogPostPage: NextPage<PageParams> = async ({ params: { slug } }) => {
+const BlogPostPage: NextPage<BlogPageParams> = async ({ params: { slug } }) => {
   let post: HydratedBlogPost | undefined;
   try {
     post = await getPost(slug);
