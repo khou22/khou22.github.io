@@ -11,6 +11,12 @@ export async function GET() {
   const randomPhoto =
     featuredPhotos[Math.floor(Math.random() * featuredPhotos.length)];
 
+  const headers = new Headers({
+    "Cache-Control": "no-cache, no-store, must-revalidate",
+    Pragma: "no-cache",
+    Expires: "0",
+  });
+
   if (!randomPhoto) {
     // Return a fallback image if no featured photos are found
     return new ImageResponse(
@@ -34,6 +40,7 @@ export async function GET() {
       {
         width: 1200,
         height: 630,
+        headers,
       },
     );
   }
@@ -104,6 +111,7 @@ export async function GET() {
       {
         width: 1200,
         height: 630,
+        headers,
       },
     );
   } catch (error) {
@@ -129,6 +137,7 @@ export async function GET() {
       {
         width: 1200,
         height: 630,
+        headers,
       },
     );
   }
