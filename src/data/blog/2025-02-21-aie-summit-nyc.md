@@ -20,4 +20,6 @@ Here’s an example of these principles in action. When we launched Windsurf, we
 
 The full talk can be found on YouTube: [How Windsurf writes 90% of your code with an Agentic IDE - Kevin Hou, head of product eng](https://youtu.be/bVNNvWq6dKo).
 
-[![AI Engineer Summit NYC 2025 Kevin Hou Windsurf talk](https://khou22.github.io/media/blog/images/ai-engineer-summit-nyc-walk-on-stage-shot)](https://youtu.be/bVNNvWq6dKo)
+[![AI Engineer Summit NYC 2025 Kevin Hou Windsurf talk intro](https://khou22.github.io/media/blog/images/ai-engineer-summit-nyc-walk-on-stage-shot)](https://youtu.be/bVNNvWq6dKo)
+
+[![AI Engineer Summit NYC 2025 Kevin Hou Windsurf talk](https://khou22.github.io/media/blog/images/ai-engineer-summit-nyc-speaking-stage.jpg)](https://youtu.be/bVNNvWq6dKo)
