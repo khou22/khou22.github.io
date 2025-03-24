@@ -39,8 +39,11 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
+    "@react-three/drei": "^10.0.5",
+    "@react-three/fiber": "^9.1.0",
     "@sendgrid/mail": "^8.1.0",
     "@types/react-syntax-highlighter": "^15.5.10",
+    "@types/three": "^0.161.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "gray-matter": "^4.0.3",
@@ -63,6 +66,7 @@
     "sqlite3": "^5.1.6",
     "tailwind-merge": "^2.1.0",
     "tailwindcss-animate": "^1.0.7",
+    "three": "^0.161.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
