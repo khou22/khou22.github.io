@@ -18,6 +18,10 @@ const LOCAL_STORAGE_KEY = "tweetPreview";
 export const TweetPreview = () => {
   const [text, setText] = useState("");
   const [images, setImages] = useState<ImageData[]>([]);
+  const [showFullText, setShowFullText] = useState(false);
+
+  const MAX_CHARS = 280;
+  const truncatedText = text.slice(0, MAX_CHARS);
 
   useEffect(() => {
     const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -127,11 +131,14 @@ export const TweetPreview = () => {
           placeholder="What's happening?"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          maxLength={280}
           className="mb-1"
         />
-        <p className="mb-3 text-right text-xs text-slate-500">
-          {text.length}/280
+        <p
+          className={`mb-3 text-right text-xs ${
+            text.length > MAX_CHARS ? "text-red-500" : "text-slate-500"
+          }`}
+        >
+          {text.length}/{MAX_CHARS}
         </p>
         <Input
           type="file"
@@ -188,7 +195,22 @@ export const TweetPreview = () => {
         )}
       </div>
       <div className="rounded border p-4">
-        <p className="mb-2 whitespace-pre-wrap">{text}</p>
+        <div className="mb-2">
+          <p className="whitespace-pre-wrap">
+            {showFullText ? text : truncatedText}
+            {text.length > MAX_CHARS && !showFullText && "..."}
+          </p>
+          {text.length > MAX_CHARS && (
+            <Button
+              type="button"
+              variant="link"
+              className="mt-1 h-auto p-0 text-xs"
+              onClick={() => setShowFullText(!showFullText)}
+            >
+              {showFullText ? "Show less" : "See more"}
+            </Button>
+          )}
+        </div>
         {images.length > 0 && (
           <div
             className={classNames(
