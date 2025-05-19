@@ -1,8 +1,12 @@
 ---
 title: "Ricoh GR IIIx: Tips, Tricks, and My Daily Setup"
-date: 2025-04-12
-categories: [photography, gear, tips]
-tags: [ricoh, gr iiix, camera, presets, accessories, street photography]
+author: "Kevin Hou"
+date: 2025-04-12 10:00:00
+tags: [photography]
+description: "I've been using the Ricoh GR IIIx as my default camera for the last 6 months and I wanted to write about some of the thoughts and experiences I've had with it."
+image: "https://khou22.github.io/media/blog/images/ricoh-gr-iiix-hero1.jpg"
+tags: [photography]
+featured: false
 ---
 
 <div style="display: flex; gap: 8px; width: 100%; margin-bottom: 1.5rem;">
