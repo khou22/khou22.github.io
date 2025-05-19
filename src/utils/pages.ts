@@ -43,6 +43,7 @@ export const PAGES = {
   PROGRAMMING: "/programming",
   CODEIUM_DEMO: "/programming/codeium",
   BROWSER_HOMEPAGE: "/programming/browser-home-page",
+  TWEET_PREVIEW: "/tweet-preview",
   ADMIN: {
     PHOTOGRAPHY: "/admin/photos",
     ALL_PHOTOS: (page: number) => `/admin/photos/all/${page}`,
