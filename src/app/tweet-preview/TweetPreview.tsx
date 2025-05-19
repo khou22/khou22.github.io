@@ -1,7 +1,11 @@
 "use client";
 
 import { useState, ChangeEvent, useEffect } from "react";
-import { ArrowLeftIcon, ArrowRightIcon, TrashIcon } from "@radix-ui/react-icons";
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  TrashIcon,
+} from "@radix-ui/react-icons";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -22,7 +26,10 @@ export const TweetPreview = () => {
         const data = JSON.parse(stored) as { text: string; images: string[] };
         setText(data.text || "");
         setImages(
-          data.images.map((d) => ({ id: Date.now() + Math.random(), dataUrl: d }))
+          data.images.map((d) => ({
+            id: Date.now() + Math.random(),
+            dataUrl: d,
+          })),
         );
       } catch {
         // ignore parse errors
@@ -33,26 +40,59 @@ export const TweetPreview = () => {
   useEffect(() => {
     localStorage.setItem(
       LOCAL_STORAGE_KEY,
-      JSON.stringify({ text, images: images.map((i) => i.dataUrl) })
+      JSON.stringify({ text, images: images.map((i) => i.dataUrl) }),
     );
   }, [text, images]);
 
-  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const resizeImage = (dataUrl: string, maxSize: number): Promise<string> => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement("canvas");
+        let width = img.width;
+        let height = img.height;
+
+        if (width > maxSize || height > maxSize) {
+          if (width > height) {
+            height = Math.round((height * maxSize) / width);
+            width = maxSize;
+          } else {
+            width = Math.round((width * maxSize) / height);
+            height = maxSize;
+          }
+        }
+
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return resolve(dataUrl);
+
+        ctx.drawImage(img, 0, 0, width, height);
+        resolve(canvas.toDataURL("image/jpeg", 0.9));
+      };
+      img.src = dataUrl;
+    });
+  };
+
+  const handleFileChange = async (e: ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files) return;
     const remaining = 4 - images.length;
-    Array.from(files)
-      .slice(0, remaining)
-      .forEach((file) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-          setImages((prev) => [
-            ...prev,
-            { id: Date.now() + Math.random(), dataUrl: reader.result as string },
-          ]);
-        };
-        reader.readAsDataURL(file);
-      });
+
+    for (const file of Array.from(files).slice(0, remaining)) {
+      const reader = new FileReader();
+      reader.onload = async () => {
+        const resizedDataUrl = await resizeImage(reader.result as string, 1400);
+        setImages((prev) => [
+          ...prev,
+          {
+            id: Date.now() + Math.random(),
+            dataUrl: resizedDataUrl,
+          },
+        ]);
+      };
+      reader.readAsDataURL(file);
+    }
     e.target.value = "";
   };
 
@@ -81,7 +121,7 @@ export const TweetPreview = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2">
       <div>
         <Textarea
           placeholder="What's happening?"
@@ -133,7 +173,12 @@ export const TweetPreview = () => {
                   >
                     <ArrowRightIcon />
                   </Button>
-                  <Button type="button" size="icon" variant="destructive" onClick={() => removeImage(idx)}>
+                  <Button
+                    type="button"
+                    size="icon"
+                    variant="destructive"
+                    onClick={() => removeImage(idx)}
+                  >
                     <TrashIcon />
                   </Button>
                 </div>
@@ -143,11 +188,12 @@ export const TweetPreview = () => {
         )}
       </div>
       <div className="rounded border p-4">
+        <p className="mb-2 whitespace-pre-wrap">{text}</p>
         {images.length > 0 && (
           <div
             className={classNames(
-              "mb-2 grid gap-2", 
-              images.length === 1 ? "" : "grid-cols-2"
+              "mb-2 grid gap-2",
+              images.length === 1 ? "" : "grid-cols-2",
             )}
           >
             {images.map((img, idx) => (
@@ -160,7 +206,6 @@ export const TweetPreview = () => {
             ))}
           </div>
         )}
-        <p className="whitespace-pre-wrap">{text}</p>
       </div>
     </div>
   );
