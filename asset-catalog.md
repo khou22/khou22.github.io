@@ -1,6 +1,6 @@
 ---
 
-last_updated: 2025-02-04 11:05:26
+last_updated: 2025-05-22 10:01:38
 
 ---
 
@@ -782,6 +782,8 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **installing-all-google-fonts**: [https://khou22.github.io/media/blog/images/installing-all-google-fonts.png](https://khou22.github.io/media/blog/images/installing-all-google-fonts.png)
 - **Swift_Table_Views**: [https://khou22.github.io/media/blog/images/Swift_Table_Views.png](https://khou22.github.io/media/blog/images/Swift_Table_Views.png)
 - **windsurf-video-thumbnail**: [https://khou22.github.io/media/blog/images/windsurf-video-thumbnail.png](https://khou22.github.io/media/blog/images/windsurf-video-thumbnail.png)
+- **ai-engineer-summit-nyc-speaking-stage**: [https://khou22.github.io/media/blog/images/ai-engineer-summit-nyc-speaking-stage.jpg](https://khou22.github.io/media/blog/images/ai-engineer-summit-nyc-speaking-stage.jpg)
+- **ai-engineer-summit-nyc-walk-on-stage-shot**: [https://khou22.github.io/media/blog/images/ai-engineer-summit-nyc-walk-on-stage-shot.jpg](https://khou22.github.io/media/blog/images/ai-engineer-summit-nyc-walk-on-stage-shot.jpg)
 - **syntax-podcast-cover-photo**: [https://khou22.github.io/media/blog/images/syntax-podcast-cover-photo.jpg](https://khou22.github.io/media/blog/images/syntax-podcast-cover-photo.jpg)
 - **codeium-series-c-thumbnail**: [https://khou22.github.io/media/blog/images/codeium-series-c-thumbnail.png](https://khou22.github.io/media/blog/images/codeium-series-c-thumbnail.png)
 - **Blog_Post_Placeholder_Image**: [https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg](https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg)
@@ -794,6 +796,7 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **js-nation-live-stream**: [https://khou22.github.io/media/blog/images/js-nation-talk/js-nation-live-stream.png](https://khou22.github.io/media/blog/images/js-nation-talk/js-nation-live-stream.png)
 - **js-nation-presentation-stage**: [https://khou22.github.io/media/blog/images/js-nation-talk/js-nation-presentation-stage.jpg](https://khou22.github.io/media/blog/images/js-nation-talk/js-nation-presentation-stage.jpg)
 - **banner**: [https://khou22.github.io/media/blog/images/Slate-Scheduler/banner.png](https://khou22.github.io/media/blog/images/Slate-Scheduler/banner.png)
+- **ai-engineer-summit-nyc-2025-video-performance-swyx**: [https://khou22.github.io/media/blog/images/ai-engineer-summit-nyc-2025-video-performance-swyx.png](https://khou22.github.io/media/blog/images/ai-engineer-summit-nyc-2025-video-performance-swyx.png)
 - **Desmos_Staff_Picks**: [https://khou22.github.io/media/blog/images/Desmos/Desmos_Staff_Picks.png](https://khou22.github.io/media/blog/images/Desmos/Desmos_Staff_Picks.png)
 - **Desmos iPhone Labeled 4**: [https://khou22.github.io/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%204.jpg](https://khou22.github.io/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%204.jpg)
 - **Desmos iPhone Labeled 3**: [https://khou22.github.io/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%203.jpg](https://khou22.github.io/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%203.jpg)
@@ -1035,4 +1038,5 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **nuro_padding**: [https://khou22.github.io/media/occupations/nuro_padding.png](https://khou22.github.io/media/occupations/nuro_padding.png)
 - **moat**: [https://khou22.github.io/media/occupations/moat.png](https://khou22.github.io/media/occupations/moat.png)
 - **nuro_light**: [https://khou22.github.io/media/occupations/nuro_light.png](https://khou22.github.io/media/occupations/nuro_light.png)
+- **windsurf**: [https://khou22.github.io/media/occupations/windsurf.png](https://khou22.github.io/media/occupations/windsurf.png)
 - **nuro**: [https://khou22.github.io/media/occupations/nuro.png](https://khou22.github.io/media/occupations/nuro.png)

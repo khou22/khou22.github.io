@@ -7004,6 +7004,16 @@ export const _generatedCdnAssets = {
     name: `windsurf-video-thumbnail`,
     dimensions: [1280, 720],
   },
+	"media/blog/images/ai_engineer_summit_nyc_speaking_stage_jpg": {
+    path: "/media/blog/images/ai-engineer-summit-nyc-speaking-stage.jpg",
+    name: `ai-engineer-summit-nyc-speaking-stage`,
+    dimensions: [4928, 3280],
+  },
+	"media/blog/images/ai_engineer_summit_nyc_walk_on_stage_shot_jpg": {
+    path: "/media/blog/images/ai-engineer-summit-nyc-walk-on-stage-shot.jpg",
+    name: `ai-engineer-summit-nyc-walk-on-stage-shot`,
+    dimensions: [4899, 3266],
+  },
 	"media/blog/images/syntax_podcast_cover_photo_jpg": {
     path: "/media/blog/images/syntax-podcast-cover-photo.jpg",
     name: `syntax-podcast-cover-photo`,
@@ -7078,6 +7088,11 @@ export const _generatedCdnAssets = {
     path: "/media/blog/images/Slate-Scheduler/ios-calendar-app-location-search.gif",
     name: `ios-calendar-app-location-search`,
     dimensions: [null, null],
+  },
+	"media/blog/images/ai_engineer_summit_nyc_2025_video_performance_swyx_png": {
+    path: "/media/blog/images/ai-engineer-summit-nyc-2025-video-performance-swyx.png",
+    name: `ai-engineer-summit-nyc-2025-video-performance-swyx`,
+    dimensions: [1246, 804],
   },
 	"media/blog/images/Desmos/Desmos_Staff_Picks_png": {
     path: "/media/blog/images/Desmos/Desmos_Staff_Picks.png",
@@ -8488,6 +8503,11 @@ export const _generatedCdnAssets = {
     path: "/media/occupations/nuro_light.png",
     name: `nuro_light`,
     dimensions: [2477, 708],
+  },
+	"media/occupations/windsurf_png": {
+    path: "/media/occupations/windsurf.png",
+    name: `windsurf`,
+    dimensions: [8096, 2562],
   },
 	"media/occupations/nuro_png": {
     path: "/media/occupations/nuro.png",

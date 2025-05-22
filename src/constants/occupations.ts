@@ -23,7 +23,16 @@ export const occupations: OccupationType[] = [
     },
   },
   {
-    years: [[2023, 2024]],
+    years: [[2023, 2025]],
+    featured: true,
+    fullTime: true,
+    company: {
+      name: "Windsurf",
+      logo: getCdnAsset("media/occupations/windsurf_png"),
+    },
+  },
+  {
+    years: [[2023, 2025]],
     featured: true,
     fullTime: true,
     company: {
