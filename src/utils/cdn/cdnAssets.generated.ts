@@ -6824,6 +6824,21 @@ export const _generatedCdnAssets = {
     name: `cover`,
     dimensions: [1200, 630],
   },
+	"media/blog/images/ai_engineer_worlds_fair_2025/stage_walk_on_jpg": {
+    path: "/media/blog/images/ai-engineer-worlds-fair-2025/stage-walk-on.jpg",
+    name: `stage-walk-on`,
+    dimensions: [7812, 5211],
+  },
+	"media/blog/images/ai_engineer_worlds_fair_2025/windsurf_stickers_jpg": {
+    path: "/media/blog/images/ai-engineer-worlds-fair-2025/windsurf-stickers.jpg",
+    name: `windsurf-stickers`,
+    dimensions: [7952, 5304],
+  },
+	"media/blog/images/ai_engineer_worlds_fair_2025/stage_shot_jpg": {
+    path: "/media/blog/images/ai-engineer-worlds-fair-2025/stage-shot.jpg",
+    name: `stage-shot`,
+    dimensions: [7250, 4836],
+  },
 	"media/blog/images/ios_number_keypad_with_done_button_png": {
     path: "/media/blog/images/ios-number-keypad-with-done-button.png",
     name: `ios-number-keypad-with-done-button`,
@@ -8507,7 +8522,7 @@ export const _generatedCdnAssets = {
 	"media/occupations/windsurf_png": {
     path: "/media/occupations/windsurf.png",
     name: `windsurf`,
-    dimensions: [8096, 2562],
+    dimensions: [2366, 332],
   },
 	"media/occupations/nuro_png": {
     path: "/media/occupations/nuro.png",

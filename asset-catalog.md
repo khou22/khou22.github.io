@@ -1,6 +1,6 @@
 ---
 
-last_updated: 2025-05-22 10:01:38
+last_updated: 2025-06-06 11:56:27
 
 ---
 
@@ -747,6 +747,9 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **merging-chunks**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/merging-chunks.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/merging-chunks.png)
 - **web-search**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/web-search.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/web-search.png)
 - **cover**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/cover.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/cover.png)
+- **stage-walk-on**: [https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-2025/stage-walk-on.jpg](https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-2025/stage-walk-on.jpg)
+- **windsurf-stickers**: [https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-2025/windsurf-stickers.jpg](https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-2025/windsurf-stickers.jpg)
+- **stage-shot**: [https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-2025/stage-shot.jpg](https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-2025/stage-shot.jpg)
 - **ios-number-keypad-with-done-button**: [https://khou22.github.io/media/blog/images/ios-number-keypad-with-done-button.png](https://khou22.github.io/media/blog/images/ios-number-keypad-with-done-button.png)
 - **OSX 10.11 Jekyll**: [https://khou22.github.io/media/blog/images/OSX%2010.11%20Jekyll.png](https://khou22.github.io/media/blog/images/OSX%2010.11%20Jekyll.png)
 - **Desktop Size**: [https://khou22.github.io/media/blog/images/YouTube%20Channel%20Artwork/Desktop%20Size.png](https://khou22.github.io/media/blog/images/YouTube%20Channel%20Artwork/Desktop%20Size.png)
