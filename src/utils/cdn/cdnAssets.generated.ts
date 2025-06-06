@@ -6884,10 +6884,20 @@ export const _generatedCdnAssets = {
     name: `cover`,
     dimensions: [1200, 630],
   },
+	"media/blog/images/ai_engineer_worlds_fair_2025/stage_walk_on_jpg": {
+    path: "/media/blog/images/ai-engineer-worlds-fair-2025/stage-walk-on.jpg",
+    name: `stage-walk-on`,
+    dimensions: [7812, 5211],
+  },
 	"media/blog/images/ai_engineer_worlds_fair_2025/youtube_thumbnail_jpg": {
     path: "/media/blog/images/ai-engineer-worlds-fair-2025/youtube-thumbnail.jpg",
     name: `youtube-thumbnail`,
     dimensions: [1280, 720],
+  },
+	"media/blog/images/ai_engineer_worlds_fair_2025/windsurf_stickers_jpg": {
+    path: "/media/blog/images/ai-engineer-worlds-fair-2025/windsurf-stickers.jpg",
+    name: `windsurf-stickers`,
+    dimensions: [7952, 5304],
   },
 	"media/blog/images/ai_engineer_worlds_fair_2025/stage_shot_jpg": {
     path: "/media/blog/images/ai-engineer-worlds-fair-2025/stage-shot.jpg",
