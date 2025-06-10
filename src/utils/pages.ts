@@ -32,6 +32,7 @@ export const PAGES = {
       `/api/product/${getPhotoURLComponent(photoID)}/pricing.json`,
     AERIAL_SF: "/photography/aerial-sf",
     SAN_FRANCISCAN: "/photography/san-franciscan",
+    SF_PRINTS: "/photography/sf-prints",
     FARLEYS_POTRERO: "/photography/farleys-potrero-artist-of-the-month",
     ALBUM_COVER: (tag: PhotoTags) =>
       `/photography/${tagMetadata[tag].slug}/cover.png`,

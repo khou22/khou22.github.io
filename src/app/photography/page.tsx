@@ -81,14 +81,24 @@ const PhotographyHomepage = async () => {
             style={{ animationDelay: `${4 * fadeAnimationDeltaMS}ms` }}
           />
           <FullCoverArticle
+            href={PAGES.PHOTOGRAPHY.SF_PRINTS}
+            title="San Francisco Prints"
+            category="Print Shop"
+            description="Top-rated San Francisco shots available as limited edition prints."
+            width={1}
+            imageSrc={getCdnAsset("photography/Golden_Gate_Bridge_Aerial_Head_On_jpg")}
+            className="fade-appear"
+            style={{ animationDelay: `${5 * fadeAnimationDeltaMS}ms` }}
+          />
+          <FullCoverArticle
             href={PAGES.PHOTOGRAPHY.FEATURED}
             title="Featured Works"
             category="Prints"
             description="A mixture of fan favorites and personal favorites."
-            width={2}
+            width={1}
             imageSrc={getCdnAsset("photography/Yosemite_Valley_Sunset_jpg")}
             className="fade-appear"
-            style={{ animationDelay: `${5 * fadeAnimationDeltaMS}ms` }}
+            style={{ animationDelay: `${6 * fadeAnimationDeltaMS}ms` }}
           />
           <FullCoverArticle
             href={PAGES.PHOTOGRAPHY.TAG(PhotoTags.Drone)}
