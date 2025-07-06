@@ -68,7 +68,6 @@ export const SocialMediaImageFrame: React.FC<SocialMediaImageFrameProps> = ({
                 value={backgroundOpacity}
                 className="max-w-[80px]"
                 onChange={(e) => {
-                  const value = e.target.value || 0;
                   const opacity = parseInt(e.target.value);
                   if (!isNaN(opacity)) {
                     setBackgroundOpacity(opacity);

@@ -7,6 +7,7 @@ import {
   isThumbnail,
 } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
+import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 
 export type PageProps = {
   params: {
@@ -37,10 +38,13 @@ const PhotoSocialsPage = async ({
   return (
     <>
       <PageWrapper
-        className="mt-16 w-full items-center space-y-4 md:space-y-8"
+        className="mt-16 w-full space-y-4 md:space-y-8"
         maxWidth="wide"
       >
-        <h3>Social Variants</h3>
+        <CustomLink href={PAGES.PHOTOGRAPHY.PHOTO(photoID)}>
+          &larr; Back to Photo
+        </CustomLink>
+        <h3 className="w-full text-center">Social Variants</h3>
         <PanoramaCarousel photoID={photoID} />
       </PageWrapper>
     </>
