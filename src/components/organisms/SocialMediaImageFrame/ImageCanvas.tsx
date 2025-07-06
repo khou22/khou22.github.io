@@ -10,20 +10,22 @@ import { classNames } from "@/utils/style";
 import { Button } from "@/components/ui/button";
 import { downloadURL } from "@/utils/download";
 
-type LandscapeImageCropProps = {
+type ImageCanvasProps = {
   photoID: PhotoIdType;
   className?: string;
   blur?: number;
   textColor?: string;
   backgroundColor?: string;
+  backgroundOpacity?: number;
 };
 
-export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
+export const ImageCanvas: React.FC<ImageCanvasProps> = ({
   photoID,
   className,
   blur = 64,
   textColor = "#fff",
   backgroundColor = "#000",
+  backgroundOpacity = 0.8,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const photoName = getPhotoName(photoID);
@@ -80,7 +82,7 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
       }
       ctx.save();
       ctx.filter = `blur(${blur}px)`;
-      ctx.globalAlpha = 0.8;
+      ctx.globalAlpha = backgroundOpacity;
       ctx.drawImage(img, bgDx, bgDy, bgDrawWidth, bgDrawHeight);
       ctx.globalAlpha = 1;
       ctx.filter = "none";
@@ -139,7 +141,7 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
       ctx.fillText("July 1, 2025", INSTAGRAM_CAROUSEL_SIZE.width / 2, dateY);
       ctx.restore();
     };
-  }, [backgroundColor, blur, photoID, photoName, textColor]);
+  }, [backgroundColor, backgroundOpacity, blur, photoID, photoName, textColor]);
 
   // Call paint() on mount and whenever dependencies change
   useEffect(() => {

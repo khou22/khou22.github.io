@@ -1,10 +1,10 @@
 import React from "react";
 import { Aboreto } from "next/font/google";
-import { LandscapeImageCrop } from "./LandscapeImageCrop";
 import { getCdnAsset, getPhotoName, PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { getPhotoSize } from "@/utils/photos/getPhotoSize";
 import { INSTAGRAM_CAROUSEL_SIZE } from "@/constants/contentMetadata";
 import { classNames } from "@/utils/style";
+import { SocialMediaImageFrame } from "@/components/organisms/SocialMediaImageFrame/SocialMediaImageFrame";
 
 const captionFont = Aboreto({
   subsets: ["latin"],
@@ -83,9 +83,10 @@ export const PanoramaCarousel: React.FC<PanoramaCarouselProps> = async ({
         <p>Num images: {normalizedNumCarouselImages.toFixed(2)}</p>
       </div>
 
-      <div>
-        <LandscapeImageCrop photoID={photoID} className={imagePreviewHeight} />
-      </div>
+      <SocialMediaImageFrame
+        photoID={photoID}
+        imageClassName={imagePreviewHeight}
+      />
     </div>
   );
 };
