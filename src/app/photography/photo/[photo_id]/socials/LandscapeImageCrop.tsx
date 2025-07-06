@@ -1,14 +1,19 @@
+/* eslint-disable @next/next/no-page-custom-font */
+
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+
+import React, { useCallback, useEffect, useRef } from "react";
 import { Aboreto } from "next/font/google";
-import Head from "next/head";
+import { DownloadIcon } from "@radix-ui/react-icons";
 import { getCdnAsset, getPhotoName, PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { INSTAGRAM_CAROUSEL_SIZE } from "@/constants/contentMetadata";
 import { classNames } from "@/utils/style";
+import { Button } from "@/components/ui/button";
 
 const captionFont = Aboreto({
   subsets: ["latin"],
   weight: "400",
+  variable: "--font-aboreto",
 });
 
 type LandscapeImageCropProps = {
@@ -21,11 +26,7 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
   className,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [photoName, setPhotoName] = useState("");
-
-  useEffect(() => {
-    setPhotoName(getPhotoName(photoID));
-  }, [photoID]);
+  const photoName = getPhotoName(photoID);
 
   // Paint function draws the entire canvas
   const paint = useCallback(async () => {
@@ -34,10 +35,8 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    console.log("Loading canvas assets");
-
     // Ensure Aboreto font is loaded for canvas text
-    await document.fonts.load("32px 'Aboreto'");
+    await document.fonts.load("32px 'var(--font-aboreto)'");
     const img = new window.Image();
     img.src = getCdnAsset(photoID);
     img.onload = () => {
@@ -90,45 +89,52 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
       // --- Content padding for title and main image (not background) ---
       const contentPadding = 40; // Adjust as needed for desired padding
 
-      // --- Draw main sharp image with 'contain' sizing (width always matches padded content area) ---
+      // --- Draw main image, title, and date as a vertically centered group ---
       const canvasWidth = INSTAGRAM_CAROUSEL_SIZE.width - contentPadding * 2;
       const canvasHeight = INSTAGRAM_CAROUSEL_SIZE.height - contentPadding * 2;
       let mainDrawWidth = canvasWidth;
       let mainDrawHeight = img.height * (canvasWidth / img.width);
-      let mainDx = contentPadding;
-      let mainDy = contentPadding + (canvasHeight - mainDrawHeight) / 2;
       // If the image is so tall that it exceeds the content area, fit by height instead
       if (mainDrawHeight > canvasHeight) {
         mainDrawHeight = canvasHeight;
         mainDrawWidth = img.width * (canvasHeight / img.height);
-        mainDx = contentPadding + (canvasWidth - mainDrawWidth) / 2;
-        mainDy = contentPadding;
       }
+      const imageTitleGap = 312;
+      const titleDateGap = 72;
+      const captionFontSize = 88;
+      const dateFontSize = 72;
+      // Calculate total group height
+      const groupHeight =
+        mainDrawHeight +
+        imageTitleGap +
+        captionFontSize +
+        titleDateGap +
+        dateFontSize;
+
+      // Top of group (vertically centered in padded area)
+      const groupTop = contentPadding + (canvasHeight - groupHeight) / 2;
+
+      // Draw main image
+      const mainDx = contentPadding + (canvasWidth - mainDrawWidth) / 2;
+      const mainDy = groupTop;
       ctx.drawImage(img, mainDx, mainDy, mainDrawWidth, mainDrawHeight);
 
-      // --- Draw caption (title and date) inside the canvas ---
-      const captionMargin = 32;
-      const captionFontSize = 32;
-      const dateFontSize = 22;
-      const captionY =
-        INSTAGRAM_CAROUSEL_SIZE.height - captionMargin - dateFontSize - 8;
-      const dateY = INSTAGRAM_CAROUSEL_SIZE.height - captionMargin;
+      // Draw title
       ctx.save();
       ctx.textAlign = "center";
-      ctx.textBaseline = "alphabetic";
-      ctx.font = `bold ${captionFontSize}px 'Aboreto', sans-serif`;
-      ctx.fillStyle = "#222";
-      ctx.shadowColor = "rgba(255,255,255,0.7)";
-      ctx.shadowBlur = 6;
+      ctx.textBaseline = "top";
+      ctx.font = `normal 400 ${captionFontSize}px 'var(--font-aboreto)', system-ui`;
+      ctx.fillStyle = "#FFF";
+      const titleY = mainDy + mainDrawHeight + imageTitleGap;
       ctx.fillText(
         photoName.toUpperCase(),
         INSTAGRAM_CAROUSEL_SIZE.width / 2,
-        captionY,
+        titleY,
       );
-      ctx.font = `normal ${dateFontSize}px 'Aboreto', sans-serif`;
-      ctx.fillStyle = "#444";
-      ctx.shadowColor = "rgba(255,255,255,0.7)";
-      ctx.shadowBlur = 6;
+
+      // Draw date
+      ctx.font = `normal 400 ${dateFontSize}px 'var(--font-aboreto)', system-ui`;
+      const dateY = titleY + captionFontSize + titleDateGap;
       ctx.fillText("July 1, 2025", INSTAGRAM_CAROUSEL_SIZE.width / 2, dateY);
       ctx.restore();
     };
@@ -142,13 +148,15 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
 
   // Only render a canvas
   return (
-    <>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Aboreto:wght@400&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+    <div className="group relative">
+      <Button
+        type="button"
+        size="icon"
+        variant="default"
+        className="invisible absolute left-2 top-2 z-10 group-hover:visible"
+      >
+        <DownloadIcon />
+      </Button>
       <canvas
         ref={canvasRef}
         width={INSTAGRAM_CAROUSEL_SIZE.width}
@@ -159,8 +167,8 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
           background: "#fff",
           aspectRatio: `${INSTAGRAM_CAROUSEL_SIZE.width} / ${INSTAGRAM_CAROUSEL_SIZE.height}`,
         }}
-        className={classNames("max-h-96 max-w-full", className)}
+        className={classNames("max-w-full", className)}
       />
-    </>
+    </div>
   );
 };
