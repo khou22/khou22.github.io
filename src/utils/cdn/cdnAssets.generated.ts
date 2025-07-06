@@ -1134,6 +1134,11 @@ export const _generatedCdnAssets = {
     name: `San Francisco Golden Gate Park Satellite Shot`,
     dimensions: [1600, 2000],
   },
+	"photography/turkey/Hagia_Sophia_placeholder_jpg": {
+    path: "/photography/turkey/Hagia%20Sophia.placeholder.jpg",
+    name: `Hagia Sophia.placeholder`,
+    dimensions: [571, 800],
+  },
 	"photography/turkey/Cappadocia_Landscape_jpg": {
     path: "/photography/turkey/Cappadocia%20Landscape.jpg",
     name: `Cappadocia Landscape`,
@@ -1144,10 +1149,25 @@ export const _generatedCdnAssets = {
     name: `Turkey Baklava`,
     dimensions: [4498, 3000],
   },
+	"photography/turkey/Turkey_Baklava_placeholder_jpg": {
+    path: "/photography/turkey/Turkey%20Baklava.placeholder.jpg",
+    name: `Turkey Baklava.placeholder`,
+    dimensions: [800, 534],
+  },
+	"photography/turkey/Turkish_Horses_placeholder_jpg": {
+    path: "/photography/turkey/Turkish%20Horses.placeholder.jpg",
+    name: `Turkish Horses.placeholder`,
+    dimensions: [534, 800],
+  },
 	"photography/turkey/Hagia_Sophia_jpg": {
     path: "/photography/turkey/Hagia%20Sophia.jpg",
     name: `Hagia Sophia`,
     dimensions: [2143, 3000],
+  },
+	"photography/turkey/Turkey_Portrait_1_placeholder_jpg": {
+    path: "/photography/turkey/Turkey%20Portrait%201.placeholder.jpg",
+    name: `Turkey Portrait 1.placeholder`,
+    dimensions: [640, 800],
   },
 	"photography/turkey/Turkey_Kababs_jpg": {
     path: "/photography/turkey/Turkey%20Kababs.jpg",
@@ -1164,15 +1184,35 @@ export const _generatedCdnAssets = {
     name: `Turkey Portrait 1`,
     dimensions: [2400, 3000],
   },
+	"photography/turkey/Ephesus_Turkey_Panorama_placeholder_jpg": {
+    path: "/photography/turkey/Ephesus%2C%20Turkey%20Panorama.placeholder.jpg",
+    name: `Ephesus, Turkey Panorama.placeholder`,
+    dimensions: [800, 267],
+  },
 	"photography/turkey/Turkey_Portrait_2_jpg": {
     path: "/photography/turkey/Turkey%20Portrait%202.jpg",
     name: `Turkey Portrait 2`,
     dimensions: [2400, 3000],
   },
+	"photography/turkey/Turkey_Kababs_placeholder_jpg": {
+    path: "/photography/turkey/Turkey%20Kababs.placeholder.jpg",
+    name: `Turkey Kababs.placeholder`,
+    dimensions: [640, 800],
+  },
 	"photography/turkey/Turkish_Horses_jpg": {
     path: "/photography/turkey/Turkish%20Horses.jpg",
     name: `Turkish Horses`,
     dimensions: [2001, 3000],
+  },
+	"photography/turkey/Cappadocia_Landscape_placeholder_jpg": {
+    path: "/photography/turkey/Cappadocia%20Landscape.placeholder.jpg",
+    name: `Cappadocia Landscape.placeholder`,
+    dimensions: [640, 800],
+  },
+	"photography/turkey/Turkey_Portrait_2_placeholder_jpg": {
+    path: "/photography/turkey/Turkey%20Portrait%202.placeholder.jpg",
+    name: `Turkey Portrait 2.placeholder`,
+    dimensions: [640, 800],
   },
 	"photography/Kowloon_Bay_Drone_Vertical_jpg": {
     path: "/photography/Kowloon%20Bay%20Drone%20%28Vertical%29.jpg",
@@ -2758,6 +2798,16 @@ export const _generatedCdnAssets = {
     path: "/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.jpg",
     name: `House at the Base of the Tetons in Teton Village`,
     dimensions: [2136, 1600],
+  },
+	"photography/switzerland/North_Face_Trail_at_Sunset_Panorama_placeholder_jpg": {
+    path: "/photography/switzerland/North%20Face%20Trail%20at%20Sunset%20Panorama.placeholder.jpg",
+    name: `North Face Trail at Sunset Panorama.placeholder`,
+    dimensions: [800, 291],
+  },
+	"photography/switzerland/North_Face_Trail_at_Sunset_Panorama_jpg": {
+    path: "/photography/switzerland/North%20Face%20Trail%20at%20Sunset%20Panorama.jpg",
+    name: `North Face Trail at Sunset Panorama`,
+    dimensions: [12242, 4447],
   },
 	"photography/Embarcadero_Drone_Ferry_Building_Night_Horizontal_jpg": {
     path: "/photography/Embarcadero%20Drone%20Ferry%20Building%20Night%20Horizontal.jpg",
@@ -6824,6 +6874,16 @@ export const _generatedCdnAssets = {
     name: `cover`,
     dimensions: [1200, 630],
   },
+	"media/blog/images/ai_engineer_worlds_fair_2025/youtube_thumbnail_jpg": {
+    path: "/media/blog/images/ai-engineer-worlds-fair-2025/youtube-thumbnail.jpg",
+    name: `youtube-thumbnail`,
+    dimensions: [1280, 720],
+  },
+	"media/blog/images/ai_engineer_worlds_fair_2025/stage_shot_jpg": {
+    path: "/media/blog/images/ai-engineer-worlds-fair-2025/stage-shot.jpg",
+    name: `stage-shot`,
+    dimensions: [2524, 1682],
+  },
 	"media/blog/images/ios_number_keypad_with_done_button_png": {
     path: "/media/blog/images/ios-number-keypad-with-done-button.png",
     name: `ios-number-keypad-with-done-button`,
@@ -8507,7 +8567,7 @@ export const _generatedCdnAssets = {
 	"media/occupations/windsurf_png": {
     path: "/media/occupations/windsurf.png",
     name: `windsurf`,
-    dimensions: [8096, 2562],
+    dimensions: [2366, 332],
   },
 	"media/occupations/nuro_png": {
     path: "/media/occupations/nuro.png",

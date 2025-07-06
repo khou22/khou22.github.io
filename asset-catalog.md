@@ -1,6 +1,6 @@
 ---
 
-last_updated: 2025-05-22 10:01:38
+last_updated: 2025-07-06 17:26:27
 
 ---
 
@@ -285,6 +285,7 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **Catcher Emmie Flames Softball Portrait**: [https://khou22.github.io/photography/sports/Catcher%20Emmie%20Flames%20Softball%20Portrait.jpg](https://khou22.github.io/photography/sports/Catcher%20Emmie%20Flames%20Softball%20Portrait.jpg)
 - **LWHS vs University Softball 2021**: [https://khou22.github.io/photography/sports/LWHS%20vs%20University%20Softball%202021.jpg](https://khou22.github.io/photography/sports/LWHS%20vs%20University%20Softball%202021.jpg)
 - **House at the Base of the Tetons in Teton Village**: [https://khou22.github.io/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.jpg](https://khou22.github.io/photography/House%20at%20the%20Base%20of%20the%20Tetons%20in%20Teton%20Village.jpg)
+- **North Face Trail at Sunset Panorama**: [https://khou22.github.io/photography/switzerland/North%20Face%20Trail%20at%20Sunset%20Panorama.jpg](https://khou22.github.io/photography/switzerland/North%20Face%20Trail%20at%20Sunset%20Panorama.jpg)
 - **Embarcadero Drone Ferry Building Night Horizontal**: [https://khou22.github.io/photography/Embarcadero%20Drone%20Ferry%20Building%20Night%20Horizontal.jpg](https://khou22.github.io/photography/Embarcadero%20Drone%20Ferry%20Building%20Night%20Horizontal.jpg)
 - ** (USA Road Trip)-5**: [https://khou22.github.io/photography/%20%28USA%20Road%20Trip%29-5.jpg](https://khou22.github.io/photography/%20%28USA%20Road%20Trip%29-5.jpg)
 - **Badlands Bright Vertical**: [https://khou22.github.io/photography/Badlands%20Bright%20Vertical.jpg](https://khou22.github.io/photography/Badlands%20Bright%20Vertical.jpg)
@@ -747,6 +748,8 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **merging-chunks**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/merging-chunks.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/merging-chunks.png)
 - **web-search**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/web-search.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/web-search.png)
 - **cover**: [https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/cover.png](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/cover.png)
+- **youtube-thumbnail**: [https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-2025/youtube-thumbnail.jpg](https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-2025/youtube-thumbnail.jpg)
+- **stage-shot**: [https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-2025/stage-shot.jpg](https://khou22.github.io/media/blog/images/ai-engineer-worlds-fair-2025/stage-shot.jpg)
 - **ios-number-keypad-with-done-button**: [https://khou22.github.io/media/blog/images/ios-number-keypad-with-done-button.png](https://khou22.github.io/media/blog/images/ios-number-keypad-with-done-button.png)
 - **OSX 10.11 Jekyll**: [https://khou22.github.io/media/blog/images/OSX%2010.11%20Jekyll.png](https://khou22.github.io/media/blog/images/OSX%2010.11%20Jekyll.png)
 - **Desktop Size**: [https://khou22.github.io/media/blog/images/YouTube%20Channel%20Artwork/Desktop%20Size.png](https://khou22.github.io/media/blog/images/YouTube%20Channel%20Artwork/Desktop%20Size.png)
