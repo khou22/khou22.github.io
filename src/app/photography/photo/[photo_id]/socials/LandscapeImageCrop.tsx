@@ -3,7 +3,6 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef } from "react";
-import { Aboreto } from "next/font/google";
 import { DownloadIcon } from "@radix-ui/react-icons";
 import { getCdnAsset, getPhotoName, PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { INSTAGRAM_CAROUSEL_SIZE } from "@/constants/contentMetadata";
@@ -11,20 +10,20 @@ import { classNames } from "@/utils/style";
 import { Button } from "@/components/ui/button";
 import { downloadURL } from "@/utils/download";
 
-const captionFont = Aboreto({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-aboreto",
-});
-
 type LandscapeImageCropProps = {
   photoID: PhotoIdType;
   className?: string;
+  blur?: number;
+  textColor?: string;
+  backgroundColor?: string;
 };
 
 export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
   photoID,
   className,
+  blur = 64,
+  textColor = "#fff",
+  backgroundColor = "#000",
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const photoName = getPhotoName(photoID);
@@ -42,7 +41,7 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
     img.src = getCdnAsset(photoID);
     img.onload = () => {
       // Fill background white
-      ctx.fillStyle = "#fff";
+      ctx.fillStyle = backgroundColor;
       ctx.fillRect(
         0,
         0,
@@ -80,7 +79,7 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
           INSTAGRAM_CAROUSEL_SIZE.height * overextend;
       }
       ctx.save();
-      ctx.filter = "blur(16px) brightness(1.1)";
+      ctx.filter = `blur(${blur}px)`;
       ctx.globalAlpha = 0.8;
       ctx.drawImage(img, bgDx, bgDy, bgDrawWidth, bgDrawHeight);
       ctx.globalAlpha = 1;
@@ -126,7 +125,7 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
       ctx.textAlign = "center";
       ctx.textBaseline = "top";
       ctx.font = `normal 400 ${captionFontSize}px 'var(--font-aboreto)', system-ui`;
-      ctx.fillStyle = "#FFF";
+      ctx.fillStyle = textColor;
       const titleY = mainDy + mainDrawHeight + imageTitleGap;
       ctx.fillText(
         photoName.toUpperCase(),
@@ -140,7 +139,7 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
       ctx.fillText("July 1, 2025", INSTAGRAM_CAROUSEL_SIZE.width / 2, dateY);
       ctx.restore();
     };
-  }, [photoID, photoName]);
+  }, [backgroundColor, blur, photoID, photoName, textColor]);
 
   // Call paint() on mount and whenever dependencies change
   useEffect(() => {
