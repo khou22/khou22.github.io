@@ -9,6 +9,7 @@ import { getCdnAsset, getPhotoName, PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { INSTAGRAM_CAROUSEL_SIZE } from "@/constants/contentMetadata";
 import { classNames } from "@/utils/style";
 import { Button } from "@/components/ui/button";
+import { downloadURL } from "@/utils/download";
 
 const captionFont = Aboreto({
   subsets: ["latin"],
@@ -103,6 +104,7 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
       const titleDateGap = 72;
       const captionFontSize = 88;
       const dateFontSize = 72;
+
       // Calculate total group height
       const groupHeight =
         mainDrawHeight +
@@ -146,6 +148,12 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
     paint();
   }, [paint]);
 
+  const downloadImage = useCallback(() => {
+    if (!canvasRef.current) return;
+    const dataURL = canvasRef.current.toDataURL("image/jpeg", 0.8);
+    downloadURL(dataURL, "full-print.jpeg");
+  }, []);
+
   // Only render a canvas
   return (
     <div className="group relative">
@@ -154,6 +162,7 @@ export const LandscapeImageCrop: React.FC<LandscapeImageCropProps> = ({
         size="icon"
         variant="default"
         className="invisible absolute left-2 top-2 z-10 group-hover:visible"
+        onClick={downloadImage}
       >
         <DownloadIcon />
       </Button>
