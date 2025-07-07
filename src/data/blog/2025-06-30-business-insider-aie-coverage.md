@@ -9,9 +9,11 @@ featured: false
 
 View the [original article](https://www.businessinsider.com/windsurf-head-product-engineering-what-makes-successful-sofware-developer-2025-6).
 
+The following are excerpts from the article:
+
 >Kevin Hou, head of product engineering at Windsurf, said competency in three categories makes a "successful" engineer.
 >Those areas are coding, knowing when to seek outside support, and the nebulous "metalearning," he said.
->Windsurf aims to replicate the processes of human programmers, he said at the AI Engineer World's Fair.
+>Windsurf aims to replicate the processes of human programmers, he said at the [AI Engineer World's Fair](https://www.youtube.com/watch?v=JVuNPL5QO8Q).
 >
 >Windsurf's head of product engineering believes proficiency in three key areas makes a successful software engineer — coding, research, and "metalearning."
 >
@@ -32,8 +34,6 @@ View the [original article](https://www.businessinsider.com/windsurf-head-produc
 >"Windsurf is ultimately looking to make software engineering "99% agent and 1% human," Hou added.
 >
 >"And as more and more of these timelines and workflows become AI-powered, it becomes possible to have Windsurf working for you at all times," he said. "Not only as you type and use autocomplete and tab, but also in the background — researching when you're working, fully in parallel, only asking you to approve."
->
->Windsurf did not respond to a request for additional comment by Business Insider prior to publication.
 >
 >As AI-assisted coding becomes increasingly popular, companies have already begun to hire fewer human employees. Early-career workers in the tech sphere have been hit particularly hard. In an ideal world, though, Hou said Windsurf will help make programming a more accessible process, not one that's devoid of people entirely.
 >
