@@ -2,13 +2,12 @@
 
 "use client";
 
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect } from "react";
 import { DownloadIcon } from "@radix-ui/react-icons";
 import { getCdnAsset, getPhotoName, PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { INSTAGRAM_CAROUSEL_SIZE } from "@/constants/contentMetadata";
 import { classNames } from "@/utils/style";
 import { Button } from "@/components/ui/button";
-import { downloadURL } from "@/utils/download";
 
 type ImageCanvasProps = {
   photoID: PhotoIdType;
@@ -17,22 +16,27 @@ type ImageCanvasProps = {
   textColor?: string;
   backgroundColor?: string;
   backgroundOpacity?: number;
+  handleDownload?: () => void;
 };
 
-export const ImageCanvas: React.FC<ImageCanvasProps> = ({
-  photoID,
-  className,
-  blur = 64,
-  textColor = "#fff",
-  backgroundColor = "#000",
-  backgroundOpacity = 0.8,
-}) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+export const ImageCanvas = React.forwardRef<
+  HTMLCanvasElement,
+  ImageCanvasProps
+>((props, ref) => {
+  const {
+    photoID,
+    className,
+    blur = 64,
+    textColor = "#fff",
+    backgroundColor = "#000",
+    backgroundOpacity = 0.8,
+    handleDownload,
+  } = props;
   const photoName = getPhotoName(photoID);
-
   // Paint function draws the entire canvas
   const paint = useCallback(async () => {
-    const canvas = canvasRef.current;
+    // Access the canvas through the forwarded ref
+    const canvas = (ref as React.RefObject<HTMLCanvasElement>)?.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
@@ -141,7 +145,15 @@ export const ImageCanvas: React.FC<ImageCanvasProps> = ({
       ctx.fillText("July 1, 2025", INSTAGRAM_CAROUSEL_SIZE.width / 2, dateY);
       ctx.restore();
     };
-  }, [backgroundColor, backgroundOpacity, blur, photoID, photoName, textColor]);
+  }, [
+    backgroundColor,
+    backgroundOpacity,
+    blur,
+    photoID,
+    photoName,
+    textColor,
+    ref,
+  ]);
 
   // Call paint() on mount and whenever dependencies change
   useEffect(() => {
@@ -149,26 +161,22 @@ export const ImageCanvas: React.FC<ImageCanvasProps> = ({
     paint();
   }, [paint]);
 
-  const downloadImage = useCallback(() => {
-    if (!canvasRef.current) return;
-    const dataURL = canvasRef.current.toDataURL("image/jpeg", 0.8);
-    downloadURL(dataURL, "full-print.jpeg");
-  }, []);
-
   // Only render a canvas
   return (
     <div className="group relative">
-      <Button
-        type="button"
-        size="icon"
-        variant="default"
-        className="invisible absolute left-2 top-2 z-10 group-hover:visible"
-        onClick={downloadImage}
-      >
-        <DownloadIcon />
-      </Button>
+      {handleDownload && (
+        <Button
+          type="button"
+          size="icon"
+          variant="default"
+          className="invisible absolute left-2 top-2 z-10 group-hover:visible"
+          onClick={handleDownload}
+        >
+          <DownloadIcon />
+        </Button>
+      )}
       <canvas
-        ref={canvasRef}
+        ref={ref}
         width={INSTAGRAM_CAROUSEL_SIZE.width}
         height={INSTAGRAM_CAROUSEL_SIZE.height}
         style={{
@@ -181,4 +189,7 @@ export const ImageCanvas: React.FC<ImageCanvasProps> = ({
       />
     </div>
   );
-};
+});
+
+// Add display name for React DevTools
+ImageCanvas.displayName = "ImageCanvas";

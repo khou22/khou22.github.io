@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { OpacityIcon } from "@radix-ui/react-icons";
 import { ImageCanvas } from "./ImageCanvas";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/hover-card";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
+import { downloadURL } from "@/utils/download";
 
 type SocialMediaImageFrameProps = {
   photoID: PhotoIdType;
@@ -27,6 +28,13 @@ export const SocialMediaImageFrame: React.FC<SocialMediaImageFrameProps> = ({
   const [textColor, setTextColor] = useState("#fff");
   const [backgroundOpacity, setBackgroundOpacity] = useState(80);
   const [blur, setBlur] = useState(64);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  const handleDownload = useCallback(() => {
+    if (!canvasRef.current) return;
+    const dataURL = canvasRef.current.toDataURL("image/jpeg", 0.8);
+    downloadURL(dataURL, "full-print.jpeg");
+  }, []);
 
   return (
     <div className="w-fit space-y-2">
@@ -37,6 +45,8 @@ export const SocialMediaImageFrame: React.FC<SocialMediaImageFrameProps> = ({
         backgroundOpacity={backgroundOpacity / 100}
         textColor={textColor}
         blur={blur}
+        ref={canvasRef}
+        handleDownload={handleDownload}
       />
       <div className="flex flex-row items-end justify-between space-x-1">
         <div className="flex flex-row items-center justify-start space-x-3">
@@ -123,7 +133,7 @@ export const SocialMediaImageFrame: React.FC<SocialMediaImageFrameProps> = ({
           </HoverCard>
         </div>
         <div>
-          <Button>Download</Button>
+          <Button onClick={handleDownload}>Download</Button>
         </div>
       </div>
     </div>
