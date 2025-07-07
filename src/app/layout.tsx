@@ -82,6 +82,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const gaID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+  const isDev = process.env.NODE_ENV !== "production";
   return (
     <html lang="en">
       <PHProvider>
@@ -95,14 +96,20 @@ export default function RootLayout({
         >
           <PostHogPageView />
           <Snipcart />
-          <HydrationOverlay>
-            <NavBar />
-            {children}
-            <Footer />
-          </HydrationOverlay>
-          {gaID && process.env.NODE_ENV === "production" && (
-            <GoogleAnalytics gaId={gaID} />
+          {isDev ? (
+            <HydrationOverlay>
+              <NavBar />
+              {children}
+              <Footer />
+            </HydrationOverlay>
+          ) : (
+            <>
+              <NavBar />
+              {children}
+              <Footer />
+            </>
           )}
+          {gaID && !isDev && <GoogleAnalytics gaId={gaID} />}
         </body>
       </PHProvider>
     </html>
