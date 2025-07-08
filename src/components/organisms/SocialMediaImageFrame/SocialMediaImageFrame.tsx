@@ -3,7 +3,7 @@
 import React, { useCallback, useRef, useState } from "react";
 import { OpacityIcon } from "@radix-ui/react-icons";
 import { ImageCanvas } from "./ImageCanvas";
-import { PhotoIdType } from "@/utils/cdn/cdnAssets";
+import { getPhotoName, PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { Button } from "@/components/ui/button";
 
 import {
@@ -28,6 +28,7 @@ export const SocialMediaImageFrame: React.FC<SocialMediaImageFrameProps> = ({
   const [textColor, setTextColor] = useState("#fff");
   const [backgroundOpacity, setBackgroundOpacity] = useState(80);
   const [blur, setBlur] = useState(64);
+  const [title, setTitle] = useState("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const handleDownload = useCallback(() => {
@@ -47,6 +48,7 @@ export const SocialMediaImageFrame: React.FC<SocialMediaImageFrameProps> = ({
         blur={blur}
         ref={canvasRef}
         handleDownload={handleDownload}
+        title={title}
       />
       <div className="flex flex-row items-end justify-between space-x-1">
         <div className="flex flex-row items-center justify-start space-x-3">
@@ -135,6 +137,13 @@ export const SocialMediaImageFrame: React.FC<SocialMediaImageFrameProps> = ({
         <div>
           <Button onClick={handleDownload}>Download</Button>
         </div>
+      </div>
+      <div>
+        <Input
+          placeholder={getPhotoName(photoID)}
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
       </div>
     </div>
   );

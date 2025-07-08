@@ -17,6 +17,7 @@ type ImageCanvasProps = {
   backgroundColor?: string;
   backgroundOpacity?: number;
   handleDownload?: () => void;
+  title?: string;
 };
 
 export const ImageCanvas = React.forwardRef<
@@ -31,6 +32,7 @@ export const ImageCanvas = React.forwardRef<
     backgroundColor = "#000",
     backgroundOpacity = 0.8,
     handleDownload,
+    title,
   } = props;
   const photoName = getPhotoName(photoID);
   // Paint function draws the entire canvas
@@ -134,7 +136,7 @@ export const ImageCanvas = React.forwardRef<
       ctx.fillStyle = textColor;
       const titleY = mainDy + mainDrawHeight + imageTitleGap;
       ctx.fillText(
-        photoName.toUpperCase(),
+        (title || photoName).toUpperCase(),
         INSTAGRAM_CAROUSEL_SIZE.width / 2,
         titleY,
       );
@@ -151,6 +153,7 @@ export const ImageCanvas = React.forwardRef<
     blur,
     photoID,
     photoName,
+    title,
     textColor,
     ref,
   ]);
