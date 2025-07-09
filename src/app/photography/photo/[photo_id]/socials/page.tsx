@@ -1,5 +1,5 @@
 import { notFound, redirect } from "next/navigation";
-import { PanoramaCarousel } from "./PanoramaCarousel";
+import { PanoramaPostContent } from "./PanoramaCarousel";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import {
   getPhotoForThumbnail,
@@ -45,7 +45,7 @@ const PhotoSocialsPage = async ({
           &larr; Back to Photo
         </CustomLink>
         <h3 className="w-full text-center">Social Variants</h3>
-        <PanoramaCarousel photoID={photoID} />
+        <PanoramaPostContent photoID={photoID} />
       </PageWrapper>
     </>
   );
