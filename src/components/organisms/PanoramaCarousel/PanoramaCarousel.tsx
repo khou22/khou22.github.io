@@ -10,12 +10,14 @@ type PanoramaCarouselProps = {
   photoID: PhotoIdType;
   imageClassName?: string;
   photoSize: PhotoSize;
+  position?: "center" | "left" | "none";
 };
 
 export const PanoramaCarousel: React.FC<PanoramaCarouselProps> = ({
   photoID,
   imageClassName,
   photoSize: size,
+  position = "center",
 }) => {
   if (!size.width || !size.height) return <p>Error: No size for photo</p>;
 
@@ -72,9 +74,11 @@ export const PanoramaCarousel: React.FC<PanoramaCarouselProps> = ({
                       canvas.width = INSTAGRAM_CAROUSEL_SIZE.width;
                       canvas.height = INSTAGRAM_CAROUSEL_SIZE.height;
 
+                      // TODO (kevin): Make the canvas's responsive to the cut off type (ie. center, left, none)
+
                       // Load and draw the image portion for this carousel item
                       const img = new Image();
-                      img.crossOrigin = "anonymous";
+                      // img.crossOrigin = "anonymous";
                       img.onload = () => {
                         // Calculate the source rectangle for this carousel item
                         const sourceX = (i * img.width) / numCarouselImages;

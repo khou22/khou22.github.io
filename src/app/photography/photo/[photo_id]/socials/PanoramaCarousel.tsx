@@ -1,9 +1,9 @@
 import React from "react";
+import { PanoramaCarouselClient } from "./PanoramaCarouselClient";
 import { getPhotoName, PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { getPhotoSize } from "@/utils/photos/getPhotoSize";
 import { INSTAGRAM_CAROUSEL_SIZE } from "@/constants/contentMetadata";
 import { SocialMediaImageFrame } from "@/components/organisms/SocialMediaImageFrame/SocialMediaImageFrame";
-import { PanoramaCarousel } from "@/components/organisms/PanoramaCarousel/PanoramaCarousel";
 
 type PanoramaPostContentProps = {
   photoID: PhotoIdType;
@@ -28,7 +28,7 @@ export const PanoramaPostContent: React.FC<PanoramaPostContentProps> = async ({
   return (
     <div className="grid w-full grid-cols-2 gap-2">
       <div className="space-y-4">
-        <PanoramaCarousel
+        <PanoramaCarouselClient
           photoID={photoID}
           imageClassName={imagePreviewHeight}
           photoSize={size}
