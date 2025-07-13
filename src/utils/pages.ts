@@ -44,6 +44,9 @@ export const PAGES = {
   CODEIUM_DEMO: "/programming/codeium",
   BROWSER_HOMEPAGE: "/programming/browser-home-page",
   TWEET_PREVIEW: "/tweet-preview",
+  TOOLS: {
+    PHOTO_BLUR: "/tools/photo-blur",
+  },
   ADMIN: {
     PHOTOGRAPHY: "/admin/photos",
     ALL_PHOTOS: (page: number) => `/admin/photos/all/${page}`,
