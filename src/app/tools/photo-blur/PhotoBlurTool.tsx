@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { UndoButton } from "./UndoButton";
 import { Button } from "@/components/ui/button";
 import { classNames } from "@/utils/style";
 
@@ -26,7 +27,7 @@ export const PhotoBlurTool = () => {
     x: number;
     y: number;
   } | null>(null);
-  const [showUndoDropdown, setShowUndoDropdown] = useState(false);
+
   const [isDragOver, setIsDragOver] = useState(false);
 
   const getPos = (e: React.MouseEvent<HTMLCanvasElement, MouseEvent>) => {
@@ -322,7 +323,6 @@ export const PhotoBlurTool = () => {
     const newHistory = history.slice(0, index + 1);
     setHistory(newHistory);
     loadFromDataUrl(newHistory[newHistory.length - 1]);
-    setShowUndoDropdown(false);
   };
 
   const download = () => {
@@ -385,73 +385,12 @@ export const PhotoBlurTool = () => {
         )}
 
         <div className="flex gap-2">
-          <div className="relative">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={undo}
-              disabled={history.length <= 1}
-              size="sm"
-              onMouseEnter={() => setShowUndoDropdown(true)}
-              onMouseLeave={() => setShowUndoDropdown(false)}
-            >
-              Undo
-            </Button>
-            {showUndoDropdown && history.length > 1 && (
-              <div
-                className="absolute bottom-full left-0 z-10 mb-2 max-h-80 w-64 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg"
-                onMouseEnter={() => setShowUndoDropdown(true)}
-                onMouseLeave={() => setShowUndoDropdown(false)}
-              >
-                <div className="p-2">
-                  <div className="mb-2 text-xs font-medium text-gray-600">
-                    History ({history.length} states)
-                  </div>
-                  <div className="space-y-1">
-                    {history
-                      .slice()
-                      .reverse()
-                      .map((dataUrl, reverseIndex) => {
-                        const actualIndex = history.length - 1 - reverseIndex;
-                        const isCurrentState =
-                          actualIndex === history.length - 1;
-                        return (
-                          <button
-                            key={actualIndex}
-                            onClick={() => jumpToHistoryState(actualIndex)}
-                            className={classNames(
-                              "flex w-full items-center gap-2 rounded p-2 text-left transition-colors hover:bg-gray-50",
-                              isCurrentState &&
-                                "border border-blue-200 bg-blue-50",
-                            )}
-                          >
-                            <img
-                              src={dataUrl}
-                              alt={`State ${actualIndex + 1}`}
-                              className="h-12 w-12 flex-shrink-0 rounded border border-gray-200 object-cover"
-                            />
-                            <div className="min-w-0 flex-1">
-                              <div className="text-sm font-medium text-gray-900">
-                                {isCurrentState
-                                  ? "Current"
-                                  : `State ${actualIndex + 1}`}
-                              </div>
-                              <div className="text-xs text-gray-500">
-                                {reverseIndex === 0
-                                  ? "Latest"
-                                  : `${reverseIndex} step${
-                                      reverseIndex === 1 ? "" : "s"
-                                    } ago`}
-                              </div>
-                            </div>
-                          </button>
-                        );
-                      })}
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
+          <UndoButton
+            history={history}
+            onUndo={undo}
+            onJumpToState={jumpToHistoryState}
+            disabled={history.length <= 1}
+          />
           <Button type="button" variant="outline" onClick={download} size="sm">
             Download
           </Button>
