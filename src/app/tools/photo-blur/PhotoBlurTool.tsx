@@ -2,13 +2,13 @@
 
 import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { classNames } from "@/utils/style";
 
 const DEFAULT_PIXEL_SIZE = 20;
 const DEFAULT_BRUSH_SIZE = 40;
 
 export const PhotoBlurTool = () => {
+  const fileUploadRef = useRef<HTMLInputElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const baseCanvasRef = useRef<HTMLCanvasElement>(null);
   const overlayRef = useRef<HTMLCanvasElement>(null);
@@ -26,6 +26,8 @@ export const PhotoBlurTool = () => {
     x: number;
     y: number;
   } | null>(null);
+  const [showUndoDropdown, setShowUndoDropdown] = useState(false);
+  const [isDragOver, setIsDragOver] = useState(false);
 
   const getPos = (e: React.MouseEvent<HTMLCanvasElement, MouseEvent>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -99,72 +101,52 @@ export const PhotoBlurTool = () => {
       const bctx = baseCanvas.getContext("2d")!;
       ctx.drawImage(img, 0, 0);
       bctx.drawImage(img, 0, 0);
+      setHistory([canvas.toDataURL()]);
     };
     img.src = url;
+  };
+
+  const processFile = (file: File) => {
+    if (!file.type.startsWith("image/")) return;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const dataUrl = event.target?.result as string;
+      loadFromDataUrl(dataUrl);
+    };
+    reader.readAsDataURL(file);
   };
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    const reader = new FileReader();
-    reader.onload = () => {
-      const img = new Image();
-      img.onload = () => {
-        const canvas = canvasRef.current!;
-        const baseCanvas = baseCanvasRef.current!;
-        const overlay = overlayRef.current!;
-
-        // Calculate display dimensions while maintaining aspect ratio
-        const maxWidth = Math.min(800, window.innerWidth - 64);
-        const maxHeight = Math.min(600, window.innerHeight - 200);
-
-        let displayWidth = img.width;
-        let displayHeight = img.height;
-
-        // Scale down if image is too large
-        if (displayWidth > maxWidth || displayHeight > maxHeight) {
-          const aspectRatio = img.width / img.height;
-          if (displayWidth > displayHeight) {
-            displayWidth = maxWidth;
-            displayHeight = maxWidth / aspectRatio;
-            if (displayHeight > maxHeight) {
-              displayHeight = maxHeight;
-              displayWidth = maxHeight * aspectRatio;
-            }
-          } else {
-            displayHeight = maxHeight;
-            displayWidth = maxHeight * aspectRatio;
-            if (displayWidth > maxWidth) {
-              displayWidth = maxWidth;
-              displayHeight = maxWidth / aspectRatio;
-            }
-          }
-        }
-
-        // Set canvas dimensions (internal resolution)
-        canvas.width = img.width;
-        canvas.height = img.height;
-        baseCanvas.width = img.width;
-        baseCanvas.height = img.height;
-        overlay.width = img.width;
-        overlay.height = img.height;
-
-        // Set display size via CSS
-        canvas.style.width = `${displayWidth}px`;
-        canvas.style.height = `${displayHeight}px`;
-        overlay.style.width = `${displayWidth}px`;
-        overlay.style.height = `${displayHeight}px`;
-
-        const ctx = canvas.getContext("2d")!;
-        const bctx = baseCanvas.getContext("2d")!;
-        ctx.drawImage(img, 0, 0);
-        bctx.drawImage(img, 0, 0);
-        setHistory([canvas.toDataURL()]);
-      };
-      img.src = reader.result as string;
-    };
-    reader.readAsDataURL(file);
+    processFile(file);
     e.target.value = "";
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragOver(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragOver(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragOver(false);
+
+    const files = Array.from(e.dataTransfer.files);
+    const imageFile = files.find((file) => file.type.startsWith("image/"));
+
+    if (imageFile) {
+      console.log("Image file dropped:", imageFile);
+      processFile(imageFile);
+    }
   };
 
   const pixelateRect = (x: number, y: number, w: number, h: number) => {
@@ -330,9 +312,17 @@ export const PhotoBlurTool = () => {
 
   const undo = () => {
     if (history.length <= 1) return;
-    const newHist = history.slice(0, -1);
-    loadFromDataUrl(newHist[newHist.length - 1]);
-    setHistory(newHist);
+    const newHistory = history.slice(0, -1);
+    setHistory(newHistory);
+    loadFromDataUrl(newHistory[newHistory.length - 1]);
+  };
+
+  const jumpToHistoryState = (index: number) => {
+    if (index < 0 || index >= history.length) return;
+    const newHistory = history.slice(0, index + 1);
+    setHistory(newHistory);
+    loadFromDataUrl(newHistory[newHistory.length - 1]);
+    setShowUndoDropdown(false);
   };
 
   const download = () => {
@@ -346,14 +336,6 @@ export const PhotoBlurTool = () => {
 
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-col items-start space-y-4 p-4">
-      <div className="w-full">
-        <Input
-          type="file"
-          accept="image/*"
-          onChange={handleFile}
-          className="max-w-sm"
-        />
-      </div>
       <div className="flex flex-wrap items-center gap-4">
         <div className="flex gap-2">
           <Button
@@ -403,15 +385,73 @@ export const PhotoBlurTool = () => {
         )}
 
         <div className="flex gap-2">
-          <Button
-            type="button"
-            variant="outline"
-            onClick={undo}
-            disabled={history.length <= 1}
-            size="sm"
-          >
-            Undo
-          </Button>
+          <div className="relative">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={undo}
+              disabled={history.length <= 1}
+              size="sm"
+              onMouseEnter={() => setShowUndoDropdown(true)}
+              onMouseLeave={() => setShowUndoDropdown(false)}
+            >
+              Undo
+            </Button>
+            {showUndoDropdown && history.length > 1 && (
+              <div
+                className="absolute bottom-full left-0 z-10 mb-2 max-h-80 w-64 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg"
+                onMouseEnter={() => setShowUndoDropdown(true)}
+                onMouseLeave={() => setShowUndoDropdown(false)}
+              >
+                <div className="p-2">
+                  <div className="mb-2 text-xs font-medium text-gray-600">
+                    History ({history.length} states)
+                  </div>
+                  <div className="space-y-1">
+                    {history
+                      .slice()
+                      .reverse()
+                      .map((dataUrl, reverseIndex) => {
+                        const actualIndex = history.length - 1 - reverseIndex;
+                        const isCurrentState =
+                          actualIndex === history.length - 1;
+                        return (
+                          <button
+                            key={actualIndex}
+                            onClick={() => jumpToHistoryState(actualIndex)}
+                            className={classNames(
+                              "flex w-full items-center gap-2 rounded p-2 text-left transition-colors hover:bg-gray-50",
+                              isCurrentState &&
+                                "border border-blue-200 bg-blue-50",
+                            )}
+                          >
+                            <img
+                              src={dataUrl}
+                              alt={`State ${actualIndex + 1}`}
+                              className="h-12 w-12 flex-shrink-0 rounded border border-gray-200 object-cover"
+                            />
+                            <div className="min-w-0 flex-1">
+                              <div className="text-sm font-medium text-gray-900">
+                                {isCurrentState
+                                  ? "Current"
+                                  : `State ${actualIndex + 1}`}
+                              </div>
+                              <div className="text-xs text-gray-500">
+                                {reverseIndex === 0
+                                  ? "Latest"
+                                  : `${reverseIndex} step${
+                                      reverseIndex === 1 ? "" : "s"
+                                    } ago`}
+                              </div>
+                            </div>
+                          </button>
+                        );
+                      })}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
           <Button type="button" variant="outline" onClick={download} size="sm">
             Download
           </Button>
@@ -439,8 +479,37 @@ export const PhotoBlurTool = () => {
         </div>
       </div>
       {!history.length && (
-        <div className="w-full py-12 text-center text-gray-500">
-          Upload an image to start editing
+        <div
+          className={classNames(
+            "flex w-full flex-col items-center justify-center gap-2 rounded-lg border-2 border-dashed py-12 text-center transition-colors",
+            isDragOver
+              ? "border-blue-400 bg-blue-50 text-blue-600"
+              : "border-gray-300 text-gray-500",
+          )}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+        >
+          {isDragOver ? (
+            "Drop image here"
+          ) : (
+            <>
+              <p>Upload an image to start editing or drag and drop</p>
+              <Button
+                onClick={() => fileUploadRef.current?.click()}
+                variant="outline"
+              >
+                Upload File
+              </Button>
+            </>
+          )}
+
+          <input
+            type="file"
+            ref={fileUploadRef}
+            onChange={handleFile}
+            style={{ display: "none" }}
+          />
         </div>
       )}
     </div>
