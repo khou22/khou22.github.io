@@ -45,7 +45,9 @@ export const PAGES = {
   BROWSER_HOMEPAGE: "/programming/browser-home-page",
   TWEET_PREVIEW: "/tweet-preview",
   TOOLS: {
+    HOME: "/tools",
     PHOTO_BLUR: "/tools/photo-blur",
+    TWEET_PREVIEW: "/tools/tweet-preview",
   },
   ADMIN: {
     PHOTOGRAPHY: "/admin/photos",

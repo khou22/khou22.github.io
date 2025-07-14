@@ -10,6 +10,10 @@ const PhotoBlurPage = () => {
   return (
     <PageWrapper maxWidth="wide">
       <h1 className="mb-4 text-center leading-loose">Photo Blur Tool</h1>
+      <p>
+        Simple, free, and easy to use photo blur tool to remove distractions
+        from your photos and hide sensitive information.
+      </p>
       <PhotoBlurTool />
     </PageWrapper>
   );

@@ -22,6 +22,7 @@ const navigation = {
   personal: [
     { name: "Blog", href: PAGES.BLOG },
     { name: "Contact", href: PAGES.CONTACT },
+    { name: "Tools", href: PAGES.TOOLS.HOME },
   ],
 };
 
