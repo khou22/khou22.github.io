@@ -21,6 +21,11 @@ const ToolsPage = () => {
             Tweet Preview
           </CustomLink>
         </li>
+        <li>
+          <CustomLink href={PAGES.TOOLS.RGB_TO_OKLCH}>
+            RGB to OKLCH Converter
+          </CustomLink>
+        </li>
       </ul>
     </PageWrapper>
   );

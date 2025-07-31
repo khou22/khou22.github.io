@@ -5,3 +5,6 @@ docs/
 dist/
 out/
 *.generated.*
+pnpm-lock.yaml
+asset-catalog.md
+src/data/blog/
