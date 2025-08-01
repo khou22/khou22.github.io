@@ -10,7 +10,11 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  */
 
-export function rgbToOklch(rgb: { r: number; g: number; b: number }): { l: number; c: number; h: number } | null {
+export function rgbToOklch(rgb: {
+  r: number;
+  g: number;
+  b: number;
+}): { l: number; c: number; h: number } | null {
   // Step 1: Convert RGB to Linear RGB
   const r = rgb.r / 255;
   const g = rgb.g / 255;
@@ -36,9 +40,12 @@ export function rgbToOklch(rgb: { r: number; g: number; b: number }): { l: numbe
   const yNorm = y / yn;
   const zNorm = z / zn;
 
-  const fx = xNorm > 0.008856 ? Math.pow(xNorm, 1 / 3) : 7.787 * xNorm + 16 / 116;
-  const fy = yNorm > 0.008856 ? Math.pow(yNorm, 1 / 3) : 7.787 * yNorm + 16 / 116;
-  const fz = zNorm > 0.008856 ? Math.pow(zNorm, 1 / 3) : 7.787 * zNorm + 16 / 116;
+  const fx =
+    xNorm > 0.008856 ? Math.pow(xNorm, 1 / 3) : 7.787 * xNorm + 16 / 116;
+  const fy =
+    yNorm > 0.008856 ? Math.pow(yNorm, 1 / 3) : 7.787 * yNorm + 16 / 116;
+  const fz =
+    zNorm > 0.008856 ? Math.pow(zNorm, 1 / 3) : 7.787 * zNorm + 16 / 116;
 
   const l = 116 * fy - 16;
   const a = 500 * (fx - fy);
@@ -52,9 +59,9 @@ export function rgbToOklch(rgb: { r: number; g: number; b: number }): { l: numbe
   }
 
   return {
-    l: l / 100,  // Normalized to 0-1 range
-    c: c / 100,  // Normalized to 0-1 range (though max varies)
-    h: h         // Hue in degrees (0-360)
+    l: l / 100, // Normalized to 0-1 range
+    c: c / 100, // Normalized to 0-1 range (though max varies)
+    h: h, // Hue in degrees (0-360)
   };
 }
 
