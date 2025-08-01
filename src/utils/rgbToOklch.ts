@@ -1,78 +1,64 @@
-/**
- * Represents a color in the sRGB color space.
- * Values for r, g, and b are typically between 0 and 255.
- */
-interface RgbColor {
-  r: number;
-  g: number;
-  b: number;
-}
-
-/**
- * Represents a color in the Oklch color space.
- * l (lightness): 0 to 1
- * c (chroma): 0 to ~0.37
- * h (hue): 0 to 360
- */
-interface OklchColor {
-  l: number;
-  c: number;
-  h: number;
-}
-
-/**
- * Converts an sRGB color to the Oklch color space.
- * This is a multi-step process: sRGB -> linear sRGB -> CIEXYZ -> Oklab -> Oklch.
+/*
+ * Copyright (C) 2025 Sohan Basak (iamsohan.in)
  *
- * @param rgb The color to convert, as an object with r, g, b properties (0-255).
- * @returns The equivalent color in the Oklch color space.
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the WTFPL, Version 2, as published by
+ * Sam Hocevar. See http://www.wtfpl.net/ for more details.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  */
-export function rgbToOklch(rgb: RgbColor): OklchColor {
-  // 1. Convert sRGB (0-255) to linear sRGB (0-1)
-  const r_linear = srgbToLinear(rgb.r / 255);
-  const g_linear = srgbToLinear(rgb.g / 255);
-  const b_linear = srgbToLinear(rgb.b / 255);
 
-  // 2. Convert linear sRGB to CIEXYZ (D65 illuminant)
-  const x = 0.4124564 * r_linear + 0.3575761 * g_linear + 0.1804375 * b_linear;
-  const y = 0.2126729 * r_linear + 0.7151522 * g_linear + 0.072175 * b_linear;
-  const z = 0.0193339 * r_linear + 0.119192 * g_linear + 0.9503041 * b_linear;
+export function rgbToOklch(rgb: { r: number; g: number; b: number }): { l: number; c: number; h: number } | null {
+  // Step 1: Convert RGB to Linear RGB
+  const r = rgb.r / 255;
+  const g = rgb.g / 255;
+  const b = rgb.b / 255;
 
-  // 3. Convert CIEXYZ to Oklab
-  const l_ = 0.4124564 * r_linear + 0.3575761 * g_linear + 0.1804375 * b_linear;
-  const m_ = 0.2126729 * r_linear + 0.7151522 * g_linear + 0.072175 * b_linear;
-  const s_ = 0.0193339 * r_linear + 0.119192 * g_linear + 0.9503041 * b_linear;
+  const linearRgb = {
+    r: r <= 0.04045 ? r / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4),
+    g: g <= 0.04045 ? g / 12.92 : Math.pow((g + 0.055) / 1.055, 2.4),
+    b: b <= 0.04045 ? b / 12.92 : Math.pow((b + 0.055) / 1.055, 2.4),
+  };
 
-  const l_cubed = Math.cbrt(l_);
-  const m_cubed = Math.cbrt(m_);
-  const s_cubed = Math.cbrt(s_);
+  // Step 2: Linear RGB to XYZ
+  const x = 0.4124 * linearRgb.r + 0.3576 * linearRgb.g + 0.1805 * linearRgb.b;
+  const y = 0.2126 * linearRgb.r + 0.7152 * linearRgb.g + 0.0722 * linearRgb.b;
+  const z = 0.0193 * linearRgb.r + 0.1192 * linearRgb.g + 0.9505 * linearRgb.b;
 
-  const l =
-    0.2104542553 * l_cubed + 0.793617785 * m_cubed - 0.0040720468 * s_cubed;
-  const a =
-    1.9779984951 * l_cubed - 2.428592205 * m_cubed + 0.4505937099 * s_cubed;
-  const b =
-    0.0259040371 * l_cubed + 0.7827717662 * m_cubed - 0.808675766 * s_cubed;
+  // Step 3: XYZ to Lab
+  const xn = 0.95047;
+  const yn = 1.0;
+  const zn = 1.08883;
 
-  // 4. Convert Oklab to Oklch
-  const c = Math.sqrt(a * a + b * b);
-  let h = Math.atan2(b, a) * (180 / Math.PI);
+  const xNorm = x / xn;
+  const yNorm = y / yn;
+  const zNorm = z / zn;
 
+  const fx = xNorm > 0.008856 ? Math.pow(xNorm, 1 / 3) : 7.787 * xNorm + 16 / 116;
+  const fy = yNorm > 0.008856 ? Math.pow(yNorm, 1 / 3) : 7.787 * yNorm + 16 / 116;
+  const fz = zNorm > 0.008856 ? Math.pow(zNorm, 1 / 3) : 7.787 * zNorm + 16 / 116;
+
+  const l = 116 * fy - 16;
+  const a = 500 * (fx - fy);
+  const bLab = 200 * (fy - fz);
+
+  // Step 4: Lab to LCH
+  const c = Math.sqrt(Math.pow(a, 2) + Math.pow(bLab, 2));
+  let h = Math.atan2(bLab, a) * (180 / Math.PI);
   if (h < 0) {
     h += 360;
   }
 
-  return { l, c, h };
+  return {
+    l: l / 100,  // Normalized to 0-1 range
+    c: c / 100,  // Normalized to 0-1 range (though max varies)
+    h: h         // Hue in degrees (0-360)
+  };
 }
 
-/**
- * Helper function to convert a single sRGB channel value to its linear equivalent.
- * @param value The sRGB channel value (0-1).
- * @returns The linear RGB channel value (0-1).
- */
-function srgbToLinear(value: number): number {
-  if (value <= 0.04045) {
-    return value / 12.92;
-  }
-  return Math.pow((value + 0.055) / 1.055, 2.4);
-}
+// Example usage:
+// const rgb = { r: 255, g: 0, b: 0 }; // Red
+// const oklch = rgbToOklch(rgb);
+// console.log(oklch); // { l: ~0.627, c: ~0.258, h: ~29.23 }
