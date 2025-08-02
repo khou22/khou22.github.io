@@ -1,6 +1,6 @@
 ---
 
-last_updated: 2025-07-06 17:26:27
+last_updated: 2025-08-02 01:10:03
 
 ---
 
@@ -22,6 +22,7 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **High Island Reservoir Panorama**: [https://khou22.github.io/photography/High%20Island%20Reservoir%20Panorama.jpg](https://khou22.github.io/photography/High%20Island%20Reservoir%20Panorama.jpg)
 - **San Francisco Downtown Through Car Mirror**: [https://khou22.github.io/photography/San%20Francisco%20Downtown%20Through%20Car%20Mirror.jpg](https://khou22.github.io/photography/San%20Francisco%20Downtown%20Through%20Car%20Mirror.jpg)
 - **Bear Valley Astrophotography Landscape**: [https://khou22.github.io/photography/Bear%20Valley%20Astrophotography%20Landscape.jpg](https://khou22.github.io/photography/Bear%20Valley%20Astrophotography%20Landscape.jpg)
+- **kevin_caroline_engagement_cover**: [https://khou22.github.io/photography/personal/kevin_caroline_engagement_cover.jpg](https://khou22.github.io/photography/personal/kevin_caroline_engagement_cover.jpg)
 - **Korean Bar Reflection in Rain Puddle**: [https://khou22.github.io/photography/Korean%20Bar%20Reflection%20in%20Rain%20Puddle.jpg](https://khou22.github.io/photography/Korean%20Bar%20Reflection%20in%20Rain%20Puddle.jpg)
 - **Hie Shrine, Tokyo, Japan**: [https://khou22.github.io/photography/Hie%20Shrine%2C%20Tokyo%2C%20Japan.jpg](https://khou22.github.io/photography/Hie%20Shrine%2C%20Tokyo%2C%20Japan.jpg)
 - **Greenwich Golf Course Summer Drone Vertical**: [https://khou22.github.io/photography/Greenwich%20Golf%20Course%20Summer%20Drone%20Vertical.jpg](https://khou22.github.io/photography/Greenwich%20Golf%20Course%20Summer%20Drone%20Vertical.jpg)

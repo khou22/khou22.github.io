@@ -99,6 +99,16 @@ export const _generatedCdnAssets = {
     name: `Bear Valley Astrophotography Landscape`,
     dimensions: [2400, 1600],
   },
+	"photography/personal/kevin_caroline_engagement_cover_placeholder_jpg": {
+    path: "/photography/personal/kevin_caroline_engagement_cover.placeholder.jpg",
+    name: `kevin_caroline_engagement_cover.placeholder`,
+    dimensions: [800, 532],
+  },
+	"photography/personal/kevin_caroline_engagement_cover_jpg": {
+    path: "/photography/personal/kevin_caroline_engagement_cover.jpg",
+    name: `kevin_caroline_engagement_cover`,
+    dimensions: [4903, 3262],
+  },
 	"photography/Korean_Bar_Reflection_in_Rain_Puddle_jpg": {
     path: "/photography/Korean%20Bar%20Reflection%20in%20Rain%20Puddle.jpg",
     name: `Korean Bar Reflection in Rain Puddle`,
