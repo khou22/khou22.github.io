@@ -14,10 +14,20 @@ import { ParallaxHoverCard } from "@/components/atoms/ParallaxHoverCard/Parallax
 import { PhotoImage } from "@/components/atoms/PhotoImage/PhotoImage";
 import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 import { BioSection } from "@/components/organisms/BioSection/BioSection";
+import { siteMetadata } from "@/constants/siteMetadata";
 
 const HomePage = async () => {
   return (
     <main className="overflow-x-hidden">
+      {/* Hidden preview image so link unfurls fall back to the site card. */}
+      <img
+        src={siteMetadata.previewCard.url}
+        alt={siteMetadata.title}
+        width={siteMetadata.previewCard.width}
+        height={siteMetadata.previewCard.height}
+        className="sr-only"
+        loading="lazy"
+      />
       <ParallaxCover />
 
       {/* Gradient transition to the page content. */}
