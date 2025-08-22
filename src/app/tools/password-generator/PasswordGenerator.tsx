@@ -16,7 +16,8 @@ const PASSWORD_LENGTH = 16;
 export const PasswordGenerator = () => {
   const [includeLetters, setIncludeLetters] = useState(true);
   const [includeNumbers, setIncludeNumbers] = useState(true);
-  const [includeSymbols, setIncludeSymbols] = useState(true);
+  const [includeSymbols, setIncludeSymbols] = useState(false);
+  const [includeHyphens, setIncludeHyphens] = useState(true);
   const [mixedCase, setMixedCase] = useState(true);
   const [password, setPassword] = useState("");
 
@@ -39,9 +40,11 @@ export const PasswordGenerator = () => {
     for (let i = 0; i < PASSWORD_LENGTH; i++) {
       raw += chars[Math.floor(Math.random() * chars.length)];
     }
-    const withDashes = raw.match(/.{1,4}/g)?.join("-") || raw;
-    setPassword(withDashes);
-  }, [includeLetters, includeNumbers, includeSymbols, mixedCase]);
+    const formatted = includeHyphens
+      ? raw.match(/.{1,4}/g)?.join("-") || raw
+      : raw;
+    setPassword(formatted);
+  }, [includeLetters, includeNumbers, includeSymbols, includeHyphens, mixedCase]);
 
   useEffect(() => {
     generatePassword();
@@ -79,6 +82,14 @@ export const PasswordGenerator = () => {
             onCheckedChange={(v) => setIncludeSymbols(!!v)}
           />
           <Label htmlFor="symbols">Symbols</Label>
+        </div>
+        <div className="flex items-center gap-2">
+          <Checkbox
+            id="hyphens"
+            checked={includeHyphens}
+            onCheckedChange={(v) => setIncludeHyphens(!!v)}
+          />
+          <Label htmlFor="hyphens">Hyphens</Label>
         </div>
         <div className="flex items-center gap-2">
           <Checkbox
