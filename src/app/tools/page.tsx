@@ -26,6 +26,11 @@ const ToolsPage = () => {
             RGB to OKLCH Converter
           </CustomLink>
         </li>
+        <li>
+          <CustomLink href={PAGES.TOOLS.PASSWORD_GENERATOR}>
+            Password Generator
+          </CustomLink>
+        </li>
       </ul>
     </PageWrapper>
   );
