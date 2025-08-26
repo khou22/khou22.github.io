@@ -44,7 +44,13 @@ export const PasswordGenerator = () => {
       ? raw.match(/.{1,4}/g)?.join("-") || raw
       : raw;
     setPassword(formatted);
-  }, [includeLetters, includeNumbers, includeSymbols, includeHyphens, mixedCase]);
+  }, [
+    includeLetters,
+    includeNumbers,
+    includeSymbols,
+    includeHyphens,
+    mixedCase,
+  ]);
 
   useEffect(() => {
     generatePassword();
@@ -113,4 +119,3 @@ export const PasswordGenerator = () => {
     </div>
   );
 };
-

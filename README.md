@@ -16,6 +16,13 @@ pnpm start:cdn
 pnpm dev
 ```
 
+Make sure run the following before committing:
+
+```bash
+pnpm lint
+pnpm prettier
+```
+
 ### Deployment
 
 1. Static assets will be on GitHub pages. I'm going to leverage the `docs/` subdirectory as my CDN.

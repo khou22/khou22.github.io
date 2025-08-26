@@ -16,4 +16,3 @@ const PasswordGeneratorPage = () => {
 };
 
 export default PasswordGeneratorPage;
-
