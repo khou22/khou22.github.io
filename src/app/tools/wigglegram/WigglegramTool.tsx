@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useCallback } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { classNames } from "@/utils/style";
 
@@ -26,6 +26,32 @@ export const WigglegramTool = () => {
   const [progress, setProgress] = useState(0);
   const [progressMessage, setProgressMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  // Alignment editor state
+  const [isEditorMode, setIsEditorMode] = useState(false);
+  const [baseFrameIndex, setBaseFrameIndex] = useState(1); // Default to middle frame
+  const [alignmentOffsets, setAlignmentOffsets] = useState<{
+    left: { x: number; y: number };
+    right: { x: number; y: number };
+  }>({ left: { x: 0, y: 0 }, right: { x: 0, y: 0 } });
+  const [isDragging, setIsDragging] = useState<"left" | "right" | null>(null);
+  const [dragStart, setDragStart] = useState<{ x: number; y: number } | null>(
+    null,
+  );
+  const editorCanvasRef = useRef<HTMLCanvasElement>(null);
+
+  // Layer control state
+  const [layerVisibility, setLayerVisibility] = useState<{
+    left: boolean;
+    right: boolean;
+  }>({ left: true, right: true });
+  const [layerLocked, setLayerLocked] = useState<{
+    left: boolean;
+    right: boolean;
+  }>({ left: false, right: false });
+  const [selectedLayer, setSelectedLayer] = useState<"left" | "right" | null>(
+    null,
+  );
 
   const extractFrames = useCallback(
     (img: HTMLImageElement) => {
@@ -158,7 +184,33 @@ export const WigglegramTool = () => {
       const totalCycles = 3;
       const animateFrames = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(extractedFrames[frameIndex].canvas, 0, 0);
+
+        // Apply alignment offsets if in editor mode
+        if (isEditorMode) {
+          // Draw frame with alignment offset
+          let offsetX = 0;
+          let offsetY = 0;
+
+          if (frameIndex === baseFrameIndex - 1 && baseFrameIndex > 0) {
+            // Left frame
+            offsetX = alignmentOffsets.left.x;
+            offsetY = alignmentOffsets.left.y;
+          } else if (
+            frameIndex === baseFrameIndex + 1 &&
+            baseFrameIndex < extractedFrames.length - 1
+          ) {
+            // Right frame
+            offsetX = alignmentOffsets.right.x;
+            offsetY = alignmentOffsets.right.y;
+          }
+          // Base frame uses no offset (0, 0)
+
+          ctx.drawImage(extractedFrames[frameIndex].canvas, offsetX, offsetY);
+        } else {
+          // Simple mode - no offsets
+          ctx.drawImage(extractedFrames[frameIndex].canvas, 0, 0);
+        }
+
         frameIndex = (frameIndex + 1) % extractedFrames.length;
 
         if (frameIndex === 0) {
@@ -188,7 +240,13 @@ export const WigglegramTool = () => {
       setProgress(0);
       setProgressMessage("");
     }
-  }, [extractedFrames, animationSpeed]);
+  }, [
+    extractedFrames,
+    animationSpeed,
+    isEditorMode,
+    baseFrameIndex,
+    alignmentOffsets,
+  ]);
 
   const downloadVideo = useCallback(() => {
     if (!previewVideo) return;
@@ -231,13 +289,308 @@ export const WigglegramTool = () => {
     }
   };
 
+  // Reset alignment offsets when frames change
+  const resetAlignmentOffsets = useCallback(() => {
+    setAlignmentOffsets({ left: { x: 0, y: 0 }, right: { x: 0, y: 0 } });
+  }, []);
+
   // Re-extract frames when settings change
   const handleSettingsChange = useCallback(() => {
     if (originalImage) {
       extractFrames(originalImage);
       setPreviewVideo(null); // Clear previous video
+      resetAlignmentOffsets(); // Reset alignment when frames change
     }
-  }, [originalImage, extractFrames]);
+  }, [originalImage, extractFrames, resetAlignmentOffsets]);
+
+  // Update base frame index when number of frames changes
+  const updateBaseFrameIndex = useCallback(() => {
+    const middleIndex = Math.floor(numFrames / 2);
+    setBaseFrameIndex(middleIndex);
+  }, [numFrames]);
+
+  // Editor canvas drawing function
+  const drawEditorCanvas = useCallback(() => {
+    const canvas = editorCanvasRef.current;
+    if (!canvas || extractedFrames.length === 0) return;
+
+    const ctx = canvas.getContext("2d")!;
+    const baseFrame = extractedFrames[baseFrameIndex];
+    if (!baseFrame) return;
+
+    // Set canvas size to match base frame
+    canvas.width = baseFrame.canvas.width;
+    canvas.height = baseFrame.canvas.height;
+
+    // Clear canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw base frame
+    ctx.drawImage(baseFrame.canvas, 0, 0);
+
+    // Draw left frame overlay (semi-transparent)
+    if (baseFrameIndex > 0 && layerVisibility.left) {
+      const leftFrame = extractedFrames[baseFrameIndex - 1];
+      ctx.globalAlpha = selectedLayer === "left" ? 0.7 : 0.5;
+      ctx.drawImage(
+        leftFrame.canvas,
+        alignmentOffsets.left.x,
+        alignmentOffsets.left.y,
+      );
+    }
+
+    // Draw right frame overlay (semi-transparent)
+    if (baseFrameIndex < extractedFrames.length - 1 && layerVisibility.right) {
+      const rightFrame = extractedFrames[baseFrameIndex + 1];
+      ctx.globalAlpha = selectedLayer === "right" ? 0.7 : 0.5;
+      ctx.drawImage(
+        rightFrame.canvas,
+        alignmentOffsets.right.x,
+        alignmentOffsets.right.y,
+      );
+    }
+
+    // Reset alpha
+    ctx.globalAlpha = 1.0;
+  }, [
+    extractedFrames,
+    baseFrameIndex,
+    alignmentOffsets,
+    layerVisibility,
+    selectedLayer,
+  ]);
+
+  // Mouse event handlers for dragging
+  const handleMouseDown = useCallback(
+    (e: React.MouseEvent<HTMLCanvasElement>) => {
+      const canvas = editorCanvasRef.current;
+      if (!canvas) return;
+
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      // Determine which overlay is being clicked
+      const leftFrame =
+        baseFrameIndex > 0 ? extractedFrames[baseFrameIndex - 1] : null;
+      const rightFrame =
+        baseFrameIndex < extractedFrames.length - 1
+          ? extractedFrames[baseFrameIndex + 1]
+          : null;
+
+      // Check if click is within left frame bounds
+      if (
+        leftFrame &&
+        layerVisibility.left &&
+        !layerLocked.left &&
+        x >= alignmentOffsets.left.x &&
+        x <= alignmentOffsets.left.x + leftFrame.canvas.width &&
+        y >= alignmentOffsets.left.y &&
+        y <= alignmentOffsets.left.y + leftFrame.canvas.height
+      ) {
+        setIsDragging("left");
+        setSelectedLayer("left");
+        setDragStart({
+          x: x - alignmentOffsets.left.x,
+          y: y - alignmentOffsets.left.y,
+        });
+      }
+      // Check if click is within right frame bounds
+      else if (
+        rightFrame &&
+        layerVisibility.right &&
+        !layerLocked.right &&
+        x >= alignmentOffsets.right.x &&
+        x <= alignmentOffsets.right.x + rightFrame.canvas.width &&
+        y >= alignmentOffsets.right.y &&
+        y <= alignmentOffsets.right.y + rightFrame.canvas.height
+      ) {
+        setIsDragging("right");
+        setSelectedLayer("right");
+        setDragStart({
+          x: x - alignmentOffsets.right.x,
+          y: y - alignmentOffsets.right.y,
+        });
+      }
+    },
+    [
+      extractedFrames,
+      baseFrameIndex,
+      alignmentOffsets,
+      layerVisibility,
+      layerLocked,
+    ],
+  );
+
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLCanvasElement>) => {
+      if (!isDragging || !dragStart) return;
+
+      const canvas = editorCanvasRef.current;
+      if (!canvas) return;
+
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const newX = x - dragStart.x;
+      const newY = y - dragStart.y;
+
+      // Get frame dimensions for boundary checking
+      const frameIndex =
+        isDragging === "left" ? baseFrameIndex - 1 : baseFrameIndex + 1;
+      const frame = extractedFrames[frameIndex];
+      if (!frame) return;
+
+      // Constrain to canvas bounds
+      const maxX = canvas.width - frame.canvas.width;
+      const maxY = canvas.height - frame.canvas.height;
+      const constrainedX = Math.max(
+        -frame.canvas.width + 50,
+        Math.min(maxX + frame.canvas.width - 50, newX),
+      );
+      const constrainedY = Math.max(
+        -frame.canvas.height + 50,
+        Math.min(maxY + frame.canvas.height - 50, newY),
+      );
+
+      setAlignmentOffsets((prev) => ({
+        ...prev,
+        [isDragging]: { x: constrainedX, y: constrainedY },
+      }));
+    },
+    [isDragging, dragStart, extractedFrames, baseFrameIndex],
+  );
+
+  const handleMouseUp = useCallback(() => {
+    setIsDragging(null);
+    setDragStart(null);
+  }, []);
+
+  // Touch event handlers for mobile support
+  const handleTouchStart = useCallback(
+    (e: React.TouchEvent<HTMLCanvasElement>) => {
+      e.preventDefault();
+      const touch = e.touches[0];
+      const canvas = editorCanvasRef.current;
+      if (!canvas) return;
+
+      const rect = canvas.getBoundingClientRect();
+      const x = touch.clientX - rect.left;
+      const y = touch.clientY - rect.top;
+
+      // Similar logic to handleMouseDown
+      const leftFrame =
+        baseFrameIndex > 0 ? extractedFrames[baseFrameIndex - 1] : null;
+      const rightFrame =
+        baseFrameIndex < extractedFrames.length - 1
+          ? extractedFrames[baseFrameIndex + 1]
+          : null;
+
+      if (
+        leftFrame &&
+        layerVisibility.left &&
+        !layerLocked.left &&
+        x >= alignmentOffsets.left.x &&
+        x <= alignmentOffsets.left.x + leftFrame.canvas.width &&
+        y >= alignmentOffsets.left.y &&
+        y <= alignmentOffsets.left.y + leftFrame.canvas.height
+      ) {
+        setIsDragging("left");
+        setSelectedLayer("left");
+        setDragStart({
+          x: x - alignmentOffsets.left.x,
+          y: y - alignmentOffsets.left.y,
+        });
+      } else if (
+        rightFrame &&
+        layerVisibility.right &&
+        !layerLocked.right &&
+        x >= alignmentOffsets.right.x &&
+        x <= alignmentOffsets.right.x + rightFrame.canvas.width &&
+        y >= alignmentOffsets.right.y &&
+        y <= alignmentOffsets.right.y + rightFrame.canvas.height
+      ) {
+        setIsDragging("right");
+        setSelectedLayer("right");
+        setDragStart({
+          x: x - alignmentOffsets.right.x,
+          y: y - alignmentOffsets.right.y,
+        });
+      }
+    },
+    [
+      extractedFrames,
+      baseFrameIndex,
+      alignmentOffsets,
+      layerVisibility,
+      layerLocked,
+    ],
+  );
+
+  const handleTouchMove = useCallback(
+    (e: React.TouchEvent<HTMLCanvasElement>) => {
+      e.preventDefault();
+      if (!isDragging || !dragStart) return;
+
+      const touch = e.touches[0];
+      const canvas = editorCanvasRef.current;
+      if (!canvas) return;
+
+      const rect = canvas.getBoundingClientRect();
+      const x = touch.clientX - rect.left;
+      const y = touch.clientY - rect.top;
+
+      const newX = x - dragStart.x;
+      const newY = y - dragStart.y;
+
+      const frameIndex =
+        isDragging === "left" ? baseFrameIndex - 1 : baseFrameIndex + 1;
+      const frame = extractedFrames[frameIndex];
+      if (!frame) return;
+
+      // Constrain to canvas bounds
+      const maxX = canvas.width - frame.canvas.width;
+      const maxY = canvas.height - frame.canvas.height;
+      const constrainedX = Math.max(
+        -frame.canvas.width + 50,
+        Math.min(maxX + frame.canvas.width - 50, newX),
+      );
+      const constrainedY = Math.max(
+        -frame.canvas.height + 50,
+        Math.min(maxY + frame.canvas.height - 50, newY),
+      );
+
+      setAlignmentOffsets((prev) => ({
+        ...prev,
+        [isDragging]: { x: constrainedX, y: constrainedY },
+      }));
+    },
+    [isDragging, dragStart, extractedFrames, baseFrameIndex],
+  );
+
+  const handleTouchEnd = useCallback(() => {
+    setIsDragging(null);
+    setDragStart(null);
+  }, []);
+
+  // Effect to update base frame index when number of frames changes
+  useEffect(() => {
+    updateBaseFrameIndex();
+  }, [updateBaseFrameIndex]);
+
+  // Effect to redraw canvas when relevant state changes
+  useEffect(() => {
+    if (isEditorMode) {
+      drawEditorCanvas();
+    }
+  }, [
+    isEditorMode,
+    drawEditorCanvas,
+    alignmentOffsets,
+    baseFrameIndex,
+    extractedFrames,
+  ]);
 
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col items-start space-y-6 p-4">
@@ -350,8 +703,268 @@ export const WigglegramTool = () => {
         </div>
       )}
 
-      {/* Frame Preview */}
+      {/* Editor Mode Toggle */}
       {extractedFrames.length > 0 && (
+        <div className="w-full rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <h3 className="mb-4 text-lg font-semibold">Alignment Mode</h3>
+          <div className="flex flex-wrap gap-4">
+            <Button
+              onClick={() => setIsEditorMode(false)}
+              variant={!isEditorMode ? "primary" : "outline"}
+              size="sm"
+            >
+              Simple Mode
+            </Button>
+            <Button
+              onClick={() => setIsEditorMode(true)}
+              variant={isEditorMode ? "primary" : "outline"}
+              size="sm"
+            >
+              Alignment Editor
+            </Button>
+          </div>
+
+          {/* Base Frame Selector */}
+          {isEditorMode && (
+            <div className="mt-4 flex flex-col gap-2">
+              <label className="text-sm font-medium">Base Frame:</label>
+              <select
+                value={baseFrameIndex}
+                onChange={(e) => setBaseFrameIndex(Number(e.target.value))}
+                className="w-fit rounded border border-gray-300 px-3 py-2"
+              >
+                {extractedFrames.map((_, index) => (
+                  <option key={index} value={index}>
+                    Frame {index + 1}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Alignment Editor */}
+      {extractedFrames.length > 0 && isEditorMode && (
+        <div className="w-full">
+          <h3 className="mb-4 text-lg font-semibold">Drag to Align Frames</h3>
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+            {/* Canvas Column */}
+            <div className="lg:col-span-2">
+              <div className="relative rounded border border-gray-300 shadow-lg">
+                <canvas
+                  ref={editorCanvasRef}
+                  onMouseDown={handleMouseDown}
+                  onMouseMove={handleMouseMove}
+                  onMouseUp={handleMouseUp}
+                  onMouseLeave={handleMouseUp}
+                  onTouchStart={handleTouchStart}
+                  onTouchMove={handleTouchMove}
+                  onTouchEnd={handleTouchEnd}
+                  className="h-auto w-full cursor-grab active:cursor-grabbing"
+                  style={{ maxWidth: "100%" }}
+                />
+              </div>
+            </div>
+
+            {/* Layer Control Panel */}
+            <div className="lg:col-span-1">
+              <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                <h4 className="mb-3 font-semibold">Layers</h4>
+
+                {/* Base Frame */}
+                <div className="mb-3 rounded border bg-white p-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">
+                      Base Frame {baseFrameIndex + 1}
+                    </span>
+                    <span className="rounded bg-blue-100 px-2 py-1 text-xs text-gray-500">
+                      Base
+                    </span>
+                  </div>
+                </div>
+
+                {/* Left Frame */}
+                {baseFrameIndex > 0 && (
+                  <div
+                    className={`mb-3 rounded border p-3 ${
+                      selectedLayer === "left"
+                        ? "border-blue-300 bg-blue-50"
+                        : "bg-white"
+                    }`}
+                  >
+                    <div className="mb-2 flex items-center justify-between">
+                      <span className="text-sm font-medium">
+                        Left Frame {baseFrameIndex}
+                      </span>
+                      <div className="flex gap-1">
+                        <button
+                          onClick={() =>
+                            setLayerVisibility((prev) => ({
+                              ...prev,
+                              left: !prev.left,
+                            }))
+                          }
+                          className={`rounded p-1 text-xs ${
+                            layerVisibility.left
+                              ? "bg-green-100 text-green-700"
+                              : "bg-gray-100 text-gray-500"
+                          }`}
+                          title={
+                            layerVisibility.left ? "Hide layer" : "Show layer"
+                          }
+                        >
+                          {layerVisibility.left ? "👁️" : "🙈"}
+                        </button>
+                        <button
+                          onClick={() =>
+                            setLayerLocked((prev) => ({
+                              ...prev,
+                              left: !prev.left,
+                            }))
+                          }
+                          className={`rounded p-1 text-xs ${
+                            layerLocked.left
+                              ? "bg-red-100 text-red-700"
+                              : "bg-gray-100 text-gray-500"
+                          }`}
+                          title={
+                            layerLocked.left ? "Unlock layer" : "Lock layer"
+                          }
+                        >
+                          {layerLocked.left ? "🔒" : "🔓"}
+                        </button>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() =>
+                        setSelectedLayer(
+                          selectedLayer === "left" ? null : "left",
+                        )
+                      }
+                      className={`w-full rounded px-2 py-1 text-left text-xs ${
+                        selectedLayer === "left"
+                          ? "bg-blue-200 text-blue-800"
+                          : "bg-gray-100 text-gray-600"
+                      }`}
+                    >
+                      {selectedLayer === "left"
+                        ? "Selected"
+                        : "Click to select"}
+                    </button>
+                    <div className="mt-1 text-xs text-gray-500">
+                      Offset: ({alignmentOffsets.left.x},{" "}
+                      {alignmentOffsets.left.y})
+                    </div>
+                  </div>
+                )}
+
+                {/* Right Frame */}
+                {baseFrameIndex < extractedFrames.length - 1 && (
+                  <div
+                    className={`mb-3 rounded border p-3 ${
+                      selectedLayer === "right"
+                        ? "border-blue-300 bg-blue-50"
+                        : "bg-white"
+                    }`}
+                  >
+                    <div className="mb-2 flex items-center justify-between">
+                      <span className="text-sm font-medium">
+                        Right Frame {baseFrameIndex + 2}
+                      </span>
+                      <div className="flex gap-1">
+                        <button
+                          onClick={() =>
+                            setLayerVisibility((prev) => ({
+                              ...prev,
+                              right: !prev.right,
+                            }))
+                          }
+                          className={`rounded p-1 text-xs ${
+                            layerVisibility.right
+                              ? "bg-green-100 text-green-700"
+                              : "bg-gray-100 text-gray-500"
+                          }`}
+                          title={
+                            layerVisibility.right ? "Hide layer" : "Show layer"
+                          }
+                        >
+                          {layerVisibility.right ? "👁️" : "🙈"}
+                        </button>
+                        <button
+                          onClick={() =>
+                            setLayerLocked((prev) => ({
+                              ...prev,
+                              right: !prev.right,
+                            }))
+                          }
+                          className={`rounded p-1 text-xs ${
+                            layerLocked.right
+                              ? "bg-red-100 text-red-700"
+                              : "bg-gray-100 text-gray-500"
+                          }`}
+                          title={
+                            layerLocked.right ? "Unlock layer" : "Lock layer"
+                          }
+                        >
+                          {layerLocked.right ? "🔒" : "🔓"}
+                        </button>
+                      </div>
+                    </div>
+                    <button
+                      onClick={() =>
+                        setSelectedLayer(
+                          selectedLayer === "right" ? null : "right",
+                        )
+                      }
+                      className={`w-full rounded px-2 py-1 text-left text-xs ${
+                        selectedLayer === "right"
+                          ? "bg-blue-200 text-blue-800"
+                          : "bg-gray-100 text-gray-600"
+                      }`}
+                    >
+                      {selectedLayer === "right"
+                        ? "Selected"
+                        : "Click to select"}
+                    </button>
+                    <div className="mt-1 text-xs text-gray-500">
+                      Offset: ({alignmentOffsets.right.x},{" "}
+                      {alignmentOffsets.right.y})
+                    </div>
+                  </div>
+                )}
+
+                {/* Controls */}
+                <div className="mt-4 space-y-2">
+                  <Button
+                    onClick={() => resetAlignmentOffsets()}
+                    variant="outline"
+                    size="sm"
+                    className="w-full"
+                  >
+                    Reset Alignment
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      setLayerVisibility({ left: true, right: true });
+                      setLayerLocked({ left: false, right: false });
+                      setSelectedLayer(null);
+                    }}
+                    variant="outline"
+                    size="sm"
+                    className="w-full"
+                  >
+                    Reset All Layers
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Frame Preview */}
+      {extractedFrames.length > 0 && !isEditorMode && (
         <div className="w-full">
           <h3 className="mb-4 text-lg font-semibold">Extracted Frames</h3>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
