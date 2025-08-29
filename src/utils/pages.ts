@@ -49,6 +49,7 @@ export const PAGES = {
     PHOTO_BLUR: "/tools/photo-blur",
     TWEET_PREVIEW: "/tools/tweet-preview",
     RGB_TO_OKLCH: "/tools/rgb-to-oklch",
+    OG_PREVIEW: "/tools/og-preview",
   },
   ADMIN: {
     PHOTOGRAPHY: "/admin/photos",

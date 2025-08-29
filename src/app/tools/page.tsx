@@ -26,6 +26,11 @@ const ToolsPage = () => {
             RGB to OKLCH Converter
           </CustomLink>
         </li>
+        <li>
+          <CustomLink href={PAGES.TOOLS.OG_PREVIEW}>
+            OG Image Preview
+          </CustomLink>
+        </li>
       </ul>
     </PageWrapper>
   );
