@@ -50,6 +50,7 @@ export const PAGES = {
     TWEET_PREVIEW: "/tools/tweet-preview",
     RGB_TO_OKLCH: "/tools/rgb-to-oklch",
     PASSWORD_GENERATOR: "/tools/password-generator",
+    WIGGLEGRAM: "/tools/wigglegram",
   },
   ADMIN: {
     PHOTOGRAPHY: "/admin/photos",
