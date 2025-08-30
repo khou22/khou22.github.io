@@ -1,7 +1,7 @@
 import { VideoGeneratorOptions } from '../types/wigglegram';
 
 export const generateVideo = async (options: VideoGeneratorOptions): Promise<Blob> => {
-  const { frames, animationSpeed, onProgress } = options;
+  const { frames, animationSpeed, cropParameters, onProgress } = options;
 
   if (frames.length === 0) {
     throw new Error('No frames provided');
@@ -12,12 +12,23 @@ export const generateVideo = async (options: VideoGeneratorOptions): Promise<Blo
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d")!;
 
-  // Calculate canvas size - use first frame as reference
+  // Calculate canvas size based on crop parameters or use first frame as reference
   const firstFrame = frames[0].data;
   
+  let canvasWidth, canvasHeight;
+  if (cropParameters) {
+    // Use crop dimensions
+    canvasWidth = cropParameters.width;
+    canvasHeight = cropParameters.height;
+  } else {
+    // Use full frame dimensions
+    canvasWidth = firstFrame.canvas.width;
+    canvasHeight = firstFrame.canvas.height;
+  }
+  
   // Ensure canvas dimensions are even numbers (some encoders require this)
-  canvas.width = Math.ceil(firstFrame.canvas.width / 2) * 2;
-  canvas.height = Math.ceil(firstFrame.canvas.height / 2) * 2;
+  canvas.width = Math.ceil(canvasWidth / 2) * 2;
+  canvas.height = Math.ceil(canvasHeight / 2) * 2;
 
   onProgress(20, "Initializing video stream...");
 
@@ -71,11 +82,34 @@ export const generateVideo = async (options: VideoGeneratorOptions): Promise<Blo
       const currentFrame = frames[frameIndex];
       const { data: frameData, offsets } = currentFrame;
       
-      // Apply offsets if they exist, otherwise draw at origin
-      const offsetX = offsets?.left?.x || offsets?.right?.x || 0;
-      const offsetY = offsets?.left?.y || offsets?.right?.y || 0;
-      
-      ctx.drawImage(frameData.canvas, offsetX, offsetY);
+      if (cropParameters) {
+        // Apply crop: draw a specific region of the source canvas to fill the output canvas
+        const offsetX = offsets?.left?.x || offsets?.right?.x || 0;
+        const offsetY = offsets?.left?.y || offsets?.right?.y || 0;
+        
+        // Calculate source position including frame offsets
+        const sourceX = cropParameters.x - offsetX;
+        const sourceY = cropParameters.y - offsetY;
+        
+        // Draw the cropped region from source to fill the entire canvas
+        ctx.drawImage(
+          frameData.canvas,
+          sourceX,  // sx: source x
+          sourceY,  // sy: source y 
+          cropParameters.width,   // sw: source width
+          cropParameters.height,  // sh: source height
+          0,        // dx: destination x
+          0,        // dy: destination y
+          canvas.width,   // dw: destination width  
+          canvas.height   // dh: destination height
+        );
+      } else {
+        // No crop - apply offsets if they exist, otherwise draw at origin
+        const offsetX = offsets?.left?.x || offsets?.right?.x || 0;
+        const offsetY = offsets?.left?.y || offsets?.right?.y || 0;
+        
+        ctx.drawImage(frameData.canvas, offsetX, offsetY);
+      }
 
       frameIndex = (frameIndex + 1) % frames.length;
 
@@ -98,10 +132,42 @@ export const generateVideo = async (options: VideoGeneratorOptions): Promise<Blo
 };
 
 export const downloadVideo = (videoUrl: string, filename: string = "wigglegram.mp4"): void => {
-  if (!videoUrl) return;
+  if (!videoUrl) {
+    console.error('No video URL provided for download');
+    return;
+  }
 
-  const link = document.createElement("a");
-  link.href = videoUrl;
-  link.download = filename;
-  link.click();
+  try {
+    // Create download link with proper attributes
+    const link = document.createElement("a");
+    link.href = videoUrl;
+    link.download = filename;
+    link.style.display = 'none';
+    
+    // Add to DOM temporarily for better browser support
+    document.body.appendChild(link);
+    
+    // Trigger download
+    link.click();
+    
+    // Clean up
+    setTimeout(() => {
+      document.body.removeChild(link);
+    }, 100);
+    
+    console.log('Video download initiated:', filename);
+  } catch (error) {
+    console.error('Error downloading video:', error);
+    
+    // Fallback: try opening in new window
+    try {
+      const newWindow = window.open(videoUrl, '_blank');
+      if (!newWindow) {
+        alert('Please allow popups to download the video, or right-click the video and select "Save video as..."');
+      }
+    } catch (fallbackError) {
+      console.error('Fallback download also failed:', fallbackError);
+      alert('Download failed. Please right-click the video and select "Save video as..."');
+    }
+  }
 };

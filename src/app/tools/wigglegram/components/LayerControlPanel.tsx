@@ -1,35 +1,61 @@
 "use client";
 
-import { LayerControlPanelProps } from "../types/wigglegram";
+import { useState, useEffect } from "react";
+import {
+  LayerControlPanelProps,
+  LayerState,
+  DragLayer,
+} from "../types/wigglegram";
 import { Button } from "@/components/ui/button";
 
 export const LayerControlPanel = ({
-  layerVisibility,
-  layerLocked,
-  selectedLayer,
   alignmentOffsets,
-  onLayerVisibilityChange,
-  onLayerLockedChange,
-  onSelectedLayerChange,
+  onLayerStateChange,
   onResetAlignment,
   onResetAllLayers,
 }: LayerControlPanelProps) => {
+  // Internal layer state management
+  const [layerVisibility, setLayerVisibility] = useState<LayerState>({
+    left: true,
+    right: true,
+  });
+  const [layerLocked, setLayerLocked] = useState<LayerState>({
+    left: false,
+    right: false,
+  });
+  const [selectedLayer, setSelectedLayer] = useState<DragLayer>(null);
+
+  // Emit state changes to parent
+  useEffect(() => {
+    onLayerStateChange?.({
+      visibility: layerVisibility,
+      locked: layerLocked,
+      selected: selectedLayer,
+    });
+  }, [layerVisibility, layerLocked, selectedLayer, onLayerStateChange]);
   const handleToggleVisibility = (layer: "left" | "right") => {
-    onLayerVisibilityChange({
+    setLayerVisibility({
       ...layerVisibility,
       [layer]: !layerVisibility[layer],
     });
   };
 
   const handleToggleLocked = (layer: "left" | "right") => {
-    onLayerLockedChange({
+    setLayerLocked({
       ...layerLocked,
       [layer]: !layerLocked[layer],
     });
   };
 
   const handleSelectLayer = (layer: "left" | "right") => {
-    onSelectedLayerChange(selectedLayer === layer ? null : layer);
+    setSelectedLayer(selectedLayer === layer ? null : layer);
+  };
+
+  const handleResetAllLayers = () => {
+    setLayerVisibility({ left: true, right: true });
+    setLayerLocked({ left: false, right: false });
+    setSelectedLayer(null);
+    onResetAllLayers?.();
   };
 
   return (
@@ -135,7 +161,7 @@ export const LayerControlPanel = ({
           Reset Alignment
         </Button>
         <Button
-          onClick={onResetAllLayers}
+          onClick={handleResetAllLayers}
           variant="outline"
           size="sm"
           className="w-full"

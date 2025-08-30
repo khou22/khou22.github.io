@@ -1,23 +1,40 @@
 "use client";
 
-import { useCallback, useEffect } from "react";
-import { ImageAlignmentEditorProps } from "../types/wigglegram";
+import { useCallback, useEffect, useState, useRef } from "react";
+import {
+  ImageAlignmentEditorProps,
+  AlignmentOffsets,
+  DragLayer,
+} from "../types/wigglegram";
 
 export const ImageAlignmentEditor = ({
   extractedFrames,
-  baseFrameIndex,
-  alignmentOffsets,
-  isDragging,
-  dragStart,
-  layerVisibility,
-  layerLocked,
-  selectedLayer,
+  layerState,
+  onAlignmentChange,
   onBaseFrameChange,
-  onAlignmentOffsetsChange,
-  onDraggingChange,
-  onDragStartChange,
-  editorCanvasRef,
 }: ImageAlignmentEditorProps) => {
+  // Internal canvas ref
+  const editorCanvasRef = useRef<HTMLCanvasElement>(null);
+
+  // Internal alignment state management
+  const [baseFrameIndex, setBaseFrameIndex] = useState(1);
+  const [alignmentOffsets, setAlignmentOffsets] = useState<AlignmentOffsets>({
+    left: { x: 0, y: 0 },
+    right: { x: 0, y: 0 },
+  });
+  const [isDragging, setIsDragging] = useState<DragLayer>(null);
+  const [dragStart, setDragStart] = useState<{ x: number; y: number } | null>(
+    null,
+  );
+
+  // Emit changes to parent
+  useEffect(() => {
+    onAlignmentChange?.(alignmentOffsets);
+  }, [alignmentOffsets, onAlignmentChange]);
+
+  useEffect(() => {
+    onBaseFrameChange?.(baseFrameIndex);
+  }, [baseFrameIndex, onBaseFrameChange]);
   // Editor canvas drawing function
   const drawEditorCanvas = useCallback(() => {
     const canvas = editorCanvasRef.current;
@@ -38,9 +55,9 @@ export const ImageAlignmentEditor = ({
     ctx.drawImage(baseFrame.canvas, 0, 0);
 
     // Draw left frame overlay (semi-transparent)
-    if (baseFrameIndex > 0 && layerVisibility.left) {
+    if (baseFrameIndex > 0 && layerState.visibility.left) {
       const leftFrame = extractedFrames[baseFrameIndex - 1];
-      ctx.globalAlpha = selectedLayer === "left" ? 0.7 : 0.5;
+      ctx.globalAlpha = layerState.selected === "left" ? 0.7 : 0.5;
       ctx.drawImage(
         leftFrame.canvas,
         alignmentOffsets.left.x,
@@ -49,9 +66,12 @@ export const ImageAlignmentEditor = ({
     }
 
     // Draw right frame overlay (semi-transparent)
-    if (baseFrameIndex < extractedFrames.length - 1 && layerVisibility.right) {
+    if (
+      baseFrameIndex < extractedFrames.length - 1 &&
+      layerState.visibility.right
+    ) {
       const rightFrame = extractedFrames[baseFrameIndex + 1];
-      ctx.globalAlpha = selectedLayer === "right" ? 0.7 : 0.5;
+      ctx.globalAlpha = layerState.selected === "right" ? 0.7 : 0.5;
       ctx.drawImage(
         rightFrame.canvas,
         alignmentOffsets.right.x,
@@ -65,8 +85,8 @@ export const ImageAlignmentEditor = ({
     extractedFrames,
     baseFrameIndex,
     alignmentOffsets,
-    layerVisibility,
-    selectedLayer,
+    layerState.visibility,
+    layerState.selected,
     editorCanvasRef,
   ]);
 
@@ -91,15 +111,15 @@ export const ImageAlignmentEditor = ({
       // Check if click is within left frame bounds
       if (
         leftFrame &&
-        layerVisibility.left &&
-        !layerLocked.left &&
+        layerState.visibility.left &&
+        !layerState.locked.left &&
         x >= alignmentOffsets.left.x &&
         x <= alignmentOffsets.left.x + leftFrame.canvas.width &&
         y >= alignmentOffsets.left.y &&
         y <= alignmentOffsets.left.y + leftFrame.canvas.height
       ) {
-        onDraggingChange("left");
-        onDragStartChange({
+        setIsDragging("left");
+        setDragStart({
           x: x - alignmentOffsets.left.x,
           y: y - alignmentOffsets.left.y,
         });
@@ -107,15 +127,15 @@ export const ImageAlignmentEditor = ({
       // Check if click is within right frame bounds
       else if (
         rightFrame &&
-        layerVisibility.right &&
-        !layerLocked.right &&
+        layerState.visibility.right &&
+        !layerState.locked.right &&
         x >= alignmentOffsets.right.x &&
         x <= alignmentOffsets.right.x + rightFrame.canvas.width &&
         y >= alignmentOffsets.right.y &&
         y <= alignmentOffsets.right.y + rightFrame.canvas.height
       ) {
-        onDraggingChange("right");
-        onDragStartChange({
+        setIsDragging("right");
+        setDragStart({
           x: x - alignmentOffsets.right.x,
           y: y - alignmentOffsets.right.y,
         });
@@ -125,10 +145,10 @@ export const ImageAlignmentEditor = ({
       extractedFrames,
       baseFrameIndex,
       alignmentOffsets,
-      layerVisibility,
-      layerLocked,
-      onDraggingChange,
-      onDragStartChange,
+      layerState.visibility,
+      layerState.locked,
+      setIsDragging,
+      setDragStart,
       editorCanvasRef,
     ],
   );
@@ -165,7 +185,7 @@ export const ImageAlignmentEditor = ({
         Math.min(maxY + frame.canvas.height - 50, newY),
       );
 
-      onAlignmentOffsetsChange({
+      setAlignmentOffsets({
         ...alignmentOffsets,
         [isDragging]: { x: constrainedX, y: constrainedY },
       });
@@ -176,15 +196,15 @@ export const ImageAlignmentEditor = ({
       extractedFrames,
       baseFrameIndex,
       alignmentOffsets,
-      onAlignmentOffsetsChange,
+      setAlignmentOffsets,
       editorCanvasRef,
     ],
   );
 
   const handleMouseUp = useCallback(() => {
-    onDraggingChange(null);
-    onDragStartChange(null);
-  }, [onDraggingChange, onDragStartChange]);
+    setIsDragging(null);
+    setDragStart(null);
+  }, []);
 
   // Touch event handlers for mobile support
   const handleTouchStart = useCallback(
@@ -208,29 +228,29 @@ export const ImageAlignmentEditor = ({
 
       if (
         leftFrame &&
-        layerVisibility.left &&
-        !layerLocked.left &&
+        layerState.visibility.left &&
+        !layerState.locked.left &&
         x >= alignmentOffsets.left.x &&
         x <= alignmentOffsets.left.x + leftFrame.canvas.width &&
         y >= alignmentOffsets.left.y &&
         y <= alignmentOffsets.left.y + leftFrame.canvas.height
       ) {
-        onDraggingChange("left");
-        onDragStartChange({
+        setIsDragging("left");
+        setDragStart({
           x: x - alignmentOffsets.left.x,
           y: y - alignmentOffsets.left.y,
         });
       } else if (
         rightFrame &&
-        layerVisibility.right &&
-        !layerLocked.right &&
+        layerState.visibility.right &&
+        !layerState.locked.right &&
         x >= alignmentOffsets.right.x &&
         x <= alignmentOffsets.right.x + rightFrame.canvas.width &&
         y >= alignmentOffsets.right.y &&
         y <= alignmentOffsets.right.y + rightFrame.canvas.height
       ) {
-        onDraggingChange("right");
-        onDragStartChange({
+        setIsDragging("right");
+        setDragStart({
           x: x - alignmentOffsets.right.x,
           y: y - alignmentOffsets.right.y,
         });
@@ -240,10 +260,10 @@ export const ImageAlignmentEditor = ({
       extractedFrames,
       baseFrameIndex,
       alignmentOffsets,
-      layerVisibility,
-      layerLocked,
-      onDraggingChange,
-      onDragStartChange,
+      layerState.visibility,
+      layerState.locked,
+      setIsDragging,
+      setDragStart,
       editorCanvasRef,
     ],
   );
@@ -281,7 +301,7 @@ export const ImageAlignmentEditor = ({
         Math.min(maxY + frame.canvas.height - 50, newY),
       );
 
-      onAlignmentOffsetsChange({
+      setAlignmentOffsets({
         ...alignmentOffsets,
         [isDragging]: { x: constrainedX, y: constrainedY },
       });
@@ -292,15 +312,15 @@ export const ImageAlignmentEditor = ({
       extractedFrames,
       baseFrameIndex,
       alignmentOffsets,
-      onAlignmentOffsetsChange,
+      setAlignmentOffsets,
       editorCanvasRef,
     ],
   );
 
   const handleTouchEnd = useCallback(() => {
-    onDraggingChange(null);
-    onDragStartChange(null);
-  }, [onDraggingChange, onDragStartChange]);
+    setIsDragging(null);
+    setDragStart(null);
+  }, [setIsDragging, setDragStart]);
 
   // Effect to redraw canvas when relevant state changes
   useEffect(() => {
@@ -318,7 +338,7 @@ export const ImageAlignmentEditor = ({
             </label>
             <select
               value={baseFrameIndex}
-              onChange={(e) => onBaseFrameChange(parseInt(e.target.value))}
+              onChange={(e) => onBaseFrameChange?.(parseInt(e.target.value))}
               className="rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             >
               {extractedFrames.map((_, index) => (

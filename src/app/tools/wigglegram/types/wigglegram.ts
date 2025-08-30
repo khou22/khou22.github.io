@@ -33,41 +33,62 @@ export interface SimpleFrameEditorProps {
 }
 
 export interface ImageAlignmentEditorProps {
+  // External data needed for rendering
   extractedFrames: ExtractedFrame[];
-  baseFrameIndex: number;
-  alignmentOffsets: AlignmentOffsets;
-  isDragging: DragLayer;
-  dragStart: { x: number; y: number } | null;
-  layerVisibility: LayerState;
-  layerLocked: LayerState;
-  selectedLayer: DragLayer;
-  onBaseFrameChange: (index: number) => void;
-  onAlignmentOffsetsChange: (offsets: AlignmentOffsets) => void;
-  onDraggingChange: (layer: DragLayer) => void;
-  onDragStartChange: (start: { x: number; y: number } | null) => void;
-  editorCanvasRef: React.RefObject<HTMLCanvasElement>;
+  
+  // Layer state from LayerControlPanel
+  layerState: {
+    visibility: LayerState;
+    locked: LayerState;
+    selected: DragLayer;
+  };
+  
+  // Callbacks to parent
+  onAlignmentChange?: (offsets: AlignmentOffsets) => void;
+  onBaseFrameChange?: (index: number) => void;
 }
 
 export interface LayerControlPanelProps {
-  layerVisibility: LayerState;
-  layerLocked: LayerState;
-  selectedLayer: DragLayer;
+  // Read-only data for display
   alignmentOffsets: AlignmentOffsets;
-  onLayerVisibilityChange: (visibility: LayerState) => void;
-  onLayerLockedChange: (locked: LayerState) => void;
-  onSelectedLayerChange: (layer: DragLayer) => void;
-  onResetAlignment: () => void;
-  onResetAllLayers: () => void;
+  
+  // Callbacks to parent
+  onLayerStateChange?: (state: {
+    visibility: LayerState;
+    locked: LayerState;
+    selected: DragLayer;
+  }) => void;
+  onResetAlignment?: () => void;
+  onResetAllLayers?: () => void;
+}
+
+export interface CropParameters {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
+export interface VideoCropSelectorProps {
+  videoElement: HTMLVideoElement;
+  onCropChange: (crop: CropParameters) => void;
+  initialCrop?: CropParameters;
 }
 
 export interface VideoPreviewProps {
-  previewVideo: string | null;
-  isGenerating: boolean;
-  progress: number;
-  progressMessage: string;
-  errorMessage: string | null;
-  onGenerateVideo: () => void;
-  onDownloadVideo: () => void;
+  // Data needed for video generation
+  extractedFrames: ExtractedFrame[];
+  animationSpeed: number;
+  alignmentOffsets: AlignmentOffsets;
+  isEditorMode: boolean;
+  baseFrameIndex: number;
+  
+  // External crop state coordination
+  cropParameters?: CropParameters | null;
+  onCropParametersChange?: (crop: CropParameters | null) => void;
+  
+  // Callbacks to parent
+  onVideoGenerated?: (videoUrl: string) => void;
 }
 
 export interface VideoGeneratorOptions {
@@ -76,5 +97,6 @@ export interface VideoGeneratorOptions {
     offsets: AlignmentOffsets;
   }[]
   animationSpeed: number;
+  cropParameters?: CropParameters;
   onProgress: (progress: number, message: string) => void;
 }
