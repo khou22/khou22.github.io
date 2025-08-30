@@ -31,6 +31,9 @@ const ToolsPage = () => {
             Password Generator
           </CustomLink>
         </li>
+        <li>
+          <CustomLink href={PAGES.TOOLS.WIGGLEGRAM}>Wigglegram Tool</CustomLink>
+        </li>
       </ul>
     </PageWrapper>
   );
