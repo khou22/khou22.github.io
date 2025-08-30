@@ -42,6 +42,54 @@ const initFFmpeg = async (
   return ffmpeg;
 };
 
+// Helper function to calculate overlapping area of all frames
+const calculateOverlappingArea = (
+  frames: VideoGeneratorOptions["frames"],
+): { x: number; y: number; width: number; height: number } => {
+  if (frames.length === 0) {
+    throw new Error("No frames to calculate overlap");
+  }
+
+  const firstFrame = frames[0].data;
+  const baseWidth = firstFrame.canvas.width;
+  const baseHeight = firstFrame.canvas.height;
+
+  // Start with the full area of the first frame
+  let minX = 0;
+  let minY = 0;
+  let maxX = baseWidth;
+  let maxY = baseHeight;
+
+  // For each frame, calculate its effective bounds considering offsets
+  frames.forEach(({ offsets }) => {
+    const offsetX = offsets?.left?.x || offsets?.right?.x || 0;
+    const offsetY = offsets?.left?.y || offsets?.right?.y || 0;
+
+    // Frame bounds with offset applied
+    const frameMinX = offsetX;
+    const frameMinY = offsetY;
+    const frameMaxX = offsetX + baseWidth;
+    const frameMaxY = offsetY + baseHeight;
+
+    // Find intersection (overlapping area)
+    minX = Math.max(minX, frameMinX);
+    minY = Math.max(minY, frameMinY);
+    maxX = Math.min(maxX, frameMaxX);
+    maxY = Math.min(maxY, frameMaxY);
+  });
+
+  // Ensure we have a valid overlapping area
+  const width = Math.max(0, maxX - minX);
+  const height = Math.max(0, maxY - minY);
+
+  if (width === 0 || height === 0) {
+    // Fallback to original frame size if no overlap
+    return { x: 0, y: 0, width: baseWidth, height: baseHeight };
+  }
+
+  return { x: minX, y: minY, width, height };
+};
+
 export const generateVideo = async (
   options: VideoGeneratorOptions,
 ): Promise<Blob> => {
@@ -59,15 +107,18 @@ export const generateVideo = async (
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d")!;
 
-    // Calculate canvas size
-    const firstFrame = frames[0].data;
-    let canvasWidth, canvasHeight;
+    // Calculate canvas size - prioritize user crop, then auto-calculate overlap
+    let canvasWidth, canvasHeight, cropArea;
     if (cropParameters) {
       canvasWidth = cropParameters.width;
       canvasHeight = cropParameters.height;
+      cropArea = cropParameters;
     } else {
-      canvasWidth = firstFrame.canvas.width;
-      canvasHeight = firstFrame.canvas.height;
+      // Auto-calculate overlapping area to eliminate background gaps
+      onProgress(5, "Calculating overlapping area...");
+      cropArea = calculateOverlappingArea(frames);
+      canvasWidth = cropArea.width;
+      canvasHeight = cropArea.height;
     }
 
     // Ensure even dimensions for better codec compatibility
@@ -85,28 +136,26 @@ export const generateVideo = async (
       const currentFrame = frames[i];
       const { data: frameData, offsets } = currentFrame;
 
-      if (cropParameters) {
-        const offsetX = offsets?.left?.x || offsets?.right?.x || 0;
-        const offsetY = offsets?.left?.y || offsets?.right?.y || 0;
-        const sourceX = cropParameters.x - offsetX;
-        const sourceY = cropParameters.y - offsetY;
+      // Apply frame offset
+      const offsetX = offsets?.left?.x || offsets?.right?.x || 0;
+      const offsetY = offsets?.left?.y || offsets?.right?.y || 0;
 
-        ctx.drawImage(
-          frameData.canvas,
-          sourceX,
-          sourceY,
-          cropParameters.width,
-          cropParameters.height,
-          0,
-          0,
-          canvas.width,
-          canvas.height,
-        );
-      } else {
-        const offsetX = offsets?.left?.x || offsets?.right?.x || 0;
-        const offsetY = offsets?.left?.y || offsets?.right?.y || 0;
-        ctx.drawImage(frameData.canvas, offsetX, offsetY);
-      }
+      // Calculate source coordinates relative to the frame's offset position
+      const sourceX = cropArea.x - offsetX;
+      const sourceY = cropArea.y - offsetY;
+
+      // Draw the cropped area from the frame to fill the entire canvas
+      ctx.drawImage(
+        frameData.canvas,
+        sourceX,
+        sourceY,
+        cropArea.width,
+        cropArea.height,
+        0,
+        0,
+        canvas.width,
+        canvas.height,
+      );
 
       // Convert canvas to blob and write to FFmpeg
       const blob = await new Promise<Blob>((resolve) => {
