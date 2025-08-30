@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { VideoCropSelectorProps, CropParameters } from "../types/wigglegram";
+import { VideoCropSelectorProps, CropParameters } from "./types";
 
 export const VideoCropSelector = ({
   videoElement,

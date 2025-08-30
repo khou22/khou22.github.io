@@ -1,11 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  LayerControlPanelProps,
-  LayerState,
-  DragLayer,
-} from "../types/wigglegram";
+import { LayerControlPanelProps, LayerState, DragLayer } from "./types";
 import { Button } from "@/components/ui/button";
 
 export const LayerControlPanel = ({

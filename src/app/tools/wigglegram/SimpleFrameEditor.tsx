@@ -1,6 +1,6 @@
 "use client";
 
-import { SimpleFrameEditorProps } from "../types/wigglegram";
+import { SimpleFrameEditorProps } from "./types";
 import { Button } from "@/components/ui/button";
 
 export const SimpleFrameEditor = ({

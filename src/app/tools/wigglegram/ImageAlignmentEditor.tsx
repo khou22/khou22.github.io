@@ -5,7 +5,7 @@ import {
   ImageAlignmentEditorProps,
   AlignmentOffsets,
   DragLayer,
-} from "../types/wigglegram";
+} from "./types";
 
 export const ImageAlignmentEditor = ({
   extractedFrames,

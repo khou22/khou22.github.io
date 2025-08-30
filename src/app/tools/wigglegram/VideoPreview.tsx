@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
-import { VideoPreviewProps } from "../types/wigglegram";
-import { generateVideo, downloadVideo } from "../utils/videoGenerator";
+import { VideoPreviewProps } from "./types";
+import { generateVideo, downloadVideo } from "./videoGenerator";
 import { VideoCropSelector } from "./VideoCropSelector";
 import { Button } from "@/components/ui/button";
 
@@ -14,13 +14,13 @@ export const VideoPreview = ({
   baseFrameIndex,
   cropParameters,
   onCropParametersChange,
-  onVideoGenerated,
 }: VideoPreviewProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showCropSelector, setShowCropSelector] = useState(false);
 
   // Internal state for video generation
   const [previewVideo, setPreviewVideo] = useState<string | null>(null);
+  const [videoBlob, setVideoBlob] = useState<Blob | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [progress, setProgress] = useState(0);
   const [progressMessage, setProgressMessage] = useState("");
@@ -91,7 +91,7 @@ export const VideoPreview = ({
       // Create video URL from blob and set preview
       const videoUrl = URL.createObjectURL(blob);
       setPreviewVideo(videoUrl);
-      onVideoGenerated?.(videoUrl);
+      setVideoBlob(blob);
 
       setTimeout(() => {
         setIsGenerating(false);
@@ -116,7 +116,6 @@ export const VideoPreview = ({
     baseFrameIndex,
     alignmentOffsets,
     cropParameters,
-    onVideoGenerated,
   ]);
 
   const handleRegenerateWithCrop = useCallback(async () => {
@@ -129,8 +128,8 @@ export const VideoPreview = ({
 
   const handleDownloadVideo = useCallback(() => {
     if (!previewVideo) return;
-    downloadVideo(previewVideo);
-  }, [previewVideo]);
+    downloadVideo(previewVideo, videoBlob || undefined);
+  }, [previewVideo, videoBlob]);
   return (
     <div className="w-full space-y-6">
       {/* Generate Video Section */}
@@ -196,6 +195,7 @@ export const VideoPreview = ({
           <div className="flex justify-center">
             <div className="relative inline-block">
               <video
+                autoPlay
                 ref={videoRef}
                 src={previewVideo}
                 controls={!showCropSelector}

@@ -35,14 +35,14 @@ export interface SimpleFrameEditorProps {
 export interface ImageAlignmentEditorProps {
   // External data needed for rendering
   extractedFrames: ExtractedFrame[];
-  
+
   // Layer state from LayerControlPanel
   layerState: {
     visibility: LayerState;
     locked: LayerState;
     selected: DragLayer;
   };
-  
+
   // Callbacks to parent
   onAlignmentChange?: (offsets: AlignmentOffsets) => void;
   onBaseFrameChange?: (index: number) => void;
@@ -51,7 +51,7 @@ export interface ImageAlignmentEditorProps {
 export interface LayerControlPanelProps {
   // Read-only data for display
   alignmentOffsets: AlignmentOffsets;
-  
+
   // Callbacks to parent
   onLayerStateChange?: (state: {
     visibility: LayerState;
@@ -82,20 +82,17 @@ export interface VideoPreviewProps {
   alignmentOffsets: AlignmentOffsets;
   isEditorMode: boolean;
   baseFrameIndex: number;
-  
+
   // External crop state coordination
   cropParameters?: CropParameters | null;
   onCropParametersChange?: (crop: CropParameters | null) => void;
-  
-  // Callbacks to parent
-  onVideoGenerated?: (videoUrl: string) => void;
 }
 
 export interface VideoGeneratorOptions {
   frames: {
     data: ExtractedFrame;
     offsets: AlignmentOffsets;
-  }[]
+  }[];
   animationSpeed: number;
   cropParameters?: CropParameters;
   onProgress: (progress: number, message: string) => void;

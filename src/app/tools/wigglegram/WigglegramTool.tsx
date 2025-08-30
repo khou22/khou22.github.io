@@ -9,13 +9,13 @@ import {
   DragLayer,
   FrameArrangement,
   CropParameters,
-} from "./types/wigglegram";
+} from "./types";
 
 // Import components and utilities
-import { VideoPreview } from "./components/VideoPreview";
-import { SimpleFrameEditor } from "./components/SimpleFrameEditor";
-import { ImageAlignmentEditor } from "./components/ImageAlignmentEditor";
-import { LayerControlPanel } from "./components/LayerControlPanel";
+import { VideoPreview } from "./VideoPreview";
+import { SimpleFrameEditor } from "./SimpleFrameEditor";
+import { ImageAlignmentEditor } from "./ImageAlignmentEditor";
+import { LayerControlPanel } from "./LayerControlPanel";
 
 // Import external dependencies
 import { Button } from "@/components/ui/button";
@@ -32,7 +32,6 @@ export const WigglegramTool = () => {
     useState<FrameArrangement>("horizontal");
   const [animationSpeed, setAnimationSpeed] = useState(200);
   const [isDragOver, setIsDragOver] = useState(false);
-  const [previewVideo, setPreviewVideo] = useState<string | null>(null);
 
   // Alignment editor state (simplified - most state now managed by ImageAlignmentEditor)
   const [isEditorMode, setIsEditorMode] = useState(false);
@@ -186,7 +185,6 @@ export const WigglegramTool = () => {
   const handleSettingsChange = useCallback(() => {
     if (originalImage) {
       extractFrames(originalImage);
-      setPreviewVideo(null);
       resetAlignmentOffsets();
     }
   }, [originalImage, extractFrames, resetAlignmentOffsets]);
@@ -286,7 +284,6 @@ export const WigglegramTool = () => {
                 baseFrameIndex={baseFrameIndex}
                 cropParameters={cropParameters}
                 onCropParametersChange={setCropParameters}
-                onVideoGenerated={setPreviewVideo}
               />
             </>
           )}
