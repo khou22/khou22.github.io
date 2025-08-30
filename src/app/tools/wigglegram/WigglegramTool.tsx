@@ -21,17 +21,23 @@ import { LayerControlPanel } from "./LayerControlPanel";
 import { Button } from "@/components/ui/button";
 import { classNames } from "@/utils/style";
 
+const DEFAULT_ANIMATION_SPEED = 150;
+const DEFAULT_NUM_FRAMES = 3;
+const DEFAULT_FRAME_ARRANGEMENT = "horizontal";
+const DEFAULT_REPEAT_COUNT = 2;
+
 export const WigglegramTool = () => {
   const fileUploadRef = useRef<HTMLInputElement>(null);
   const [originalImage, setOriginalImage] = useState<HTMLImageElement | null>(
     null,
   );
   const [extractedFrames, setExtractedFrames] = useState<ExtractedFrame[]>([]);
-  const [numFrames, setNumFrames] = useState(3);
-  const [frameArrangement, setFrameArrangement] =
-    useState<FrameArrangement>("horizontal");
-  const [animationSpeed, setAnimationSpeed] = useState(200);
-  const [repeatCount, setRepeatCount] = useState(1);
+  const [numFrames, setNumFrames] = useState(DEFAULT_NUM_FRAMES);
+  const [frameArrangement, setFrameArrangement] = useState<FrameArrangement>(
+    DEFAULT_FRAME_ARRANGEMENT,
+  );
+  const [animationSpeed, setAnimationSpeed] = useState(DEFAULT_ANIMATION_SPEED);
+  const [repeatCount, setRepeatCount] = useState(DEFAULT_REPEAT_COUNT);
   const [isDragOver, setIsDragOver] = useState(false);
 
   // Alignment editor state (simplified - most state now managed by ImageAlignmentEditor)

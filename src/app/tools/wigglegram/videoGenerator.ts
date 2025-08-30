@@ -11,7 +11,7 @@ const initFFmpeg = async (
     return ffmpegInstance;
   }
 
-  onProgress(5, "Loading FFmpeg...");
+  onProgress(2, "Loading FFmpeg...");
 
   const ffmpeg = new FFmpeg();
 
@@ -20,16 +20,7 @@ const initFFmpeg = async (
     console.log("FFmpeg:", message);
   });
 
-  ffmpeg.on("progress", ({ progress, time }) => {
-    if (progress > 0) {
-      const progressPercent = Math.round(progress * 100);
-      const timeStr = time ? ` (${Math.round(time / 1000000)}s)` : "";
-      onProgress(
-        80 + progress * 15,
-        `Encoding video... ${progressPercent}%${timeStr}`,
-      );
-    }
-  });
+  // Note: FFmpeg progress events are handled per-execution, not globally
 
   const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd";
 
@@ -39,7 +30,7 @@ const initFFmpeg = async (
   });
 
   ffmpegInstance = ffmpeg;
-  onProgress(20, "FFmpeg loaded successfully");
+  onProgress(10, "FFmpeg loaded successfully");
 
   return ffmpeg;
 };
@@ -123,7 +114,7 @@ export const generateVideo = async (
       cropArea = cropParameters;
     } else {
       // Auto-calculate overlapping area to eliminate background gaps
-      onProgress(5, "Calculating overlapping area...");
+      onProgress(12, "Calculating overlapping area...");
       cropArea = calculateOverlappingArea(frames);
       canvasWidth = cropArea.width;
       canvasHeight = cropArea.height;
@@ -133,7 +124,7 @@ export const generateVideo = async (
     canvas.width = Math.ceil(canvasWidth / 2) * 2;
     canvas.height = Math.ceil(canvasHeight / 2) * 2;
 
-    onProgress(25, "Processing frames...");
+    onProgress(15, "Processing frames...");
 
     // Create snake animation sequence (forward then backward for each repeat)
     const animationSequence: number[] = [];
@@ -152,7 +143,7 @@ export const generateVideo = async (
     for (let seqIndex = 0; seqIndex < animationSequence.length; seqIndex++) {
       const frameIndex = animationSequence[seqIndex];
       const i = seqIndex; // Use sequence index for file naming
-      const progress = 25 + (seqIndex / animationSequence.length) * 40;
+      const progress = 15 + (seqIndex / animationSequence.length) * 35;
       onProgress(
         progress,
         `Processing frame ${seqIndex + 1}/${animationSequence.length}...`,
@@ -192,63 +183,35 @@ export const generateVideo = async (
       await ffmpeg.writeFile(frameFileName, await fetchFile(blob));
     }
 
-    onProgress(70, "Starting video encoding...");
+    onProgress(50, "Starting video encoding...");
 
     // Calculate frame rate from animation speed
     const fps = Math.max(5, Math.min(30, 1000 / animationSpeed));
 
-    // Set up FFmpeg progress tracking for this specific encoding job
-    const encodingProgressHandler = ({
-      progress,
-      time,
-    }: {
-      progress: number;
-      time?: number;
-    }) => {
-      if (progress > 0) {
-        const progressPercent = Math.round(progress * 100);
-        const timeStr = time
-          ? ` (${Math.round(time / 1000000)}s processed)`
-          : "";
-        onProgress(
-          70 + progress * 25, // Map FFmpeg progress (0-1) to our range (70-95)
-          `Encoding video... ${progressPercent}%${timeStr}`,
-        );
-      }
-    };
-
-    // Add temporary progress handler for this encoding
-    ffmpeg.on("progress", encodingProgressHandler);
-
-    try {
-      // Create MP4 video using FFmpeg with iOS Safari compatibility
-      await ffmpeg.exec([
-        "-framerate",
-        fps.toString(),
-        "-i",
-        "frame%03d.png",
-        "-c:v",
-        "libx264",
-        "-profile:v",
-        "main",
-        "-level",
-        "3.1",
-        "-pix_fmt",
-        "yuv420p",
-        "-crf",
-        "23",
-        "-preset",
-        "medium",
-        "-movflags",
-        "+faststart",
-        "-f",
-        "mp4",
-        "output.mp4",
-      ]);
-    } finally {
-      // Remove the temporary progress handler
-      ffmpeg.off("progress", encodingProgressHandler);
-    }
+    // Create MP4 video using FFmpeg with iOS Safari compatibility
+    await ffmpeg.exec([
+      "-framerate",
+      fps.toString(),
+      "-i",
+      "frame%03d.png",
+      "-c:v",
+      "libx264",
+      "-profile:v",
+      "main",
+      "-level",
+      "3.1",
+      "-pix_fmt",
+      "yuv420p",
+      "-crf",
+      "23",
+      "-preset",
+      "medium",
+      "-movflags",
+      "+faststart",
+      "-f",
+      "mp4",
+      "output.mp4",
+    ]);
 
     onProgress(95, "Finalizing video...");
 
