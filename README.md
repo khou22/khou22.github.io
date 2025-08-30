@@ -45,8 +45,8 @@ gray: #9DB7C1
 I created helper scrips to compress images and create thumbnails. I use these when uploading new photos:
 
 ```sh
-# Compress images.
-pnpm clean-images --max_kb 2100 --no-dry-run
+# Compress images. Add a small buffer so borderline files are skipped.
+pnpm clean-images --max_kb 2100 --buffer_kb 100 --no-dry-run
 
 # Update Typescript objects.
 pnpm generate:assets
@@ -63,4 +63,4 @@ Then you can go to the [admin page](http://localhost:3000/admin/photos) and set 
 ### To Do
 
 - [ ] Add a whitelist of blog images that don't need to be compressed. (ie. `docs/media/blog/images/mintlify-feature/mintlify-founder-mode-blog-post.jpeg`)
-- [ ] Add a buffer to the clean image script so that we don't repeatedly compress the same images that are borderline.
+- [x] Add a buffer to the clean image script so that we don't repeatedly compress the same images that are borderline.
