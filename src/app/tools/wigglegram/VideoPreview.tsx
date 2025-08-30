@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 export const VideoPreview = ({
   extractedFrames,
   animationSpeed,
+  repeatCount,
   alignmentOffsets,
   isEditorMode,
   baseFrameIndex,
@@ -81,6 +82,7 @@ export const VideoPreview = ({
       const blob = await generateVideo({
         frames,
         animationSpeed,
+        repeatCount,
         cropParameters: cropParameters || undefined,
         onProgress: (progress, message) => {
           setProgress(progress);
@@ -112,6 +114,7 @@ export const VideoPreview = ({
   }, [
     extractedFrames,
     animationSpeed,
+    repeatCount,
     isEditorMode,
     baseFrameIndex,
     alignmentOffsets,

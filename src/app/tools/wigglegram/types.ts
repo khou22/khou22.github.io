@@ -25,9 +25,11 @@ export interface SimpleFrameEditorProps {
   numFrames: number;
   frameArrangement: FrameArrangement;
   animationSpeed: number;
+  repeatCount: number;
   onNumFramesChange: (value: number) => void;
   onFrameArrangementChange: (value: FrameArrangement) => void;
   onAnimationSpeedChange: (value: number) => void;
+  onRepeatCountChange: (value: number) => void;
   onModeToggle: (isEditorMode: boolean) => void;
   isEditorMode: boolean;
 }
@@ -79,6 +81,7 @@ export interface VideoPreviewProps {
   // Data needed for video generation
   extractedFrames: ExtractedFrame[];
   animationSpeed: number;
+  repeatCount: number;
   alignmentOffsets: AlignmentOffsets;
   isEditorMode: boolean;
   baseFrameIndex: number;
@@ -94,6 +97,7 @@ export interface VideoGeneratorOptions {
     offsets: AlignmentOffsets;
   }[];
   animationSpeed: number;
+  repeatCount: number;
   cropParameters?: CropParameters;
   onProgress: (progress: number, message: string) => void;
 }

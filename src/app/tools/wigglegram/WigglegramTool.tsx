@@ -31,6 +31,7 @@ export const WigglegramTool = () => {
   const [frameArrangement, setFrameArrangement] =
     useState<FrameArrangement>("horizontal");
   const [animationSpeed, setAnimationSpeed] = useState(200);
+  const [repeatCount, setRepeatCount] = useState(1);
   const [isDragOver, setIsDragOver] = useState(false);
 
   // Alignment editor state (simplified - most state now managed by ImageAlignmentEditor)
@@ -249,6 +250,8 @@ export const WigglegramTool = () => {
               setTimeout(handleSettingsChange, 0);
             }}
             onAnimationSpeedChange={setAnimationSpeed}
+            repeatCount={repeatCount}
+            onRepeatCountChange={setRepeatCount}
             onModeToggle={setIsEditorMode}
             isEditorMode={isEditorMode}
           />
@@ -279,6 +282,7 @@ export const WigglegramTool = () => {
               <VideoPreview
                 extractedFrames={extractedFrames}
                 animationSpeed={animationSpeed}
+                repeatCount={repeatCount}
                 alignmentOffsets={alignmentOffsets}
                 isEditorMode={isEditorMode}
                 baseFrameIndex={baseFrameIndex}
