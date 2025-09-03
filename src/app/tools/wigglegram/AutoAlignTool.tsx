@@ -24,11 +24,13 @@ export const AutoAlignTool = ({
   useEffect(() => {
     const canvas = canvasRef.current;
     if (canvas && !box) {
+      const rect = canvas.getBoundingClientRect();
+      const size = Math.min(rect.width, rect.height) * 0.25;
       setBox({
-        x: canvas.width * 0.25,
-        y: canvas.height * 0.25,
-        width: canvas.width * 0.5,
-        height: canvas.height * 0.5,
+        x: (rect.width - size) / 2,
+        y: (rect.height - size) / 2,
+        width: size,
+        height: size,
       });
     }
   }, [canvasRef, box]);
@@ -36,26 +38,38 @@ export const AutoAlignTool = ({
   if (!box) return null;
 
   const handleAlign = async () => {
+    const canvasEl = canvasRef.current;
     const base = extractedFrames[baseFrameIndex];
-    if (!base) return;
+    if (!canvasEl || !base) return;
+
+    const rect = canvasEl.getBoundingClientRect();
+    const scaleX = base.canvas.width / rect.width;
+    const scaleY = base.canvas.height / rect.height;
+    const scaledBox: BoundingBox = {
+      x: Math.round(box.x * scaleX),
+      y: Math.round(box.y * scaleY),
+      width: Math.round(box.width * scaleX),
+      height: Math.round(box.height * scaleY),
+    };
+
     const newOffsets: AlignmentOffsets = {
       left: { x: 0, y: 0 },
       right: { x: 0, y: 0 },
     };
     const leftFrame = extractedFrames[baseFrameIndex - 1];
     if (leftFrame) {
-      newOffsets.left = await autoAlign(base.canvas, leftFrame.canvas, box);
+      newOffsets.left = await autoAlign(base.canvas, leftFrame.canvas, scaledBox);
     }
     const rightFrame = extractedFrames[baseFrameIndex + 1];
     if (rightFrame) {
-      newOffsets.right = await autoAlign(base.canvas, rightFrame.canvas, box);
+      newOffsets.right = await autoAlign(base.canvas, rightFrame.canvas, scaledBox);
     }
     onAlignment(newOffsets);
   };
 
   const canvas = canvasRef.current;
-  const width = canvas?.width || 0;
-  const height = canvas?.height || 0;
+  const width = canvas?.clientWidth || 0;
+  const height = canvas?.clientHeight || 0;
 
   return (
     <>
