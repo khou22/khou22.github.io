@@ -51,6 +51,7 @@ export const PAGES = {
     RGB_TO_OKLCH: "/tools/rgb-to-oklch",
     PASSWORD_GENERATOR: "/tools/password-generator",
     WIGGLEGRAM: "/tools/wigglegram",
+    BOUNDING_BOX: "/tools/bounding-box",
   },
   ADMIN: {
     PHOTOGRAPHY: "/admin/photos",
