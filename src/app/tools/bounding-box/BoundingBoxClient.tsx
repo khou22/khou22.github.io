@@ -42,6 +42,10 @@ export const BoundingBoxClient = ({ imageUrl }: { imageUrl: string }) => {
     setBoundingBox(null);
   };
 
+  const handleCancelSelection = () => {
+    setBoundingBox(null);
+  };
+
   return (
     <div className="relative">
       <ImageAnnotation
@@ -80,9 +84,23 @@ export const BoundingBoxClient = ({ imageUrl }: { imageUrl: string }) => {
               alt=""
             />
 
-            <Button onClick={handleCopySelection} size="sm" className="w-full">
-              Copy Selection
-            </Button>
+            <div className="flex gap-2">
+              <Button
+                onClick={handleCancelSelection}
+                size="sm"
+                variant="outline"
+                className="flex-1"
+              >
+                Cancel
+              </Button>
+              <Button
+                onClick={handleCopySelection}
+                size="sm"
+                className="flex-1"
+              >
+                Copy Selection
+              </Button>
+            </div>
           </Card>
         </>
       )}
