@@ -73,3 +73,8 @@ export const CDN_DOCUMENTS = {
     },
   },
 };
+
+// Assets stored in public folder (in almost every case images should be put in `docs/` instead of `public/`)
+export const CDN_PUBLIC = {
+  PLACEHOLDER_IMAGE: "/placeholders/placeholder_image.jpg",
+};

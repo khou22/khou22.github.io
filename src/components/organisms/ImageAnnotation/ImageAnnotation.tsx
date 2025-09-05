@@ -41,6 +41,8 @@ export const ImageAnnotation = ({
       width: finalBox.width / containerWidth,
       height: finalBox.height / containerHeight,
       imageBase64: cropImageToBase64(imgRef.current, finalBox),
+      originalWidthPx: imgRef.current.naturalWidth,
+      originalHeightPx: imgRef.current.naturalHeight,
     });
   };
 
@@ -61,7 +63,12 @@ export const ImageAnnotation = ({
       {box && (
         <div
           className="pointer-events-none absolute border-2 border-blue-500 bg-blue-500/20"
-          style={{ left: box.x, top: box.y, width: box.width, height: box.height }}
+          style={{
+            left: box.x,
+            top: box.y,
+            width: box.width,
+            height: box.height,
+          }}
         />
       )}
     </div>

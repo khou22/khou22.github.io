@@ -109,10 +109,12 @@ export const SimpleFrameEditor = ({
         <div className="mt-4 rounded-md bg-blue-50 p-3">
           <div className="flex items-center justify-between text-sm">
             <span className="font-medium text-blue-900">
-              Estimated Duration: <strong>{estimatedDuration.toFixed(1)}s</strong>
+              Estimated Duration:{" "}
+              <strong>{estimatedDuration.toFixed(1)}s</strong>
             </span>
             <span className="text-blue-700">
-              {totalFrames} frames • {repeatCount} repeat{repeatCount !== 1 ? 's' : ''}
+              {totalFrames} frames • {repeatCount} repeat
+              {repeatCount !== 1 ? "s" : ""}
             </span>
           </div>
           <p className="mt-1 text-xs text-blue-600">
