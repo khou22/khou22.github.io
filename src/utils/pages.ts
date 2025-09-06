@@ -51,6 +51,7 @@ export const PAGES = {
     RGB_TO_OKLCH: "/tools/rgb-to-oklch",
     PASSWORD_GENERATOR: "/tools/password-generator",
     WIGGLEGRAM: "/tools/wigglegram",
+    BOUNDING_BOX: "/tools/bounding-box",
   },
   ADMIN: {
     PHOTOGRAPHY: "/admin/photos",
@@ -71,4 +72,9 @@ export const CDN_DOCUMENTS = {
       "10949174": getCdnAsset("documents/patents/kevin_hou_us_10949174_pdf"),
     },
   },
+};
+
+// Assets stored in public folder (in almost every case images should be put in `docs/` instead of `public/`)
+export const CDN_PUBLIC = {
+  PLACEHOLDER_IMAGE: "/placeholders/placeholder_image.jpg",
 };

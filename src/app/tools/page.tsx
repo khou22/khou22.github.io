@@ -34,6 +34,11 @@ const ToolsPage = () => {
         <li>
           <CustomLink href={PAGES.TOOLS.WIGGLEGRAM}>Wigglegram Tool</CustomLink>
         </li>
+        <li>
+          <CustomLink href={PAGES.TOOLS.BOUNDING_BOX}>
+            Bounding Box Tool
+          </CustomLink>
+        </li>
       </ul>
     </PageWrapper>
   );
