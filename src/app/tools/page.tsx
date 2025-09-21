@@ -39,6 +39,11 @@ const ToolsPage = () => {
             Bounding Box Tool
           </CustomLink>
         </li>
+        <li>
+          <CustomLink href={PAGES.TOOLS.FLIGHT_CALENDAR}>
+            Flight Calendar Tool
+          </CustomLink>
+        </li>
       </ul>
     </PageWrapper>
   );
