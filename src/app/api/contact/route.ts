@@ -1,6 +1,6 @@
-import sgMail from "@sendgrid/mail";
 import moment from "moment";
 import { NextRequest } from "next/server";
+import { EmailServiceFactory } from "@/services/email/EmailServiceFactory";
 
 export type ContactFormRequest = {
   full_name: string;
@@ -17,17 +17,20 @@ export async function POST(request: NextRequest) {
   try {
     const body: ContactFormRequest = await request.json();
 
-    if (!process.env.SENDGRID_API_KEY) {
-      throw new Error("No Sendgrid API key found");
-    }
     if (!process.env.CONTACT_FORM_ADDRESS) {
       throw new Error("No contact form address found");
     }
 
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-    const sendgridPayload: sgMail.MailDataRequired = {
+    const emailService = EmailServiceFactory.create();
+    const emailContent = `Name: ${body.full_name}
+Email: ${body.email}
+Subject: ${body.subject}
+Sent At: ${moment().format("llll")}
+${body.timezone ? `Timezone: ${body.timezone}\n` : ""}
+${body.message}`;
+
+    await emailService.sendEmail({
       to: {
-        // Must match verified senders: https://docs.sendgrid.com/for-developers/sending-email/sender-identity
         name: "Hello Kevin",
         email: process.env.CONTACT_FORM_ADDRESS,
       },
@@ -36,19 +39,8 @@ export async function POST(request: NextRequest) {
         email: process.env.CONTACT_FORM_ADDRESS,
       },
       subject: body.subject,
-      content: [
-        {
-          type: "text/plain",
-          value: `Name: ${body.full_name}
-Email: ${body.email}
-Subject: ${body.subject}
-Sent At: ${moment().format("llll")}
-${body.timezone ? `Timezone: ${body.timezone}\n` : ""}
-${body.message}`,
-        },
-      ],
-    };
-    await sgMail.send(sendgridPayload);
+      content: emailContent,
+    });
 
     return new Response("Success", { status: 200 });
   } catch (error) {
