@@ -44,6 +44,10 @@ export const PAGES = {
   CODEIUM_DEMO: "/programming/codeium",
   BROWSER_HOMEPAGE: "/programming/browser-home-page",
   TWEET_PREVIEW: "/tweet-preview",
+  CYCLING: {
+    HOME: "/cycling",
+    NICE: "/cycling/nice-cote-d-eze",
+  },
   TOOLS: {
     HOME: "/tools",
     PHOTO_BLUR: "/tools/photo-blur",

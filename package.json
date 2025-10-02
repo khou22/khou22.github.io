@@ -47,6 +47,7 @@
     "clsx": "^2.0.0",
     "form-data": "^4.0.4",
     "gray-matter": "^4.0.3",
+    "leaflet": "^1.9.4",
     "lodash": "^4.17.21",
     "mailgun.js": "^12.0.3",
     "moment": "^2.29.4",
@@ -57,6 +58,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.48.2",
+    "react-leaflet": "^5.0.0",
     "react-markdown": "^9.0.1",
     "react-photo-album": "^2.3.0",
     "react-syntax-highlighter": "^15.5.0",
@@ -68,6 +70,7 @@
     "sqlite3": "^5.1.6",
     "tailwind-merge": "^2.1.0",
     "tailwindcss-animate": "^1.0.7",
+    "togeojson": "^0.16.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -76,7 +79,9 @@
     "@tailwindcss/typography": "^0.5.10",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
+    "@types/geojson": "^7946.0.16",
     "@types/jest": "^29.5.11",
+    "@types/leaflet": "^1.9.20",
     "@types/lodash": "^4.17.6",
     "@types/node": "^20",
     "@types/react": "^18",
