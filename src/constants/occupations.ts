@@ -13,6 +13,15 @@ export type OccupationType = {
 
 export const occupations: OccupationType[] = [
   {
+    years: [[2025, 2025]],
+    featured: true,
+    fullTime: true,
+    company: {
+      name: "Google DeepMind",
+      logo: "/deepmind-logo.png",
+    },
+  },
+  {
     years: [[2020, 2023]],
     featured: true,
     fullTime: true,
