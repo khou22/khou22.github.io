@@ -3,9 +3,13 @@
 import React, { useState } from "react";
 import type { FeatureCollection } from "geojson";
 import { LatLngBoundsExpression } from "leaflet";
+import dynamic from "next/dynamic";
 import { GpxUploadControls } from "@/components/organisms/GpxUploadControls/GpxUploadControls";
 import { computeCoordinateBounds } from "@/utils/mapping/computeCoordinateBounds";
-import { GpxMap } from "@/components/organisms/GpxMap/GpxMap";
+
+const GpxMap = dynamic(() => import("@/components/organisms/GpxMap/GpxMap").then((mod) => mod.GpxMap), {
+  ssr: false,
+});
 
 export const NiceMonacoRidePageClient = () => {
   const [geojson, setGeojson] = useState<FeatureCollection | null>(
