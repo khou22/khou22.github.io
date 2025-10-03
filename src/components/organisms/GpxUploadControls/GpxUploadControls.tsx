@@ -21,37 +21,48 @@ export const GpxUploadControls: React.FC<GpxUploadControlsProps> = ({
   const [error, setError] = useState<Error | null>();
   const [name, setName] = useState<string | null>();
 
-  const handleXml = useCallback((xml: string) => {
-    try {
-      const gpx = parseGpxXml(xml);
-      const name = gpx.name || 'Unknown';
-      onGpxLoad?.(gpx.geo, name);
-      setName(name);
-    } catch (e) {
-      if (e instanceof Error) {
-        setError(e);
-      } else {
-        setError(new Error(`Unknown error: ${e}`));
+  const handleXml = useCallback(
+    (xml: string) => {
+      try {
+        const gpx = parseGpxXml(xml);
+        const name = gpx.name || "Unknown";
+        onGpxLoad?.(gpx.geo, name);
+        setName(name);
+      } catch (e) {
+        if (e instanceof Error) {
+          setError(e);
+        } else {
+          setError(new Error(`Unknown error: ${e}`));
+        }
       }
-    }
-  }, [onGpxLoad]);
+    },
+    [onGpxLoad],
+  );
 
-
-  const handleFileChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0];
       if (!file) {
-        throw new Error('No files in upload')
+        throw new Error("No files in upload");
       }
 
-    file.text().then((text) => handleXml(text)).catch((error) => setError(error));
-  }, [handleXml]);
+      file
+        .text()
+        .then((text) => handleXml(text))
+        .catch((error) => setError(error));
+    },
+    [handleXml],
+  );
 
-  const handleUrlLoad = useCallback((url: string) => {
-    fetch(url)
-      .then((response) => response.text())
-      .then((text) => handleXml(text))
-      .catch((error) => setError(error));
-  }, [handleXml]);
+  const handleUrlLoad = useCallback(
+    (url: string) => {
+      fetch(url)
+        .then((response) => response.text())
+        .then((text) => handleXml(text))
+        .catch((error) => setError(error));
+    },
+    [handleXml],
+  );
 
   return (
     <Card className="mb-4 rounded-2xl">

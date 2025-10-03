@@ -1,12 +1,12 @@
 import { FeatureCollection, Position } from "geojson";
-import { LatLngBoundsExpression } from "leaflet";
+import { LatLng, LatLngBounds } from "leaflet";
 
 /**
  * Computes the bounding box for a GeoJSON FeatureCollection.
  */
 export const computeCoordinateBounds = (
   gj: FeatureCollection,
-): { bounds: LatLngBoundsExpression | null, accumulatedAlt: number } => {
+): { bounds: LatLngBounds | null; accumulatedAlt: number } => {
   let minLat = 90,
     minLng = 180,
     maxLat = -90,
@@ -15,10 +15,10 @@ export const computeCoordinateBounds = (
 
   // Iterate over each feature.
   for (const f of gj.features) {
-    if (f.geometry && f.geometry.type === 'LineString') {
+    if (f.geometry && f.geometry.type === "LineString") {
       let prevAlt: number | null = null;
       f.geometry.coordinates.forEach((pos: Position) => {
-        const [lat, lng, alt] = pos;
+        const [lng, lat, alt] = pos;
 
         // Update bounding box.
         if (Number.isFinite(lat) && Number.isFinite(lng)) {
@@ -39,10 +39,10 @@ export const computeCoordinateBounds = (
 
   if (minLat === 90) return { bounds: null, accumulatedAlt: 0 };
   return {
-    bounds: [
-      [minLat, minLng],
-      [maxLat, maxLng],
-    ],
+    bounds: new LatLngBounds(
+      new LatLng(minLat, minLng),
+      new LatLng(maxLat, maxLng),
+    ),
     accumulatedAlt,
   };
-}
+};

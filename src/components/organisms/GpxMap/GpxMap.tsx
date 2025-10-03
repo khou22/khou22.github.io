@@ -32,9 +32,7 @@ const waypointStyle = {
 /**
  * Component that auto-fits map bounds to GeoJSON data.
  */
-const FitBounds: React.FC<{ gj: FeatureCollection | null }> = ({
-  gj,
-}) => {
+const FitBounds: React.FC<{ gj: FeatureCollection | null }> = ({ gj }) => {
   const map = useMap();
   useMemo(() => {
     if (!gj) return;
@@ -97,9 +95,10 @@ export const GpxMap: React.FC<GpxMapProps> = ({
               pointToLayer={(feature: any, latlng: any) => {
                 // Style waypoints distinctly
                 if (feature?.properties?.name) {
-                  return L.circleMarker(latlng, waypointStyle as any).bindTooltip(
-                    String(feature.properties.name),
-                  );
+                  return L.circleMarker(
+                    latlng,
+                    waypointStyle as any,
+                  ).bindTooltip(String(feature.properties.name));
                 }
                 return L.circleMarker(latlng, waypointStyle as any);
               }}
