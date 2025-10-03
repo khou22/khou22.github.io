@@ -2,7 +2,7 @@
 
 import React, { useMemo } from "react";
 import { MapContainer, TileLayer, GeoJSON, useMap } from "react-leaflet";
-import type { LatLngBoundsExpression, LatLngExpression } from "leaflet";
+import type { LatLngExpression } from "leaflet";
 import type { FeatureCollection } from "geojson";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -37,9 +37,9 @@ const FitBounds: React.FC<{ gj: FeatureCollection | null }> = ({
   const map = useMap();
   useMemo(() => {
     if (!gj) return;
-    const b = computeCoordinateBounds(gj);
-    if (b) {
-      map.fitBounds(b, { padding: [32, 32] });
+    const { bounds } = computeCoordinateBounds(gj);
+    if (bounds) {
+      map.fitBounds(bounds, { padding: [32, 32] });
     }
   }, [gj, map]);
   return null;

@@ -5,6 +5,7 @@ import type { FeatureCollection } from "geojson";
 import { LatLngBoundsExpression } from "leaflet";
 import { GpxUploadControls } from "@/components/organisms/GpxUploadControls/GpxUploadControls";
 import { computeCoordinateBounds } from "@/utils/mapping/computeCoordinateBounds";
+import { GpxMap } from "@/components/organisms/GpxMap/GpxMap";
 
 export const NiceMonacoRidePageClient = () => {
   const [geojson, setGeojson] = useState<FeatureCollection | null>(
@@ -12,14 +13,15 @@ export const NiceMonacoRidePageClient = () => {
   );
   const [bounds, setBounds] = useState<LatLngBoundsExpression | null>(null)
 
-  const handleGpxLoad = (
+  const handleGpxLoad = async (
     loadedGeojson: FeatureCollection | null,
     name: string,
   ) => {
     setGeojson(loadedGeojson);
 
     if (loadedGeojson) {
-      setBounds(computeCoordinateBounds(loadedGeojson))
+      const { bounds } = await computeCoordinateBounds(loadedGeojson)
+      setBounds(bounds)
     }
   };
 
@@ -33,7 +35,7 @@ export const NiceMonacoRidePageClient = () => {
         </div>
       )}
 
-      {/* <GpxMap geojson={geojson} defaultCenter={[43.7, 7.25]} defaultZoom={11} /> */}
+      <GpxMap geojson={geojson} defaultCenter={[43.7, 7.25]} defaultZoom={11} />
     </div>
   );
 }

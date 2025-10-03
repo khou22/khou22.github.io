@@ -5,7 +5,7 @@ import type { FeatureCollection } from "geojson";
 import { Card, CardContent } from "@/components/ui/card";
 import { GpxUploadInput } from "@/components/atoms/GpxUploadInput/GpxUploadInput";
 import { GpxUrlInput } from "@/components/atoms/GpxUrlInput/GpxUrlInput";
-import { useGpxParser } from "@/hooks/useGpxParser/useGpxParser";
+import { parseGpxXml } from "@/utils/mapping/parseGpxXml";
 
 export interface GpxUploadControlsProps {
   onGpxLoad?: (geojson: FeatureCollection | null, name: string) => void;
@@ -19,38 +19,39 @@ export const GpxUploadControls: React.FC<GpxUploadControlsProps> = ({
   onGpxLoad,
 }) => {
   const [error, setError] = useState<Error | null>();
-  const [geojson, setGeojson] = useState<FeatureCollection | null>(
-    null,
-  );
-  const [name, setName] = useState('')
-  const { fromFile, fromUrl } = useGpxParser();
+  const [name, setName] = useState<string | null>();
 
-  // Notify parent when GPX is loaded
-  React.useEffect(() => {
-    if (onGpxLoad && geojson) {
-      onGpxLoad(geojson, name);
+  const handleXml = useCallback((xml: string) => {
+    try {
+      const gpx = parseGpxXml(xml);
+      const name = gpx.name || 'Unknown';
+      onGpxLoad?.(gpx.geo, name);
+      setName(name);
+    } catch (e) {
+      if (e instanceof Error) {
+        setError(e);
+      } else {
+        setError(new Error(`Unknown error: ${e}`));
+      }
     }
-  }, [geojson, name, onGpxLoad]);
+  }, [onGpxLoad]);
+
 
   const handleFileChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    try {
       const file = e.target.files?.[0];
       if (!file) {
         throw new Error('No files in upload')
       }
-      const text = await file.text();
-    } catch (e) {
-      if (e instanceof Error) {
-        setError(e)
-      } else {
-        setError(new Error(`Unknown error: ${e}`))
-      }
-    }
-  }, []);
 
-  const handleUrlLoad = (url: string) => {
-    fromUrl(url);
-  };
+    file.text().then((text) => handleXml(text)).catch((error) => setError(error));
+  }, [handleXml]);
+
+  const handleUrlLoad = useCallback((url: string) => {
+    fetch(url)
+      .then((response) => response.text())
+      .then((text) => handleXml(text))
+      .catch((error) => setError(error));
+  }, [handleXml]);
 
   return (
     <Card className="mb-4 rounded-2xl">
@@ -61,7 +62,7 @@ export const GpxUploadControls: React.FC<GpxUploadControlsProps> = ({
             <GpxUrlInput onLoad={handleUrlLoad} />
           </div>
         </div>
-        {error && <p className="mt-3 text-sm text-red-600">{error}</p>}
+        {error && <p className="mt-3 text-sm text-red-600">{error.message}</p>}
         {name && !error && (
           <p className="mt-3 text-sm text-neutral-600">
             Loaded: <span className="font-medium">{name}</span>
