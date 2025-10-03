@@ -108,8 +108,8 @@ dependencies:
     specifier: ^7.48.2
     version: 7.48.2(react@18.2.0)
   react-leaflet:
-    specifier: ^5.0.0
-    version: 5.0.0(leaflet@1.9.4)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^4.2.1
+    version: 4.2.1(leaflet@1.9.4)(react-dom@18.2.0)(react@18.2.0)
   react-markdown:
     specifier: ^9.0.1
     version: 9.0.1(@types/react@18.2.37)(react@18.2.0)
@@ -2419,12 +2419,12 @@ packages:
       '@babel/runtime': 7.23.5
     dev: false
 
-  /@react-leaflet/core@3.0.0(leaflet@1.9.4)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-3EWmekh4Nz+pGcr+xjf0KNyYfC3U2JjnkWsh0zcqaexYqmmB5ZhH37kz41JXGmKzpaMZCnPofBBm64i+YrEvGQ==}
+  /@react-leaflet/core@2.1.0(leaflet@1.9.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Qk7Pfu8BSarKGqILj4x7bCSZ1pjuAPZ+qmRwH5S7mDS91VSbVVsJSrW4qA+GPrro8t69gFYVMWb1Zc4yFmPiVg==}
     peerDependencies:
       leaflet: ^1.9.0
-      react: ^19.0.0
-      react-dom: ^19.0.0
+      react: ^18.0.0
+      react-dom: ^18.0.0
     dependencies:
       leaflet: 1.9.4
       react: 18.2.0
@@ -7753,14 +7753,14 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: true
 
-  /react-leaflet@5.0.0(leaflet@1.9.4)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-CWbTpr5vcHw5bt9i4zSlPEVQdTVcML390TjeDG0cK59z1ylexpqC6M1PJFjV8jD7CF+ACBFsLIDs6DRMoLEofw==}
+  /react-leaflet@4.2.1(leaflet@1.9.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-p9chkvhcKrWn/H/1FFeVSqLdReGwn2qmiobOQGO3BifX+/vV/39qhY8dGqbdcPh1e6jxh/QHriLXr7a4eLFK4Q==}
     peerDependencies:
       leaflet: ^1.9.0
-      react: ^19.0.0
-      react-dom: ^19.0.0
+      react: ^18.0.0
+      react-dom: ^18.0.0
     dependencies:
-      '@react-leaflet/core': 3.0.0(leaflet@1.9.4)(react-dom@18.2.0)(react@18.2.0)
+      '@react-leaflet/core': 2.1.0(leaflet@1.9.4)(react-dom@18.2.0)(react@18.2.0)
       leaflet: 1.9.4
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)

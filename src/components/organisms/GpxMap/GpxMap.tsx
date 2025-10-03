@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useMemo } from "react";
+import "leaflet/dist/leaflet.css";
+
 import { MapContainer, TileLayer, GeoJSON, useMap } from "react-leaflet";
 import type { LatLngExpression } from "leaflet";
 import type { FeatureCollection } from "geojson";
 import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 import { MapLegend } from "@/components/atoms/MapLegend/MapLegend";
 import { computeCoordinateBounds } from "@/utils/mapping/computeCoordinateBounds";

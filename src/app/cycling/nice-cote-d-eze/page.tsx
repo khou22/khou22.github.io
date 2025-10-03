@@ -1,10 +1,6 @@
 import React from "react";
-import dynamic from "next/dynamic";
+import { NiceMonacoRidePageClient } from "./NiceMonacoRidePageClient";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
-
-const NiceMonacoRidePageClient = dynamic(() => import('./NiceMonacoRidePageClient').then(m => m.NiceMonacoRidePageClient), {
-  ssr: false,
-})
 
 /**
  * Nice to Monaco cycling route viewer.
