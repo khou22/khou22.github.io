@@ -3,7 +3,7 @@ import { EmailService, EmailRequest } from "./EmailService";
 
 // Note: Requires 'mailgun.js' and 'form-data' packages to be installed
 // Run: pnpm add mailgun.js form-data
-const formData = require('form-data');
+const formData = require("form-data");
 const mailgun = new Mailgun(formData);
 
 export class MailgunProvider implements EmailService {

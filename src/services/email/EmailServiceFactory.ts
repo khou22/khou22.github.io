@@ -4,7 +4,8 @@ import { MailgunProvider } from "./MailgunProvider";
 
 export class EmailServiceFactory {
   static create(): EmailService {
-    const provider = (process.env.EMAIL_PROVIDER as EmailProvider) || EmailProvider.MAILGUN;
+    const provider =
+      (process.env.EMAIL_PROVIDER as EmailProvider) || EmailProvider.MAILGUN;
 
     switch (provider) {
       case EmailProvider.MAILGUN:
