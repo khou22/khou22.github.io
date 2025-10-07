@@ -4,6 +4,7 @@ import React, { } from "react";
 import dynamic from "next/dynamic";
 import type { Waypoint } from "@/components/organisms/GpxMap/GpxMap";
 import { parseGpxXml } from "@/utils/mapping/parseGpxXml";
+import { GpxRouteSvg } from "@/components/organisms/GpxRouteSvg/GpxRouteSvg";
 
 // Waypoints for the Nice-Cote d'Eze cycling route
 const ROUTE_WAYPOINTS: Waypoint[] = [
@@ -61,6 +62,8 @@ export const NiceMonacoRidePageClient: React.FC<NiceMonacoRidePageProps> = ({ gp
 
   return (
     <div>
+      <GpxRouteSvg geoJson={geoJson} className="w-[500px] stroke-2" />
+
       <GpxMap
         geojson={geoJson}
         defaultCenter={[43.7, 7.25]}
