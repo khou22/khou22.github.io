@@ -5919,6 +5919,41 @@ export const _generatedCdnAssets = {
     name: `Hawk Hill Downhill Cycling FPV.placeholder`,
     dimensions: [800, 598],
   },
+	"photography/cycling/cote_d_eza/monaco_harbor_jpg": {
+    path: "/photography/cycling/cote-d-eza/monaco_harbor.jpg",
+    name: `monaco_harbor`,
+    dimensions: [6000, 4000],
+  },
+	"photography/cycling/cote_d_eza/monte_carlo_viewpoinrt_jpg": {
+    path: "/photography/cycling/cote-d-eza/monte_carlo_viewpoinrt.jpg",
+    name: `monte_carlo_viewpoinrt`,
+    dimensions: [3740, 2494],
+  },
+	"photography/cycling/cote_d_eza/monaco_architecture_jpg": {
+    path: "/photography/cycling/cote-d-eza/monaco_architecture.jpg",
+    name: `monaco_architecture`,
+    dimensions: [4000, 6000],
+  },
+	"photography/cycling/cote_d_eza/monte_carlo_hike_jpg": {
+    path: "/photography/cycling/cote-d-eza/monte_carlo_hike.jpg",
+    name: `monte_carlo_hike`,
+    dimensions: [2229, 3343],
+  },
+	"photography/cycling/cote_d_eza/nice_bakery_jpg": {
+    path: "/photography/cycling/cote-d-eza/nice_bakery.jpg",
+    name: `nice_bakery`,
+    dimensions: [4000, 6000],
+  },
+	"photography/cycling/cote_d_eza/monte_carlo_viewpoint_portrait_jpg": {
+    path: "/photography/cycling/cote-d-eza/monte_carlo_viewpoint_portrait.jpg",
+    name: `monte_carlo_viewpoint_portrait`,
+    dimensions: [5544, 3696],
+  },
+	"photography/cycling/cote_d_eza/tour_de_france_start_jpg": {
+    path: "/photography/cycling/cote-d-eza/tour_de_france_start.jpg",
+    name: `tour_de_france_start`,
+    dimensions: [3783, 5674],
+  },
 	"photography/cycling/Cycling_Motion_Blur_Landscape_placeholder_jpg": {
     path: "/photography/cycling/Cycling%20Motion%20Blur%20Landscape.placeholder.jpg",
     name: `Cycling Motion Blur Landscape.placeholder`,

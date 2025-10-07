@@ -18,6 +18,26 @@ import { useIsClient } from "@/hooks/useIsClient/useIsClient";
 import { MapLegend } from "@/components/atoms/MapLegend/MapLegend";
 import { computeCoordinateBounds } from "@/utils/mapping/computeCoordinateBounds";
 
+export type MapTheme = "carto" | "mapbox";
+
+interface TileLayerConfig {
+  url: string;
+  attribution: string;
+}
+
+const MAP_THEMES: Record<MapTheme, TileLayerConfig> = {
+  carto: {
+    url: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  },
+  mapbox: {
+    url: "https://api.mapbox.com/styles/v1/mapbox/outdoors-v12/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2hvdTIyIiwiYSI6ImNtMjExdGJldjBjbTkyaXEzdDN3M2lqeG0ifQ.4gKO0ZUwOKs_kfFvQcANHw",
+    attribution:
+      '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors',
+  },
+};
+
 export interface Waypoint {
   lat: number;
   lng: number;
@@ -32,6 +52,7 @@ export interface GpxMapProps {
   defaultZoom?: number;
   waypoints?: Waypoint[];
   interactive?: boolean;
+  theme?: MapTheme;
 }
 
 const gpxStyle = {
@@ -73,7 +94,9 @@ export const GpxMap: React.FC<GpxMapProps> = ({
   defaultZoom = 11,
   waypoints = [],
   interactive = true,
+  theme = "carto",
 }) => {
+  const tileConfig = MAP_THEMES[theme];
   const isClient = useIsClient();
 
   if (!isClient) {
@@ -101,11 +124,8 @@ export const GpxMap: React.FC<GpxMapProps> = ({
         keyboard={interactive}
         zoomControl={interactive}
       >
-        {/* Minimalist tile layer with reduced labels */}
-        <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-        />
+        {/* Dynamic tile layer based on theme */}
+        <TileLayer url={tileConfig.url} attribution={tileConfig.attribution} />
 
         {geojson && (
           <>

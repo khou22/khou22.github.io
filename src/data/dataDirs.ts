@@ -5,6 +5,7 @@ import path from "path";
  */
 const dataDirs = {
   blog: "src/data/blog",
+  cycling: "src/data/cycling",
 };
 
 /**

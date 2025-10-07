@@ -1,12 +1,18 @@
 import React from "react";
-import { NiceMonacoRidePageClient } from "./NiceMonacoRidePageClient";
+import dynamic from "next/dynamic";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
+import { getCyclingRoute } from "@/utils/cycling/routeData";
+
+// TODO: Once DOMParser is SSR compatible, can remove this layer of client rendering.
+const NiceMonacoRidePageClient = dynamic(() => import('./NiceMonacoRidePageClient').then(m => m.NiceMonacoRidePageClient), { ssr: false })
 
 /**
  * Nice to Monaco cycling route viewer.
  * Upload a GPX file or paste a URL to visualize the route.
  */
-export default function NiceMonacoRidePage() {
+const NiceMonacoRidePage = async () => {
+  const gpxFile = await getCyclingRoute('2025-08-nice-to-monaco.gpx')
+
   return (
     <PageWrapper>
       <div className="mb-4 w-full border-b border-gray-300 pb-4 text-center">
@@ -14,16 +20,13 @@ export default function NiceMonacoRidePage() {
           Nice to Monaco
         </h1>
         <p className="text-neutral-600">
-          Cycling Route Viewer • Upload a GPX file or paste a URL
+          Cycling along the coastline of the South of France
         </p>
       </div>
 
-      <NiceMonacoRidePageClient />
-
-      <p className="mt-3 text-xs text-neutral-500">
-        Tiles © OpenStreetMap contributors • Carto Light basemap. For heavier
-        usage, self-host or switch to another free OSM provider.
-      </p>
+      <NiceMonacoRidePageClient gpxFileContents={gpxFile} />
     </PageWrapper>
   );
 }
+
+export default NiceMonacoRidePage;

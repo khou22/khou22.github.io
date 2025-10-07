@@ -1,6 +1,6 @@
 ---
 
-last_updated: 2025-08-02 01:10:03
+last_updated: 2025-10-07 16:32:43
 
 ---
 
@@ -597,6 +597,13 @@ This catalog includes only JPEG and PNG files, excluding placeholders.
 - **Cycling Backpacking Trip Portrait 1**: [https://khou22.github.io/photography/cycling/Cycling%20Backpacking%20Trip%20Portrait%201.jpg](https://khou22.github.io/photography/cycling/Cycling%20Backpacking%20Trip%20Portrait%201.jpg)
 - **Cycling Backpacking Trip Portrait 2**: [https://khou22.github.io/photography/cycling/Cycling%20Backpacking%20Trip%20Portrait%202.jpg](https://khou22.github.io/photography/cycling/Cycling%20Backpacking%20Trip%20Portrait%202.jpg)
 - **Bike Through Tent**: [https://khou22.github.io/photography/cycling/Bike%20Through%20Tent.jpg](https://khou22.github.io/photography/cycling/Bike%20Through%20Tent.jpg)
+- **monaco_harbor**: [https://khou22.github.io/photography/cycling/cote-d-eza/monaco_harbor.jpg](https://khou22.github.io/photography/cycling/cote-d-eza/monaco_harbor.jpg)
+- **monte_carlo_viewpoinrt**: [https://khou22.github.io/photography/cycling/cote-d-eza/monte_carlo_viewpoinrt.jpg](https://khou22.github.io/photography/cycling/cote-d-eza/monte_carlo_viewpoinrt.jpg)
+- **monaco_architecture**: [https://khou22.github.io/photography/cycling/cote-d-eza/monaco_architecture.jpg](https://khou22.github.io/photography/cycling/cote-d-eza/monaco_architecture.jpg)
+- **monte_carlo_hike**: [https://khou22.github.io/photography/cycling/cote-d-eza/monte_carlo_hike.jpg](https://khou22.github.io/photography/cycling/cote-d-eza/monte_carlo_hike.jpg)
+- **nice_bakery**: [https://khou22.github.io/photography/cycling/cote-d-eza/nice_bakery.jpg](https://khou22.github.io/photography/cycling/cote-d-eza/nice_bakery.jpg)
+- **monte_carlo_viewpoint_portrait**: [https://khou22.github.io/photography/cycling/cote-d-eza/monte_carlo_viewpoint_portrait.jpg](https://khou22.github.io/photography/cycling/cote-d-eza/monte_carlo_viewpoint_portrait.jpg)
+- **tour_de_france_start**: [https://khou22.github.io/photography/cycling/cote-d-eza/tour_de_france_start.jpg](https://khou22.github.io/photography/cycling/cote-d-eza/tour_de_france_start.jpg)
 - **Rohan Cycling Shot San Francisco Skyline**: [https://khou22.github.io/photography/cycling/Rohan%20Cycling%20Shot%20San%20Francisco%20Skyline.jpg](https://khou22.github.io/photography/cycling/Rohan%20Cycling%20Shot%20San%20Francisco%20Skyline.jpg)
 - **Twin Peaks Cycling Portrait**: [https://khou22.github.io/photography/cycling/Twin%20Peaks%20Cycling%20Portrait.jpg](https://khou22.github.io/photography/cycling/Twin%20Peaks%20Cycling%20Portrait.jpg)
 - **Hawk Hill Downhill Cycling FPV**: [https://khou22.github.io/photography/cycling/Hawk%20Hill%20Downhill%20Cycling%20FPV.jpg](https://khou22.github.io/photography/cycling/Hawk%20Hill%20Downhill%20Cycling%20FPV.jpg)

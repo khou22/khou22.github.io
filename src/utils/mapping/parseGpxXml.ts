@@ -10,6 +10,7 @@ import { gpx as gpxToGeoJSON } from "togeojson";
 export const parseGpxXml = (
   xmlText: string,
 ): { name: string | null; geo: FeatureCollection } => {
+  // TODO: Find a server side compatible DOMParser
   const doc = new DOMParser().parseFromString(xmlText, "application/xml");
 
   const rootName = doc.querySelector(

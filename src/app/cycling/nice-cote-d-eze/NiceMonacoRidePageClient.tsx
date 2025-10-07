@@ -1,13 +1,9 @@
 "use client";
 
-import React, { useCallback, useState } from "react";
-import type { FeatureCollection } from "geojson";
-import { LatLngBounds } from "leaflet";
+import React, { } from "react";
 import dynamic from "next/dynamic";
-import { GpxUploadControls } from "@/components/organisms/GpxUploadControls/GpxUploadControls";
-import { computeCoordinateBounds } from "@/utils/mapping/computeCoordinateBounds";
-import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import type { Waypoint } from "@/components/organisms/GpxMap/GpxMap";
+import { parseGpxXml } from "@/utils/mapping/parseGpxXml";
 
 // Waypoints for the Nice-Cote d'Eze cycling route
 const ROUTE_WAYPOINTS: Waypoint[] = [
@@ -56,43 +52,18 @@ const GpxMap = dynamic(
   },
 );
 
-export const NiceMonacoRidePageClient = () => {
-  const [geojson, setGeojson] = useState<FeatureCollection | null>(null);
-  const [bounds, setBounds] = useState<LatLngBounds | null>(null);
+type NiceMonacoRidePageProps = {
+  gpxFileContents: string;
+}
 
-  const handleGpxLoad = useCallback(
-    async (loadedGeojson: FeatureCollection | null, name: string) => {
-      setGeojson(loadedGeojson);
-
-      if (loadedGeojson) {
-        const { bounds } = await computeCoordinateBounds(loadedGeojson);
-        setBounds(bounds);
-      }
-    },
-    [],
-  );
+export const NiceMonacoRidePageClient: React.FC<NiceMonacoRidePageProps> = ({ gpxFileContents }) => {
+  const { geo: geoJson } = parseGpxXml(gpxFileContents)
 
   return (
     <div>
-      <GpxUploadControls onGpxLoad={handleGpxLoad} />
-
-      {bounds && (
-        <div>
-          <p>
-            Map Center:{" "}
-            <CustomLink
-              href={`https://www.openstreetmap.org/#map=11/${
-                bounds.getCenter().lat
-              }/${bounds.getCenter().lng}`}
-            >
-              {bounds.getCenter().lat}, {bounds.getCenter().lng}
-            </CustomLink>
-          </p>
-        </div>
-      )}
 
       <GpxMap
-        geojson={geojson}
+        geojson={geoJson}
         defaultCenter={[43.7, 7.25]}
         defaultZoom={11}
         waypoints={ROUTE_WAYPOINTS}
