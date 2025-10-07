@@ -61,7 +61,6 @@ export const NiceMonacoRidePageClient: React.FC<NiceMonacoRidePageProps> = ({ gp
 
   return (
     <div>
-
       <GpxMap
         geojson={geoJson}
         defaultCenter={[43.7, 7.25]}

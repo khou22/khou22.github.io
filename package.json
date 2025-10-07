@@ -22,6 +22,7 @@
     "generate:thumbnails": "python scripts/generate_thumbnails.py --max_kb 250",
     "clean-images": "python scripts/clean_assets.py",
     "clean-db": "tsx scripts/clean_db.ts",
+    "clean-gpx": "python scripts/clean_gpx.py",
     "fetch-og": "tsx scripts/fetch-og.ts"
   },
   "dependencies": {

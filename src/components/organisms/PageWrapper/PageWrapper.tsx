@@ -1,7 +1,9 @@
+import { CSSProperties } from "react";
 import { classNames } from "@/utils/style";
 
 type PageWrapperProps = {
   className?: string;
+  style?: CSSProperties;
 
   /**
    * The max width of the page. Defaults to `normal`.
@@ -21,6 +23,7 @@ type PageWrapperProps = {
 export const PageWrapper: React.FC<PageWrapperProps> = ({
   className = "",
   maxWidth = "normal",
+  style,
   children,
 }) => {
   let widthClassName = "max-w-3xl xl:max-w-4xl 2xl:max-w-6xl";
@@ -40,6 +43,7 @@ export const PageWrapper: React.FC<PageWrapperProps> = ({
         widthClassName,
         className,
       )}
+      style={style}
     >
       {children}
     </div>

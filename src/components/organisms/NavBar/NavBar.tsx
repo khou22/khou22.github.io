@@ -32,7 +32,8 @@ export const NavBar: React.FC = () => {
     pathname === PAGES.HOME ||
     pathname === PAGES.BLOG ||
     pathname === PAGES.PHOTOGRAPHY.AERIAL_SF ||
-    pathname === PAGES.BROWSER_HOMEPAGE;
+    pathname === PAGES.BROWSER_HOMEPAGE ||
+    pathname === PAGES.CYCLING.NICE;
 
   // If floating, never have a scroll transition.
   const transitionProgress = isFloating
