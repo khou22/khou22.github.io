@@ -38,6 +38,7 @@ export const occupations: OccupationType[] = [
     company: {
       name: "Windsurf",
       logo: getCdnAsset("media/occupations/windsurf_png"),
+      logoLight: getCdnAsset("media/occupations/windsurf_light_png"),
     },
   },
   {
