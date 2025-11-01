@@ -8,7 +8,7 @@ type PageWrapperProps = {
   /**
    * The max width of the page. Defaults to `normal`.
    */
-  maxWidth?: "none" | "normal" | "wide";
+  maxWidth?: "none" | "normal" | "wide" | "extra-wide";
 
   /**
    * The content of the page.
@@ -30,6 +30,9 @@ export const PageWrapper: React.FC<PageWrapperProps> = ({
   switch (maxWidth) {
     case "wide":
       widthClassName = "max-w-6xl xl:max-w-7xl";
+      break;
+    case "extra-wide":
+      widthClassName = "max-w-7xl xl:max-w-[1500px]";
       break;
     case "none":
       widthClassName = "max-w-full";

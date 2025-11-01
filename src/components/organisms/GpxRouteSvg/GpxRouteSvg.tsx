@@ -16,10 +16,10 @@ export const GpxRouteSvg: React.FC<GpxRouteSvgProps> = ({ geoJson, ...props }) =
   const pathData = useMemo(() => {
     if (!bounds) return "";
 
-    const minLng = bounds.getWest();
-    const maxLng = bounds.getEast();
-    const minLat = bounds.getSouth();
-    const maxLat = bounds.getNorth();
+    const minLng = bounds[0][1];
+    const maxLng = bounds[1][1];
+    const minLat = bounds[0][0];
+    const maxLat = bounds[1][0];
 
     const geoWidth = maxLng - minLng;
     const geoHeight = maxLat - minLat;

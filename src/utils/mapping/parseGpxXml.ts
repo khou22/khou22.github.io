@@ -1,4 +1,6 @@
 import { FeatureCollection } from "geojson";
+import { parse } from 'node-html-parser';
+
 
 // @ts-ignore - togeojson doesn't have perfect types
 import { gpx as gpxToGeoJSON } from "togeojson";
@@ -10,9 +12,7 @@ import { gpx as gpxToGeoJSON } from "togeojson";
 export const parseGpxXml = (
   xmlText: string,
 ): { name: string | null; geo: FeatureCollection } => {
-  // TODO: Find a server side compatible DOMParser
-  const doc = new DOMParser().parseFromString(xmlText, "application/xml");
-
+  const doc = parse(xmlText);
   const rootName = doc.querySelector(
     "gpx > metadata > name, gpx > trk > name, gpx > rte > name",
   )?.textContent;

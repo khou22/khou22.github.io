@@ -1,12 +1,14 @@
 import { FeatureCollection, Position } from "geojson";
-import { LatLng, LatLngBounds } from "leaflet";
+import { type LatLngBoundsLiteral } from "leaflet";
 
 /**
- * Computes the bounding box for a GeoJSON FeatureCollection.
+ * Computes the bounding box for a GeoJSON FeatureCollection. This is a
+ * server-side enabled implementation. To use LatLng and LatLngBounds
+ * classes, you need to parse the returned values from this function.
  */
 export const computeCoordinateBounds = (
   gj: FeatureCollection,
-): { bounds: LatLngBounds | null; accumulatedAlt: number } => {
+): { bounds: LatLngBoundsLiteral | null; accumulatedAlt: number } => {
   let minLat = 90,
     minLng = 180,
     maxLat = -90,
@@ -39,10 +41,10 @@ export const computeCoordinateBounds = (
 
   if (minLat === 90) return { bounds: null, accumulatedAlt: 0 };
   return {
-    bounds: new LatLngBounds(
-      new LatLng(minLat, minLng),
-      new LatLng(maxLat, maxLng),
-    ),
+    bounds: [
+      [minLat, minLng],
+      [maxLat, maxLng],
+    ],
     accumulatedAlt,
   };
 };
