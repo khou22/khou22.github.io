@@ -4,17 +4,16 @@ import { computeCoordinateBounds } from "@/utils/mapping/computeCoordinateBounds
 
 type GpxRouteSvgProps = {
   geoJson: FeatureCollection;
+  padding?: number;
 } & React.SVGProps<SVGSVGElement>;
 
 const VIEWBOX_WIDTH = 1000;
-const VIEWBOX_HEIGHT = 1000;
-const PADDING = 50; // 5% padding
 
-export const GpxRouteSvg: React.FC<GpxRouteSvgProps> = ({ geoJson, ...props }) => {
+export const GpxRouteSvg: React.FC<GpxRouteSvgProps> = ({ geoJson, padding = 0.05, ...props }) => {
   const { bounds } = computeCoordinateBounds(geoJson);
 
-  const pathData = useMemo(() => {
-    if (!bounds) return "";
+  const { pathData, viewBoxHeight } = useMemo(() => {
+    if (!bounds) return { pathData: "", viewBoxHeight: VIEWBOX_WIDTH };
 
     const minLng = bounds[0][1];
     const maxLng = bounds[1][1];
@@ -24,19 +23,16 @@ export const GpxRouteSvg: React.FC<GpxRouteSvgProps> = ({ geoJson, ...props }) =
     const geoWidth = maxLng - minLng;
     const geoHeight = maxLat - minLat;
 
-    if (geoWidth === 0 || geoHeight === 0) return "";
+    if (geoWidth === 0 || geoHeight === 0) return { pathData: "", viewBoxHeight: VIEWBOX_WIDTH };
 
-    const drawWidth = VIEWBOX_WIDTH - 2 * PADDING;
-    const drawHeight = VIEWBOX_HEIGHT - 2 * PADDING;
+    const paddingPx = VIEWBOX_WIDTH * padding;
+    const drawWidth = VIEWBOX_WIDTH - 2 * paddingPx;
+    const scale = drawWidth / geoWidth;
+    const drawHeight = geoHeight * scale;
+    const viewBoxHeight = drawHeight + 2 * paddingPx;
 
-    const scaleX = drawWidth / geoWidth;
-    const scaleY = drawHeight / geoHeight;
-    // Use the smaller scale to ensure it fits within the box while maintaining aspect ratio
-    const scale = Math.min(scaleX, scaleY);
-
-    // Center the path if one dimension is smaller than the available space
-    const offsetX = PADDING + (drawWidth - geoWidth * scale) / 2;
-    const offsetY = PADDING + (drawHeight - geoHeight * scale) / 2;
+    const offsetX = paddingPx;
+    const offsetY = paddingPx;
 
     const project = (lng: number, lat: number): [number, number] => {
       const x = offsetX + (lng - minLng) * scale;
@@ -56,8 +52,8 @@ export const GpxRouteSvg: React.FC<GpxRouteSvgProps> = ({ geoJson, ...props }) =
         });
       }
     }
-    return d.trim();
-  }, [geoJson, bounds]);
+    return { pathData: d.trim(), viewBoxHeight };
+  }, [geoJson, bounds, padding]);
 
   if (!bounds) return (
     <p>Error computing GPX bounds</p>
@@ -65,7 +61,7 @@ export const GpxRouteSvg: React.FC<GpxRouteSvgProps> = ({ geoJson, ...props }) =
 
   return (
     <svg
-      viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
+      viewBox={`0 0 ${VIEWBOX_WIDTH} ${viewBoxHeight}`}
       fill="none"
       stroke="currentColor"
       strokeWidth={1}
