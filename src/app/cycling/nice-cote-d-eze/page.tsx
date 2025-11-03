@@ -10,10 +10,14 @@ import { parseGpxXml } from "@/utils/mapping/parseGpxXml";
 // TODO: Once DOMParser is SSR compatible, can remove this layer of client rendering.
 const NiceMonacoRidePageClient = dynamic(() => import('./NiceMonacoRidePageClient').then(m => m.NiceMonacoRidePageClient), { ssr: false })
 
+const coverImage: PhotoIdType = "photography/cycling/cote_d_eza/monte_carlo_viewpoinrt_jpg"
+
 const featuredImages: PhotoIdType[] = [
-  'photography/san_francisco/Gravel_Bike_at_Golden_Gate_Bridge_at_Sunset_jpg',
-  'photography/cycling/Peugeot_Road_Bike_at_Sunset_jpg',
-  'photography/cycling/Cycling_Motion_Blur_Landscape_jpg',
+  coverImage,
+  "photography/cycling/cote_d_eza/nice_bakery_jpg",
+  "photography/cycling/cote_d_eza/tour_de_france_start_jpg",
+  "photography/cycling/cote_d_eza/monaco_harbor_jpg",
+  'photography/cycling/cote_d_eza/monte_carlo_viewpoint_portrait_jpg',
 ]
 
 /**
@@ -26,14 +30,16 @@ const NiceMonacoRidePage = async () => {
 
   return (
     <>
-      <div
-        className="w-full overflow-hidden h-screen pt-36"
-        style={{
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundImage: `url(${getCdnAsset(featuredImages[0])})`
-        }}
-      >
+      <div className="w-full overflow-hidden h-screen pt-36 relative">
+        {/* Background image */}
+        <Image
+          alt={getPhotoName(coverImage)}
+          fill
+          src={getCdnAsset(coverImage)}
+          className="object-cover absolute left-0 top-0 w-full h-full -z-10 brightness-75"
+        />
+
+        {/* Cover content */}
         <PageWrapper maxWidth="extra-wide">
           <div className="w-full flex flex-row justify-between items-start">
             <div>
