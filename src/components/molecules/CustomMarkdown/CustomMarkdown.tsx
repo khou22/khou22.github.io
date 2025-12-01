@@ -90,6 +90,16 @@ export const CustomMarkdown: React.FC<CustomMarkdownProps> = ({
         </CustomLink>
       );
     },
+    img: ({ src, alt, ...props }) => {
+      return (
+        <img
+          src={src as string}
+          alt={alt as string}
+          {...props}
+          className="max-w-full sm:max-w-[300px] md:max-w-[400px] lg:max-w-[580px] xl:max-w-[750px]"
+        />
+      );
+    },
   };
 
   return (
