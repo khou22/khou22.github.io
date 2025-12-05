@@ -131,6 +131,19 @@ const getPhotoSiteMap = async (): Promise<MetadataRoute.Sitemap> => {
   return mainPhotoPages.concat(photoTagPages).concat(photoPages);
 };
 
+const getToolsSiteMap = async (): Promise<MetadataRoute.Sitemap> => {
+  const toolsPages: MetadataRoute.Sitemap = Object.values(PAGES.TOOLS).map(
+    (toolUrl) => ({
+      url: `${siteMetadata.siteUrl}${toolUrl}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: SiteMapPriority.MEDIUM,
+    }),
+  );
+
+  return toolsPages;
+};
+
 /**
  * Generates the sitemap for search engine optimization.
  *
@@ -139,6 +152,7 @@ const getPhotoSiteMap = async (): Promise<MetadataRoute.Sitemap> => {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogSitemap = await getBlogSiteMap();
   const photoSitemap = await getPhotoSiteMap();
+  const toolsSitemap = await getToolsSiteMap();
 
   const mainPagesSitemap: MetadataRoute.Sitemap = [
     {
@@ -179,5 +193,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  return mainPagesSitemap.concat(blogSitemap).concat(photoSitemap);
+  return mainPagesSitemap
+    .concat(blogSitemap)
+    .concat(photoSitemap)
+    .concat(toolsSitemap);
 }
