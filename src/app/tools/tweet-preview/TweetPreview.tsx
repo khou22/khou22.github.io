@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { classNames } from "@/utils/style";
 
-type ImageData = { id: number; dataUrl: string };
+type ImageData = { id: number; fileName: string; dataUrl: string };
 
 const LOCAL_STORAGE_KEY = "tweetPreview";
 
@@ -27,12 +27,16 @@ export const TweetPreview = () => {
     const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
     if (stored) {
       try {
-        const data = JSON.parse(stored) as { text: string; images: string[] };
+        const data = JSON.parse(stored) as {
+          text: string;
+          images: { fileName: string; dataUrl: string }[];
+        };
         setText(data.text || "");
         setImages(
           data.images.map((d) => ({
             id: Date.now() + Math.random(),
-            dataUrl: d,
+            fileName: d.fileName,
+            dataUrl: d.dataUrl,
           })),
         );
       } catch {
@@ -44,7 +48,13 @@ export const TweetPreview = () => {
   useEffect(() => {
     localStorage.setItem(
       LOCAL_STORAGE_KEY,
-      JSON.stringify({ text, images: images.map((i) => i.dataUrl) }),
+      JSON.stringify({
+        text,
+        images: images.map((i) => ({
+          fileName: i.fileName,
+          dataUrl: i.dataUrl,
+        })),
+      }),
     );
   }, [text, images]);
 
@@ -92,6 +102,7 @@ export const TweetPreview = () => {
           {
             id: Date.now() + Math.random(),
             dataUrl: resizedDataUrl,
+            fileName: file.name,
           },
         ]);
       };
@@ -214,7 +225,7 @@ export const TweetPreview = () => {
         {images.length > 0 && (
           <div
             className={classNames(
-              "mb-2 grid gap-2",
+              "mb-2 grid gap-0.5 overflow-clip rounded-xl",
               images.length === 1 ? "" : "grid-cols-2",
             )}
           >
@@ -223,7 +234,8 @@ export const TweetPreview = () => {
                 key={img.id}
                 src={img.dataUrl}
                 alt={`tweet image ${idx + 1}`}
-                className="aspect-square w-full rounded object-cover"
+                title={img.fileName}
+                className="aspect-[16/9] h-[144px] w-full object-cover"
               />
             ))}
           </div>
