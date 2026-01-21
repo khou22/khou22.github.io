@@ -39,6 +39,9 @@ const ToolsPage = () => {
             Bounding Box Tool
           </CustomLink>
         </li>
+        <li>
+          <CustomLink href={PAGES.TOOLS.JSON_VIEWER}>JSON Viewer</CustomLink>
+        </li>
       </ul>
     </PageWrapper>
   );
