@@ -1,13 +1,20 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import dynamic from "next/dynamic";
 import { Slide, CarouselSettings, TextOverlay } from "./types";
 import { DEFAULT_SETTINGS, DEFAULT_TEXT_OVERLAY } from "./constants";
 import { GlobalSettings } from "./components/GlobalSettings";
-import { CanvasEditor } from "./components/CanvasEditor";
 import { SlideStrip } from "./components/SlideStrip";
 import { TextControls } from "./components/TextControls";
 import { ExportButton } from "./components/ExportButton";
+
+// Konva accesses `window` at import time — must skip SSR
+const CanvasEditor = dynamic(
+  () =>
+    import("./components/CanvasEditor").then((mod) => mod.CanvasEditor),
+  { ssr: false },
+);
 
 function createSlide(imageUrl: string | null = null): Slide {
   return {

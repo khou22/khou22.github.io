@@ -74,6 +74,9 @@ dependencies:
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3
+  konva:
+    specifier: ^10.2.3
+    version: 10.2.3
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
@@ -107,6 +110,9 @@ dependencies:
   react-hook-form:
     specifier: ^7.48.2
     version: 7.48.2(react@18.2.0)
+  react-konva:
+    specifier: '18'
+    version: 18.2.14(@types/react@18.2.37)(konva@10.2.3)(react-dom@18.2.0)(react@18.2.0)
   react-markdown:
     specifier: ^9.0.1
     version: 9.0.1(@types/react@18.2.37)(react@18.2.0)
@@ -2725,6 +2731,14 @@ packages:
     resolution: {integrity: sha512-49897Y0UiCGmxZqpC8Blrf6meL8QUla6eb+BBhn69dTXlmuOlzkfr7HHY/O8J25e1lTUMs+YYxSlVDAaGHCOLg==}
     dependencies:
       '@types/react': 18.2.37
+
+  /@types/react-reconciler@0.28.9(@types/react@18.2.37):
+    resolution: {integrity: sha512-HHM3nxyUZ3zAylX8ZEyrDNd2XZOnQ0D5XfunJF5FLQnZbHHYq4UWvW1QfelQNXv1ICNkwYhfxjwfnqivYB6bFg==}
+    peerDependencies:
+      '@types/react': '*'
+    dependencies:
+      '@types/react': 18.2.37
+    dev: false
 
   /@types/react-syntax-highlighter@15.5.10:
     resolution: {integrity: sha512-Vf8nNkGHnjwK37b2wDs92zJSAWS2Mb57NcYHgajCNssHeTNEixvjINnXJkKdY0V0/eLrYkPP1xDKvNmYIr4HIg==}
@@ -5858,6 +5872,17 @@ packages:
       set-function-name: 2.0.1
     dev: true
 
+  /its-fine@1.2.5(@types/react@18.2.37)(react@18.2.0):
+    resolution: {integrity: sha512-fXtDA0X0t0eBYAGLVM5YsgJGsJ5jEmqZEPrGbzdf5awjv0xE7nqv3TVnvtUF060Tkes15DbDAKW/I48vsb6SyA==}
+    peerDependencies:
+      react: '>=18.0'
+    dependencies:
+      '@types/react-reconciler': 0.28.9(@types/react@18.2.37)
+      react: 18.2.0
+    transitivePeerDependencies:
+      - '@types/react'
+    dev: false
+
   /jackspeak@2.3.6:
     resolution: {integrity: sha512-N3yCS/NegsOBokc8GAdM8UcmfsKiSS8cipheD/nivzr700H+nsMOxJjQnvwOcRYVuFkdH0wGUvW2WbXGmrZGbQ==}
     engines: {node: '>=14'}
@@ -6443,6 +6468,10 @@ packages:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
     engines: {node: '>=6'}
     dev: true
+
+  /konva@10.2.3:
+    resolution: {integrity: sha512-NDGeIxm2nsQcp6oqZKS9T764JEi53RpQvpUxV2EK7Awm49fwdd1+EB1Nq1nyspRc0hOAKyKssoTFvPaKwiSUog==}
+    dev: false
 
   /language-subtag-registry@0.3.22:
     resolution: {integrity: sha512-tN0MCzyWnoz/4nHS6uxdlFWoUZT7ABptwKPQ52Ea7URk6vll88bWBVhodtnlfEuCcKWNGoc+uGbw1cwa9IKh/w==}
@@ -7762,6 +7791,24 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: true
 
+  /react-konva@18.2.14(@types/react@18.2.37)(konva@10.2.3)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-lBDe/5fTgquMdg1AHI0B16YZdAOvEhWMBWuo12ioyY0icdxcz9Cf12j86fsCJCHdnvjUOlZeC0f5q+siyHbD4Q==}
+    peerDependencies:
+      konva: ^8.0.1 || ^7.2.5 || ^9.0.0 || ^10.0.0
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+    dependencies:
+      '@types/react-reconciler': 0.28.9(@types/react@18.2.37)
+      its-fine: 1.2.5(@types/react@18.2.37)(react@18.2.0)
+      konva: 10.2.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-reconciler: 0.29.2(react@18.2.0)
+      scheduler: 0.23.0
+    transitivePeerDependencies:
+      - '@types/react'
+    dev: false
+
   /react-markdown@9.0.1(@types/react@18.2.37)(react@18.2.0):
     resolution: {integrity: sha512-186Gw/vF1uRkydbsOIkcGXw7aHq0sZOCRFFjGrr7b9+nVZg4UfA4enXCaxm4fUzecU38sWfrNDitGhshuU7rdg==}
     peerDependencies:
@@ -7791,6 +7838,17 @@ packages:
       react: '>=16.8.0'
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /react-reconciler@0.29.2(react@18.2.0):
+    resolution: {integrity: sha512-zZQqIiYgDCTP/f1N/mAR10nJGrPD2ZR+jDSEsKWJHYC7Cm2wodlwbR3upZRdC3cjIjSlTLNVyO7Iu0Yy7t2AYg==}
+    engines: {node: '>=0.10.0'}
+    peerDependencies:
+      react: ^18.3.1
+    dependencies:
+      loose-envify: 1.4.0
+      react: 18.2.0
+      scheduler: 0.23.2
     dev: false
 
   /react-remove-scroll-bar@2.3.4(@types/react@18.2.37)(react@18.2.0):
@@ -8104,6 +8162,12 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
+
+  /scheduler@0.23.2:
+    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
 
   /schema-utils@3.3.0:
     resolution: {integrity: sha512-pN/yOAvcC+5rQ5nERGuwrjLlYvLTbCibnZ1I7B1LaiAz9BRBlE9GMgE/eqV30P7aJQUf7Ddimy/RsbYO/GrVGg==}
