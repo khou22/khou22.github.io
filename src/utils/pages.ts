@@ -52,6 +52,7 @@ export const PAGES = {
     PASSWORD_GENERATOR: "/tools/password-generator",
     WIGGLEGRAM: "/tools/wigglegram",
     BOUNDING_BOX: "/tools/bounding-box",
+    INSTAGRAM_CAROUSEL: "/tools/instagram-carousel",
   },
   ADMIN: {
     PHOTOGRAPHY: "/admin/photos",

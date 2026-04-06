@@ -39,6 +39,11 @@ const ToolsPage = () => {
             Bounding Box Tool
           </CustomLink>
         </li>
+        <li>
+          <CustomLink href={PAGES.TOOLS.INSTAGRAM_CAROUSEL}>
+            Instagram Carousel Creator
+          </CustomLink>
+        </li>
       </ul>
     </PageWrapper>
   );
