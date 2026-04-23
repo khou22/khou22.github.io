@@ -17,10 +17,10 @@ import {
 } from "@/constants/photoPricing";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
-import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
+import { PhotoIdType, getPhotoName, getCdnAsset } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
-import { getSnipcartProduct } from "@/utils/snipcart";
 import { PhotoSize } from "@/utils/photos/getPhotoSize";
+import { useCartStore } from "@/store/cart";
 
 type ProductDetailsProps = {
   photoID: PhotoIdType;
@@ -36,6 +36,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
   photoSize,
 }) => {
   const posthog = usePostHog();
+  const addItem = useCartStore((state) => state.addItem);
 
   const [selectedSizeID, setSelectedSizeID] = useState(defaultPhotoSize.id);
   const selectedSize =
@@ -51,7 +52,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
       ? "horizontal"
       : "vertical";
 
-  const snipcartProduct = getSnipcartProduct(photoID, selectedSize);
   return (
     <div className="flex flex-col items-start justify-start space-y-6">
       <div>
@@ -59,7 +59,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
         <h4 className="mt-2 font-medium text-gray-800">
           ${selectedSize.price}
         </h4>
-        <p className="sr-only">{snipcartProduct.description}</p>
 
         <div className="mt-2 flex flex-row flex-wrap items-center justify-start gap-1">
           {tags.map((tag) => (
@@ -88,18 +87,20 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
       </div>
       <Button
         variant="primary"
-        className="snipcart-add-item w-full"
-        data-item-id={snipcartProduct.id}
-        data-item-name={snipcartProduct.name}
-        data-item-price={snipcartProduct.price}
-        data-item-url={snipcartProduct.url}
-        data-item-image={snipcartProduct.image}
+        className="w-full"
         onClick={() => {
           posthog.capture("add_to_cart", {
-            product_name: snipcartProduct.name,
-            product_id: snipcartProduct.id,
-            product_price: snipcartProduct.price,
-            product_url: snipcartProduct.url,
+            product_name: getPhotoName(photoID),
+            product_id: photoID,
+            product_price: selectedSize.price,
+          });
+          addItem({
+            id: `${photoID}__${selectedSize.id}`,
+            photoID,
+            variantID: selectedSize.id,
+            name: `${getPhotoName(photoID)} (${selectedSize.name})`,
+            price: selectedSize.price,
+            image: getCdnAsset(photoID),
           });
         }}
       >
