@@ -4,8 +4,8 @@ import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
 import { Cutive_Mono, Montserrat, Mulish } from "next/font/google";
 import "./globals.css";
 import dynamic from "next/dynamic";
-import { Snipcart } from "../components/organisms/Snipcart/Snipcart";
 import { PHProvider } from "./providers";
+import { CartProvider } from '@/components/store/CartContext';
 import { siteMetadata } from "@/constants/siteMetadata";
 import { NavBar } from "@/components/organisms/NavBar/NavBar";
 import { Footer } from "@/components/organisms/Footer/Footer";
@@ -86,6 +86,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <PHProvider>
+        <CartProvider>
         <body
           className={classNames(
             bodyFont.variable,
@@ -95,7 +96,6 @@ export default function RootLayout({
           )}
         >
           <PostHogPageView />
-          <Snipcart />
           {isDev ? (
             <HydrationOverlay>
               <NavBar />
@@ -111,6 +111,7 @@ export default function RootLayout({
           )}
           {gaID && !isDev && <GoogleAnalytics gaId={gaID} />}
         </body>
+        </CartProvider>
       </PHProvider>
     </html>
   );

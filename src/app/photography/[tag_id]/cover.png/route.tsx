@@ -16,16 +16,27 @@ type RouteParams = {
   };
 };
 
+export async function generateStaticParams() {
+  return Object.values(tagMetadata)
+    .filter((metadata) => !metadata.hidden)
+    .map((metadata) => {
+      return {
+        tag_id: metadata.slug,
+      };
+    });
+}
+
 export async function GET(_: NextRequest, context: RouteParams) {
   const photoTag = findKey(
     tagMetadata,
     ({ slug }) => slug === context.params.tag_id,
   ) as PhotoTags;
-  const metadata = tagMetadata[photoTag];
 
   if (!photoTag) {
     notFound();
   }
+
+  const metadata = tagMetadata[photoTag];
 
   try {
     const photos = await getPhotosWithTag(photoTag);

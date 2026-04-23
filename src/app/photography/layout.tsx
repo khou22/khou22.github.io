@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { CartButton } from "@/components/organisms/Snipcart/CartButton";
+import { CartButton } from "@/components/store/CartButton";
+import { CartSidebar } from "@/components/store/CartSidebar";
 import { siteMetadata } from "@/constants/siteMetadata";
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function PhotographyLayout({
   return (
     <>
       <CartButton />
+      <CartSidebar />
       {children}
     </>
   );

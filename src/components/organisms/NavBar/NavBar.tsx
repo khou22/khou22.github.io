@@ -15,6 +15,8 @@ import { clamp, interpolate } from "@/utils/math";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
+import { useCart } from "@/components/store/CartContext";
+import { ShoppingCartIcon } from "@/components/icons/ShoppingCartIcon/ShoppingCartIcon";
 
 /**
  * Standard nav bar for the site. Floats on certain pages, otherwise is relative. Dropdowns for
@@ -26,6 +28,8 @@ export const NavBar: React.FC = () => {
   const { scrollY } = useScrollPosition();
   const screenSize = useScreenSize();
   const [isDropdownOpen, setIsDropdownOpen] = useState<NavBarDropdownType>();
+  const { cart, toggleCart, isCartLoaded } = useCart();
+  const itemCount = cart.reduce((acc, item) => acc + item.quantity, 0);
   const isHovering = Boolean(isDropdownOpen);
   const pathname = usePathname();
   const isFloating =
@@ -121,7 +125,25 @@ export const NavBar: React.FC = () => {
               </div>
             </div>
           </Link>
-          <MobileNav />
+
+          <div className="flex items-center gap-x-2 md:order-2">
+            {isCartLoaded && (
+              <button
+                className="relative flex items-center justify-center rounded-full p-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 focus:outline-none transition-colors"
+                onClick={toggleCart}
+                aria-label="Shopping cart"
+              >
+                <ShoppingCartIcon className="h-6 w-6" />
+                {itemCount > 0 && (
+                  <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-bold text-white shadow-sm">
+                    {itemCount}
+                  </span>
+                )}
+              </button>
+            )}
+            <MobileNav />
+          </div>
+
           <div
             id="mega-menu-full"
             className="hidden w-full items-center justify-between font-medium md:order-1 md:flex md:w-auto"

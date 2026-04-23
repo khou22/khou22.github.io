@@ -23,11 +23,13 @@ type PageProps = {
 };
 
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
-  return Object.values(PhotoTags).map((value) => {
-    return {
-      tag_id: value,
-    };
-  });
+  return Object.values(tagMetadata)
+    .filter((metadata) => !metadata.hidden)
+    .map((metadata) => {
+      return {
+        tag_id: metadata.slug,
+      };
+    });
 }
 
 export const generateMetadata = ({ params }: PageProps): Metadata => {
@@ -88,11 +90,12 @@ const TagPage = async ({ params }: PageProps) => {
     tagMetadata,
     ({ slug }) => slug === params.tag_id,
   ) as PhotoTags;
-  const metadata = tagMetadata[photoTag];
 
   if (!photoTag) {
     notFound();
   }
+
+  const metadata = tagMetadata[photoTag];
 
   const photoIDs = await getPhotosWithTag(photoTag);
   const suggestedTags = getSuggestedPhotoTags(photoTag, 4);

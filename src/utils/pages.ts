@@ -59,6 +59,12 @@ export const PAGES = {
     SUBDIRECTORY: (dirName: string) => `/admin/photos/${dirName}`,
     SEARCH: (query: string) => `/admin/photos/search/${query}`,
   },
+  STORE: {
+    CHECKOUT: {
+      SUCCESS: "/store/checkout/success",
+      CANCEL: "/store/checkout/cancel",
+    },
+  },
   REDIRECTS: {
     FARLEYS: "/r/farleys",
   },
