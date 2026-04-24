@@ -7,6 +7,8 @@ import readingTime from "reading-time";
 import { HydratedBlogPost } from "@/data/types";
 import { getDataDirectory } from "@/data/dataDirs";
 
+export const POSTS_PER_PAGE = 10;
+
 /**
  * Retrieves a list of hydrated blog posts sorted in descending order of date.
  *
@@ -110,4 +112,38 @@ export const getPostsByTag = async (
 ): Promise<HydratedBlogPost[]> => {
   const posts = await getPosts();
   return posts.filter((p) => p.frontMatter.tags.includes(tagID));
+};
+
+/**
+ * Retrieves a paginated list of blog posts.
+ *
+ * @param {number} page The page number to retrieve (1-indexed).
+ * @param {number} limit The number of posts per page.
+ * @return {Promise<{ posts: HydratedBlogPost[], totalPages: number, currentPage: number, totalPosts: number }>}
+ */
+export const getPaginatedPosts = async (
+  page: number,
+  limit: number = POSTS_PER_PAGE,
+): Promise<{
+  posts: HydratedBlogPost[];
+  totalPages: number;
+  currentPage: number;
+  totalPosts: number;
+}> => {
+  const allPosts = await getPosts();
+  const totalPosts = allPosts.length;
+  const totalPages = Math.ceil(totalPosts / limit);
+
+  // Ensure page is within bounds
+  const currentPage = Math.max(1, Math.min(page, totalPages || 1));
+
+  const offset = (currentPage - 1) * limit;
+  const paginatedPosts = allPosts.slice(offset, offset + limit);
+
+  return {
+    posts: paginatedPosts,
+    totalPages,
+    currentPage,
+    totalPosts,
+  };
 };
