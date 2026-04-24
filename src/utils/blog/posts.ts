@@ -28,9 +28,14 @@ export function getPosts(): HydratedBlogPost[] {
     // Use `gray-matter` to parse the post frontmatter into metadata
     const matterResult = matter(fileContents);
 
-    const { title, author, date: dateStr, description } = matterResult.data;
-    if (!title || !author || !dateStr || !description) {
+    const { title, author, date: dateStr } = matterResult.data;
+    let { description } = matterResult.data;
+    if (!title || !author || !dateStr) {
       throw new Error(`Missing metadata in ${filename}`);
+    }
+
+    if (!description) {
+      description = title;
     }
 
     const date = moment(dateStr);
