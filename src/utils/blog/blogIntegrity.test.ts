@@ -180,7 +180,7 @@ describe("Blog Posts Integrity Tests", () => {
 
         if (!(key in _generatedCdnAssets)) {
           errors.push(
-            `[Broken image embed] Blog post "${filename}" contains broken embedded image (${type}): asset not found in CDN registry (src: "${src}", key: "${key}")`
+            `[Broken image embed] Blog post "${filename}" contains broken embedded image (${type}): asset not found in CDN registry (src: "${src}", key: "${key}")`,
           );
         }
       };

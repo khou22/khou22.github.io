@@ -171,7 +171,9 @@ export const resolveBlogImage = (src: string): string => {
   key = key.replace(/[^a-zA-Z0-9/]+/g, "_");
 
   if (key in _generatedCdnAssets) {
-    return `${baseUrl}${_generatedCdnAssets[key as keyof typeof _generatedCdnAssets].path}`;
+    return `${baseUrl}${
+      _generatedCdnAssets[key as keyof typeof _generatedCdnAssets].path
+    }`;
   }
 
   return src;
