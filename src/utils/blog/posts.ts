@@ -12,7 +12,10 @@ import { getDataDirectory } from "@/data/dataDirs";
  *
  * @return {HydratedBlogPost[]} An array of hydrated blog post objects.
  */
-export function getPosts(): HydratedBlogPost[] {
+export function getPosts(
+  options: { includeArchived?: boolean } = {},
+): HydratedBlogPost[] {
+  const { includeArchived = false } = options;
   const postsDirectory = getDataDirectory("blog");
   const fileNames = fs.readdirSync(postsDirectory);
 
@@ -28,9 +31,14 @@ export function getPosts(): HydratedBlogPost[] {
     // Use `gray-matter` to parse the post frontmatter into metadata
     const matterResult = matter(fileContents);
 
-    const { title, author, date: dateStr, description } = matterResult.data;
-    if (!title || !author || !dateStr || !description) {
+    const { title, author, date: dateStr } = matterResult.data;
+    let { description } = matterResult.data;
+    if (!title || !author || !dateStr) {
       throw new Error(`Missing metadata in ${filename}`);
+    }
+
+    if (!description) {
+      description = title;
     }
 
     const date = moment(dateStr);
@@ -52,6 +60,7 @@ export function getPosts(): HydratedBlogPost[] {
         image: matterResult.data.image || null,
         tags: matterResult.data.tags || [],
         featured: matterResult.data.featured || false,
+        archived: matterResult.data.archived || false,
         estimatedReadingTimeMS: readingStats.time,
         wordCount: readingStats.words,
         slug,
@@ -60,14 +69,21 @@ export function getPosts(): HydratedBlogPost[] {
     };
   });
 
-  // Sort posts by date and return
-  return allPostsData.sort((a, b) => {
+  // Sort posts by date
+  const sorted = allPostsData.sort((a, b) => {
     if (a.frontMatter.date < b.frontMatter.date) {
       return 1;
     } else {
       return -1;
     }
   });
+
+  // Filter out archived posts unless explicitly requested
+  if (!includeArchived) {
+    return sorted.filter((p) => !p.frontMatter.archived);
+  }
+
+  return sorted;
 }
 
 export class PostNotFoundError extends Error {
@@ -78,7 +94,7 @@ export class PostNotFoundError extends Error {
 }
 
 export const getPost = async (slug: string): Promise<HydratedBlogPost> => {
-  const posts = await getPosts();
+  const posts = await getPosts({ includeArchived: true });
 
   // Find the post using its unique slug.
   const post = find(posts, (p) => p.frontMatter.slug === slug);

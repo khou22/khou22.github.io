@@ -7,7 +7,7 @@ tags: [coding]
 featured: false
 ---
 
-As a photographer and designer, I've always believed images are a multiplier on a website's engagement. While you can often accomplish what you want to render using normal JS + React + CSS, there a few cases where images are simpler and make more sense.
+As a photographer and designer, I've always believed images are a multiplier on a website's engagement. While you can often accomplish what you want to render using normal JS + React + CSS, there are a few cases where images are simpler and make more sense.
 
 ### Use Case 1: Open-Graph Images
 
@@ -41,7 +41,7 @@ Here's an example that I built with Codeium:
 
 There's two reasons for this:
 
-1. You'll come up with something cleaner and more intentional. These card's are only as successful as their design & information they provide. There is no interaction so you'll want to spend some time to get it right.
+1. You'll come up with something cleaner and more intentional. These cards are only as successful as their design & information they provide. There is no interaction so you'll want to spend some time to get it right.
 2. Using Figma's DevMode feature, you'll be able to access absolute / relative positions which makes the development process significantly easier.
 
 ### Create a Shared, Top-Level React Component
@@ -80,7 +80,7 @@ Your server will disconnect and you'll get no response or error message on the c
 
 #### Tip: Use Percentages
 
-If you use percentages instead of hard coded values, you can use this component more flexibly. The default OG image size is 1200 x 630 which could be too large for your mobile display. If you're embedding this card as a preview as a React Compoennt (see tip on using shared, top-level React component), then you'll want to make sure the component is scalable.
+If you use percentages instead of hard coded values, you can use this component more flexibly. The default OG image size is 1200 x 630 which could be too large for your mobile display. If you're embedding this card as a preview as a React Component (see tip on using shared, top-level React component), then you'll want to make sure the component is scalable.
 
 You can also make the text dynamic by using `rem` or doing some rough switch / case math based on the length of the string and size of the card.
 

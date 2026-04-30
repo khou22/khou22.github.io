@@ -6529,25 +6529,25 @@ export const _generatedCdnAssets = {
     name: `async-post-message-homepage`,
     dimensions: [1800, 1263],
   },
-	"media/projects/executeOrder66/GitHub_Logo_png": {
-    path: "/media/projects/executeOrder66/GitHub%20Logo.png",
-    name: `GitHub Logo`,
+	"media/projects/executeOrder66/twitter_post_kevin_hou_jpg": {
+    path: "/media/projects/executeOrder66/twitter-post-kevin-hou.jpg",
+    name: `twitter-post-kevin-hou`,
+    dimensions: [750, 1334],
+  },
+	"media/projects/executeOrder66/twitter_post_major_league_hacking_jpg": {
+    path: "/media/projects/executeOrder66/twitter-post-major-league-hacking.jpg",
+    name: `twitter-post-major-league-hacking`,
+    dimensions: [750, 1334],
+  },
+	"media/projects/executeOrder66/twitter_post_github_education_jpg": {
+    path: "/media/projects/executeOrder66/twitter-post-github-education.jpg",
+    name: `twitter-post-github-education`,
+    dimensions: [750, 1334],
+  },
+	"media/projects/executeOrder66/github_logo_png": {
+    path: "/media/projects/executeOrder66/github-logo.png",
+    name: `github-logo`,
     dimensions: [400, 400],
-  },
-	"media/projects/executeOrder66/Twitter_Post_Kevin_Hou_jpg": {
-    path: "/media/projects/executeOrder66/Twitter%20Post%20-%20Kevin%20Hou.jpg",
-    name: `Twitter Post - Kevin Hou`,
-    dimensions: [750, 1334],
-  },
-	"media/projects/executeOrder66/Twitter_Post_GitHub_Education_jpg": {
-    path: "/media/projects/executeOrder66/Twitter%20Post%20-%20GitHub%20Education.jpg",
-    name: `Twitter Post - GitHub Education`,
-    dimensions: [750, 1334],
-  },
-	"media/projects/executeOrder66/Twitter_Post_Major_League_Hacking_jpg": {
-    path: "/media/projects/executeOrder66/Twitter%20Post%20-%20Major%20League%20Hacking.jpg",
-    name: `Twitter Post - Major League Hacking`,
-    dimensions: [750, 1334],
   },
 	"media/photography/customers/breitling_png": {
     path: "/media/photography/customers/breitling.png",
@@ -6899,11 +6899,6 @@ export const _generatedCdnAssets = {
     name: `ios-number-keypad-with-done-button`,
     dimensions: [750, 529],
   },
-	"media/blog/images/OSX_10_11_Jekyll_png": {
-    path: "/media/blog/images/OSX%2010.11%20Jekyll.png",
-    name: `OSX 10.11 Jekyll`,
-    dimensions: [2880, 1800],
-  },
 	"media/blog/images/YouTube_Channel_Artwork/Desktop_Size_png": {
     path: "/media/blog/images/YouTube%20Channel%20Artwork/Desktop%20Size.png",
     name: `Desktop Size`,
@@ -6913,6 +6908,11 @@ export const _generatedCdnAssets = {
     path: "/media/blog/images/YouTube%20Channel%20Artwork/YouTube%20Channel%20Artwork.jpg",
     name: `YouTube Channel Artwork`,
     dimensions: [2560, 1440],
+  },
+	"media/blog/images/osx_10_11_jekyll_png": {
+    path: "/media/blog/images/osx-10-11-jekyll.png",
+    name: `osx-10-11-jekyll`,
+    dimensions: [2880, 1800],
   },
 	"media/blog/images/Tab_Bar_Navigation/Large_Center_Icon_png": {
     path: "/media/blog/images/Tab-Bar-Navigation/Large_Center_Icon.png",
@@ -7163,6 +7163,46 @@ export const _generatedCdnAssets = {
     path: "/media/blog/images/ai-engineer-summit-nyc-2025-video-performance-swyx.png",
     name: `ai-engineer-summit-nyc-2025-video-performance-swyx`,
     dimensions: [1246, 804],
+  },
+	"media/blog/images/antigravity/agent_manager_png": {
+    path: "/media/blog/images/antigravity/agent-manager.png",
+    name: `agent-manager`,
+    dimensions: [3150, 1924],
+  },
+	"media/blog/images/antigravity/inbox_png": {
+    path: "/media/blog/images/antigravity/inbox.png",
+    name: `inbox`,
+    dimensions: [2824, 1978],
+  },
+	"media/blog/images/antigravity/comment_system_png": {
+    path: "/media/blog/images/antigravity/comment-system.png",
+    name: `comment-system`,
+    dimensions: [1984, 950],
+  },
+	"media/blog/images/antigravity/architecture_diagram_png": {
+    path: "/media/blog/images/antigravity/architecture-diagram.png",
+    name: `architecture-diagram`,
+    dimensions: [3068, 1972],
+  },
+	"media/blog/images/antigravity/artifact_alert_png": {
+    path: "/media/blog/images/antigravity/artifact-alert.png",
+    name: `artifact-alert`,
+    dimensions: [1094, 328],
+  },
+	"media/blog/images/antigravity/antigravity_cover_jpg": {
+    path: "/media/blog/images/antigravity/antigravity-cover.jpg",
+    name: `antigravity-cover`,
+    dimensions: [1440, 810],
+  },
+	"media/blog/images/antigravity/browser_walkthrough_png": {
+    path: "/media/blog/images/antigravity/browser-walkthrough.png",
+    name: `browser-walkthrough`,
+    dimensions: [2600, 1732],
+  },
+	"media/blog/images/antigravity/browser_actuation_gif": {
+    path: "/media/blog/images/antigravity/browser-actuation.gif",
+    name: `browser-actuation`,
+    dimensions: [null, null],
   },
 	"media/blog/images/Desmos/Desmos_Staff_Picks_png": {
     path: "/media/blog/images/Desmos/Desmos_Staff_Picks.png",

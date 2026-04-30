@@ -3,11 +3,12 @@ title: "Slate: Taking My First Solo iOS App from R&D to Full Scale Product"
 author: "Kevin Hou"
 date: 2017-12-03 10:12:15
 description: "A detailed post about my journey in publishing my first iOS app."
-image: "https://khou22.github.io/media/blog/images/Slate-Scheduler/banner.png"
+image: "/media/blog/images/Slate-Scheduler/banner.png"
 tags: [coding, mobile, product]
+featured: false
 ---
 
-![slate scheduler announcement](https://khou22.github.io/media/blog/images/Slate-Scheduler/banner.png)
+![slate scheduler announcement](/media/blog/images/Slate-Scheduler/banner.png)
 
 ## Introduction
 
@@ -58,13 +59,13 @@ These three elements can be broken into two groups: text fields and dates. Text 
 
 The text fields ultimately came down to minimizing the number of keyboard key presses. A lot of time is wasted typing the same event name and loction over and over again. I decided that every text field should have a list of text suggests based on historical data: events that you add frequently would have a higher liklihood of showing up. It'd be an autocomplete text field that would double as a search box of sorts (think Google search suggestions). This would make "typing" the names of events a matter of simply pressing the suggestion or searching then selecting.
 
-![slate scheduler autocomplete search](https://khou22.github.io/media/blog/images/Slate-Scheduler/autocomplete-search.gif)
+![slate scheduler autocomplete search](/media/blog/images/Slate-Scheduler/autocomplete-search.gif)
 
 The location input would work in the same way. Most location search boxes direct you to a new, fullscreen search page which both feels annoying and takes longer. With these autocomplete text fields, all interaction could take place on the same page.
 
-![ios calendar app location search](https://khou22.github.io/media/blog/images/Slate-Scheduler/ios-calendar-app-location-search.gif)
+![ios calendar app location search](/media/blog/images/Slate-Scheduler/ios-calendar-app-location-search.gif)
 
-![slate scheduler location search](https://khou22.github.io/media/blog/images/Slate-Scheduler/slate-location-search.gif)
+![slate scheduler location search](/media/blog/images/Slate-Scheduler/slate-location-search.gif)
 
 I also wanted an easy way to prepend a room number or some sort of text before the location. With most calendar clients, because you'd be searching for an exact location, you wouldn't have the ability to both search for a real location and add a room number. I solved this problem by splitting the location text field into two: a main location field with Google maps searching and a smaller text field to add a small chunk of text before the actual location.
 
@@ -80,13 +81,13 @@ Slate uses a predictive model that strengthens with usage to allow you to schedu
 
 I will not focus on the implementation as much simply because I've already covered a lot of the topics in other blog posts. Here are some of the few blog posts:
 
-1. [Swift Classes August 2017: Classes, Subclasses, and Protocols](http://khou22.com/ios/2017/08/24/swift-classes-august-2017-classes-subclasses-and-protocols.html)
-2. [Swift Tips and Tricks February 2017: UI Text Field Styling and Force Touch App Shortcuts](http://khou22.com/ios/2017/02/28/swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts.html)
-3. [Data Types December 2016: Dictionaries and Symbol Tables](http://khou22.com/programming/2016/12/18/data-types-december-2016-dictionaries-and-symbol-tables.html)
-4. [Swift Core Data Basics: Storing App Data](http://khou22.com/ios/2016/10/31/swift-core-data-basics-storing-app-data.html)
-5. [Swift Navigation Basics: How to Setup a Tab Bar App](http://khou22.com/ios/2016/08/10/swift-navigation-basics-how-to-setup-a-simple-tab-bar-app.html)
-6. [Persist Data: Storing Values Locally Using Swift](http://khou22.com/ios/2016/07/25/persist-data-storing-values-locally-using-swift.html)
-7. And many more that can be found in the [iOS category of my blog site](http://khou22.com/blog/category/ios/)
+1. [Swift Classes August 2017: Classes, Subclasses, and Protocols](/blog/2017-08-24-swift-classes-august-2017-classes-subclasses-and-protocols)
+2. [Swift Tips and Tricks February 2017: UI Text Field Styling and Force Touch App Shortcuts](/blog/2017-02-28-swift-tips-and-tricks-february-2017-ui-text-field-styling-and-force-touch-app-shortcuts)
+3. [Data Types December 2016: Dictionaries and Symbol Tables](/blog/2016-12-18-data-types-december-2016---dictionaries-and-symbol-tables)
+4. [Swift Core Data Basics: Storing App Data](/blog/2016-10-31-swift-core-data-basics-storing-app-data)
+5. [Swift Navigation Basics: How to Setup a Tab Bar App](/blog/2016-08-10-swift-navigation-basics-how-to-setup-a-simple-tab-bar-app)
+6. [Persist Data: Storing Values Locally Using Swift](/blog/2016-07-25-persist-data-storing-values-locally-using-swift)
+7. And many more that can be found in the [iOS category of my blog site](/blog?tag=ios)
 
 ## What I Learned
 

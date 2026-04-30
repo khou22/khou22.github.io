@@ -315,7 +315,7 @@ export const programmingProjects: ProgrammingProjectType[] = [
     name: "Execute Order 66",
     subtitle: "Block profanity in GitHub",
     slug: "https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone?hl=en-US",
-    image: getCdnAsset("media/projects/executeOrder66/GitHub_Logo_png"),
+    image: getCdnAsset("media/projects/executeOrder66/github_logo_png"),
     category: ProjectCategory.WebApp,
     description:
       "A Google Chrome Extension that cleanses the profanity out of your GitHub repos.",

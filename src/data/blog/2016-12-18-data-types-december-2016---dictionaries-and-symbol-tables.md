@@ -5,8 +5,8 @@ author: "Kevin Hou"
 date: 2016-12-18 14:57:26
 description: "An overview of dictionaries/symbol tables and how they are useful."
 tags: [coding]
+featured: false
 ---
-
 Recently in class, I’ve been learning a lot about different data structures to use in programs. Many of the common, most applicable, include linked lists, stacks, queues, double linked lists, and symbol tables. In this post I will give a brief overview of symbol tables, also known as dictionaries or hash maps, and provide some instances where symbol tables can greatly improve the quality of your code. When implemented correctly, this simple data type can improve efficiency, code readability, and run time.
 
 ### What are dictionaries and symbol tables?

@@ -34,7 +34,7 @@ The fastest way to get started is to activate web search in your Windsurf Settin
 
 ## Technology
 
-The Cascade agent is already one of the most popular and top performing agents on the market. It's used by hundreds of thousands of developers around the world to build new projects, refactor existing codebases, write unit tests, and so much more. It's incredibely versitile and that largely due to its ability to know _when_ and _how_ to use its tools.
+The Cascade agent is already one of the most popular and top performing agents on the market. It's used by hundreds of thousands of developers around the world to build new projects, refactor existing codebases, write unit tests, and so much more. It's incredibly versatile and that's largely due to its ability to know _when_ and _how_ to use its tools.
 
 Cascade has a number of tools available at its disposal, including but not limited to:
 
@@ -44,16 +44,16 @@ Cascade has a number of tools available at its disposal, including but not limit
 - Executing terminal commands on your behalf
 - **New**: Retrieving content from the web
 
-We designed and built Cascade to operate very much as a human would. This is the reason why it's flexible, capable, and performant. Regardless of the size or complexity of the codebase, Cascade will be able to groq through it and provide you with file changes, explanations, and more.
+We designed and built Cascade to operate very much as a human would. This is the reason why it's flexible, capable, and performant. Regardless of the size or complexity of the codebase, Cascade will be able to grok through it and provide you with file changes, explanations, and more.
 
-I believe that the future of AI is agents and that agents should mimic the behavior of humans when solving problems. Thinks about how a human would go about researching a question. For the sake of argument, let's say you want to learn how to create a dynamically generated open-graph image (ie. preview thumbnail image) for a page on your NextJS website.
+I believe that the future of AI is agents and that agents should mimic the behavior of humans when solving problems. Think about how a human would go about researching a question. For the sake of argument, let's say you want to learn how to create a dynamically generated open-graph image (ie. preview thumbnail image) for a page on your NextJS website.
 
 ### Architecture
 
-Cascade is the AI agent that powers in Windsurf. Web search is a mechanism for external content retrieval and therefore can be considered a "tool" in the agentic executation system. It's structured into three different tools:
+Cascade is the AI agent that powers Windsurf. Web search is a mechanism for external content retrieval and therefore can be considered a "tool" in the agentic execution system. It's structured into three different tools:
 
 1. **Web Search**: Find a list of relevant articles online that pertain to your query or intent. It does not read the contents of the page.
-2. **URL Read**: Get the contents of the page and if neccessary, create multiple "chunks".
+2. **URL Read**: Get the contents of the page and if necessary, create multiple "chunks".
 3. **View a Chunk**: If the page gets chunked, read the relevant sections of the page.
 
 Here is an example of an end-to-end NextJS change that required looking up the most recent documentation and reading a specific section of the page in order to generate the correct code:
@@ -64,7 +64,6 @@ Here is an example of an end-to-end NextJS change that required looking up the m
 
 Web search is fairly straight forward. We use an LLM to synthesize our conversation and intent into a query and use that query to pull a list of articles that could be helpful. This can include anything from StackOverflow links and GitHub issues to documentation sites and blog posts. This is very similar to a human searching on Google, no need to overthink it!
 
-TODO: screenshot
 
 #### URL Reading
 
@@ -74,7 +73,7 @@ This step's logic depends a bit on the page in question. It performs a web scrap
 
 **Long Site:** If a site is long, we don't want to waste time or tokens reading the _entire_ site so we end up creating "chunks". A "chunk" is defined as a section of the page. We have a heuristic to best chunk a page and this is often at the start of a new header. After chunking, we'll construct an outline with a summary of all the chunks on the page (ie. a table of contents). The output of this step will then be an outline. Sometimes this is enough to help with your query, but often the planner will decide it needs to know more and will reach for our third tool: "View Chunk".
 
-Here is an example of the NextJS page broken up into it's "chunks":
+Here is an example of the NextJS page broken up into its "chunks":
 
 ![windsurf cascade page chunking](https://khou22.github.io/media/blog/images/windsurf-web-search-tutorial/chunk-visualization.png)
 
@@ -108,7 +107,7 @@ In my experience, it's best to provide Cascade with more specific prompts rather
 
 You do not need to use `@web` and in some cases, I've found searching the web can sometimes be overkill. For example, if you're looking to generate a function and there's no real-time need, Cascade can likely do this entirely based on its training data. Forcing it to use the web can waste Flow Action credits and slow down the end to end experience.
 
-One of the biggest challenges I had worked on was site compatability. Websites are built very differently and it's difficult to build a web scraping system that works on every site. I considerd outsourcing to a third party but that would both hinder our security posture as well as prevent you from reading documents within your network. I'm working on adding more site compatability but if you find that the page read is not as useful as you'd expect (by clicking on the URL to view the markdown it read), consider prompting it to look at URLs that can be reliably scraped such as blog posts, document sites, StackOverflow, GitHub file links / issues, and more. Cases that are known to be problematic are things like paywalls, login pages, online editors (ie. CodeSandbox), and JS-heavy sites (ie. animated sites).
+One of the biggest challenges I had worked on was site compatibility. Websites are built very differently and it's difficult to build a web scraping system that works on every site. I considered outsourcing to a third party but that would both hinder our security posture as well as prevent you from reading documents within your network. I'm working on adding more site compatibility but if you find that the page read is not as useful as you'd expect (by clicking on the URL to view the markdown it read), consider prompting it to look at URLs that can be reliably scraped such as blog posts, document sites, StackOverflow, GitHub file links / issues, and more. Cases that are known to be problematic are things like paywalls, login pages, online editors (ie. CodeSandbox), and JS-heavy sites (ie. animated sites).
 
 ## Conclusion
 
