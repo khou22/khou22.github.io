@@ -27,40 +27,68 @@ describe("Blog Posts Integrity Tests", () => {
       try {
         matterResult = matter(fileContents);
       } catch (e) {
-        errors.push(`[Malformed frontmatter] Failed to parse frontmatter in "${filename}": ${e.message}`);
+        errors.push(
+          `[Malformed frontmatter] Failed to parse frontmatter in "${filename}": ${e.message}`,
+        );
         return;
       }
 
-      const { title, author, date: dateStr, description, tags } = matterResult.data;
+      const {
+        title,
+        author,
+        date: dateStr,
+        description,
+        tags,
+      } = matterResult.data;
 
-      if (title === undefined || (typeof title === "string" && title.trim() === "")) {
-        errors.push(`[Missing metadata] Post "${filename}" is missing or has an empty title field.`);
+      if (
+        title === undefined ||
+        (typeof title === "string" && title.trim() === "")
+      ) {
+        errors.push(
+          `[Missing metadata] Post "${filename}" is missing or has an empty title field.`,
+        );
       }
-      if (author === undefined || (typeof author === "string" && author.trim() === "")) {
-        errors.push(`[Missing metadata] Post "${filename}" is missing or has an empty author field.`);
+      if (
+        author === undefined ||
+        (typeof author === "string" && author.trim() === "")
+      ) {
+        errors.push(
+          `[Missing metadata] Post "${filename}" is missing or has an empty author field.`,
+        );
       }
       if (dateStr === undefined) {
         errors.push(`[Missing metadata] Post "${filename}" is missing date.`);
       } else {
         const parsedDate = moment(dateStr);
         if (!parsedDate.isValid()) {
-          errors.push(`[Invalid Date] Post "${filename}" has malformed date: "${dateStr}".`);
+          errors.push(
+            `[Invalid Date] Post "${filename}" has malformed date: "${dateStr}".`,
+          );
         }
       }
 
       if (tags !== undefined && !Array.isArray(tags)) {
-        errors.push(`[Schema Violation] Post "${filename}" has tags field which is not an array.`);
+        errors.push(
+          `[Schema Violation] Post "${filename}" has tags field which is not an array.`,
+        );
       }
 
-      const slug = filename.replace(/\.mdx?$/, "").replaceAll(/[^a-z0-9]/gi, "-");
+      const slug = filename
+        .replace(/\.mdx?$/, "")
+        .replaceAll(/[^a-z0-9]/gi, "-");
       if (seenSlugs.has(slug)) {
-        errors.push(`[Slug Collision] Post "${filename}" generates a duplicated slug "${slug}".`);
+        errors.push(
+          `[Slug Collision] Post "${filename}" generates a duplicated slug "${slug}".`,
+        );
       }
       seenSlugs.add(slug);
     });
 
     if (errors.length > 0) {
-      throw new Error(`Metadata Integrity failed with errors:\n${errors.join("\n")}`);
+      throw new Error(
+        `Metadata Integrity failed with errors:\n${errors.join("\n")}`,
+      );
     }
   });
 
@@ -77,7 +105,9 @@ describe("Blog Posts Integrity Tests", () => {
     const imgHtmlRegex = /<img\s+[^>]*?src=["']([^"']+)["']/gi;
 
     fileNames.forEach((filename) => {
-      const slug = filename.replace(/\.mdx?$/, "").replaceAll(/[^a-z0-9]/gi, "-");
+      const slug = filename
+        .replace(/\.mdx?$/, "")
+        .replaceAll(/[^a-z0-9]/gi, "-");
       const fullPath = path.join(postsDirectory, filename);
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const matterResult = matter(fileContents);
@@ -184,13 +214,17 @@ describe("Blog Posts Integrity Tests", () => {
 
     if (cycles.length > 0) {
       console.warn("\n⚠️ Audited internal reciprocal reference loops found:\n");
-      cycles.forEach((cycle) => console.warn(`   🔁 Loop: ${cycle.join(" -> ")}`));
+      cycles.forEach((cycle) =>
+        console.warn(`   🔁 Loop: ${cycle.join(" -> ")}`),
+      );
     }
 
     if (errors.length > 0) {
       console.error("\nCollected anomalies during verification:\n");
       errors.forEach((err) => console.error(`❌ ${err}`));
-      throw new Error(`Cross-reference Integrity Test failed with ${errors.length} validation anomalies found.`);
+      throw new Error(
+        `Cross-reference Integrity Test failed with ${errors.length} validation anomalies found.`,
+      );
     }
   });
 
@@ -228,7 +262,9 @@ describe("Blog Posts Integrity Tests", () => {
 
             // Validate language name syntax
             // Format could be "language" or "language {1,3-5}"
-            const langMatch = params.match(/^([a-zA-Z0-9\-+._]*)(?:\s*(\{.*\}))?$/);
+            const langMatch = params.match(
+              /^([a-zA-Z0-9\-+._]*)(?:\s*(\{.*\}))?$/,
+            );
             if (!langMatch) {
               errors.push(
                 `[Invalid code fence] Post "${filename}" at line ${lineNum}: opening code block contains unusual metadata string "${params}".`,
@@ -252,7 +288,9 @@ describe("Blog Posts Integrity Tests", () => {
     });
 
     if (errors.length > 0) {
-      throw new Error(`Code fence conformance validations failed:\n${errors.join("\n")}`);
+      throw new Error(
+        `Code fence conformance validations failed:\n${errors.join("\n")}`,
+      );
     }
   });
 });
