@@ -2,7 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import moment from "moment";
+import { _generatedCdnAssets } from "../cdn/cdnAssets.generated";
 import { getPosts } from "./posts";
+import { goldenBlogImages } from "../../constants/goldenBlogImages";
 
 describe("Blog Posts Integrity Tests", () => {
   const postsDirectory = path.join(process.cwd(), "src/data/blog");
@@ -100,9 +102,10 @@ describe("Blog Posts Integrity Tests", () => {
     const errors: string[] = [];
     const adjList = new Map();
 
-    // Regex to capture both Markdown links and Markdown images
+    // Regex to capture both Markdown links and images
     const linkRegex = /\[.*?\]\((.*?)\)/g;
     const imgHtmlRegex = /<img\s+[^>]*?src=["']([^"']+)["']/gi;
+    const imgMarkdownRegex = /!\[.*?\]\((.*?)\)/g;
 
     fileNames.forEach((filename) => {
       const slug = filename
@@ -154,28 +157,39 @@ describe("Blog Posts Integrity Tests", () => {
       }
 
       // Test Images
-      while ((match = imgHtmlRegex.exec(content)) !== null) {
-        const src = match[1].trim();
-
+      const validateImage = (src: string, type: string) => {
+        src = src.trim();
         if (
           !src ||
           src.startsWith("http://") ||
           src.startsWith("https://") ||
-          src.startsWith("//")
+          src.startsWith("//") ||
+          goldenBlogImages.has(src)
         ) {
-          continue;
+          return;
         }
 
-        // Validate local assets referenced relatively or via absolute root paths
-        if (src.startsWith("/media/") || src.startsWith("/photography/")) {
-          const relativePath = src.replace(/^\//, "");
-          const assetPath = path.join(docsDirectory, relativePath);
-          if (!fs.existsSync(assetPath)) {
-            errors.push(
-              `[Broken image embed] Blog post "${filename}" contains broken embedded image: local asset does not exist in target output directory "${assetPath}" (src: "${src}")`,
-            );
-          }
+        let key = src;
+        if (key.startsWith("/")) {
+          key = key.substring(1);
         }
+        try {
+          key = decodeURIComponent(key);
+        } catch (e) {}
+        key = key.replace(/[^a-zA-Z0-9/]+/g, "_");
+
+        if (!(key in _generatedCdnAssets)) {
+          errors.push(
+            `[Broken image embed] Blog post "${filename}" contains broken embedded image (${type}): asset not found in CDN registry (src: "${src}", key: "${key}")`
+          );
+        }
+      };
+
+      while ((match = imgHtmlRegex.exec(content)) !== null) {
+        validateImage(match[1], "HTML");
+      }
+      while ((match = imgMarkdownRegex.exec(content)) !== null) {
+        validateImage(match[1], "Markdown");
       }
     });
 
