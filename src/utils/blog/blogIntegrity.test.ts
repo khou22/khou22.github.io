@@ -3,8 +3,8 @@ import path from "path";
 import matter from "gray-matter";
 import moment from "moment";
 import { _generatedCdnAssets } from "../cdn/cdnAssets.generated";
-import { getPosts } from "./posts";
 import { goldenBlogImages } from "../../constants/goldenBlogImages";
+import { getPosts } from "./posts";
 
 describe("Blog Posts Integrity Tests", () => {
   const postsDirectory = path.join(process.cwd(), "src/data/blog");
