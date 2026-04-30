@@ -16,7 +16,7 @@ import { PAGES } from "@/utils/pages";
  * Get all blog posts and generate static params. Allows for automatic memoization of these pages.
  */
 export async function generateStaticParams() {
-  const posts = await getPosts();
+  const posts = await getPosts({ includeArchived: true });
   return posts.map((post) => ({
     slug: post.frontMatter.slug,
   }));
