@@ -5,6 +5,7 @@ date:   2015-07-21 14:32:00
 description: "A quicker and faster way of writing if/then statements in javascript."
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [javascript]
+archived: true
 ---
 As a lot of you guys know, a proper if/then statement looks like this:
 

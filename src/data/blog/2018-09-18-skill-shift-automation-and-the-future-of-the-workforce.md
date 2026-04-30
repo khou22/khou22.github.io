@@ -6,6 +6,7 @@ description: "My notes after reading a handful of articles about workplace autom
 image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [internship, reflection]
 featured: false
+archived: true
 ---
 ## Demand for Workforce Skills
 * Machines are getting smarter

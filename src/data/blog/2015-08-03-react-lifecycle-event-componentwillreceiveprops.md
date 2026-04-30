@@ -6,6 +6,7 @@ description: "An overview of one of ReactJS's useful lifecycle events: component
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [reactjs]
 featured: false
+archived: true
 ---
 
 <div class="my-6 p-4 border-l-4 border-orange-500 bg-orange-500/10 rounded-r-lg flex flex-col gap-2" style="background-color: rgba(218, 141, 15, 0.08); border-left: 4px solid rgb(218, 141, 15); border-radius: 0 8px 8px 0;">

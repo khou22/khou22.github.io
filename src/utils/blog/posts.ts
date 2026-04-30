@@ -12,7 +12,10 @@ import { getDataDirectory } from "@/data/dataDirs";
  *
  * @return {HydratedBlogPost[]} An array of hydrated blog post objects.
  */
-export function getPosts(): HydratedBlogPost[] {
+export function getPosts(
+  options: { includeArchived?: boolean } = {},
+): HydratedBlogPost[] {
+  const { includeArchived = false } = options;
   const postsDirectory = getDataDirectory("blog");
   const fileNames = fs.readdirSync(postsDirectory);
 
@@ -57,6 +60,7 @@ export function getPosts(): HydratedBlogPost[] {
         image: matterResult.data.image || null,
         tags: matterResult.data.tags || [],
         featured: matterResult.data.featured || false,
+        archived: matterResult.data.archived || false,
         estimatedReadingTimeMS: readingStats.time,
         wordCount: readingStats.words,
         slug,
@@ -65,14 +69,21 @@ export function getPosts(): HydratedBlogPost[] {
     };
   });
 
-  // Sort posts by date and return
-  return allPostsData.sort((a, b) => {
+  // Sort posts by date
+  const sorted = allPostsData.sort((a, b) => {
     if (a.frontMatter.date < b.frontMatter.date) {
       return 1;
     } else {
       return -1;
     }
   });
+
+  // Filter out archived posts unless explicitly requested
+  if (!includeArchived) {
+    return sorted.filter((p) => !p.frontMatter.archived);
+  }
+
+  return sorted;
 }
 
 export class PostNotFoundError extends Error {

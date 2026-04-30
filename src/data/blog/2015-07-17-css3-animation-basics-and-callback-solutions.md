@@ -5,6 +5,7 @@ date:   2015-07-17 14:07:02
 description: "CSS3 Animation Basics and Callback Solutions"
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [reactjs, es6, css, html, javascript, sourceCode]
+archived: true
 ---
 *Historical Note: The code examples in this 2015 post target early React versions. They rely on the legacy `React.createClass` syntax (deprecated in version 15.5 and removed in 16.0) and basic manual DOM state-toggling. For modern implementations, use functional components with React Hooks (`useState`), paired with dynamic CSS class management or dedicated animation libraries.*
 

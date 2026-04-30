@@ -6,6 +6,7 @@ description: "An overview of some of the major topics I learned in the past week
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, xcode, tutorial, sourceCode]
 featured: false
+archived: true
 ---
 ### Extensions
 

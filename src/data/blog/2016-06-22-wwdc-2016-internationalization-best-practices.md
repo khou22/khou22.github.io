@@ -6,6 +6,7 @@ description: "My thoughts, notes, and main takeaways about the WWDC workshop on 
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, xcode, reflection]
 featured: false
+archived: true
 ---
 
 Video (must be played in Safari): <https://developer.apple.com/videos/play/wwdc2016/201/>

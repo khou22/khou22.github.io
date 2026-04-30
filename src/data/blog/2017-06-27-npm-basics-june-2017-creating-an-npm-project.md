@@ -6,6 +6,7 @@ description: "The basic principle of the Node Package Manager (NPM) and how to c
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [packageManager, github]
 featured: false
+archived: true
 ---
 ## Create an NPM Environment
 First, you need to create an NPM environment for your library so that NPM knows what dependencies and scripts are associated with the library. Run:

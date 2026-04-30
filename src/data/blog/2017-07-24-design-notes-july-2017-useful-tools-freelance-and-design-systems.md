@@ -6,6 +6,7 @@ description: "Some useful design tools I've picked up and interesting notes abou
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [designProcess]
 featured: false
+archived: true
 ---
 ### Introduction
 I’ve recently started talking to some designers at Moat — Vince Li and Josh Turk (Spelling?) [head of design at Moat] — and they’ve been giving me some really good insight into design at a big company as well as tools for myself to use. I’ve been working on the frontend Analytics engineering team, however, because of the size of the company, we do not do any design work. I’ve taken a liking to talking to designers to see what’s going on with their projects and any tips they might have for starting designers.

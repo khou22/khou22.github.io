@@ -6,6 +6,7 @@ description: "A blog post covering some useful extensions and commands relating 
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, xcode, tutorial, sourceCode]
 featured: false
+archived: true
 ---
 ### Dates
 

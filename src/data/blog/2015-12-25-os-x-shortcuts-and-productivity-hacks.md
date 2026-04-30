@@ -6,6 +6,7 @@ description: "A collection of useful OS X tricks, productivity shortcuts, displa
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [terminal, unix, macos, css]
 featured: false
+archived: true
 ---
 Happy holidays everyone! Here are some useful OS X tips and tricks that I thought I would share:
 

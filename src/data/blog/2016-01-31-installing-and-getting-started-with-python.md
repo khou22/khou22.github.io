@@ -6,6 +6,7 @@ description: "Setting up Python on my own computer."
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [python]
 featured: false
+archived: true
 ---
 # Downloading and Installing Python
 First download Python from the [Python website](https://www.python.org/downloads/). After installing, you can install other helpful tools including [Pip](https://bootstrap.pypa.io/get-pip.py). Save the file as a Python file (extension: ".py") and navigate to the file in your terminal. Run the Python script using your terminal to install:

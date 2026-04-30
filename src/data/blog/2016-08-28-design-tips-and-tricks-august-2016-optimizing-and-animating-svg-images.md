@@ -6,6 +6,7 @@ description: "My notes from an online seminar I tuned into that describes how to
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [graphicDesign, userExperience, userInterface, tutorial]
 featured: false
+archived: true
 ---
 ### Overview
 

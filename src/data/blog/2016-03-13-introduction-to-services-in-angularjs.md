@@ -6,6 +6,7 @@ description: "How to create and use services and factories in AngularJS"
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [ionic, javascript, angularjs]
 featured: false
+archived: true
 ---
 
 ### What Are Services?

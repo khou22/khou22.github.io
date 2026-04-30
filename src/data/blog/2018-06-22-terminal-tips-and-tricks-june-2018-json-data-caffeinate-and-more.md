@@ -6,6 +6,7 @@ description: "A collection of helpful command line tips and tricks that I've col
 image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [terminal]
 featured: false
+archived: true
 ---
 ## Inspecting JSON Data
 Instead of spending time writing code to view JSON or using a JSON viewer app, which can both be incredibly slow with large JSON files, you can use `NodeJS` to inspect JSON objects. Simply start the Node console:

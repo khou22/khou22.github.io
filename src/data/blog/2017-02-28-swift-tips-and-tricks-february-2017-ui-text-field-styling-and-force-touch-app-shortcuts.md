@@ -6,6 +6,7 @@ description: "A couple of useful extensions for iOS UITextFields (bottom borders
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, tutorial]
 featured: false
+archived: true
 ---
 
 ### Useful UITextField Extensions

@@ -6,6 +6,7 @@ description: "Clearing Timeouts and Intervals Before They Trigger"
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [javascript]
 featured: false
+archived: true
 ---
 I've been working a lot with time and animation and one of the things that I had to overcome was preventing an existing timeout from triggering. I had already declared a timeout with setTimeout, but I wanted to cancel it midway.
 My solution was to first declare an empty variable at the top of my React code. This line goes even before you create your class:

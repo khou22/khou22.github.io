@@ -6,6 +6,7 @@ description: "A brief introduction to the world of flexbox — a powerful layout
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [css, tutorial]
 featured: false
+archived: true
 ---
 ## Introduction
 I've been starting to work with CSS flexbox for one of my projects at work that has some very sophisticated alignment, spacing, sizing, and positioning specifications. It's heavy in animations and must respond dynamically to window dimension changes. One of my co-workers advised that I try out flexbox since it specializes in these types of properties.

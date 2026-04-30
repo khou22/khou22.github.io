@@ -10,7 +10,7 @@ describe("Blog Posts Integrity Tests", () => {
 
   test("All markdown files compile properly without metadata errors", () => {
     expect(() => {
-      const posts = getPosts();
+      const posts = getPosts({ includeArchived: true });
       expect(posts.length).toBeGreaterThan(0);
     }).not.toThrow();
   });
@@ -66,7 +66,7 @@ describe("Blog Posts Integrity Tests", () => {
 
   test("Check for broken cross-references, relative link integrity, and reference loops", () => {
     const fileNames = fs.readdirSync(postsDirectory);
-    const allPosts = getPosts();
+    const allPosts = getPosts({ includeArchived: true });
     const validSlugs = new Set(allPosts.map((p) => p.frontMatter.slug));
 
     const errors: string[] = [];

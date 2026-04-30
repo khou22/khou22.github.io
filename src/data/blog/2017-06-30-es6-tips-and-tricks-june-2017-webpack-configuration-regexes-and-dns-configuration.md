@@ -6,6 +6,7 @@ description: "A somewhat random assortment of things I've learned and felt worth
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [es6, javascript, tutorial]
 featured: true
+archived: true
 ---
 ### Using Raw Files with Webpack
 There are some files that are best used when imported as their raw contents. This includes, but is not limited to file extensions like: `.svg`, `.md`, and `.txt`. For these situations, you must use the `raw-loader` in your `webpack.config` file:  

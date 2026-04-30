@@ -6,6 +6,7 @@ description: "Useful code snippets, functions, and classes that will make you mo
 image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [python, sourceCode]
 featured: false
+archived: true
 ---
 This blog post contains a number of useful code snippets, functions, and classes that will help with machine learning in Jupyter Notebooks. Specific usage instructions as well as dependencies 
 

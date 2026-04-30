@@ -6,6 +6,7 @@ description: "Some useful commands for Ionic"
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [ionic]
 featured: false
+archived: true
 ---
 
 ## Working on the Project

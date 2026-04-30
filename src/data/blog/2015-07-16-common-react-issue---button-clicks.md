@@ -5,6 +5,7 @@ date:   2015-07-16 13:10:57
 description: "Common React Issue - Button Clicks"
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [reactjs, javascript]
+archived: true
 ---
 *Historical Note: The code examples in this 2015 post target early React versions. They rely on the legacy `React.createClass` syntax and deprecated state initialization paradigms like `getInitialState` (both deprecated in version 15.5 and removed in 16.0). For modern applications, write functional components leveraging standard React Hooks such as `useState`.*
 

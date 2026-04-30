@@ -6,6 +6,7 @@ description: "My notes and takeaways from the WWDC talk on auto layout from 2015
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, xcode]
 featured: false
+archived: true
 ---
 Mysteries of Auto Layout, Part 1: [https://developer.apple.com/videos/play/wwdc2015/218](https://developer.apple.com/videos/play/wwdc2015/218)
 

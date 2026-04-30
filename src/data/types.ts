@@ -19,6 +19,11 @@ export type BlogPostFrontMatter = {
   featured: boolean;
 
   /**
+   * If true, the post will not be shown on the website. Defaults to false.
+   */
+  archived: boolean;
+
+  /**
    * Estimated number of milliseconds to read the blog post.
    */
   estimatedReadingTimeMS: number;

@@ -6,6 +6,7 @@ description: "My notes and thoughts on Apple's new API calls for animations and 
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, xcode, tutorial, sourceCode]
 featured: false
+archived: true
 ---
 Video (must be played in Safari): [https://developer.apple.com/videos/play/wwdc2016/216/](https://developer.apple.com/videos/play/wwdc2016/216/)
 

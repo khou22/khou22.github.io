@@ -5,6 +5,7 @@ date: 2015-07-31 21:13:47
 description: "Adding accessibility features to your website to allow for a wider audience."
 image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [html]
+archived: true
 ---
 Today, I discovered accessibility and assistive technology. It's really an intriguing topic and is something I've never really thought about. I think it's important in this day and age to be cognicant of who owns what technology and who has access to what. I did a paper earlier this year on the digital divide, but I took the lense of age, gender, location, etc..not of ableness. My web app is almost ready to be packaged and shipped so it's time to start putting on the finishing touches. One of these is enabling voiceover.
 
