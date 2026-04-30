@@ -3,7 +3,7 @@ title: "Swift Classes August 2017: Classes, Subclasses, and Protocols"
 author: "Kevin Hou"
 date: 2017-08-24 22:44:37
 description: "The basics of classes and subclasses as well as a detailed tutorial on setting up your own custom protocols and delegates."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, tutorial]
 featured: false
 ---

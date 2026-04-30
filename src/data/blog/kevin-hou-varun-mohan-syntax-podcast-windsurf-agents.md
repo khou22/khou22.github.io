@@ -2,15 +2,15 @@
 title: "Syntax Podcast: Windsurf forked VS Code to compete with Cursor. Talking the future of AI + Coding"
 author: "Kevin Hou, Varun Mohan, and Syntax Team"
 date: 2025-01-22 9:00:00
-description: "Varun Mohan and I were invited onto the Syntax Podcast to discuss the Windsurf Editor, the first AI agent-powered code editor. We also talked about its origin story, the benefits of agentic superpowers, technical challengs, and much more."
+description: "Varun Mohan and I were invited onto the Syntax Podcast to discuss the Windsurf Editor, the first AI agent-powered code editor. We also talked about its origin story, the benefits of agentic superpowers, technical challenges, and much more."
 image: "https://khou22.github.io/media/blog/images/syntax-podcast-windsurf-editor-cover.jpg"
 tags: [coding]
 featured: false
 ---
 
-Varun Mohan and I were invited onto the Syntax Podcast to discuss the Windsurf Editor, the first AI agent-powered code editor. We also talked about its origin story, the benefits of agentic superpowers, technical challengs, and much more.
+Varun Mohan and I were invited onto the Syntax Podcast to discuss the Windsurf Editor, the first AI agent-powered code editor. We also talked about its origin story, the benefits of agentic superpowers, technical challenges, and much more.
 
-I've been lucky enough to be on the Syntax Podcast twice now! The hosts, Scott and Wes, are incrediblely good at their craft and it's always a pleasure chatting with them about tech, AI, and life in general.
+I've been lucky enough to be on the Syntax Podcast twice now! The hosts, Scott and Wes, are incredibly good at their craft and it's always a pleasure chatting with them about tech, AI, and life in general.
 
 Check out the episode here: [https://syntax.fm/show/870/windsurf-forked-vs-code-to-compete-with-cursor-talking-the-future-of-ai-coding](https://syntax.fm/show/870/windsurf-forked-vs-code-to-compete-with-cursor-talking-the-future-of-ai-coding).
 

@@ -3,7 +3,7 @@ title: "Installing and Getting Started with Python"
 author: "Kevin Hou"
 date: 2016-01-31 13:44:44
 description: "Setting up Python on my own computer."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [python]
 featured: false
 ---
@@ -13,7 +13,7 @@ First download Python from the [Python website](https://www.python.org/downloads
 ```bash
 $ python get-pip.py
 ```
-so
+
 In order to install globally you may to run a "sudo" install:
 ```bash
 $ sudo python get-pip.py
@@ -44,5 +44,5 @@ for i in range(100):
 ```
 
 # Constructing and Interpreting JSON data
-This was great way for me to learn how Python data structures worked. It helped me gain a good foundation in simple variable types as well as how to communicate between different programming languages. For example, Javascript often sends data in the form of a JSON object. By doing this project I was able to pass data from my Javascript into my Python script and vice versa. [Reference](https://docs.python.org/2/library/json.html)
+This was great way for me to learn how Python data structures worked. It helped me gain a good foundation in simple variable types as well as how to communicate between different programming languages. For example, Javascript often sends data in the form of a JSON object. By doing this project I was able to pass data from my Javascript into my Python script and vice versa. [Reference](https://docs.python.org/3/library/json.html)
 

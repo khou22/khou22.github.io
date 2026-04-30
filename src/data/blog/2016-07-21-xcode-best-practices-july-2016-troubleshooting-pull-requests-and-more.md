@@ -3,8 +3,9 @@ title: "Xcode Best Practices July 2016: Troubleshooting, Pull Requests, Cocoapod
 author: "Kevin Hou"
 date: 2016-07-20 11:30:53
 description: "A few coding best practices that I learned in the past couple of weeks from my manager and mentor. These are primarily Xcode-oriented but can easily be applied to other languages and IDE's"
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, xcode, packageManager, github]
+featured: false
 ---
 ### Troubleshooting Xcode
 
@@ -26,7 +27,7 @@ A helpful tool I just learned to see more details about a contribution or the ow
 
 ### Using Structures for Global Constants
 
-In addition to using structures to store file names as I mentioned in an [earlier blog post](http://khou22.github.io/programming/2016/07/20/swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections.html), it is good practice to create a file, usually named "Constants.swift", containing global structures to store values. These constants are usually accessed by multiple view controllers and make it easier to standardize. It's similar to the difference between CSS and SASS. In CSS, you must re-type the values every time, but in SASS you can create and use variables. It makes modifying values much, much easier. Here is an example of standardized colors:
+In addition to using structures to store file names as I mentioned in an [earlier blog post](/blog/2016-07-20-swift-tips-and-tricks-july-2016-extensions-structures-and-outlet-collections), it is good practice to create a file, usually named "Constants.swift", containing global structures to store values. These constants are usually accessed by multiple view controllers and make it easier to standardize. It's similar to the difference between CSS and SASS. In CSS, you must re-type the values every time, but in SASS you can create and use variables. It makes modifying values much, much easier. Here is an example of standardized colors:
 
 **Declaration**
 ```swift
@@ -66,6 +67,6 @@ In my opinion, I think you should strike a balance. Cocoapods and other package 
 
 A quick note to self that's somewhat technical: when using Cocoapods, you must open the .workspace file in Xcode not the .xcodeproject file!
 
-![Installing Cocoapods](https://khou22.github.io/media/blog/images/Installing_Cocoapods.png)
+![Installing Cocoapods](/media/blog/images/Installing_Cocoapods.png)
 
 I hope you found this post useful. I’m learning a lot about Xcode and especially about how to work in teams. There’s always room for growth and everyone can get better at it. Talk to you in the next one!

@@ -4,14 +4,14 @@ author: "Kevin Hou"
 date: 2016-07-22 09:48:15
 description: "An overview of the fundamental basics in the HealthKit API and some more complex examples to get you started."
 tags: [coding, mobile, tutorial]
+featured: false
 ---
-
 ## Project Objectives
 
 I was instructed to integrate HealthKit information — specifically pulling steps data — into Breathometer's upcoming app. I'm realitively new to Swift having only started a month ago, so this project was a way for me to get more familiar with the language and IDE. My task was to pull the data from HealhtKit then populate a table within a page of the app. This data could then be used for visualizations, analysis, etc. Here are my main learning goals for this project:
 
 - Learn how to integrate with HealthKit and pull data from a “3rd party” source (not really a 3rd party but it's an API all the same)
-- Learn the fundamentals of table views, populating views, etc. so that I can develop a better understanding of Swift frontend [see next post](http://khou22.github.io/programming/2016/07/22/swift-tableview-basics-how-to-create-and-populate-tables.html)
+- Learn the fundamentals of table views, populating views, etc. so that I can develop a better understanding of Swift frontend [see next post](/blog/2016-07-22-swift-tableview-basics-how-to-create-and-populate-tables)
 
 ## Authorizing and Integrating with HealthKit
 

@@ -36,7 +36,7 @@ A few seconds later I had a query that executed perfectly. I used Neon's console
 
 The great news with NextJS is that we don't need to setup a new project, manage CORS, or spin up a new server! Instead, we can use a server side endpoint file in our `app/` directory. We use the following code to store our values in our NeonDatabase.
 
-This took me about 5 minutes to setup. A very different story if I were to have made a new Flask/FastAPI Python server and deployed a new Kubernetes service.
+This took me about 5 minutes to setup. A very different story if I had made a new Flask/FastAPI Python server and deployed a new Kubernetes service.
 
 ```tsx {7-13}
 import { neon } from "@neondatabase/serverless";
@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
 
 The last thing to do is to make a form that can send a payload to our endpoint. I've used `yup` in the past for schema validation but `zod` seems like the new kid on the block and I really like how simple their setup is.
 
-It also plays really nicely with `react-hook-form`, a headless form hook that manages your validation, error states, controlled inputs, etc. It let's you bring your own UI components so you can have maximum flexibility while keeping the setup cost for state management low.
+It also plays really nicely with `react-hook-form`, a headless form hook that manages your validation, error states, controlled inputs, etc. It lets you bring your own UI components so you can have maximum flexibility while keeping the setup cost for state management low.
 
 ```tsx
 const generateFormSchema = z.object({

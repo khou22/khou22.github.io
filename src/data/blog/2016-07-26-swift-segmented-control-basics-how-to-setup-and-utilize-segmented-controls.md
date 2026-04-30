@@ -3,14 +3,14 @@ title: "Swift Segmented Control Basics: How to Setup and Utilize Segmented Contr
 author: "Kevin Hou"
 date: 2016-07-26 14:13:16
 description: "A short tutorial on segmented controls in Swift as well as a brief explanation on why I write these blog posts."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, xcode, tutorial, sourceCode]
+featured: false
 ---
-
 ### Introduction
 I’m beginning to dive deeper and deeper into Swift and iOS development, but I came to the realization a couple days ago that my summer internship at Breathometer is already drawing to a close. My goal for the summer was to be able to develop my own apps from scratch by the time I leave. I’m slowly but surely gaining the confidence the and the technical prowess to be able to make more and more complex apps.
 
-I’ve already learned some of the key parts of most apps like views, outlets, structures, pagination, table views, animations, 3rd party integration, threading, push notifications, graphing, localization, and more. Another basic piece of any app is segmentation. Everyone’s used an app with the familiar segmented control bar — many of Apple’s stock apps use this component:
+I’ve already learned some of the key parts of most apps like views, outlets, structures, [pagination](/blog/2016-06-28-making-a-simple-page-based-application-in-swift), table views, animations, 3rd party integration, threading, push notifications, graphing, localization, and more. Another basic piece of any app is segmentation. Everyone’s used an app with the familiar segmented control bar — many of Apple’s stock apps use this component:
 
 ![Segmented Control](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/MobileHIG/Art/segmented_control.png)
 
@@ -42,4 +42,4 @@ Using the same window setup, ctrl click and drag to create an outlet Action with
 
 That’s about all there is to it! They’re very simple and straightforward, but can be very useful and powerful in the right situation. I’ve noticed that a common use case is when you want to apply different filters onto data sets. In my project right now, I am segmenting data by time into “Week,” “Month,” and “Year.” Those three options serve as my segments and my UITableView updated every time my index changes. Other use cases include contact filtering, segmenting information into categories on the same view controller, etc. Hope you found this helpful!
 
-Tutorial primarily from: [http://www.ioscreator.com/tutorials/segmented-control-tutorial-ios8-swift](http://www.ioscreator.com/tutorials/segmented-control-tutorial-ios8-swift)
+Tutorial primarily from: [https://www.ioscreator.com/tutorials/segmented-control-tutorial-ios8-swift](https://www.ioscreator.com/tutorials/segmented-control-tutorial-ios8-swift)

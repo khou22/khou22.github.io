@@ -3,8 +3,9 @@ title: "ES6 Tips and Tricks June 2017: Imports, Functions, and More"
 author: "Kevin Hou"
 date: 2017-06-14 17:50:35
 description: "An ongoing blog post of useful ES6 notes that I come across throughout June."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [javascript, es6]
+featured: false
 ---
 I am writing this blog post because I am, again, using ES6 for my internship. I was first exposed to this variation of Javascript during my very first internship at Salesforce back in Summer 2015. It feels like a long time ago and I've come a _long_ way since then. I am approaching ES6 with new awareness and sharper critical thinking. I felt it was useful to document some of the neat tricks I found with ES6 during my first month of my internship at Moat. A lot of this is partially review — a chance for me to shake the rust off and really solidify my skills in ES6.
 
@@ -76,7 +77,7 @@ class SomeComponent extends Component {
                 <button id="button" onClick={() => this.clicked(input)}>I work</button>
 
                 This won't preserve 'this' and your component will crash
-                <button id="button" onClick={this.clicked(input)}>
+                <button id="button" onClick={this.clicked(input)}>I fail</button>
             </div>
         );
     }

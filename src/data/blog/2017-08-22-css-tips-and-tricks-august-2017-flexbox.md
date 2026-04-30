@@ -3,7 +3,7 @@ title: "CSS Tips and Tricks August 2017: Flexbox"
 author: "Kevin Hou"
 date: 2017-08-22 18:47:59
 description: "A brief introduction to the world of flexbox — a powerful layout and alignment tool."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [css, tutorial]
 featured: false
 ---

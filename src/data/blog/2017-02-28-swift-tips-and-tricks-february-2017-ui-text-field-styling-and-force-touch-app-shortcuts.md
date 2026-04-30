@@ -3,8 +3,9 @@ title: "Swift Tips and Tricks February 2017: UI Text Field Styling and Force Tou
 author: "Kevin Hou"
 date: 2017-02-28 19:16:22
 description: "A couple of useful extensions for iOS UITextFields (bottom borders and a done button for the numerical keypad) as well as a short example of how to implement Force Touch app shortcut capabilities into your app."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, tutorial]
+featured: false
 ---
 
 ### Useful UITextField Extensions
@@ -13,7 +14,7 @@ One of the side projects I’m working on is very frontend focused and after spe
 
 Here is an extension for a UITextField that gives two functionalities. The first is a text field with just a bottom border (think material design). The second adds a done button to the keyboard like so:
 
-![iPhone Number Keypad with Done Button](https://khou22.github.io/media/blog/images/ios-number-keypad-with-done-button.png)
+![iPhone Number Keypad with Done Button](/media/blog/images/ios-number-keypad-with-done-button.png)
 
 It’s very useful for the number pad input which doesn’t the native “Done,” “Return,” etc. buttons on the keyboard itself.
 
@@ -85,7 +86,7 @@ private func launchInitialVC(viewController identifier: String) {
 
 **Here are some other useful tools for giving your app Force Touch capabilities:**
 
-Useful tutorial: [http://samwize.com/2016/04/25/tutorial-on-creating-app-shortcut-with-3d-touch/](http://samwize.com/2016/04/25/tutorial-on-creating-app-shortcut-with-3d-touch/)
+Useful tutorial: [https://samwize.com/2016/04/25/tutorial-on-creating-app-shortcut-with-3d-touch/](http://samwize.com/2016/04/25/tutorial-on-creating-app-shortcut-with-3d-touch/)
 
 Design guidelines on shortcut icons: [https://developer.apple.com/reference/uikit/uiapplicationshortcuticontype](https://developer.apple.com/reference/uikit/uiapplicationshortcuticontype)
 

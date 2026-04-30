@@ -9,8 +9,8 @@ featured: false
 ---
 ## Demand for Workforce Skills
 * Machines are getting smarter
-* High productivity, GDP growth, performance, propsperity
-* People will nee to be more social/emotional - soft skills are more important
+* High productivity, GDP growth, performance, prosperity
+* People will need to be more social/emotional - soft skills are more important
 * Basic cognitive/physical/manual skills will decline
 * "creativity, critical thinking, decision making, and complex information processing, will grow through 2030, by 19 percent in the United States and by 14 percent in Europe, from sizable bases today."
 * Data input tasks will be in the decline, machines can do these
@@ -22,7 +22,7 @@ featured: false
 
 ## Shifting skill requirements in five sectors
 * Banking/insurance - number crunching jobs will decline
-* Social/emootional skills will still be needed for customer interaction
+* Social/emotional skills will still be needed for customer interaction
 * Energy/mining - Manual work will be displaced as machines can easily run diagnostics, collect data, read metrics
 * Healthcare - office support staff will decrease, care providers will increase
 * Manufacturing - physical labor decrease, more leadership skills needed
@@ -31,18 +31,18 @@ featured: false
     * Decrease human interaction
 
 ## Mindshift
-* It'll be a huage mind-set shift for companies
+* It'll be a huge mind-set shift for companies
 * The way they work will be must faster and more dynamic
 * Might be a "new-collar" job that operates in between white and blue
     * People who don't get cut will need to operate at a higher level because a lot of their tasks will be sped up
 * "Gig"/sharing economy will increase
 
 ## Future Workforce
-* Retraining - in-house vs. outsourced learning opportunieis
+* Retraining - in-house vs. outsourced learning opportunities
 * Redeployment - unbundling/rebundling tasks
 * Hiring - sometimes less expensive than retraining
     * Europe is much more willing to retrain
-    * US 35% of respondants said they would simply rehire or mainly rehire
+    * US 35% of respondents said they would simply rehire or mainly rehire
     * Europe: 7% would rehire
 * Contracting - bring in contractors for very specific knowledge set for noncore/low-skill roles
     * Not for "high-skill talent"

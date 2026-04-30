@@ -3,7 +3,7 @@ title: "Salesforce Internship - Summer 2015"
 author: "Kevin Hou"
 date:   2015-07-16 13:35:21
 description: "First thoughts on my new internship at Salesforce.com during the summer of 2015. I worked as a UX (User Experience) Engineer."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [internship, reflection]
 ---
 ![Salesforce.com logo](https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg)

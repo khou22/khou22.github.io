@@ -3,8 +3,9 @@ title: "NPM Basics June 2017: Creating an NPM Project"
 author: "Kevin Hou"
 date: 2017-06-27 10:17:34
 description: "The basic principle of the Node Package Manager (NPM) and how to create your own packages."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [packageManager, github]
+featured: false
 ---
 ## Create an NPM Environment
 First, you need to create an NPM environment for your library so that NPM knows what dependencies and scripts are associated with the library. Run:

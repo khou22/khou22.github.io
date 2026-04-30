@@ -3,7 +3,7 @@ title: "Design Notes July 2017: Useful Tools, Freelance, and Design Systems"
 author: "Kevin Hou"
 date: 2017-07-24 11:49:12
 description: "Some useful design tools I've picked up and interesting notes about freelance work (not limited to design specifically) as well as my thoughts on design systems."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [designProcess]
 featured: false
 ---

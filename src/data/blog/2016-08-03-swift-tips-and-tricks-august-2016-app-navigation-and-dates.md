@@ -3,8 +3,9 @@ title: "Swift Tips and Tricks August 2016: App Navigation and Dates"
 author: "Kevin Hou"
 date: 2016-08-03 13:45:22
 description: "A blog post covering some useful extensions and commands relating to code-based view controller navigation and date types."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, xcode, tutorial, sourceCode]
+featured: false
 ---
 ### Dates
 
@@ -52,7 +53,7 @@ recentSample?.sortInPlace({
 Navigation between different screens in your app can be confusing, with many different options, methods, and structure to choose from. There are four main types of navigation:
 
 * Modal UIViewController — this is the simplest and most straightforward solution. It simply presents another view controller over the previous.
-* UIPageControl — this is the familiar side swiping style in which multiple views are presented side-by-side and can be accessed by swiping left or right. I covered the basics in an old [blog post](http://khou22.github.io/programming/2016/06/28/making-a-simple-page-based-application-in-swift.html)
+* UIPageControl — this is the familiar side swiping style in which multiple views are presented side-by-side and can be accessed by swiping left or right. I covered the basics in an [earlier guide on page-based applications in Swift](/blog/2016-06-28-making-a-simple-page-based-application-in-swift).
 * UITabBarController — this is the structure of many multi-page, multi-sectioned apps like Facebook, Instagram, Photos, Music, and Twitter. They allow you to have multiple sections in your app and provide you with a simple, intuitive way of navigating via a tool bar.
 * Custom — you really have to know what you’re doing if you want to create a custom navigation controller. It can be great for certain use cases, but it’s real pain if you’re collaborating with others because nothing is standardized.
 

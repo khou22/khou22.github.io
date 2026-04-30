@@ -4,8 +4,8 @@ author: "Kevin Hou"
 date: 2016-04-21 22:43:30
 description: "Overview, reflection, etc. on building the Uber Scheduler at my first hackathon. It won first overall!"
 tags: [hackathon, coding, web, design]
+featured: false
 ---
-
 This past week, a group of friends and I attended a hackathon, MenloHacks — an MLH (Major League Hackathon) sponsored event. This was my first hackathon and was also for one of my two partners. Our group of 3 high schoolers built an Uber scheduling app for both iOS and Android. Our app would essentially allow users to schedule uber rides ahead of time at a set date/time. Another core segment of our app was the recurring schedule component: an alarm-clock-style feature that could automatically call you an Uber on specific weekdays (i.e. every Monday, Wednesday, and Friday at 5:45 PM). We were able to complete our product within the allotted 24 hour time period. We even had time to build another project - a Google Chrome extension that censors your vulgar GitHub commits (see Execute Order 66). I worked as the primary front end engineer and also designed the UI/UX from scratch.
 
 We built our app in Ionic using AngularJS for the front end and Python for our Google Cloud Engine backend. We wanted to have discipline when building the app so we concentrated on maintaining good coding practices such as commenting code, building in a scalable fashion, as well as programming code that was organized and efficient. Due to the nature of Google Cloud Engine, our app is potentially scalable to millions of users.
@@ -45,20 +45,20 @@ I created multiple designs and iterated on previous versions. Due to the 24 hour
 
 #### Version 1
 
-![Uber Scheduler screenshot Kevin Hou project rough draft v1](https://khou22.github.io/media/projects/uberScheduler/design-mockups/home-screen.png)
-![Uber Scheduler screenshot Kevin Hou project time picker v1](https://khou22.github.io/media/projects/uberScheduler/design-mockups/time-picker-v1.png)
-![Uber Scheduler screenshot Kevin Hou project general tab v1](https://khou22.github.io/media/projects/uberScheduler/design-mockups/general-tab-v1.png)
+![Uber Scheduler screenshot Kevin Hou project rough draft v1](/media/projects/uberScheduler/design-mockups/home-screen.png)
+![Uber Scheduler screenshot Kevin Hou project time picker v1](/media/projects/uberScheduler/design-mockups/time-picker-v1.png)
+![Uber Scheduler screenshot Kevin Hou project general tab v1](/media/projects/uberScheduler/design-mockups/general-tab-v1.png)
 
 #### Version 2 (Final Designs)
 
-![Uber Scheduler screenshot Kevin Hou project home screen](https://khou22.github.io/media/projects/uberScheduler/screenshots/home-screen.png)
-![Uber Scheduler screenshot Kevin Hou project location](https://khou22.github.io/media/projects/uberScheduler/design-mockups/location-tab.png)
-![Uber Scheduler screenshot Kevin Hou project time](https://khou22.github.io/media/projects/uberScheduler/design-mockups/time-picker-v2.png)
-![Uber Scheduler screenshot Kevin Hou project general usage](https://khou22.github.io/media/projects/uberScheduler/design-mockups/general-tab-v2.png)
+![Uber Scheduler screenshot Kevin Hou project home screen](/media/projects/uberScheduler/screenshots/home-screen.png)
+![Uber Scheduler screenshot Kevin Hou project location](/media/projects/uberScheduler/design-mockups/location-tab.png)
+![Uber Scheduler screenshot Kevin Hou project time](/media/projects/uberScheduler/design-mockups/time-picker-v2.png)
+![Uber Scheduler screenshot Kevin Hou project general usage](/media/projects/uberScheduler/design-mockups/general-tab-v2.png)
 
 ### App Screenshots (Working MVP)
 
-![Uber Scheduler screenshot Kevin Hou project home screen](https://khou22.github.io/media/projects/uberScheduler/screenshots/home-screen.png)
-![Uber Scheduler screenshot Kevin Hou project general settings](https://khou22.github.io/media/projects/uberScheduler/screenshots/general-settings.png)
-![Uber Scheduler screenshot Kevin Hou project schedule configuration](https://khou22.github.io/media/projects/uberScheduler/screenshots/schedule-configuration.png)
-![Uber Scheduler screenshot Kevin Hou project fare estimate](https://khou22.github.io/media/projects/uberScheduler/screenshots/fare-estimate.png)
+![Uber Scheduler screenshot Kevin Hou project home screen](/media/projects/uberScheduler/screenshots/home-screen.png)
+![Uber Scheduler screenshot Kevin Hou project general settings](/media/projects/uberScheduler/screenshots/general-settings.png)
+![Uber Scheduler screenshot Kevin Hou project schedule configuration](/media/projects/uberScheduler/screenshots/schedule-configuration.png)
+![Uber Scheduler screenshot Kevin Hou project fare estimate](/media/projects/uberScheduler/screenshots/fare-estimate.png)

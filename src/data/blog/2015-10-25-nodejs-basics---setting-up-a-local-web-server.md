@@ -3,7 +3,7 @@ title: "NodeJS Basics - Setting Up A Local Web Server"
 author: "Kevin Hou"
 date: 2015-10-25 21:16:28
 description: "Quick start guide of the Javascript runtime environment, Node.js, and its basic functionalities."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [nodejs, javascript]
 featured: false
 ---
@@ -49,10 +49,10 @@ If you wish to install all the packages specified in the 'package.json' file, si
 ```bash
 $: npm install
 ```
-This will install all the required modules. This sytem makes sharing code incredibly elegant and easy!
+This will install all the required modules. This system makes sharing code incredibly elegant and easy!
 
 ### Including Other JS Files in Your Code
-It's very easy to include other Javascript files in your code. In fact, it's almsot identical to including a package dependency. Simply include:
+It's very easy to include other Javascript files in your code. In fact, it's almost identical to including a package dependency. Simply include:
 ```javascript
 var m2 = require("./module2"); //Assumes js file
 ```
@@ -61,7 +61,7 @@ Must export your data in module2 otherwise it just reads an empty object:
 ```javascript
 //In module2.js
 var a = 10;
-module.export.data = a; //Will export an object
+module.exports.data = a; //Will export an object
 //To access in other JS files, a will be stored as data.a
 ```
 
@@ -79,4 +79,4 @@ var server = http.createServer(function(request, response) {
 server.listen(3000); //Specifies the port at which it will be served
 ```
 
-Hope this helps! I'll be updating my site with various Node.js content and updates on the Plargiism App. In the meantime, if you have any questions feel free to [reach out](mailto:kevin.ch.hou@gmail.com)
+Hope this helps! I'll be updating my site with various Node.js content and updates on the Plagiarism App. In the meantime, if you have any questions feel free to [reach out](mailto:kevin.ch.hou@gmail.com)

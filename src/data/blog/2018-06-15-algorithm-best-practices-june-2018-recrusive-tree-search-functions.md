@@ -1,5 +1,5 @@
 ---
-title: "Algorithm Best Practices June 2018: Recrusive Tree Search Functions"
+title: "Algorithm Best Practices June 2018: Recursive Tree Search Functions"
 author: "Kevin Hou"
 date: 2018-06-15 11:22:18
 description: "A tutorial on some best practices for designing recursive functions."
@@ -34,7 +34,7 @@ The solution to these problems is to a) write code that works b) document your c
 
 
 
-The code below was written in Python 3 and demonstrates a simple depth-first search using an accumulator object that is pass-by-reference. The coolest parts about this code in my opinion was the implementation of a visitor function and an accumulator. Using these methods, handling data and performing the main logic is clearly compartmentalized. This ensures the main recursive logic isn't affected by your logic and prevents bugs (like stack overflows) from occuring.
+The code below was written in Python 3 and demonstrates a simple depth-first search using an accumulator object that is pass-by-reference. The coolest parts about this code in my opinion was the implementation of a visitor function and an accumulator. Using these methods, handling data and performing the main logic is clearly compartmentalized. This ensures the main recursive logic isn't affected by your logic and prevents bugs (like stack overflows) from occurring.
 
 ``` python
 # Python 3
@@ -51,24 +51,24 @@ def hasChildren(node):
 def visitor(element, accumulator):
 
     # In this situation, we're simply checking if it's a leaf and storing it in our accumulator if it is
-    if ~hasChildren(element): # Check if it's a leaf node
+    if not hasChildren(element): # Check if it's a leaf node
         accumulator.append(element) # Add to accumulator if leaf
 
 # The recursive function that calls itself
 # Searches a node, applies a visitor function, and searches each child node
-def searchChildren(node, visitor):
-    visitor(node) # Visitor function
+def searchChildren(node, visitor, accumulator):
+    visitor(node, accumulator) # Visitor function
 
     # Recursively search if possible
-    if hasChildren(element):
-        children = element['children'] # Get child nodes
-        list(map(lambda child: searchChildren(child, visitor), children)) # Search each child node
+    if hasChildren(node):
+        children = node['children'] # Get child nodes
+        list(map(lambda child: searchChildren(child, visitor, accumulator), children)) # Search each child node
             
 # Get all SLDS components
 def getLeaves(tree):
     accumulator = [] # Pass-by-reference accumulator object
     
     # Initial search call with visitor function
-    searchChildren(tree, lambda element: visitor(element, accumulator))
+    searchChildren(tree, visitor, accumulator)
 ```
 

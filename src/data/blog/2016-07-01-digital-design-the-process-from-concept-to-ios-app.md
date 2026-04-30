@@ -3,10 +3,10 @@ title: "Digital Design: The Process from Concept to iOS App"
 author: "Kevin Hou"
 date: 2016-07-01 15:34:12
 description: "A brief overview of the design process and how important it is in app development."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [designProcess, userExperience, userInterface]
+featured: false
 ---
-
 This is my second week working at Breathometer, a startup that builds breath analysis devices to help users better understand their health. We are nearly finished with Mint — a device that measures various chemical levels in your breath to give you an overall oral hygiene report. Another device, called Slim, measures the amount of acetone in your breath and uses it as a metric to calculate the amount of fat your body is burning.
 
 The development stages of Mint are essentially complete, but Slim is still in the development process. As a frontend developer and designer, I’ve been assigned the role of creating the onboarding user flow. Because I’ve never had any formal training or business-level experience in design, my design process can most definitely be improved. I met with my manager and mentor today to discuss this project, and we’ve decided that the most valuable course of action for me is to go through the entire design process correctly, so that I can internalize it for the future. I’ve done some preliminary research, and the steps are as outlined below.

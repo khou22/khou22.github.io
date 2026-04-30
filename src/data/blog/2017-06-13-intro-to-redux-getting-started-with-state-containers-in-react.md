@@ -3,8 +3,9 @@ title: "Intro to Redux: Getting Started with State Containers in React"
 author: "Kevin Hou"
 date: 2017-06-13 10:26:07
 description: "A quick overview of Redux, its benefits, and how it integrates with React"
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [reactjs, redux, javascript, es6]
+featured: false
 ---
 ## Overview of Redux
 Redux is a way of keeping all states consolidated in one master, global javascript object (called a Redux tree) and accessed using a store. In order to understand the basics, it is important to recognize the difference between pure and impure functions. Pure functions have no observable side effects on the database or server; in fact, the return values depend solely on the values of the arguments. If you put in the same arguments, you should get the exact same output every time. An impure function does not do this. It may modify the DOM or change a database.
@@ -123,4 +124,4 @@ render();
 
 
 ## Closing Comments
-Hope you were able to follow this brief tutorial! It is loosely based on the free course on egghead.io on [Redux and React](http://webpack.github.io/docs/tutorials/getting-started/). The full code can be found [on my GitHub](https://github.com/khou22/NodeJSPractice/tree/master/Redux).
+Hope you were able to follow this brief tutorial! It is loosely based on the free course on egghead.io on [Redux and React](https://egghead.io/courses/getting-started-with-redux). The full code can be found [on my GitHub](https://github.com/khou22/NodeJSPractice/tree/master/Redux).

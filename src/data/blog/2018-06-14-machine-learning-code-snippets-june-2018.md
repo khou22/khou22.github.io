@@ -32,7 +32,7 @@ newDF = df.drop(columns=['z'])
 ```
 
 #### Converting All Non-Null Entries to 1
-This is helpful when converting a dataframe into a boolean dataframe in which a 1 indicates the prescence of a value and a null indicates there was no value. It can turn any dataframe into a sort of "checkbox" which is helpful for certain types of data processing like collaborative filtering where the actual value doesn't matter.
+This is helpful when converting a dataframe into a boolean dataframe in which a 1 indicates the presence of a value and a null indicates there was no value. It can turn any dataframe into a sort of "checkbox" which is helpful for certain types of data processing like collaborative filtering where the actual value doesn't matter.
 
 ``` python
 booleanDF = copy.deepcopy(df) # Deep copy so don't modify other DF
@@ -56,7 +56,7 @@ finalDF = pd.concat([df1, df2], sort=True, axis=0)
 finalDF = pd.concat([df1, df2], sort=True, axis=0, ignore_index=True)
 ```
 
-## Getting an Overview of a DataFrame (Make this into another 
+## Getting an Overview of a DataFrame
 It's often difficult to deal with abstract, seemingly black-box machine learning algorithms. What can help alleviate some of this stress is knowing what your data really looks like. Here's a few examples that will help you understand what's going on in your dataset.
 
 #### Printing Basic Excerpts
@@ -66,7 +66,7 @@ df.describe()
 df.head(5) # First 5 rows
 ```
 
-Running `df.describe()` will print a table of all columns and their respective counts (how many non-null values in the column), mean, std (standard deviation), min, 25%, 50%, 75%, and max. Sometimes the row name doens't get included. This can be fixed by passing in the argument "include='all'" as follows: `df.describe(include='all')`.
+Running `df.describe()` will print a table of all columns and their respective counts (how many non-null values in the column), mean, std (standard deviation), min, 25%, 50%, 75%, and max. Sometimes the row name doesn't get included. This can be fixed by passing in the argument "include='all'" as follows: `df.describe(include='all')`.
 
 
 

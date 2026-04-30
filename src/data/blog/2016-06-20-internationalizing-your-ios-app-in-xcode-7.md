@@ -3,12 +3,11 @@ title: "Internationalizing Your iOS App in Xcode 7"
 author: "Kevin Hou"
 date: 2016-06-20 18:16:44
 description: "A quick tutorial on how to prepare your app for internationalization using Xcode's built-in localization tools."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, xcode]
 featured: false
 ---
 # Localization in Swift Xcode 7.3.1
-*** This is a blog post in progress ***
 
 ## Prepare Xcode Project
 Go to the project page → Localizations → Add a new language and select all the resources.
@@ -34,7 +33,7 @@ Change the `.xliff` file (found it useful to use a simple IDE like Atom or Subli
 
 # To Import:
 Import the `.xliff` file.
-Add the newly created `Localizable.strings` file (in the parent) to the build phases (Target --> Build Phases --> Copy Bundle Resources --> Add) — [Reference](http://fullscreensoftware.blogspot.co.il/2011/09/xcode-4-and-localizablestrings-issue.html).
+Add the newly created `Localizable.strings` file (in the parent) to the build phases (Target --> Build Phases --> Copy Bundle Resources --> Add) — [Reference](https://fullscreensoftware.blogspot.co.il/2011/09/xcode-4-and-localizablestrings-issue.html).
 Build and run.
 
 # To add other languages:

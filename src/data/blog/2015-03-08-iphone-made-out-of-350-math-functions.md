@@ -3,7 +3,7 @@ title: "iPhone Made Out of 350 Math Functions"
 author: "Kevin Hou"
 date: 2015-03-08 18:38:01
 description: "An overview of a picture of an iPhone that I generated using 350+ math equations on Desmos.com."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: []
 ---
 ### Background
@@ -16,25 +16,25 @@ Here is the link to the graph:
 [https://www.desmos.com/calculator/b2qi05nasi](https://www.desmos.com/calculator/b2qi05nasi)
 
 My graph was actually featured as one of the "Creative Picks" for the Desmos site! My graph was sent out on one of the monthy Desmos newsletters to the tens of thousands of Desmos users.
-![Desmos Staff Picks](https://khou22.github.io/media/blog/images/Desmos/Desmos_Staff_Picks.png)
+![Desmos Staff Picks](/media/blog/images/Desmos/Desmos_Staff_Picks.png)
 
 ### Screenshots
 Here is a screenshot of the final creation:
 
-![Desmos iPhone](https://khou22.github.io/media/blog/images/Desmos/Desmos%20iPhone.png)
+![Desmos iPhone](/media/blog/images/Desmos/Desmos%20iPhone.png)
 
 Here are the different types of equations I used and the total times I used them.
-![Desmos iPhone Stats](https://khou22.github.io/media/blog/images/Desmos/Desmos%20iPhone%20Stats.png)
+![Desmos iPhone Stats](/media/blog/images/Desmos/Desmos%20iPhone%20Stats.png)
 
-Below are images of the finsihed product with each function labeled. The number corresponds to the function on the Desmos file as well as the number on the list of all the functions.
+Below are images of the finished product with each function labeled. The number corresponds to the function on the Desmos file as well as the number on the list of all the functions.
 
-![Desmos iPhone Labeled 3](https://khou22.github.io/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%203.jpg)
+![Desmos iPhone Labeled 3](/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%203.jpg)
 
-![Desmos iPhone Labeled 2](https://khou22.github.io/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%202.jpg)
+![Desmos iPhone Labeled 2](/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%202.jpg)
 
-![Desmos iPhone Labeled 1](https://khou22.github.io/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%201.jpg)
+![Desmos iPhone Labeled 1](/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%201.jpg)
 
-![Desmos iPhone Labeled 4](https://khou22.github.io/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%204.jpg)
+![Desmos iPhone Labeled 4](/media/blog/images/Desmos/Desmos%20iPhone%20Labeled%204.jpg)
 
 **Circles:**
 2, 3, 4, 5, 6, 16, 17, 18, 19, 31, 32, 33, 34, 43, 44, 56, 57, 58, 61, 68, 69, 88, 89, 90, 91, 92, 93, 98, 100, 115, 117, 125, 126, 127, 128, 141, 142, 150, 151, 152, 153, 154, 158, 159, 160, 161, 162, 163, 169, 170, 171, 172, 176, 177, 181, 182, 184, 189, 190, 194, 195, 199, 200, 204, 205, 220, 224, 225, 230, 231, 253, 254, 260, 273, 274, 281, 282, 283, 284, 291, 192, 298, 299, 306, 307, 308, 316, 317, 318, 324.
@@ -68,4 +68,4 @@ Below are images of the finsihed product with each function labeled. The number 
 
 ### Piston Animation (Also a Staff Pick)
 I also created a piston animation graph that was featured as one of the "Favorite Graphs of the Month." Here is the link: [https://www.desmos.com/calculator/o6zbu8pofe](https://www.desmos.com/calculator/o6zbu8pofe)
-![Desmos Piston Animation](https://khou22.github.io/media/blog/images/Desmos/Desmos_Piston_Animation.png)
+![Desmos Piston Animation](/media/blog/images/Desmos/Desmos_Piston_Animation.png)

@@ -3,7 +3,7 @@ title: "My Custom VIM Configuration: Installation, Usage, and Capabilities"
 author: "Kevin Hou"
 date: 2017-08-04 17:18:02
 description: "My personal VIM configuration that includes most of the functionalities found in editors like Sublime and Atom, but in a faster, slicker, and more powerful package."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [vim, sourceCode]
 featured: true
 ---

@@ -3,7 +3,7 @@ title: "GitHub Octocat Design Challenge Winner"
 author: "Kevin Hou"
 date: 2016-05-01 14:49:19
 description: "I designed a logo for a project of mine that took a unique spin on the GitHub Octocat mascot. I entered it into the design challenge and won!"
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [hackathon, graphicDesign]
 featured: false
 ---
@@ -15,7 +15,7 @@ I took inspiration from the name of our Chrome Extension: Execute Order 66. For 
 
 It was easy decision to include the Octocat mascot in my design since we were creating a GitHub developer tool. Because of the dark nature of the phrase "Execute Order 66," I felt that the overall design should reflect this. As a result, I designed with largely a black color palette and a Sith lightsaber to add a red highlight. For the background, I used the iconic "light speed" design from Star Wars.
 
-![GitHub Logo](https://khou22.github.io/media/projects/executeOrder66/GitHub%20Logo.png)
+![GitHub Logo](/media/projects/executeOrder66/github-logo.png)
 
 Overall, I was pretty happy with my design. For one, because this was our second project, I had to design this logo in about 10 minutes. Secondly, I got a lot of exposure for it on Twitter! It was nice to know that people out there appreciated my design. It strengthened my confidence in my design skills and I'm beginning to now identify as a designer as well as a programmer. If I were to do this logo again, I would increase the resolution of my design. It's a little low resolution, but it's not noticeable on the [Chrome app store](https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone). Feel free to download the [Chrome Extension](https://chrome.google.com/webstore/detail/execute-order-66/hgoanjhaboccoaefceiebdodiillhone).
 
@@ -25,12 +25,12 @@ Below are screenshots and links of the various Twitter announcements. About 15 p
 
 [GitHub Education Announcement](https://twitter.com/GitHubEducation/status/722884798457335810)
 
-![GitHub Education Twitter Post](https://khou22.github.io/media/projects/executeOrder66/Twitter%20Post%20-%20GitHub%20Education.jpg)
+![GitHub Education Twitter Post](/media/projects/executeOrder66/twitter-post-github-education.jpg)
 
 [Major League Hacking Shoutout](https://twitter.com/MLHacks/status/723598523627794432)
 
-![Major League Hacking Twitter Post](https://khou22.github.io/media/projects/executeOrder66/Twitter%20Post%20-%20Major%20League%20Hacking.jpg)
+![Major League Hacking Twitter Post](/media/projects/executeOrder66/twitter-post-major-league-hacking.jpg)
 
 [My Original Tweet](https://twitter.com/kevinhou22/status/721793013060505601)
 
-![Kevin Hou Twitter Post](https://khou22.github.io/media/projects/executeOrder66/Twitter%20Post%20-%20Kevin%20Hou.jpg)
+![Kevin Hou Twitter Post](/media/projects/executeOrder66/twitter-post-kevin-hou.jpg)

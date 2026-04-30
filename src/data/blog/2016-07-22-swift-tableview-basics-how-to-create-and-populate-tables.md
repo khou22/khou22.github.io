@@ -5,13 +5,13 @@ author: "Kevin Hou"
 date: 2016-07-22 10:46:44
 description: "A quick, bare-bones introduction to Table Views in Swift."
 tags: [coding, mobile, tutorial]
+featured: false
 ---
-
 ## Project Objectives
 
 I was instructed to integrate HealthKit information — specifically pulling steps data — into Breathometer's upcoming app. I'm realitively new to Swift having only started a month ago, so this project was a way for me to get more familiar with the language and IDE. My task was to pull the data from HealhtKit then populate a table within a page of the app. This data could then be used for visualizations, analysis, etc. Here are my main learning goals for this project:
 
-- Learn how to integrate with HealthKit and pull data from a “3rd party” source ([see last post](http://khou22.github.io/programming/2016/07/22/introduction-to-healthkit-reading-steps-weight-height-and-more.html))
+- Learn how to integrate with HealthKit and pull data from a “3rd party” source ([see last post](/blog/2016-07-22-introduction-to-healthkit-reading-steps-weight-height-and-more))
 - Learn the fundamentals of table views, populating views, etc. so that I can develop a better understanding of Swift frontend
 
 ## Setting Up the Table
@@ -49,7 +49,7 @@ func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSInde
 ### Connect dataSource and delegate
 
 You must also link the table view dataSource and delegate to the view controller like so:
-![swift table views](https://khou22.github.io/media/blog/images/Swift_Table_Views.png)
+![swift table views](/media/blog/images/Swift_Table_Views.png)
 
 ### Register Cell Class
 

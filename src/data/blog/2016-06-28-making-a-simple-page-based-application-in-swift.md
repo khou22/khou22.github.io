@@ -4,8 +4,8 @@ author: "Kevin Hou"
 date: 2016-06-28 15:10:08
 description: "A quick tutorial on how to make a bare-bones page-based application in Xcode 7.3 using Swift."
 tags: [coding, mobile, tutorial]
+featured: false
 ---
-
 ## Introduction
 
 I’ve been starting to hunker down and learn the basics of Swift. Because my current project at work is to build an onboarding screen, there will likely be some sort of side scrolling element to it — similar to an iPhone homescreen. Because I knew no Swift-specific data structures, principles, etc. going into this, I was learning from the ground up. It was initially really challenging because I had no basic knowledge to go off of. The intent of this side project was to learn the fundamentals of Swift, especially how Views work.
@@ -133,7 +133,7 @@ Like all programmers, I googled my way through this project. This [tutorial](htt
 
 Here are some of the key, completed source files (note: I named the Pager “OnboardingPager” instead of “Pager” as I stated in the tutorial):
 
-- [ViewController.swift](https://khou22.github.io/media/blog/source-files/making-a-simple-page-based-application-swift/ViewController.swift)
-- [OnboardingView.swift](https://khou22.github.io/media/blog/source-files/making-a-simple-page-based-application-swift/OnboardingView.swift)
-- [PageOne.swift](https://khou22.github.io/media/blog/source-files/making-a-simple-page-based-application-swift/PageOne.swift)
-- [PageTwo.swift](https://khou22.github.io/media/blog/source-files/making-a-simple-page-based-application-swift/PageTwo.swift)
+- [ViewController.swift](/media/blog/source-files/making-a-simple-page-based-application-swift/ViewController.swift)
+- [OnboardingView.swift](/media/blog/source-files/making-a-simple-page-based-application-swift/OnboardingView.swift)
+- [PageOne.swift](/media/blog/source-files/making-a-simple-page-based-application-swift/PageOne.swift)
+- [PageTwo.swift](/media/blog/source-files/making-a-simple-page-based-application-swift/PageTwo.swift)

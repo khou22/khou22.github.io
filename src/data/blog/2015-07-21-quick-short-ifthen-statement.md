@@ -3,7 +3,7 @@ title: "Quick, Short If/Then Statement"
 author: "Kevin Hou"
 date:   2015-07-21 14:32:00
 description: "A quicker and faster way of writing if/then statements in javascript."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [javascript]
 ---
 As a lot of you guys know, a proper if/then statement looks like this:
@@ -33,6 +33,6 @@ An **efficient, concise** alternative is to use this format condenses this code 
 var str = condition == true ? "yes" : "no";
 ```
 
-This is a very simple, easy trick to greatly increase the readabitlity of your code. Instead of having an incredibely long file with lots of short lines, you can work horizontally and make use of your horizontal realistate.
+This is a very simple, easy trick to greatly increase the readability of your code. Instead of having an incredibely long file with lots of short lines, you can work horizontally and make use of your horizontal real estate.
 
 This method is particularly useful when you need many if-statements in a row. Hope this help!

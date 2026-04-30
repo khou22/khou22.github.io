@@ -28,14 +28,14 @@ $ tmux -V
 2. After pressing `Control + b`, can type `:` to get the TMUX prompt
 
 ## Managing Sessions
-After you've created a session, you can temporarily exit or `detatch` this session. To do this, press `Control + b` then `d` to detatch.
+After you've created a session, you can temporarily exit or `detach` this session. To do this, press `Control + b` then `d` to detach.
 
-To see a list of suspended sessions, you can type `$ tmux ls`. To get back to a sesion, type `$ tmux attach-session -t <id>` (shortcut: `$ tmux a -t <id>`). You can also use `$tmux a #` to go to the most recent session.
+To see a list of suspended sessions, you can type `$ tmux ls`. To get back to a session, type `$ tmux attach-session -t <id>` (shortcut: `$ tmux a -t <id>`). You can also use `$tmux a #` to go to the most recent session.
 
 ![TMUX Sessions](https://khou22.github.io/media/blog/images/tmux/session.png)
 
-### Switching Between Session
-Once you're in a TMUX session, you can press `Control + b` and `s` to get a dialogue of the open sessions with a preview of what they look like. You can also use `Control + b` and `(`/`)` to move left/right between existing session. To get a read-only list from your main shell, you can type `$ tmux ls`.
+### Switching Between Sessions
+Once you're in a TMUX session, you can press `Control + b` and `s` to get a dialogue of the open sessions with a preview of what they look like. You can also use `Control + b` and `(`/`)` to move left/right between existing sessions. To get a read-only list from your main shell, you can type `$ tmux ls`.
 
 To kill the session you're currently in, type: `Control + b` and `: kill-session`. You can also do this from your main shell: `$ tmux kill-session -t <name or id>`.
 

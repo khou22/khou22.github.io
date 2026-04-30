@@ -3,7 +3,7 @@ title: "Making a Bare Minimum Modal in HTML and CSS"
 author: "Kevin Hou"
 date: 2015-07-31 11:05:17
 description: "A quick tutorial on how to make a modal in pure HTML and CSS — good reference."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [html, css, sourceCode]
 ---
 Here is the code for a bare minimum popup modal:

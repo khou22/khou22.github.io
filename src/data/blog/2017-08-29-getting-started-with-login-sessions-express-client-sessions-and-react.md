@@ -3,7 +3,7 @@ title: "Getting Started with Login Sessions: Express, Client Sessions, and React
 author: "Kevin Hou"
 date: 2017-08-29 21:33:04
 description: "A tutorial on how to set up your own web app with login authentication, cookies, and sessions using Node and Express."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [expressServer, backendServer, es6, javascript, tutorial, sourceCode]
 featured: true
 ---
@@ -119,7 +119,7 @@ export const login = (req: Request, res: express.Response) => {
 ### Set a browser cookie from an API response
 Now that we know how to send a cookie back from the server, we must now inject that cookie into the browser so the session can actually be tied to a browser. The `client-session` package automatically sets the appropriate cookie on the response header as `Set-Cookie`. This indicates to the browser to store the response as a cookie. Any response with the property `Set-Cookie`, as seen below, will do just that.
 
-![set-cookie-response](https://khou22.github.io/media/blog/images/set-cookie-response.png)
+![set-cookie-response](/media/blog/images/set-cookie-response.png)
 
 In order for the client to allow setting a cookie, the `fetch` request must be `same-origin`. This is a security feature that ensures malicious cookies have a harder time. I'm using `whatwg-fetch` and in my fetch request, I set `credentials: 'same-origin'`:
 

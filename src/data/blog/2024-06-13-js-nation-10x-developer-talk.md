@@ -8,7 +8,7 @@ tags: [coding]
 featured: false
 ---
 
-The full talk can be found on the JS Nation portal for free: [Can AI Turns Us Into 10x Developers?](https://www.youtube.com/watch?v=mDKFNanphfE).
+The full talk can be found on the JS Nation portal for free: [Can AI Turn Us Into 10x Developers?](https://www.youtube.com/watch?v=mDKFNanphfE).
 
 [![JS Nation 2024 Kevin Hou lightning talk AI developer tools](https://khou22.github.io/media/profile_pictures/js-nation-presentation-headshot.jpg)](https://www.youtube.com/watch?v=mDKFNanphfE)
 
@@ -32,7 +32,7 @@ This is my first time in this beautiful city. Honestly, I haven't spent too much
 
 It's the Amsterdam Breathalyser. We're going to do this all armed with Codeium, an AI developer tool. So we're going to start with our JS monorepo, so fairly standard.
 
-The thing that I want to call out is that we have packages, we have shared dependencies, think design system, think utils, and a completely empty Vita project.
+The thing that I want to call out is that we have packages, we have shared dependencies, think design system, think utils, and a completely empty Vite project.
 
 We want to start by creating a landing page. Traditionally, you might have spent some time learning how to centre a title and a button on a page. What would you do? You would go to StackOverflow, try to find the exact copy of what you want. You might go to W3 schools, or you might even be in, who has played Flexbox Froggy? The classic let's get into the Flexbox game. Now, with Codeium and all these new dev tools, we're able to speed up that acceleration of learning.
 

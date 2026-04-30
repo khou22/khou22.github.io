@@ -3,7 +3,7 @@ title: "AI Engineer Summit NYC 2025: How Windsurf writes 90% of your code with a
 author: "Kevin Hou"
 date: 2025-02-21 10:00:00
 description: "I spoke at AI Engineer Summit NYC 2025 in New York City about the secret sauce behind Windsurf and the team’s playbook for building the best AI products."
-image: "https://khou22.github.io/media/blog/images/ai-engineer-summit-nyc-walk-on-stage-shot"
+image: "https://khou22.github.io/media/blog/images/ai-engineer-summit-nyc-walk-on-stage-shot.jpg"
 tags: [coding]
 featured: false
 ---

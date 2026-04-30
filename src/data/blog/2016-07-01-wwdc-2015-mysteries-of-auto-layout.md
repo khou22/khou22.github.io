@@ -3,10 +3,10 @@ title: "WWDC 2015: Mysteries of Auto Layout"
 author: "Kevin Hou"
 date: 2016-07-01 16:33:27
 description: "My notes and takeaways from the WWDC talk on auto layout from 2015. I know the video is a year old, but it was a good learning resource for me."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [swift, xcode]
+featured: false
 ---
-
 Mysteries of Auto Layout, Part 1: [https://developer.apple.com/videos/play/wwdc2015/218](https://developer.apple.com/videos/play/wwdc2015/218)
 
 Auto Layout Definition: Constraints lead to equations that layout your views automatically

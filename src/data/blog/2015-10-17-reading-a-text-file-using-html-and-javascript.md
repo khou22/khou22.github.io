@@ -3,7 +3,7 @@ title: "Reading a Text File Using HTML and Javascript"
 author: "Kevin Hou"
 date: 2015-10-17 20:55:04
 description: "Uploading a text file and parsing it into a string in a web app"
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [html, javascript]
 featured: false
 ---
@@ -20,7 +20,7 @@ Start with a simple HTML form input. This form will accept a tag and, when submi
 </form>
 ```
 
-*React requires closing slashes on the inputs because it only recognizes "complete" tags.*
+*In JSX, all elements must be explicitly closed. Void elements like `<input>` must either self-close with a slash or use a matching closing tag.*
 
 Now here's where the fun happens:
 

@@ -3,7 +3,7 @@ title: "Designing My YouTube Channel Artwork"
 author: "Kevin Hou"
 date: 2016-05-07 21:32:05
 description: "How to design your YouTube artwork effectively. Tips, tricks, and more."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [graphicDesign]
 featured: false
 ---
@@ -22,12 +22,12 @@ I looked at the channel artworks of some of my favorite tech and wood YouTubers.
 
 #### Desktop Browser
 
-![Desktop Browser](https://khou22.github.io/media/blog/images/YouTube Channel Artwork/Desktop Size.png)
+![Desktop Browser](/media/blog/images/YouTube%20Channel%20Artwork/Desktop%20Size.png)
 
 This is typically what a YouTuber user would see. This is the crop size for a desktop browser. A mobile device would be the same height as this, but the side edges would be trimmed inward a tiny bit.
 
 #### Full Size (For TV Clients)
 
-![Full Size](https://khou22.github.io/media/blog/images/YouTube Channel Artwork/YouTube Channel Artwork.jpg)
+![Full Size](/media/blog/images/YouTube%20Channel%20Artwork/YouTube%20Channel%20Artwork.jpg)
 
 This is the full resolution image. The only time a user would see this entire image would be on the TV.

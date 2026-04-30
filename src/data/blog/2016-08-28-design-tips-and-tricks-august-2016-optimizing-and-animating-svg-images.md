@@ -3,10 +3,10 @@ title: "Design Tips and Tricks August 2016: Optimizing and Animating SVG Images"
 author: "Kevin Hou"
 date: 2016-08-28 18:46:35
 description: "My notes from an online seminar I tuned into that describes how to create and animate SVG images."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [graphicDesign, userExperience, userInterface, tutorial]
+featured: false
 ---
-
 ### Overview
 
 - Codepen is useful for rapid SVG development
@@ -82,7 +82,7 @@ Line drawing animations: <https://css-tricks.com/svg-line-animation-works/>
 Morphing: <http://codepen.io/chriscoyier/pen/DpFfE>  
 
 **Tools mentioned:**  
-<http://cubic-bezier.com>  
+<https://cubic-bezier.com>  
 <https://petercollingridge.appspot.com/svg-editor>  
 
 **Animations in Swift**  

@@ -3,8 +3,9 @@ title: "Getting Started with Typescript: Thoughts, Tips, and Useful Notes"
 author: "Kevin Hou"
 date: 2017-07-14 17:40:33
 description: "A short introduction into TypeScript as well as a reflection on my thoughts and opinions about it."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [javascript, es6, expressServer, backendServer]
+featured: false
 ---
 I started using TypeScript for my next project at Moat and I have to say I really love it. I’ve always been a fan of type safe language — largely for the compile-time debugging, code completion, and readability — which is why I’m such a huge fan of Swift. TypeScript has given me the structure and safety that I’ve found with Java and Swift, and has reinvigorated my love for web development. I’ve always considered web development to be somewhat of the “wild west” — not too much standardization and with no checks and balances to minimize errors.
 
@@ -52,7 +53,7 @@ interface Request extends express.Request {
 ```
 
 Now, I can use GitHubFile or GitHubRepository as a type just like I would with any other variable type. I have the added benefit of code completion now. When I type a variable name of type GitHubFile and press period, a list of properties and their expected type shows up. It enables IDE’s to be much smarter about their suggestions to the point where it’s honestly approaching Xcode level.
-![Atom code completion](https://khou22.github.io/media/blog/images/TypeScript-Intro/atom_code_completion_typescript.png)
+![Atom code completion](/media/blog/images/TypeScript-Intro/atom_code_completion_typescript.png)
 
 ### Basic Syntaxes
 **Arrays:**

@@ -8,7 +8,7 @@ tags: [terminal]
 featured: false
 ---
 ## Inspecting JSON Data
-Instead of spending time writing code to view JSON or using a JSON viewer app, which can both be incredibely slow with large JSON files, you can use `NodeJS` to inspect JSON objects. Simply start the Node console:
+Instead of spending time writing code to view JSON or using a JSON viewer app, which can both be incredibly slow with large JSON files, you can use `NodeJS` to inspect JSON objects. Simply start the Node console:
 
 ``` bash
 $ node
@@ -30,7 +30,7 @@ Next, you can import the JSON and navigate the tree object to your heart's conte
 ```
 
 ## Prevent Mac from Sleeping
-Mac's contain a built in terminal function called `Caffeinate`. While one could download the free ["Caffeine" app](http://lightheadsw.com/caffeine/) from the Mac App Store, the command line provides an easy alternative. It offers more control and in my opinion is easier to interpret. To activate, simply type:
+Macs contain a built in terminal function called `Caffeinate`. While one could download the free ["Caffeine" app](http://lightheadsw.com/caffeine/) from the Mac App Store, the command line provides an easy alternative. It offers more control and in my opinion is easier to interpret. To activate, simply type:
 ``` bash
 $ caffeinate # Indefinite amount of time
 ```
@@ -39,7 +39,7 @@ $ caffeinate # Indefinite amount of time
 ``` bash
 -d	# Prevent display from sleeping
 -i	# Prevent system from idle sleeping
--s	# Prevent system from lseeping (only when plugged in)
+-s	# Prevent system from sleeping (only when plugged in)
 -u	# Resets the system timeout and/or will wake the computer
 -t <seconds> # Specifies timeout in seconds from the time the command is run
 ```
@@ -93,7 +93,7 @@ Show a mini calendar view:
 `$ cal`
 
 Count number of columns in CSV file:  
-`$ head -1 data_set/background-one.csv | sed 's/[^,]//g' | wc -c$
+`$ head -1 data_set/background-one.csv | sed 's/[^,]//g' | wc -c`
 
 Open URLs without copy pasting:  
 `Command + Click`

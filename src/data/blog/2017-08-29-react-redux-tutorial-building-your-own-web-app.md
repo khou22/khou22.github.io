@@ -3,7 +3,7 @@ title: "React Redux Tutorial: Building Your Own Web App"
 author: "Kevin Hou"
 date: 2017-08-29 21:16:59
 description: "An introduction into React-Redux — a framework for building web applications. This tutorial is implemented with ES6 and Webpack."
-image: "https://khou22.github.io/media/blog/images/Blog_Post_Placeholder_Image.jpg"
+image: "/media/blog/images/Blog_Post_Placeholder_Image.jpg"
 tags: [reactjs, redux, javascript, es6, tutorial, sourceCode]
 featured: true
 ---
