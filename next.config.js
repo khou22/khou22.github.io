@@ -8,6 +8,15 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/blog/page/1",
+        destination: "/blog",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

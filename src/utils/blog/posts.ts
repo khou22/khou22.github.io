@@ -7,7 +7,7 @@ import readingTime from "reading-time";
 import { HydratedBlogPost } from "@/data/types";
 import { getDataDirectory } from "@/data/dataDirs";
 
-export const POSTS_PER_PAGE = 10;
+export const POSTS_PER_PAGE = 15;
 
 /**
  * Retrieves a list of hydrated blog posts sorted in descending order of date.
@@ -146,4 +146,19 @@ export const getPaginatedPosts = async (
     currentPage,
     totalPosts,
   };
+};
+
+export const getPostListPageForSlug = (
+  slug: string,
+  limit: number = POSTS_PER_PAGE,
+): number | null => {
+  const postIndex = getPosts().findIndex(
+    (post) => post.frontMatter.slug === slug,
+  );
+
+  if (postIndex === -1) {
+    return null;
+  }
+
+  return Math.floor(postIndex / limit) + 1;
 };

@@ -3,7 +3,12 @@ import moment from "moment";
 import Link from "next/link";
 import { BlogPageParams } from "./types";
 import { siteMetadata } from "@/constants/siteMetadata";
-import { PostNotFoundError, getPost, getPosts } from "@/utils/blog/posts";
+import {
+  PostNotFoundError,
+  getPost,
+  getPostListPageForSlug,
+  getPosts,
+} from "@/utils/blog/posts";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { HydratedBlogPost } from "@/data/types";
 import { CustomMarkdown } from "@/components/molecules/CustomMarkdown/CustomMarkdown";
@@ -77,9 +82,14 @@ const BlogPostPage: NextPage<BlogPageParams> = async ({ params: { slug } }) => {
     return <PostNotFound slug={slug} />;
   }
 
+  const postListPage = getPostListPageForSlug(slug);
+  const backHref = postListPage
+    ? PAGES.BLOG_PAGE_POSTS(postListPage)
+    : PAGES.BLOG_INDEX;
+
   return (
     <PageWrapper>
-      <CustomLink href={PAGES.BLOG_POSTS}>&larr; Back to Blog</CustomLink>
+      <CustomLink href={backHref}>&larr; Back to Blog</CustomLink>
       <p className="w-full text-center">
         <time dateTime={post.frontMatter.date.toISOString()}>
           {moment(post.frontMatter.date).format("MMMM D, YYYY")}

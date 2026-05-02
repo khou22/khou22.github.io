@@ -20,7 +20,7 @@ export const Pagination: React.FC<PaginationProps> = ({
   if (totalPages <= 1) return null;
 
   const getPageUrl = (page: number) => {
-    return `${baseUrl}?page=${page}`;
+    return page <= 1 ? baseUrl : `${baseUrl}/page/${page}`;
   };
 
   const isFirstPage = currentPage <= 1;
@@ -62,33 +62,31 @@ export const Pagination: React.FC<PaginationProps> = ({
     <nav
       className={classNames(
         "flex items-center justify-center space-x-1 py-8",
-        className
+        className,
       )}
       aria-label="Pagination"
     >
-      {/* Previous Button */}
       {isFirstPage ? (
-        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-300 cursor-not-allowed">
+        <span className="flex h-10 w-10 cursor-not-allowed items-center justify-center rounded-full border border-slate-200 text-slate-300">
           <ArrowLeftIcon className="h-5 w-5" />
         </span>
       ) : (
         <Link
           href={getPageUrl(currentPage - 1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:border-blue-500 hover:text-blue-500 transition-all duration-200"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-all duration-200 hover:border-blue-500 hover:text-blue-500"
           aria-label="Previous Page"
         >
           <ArrowLeftIcon className="h-5 w-5" />
         </Link>
       )}
 
-      {/* Page Numbers */}
       <div className="flex items-center space-x-1">
         {getPageNumbers().map((page, index) => {
           if (page === "...") {
             return (
               <span
                 key={`ellipsis-${index}`}
-                className="px-2 text-slate-400 select-none"
+                className="select-none px-2 text-slate-400"
               >
                 &hellip;
               </span>
@@ -105,7 +103,7 @@ export const Pagination: React.FC<PaginationProps> = ({
                 "flex h-10 w-10 items-center justify-center rounded-full border text-sm font-medium transition-all duration-200",
                 isCurrent
                   ? "border-blue-500 bg-blue-500 text-white shadow-md shadow-blue-100"
-                  : "border-slate-200 text-slate-600 hover:border-blue-500 hover:text-blue-500"
+                  : "border-slate-200 text-slate-600 hover:border-blue-500 hover:text-blue-500",
               )}
               aria-current={isCurrent ? "page" : undefined}
             >
@@ -115,15 +113,14 @@ export const Pagination: React.FC<PaginationProps> = ({
         })}
       </div>
 
-      {/* Next Button */}
       {isLastPage ? (
-        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-300 cursor-not-allowed">
+        <span className="flex h-10 w-10 cursor-not-allowed items-center justify-center rounded-full border border-slate-200 text-slate-300">
           <ArrowRightIcon className="h-5 w-5" />
         </span>
       ) : (
         <Link
           href={getPageUrl(currentPage + 1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:border-blue-500 hover:text-blue-500 transition-all duration-200"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-all duration-200 hover:border-blue-500 hover:text-blue-500"
           aria-label="Next Page"
         >
           <ArrowRightIcon className="h-5 w-5" />

@@ -1,7 +1,11 @@
 import fs from "fs";
 import matter from "gray-matter";
 import readingTime from "reading-time";
-import { getPaginatedPosts, POSTS_PER_PAGE } from "./posts";
+import {
+  getPaginatedPosts,
+  getPostListPageForSlug,
+  POSTS_PER_PAGE,
+} from "./posts";
 import { getDataDirectory } from "@/data/dataDirs";
 
 jest.mock('fs');
@@ -60,7 +64,7 @@ describe('getPaginatedPosts', () => {
     const result = await getPaginatedPosts(1);
     expect(result.posts.length).toBe(POSTS_PER_PAGE);
     expect(result.currentPage).toBe(1);
-    expect(result.totalPages).toBe(3);
+    expect(result.totalPages).toBe(2);
     expect(result.totalPosts).toBe(25);
   });
 
@@ -80,15 +84,35 @@ describe('getPaginatedPosts', () => {
     });
 
     const result = await getPaginatedPosts(2);
-    expect(result.posts.length).toBe(POSTS_PER_PAGE);
+    expect(result.posts.length).toBe(10);
     expect(result.currentPage).toBe(2);
-    // The first post on page 2 (with limit 10) should be the 11th post.
-    expect(result.posts[0].frontMatter.title).toBe('Post 11');
+    // The first post on page 2 (with limit 15) should be the 16th post.
+    expect(result.posts[0].frontMatter.title).toBe('Post 16');
   });
 
   it('should handle out-of-bounds page', async () => {
     const result = await getPaginatedPosts(10);
-    expect(result.currentPage).toBe(3); // Last page
-    expect(result.posts.length).toBe(5);
+    expect(result.currentPage).toBe(2); // Last page
+    expect(result.posts.length).toBe(10);
+  });
+
+  it('should return the page that contains a post slug', () => {
+    let counter = 0;
+    mockedMatter.mockImplementation(() => {
+        counter++;
+        return {
+            data: {
+                title: `Post ${counter}`,
+                author: 'Author',
+                date: new Date(2023, 0, 31 - counter).toISOString(),
+                description: 'Description'
+            },
+            content: 'Mock Content'
+        } as any;
+    });
+
+    expect(getPostListPageForSlug('post-1')).toBe(1);
+    expect(getPostListPageForSlug('post-16')).toBe(2);
+    expect(getPostListPageForSlug('missing-post')).toBeNull();
   });
 });

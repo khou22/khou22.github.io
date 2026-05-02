@@ -11,6 +11,8 @@ describe('Pagination Component', () => {
     expect(screen.getByText('3')).toBeInTheDocument();
     expect(screen.getByText('4')).toBeInTheDocument();
     expect(screen.getByText('5')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: '1' })).toHaveAttribute('href', '/test');
+    expect(screen.getByRole('link', { name: '3' })).toHaveAttribute('href', '/test/page/3');
   });
 
   it('does not render if totalPages is 1', () => {
