@@ -16,6 +16,7 @@ import { Badge } from "@/components/ui/badge";
 import { TagIcon } from "@/components/icons/TagIcon/TagIcon";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PAGES } from "@/utils/pages";
+import { resolveBlogImage } from "@/utils/cdn/cdnAssets";
 
 /**
  * Get all blog posts and generate static params. Allows for automatic memoization of these pages.
@@ -49,7 +50,9 @@ export async function generateMetadata({
     openGraph: {
       images: [
         {
-          url: post.frontMatter.image || siteMetadata.previewCard.url,
+          url: post.frontMatter.image
+            ? resolveBlogImage(post.frontMatter.image)
+            : siteMetadata.previewCard.url,
           alt: post.frontMatter.title,
           width: siteMetadata.previewCard.width,
           height: siteMetadata.previewCard.height,

@@ -150,3 +150,31 @@ export const pathToPhotoID = (photoPath: string): string => {
 
   return sanitizedPath;
 };
+
+/**
+ * Resolve an old blog image path to its CDN URL if registered.
+ */
+export const resolveBlogImage = (src: string): string => {
+  if (!src) return src;
+
+  let key = src;
+  if (key.startsWith("/")) {
+    key = key.substring(1);
+  }
+
+  try {
+    key = decodeURIComponent(key);
+  } catch (e) {
+    // ignore malformed URI
+  }
+
+  key = key.replace(/[^a-zA-Z0-9/]+/g, "_");
+
+  if (key in _generatedCdnAssets) {
+    return `${baseUrl}${
+      _generatedCdnAssets[key as keyof typeof _generatedCdnAssets].path
+    }`;
+  }
+
+  return src;
+};

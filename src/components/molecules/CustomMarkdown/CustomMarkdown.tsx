@@ -8,6 +8,7 @@ import React from "react";
 import rehypeRaw from "rehype-raw";
 import { classNames } from "@/utils/style";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
+import { resolveBlogImage } from "@/utils/cdn/cdnAssets";
 
 type CustomMarkdownProps = {
   children: string;
@@ -93,7 +94,7 @@ export const CustomMarkdown: React.FC<CustomMarkdownProps> = ({
     img: ({ src, alt, ...props }) => {
       return (
         <img
-          src={src as string}
+          src={resolveBlogImage(src as string)}
           alt={alt as string}
           {...props}
           className="max-w-full sm:max-w-[300px] md:max-w-[400px] lg:max-w-[580px] xl:max-w-[750px]"
