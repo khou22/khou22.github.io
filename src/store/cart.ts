@@ -1,10 +1,9 @@
 import { create } from "zustand";
-import { persist, createJSONStorage, StateStorage } from "zustand/middleware";
-import Cookies from "js-cookie";
+import { persist } from "zustand/middleware";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 
 export interface CartItem {
-  id: string; // photoID_variantID
+  id: string; // photoID__variantID
   photoID: PhotoIdType;
   variantID: string;
   name: string;
@@ -20,12 +19,6 @@ interface CartState {
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
 }
-
-const cookieStorage: StateStorage = {
-  getItem: (name) => Cookies.get(name) ?? null,
-  setItem: (name, value) => Cookies.set(name, value, { expires: 7 }), // 7 days
-  removeItem: (name) => Cookies.remove(name),
-};
 
 export const useCartStore = create<CartState>()(
   persist(
@@ -64,7 +57,6 @@ export const useCartStore = create<CartState>()(
     }),
     {
       name: "cart-storage",
-      storage: createJSONStorage(() => cookieStorage),
     }
   )
 );

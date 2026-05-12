@@ -77,9 +77,6 @@ dependencies:
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3
-  js-cookie:
-    specifier: ^3.0.5
-    version: 3.0.5
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
@@ -175,9 +172,6 @@ devDependencies:
   '@types/jest':
     specifier: ^29.5.11
     version: 29.5.11
-  '@types/js-cookie':
-    specifier: ^3.0.6
-    version: 3.0.6
   '@types/lodash':
     specifier: ^4.17.6
     version: 4.17.6
@@ -2687,10 +2681,6 @@ packages:
     dependencies:
       expect: 29.7.0
       pretty-format: 29.7.0
-    dev: true
-
-  /@types/js-cookie@3.0.6:
-    resolution: {integrity: sha512-wkw9yd1kEXOPnvEeEV1Go1MmxtBJL0RR79aOTAApecWFVu7w0NNXNqhcWgvw2YgZDYadliXkl14pa3WXw5jlCQ==}
     dev: true
 
   /@types/jsdom@20.0.1:
@@ -6333,11 +6323,6 @@ packages:
       editorconfig: 1.0.4
       glob: 10.3.10
       nopt: 7.2.0
-    dev: false
-
-  /js-cookie@3.0.5:
-    resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
-    engines: {node: '>=14'}
     dev: false
 
   /js-tokens@4.0.0:

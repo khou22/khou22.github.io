@@ -4,6 +4,8 @@ import { RadioGroup } from "@headlessui/react";
 import { useState } from "react";
 import { groupBy } from "lodash";
 import { usePostHog } from "posthog-js/react";
+import { toast } from "sonner";
+import { sendGTMEvent } from "@next/third-parties/google";
 import { VariantCategory } from "./VariantCategory";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
@@ -89,11 +91,15 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
         variant="primary"
         className="w-full"
         onClick={() => {
-          posthog.capture("add_to_cart", {
+          const analyticsPayload = {
             product_name: getPhotoName(photoID),
             product_id: photoID,
             product_price: selectedSize.price,
-          });
+            variant: selectedSize.name,
+            material: selectedSize.material,
+          };
+          posthog.capture("add_to_cart", analyticsPayload);
+          sendGTMEvent({ event: "add_to_cart", ...analyticsPayload });
           addItem({
             id: `${photoID}__${selectedSize.id}`,
             photoID,
@@ -102,6 +108,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             price: selectedSize.price,
             image: getCdnAsset(photoID),
           });
+          toast.success(`Added ${getPhotoName(photoID)} (${selectedSize.name}) to cart`);
         }}
       >
         Add to cart

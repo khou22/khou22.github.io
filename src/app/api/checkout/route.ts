@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { stripe } from "../../../lib/stripe";
 import { photoPricing } from "../../../constants/photoPricing";
 import { getPhotoName, PhotoIdType } from "../../../utils/cdn/cdnAssets";
+import { getBaseUrl } from "../../../utils/getBaseUrl";
 
 export async function POST(req: Request) {
   try {
@@ -45,7 +46,7 @@ export async function POST(req: Request) {
       };
     });
 
-    const baseUrl = process.env.BASE_URL || 'https://khou22.com';
+    const baseUrl = getBaseUrl();
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -53,6 +54,14 @@ export async function POST(req: Request) {
       mode: "payment",
       success_url: `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseUrl}/cart`,
+      // Collect customer email on every order
+      customer_creation: "always",
+      // Collect shipping address (US only — physical print fulfillment)
+      shipping_address_collection: {
+        allowed_countries: ["US"],
+      },
+      // Customer-facing receipts are handled by Stripe
+      // (enable in Stripe Dashboard → Settings → Emails → Successful payments)
     });
 
     return NextResponse.json({ url: session.url });

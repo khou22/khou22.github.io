@@ -9,6 +9,7 @@ import { siteMetadata } from "@/constants/siteMetadata";
 import { NavBar } from "@/components/organisms/NavBar/NavBar";
 import { Footer } from "@/components/organisms/Footer/Footer";
 import { classNames } from "@/utils/style";
+import { Toaster } from "@/components/ui/sonner";
 
 const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
   ssr: false,
@@ -108,6 +109,7 @@ export default function RootLayout({
             </>
           )}
           {gaID && !isDev && <GoogleAnalytics gaId={gaID} />}
+          <Toaster />
         </body>
       </PHProvider>
     </html>

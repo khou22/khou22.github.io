@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { toast } from "sonner";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { usePostHog } from "posthog-js/react";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { useCartStore, selectTotalPrice } from "@/store/cart";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
@@ -13,6 +15,7 @@ import { PAGES } from "@/utils/pages";
 
 const CartPage = () => {
   const isClient = useIsClient();
+  const posthog = usePostHog();
   const { items, updateQuantity, removeItem, clearCart } = useCartStore();
   const totalPrice = useCartStore(selectTotalPrice);
   const [isCheckingOut, setIsCheckingOut] = useState(false);
@@ -21,6 +24,20 @@ const CartPage = () => {
     if (items.length === 0) return;
     
     setIsCheckingOut(true);
+
+    // Track checkout initiation across all analytics systems
+    const analyticsPayload = {
+      total_price: totalPrice,
+      item_count: items.length,
+      items: items.map((item) => ({
+        name: item.name,
+        price: item.price,
+        quantity: item.quantity,
+      })),
+    };
+    posthog.capture("checkout_initiated", analyticsPayload);
+    sendGTMEvent({ event: "checkout_initiated", ...analyticsPayload });
+
     try {
       const response = await fetch("/api/checkout", {
         method: "POST",

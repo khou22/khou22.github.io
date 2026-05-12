@@ -1,11 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
-import { sendOrderEmail } from '@/lib/mailgun';
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  // @ts-ignore - version might vary slightly depending on the installed stripe package
-  apiVersion: '2023-10-16',
-});
+import { stripe } from '@/lib/stripe';
+import { sendAdminOrderNotification } from '@/lib/mailgun';
 
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
 
@@ -38,12 +34,16 @@ export async function POST(req: NextRequest) {
     console.log(`Checkout session completed: ${session.id}`);
 
     try {
-      await sendOrderEmail(session);
+      await sendAdminOrderNotification(session);
     } catch (error) {
       console.error('Failed to send order email:', error);
       // We still return 200 to Stripe to acknowledge receipt of the event
     }
   }
+
+  // TODO: Consider handling additional event types in the future:
+  // - checkout.session.expired (cart abandonment tracking)
+  // - charge.refunded (refund notifications)
 
   return NextResponse.json({ received: true });
 }

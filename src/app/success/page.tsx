@@ -3,6 +3,8 @@
 import React, { useEffect, useState, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { sendGTMEvent } from "@next/third-parties/google";
+import { usePostHog } from "posthog-js/react";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
 import { useCartStore } from "@/store/cart";
 import { Button } from "@/components/ui/button";
@@ -23,6 +25,7 @@ interface SessionData {
 
 const SuccessContent = () => {
   const clearCart = useCartStore((state) => state.clearCart);
+  const posthog = usePostHog();
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("session_id");
   
@@ -44,6 +47,22 @@ const SuccessContent = () => {
       try {
         const data = await getSessionDetails(sessionId);
         setSessionData(data);
+
+        // Track purchase completion across all analytics systems
+        const analyticsPayload = {
+          session_id: sessionId,
+          total_amount: data.amount / 100,
+          currency: data.currency,
+          customer_email: data.customer_email,
+          item_count: data.items.length,
+          items: data.items.map((item) => ({
+            name: item.name,
+            quantity: item.quantity,
+            amount: item.amount / 100,
+          })),
+        };
+        posthog.capture("purchase_complete", analyticsPayload);
+        sendGTMEvent({ event: "purchase_complete", ...analyticsPayload });
       } catch (err: any) {
         setError(err.message || "An error occurred while fetching session details");
       } finally {
