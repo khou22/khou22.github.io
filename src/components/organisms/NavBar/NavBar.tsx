@@ -9,12 +9,14 @@ import { PhotographyDropdown } from "./PhotographyDropdown";
 import { MobileNav } from "./MobileNav";
 import { PersonalLogo } from "@/components/atoms/PersonalLogo/PersonalLogo";
 import { CarrotDownIcon } from "@/components/icons/CarrotDownIcon/CarrotDownIcon";
+import { ShoppingCartIcon } from "@/components/icons/ShoppingCartIcon/ShoppingCartIcon";
 import { useScreenSize } from "@/hooks/useScreenSize/useScreenSize";
 import { useScrollPosition } from "@/hooks/useScrollPosition/useScrollPosition";
 import { clamp, interpolate } from "@/utils/math";
 import { PAGES } from "@/utils/pages";
 import { classNames } from "@/utils/style";
 import { useIsClient } from "@/hooks/useIsClient/useIsClient";
+import { useCartStore, selectTotalItems } from "@/store/cart";
 
 /**
  * Standard nav bar for the site. Floats on certain pages, otherwise is relative. Dropdowns for
@@ -22,6 +24,7 @@ import { useIsClient } from "@/hooks/useIsClient/useIsClient";
  */
 export const NavBar: React.FC = () => {
   const isClient = useIsClient();
+  const totalItems = useCartStore(selectTotalItems);
 
   const { scrollY } = useScrollPosition();
   const screenSize = useScreenSize();
@@ -185,6 +188,17 @@ export const NavBar: React.FC = () => {
                   onMouseEnter={() => setIsDropdownOpen(undefined)}
                 >
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={PAGES.CART}
+                  className="flex items-center gap-1.5 rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-600"
+                  style={{ fontSize: linkFontSize }}
+                  onMouseEnter={() => setIsDropdownOpen(undefined)}
+                >
+                  <ShoppingCartIcon className="h-4 w-4" />
+                  <span>Cart ({totalItems})</span>
                 </Link>
               </li>
             </ul>

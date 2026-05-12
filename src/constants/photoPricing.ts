@@ -12,7 +12,7 @@ export type PhotoPriceVariant = {
    */
   id: string;
   /**
-   * Human readable name for Snipcart purposes.
+   * Human readable name for display purposes.
    */
   name: string;
   price: number;
@@ -55,7 +55,7 @@ export const photoPricing: PhotoPriceVariant[] = [
   },
   {
     id: "12x18-photo-paper",
-    name: "16x20",
+    name: "12x18",
     price: 79.0,
     material: PhotoPrintMaterial.PhotoPaper,
     widthInches: 12,

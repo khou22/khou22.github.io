@@ -14,6 +14,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { PAGES } from "@/utils/pages";
+import { useCartStore, selectTotalItems } from "@/store/cart";
+import { ShoppingCartIcon } from "@/components/icons/ShoppingCartIcon/ShoppingCartIcon";
 
 type MobileNavLinks = {
   title: string;
@@ -44,6 +46,7 @@ const navLinks: MobileNavLinks[] = [
 ];
 
 export const MobileNav = () => {
+  const totalItems = useCartStore(selectTotalItems);
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -67,6 +70,12 @@ export const MobileNav = () => {
               <CustomLink href={link.href}>{link.title}</CustomLink>
             </SheetClose>
           ))}
+          <SheetClose asChild>
+            <CustomLink href={PAGES.CART} className="flex items-center gap-1.5">
+              <ShoppingCartIcon className="h-4 w-4" />
+              <span>Cart ({totalItems})</span>
+            </CustomLink>
+          </SheetClose>
         </div>
         <SheetFooter>
           <SocialLinks className="my-3 space-x-2" />
