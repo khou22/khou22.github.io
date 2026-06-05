@@ -95,7 +95,7 @@ const HomePage = async () => {
               </FadeInView>
             </div>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1 p-4 sm:p-0">
             <FadeInView threshold={0.35} durationMS={1000}>
               <img
                 alt="homepage photography image tiles"
@@ -181,7 +181,7 @@ const HomePage = async () => {
               </h5>
             </FadeInView>
             <FadeInView once>
-              <PhotographyCustomersGrid className="my-4" />
+              <PhotographyCustomersGrid className="my-4 px-4 sm:px-0" />
             </FadeInView>
             <FadeInView once>
               <p className="caption text-center">
