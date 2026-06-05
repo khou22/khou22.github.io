@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { FadeInView } from "@/components/atoms/FadeInView/FadeInView";
 import { PageWrapper } from "@/components/organisms/PageWrapper/PageWrapper";
@@ -42,11 +43,13 @@ const ProgrammingPortfolioPage = () => {
                 key={occupation.company.name}
                 className="relative aspect-[7/2] w-full scale-100 transition-transform duration-200 ease-in-out hover:scale-110"
               >
-                <img
-                  src={occupation.company.logo}
-                  alt={occupation.company.name}
-                  className="h-full w-full object-contain"
-                />
+                <Link href={occupation.company.url} target="_blank">
+                  <img
+                    src={occupation.company.logo}
+                    alt={occupation.company.name}
+                    className="h-full w-full object-contain"
+                  />
+                </Link>
                 <span className="sr-only">{occupation.company.name}</span>
               </div>
             ))}
