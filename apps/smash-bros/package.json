@@ -1,0 +1,17 @@
+{
+  "name": "smash-bros-melee-tribute",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An original Melee-style platform fighter tribute. Not affiliated with Nintendo.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
