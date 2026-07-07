@@ -12,7 +12,7 @@ export type PhotoPriceVariant = {
    */
   id: string;
   /**
-   * Human readable name for Snipcart purposes.
+   * Human readable variant name shown in the cart and on Stripe line items.
    */
   name: string;
   price: number;

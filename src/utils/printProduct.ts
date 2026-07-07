@@ -4,35 +4,36 @@ import {
   getPhotoThumbnail,
   getPhotoName,
 } from "./cdn/cdnAssets";
-import { PAGES } from "./pages";
 import { PhotoPriceVariant } from "@/constants/photoPricing";
-import { siteMetadata } from "@/constants/siteMetadata";
 
 /**
- * Data required for Snipcart validation.
+ * Provider-neutral product metadata for a photo print (photo + size/material
+ * variant). Used to build Stripe Checkout line items and cart UI.
  */
-export interface ISnipcartProduct {
+export interface PrintProduct {
+  /**
+   * Unique product ID in the form `${photoID}_${variant.id}`.
+   */
   id: string;
   name: string;
+  /**
+   * Price in dollars (source of truth: `photoPricing`).
+   */
   price: number;
   description: string;
-  image: string;
-
   /**
-   * JSON URL that will be used to validate the Snipcart product
-   *
-   * Docs: https://docs.snipcart.com/v3/setup/order-validation#json-crawler
+   * Absolute CDN URL of the photo (thumbnail when available).
    */
-  url: string;
+  image: string;
 }
 
 /**
  * Get unique product metadata for e-commerce for a given photo + size/price.
  */
-export const getSnipcartProduct = (
+export const getPrintProduct = (
   photoID: PhotoIdType,
   price: PhotoPriceVariant,
-): ISnipcartProduct => {
+): PrintProduct => {
   let img = getCdnAsset(photoID);
   const thumbnail = getPhotoThumbnail(photoID);
   if (thumbnail) {
@@ -43,9 +44,6 @@ export const getSnipcartProduct = (
     id: `${photoID}_${price.id}`,
     price: price.price,
     name: `${getPhotoName(photoID)} (${price.name})`,
-    url: `${siteMetadata.siteUrl}${PAGES.PHOTOGRAPHY.PRODUCT_VALIDATION(
-      photoID,
-    )}`,
     description: `High quality ${price.name} photo print of ${getPhotoName(
       photoID,
     )} on ${price.material}.`,
