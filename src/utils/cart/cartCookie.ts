@@ -64,7 +64,10 @@ export const readCartCookie = (): CartItem[] => {
 export const writeCartCookie = (items: CartItem[]) => {
   if (typeof document === "undefined") return;
 
+  // `secure` everywhere except plain-http local dev (Safari rejects Secure
+  // cookies on http://localhost).
+  const secure = window.location.protocol === "https:" ? "; secure" : "";
   document.cookie = `${CART_COOKIE_NAME}=${encodeURIComponent(
     JSON.stringify(items),
-  )}; path=/; max-age=${CART_COOKIE_MAX_AGE_SECONDS}; samesite=lax`;
+  )}; path=/; max-age=${CART_COOKIE_MAX_AGE_SECONDS}; samesite=lax${secure}`;
 };
