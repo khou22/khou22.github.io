@@ -55,7 +55,7 @@ export const photoPricing: PhotoPriceVariant[] = [
   },
   {
     id: "12x18-photo-paper",
-    name: "16x20",
+    name: "12x18",
     price: 79.0,
     material: PhotoPrintMaterial.PhotoPaper,
     widthInches: 12,
