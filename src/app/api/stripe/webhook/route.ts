@@ -3,9 +3,9 @@ import Stripe from "stripe";
 import { EmailServiceFactory } from "@/services/email/EmailServiceFactory";
 
 /**
- * Stripe webhook. On `checkout.session.completed`, sends an order
- * notification email so fulfillment can be handled manually (order history
- * lives in the Stripe Dashboard — no database).
+ * Stripe webhook. On a paid Checkout Session, sends an order notification
+ * email so fulfillment can be handled manually (order history lives in the
+ * Stripe Dashboard — no database).
  */
 export async function POST(request: NextRequest) {
   if (!process.env.STRIPE_SECRET_KEY || !process.env.STRIPE_WEBHOOK_SECRET) {
@@ -33,10 +33,26 @@ export async function POST(request: NextRequest) {
     return new Response("Invalid signature", { status: 400 });
   }
 
-  if (event.type === "checkout.session.completed") {
-    const session = event.data.object;
-
+  if (
+    event.type === "checkout.session.completed" ||
+    event.type === "checkout.session.async_payment_succeeded"
+  ) {
     try {
+      // Event payloads follow the webhook endpoint's configured API version,
+      // not the SDK's — re-retrieve the session so the shape (eg.
+      // `collected_information`) always matches the SDK's pinned version.
+      const session = await stripe.checkout.sessions.retrieve(
+        event.data.object.id,
+      );
+
+      // Delayed-notification payment methods (eg. ACH) fire
+      // `checkout.session.completed` while `payment_status` is still
+      // "unpaid"; the `async_payment_succeeded` event arrives once the
+      // payment actually clears and triggers the email instead.
+      if (session.payment_status !== "paid") {
+        return new Response("ok (payment not yet complete)");
+      }
+
       await sendOrderNotification(stripe, session);
     } catch (error) {
       // Return 500 so Stripe retries the webhook until the email succeeds.
@@ -45,6 +61,11 @@ export async function POST(request: NextRequest) {
         status: 500,
       });
     }
+  }
+
+  if (event.type === "checkout.session.async_payment_failed") {
+    // No email — the order never happened. Logged for visibility only.
+    console.warn("Async payment failed for session:", event.data.object.id);
   }
 
   return new Response("ok");
@@ -58,13 +79,24 @@ const sendOrderNotification = async (
     throw new Error("No order notification email found");
   }
 
-  // Line items are not included on the event payload; fetch them for the
-  // email body so each order is self-describing.
+  // Line items are not included on the session; fetch them (with the inline
+  // product expanded so the exact photoID is available) so each order email
+  // is self-describing for fulfillment.
   const lineItems = await stripe.checkout.sessions.listLineItems(session.id, {
     limit: 100,
+    expand: ["data.price.product"],
   });
   const itemSummary = lineItems.data
-    .map((item) => `- ${item.quantity}× ${item.description}`)
+    .map((item) => {
+      const product = item.price?.product;
+      const photoID =
+        product && typeof product !== "string" && !product.deleted
+          ? product.metadata.photoID
+          : undefined;
+      return `- ${item.quantity}× ${item.description}${
+        photoID ? ` (photoID: ${photoID})` : ""
+      }`;
+    })
     .join("\n");
 
   const shipping = session.collected_information?.shipping_details;
