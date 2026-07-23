@@ -12,6 +12,11 @@ export type CheckoutRequest = {
 };
 
 /**
+ * Stripe Checkout's own cap on line items per session.
+ */
+const MAX_LINE_ITEMS = 100;
+
+/**
  * Creates a Stripe Checkout Session for the given cart. The client only sends
  * `{photoID, variantId, qty}` — prices are always re-derived server-side from
  * `photoPricing`, so cart tampering is not possible.
@@ -26,6 +31,9 @@ export async function POST(request: NextRequest) {
     const body: CheckoutRequest = await request.json();
     if (!Array.isArray(body.items) || body.items.length === 0) {
       return new Response("Cart is empty", { status: 400 });
+    }
+    if (body.items.length > MAX_LINE_ITEMS) {
+      return new Response("Too many items in cart", { status: 400 });
     }
 
     const line_items: Stripe.Checkout.SessionCreateParams.LineItem[] =
@@ -42,9 +50,15 @@ export async function POST(request: NextRequest) {
           );
         }
 
+        if (!Number.isInteger(item.qty) || item.qty < 1) {
+          throw new CheckoutValidationError(
+            `Invalid quantity for ${item.variantId}`,
+          );
+        }
+
         const product = getPrintProduct(photoID, variant);
         return {
-          quantity: Math.max(1, Math.min(Math.round(item.qty), MAX_ITEM_QTY)),
+          quantity: Math.min(item.qty, MAX_ITEM_QTY),
           price_data: {
             currency: "usd",
             unit_amount: Math.round(variant.price * 100),
