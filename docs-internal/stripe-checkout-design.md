@@ -309,6 +309,22 @@ export async function POST(req: NextRequest) {
 `req.text()`, so there's no `bodyParser` config to disable (that was a Pages
 Router concern). Just don't call `req.json()` before verifying.
 
+**Implementation notes (the shipped route goes beyond this sketch):**
+
+- **Don't trust the event payload's shape.** Event payloads follow the webhook
+  _endpoint's_ configured API version, not the SDK's — on older versions the
+  shipping address lives at `session.shipping_details` instead of
+  `session.collected_information.shipping_details`. The route re-retrieves the
+  session via the SDK so the shape always matches the SDK's pinned version.
+- **Gate on `payment_status === "paid"`.** Delayed-notification payment methods
+  (eg. ACH) fire `checkout.session.completed` while the session is still
+  `unpaid`; the order email is sent only once paid. The route also handles
+  `checkout.session.async_payment_succeeded` (email) and logs
+  `checkout.session.async_payment_failed`.
+- **Expand `data.price.product` on line items** so the exact `photoID`
+  (product metadata) appears in the order email — display names alone can be
+  ambiguous for fulfillment.
+
 ---
 
 ## 8) Testing
@@ -329,9 +345,15 @@ Router concern). Just don't call `req.json()` before verifying.
 
 - Add all Stripe + email env vars in the Vercel dashboard (Production + Preview).
 - Register the production webhook in Stripe:
-  `https://<your-domain>/api/stripe/webhook`, event
-  `checkout.session.completed`. Copy that endpoint's signing secret into
-  `STRIPE_WEBHOOK_SECRET` on Vercel.
+  `https://<your-domain>/api/stripe/webhook`, events
+  `checkout.session.completed`, `checkout.session.async_payment_succeeded`,
+  and `checkout.session.async_payment_failed`. Copy that endpoint's signing
+  secret into `STRIPE_WEBHOOK_SECRET` on Vercel.
+- When creating the endpoint, **pin its API version** to the version the
+  installed `stripe` SDK targets (see `node_modules/stripe/cjs/apiVersion.js`,
+  currently `2026-06-24.dahlia`) rather than the account default. The route
+  re-retrieves sessions so it tolerates a mismatch, but pinning keeps event
+  payloads and SDK types consistent.
 - No static-export concern — the site already runs a Node runtime on Vercel.
 
 ---
