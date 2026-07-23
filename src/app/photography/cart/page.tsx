@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePostHog } from "posthog-js/react";
 import { toast } from "sonner";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
@@ -88,6 +88,16 @@ export default function CartPage() {
   const posthog = usePostHog();
   const [isCheckingOut, setIsCheckingOut] = useState(false);
 
+  // Safari/Firefox restore this page from the bfcache when the user hits
+  // Back from Stripe — reset the button so it isn't stuck on "Redirecting…".
+  useEffect(() => {
+    const onPageShow = (event: PageTransitionEvent) => {
+      if (event.persisted) setIsCheckingOut(false);
+    };
+    window.addEventListener("pageshow", onPageShow);
+    return () => window.removeEventListener("pageshow", onPageShow);
+  }, []);
+
   const subtotal = items.reduce((total, item) => {
     const variant = photoPricing.find((v) => v.id === item.variantId);
     return total + (variant?.price ?? 0) * item.qty;
@@ -107,7 +117,15 @@ export default function CartPage() {
         body: JSON.stringify({ items }),
       });
       if (!response.ok) {
-        throw new Error(await response.text());
+        const message = await response.text();
+        // 400s carry a human-readable reason (eg. an out-of-stock variant).
+        toast.error(
+          response.status === 400 && message
+            ? message
+            : "Something went wrong starting checkout. Please try again.",
+        );
+        setIsCheckingOut(false);
+        return;
       }
       const { url } = await response.json();
       window.location.href = url;
