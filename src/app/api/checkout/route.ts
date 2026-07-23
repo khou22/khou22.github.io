@@ -61,7 +61,12 @@ export async function POST(request: NextRequest) {
         };
       });
 
-    const baseUrl = siteMetadata.siteUrl;
+    // In dev, redirect back to the origin the checkout started on (eg.
+    // localhost) so local test payments don't land on the production site.
+    const baseUrl =
+      process.env.NODE_ENV === "development"
+        ? request.nextUrl.origin
+        : siteMetadata.siteUrl;
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items,
