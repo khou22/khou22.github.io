@@ -19,6 +19,14 @@ const CART_COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 30; // 30 days
  */
 export const MAX_ITEM_QTY = 20;
 
+/**
+ * Maximum number of distinct line items. Browsers cap a single cookie at
+ * ~4KB and silently drop writes over the limit; 15 worst-case entries (long
+ * photo IDs, URL-encoded) stay comfortably under that. Mirrored server-side
+ * in /api/checkout.
+ */
+export const MAX_CART_LINES = 15;
+
 const isValidCartItem = (item: unknown): item is CartItem => {
   if (typeof item !== "object" || item === null) return false;
   const { photoID, variantId, qty } = item as Record<string, unknown>;
@@ -52,6 +60,7 @@ export const readCartCookie = (): CartItem[] => {
     if (!Array.isArray(parsed)) return [];
     return parsed
       .filter(isValidCartItem)
+      .slice(0, MAX_CART_LINES)
       .map((item) => ({ ...item, qty: Math.min(item.qty, MAX_ITEM_QTY) }));
   } catch {
     return [];

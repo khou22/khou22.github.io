@@ -3,6 +3,13 @@ import Stripe from "stripe";
 import { EmailServiceFactory } from "@/services/email/EmailServiceFactory";
 
 /**
+ * Vercel serverless function timeout. The webhook makes two Stripe calls plus
+ * an email send; the default (10s on Hobby) is tight once SDK retries kick in.
+ * 60s is allowed on all plans.
+ */
+export const maxDuration = 60;
+
+/**
  * Stripe webhook. On a paid Checkout Session, sends an order notification
  * email so fulfillment can be handled manually (order history lives in the
  * Stripe Dashboard — no database).

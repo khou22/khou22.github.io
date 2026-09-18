@@ -9,6 +9,7 @@ import {
 } from "react";
 import {
   CartItem,
+  MAX_CART_LINES,
   MAX_ITEM_QTY,
   readCartCookie,
   writeCartCookie,
@@ -20,7 +21,11 @@ type CartContextValue = {
    * Total number of prints across all line items.
    */
   count: number;
-  addItem: (photoID: string, variantId: string) => void;
+  /**
+   * Returns `false` (without adding) when the cart already holds the
+   * maximum number of distinct line items.
+   */
+  addItem: (photoID: string, variantId: string) => boolean;
   setQty: (photoID: string, variantId: string, qty: number) => void;
   removeItem: (photoID: string, variantId: string) => void;
   clearCart: () => void;
@@ -54,9 +59,13 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
       if (existing) {
         existing.qty = Math.min(existing.qty + 1, MAX_ITEM_QTY);
         update([...current]);
-      } else {
-        update([...current, { photoID, variantId, qty: 1 }]);
+        return true;
       }
+      if (current.length >= MAX_CART_LINES) {
+        return false;
+      }
+      update([...current, { photoID, variantId, qty: 1 }]);
+      return true;
     },
     [update],
   );

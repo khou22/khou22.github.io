@@ -172,7 +172,9 @@ CHECKOUT_SUCCESS: "/photography/cart/success",
 ```
 
 > Note: cookie has a ~4KB limit. Storing only ids/qty (not full product data)
-> keeps carts tiny even with many items. If it ever matters, fall back to
+> keeps carts tiny even with many items. The cart is capped at
+> `MAX_CART_LINES` (15) distinct lines so the encoded cookie can never exceed the
+> limit (browsers silently drop oversized cookie writes). If it ever matters, fall back to
 > `localStorage`; cookies are fine to start.
 
 ---
@@ -355,6 +357,11 @@ Router concern). Just don't call `req.json()` before verifying.
   re-retrieves sessions so it tolerates a mismatch, but pinning keeps event
   payloads and SDK types consistent.
 - No static-export concern — the site already runs a Node runtime on Vercel.
+- Checkout redirects use the canonical `siteMetadata.siteUrl` only when
+  `VERCEL_ENV === "production"`; local dev and Vercel **preview** deployments
+  redirect back to the request origin so test payments stay on the preview.
+- Both API routes export `maxDuration = 60` so a slow Stripe round-trip (plus
+  SDK retries) isn't cut off by the 10s default function timeout.
 
 ---
 

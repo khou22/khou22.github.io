@@ -7,13 +7,17 @@ import { PAGES } from "@/utils/pages";
 
 /**
  * Post-checkout landing page. Stripe redirects here after a successful
- * payment; the cart is cleared on arrival.
+ * payment (with `?session_id=...`); the cart is cleared on arrival. Direct
+ * visits without a session ID leave the cart alone.
  */
 export default function CheckoutSuccessPage() {
   const { clearCart } = useCart();
 
   useEffect(() => {
-    clearCart();
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("session_id")) {
+      clearCart();
+    }
   }, [clearCart]);
 
   return (

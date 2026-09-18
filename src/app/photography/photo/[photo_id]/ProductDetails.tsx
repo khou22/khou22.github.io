@@ -95,7 +95,18 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
         variant="primary"
         className="w-full"
         onClick={() => {
-          addItem(photoID, selectedSize.id);
+          if (!addItem(photoID, selectedSize.id)) {
+            toast.error(
+              "Your cart is full. Check out or remove an item first.",
+              {
+                action: {
+                  label: "View cart",
+                  onClick: () => router.push(PAGES.PHOTOGRAPHY.CART),
+                },
+              },
+            );
+            return;
+          }
           posthog.capture("add_to_cart", {
             product_name: printProduct.name,
             product_id: printProduct.id,
