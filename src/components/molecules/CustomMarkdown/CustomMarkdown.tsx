@@ -9,6 +9,7 @@ import rehypeRaw from "rehype-raw";
 import { classNames } from "@/utils/style";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { resolveBlogImage } from "@/utils/cdn/cdnAssets";
+import { LeafletMapEmbed } from "@/components/organisms/LeafletMap/LeafletMapEmbed";
 
 type CustomMarkdownProps = {
   children: string;
@@ -102,6 +103,11 @@ export const CustomMarkdown: React.FC<CustomMarkdownProps> = ({
       );
     },
   };
+
+  // Custom HTML tags that aren't part of react-markdown's element typings.
+  // Authors can embed an interactive map in a post via `<leaflet-map ...>`.
+  (MarkdownComponents as Record<string, typeof LeafletMapEmbed>)["leaflet-map"] =
+    LeafletMapEmbed;
 
   return (
     <ReactMarkdown
