@@ -21,6 +21,8 @@ export const PAGES = {
   BLOG_POST: (post: BlogPostFrontMatter) => post.link || `/blog/${post.slug}`,
   BLOG_TAG: (tag: string) => `/blog/tag/${tag}`,
   CONTACT: "/contact",
+  CART: "/cart",
+  SUCCESS: "/success",
   WOOD: "/wood",
   DESIGN: "/design",
   PHOTOGRAPHY: {

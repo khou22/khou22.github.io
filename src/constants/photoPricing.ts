@@ -12,7 +12,7 @@ export type PhotoPriceVariant = {
    */
   id: string;
   /**
-   * Human readable name for Snipcart purposes.
+   * Human readable name for display purposes.
    */
   name: string;
   price: number;
