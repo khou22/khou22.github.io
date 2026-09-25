@@ -5,6 +5,12 @@ import argparse
 parser = argparse.ArgumentParser(description="Detect and fix images that are too large")
 parser.add_argument("--max_kb", type=int, default=3500, help="max KB for image")
 parser.add_argument(
+    "--buffer_kb",
+    type=int,
+    default=100,
+    help="size buffer in KB to skip recompressing borderline images",
+)
+parser.add_argument(
     "--dry-run",
     type=bool,
     default=True,
@@ -56,8 +62,8 @@ def main():
         # Get the size of the existing thumbnail
         storage_size = os.path.getsize(file)
 
-        # If the thumbnail is over the specified limit, regenerate it.
-        if storage_size > args.max_kb * 1024:
+        # If the image is significantly over the specified limit, regenerate it.
+        if storage_size > (args.max_kb + args.buffer_kb) * 1024:
             num_oversized_images += 1
         else:
             num_ok_images += 1
@@ -94,7 +100,7 @@ def main():
         f"""
 Asset Cleaning Complete:
     ✅ Completed: {num_images_fixed} resizes
-    🛠️ Oversized: {num_oversized_images} over {bytes_to_human_readable(args.max_kb * 1024)}
+    🛠️ Oversized: {num_oversized_images} over {bytes_to_human_readable((args.max_kb + args.buffer_kb) * 1024)}
     ⏭️ Skipped: {num_ok_images} existing
     📷 Total: {num_photos} photos
     🗃️ Saved: {bytes_to_human_readable(abs(total_bytes_saved))}"""
