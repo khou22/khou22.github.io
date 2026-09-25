@@ -10,6 +10,13 @@ export interface AlignmentOffsets {
   right: { x: number; y: number };
 }
 
+export interface BoundingBox {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
 export interface LayerState {
   left: boolean;
   right: boolean;
