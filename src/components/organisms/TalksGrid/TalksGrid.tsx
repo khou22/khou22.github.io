@@ -113,7 +113,9 @@ export const TalksGrid: React.FC<TalksGridProps> = ({ talks }) => {
               <h3 className="line-clamp-2 text-base font-semibold leading-snug text-gray-900 group-hover:text-blue-600">
                 {talk.title}
               </h3>
-              <p className="text-sm text-gray-600">{talk.channel}</p>
+              {talk.channel && (
+                <p className="text-sm text-gray-600">{talk.channel}</p>
+              )}
               <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
                 <span
                   className={classNames(
