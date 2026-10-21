@@ -164,6 +164,16 @@ export const NavBar: React.FC = () => {
               </li>
               <li>
                 <Link
+                  href={PAGES.TALKS}
+                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-600"
+                  style={{ fontSize: linkFontSize }}
+                  onMouseEnter={() => setIsDropdownOpen(undefined)}
+                >
+                  Talks
+                </Link>
+              </li>
+              <li>
+                <Link
                   href={PAGES.PHOTOGRAPHY.HOME}
                   className={classNames(
                     "flex w-full items-center justify-between rounded px-3 py-2 hover:bg-gray-100 md:w-auto md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-600",
