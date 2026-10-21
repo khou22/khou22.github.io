@@ -4,10 +4,12 @@ import { open } from "sqlite";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 
-// Open a SQLite database, stored in the file db.sqlite
+// Open the SQLite photo database. Overridable with PHOTO_DB_PATH (used by tests).
 export const connectToPhotoDb = async () => {
   const db = await open({
-    filename: path.join(process.cwd(), "src/data/photos/photo_db.sqlite"),
+    filename:
+      process.env.PHOTO_DB_PATH ??
+      path.join(process.cwd(), "src/data/photos/photo_db.sqlite"),
     driver: sqlite3.Database,
   });
 

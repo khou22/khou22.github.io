@@ -1,9 +1,8 @@
+import { CliError } from "./errors";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { tagMetadata } from "@/constants/photoTags/tagMetadata";
 import { getPhotoName, isPhotoID, PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { getPhotoIDs } from "@/utils/photos/getPhotoIDs";
-
-export class CliError extends Error {}
 
 const sanitize = (str: string) => str.replace(/[^a-zA-Z0-9/]+/g, "_");
 

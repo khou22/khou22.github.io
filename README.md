@@ -96,6 +96,8 @@ pnpm photos clean-db --no-dry-run
 
 Bulk edits compose with `--ids`, ie. `pnpm photos list --subdir events --ids | xargs pnpm photos sell off`.
 
+The CLI lives in `scripts/photo-cli/`: `commands/` holds one module per command group (browse, metadata, files, images, db) and `lib/` holds the shared logic (argument parsing, photo/tag resolution, catalog queries, image processing). Tests run against a temporary DB and docs folder (`PHOTO_DB_PATH` / `PHOTO_DOCS_DIR`) with a fixture asset map, so they never touch real photos: `pnpm test scripts/photo-cli src/data/photos`.
+
 ### To Do
 
 - [ ] Add a whitelist of blog images that don't need to be compressed. (ie. `docs/media/blog/images/mintlify-feature/mintlify-founder-mode-blog-post.jpeg`)

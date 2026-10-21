@@ -1,12 +1,8 @@
 import fs from "fs";
 import path from "path";
-import { spawnSync } from "child_process";
 import sharp from "sharp";
-import { CliError } from "./resolve";
-
-export const REPO_ROOT = path.resolve(__dirname, "../..");
-export const DOCS_DIR = path.join(REPO_ROOT, "docs");
-export const PHOTOGRAPHY_DIR = path.join(DOCS_DIR, "photography");
+import { displayPath, docsDir, photographyDir } from "./config";
+import { CliError } from "./errors";
 
 const jpegRegex = /\.jpe?g$/i;
 const placeholderRegex = /\.placeholder\.jpe?g$/i;
@@ -26,7 +22,7 @@ export const humanBytes = (numBytes: number): string => {
 };
 
 /**
- * Recursively collect JPEGs under the given files/directories.
+ * Recursively collect JPEGs under the given files/directories, sorted.
  */
 export const collectJpegs = (
   targets: string[],
@@ -51,38 +47,61 @@ export const collectJpegs = (
   return files;
 };
 
+export const dimensions = async (file: string | Buffer) => {
+  const { width, height } = await sharp(file).metadata();
+  return { width: width ?? 0, height: height ?? 0 };
+};
+
+const formatDimensions = ({
+  width,
+  height,
+}: {
+  width: number;
+  height: number;
+}) => `${width}x${height}`;
+
 /**
- * Resize an image to fit within the given bounds (never enlarging) and save
- * it as an optimized JPEG. EXIF orientation is baked into the pixels.
+ * Re-encode an image to fit within the given bounds (never enlarging) as an
+ * optimized JPEG. EXIF orientation is baked into the pixels.
  */
-export const resizeJpeg = async (
+export const encodeJpeg = (
   src: string,
-  dest: string,
   {
     width,
     height,
     quality,
   }: { width?: number; height?: number; quality: number },
-): Promise<Buffer> => {
-  const output = await sharp(src)
+): Promise<Buffer> =>
+  sharp(src)
     .rotate()
     .resize({ width, height, fit: "inside", withoutEnlargement: true })
     .jpeg({ quality, mozjpeg: true })
     .toBuffer();
+
+/**
+ * Resize `src` and write the result to `dest` (which may be `src`).
+ */
+export const resizeJpeg = async (
+  src: string,
+  dest: string,
+  options: { width?: number; height?: number; quality: number },
+): Promise<Buffer> => {
+  const output = await encodeJpeg(src, options);
   await fs.promises.writeFile(dest, output);
   return output;
 };
 
-const dimensions = async (file: string) => {
-  const { width, height } = await sharp(file).metadata();
-  return `${width}x${height}`;
+export type CleanStats = {
+  scanned: number;
+  oversized: number;
+  compressed: number;
+  unchanged: number;
+  bytesSaved: number;
 };
-
-const relative = (file: string) => path.relative(REPO_ROOT, file);
 
 /**
  * Compress JPEGs that are over the size limit. Panoramas are allowed to be
- * very wide; everything else is capped by height.
+ * very wide; everything else is capped at 3000px tall.
  */
 export const cleanImages = async ({
   targets,
@@ -94,66 +113,71 @@ export const cleanImages = async ({
   maxKb: number;
   quality: number;
   dryRun: boolean;
-}) => {
-  const files = collectJpegs(targets.length ? targets : [DOCS_DIR], {
+}): Promise<CleanStats> => {
+  const files = collectJpegs(targets.length ? targets : [docsDir()], {
     includePlaceholders: true,
   });
-  let numOversized = 0;
-  let numFixed = 0;
-  let numUnchanged = 0;
-  let bytesSaved = 0;
+  const stats: CleanStats = {
+    scanned: files.length,
+    oversized: 0,
+    compressed: 0,
+    unchanged: 0,
+    bytesSaved: 0,
+  };
 
   for (const file of files) {
     const size = fs.statSync(file).size;
     if (size <= maxKb * 1024) continue;
-    numOversized += 1;
+    stats.oversized += 1;
 
-    const originalDims = await dimensions(file);
-    const row = `${relative(file).padEnd(80)}${humanBytes(size).padEnd(
+    const row = `${displayPath(file).padEnd(80)}${humanBytes(size).padEnd(
       14,
-    )}${originalDims.padEnd(12)}`;
+    )}${formatDimensions(await dimensions(file)).padEnd(12)}`;
     if (dryRun) {
       console.log(row);
       continue;
     }
 
-    const output = await sharp(file)
-      .rotate()
-      .resize({
-        width: 15000,
-        height: 3000,
-        fit: "inside",
-        withoutEnlargement: true,
-      })
-      .jpeg({ quality, mozjpeg: true })
-      .toBuffer();
-
+    const output = await encodeJpeg(file, {
+      width: 15000,
+      height: 3000,
+      quality,
+    });
     if (output.length >= size) {
-      numUnchanged += 1;
+      stats.unchanged += 1;
       console.log(`${row}skipped (re-encode would not shrink it)`);
       continue;
     }
 
     await fs.promises.writeFile(file, output);
-    numFixed += 1;
-    bytesSaved += size - output.length;
+    stats.compressed += 1;
+    stats.bytesSaved += size - output.length;
     console.log(
-      `${row}-> ${humanBytes(output.length).padEnd(14)}${(
-        await dimensions(file)
+      `${row}-> ${humanBytes(output.length).padEnd(14)}${formatDimensions(
+        await dimensions(output),
       ).padEnd(12)}-${humanBytes(size - output.length)}`,
     );
   }
 
   console.log(`
 Image Cleaning ${dryRun ? "(dry run) " : ""}Complete:
-    🛠️ Oversized: ${numOversized} over ${humanBytes(maxKb * 1024)}
-    ✅ Compressed: ${numFixed}
-    ⏭️ Unchanged: ${numUnchanged}
-    📷 Scanned: ${files.length} images
-    🗃️ Saved: ${humanBytes(bytesSaved)}`);
-  if (dryRun && numOversized > 0) {
+    🛠️ Oversized: ${stats.oversized} over ${humanBytes(maxKb * 1024)}
+    ✅ Compressed: ${stats.compressed}
+    ⏭️ Unchanged: ${stats.unchanged}
+    📷 Scanned: ${stats.scanned} images
+    🗃️ Saved: ${humanBytes(stats.bytesSaved)}`);
+  if (dryRun && stats.oversized > 0) {
     console.log("\nRe-run with --no-dry-run to compress.");
   }
+  return stats;
+};
+
+export type ThumbnailStats = {
+  total: number;
+  generated: number;
+  pending: number;
+  oversized: number;
+  skipped: number;
 };
 
 /**
@@ -174,26 +198,31 @@ export const generateThumbnails = async ({
   quality: number;
   force: boolean;
   dryRun: boolean;
-}) => {
-  const files = collectJpegs(targets.length ? targets : [PHOTOGRAPHY_DIR], {
+}): Promise<ThumbnailStats> => {
+  const files = collectJpegs(targets.length ? targets : [photographyDir()], {
     includePlaceholders: false,
   });
-  let numGenerated = 0;
-  let numOversized = 0;
-  let numSkipped = 0;
+  const stats: ThumbnailStats = {
+    total: files.length,
+    generated: 0,
+    pending: 0,
+    oversized: 0,
+    skipped: 0,
+  };
 
   for (const file of files) {
     const thumbnailPath = thumbnailPathFor(file);
     if (fs.existsSync(thumbnailPath) && !force) {
       if (fs.statSync(thumbnailPath).size <= maxKb * 1024) {
-        numSkipped += 1;
+        stats.skipped += 1;
         continue;
       }
-      numOversized += 1;
+      stats.oversized += 1;
     }
 
     if (dryRun) {
-      console.log(`[dry run] Generating thumbnail for ${relative(file)}`);
+      stats.pending += 1;
+      console.log(`[dry run] Generating thumbnail for ${displayPath(file)}`);
       continue;
     }
 
@@ -202,36 +231,18 @@ export const generateThumbnails = async ({
       height: size,
       quality,
     });
-    numGenerated += 1;
-    console.log(`Generated ${relative(thumbnailPath)}`);
+    stats.generated += 1;
+    console.log(`Generated ${displayPath(thumbnailPath)}`);
   }
 
   console.log(`
 Thumbnail Generation ${dryRun ? "(dry run) " : ""}Complete:
-    ✅ Generated: ${numGenerated}
-    🛠️ Oversized: ${numOversized} over ${maxKb}KB
-    ⏭️ Skipped: ${numSkipped} existing
-    📷 Total: ${files.length} photos`);
-  if (dryRun && numSkipped < files.length) {
+    ✅ Generated: ${stats.generated}
+    🛠️ Oversized: ${stats.oversized} over ${maxKb}KB
+    ⏭️ Skipped: ${stats.skipped} existing
+    📷 Total: ${stats.total} photos`);
+  if (stats.pending > 0) {
     console.log("\nRe-run with --no-dry-run to generate.");
   }
-};
-
-/**
- * Regenerate `src/utils/cdn/cdnAssets.generated.ts` and `asset-catalog.md`.
- */
-export const generateAssetMap = () => {
-  const script = path.join(REPO_ROOT, "scripts/generate_assets.py");
-  for (const python of ["python3", "python"]) {
-    const result = spawnSync(python, [script], { stdio: "inherit" });
-    if (result.error && "code" in result.error) {
-      if (result.error.code === "ENOENT") continue;
-    }
-    if (result.status !== 0) {
-      throw new CliError(`generate_assets.py failed (exit ${result.status})`);
-    }
-    console.log("Regenerated the CDN asset map.");
-    return;
-  }
-  throw new CliError("Python is required to regenerate the asset map.");
+  return stats;
 };
