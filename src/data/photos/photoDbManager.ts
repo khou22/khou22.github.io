@@ -4,10 +4,12 @@ import { open } from "sqlite";
 import { PhotoIdType } from "@/utils/cdn/cdnAssets";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 
-// Open a SQLite database, stored in the file db.sqlite
+// Open the SQLite photo database. Overridable with PHOTO_DB_PATH (used by tests).
 export const connectToPhotoDb = async () => {
   const db = await open({
-    filename: path.join(process.cwd(), "src/data/photos/photo_db.sqlite"),
+    filename:
+      process.env.PHOTO_DB_PATH ??
+      path.join(process.cwd(), "src/data/photos/photo_db.sqlite"),
     driver: sqlite3.Database,
   });
 
@@ -59,13 +61,10 @@ export const getMetadataByPhotoID = async (): Promise<
   );
   metadata.forEach((row) => {
     const photoID = row.photo_id as PhotoIdType;
-    const rating = row.rating;
-    if (tagsByPhotoID[photoID]) {
-      tagsByPhotoID[photoID] = {
-        tags: tagsByPhotoID[photoID]?.tags ?? [],
-        rating: rating,
-      };
-    }
+    tagsByPhotoID[photoID] = {
+      tags: tagsByPhotoID[photoID]?.tags ?? [],
+      rating: row.rating,
+    };
   });
 
   return tagsByPhotoID;
@@ -150,6 +149,48 @@ export const setPhotoRating = async (
   await db.run(
     `INSERT OR REPLACE INTO photo_metadata (photo_id, rating) VALUES (?, ?)`,
     [photoID, rating],
+  );
+};
+
+/**
+ * Remove the rating for the given photo ID.
+ */
+export const clearPhotoRating = async (photoID: PhotoIdType): Promise<void> => {
+  const db = await connectToPhotoDb();
+  await db.run(`DELETE FROM photo_metadata WHERE photo_id = ?`, [photoID]);
+};
+
+/**
+ * Add tags to the given photo ID. Existing tags are ignored.
+ */
+export const addPhotoTags = async (
+  photoID: PhotoIdType,
+  tags: PhotoTags[],
+): Promise<void> => {
+  if (tags.length === 0) return;
+  const db = await connectToPhotoDb();
+  await db.run(
+    `INSERT OR IGNORE INTO photo_tags (photo_id, tag_name) VALUES ${tags
+      .map(() => "(?, ?)")
+      .join(", ")}`,
+    tags.flatMap((tag) => [photoID, tag]),
+  );
+};
+
+/**
+ * Remove tags from the given photo ID.
+ */
+export const removePhotoTags = async (
+  photoID: PhotoIdType,
+  tags: PhotoTags[],
+): Promise<void> => {
+  if (tags.length === 0) return;
+  const db = await connectToPhotoDb();
+  await db.run(
+    `DELETE FROM photo_tags WHERE photo_id = ? AND tag_name IN (${tags
+      .map(() => "?")
+      .join(", ")})`,
+    [photoID, ...tags],
   );
 };
 
