@@ -168,6 +168,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: SiteMapPriority.HIGH,
     },
     {
+      url: `${siteMetadata.siteUrl}${PAGES.TALKS}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: SiteMapPriority.MEDIUM,
+    },
+    {
       url: `${siteMetadata.siteUrl}${PAGES.WOOD}`,
       lastModified: new Date(),
       changeFrequency: "daily",

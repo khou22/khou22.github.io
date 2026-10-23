@@ -38,6 +38,10 @@ const navLinks: MobileNavLinks[] = [
     href: PAGES.BLOG,
   },
   {
+    title: "Talks",
+    href: PAGES.TALKS,
+  },
+  {
     title: "Contact",
     href: PAGES.CONTACT,
   },
