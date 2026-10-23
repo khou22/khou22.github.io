@@ -1,5 +1,5 @@
 import { photoPricing } from "@/constants/photoPricing";
-import { isPhotoID } from "@/utils/cdn/cdnAssets";
+import { isPhotoID, isThumbnail, PhotoIdType } from "@/utils/cdn/cdnAssets";
 
 /**
  * A single cart entry. Intentionally minimal — prices are never stored
@@ -33,6 +33,9 @@ const isValidCartItem = (item: unknown): item is CartItem => {
   return (
     typeof photoID === "string" &&
     isPhotoID(photoID) &&
+    photoID.startsWith("photography/") &&
+    photoID.endsWith("_jpg") &&
+    !isThumbnail(photoID as PhotoIdType) &&
     typeof variantId === "string" &&
     photoPricing.some((variant) => variant.id === variantId) &&
     typeof qty === "number" &&

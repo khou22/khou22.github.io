@@ -8,7 +8,7 @@ import {
   MAX_CART_LINES,
   MAX_ITEM_QTY,
 } from "@/utils/cart/cartCookie";
-import { castPhotoID } from "@/utils/cdn/cdnAssets";
+import { castPhotoID, isThumbnail } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { getPrintProduct } from "@/utils/printProduct";
 import { siteMetadata } from "@/constants/siteMetadata";
@@ -35,8 +35,18 @@ export async function POST(request: NextRequest) {
     }
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-    const body: CheckoutRequest = await request.json();
-    if (!Array.isArray(body.items) || body.items.length === 0) {
+    let body: CheckoutRequest;
+    try {
+      body = await request.json();
+    } catch {
+      throw new CheckoutValidationError("Invalid request body");
+    }
+    if (
+      !body ||
+      typeof body !== "object" ||
+      !Array.isArray(body.items) ||
+      body.items.length === 0
+    ) {
       return new Response("Cart is empty", { status: 400 });
     }
     if (body.items.length > MAX_CART_LINES) {
@@ -45,8 +55,17 @@ export async function POST(request: NextRequest) {
 
     const line_items: Stripe.Checkout.SessionCreateParams.LineItem[] = [];
     for (const item of body.items) {
-      const photoID = castPhotoID(item.photoID);
-      if (!photoID) {
+      if (!item || typeof item !== "object") {
+        throw new CheckoutValidationError("Invalid cart item");
+      }
+      const photoID =
+        typeof item.photoID === "string" ? castPhotoID(item.photoID) : null;
+      if (
+        !photoID ||
+        isThumbnail(photoID) ||
+        !photoID.startsWith("photography/") ||
+        !photoID.endsWith("_jpg")
+      ) {
         throw new CheckoutValidationError(`Unknown photo: ${item.photoID}`);
       }
 

@@ -8,7 +8,7 @@ import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/components/organisms/Cart/CartProvider";
 import { photoPricing } from "@/constants/photoPricing";
-import { CartItem } from "@/utils/cart/cartCookie";
+import { CartItem, MAX_ITEM_QTY } from "@/utils/cart/cartCookie";
 import {
   castPhotoID,
   getCdnAsset,
@@ -65,6 +65,7 @@ const CartLineItem = ({ item }: { item: CartItem }) => {
           variant="outline"
           size="icon"
           aria-label="Increase quantity"
+          disabled={item.qty >= MAX_ITEM_QTY}
           onClick={() => setQty(item.photoID, item.variantId, item.qty + 1)}
         >
           +
@@ -162,9 +163,7 @@ export default function CartPage() {
             <span className="font-medium">Subtotal</span>
             <span className="font-medium">${subtotal.toFixed(2)}</span>
           </div>
-          <p className="caption mt-1">
-            Shipping and taxes are calculated at checkout.
-          </p>
+          <p className="caption mt-1">Shipping is calculated at checkout.</p>
 
           <Button
             variant="primary"
