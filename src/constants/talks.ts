@@ -36,6 +36,11 @@ export type TalkRecord = {
    * Conference, podcast, or series the appearance was part of.
    */
   event?: string;
+
+  /**
+   * Custom cover image. Falls back to the YouTube thumbnail when omitted.
+   */
+  image?: string;
 };
 
 export const getYouTubeUrl = (youtubeId: string) =>

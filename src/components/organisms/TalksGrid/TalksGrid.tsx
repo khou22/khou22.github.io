@@ -95,7 +95,7 @@ export const TalksGrid: React.FC<TalksGridProps> = ({ talks }) => {
           >
             <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-gray-100 shadow-sm">
               <img
-                src={getYouTubeThumbnail(talk.youtubeId)}
+                src={talk.image ?? getYouTubeThumbnail(talk.youtubeId)}
                 alt={talk.title}
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
