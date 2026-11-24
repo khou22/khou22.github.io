@@ -1,6 +1,5 @@
 "use client";
 
-import { RadioGroup } from "@headlessui/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { usePostHog } from "posthog-js/react";
@@ -65,17 +64,12 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
       </div>
 
       <div className="w-full">
-        <RadioGroup
-          value={selectedSizeID}
-          onChange={setSelectedSizeID}
-          className="mt-2"
-        >
-          <VariantSelector
-            priceVariants={photoPricing}
-            selectedVariant={selectedSize}
-            orientation={orientation}
-          />
-        </RadioGroup>
+        <VariantSelector
+          priceVariants={photoPricing}
+          selectedVariant={selectedSize}
+          onSelectVariantId={setSelectedSizeID}
+          orientation={orientation}
+        />
       </div>
       <Button
         variant="primary"
