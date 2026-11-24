@@ -1,5 +1,6 @@
 "use client";
 
+import { CheckCircledIcon } from "@radix-ui/react-icons";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { usePostHog } from "posthog-js/react";
@@ -92,7 +93,19 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             product_id: printProduct.id,
             product_price: printProduct.price,
           });
-          toast.success(`Added ${printProduct.name} to cart`);
+          toast.custom((id) => (
+            <button
+              type="button"
+              onClick={() => {
+                toast.dismiss(id);
+                router.push(PAGES.PHOTOGRAPHY.CART);
+              }}
+              className="flex w-full cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-left text-sm text-slate-950 shadow-lg transition-colors hover:bg-slate-50"
+            >
+              <CheckCircledIcon className="h-5 w-5 shrink-0 text-slate-900" />
+              <span>Added {printProduct.name} to cart</span>
+            </button>
+          ));
           router.push(PAGES.PHOTOGRAPHY.CART);
         }}
       >
