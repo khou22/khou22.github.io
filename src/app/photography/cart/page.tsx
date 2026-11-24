@@ -1,6 +1,8 @@
 "use client";
 
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { usePostHog } from "posthog-js/react";
 import { toast } from "sonner";
@@ -87,7 +89,16 @@ const CartLineItem = ({ item }: { item: CartItem }) => {
 export default function CartPage() {
   const { items } = useCart();
   const posthog = usePostHog();
+  const router = useRouter();
   const [isCheckingOut, setIsCheckingOut] = useState(false);
+
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      router.back();
+    } else {
+      router.push(PAGES.PHOTOGRAPHY.HOME);
+    }
+  };
 
   // Safari/Firefox restore this page from the bfcache when the user hits
   // Back from Stripe — reset the button so it isn't stuck on "Redirecting…".
@@ -139,6 +150,15 @@ export default function CartPage() {
 
   return (
     <main className="mx-auto min-h-[60vh] w-full max-w-2xl px-4 py-12">
+      <Button
+        variant="ghost"
+        size="sm"
+        className="-ml-3 mb-4 gap-1.5 text-gray-600 hover:text-gray-900"
+        onClick={handleBack}
+      >
+        <ArrowLeftIcon className="h-4 w-4" />
+        Back
+      </Button>
       <h1 className="mb-8">Your Cart</h1>
 
       {items.length === 0 ? (
