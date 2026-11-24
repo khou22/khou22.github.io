@@ -1,22 +1,17 @@
 "use client";
 
-import { RadioGroup } from "@headlessui/react";
+import { CheckCircledIcon } from "@radix-ui/react-icons";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { groupBy } from "lodash";
 import { usePostHog } from "posthog-js/react";
 import { toast } from "sonner";
-import { VariantCategory } from "./VariantCategory";
+import { VariantSelector } from "./VariantSelector";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
 import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import {
-  PhotoPriceVariant,
-  photoPricing,
-  PhotoPrintMaterial,
-} from "@/constants/photoPricing";
+import { photoPricing, PhotoPrintMaterial } from "@/constants/photoPricing";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
@@ -47,10 +42,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
     photoPricing.find((pricing) => pricing.id === selectedSizeID) ??
     defaultPhotoSize;
 
-  const pricingByMaterial = groupBy(
-    photoPricing,
-    (pricing) => pricing.material,
-  ) as Record<PhotoPrintMaterial, PhotoPriceVariant[]>;
   const orientation =
     (photoSize.width ?? 0) > (photoSize.height ?? 0)
       ? "horizontal"
@@ -74,22 +65,12 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
       </div>
 
       <div className="w-full">
-        <RadioGroup
-          value={selectedSizeID}
-          onChange={setSelectedSizeID}
-          className="mt-2"
-        >
-          <VariantCategory
-            categoryName="Photo Print"
-            priceVariants={pricingByMaterial[PhotoPrintMaterial.PhotoPaper]}
-            orientation={orientation}
-          />
-          <VariantCategory
-            categoryName="Glossy Metal"
-            priceVariants={pricingByMaterial[PhotoPrintMaterial.GlossyMetal]}
-            orientation={orientation}
-          />
-        </RadioGroup>
+        <VariantSelector
+          priceVariants={photoPricing}
+          selectedVariant={selectedSize}
+          onSelectVariantId={setSelectedSizeID}
+          orientation={orientation}
+        />
       </div>
       <Button
         variant="primary"
@@ -112,12 +93,20 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             product_id: printProduct.id,
             product_price: printProduct.price,
           });
-          toast.success(`Added ${printProduct.name} to cart`, {
-            action: {
-              label: "View cart",
-              onClick: () => router.push(PAGES.PHOTOGRAPHY.CART),
-            },
-          });
+          toast.custom((id) => (
+            <button
+              type="button"
+              onClick={() => {
+                toast.dismiss(id);
+                router.push(PAGES.PHOTOGRAPHY.CART);
+              }}
+              className="flex w-full cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-left text-sm text-slate-950 shadow-lg transition-colors hover:bg-slate-50"
+            >
+              <CheckCircledIcon className="h-5 w-5 shrink-0 text-slate-900" />
+              <span>Added {printProduct.name} to cart</span>
+            </button>
+          ));
+          router.push(PAGES.PHOTOGRAPHY.CART);
         }}
       >
         Add to cart
