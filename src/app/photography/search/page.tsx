@@ -96,7 +96,7 @@ const SearchPage = async ({ searchParams: { query } }: PageProps) => {
         <p>
           Showing {photoIDs.length} results for &quot;{query}&quot;
         </p>
-        <PhotoGallery photoIDs={photoIDs} fadeIn />
+        <PhotoGallery photoIDs={photoIDs} listName="Search Results" fadeIn />
       </div>
     </PageWrapper>
   );

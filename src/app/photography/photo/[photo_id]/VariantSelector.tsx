@@ -9,7 +9,10 @@ import { classNames } from "@/utils/style";
 type VariantSelectorProps = {
   priceVariants: PhotoPriceVariant[];
   selectedVariant: PhotoPriceVariant;
-  onSelectVariantId: (variantId: string) => void;
+  onSelectVariantId: (
+    variantId: string,
+    selectionType?: "material" | "size",
+  ) => void;
   orientation: "vertical" | "horizontal";
 };
 
@@ -63,7 +66,10 @@ export const VariantSelector: React.FC<VariantSelectorProps> = ({
         v.heightInches === selectedVariant.heightInches,
     );
     const defaultPaper = candidates.find((v) => v.id === "11x14-photo-paper");
-    onSelectVariantId((sameDimensions ?? defaultPaper ?? candidates[0]).id);
+    onSelectVariantId(
+      (sameDimensions ?? defaultPaper ?? candidates[0]).id,
+      "material",
+    );
   };
 
   return (
@@ -150,7 +156,10 @@ export const VariantSelector: React.FC<VariantSelectorProps> = ({
       </RadioGroup>
 
       {/* Step 2: Size */}
-      <RadioGroup value={selectedVariant.id} onChange={onSelectVariantId}>
+      <RadioGroup
+        value={selectedVariant.id}
+        onChange={(variantId) => onSelectVariantId(variantId, "size")}
+      >
         <RadioGroup.Label className="flex items-center gap-2 text-sm text-gray-600">
           <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-gray-900 text-xs font-semibold text-white">
             2
