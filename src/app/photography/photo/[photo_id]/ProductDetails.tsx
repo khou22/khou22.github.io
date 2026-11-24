@@ -2,7 +2,7 @@
 
 import { CheckCircledIcon } from "@radix-ui/react-icons";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePostHog } from "posthog-js/react";
 import { toast } from "sonner";
 import { VariantSelector } from "./VariantSelector";
@@ -14,6 +14,11 @@ import { Label } from "@/components/ui/label";
 import { photoPricing, PhotoPrintMaterial } from "@/constants/photoPricing";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
+import {
+  trackAddToCart,
+  trackSelectPrintVariant,
+  trackViewItem,
+} from "@/utils/analytics/ga";
 import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
 import { PAGES } from "@/utils/pages";
 import { getPrintProduct } from "@/utils/printProduct";
@@ -42,6 +47,23 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
     photoPricing.find((pricing) => pricing.id === selectedSizeID) ??
     defaultPhotoSize;
 
+  useEffect(() => {
+    trackViewItem(photoID, defaultPhotoSize);
+  }, [photoID]);
+
+  const handleSelectVariantId = (
+    variantId: string,
+    selectionType: "material" | "size" = "size",
+  ) => {
+    setSelectedSizeID(variantId);
+    const nextVariant = photoPricing.find(
+      (pricing) => pricing.id === variantId,
+    );
+    if (nextVariant) {
+      trackSelectPrintVariant(photoID, nextVariant, selectionType);
+    }
+  };
+
   const orientation =
     (photoSize.width ?? 0) > (photoSize.height ?? 0)
       ? "horizontal"
@@ -68,7 +90,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
         <VariantSelector
           priceVariants={photoPricing}
           selectedVariant={selectedSize}
-          onSelectVariantId={setSelectedSizeID}
+          onSelectVariantId={handleSelectVariantId}
           orientation={orientation}
         />
       </div>
@@ -88,6 +110,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             );
             return;
           }
+          trackAddToCart(photoID, selectedSize, 1);
           posthog.capture("add_to_cart", {
             product_name: printProduct.name,
             product_id: printProduct.id,

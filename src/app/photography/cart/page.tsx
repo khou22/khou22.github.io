@@ -3,13 +3,20 @@
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePostHog } from "posthog-js/react";
 import { toast } from "sonner";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/components/organisms/Cart/CartProvider";
 import { photoPricing } from "@/constants/photoPricing";
+import {
+  trackAddToCart,
+  trackBeginCheckout,
+  trackCheckoutError,
+  trackRemoveFromCart,
+  trackViewCart,
+} from "@/utils/analytics/ga";
 import { CartItem, MAX_ITEM_QTY } from "@/utils/cart/cartCookie";
 import {
   castPhotoID,
@@ -58,7 +65,10 @@ const CartLineItem = ({ item }: { item: CartItem }) => {
           size="icon"
           aria-label="Decrease quantity"
           disabled={item.qty <= 1}
-          onClick={() => setQty(item.photoID, item.variantId, item.qty - 1)}
+          onClick={() => {
+            setQty(item.photoID, item.variantId, item.qty - 1);
+            trackRemoveFromCart(photoID, variant, 1);
+          }}
         >
           −
         </Button>
@@ -68,7 +78,10 @@ const CartLineItem = ({ item }: { item: CartItem }) => {
           size="icon"
           aria-label="Increase quantity"
           disabled={item.qty >= MAX_ITEM_QTY}
-          onClick={() => setQty(item.photoID, item.variantId, item.qty + 1)}
+          onClick={() => {
+            setQty(item.photoID, item.variantId, item.qty + 1);
+            trackAddToCart(photoID, variant, 1);
+          }}
         >
           +
         </Button>
@@ -78,7 +91,10 @@ const CartLineItem = ({ item }: { item: CartItem }) => {
         variant="ghost"
         size="sm"
         aria-label="Remove from cart"
-        onClick={() => removeItem(item.photoID, item.variantId)}
+        onClick={() => {
+          removeItem(item.photoID, item.variantId);
+          trackRemoveFromCart(photoID, variant, item.qty);
+        }}
       >
         Remove
       </Button>
@@ -87,10 +103,17 @@ const CartLineItem = ({ item }: { item: CartItem }) => {
 };
 
 export default function CartPage() {
-  const { items } = useCart();
+  const { items, isHydrated } = useCart();
   const posthog = usePostHog();
   const router = useRouter();
   const [isCheckingOut, setIsCheckingOut] = useState(false);
+  const hasTrackedViewCart = useRef(false);
+
+  useEffect(() => {
+    if (!isHydrated || hasTrackedViewCart.current) return;
+    hasTrackedViewCart.current = true;
+    trackViewCart(items);
+  }, [isHydrated, items]);
 
   const handleBack = () => {
     if (window.history.length > 1) {
@@ -117,6 +140,7 @@ export default function CartPage() {
 
   const handleCheckout = async () => {
     setIsCheckingOut(true);
+    trackBeginCheckout(items);
     posthog.capture("begin_checkout", {
       item_count: items.length,
       subtotal,
@@ -130,6 +154,12 @@ export default function CartPage() {
       });
       if (!response.ok) {
         const message = await response.text();
+        trackCheckoutError(
+          message
+            ? `http_${response.status}: ${message}`
+            : `http_${response.status}`,
+          items,
+        );
         // 400s carry a human-readable reason (eg. an out-of-stock variant).
         toast.error(
           response.status === 400 && message
@@ -143,6 +173,7 @@ export default function CartPage() {
       window.location.href = url;
     } catch (error) {
       console.error("Checkout failed:", error);
+      trackCheckoutError("network_error", items);
       toast.error("Something went wrong starting checkout. Please try again.");
       setIsCheckingOut(false);
     }

@@ -1,6 +1,7 @@
 "use client";
 
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
+import { trackSearch } from "@/utils/analytics/ga";
 import { classNames } from "@/utils/style";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon/ArrowRightIcon";
 
@@ -11,7 +12,16 @@ type SearchInputProps = {
 export const SearchInput: React.FC<SearchInputProps> = ({ initialQuery }) => {
   return (
     <div className="relative flex w-full flex-row items-center justify-center bg-gradient-to-b from-gray-100/10 to-gray-50 pb-4 pt-8">
-      <form action="/photography/search">
+      <form
+        action="/photography/search"
+        onSubmit={(event) => {
+          const formData = new FormData(event.currentTarget);
+          const query = formData.get("query");
+          if (typeof query === "string") {
+            trackSearch(query);
+          }
+        }}
+      >
         <div
           className={classNames(
             "group flex w-[95vw] max-w-lg flex-row items-center justify-center rounded-lg border border-gray-100 bg-white px-4 py-2 shadow",

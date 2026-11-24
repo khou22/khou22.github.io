@@ -127,6 +127,7 @@ const TagPage = async ({ params }: PageProps) => {
 
         <PhotoGallery
           photoIDs={photoIDs.filter((id) => !featuredPhotoIDs.has(id))}
+          listName={metadata.name}
         />
 
         {suggestedSection}
@@ -182,7 +183,7 @@ const TagPage = async ({ params }: PageProps) => {
         </div>
       </div>
 
-      <PhotoGallery photoIDs={photoIDs} fadeIn />
+      <PhotoGallery photoIDs={photoIDs} listName={metadata.name} fadeIn />
 
       {suggestedSection}
     </PageWrapper>

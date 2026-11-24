@@ -18,6 +18,10 @@ import {
 type CartContextValue = {
   items: CartItem[];
   /**
+   * True once cart state has been hydrated from the cookie on the client.
+   */
+  isHydrated: boolean;
+  /**
    * Total number of prints across all line items.
    */
   count: number;
@@ -40,9 +44,11 @@ const CartContext = createContext<CartContextValue | null>(null);
  */
 export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   const [items, setItems] = useState<CartItem[]>([]);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
     setItems(readCartCookie());
+    setIsHydrated(true);
   }, []);
 
   const update = useCallback((next: CartItem[]) => {
@@ -101,7 +107,15 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <CartContext.Provider
-      value={{ items, count, addItem, setQty, removeItem, clearCart }}
+      value={{
+        items,
+        isHydrated,
+        count,
+        addItem,
+        setQty,
+        removeItem,
+        clearCart,
+      }}
     >
       {children}
     </CartContext.Provider>
