@@ -112,12 +112,8 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             product_id: printProduct.id,
             product_price: printProduct.price,
           });
-          toast.success(`Added ${printProduct.name} to cart`, {
-            action: {
-              label: "View cart",
-              onClick: () => router.push(PAGES.PHOTOGRAPHY.CART),
-            },
-          });
+          toast.success(`Added ${printProduct.name} to cart`);
+          router.push(PAGES.PHOTOGRAPHY.CART);
         }}
       >
         Add to cart
