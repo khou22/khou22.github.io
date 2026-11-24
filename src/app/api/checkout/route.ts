@@ -125,6 +125,7 @@ export async function POST(request: NextRequest) {
       cancel_url: `${baseUrl}${PAGES.PHOTOGRAPHY.CART}`,
       allow_promotion_codes: true,
       shipping_address_collection: { allowed_countries: ["US"] },
+      invoice_creation: { enabled: true },
       // Shipping cost is configured in the Stripe Dashboard (optional).
       ...(process.env.STRIPE_SHIPPING_RATE_ID
         ? {
