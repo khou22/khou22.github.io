@@ -30,12 +30,13 @@ const MATERIAL_OPTIONS: {
 const formatDimensions = (
   variant: PhotoPriceVariant,
   orientation: "vertical" | "horizontal",
+  compact = false,
 ) => {
   const first =
     orientation === "horizontal" ? variant.heightInches : variant.widthInches;
   const second =
     orientation === "horizontal" ? variant.widthInches : variant.heightInches;
-  return `${first} × ${second}"`;
+  return compact ? `${first}×${second}"` : `${first} × ${second}"`;
 };
 
 export const VariantSelector: React.FC<VariantSelectorProps> = ({
@@ -186,18 +187,18 @@ export const VariantSelector: React.FC<VariantSelectorProps> = ({
                   <div
                     className={classNames(
                       checked ? "bg-blue-50/70" : "bg-gray-50/70",
-                      "px-3 py-2",
+                      "px-2.5 py-2",
                     )}
                   >
                     <RadioGroup.Label
                       as="div"
-                      className="text-sm font-semibold text-gray-900"
+                      className="whitespace-nowrap text-sm font-semibold text-gray-900"
                     >
-                      {formatDimensions(pricing, orientation)}
+                      {formatDimensions(pricing, orientation, true)}
                     </RadioGroup.Label>
                   </div>
-                  <div className="border-t border-gray-200 bg-white px-3 py-1.5">
-                    <div className="text-sm font-semibold text-gray-900">
+                  <div className="border-t border-gray-200 bg-white px-2.5 py-1.5">
+                    <div className="whitespace-nowrap text-sm font-semibold text-gray-900">
                       ${pricing.price}
                     </div>
                   </div>
