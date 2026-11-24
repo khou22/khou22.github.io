@@ -3,20 +3,15 @@
 import { RadioGroup } from "@headlessui/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { groupBy } from "lodash";
 import { usePostHog } from "posthog-js/react";
 import { toast } from "sonner";
-import { VariantCategory } from "./VariantCategory";
+import { VariantSelector } from "./VariantSelector";
 import { CustomLink } from "@/components/atoms/CustomLink/CustomLink";
 import { PhotoTagBadge } from "@/components/atoms/PhotoTagBadge/PhotoTagBadge";
 import { InputWithCopy } from "@/components/molecules/InputWithCopy/InputWithCopy";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import {
-  PhotoPriceVariant,
-  photoPricing,
-  PhotoPrintMaterial,
-} from "@/constants/photoPricing";
+import { photoPricing, PhotoPrintMaterial } from "@/constants/photoPricing";
 import { PhotoTags } from "@/constants/photoTags/photoTags";
 import { siteMetadata } from "@/constants/siteMetadata";
 import { PhotoIdType, getPhotoName } from "@/utils/cdn/cdnAssets";
@@ -47,10 +42,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
     photoPricing.find((pricing) => pricing.id === selectedSizeID) ??
     defaultPhotoSize;
 
-  const pricingByMaterial = groupBy(
-    photoPricing,
-    (pricing) => pricing.material,
-  ) as Record<PhotoPrintMaterial, PhotoPriceVariant[]>;
   const orientation =
     (photoSize.width ?? 0) > (photoSize.height ?? 0)
       ? "horizontal"
@@ -79,14 +70,9 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
           onChange={setSelectedSizeID}
           className="mt-2"
         >
-          <VariantCategory
-            categoryName="Photo Print"
-            priceVariants={pricingByMaterial[PhotoPrintMaterial.PhotoPaper]}
-            orientation={orientation}
-          />
-          <VariantCategory
-            categoryName="Glossy Metal"
-            priceVariants={pricingByMaterial[PhotoPrintMaterial.GlossyMetal]}
+          <VariantSelector
+            priceVariants={photoPricing}
+            selectedVariant={selectedSize}
             orientation={orientation}
           />
         </RadioGroup>
