@@ -6,6 +6,7 @@ import {
   AlignmentOffsets,
   DragLayer,
 } from "./types";
+import { AutoAlignTool } from "./AutoAlignTool";
 
 export const ImageAlignmentEditor = ({
   extractedFrames,
@@ -351,17 +352,25 @@ export const ImageAlignmentEditor = ({
         </div>
 
         <div className="w-full overflow-auto rounded-lg border border-gray-300">
-          <canvas
-            ref={editorCanvasRef}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-            className="block h-auto max-w-full cursor-crosshair"
-            style={{ touchAction: "none" }}
-          />
+          <div className="relative inline-block">
+            <canvas
+              ref={editorCanvasRef}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+              className="block h-auto max-w-full cursor-crosshair"
+              style={{ touchAction: "none" }}
+            />
+            <AutoAlignTool
+              canvasRef={editorCanvasRef}
+              extractedFrames={extractedFrames}
+              baseFrameIndex={baseFrameIndex}
+              onAlignment={setAlignmentOffsets}
+            />
+          </div>
         </div>
 
         <p className="mt-4 text-sm text-gray-600">
